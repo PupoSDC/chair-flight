@@ -2,13 +2,16 @@
   "name": "chair-fight-monorepo",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx serve chair-flight-webapp"
+  },
   "private": true,
   "dependencies": {
     "@nrwl/next": "15.7.1",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

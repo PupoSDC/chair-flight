@@ -8,10 +8,13 @@ const { withNx } = require('@nrwl/next/plugins/with-nx');
  **/
 const nextConfig = {
   nx: {
-    // Set this to true if you would like to to use SVGR
-    // See: https://github.com/gregberge/svgr
-    svgr: false,
+    svgr: true,
   },
+  pageExtensions: [
+    'page.tsx', 
+    'api.ts',
+    'page.mdx'
+  ],
 };
 
 module.exports = withNx(nextConfig);
