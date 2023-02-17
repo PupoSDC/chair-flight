@@ -1,6 +1,6 @@
-import { default as Head } from "next/head";
-import { LOCAL_STORAGE_THEME } from "../constants/storage";
-import type { FunctionComponent } from "react";
+import { default as Head } from 'next/head';
+import { LOCAL_STORAGE_THEME } from '../constants/storage';
+import type { FunctionComponent } from 'react';
 
 export type AppHtmlHeadProps = {
   title: string;
@@ -22,9 +22,9 @@ export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
     <meta property="og:description" content={description} key="desc2" />
     <meta property="og:image" content={imageUrl} key="image" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <meta name="theme-color" content={"#000"} />
+    <meta name="theme-color" content={'#000'} />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="msapplication-TileColor" content={"#000"} />
+    <meta name="msapplication-TileColor" content={'#000'} />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="manifest" href="/site.webmanifest" />

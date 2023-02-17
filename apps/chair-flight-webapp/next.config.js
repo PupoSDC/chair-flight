@@ -1,12 +1,15 @@
-//@ts-check
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { withNx } = require('@nrwl/next/plugins/with-nx');
 
-/**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
- **/
-const nextConfig = {
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    providerImportSource: "@mdx-js/react",
+  },
+})
+
+module.exports = withNx(withMDX({
   nx: {
     svgr: true,
   },
@@ -15,6 +18,4 @@ const nextConfig = {
     'api.ts',
     'page.mdx'
   ],
-};
-
-module.exports = withNx(nextConfig);
+}));

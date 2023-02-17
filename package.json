@@ -1,5 +1,5 @@
 {
-  "name": "chair-fight-monorepo",
+  "name": "chair-flight-monorepo",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -7,8 +7,11 @@
   },
   "private": true,
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.1.6",
     "@nrwl/next": "15.7.1",
-    "next": "13.1.1",
+    "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
