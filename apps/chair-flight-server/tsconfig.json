@@ -11,12 +11,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "types": ["jest", "node"]
+    "types": ["vitest", "node"]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
     "node_modules",
-    "jest.config.ts",
+    "vite.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts"
   ]

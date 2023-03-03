@@ -18,7 +18,9 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/chair-flight-question-bank-framework/**/*.ts"]
+        "lintFilePatterns": [
+          "libs/chair-flight-question-bank-framework/**/*.ts"
+        ]
       }
     },
     "test": {

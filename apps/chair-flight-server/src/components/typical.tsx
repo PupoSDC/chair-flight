@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import type { FunctionComponent } from "react";
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { FunctionComponent } from 'react';
 
 async function wait(time: number) {
   await new Promise<void>((r) => setTimeout(r, time));
@@ -12,7 +12,7 @@ async function* automaticType(
   let lastStep = steps[0] as string;
   while (true) {
     const step = steps[i % steps.length];
-    if (typeof step === "number") {
+    if (typeof step === 'number') {
       await wait(step);
       for (let j = 1; j < lastStep.length + 1; j++) {
         yield lastStep.slice(0, lastStep.length - j);
@@ -50,7 +50,7 @@ export const Typical: FunctionComponent<TypicalProps> = ({ steps }) => {
       <span ref={ref}>{text}</span>
       <style jsx>{`
         &::after {
-          content: "|";
+          content: '|';
           animation: blink 1s infinite step-start;
         }
 

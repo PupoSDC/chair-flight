@@ -1,7 +1,7 @@
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
-import { HelloWorld } from "@chair-flight/chair-flight-components";
+import { HelloWorld } from '@chair-flight/chair-flight-components';
 
 export function App() {
   return (

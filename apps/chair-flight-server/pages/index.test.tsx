@@ -5,6 +5,6 @@ import Index from './index.page';
 describe('Index', () => {
   it('should render successfully', () => {
     render(<Index />);
-    expect(screen.getByText("CHAIR FLIGHT")).toBeTruthy();
+    expect(screen.getByText('CHAIR FLIGHT')).toBeTruthy();
   });
 });

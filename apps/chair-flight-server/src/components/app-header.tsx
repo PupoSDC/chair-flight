@@ -1,13 +1,13 @@
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { default as Link } from "next/link";
-import { ReactComponent as Logo } from "../resources/icon.svg";
-import { LOCAL_STORAGE_THEME } from "../constants/storage";
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
+import { default as Link } from 'next/link';
+import { ReactComponent as Logo } from '../resources/icon.svg';
+import { LOCAL_STORAGE_THEME } from '../constants/storage';
 
 const toggleTheme = () => {
-  const mode = localStorage.getItem(LOCAL_STORAGE_THEME) ?? "light";
-  const newMode = mode === "light" ? "dark" : "light";
+  const mode = localStorage.getItem(LOCAL_STORAGE_THEME) ?? 'light';
+  const newMode = mode === 'light' ? 'dark' : 'light';
   localStorage.setItem(LOCAL_STORAGE_THEME, newMode);
-  document.documentElement.setAttribute("data-theme", newMode);
+  document.documentElement.setAttribute('data-theme', newMode);
 };
 
 export const AppHeader = () => {
@@ -35,16 +35,14 @@ export const AppHeader = () => {
           padding: 0 1rem 0 2rem;
           background-color: var(--card-background-color);
           z-index: 1000;
-          box-shadow: 
-            rgb(0 0 0 / 20%) 0px 2px 1px -1px, 
-            rgb(0 0 0 / 14%) 0px 1px 1px 0px, 
-            rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+          box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+            rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
         }
 
         .header-companion {
           height: var(--toolbar-height);
           width: 100%;
-          content: "";
+          content: '';
         }
 
         header > :global(.main-logo) {
@@ -73,7 +71,7 @@ export const AppHeader = () => {
         }
 
         header:after {
-          content: "alpha";
+          content: 'alpha';
           position: absolute;
           width: 80px;
           height: 25px;
@@ -101,11 +99,11 @@ export const AppHeader = () => {
           box-shadow: none;
         }
 
-        :global(:root:not([data-theme="dark"]) .light-mode-only) {
+        :global(:root:not([data-theme='dark']) .light-mode-only) {
           display: none;
         }
 
-        :global(:root:not([data-theme="light"]) .dark-mode-only) {
+        :global(:root:not([data-theme='light']) .dark-mode-only) {
           display: none;
         }
       `}</style>

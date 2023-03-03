@@ -1,8 +1,8 @@
-import { MDXProvider } from "@mdx-js/react";
-import { AppHead } from "../../src/components/app-head";
-import { AppHeader } from "../../src/components/app-header";
+import { MDXProvider } from '@mdx-js/react';
+import { AppHead } from '../../src/components/app-head';
+import { AppHeader } from '../../src/components/app-header';
 
-import type { FunctionComponent, PropsWithChildren } from "react";
+import type { FunctionComponent, PropsWithChildren } from 'react';
 
 type ArticlePageLayoutProps = PropsWithChildren<{
   meta: {

@@ -5,17 +5,15 @@ const withMDX = require('@next/mdx')({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
-    providerImportSource: "@mdx-js/react",
+    providerImportSource: '@mdx-js/react',
   },
-})
+});
 
-module.exports = withNx(withMDX({
-  nx: {
-    svgr: true,
-  },
-  pageExtensions: [
-    'page.tsx', 
-    'api.ts',
-    'page.mdx'
-  ],
-}));
+module.exports = withNx(
+  withMDX({
+    nx: {
+      svgr: true,
+    },
+    pageExtensions: ['page.tsx', 'api.ts', 'page.mdx'],
+  })
+);

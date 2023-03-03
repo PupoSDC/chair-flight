@@ -1,17 +1,16 @@
-
-import type { GetStaticProps, NextPage } from "next";
-import { AppHead } from "../src/components/app-head";
-import { AppHeader } from "../src/components/app-header";
-import { Typical } from "../src/components/typical";
-import { APP_DESC, APP_NAME } from "../src/constants/text";
-import { HelloWorld } from "@chair-flight/chair-flight-components";
+import type { GetStaticProps, NextPage } from 'next';
+import { AppHead } from '../src/components/app-head';
+import { AppHeader } from '../src/components/app-header';
+import { Typical } from '../src/components/typical';
+import { APP_DESC, APP_NAME } from '../src/constants/text';
+import { HelloWorld } from '@chair-flight/chair-flight-components';
 
 const PUNCH_LINES = [
-  "Community Built",
+  'Community Built',
   2000,
-  "Minimalistic",
+  'Minimalistic',
   2000,
-  "Free",
+  'Free',
   2000,
 ];
 

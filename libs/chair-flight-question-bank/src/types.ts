@@ -5,13 +5,13 @@ export type ContentId = string;
 export type LearningObjectiveId = string;
 
 export enum CourseName {
-  ATPL_A = "ATPL(A)",
-  CPL_A = "CPL(A)",
-  ATPL_H_IR = "ATPL(H)/IR",
-  ATPL_H_VFR = "ATPL(H)/VFR",
-  CPL_H = "CPL(H)",
-  IR = "IR",
-  CBIR_A = "CBIR(A)",
+  ATPL_A = 'ATPL(A)',
+  CPL_A = 'CPL(A)',
+  ATPL_H_IR = 'ATPL(H)/IR',
+  ATPL_H_VFR = 'ATPL(H)/VFR',
+  CPL_H = 'CPL(H)',
+  IR = 'IR',
+  CBIR_A = 'CBIR(A)',
 }
 
 type CorrectOption = {
@@ -51,7 +51,7 @@ export type QuestionBankContentMetaData = {
 
 export type QuestionBankContentMap = Record<
   ContentId,
-  Record<ContentId, Record<ContentId, {}>>
+  Record<ContentId, Record<ContentId, unknown>>
 >;
 
 export type LearningObjectiveMetadata = {

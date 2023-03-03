@@ -1,10 +1,11 @@
-import { ArticlePageLayout } from "./_article-page.layout"
+import { ArticlePageLayout } from './_article-page.layout';
 
 export const meta = {
   name: 'About Us',
   linkName: 'About Chair Flight',
-  description: 'Our goal is to build an **Open Source**, **Free** and **Community driven** aviation question bank built by students for students.'
-}
+  description:
+    'Our goal is to build an **Open Source**, **Free** and **Community driven** aviation question bank built by students for students.',
+};
 
 # About Chair flight
 
@@ -54,7 +55,10 @@ to help us make this project even better
 
 ---
 
+<a role="button" href="/questions" className="full-width">
+  Explore questions
+</a>
 
-<a role="button" href="/questions" className="full-width">Explore questions</a>
+export default ({ children }) => <ArticlePageLayout meta={meta}>{children}</ArticlePageLayout
 
-export default ({ children }) => <ArticlePageLayout meta={meta}>{children}</ArticlePageLayout>
+>

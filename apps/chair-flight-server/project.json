@@ -44,7 +44,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nrwl/vite:test",
       "outputs": ["coverage/apps/chair-flight-server"],
       "options": {
         "passWithNoTests": true,
