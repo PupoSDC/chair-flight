@@ -17,8 +17,12 @@
     "*.{js,jsx,ts,tsx,md,mdx,css,json}": "prettier --write"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/public-sans": "^4.5.12",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
+    "@mui/joy": "^5.0.0-alpha.69",
     "@next/mdx": "^13.1.6",
     "@nrwl/next": "15.7.1",
     "next": "^13.2.0",
