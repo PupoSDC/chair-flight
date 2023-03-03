@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "npm run dev:spa & npm run dev:server",
     "dev:spa": "nx preview chair-flight-spa",
     "dev:server": "nx serve chair-flight-server",
@@ -25,7 +26,7 @@
     "@mui/joy": "^5.0.0-alpha.69",
     "@next/mdx": "^13.1.6",
     "@nrwl/next": "15.7.1",
-    "next": "^13.2.0",
+    "next": "^13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
@@ -33,7 +34,6 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.14.5",
     "@nrwl/cypress": "15.7.1",
     "@nrwl/eslint-plugin-nx": "15.7.1",
     "@nrwl/js": "15.7.1",
