@@ -1,9 +1,11 @@
 {
-  "name": "chair-flight-monorepo",
+  "name": "chair-flight",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx serve chair-flight-webapp"
+    "dev": "npm run dev:spa & npm run dev:server",
+    "dev:spa": "nx preview chair-flight-spa",
+    "dev:server": "nx serve chair-flight-server"
   },
   "private": true,
   "dependencies": {
@@ -11,29 +13,32 @@
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.1.6",
     "@nrwl/next": "15.7.1",
-    "next": "^13.1.6",
+    "next": "^13.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
+    "react-router-dom": "6.4.3",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
     "@nrwl/cypress": "15.7.1",
     "@nrwl/eslint-plugin-nx": "15.7.1",
-    "@nrwl/jest": "15.7.1",
     "@nrwl/js": "15.7.1",
     "@nrwl/linter": "15.7.1",
     "@nrwl/react": "15.7.1",
+    "@nrwl/vite": "15.7.1",
     "@nrwl/workspace": "15.7.1",
-    "@testing-library/react": "13.4.0",
-    "@types/jest": "28.1.1",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
-    "babel-jest": "28.1.1",
+    "@vitejs/plugin-react": "^3.0.0",
+    "@vitest/coverage-c8": "~0.25.8",
+    "@vitest/ui": "^0.25.8",
     "cypress": "^12.2.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "13.1.1",
@@ -43,13 +48,14 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
-    "jest": "28.1.1",
-    "jest-environment-jsdom": "28.1.1",
+    "jsdom": "~20.0.3",
     "nx": "15.7.1",
     "prettier": "^2.6.2",
-    "react-test-renderer": "18.2.0",
-    "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "vite": "^4.0.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.0.2",
+    "vitest": "^0.25.8"
   }
 }

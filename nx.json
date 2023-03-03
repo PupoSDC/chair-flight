@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "chair-flight-monorepo",
+  "npmScope": "chair-flight",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -33,12 +33,26 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json"
     ],
-    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+    "sharedGlobals": [
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/babel.config.json"
+    ]
   },
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "none",
+        "linter": "eslint",
+        "bundler": "vite",
         "babel": true
+      },
+      "component": {
+        "style": "none"
+      },
+      "library": {
+        "style": "none",
+        "linter": "eslint",
+        "unitTestRunner": "vitest"
       }
     },
     "@nrwl/next": {

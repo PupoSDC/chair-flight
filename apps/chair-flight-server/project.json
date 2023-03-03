@@ -1,0 +1,63 @@
+{
+  "name": "chair-flight-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chair-flight-server",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/chair-flight-server",
+        "outputPath": "dist/apps/chair-flight-server"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/chair-flight-server"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "chair-flight-server:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "chair-flight-server:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "chair-flight-server:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "chair-flight-server:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/chair-flight-server"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/chair-flight-spa"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/chair-flight-server/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
