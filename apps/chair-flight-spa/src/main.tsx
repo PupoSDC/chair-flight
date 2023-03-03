@@ -6,7 +6,7 @@ import { CssBaseline } from '@mui/joy';
 
 import '@fontsource/public-sans';
 
-import { App } from './app/app';
+import { App } from './app';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
