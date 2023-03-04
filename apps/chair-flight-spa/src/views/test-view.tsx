@@ -4,7 +4,7 @@ export const TestView = () => {
   return (
     <QuestionBox
       disabled
-      question={'## hello world\n\nHello world'}
+      question={'## hello world\n\nHello world 2'}
       correctOptionId={'1'}
       selectedOptionId={'3'}
       status={'show-result'}

@@ -8,19 +8,19 @@ export const getOptionColor = ({
   selectedOptionId: string;
   correctOptionId: string;
   optionId: string;
-}): ['plain' | 'outlined', 'primary' | 'success' | 'danger' | 'neutral'] => {
+}): ['solid' | 'outlined', 'primary' | 'success' | 'danger' | 'neutral'] => {
   if (status === 'in-progress') {
     if (selectedOptionId === optionId) {
-      return ['plain', 'primary'];
+      return ['solid', 'primary'];
     } else {
       return ['outlined', 'primary'];
     }
   } else {
     if (selectedOptionId === optionId) {
       if (correctOptionId === optionId) {
-        return ['plain', 'success'];
+        return ['solid', 'success'];
       } else {
-        return ['outlined', 'danger'];
+        return ['solid', 'danger'];
       }
     } else if (correctOptionId === optionId) {
       return ['outlined', 'success'];

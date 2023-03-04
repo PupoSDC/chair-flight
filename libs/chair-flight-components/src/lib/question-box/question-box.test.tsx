@@ -1,0 +1,27 @@
+import { render, screen } from '@testing-library/react';
+import { QuestionBox } from './question-box';
+
+describe('QuestionBox', () => {
+  it('renders without crashing', () => {
+    render(
+      <QuestionBox
+        question="What is your name?"
+        correctOptionId={'123'}
+        selectedOptionId={'123'}
+        status={'in-progress'}
+        options={[
+          { optionId: '123', text: 'John' },
+          { optionId: '456', text: 'Jane' },
+          { optionId: '789', text: 'Jack' },
+          { optionId: '101', text: 'Jill' },
+        ]}
+      />
+    );
+
+    expect(screen.getByText('What is your name?')).toBeInTheDocument();
+    expect(screen.getByText('John')).toBeInTheDocument();
+    expect(screen.getByText('Jane')).toBeInTheDocument();
+    expect(screen.getByText('Jack')).toBeInTheDocument();
+    expect(screen.getByText('Jill')).toBeInTheDocument();
+  });
+});
