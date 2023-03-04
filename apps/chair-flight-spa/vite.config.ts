@@ -7,12 +7,12 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/chair-flight-spa',
 
   server: {
-    port: 4400,
+    port: 4401,
     host: 'localhost',
   },
 
   preview: {
-    port: 4500,
+    port: 4501,
     host: 'localhost',
   },
 

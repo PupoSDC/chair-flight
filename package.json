@@ -5,14 +5,14 @@
   "private": true,
   "author": "PupoSDC",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev": "npm run dev:spa & npm run dev:server",
+    "dev": "npm run dev:spa & npm run dev:server & npm run dev:storybook",
     "dev:spa": "nx serve chair-flight-spa",
     "dev:server": "nx serve chair-flight-server",
     "dev:storybook": "nx storybook chair-flight-components",
     "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
     "prettier": "prettier . --write",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install"
   },
   "dependencies": {
