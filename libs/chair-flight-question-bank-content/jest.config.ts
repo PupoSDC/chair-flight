@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'chair-flight-question-bank',
+  displayName: 'chair-flight-question-bank-content',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/chair-flight-question-bank',
+  coverageDirectory: '../../coverage/libs/chair-flight-question-bank-content',
 };

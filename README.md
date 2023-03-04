@@ -27,7 +27,7 @@ pnpm run dev
 |                                      |                                             | dev   |
 | ------------------------------------ | ------------------------------------------- | ----- |
 | chair-flight-components              | Shared components with Storybook            | :4210 |
-| chair-flight-question-bank           | Next.js server for static/SSR pages and API |       |
+| chair-flight-question-bank-content   | Next.js server for static/SSR pages and API |       |
 | chair-flight-question-bank-framework | Main Vite react web app                     |       |
 | js-utils                             | Main Vite react web app                     |       |
 

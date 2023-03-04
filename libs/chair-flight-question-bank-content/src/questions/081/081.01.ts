@@ -1,7 +1,5 @@
-import {
-  questionBasic,
-  dedent,
-} from '@chair-flight/chair-flight-question-bank-framework';
+import { questionBasic } from '@chair-flight/chair-flight-question-bank-framework';
+import { dedent } from '@chair-flight/js-utils';
 
 export const QJ5E83D02M = questionBasic({
   id: 'QJ5E83D02M',
