@@ -1,9 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next';
 import { AppHead } from '../src/components/app-head';
 import { AppHeader } from '../src/components/app-header';
-import { Typical } from '../src/components/typical';
 import { APP_DESC, APP_NAME } from '../src/constants/text';
-import { HelloWorld } from '@chair-flight/chair-flight-components';
+import { Typical } from '@chair-flight/chair-flight-components';
 
 const PUNCH_LINES = [
   'Community Built',
@@ -25,7 +24,6 @@ const IndexPage: NextPage = () => {
       />
       <AppHeader />
       <main>
-        <HelloWorld />
         <h1>
           Chair Flight is <br />
           <Typical steps={PUNCH_LINES} />

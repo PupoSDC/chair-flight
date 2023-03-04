@@ -1,1 +1,2 @@
-export { QuestionBox, QuestionBoxProps } from './question-box';
+export { QuestionBox } from './question-box';
+export type { QuestionBoxProps } from './question-box';

@@ -8,6 +8,7 @@
     "dev": "npm run dev:spa & npm run dev:server",
     "dev:spa": "nx serve chair-flight-spa",
     "dev:server": "nx serve chair-flight-server",
+    "build": " nx run-many --target=build --projects=chair-flight-server,chair-flight-spa",
     "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
     "prettier": "prettier . --write",
