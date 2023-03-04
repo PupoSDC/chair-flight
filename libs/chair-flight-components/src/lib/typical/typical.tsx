@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FunctionComponent } from 'react';
+import { styled } from '@mui/joy';
 
 async function wait(time: number) {
   await new Promise<void>((r) => setTimeout(r, time));
@@ -29,12 +30,25 @@ async function* automaticType(
   }
 }
 
+const StyledTypicalSpan = styled('span')`
+  &::after {
+    content: '|';
+    animation: blink 1s infinite step-start;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+`;
+
 export type TypicalProps = {
   steps: (string | number)[];
 };
 
 export const Typical: FunctionComponent<TypicalProps> = ({ steps }) => {
-  const ref = useRef<HTMLDListElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const [text, setText] = useState(steps[0]);
   const generator = useMemo(() => automaticType(steps), [steps]);
 
@@ -45,21 +59,5 @@ export const Typical: FunctionComponent<TypicalProps> = ({ steps }) => {
     })();
   });
 
-  return (
-    <>
-      <span ref={ref}>{text}</span>
-      <style jsx>{`
-        &::after {
-          content: '|';
-          animation: blink 1s infinite step-start;
-        }
-
-        @keyframes blink {
-          50% {
-            opacity: 0;
-          }
-        }
-      `}</style>
-    </>
-  );
+  return <StyledTypicalSpan ref={ref}>{text}</StyledTypicalSpan>;
 };

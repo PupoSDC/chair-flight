@@ -1,1 +1,1 @@
-export * from './question-box';
+export { QuestionBox, QuestionBoxProps } from './question-box';

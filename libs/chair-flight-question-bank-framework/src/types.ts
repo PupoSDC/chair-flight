@@ -51,7 +51,7 @@ export type QuestionBankContentMetaData = {
 
 export type QuestionBankContentMap = Record<
   ContentId,
-  Record<ContentId, Record<ContentId, {}>>
+  Record<ContentId, Record<ContentId, unknown>>
 >;
 
 export type LearningObjectiveMetadata = {

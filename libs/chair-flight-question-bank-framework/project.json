@@ -4,16 +4,6 @@
   "sourceRoot": "libs/chair-flight-question-bank-framework/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/libs/chair-flight-question-bank-framework",
-        "main": "libs/chair-flight-question-bank-framework/src/index.ts",
-        "tsConfig": "libs/chair-flight-question-bank-framework/tsconfig.lib.json",
-        "assets": ["libs/chair-flight-question-bank-framework/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -24,17 +14,11 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/chair-flight-question-bank-framework"],
       "options": {
         "jestConfig": "libs/chair-flight-question-bank-framework/jest.config.ts",
         "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     }
   },

@@ -22,9 +22,9 @@ export const dedent = (
   const lines = result.split('\n');
   let mindent: number | null = null;
   lines.forEach((l) => {
-    let m = l.match(/^(\s+)\S+/);
+    const m = l.match(/^(\s+)\S+/);
     if (m) {
-      let indent = m[1].length;
+      const indent = m[1].length;
       if (!mindent) {
         // this is the first indented line
         mindent = indent;

@@ -1,5 +1,5 @@
 import { Question } from './types';
-import { getRandomShuffler } from './random';
+import { getRandomShuffler } from '@chair-flight/js-utils';
 
 type Option = {
   key: string;
@@ -34,7 +34,7 @@ export const questionFromMap = ({
       .map((opt, i) => ({
         id: `${id}-${i + 1}`,
         text: opt.value,
-        correct: false as false,
+        correct: false as const,
         why: opt.why ?? `${opt.key} ==> ${opt.value}`,
       }));
     const wrongOptionsForValue = shuffle(options)
@@ -43,7 +43,7 @@ export const questionFromMap = ({
       .map((opt, i) => ({
         id: `${id}-${i + 1}`,
         text: opt.key,
-        correct: false as false,
+        correct: false as const,
         why: opt.why ?? `${opt.key} ==> ${opt.value}`,
       }));
     sum.push({
@@ -57,7 +57,7 @@ export const questionFromMap = ({
         {
           id: `${id}-0`,
           text: option.value,
-          correct: true,
+          correct: true as const,
           why: option.why ?? `${option.key} ==> ${option.value}`,
         },
         wrongOptionsForKey[0],
@@ -79,7 +79,7 @@ export const questionFromMap = ({
         {
           id: `${id}-0`,
           text: option.key,
-          correct: true,
+          correct: true as const,
           why: option.why ?? `${option.key} ==> ${option.value}`,
         },
         wrongOptionsForValue[0],
