@@ -1,5 +1,4 @@
 import { default as Head } from 'next/head';
-import { LOCAL_STORAGE_THEME } from '../constants/storage';
 import type { FunctionComponent } from 'react';
 
 export type AppHtmlHeadProps = {
@@ -96,11 +95,6 @@ export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
       type="image/png"
       sizes="16x16"
       href="/icons/favicon-16x16.png"
-    />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `document.documentElement.setAttribute("data-theme",  localStorage.getItem("${LOCAL_STORAGE_THEME}") || "light");`,
-      }}
     />
   </Head>
 );

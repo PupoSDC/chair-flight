@@ -5,10 +5,10 @@
   "private": true,
   "author": "PupoSDC",
   "scripts": {
-    "dev": "npm run dev:spa & npm run dev:server",
+    "dev": "nx run-many --target=serve --projects=chair-flight-server,chair-flight-spa",
     "dev:spa": "nx serve chair-flight-spa",
     "dev:server": "nx serve chair-flight-server",
-    "build": " nx run-many --target=build --projects=chair-flight-server,chair-flight-spa",
+    "build": "nx run-many --target=build --projects=chair-flight-server,chair-flight-spa",
     "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
     "prettier": "prettier . --write",

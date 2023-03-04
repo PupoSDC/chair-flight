@@ -1,8 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 import { AppHead } from '../src/components/app-head';
-import { AppHeader } from '../src/components/app-header';
 import { APP_DESC, APP_NAME } from '../src/constants/text';
-import { Typical } from '@chair-flight/chair-flight-components';
+import { AppHeader, Typical } from '@chair-flight/chair-flight-components';
 
 const PUNCH_LINES = [
   'Community Built',
