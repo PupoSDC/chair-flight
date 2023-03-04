@@ -1,5 +1,5 @@
 {
-  "name": "chair-flight-question-bank-content-content",
+  "name": "chair-flight-question-bank-content",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/chair-flight-question-bank-content/src",
   "projectType": "library",
@@ -12,17 +12,11 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/chair-flight-question-bank-content"],
       "options": {
         "jestConfig": "libs/chair-flight-question-bank-content/jest.config.ts",
         "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     }
   },

@@ -13,7 +13,7 @@ describe('QuestionBox', () => {
           { optionId: '123', text: 'John' },
           { optionId: '456', text: 'Jane' },
           { optionId: '789', text: 'Jack' },
-          { optionId: '101', text: 'Jill' },
+          { optionId: '102', text: 'Jill' },
         ]}
       />
     );
