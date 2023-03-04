@@ -21,31 +21,6 @@
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/libs/chair-flight-components"
       }
-    },
-    "storybook": {
-      "executor": "@nrwl/storybook:storybook",
-      "options": {
-        "port": 4410,
-        "configDir": "libs/chair-flight-components/.storybook"
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "build-storybook": {
-      "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputDir}"],
-      "options": {
-        "outputDir": "dist/storybook/chair-flight-components",
-        "configDir": "libs/chair-flight-components/.storybook"
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
     }
   }
 }

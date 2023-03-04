@@ -5,10 +5,9 @@
   "private": true,
   "author": "PupoSDC",
   "scripts": {
-    "dev": "npm run dev:spa & npm run dev:server & npm run dev:storybook",
+    "dev": "npm run dev:spa & npm run dev:server",
     "dev:spa": "nx serve chair-flight-spa",
     "dev:server": "nx serve chair-flight-server",
-    "dev:storybook": "nx storybook chair-flight-components",
     "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
     "prettier": "prettier . --write",
@@ -22,7 +21,7 @@
     "@mdx-js/loader": "2.3.0",
     "@mdx-js/react": "2.3.0",
     "@mui/joy": "5.0.0-alpha.69",
-    "@next/mdx": "13.1.6",
+    "@next/mdx": "13.2.3",
     "@nrwl/next": "15.7.1",
     "next": "^13.2.3",
     "react": "18.2.0",
@@ -34,17 +33,14 @@
     "tslib": "2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
     "@nrwl/cypress": "15.7.1",
     "@nrwl/eslint-plugin-nx": "15.7.1",
     "@nrwl/js": "15.8.5",
     "@nrwl/linter": "15.7.1",
     "@nrwl/react": "15.7.1",
-    "@nrwl/storybook": "^15.8.5",
     "@nrwl/vite": "15.7.1",
     "@nrwl/workspace": "15.7.1",
-    "@storybook/addon-essentials": "^7.0.0-beta.43",
-    "@storybook/core-server": "^7.0.0-beta.43",
-    "@storybook/react-vite": "^7.0.0-beta.43",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/node": "18.11.9",
@@ -75,6 +71,7 @@
     "vite": "^4.0.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.0.2",
-    "vitest": "^0.25.8"
+    "vitest": "^0.25.8",
+    "webpack": "^5.75.0"
   }
 }
