@@ -15,12 +15,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
     "@fontsource/public-sans": "4.5.12",
     "@mdx-js/loader": "2.3.0",
     "@mdx-js/react": "2.3.0",
+    "@mui/icons-material": "5.11.11",
     "@mui/joy": "5.0.0-alpha.69",
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.69",
     "@next/mdx": "13.2.3",
     "@nrwl/next": "15.7.1",
     "next": "^13.2.3",
@@ -73,5 +75,8 @@
     "vite-tsconfig-paths": "^4.0.2",
     "vitest": "^0.25.8",
     "webpack": "^5.75.0"
+  },
+  "overried": {
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.69"
   }
 }

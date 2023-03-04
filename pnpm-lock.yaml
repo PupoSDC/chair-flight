@@ -2,12 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': ^7.21.0
-  '@emotion/react': ^11.10.6
-  '@emotion/styled': ^11.10.6
+  '@emotion/react': 11.10.6
+  '@emotion/styled': 11.10.6
   '@fontsource/public-sans': 4.5.12
   '@mdx-js/loader': 2.3.0
   '@mdx-js/react': 2.3.0
+  '@mui/icons-material': 5.11.11
   '@mui/joy': 5.0.0-alpha.69
+  '@mui/material': npm:@mui/joy@5.0.0-alpha.69
   '@next/mdx': 13.2.3
   '@nrwl/cypress': 15.7.1
   '@nrwl/eslint-plugin-nx': 15.7.1
@@ -64,7 +66,9 @@ dependencies:
   '@fontsource/public-sans': 4.5.12
   '@mdx-js/loader': 2.3.0_webpack@5.75.0
   '@mdx-js/react': 2.3.0_react@18.2.0
+  '@mui/icons-material': 5.11.11_clcn5e3ob4764w7tf44r4cuspm
   '@mui/joy': 5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q
+  '@mui/material': /@mui/joy/5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q
   '@next/mdx': 13.2.3_msthxdjvrhmdkfpqqalumiidgq
   '@nrwl/next': 15.7.1_6c6lwnm6ghayigwifo3gietkyu
   next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
@@ -2111,6 +2115,23 @@ packages:
 
   /@mui/core-downloads-tracker/5.11.11:
     resolution: {integrity: sha512-0YK0K9GfW1ysw9z4ztWAjLW+bktf+nExMyn2+EQe1Ijb0kF2kz1kIOmb4+di0/PsXG70uCuw4DhEIdNd+JQkRA==}
+    dev: false
+
+  /@mui/icons-material/5.11.11_clcn5e3ob4764w7tf44r4cuspm:
+    resolution: {integrity: sha512-Eell3ADmQVE8HOpt/LZ3zIma8JSvPh3XgnhwZLT0k5HRqZcd6F/QDHc7xsWtgz09t+UEFvOYJXjtrwKmLdwwpw==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@mui/material': /@mui/joy/5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q
+      '@types/react': 18.0.25
+      react: 18.2.0
     dev: false
 
   /@mui/joy/5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q:

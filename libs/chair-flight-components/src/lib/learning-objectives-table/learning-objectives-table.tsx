@@ -1,16 +1,14 @@
 import { FunctionComponent } from 'react';
-import { Box, BoxProps, styled } from '@mui/joy';
+import { Box, styled, Table } from '@mui/joy';
+import { LearningObjectivesTableProps } from './learning-objectives-table.types';
+import { LearningObjectivesTableRow } from './learning-objectives-table-row';
 
 const StyledContainer = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: `calc(100% - ${theme.shape.headerHeight}px)`,
+  height: `100%`,
 
-  '& > .MuiTableContainer-root': {
+  '& > table': {
     height: 'calc(100% - 52px)',
-  },
-
-  '& > .MuiTablePagination-root': {
-    height: '52px',
   },
 
   '& table': {
@@ -24,25 +22,21 @@ const StyledContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-export type LearningObjectivesTableProps = {
-  initialPageSize?: 5 | 10 | 25 | 50 | 100;
-  initialIdFilter?: string;
-  initialTextFilter?: string;
-  initialCourseFilters?: string[];
-  onCourseFiltersChanged?: (courses: string[]) => void;
-  onIdFilterChanged?: (id: string) => void;
-  courses: string[];
-  learningObjectives: Array<{
-    text: string;
-    id: string;
-    contentId: string;
-    numberOfQuestions: number;
-    courses: Record<string, boolean>;
-  }>;
-} & Pick<BoxProps, 'sx' | 'className'>;
-
 export const LearningObjectivesTable: FunctionComponent<
   LearningObjectivesTableProps
-> = () => {
-  return <StyledContainer />;
+> = ({ learningObjectives }) => {
+  return (
+    <StyledContainer>
+      <Table>
+        <tbody>
+          {learningObjectives.map((learningObjective) => (
+            <LearningObjectivesTableRow
+              key={learningObjective.id}
+              {...learningObjective}
+            />
+          ))}
+        </tbody>
+      </Table>
+    </StyledContainer>
+  );
 };
