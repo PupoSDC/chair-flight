@@ -25,15 +25,6 @@ export default defineConfig({
     }),
   ],
 
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
   test: {
     globals: true,
     cache: {
@@ -41,5 +32,21 @@ export default defineConfig({
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  },
+
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split('.').at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img';
+          }
+          return `app-assets/${extType}/[name]-[hash][extname]`;
+        },
+        chunkFileNames: 'app-assets/js/[name]-[hash].js',
+        entryFileNames: 'app-assets/js/[name]-[hash].js',
+      },
+    },
   },
 });
