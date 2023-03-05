@@ -1,4 +1,4 @@
-import { default as dedent } from 'dedent';
+import { dedent } from '@chair-flight/js-utils';
 
 export const APP_NAME = 'Chair Flight';
 export const APP_DESC = dedent`
