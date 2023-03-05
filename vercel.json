@@ -1,21 +1,4 @@
 {
-  "buildCommand": "next build",
-  "rewrites": [
-    {
-      "source": "/admin/",
-      "destination": "https://admin-app.vercel.com/"
-    },
-    {
-      "source": "/admin/:match*",
-      "destination": "https://admin-app.vercel.com/:match*"
-    },
-    {
-      "source": "/",
-      "destination": "https://your-app.vercel.com/"
-    },
-    {
-      "source": "/:match*",
-      "destination": "https://your-app.vercel.com/:match*"
-    }
-  ]
+  "buildCommand": "pnpm build",
+  "rewrites": []
 }
