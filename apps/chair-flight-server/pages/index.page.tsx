@@ -1,7 +1,13 @@
 import type { GetStaticProps, NextPage } from 'next';
 import { AppHead } from '../src/components/app-head';
 import { APP_DESC, APP_NAME } from '../src/constants/text';
-import { AppHeader, Typical } from '@chair-flight/chair-flight-components';
+import {
+  AppHeader,
+  HEADER_HEIGHT,
+  Typical,
+} from '@chair-flight/chair-flight-components';
+import { default as Link } from '@mui/joy/Link';
+import { Button, styled, Typography } from '@mui/joy';
 
 const PUNCH_LINES = [
   'Community Built',
@@ -11,6 +17,37 @@ const PUNCH_LINES = [
   'Free',
   2000,
 ];
+
+const StyledMainContainer = styled('main')`
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - ${HEADER_HEIGHT}px);
+  padding: ${({ theme }) => theme.spacing(2, 2)};
+  background-color: ${({ theme }) => theme.vars.palette.primary.softBg};
+
+  h1 {
+    font-weight: 900;
+  }
+
+  h1 > span {
+    color: ${({ theme }) => theme.vars.palette.primary[500]};
+  }
+`;
+
+const StyledLinksContainer = styled('div')`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 1em;
+  width: calc(100% - 2em);
+
+  & > a {
+    margin-top: ${({ theme }) => theme.spacing(1)};
+  }
+  & > a:hover {
+    text-decoration: none;
+  }
+`;
 
 const IndexPage: NextPage = () => {
   return (
@@ -22,55 +59,31 @@ const IndexPage: NextPage = () => {
         imageUrl={`${process.env.NEXT_PUBLIC_APP_URL}/images/HomeBackground.png`}
       />
       <AppHeader />
-      <main>
-        <h1>
+      <StyledMainContainer>
+        <Typography level="h3" component="h1">
           Chair Flight is <br />
           <Typical steps={PUNCH_LINES} />
           &nbsp;
-        </h1>
+        </Typography>
 
         <h3>Built by students for students.</h3>
 
-        <div className="button-container">
-          <a href="/questions" role="button">
-            Explore Questions
-          </a>
-          <a href="/articles/about-us" role="button" className="outline">
-            About This Project
-          </a>
-        </div>
-      </main>
-      <style jsx>{`
-        main {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          height: calc(100% - var(--toolbar-height));
-          width: 100%;
-          background-color: var(--special-background);
-          padding: 2em 1em 1em 1em;
-        }
-
-        h1 > :global(span) {
-          color: var(--primary);
-        }
-
-        .button-container {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          bottom: 1em;
-          width: calc(100% - 2em);
-        }
-
-        .button-container a {
-          margin-top: 0.5em;
-        }
-
-        :global(:root) {
-          background-color: var(--special-background);
-        }
-      `}</style>
+        <StyledLinksContainer>
+          <Button
+            size="lg"
+            component={Link}
+            href="/questions"
+            children="Explore Questions"
+          />
+          <Button
+            size="lg"
+            variant="outlined"
+            component={Link}
+            href="/articles/about-us"
+            children="About This Project"
+          />
+        </StyledLinksContainer>
+      </StyledMainContainer>
     </>
   );
 };

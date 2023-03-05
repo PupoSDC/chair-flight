@@ -1,1 +1,1 @@
-export { AppHeader } from './app-header';
+export { AppHeader, HEADER_HEIGHT } from './app-header';

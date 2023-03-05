@@ -1,4 +1,7 @@
 import { ArticlePageLayout } from './_article-page.layout';
+import { default as Link } from 'next/link';
+import { Button } from '@mui/joy';
+import { default as OpenInNewIcon } from '@mui/icons-material/OpenInNew';
 
 export const meta = {
   name: 'About Us',
@@ -55,12 +58,14 @@ to help us make this project even better
 
 ---
 
-<a role="button" href="/questions" className="full-width">
-  Explore questions
-</a>
+<Button
+  endDecorator={<OpenInNewIcon />}
+  component={Link}
+  href="/questions"
+  children={'Explore questions'}
+  sx={{ width: '100%' }}
+/>
 
 export default ({ children }) => (
   <ArticlePageLayout meta={meta}>{children}</ArticlePageLayout>
 );
-
->

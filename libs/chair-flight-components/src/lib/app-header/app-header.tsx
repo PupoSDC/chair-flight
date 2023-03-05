@@ -1,30 +1,33 @@
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 import { ReactComponent as Logo } from './icon.svg';
-import { styled, useColorScheme } from '@mui/joy';
+import { Link, styled, useColorScheme } from '@mui/joy';
 import { useEffect, useState } from 'react';
-import { useLinkComponent } from '../hooks/useLinkComponent';
+import { default as LightModeIcon } from '@mui/icons-material/LightMode';
+import { default as DarkModeIcon } from '@mui/icons-material/DarkMode';
+import { default as IconButton } from '@mui/joy/IconButton';
 
-const TOOLBAR_HEIGHT = 48;
+export const HEADER_HEIGHT = 40;
 
 const StyledHeaderCompanion = styled('div')`
-  height: ${TOOLBAR_HEIGHT}px;
+  height: ${HEADER_HEIGHT}px;
   width: 100%;
   content: '';
 `;
 
 const StyledHeader = styled('header')`
+  color: ${({ theme }) => theme.vars.palette.text.primary};
   width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: ${TOOLBAR_HEIGHT}px;
+  height: ${HEADER_HEIGHT}px;
   padding: 0 1rem 0 2rem;
-  background-color: var(--joy-palette-neutral-plainHoverBg);
+  background-color: ${({ theme }) => theme.vars.palette.neutral.plainHoverBg};
   z-index: 1000;
-  box-shadow: ${({ theme }) => theme.shadow.sm};
+  box-shadow: ${({ theme }) => theme.shadow.md};
 
   & > a {
+    margin-left: ${({ theme }) => theme.spacing(1)};
     display: flex;
     vertical-align: center;
     align-items: center;
@@ -64,7 +67,7 @@ const StyledHeader = styled('header')`
   }
 `;
 
-const StyledModeButton = styled('button')`
+const StyledModeButton = styled(IconButton)`
   border: none;
   margin: 0;
   flex: 0;
@@ -74,7 +77,6 @@ const StyledModeButton = styled('button')`
 export const AppHeader = () => {
   const [isMounted, setIsMounted] = useState(false);
   const { mode, setMode } = useColorScheme();
-  const { Link } = useLinkComponent();
   const toggleTheme = () => setMode(mode === 'dark' ? 'light' : 'dark');
   const showDarkModeButton = !isMounted || mode === 'light';
 
@@ -87,8 +89,8 @@ export const AppHeader = () => {
           <Logo />
           <h2>CHAIR FLIGHT</h2>
         </Link>
-        <StyledModeButton onClick={toggleTheme}>
-          {showDarkModeButton ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
+        <StyledModeButton size="sm" variant="outlined" onClick={toggleTheme}>
+          {showDarkModeButton ? <LightModeIcon /> : <DarkModeIcon />}
         </StyledModeButton>
       </StyledHeader>
       <StyledHeaderCompanion />

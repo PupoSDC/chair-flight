@@ -1,7 +1,5 @@
 import { forwardRef } from 'react';
 
-// react props for a link elemet
-
 const TemporaryLinkComponent = forwardRef<
   HTMLAnchorElement,
   React.HTMLProps<HTMLAnchorElement>
