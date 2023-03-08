@@ -40,6 +40,7 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.6.1
   eslint-plugin-react: 7.31.11
   eslint-plugin-react-hooks: 4.6.0
+  fuse.js: ^6.6.2
   husky: ^8.0.3
   jsdom: ~20.0.3
   lint-staged: ^13.1.2
@@ -60,6 +61,7 @@ specifiers:
   vite-tsconfig-paths: ^4.0.2
   vitest: ^0.25.8
   webpack: ^5.75.0
+  zod: ^3.21.2
 
 dependencies:
   '@emotion/react': 11.10.6_fan5qbzahqtxlm5dzefqlqx5ia
@@ -71,6 +73,7 @@ dependencies:
   '@mui/joy': 5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q
   '@mui/material': /@mui/joy/5.0.0-alpha.69_djbvr54jltxzvghogofy3z763q
   '@next/mdx': 13.1.6_msthxdjvrhmdkfpqqalumiidgq
+  fuse.js: 6.6.2
   next: 13.1.6_6m24vuloj5ihw4zc5lbsktc4fu
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -78,6 +81,7 @@ dependencies:
   react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
   remark-gfm: 3.0.1
   tslib: 2.3.0
+  zod: 3.21.2
 
 devDependencies:
   '@babel/core': 7.21.0
@@ -6934,6 +6938,11 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -12539,6 +12548,10 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.21.2:
+    resolution: {integrity: sha512-0Ygy2/IZNIxHterZdHjE5Vb8hp1fUHJD/BGvSHj8QJx+UipEVNvo9WLchoyBpz5JIaN6KmdGDGYdloGzpFK98g==}
+    dev: false
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}

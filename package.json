@@ -27,13 +27,15 @@
     "@mui/joy": "5.0.0-alpha.69",
     "@mui/material": "npm:@mui/joy@5.0.0-alpha.69",
     "@next/mdx": "13.1.6",
+    "fuse.js": "^6.6.2",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "8.0.5",
     "react-router-dom": "6.4.3",
     "remark-gfm": "3.0.1",
-    "tslib": "2.3.0"
+    "tslib": "2.3.0",
+    "zod": "^3.21.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -41,9 +43,9 @@
     "@nrwl/eslint-plugin-nx": "15.7.1",
     "@nrwl/js": "15.8.5",
     "@nrwl/linter": "15.7.1",
+    "@nrwl/next": "15.7.1",
     "@nrwl/react": "15.7.1",
     "@nrwl/vite": "15.7.1",
-    "@nrwl/next": "15.7.1",
     "@nrwl/workspace": "15.7.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
