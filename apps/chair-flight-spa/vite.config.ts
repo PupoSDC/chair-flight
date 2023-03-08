@@ -1,8 +1,8 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import viteTsConfigPaths from 'vite-tsconfig-paths';
-import svgr from 'vite-plugin-svgr';
+import { default as react } from '@vitejs/plugin-react';
+import { default as viteTsConfigPaths } from 'vite-tsconfig-paths';
+import { default as svgr } from 'vite-plugin-svgr';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/chair-flight-spa',
