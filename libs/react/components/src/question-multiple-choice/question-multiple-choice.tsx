@@ -134,6 +134,7 @@ export const QuestionMultipleChoice = forwardRef<
           if (loading)
             return (
               <QuestionMultipleChoiceOption
+                key={optionId}
                 fullWidth
                 variant="outlined"
                 color="primary"

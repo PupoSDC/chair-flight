@@ -1,4 +1,6 @@
 export * from "./components/app-head";
+export * from "./components/home-page/alpha-preview";
+export * from "./components/home-page/cool-sliding-thing";
 export * from "./components/home-page/landing-screen";
 export * from "./components/home-page/question-preview";
 export * from "./constants/text";

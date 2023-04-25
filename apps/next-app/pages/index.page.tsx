@@ -1,16 +1,10 @@
-import {
-  Box,
-  styled,
-  GlobalStyles,
-  Typography,
-  Button,
-  Link,
-  Grid,
-} from "@mui/joy";
+import { Box, styled, GlobalStyles } from "@mui/joy";
 import {
   AppHead,
   QuestionPreview,
   LandingScreen,
+  CoolSlidingThing,
+  AlphaPreview,
 } from "@chair-flight/next/components";
 import { staticHandler } from "@chair-flight/next/server";
 import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
@@ -38,6 +32,14 @@ StyledSection.defaultProps = {
   component: "section",
 };
 
+const StyledSectionA = styled(StyledSection)`
+  background-color: ${({ theme }) => theme.vars.palette.background.body};
+`;
+
+const StyledSectionB = styled(StyledSection)`
+  background-color: ${({ theme }) => theme.vars.palette.primary.softBg};
+`;
+
 export type IndexPageProps = {
   numberOfQuestions: number;
   demoQuestion: QuestionTemplate;
@@ -51,55 +53,19 @@ export const IndexPage: NextPage<IndexPageProps> = ({
     <AppHead />
     <Header />
     <StyledMain>
+      <CoolSlidingThing />
       <StyledSection>
         <LandingScreen />
       </StyledSection>
-      <StyledSection sx={{ backgroundColor: "background.backdrop" }}>
+      <StyledSectionB>
         <QuestionPreview
           numberOfQuestions={numberOfQuestions}
           questionTemplate={demoQuestion}
         />
-      </StyledSection>
-      <StyledSection sx={{ flexDirection: "column", justifyContent: "center" }}>
-        <Typography level="h2" sx={{ textAlign: "center" }}>
-          Explore the Alpha functionalities
-        </Typography>
-        <Grid
-          spacing={{ xs: 2, sm: 4 }}
-          container
-          sx={{
-            py: 4,
-            width: "100%",
-            maxWidth: (t) => t.breakpoints.values.md,
-          }}
-        >
-          <Grid xs={12} sm={4}>
-            <Button
-              variant="outlined"
-              component={Link}
-              href="/questions"
-              fullWidth
-            >
-              Search Questions
-            </Button>
-          </Grid>
-          <Grid xs={12} sm={4}>
-            <Button variant="outlined" component={Link} href="/tests" fullWidth>
-              Create a Test
-            </Button>
-          </Grid>
-          <Grid xs={12} sm={4}>
-            <Button
-              variant="outlined"
-              component={Link}
-              href="/learning-objectives"
-              fullWidth
-            >
-              Search Learning Objectives
-            </Button>
-          </Grid>
-        </Grid>
-      </StyledSection>
+      </StyledSectionB>
+      <StyledSectionA>
+        <AlphaPreview />
+      </StyledSectionA>
     </StyledMain>
     <GlobalStyles
       styles={{

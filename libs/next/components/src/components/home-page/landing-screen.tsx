@@ -1,6 +1,5 @@
 import { Box, Button, Link, Typography } from "@mui/joy";
 import { Typical } from "@chair-flight/react/components";
-import { CoolSlidingThing } from "./cool-sliding-thing";
 import type { FunctionComponent } from "react";
 
 const PUNCH_LINES = [
@@ -14,8 +13,7 @@ const PUNCH_LINES = [
 
 export const LandingScreen: FunctionComponent = () => {
   return (
-    <>
-      <Box
+    <Box
         sx={{
           m: "auto",
           p: 2,
@@ -85,7 +83,5 @@ export const LandingScreen: FunctionComponent = () => {
           </Box>
         </Box>
       </Box>
-      <CoolSlidingThing />
-    </>
   );
 };

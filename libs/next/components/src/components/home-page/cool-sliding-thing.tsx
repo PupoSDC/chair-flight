@@ -97,7 +97,7 @@ export const CoolSlidingThing: FunctionComponent<CoolSlidingThingProps> = ({
     <Box
       {...props}
       sx={{
-        position: "absolute",
+        position: "fixed",
         overflow: "hidden",
         width: "100vw",
         height: `calc(100vh - ${HEADER_HEIGHT}px)`,
