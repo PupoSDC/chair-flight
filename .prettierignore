@@ -1,4 +1,13 @@
-# Add files here to ignore them from prettier formatting
+dist
+coverage
+tmp
+pnpm-lock.yaml
+.next
+.expo
+.gitignore
+.editorconfig
+.prettierignore
 
-/dist
-/coverage
+# Content produced by build steps
+apps/next-app/public/storybook
+apps/next-app/public/content

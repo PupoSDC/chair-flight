@@ -1,0 +1,63 @@
+{
+  "name": "next-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/next-app",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200,
+        "buildTarget": "next-app:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "next-app:build:development",
+          "dev": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "root": "apps/next-app",
+        "outputPath": "dist/apps/next-app"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "next-app:build",
+        "dev": false
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/next-app"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/next-app"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/next-app/pages/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p apps/next-app/tsconfig.app.json --noEmit",
+          "tsc -p apps/next-app/tsconfig.spec.json --noEmit"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "upstash",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/upstash/src",
+  "projectType": "application",
+  "targets": {
+    "execute": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node ./apps/upstash/src/main.ts --project ./apps/upstash/tsconfig.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/upstash/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

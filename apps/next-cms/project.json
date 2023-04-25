@@ -1,0 +1,84 @@
+{
+  "name": "next-cms",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/next-cms",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4210,
+        "buildTarget": "next-cms:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "next-cms:build:development",
+          "dev": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/next-cms",
+        "outputPath": "dist/apps/next-cms"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/next-cms"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "next-cms:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "next-cms:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "next-cms:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "next-cms:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/next-cms/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/next-cms/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

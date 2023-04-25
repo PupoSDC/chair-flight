@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["node", "vitest/globals", "@testing-library/jest-dom"],
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "index.d.ts",
+    "vite.config.ts",
+    "src/**/*.test.*",
+    "src/**/*.spec.*",
+    "pages/**/*.test.*",
+    "pages/**/*.spec.*"
+  ],
+  "exclude": ["node_modules"]
+}

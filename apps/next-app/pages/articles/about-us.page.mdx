@@ -1,0 +1,71 @@
+import { default as Link } from "next/link";
+import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
+import { Button } from "@mui/joy";
+import { ArticlePageLayout } from "./_article-page.layout";
+
+export const meta = {
+  name: "About Us",
+  linkName: "About Chair Flight",
+  description:
+    "Our goal is to build an **Open Source**, **Free** and **Community driven** aviation question bank built by students for students.",
+};
+
+# About Chair flight
+
+---
+
+Our goal is to build an **Open Source**, **Free** and **Community driven**
+aviation question bank built by students for students.
+
+---
+
+### What is the current state of the project?
+
+The project is still in early development. Most features and functionalities are
+not yet developed and in general things are expected **Not** to work.
+
+---
+
+### What is the source of your questions?
+
+Chair flight uses the **Chair Flight Question Bank**. This bank is built by
+students for students based on feedback collected in the exams. Unlike other
+banks we intend to keep this part of the project fully public and available for
+everyone to use, audit, and contribute.
+
+---
+
+### How will you make money of this?
+
+We probably won't. Although not formalized you can think of this project and our
+team as a "non-profit".
+
+We will most likely develop a "premium" version on top of the free content, and
+we may use adds for non-paying users, but access to the question bank will
+remain free for as long as this project is still going.
+
+---
+
+### How can I contribute?
+
+At the moment we are keeping a small team involved in this project to avoid
+growing faster than we can handle. We want to make sure the core of our product
+works in a robust way before finding ourselves stuck with too much content to
+migrate
+
+In the future we hope to provide you with all the tools you could possible want
+to help us make this project even better
+
+---
+
+<Button
+  endDecorator={<OpenInNewIcon />}
+  component={Link}
+  href="/questions"
+  children={"Explore questions"}
+  sx={{ mx: "auto", mb: 2 }}
+/>
+
+export default ({ children }) => (
+  <ArticlePageLayout meta={meta}>{children}</ArticlePageLayout>
+);

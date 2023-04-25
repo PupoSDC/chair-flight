@@ -1,0 +1,40 @@
+import { QuestionBankLocalRepository } from "@chair-flight/question-bank";
+import type {
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+  PreviewData,
+} from "next/types";
+import type { ParsedUrlQuery } from "querystring";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
+
+export type HandleGetStaticProps<
+  Props extends Record<string, unknown>,
+  Params extends ParsedUrlQuery = ParsedUrlQuery,
+  Preview extends PreviewData = PreviewData
+> = (
+  context: GetStaticPropsContext<Params, Preview>,
+  questionBank: QuestionBankRepository
+) => Promise<GetStaticPropsResult<Props>> | GetStaticPropsResult<Props>;
+
+export const staticHandler = <
+  Props extends Record<string, unknown>,
+  Params extends ParsedUrlQuery = ParsedUrlQuery,
+  Preview extends PreviewData = PreviewData
+>(
+  handler: ({
+    context,
+    questionBank,
+  }: {
+    context: GetStaticPropsContext<Params, Preview>;
+    questionBank: QuestionBankRepository;
+  }) => Promise<GetStaticPropsResult<Props>> | GetStaticPropsResult<Props>
+): GetStaticProps<Props, Params, Preview> => {
+  const questionBank = new QuestionBankLocalRepository();
+
+  return async (context) =>
+    handler({
+      context,
+      questionBank,
+    });
+};

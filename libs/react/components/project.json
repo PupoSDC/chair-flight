@@ -1,0 +1,58 @@
+{
+  "name": "react-components",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/components/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/react/components/src/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/react/components"],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../../../coverage/libs/react/components"
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/react/components/tsconfig.lib.json --noEmit",
+          "tsc -p libs/react/components/tsconfig.spec.json --noEmit"
+        ]
+      }
+    },
+    "dev": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "port": 4250,
+        "configDir": "libs/react/components/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "apps/next-app/public/storybook",
+        "configDir": "libs/react/components/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

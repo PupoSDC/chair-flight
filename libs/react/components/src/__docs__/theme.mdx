@@ -1,0 +1,240 @@
+import CancelIcon from "@mui/icons-material/Cancel";
+import {
+  Box,
+  Button,
+  Divider,
+  Input,
+  Sheet,
+  Switch,
+  Textarea,
+  Typography,
+} from "@mui/joy";
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { Typeset } from "@storybook/blocks";
+
+<Meta title="docs/Theme Overview" />
+
+# Theme Overview
+
+We are using Joy ui.
+
+<br />
+
+To avoid getting lost doing too many custom components, the approach taken in
+this project is to configure the components via the theme. In this page you can
+enjoy a demo of components coming straight from joy UI with out custom team
+applied to them.
+
+<br />
+
+If you are contributing to this project, you should feel confortable using any
+component coming from joy ui out of the box.
+
+<br />
+
+## Buttons
+
+export const aButton = "A Button";
+
+<Box sx={{ my: 2 }}>
+  <Button sx={{ mx: 1 }} variant="solid" children="solid" />
+  <Button sx={{ mx: 1 }} variant="outlined" children="outlined" />
+  <Button sx={{ mx: 1 }} variant="plain" children="plain" />
+  <Button sx={{ mx: 1 }} disabled variant="solid" children="disabled" />
+  <Button sx={{ mx: 1 }} disabled variant="outlined" children="disabled" />
+  <Button sx={{ mx: 1 }} disabled variant="plain" children="disabled" />
+  <Button sx={{ mx: 1 }} loading variant="solid" children="loading" />
+  <Button sx={{ mx: 1 }} loading variant="outlined" children="loading" />
+  <Button sx={{ mx: 1 }} loading variant="plain" children="loading" />
+</Box>
+
+<Box sx={{ my: 2 }}>
+  <Button sx={{ mx: 1 }} color="neutral" variant="solid" children="solid" />
+  <Button
+    sx={{ mx: 1 }}
+    color="neutral"
+    variant="outlined"
+    children="outlined"
+  />
+  <Button sx={{ mx: 1 }} color="neutral" variant="plain" children="plain" />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="neutral"
+    variant="solid"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="neutral"
+    variant="outlined"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="neutral"
+    variant="plain"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="neutral"
+    variant="solid"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="neutral"
+    variant="outlined"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="neutral"
+    variant="plain"
+    children="loading"
+  />
+</Box>
+
+<Box sx={{ my: 2 }}>
+  <Button sx={{ mx: 1 }} color="danger" variant="solid" children="solid" />
+  <Button
+    sx={{ mx: 1 }}
+    color="danger"
+    variant="outlined"
+    children="outlined"
+  />
+  <Button sx={{ mx: 1 }} color="danger" variant="plain" children="plain" />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="danger"
+    variant="solid"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="danger"
+    variant="outlined"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="danger"
+    variant="plain"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="danger"
+    variant="solid"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="danger"
+    variant="outlined"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="danger"
+    variant="plain"
+    children="loading"
+  />
+</Box>
+
+<Box sx={{ my: 2 }}>
+  <Button sx={{ mx: 1 }} color="success" variant="solid" children="solid" />
+  <Button
+    sx={{ mx: 1 }}
+    color="success"
+    variant="outlined"
+    children="outlined"
+  />
+  <Button sx={{ mx: 1 }} color="success" variant="plain" children="plain" />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="success"
+    variant="solid"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="success"
+    variant="outlined"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    disabled
+    color="success"
+    variant="plain"
+    children="disabled"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="success"
+    variant="solid"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="success"
+    variant="outlined"
+    children="loading"
+  />
+  <Button
+    sx={{ mx: 1 }}
+    loading
+    color="success"
+    variant="plain"
+    children="loading"
+  />
+</Box>
+
+## Forms
+
+<Sheet variant="outlined" sx={{ p: 2, my: 2 }}>
+  <Input sx={{ my: 1 }} placeholder="Input" />
+  <Textarea sx={{ my: 1 }} minRows={5} placeholder="Text Area" />
+  <Switch sx={{ mx: 2 }} />
+  <Button sx={{ mb: 1 }} fullWidth children={"Submit"} />
+  <Button
+    sx={{ mb: 1 }}
+    fullWidth
+    variant="outlined"
+    children={"Cancel"}
+    startDecorator={<CancelIcon />}
+  />
+</Sheet>
+
+## Typography
+
+export const text = `The quick brown fox jumps over the lazy dog`;
+
+<Sheet variant="outlined" sx={{ p: 2, my: 2 }}>
+  <Typography level="h1" children={`h1: ${text}`} />
+  <Typography level="h2" children={`h2: ${text}`} />
+  <Typography level="h3" children={`h3: ${text}`} />
+  <Typography level="h4" children={`h4: ${text}`} />
+  <Typography level="h5" children={`h5: ${text}`} />
+  <Typography level="h6" children={`h6: ${text}`} />
+  <Typography level="body1" children={`body1: ${text}`} />
+  <Typography level="body2" children={`body2: ${text}`} />
+  <Typography level="body3" children={`body3: ${text}`} />
+</Sheet>

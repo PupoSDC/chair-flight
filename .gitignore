@@ -1,5 +1,3 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
 dist
 tmp
@@ -40,3 +38,10 @@ Thumbs.db
 
 # Next.js
 .next
+.env
+*.tsbuildinfo
+.vercel
+
+# Content produced by build steps
+apps/next-app/public/storybook
+apps/next-app/public/content
