@@ -28,6 +28,13 @@ export class ConfigurationError extends Error {
   }
 }
 
+export class MissingEnvVariableError extends Error {
+  constructor(envVariableName: string) {
+    super(`Missing required env variable: ${envVariableName}`);
+    this.name = MissingEnvVariableError.name;
+  }
+}
+
 export class DataError extends Error {
   constructor(message: string) {
     super(`Data Error: ${message}`);

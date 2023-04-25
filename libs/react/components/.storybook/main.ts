@@ -7,7 +7,6 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-essentials",
     "@nrwl/react/plugins/storybook",
-    "@storybook/addon-docs",
     "storybook-dark-mode",
   ],
   typescript: {

@@ -1,3 +1,4 @@
+import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
   QuestionBankLocalRepository,
@@ -37,8 +38,8 @@ export const ssrHandler = <
   }) => Promise<GetServerSidePropsResult<Props>>
 ): GetServerSideProps<Props, Params, Preview> => {
   const questionBank =
-    process.env["NODE_ENV"] !== "development" ||
-    process.env["QUESTION_BANK_PROVIDER"] === "redis"
+    getEnvVariableOrThrow("NODE_ENV") !== "development" ||
+    getEnvVariableOrThrow("QUESTION_BANK_PROVIDER") === "redis"
       ? new QuestionBankRedisRepository()
       : new QuestionBankLocalRepository();
 

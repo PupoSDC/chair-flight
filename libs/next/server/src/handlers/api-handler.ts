@@ -1,6 +1,7 @@
 import { AxiosError } from "axios";
 import { performance } from "perf_hooks";
 import { ZodError } from "zod";
+import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import {
   NotFoundError,
   UnauthorizedError,
@@ -61,13 +62,12 @@ export const apiHandler = (
 ): NextApiHandler => {
   return async (req, res) => {
     const start = performance.now();
-    process.env["performance-start"] = start.toString();
     const method = req.method?.toLowerCase();
     const callback = handlers[method as "get"];
 
     const questionBank =
-      process.env["NODE_ENV"] !== "development" ||
-      process.env["QUESTION_BANK_PROVIDER"] === "redis"
+      getEnvVariableOrThrow("NODE_ENV") !== "development" ||
+      getEnvVariableOrThrow("QUESTION_BANK_PROVIDER") === "redis"
         ? new QuestionBankRedisRepository()
         : new QuestionBankLocalRepository();
 

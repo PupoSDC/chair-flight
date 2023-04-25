@@ -1,6 +1,7 @@
 import { default as Image } from "next/image";
 import { MDXProvider } from "@mdx-js/react";
 import { Box, Divider, Typography } from "@mui/joy";
+import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { AppHead } from "@chair-flight/next/components";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import type { FunctionComponent, PropsWithChildren } from "react";
@@ -24,7 +25,9 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
         title={meta.title}
         linkTitle={meta.linkTitle}
         description={meta.description}
-        imageUrl={`${process.env["NEXT_PUBLIC_APP_URL"]}${meta.imageUrl}`}
+        imageUrl={`${getEnvVariableOrThrow("NEXT_PUBLIC_APP_URL")}${
+          meta.imageUrl
+        }`}
       />
       <Header />
       <Box
