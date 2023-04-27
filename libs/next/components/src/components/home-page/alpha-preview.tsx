@@ -1,5 +1,5 @@
-import type { FunctionComponent } from "react";
 import { Typography, Button, Link, Grid, Box } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 export const AlphaPreview: FunctionComponent = () => (
   <Box
@@ -17,7 +17,7 @@ export const AlphaPreview: FunctionComponent = () => (
     </Typography>
     <Grid
       spacing={{ xs: 2, sm: 4 }}
-      pl={{ xs: 2, sm: 4 }}
+      pl={{ xs: 4, sm: 4 }}
       container
       sx={{
         width: "100%",
