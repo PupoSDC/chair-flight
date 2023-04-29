@@ -71,7 +71,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
     if (this.allLearningObjectives.length) return this.allLearningObjectives;
     const fileName = path.join(
       cwd(),
-      "libs/question-banlibs/question-bank/content/external/tk-syllabus.xlsx"
+      "libs/question-bank/content/external/tk-syllabus.xlsx"
     );
     const questions = await this.getAllQuestionsFromLocalFs();
     const workbook = XLSX.readFile(fileName);
