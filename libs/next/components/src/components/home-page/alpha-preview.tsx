@@ -1,5 +1,5 @@
-import type { FunctionComponent } from "react";
 import { Typography, Button, Link, Grid, Box } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 export const AlphaPreview: FunctionComponent = () => (
   <Box

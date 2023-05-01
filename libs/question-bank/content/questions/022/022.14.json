@@ -1,41 +1,169 @@
 [
   {
-    "id": "Q07K5MEJIQ",
+    "id": "QDZZ027556",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.06"],
     "variants": {
-      "jwgkxPQ3": {
-        "id": "jwgkxPQ3",
+      "v1mGIFUQ": {
+        "id": "v1mGIFUQ",
         "type": "simple",
-        "question": "A computer memory can consist of..",
+        "question": "The purpose of the FD system is to...",
         "options": [
           {
-            "id": "A6AQ5AKNN5",
-            "text": "capacitors",
+            "id": "AAA6KUKZFR",
+            "text": "help the pilot to fly manually by providing optimal guidance.",
             "correct": true,
             "why": ""
           },
           {
-            "id": "AA83CST0LF",
-            "text": "voltage",
+            "id": "AQPZ6523GA",
+            "text": "frees a lot of resources.",
             "correct": false,
             "why": ""
           },
           {
-            "id": "A2A5O9WR6U",
-            "text": "diodes",
+            "id": "AGQ6RODY2G",
+            "text": "provides the flight crew with a guidance better than the manually calculated one, although it is very demanding to use.",
             "correct": false,
             "why": ""
           },
           {
-            "id": "ACRCK4DDES",
-            "text": "resistors",
+            "id": "AA881EDZ2K",
+            "text": "help the flight crew to easily manage the FMS.",
             "correct": false,
             "why": ""
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-626625", "AVEXAM-97986", "ATPLQ-222465"],
+        "externalIds": ["AVEXAM-581"],
+        "explanation": ""
+      }
+    }
+  },
+  {
+    "id": "QF9NB7Z8X8",
+    "explanation": "",
+    "learningObjectives": ["022.14.02.01.03"],
+    "variants": {
+      "YzhiSHmo": {
+        "id": "YzhiSHmo",
+        "type": "simple",
+        "question": "The parameters taken into account by the flight director computer in the altitude hold mode (ALT HOLD) are:\n\n- Altitude deviation\n\n- Engine RPM\n\n- Ground speed\n\n- Pitch attitude</li>\n</ol>\nThe combination regrouping all the correct statements is:",
+        "options": [
+          {
+            "id": "AVIC8W45UY",
+            "text": "1, 4",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "AN7KU6O0LG",
+            "text": "1 only",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AW5UCXD97K",
+            "text": "1, 3",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AMZ6AF1775",
+            "text": "1, 2",
+            "correct": false,
+            "why": ""
+          }
+        ],
+        "annexes": [],
+        "externalIds": ["AVEXAM-24606", "ATPLQ-226414"],
+        "explanation": ""
+      }
+    }
+  },
+  {
+    "id": "QUGCUQ3QAT",
+    "explanation": "",
+    "learningObjectives": ["022.14.03.03.04"],
+    "variants": {
+      "PDsHFR2b": {
+        "id": "PDsHFR2b",
+        "type": "simple",
+        "question": "What is true about the FMC databases:",
+        "options": [
+          {
+            "id": "A1O6DNC0BL",
+            "text": "The data includes SIDs, STARS and runway approaches.",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "ANEYD80ENC",
+            "text": "the data can not be customized for the specific airline operations.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AM9KS1BR9C",
+            "text": "the navigation database contains the company’s cost index strategy.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AUX26Z355V",
+            "text": "the performance database contains aeronautical information for the planned area of operations of the aircraft.",
+            "correct": false,
+            "why": ""
+          }
+        ],
+        "annexes": [],
+        "externalIds": [
+          "BGS-620495",
+          "ATPLQ-221245",
+          "AVEXAM-10747",
+          "ATPLQ-224415"
+        ],
+        "explanation": ""
+      }
+    }
+  },
+  {
+    "id": "QOFZMK34XS",
+    "explanation": "",
+    "learningObjectives": ["022.14.03.03.04"],
+    "variants": {
+      "MBNr7RaG": {
+        "id": "MBNr7RaG",
+        "type": "simple",
+        "question": "Concerning FMC databases:",
+        "options": [
+          {
+            "id": "AHGI8WSFX0",
+            "text": "the navigation database may be customized for the specific airline operations.",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "A14H2MHN8Y",
+            "text": "only the navigation database may be customized by the company's cost index strategy.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AZ9HII87CI",
+            "text": "company database and FMC databases can not be used at the same time.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "AO5LU7V4BJ",
+            "text": "only the performance database may be customized by the company.",
+            "correct": false,
+            "why": ""
+          }
+        ],
+        "annexes": [],
+        "externalIds": ["AVEXAM-28038", "ATPLQ-223071", "BGS-620494"],
         "explanation": ""
       }
     }
@@ -43,7 +171,7 @@
   {
     "id": "Q1J7HXMR0A",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "zy6UMpK1": {
         "id": "zy6UMpK1",
@@ -82,50 +210,9 @@
     }
   },
   {
-    "id": "Q24Q5HFNW7",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "BT41L8AL": {
-        "id": "BT41L8AL",
-        "type": "simple",
-        "question": "If an aircraft software failure is classified as level A, it is",
-        "options": [
-          {
-            "id": "ASK0PKYR3Z",
-            "text": "catastrophic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJWYYUYJI0",
-            "text": "hazardous",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU7H2ZJLL0",
-            "text": "major",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A69HNK7DDV",
-            "text": "minor",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120897", "AVEXAM-46963"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q2JUZ75H70",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "3HtTUHeV": {
         "id": "3HtTUHeV",
@@ -166,7 +253,7 @@
   {
     "id": "Q2PVHFKOKC",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "Pgt3VhsU": {
         "id": "Pgt3VhsU",
@@ -207,7 +294,7 @@
   {
     "id": "Q3CV93MFAX",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "Fq3Tf88S": {
         "id": "Fq3Tf88S",
@@ -248,7 +335,7 @@
   {
     "id": "Q3PVM6XPIV",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "b5eaPlQv": {
         "id": "b5eaPlQv",
@@ -289,7 +376,7 @@
   {
     "id": "Q45H2TXBE7",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.02"],
     "variants": {
       "luNiukRw": {
         "id": "luNiukRw",
@@ -328,50 +415,9 @@
     }
   },
   {
-    "id": "Q4BWI6JKWE",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "a9N1LwMb": {
-        "id": "a9N1LwMb",
-        "type": "simple",
-        "question": "Routes where the FANS-1/A concept is used",
-        "options": [
-          {
-            "id": "AI9L2N5Y2H",
-            "text": "require specific RNP capabilities.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AT7OFIBNFD",
-            "text": "are used during high traffic times only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOXAA2PHMZ",
-            "text": "are designated for FANS with sequence number.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKG1LQ9ODD",
-            "text": "are controlled by global ICAO ATC units.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106601", "AVEXAM-56165"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q4JYGSB4PY",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "nu4DyWN5": {
         "id": "nu4DyWN5",
@@ -412,7 +458,7 @@
   {
     "id": "Q4U6MQYSSZ",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "G9XYtEYn": {
         "id": "G9XYtEYn",
@@ -457,50 +503,9 @@
     }
   },
   {
-    "id": "Q4ZXBTD623",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "0jSjSXlC": {
-        "id": "0jSjSXlC",
-        "type": "simple",
-        "question": "What is the purpose of an on board ATSU",
-        "options": [
-          {
-            "id": "AJUGMWEBYH",
-            "text": "manages the data link information exchange between the. aircraft and the Air Traffic",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAMG6SZ68M",
-            "text": "Thrust management",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAML58QFPA",
-            "text": "fuel management",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9Y6TJCLVJ",
-            "text": "management of the Human Machine Interface",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-622449"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q504VNFVU7",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "IJfPWrgy": {
         "id": "IJfPWrgy",
@@ -539,50 +544,9 @@
     }
   },
   {
-    "id": "QLIQ46A55G",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "mt8NVSE4": {
-        "id": "mt8NVSE4",
-        "type": "simple",
-        "question": "Which type of communication is used in ACMS (Aeroplane Condition Monitoring System)?",
-        "options": [
-          {
-            "id": "ALM4BI5KGC",
-            "text": "By datalink without crew notification.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJEVQGMQ2J",
-            "text": "By crew voice communication reports.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6XF1KKUV4",
-            "text": "By the FDR on the ground, done by the maintenance personnel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALBK5WZ4QE",
-            "text": "By command via HF and VHF.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-79040", "ATPLQ-222488"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q5E8OP2UWY",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "JAQXF6Od": {
         "id": "JAQXF6Od",
@@ -623,7 +587,7 @@
   {
     "id": "Q5F53GAP9G",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "G3x7ohOu": {
         "id": "G3x7ohOu",
@@ -664,7 +628,7 @@
   {
     "id": "Q5UEGF5UF1",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "MngbM22n": {
         "id": "MngbM22n",
@@ -711,7 +675,7 @@
   {
     "id": "Q5XJ7JZDXH",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "Mht4mBlg": {
         "id": "Mht4mBlg",
@@ -750,55 +714,9 @@
     }
   },
   {
-    "id": "Q697Y4AB8V",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "IimbdcvD": {
-        "id": "IimbdcvD",
-        "type": "simple",
-        "question": "Except for airplanes under 5.7 t airworthiness certificate of which is subsequent to 31 march 1998, a flight data recording system must be able to store the recorded data for a minimum of the last",
-        "options": [
-          {
-            "id": "A6I0ND4MSK",
-            "text": "25 hours.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2V90DVCS3",
-            "text": "10 hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHCZYQITHP",
-            "text": "60 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARCQI6IHQ2",
-            "text": "30 minutes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106793",
-          "AVEXAM-6957",
-          "BGS-993008",
-          "BGS-221081"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q6P88EJSKV",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.02"],
     "variants": {
       "xpYigNiB": {
         "id": "xpYigNiB",
@@ -839,7 +757,7 @@
   {
     "id": "Q6Q96PR5OU",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "kN15fBIW": {
         "id": "kN15fBIW",
@@ -880,7 +798,7 @@
   {
     "id": "Q6T1AHYEYW",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "EOOyVOui": {
         "id": "EOOyVOui",
@@ -921,7 +839,7 @@
   {
     "id": "Q73E14MGFI",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "jLPOK2lX": {
         "id": "jLPOK2lX",
@@ -962,7 +880,7 @@
   {
     "id": "Q77XAKZWQB",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "nBKdSueX": {
         "id": "nBKdSueX",
@@ -1003,7 +921,7 @@
   {
     "id": "Q7A29M9OPL",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "rtukFJUD": {
         "id": "rtukFJUD",
@@ -1044,7 +962,7 @@
   {
     "id": "Q7NRDL50TV",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.02"],
     "variants": {
       "3AJGK88N": {
         "id": "3AJGK88N",
@@ -1085,7 +1003,7 @@
   {
     "id": "Q84ALPHCBP",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "dftvWGw1": {
         "id": "dftvWGw1",
@@ -1126,7 +1044,7 @@
   {
     "id": "Q8GHVVG6Q8",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "6UVhTmqw": {
         "id": "6UVhTmqw",
@@ -1173,7 +1091,7 @@
   {
     "id": "Q8HB6BREBO",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.02"],
     "variants": {
       "vjZZjs9g": {
         "id": "vjZZjs9g",
@@ -1248,7 +1166,7 @@
   {
     "id": "Q8MHQJM7N0",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "4zgin9Rt": {
         "id": "4zgin9Rt",
@@ -1287,91 +1205,9 @@
     }
   },
   {
-    "id": "Q94V1G6N3J",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "rhQJjCV9": {
-        "id": "rhQJjCV9",
-        "type": "simple",
-        "question": "Without any external action, the axis of a free gyroscope is fixed with reference to",
-        "options": [
-          {
-            "id": "AHQFQB7E8V",
-            "text": "space.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1SRUWAR63",
-            "text": "the aircraft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEXBE8P6HC",
-            "text": "the earth.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AS4U3QZWKM",
-            "text": "the apparent vertical.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106317", "BGS-220291"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q95X2O7EHN",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "a4EeidKr": {
-        "id": "a4EeidKr",
-        "type": "simple",
-        "question": "Flight recorder duration must be such that flight data, cockpit voice and sound warnings may respectively be recorded during at least",
-        "options": [
-          {
-            "id": "A2GU2842YB",
-            "text": "25 hours for flight data, 30 minutes for cockpit voices and warnings horns.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAFS9VFE6V",
-            "text": "48 hours for flight data, 60 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYF6Y1Z4TZ",
-            "text": "20 hours for flight data, 15 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQRNUL0D58",
-            "text": "24 hours for flight data, 60 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106790", "BGS-993007", "AVEXAM-44394"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q9A8UUOXN5",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.03"],
     "variants": {
       "77HYZQRD": {
         "id": "77HYZQRD",
@@ -1410,84 +1246,9 @@
     }
   },
   {
-    "id": "Q9ET2TTLM4",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "ra65VOPH": {
-        "id": "ra65VOPH",
-        "type": "simple",
-        "question": "The flight data recorder must automatically stop data recording when the:",
-        "options": [
-          {
-            "id": "AZOGJZZVSZ",
-            "text": "Airplane cannot any longer move by its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AD7SKQPLAC",
-            "text": "Landing gear is extended and locked.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKKMW9UY3S",
-            "text": "Airplane clears the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AC689WZZY8",
-            "text": "Main gear shock strut compresses when touching &nbsp;the runway.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221079", "ATPLGS-106795", "ATPLQ-227371"],
-        "explanation": ""
-      },
-      "0aG2ICvP": {
-        "id": "0aG2ICvP",
-        "type": "simple",
-        "question": "The flight data recorder must automatically stop data recording when the:",
-        "options": [
-          {
-            "id": "AB4MLEOC7Y",
-            "text": "Aeroplane cannot any longer move by its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AATUQFE0VL",
-            "text": "Main gear shock strut compresses when touching &nbsp;the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMDPN3EYMA",
-            "text": "Aeroplane clears the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARW84DSKBO",
-            "text": "Landing gear is extended and locked.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-993010", "ATPLQ-227371"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q9LTN29V31",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "gCYJbMul": {
         "id": "gCYJbMul",
@@ -1528,7 +1289,7 @@
   {
     "id": "Q9XO0U4BYE",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "xuMbsziQ": {
         "id": "xuMbsziQ",
@@ -1567,105 +1328,9 @@
     }
   },
   {
-    "id": "QA34MKD6V1",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "7yEaiwK3": {
-        "id": "7yEaiwK3",
-        "type": "simple",
-        "question": "In computing, which of these statements about multitasking are correct or incorrect?\n\n1. Multitasking gives the appearance of running several programs simultaneously.2. The central processing unit (CPU) switches rapidly between each programme in turn.",
-        "options": [
-          {
-            "id": "A9X55YMCX1",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQEU58NSKI",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AODYW6SSU8",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A04F7QA4S0",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-225397",
-          "BGS-221945",
-          "BGS-222165",
-          "BGS-222240",
-          "BGS-222241",
-          "ATPLGS-106810",
-          "ATPLGS-106820",
-          "ATPLGS-106799"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QAAW3OYAI7",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "kNZiHlh5": {
-        "id": "kNZiHlh5",
-        "type": "simple",
-        "question": "The flight data recorder must automatically stop data recording when the",
-        "options": [
-          {
-            "id": "AT3R91U6DB",
-            "text": "airplane cannot any longer move by its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8B3QMX6Y7",
-            "text": "airplane clears the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2BA3Y2752",
-            "text": "main gear shock strut compresses when touching the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2A9XV2NAD",
-            "text": "landing gear is extended and locked.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106795",
-          "BGS-221079",
-          "ATPLQ-227371",
-          "BGS-993010"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QAST0JX6ZQ",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "xsgw32Ww": {
         "id": "xsgw32Ww",
@@ -1706,7 +1371,7 @@
   {
     "id": "QAVOVKA0NP",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "rVeupT0C": {
         "id": "rVeupT0C",
@@ -1747,7 +1412,7 @@
   {
     "id": "QUZKGM1437",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "PbmtMdbo": {
         "id": "PbmtMdbo",
@@ -1827,7 +1492,7 @@
   {
     "id": "QCIEP6X7DP",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.02"],
     "variants": {
       "RCS9OFiE": {
         "id": "RCS9OFiE",
@@ -1902,7 +1567,7 @@
   {
     "id": "QCSNSQXJ1Z",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "OvfotrfO": {
         "id": "OvfotrfO",
@@ -1943,7 +1608,7 @@
   {
     "id": "QD8V3H8QQ9",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "SNTksSvn": {
         "id": "SNTksSvn",
@@ -2018,7 +1683,7 @@
   {
     "id": "QD9TAB6TRO",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "fuSE2K7D": {
         "id": "fuSE2K7D",
@@ -2059,7 +1724,7 @@
   {
     "id": "QDA9E5YNA8",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.04"],
     "variants": {
       "vcImXMHH": {
         "id": "vcImXMHH",
@@ -2139,7 +1804,7 @@
   {
     "id": "QE7BDVDV9R",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.02"],
     "variants": {
       "1mUGkX2A": {
         "id": "1mUGkX2A",
@@ -2180,7 +1845,7 @@
   {
     "id": "QE96YE8DNG",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "zOWuyJdP": {
         "id": "zOWuyJdP",
@@ -2221,7 +1886,7 @@
   {
     "id": "QECUP8BDGJ",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "uX4d8JJa": {
         "id": "uX4d8JJa",
@@ -2262,7 +1927,7 @@
   {
     "id": "QEDFZMHKJW",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "kGaH2lYq": {
         "id": "kGaH2lYq",
@@ -2301,50 +1966,9 @@
     }
   },
   {
-    "id": "QEPLY1KI0R",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "hPl54oAP": {
-        "id": "hPl54oAP",
-        "type": "simple",
-        "question": "What must all transport aircraft over 5 700 kg MTOM carry?",
-        "options": [
-          {
-            "id": "AX7BEBA2O8",
-            "text": "An entirely independent cockpit voice recorder and flight data recorder.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC2T1AKDYA",
-            "text": "A combined voice, flight data and maintenance data recorder.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASX8G2LOTI",
-            "text": "A cockpit voice recorder combined with a flight data recorder.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATPS6C7B1U",
-            "text": "A maintenance data recorder and a cockpit voice recorder.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228253", "BGS-990648"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QFKSF355PL",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "qg1nGg0V": {
         "id": "qg1nGg0V",
@@ -2385,7 +2009,7 @@
   {
     "id": "QFVA7RG795",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "vteGEjR8": {
         "id": "vteGEjR8",
@@ -2426,7 +2050,7 @@
   {
     "id": "QGWZROPNUW",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "hppooknk": {
         "id": "hppooknk",
@@ -2465,50 +2089,9 @@
     }
   },
   {
-    "id": "QHR8O5YALB",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "pGuJJRoY": {
-        "id": "pGuJJRoY",
-        "type": "simple",
-        "question": "The FANS concept makes use of",
-        "options": [
-          {
-            "id": "AF5JGG9TBL",
-            "text": "satellite communication and satellite navigation.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9WTS72HGS",
-            "text": "voice communication for air navigation system position updating.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV4NWX4YRU",
-            "text": "conventional communication only and satellite navigation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKDWGVPWT5",
-            "text": "VOR-DME position updating for air navigation.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-113414", "ATPLQ-222001"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QHTRFAI46I",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "sMllEDS2": {
         "id": "sMllEDS2",
@@ -2549,7 +2132,7 @@
   {
     "id": "QHU6XC4O5B",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "xwZozucy": {
         "id": "xwZozucy",
@@ -2593,50 +2176,9 @@
     }
   },
   {
-    "id": "QHW3HR8TS7",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "3v3bhDnu": {
-        "id": "3v3bhDnu",
-        "type": "simple",
-        "question": "An aircraft dispatched with an unserviceable DFDR may complete ___ consecutive flights before the DFDR is repaired.",
-        "options": [
-          {
-            "id": "A20481UXFI",
-            "text": "8",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWKMLCDJ0J",
-            "text": "5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A09OUSPU5P",
-            "text": "3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A57OAZY4PI",
-            "text": "0",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-223166", "BGS-990649"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QISHUH7SSN",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.02"],
     "variants": {
       "7Kz5LXF6": {
         "id": "7Kz5LXF6",
@@ -2680,132 +2222,9 @@
     }
   },
   {
-    "id": "QIXVFHJKZG",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "VulzKZbH": {
-        "id": "VulzKZbH",
-        "type": "simple",
-        "question": "In accordance with (ICAO) Annex 6 part I, the flight data recorder is to be located in the aircraft :",
-        "options": [
-          {
-            "id": "AYT6D4V6QH",
-            "text": "As far to the rear as practicable",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A12ZW2OME8",
-            "text": "As near to the landing gear as practicable",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AANMOIIOY2",
-            "text": "As far forward as practicable",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF7788V8M8",
-            "text": "At the right or left wing tip",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221078", "AVEXAM-95493"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJ9CWXQHAT",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "8i8C8ITm": {
-        "id": "8i8C8ITm",
-        "type": "simple",
-        "question": "FANS was developed by ICAO",
-        "options": [
-          {
-            "id": "A7AR5SI11I",
-            "text": "to allow more aircraft to safely and efficiently utilise a given volume of airspace.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7PHTC2P0A",
-            "text": "to provide a more efficient, safe, and cost-effective system for communication.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5DR9RVXXH",
-            "text": "in order to automate and distribute departure slots.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A10I935IO7",
-            "text": "to effectively monitor aircraft systems` status information and fuel consumption.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-127556", "AVEXAM-4159"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJIMKO0RDQ",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "9jIlQHfc": {
-        "id": "9jIlQHfc",
-        "type": "simple",
-        "question": "Cockpit voice recordings may not be used for any other purpose other than accident or incident investigation:\n&nbsp;",
-        "options": [
-          {
-            "id": "AJA97CRUPH",
-            "text": "Without the consent of all crewmembers",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZBYQWF560",
-            "text": "Without the consent of the aircraft Captain",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ4OY3P7T3",
-            "text": "Except for maintenance analysis",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASN1ABTNHT",
-            "text": "Without the consent of the next of kin of all deceased crew",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-990650", "ATPLQ-223976"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QJPEJZVGEX",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "le6xV1op": {
         "id": "le6xV1op",
@@ -2880,7 +2299,7 @@
   {
     "id": "QSJ6DKL5B5",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "pbuwG1ib": {
         "id": "pbuwG1ib",
@@ -2919,166 +2338,9 @@
     }
   },
   {
-    "id": "QLIBNJQ2N8",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "XE0zu0f0": {
-        "id": "XE0zu0f0",
-        "type": "simple",
-        "question": "All transport aircraft over 5,700kg MTOM, must carry:\n&nbsp;",
-        "options": [
-          {
-            "id": "ACRTZ4ATBQ",
-            "text": "An entirely independent cockpit voice recorder and flight data recorder",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVOECTCSD7",
-            "text": "A cockpit voice recorder combined with a flight data recorder",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQFDM1EZ37",
-            "text": "A combined voice, flight data and maintenance data recorder",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3390OHXK0",
-            "text": "A maintenance data recorder and a cockpit voice recorder",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-990648", "ATPLQ-228253"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLVKQLH7Y2",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "5JwZg7ag": {
-        "id": "5JwZg7ag",
-        "type": "simple",
-        "question": "Except for airplanes under 5,7t airworthiness certificate of which is subsequent to 31 march 1998, a flight data recording system must be able to store the recorded data for a minimum of the last :",
-        "options": [
-          {
-            "id": "ARZ11V5DBF",
-            "text": "25 hours.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACHGHCBYP6",
-            "text": "60 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7QO1DC6YA",
-            "text": "10 hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUIMN96UKZ",
-            "text": "30 minutes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221081", "AVEXAM-6957", "ATPLGS-106793"],
-        "explanation": ""
-      },
-      "0LFDjLJq": {
-        "id": "0LFDjLJq",
-        "type": "simple",
-        "question": "Except for airplanes under 5.7 t airworthiness certificate of which is subsequent to 31 March 1998, a flight data recording system must be able to store the recorded data for a minimum of the last :",
-        "options": [
-          {
-            "id": "AONFVZ3EAB",
-            "text": "25 hours.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACGQXGKYII",
-            "text": "10 hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVKWQTPMBS",
-            "text": "30 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX5V9NQXKF",
-            "text": "60 minutes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-993008", "AVEXAM-6957", "ATPLGS-106793"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLZWQPJLUQ",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "GpXXr8d5": {
-        "id": "GpXXr8d5",
-        "type": "simple",
-        "question": "Which of these statements about the random access memory (RAM) are correct or incorrect?\n\n1. Data stored are lost after the power is switched off.2. It can be read and written to anytime the processor commands it.",
-        "options": [
-          {
-            "id": "AXHO6TLB0Y",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARY2I2NFPW",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARCRI9KNRD",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH97KMURZS",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-229094", "BGS-221975"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QMM8FKYKLW",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.02"],
     "variants": {
       "AtTeq8NA": {
         "id": "AtTeq8NA",
@@ -3119,7 +2381,7 @@
   {
     "id": "QMTLQA1H1D",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "jA5CxGet": {
         "id": "jA5CxGet",
@@ -3158,137 +2420,9 @@
     }
   },
   {
-    "id": "QN9GLZ83WB",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "jmvJoaG2": {
-        "id": "jmvJoaG2",
-        "type": "simple",
-        "question": "What is the main purpose of the flight data monitoring?",
-        "options": [
-          {
-            "id": "AR1D8WYPBM",
-            "text": "To record systems status and flight conditions and automatically send reports to the company for investigation and training.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJADZJMCG3",
-            "text": "To record systems status and flight conditions and issue alerts and/or warnings to flight crew as soon as predetermined thresholds have been reached.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATW3SJLYB7",
-            "text": "To record systems status and flight conditions in order to generate automatic checklists both normal and abnormal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOE4DDRLEQ",
-            "text": "To record systems status and flight conditions and automatically send reports to the authority.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228478", "AVEXAM-10722"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNDGY9Z985",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "tWTqvgi1": {
-        "id": "tWTqvgi1",
-        "type": "simple",
-        "question": "The ADS is a FANS application performed",
-        "options": [
-          {
-            "id": "AY7TEAX5RE",
-            "text": "automatically, without any crew action to define the set of data to downlink or the type of report contract.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASECYC6O8Y",
-            "text": "semi automatically, the pilot has to define the set of data to downlink but cannot define the type of report contract.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APX9PBO7NM",
-            "text": "manually, the pilot has to define the set of data to downlink and the type of report contract.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJDC5WJ2XF",
-            "text": "semi automatically, the pilot cannot define the set of data to downlink but can define the type of report contract.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106604", "AVEXAM-53632"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNL9JY2Z0N",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "0lzfqPCt": {
-        "id": "0lzfqPCt",
-        "type": "simple",
-        "question": "Except for airplanes under 5.7 t airworthiness certificate of which is subsequent to 31 march **1998**, a flight data recording system must be able to store the recorded data for a minimum of the last:",
-        "options": [
-          {
-            "id": "A2PNE07Q04",
-            "text": "25 hours.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGJDRN7W70",
-            "text": "10 hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A27U5C6JF5",
-            "text": "60 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASFFCZXNPO",
-            "text": "30 minutes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-6957",
-          "BGS-993008",
-          "BGS-221081",
-          "ATPLGS-106793"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QNNU0DV9GL",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "X4H9Iwh3": {
         "id": "X4H9Iwh3",
@@ -3333,91 +2467,9 @@
     }
   },
   {
-    "id": "QOZ48EXGDP",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "i0pncREk": {
-        "id": "i0pncREk",
-        "type": "simple",
-        "question": "What is the main purpose of the flight monitoring system?",
-        "options": [
-          {
-            "id": "AL2UXK8QX9",
-            "text": "Record systems status and flight conditions and automatically send reports to the company for investigation and training.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AD4ZQRAZ8E",
-            "text": "Record systems status and flight conditions in order to generated automatic checklists both normal and abnormal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL7FEMN1M9",
-            "text": "Record systems status and flight conditions and automatically send reports to the authority.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJRP94T300",
-            "text": "Record systems status and flight conditions and issue alerts and/or warnings to flight crew as soon as predetermined thresholds have been reached.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-10722", "ATPLQ-228478"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPD0B2OEK7",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "XdTK7Ypc": {
-        "id": "XdTK7Ypc",
-        "type": "simple",
-        "question": "Redundancy in systems is",
-        "options": [
-          {
-            "id": "AETKGSC80Q",
-            "text": "the duplication, triplication, or more of critical systems.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AO2Q4A6IVN",
-            "text": "connecting components in series to improve performance.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE6MZA6KG8",
-            "text": "the situation in which a catastrophic failure is caused by a single failure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A76MVFCP70",
-            "text": "two systems working together in tandem to ensure accuracy.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225591"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QPXDXW75B7",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "Dsc7WC1A": {
         "id": "Dsc7WC1A",
@@ -3458,7 +2510,7 @@
   {
     "id": "QQHLYNI0ZU",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "Kfq8B1l6": {
         "id": "Kfq8B1l6",
@@ -3497,91 +2549,9 @@
     }
   },
   {
-    "id": "QQUO6QIWRZ",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "ukM1tPqN": {
-        "id": "ukM1tPqN",
-        "type": "simple",
-        "question": "Cockpit voice recordings are not to be used for any other purpose other than accident or incident investigation:",
-        "options": [
-          {
-            "id": "ANW3H0PT2P",
-            "text": "Without the consent of all crewmembers.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ3WN9QPW0",
-            "text": "Without the consent of the next of kin of all deceased crew.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATNMXC05TI",
-            "text": "Without the consent of the aircraft Captain.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOVVS0MCWG",
-            "text": "Except for maintenance analysis.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-223976", "BGS-990650"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQYN7PHX5J",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "laEUnQP6": {
-        "id": "laEUnQP6",
-        "type": "simple",
-        "question": "The software used to run the ATSU application (ATC &amp; AOC)",
-        "options": [
-          {
-            "id": "AW8TTSTDP2",
-            "text": "Is certified according to an equipment certification standard(ED12b,D0178B)",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AA56B5C7KK",
-            "text": "is only approved and tested by the manufacturer",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIXVBIM2D1",
-            "text": "Only approved by the company",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV91T543SP",
-            "text": "Certified according to CS25",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-622646"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QR6KI0IM2R",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "hw3zZYJW": {
         "id": "hw3zZYJW",
@@ -3620,96 +2590,9 @@
     }
   },
   {
-    "id": "QRE41HWH6N",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "O95NT9YV": {
-        "id": "O95NT9YV",
-        "type": "simple",
-        "question": "When must the flight data recorder automatically stop data recording?",
-        "options": [
-          {
-            "id": "ADC02YM6M7",
-            "text": "When the aeroplane cannot any longer move by its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZTH0QG1A8",
-            "text": "When the main gear shock strut compresses when touching the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABJK7NPB0A",
-            "text": "When the aeroplane clears the runway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXSPTQEPUK",
-            "text": "When the landing gear is extended and locked.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-227371",
-          "BGS-221079",
-          "ATPLGS-106795",
-          "BGS-993010"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRJ0LVDNUT",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "yfwbI1jT": {
-        "id": "yfwbI1jT",
-        "type": "simple",
-        "question": "When an automatic landing is interrupted by a go-around\n1) The auto throttle reacts immediately upon the pilot action on the TO/GA (Take-off/Go-Around) switch in order to recover the maximum thrust.\n2) The autopilot monitors the climb and the rotation of the airplane.\n3) The autopilot retracts the landing gear and reduces the flap deflection in order to reduce the drag.\n4) The pilot performs the climb and the rotation of the airplane.\n5) The pilot retracts the landing Gear",
-        "options": [
-          {
-            "id": "AQV09NAJYJ",
-            "text": "1, 2, 5",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8BLWK4NYV",
-            "text": "1, 4, 5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALTHWIVFL1",
-            "text": "1, 2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOZGOWXFR7",
-            "text": "1, 3, 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106533", "AVEXAM-32044", "AVEXAM-98642"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QRSB8V4M35",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "iU5MFZYq": {
         "id": "iU5MFZYq",
@@ -3750,7 +2633,7 @@
   {
     "id": "QTF6M19HG8",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "IN27i0OR": {
         "id": "IN27i0OR",
@@ -3796,7 +2679,7 @@
   {
     "id": "QTFZQTND8K",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "lTRtzXyn": {
         "id": "lTRtzXyn",
@@ -3837,7 +2720,7 @@
   {
     "id": "QTG808QJ8E",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "bZhCN7ST": {
         "id": "bZhCN7ST",
@@ -3878,7 +2761,7 @@
   {
     "id": "QTIZVQ5372",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "qjKeMBvv": {
         "id": "qjKeMBvv",
@@ -3919,7 +2802,7 @@
   {
     "id": "QU0893DDI0",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.02"],
     "variants": {
       "6VA1wqyk": {
         "id": "6VA1wqyk",
@@ -3960,7 +2843,7 @@
   {
     "id": "QU82WCL7M2",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.06"],
     "variants": {
       "dUceFblb": {
         "id": "dUceFblb",
@@ -4001,7 +2884,7 @@
   {
     "id": "QUBE1X2D38",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "Lj3EluKm": {
         "id": "Lj3EluKm",
@@ -4042,7 +2925,7 @@
   {
     "id": "QUJVKZCX9J",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "p80GK4wY": {
         "id": "p80GK4wY",
@@ -4083,7 +2966,7 @@
   {
     "id": "QUTG0M65R6",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.03.03.02"],
     "variants": {
       "vdrsNxbi": {
         "id": "vdrsNxbi",
@@ -4124,7 +3007,7 @@
   {
     "id": "QW2Z1BFVMN",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.01.01.03"],
     "variants": {
       "m7ntnQRs": {
         "id": "m7ntnQRs",
@@ -4170,7 +3053,7 @@
   {
     "id": "QXURZR4I0I",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "iP2B5ihD": {
         "id": "iP2B5ihD",
@@ -4215,50 +3098,9 @@
     }
   },
   {
-    "id": "QY1GJP9KXU",
-    "explanation": "",
-    "learningObjectives": ["022.14"],
-    "variants": {
-      "z5fXY1q3": {
-        "id": "z5fXY1q3",
-        "type": "simple",
-        "question": "If the Radio Altimeter fails during an autoland approach",
-        "options": [
-          {
-            "id": "ALP3MRMC9F",
-            "text": "the RA stops showing the height.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABINSIN0QS",
-            "text": "an audio alert sounds.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH1BWPX1YJ",
-            "text": "the DH flashes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADS8EI5ZSM",
-            "text": "the DH flashes and an audio alert sounds.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106555"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QYANR1D3NJ",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.02"],
     "variants": {
       "kNUuYKJK": {
         "id": "kNUuYKJK",
@@ -4367,7 +3209,7 @@
   {
     "id": "QZ5FALEMKY",
     "explanation": "",
-    "learningObjectives": ["022.14"],
+    "learningObjectives": ["022.14.02.01.03"],
     "variants": {
       "RgCCZaF2": {
         "id": "RgCCZaF2",
