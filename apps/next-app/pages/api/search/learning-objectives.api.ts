@@ -1,18 +1,15 @@
 import {
-  makeSearchLearningObjectives,
+  searchLearningObjectives,
   searchQueryValidation,
 } from "@chair-flight/core/app";
 import { apiHandler } from "@chair-flight/next/server";
-import type { SearchLearningObjectives } from "@chair-flight/core/app";
-
-let search: SearchLearningObjectives;
 
 export default apiHandler(
   {
     get: async ({ req, questionBank }) => {
-      search ??= await makeSearchLearningObjectives(questionBank);
       const inputs = searchQueryValidation.parse(req.query);
-      return search(inputs);
+      const results = await searchLearningObjectives(questionBank, inputs);
+      return results;
     },
   },
   {

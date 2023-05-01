@@ -132,22 +132,20 @@ export const applyBestMatchingLoToAllQuestions = async ({
   const filteredTemplates = allTemplates.filter(
     (template) =>
       template.learningObjectives.length === 1 &&
-      template.learningObjectives[0].startsWith("022.07")
+      template.learningObjectives[0] === "010.01"
   );
 
   for (let i = 0; i < filteredTemplates.length; i++) {
     const template = filteredTemplates[i];
-    console.log(`processing ${i} / ${allTemplates.length}`);
+    console.log(`processing ${i} / ${filteredTemplates.length}`);
     const templateEmbedding = await redis.get<RedisEmbedding>(
       `question-template-embeddings-${template.id}`
     );
     if (!templateEmbedding) continue;
 
-    const relevantLos = loEmbeddings
-      .filter((lo) =>
-        lo.id.startsWith(template.learningObjectives[0].split(".")[0])
-      )
-      .filter((lo) => !lo.id.startsWith("022.07"));
+    const relevantLos = loEmbeddings.filter((lo) =>
+      lo.id.startsWith(template.learningObjectives[0].split(".")[0])
+    );
 
     const result = relevantLos
       .map((lo) => ({

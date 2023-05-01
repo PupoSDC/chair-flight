@@ -56,6 +56,12 @@ const handleError = (res: NextApiResponse, error: unknown) => {
   return res.status(500).send("Unexpected Error");
 };
 
+const questionBank =
+  getEnvVariableOrThrow("NODE_ENV") !== "development" ||
+  getEnvVariableOrThrow("QUESTION_BANK_PROVIDER") === "redis"
+    ? new QuestionBankRedisRepository()
+    : new QuestionBankLocalRepository();
+
 export const apiHandler = (
   handlers: Handlers,
   options: HandlerOptions
@@ -64,12 +70,6 @@ export const apiHandler = (
     const start = performance.now();
     const method = req.method?.toLowerCase();
     const callback = handlers[method as "get"];
-
-    const questionBank =
-      getEnvVariableOrThrow("NODE_ENV") !== "development" ||
-      getEnvVariableOrThrow("QUESTION_BANK_PROVIDER") === "redis"
-        ? new QuestionBankRedisRepository()
-        : new QuestionBankLocalRepository();
 
     // const getFirebaseAdmin = async () => {
     //   if (!firebaseAdmin) {

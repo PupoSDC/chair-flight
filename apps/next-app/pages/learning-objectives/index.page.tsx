@@ -119,14 +119,19 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                           }}
                         />
                       ))}
-                      <th style={{ width: "12em", fontSize: 10 }}>Source</th>
+                      <th style={{ width: "7em", fontSize: 10 }}>Questions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {results.map((result) => (
                       <tr key={result.id}>
-                        <td>{result.contentId}</td>
-                        <td>{result.text}</td>
+                        <td>
+                          <Typography>{result.contentId}</Typography>
+                        </td>
+                        <td>
+                          <Typography>{result.text}</Typography>
+                          <Typography level="body3">{result.source}</Typography>
+                        </td>
                         {Object.keys(CourseNames).map((courseName) => (
                           <td key={courseName} className="course-name">
                             {result.courses.includes(
@@ -134,7 +139,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                             ) && <CheckIcon />}
                           </td>
                         ))}
-                        <td>{result.source}</td>
+                        <td>{result.questions.length}</td>
                       </tr>
                     ))}
                   </tbody>

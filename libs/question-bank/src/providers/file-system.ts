@@ -123,6 +123,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
       });
     });
 
+    this.allLearningObjectives = learningObjectives;
     return learningObjectives;
   }
 
