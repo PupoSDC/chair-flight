@@ -83,17 +83,24 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
           string,
           string
         >[];
-        return sheet.map<LearningObjective>((row) => ({
-          courses: Object.keys(CourseNames)
-            .filter((item) => row[item])
-            .map((k) => CourseNames[k]),
-          questions: [],
-          text: row["2020 syllabus text"],
-          contentId: row["2020 syllabus reference"]?.replaceAll(".00", ""),
-          // some sources are just 0 (?)... ignore those!
-          source: row["Source / Comment"] || "",
-          id: row["2020 syllabus reference"]?.replaceAll(".00", ""),
-        }));
+        return sheet.map<LearningObjective>((row) => {
+          const text =
+            row["2020 syllabus text"]
+              ?.replaceAll(":", ":\n- ")
+              ?.replaceAll(";", ";\n- ") ?? "";
+
+          return {
+            courses: Object.keys(CourseNames)
+              .filter((item) => row[item])
+              .map((k) => CourseNames[k]),
+            questions: [],
+            text,
+            contentId: row["2020 syllabus reference"]?.replaceAll(".00", ""),
+            // some sources are just 0 (?)... ignore those!
+            source: row["Source / Comment"] || "",
+            id: row["2020 syllabus reference"]?.replaceAll(".00", ""),
+          };
+        });
       })
       .reduce<Record<LearningObjectiveId, LearningObjective>>((s, k) => {
         if (!k.contentId) return s;

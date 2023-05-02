@@ -11,6 +11,7 @@ import {
   Sheet,
   Table,
   Typography,
+  styled,
   useTheme,
 } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
@@ -21,10 +22,23 @@ import {
   AppLayout,
   CtaSearch,
   useMediaQuery,
+  MarkdownClient,
 } from "@chair-flight/react/components";
 import type { GetStaticProps, NextPage } from "next";
 import type { CourseName, LearningObjective } from "@chair-flight/base/types";
 import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
+
+const TdWithMarkdown = styled("td")`
+  margin: ${({ theme }) => theme.spacing(0.5, 0)};
+
+  & p {
+    margin: 0;
+  }
+
+  & ul {
+    margin: 0;
+  }
+`;
 
 export const LearningObjectivesIndexPage: NextPage = () => {
   const lastSearch = useRef("");
@@ -128,10 +142,10 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                         <td>
                           <Typography>{result.contentId}</Typography>
                         </td>
-                        <td>
-                          <Typography>{result.text}</Typography>
+                        <TdWithMarkdown>
+                          <MarkdownClient>{result.text}</MarkdownClient>
                           <Typography level="body3">{result.source}</Typography>
-                        </td>
+                        </TdWithMarkdown>
                         {Object.keys(CourseNames).map((courseName) => (
                           <td key={courseName} className="course-name">
                             {result.courses.includes(
