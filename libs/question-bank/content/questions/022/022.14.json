@@ -41,47 +41,6 @@
     }
   },
   {
-    "id": "QF9NB7Z8X8",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.03"],
-    "variants": {
-      "YzhiSHmo": {
-        "id": "YzhiSHmo",
-        "type": "simple",
-        "question": "The parameters taken into account by the flight director computer in the altitude hold mode (ALT HOLD) are:\n\n- Altitude deviation\n\n- Engine RPM\n\n- Ground speed\n\n- Pitch attitude</li>\n</ol>\nThe combination regrouping all the correct statements is:",
-        "options": [
-          {
-            "id": "AVIC8W45UY",
-            "text": "1, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AN7KU6O0LG",
-            "text": "1 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW5UCXD97K",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMZ6AF1775",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-24606", "ATPLQ-226414"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QUGCUQ3QAT",
     "explanation": "",
     "learningObjectives": ["022.14.03.03.04"],
@@ -450,7 +409,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-221082", "ATPLGS-106788"],
+        "externalIds": ["BGS-221082", "ATPLGS-106788", "AVEXAM-40908"],
         "explanation": ""
       }
     }
@@ -714,47 +673,6 @@
     }
   },
   {
-    "id": "Q6P88EJSKV",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.02"],
-    "variants": {
-      "xpYigNiB": {
-        "id": "xpYigNiB",
-        "type": "simple",
-        "question": "A CVR consists of..",
-        "options": [
-          {
-            "id": "ARYG30048M",
-            "text": "a tape recorder, Underwater Locating Device, area microphone, and control unit.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYWFHI35C9",
-            "text": "an Underwater Locating Device, illuminating light, speakers, tape recorder, and control unit.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACG7Z9MIKO",
-            "text": "a Digital Flight Data Acquisition Unit, area microphone, erase button, and tape recorder.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASNXPVE8N6",
-            "text": "an Event Mark Device, Emergency Locator Transmitter, test button, and erase button.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-223393", "ATPLGS-120908", "BGS-222320"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q6Q96PR5OU",
     "explanation": "",
     "learningObjectives": ["022.14.02.01.02"],
@@ -790,7 +708,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220822", "ATPLQ-224804"],
+        "externalIds": [
+          "BGS-220822",
+          "ATPLQ-224804",
+          "AVEXAM-91850",
+          "ATPLGS-106796"
+        ],
         "explanation": ""
       }
     }
@@ -1082,7 +1005,8 @@
           "ATPLQ-223048",
           "ATPLGS-120348",
           "AVEXAM-86624",
-          "ATPLQ-227005"
+          "ATPLQ-227005",
+          "ATPLGS-627238"
         ],
         "explanation": ""
       }
@@ -1281,48 +1205,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-31507", "ATPLGS-106786"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q9XO0U4BYE",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "xuMbsziQ": {
-        "id": "xuMbsziQ",
-        "type": "simple",
-        "question": "The Flight Data Recorder makes use of...",
-        "options": [
-          {
-            "id": "ARWLM7XZMQ",
-            "text": "a recording system, an event button, and an underwater locating device.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJGOMU68ZR",
-            "text": "an underwater locating device, an erase button, and a headset jack.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYA8BQHFXU",
-            "text": "an erase button, a recording system, and an area microphone.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUXXYCPJRO",
-            "text": "an area microphone, a headset jack and an event button.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "AVEXAM-31507",
+          "ATPLGS-106786",
+          "BGS-993012",
+          "BGS-221086"
         ],
-        "annexes": [],
-        "externalIds": ["BGS-222309", "ATPLGS-120910", "ATPLQ-222608"],
         "explanation": ""
       }
     }
@@ -1369,127 +1257,6 @@
     }
   },
   {
-    "id": "QAVOVKA0NP",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "rVeupT0C": {
-        "id": "rVeupT0C",
-        "type": "simple",
-        "question": "The purpose of the Cockpit Voice Recorder (CVR) is to record:1 – the audio environment in the flight deck. \n 2 – specific aircraft performance parameters. \n 3 – the communications of the flight crew members using the interphone system.The combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AVRQBOX6H5",
-            "text": "1, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKLK6FT3J8",
-            "text": "1, 2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6XQB9QWUJ",
-            "text": "2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP819S0HBF",
-            "text": "1.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-223787", "BGS-222312"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QUZKGM1437",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "PbmtMdbo": {
-        "id": "PbmtMdbo",
-        "type": "simple",
-        "question": "The flight data recorder must start data recording automatically:",
-        "options": [
-          {
-            "id": "ANC698DHKT",
-            "text": "Before the airplane is able to move by under its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1OTSAVF5G",
-            "text": "When taking-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A46TWAW98T",
-            "text": "When lining up.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACVRTRY0GD",
-            "text": "When the landing gear is retracted.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-221080",
-          "ATPLGS-106791",
-          "AVEXAM-40624",
-          "ATPLQ-221882"
-        ],
-        "explanation": ""
-      },
-      "jR6Ogj6f": {
-        "id": "jR6Ogj6f",
-        "type": "simple",
-        "question": "The flight data recorder must start data recording automatically:",
-        "options": [
-          {
-            "id": "A18VLBSRDO",
-            "text": "Before the airplane is able to move under its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMDBB9O5NM",
-            "text": "When lining up.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A559QGQCY9",
-            "text": "When taking-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXAF4QVW3I",
-            "text": "When the landing gear is retracted.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-993009", "ATPLGS-106791", "ATPLQ-221882"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QCIEP6X7DP",
     "explanation": "",
     "learningObjectives": ["022.14.03.03.02"],
@@ -1525,7 +1292,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-76753", "ATPLQ-225149"],
+        "externalIds": ["AVEXAM-76753", "ATPLQ-225149", "BGS-222273"],
         "explanation": ""
       },
       "94h7HiXF": {
@@ -1560,122 +1327,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222273", "ATPLQ-225149", "AVEXAM-76753"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QCSNSQXJ1Z",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.03"],
-    "variants": {
-      "OvfotrfO": {
-        "id": "OvfotrfO",
-        "type": "simple",
-        "question": "The purpose of the Flight Data Recorder (FDR) is to record specific parameters such as:\n1. time\n2. attitude\n3. airspeed\n4. flaps/slats configuration or cockpit selection\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "ARNCLG64GU",
-            "text": "1, 2, 3, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJDTN3ZYPT",
-            "text": "2, 3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7QKJRHOZS",
-            "text": "1, 2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVRPTN9HDG",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222260", "ATPLQ-221892"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QD8V3H8QQ9",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "SNTksSvn": {
-        "id": "SNTksSvn",
-        "type": "simple",
-        "question": "The voice recorder records on four different channels the following information:\n&nbsp;\n1. Aural warnings\n2. Radio communications\n3. Conversations between the crew members through the cockpit interphone\n4. Announcements to the passengers\n&nbsp;\nThe combination regrouping all the correct statements is:",
-        "options": [
-          {
-            "id": "AA1TKM45OE",
-            "text": "1, 2, 3 and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOTF8XXM8C",
-            "text": "1 and 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALL1G0B6JB",
-            "text": "1, 2 and 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXSIR4RRRI",
-            "text": "1 and 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-993012", "ATPLGS-106786"],
-        "explanation": ""
-      },
-      "52IeVvec": {
-        "id": "52IeVvec",
-        "type": "simple",
-        "question": "The voice recorder records on four different channels the following information:\n&nbsp;\n1. Aural warnings\n2. Radio communications\n3. Conversations between the crew members through the cockpit interphone\n4. Announcements to the passengers\n&nbsp;\nThe combination regrouping all the correct statements is:",
-        "options": [
-          {
-            "id": "AX3MZ4O3Z5",
-            "text": "1, 2, 3, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AL3IR6C2G3",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV6QGJ24MH",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APTD66P1LV",
-            "text": "1, 2, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221086", "ATPLGS-106786"],
         "explanation": ""
       }
     }
@@ -1802,88 +1453,6 @@
     }
   },
   {
-    "id": "QE7BDVDV9R",
-    "explanation": "",
-    "learningObjectives": ["022.14.03.03.02"],
-    "variants": {
-      "1mUGkX2A": {
-        "id": "1mUGkX2A",
-        "type": "simple",
-        "question": "Acquired data from the Aircraft Condition Monitoring System (ACMS) may be used:",
-        "options": [
-          {
-            "id": "AVH7J411EU",
-            "text": "As part of an FDM and safety programme.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATEXHB5NE1",
-            "text": "In place of the FWS to generate alerts.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT4JVKTNPI",
-            "text": "By the EFB for performance calculations.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A404HXPLFB",
-            "text": "For the EGPWS terrain display.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-224119", "BGS-221669"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QE96YE8DNG",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "zOWuyJdP": {
-        "id": "zOWuyJdP",
-        "type": "simple",
-        "question": "An aircraft dispatched with an unserviceable DFDR may complete a number of consecutive flights before the DFDR is repaired. This number is:\n&nbsp;",
-        "options": [
-          {
-            "id": "A9HGURPYVT",
-            "text": "8",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALCQWEWBGG",
-            "text": "None",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6QF1TP25U",
-            "text": "5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADCCSYK0P2",
-            "text": "3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-990649", "ATPLQ-223166"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QECUP8BDGJ",
     "explanation": "",
     "learningObjectives": ["022.14.02.01.02"],
@@ -1925,129 +1494,6 @@
     }
   },
   {
-    "id": "QEDFZMHKJW",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.03"],
-    "variants": {
-      "kGaH2lYq": {
-        "id": "kGaH2lYq",
-        "type": "simple",
-        "question": "The purpose of the Flight Data Recorder (FDR) is to record specific parameters such as:\n1. pressure altitude\n2. propulsive/thrust power on each engine\n3. the audio environment in the flight deck\n4. heading\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AQ8T53IVY8",
-            "text": "1, 2, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWRUZRA7GH",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A629WLBDIS",
-            "text": "2, 3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFO2PC4MQY",
-            "text": "2, 4.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222161", "ATPLQ-227300"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QFKSF355PL",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "qg1nGg0V": {
-        "id": "qg1nGg0V",
-        "type": "simple",
-        "question": "The purpose of the Cockpit Voice Recorder (CVR) is to record:\n1 – the communications transmitted or received by radio.  \n2 – the communications of flight crew members on the flight deck using the public address system.  \n3 – some air data parameters.The combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A6LJW17F1K",
-            "text": "1, 2.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKSQD0ID60",
-            "text": "3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4UYEMQ9IA",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2PVCM7WUX",
-            "text": "1.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225543", "BGS-222311"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QFVA7RG795",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "vteGEjR8": {
-        "id": "vteGEjR8",
-        "type": "simple",
-        "question": "A cockpit voice recorder (CVR) will record\n1) the information exchanged by the cabin crew.\n2) the conversations between the crew members and voice communications transmitted from or received on the flight deck by radio.\n3) the announcements made via the public address even if it has not been selected.\n4) the conversations and alarms audible in the cockpit.\n5) the captain conversations only.The combination re-grouping all the correct statements is",
-        "options": [
-          {
-            "id": "ASOITG20OL",
-            "text": "2, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0JA832KGE",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXTNIVQICY",
-            "text": "3, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG0WG7AVWX",
-            "text": "1, 5",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-40908", "ATPLGS-106788", "BGS-221082"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QGWZROPNUW",
     "explanation": "",
     "learningObjectives": ["022.14.02.01.02"],
@@ -2083,7 +1529,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-91850", "ATPLQ-224804"],
+        "externalIds": ["AVEXAM-91850", "ATPLQ-224804", "ATPLGS-106796"],
         "explanation": ""
       }
     }
@@ -2130,52 +1576,6 @@
     }
   },
   {
-    "id": "QHU6XC4O5B",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "xwZozucy": {
-        "id": "xwZozucy",
-        "type": "simple",
-        "question": "When pressing the EVENT-button on the flight data recorder control panel:",
-        "options": [
-          {
-            "id": "A0FVBSZJ3U",
-            "text": "the recording is marked, enabling this event to be found rapidly at a subsequent analysis.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0X8TVYOS9",
-            "text": "a event mark is set on the recording, after that the recording is automatically stopped.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIJK33MDQU",
-            "text": "the recording is rewound so that whatever happens after this event is recorded.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOHLGB65LV",
-            "text": "the recording is automatically stopped upon this event.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-224804",
-          "AVEXAM-91850",
-          "BGS-220822",
-          "ATPLGS-106796"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QISHUH7SSN",
     "explanation": "",
     "learningObjectives": ["022.14.03.03.02"],
@@ -2217,81 +1617,6 @@
           "ATPLQ-227878",
           "BGS-221270"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJPEJZVGEX",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "le6xV1op": {
-        "id": "le6xV1op",
-        "type": "simple",
-        "question": "Flight recorder duration must be such that flight data, cockpit voice and sound warnings may respectively be recorded during at least:",
-        "options": [
-          {
-            "id": "AY8ZZPH450",
-            "text": "25 hours for flight data, 30 minutes for cockpit voices and warnings horns.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AW74SPYFKP",
-            "text": "20 hours for flight data, 15 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW4V4JV2ZE",
-            "text": "48 hours for flight data, 60 minutes for cockpit voices and warnings horns",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5EFAV3WFS",
-            "text": "24 hours for flight data, 60 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-993007", "ATPLGS-106790"],
-        "explanation": ""
-      },
-      "tvmDXXkV": {
-        "id": "tvmDXXkV",
-        "type": "simple",
-        "question": "Flight recorder duration must be such that flight data, cockpit voice and sound warnings may respectively be recorded during at least:",
-        "options": [
-          {
-            "id": "AAZ1CGBKW3",
-            "text": "25 hours for flight data, 30 minutes for cockpit voices and warnings horns.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5RK862H7F",
-            "text": "20 hours for flight data, 15 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFSS0AA46I",
-            "text": "24 hours for flight data, 60 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANRVN2MPXS",
-            "text": "48 hours for flight data, 60 minutes for cockpit voices and warnings horns.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-44394", "ATPLGS-106790"],
         "explanation": ""
       }
     }
@@ -2374,135 +1699,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-221087", "AVEXAM-74085"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMTLQA1H1D",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "jA5CxGet": {
-        "id": "jA5CxGet",
-        "type": "simple",
-        "question": "The Flight Data Recorder makes use of",
-        "options": [
-          {
-            "id": "AWWDCAO7ZV",
-            "text": "a recording system, an “event” button, and an underwater locating device.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOEA4N3FAO",
-            "text": "an underwater locating device, an erase button, and a headset jack.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZNPBDKQGA",
-            "text": "an area microphone, a headset jack and an “event” button.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANKSCSJ9O9",
-            "text": "an erase button, a recording system, and an area microphone.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120910", "BGS-222309"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNNU0DV9GL",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "X4H9Iwh3": {
-        "id": "X4H9Iwh3",
-        "type": "simple",
-        "question": "According to CS25, a CVR (Cockpit Voice Recorder) must record:\n\n1 – communications transmitted from or received in the aeroplane by radio2 – communications of flight-crew members on the flight deck via the area microphone3 – communications of flight-crew members on the flight deck using the aeroplane`s interphone system4 – audio signals identifying navigation or approach aids introduced into a headset or speaker\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "ADFJV328MH",
-            "text": "1, 2, 3, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFEJKU5VXR",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABW7FC9GA2",
-            "text": "2, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7RJDA57KL",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-223048",
-          "AVEXAM-86624",
-          "BGS-220821",
-          "ATPLGS-627238",
-          "ATPLGS-120348"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPXDXW75B7",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "Dsc7WC1A": {
-        "id": "Dsc7WC1A",
-        "type": "simple",
-        "question": "A Cockpit Voice Recorder must record..",
-        "options": [
-          {
-            "id": "A7DGSKZHEF",
-            "text": "voice or audio signals identifying navigation or approach aids introduced into a headset or speaker and voice communications: transmitted from or received in the aeroplane by radio, of flight-crew members on the flight deck, of flight-crew members on the flight deck using the aeroplane`s interphone system, and of flight-crew members on the flight-deck using the public address system (if installed).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A3A40Y6CP7",
-            "text": "flight data, voice or audio signals identifying navigation or approach aids introduced into a headset or speaker and voice communications: transmitted from or received in the aeroplane by radio, and of flight-crew members on the flight deck.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVZP736VQW",
-            "text": "voice or audio signals identifying navigation or approach aids introduced into a headset or speaker and data recording flight and engine parameters.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6FB40W0VB",
-            "text": "voice or audio signals identifying navigation or approach aids introduced into a headset or speaker and voice communications: transmitted from or received in the aeroplane by radio, of flight-crew members on the flight deck, of flight-crew members on the flight deck using the aeroplane`s interphone system including calls between cabin crew stations (if installed), and of flight-crew members on the flight-deck using the public address system (if installed).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-227330", "BGS-222253", "AVEXAM-87999"],
         "explanation": ""
       }
     }
@@ -2631,93 +1827,6 @@
     }
   },
   {
-    "id": "QTF6M19HG8",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.03"],
-    "variants": {
-      "IN27i0OR": {
-        "id": "IN27i0OR",
-        "type": "simple",
-        "question": "The voice recorder records on four different channels the following information\n1) aural warnings.\n2) radio communications.\n3) conversations between the crew members through the cockpit interphone.\n4) announcements to the passengers.The combination re-grouping all the correct statements is",
-        "options": [
-          {
-            "id": "A9E0YD46T3",
-            "text": "1, 2, 3, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AUZ6VLMT3E",
-            "text": "1, 2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATN6GKRE72",
-            "text": "1, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXUMKG0WV8",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106786",
-          "BGS-221086",
-          "BGS-993012",
-          "AVEXAM-31507"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTFZQTND8K",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.03"],
-    "variants": {
-      "lTRtzXyn": {
-        "id": "lTRtzXyn",
-        "type": "simple",
-        "question": "Parameters recorded by a Flight Data Recorder include...",
-        "options": [
-          {
-            "id": "AE34FUARXC",
-            "text": "attitude, heading, and thrust/power on each engine.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMD7OJI41Q",
-            "text": "airspeed, attitude, and announcements by cabin crew members.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1CCRVYPKR",
-            "text": "time or relative time count, aural cockpit warnings, and airspeed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVMUJTVVD1",
-            "text": "landing gear position, pressure altitude, and pilot communications.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222205", "ATPLQ-228349"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QTG808QJ8E",
     "explanation": "",
     "learningObjectives": ["022.14.02.01.02"],
@@ -2754,88 +1863,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-226722", "BGS-221085", "ATPLGS-106787"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTIZVQ5372",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "qjKeMBvv": {
-        "id": "qjKeMBvv",
-        "type": "simple",
-        "question": "When pressing the push button EVENT on the unit control of flight data recorder",
-        "options": [
-          {
-            "id": "ATW5HCTIPC",
-            "text": "a mark is set on the recording, enabling this event to be found rapidly at a subsequent analysis.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS7ELTGK27",
-            "text": "the recording is automatically stopped upon this event.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A34D1KKBYY",
-            "text": "the recording is rewound so that whatever happens after this event is recorded.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGZYELDUWD",
-            "text": "a event mark is set on the recording, after that the recording is automatically stopped.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106796", "ATPLQ-224804"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QU0893DDI0",
-    "explanation": "",
-    "learningObjectives": ["022.14.01.01.02"],
-    "variants": {
-      "6VA1wqyk": {
-        "id": "6VA1wqyk",
-        "type": "simple",
-        "question": "A CVR consists of",
-        "options": [
-          {
-            "id": "A8VEB9WDFK",
-            "text": "a tape recorder, Underwater Locating Device, area microphone, and control unit.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGB59CJIJQ",
-            "text": "an Underwater Locating Device, illuminating light, speakers, tape recorder, and control unit.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF81VIVDN3",
-            "text": "an Event Mark Device, Emergency Locator Transmitter, test button, and erase button.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A60J5LPLO8",
-            "text": "a Digital Flight Data Acquisition Unit, area microphone, erase button, and tape recorder.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120908", "ATPLQ-223393", "BGS-222320"],
         "explanation": ""
       }
     }
@@ -2964,47 +1991,6 @@
     }
   },
   {
-    "id": "QUTG0M65R6",
-    "explanation": "",
-    "learningObjectives": ["022.14.03.03.02"],
-    "variants": {
-      "vdrsNxbi": {
-        "id": "vdrsNxbi",
-        "type": "simple",
-        "question": "A Flight Data Recorder together with an ACMS (Aeroplane Condition Monitoring System) can be used for..",
-        "options": [
-          {
-            "id": "AYFURFSIUO",
-            "text": "accident analysis and trouble-shooting.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALYUMUYMR1",
-            "text": "transmitting aircraft location data to ground stations during flight.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD278JD6GJ",
-            "text": "relaying pilot communications to ground stations.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH4QA29A4L",
-            "text": "sending cockpit aural warnings to the operator`s maintenance base.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225149", "AVEXAM-76753", "BGS-222273"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QW2Z1BFVMN",
     "explanation": "",
     "learningObjectives": ["022.14.01.01.03"],
@@ -3045,53 +2031,6 @@
           "ATPLQ-223048",
           "ATPLGS-627238",
           "ATPLGS-120348"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXURZR4I0I",
-    "explanation": "",
-    "learningObjectives": ["022.14.02.01.02"],
-    "variants": {
-      "iP2B5ihD": {
-        "id": "iP2B5ihD",
-        "type": "simple",
-        "question": "When must the flight data recorder start data recording automatically?",
-        "options": [
-          {
-            "id": "A43WQ8ZHHY",
-            "text": "Before the airplane is able to move under its own power.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AI1RIHRF5Q",
-            "text": "When taking-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQIS4OGTSO",
-            "text": "When lining up.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVNAUT6G8P",
-            "text": "When the landing gear is retracted.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-221882",
-          "ATPLGS-106791",
-          "BGS-221080",
-          "BGS-993009",
-          "AVEXAM-40624"
         ],
         "explanation": ""
       }

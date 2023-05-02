@@ -35,48 +35,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-44338"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q5ZH6B0F25",
-    "explanation": "",
-    "learningObjectives": ["062.07.05.01.01"],
-    "variants": {
-      "BoZHw5bo": {
-        "id": "BoZHw5bo",
-        "type": "simple",
-        "question": "Which of the following components of the ILS are protected from interference by the FM-Immunity filters in NAV equipment?",
-        "options": [
-          {
-            "id": "A1WMRJTRQA",
-            "text": "Localiser only",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5WCTC9ZO1",
-            "text": "Localiser and Glidepath",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2HJTVXKZ0",
-            "text": "Glidepath only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AS0MW969VE",
-            "text": "Glidepath and DME",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-621250"],
+        "externalIds": ["AVEXAM-44338", "ATPLGS-621250"],
         "explanation": ""
       }
     }
@@ -200,47 +159,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-625145"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q2EOL7X1PT",
-    "explanation": "",
-    "learningObjectives": ["062.07.05.01.01"],
-    "variants": {
-      "nBygJR8X": {
-        "id": "nBygJR8X",
-        "type": "simple",
-        "question": "A flight is planned to Longyear Airport in Svalbard (lat. 78°15'N), Due to the high latitude the aircraft GPS will NOT be able to achieve RAIM during the arrival phase of flight, as not enough satellites will be in view. If the aircraft is suitably equipped, which of the following systems could be used for integrity monitoring?",
-        "options": [
-          {
-            "id": "AJ8J3Y0V80",
-            "text": "AAIM (Aircraft Autonomous Integrity Monitoring) using the IRS and barometric altimeter.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATY9503UJF",
-            "text": "GBAS using the INS and barometric altimeter.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6V81XSNHY",
-            "text": "AAIM (Aircraft Autonomous Integrity Monitoring) using the VOR and DME.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ9I0ANK1P",
-            "text": "GBAS using the DME only.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-626163"],
         "explanation": ""
       }
     }
@@ -486,7 +404,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-626086"],
+        "externalIds": ["ATPLQ-626086", "BGS-621388"],
         "explanation": ""
       }
     }
@@ -527,7 +445,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-625963"],
+        "externalIds": ["ATPLQ-625963", "BGS-621085", "AVEXAM-72421"],
         "explanation": ""
       }
     }
@@ -814,7 +732,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-621172"],
+        "externalIds": ["BGS-621172", "ATPLQ-622125"],
         "explanation": ""
       }
     }
@@ -855,7 +773,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-621374"],
+        "externalIds": ["BGS-621374", "ATPLQ-621066"],
         "explanation": ""
       }
     }
@@ -937,7 +855,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-624933"],
+        "externalIds": ["ATPLQ-624933", "BGS-621211"],
         "explanation": ""
       }
     }
@@ -979,88 +897,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-621565"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q8UEI5AJPQ",
-    "explanation": "",
-    "learningObjectives": ["062.07.01.01.04"],
-    "variants": {
-      "3m62iZ0h": {
-        "id": "3m62iZ0h",
-        "type": "simple",
-        "question": "Within the PBN concept, how can \"accuracy\" be defined?",
-        "options": [
-          {
-            "id": "AK0UD3IATP",
-            "text": "A comparison between the required position and the true position.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0NOSP5GTM",
-            "text": "Being in compliance with the reference ellipsoid WGS-95.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL9LHX88PI",
-            "text": "Being within 1 NM laterally and within 200 ft vertically of the required position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKKC3EJZ28",
-            "text": "Having total system error that is expected to be achieved at least 50% of the time.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-622125"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q9A3LRGUI5",
-    "explanation": "",
-    "learningObjectives": ["062.07.01.03.02"],
-    "variants": {
-      "BxVVhIyq": {
-        "id": "BxVVhIyq",
-        "type": "simple",
-        "question": "You do a briefing for an approach on an airfield which uses PBN operations, which kind of PBN specification are you likely to encounter in the arrival procedure (STAR)?",
-        "options": [
-          {
-            "id": "APPG8WVKAU",
-            "text": "RNAV 1",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYTUSJSZUA",
-            "text": "RNP AR APCH",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA6LJW9E9H",
-            "text": "RNAV 10",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALMDIV441H",
-            "text": "RNP 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-621211"],
         "explanation": ""
       }
     }
@@ -1183,7 +1019,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-34421"],
+        "externalIds": ["AVEXAM-34421", "ATPLGS-125074"],
         "explanation": ""
       }
     }
@@ -1347,89 +1183,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-625345"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QD1M2E1KFD",
-    "explanation": "",
-    "learningObjectives": ["062.07.05.09.01"],
-    "variants": {
-      "UXeC3cwK": {
-        "id": "UXeC3cwK",
-        "type": "simple",
-        "question": "Which of the following PBN procedures is classified as a Non-Precision Approach (NPA) procedure? RNP APCH to",
-        "options": [
-          {
-            "id": "AP6CN1ESHE",
-            "text": "LNAV minima.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADNYH49GB7",
-            "text": "GLS minima.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL7WPFMI78",
-            "text": "LNAV/VNAV minima.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADJOMEWY3R",
-            "text": "LPV minima.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125074"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QDJ71JVIUY",
-    "explanation": "",
-    "learningObjectives": ["062.07.02.02.01"],
-    "variants": {
-      "wPEC9jJq": {
-        "id": "wPEC9jJq",
-        "type": "simple",
-        "question": "Which of the following are some of the required navigation functionalities of RNAV and RNP specifications?\n1. Continuous indication of lateral deviation\n2. Continuous indication of vertical deviation\n3. Distance/bearing to the active waypoint\n4. Groundspeed or time to the active waypoint\n5. Navigation data storage\n6. an FMC",
-        "options": [
-          {
-            "id": "AEGOOXA70S",
-            "text": "1, 3, 4, and 5",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AX8TR63J1D",
-            "text": "2, 4, 5, and 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFXK6S7TVS",
-            "text": "2, 3, 4, and 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABR70T5Z54",
-            "text": "1, 2, 3, and 5",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-621085"],
+        "externalIds": ["ATPLQ-625345", "BGS-620822"],
         "explanation": ""
       }
     }
@@ -1594,47 +1348,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-101032"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QGL55QM2RC",
-    "explanation": "",
-    "learningObjectives": ["062.07.01.03.01"],
-    "variants": {
-      "xLYUSQyd": {
-        "id": "xLYUSQyd",
-        "type": "simple",
-        "question": "Which of the following statements is correct with regards to the scope of the PBN concept?",
-        "options": [
-          {
-            "id": "AEPJLRM4ML",
-            "text": "In the approach phases of flight, PBN accommodates both linear and angular laterally guided operations.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANBCSRKI8Z",
-            "text": "In the approach phases of flight, PBN is limited to operations with guidance to fly the ILS procedure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ5DJ3MY8G",
-            "text": "For oceanic/remote, en-route and terminal phases of flight, PBN accommodates both linear and angular laterally guided operations.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD4SFG5PNR",
-            "text": "For oceanic/remote, en-route and terminal phases of flight, PBN is limited to operations with angular laterally guided operations.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-621066"],
         "explanation": ""
       }
     }
@@ -1962,7 +1675,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-628276", "ATPLGS-620940"],
+        "externalIds": [
+          "ATPLQ-628276",
+          "ATPLGS-620940",
+          "AVEXAM-63546",
+          "BGS-620885"
+        ],
         "explanation": ""
       }
     }
@@ -2173,47 +1891,6 @@
     }
   },
   {
-    "id": "QN52OBEGCV",
-    "explanation": "",
-    "learningObjectives": ["062.07.01.01.01"],
-    "variants": {
-      "JHVoR4vU": {
-        "id": "JHVoR4vU",
-        "type": "simple",
-        "question": "Which of the following is a requirement for Required Navigation Performance (RNP) operations? Area navigation that includes the requirements for...",
-        "options": [
-          {
-            "id": "ANNBPLJH39",
-            "text": "on-board performance monitoring and alerting.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4EVFELB3F",
-            "text": "ground-based performance monitoring and alerting.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOTYVWXPBP",
-            "text": "integrating ATC surveillance monitoring and alerting. ",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A66TW3LPHO",
-            "text": "satellite-based performance monitoring and alerting.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-620822"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QN86TSXEY8",
     "explanation": "",
     "learningObjectives": ["062.07.01.02.01"],
@@ -2249,7 +1926,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-620850"],
+        "externalIds": ["BGS-620850", "ATPLGS-125064"],
         "explanation": ""
       }
     }
@@ -2291,47 +1968,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-621443"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNHN45RPCX",
-    "explanation": "",
-    "learningObjectives": ["062.07.02.03.11"],
-    "variants": {
-      "Yngl9ePI": {
-        "id": "Yngl9ePI",
-        "type": "simple",
-        "question": "Which RNP is mainly used by helicopters and can be used during all flight phases, except for en-route oceanic/remote and final approach phases?",
-        "options": [
-          {
-            "id": "A8AZWR1T6C",
-            "text": "RNP 0.3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANAODEHXMM",
-            "text": "RNP 10",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFB49U48R0",
-            "text": "RNP AR APCH",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE2SDG4WYF",
-            "text": "RNP 5",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-63546"],
         "explanation": ""
       }
     }
@@ -2537,88 +2173,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-79512"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPZKP139VB",
-    "explanation": "",
-    "learningObjectives": ["062.07.01.02.01"],
-    "variants": {
-      "DhwdsiRa": {
-        "id": "DhwdsiRa",
-        "type": "simple",
-        "question": "Which of the following statements best describes PBN? Performance-based navigation",
-        "options": [
-          {
-            "id": "AJFQXSVW7A",
-            "text": "is not sensor-specific.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACCOKNVOXD",
-            "text": "is based on sensor-specific navigation specifications.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXSA1F151V",
-            "text": "is similar to conventional navigation, requiring ground-based infrastructure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0WLPTSGEH",
-            "text": "requires the development of sensor-specific routes and procedures.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125064"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQ9I2IK2O6",
-    "explanation": "",
-    "learningObjectives": ["062.07.02.02.01"],
-    "variants": {
-      "g3JMGntA": {
-        "id": "g3JMGntA",
-        "type": "simple",
-        "question": "Which of the following are some of the required navigation functionalities of RNAV and RNP specifications?\n\n- Continuous indication of lateral deviation\n\n- Continuous indication of vertical deviation\n\n- Distance and bearing to active waypoint\n\n- Groundspeed or time to the active waypoint\n\n- Navigation data storage\n\n- An FMC</li>\n</ol>",
-        "options": [
-          {
-            "id": "A6M1D5155H",
-            "text": "1, 3, 4, 5",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AF4PS3PTUN",
-            "text": "2, 4, 5, 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6DL5WTSXO",
-            "text": "2, 3, 4, 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A31YVKQ9P0",
-            "text": "1, 2, 3, 5",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-72421"],
         "explanation": ""
       }
     }
@@ -2864,7 +2418,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-627157"],
+        "externalIds": ["ATPLQ-627157", "BGS-621387"],
         "explanation": ""
       }
     }
@@ -3193,129 +2747,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-620862"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QWZJ4DFZ7Y",
-    "explanation": "",
-    "learningObjectives": ["062.07.02.03.11"],
-    "variants": {
-      "rjWMUilg": {
-        "id": "rjWMUilg",
-        "type": "simple",
-        "question": "Which RNP can be&nbsp;can be used&nbsp;in all phases of flight except for en-route oceanic/remote and final approach phases and is intended primarily for helicopters?",
-        "options": [
-          {
-            "id": "ARW1SQEITR",
-            "text": "RNP 0.3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6JAY89U83",
-            "text": "RNP 1",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASJYSR2J4U",
-            "text": "RNP 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZYOE2M3PD",
-            "text": "RNP APCH",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-620885"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QX80D64Q4O",
-    "explanation": "",
-    "learningObjectives": ["062.07.05.05.04"],
-    "variants": {
-      "mcjBekOM": {
-        "id": "mcjBekOM",
-        "type": "simple",
-        "question": "A pilot is planning a flight under PBN specifications: An RNP approach to LNAV/VNAV minima may only be flown with vertical guidance...",
-        "options": [
-          {
-            "id": "A8S0Z2KIQU",
-            "text": "certified for the purpose.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AH2EJSCLPS",
-            "text": "from an ILS or MLS glide slope.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEDL3BNXMN",
-            "text": "from a radio altimeter.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQ3YUU03EZ",
-            "text": "from a barometric altimeter.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-621387"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXCHTV1IYV",
-    "explanation": "",
-    "learningObjectives": ["062.07.05.03.01"],
-    "variants": {
-      "suvTytxp": {
-        "id": "suvTytxp",
-        "type": "simple",
-        "question": "A pilot is planning to fly an RNP 1 STAR (Standard instrument arrival). But after inserting the appropriate STAR in the FMS one of the waypoints is missing when comparing to the charted procedure. It appears that due to an error, the waypoint is NOT defined in the waypoint database in the FMS. As a result of this error the pilot may...",
-        "options": [
-          {
-            "id": "A43VQH3K9D",
-            "text": "NOT fly the planned procedure and must request an alternative STAR.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9P0TR6AG4",
-            "text": "fly the STAR provided there are NO gaps in the coding of the arrival.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATTSUH0OH8",
-            "text": "create a waypoint based on a radial/DME from a nearby VOR DME station.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAJLV37GCI",
-            "text": "create a waypoint based on the latitude and longitude of the missing waypoint.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-621388"],
         "explanation": ""
       }
     }

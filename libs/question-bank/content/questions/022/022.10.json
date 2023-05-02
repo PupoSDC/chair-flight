@@ -35,91 +35,9 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-113221", "ATPLQ-226111"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHWIKY8SNP",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.03"],
-    "variants": {
-      "DkTZiOPg": {
-        "id": "DkTZiOPg",
-        "type": "simple",
-        "question": "The output data from an ADC are used by:\n1. Transponder\n2. EFIS via the symbol generator\n3. Automatic Flight Control System (AFCS)\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AWDE5VOM14",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKA0I0PMT1",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2NJUNVKSM",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHPZEU38CJ",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220240", "ATPLQ-226111"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSQ7AW5H56",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.03"],
-    "variants": {
-      "W7J6M2Nf": {
-        "id": "W7J6M2Nf",
-        "type": "simple",
-        "question": "The output data from an ADC are used by:\n\n1 – Transponder2 – EFIS via the symbol generator3 – Automatic Flight Control System (AFCS)\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A1GJ7Y01MY",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC1F7KE8K4",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASZCDWACF6",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6L06C4OBF",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
         "externalIds": [
-          "ATPLQ-226111",
           "ATPLGS-113221",
+          "ATPLQ-226111",
           "BGS-220240",
           "AVEXAM-71036"
         ],
@@ -517,7 +435,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-227172", "ATPLGS-106593"],
+        "externalIds": [
+          "ATPLQ-227172",
+          "ATPLGS-106593",
+          "AVEXAM-6104",
+          "ATPLGS-106599"
+        ],
         "explanation": ""
       }
     }
@@ -558,7 +481,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-229762", "ATPLGS-106598", "BGS-220608"],
+        "externalIds": [
+          "ATPLQ-229762",
+          "ATPLGS-106598",
+          "BGS-220608",
+          "AVEXAM-79898"
+        ],
         "explanation": ""
       }
     }
@@ -725,48 +653,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-94237"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q7AO2KVSCR",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.05"],
-    "variants": {
-      "sp1nqJjG": {
-        "id": "sp1nqJjG",
-        "type": "simple",
-        "question": "A D-ATIS is:",
-        "options": [
-          {
-            "id": "AIGTYEMQFE",
-            "text": "an ATIS message received by datalink.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK2W3WPO3X",
-            "text": "an ATIS message broadcast on HF when out of the VHF radio range from the airport.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0UK1S1S3P",
-            "text": "a short ATIS that only includes parameters that have changed from previous ATIS record.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADZH9WBGLN",
-            "text": "a Diversion ATIS for the alternate airport.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "AVEXAM-94237",
+          "ATPLQ-224926",
+          "AVEXAM-38665",
+          "ATPLGS-120769",
+          "BGS-220602"
         ],
-        "annexes": [],
-        "externalIds": ["BGS-220591", "ATPLGS-120739"],
         "explanation": ""
       }
     }
@@ -854,52 +747,6 @@
     }
   },
   {
-    "id": "Q8QVPPX2G9",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.03"],
-    "variants": {
-      "KW2hvUsO": {
-        "id": "KW2hvUsO",
-        "type": "simple",
-        "question": "The CPDLC is a FANS application that consists in:",
-        "options": [
-          {
-            "id": "AT39BV1MFF",
-            "text": "transmitting datalink formatted messages between the pilot and ATC controller.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AR7PA92DFW",
-            "text": "sending automatically aircraft surveillance data to the air traffic controller.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK4O6933HT",
-            "text": "establishing air/ground connection to verify if the datalink communication can be performed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2IRA2E9K4",
-            "text": "connecting the aircraft to the appropriate ATC centre.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-224926",
-          "AVEXAM-38665",
-          "ATPLGS-120769",
-          "BGS-220602"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q94GIOAJTL",
     "explanation": "",
     "learningObjectives": ["022.10.01.01.02"],
@@ -936,52 +783,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-1763", "BGS-220604", "ATPLQ-228123"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q96FOIG8YV",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.05"],
-    "variants": {
-      "guJ8DfTT": {
-        "id": "guJ8DfTT",
-        "type": "simple",
-        "question": "The following ATC clearances can be received via the datalink application",
-        "options": [
-          {
-            "id": "AM8JCKOIVA",
-            "text": "Departure, Oceanic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASP2AX88P9",
-            "text": "Departure, En route, Landing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACH993DZUX",
-            "text": "Take-off, En route, Landing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK8KZ8E466",
-            "text": "Departure, Take-off, En route.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106598",
-          "AVEXAM-79898",
-          "BGS-220608",
-          "ATPLQ-229762"
-        ],
         "explanation": ""
       }
     }
@@ -1068,7 +869,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-225230", "AVEXAM-4159"],
+        "externalIds": [
+          "ATPLQ-225230",
+          "AVEXAM-4159",
+          "BGS-221245",
+          "ATPLGS-127556"
+        ],
         "explanation": ""
       }
     }
@@ -1156,47 +962,6 @@
           "ATPLQ-223188",
           "AVEXAM-95686"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QC14XKWA4C",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.05"],
-    "variants": {
-      "1TNkBtEl": {
-        "id": "1TNkBtEl",
-        "type": "simple",
-        "question": "The following ATC clearances can be received via the datalink application:",
-        "options": [
-          {
-            "id": "A7YENQILKN",
-            "text": "Departure, Oceanic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFJGV4NV6V",
-            "text": "Departure, En route, Landing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM45IV4T2V",
-            "text": "Departure, Take-off, En route.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOM75LKZ9V",
-            "text": "Take-off, En route, Landing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-79898", "ATPLGS-106598"],
         "explanation": ""
       }
     }
@@ -1448,47 +1213,6 @@
     }
   },
   {
-    "id": "QGLIB7155I",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "vXVmBQs4": {
-        "id": "vXVmBQs4",
-        "type": "simple",
-        "question": "FANS routes or airspace where this applies are..",
-        "options": [
-          {
-            "id": "ANB5KNBX46",
-            "text": "associated with a given RNP (Required Navigation Performance) value.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVFLJ12EGU",
-            "text": "only used during hours of increased traffic volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX4J93INII",
-            "text": "associated with a specific FANS route or airspace sequence number.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWI5FMKC2S",
-            "text": "controlled by ICAO`s central ATC facility.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-227564", "ATPLGS-120924"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QH277D0FFW",
     "explanation": "",
     "learningObjectives": ["022.10.01.01.03"],
@@ -1528,7 +1252,8 @@
           "AVEXAM-47484",
           "BGS-220612",
           "ATPLQ-227201",
-          "ATPLGS-106592"
+          "ATPLGS-106592",
+          "AVEXAM-99515"
         ],
         "explanation": ""
       }
@@ -1739,48 +1464,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-80998", "ATPLGS-106589"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QKE8T1JE5G",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.03"],
-    "variants": {
-      "dACrKjNu": {
-        "id": "dACrKjNu",
-        "type": "simple",
-        "question": "The units that can be connected to the Communication Management Unit (CMU) are:\n\n1 – EGPWS2 – HF Communication Unit3 – Multipurpose Control and Display Unit (MCDU)4 – VHF Communication Unit5 – Satcom\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AO6E2JZL8Q",
-            "text": "2, 3, 4, 5.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADE8VSBSZC",
-            "text": "1, 3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK8J9M9MWT",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A97TWW1GOM",
-            "text": "2, 4, 5.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228006", "ATPLGS-106589"],
+        "externalIds": ["AVEXAM-80998", "ATPLGS-106589", "ATPLQ-228006"],
         "explanation": ""
       }
     }
@@ -1862,7 +1546,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-227065"],
+        "externalIds": ["ATPLQ-227065", "AVEXAM-92249"],
         "explanation": ""
       }
     }
@@ -1903,7 +1587,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220599", "AVEXAM-72185", "ATPLGS-106599"],
+        "externalIds": [
+          "BGS-220599",
+          "AVEXAM-72185",
+          "ATPLGS-106599",
+          "ATPLQ-224777"
+        ],
         "explanation": ""
       }
     }
@@ -2094,139 +1783,6 @@
     }
   },
   {
-    "id": "QQK6LTGEOZ",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.03"],
-    "variants": {
-      "b6Ig76KK": {
-        "id": "b6Ig76KK",
-        "type": "simple",
-        "question": "The ADS is a FANS application which...",
-        "options": [
-          {
-            "id": "ANINKD7VNN",
-            "text": "sends automatically aircraft surveillance data to the air traffic controller.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEMDKXR5I4",
-            "text": "establishes automatic air/ground connection to verify if the datalink communication can be performed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG6M1PRS1I",
-            "text": "connects the aircraft to the appropriate ATC centre.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJN42Q28A8",
-            "text": "exchanges messages relative to route modifications and transfer of ATC centre.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220598", "ATPLGS-120769"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QR0W9WEJ3B",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.08"],
-    "variants": {
-      "kqzhsMB9": {
-        "id": "kqzhsMB9",
-        "type": "simple",
-        "question": "When sent, a MAYDAY datalink message to the ATC has the following effect on ADS",
-        "options": [
-          {
-            "id": "AV56ZBBDF6",
-            "text": "the ADS contract is switched to high periodic reporting rate.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADM2FPQI9T",
-            "text": "the ADS current contract is stopped.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN7AES1XHL",
-            "text": "no change to the current contract in process.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7XX67OSMR",
-            "text": "the ADS current contract reporting rate is unchanged but includes more data.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-113292",
-          "BGS-220619",
-          "ATPLQ-225581",
-          "AVEXAM-2438"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QR6U2YWU6R",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "Xj1xJ0qG": {
-        "id": "Xj1xJ0qG",
-        "type": "simple",
-        "question": "FANS was developed by ICAO...",
-        "options": [
-          {
-            "id": "AAUUMI0B1I",
-            "text": "to allow more aircraft to safely and efficiently utilise a given volume of airspace.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANP8X604PS",
-            "text": "to provide a more efficient, safe, and cost-effective system for communication.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX66A0PI6U",
-            "text": "in order to automate and distribute departure slots.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALEX1G28D7",
-            "text": "to effectively monitor aircraft systems` status information and fuel consumption.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-221245",
-          "ATPLGS-127556",
-          "ATPLQ-225230",
-          "AVEXAM-4159"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QS4OFTAWUT",
     "explanation": "",
     "learningObjectives": ["022.10.01.02.05"],
@@ -2263,93 +1819,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222097", "ATPLQ-226358", "AVEXAM-76820"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QS8LT4G5JK",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.01.02"],
-    "variants": {
-      "PVTsEbEy": {
-        "id": "PVTsEbEy",
-        "type": "simple",
-        "question": "The datalink communication message CHECK STUCK MICROPHONE [frequency] refers to a request from:",
-        "options": [
-          {
-            "id": "AMECSR7SC3",
-            "text": "the ATC to the pilot to check microphone buttons due to a continuous transmission detected on the frequency.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATNZXD0URF",
-            "text": "the ATC to the pilot to transmit blind.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZT62ZQ000",
-            "text": "the ATC to the pilot to revert to the voice communication by pushing and holding a few seconds the mike button.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA0JFO7OMY",
-            "text": "the pilot to the ATC to solve a continuous transmission issue with the voice frequency.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220604", "AVEXAM-1763", "ATPLQ-228123"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QS95GOAMMW",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.08"],
-    "variants": {
-      "gds7czQk": {
-        "id": "gds7czQk",
-        "type": "simple",
-        "question": "The different types of ADS contracts can be:\n\n- Periodic: at periodic time intervals\n\n- On demand: when asked for by the ATC\n\n- On event: whenever a specified event occurs</li>\n</ol>\nThe combination which regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AA5INMTUJC",
-            "text": "1, 2, 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AI5K53TMKA",
-            "text": "2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOI3QW11R3",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADULVRRC1A",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-99830",
-          "ATPLGS-106603",
-          "BGS-220606",
-          "ATPLQ-223824"
-        ],
         "explanation": ""
       }
     }
@@ -2472,7 +1941,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-89261"],
+        "externalIds": ["AVEXAM-89261", "AVEXAM-4348"],
         "explanation": ""
       }
     }
@@ -2514,47 +1983,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-221620", "ATPLQ-223538"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QW69052TUN",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "rgZFSkty": {
-        "id": "rgZFSkty",
-        "type": "simple",
-        "question": "Which telecommunication technique is used by FANS?",
-        "options": [
-          {
-            "id": "ATCCKKTK2M",
-            "text": "SATCOM",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AU9BWPU62X",
-            "text": "HF",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMXH2W7L0J",
-            "text": "HF/ADF",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMFXPLRP01",
-            "text": "ADF",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-92249"],
         "explanation": ""
       }
     }
@@ -2733,47 +2161,6 @@
     }
   },
   {
-    "id": "QXRJCE0PXS",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.04"],
-    "variants": {
-      "d66fnpfX": {
-        "id": "d66fnpfX",
-        "type": "simple",
-        "question": "A ground station receives a digital message from an aircraft in flight. This is called...",
-        "options": [
-          {
-            "id": "AQXRNSCCXP",
-            "text": "message / data downlink.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2NYJATXFQ",
-            "text": "two-way communication VHF message.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALE9JII9MW",
-            "text": "two-way communication HF message.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXG5XJJ6F0",
-            "text": "message / data uplink.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-4348"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QY5U9WL5WW",
     "explanation": "",
     "learningObjectives": ["022.10.01.02.05"],
@@ -2815,47 +2202,6 @@
     }
   },
   {
-    "id": "QY5Y5N2V8P",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.02.03"],
-    "variants": {
-      "1KxrTIad": {
-        "id": "1KxrTIad",
-        "type": "simple",
-        "question": "The basic on-board datalink communication system is typically composed by the following sub systems:\n1 – Communication Management Unit (CMU)2 – Multi-purpose Control and Display Unit (MCDU)3 – Audio Control Panel (ACP)\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AVCBQ79PGS",
-            "text": "1, 2.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8SLSRYT5Y",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6ASHTVGDK",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMEC8NFUM4",
-            "text": "1, 2, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-224777", "AVEXAM-72185", "ATPLGS-106599"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QYBFOSVOM4",
     "explanation": "",
     "learningObjectives": ["022.10.01.01.05"],
@@ -2892,181 +2238,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-221699", "ATPLQ-225449"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYDXQXJBXN",
-    "explanation": "",
-    "learningObjectives": ["022.10.01.01.03"],
-    "variants": {
-      "Uct1zc5C": {
-        "id": "Uct1zc5C",
-        "type": "simple",
-        "question": "The on-board communication devices to transmit and receive datalink communication can be\n\t\n\t\n1) VHF COM.\n\t\n2) HF COM.\n\t\n3) SATCOM.\n\tThe combination which regroups all of the correct statements is",
-        "options": [
-          {
-            "id": "AYKFWYO43U",
-            "text": "1, 2, 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM9ZX4HT6W",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGPXTB32A8",
-            "text": "3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUQ83LKMO3",
-            "text": "1",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106592",
-          "BGS-220612",
-          "ATPLQ-227201",
-          "AVEXAM-47484",
-          "AVEXAM-99515"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYVGZCGBVC",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.08"],
-    "variants": {
-      "jJ63oRtW": {
-        "id": "jJ63oRtW",
-        "type": "simple",
-        "question": "The different types of ADS contracts can be:\n1. periodic: at periodic time intervals\n2. on demand: when asked for by the ATC\n3. on event: whenever a specified event occurs\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "ABMO3O07Y7",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A023H4I1QH",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD2J8DXXLG",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8PYG0A1ZO",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220606",
-          "ATPLGS-106603",
-          "AVEXAM-99830",
-          "ATPLQ-223824"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZA6DDHWXN",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.03"],
-    "variants": {
-      "4JZ98SJ6": {
-        "id": "4JZ98SJ6",
-        "type": "simple",
-        "question": "The ADS is a FANS application which consists in:",
-        "options": [
-          {
-            "id": "A38AX43XZI",
-            "text": "sending automatically aircraft surveillance data to the air traffic controller.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7MX3ETMSM",
-            "text": "exchanging messages relative to route modifications and transfer of ATC centre.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMCCS2AO1J",
-            "text": "connecting the aircraft to the appropriate ATC centre.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALV823CFZL",
-            "text": "establishing automatic air/ground connection to verify if the datalink communication can be performed.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-226682", "ATPLGS-120769"],
-        "explanation": ""
-      },
-      "G1T14bio": {
-        "id": "G1T14bio",
-        "type": "simple",
-        "question": "The ADS is a FANS application which consists in:",
-        "options": [
-          {
-            "id": "AG9GKFG5B1",
-            "text": "sending automatically aircraft surveillance data to the air traffic controller.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A3HFFDOXIB",
-            "text": "establishing automatic air/ground connection to verify if the datalink communication can be performed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABTGARP4VB",
-            "text": "connecting the aircraft to the appropriate ATC center.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOGQ3OXW6W",
-            "text": "broadcasting aircraft position and intents to the other aircraft in the vicinity.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-38665",
-          "BGS-220598",
-          "BGS-220602",
-          "ATPLQ-226682",
-          "ATPLQ-224926",
-          "ATPLGS-120769"
-        ],
         "explanation": ""
       }
     }
@@ -3325,47 +2496,6 @@
     }
   },
   {
-    "id": "Q4BWI6JKWE",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "a9N1LwMb": {
-        "id": "a9N1LwMb",
-        "type": "simple",
-        "question": "Routes where the FANS-1/A concept is used",
-        "options": [
-          {
-            "id": "AI9L2N5Y2H",
-            "text": "require specific RNP capabilities.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AT7OFIBNFD",
-            "text": "are used during high traffic times only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOXAA2PHMZ",
-            "text": "are designated for FANS with sequence number.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKG1LQ9ODD",
-            "text": "are controlled by global ICAO ATC units.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106601", "AVEXAM-56165"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q4ZXBTD623",
     "explanation": "",
     "learningObjectives": ["022.10.01.02.03"],
@@ -3443,129 +2573,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-79040", "ATPLQ-222488"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHR8O5YALB",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "pGuJJRoY": {
-        "id": "pGuJJRoY",
-        "type": "simple",
-        "question": "The FANS concept makes use of",
-        "options": [
-          {
-            "id": "AF5JGG9TBL",
-            "text": "satellite communication and satellite navigation.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9WTS72HGS",
-            "text": "voice communication for air navigation system position updating.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV4NWX4YRU",
-            "text": "conventional communication only and satellite navigation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKDWGVPWT5",
-            "text": "VOR-DME position updating for air navigation.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-113414", "ATPLQ-222001"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJ9CWXQHAT",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.02"],
-    "variants": {
-      "8i8C8ITm": {
-        "id": "8i8C8ITm",
-        "type": "simple",
-        "question": "FANS was developed by ICAO",
-        "options": [
-          {
-            "id": "A7AR5SI11I",
-            "text": "to allow more aircraft to safely and efficiently utilise a given volume of airspace.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7PHTC2P0A",
-            "text": "to provide a more efficient, safe, and cost-effective system for communication.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5DR9RVXXH",
-            "text": "in order to automate and distribute departure slots.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A10I935IO7",
-            "text": "to effectively monitor aircraft systems` status information and fuel consumption.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-127556", "AVEXAM-4159"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNDGY9Z985",
-    "explanation": "",
-    "learningObjectives": ["022.10.02.01.03"],
-    "variants": {
-      "tWTqvgi1": {
-        "id": "tWTqvgi1",
-        "type": "simple",
-        "question": "The ADS is a FANS application performed",
-        "options": [
-          {
-            "id": "AY7TEAX5RE",
-            "text": "automatically, without any crew action to define the set of data to downlink or the type of report contract.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASECYC6O8Y",
-            "text": "semi automatically, the pilot has to define the set of data to downlink but cannot define the type of report contract.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APX9PBO7NM",
-            "text": "manually, the pilot has to define the set of data to downlink and the type of report contract.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJDC5WJ2XF",
-            "text": "semi automatically, the pilot cannot define the set of data to downlink but can define the type of report contract.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106604", "AVEXAM-53632"],
         "explanation": ""
       }
     }

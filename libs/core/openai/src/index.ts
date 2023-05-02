@@ -1,1 +1,1 @@
-export * from "./functions/find-best-matching-lo";
+export * from "./functions/merge-questions-with-high-similarity";

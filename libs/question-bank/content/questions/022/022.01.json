@@ -289,7 +289,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-221163", "ATPLGS-627204", "ATPLQ-222510"],
+        "externalIds": [
+          "BGS-221163",
+          "ATPLGS-627204",
+          "ATPLQ-222510",
+          "BGS-222163"
+        ],
         "explanation": ""
       }
     }
@@ -533,7 +538,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-50451", "ATPLGS-106040"],
+        "externalIds": [
+          "AVEXAM-50451",
+          "ATPLGS-106040",
+          "ATPLQ-227758",
+          "BGS-220036",
+          "ATPLGS-120476"
+        ],
         "explanation": ""
       }
     }
@@ -719,7 +730,8 @@
           "ATPLGS-625705",
           "BGS-222282",
           "AVEXAM-6130",
-          "ATPLQ-226603"
+          "ATPLQ-226603",
+          "BGS-222280"
         ],
         "explanation": ""
       }
@@ -1061,7 +1073,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-120800", "ATPLQ-222666"],
+        "externalIds": ["ATPLGS-120800", "ATPLQ-222666", "BGS-222287"],
         "explanation": ""
       }
     }
@@ -1102,7 +1114,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-222234", "ATPLQ-225964", "ATPLGS-120898"],
+        "externalIds": [
+          "BGS-222234",
+          "ATPLQ-225964",
+          "ATPLGS-120898",
+          "ATPLGS-626386",
+          "AVEXAM-70163"
+        ],
         "explanation": ""
       }
     }
@@ -1389,7 +1407,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-222168"],
+        "externalIds": ["BGS-222168", "ATPLQ-225062", "AVEXAM-92537"],
         "explanation": ""
       }
     }
@@ -1430,7 +1448,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-54980", "ATPLGS-113266", "ATPLQ-224452"],
+        "externalIds": [
+          "AVEXAM-54980",
+          "ATPLGS-113266",
+          "ATPLQ-224452",
+          "BGS-221233"
+        ],
         "explanation": ""
       }
     }
@@ -1512,7 +1535,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-43604", "BGS-222279", "ATPLQ-228410"],
+        "externalIds": [
+          "AVEXAM-43604",
+          "BGS-222279",
+          "ATPLQ-228410",
+          "BGS-222281",
+          "AVEXAM-34210"
+        ],
         "explanation": ""
       }
     }
@@ -1629,139 +1658,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-27502"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QBJPIE6AFL",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.02"],
-    "variants": {
-      "LFBXwmEd": {
-        "id": "LFBXwmEd",
-        "type": "simple",
-        "question": "A pressure of 1 bar is equivalent to",
-        "options": [
-          {
-            "id": "A7179WH5K3",
-            "text": "100000 Pascal.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ79TYSTW0",
-            "text": "10 Pascal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0RAPMNQEV",
-            "text": "1000 Pascal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOGPUUB0RP",
-            "text": "100 Pascal.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-113266",
-          "AVEXAM-54980",
-          "BGS-221233",
-          "ATPLQ-224452"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q3CXVF52JD",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.01"],
-    "variants": {
-      "Vb8trURZ": {
-        "id": "Vb8trURZ",
-        "type": "simple",
-        "question": "The parameters used to represent thrust are:\n1. N1 (low pressure shaft speed)\n2. N2 (high pressure shaft speed)\n3. EGT\n4. EPR\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AU9S8LZDX0",
-            "text": "1, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2EYUVWA64",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2X2DPQNGF",
-            "text": "4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM79ACXXNV",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221948", "ATPLQ-225288"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q3H8GLBNC0",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "dqhgrYd9": {
-        "id": "dqhgrYd9",
-        "type": "simple",
-        "question": "One of the disadvantages of an electronic tachometer is the",
-        "options": [
-          {
-            "id": "AQ87FZBBLI",
-            "text": "necessity of a power supply.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFWHTQF6LJ",
-            "text": "high influence of line resistance on the indication.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP0SYQVEHS",
-            "text": "generation of spurious signals at the commutator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD71JE4TJN",
-            "text": "influence of temperature on the indication.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220044",
-          "ATPLQ-221362",
-          "ATPLGS-121066",
-          "BGS-993017"
-        ],
         "explanation": ""
       }
     }
@@ -1972,7 +1868,14 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-99001", "ATPLQ-228418"],
+        "externalIds": [
+          "AVEXAM-99001",
+          "ATPLQ-228418",
+          "ATPLGS-105884",
+          "BGS-993025",
+          "ATPLGS-121103",
+          "BGS-220002"
+        ],
         "explanation": ""
       }
     }
@@ -2060,81 +1963,6 @@
     }
   },
   {
-    "id": "Q4CHSJ86A4",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.02"],
-    "variants": {
-      "nwTRhiBE": {
-        "id": "nwTRhiBE",
-        "type": "simple",
-        "question": "When compared with the volumetric fuel flow meter, the mass fuel flow meter takes into account the fuel:",
-        "options": [
-          {
-            "id": "ACKF3ZR2UO",
-            "text": "density.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATJY8JD9H4",
-            "text": "pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAH5P1RAXZ",
-            "text": "permittivity",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4P7K3UZR9",
-            "text": "turbulent flow in the line.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-227758", "BGS-220036", "ATPLGS-120476"],
-        "explanation": ""
-      },
-      "Q8X2oZpM": {
-        "id": "Q8X2oZpM",
-        "type": "simple",
-        "question": "When compared with the volumetric fuel flow meter, the mass fuel flow meter takes into account the fuel:",
-        "options": [
-          {
-            "id": "AS4Y9889P6",
-            "text": "density.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZALNR48TI",
-            "text": "turbulent flow in the line.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX8JDB4KWE",
-            "text": "pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8PQPNPY7P",
-            "text": "permittivity.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220036", "ATPLQ-227758"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q4HXTFIS7E",
     "explanation": "",
     "learningObjectives": ["022.01.08.01.01"],
@@ -2205,47 +2033,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-21922", "ATPLQ-228639"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q4M3GU2BXK",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.01"],
-    "variants": {
-      "CX7cApX6": {
-        "id": "CX7cApX6",
-        "type": "simple",
-        "question": "By integrating a flow with respect to time we obtain:",
-        "options": [
-          {
-            "id": "AF7ZSFLRWP",
-            "text": "a volume or a mass.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AE5W22OZGE",
-            "text": "the diameter of the line.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3PN7NGEMR",
-            "text": "the cross section of the line.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT101QTIIN",
-            "text": "a pressure.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222287", "ATPLQ-222666", "ATPLGS-120800"],
         "explanation": ""
       }
     }
@@ -2327,7 +2114,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-121070", "BGS-220046", "ATPLQ-221549"],
+        "externalIds": [
+          "ATPLGS-121070",
+          "BGS-220046",
+          "ATPLQ-221549",
+          "AVEXAM-3010"
+        ],
         "explanation": ""
       }
     }
@@ -2451,52 +2243,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-38093", "ATPLQ-225384", "AVEXAM-4380"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q51XRBHKIJ",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.01"],
-    "variants": {
-      "RmymGrrz": {
-        "id": "RmymGrrz",
-        "type": "simple",
-        "question": "A pressure is defined as",
-        "options": [
-          {
-            "id": "AU1W5992LX",
-            "text": "a force per unit area.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0C6F90VAM",
-            "text": "density per unit volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVMCL9LAQB",
-            "text": "a force per unit volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG8C8I4EBX",
-            "text": "density per unit area.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-105886",
-          "AVEXAM-24951",
-          "BGS-221947",
-          "ATPLQ-223481"
-        ],
         "explanation": ""
       }
     }
@@ -2951,7 +2697,8 @@
           "ATPLGS-120473",
           "ATPLQ-228259",
           "BGS-220030",
-          "AVEXAM-77901"
+          "AVEXAM-77901",
+          "AVEXAM-76724"
         ],
         "explanation": ""
       }
@@ -3034,7 +2781,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-51592", "ATPLQ-229348"],
+        "externalIds": ["AVEXAM-51592", "ATPLQ-229348", "ATPLGS-106022"],
         "explanation": ""
       }
     }
@@ -3203,48 +2950,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-59952", "BGS-220039", "ATPLQ-224090"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q6T8E4MSQV",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.01"],
-    "variants": {
-      "EGRDl8oq": {
-        "id": "EGRDl8oq",
-        "type": "simple",
-        "question": "Any vibration displayed on an engine vibration monitoring system for a turbojet:",
-        "options": [
-          {
-            "id": "ATJKEONZMR",
-            "text": "indicates rotor imbalance.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYTN4P3LQW",
-            "text": "is directly proportional to engine speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKR6CYMH9I",
-            "text": "varies inversely as the square of the engine speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4XTDLW1LX",
-            "text": "is presented without any amplification or filtering.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "AVEXAM-59952",
+          "BGS-220039",
+          "ATPLQ-224090",
+          "ATPLGS-622623"
         ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-83792", "ATPLQ-224239"],
         "explanation": ""
       }
     }
@@ -3285,7 +2996,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-47909", "BGS-221963", "ATPLQ-228152"],
+        "externalIds": [
+          "AVEXAM-47909",
+          "BGS-221963",
+          "ATPLQ-228152",
+          "ATPLGS-106041"
+        ],
         "explanation": ""
       }
     }
@@ -3401,7 +3117,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-106071", "AVEXAM-33303", "ATPLQ-227212"],
+        "externalIds": [
+          "ATPLGS-106071",
+          "AVEXAM-33303",
+          "ATPLQ-227212",
+          "ATPLGS-129516"
+        ],
         "explanation": ""
       }
     }
@@ -3442,7 +3163,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-221402", "ATPLQ-228849"],
+        "externalIds": [
+          "BGS-221402",
+          "ATPLQ-228849",
+          "AVEXAM-90266",
+          "BGS-221318",
+          "ATPLGS-627458"
+        ],
         "explanation": ""
       }
     }
@@ -3483,48 +3210,16 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-4521"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q7F6L9JYSL",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.03"],
-    "variants": {
-      "IwpQUsq7": {
-        "id": "IwpQUsq7",
-        "type": "simple",
-        "question": "The sensor(s) feeding the EPR-indicator is (are)...",
-        "options": [
-          {
-            "id": "A9ZLJN8YQH",
-            "text": "pressure probes, one located upstream from the compressor inlet, and the other downstream from the turbine outlet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0R65P07TQ",
-            "text": "temperature probes, one located upstream from the compressor inlet, and an other downstream from the turbine outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYRURTG83V",
-            "text": "tachometer located on the shaft of the N1 compressor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARLOYVZMGI",
-            "text": "tachometer located on the shaft of the N2 compressor.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "AVEXAM-4521",
+          "ATPLGS-113111",
+          "ATPLQ-228113",
+          "ATPLGS-106045",
+          "BGS-221226",
+          "BGS-221958",
+          "ATPLGS-113275",
+          "ATPLGS-106023"
         ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-9730", "BGS-220059", "ATPLQ-222483"],
         "explanation": ""
       }
     }
@@ -3779,47 +3474,6 @@
     }
   },
   {
-    "id": "Q7V45X9A4P",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.03"],
-    "variants": {
-      "yYzcaoVP": {
-        "id": "yYzcaoVP",
-        "type": "simple",
-        "question": "Fuel flow can be expressed in:\n1 – kg per m^3^. \n2 – lb per m^3^. \n3 – lb per hour. \n4 – kg per hour.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AO3T0BY8OK",
-            "text": "3, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A964PVABAX",
-            "text": "3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0ZGEPXYNC",
-            "text": "1,2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT05VN5O1X",
-            "text": "1",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228152", "BGS-221963", "AVEXAM-47909"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q80YZGYG9I",
     "explanation": "",
     "learningObjectives": ["022.01.01.01.06"],
@@ -3856,47 +3510,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-86212", "ATPLGS-105887"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q88878R0W5",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.02"],
-    "variants": {
-      "70D2cCYm": {
-        "id": "70D2cCYm",
-        "type": "simple",
-        "question": "Given:\nP = power\nT = torque\nn = RPM\nThe correct relationship is:",
-        "options": [
-          {
-            "id": "AF565FS709",
-            "text": "P = T x n.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWTTLNYI4T",
-            "text": "P = T x GS.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A74C7WOWIA",
-            "text": "P = T / n.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA9NSB1NZX",
-            "text": "P = T x TAS.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221236", "ATPLQ-222853", "ATPLGS-113281"],
         "explanation": ""
       }
     }
@@ -4516,47 +4129,6 @@
     }
   },
   {
-    "id": "Q9AGYCD3KB",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.01"],
-    "variants": {
-      "6MNfDHVI": {
-        "id": "6MNfDHVI",
-        "type": "simple",
-        "question": "Which of these statements about fuel quantity measurement are correct or incorrect? 1 The quantity of fuel can be measured by volume2 The quantity of fuel can be measured by mass.",
-        "options": [
-          {
-            "id": "AY5744GTNT",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A68SA6QRGB",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHC7QZ5E3E",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUAIRVHQDZ",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-113111"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q9C3EBBZO7",
     "explanation": "",
     "learningObjectives": ["022.01.09.01.01"],
@@ -4766,7 +4338,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-53933", "ATPLQ-229515"],
+        "externalIds": ["AVEXAM-53933", "ATPLQ-229515", "ATPLGS-105881"],
         "explanation": ""
       }
     }
@@ -4848,7 +4420,15 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-112462", "AVEXAM-23059"],
+        "externalIds": [
+          "ATPLGS-112462",
+          "AVEXAM-23059",
+          "ATPLQ-224019",
+          "BGS-220062",
+          "BGS-221220",
+          "ATPLGS-129522",
+          "AVEXAM-33640"
+        ],
         "explanation": ""
       }
     }
@@ -4895,88 +4475,6 @@
           "AVEXAM-19955",
           "ATPLGS-106058",
           "ATPLGS-106060"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QA776RDHVC",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "vRlgpVpU": {
-        "id": "vRlgpVpU",
-        "type": "simple",
-        "question": "Given:\nC = temperature in Celsius\nK = temperature in Kelvin\nThe correct relationship between these different units is:",
-        "options": [
-          {
-            "id": "AGT548IBYQ",
-            "text": "K = C + 273.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOLAD4CEG3",
-            "text": "C = K + 273.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK99B1GVUI",
-            "text": "C = K x 1.8 + 32.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQ8KVJSZVI",
-            "text": "K = C x 1.8 + 32.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222281", "ATPLQ-228410"],
-        "explanation": ""
-      },
-      "dN20ugND": {
-        "id": "dN20ugND",
-        "type": "simple",
-        "question": "Given:\nC = temperature in Celsius\nK = temperature in Kelvin\nThe correct relationship between these different units is:",
-        "options": [
-          {
-            "id": "AWSQJ303OM",
-            "text": "C = K - 273.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS0SSOK0BF",
-            "text": "K = C - 273.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARCL3VTF70",
-            "text": "K = C x 1.8 + 32.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A17UCW84AN",
-            "text": "C = K x 1.8 + 32.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-222279",
-          "ATPLQ-223294",
-          "AVEXAM-34210",
-          "AVEXAM-43604",
-          "ATPLQ-228410",
-          "ATPLGS-113313"
         ],
         "explanation": ""
       }
@@ -5316,7 +4814,15 @@
           "ATPLQ-229195",
           "BGS-222178",
           "BGS-221196",
-          "AVEXAM-70740"
+          "AVEXAM-70740",
+          "BGS-221269",
+          "ATPLQ-229938",
+          "AVEXAM-71843",
+          "ATPLGS-120790",
+          "ATPLQ-222696",
+          "AVEXAM-30005",
+          "BGS-221088",
+          "BGS-222177"
         ],
         "explanation": ""
       },
@@ -5438,95 +4944,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-120803", "ATPLQ-223638"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QBXYEJA1TU",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.01"],
-    "variants": {
-      "UF63yW1p": {
-        "id": "UF63yW1p",
-        "type": "simple",
-        "question": "A pressure is defined as:",
-        "options": [
-          {
-            "id": "A6G4F4FCZ8",
-            "text": "a force per unit area.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2PBWDUAVD",
-            "text": "a force per unit volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A01F4DF8FC",
-            "text": "density per unit volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM20NL8FV8",
-            "text": "density per unit area.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-24951",
-          "ATPLGS-120789",
-          "ATPLQ-223481",
-          "ATPLGS-105886",
-          "BGS-221947"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QC2NAXXZBW",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "aGv8fas3": {
-        "id": "aGv8fas3",
-        "type": "simple",
-        "question": "The Bourdon tube is used to measure:",
-        "options": [
-          {
-            "id": "AG8EWO9RAN",
-            "text": "pressure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A69OZCU1KL",
-            "text": "temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYD0A9KF39",
-            "text": "quantity.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATVPK6HAUQ",
-            "text": "a flow rate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228762", "BGS-221946", "ATPLGS-121085"],
+        "externalIds": ["ATPLGS-120803", "ATPLQ-223638", "BGS-221375"],
         "explanation": ""
       }
     }
@@ -5777,91 +5195,6 @@
     }
   },
   {
-    "id": "QD4XCEPEP2",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.03"],
-    "variants": {
-      "euO5fFLN": {
-        "id": "euO5fFLN",
-        "type": "simple",
-        "question": "The value shown by the indicator of a vibration monitoring system is 4. This is:",
-        "options": [
-          {
-            "id": "ASK286KCZW",
-            "text": "a level of vibration without any unit.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4WOY7Z157",
-            "text": "4%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1R6LHR19J",
-            "text": "4% or 4 kHz depending on the type of aircraft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQ2HO5QR8E",
-            "text": "4 Hz.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-222510",
-          "ATPLGS-627204",
-          "BGS-221163",
-          "BGS-222163"
-        ],
-        "explanation": ""
-      },
-      "pzf5ZhU3": {
-        "id": "pzf5ZhU3",
-        "type": "simple",
-        "question": "The value shown by the indicator of a vibration monitoring system is 4. This is:",
-        "options": [
-          {
-            "id": "AVFE47M6Y4",
-            "text": "a level of vibration without any unit.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATQT73T1B1",
-            "text": "4%",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAXXL6PLPZ",
-            "text": "4% or 4 kHz depending on the type of aircraft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATZ7VY6XWY",
-            "text": "4 Hz.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-627204",
-          "BGS-221163",
-          "BGS-222163",
-          "ATPLQ-222510"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QDADH3DVZ8",
     "explanation": "",
     "learningObjectives": ["022.01.04.01.02"],
@@ -5979,7 +5312,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-106057", "ATPLQ-226749"],
+        "externalIds": ["ATPLGS-106057", "ATPLQ-226749", "AVEXAM-94123"],
         "explanation": ""
       }
     }
@@ -6283,7 +5616,8 @@
           "AVEXAM-65050",
           "ATPLQ-225572",
           "ATPLQ-225321",
-          "ATPLGS-626196"
+          "ATPLGS-626196",
+          "BGS-221413"
         ],
         "explanation": ""
       }
@@ -6378,47 +5712,6 @@
     }
   },
   {
-    "id": "QEUEXP9T10",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.05"],
-    "variants": {
-      "LS3FGMbm": {
-        "id": "LS3FGMbm",
-        "type": "simple",
-        "question": "A capacitance type fuel quantity measurement system provides the indication of the...",
-        "options": [
-          {
-            "id": "A3401I3V8G",
-            "text": "mass of the fuel.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP94JRWULG",
-            "text": "volume of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOPHJXZIW5",
-            "text": "inductivity of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR8HOC865Z",
-            "text": "density-volume of the fuel.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221413", "AVEXAM-65050", "ATPLQ-225572"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QEX812VVCM",
     "explanation": "",
     "learningObjectives": ["022.01.02.01.02"],
@@ -6495,7 +5788,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-121067", "BGS-220037", "ATPLQ-227820"],
+        "externalIds": [
+          "ATPLGS-121067",
+          "BGS-220037",
+          "ATPLQ-227820",
+          "AVEXAM-64849"
+        ],
         "explanation": ""
       }
     }
@@ -6588,88 +5886,6 @@
           "ATPLGS-106022",
           "AVEXAM-51592"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QFSOLO8ADQ",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "FxIzlIOv": {
-        "id": "FxIzlIOv",
-        "type": "simple",
-        "question": "One of the disadvantages of an electronic tachometer is the:",
-        "options": [
-          {
-            "id": "AYKKS1NXM0",
-            "text": "necessity of a power supply.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAOLML3DBA",
-            "text": "influence of temperature on the indication.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMT03ESUIN",
-            "text": "generation of spurious signals at the commutator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5Y2657UZ0",
-            "text": "high influence of line resistance on the indication.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-50114", "BGS-993017", "ATPLQ-221362"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QG52S0PAA1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "CMX8MaPp": {
-        "id": "CMX8MaPp",
-        "type": "simple",
-        "question": "The disadvantages of a float type fuel gauge are:\n\n- The design is complex.\n\n- The indications are influenced by the airplane attitude variations.\n\n- The indications are influenced by the accelerations.\n\n- The indications are influenced by temperature variations.</li>\n</ol>\nThe combination regrouping all the correct statements is:",
-        "options": [
-          {
-            "id": "ANOAV5OUQT",
-            "text": "2, 3, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A42Z8AO28N",
-            "text": "1 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9QWS650MK",
-            "text": "2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A99PUJHHBK",
-            "text": "1, 2, 3, 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-39233", "ATPLGS-106018"],
         "explanation": ""
       }
     }
@@ -6879,7 +6095,8 @@
           "AVEXAM-37003",
           "BGS-221959",
           "BGS-221960",
-          "AVEXAM-38987"
+          "AVEXAM-38987",
+          "ATPLQ-228937"
         ],
         "explanation": ""
       }
@@ -6962,7 +6179,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-129505", "BGS-220060", "ATPLQ-225217"],
+        "externalIds": [
+          "ATPLGS-129505",
+          "BGS-220060",
+          "ATPLQ-225217",
+          "AVEXAM-50391"
+        ],
         "explanation": ""
       }
     }
@@ -7296,164 +6518,6 @@
     }
   },
   {
-    "id": "QH67D8PYOW",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.01"],
-    "variants": {
-      "anJM9egP": {
-        "id": "anJM9egP",
-        "type": "simple",
-        "question": "Torque can be determined by measuring the:",
-        "options": [
-          {
-            "id": "AOUPOFCH2R",
-            "text": "the twist of a torque shaft of a known length.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AN8Q3B1K22",
-            "text": "ratio Pt2 / Pt7.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A59I92Q20W",
-            "text": "ratio Pt7 / Pt2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADE55SCV85",
-            "text": "change in frequency between the torque shaft and the reference shaft.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-224019",
-          "AVEXAM-23059",
-          "BGS-220062",
-          "BGS-221220",
-          "ATPLGS-129522",
-          "AVEXAM-33640",
-          "ATPLGS-112462"
-        ],
-        "explanation": ""
-      },
-      "x63719L8": {
-        "id": "x63719L8",
-        "type": "simple",
-        "question": "Torque can be determined by measuring the:",
-        "options": [
-          {
-            "id": "AZJ3RMLR1X",
-            "text": "the twist of a torque shaft of a known length.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APCSKU443R",
-            "text": "ratio Pt7/Pt2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA0QZP3MAP",
-            "text": "ratio Pt2 / Pt7.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG9H62GN40",
-            "text": "change in frequency between the torque shaft and the reference shaft.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220062", "AVEXAM-23059", "ATPLQ-224019"],
-        "explanation": ""
-      },
-      "NBwL3rop": {
-        "id": "NBwL3rop",
-        "type": "simple",
-        "question": "Torque can be determined by measuring the:",
-        "options": [
-          {
-            "id": "AKUXTDZ3RV",
-            "text": "change in phase between the torque shaft and the reference shaft.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXHEZM0L0G",
-            "text": "change in frequency between the torque shaft and the reference shaft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABXJCNPP75",
-            "text": "ratio Pt2 / Pt7.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A67WVUE378",
-            "text": "ratio Pt7 / Pt2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-23059",
-          "BGS-220062",
-          "BGS-221220",
-          "ATPLQ-224019",
-          "ATPLGS-129522",
-          "ATPLGS-112462"
-        ],
-        "explanation": ""
-      },
-      "NvyKcMTq": {
-        "id": "NvyKcMTq",
-        "type": "simple",
-        "question": "Torque can be determined by measuring the:",
-        "options": [
-          {
-            "id": "ARGBNEFJRC",
-            "text": "the twist of the shaft of a known length.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYMGBNU4PT",
-            "text": "change in frequency between the torque shaft and the reference shaft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AO0D615Q4C",
-            "text": "ratio Pt7 / Pt2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE0U2YYV8X",
-            "text": "ratio Pt2 / Pt7.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-33640", "ATPLQ-224019"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QHD5EXG264",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.03"],
@@ -7489,7 +6553,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-36805", "ATPLQ-225394"],
+        "externalIds": ["AVEXAM-36805", "ATPLQ-225394", "ATPLGS-106056"],
         "explanation": ""
       }
     }
@@ -7572,47 +6636,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-105885"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHMXGMKDYV",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.03"],
-    "variants": {
-      "Hfbf3Bd9": {
-        "id": "Hfbf3Bd9",
-        "type": "simple",
-        "question": "Fuel flow can be expressed in\n1) kg per m3.\n2) lbs per m3.\n3) lbs per hour.\n4) kg per hour.The combination that regroups all of the correct statements is",
-        "options": [
-          {
-            "id": "AHCSOERFH5",
-            "text": "3, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AB5DHWD6FJ",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ6QOE960H",
-            "text": "4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZQ0HZPBJH",
-            "text": "1",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106041", "BGS-221963", "AVEXAM-47909"],
         "explanation": ""
       }
     }
@@ -7789,91 +6812,6 @@
     }
   },
   {
-    "id": "QIFYEFTWZZ",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.02"],
-    "variants": {
-      "26ZoottB": {
-        "id": "26ZoottB",
-        "type": "simple",
-        "question": "The output from an engine vibration transducer is:",
-        "options": [
-          {
-            "id": "A3QT3452F7",
-            "text": "always filtered to remove unwanted frequencies.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANG0O62BY8",
-            "text": "directly proportional to engine speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A932J8BHN9",
-            "text": "fed directly to the indicator in the flight deck without amplification or filtering.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AB7E10MR3U",
-            "text": "inversely proportional to engine speed.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228770",
-          "ATPLGS-120628",
-          "BGS-220066",
-          "AVEXAM-89363"
-        ],
-        "explanation": ""
-      },
-      "u1cExFEb": {
-        "id": "u1cExFEb",
-        "type": "simple",
-        "question": "The output from an engine vibration transducer is:",
-        "options": [
-          {
-            "id": "ATJZJBQ8VN",
-            "text": "always filtered to remove unwanted frequencies.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AN0XHKEH89",
-            "text": "directly proportional to engine speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6HRH0ZJQO",
-            "text": "inversely proportional to engine speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL2W6JGPVZ",
-            "text": "fed directly to the indicator in the cockpit without amplification or filtering.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-89363",
-          "BGS-220066",
-          "ATPLQ-228770",
-          "ATPLGS-120628"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QU5WZWOIBZ",
     "explanation": "",
     "learningObjectives": ["022.01.08.01.01"],
@@ -7998,52 +6936,6 @@
           "BGS-222281",
           "ATPLGS-113313",
           "BGS-222279"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QIXQ0CVU8Q",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.02"],
-    "variants": {
-      "oJGEQrUf": {
-        "id": "oJGEQrUf",
-        "type": "simple",
-        "question": "A pressure of 1 bar is equivalent to:",
-        "options": [
-          {
-            "id": "AAGEQ8MYR2",
-            "text": "100000 Pascal.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALZ65XR016",
-            "text": "100 Pascal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYJ3A3RBW6",
-            "text": "1000 Pascal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVWO9RN75C",
-            "text": "10 Pascal.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-224452",
-          "ATPLGS-113266",
-          "BGS-221233",
-          "AVEXAM-54980"
         ],
         "explanation": ""
       }
@@ -8178,52 +7070,6 @@
     }
   },
   {
-    "id": "QJET5D75N5",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.01"],
-    "variants": {
-      "3HfPNLvb": {
-        "id": "3HfPNLvb",
-        "type": "simple",
-        "question": "A pressure is defined as a",
-        "options": [
-          {
-            "id": "AKIIPHXBXC",
-            "text": "force per unit area.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A23J4C8YS1",
-            "text": "density per unit area.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI6IBOCTQT",
-            "text": "force per unit volume.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATN9P1OA0Z",
-            "text": "density per unit volume.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-120789",
-          "AVEXAM-24951",
-          "BGS-221947",
-          "ATPLQ-223481"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QJLHKB9RMC",
     "explanation": "",
     "learningObjectives": ["022.01.02.01.04"],
@@ -8260,91 +7106,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-31552", "BGS-220017"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJQCGM4Y9L",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.01"],
-    "variants": {
-      "4tDAZT0y": {
-        "id": "4tDAZT0y",
-        "type": "simple",
-        "question": "A jet engine vibration meter is indicating \"4\". What is the unit of this indication?",
-        "options": [
-          {
-            "id": "AY3EQL9JTA",
-            "text": "No units are specified",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQUOJFQHUR",
-            "text": "hPa",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYK3RCT9WL",
-            "text": "Hz",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHOHXILDDC",
-            "text": "m/s",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-227212",
-          "AVEXAM-33303",
-          "ATPLGS-106071",
-          "ATPLGS-129516"
-        ],
-        "explanation": ""
-      },
-      "dVDeKz7Y": {
-        "id": "dVDeKz7Y",
-        "type": "simple",
-        "question": "A jet engine vibration meter is indicating \"4\". What is the unit of this indication?",
-        "options": [
-          {
-            "id": "AVNNRS0R4A",
-            "text": "No units are specified.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A13DC8QR0D",
-            "text": "m/s",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANYQ9CPCVK",
-            "text": "4 %",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK0KCEBQIV",
-            "text": "Hz",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-33303",
-          "ATPLQ-227212",
-          "ATPLGS-129516",
-          "ATPLGS-106071"
-        ],
         "explanation": ""
       }
     }
@@ -8391,93 +7152,6 @@
           "AVEXAM-36893",
           "ATPLGS-106053",
           "ATPLGS-627208"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QK11PJEWBA",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "gOBcyDmM": {
-        "id": "gOBcyDmM",
-        "type": "simple",
-        "question": "In a three-phase synchronous motor type tachometer the:\n1. transmitter is a direct current generator\n2. voltage is proportional to the transmitter drive speed\n3. frequency is proportional to the transmitter drive speed\n4. speed indicating element is a galvanometer\n5. speed indicating element is an asynchronous motor driving a magnetic tachometer The combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AJ73UK0R34",
-            "text": "3, 5.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6Z577D53Z",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR3233E4FL",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKE8G2KLUB",
-            "text": "2, 5.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220043", "ATPLQ-222334"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QK1NR9JCR4",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "iQXUFMaY": {
-        "id": "iQXUFMaY",
-        "type": "simple",
-        "question": "A magnetic tachometer consists amongst others of ...",
-        "options": [
-          {
-            "id": "A1R7OCNC6H",
-            "text": "a permanent magnet turning inside a non-magnetic drag cup.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADKWTORTH5",
-            "text": "a single-phase generator connected to a synchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A03EFR2RP5",
-            "text": "a three-phase generator connected to an asynchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AATD81O7LM",
-            "text": "a single-phase generator connected to an asynchronous motor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220037",
-          "AVEXAM-64849",
-          "ATPLGS-121067",
-          "ATPLQ-227820"
         ],
         "explanation": ""
       }
@@ -8560,48 +7234,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-229038", "BGS-221222", "ATPLGS-120806"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QKBP5S1GX0",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "BZJdkAoM": {
-        "id": "BZJdkAoM",
-        "type": "simple",
-        "question": "Different pressure sensors are used according to the intensity of the pressure measured (low, medium or high)Classify the following sensors by order of increasing pressure for which they are suitable\n1) bellows type\n2) Bourdon tube type\n3) aneroid capsule type",
-        "options": [
-          {
-            "id": "AO4BO56ZX1",
-            "text": "3, 1, 2",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATYAVQVKG0",
-            "text": "1, 2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK65GLG0S0",
-            "text": "3, 2, 1",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0I9XAAGRU",
-            "text": "2, 1, 3",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "ATPLQ-229038",
+          "BGS-221222",
+          "ATPLGS-120806",
+          "ATPLQ-226749"
         ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105884", "ATPLQ-228418"],
         "explanation": ""
       }
     }
@@ -8683,7 +7321,14 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-45861"],
+        "externalIds": [
+          "AVEXAM-45861",
+          "BGS-222282",
+          "ATPLGS-129533",
+          "AVEXAM-6130",
+          "ATPLGS-625705",
+          "AVEXAM-38093"
+        ],
         "explanation": ""
       }
     }
@@ -8852,7 +7497,16 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-120931", "ATPLQ-225778"],
+        "externalIds": [
+          "ATPLGS-120931",
+          "ATPLQ-225778",
+          "BGS-220314",
+          "ATPLGS-106350",
+          "ATPLQ-224963",
+          "BGS-220313",
+          "AVEXAM-78825",
+          "AVEXAM-60114"
+        ],
         "explanation": ""
       },
       "8W3xrO82": {
@@ -8974,53 +7628,11 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220003", "ATPLQ-228075"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLB8IUSR7K",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.01"],
-    "variants": {
-      "HnwGali9": {
-        "id": "HnwGali9",
-        "type": "simple",
-        "question": "The magnitude of a torque is defined as:",
-        "options": [
-          {
-            "id": "AADHET8T5A",
-            "text": "force times its lever arm.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5RBX7WIS2",
-            "text": "force divided by its lever arm.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUVJ90R004",
-            "text": "force divided by RPM.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9OBR6BCN2",
-            "text": "force times RPM.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
         "externalIds": [
-          "ATPLQ-222747",
-          "AVEXAM-36893",
-          "ATPLGS-106053",
-          "ATPLGS-627208",
-          "BGS-222261"
+          "BGS-220003",
+          "ATPLQ-228075",
+          "AVEXAM-90923",
+          "ATPLGS-105877"
         ],
         "explanation": ""
       }
@@ -9242,52 +7854,6 @@
     }
   },
   {
-    "id": "QLW0YKL65E",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "bUEdHuPW": {
-        "id": "bUEdHuPW",
-        "type": "simple",
-        "question": "The Bourdon tube is a:",
-        "options": [
-          {
-            "id": "AH98S12O2I",
-            "text": "pressure sensor",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMX9HFXMP7",
-            "text": "turbine temperature probe",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOICVOQQ0N",
-            "text": "smoke detector",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR6UAUYH1I",
-            "text": "vibration detector",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220005",
-          "ATPLQ-222273",
-          "AVEXAM-74638",
-          "ATPLGS-120513"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QLYTUP70P0",
     "explanation": "",
     "learningObjectives": ["022.01.01.01.04"],
@@ -9323,135 +7889,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-68134", "ATPLQ-229515"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QM89CIN5X9",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.05"],
-    "variants": {
-      "5We0a31y": {
-        "id": "5We0a31y",
-        "type": "simple",
-        "question": "For a capacitance type fuel indication system, what indication would you expect in case of failure?",
-        "options": [
-          {
-            "id": "A4NW03Y90E",
-            "text": "A sudden full deflection of the fuel gauge towards empty.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5UMVVKQ08",
-            "text": "A progressive deflection of the gauge to full.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQWZVCCCBU",
-            "text": "A red flag in the gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7BZ6TP35V",
-            "text": "A frozen fuel level indication.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-221806", "AVEXAM-18643"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMBI8RZGWR",
-    "explanation": "",
-    "learningObjectives": ["022.01.08.01.02"],
-    "variants": {
-      "QahwiqF8": {
-        "id": "QahwiqF8",
-        "type": "simple",
-        "question": "On an twin-engine aeroplane, the synchroscope can consists of:",
-        "options": [
-          {
-            "id": "A3ZR032QWJ",
-            "text": "a rotor fed by the alternator driven by the master engine, and a stator fed by the alternator driven by the engine to be synchronised.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AE1AJ46UD6",
-            "text": "a voltmeter fed by two tacho-genny.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXDBSZC1OK",
-            "text": "a galvanometer fed by two alternators.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADA92EX8KI",
-            "text": "an ammeter fed by two tacho-genny.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-222262", "BGS-222293"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMDJKOT5M6",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.02"],
-    "variants": {
-      "IJia1hhB": {
-        "id": "IJia1hhB",
-        "type": "simple",
-        "question": "The EPR (Engine Pressure Ratio) is",
-        "options": [
-          {
-            "id": "A23EK3ZV2I",
-            "text": "the ratio of the turbine outlet total pressure to the compressor inlet total pressure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AHZY2NAGOS",
-            "text": "the ratio of the turbine outlet total pressure to the ambient total pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIDE8868JG",
-            "text": "the ratio of the compressor outlet total pressure to the compressor inlet total pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0NQB0JVR2",
-            "text": "the difference between the compressor inlet total pressure and the turbine outlet total pressure.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-112832",
-          "AVEXAM-15363",
-          "ATPLQ-226699",
-          "BGS-220052"
-        ],
+        "externalIds": ["AVEXAM-68134", "ATPLQ-229515", "ATPLGS-105880"],
         "explanation": ""
       }
     }
@@ -9533,53 +7971,11 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-21364", "ATPLQ-223305"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMQMPTO9IN",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.05"],
-    "variants": {
-      "QvPFyrxw": {
-        "id": "QvPFyrxw",
-        "type": "simple",
-        "question": "The sensors of the Electronic Torquemeter system measure the..",
-        "options": [
-          {
-            "id": "A93B60X3FH",
-            "text": "twist in the engine output shaft.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKB6QIMJJ0",
-            "text": "torsion in the propeller or rotor blades.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALC9TT5XFO",
-            "text": "oil pressure in the gearbox.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKULSVWHSD",
-            "text": "angular speed of the propeller or rotor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
         "externalIds": [
-          "ATPLQ-225964",
-          "ATPLGS-120898",
-          "BGS-222234",
-          "ATPLGS-626386",
-          "AVEXAM-70163"
+          "AVEXAM-21364",
+          "ATPLQ-223305",
+          "BGS-222230",
+          "ATPLGS-106047"
         ],
         "explanation": ""
       }
@@ -9622,52 +8018,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-106024", "AVEXAM-77569"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMX6VNKY2T",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "823iwxsl": {
-        "id": "823iwxsl",
-        "type": "simple",
-        "question": "A magnetic tachometer consists amongst others of ..",
-        "options": [
-          {
-            "id": "AFKMTTPNK7",
-            "text": "a permanent magnet turning inside a non magnetic drag cup.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM8HUOTE64",
-            "text": "a single-phase generator connected to a synchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVDOW9DZWS",
-            "text": "a single-phase generator connected to an asynchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8UOM957GD",
-            "text": "a three phases generator connected to an asynchronous motor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-227820",
-          "BGS-220037",
-          "AVEXAM-64849",
-          "ATPLGS-121067"
-        ],
         "explanation": ""
       }
     }
@@ -9919,47 +8269,6 @@
     }
   },
   {
-    "id": "QNC3RGY1NY",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "2P5PudVf": {
-        "id": "2P5PudVf",
-        "type": "simple",
-        "question": "Given:\nC = temperature in °Celsius\nK = temperature in Kelvin\nThe correct relationship between these temperature measurement units is:",
-        "options": [
-          {
-            "id": "AAJPDRA8HC",
-            "text": "C = K - 273",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ032QUN7U",
-            "text": "K = C - 273",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8VLWWNO47",
-            "text": "C = (K × 1.8) + 32",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI1TCTZHVC",
-            "text": "K = (C × 1.8) + 32",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-34210", "BGS-222279", "ATPLQ-228410"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QNFV4DJZ1E",
     "explanation": "",
     "learningObjectives": ["022.01.02.01.02"],
@@ -9995,181 +8304,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-105996", "ATPLQ-221207"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNJ425FHQA",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.03"],
-    "variants": {
-      "jFfuXXpA": {
-        "id": "jFfuXXpA",
-        "type": "simple",
-        "question": "The methods which may be used to operate the RPM indicator are:",
-        "options": [
-          {
-            "id": "AD12HPS3YK",
-            "text": "Electrical, mechanical, and magnetic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJZABRCXKS",
-            "text": "Hydraulic, mechanical, and magnetic.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATI82ON085",
-            "text": "Centripetal, mechanical, and electrical.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1JSUM20OV",
-            "text": "Electrical, magnetic, and hydraulic.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228517", "BGS-221619"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXCUGHEUGO",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "YaqqabbI": {
-        "id": "YaqqabbI",
-        "type": "simple",
-        "question": "A three-phase electrical tachometer consists of:",
-        "options": [
-          {
-            "id": "A6FUYW0D4I",
-            "text": "a three-phase generator and a synchronous motor turning a drag-cup assembly.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWY5L39TSA",
-            "text": "a speed probe and a phonic wheel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYURD0OLQB",
-            "text": "three interconnected dynamos along a phonic wheel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AILXZFOJD6",
-            "text": "three speed probes and a phonic wheel.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220039",
-          "ATPLGS-622623",
-          "AVEXAM-59952",
-          "ATPLQ-224090"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QO0R7U6581",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "M1yQvS5M": {
-        "id": "M1yQvS5M",
-        "type": "simple",
-        "question": "The different types of tachometers are ..",
-        "options": [
-          {
-            "id": "A1K1KP8GN0",
-            "text": "mechanical, electrical, electronic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7U75WVK4Z",
-            "text": "electrical, mechanical, density.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4POR9GSX8",
-            "text": "magnetic, electrical, helical.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVH8K3V8ZD",
-            "text": "magnetic, capacitance, electronic.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-223305",
-          "BGS-222230",
-          "ATPLGS-106047",
-          "AVEXAM-21364"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QO26EPKM9A",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "XDiiQEXc": {
-        "id": "XDiiQEXc",
-        "type": "simple",
-        "question": "A Bourdon tube is a",
-        "options": [
-          {
-            "id": "AQCVG2N2UO",
-            "text": "pressure sensor.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AABN0WIGUO",
-            "text": "smoke detector.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHT15T2VLG",
-            "text": "vibration detector.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ6X0CUNCO",
-            "text": "turbine temperature probe.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120513", "AVEXAM-74638"],
+        "externalIds": ["ATPLGS-105996", "ATPLQ-221207", "AVEXAM-97574"],
         "explanation": ""
       }
     }
@@ -10211,88 +8346,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-220002", "ATPLQ-228418", "ATPLGS-121103"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QO6EPH4VNX",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "1IhkbDjw": {
-        "id": "1IhkbDjw",
-        "type": "simple",
-        "question": "In a three-phase synchronous motor type tachometer:\n\n1 – the transmitter is a direct current generator2 – the voltage is proportional to the transmitter drive speed3 – the frequency is proportional to the transmitter drive speed4 – the speed indicating element is a galvanometer5 – the speed indicating element is an asynchronous motor driving a magnetic tachometer\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "ATYPRHVVGG",
-            "text": "3, 5.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6YSCMPQZZ",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4SRO9A5G4",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQ9VO550TE",
-            "text": "2, 5.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-222334", "BGS-220043", "AVEXAM-49852"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOMPYJYE1C",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "GEgdm6iV": {
-        "id": "GEgdm6iV",
-        "type": "simple",
-        "question": "A magnetic tachometer consists of:",
-        "options": [
-          {
-            "id": "AZS6ME6NNH",
-            "text": "a permanent magnet turning inside a non magnetic drag cup.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQL4CGRFW6",
-            "text": "a single-phase generator connected to a synchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5RZNNGY8V",
-            "text": "a single-phase generator connected to a asynchronous motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ7SADA34V",
-            "text": "a three phase generator connected to a synchronous motor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-64849", "BGS-220037", "ATPLQ-227820"],
         "explanation": ""
       }
     }
@@ -10467,99 +8520,6 @@
     }
   },
   {
-    "id": "QPHXNZR0EE",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "hi7QAj7U": {
-        "id": "hi7QAj7U",
-        "type": "simple",
-        "question": "Different pressure sensors are used according to the intensity of the pressure measured (low, medium or high)\nClassify the following sensors by order of increasing pressure for which they are suitable :\n&nbsp;\n1. Bellows type\n2. Bourdon tube type\n3. Aneroid capsule",
-        "options": [
-          {
-            "id": "AW0WCWH5BM",
-            "text": "3, 1, 2",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AY3SG57OSN",
-            "text": "3, 2, 1",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADAKO9YP0I",
-            "text": "1, 2, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2X1S0MT6K",
-            "text": "2, 1, 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-993025",
-          "ATPLGS-105884",
-          "AVEXAM-99001",
-          "ATPLQ-228418",
-          "ATPLGS-121103"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXWEWJZ8E8",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.02"],
-    "variants": {
-      "zEa9bUN9": {
-        "id": "zEa9bUN9",
-        "type": "simple",
-        "question": "A pressure of 200 bar is equivalent to approximately:",
-        "options": [
-          {
-            "id": "AYP5WKGI1J",
-            "text": "3000 psi.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWJU2MF76X",
-            "text": "30 psi.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7DBDMFE61",
-            "text": "3 psi.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A23INCZ4V5",
-            "text": "300 psi.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-222696",
-          "AVEXAM-30005",
-          "BGS-221088",
-          "BGS-222177"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QPJJ3W1BO7",
     "explanation": "",
     "learningObjectives": ["022.01.01.01.02"],
@@ -10688,52 +8648,6 @@
     }
   },
   {
-    "id": "QRMJQOETCJ",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.01"],
-    "variants": {
-      "ExRGZQ9v": {
-        "id": "ExRGZQ9v",
-        "type": "simple",
-        "question": "On an electronic display unit, the source of the vibrations sensed by an engine vibration monitoring system:",
-        "options": [
-          {
-            "id": "AXZ0X5OMHH",
-            "text": "can be displayed (N1 or N2).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEVVN3CBAF",
-            "text": "cannot be displayed because of too much interference inside the engines.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFHYLXPUHZ",
-            "text": "cannot be displayed because low and high pressure shafts are damaged by the same frequencies.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ09LDPV8F",
-            "text": "cannot be displayed because low and high pressure shaft vibrate at the same frequency.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-222231",
-          "ATPLQ-226808",
-          "AVEXAM-90801",
-          "ATPLGS-106073"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQ4OQS3TFS",
     "explanation": "",
     "learningObjectives": ["022.01", "022.02"],
@@ -10816,134 +8730,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-221248"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQHOFQLB1D",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.06"],
-    "variants": {
-      "xSLUBShP": {
-        "id": "xSLUBShP",
-        "type": "simple",
-        "question": "The Hydraulic System Pressure Indicator holds...",
-        "options": [
-          {
-            "id": "AO1NLUJ6FQ",
-            "text": "a transducer that receives an electric signal from a remote pressure sensor.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADDWA2ZVGB",
-            "text": "a diaphragm that receives a hydraulic signal from the accumulator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9DKN1G6VG",
-            "text": "an aneroid capsule that receives a pneumatic signal from the hydraulic reservoir.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUHOFORQTV",
-            "text": "a bellows that receives a mechanical signal from a Bourdon tube.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-221981",
-          "ATPLQ-223816",
-          "AVEXAM-41897",
-          "ATPLGS-627209"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQOVWZOKXN",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "yOjhc94U": {
-        "id": "yOjhc94U",
-        "type": "simple",
-        "question": "Given:\nC = temperature in °Celsius\nF = temperature in °Fahrenheit\nThe correct relationship between these temperature measurement units is:",
-        "options": [
-          {
-            "id": "ASA71M5U5C",
-            "text": "F = (C × 1.8) + 32",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A3Y7RRONBJ",
-            "text": "C = (F × 1.8) + 32",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALI7M2JBJB",
-            "text": "F = C - 273",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYGY4HTNO6",
-            "text": "C = F - 273",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-59927", "BGS-222284", "ATPLQ-223628"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQSB31SHW7",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.05"],
-    "variants": {
-      "IfBMhjK6": {
-        "id": "IfBMhjK6",
-        "type": "simple",
-        "question": "Which of these statements concerning the operating principle of an oil torque meter are correct or incorrect?\n1) axial movement is generated by the helically cut gears.\n2) axial force is proportional to the torque.",
-        "options": [
-          {
-            "id": "ATPOBF9JK1",
-            "text": "1) is correct, 2) is correct",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1IL9ITJFZ",
-            "text": "1) is incorrect, 2) is correct",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKV4S1ZFYD",
-            "text": "1) is correct, 2) is incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2UM4PJ75A",
-            "text": "1) is incorrect, 2) is incorrect",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-90266", "ATPLQ-228849"],
         "explanation": ""
       }
     }
@@ -11113,121 +8899,6 @@
     }
   },
   {
-    "id": "QR6TIGNP82",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.01"],
-    "variants": {
-      "oz4XxJaL": {
-        "id": "oz4XxJaL",
-        "type": "simple",
-        "question": "The two main sources of information used to calculate turbofan thrust are the:",
-        "options": [
-          {
-            "id": "AP1FSRY3M2",
-            "text": "fan rotation speed (or N1) or the EPR (Engine Pressure Ratio).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AHM4HUJUG6",
-            "text": "fan rotation speed (or N1) or the total pressure at the low pressure turbine outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5GZOOA592",
-            "text": "high pressure turbine rotation speed or the EPR (Engine Pressure Ratio).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGXMKLZ1PO",
-            "text": "fan rotation speed (or N1) or the total pressure at the high pressure compressor outlet.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-50391", "ATPLQ-225217"],
-        "explanation": ""
-      },
-      "xRYyfpTP": {
-        "id": "xRYyfpTP",
-        "type": "simple",
-        "question": "The two main sources of information used to calculate turbojet thrust are the:",
-        "options": [
-          {
-            "id": "A2ULZNBFC8",
-            "text": "compressor rotation speed (or N1) or the EPR (Engine Pressure Ratio).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0U9KK8VDK",
-            "text": "compressor rotation speed (or N1) or the total pressure at the high pressure compressor outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9GKUDFTMA",
-            "text": "compressor rotation speed (or N1) or the total pressure at the low pressure turbine outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1E2U5ITPA",
-            "text": "high pressure turbine rotation speed or the EPR (Engine Pressure Ratio).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-67269", "BGS-220060", "ATPLQ-225217"],
-        "explanation": ""
-      },
-      "1gTJj21l": {
-        "id": "1gTJj21l",
-        "type": "simple",
-        "question": "The two main sources of information used to calculate turbojet thrust are the:",
-        "options": [
-          {
-            "id": "ARS4Z6CJXN",
-            "text": "fan rotation speed (or N1) or the EPR.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A67PNVQKKI",
-            "text": "fan rotation speed (or N1) or the total pressure at the high pressure compressor outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP2TE8LNRS",
-            "text": "fan rotation speed (or N1) or the total pressure at the low pressure turbine outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL3GXY1RN2",
-            "text": "high pressure turbine rotation speed or the EPR.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-225217",
-          "BGS-220060",
-          "AVEXAM-67269",
-          "AVEXAM-50391",
-          "ATPLGS-129505"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QR7X7UJ06T",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.01"],
@@ -11263,7 +8934,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-222262", "ATPLQ-225394"],
+        "externalIds": [
+          "BGS-222262",
+          "ATPLQ-225394",
+          "ATPLGS-120804",
+          "ATPLGS-106056",
+          "AVEXAM-36805"
+        ],
         "explanation": ""
       }
     }
@@ -11309,53 +8986,6 @@
           "BGS-221196",
           "BGS-222178",
           "ATPLQ-229195"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRJTONEPQH",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.05"],
-    "variants": {
-      "l1Bp8wkG": {
-        "id": "l1Bp8wkG",
-        "type": "simple",
-        "question": "Which of the below statements is/are correct regarding the operating principle of an oil torque meter?\n\n1. Axial movement is generated by the helically cut gears.2. Axial force is proportional to the torque.",
-        "options": [
-          {
-            "id": "A391KNIRSA",
-            "text": "Both 1 and 2 are correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AV31PX5SOB",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANCIJBQ6ZA",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0DCWTXDQG",
-            "text": "Both 1 and 2 are incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228849",
-          "BGS-221318",
-          "BGS-221402",
-          "AVEXAM-90266",
-          "ATPLGS-627458"
         ],
         "explanation": ""
       }
@@ -11444,94 +9074,6 @@
     }
   },
   {
-    "id": "QRT3QKB9F2",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.04"],
-    "variants": {
-      "TrDedFPQ": {
-        "id": "TrDedFPQ",
-        "type": "simple",
-        "question": "Engine torque may be expressed in the following units",
-        "options": [
-          {
-            "id": "AU7BCWZWUZ",
-            "text": "Newton meter (N m).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARAKSA1I30",
-            "text": "Watt (W).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEZUUZDL1V",
-            "text": "Newton per meter (N/m).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI08FWQZUE",
-            "text": "RPM.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106056", "ATPLQ-225394"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QS9GKZVF65",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "zJ2eG8f7": {
-        "id": "zJ2eG8f7",
-        "type": "simple",
-        "question": "Changes in temperature of the fuel affect its density, volume and dielectric value Er. An increase in temperature causes:",
-        "options": [
-          {
-            "id": "AD9LL9CJ64",
-            "text": "an increase in volume, decrease in density and decrease in Er.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANCNRFXFPF",
-            "text": "an increase in volume, increase in density and increase in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHQFD9ZK9H",
-            "text": "a decrease in volume, decrease in density and decrease in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP1YLJG7I6",
-            "text": "a decrease in volume, increase in density and increase in Er.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228937",
-          "BGS-221959",
-          "AVEXAM-37003",
-          "AVEXAM-38987",
-          "BGS-221960"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QSDVTHUYU0",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.01"],
@@ -11567,7 +9109,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-36893", "ATPLQ-222747", "BGS-222261"],
+        "externalIds": [
+          "AVEXAM-36893",
+          "ATPLQ-222747",
+          "BGS-222261",
+          "ATPLGS-106053"
+        ],
         "explanation": ""
       }
     }
@@ -11655,47 +9202,6 @@
     }
   },
   {
-    "id": "QSMO4WOLZ8",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "LcuXhccj": {
-        "id": "LcuXhccj",
-        "type": "simple",
-        "question": "An aneroid capsule:\n\n- measures differential pressure.\n\n- measures absolute pressure.\n\n- is used for low pressure measurement.\n\n- is used for very high pressure measurement.</li>\n</ol>\nThe combination regrouping all the correct statements is:",
-        "options": [
-          {
-            "id": "A3F02SRGQU",
-            "text": "2, 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIZMQWAW3R",
-            "text": "2, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQS7N25FM8",
-            "text": "1, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIW0A7OD68",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-90923", "ATPLQ-228075"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QSSHSNWVKK",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.05"],
@@ -11732,54 +9238,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-626386", "ATPLQ-225964"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSSTWEPYW0",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "WDgFUQP5": {
-        "id": "WDgFUQP5",
-        "type": "simple",
-        "question": "According to the range of pressure to be measured (low, medium, high), different types of pressure sensors are used. Classify the following sensors by order of increasing pressure for which they are suitable:\n\n1 – bellows type2 – Bourdon tube type3 – aneroid capsule type",
-        "options": [
-          {
-            "id": "ALADOEQMQF",
-            "text": "3, 1, 2.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMWVJO4AUI",
-            "text": "2, 1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARGBPQYYQ0",
-            "text": "1, 2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE4GGEAK3K",
-            "text": "3, 2, 1.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228418",
-          "BGS-993025",
-          "BGS-220002",
-          "ATPLGS-121103",
-          "ATPLGS-105884",
-          "AVEXAM-99001"
-        ],
         "explanation": ""
       }
     }
@@ -12017,52 +9475,6 @@
     }
   },
   {
-    "id": "QT23G66K0Q",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "jjwM9meE": {
-        "id": "jjwM9meE",
-        "type": "simple",
-        "question": "An aneroid capsule:\n\n1 – measures differential pressure2 – measures absolute pressure3 – is used for low pressure measurement4 – is used for very high pressure measurement.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A7SK8LUR6M",
-            "text": "2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP1RJIKQZN",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5R1XJTMEG",
-            "text": "2, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFL1ZE49E2",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228075",
-          "BGS-220003",
-          "ATPLGS-105877",
-          "AVEXAM-90923"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QT6VK045SL",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.03"],
@@ -12186,175 +9598,6 @@
     }
   },
   {
-    "id": "QTFEUOP1R4",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.01"],
-    "variants": {
-      "mwk9kceG": {
-        "id": "mwk9kceG",
-        "type": "simple",
-        "question": "The EPR is computed by",
-        "options": [
-          {
-            "id": "A0RWTJDW65",
-            "text": "dividing turbine discharge pressure by compressor inlet pressure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A91H3OE1RR",
-            "text": "multiplying compressor discharge pressure by turbine inlet pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ8PO77YIB",
-            "text": "multiplying compressor inlet pressure by turbine discharge pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOTCOE8EQ9",
-            "text": "dividing compressor discharge pressure by turbine discharge pressure.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120351", "BGS-222048", "ATPLQ-222263"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTGQ9L83YP",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "uOGCwoxf": {
-        "id": "uOGCwoxf",
-        "type": "simple",
-        "question": "The various types of tachometers are",
-        "options": [
-          {
-            "id": "AJKMBAD5KZ",
-            "text": "Mechanical, electrical, electronic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5DYFB5OSP",
-            "text": "Magnetic, capacitance, electronic.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKERO4ZUVN",
-            "text": "Electrical, mechanical, density.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWR2HIMMWV",
-            "text": "Magnetic, electrical, helical.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106047",
-          "BGS-222230",
-          "ATPLQ-223305",
-          "AVEXAM-21364"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTKJAYVLW1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "5J63E22z": {
-        "id": "5J63E22z",
-        "type": "simple",
-        "question": "Changes in temperature of the fuel affect its density, volume and dielectric value (Er). A decrease in temperature causes:",
-        "options": [
-          {
-            "id": "A5OYWKOZM9",
-            "text": "a decreases in volume, increases in density and increases in Er.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A273HUFUWJ",
-            "text": "a decreases in volume, decreases in density and decreases in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAZ9HD2LLF",
-            "text": "an increases in volume, decreases in density and decreases in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIVX69RV6T",
-            "text": "an increases in volume, increases in density and increases in Er.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221960", "ATPLQ-228937"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTOERODUV1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "AIErLTxo": {
-        "id": "AIErLTxo",
-        "type": "simple",
-        "question": "The indication of a fuel float gauge varies with:\n\n1 – pitch angle2 – accelerations3 – fuel temperature.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "ANNN5AG4AF",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8NXLO7DHJ",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6D100CJJJ",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASFR3PKTNR",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-221059", "BGS-220033"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QTSGDKT09U",
     "explanation": "",
     "learningObjectives": ["022.01.07.01.01"],
@@ -12391,179 +9634,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222251", "AVEXAM-77021"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTTWFA6H21",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.06"],
-    "variants": {
-      "5zFYjoD2": {
-        "id": "5zFYjoD2",
-        "type": "simple",
-        "question": "The hydraulic pressure is indicated in the cockpit:",
-        "options": [
-          {
-            "id": "A7FNIKM2HF",
-            "text": "By a Bourdon tube.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWXYMJQ6N6",
-            "text": "By bellows via mechanical sensing from a Bourdon tube.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWTOVY6TV4",
-            "text": "By several aneroid capsules.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6SG589X14",
-            "text": "Electrical signal generated by a pressure sensing element in a remote location.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228293", "AVEXAM-43536"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTUUVBT6GD",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "uVgyeyQu": {
-        "id": "uVgyeyQu",
-        "type": "simple",
-        "question": "In a compensated capacitance type quantity indicating system, the contents gauge of a half-full fuel tank indicates a fuel mass of 8&nbsp;000 kg. If a temperature rise increased the volume of fuel by 5%, the indicated fuel weight would:",
-        "options": [
-          {
-            "id": "ADNGR9UV2O",
-            "text": "remain the same.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKGLG66LUR",
-            "text": "increase by 5%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAHIGL875Q",
-            "text": "increase by 10%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX5URGMGUW",
-            "text": "decrease by 5%.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-48965",
-          "BGS-220028",
-          "ATPLQ-222204",
-          "ATPLGS-120426"
-        ],
-        "explanation": ""
-      },
-      "1jzd4KLs": {
-        "id": "1jzd4KLs",
-        "type": "simple",
-        "question": "In a compensated capacitance type quantity indicating system, the contents gauge of a half-full fuel tank indicates a fuel mass of 8&nbsp;000 kg. If a temperature rise increased the volume of fuel by 5%, the indicated fuel mass would:",
-        "options": [
-          {
-            "id": "AC2RJPH606",
-            "text": "remain the same.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP3O5J7L0Q",
-            "text": "decrease by 5%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJTDUP0UVQ",
-            "text": "increase by 5%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA3V58I8Q9",
-            "text": "increase by 10%.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-46697",
-          "BGS-220028",
-          "ATPLQ-222204",
-          "ATPLGS-120426"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QU5BATA1P6",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.01"],
-    "variants": {
-      "Bl4Gu6Yi": {
-        "id": "Bl4Gu6Yi",
-        "type": "simple",
-        "question": "A capacitive fuel quantity measurement system provides the following indication:",
-        "options": [
-          {
-            "id": "AXRAO5MB2J",
-            "text": "The mass of the fuel.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0R00ZT5XQ",
-            "text": "The volume of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXMCYNSWI5",
-            "text": "The density-volume of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE0K3YACEQ",
-            "text": "The inductivity of the fuel.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-225572",
-          "AVEXAM-65050",
-          "BGS-222170",
-          "BGS-221413",
-          "ATPLGS-626196"
-        ],
         "explanation": ""
       }
     }
@@ -12692,99 +9762,6 @@
     }
   },
   {
-    "id": "QUYEA8ULHG",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.03"],
-    "variants": {
-      "eBnHNXmE": {
-        "id": "eBnHNXmE",
-        "type": "simple",
-        "question": "Fuel flow can be expressed in:\n1. kg per m^3^  \n2. lb per m^3^  \n3. lb per hour\n4. kg per hour\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A1CS8Y7UUH",
-            "text": "3, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A21D4QCQ4Z",
-            "text": "1.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9YB4TG7AV",
-            "text": "4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQBQM0Z2ZT",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-221963",
-          "AVEXAM-47909",
-          "ATPLQ-228152",
-          "ATPLGS-106041"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QUYLKN45E8",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.01"],
-    "variants": {
-      "VrmfrNrj": {
-        "id": "VrmfrNrj",
-        "type": "simple",
-        "question": "A torque may be expressed in:",
-        "options": [
-          {
-            "id": "APWO18UOBC",
-            "text": "Newton meter (N m).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4IHV2A2G9",
-            "text": "RPM",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN47ZD7CAZ",
-            "text": "Newton per meter (N/m).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AO5Z55SYD8",
-            "text": "Watt.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-225394",
-          "BGS-222262",
-          "ATPLGS-120804",
-          "ATPLGS-106056",
-          "AVEXAM-36805"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QV1RMRNTKB",
     "explanation": "",
     "learningObjectives": ["022.01.08.01.01"],
@@ -12821,88 +9798,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-16748", "ATPLGS-106059"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVBFMNZ83T",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.05"],
-    "variants": {
-      "BDH2PS4U": {
-        "id": "BDH2PS4U",
-        "type": "simple",
-        "question": "A float type fuel gauge: \n1. supplies mass information\n2. supplies information independent of aircraft`s manoeuvres and attitude changes\n3. supplies information all the more accurate as the tank is full\n4. is typically a DC powered system\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A35VCJIGHM",
-            "text": "4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9QVN28VM6",
-            "text": "1.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF2CHUE3AK",
-            "text": "1, 2, 3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALHYB3KYX5",
-            "text": "1, 3, 4.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220025", "ATPLQ-226002", "AVEXAM-90966"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVC5C1L7UE",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "xI2PRszS": {
-        "id": "xI2PRszS",
-        "type": "simple",
-        "question": "An aneroid capsule\n1) measures differential pressure.\n2) measures absolute pressure.\n3) is used for low pressure measurement.\n4) is used for very high pressure measurement.The combination regrouping all the correct statements is",
-        "options": [
-          {
-            "id": "ALFX8HIHC7",
-            "text": "2, 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AH673JWB3K",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOMDJSNLF8",
-            "text": "1, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3CYS28IAG",
-            "text": "2, 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105877", "ATPLQ-228075"],
         "explanation": ""
       }
     }
@@ -13104,47 +9999,6 @@
     }
   },
   {
-    "id": "QVI8T5KW6B",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "uTSfmzq0": {
-        "id": "uTSfmzq0",
-        "type": "simple",
-        "question": "The different types of tachometers are ...",
-        "options": [
-          {
-            "id": "A4MSZB6JBB",
-            "text": "mechanical, electrical, electronic.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AELBVK8O5D",
-            "text": "magnetic, electrical, helical.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN5AWB8VRF",
-            "text": "magnetic, capacitance, electronic.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZGU7WUNJ9",
-            "text": "electrical, mechanical, density.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222230", "ATPLQ-223305"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QVJSCK0IGY",
     "explanation": "",
     "learningObjectives": ["022.01.05.01.01"],
@@ -13181,166 +10035,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-95770", "ATPLQ-229576"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVYJ3ZO157",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "UX6KUT8B": {
-        "id": "UX6KUT8B",
-        "type": "simple",
-        "question": "The electronic tachometer sensor is composed of:",
-        "options": [
-          {
-            "id": "A81G90LMYO",
-            "text": "a notched wheel rotating in front of a permanent magnet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A925DVI0T7",
-            "text": "a circular magnet with four poles.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9ECBINOFS",
-            "text": "the rotor of a three-phase A.C. generator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AES8PNVI9G",
-            "text": "the rotor of a single phase A.C. generator.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-221549", "ATPLGS-121070", "AVEXAM-3010"],
-        "explanation": ""
-      },
-      "rEqOTNWB": {
-        "id": "rEqOTNWB",
-        "type": "simple",
-        "question": "The electronic tachometer sensor is composed of:",
-        "options": [
-          {
-            "id": "AO813DIBLX",
-            "text": "a notched wheel rotating in front of an electro-magnet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADLTQUYC52",
-            "text": "a circular magnet with four poles.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACJ2SMLL6C",
-            "text": "the rotor of a three-phase AC generator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMFJBLMEJU",
-            "text": "the rotor of a single phase AC generator.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-3010",
-          "BGS-220046",
-          "ATPLQ-221549",
-          "ATPLGS-121070"
-        ],
-        "explanation": ""
-      },
-      "YDulNZDj": {
-        "id": "YDulNZDj",
-        "type": "simple",
-        "question": "The electronic tachometer sensor is composed of:",
-        "options": [
-          {
-            "id": "A803Q0ZS6H",
-            "text": "a notched wheel rotating in front of a permanent magnet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP27JCJVXT",
-            "text": "the rotor of a single phase AC generator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA44B2VJ0D",
-            "text": "the rotor of a three-phase AC generator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AII7MHMH7B",
-            "text": "a circular magnet with four poles.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220046",
-          "ATPLQ-221549",
-          "ATPLGS-121070",
-          "AVEXAM-3010"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVZGV9R2Z1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.06"],
-    "variants": {
-      "KPEVYgE9": {
-        "id": "KPEVYgE9",
-        "type": "simple",
-        "question": "After refuelling at your destination, before the return trip, what should be checked on the FMS fuel pages?",
-        "options": [
-          {
-            "id": "AWMJGY17U7",
-            "text": "That the volume/mass of the fuel on board is correct according to how much has been added.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8ZPPB6JQ2",
-            "text": "That the fuel in the tanks is the correct type/grade.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4KVAG6OOD",
-            "text": "That the fuel type is correctly recorded.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEHAORIZF7",
-            "text": "That the fuel temperature is within acceptable limits.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225037", "BGS-221603"],
         "explanation": ""
       }
     }
@@ -13477,47 +10171,6 @@
     }
   },
   {
-    "id": "QWEINWCBYA",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.01"],
-    "variants": {
-      "J72IlEr9": {
-        "id": "J72IlEr9",
-        "type": "simple",
-        "question": "A torque may be expressed in",
-        "options": [
-          {
-            "id": "ANDK2PGUTJ",
-            "text": "Newton meter (N m).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIMY9D2KKV",
-            "text": "Watt.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AELWF8QC71",
-            "text": "Newton per meter (N/m).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI3JI84HXG",
-            "text": "RPM",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120804", "ATPLQ-225394"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QWJQ8V71IO",
     "explanation": "",
     "learningObjectives": ["022.01.03.01.06"],
@@ -13600,47 +10253,6 @@
     }
   },
   {
-    "id": "QWUOYS8VQ2",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.03"],
-    "variants": {
-      "JA0qoATA": {
-        "id": "JA0qoATA",
-        "type": "simple",
-        "question": "The sensor(s) feeding the EPR-indicator is(are)",
-        "options": [
-          {
-            "id": "A0CW55S2JZ",
-            "text": "pressure probes, one located upstream from the compressor inlet, and the other downstream from the turbine outlet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZWLAYQWCX",
-            "text": "tachometer located on the shaft of the N2 compressor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMC4RYA8D1",
-            "text": "temperature probes, one located upstream from the compressor inlet, and an other downstream from the turbine outlet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A813XWOKKZ",
-            "text": "tachometer located on the shaft of the N1 compressor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-222483", "BGS-220059", "AVEXAM-9730"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QWZ8KXIYCC",
     "explanation": "",
     "learningObjectives": ["022.01.05.01.03"],
@@ -13677,52 +10289,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-96639"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QX7MH443P3",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.01"],
-    "variants": {
-      "dcPu6Z6y": {
-        "id": "dcPu6Z6y",
-        "type": "simple",
-        "question": "The magnitude of torque can be defined as",
-        "options": [
-          {
-            "id": "AGF5JO88CP",
-            "text": "Force × its lever arm.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AB3APXTIEJ",
-            "text": "Force / its lever arm.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE1F49A63L",
-            "text": "Force × RPM.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ1AWP5U1B",
-            "text": "Force / RPM.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106053",
-          "BGS-222261",
-          "ATPLQ-222747",
-          "AVEXAM-36893"
-        ],
         "explanation": ""
       }
     }
@@ -13774,47 +10340,6 @@
     }
   },
   {
-    "id": "QXBWV9C0W9",
-    "explanation": "",
-    "learningObjectives": ["022.01.08.01.01"],
-    "variants": {
-      "Bz3vXxQE": {
-        "id": "Bz3vXxQE",
-        "type": "simple",
-        "question": "Which of the following statements is/are correct as regards a synchroscope on a multi-engine aircraft? A synchroscope is used to...\n\n1. reduce structural vibration and noise2. achieve symmetrical thrust and fuel consumption.",
-        "options": [
-          {
-            "id": "ADZNHJNGR6",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVW1FKP0TR",
-            "text": "Both 1 and 2 are correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN1HADEZDD",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWVF2721XD",
-            "text": "Both 1 and 2 are incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228163", "BGS-221280", "ATPLGS-627207"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QXDJDDXUGJ",
     "explanation": "",
     "learningObjectives": ["022.01.03.01.06"],
@@ -13851,138 +10376,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-34380"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXKIECO3GK",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "qNyeZ89t": {
-        "id": "qNyeZ89t",
-        "type": "simple",
-        "question": "A Three-phase electrical tachometer consists of",
-        "options": [
-          {
-            "id": "ATVG5MWIEV",
-            "text": "A Three phase generator and a synchronous motor during a drag-cup assembly",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMAILR0U57",
-            "text": "Three interconnected dynamos along a phonic wheel",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFIK6LJJLL",
-            "text": "A Three speed probes a phonic wheel",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6WDNH3OJT",
-            "text": "A speed probe &amp; a phonic wheel",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-622623", "BGS-220039", "ATPLQ-224090"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXL8JQ6G4T",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "luzK7XGz": {
-        "id": "luzK7XGz",
-        "type": "simple",
-        "question": "Given:\nC = temperature in Celsius\nF = temperature in Fahrenheit\nThe correct relationship between these different units is:",
-        "options": [
-          {
-            "id": "AOBFMEC0LA",
-            "text": "F = (C x 1.8) + 32.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEWDNF1JT3",
-            "text": "C = F - 273.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0UGJVDXC5",
-            "text": "F = C - 273.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5VJL5I5AH",
-            "text": "C = (F x 1.8) + 32.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222284", "ATPLQ-223628", "AVEXAM-59927"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXM3KXGJM2",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.01"],
-    "variants": {
-      "Ajvt9O92": {
-        "id": "Ajvt9O92",
-        "type": "simple",
-        "question": "Which of these statements about fuel quantity measurement are correct or incorrect?\n\n1. The quantity of fuel can be measured by volume.2. The quantity of fuel can be measured by mass.",
-        "options": [
-          {
-            "id": "ASV18AKXWF",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS6615S537",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1E34ETJ4Y",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWHX4T2IBI",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-228113",
-          "ATPLGS-106045",
-          "BGS-221226",
-          "BGS-221958",
-          "AVEXAM-4521",
-          "ATPLGS-113111",
-          "ATPLGS-113275",
-          "ATPLGS-106023"
-        ],
         "explanation": ""
       }
     }
@@ -14150,169 +10543,6 @@
     }
   },
   {
-    "id": "QXR9P7DPD6",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.05"],
-    "variants": {
-      "Oh3DBS2V": {
-        "id": "Oh3DBS2V",
-        "type": "simple",
-        "question": "The basic principle of a capacitance fuel gauge system is that the:",
-        "options": [
-          {
-            "id": "AO7KTOEP69",
-            "text": "capacitance of a capacitor depends on the nature of the dielectric in which it is immersed.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACULSS9OPO",
-            "text": "electromotive force of a capacitor depends on the nature of the dielectric in which it is immersed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK6UZ6MUG1",
-            "text": "capacitance of a capacitor only depends on the density of the liquid on which it is immersed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA07TT2OQA",
-            "text": "internal resistance of a capacitor depends on the nature of the dielectric in which it is immersed.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-220030",
-          "ATPLQ-228259",
-          "AVEXAM-77901",
-          "ATPLGS-120473",
-          "AVEXAM-76724"
-        ],
-        "explanation": ""
-      },
-      "LPxyqo5q": {
-        "id": "LPxyqo5q",
-        "type": "simple",
-        "question": "The basic principle of a capacitance fuel gauge system is that the:",
-        "options": [
-          {
-            "id": "AVXLAHCR8J",
-            "text": "capacity of a capacitor depends on the nature of the dielectric in which it is immersed.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AD8VKVWGOQ",
-            "text": "capacity of a capacitor depends only on the density of the liquid in which it is immersed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFTWV74ZJX",
-            "text": "electromotive force of a capacity depends on the nature of the dielectric in which it is immersed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8282D3GPX",
-            "text": "internal resistance of a capacity depends on the nature of the dielectric in which it is immersed.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-77901", "BGS-220030", "ATPLQ-228259"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXRUD7I6KE",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "Im2FM4su": {
-        "id": "Im2FM4su",
-        "type": "simple",
-        "question": "Given:\nC = the temperature in Celsius\nK = the temperature in Kelvin\nF = the temperature in Fahrenheit\nWhich of these statements about temperature units are correct or incorrect?\n1. C = K + 273\n2. F = (C x 1.8) + 32",
-        "options": [
-          {
-            "id": "A6B37EMX45",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAAQ4BACUN",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3B0SNMX2J",
-            "text": "1 is correct, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQYVZ3OIQA",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222280", "ATPLQ-226603"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXS5S3M7X4",
-    "explanation": "",
-    "learningObjectives": ["022.01.08.01.02"],
-    "variants": {
-      "nrFOPUL5": {
-        "id": "nrFOPUL5",
-        "type": "simple",
-        "question": "On an twin-engine aeroplane, the synchroscope uses the following principle",
-        "options": [
-          {
-            "id": "AXFC76NMUJ",
-            "text": "it measures the frequency difference between the two engine driven alternators.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFJ022DCEO",
-            "text": "a piezoelectric sensor measures the vibrations on each engine.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIZHKUNGEB",
-            "text": "it mathematically subtracts the RPM of both engines.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2S80VVAM9",
-            "text": "it mathematically subtracts the vibrations of both engines.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120806", "BGS-221222", "ATPLQ-226749"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QXSXI35HUD",
     "explanation": "",
     "learningObjectives": ["022.01.05.01.03"],
@@ -14348,265 +10578,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-120325", "BGS-220115"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QY14YRMJ0R",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.02"],
-    "variants": {
-      "AL6UWG8i": {
-        "id": "AL6UWG8i",
-        "type": "simple",
-        "question": "Which statements concerning the fuel flow measurement are correct or incorrect?\n1) Fuel flow can be measured by volume per unit of time.\n2) Fuel flow may be measured by mass per unit of time.",
-        "options": [
-          {
-            "id": "A5KPS7E949",
-            "text": "1) is correct, 2) is correct",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJL0LMWNHI",
-            "text": "1) is incorrect, 2) is incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0GID1KINH",
-            "text": "1) is correct, 2) is incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV8ATICGZ9",
-            "text": "1) is incorrect, 2) is correct",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106045"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QY8C976B0F",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.03"],
-    "variants": {
-      "R9pZb0s3": {
-        "id": "R9pZb0s3",
-        "type": "simple",
-        "question": "On a N1 indicator, the maximum N1 admissible:",
-        "options": [
-          {
-            "id": "AUBIG53AXY",
-            "text": "may be greater than 100%.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJJHX489D5",
-            "text": "is 100%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6Q7671DQQ",
-            "text": "is approximately 99%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUJKT8KXMH",
-            "text": "is always less than 100%.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-223638", "BGS-221375", "ATPLGS-120803"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYEBI0T0KM",
-    "explanation": "",
-    "learningObjectives": ["022.01.08.01.01"],
-    "variants": {
-      "aikTlcxs": {
-        "id": "aikTlcxs",
-        "type": "simple",
-        "question": "A synchroscope is used on aeroplanes to",
-        "options": [
-          {
-            "id": "AIWWNVYZ88",
-            "text": "set several engines to the same speed.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJKKGH8D9L",
-            "text": "reduce the rpm of each engine.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUTHN9W3FT",
-            "text": "achieve optimum control of on-board voltages.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN9JIYC8B4",
-            "text": "reduce the vibration of each engine.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-121088",
-          "AVEXAM-20530",
-          "BGS-220038",
-          "ATPLQ-226504"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYFJC5IZEX",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.02"],
-    "variants": {
-      "k654kfkL": {
-        "id": "k654kfkL",
-        "type": "simple",
-        "question": "Which of these statements about temperature units are correct or incorrect?\n1. 20° Celsius = 68° Fahrenheit\n2. 0° Celsius = 273° Kelvin",
-        "options": [
-          {
-            "id": "A59LH7WGXE",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AETU6IS9MD",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6MY8TT2OC",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR2T69L5HX",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-222282",
-          "ATPLGS-129533",
-          "AVEXAM-6130",
-          "ATPLGS-625705",
-          "AVEXAM-45861",
-          "AVEXAM-38093"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYIHS817PI",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.01"],
-    "variants": {
-      "fxxpYdvA": {
-        "id": "fxxpYdvA",
-        "type": "simple",
-        "question": "The different types of tachometer are:\n\n1 – electrical.2 – mechanical.3 – electronic.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A6OLSV1D57",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARK7ABSN4J",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR4RA2YL5H",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMDPNHKZDT",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225062", "AVEXAM-92537"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYLLGFVEVY",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "CzEYmTfU": {
-        "id": "CzEYmTfU",
-        "type": "simple",
-        "question": "Changes in temperature of the fuel affect its density, volume and dielectric value (Er). An increase in temperature causes:",
-        "options": [
-          {
-            "id": "AAP3FK3F5Q",
-            "text": "an increase in volume, decrease in density and decrease in Er.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AF31TKEMDF",
-            "text": "a decrease in volume, decrease in density and decrease in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWKG07YM67",
-            "text": "a decrease in volume, increase in density and increase in Er.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGLPYXTFTT",
-            "text": "an increase in volume, increase in density and increase in Er.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221959", "ATPLQ-228937"],
+        "externalIds": ["ATPLGS-120325", "BGS-220115", "BGS-222133"],
         "explanation": ""
       }
     }
@@ -14648,47 +10620,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-1701"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZ1SF5LPWT",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.03"],
-    "variants": {
-      "BvH3SgD3": {
-        "id": "BvH3SgD3",
-        "type": "simple",
-        "question": "On an N1 indicator the maximum N1 allowed",
-        "options": [
-          {
-            "id": "ANAHYNGCP7",
-            "text": "can be greater than 100%",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATKBM2R18F",
-            "text": "is 100%",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APMZKTBAWG",
-            "text": "is approximately 99%",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZXJ0AC6BQ",
-            "text": "is less than 100%",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221375", "ATPLQ-223638"],
         "explanation": ""
       }
     }
@@ -14812,129 +10743,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-58603", "ATPLGS-106001"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZAGR41OW1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.05"],
-    "variants": {
-      "8UFUKOwj": {
-        "id": "8UFUKOwj",
-        "type": "simple",
-        "question": "A float type fuel gauge:\n1) gives a mass information.\n2) gives information independent of aircraft's manoeuvres and attitude changes.\n3) gives information all the more accurate as the tank is full.\n4) is typically a DC powered system.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AFJR0DYWJT",
-            "text": "4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZKZAZ6X9H",
-            "text": "1",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1V3LEKPRV",
-            "text": "1, 2, 3, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR4J1SO89D",
-            "text": "1, 3, 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-90966", "ATPLQ-226002"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZAJCXZHKC",
-    "explanation": "",
-    "learningObjectives": ["022.01.05.01.02"],
-    "variants": {
-      "zYIf2MdN": {
-        "id": "zYIf2MdN",
-        "type": "simple",
-        "question": "On a modern jet aircraft, the engine speed is indicated by:",
-        "options": [
-          {
-            "id": "ACTFZFDOD0",
-            "text": "% value of maximum RPM.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARA7DZQRVT",
-            "text": "% value of maximum power.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2DEQVK1QZ",
-            "text": "The Engine Pressure Ratio (EPR).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKTQBDDYUD",
-            "text": "% of maximum torque.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-229046", "BGS-221362"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZLF2DRSRX",
-    "explanation": "",
-    "learningObjectives": ["022.01.08.01.02"],
-    "variants": {
-      "dfaBxA4m": {
-        "id": "dfaBxA4m",
-        "type": "simple",
-        "question": "A synchroscope for a twin engine aircraft:",
-        "options": [
-          {
-            "id": "ARIMXGMTR5",
-            "text": "measures the difference in output frequencies of both alternators (one alternator in each engine).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2NCVMPBMZ",
-            "text": "measures the vibration values of both engines with a piezoelectric sensor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0N430NXE7",
-            "text": "mathematically subtracts vibration values of both engines.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9SO49IG7P",
-            "text": "mathematically subtracts RPM values of both engines.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-94123", "ATPLQ-226749"],
         "explanation": ""
       }
     }
@@ -15471,7 +11279,27 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-110243"],
+        "externalIds": [
+          "ATPLGS-110243",
+          "ATPLGS-110229",
+          "AVEXAM-51214",
+          "BGS-220272",
+          "AVEXAM-19529",
+          "ATPLQ-222177",
+          "ATPLQ-223933",
+          "ATPLQ-227032",
+          "ATPLQ-228789",
+          "ATPLQ-229419",
+          "ATPLQ-227817",
+          "BGS-220254",
+          "BGS-220260",
+          "BGS-220270",
+          "BGS-220258",
+          "BGS-220255",
+          "BGS-220269",
+          "BGS-220257",
+          "BGS-220259"
+        ],
         "explanation": ""
       },
       "GyVKxXy9": {
@@ -15756,7 +11584,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220163"],
+        "externalIds": [
+          "BGS-220163",
+          "AVEXAM-97733",
+          "ATPLGS-120519",
+          "AVEXAM-43156"
+        ],
         "explanation": ""
       },
       "CieniVgn": {
@@ -15878,94 +11711,6 @@
     }
   },
   {
-    "id": "Q80YTOAMLB",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.05"],
-    "variants": {
-      "yi3KncIY": {
-        "id": "yi3KncIY",
-        "type": "simple",
-        "question": "In order to measure temperature the cylinder head temperature (CHT) gauge utilises a",
-        "options": [
-          {
-            "id": "A5F33STBYE",
-            "text": "thermocouple consisting of two dissimilar metals.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5T1ZQVZT1",
-            "text": "wheatstone bridge circuit.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZ55O59J8D",
-            "text": "ratiometer circuit.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASBJW2AYKI",
-            "text": "Bourdon tube.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106001", "AVEXAM-58603"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QC94M1M30W",
-    "explanation": "",
-    "learningObjectives": ["022.01.07.01.05"],
-    "variants": {
-      "OR6sMkU1": {
-        "id": "OR6sMkU1",
-        "type": "simple",
-        "question": "Which of the below statements is/are correct regarding the operating principle of an oil torque meter?\n1 Axial movement is generated by the helically cut gears\n2 An axial force is proportional to the torque",
-        "options": [
-          {
-            "id": "ABP4CRDTY5",
-            "text": "1 &amp; 2 are correct",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A90X9N3HY5",
-            "text": "1 &amp; 2 are incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP22HZ027W",
-            "text": "1 Is correct, 2 is incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVBTSRUE1L",
-            "text": "1 is incorrect, 2 is correct",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-627458",
-          "ATPLQ-228849",
-          "AVEXAM-90266",
-          "BGS-221402",
-          "BGS-221318"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QFOU50WZUQ",
     "explanation": "",
     "learningObjectives": ["022.01.01.01.05"],
@@ -16013,7 +11758,9 @@
           "ATPLGS-120322",
           "BGS-220085",
           "ATPLGS-120519",
-          "BGS-220106"
+          "BGS-220106",
+          "AVEXAM-3742",
+          "ATPLQ-226934"
         ],
         "explanation": ""
       }
@@ -16096,7 +11843,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220120", "ATPLQ-221635"],
+        "externalIds": [
+          "BGS-220120",
+          "ATPLQ-221635",
+          "ATPLGS-120329",
+          "AVEXAM-20129",
+          "ATPLGS-105906"
+        ],
         "explanation": ""
       },
       "Gwehzy2F": {
@@ -16252,170 +12005,6 @@
     }
   },
   {
-    "id": "QMX7SZJ5XB",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.01"],
-    "variants": {
-      "C9nFhAcE": {
-        "id": "C9nFhAcE",
-        "type": "simple",
-        "question": "A temperature sensor has a recovery factor of 0.95. The temperature measured is equal to:",
-        "options": [
-          {
-            "id": "ARJLXJCR8U",
-            "text": "static air temperature (SAT) + 95% of the RAM-rise.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKUCY5RO2Y",
-            "text": "95% of the static air temperature (SAT).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AY1K8YN00Z",
-            "text": "ram air temperature (RAT) + 95% of the RAM-rise.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4C6LZ4QX7",
-            "text": "95% of the ram air temperature (RAT).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-98207", "ATPLGS-106114", "ATPLGS-120629"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQ90831S32",
-    "explanation": "",
-    "learningObjectives": ["022.01.04.01.05"],
-    "variants": {
-      "fOabAF1q": {
-        "id": "fOabAF1q",
-        "type": "simple",
-        "question": "Total fuel consumption is obtained by",
-        "options": [
-          {
-            "id": "ASBXXHPQ3L",
-            "text": "Integrating the fuel flow with respect to time",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4G4VYF1IJ",
-            "text": "Subtracting the remaining fuel from the initial fuel quantity",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9IIH2NECW",
-            "text": "Subtracting the fuel flow from the initial fuel quantity",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD3GJTAFSH",
-            "text": "Differentiating the fuel flow with respect to time",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129378", "ATPLQ-229124"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQFA9XWRRH",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "UYpTJ74f": {
-        "id": "UYpTJ74f",
-        "type": "simple",
-        "question": "A dynamic pressure measurement circuit is constituted of the following pressure probes",
-        "options": [
-          {
-            "id": "AESS9UMF7Q",
-            "text": "total pressure and static pressure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8UZBN5KHG",
-            "text": "total pressure only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0LDIDO2UV",
-            "text": "static pressure only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5JBTHHPKJ",
-            "text": "total pressure and standard pressure.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106097", "BGS-220067", "AVEXAM-90247"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQYX43WI09",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.01"],
-    "variants": {
-      "zyAwLxkJ": {
-        "id": "zyAwLxkJ",
-        "type": "simple",
-        "question": "The purpose of a vibration motor in sensitive altimeters is:",
-        "options": [
-          {
-            "id": "A0VREYTNIW",
-            "text": "To increase the accuracy of the indication.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIDHI29ZRG",
-            "text": "To compensate for vibrations caused by the piston engine and propeller.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6MJ2P5UY2",
-            "text": "To increase static friction in the gears.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APXX3HX7AH",
-            "text": "To prevent the “lock-in” phenomenon.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-224719", "AVEXAM-56369"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QREMFHY70D",
     "explanation": "",
     "learningObjectives": ["022.01.04.01.01"],
@@ -16544,163 +12133,6 @@
     }
   },
   {
-    "id": "QUA17S2SWB",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.04"],
-    "variants": {
-      "V562G3rg": {
-        "id": "V562G3rg",
-        "type": "simple",
-        "question": "The airplane outside air temperature \"probe\" measures the:",
-        "options": [
-          {
-            "id": "AHCYKP6K02",
-            "text": "total air temperature minus kinetic heating effects in order to obtain the static temperature.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACP3CT0CAG",
-            "text": "total air temperature minus compressibility effects in order to obtain the static temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATPPU1WCTB",
-            "text": "static air temperature minus kinetic heating effects in order to obtain the total temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUOGV54IZ8",
-            "text": "static air temperature minus compressibility effects in order to obtain the total temperature.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-21508", "ATPLGS-106116"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QV2IB64G6Z",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.05"],
-    "variants": {
-      "3OK2LNTG": {
-        "id": "3OK2LNTG",
-        "type": "simple",
-        "question": "The pressure measured at the forward facing orifice of a pitot tube is the",
-        "options": [
-          {
-            "id": "AEA5IXB7LZ",
-            "text": "total pressure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACSEU1572C",
-            "text": "static pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3BFYX3L4V",
-            "text": "dynamic pressure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0A4C7M0FV",
-            "text": "total pressure plus static pressure.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106089", "AVEXAM-3742", "ATPLQ-226934"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXPYS0Z8WD",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.04"],
-    "variants": {
-      "SAoo0xL8": {
-        "id": "SAoo0xL8",
-        "type": "simple",
-        "question": "The aeroplane outside air temperature probe measures the:",
-        "options": [
-          {
-            "id": "A6JFBIZMGJ",
-            "text": "total air temperature. This must be corrected for ram rise and recovery factor to obtain the static air temperature.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AA398I6O40",
-            "text": "static air temperature. This must be corrected for compressibility effects to obtain the total air temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKEO2D8556",
-            "text": "total air temperature. This must be corrected for compressibility effects to obtain the static air temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH69XERT3A",
-            "text": "static air temperature. This must be corrected for ram rise and recovery factor to obtain the total air temperature.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220016", "ATPLQ-228730", "ATPLGS-120478"],
-        "explanation": ""
-      },
-      "H4K2fxug": {
-        "id": "H4K2fxug",
-        "type": "simple",
-        "question": "The aeroplane outside air temperature probe measures the:",
-        "options": [
-          {
-            "id": "AY0HK7V1NJ",
-            "text": "total air temperature, this must be corrected for ram rise and recovery factor to obtain the static air temperature.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYU1Q3DXUY",
-            "text": "static air temperature, this must be corrected for ram rise and recovery factor to obtain the total air temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFFXDRS75C",
-            "text": "static air temperature, this must be corrected for compressibility effects to obtain the total air temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6F2F1TD2V",
-            "text": "total air temperature, this must be corrected for compressibility effects to obtain the static air temperature.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-228730", "BGS-220016", "ATPLGS-120478"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QYPV1VWFGG",
     "explanation": "",
     "learningObjectives": ["022.01.03.01.03"],
@@ -16778,47 +12210,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-58605"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZLF84GMEK",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "75CnObft": {
-        "id": "75CnObft",
-        "type": "simple",
-        "question": "Capacitance measurement is based on the variation of the",
-        "options": [
-          {
-            "id": "AZXWKHB1XX",
-            "text": "dielectric of the capacitor.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7S7QACSP0",
-            "text": "permeability of the capacitor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATQ6QJ66FL",
-            "text": "plate surface of the capacitor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4X6TK2ROP",
-            "text": "distance between the plates.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106022", "ATPLQ-229348"],
         "explanation": ""
       }
     }
@@ -16946,7 +12337,8 @@
           "BGS-222308",
           "BGS-222306",
           "ATPLQ-227957",
-          "ATPLGS-120982"
+          "ATPLGS-120982",
+          "ATPLQ-222863"
         ],
         "explanation": ""
       }
@@ -16992,90 +12384,9 @@
           "AVEXAM-16119",
           "ATPLGS-106378",
           "ATPLGS-106384",
-          "ATPLGS-106379"
+          "ATPLGS-106379",
+          "AVEXAM-83886"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQSJN3M2E3",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.02"],
-    "variants": {
-      "hF2aomFj": {
-        "id": "hF2aomFj",
-        "type": "simple",
-        "question": "The pendulum type detector system of the gyromagnetic compass indicator feeds",
-        "options": [
-          {
-            "id": "A5VRJVRU9F",
-            "text": "Torque motor in the sensitive axis",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABQ6DJMA1C",
-            "text": "2 torque motors arranged horizontally.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACWIWILBD0",
-            "text": "a levelling erection torque motor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVDPZADR2D",
-            "text": "a nozzle integral with the outer gimbal ring.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106379", "AVEXAM-83886", "AVEXAM-16119"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q27UD1PG85",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "ghrsLyrf": {
-        "id": "ghrsLyrf",
-        "type": "simple",
-        "question": "A bellows sensor installed in an engine can be used for the following instrument",
-        "options": [
-          {
-            "id": "AA8OTEAHOK",
-            "text": "Manifold pressure gauge.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ATNPFRLJY0",
-            "text": "Oil pressure gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEC005B8TS",
-            "text": "Oil temperature gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQGIUPZGA6",
-            "text": "Fuel pressure gauge.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105880"],
         "explanation": ""
       }
     }
@@ -17163,327 +12474,6 @@
     }
   },
   {
-    "id": "Q8VE4M4Y1K",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "505JT5AG": {
-        "id": "505JT5AG",
-        "type": "simple",
-        "question": "A bellows sensor can be used for the following instrument",
-        "options": [
-          {
-            "id": "ALIVLMQX8W",
-            "text": "cabin differential pressure gauge",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVSWVGZBBE",
-            "text": "engine oil pressure indicator",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ85BI6DRE",
-            "text": "fuel flow indicator",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZDS5HWLTJ",
-            "text": "engine oil temperature indicator",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105883", "AVEXAM-61681"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QDDV0AJSPI",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "L5fdmSF3": {
-        "id": "L5fdmSF3",
-        "type": "simple",
-        "question": "The engine instrument utilising an aneroid pressure diaphragm is the",
-        "options": [
-          {
-            "id": "ABEYBDTZVX",
-            "text": "manifold pressure gauge.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AV5I30L4RH",
-            "text": "oil pressure gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9XNBKUTNX",
-            "text": "fuel pressure gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6WYJEAA20",
-            "text": "oil temperature gauge.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105881", "ATPLQ-229515"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QG7LYV4YOX",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.06"],
-    "variants": {
-      "TOhfEahv": {
-        "id": "TOhfEahv",
-        "type": "simple",
-        "question": "The pressure capsule of an airspeed indicator is sensitive to the difference",
-        "options": [
-          {
-            "id": "ALXXT5W5CP",
-            "text": "(total pressure) – (static pressure).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABJSEAX5MF",
-            "text": "(dynamic pressure) – (static pressure).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUSC20LMG9",
-            "text": "(dynamic pressure) – (total pressure).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQTELZ0ZWK",
-            "text": "(total pressure) – (dynamic pressure).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120519", "AVEXAM-43156"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHL6OX0EM1",
-    "explanation": "",
-    "learningObjectives": ["022.01.03.01.04"],
-    "variants": {
-      "woOyMY5S": {
-        "id": "woOyMY5S",
-        "type": "simple",
-        "question": "The indication of a fuel float gauge varies with\n1) aircraft attitude.\n2) accelerations.\n3) atmospheric pressure.\n4) fuel temperature.The combination of correct statements is",
-        "options": [
-          {
-            "id": "AV2QYSEO49",
-            "text": "1, 2, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIW5Z6RU6S",
-            "text": "1, 2, 3, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAM13950AI",
-            "text": "4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUM8NL93DN",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-106020", "AVEXAM-50213"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QP6DSH8MF4",
-    "explanation": "",
-    "learningObjectives": ["022.01.09.01.02"],
-    "variants": {
-      "BipKLIri": {
-        "id": "BipKLIri",
-        "type": "simple",
-        "question": "A vibration indicator receives a signal from different sensors (accelerometers)It indicates the",
-        "options": [
-          {
-            "id": "APNB4VW9AO",
-            "text": "vibration amplitude at a given frequency",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXHBG0R4OW",
-            "text": "acceleration measured by the sensors, expressed in g",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGAWN3PKRW",
-            "text": "vibration period expressed in seconds",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARU8UBR3OH",
-            "text": "vibration frequency expressed in Hz",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120437", "ATPLQ-222174"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVRR5SDPAB",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.07"],
-    "variants": {
-      "iKwMx55A": {
-        "id": "iKwMx55A",
-        "type": "simple",
-        "question": "A leak in the total pressure line of a non-pressurised aircraft to an airspeed indicator would cause it to",
-        "options": [
-          {
-            "id": "ARXB0W5AQS",
-            "text": "underread",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1Y6BZLVBP",
-            "text": "overread.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A13O746SY0",
-            "text": "underread in a climb and over-read in a descent.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3U8DRDM49",
-            "text": "overread in a climb and under-read in a descent.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120329", "ATPLQ-221635"],
-        "explanation": ""
-      },
-      "W8VT7xVO": {
-        "id": "W8VT7xVO",
-        "type": "simple",
-        "question": "A leak in the pitot total pressure line of a non-pressurized aircraft to an airspeed indicator would cause it to",
-        "options": [
-          {
-            "id": "AKXYL72JKP",
-            "text": "under-read.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8OMTVGNW2",
-            "text": "freeze on the value it indicated at the time of failure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVWJESFYPA",
-            "text": "over-read.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4IY4G8Q6L",
-            "text": "indication will drop to zero.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105906", "AVEXAM-20129"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QX1XS5QV8B",
-    "explanation": "",
-    "learningObjectives": ["022.01.01.01.04"],
-    "variants": {
-      "KQqiSJMS": {
-        "id": "KQqiSJMS",
-        "type": "simple",
-        "question": "The engine instrument utilising a bellows type sensor is",
-        "options": [
-          {
-            "id": "AWVH517I88",
-            "text": "a manifold pressure gauge.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVPQS027UE",
-            "text": "a fuel pressure gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJFDAZ529F",
-            "text": "an oil pressure gauge.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT8KC041I5",
-            "text": "an oil temperature gauge.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-120512"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q2KI68E9O7",
     "explanation": "",
     "learningObjectives": ["022.01.02.01.05"],
@@ -17525,47 +12515,6 @@
     }
   },
   {
-    "id": "Q4PERAKBNB",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.05"],
-    "variants": {
-      "IAbz5Uqa": {
-        "id": "IAbz5Uqa",
-        "type": "simple",
-        "question": "During engine start..",
-        "options": [
-          {
-            "id": "AXA6CKMGMM",
-            "text": "the Autothrottle system is not used.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7K4W93SE9",
-            "text": "the Autothrottle protects against wet start.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFT39EZYO6",
-            "text": "the Autothrottle protects against hot start.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALLH5R2ZDU",
-            "text": "the Autothrottle uses ambient conditions to assist starting.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-222922", "BGS-222299", "ATPLGS-120903"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QKRDNQEIGE",
     "explanation": "",
     "learningObjectives": ["022.01.02.01.05"],
@@ -17602,47 +12551,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-57545"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPV9F6VF1L",
-    "explanation": "",
-    "learningObjectives": ["022.01.02.01.05"],
-    "variants": {
-      "9PBGbN4r": {
-        "id": "9PBGbN4r",
-        "type": "simple",
-        "question": "During engine start...",
-        "options": [
-          {
-            "id": "A1B9M2NO0F",
-            "text": "the Autothrottle system is not used.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AO8JVVXR0L",
-            "text": "the Autothrottle uses ambient conditions to assist starting.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0PK5M9TCQ",
-            "text": "the Autothrottle protects against wet start.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVBB39HE08",
-            "text": "the Autothrottle protects against hot start.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222299", "ATPLQ-222922", "ATPLGS-120903"],
         "explanation": ""
       }
     }
@@ -17765,7 +12673,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-35319", "ATPLQ-228594"],
+        "externalIds": ["AVEXAM-35319", "ATPLQ-228594", "BGS-221255"],
         "explanation": ""
       }
     }
@@ -17888,48 +12796,7 @@
           }
         ],
         "annexes": ["/content/media/38b065ee084131a9c65f9e8892680544.jpg"],
-        "externalIds": ["ATPLQ-227073", "AVEXAM-67082"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QY71YR1ZDZ",
-    "explanation": "",
-    "learningObjectives": ["022.01.06.01.03"],
-    "variants": {
-      "ROzuy28R": {
-        "id": "ROzuy28R",
-        "type": "simple",
-        "question": "On an electronic display unit, the following N1 parameters can be displayed:\n1. present N1\n2. commanded N1\n3. maximum N1 operating limit\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A2E3OGF2JB",
-            "text": "1, 2, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVDZ7D3EO3",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A63GU5IPI0",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP33I2HMAF",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222291", "ATPLQ-228565"],
+        "externalIds": ["ATPLQ-227073", "AVEXAM-67082", "ATPLQ-227072"],
         "explanation": ""
       }
     }
@@ -17975,52 +12842,6 @@
           "AVEXAM-6957",
           "BGS-993008",
           "BGS-221081"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNL9JY2Z0N",
-    "explanation": "",
-    "learningObjectives": ["022.01.10.01.01"],
-    "variants": {
-      "0lzfqPCt": {
-        "id": "0lzfqPCt",
-        "type": "simple",
-        "question": "Except for airplanes under 5.7 t airworthiness certificate of which is subsequent to 31 march **1998**, a flight data recording system must be able to store the recorded data for a minimum of the last:",
-        "options": [
-          {
-            "id": "A2PNE07Q04",
-            "text": "25 hours.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGJDRN7W70",
-            "text": "10 hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A27U5C6JF5",
-            "text": "60 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASFFCZXNPO",
-            "text": "30 minutes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-6957",
-          "BGS-993008",
-          "BGS-221081",
-          "ATPLGS-106793"
         ],
         "explanation": ""
       }

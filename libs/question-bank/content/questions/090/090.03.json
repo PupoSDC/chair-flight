@@ -151,7 +151,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-918094", "ATPLGS-129004"],
+        "externalIds": ["ATPLQ-918094", "ATPLGS-129004", "AVEXAM-50709"],
         "explanation": ""
       }
     }
@@ -192,7 +192,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-622448"],
+        "externalIds": ["ATPLGS-622448", "ATPLQ-916082"],
         "explanation": ""
       }
     }
@@ -233,7 +233,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-910164"],
+        "externalIds": ["BGS-910164", "ATPLQ-906467"],
         "explanation": ""
       }
     }
@@ -274,7 +274,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128687"],
+        "externalIds": ["ATPLGS-128687", "ATPLQ-925632"],
         "explanation": ""
       }
     }
@@ -356,7 +356,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128556"],
+        "externalIds": ["ATPLGS-128556", "ATPLQ-918869"],
         "explanation": ""
       }
     }
@@ -438,7 +438,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-905717"],
+        "externalIds": ["ATPLQ-905717", "BGS-900165"],
         "explanation": ""
       }
     }
@@ -807,7 +807,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128586"],
+        "externalIds": ["ATPLGS-128586", "ATPLQ-924876"],
         "explanation": ""
       }
     }
@@ -848,7 +848,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-67029"],
+        "externalIds": [
+          "AVEXAM-67029",
+          "ATPLGS-129107",
+          "ATPLQ-916995",
+          "BGS-910071"
+        ],
         "explanation": ""
       }
     }
@@ -890,47 +895,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-921527"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QH406SHBV3",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "pSFJnpEA": {
-        "id": "pSFJnpEA",
-        "type": "simple",
-        "question": "A pilot is in aircraft D-CURE. Select the correct read back to the following message \"Runway in use 10, Wind 130/10kts, Braking action poor, QNH 1008\":",
-        "options": [
-          {
-            "id": "A543ITQ88E",
-            "text": "RWY 10, QNH 1008, DCURE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7LAQUAMVT",
-            "text": "RWY 10, Wind 130/10kts, QNH 1008, DCURE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX293LCDCJ",
-            "text": "RWY 10, RE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABW2MAG8RA",
-            "text": "QNH 1008",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-906467"],
         "explanation": ""
       }
     }
@@ -1012,48 +976,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-67989"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJUXAYZQOA",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "tQw9ItqC": {
-        "id": "tQw9ItqC",
-        "type": "simple",
-        "question": "Which statements are correct regarding VFR arrivals?\n\n1. The pilot may be required to establish contact with approach control and request joining instructions.2. Where there is an ATIS, the pilot should acknowledge and receive it.3. Pilots must inform ATC of the SID designator and passing altitude.4. Where ATIS is NOT provided, the controller will pass on aerodrome data.5. Where ATIS is NOT provided, pilots must utilise VOLMET to obtain data.6. Pilots flying under VFR will be given a special squawk code.\n ",
-        "options": [
-          {
-            "id": "ABDQTLMZYQ",
-            "text": "1, 2, and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ2FG2EZXQ",
-            "text": "2, 4, and 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A07H5WKK8V",
-            "text": "1, 3, and 5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1OAQCAW0C",
-            "text": "3, 5, and 6",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-915690"],
+        "externalIds": ["AVEXAM-67989", "ATPLQ-915690"],
         "explanation": ""
       }
     }
@@ -1182,47 +1105,6 @@
     }
   },
   {
-    "id": "QM13VH8YP4",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "Bdos4KWb": {
-        "id": "Bdos4KWb",
-        "type": "simple",
-        "question": "D-CURE receives the following information from the Tower: \"Runway 10 in use, wind 110 degrees 4 knots, cloud and visibility OK, QNH 1009,temperature 6 degrees, dew point 2 degrees\" What is the correct read-back?",
-        "options": [
-          {
-            "id": "A99L1Q0XZ0",
-            "text": "Runway 10 QNH 1009 D-CURE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC5UKNLNXJ",
-            "text": "QNH 1009 D-CURE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVMV66JMSW",
-            "text": "Runway 10 D-CURE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABOVBBFAEP",
-            "text": "Runway 10 QNH 1009",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-916082"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QNORGZ1BZD",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.03"],
@@ -1259,47 +1141,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-18680"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOKU3EUMR6",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "dPSFyOMW": {
-        "id": "dPSFyOMW",
-        "type": "simple",
-        "question": "Which of the following statements describes most accurately the term \"essential aerodrome information\"?",
-        "options": [
-          {
-            "id": "AWB0G6JTO9",
-            "text": "Any information to ensure safe operation of an aircraft on the movement area.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACHA6NNODQ",
-            "text": "Specific information about an intended flight or portion of a flight.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYKVCS6VPX",
-            "text": "Aeronautical publications on requirements regarding the use of the aerodrome.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFQ5D4NVYB",
-            "text": "Elements of the special position report to be transmitted to the aerodrome information service.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-50709"],
         "explanation": ""
       }
     }
@@ -1422,7 +1263,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-129150"],
+        "externalIds": ["ATPLGS-129150", "AVEXAM-77710"],
         "explanation": ""
       }
     }
@@ -1469,122 +1310,6 @@
     }
   },
   {
-    "id": "QT9W8X15HT",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "62ggE5WL": {
-        "id": "62ggE5WL",
-        "type": "simple",
-        "question": "Aircraft XBC has been instructed to listen on ATIS frequency 123.25, on which information are being broadcast. What is the correct response to indicate that it will follow this instruction?",
-        "options": [
-          {
-            "id": "AZ4JBTZLM9",
-            "text": "Monitoring 123.25 XBC",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXP8RRSJ4J",
-            "text": "Will contact 123.25 XBC",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP3V7SX6RS",
-            "text": "Checking 123.25 XBC",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN4VB5PC9Y",
-            "text": "Changing to 123.25 XBC",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129107"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZ803V8PT5",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "jKm4DqMm": {
-        "id": "jKm4DqMm",
-        "type": "simple",
-        "question": "Aircraft X-BC has been instructed to listen on ATIS frequency 123.25, on which information is being broadcast. What is the correct response to indicate that it will follow this instruction?",
-        "options": [
-          {
-            "id": "AVAOSCC2TB",
-            "text": "Monitoring 123.25, X-BC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXET75Q9RQ",
-            "text": "Checking 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6I1ZWMD7Q",
-            "text": "Will contact 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8MWOOGOXA",
-            "text": "Changing to 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-916995", "BGS-910071"],
-        "explanation": ""
-      },
-      "Kyngkpc4": {
-        "id": "Kyngkpc4",
-        "type": "simple",
-        "question": "Aircraft X-BC has been instructed to listen on ATIS frequency 123.25, on which information is being broadcast.\n\tWhat is the correct response to indicate that it will follow this instruction?",
-        "options": [
-          {
-            "id": "A9QB5Q0ZD6",
-            "text": "Monitoring 123.25, X-BC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWM4OXGS5T",
-            "text": "Will contact 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATA0J57XR0",
-            "text": "Checking 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU92UXI6DL",
-            "text": "Changing to 123.25, X-BC.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128969"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QVXY8XPIVY",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.03"],
@@ -1626,47 +1351,6 @@
     }
   },
   {
-    "id": "QZSCL61JTX",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "VyjzcClv": {
-        "id": "VyjzcClv",
-        "type": "simple",
-        "question": "What is the correct way for the pilot to acknowledge that ATIS Information Golf has been received?",
-        "options": [
-          {
-            "id": "ATW4QSDDX4",
-            "text": "Information Golf.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5YKHU37Y7",
-            "text": "We have the ATIS Golf.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFUB933SZ9",
-            "text": "Weather Golf received.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK5ULZIUWE",
-            "text": "We have the Information.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-4061"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q0C75GRVV7",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.01"],
@@ -1702,7 +1386,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-908393"],
+        "externalIds": ["ATPLQ-908393", "BGS-900173"],
         "explanation": ""
       }
     }
@@ -1784,7 +1468,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-909495"],
+        "externalIds": ["ATPLQ-909495", "AVEXAM-88469"],
         "explanation": ""
       }
     }
@@ -1825,7 +1509,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-117352"],
+        "externalIds": ["ATPLGS-117352", "ATPLGS-128778", "ATPLQ-926829"],
         "explanation": ""
       }
     }
@@ -1907,7 +1591,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128990"],
+        "externalIds": [
+          "ATPLGS-128990",
+          "BGS-910094",
+          "ATPLGS-129148",
+          "AVEXAM-7142",
+          "ATPLQ-916151"
+        ],
         "explanation": ""
       }
     }
@@ -2030,7 +1720,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-920159"],
+        "externalIds": ["BGS-920159", "ATPLQ-909736"],
         "explanation": ""
       }
     }
@@ -2071,48 +1761,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-51044"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q5UT1THJCJ",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "6nmM1vPs": {
-        "id": "6nmM1vPs",
-        "type": "simple",
-        "question": "When the term CAVOK is used in an aviation routine weather report (METAR), what are the values of visibility and cloud?",
-        "options": [
-          {
-            "id": "AJY2PJJP25",
-            "text": "Visibility 10 km or more, no cloud below 5000 feet/GND.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACRSH1VZFM",
-            "text": "Visibility more than 8 km, no cloud below 3000 feet/GND.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APB65MC5IP",
-            "text": "Visibility more than 5000 m, no cloud below 1500 m/GND.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0Z5VNPCWB",
-            "text": "Visibility 10 km or more, no cloud below 1500 feet/GND.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-910094"],
+        "externalIds": ["AVEXAM-51044", "ATPLQ-915951"],
         "explanation": ""
       }
     }
@@ -2193,129 +1842,6 @@
     }
   },
   {
-    "id": "Q6AZ1542Z5",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "SN2YhGdL": {
-        "id": "SN2YhGdL",
-        "type": "simple",
-        "question": "The latest METAR reports: Wind 130°/ 5 kts, visibility 4 000 m, showers and rain, cloud, scattered CBs 2 000 ft, temperature 10° dew point 3°, QNH 995. \n From the following options, select the one which will generate an immediate update to the METAR:",
-        "options": [
-          {
-            "id": "ARMHFIMRSS",
-            "text": "Wind 200º/20 kts",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AW6F812PR8",
-            "text": "QNH 1004",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOOADEU61L",
-            "text": "Cloud OVC030",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM6IL1FUUD",
-            "text": "Cloud BKN025",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-909736"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q6D2Y1A1DX",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "88h5dSkz": {
-        "id": "88h5dSkz",
-        "type": "simple",
-        "question": "What is the correct option about the following D-ATIS? \n  \n WSSS Dep ATIS F \n 0130 METAR \n Exp ILS Apch segregrated PARL Ops in use \n ARR RWY 02L DEP 02C \n Taxiing guidance lights on all taxiways are on for lighting inspection \n Junction of TWY EP and A3 including rapid exit TWY E3 Southbound CLSD due WIP \n Wind 010 04 KT GUST 23 WIND DIR 320 V 040 \n 10 KM FEW 1600 FT \n T 27 / DP 26 QNH 1012 NOSIG \n ARR to ACK INFO E with APP on 120.3 and DEP with DELIVERY on 121.65",
-        "options": [
-          {
-            "id": "AIQB6JY8FJ",
-            "text": "The ATIS is for an aerodrome with ICAO code WSSS; taxiway E3 southbound is closed; clouds reported are FEW at 1 600 ft.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABWS2UK95O",
-            "text": "ATIS message F is current; the temperature is 26° C; and no significant changes are expected regarding weather conditions in the next two hours.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AC3AIX3HDI",
-            "text": "The ATIS is for departing and arriving traffic; Runway 02C is in use for departures; departures have to acknowledge they have received information F with Approach Control.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJDWT7SNT8",
-            "text": "Runway 02L is in use for departures; visibility is 10 km or more; wind direction is 010° and wind speed is 4 kt.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-909754"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q7I4T9YWBY",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "3QsSSI7I": {
-        "id": "3QsSSI7I",
-        "type": "simple",
-        "question": "When the term 'CAVOK' is used in an aviation routine weather report (METAR), the values of visibility and cloud are:",
-        "options": [
-          {
-            "id": "AHPIBL5002",
-            "text": "Visibility 10 km or more, no cloud below 5000 feet/GND",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9X2YFGR8T",
-            "text": "Visibility 10 km or more, no cloud below 1500 feet/GND",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOJ7WGZKYO",
-            "text": "Visibility more than 5000 m, no cloud below 1500 m/GND",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR9M1EJHI3",
-            "text": "Visibility more than 8 km, no cloud below 3000 feet/GND",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129148"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q8CVTD97RW",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.01"],
@@ -2351,7 +1877,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-920215"],
+        "externalIds": ["BGS-920215", "ATPLQ-919949"],
         "explanation": ""
       }
     }
@@ -2392,7 +1918,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-920280"],
+        "externalIds": ["BGS-920280", "ATPLGS-128947"],
         "explanation": ""
       }
     }
@@ -2480,81 +2006,6 @@
     }
   },
   {
-    "id": "Q9IE3S692V",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "A8Hnpixt": {
-        "id": "A8Hnpixt",
-        "type": "simple",
-        "question": "When the term \"CAVOK\" is used in an aviation routine weather report (METAR), the values of visibility and clouds are:",
-        "options": [
-          {
-            "id": "A0IGUE5N77",
-            "text": "visibility 10 km or more, no&nbsp;significant clouds below 5&nbsp;000 feet/GND, no weather of significance",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AX3TLXKBUX",
-            "text": "visibility more than 5&nbsp;000 m, no significant clouds below 1&nbsp;500 m/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABF733BTZ8",
-            "text": "visibility 10 km or more, no&nbsp;significant clouds below 1&nbsp;500 feet/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAIZ0FK6SP",
-            "text": "visibility more than 8 km, no significant clouds below 3&nbsp;000 feet/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-7142"],
-        "explanation": ""
-      },
-      "TcMfEgAA": {
-        "id": "TcMfEgAA",
-        "type": "simple",
-        "question": "When the term \"CAVOK\" is used in an aviation routine weather report (METAR), the values of visibility and clouds are:",
-        "options": [
-          {
-            "id": "ARY4MSPU1C",
-            "text": "visibility 10 km or more, no significant clouds below 1&nbsp;500 m/GND, no weather of significance",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALDCSCPTS9",
-            "text": "visibility more than 5&nbsp;000 m, no significant clouds below 1&nbsp;500 m/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU3XZF0LOZ",
-            "text": "visibility 10 km or more, no significant clouds below 5&nbsp;000 m/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKC27JQ7F0",
-            "text": "visibility more than 8 km, no significant clouds below 3&nbsp;000 feet/GND, no weather of significance",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-63848"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QD1HRTAP9N",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.01"],
@@ -2590,7 +2041,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-913933", "BGS-910099", "ATPLGS-128996"],
+        "externalIds": [
+          "ATPLQ-913933",
+          "BGS-910099",
+          "ATPLGS-128996",
+          "AVEXAM-60899",
+          "ATPLGS-129153"
+        ],
         "explanation": ""
       }
     }
@@ -2631,7 +2088,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-913196", "ATPLGS-626251"],
+        "externalIds": ["ATPLQ-913196", "ATPLGS-626251", "AVEXAM-54439"],
         "explanation": ""
       }
     }
@@ -2760,47 +2217,6 @@
     }
   },
   {
-    "id": "QBSTJQ720J",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "HAi0AEMH": {
-        "id": "HAi0AEMH",
-        "type": "simple",
-        "question": "The pilot of an aircraft in flight wants to obtain weather information for the destination airport. If available, a D-VOLMET can be obtained...",
-        "options": [
-          {
-            "id": "ACVRKJ4UZD",
-            "text": "via data link.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2L57CLDJD",
-            "text": "via ADSB.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABPBMBD7ZP",
-            "text": "by tuning a specific VHF frequency.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0YM178TWN",
-            "text": "by tuning a specific HF frequency.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-900173"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QC2160CK46",
     "explanation": "",
     "learningObjectives": ["090.03.01.01.01"],
@@ -2917,47 +2333,6 @@
     }
   },
   {
-    "id": "QC527F20HW",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "vW54yd10": {
-        "id": "vW54yd10",
-        "type": "simple",
-        "question": "On an aircraft which is not fitted with ACARS how will the pilots receive weather reports for a specific airfield?",
-        "options": [
-          {
-            "id": "ANWYWXVDUA",
-            "text": "Use the VOLMET for the latest METAR.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AILPRFLZ74",
-            "text": "Listen out on the AFIS.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACSYIVFI12",
-            "text": "Enquire by voice on the ATIS frequency.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6GO8KH2EH",
-            "text": "Request a SIGMET on the international weather frequency.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-77710"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QCC3RH7IYY",
     "explanation": "",
     "learningObjectives": ["090.03.01.01.01"],
@@ -3040,47 +2415,6 @@
     }
   },
   {
-    "id": "QD3L050FZ8",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.04"],
-    "variants": {
-      "jTgEd4PI": {
-        "id": "jTgEd4PI",
-        "type": "simple",
-        "question": "D-ATIS is defined as..",
-        "options": [
-          {
-            "id": "AW72RSBE8G",
-            "text": "Data link – Automatic Terminal Information Service.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7N7WOILTK",
-            "text": "Data Auto Transfer Integrated System.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AB0X0FT4IK",
-            "text": "Digital Automated Terminal Information Service.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A39VIB15OZ",
-            "text": "Downgraded Automatic Terminal Information Service.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-918869"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QDCXDMKPT7",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.01"],
@@ -3117,88 +2451,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-909234"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QDO4Y7J4F5",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "1fkYOhkT": {
-        "id": "1fkYOhkT",
-        "type": "simple",
-        "question": "On final approach to land in moderate rain, ATC transmits the following message pertinent to the landing runway \n\n'Runway report at 1243 UTC, runway 34, water up to 3 millimetres.' \n\nWhat does the pilot expect to hear afterwards?",
-        "options": [
-          {
-            "id": "A63QB8TSBF",
-            "text": "Estimated surface friction medium to good.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQR61OGSZS",
-            "text": "Braking action 50 %.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8TN74UIN3",
-            "text": "Runway reported slippery.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APY1FAKPXW",
-            "text": "Good braking action.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128778"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QEW2GUDF5E",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "gRVwC9lx": {
-        "id": "gRVwC9lx",
-        "type": "simple",
-        "question": "On final approach to land in moderate rain, ATC transmits the following message pertinent to the landing runway: \"Runway report at 12:43 UTC, runway 34, water up to 3 millimetres.\" What does the pilot expect to hear afterwards?",
-        "options": [
-          {
-            "id": "A7W3WRHCGK",
-            "text": "Estimated surface friction medium to good.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5MSXOJJPS",
-            "text": "Good braking action.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXZ2RKY9S4",
-            "text": "Braking action 50%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATAYDA4VD7",
-            "text": "Runway reported slippery.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-926829"],
         "explanation": ""
       }
     }
@@ -3280,7 +2532,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128824"],
+        "externalIds": [
+          "ATPLGS-128824",
+          "ATPLQ-929872",
+          "BGS-900103",
+          "AVEXAM-59588"
+        ],
         "explanation": ""
       },
       "2vsmIJR3": {
@@ -3395,88 +2652,6 @@
     }
   },
   {
-    "id": "QI1AS2A95E",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "UEI6dYmv": {
-        "id": "UEI6dYmv",
-        "type": "simple",
-        "question": "Which information can aircraft in flight obtain by VOLMET service?",
-        "options": [
-          {
-            "id": "AF0J2B64SS",
-            "text": "Aviation routine weather reports (METAR) of specific airports.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AU95XFVD8S",
-            "text": "Runway reports.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD0QSENNFC",
-            "text": "SIGMET.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASXPJFLUBW",
-            "text": "SPECI and TAF.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-60899"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QIAWV4NLOI",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "NvHeZwxc": {
-        "id": "NvHeZwxc",
-        "type": "simple",
-        "question": "How is temperature reported in a METAR? In terms of...",
-        "options": [
-          {
-            "id": "AAUU98QJUN",
-            "text": "degrees Celsius.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9IBCRJ3J6",
-            "text": "Kelvin.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJNBQQ52MC",
-            "text": "degrees Fahrenheit.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0YYK949GY",
-            "text": "degrees Réaumur.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-54439"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QIB0CKCYUY",
     "explanation": "",
     "learningObjectives": ["090.03.01.01.01"],
@@ -3512,7 +2687,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-12720"],
+        "externalIds": ["AVEXAM-12720", "ATPLGS-626577"],
         "explanation": ""
       }
     }
@@ -3554,81 +2729,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-915778"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJY9HWAT7G",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "q56gEaF0": {
-        "id": "q56gEaF0",
-        "type": "simple",
-        "question": "A pilot has just noted the latest ATIS for the destination aerodrome on the 20th day of the month.\n\n\"Dusseldorf Information Bravo, MET report time one zero two zero, expect ILS approach, runway in use two three left and two three right, new procedures for localiser critical areas apply, expect short time ILS interference, transition level six zero, wind three six zero degrees four knots, visibility one zero kilometres, present weather light rain, cloud few one thousand five hundred feet, scattered two thousand feet, broken four thousand feet, temperature one three, dew point one one, QNH one zero one four hecto-pascal, trend NOSIG, information Bravo out. \"\nFrom which of the following METARs has this ATIS message been created?",
-        "options": [
-          {
-            "id": "ADZID1LFP3",
-            "text": "201020Z 36004KT 9999 -RAFEW015 SCT020 BKN040 13/11 Q1014 NOSIG=",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMBRC85AVK",
-            "text": "201020Z 36004KT 9999 RAFEW015 SCT020 BKN040 13/11 Q1014=",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWNWF762AP",
-            "text": "201020Z T06036004KT 9999 -RAFEW015 SCT020 BKN040 13/11 Q1014=",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APFUC4QOS6",
-            "text": "201020Z 36004KT1000 R23-RAFEW015 SCT020 BKN040 13/11 Q1014 NOSIG=",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-919949"],
-        "explanation": ""
-      },
-      "A3WDA3IS": {
-        "id": "A3WDA3IS",
-        "type": "simple",
-        "question": "A pilot has just noted the latest ATIS for the destination aerodrome on the 20th day of the month. \n\"Dusseldorf Information Bravo, MET report time one zero two zero, expect ILS approach, runway in use two three left and two three right, new procedures for localiser critical areas apply, expect short time ILS interference, transition level six zero, wind three six zero degrees four knots, visibility one zero kilometres, present weather light rain, cloud few one thousand five hundred feet, scattered two thousand feet, broken four thousand feet, temperature one three, dew point one one, QNH one zero one four hecto-pascal, trend NOSIG, information Bravo out. \"\n From which of the following METARs has this ATIS message been created?",
-        "options": [
-          {
-            "id": "AEYYAIE15Y",
-            "text": "201020Z 36004KT 9999 -RAFEW015 SCT020 BKN040 13/11 Q1014 NOSIG=",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AR1WBPEVFL",
-            "text": "201020Z 36004KT 9999 RAFEW015 SCT020 BKN040 13/11 Q1014=",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATCAAQO6X2",
-            "text": "201020Z 36004KT1000 R23-RAFEW015 SCT020 BKN040 13/11 Q1014 NOSIG=",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMHEPOX1WN",
-            "text": "201020Z T06036004KT 9999 -RAFEW015 SCT020 BKN040 13/11 Q1014=",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117680"],
         "explanation": ""
       }
     }
@@ -3710,198 +2810,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-88728"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLBNLW5VF5",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.02"],
-    "variants": {
-      "p05xwrDg": {
-        "id": "p05xwrDg",
-        "type": "simple",
-        "question": "What is \"VOLMET\"?",
-        "options": [
-          {
-            "id": "ARAVKK5977",
-            "text": "Meteorological information for aircraft in flight.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS8SZHP7LX",
-            "text": "Meteorological station.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AARQN0XA9A",
-            "text": "Volume control meter.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK56MNTR6L",
-            "text": "A device used for measuring cloud base.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-914434"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QM9HZPQA4L",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "kl484hnD": {
-        "id": "kl484hnD",
-        "type": "simple",
-        "question": "In a runway report, what does 'friction coefficient 0.45?' mean?",
-        "options": [
-          {
-            "id": "ABLYB88XHW",
-            "text": "Braking action good.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2YZLSDTKY",
-            "text": "Braking action medium.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW8Z3V6KLO",
-            "text": "Braking action not measurable.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZJ97KXZHT",
-            "text": "Braking action poor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128947"],
-        "explanation": ""
-      },
-      "eyyE1nJT": {
-        "id": "eyyE1nJT",
-        "type": "simple",
-        "question": "In a runway report, what does 'friction coefficient 0.20?' mean?",
-        "options": [
-          {
-            "id": "ALOGV1HLFX",
-            "text": "Braking action poor.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADBSYX00SY",
-            "text": "Braking action medium.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOHWIUPBWE",
-            "text": "Braking action unreliable.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQKO1NUPQT",
-            "text": "Braking action good.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128822"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QN078A2YO6",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "Ss7TqZ0v": {
-        "id": "Ss7TqZ0v",
-        "type": "simple",
-        "question": "Decode the following RVR from a METAR message:\nR28/1000U",
-        "options": [
-          {
-            "id": "A7KAFK6077",
-            "text": "Runway 28, 1 000 metres changing upwards",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK8R96R19T",
-            "text": "Runway 28, 1 000 metres, unchanged",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABMXCJ3F3Q",
-            "text": "Runway 28, under 1 000 metres",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4W7FQGNLX",
-            "text": "Runway 28, 1 000 metres upper limit",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-915951"],
-        "explanation": ""
-      },
-      "aKCI7zR8": {
-        "id": "aKCI7zR8",
-        "type": "simple",
-        "question": "Decode the following RVR from a METAR message:\nR28/1000U",
-        "options": [
-          {
-            "id": "AJTFFA5C3C",
-            "text": "Runway 28, 1&nbsp;000 metres changing upwards",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQM7SNNNT6",
-            "text": "Runway 28, 1&nbsp;000 metres, unchanged",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM7DFN5LV1",
-            "text": "Runway 28, 1&nbsp;000 metres upper limit",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQI16LI9X3",
-            "text": "Runway 28, under 1&nbsp;000 metres",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-626575"],
+        "externalIds": ["AVEXAM-88728", "ATPLQ-914434", "ATPLGS-128328"],
         "explanation": ""
       }
     }
@@ -3943,47 +2852,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-920161"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNTCZHAMV0",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "NENyc6BH": {
-        "id": "NENyc6BH",
-        "type": "simple",
-        "question": "You are en-route to a destination which is still about 500 NM away. As you suspect a significant change in weather might have occurred, you wish to obtain the latest meteorological data. Which would be the best option?",
-        "options": [
-          {
-            "id": "AVV1G7A7XK",
-            "text": "HF VOLMET",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A86NQX2V6R",
-            "text": "UHF voice communication",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASKCN5AUKV",
-            "text": "ATIS by SELCAL",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4SRGOY7FP",
-            "text": "VHF ATIS",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-88469"],
         "explanation": ""
       }
     }
@@ -4105,47 +2973,6 @@
     }
   },
   {
-    "id": "QPBETMC1FI",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "Lyp9e47J": {
-        "id": "Lyp9e47J",
-        "type": "simple",
-        "question": "In radiotelephony, the correct way to transmit the following wind vector and speed \"170 degrees, 18 knots, gusting 30 knots\" is...",
-        "options": [
-          {
-            "id": "APYHRMKYIJ",
-            "text": "wind one seven zero degrees one eight knots gusting three zero knots.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1UKKWQP6I",
-            "text": "wind one hundred and seventy degrees eighteen knots gusting thirty knots.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFDCMOG81Q",
-            "text": "wind one hundred and seventy degrees one eight knots gusting three zero knots.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A83CVUJT7U",
-            "text": "wind one seven zero degrees eighteen knots gusting maximum thirty knots.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-900165"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QPR8FK5VIT",
     "explanation": "",
     "learningObjectives": ["090.03.01.01.01"],
@@ -4182,81 +3009,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-911078"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQ3EOP7AJD",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "bjvr5xv1": {
-        "id": "bjvr5xv1",
-        "type": "simple",
-        "question": "Which of the following correctly translates data from the METAR of Lisbon aerodrome given below?\nLPPT&nbsp;150505Z&nbsp;11006KT&nbsp;9999&nbsp;BKN016 M09/M16&nbsp;Q1006&nbsp;NOSIG =",
-        "options": [
-          {
-            "id": "ARC9RSV3CZ",
-            "text": "Report time is 05:05 UTC, dew point is minus 16°C, QNH is&nbsp;1006&nbsp;hPa",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A49C0JAYIB",
-            "text": "Temperature is 16 degrees below ISA, visibility is at least 10 km, QNH is&nbsp;1006&nbsp;hPa",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEQSHQFGGF",
-            "text": "Wind comes from 110 degrees true, QNH is 9 hPa less than ISA, no significant changes forecast",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5HUE7CZDQ",
-            "text": "The temperature is minus 9°C, report time is 15:05 PM, clouds are 5-7/8 at 1&nbsp;600 ft",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-626577"],
-        "explanation": ""
-      },
-      "qBAxE6sy": {
-        "id": "qBAxE6sy",
-        "type": "simple",
-        "question": "Which of the following correctly translates data from the METAR of Lisbon aerodrome given below?\nLPPT 150505Z 11006KT 9999 BKN016 M09/M16 Q1006 NOSIG =",
-        "options": [
-          {
-            "id": "A4NOVVTL8A",
-            "text": "Report time is 05:05 UTC, dew point is minus 16°C, QNH is 1006 hPa",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOT9Y811E3",
-            "text": "Temperature is 16 degrees below ISA, visibility is at least 10 km, QNH is 1006 hPa",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADHAP009W0",
-            "text": "Wind comes from 110 degrees true, QNH is 9 hPa less than ISA, no significant changes forecast",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACJ4B2XHAZ",
-            "text": "The temperature is minus 9°C, report time is 15:05 PM, clouds are 5-7/8 at 1 600 ft",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-913704"],
         "explanation": ""
       }
     }
@@ -4344,88 +3096,6 @@
     }
   },
   {
-    "id": "QRVBAOY1HV",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.02"],
-    "variants": {
-      "B2NZlFXk": {
-        "id": "B2NZlFXk",
-        "type": "simple",
-        "question": "What is 'VOLMET'?'",
-        "options": [
-          {
-            "id": "A922VIW6BW",
-            "text": "Meteorological information for aircraft in flight.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK19X0WVEH",
-            "text": "Volume control meter.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHMFOV820F",
-            "text": "A device used for measuring cloud base.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANRDYYD70M",
-            "text": "Meteorological station.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128328"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTYOL842XV",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.01.01"],
-    "variants": {
-      "LPfuh1lk": {
-        "id": "LPfuh1lk",
-        "type": "simple",
-        "question": "When the term \"CAVOK\" is used in an aviation routine weather report (METAR), what are the values of visibility and cloud?",
-        "options": [
-          {
-            "id": "AESHYX9JKE",
-            "text": "Visibility 10 km or more, no cloud below 5000 feet.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABMPQ21HNW",
-            "text": "Visibility more than 5000 m, no cloud below 1500 m.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKW523O7VM",
-            "text": "Visibility 10 km or more, no cloud below 1500 feet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWD46CMB3Z",
-            "text": "Visibility more than 8 km, no cloud below 3000 feet.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-916151"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QX81G6G4RN",
     "explanation": "",
     "learningObjectives": ["090.03", "090.07"],
@@ -4461,7 +3131,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-926633", "BGS-920410"],
+        "externalIds": ["ATPLQ-926633", "BGS-920410", "ATPLGS-128587"],
         "explanation": ""
       }
     }
@@ -4502,48 +3172,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128899"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXDPYJJL9M",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "rOHdFyQ8": {
-        "id": "rOHdFyQ8",
-        "type": "simple",
-        "question": "What does ATIS mean and what can a pilot expect from it?",
-        "options": [
-          {
-            "id": "A98TV7GL93",
-            "text": "Automatic Terminal Information Service; it provides the pilot with information about weather, runway in use and approach type to be expected.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEEPZKE3IO",
-            "text": "Aerodrome Traffic Indication Service; it provides the pilot with information on when other aircraft are expected to take off or land.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFD5XNLFFM",
-            "text": "Airborne Traffic Information Service; it provides the pilot with information on other traffic in the vicinity.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEV9RSBZJ4",
-            "text": "Aerodrome Terminal Instruction Service; it provides the pilot with routings for instrument approach procedures.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-51746"],
+        "externalIds": ["ATPLGS-128899", "ATPLQ-923071"],
         "explanation": ""
       }
     }
@@ -4590,163 +3219,6 @@
     }
   },
   {
-    "id": "QYAQPRMSV6",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "Td01wPrk": {
-        "id": "Td01wPrk",
-        "type": "simple",
-        "question": "Which information can aircraft in flight obtain by VOLMET:",
-        "options": [
-          {
-            "id": "AIN3BXPIAU",
-            "text": "Aviation routine weather reports (METAR) of specific airports",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AL7SEPXFVU",
-            "text": "Runway reports",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1MINMW9UV",
-            "text": "SPECI and TAF",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD5K4YXWRQ",
-            "text": "SIGMET",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129153"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q7FT75UI7W",
-    "explanation": "",
-    "learningObjectives": ["090.03", "090.06"],
-    "variants": {
-      "bZBTSf3F": {
-        "id": "bZBTSf3F",
-        "type": "simple",
-        "question": "Information about an aerodrome with an ATIS is also included in the list of VOLMET reports. The QNH is transmitted in..",
-        "options": [
-          {
-            "id": "A75BLN4JSK",
-            "text": "both the ATIS and the VOLMET reports.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYXGCWLS10",
-            "text": "neither the ATIS nor the VOLMET report.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5GSH4TG14",
-            "text": "only the VOLMET report.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AC5SXPKHZB",
-            "text": "only the ATIS report.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-923071"],
-        "explanation": ""
-      },
-      "jyRG1NjC": {
-        "id": "jyRG1NjC",
-        "type": "simple",
-        "question": "Information about an aerodrome with an ATIS is also included in the list of VOLMET reports. The QNH is transmitted in...",
-        "options": [
-          {
-            "id": "AHOZY2ZPKS",
-            "text": "Both ATIS &amp; VOLMET reports",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZUU5PAB16",
-            "text": "Neither ATIS nor VOLMET report",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AO07MXUQI0",
-            "text": "Only ATIS report",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACH57VCYLX",
-            "text": "Only VOLMET report",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-920351"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q2H5TTN5WQ",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "LRQmNeba": {
-        "id": "LRQmNeba",
-        "type": "simple",
-        "question": "Aircraft in flight may receive weather information from several sources. Which of the following is correct?",
-        "options": [
-          {
-            "id": "A763WRDM1D",
-            "text": "VOLMET broadcasts recent METAR and SPECI reports for a group of aerodromes.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2VGNL5E36",
-            "text": "Any thunderstorms seen by another aircraft in flight will be subject to a special report.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A19B2IK81X",
-            "text": "ATIS broadcasts the TAF and METAR for the aerodrome which transmits it.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF8LGWP797",
-            "text": "An ATS unit cannot provide aerodrome forecasts as part of a Flight Information Service.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-925632"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q48Y1UPPYV",
     "explanation": "",
     "learningObjectives": ["090.03.01.02.03"],
@@ -4782,89 +3254,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-906825"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QD5934VH5W",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.03"],
-    "variants": {
-      "M7QAodnn": {
-        "id": "M7QAodnn",
-        "type": "simple",
-        "question": "An aircraft is flying at a cruise altitude of 900 ft. At a distance of about 100 nm from its destination the pilot wants to listen to the ATIS. The message is very distorted and only parts of it can be received. In order to have better reception, the pilot should...",
-        "options": [
-          {
-            "id": "APHG220PRQ",
-            "text": "fly at a higher altitude to increase the range of the reception.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIVQLMU2ED",
-            "text": "increase the volume of the receiver.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGXWEZ7KCZ",
-            "text": "select the frequency of APPROACH because they are responsible for the higher airspace.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AC27AYMTJ2",
-            "text": "increase the volume of his/her headset.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-900161"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNGW61UAIE",
-    "explanation": "",
-    "learningObjectives": ["090.03.01.02.01"],
-    "variants": {
-      "ylWUS0pe": {
-        "id": "ylWUS0pe",
-        "type": "simple",
-        "question": "A continuous VOLMET broadcast contains..",
-        "options": [
-          {
-            "id": "AJ5XBKAZYF",
-            "text": "recent METAR and SPECI reports from a published selection of aerodromes.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6OXCJ30BJ",
-            "text": "an area forecast for flights in the FIR below 5000 ft AGL.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVGXTUL4WN",
-            "text": "recently received routine and special reports from aircraft within the FIR.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AID2MDK6H1",
-            "text": "the latest TAFs and METARs for major international aerodromes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-924876"],
+        "externalIds": ["ATPLQ-906825", "BGS-900161"],
         "explanation": ""
       }
     }
@@ -4905,7 +3295,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-900100"],
+        "externalIds": ["BGS-900100", "ATPLQ-926830", "ATPLGS-128828"],
         "explanation": ""
       }
     }

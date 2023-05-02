@@ -78,7 +78,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
     });
     setSelectedOption(undefined);
     setSelectedStatus("in-progress");
-    questionBoxRef.current?.change("question");
+    questionBoxRef.current?.change?.("question");
   };
 
   return (

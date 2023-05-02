@@ -76,7 +76,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-923700"],
+        "externalIds": ["ATPLQ-923700", "AVEXAM-3951"],
         "explanation": ""
       }
     }
@@ -117,7 +117,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-103531"],
+        "externalIds": ["ATPLGS-103531", "AVEXAM-37731"],
         "explanation": ""
       }
     }
@@ -199,7 +199,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-923345"],
+        "externalIds": [
+          "ATPLQ-923345",
+          "AVEXAM-81743",
+          "ATPLGS-128714",
+          "ATPLGS-117654"
+        ],
         "explanation": ""
       }
     }
@@ -241,47 +246,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-128588"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QCRS49X8JD",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.02.02"],
-    "variants": {
-      "MYBSOMgs": {
-        "id": "MYBSOMgs",
-        "type": "simple",
-        "question": "The time is now 11:23. Radar Control requests your estimate for next reporting point, which is AAL VOR/DME. You look at your operational flight plan (OFP) and estimate 12 minutes (36 NM) to go to the reporting point. Your transmission is:",
-        "options": [
-          {
-            "id": "AWW9EPKUA2",
-            "text": "estimate AAL at three-five.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAWXQ2F9EQ",
-            "text": "estimate AAL VOR in one-two minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACF22KXORC",
-            "text": "we have one-two minutes to go to AAL.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7M56ECBYD",
-            "text": "estimate AAL at eleven-thirty-five.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-37731"],
         "explanation": ""
       }
     }
@@ -533,88 +497,6 @@
     }
   },
   {
-    "id": "QKCQC8058D",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "JnKjfqOz": {
-        "id": "JnKjfqOz",
-        "type": "simple",
-        "question": "If you are requested to \"REPORT FLIGHT CONDITIONS\", what does that mean?",
-        "options": [
-          {
-            "id": "ARJVTBMEPF",
-            "text": "Indicate whether you are flying in IMC or in VMC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP61KEVQFR",
-            "text": "Indicate weather conditions as wind, visibility, temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A94T6N67UG",
-            "text": "Indicate if visibility is sufficient for landing",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATSN1ZF9V9",
-            "text": "Indicate whether you are flying IFR or VFR.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-81743"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QM8S4M0O3Y",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "KtnG5DaC": {
-        "id": "KtnG5DaC",
-        "type": "simple",
-        "question": "LSGG 241420Z 21001KT 2200 SN FEW003 BKN010 01/00 Q1020 BLSN Which of the following statements is correct??",
-        "options": [
-          {
-            "id": "AM3HGOZMZM",
-            "text": "Visibility 2200 meters, QNH 1020, blowing snow.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5849Q4WCJ",
-            "text": "Visibility 2200 meters, broken 10000 FT, QFE 1020.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQSWBSWZGT",
-            "text": "Wind direction 210 degrees true and speed of 10 knots, QNH 1020.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX64SUSD5M",
-            "text": "Wind direction 210 degrees magnetic and speed of 10 knots, QFE 1020.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117225"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQHVUVN32R",
     "explanation": "",
     "learningObjectives": ["090.07.01.02.02"],
@@ -691,48 +573,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-900138"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSAB1SUP7N",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "4y7YIxKj": {
-        "id": "4y7YIxKj",
-        "type": "simple",
-        "question": "If you are requested to 'Report flight conditions', what does that mean?",
-        "options": [
-          {
-            "id": "AZMHQW0TP3",
-            "text": "Indicate whether you are flying in IMC or in VMC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK6CFTE12D",
-            "text": "Indicate if visibility is sufficient for landing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWRBRT728J",
-            "text": "Indicate whether you are flying IFR or VFR.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF6ATALIVQ",
-            "text": "Indicate weather conditions as wind, visibility, temperature.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128714"],
+        "externalIds": ["BGS-900138", "ATPLQ-903067"],
         "explanation": ""
       }
     }
@@ -773,7 +614,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-923637"],
+        "externalIds": ["ATPLQ-923637", "AVEXAM-17275"],
         "explanation": ""
       }
     }
@@ -820,47 +661,6 @@
     }
   },
   {
-    "id": "QWD78TUDZ3",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "gLJ8FBrk": {
-        "id": "gLJ8FBrk",
-        "type": "simple",
-        "question": "If you are requested to ?Report flight conditions', what does that mean??",
-        "options": [
-          {
-            "id": "A1DHXHINWZ",
-            "text": "Indicate whether you are flying in IMC or in VMC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AUS6A872EV",
-            "text": "Indicate weather conditions as wind, visibility, temperature.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABCC3TGJR0",
-            "text": "Indicate if visibility is sufficient for landing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADTQZTDN57",
-            "text": "Indicate whether you are flying IFR or VFR.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117654"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QWJX1SF9TJ",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.02"],
@@ -896,7 +696,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-20882"],
+        "externalIds": ["AVEXAM-20882", "ATPLQ-908057"],
         "explanation": ""
       }
     }
@@ -1142,7 +942,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-80254"],
+        "externalIds": [
+          "AVEXAM-80254",
+          "ATPLGS-128991",
+          "ATPLQ-917907",
+          "BGS-910090",
+          "ATPLGS-129152"
+        ],
         "explanation": ""
       },
       "2WRaKuIn": {
@@ -1340,7 +1146,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-910097", "ATPLQ-917947", "ATPLGS-128995"],
+        "externalIds": [
+          "BGS-910097",
+          "ATPLQ-917947",
+          "ATPLGS-128995",
+          "AVEXAM-10282",
+          "ATPLGS-129156"
+        ],
         "explanation": ""
       }
     }
@@ -1545,7 +1357,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-128987"],
+        "externalIds": [
+          "ATPLGS-128987",
+          "ATPLGS-128988",
+          "ATPLGS-128989",
+          "ATPLGS-117530",
+          "BGS-910096"
+        ],
         "explanation": ""
       },
       "Yv36fVfk": {
@@ -1961,48 +1779,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-117531"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNWEM7X49G",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "8DYNQEmO": {
-        "id": "8DYNQEmO",
-        "type": "simple",
-        "question": "How can aviation routine weather reports (METAR) of specific airports be obtained by aircraft in flight (enroute)?",
-        "options": [
-          {
-            "id": "A15PZ6QJ3Q",
-            "text": "VOLMET",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4MCR8QZLD",
-            "text": "ATIS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIZPJGTCY7",
-            "text": "AFIS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEKFJZPNQQ",
-            "text": "SIGMET",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-10282"],
+        "externalIds": ["ATPLGS-117531", "ATPLQ-912638"],
         "explanation": ""
       }
     }
@@ -2083,115 +1860,6 @@
     }
   },
   {
-    "id": "QOVA9ZTQYN",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "KHA4nNHL": {
-        "id": "KHA4nNHL",
-        "type": "simple",
-        "question": "When the term \"Broken\" is used in an aviation routine weather report (METAR), what is the amount of cloud covering the sky?",
-        "options": [
-          {
-            "id": "ATRE97YN1U",
-            "text": "5 to 7 octas.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4H8HV3HRD",
-            "text": "8 octas below 10000 feet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2FRBOGDO3",
-            "text": "1 to 4 octas.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIAPKB518P",
-            "text": "Clear sky below 5000 feet.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-912638"],
-        "explanation": ""
-      },
-      "CfI83fFI": {
-        "id": "CfI83fFI",
-        "type": "simple",
-        "question": "When the term \"Scattered\" is used in an aviation routine weather report (METAR), what is the amount of cloud covering the sky?",
-        "options": [
-          {
-            "id": "ADBS85GHWJ",
-            "text": "Half or less than half of the sky is covered(3 or 4 octas).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AA04WQ4HN8",
-            "text": "The sky is clear below 5000 feet/GND.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP6UHMI38K",
-            "text": "More than half but less than the full sky is covered(5 to 7 octas).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASR8NARK7W",
-            "text": "The sky is entirely covered (8 octas).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-915179"],
-        "explanation": ""
-      },
-      "ZCBIlQ9I": {
-        "id": "ZCBIlQ9I",
-        "type": "simple",
-        "question": "When the term \"Overcast\" is used in an aviation routine weather report (METAR), what is the amount of clouds covering the sky?",
-        "options": [
-          {
-            "id": "AH2SFZFPUL",
-            "text": "100%.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABFUVCM4KG",
-            "text": "Less than 50%.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANNEWUUDGX",
-            "text": "50% or more.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATTY14H1R8",
-            "text": "It means poor ground visibility.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-914394"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QP4DHH74LD",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.02"],
@@ -2233,47 +1901,6 @@
     }
   },
   {
-    "id": "QPNG19PH14",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "yK9eeOw1": {
-        "id": "yK9eeOw1",
-        "type": "simple",
-        "question": "How can aviation routine weather reports (METAR) of specific airports be obtained by aircraft in flight:",
-        "options": [
-          {
-            "id": "AF4NO349H9",
-            "text": "VOLMET",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AA2HLM7XXS",
-            "text": "AFIS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKSOYX5Y1P",
-            "text": "ATIS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APEMEHUZTS",
-            "text": "SIGMET",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129156"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQH8L7MZDV",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.01"],
@@ -2310,47 +1937,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-919625"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQKVHO38O4",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "6I3JGBTs": {
-        "id": "6I3JGBTs",
-        "type": "simple",
-        "question": "When the term 'Scattered' is used in an aviation routine weather report (METAR), what is the amount of cloud covering the sky",
-        "options": [
-          {
-            "id": "AD6JWJ1WWJ",
-            "text": "Half or less than half of the sky is covered(3 or 4 octas).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AYTCM54TGJ",
-            "text": "The sky is entirely covered (8 octas).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7NFHHDKMN",
-            "text": "More than half but less than the full sky is covered(5 to 7 octas).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADAOTX9E8O",
-            "text": "The sky is clear below 5000 feet/GND.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117530"],
         "explanation": ""
       }
     }
@@ -2426,204 +2012,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-56003"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRLYX8KHKY",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "jovfRdbl": {
-        "id": "jovfRdbl",
-        "type": "simple",
-        "question": "When are you exempted from making meteorology reports?",
-        "options": [
-          {
-            "id": "ACH7XW84TS",
-            "text": "When your aircraft is ADS-C equipped, unless ATC requests you.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQ0T8T5DP1",
-            "text": "When you did not LOGON to CPDLC.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHF0U8BYCN",
-            "text": "Never.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMTDFK4HRT",
-            "text": "If you are flying in uncontrolled airspace.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-908057"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSBHP8P6B6",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "BgUQrHrc": {
-        "id": "BgUQrHrc",
-        "type": "simple",
-        "question": "How is the visibility in an aviation routine weather report (METAR) expressed in plain language:",
-        "options": [
-          {
-            "id": "ATPRNMP3AR",
-            "text": "Up to 5000 m in metres, above in kilometres",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXRXKH8G6Q",
-            "text": "Up to 1500 m in metres, above in kilometres",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE2D4W9N38",
-            "text": "In nautical miles only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADWNANKUF3",
-            "text": "In feet and nautical miles",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-129152"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QW4FNRPV7O",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "jcAOOSKw": {
-        "id": "jcAOOSKw",
-        "type": "simple",
-        "question": "When the term Scattered is used in an aviation routine weather report -METAR-, what is the amount of cloud covering the sky?",
-        "options": [
-          {
-            "id": "AGSX9JSL2C",
-            "text": "Half or less than half of the sky is covered (3 or 4 octas).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AL13TLOIEB",
-            "text": "The sky is clear below 5000 feet/GND.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACLYRJQQXT",
-            "text": "The sky is entirely covered (8 octas).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMWWV91UVV",
-            "text": "More than half but less than the full sky is covered (5 to 7 octas).",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-910096"],
-        "explanation": ""
-      },
-      "U1k5gtyA": {
-        "id": "U1k5gtyA",
-        "type": "simple",
-        "question": "When the term Broken is used in an aviation routine weather report -METAR-, what is the amount of cloud covering the sky?",
-        "options": [
-          {
-            "id": "A9G7Z56UWN",
-            "text": "5 to 7 octas.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AHI07FR00A",
-            "text": "Clear sky below 5000 feet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALIRTPH7M8",
-            "text": "8 octas below 10000 feet.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI2C57TYO5",
-            "text": "1 to 4 octas.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-910093"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QWQ5LIELVU",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "nEbkQtn9": {
-        "id": "nEbkQtn9",
-        "type": "simple",
-        "question": "Which weather phenomena should be reported to ATC?",
-        "options": [
-          {
-            "id": "AUL6TED2NQ",
-            "text": "Embedded cumulonimbus (CB).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AH447JYZI0",
-            "text": "Streaks of altostratus (AS) clouds ahead of you.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHHX0BUTES",
-            "text": "Sandstorm, well left of your track.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ80QIUDJG",
-            "text": "Light turbulence.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-903067"],
         "explanation": ""
       }
     }
@@ -2711,47 +2099,6 @@
     }
   },
   {
-    "id": "QZYKRBWC5Y",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "YHjvD4aF": {
-        "id": "YHjvD4aF",
-        "type": "simple",
-        "question": "You are approaching an ATS reporting point and have been instructed by the controller to make routing meteorological reports, the last of which has been transmitted about an hour ago. You are now experiencing turbulence which makes the occupants feel a strain against their seat belts. The Standardised European Rules of the AIR (SERA) require you to...",
-        "options": [
-          {
-            "id": "AF2DPU08R3",
-            "text": "Make a Special Air Report and omit the routine report.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM6HM5C8XA",
-            "text": "Include the information in the routine report which is due at the reporting point.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD1VJC5ADS",
-            "text": "Make your routine report at the reporting point. As the turbulence is only of moderate intensity, it can be excluded from the report.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGFWB3OA88",
-            "text": "Include this information into the routine report which is due in approximately one hour.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-59588"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQAVL7CCIL",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.02"],
@@ -2787,48 +2134,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-910105", "ATPLQ-914552", "ATPLGS-129012"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPRGDM0SPS",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "LZbWhxp6": {
-        "id": "LZbWhxp6",
-        "type": "simple",
-        "question": "Under which of the following circumstances shall an aircraft station squawk **7600**?",
-        "options": [
-          {
-            "id": "ATEVJZIEV4",
-            "text": "In case of radio communication failure.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AY7RF0S018",
-            "text": "When flying over desert areas.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8OFR35J3X",
-            "text": "When approaching a prohibited area.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYXCM9KPFJ",
-            "text": "When entering bad weather areas.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "BGS-910105",
+          "ATPLQ-914552",
+          "ATPLGS-129012",
+          "AVEXAM-61643"
         ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-61643"],
         "explanation": ""
       }
     }
@@ -3039,47 +2350,6 @@
     }
   },
   {
-    "id": "Q4ZVJIUZ4W",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "sIPRa7fv": {
-        "id": "sIPRa7fv",
-        "type": "simple",
-        "question": "Isolated CBs have been forecast along the planned route. An aircraft flying in a layer of nimbostratus clouds and the pilots see a lightning flash. What actions should they take?",
-        "options": [
-          {
-            "id": "ABYSYB8WGF",
-            "text": "Transmit a Special-Air-Report because the CB is embedded.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7W9GSCQ3X",
-            "text": "Nothing, because the CBs have been forecast.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMQV64VXYA",
-            "text": "Report the lightning flash at the next waypoint, which is only 15 minutes away.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWA87JWYS3",
-            "text": "Declare a PAN as the aircraft has flown into a storm.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-17275"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q5KT8FMVER",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.01"],
@@ -3196,47 +2466,6 @@
     }
   },
   {
-    "id": "Q8VIDJVV82",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.02"],
-    "variants": {
-      "e62D5hKA": {
-        "id": "e62D5hKA",
-        "type": "simple",
-        "question": "An aircraft that encounters certain meteorological phenomena in flight must make a special report\n\tWhich of the following must be reported?",
-        "options": [
-          {
-            "id": "AIGYE8HYT8",
-            "text": "A heavy sandstorm seen some distance from track.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1WEM173Y3",
-            "text": "An isolated thunderstorm seen close to track.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5QSK1KBE0",
-            "text": "Light turbulence experienced by the aircraft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACYDIJEN4V",
-            "text": "Light icing experienced by the aircraft.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-128587"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QAFVGY99IE",
     "explanation": "",
     "learningObjectives": ["090.07.01.01.01"],
@@ -3273,47 +2502,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-20351"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QCK0TL1WUE",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "0bJ74q5y": {
-        "id": "0bJ74q5y",
-        "type": "simple",
-        "question": "When air-ground data link is used, automated routine observations should be made (reports of air temperature, wind and turbulence). Aircraft not equipped with air-ground data link equipment are:",
-        "options": [
-          {
-            "id": "A16N5QUIFG",
-            "text": "exempt to make regular reports, unless specifically requested by ATC.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM2XLS5MBK",
-            "text": "are only required to make reports upon passing reporting points, not more than 30 minutes every time.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APRQHIWJ9L",
-            "text": "required only to report once, immediately after being requested.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW3VC3CJBQ",
-            "text": "are required to make regular reports, regardless of position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-3951"],
         "explanation": ""
       }
     }
@@ -3395,7 +2583,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-8579"],
+        "externalIds": ["AVEXAM-8579", "ATPLQ-929371", "BGS-920329"],
         "explanation": ""
       }
     }
@@ -3436,7 +2624,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-906448"],
+        "externalIds": ["ATPLQ-906448", "AVEXAM-12456"],
         "explanation": ""
       }
     }
@@ -3601,47 +2789,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-38313"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQT651LVAH",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.02.02"],
-    "variants": {
-      "ec8YpV2P": {
-        "id": "ec8YpV2P",
-        "type": "simple",
-        "question": "Morse code identifiers of radio navigation aids...",
-        "options": [
-          {
-            "id": "ABMZGOUT2T",
-            "text": "Consist of 2 to 4 letters and are given as dots and dashes.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC9TNQCD7Z",
-            "text": "Consist of 1 or 2 letters and are given as Latin characters.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHETT4F3KA",
-            "text": "Consist of 2 letters only and the full name is given.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A94JUDO0RJ",
-            "text": "Consist of 3 letters only and are given as dots and dashes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-12456"],
         "explanation": ""
       }
     }
@@ -3833,47 +2980,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-920245"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYA5ZP4AJV",
-    "explanation": "",
-    "learningObjectives": ["090.07.01.01.01"],
-    "variants": {
-      "pke3gIpf": {
-        "id": "pke3gIpf",
-        "type": "simple",
-        "question": "The route forecast included the chance of isolated thunderstorms. While flying in nimbostratus cloud, the pilot sees a flash of lightning. What communication, if any, should the pilot make to Air Traffic Services?",
-        "options": [
-          {
-            "id": "A2TFEIPWEO",
-            "text": "A special observation report because the pilot has encountered an embedded thunderstorm.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQIX7NG379",
-            "text": "The pilot should include the information in the next position report, which is due in 15 minutes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXNUDZGLV4",
-            "text": "A PAN call on the frequency in use because the pilot`s message is urgent.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZVNAFSYQC",
-            "text": "The observation report can be omitted because thunderstorms were forecast.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-929371", "BGS-920329"],
         "explanation": ""
       }
     }

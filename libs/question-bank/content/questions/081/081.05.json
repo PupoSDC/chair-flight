@@ -76,7 +76,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810423", "ATPLQ-814937"],
+        "externalIds": [
+          "BGS-810423",
+          "ATPLQ-814937",
+          "AVEXAM-95373",
+          "ATPLGS-125578"
+        ],
         "explanation": ""
       }
     }
@@ -158,7 +163,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-20933", "ATPLQ-819903", "BGS-810463"],
+        "externalIds": [
+          "AVEXAM-20933",
+          "ATPLQ-819903",
+          "BGS-810463",
+          "ATPLGS-125782"
+        ],
         "explanation": ""
       }
     }
@@ -239,47 +249,6 @@
     }
   },
   {
-    "id": "Q8IY7XAD50",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.02.01"],
-    "variants": {
-      "VUInRv1K": {
-        "id": "VUInRv1K",
-        "type": "simple",
-        "question": "Ignoring downwash effects on the tailplane, extension of Fowler-type flaps, will produce:",
-        "options": [
-          {
-            "id": "AV9ADIKOXD",
-            "text": "a nose-down pitching moment.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALPRAW96NR",
-            "text": "a nose-up pitching moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANWEBR4DI7",
-            "text": "no pitching moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW03K8XLKN",
-            "text": "a force which reduces drag.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-95373"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QA9UC6GF8S",
     "explanation": "",
     "learningObjectives": ["081.05.04.03.01"],
@@ -315,48 +284,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-814746"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QAS9ENTHHW",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.03.01"],
-    "variants": {
-      "SlSHMXGO": {
-        "id": "SlSHMXGO",
-        "type": "simple",
-        "question": "Spoilers mounted on the wing upper surface can be used to",
-        "options": [
-          {
-            "id": "A9Y1MTRE98",
-            "text": "assist the ailerons.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACKE2AHBNH",
-            "text": "prevent aeroplane yaw following engine failure.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEN3UQY630",
-            "text": "increase lift and drag.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0B98PA8B4",
-            "text": "assist the elevators.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125783"],
+        "externalIds": ["ATPLQ-814746", "ATPLGS-117795"],
         "explanation": ""
       }
     }
@@ -397,7 +325,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-816992"],
+        "externalIds": ["ATPLQ-816992", "BGS-812368"],
         "explanation": ""
       }
     }
@@ -478,88 +406,6 @@
     }
   },
   {
-    "id": "QGR5UAUQRK",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.03.01"],
-    "variants": {
-      "YdADJ8dE": {
-        "id": "YdADJ8dE",
-        "type": "simple",
-        "question": "When roll spoilers are extended, the part of the wing on which they are mounted",
-        "options": [
-          {
-            "id": "AH8O8ATMP1",
-            "text": "experiences a reduction in lift, which generates the desired rolling moment. In addition there is a local increase in drag, which suppresses adverse yaw.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEJYMPUBFK",
-            "text": "stalls. This causes a difference in lift between both wings, which generates the desired rolling moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0FZBZYON0",
-            "text": "experiences extra drag, which generates a yawing moment. The speed difference between both wings generates the desired rolling moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APS1ZYKVDW",
-            "text": "is forced downwards as a reaction to the increased drag.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125850"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QK6NSNLHZR",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.03.01"],
-    "variants": {
-      "F5aekjIa": {
-        "id": "F5aekjIa",
-        "type": "simple",
-        "question": "When spoilers are used as speed brakes?",
-        "options": [
-          {
-            "id": "A5C6D8G86U",
-            "text": "at the same angle of attack, CD is increased and CL is decreased.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7VREN3DBK",
-            "text": "for the same CL, the angle of attack must be reduced.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF2U933R44",
-            "text": "the CLMAX is not affected.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJTKDY8GD4",
-            "text": "at the same angle of attack, CL remains unaffected.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117795"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QKS9KYNQSL",
     "explanation": "",
     "learningObjectives": ["081.05.08.02.01"],
@@ -596,47 +442,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-125914"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QL0C8CXINL",
-    "explanation": "",
-    "learningObjectives": ["081.05.05.01.02"],
-    "variants": {
-      "ljLw36mr": {
-        "id": "ljLw36mr",
-        "type": "simple",
-        "question": "In a sideslip, rudder effectiveness may be reduced\nDeflection of which control surface will aid, through secondary (or couple aerodynamic effects, the rudder yawing moment?",
-        "options": [
-          {
-            "id": "AGFQE304FZ",
-            "text": "Ailerons",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1PC2MTS2Z",
-            "text": "Elevators",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJR18UO81S",
-            "text": "Flaps",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR6PEJDP4X",
-            "text": "Slats",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118661"],
         "explanation": ""
       }
     }
@@ -765,47 +570,6 @@
     }
   },
   {
-    "id": "QPG150YGCH",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.03.01"],
-    "variants": {
-      "DqnbgTfm": {
-        "id": "DqnbgTfm",
-        "type": "simple",
-        "question": "Wing spoilers are deflected symmetrically in flight in order to",
-        "options": [
-          {
-            "id": "AFBPI6LK1I",
-            "text": "decelerate the aeroplane and/or increase its rate of descent.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A81EELYPLI",
-            "text": "prevent aeroplane yaw.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMD4CJAAXP",
-            "text": "improve glide performance (increase lift /drag ratio).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALLC1W5TYC",
-            "text": "assist the ailerons in obtaining a higher roll rate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125782"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQT2HOV7X0",
     "explanation": "",
     "learningObjectives": ["081.05.08.02.01"],
@@ -847,47 +611,6 @@
     }
   },
   {
-    "id": "QRV4SY2XJ9",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.02.01"],
-    "variants": {
-      "bbAGHUv5": {
-        "id": "bbAGHUv5",
-        "type": "simple",
-        "question": "Considering the effect of wing downwash on the direction of the airflow approaching the tailplane, when flaps are extended the tailplane's negative angle of attack...",
-        "options": [
-          {
-            "id": "ARKBZ2BT97",
-            "text": "increases, decreasing the tailplane's effectiveness.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOD6RIIXD4",
-            "text": "increases, increasing the tailplane's effectiveness.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJBTM9UMNN",
-            "text": "decreases, increasing the tailplane's effectiveness.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7FY0QO20Q",
-            "text": "decreases, decreasing the tailplane's effectiveness.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-812368"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QRYR0GTVY1",
     "explanation": "",
     "learningObjectives": ["081.05.06.01.01"],
@@ -923,7 +646,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118667"],
+        "externalIds": ["ATPLGS-118667", "ATPLQ-818906"],
         "explanation": ""
       }
     }
@@ -1052,47 +775,6 @@
     }
   },
   {
-    "id": "QWXDIZPW8H",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.02.01"],
-    "variants": {
-      "CU8zVbPO": {
-        "id": "CU8zVbPO",
-        "type": "simple",
-        "question": "Ignoring downwash effects on the tailplane, extension of Fowler flaps, will produce",
-        "options": [
-          {
-            "id": "ALMZWTE46F",
-            "text": "a nose down pitching moment.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AU401V45K6",
-            "text": "no pitching moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AS7IYIKJP2",
-            "text": "a force which reduces drag.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AES382SZ1N",
-            "text": "a nose up pitching moment.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125578"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q2SKRBO1H3",
     "explanation": "",
     "learningObjectives": ["081.05.08.03.06"],
@@ -1129,47 +811,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-817753"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QCV49LLNHP",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.01"],
-    "variants": {
-      "IhKafj6g": {
-        "id": "IhKafj6g",
-        "type": "simple",
-        "question": "The purpose of a dorsal fin is to:",
-        "options": [
-          {
-            "id": "A7N65CULSZ",
-            "text": "maintain static directional stability at large sideslip angles.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOKLZQI8R5",
-            "text": "provide pitch and yaw control.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKKENMXV0V",
-            "text": "stabilise forebody vortices.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUTIW2X7DN",
-            "text": "reduce tendency for spiral instability.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-819256", "BGS-810753", "AVEXAM-50359"],
         "explanation": ""
       }
     }
@@ -1415,7 +1056,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118670"],
+        "externalIds": ["ATPLGS-118670", "ATPLQ-812635"],
         "explanation": ""
       }
     }
@@ -1456,7 +1097,15 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-813360", "AVEXAM-98575", "BGS-810687"],
+        "externalIds": [
+          "ATPLQ-813360",
+          "AVEXAM-98575",
+          "BGS-810687",
+          "ATPLQ-814932",
+          "AVEXAM-35538",
+          "BGS-810684",
+          "ATPLGS-126462"
+        ],
         "explanation": ""
       },
       "zHt50Iuz": {
@@ -1765,47 +1414,6 @@
     }
   },
   {
-    "id": "QLNZ8RNC6C",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.02"],
-    "variants": {
-      "VUwPTqBR": {
-        "id": "VUwPTqBR",
-        "type": "simple",
-        "question": "A forward CG shift",
-        "options": [
-          {
-            "id": "A4MOPGI3ZA",
-            "text": "increases static longitudinal stability.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6XLMOPJJJ",
-            "text": "increases longitudinal manoeuvrability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2WO8KEK5X",
-            "text": "has no influence on longitudinal manoeuvrability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT3GEPJXH6",
-            "text": "decreases static longitudinal stability.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126462"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QLR3IA8V4M",
     "explanation": "",
     "learningObjectives": ["081.05.02.04.02"],
@@ -1847,47 +1455,6 @@
     }
   },
   {
-    "id": "QPF660GEJ3",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "qWPbcNbE": {
-        "id": "qWPbcNbE",
-        "type": "simple",
-        "question": "Comparing a T-tail configuration with a low stabiliser position:",
-        "options": [
-          {
-            "id": "AEEPVT0GM6",
-            "text": "A T-Tail is more stabilising because it is less affected by downwash from the wing.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALO1C2FK04",
-            "text": "A T-tail is more stabilising because it is more affected by downwash from the wing",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATAAAKKTDH",
-            "text": "A T-tail is less stabilising because it is more affected by downwash from the wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A426NZQU1P",
-            "text": "A T-tail is less stabilising because it is less affected by downwash from the wing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811356"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QPV2XB3U61",
     "explanation": "",
     "learningObjectives": ["081.05.01.01.02"],
@@ -1923,7 +1490,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-14081"],
+        "externalIds": [
+          "AVEXAM-14081",
+          "BGS-810792",
+          "ATPLGS-627073",
+          "ATPLQ-816021"
+        ],
         "explanation": ""
       }
     }
@@ -2006,47 +1578,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-50116"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYNM5WFLX3",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "6jiAAOVB": {
-        "id": "6jiAAOVB",
-        "type": "simple",
-        "question": "An aeroplane’s bank angle is defined as the angle between its...",
-        "options": [
-          {
-            "id": "ARVTHFMYT7",
-            "text": "lateral axis and the horizon.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABRMGQUUAI",
-            "text": "longitudinal axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A01OFLVK3K",
-            "text": "longitudinal axis and the horizon.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVHZR4FPG5",
-            "text": "lateral axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810792"],
         "explanation": ""
       }
     }
@@ -2162,7 +1693,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-818827", "BGS-810815", "AVEXAM-89519"],
+        "externalIds": [
+          "ATPLQ-818827",
+          "BGS-810815",
+          "AVEXAM-89519",
+          "ATPLGS-127888"
+        ],
         "explanation": ""
       }
     }
@@ -2244,7 +1780,7 @@
           }
         ],
         "annexes": ["/content/media/845d17a523aa2f64861ef3548184f50e.jpg"],
-        "externalIds": ["BGS-810842"],
+        "externalIds": ["BGS-810842", "ATPLGS-102800"],
         "explanation": ""
       }
     }
@@ -2360,7 +1896,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-125964"],
+        "externalIds": [
+          "ATPLGS-125964",
+          "BGS-810819",
+          "ATPLQ-818942",
+          "AVEXAM-34716"
+        ],
         "explanation": ""
       }
     }
@@ -2405,49 +1946,16 @@
           "AVEXAM-45333",
           "BGS-810893",
           "BGS-811735",
-          "ATPLQ-818226"
+          "ATPLQ-818226",
+          "ATPLQ-817686",
+          "BGS-810895",
+          "BGS-810873",
+          "ATPLQ-819983",
+          "AVEXAM-82321",
+          "ATPLGS-125925",
+          "ATPLGS-126045",
+          "AVEXAM-46813"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q8VWY9TZ0P",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.02"],
-    "variants": {
-      "SNTACuIg": {
-        "id": "SNTACuIg",
-        "type": "simple",
-        "question": "Aileron deflection causes a rotation around the longitudinal axis by:",
-        "options": [
-          {
-            "id": "AZ2SXEDFXL",
-            "text": "changing the wing camber and the two wings therefore produce different lift values resulting in a moment about the longitudinal axis.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A21YQUCR46",
-            "text": "aileron secondary effect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A57ZR9Z98S",
-            "text": "causing sideslip, which generates a rolling moment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7LO1IZA22",
-            "text": "changing the wing drag and the two wings therefore produce different lift values resulting in a moment about the longitudinal axis.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810819", "ATPLQ-818942", "AVEXAM-34716"],
         "explanation": ""
       }
     }
@@ -2570,7 +2078,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-819943", "BGS-810851"],
+        "externalIds": [
+          "ATPLQ-819943",
+          "BGS-810851",
+          "AVEXAM-17489",
+          "ATPLGS-125923"
+        ],
         "explanation": ""
       },
       "Ud1c6o3T": {
@@ -2605,81 +2118,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-17489"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q17311SS7U",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.01.02"],
-    "variants": {
-      "ZHkFFKTD": {
-        "id": "ZHkFFKTD",
-        "type": "simple",
-        "question": "The tab in the figure represents",
-        "options": [
-          {
-            "id": "AO8P0J6EA6",
-            "text": "a servo tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AH4Z3KQ3UT",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6QDEPCSR3",
-            "text": "a balance tab .",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1CIBVXL2W",
-            "text": "a trim tab.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/1610080f4b204655379965105d7055fe.jpg"],
-        "externalIds": ["ATPLGS-102800"],
-        "explanation": ""
-      },
-      "F1AkmLVr": {
-        "id": "F1AkmLVr",
-        "type": "simple",
-        "question": "The tab in the figure represents",
-        "options": [
-          {
-            "id": "A41XLGFWXT",
-            "text": "a balance tab that also functions as a trim tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMGD16OO45",
-            "text": "a trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOFB85ICVE",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZTHPIE3M9",
-            "text": "a control tab.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/066fd50437512fac702db65a5860502c.jpg"],
-        "externalIds": ["ATPLGS-102792"],
         "explanation": ""
       }
     }
@@ -2720,7 +2158,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810852", "AVEXAM-2962", "ATPLQ-811247"],
+        "externalIds": [
+          "BGS-810852",
+          "AVEXAM-2962",
+          "ATPLQ-811247",
+          "ATPLGS-125766"
+        ],
         "explanation": ""
       }
     }
@@ -2802,7 +2245,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810712"],
+        "externalIds": ["BGS-810712", "AVEXAM-47348"],
         "explanation": ""
       }
     }
@@ -2843,7 +2286,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-125847"],
+        "externalIds": [
+          "ATPLGS-125847",
+          "ATPLQ-815173",
+          "BGS-810824",
+          "AVEXAM-7943"
+        ],
         "explanation": ""
       }
     }
@@ -2884,7 +2332,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-18257", "BGS-810820", "ATPLQ-814388"],
+        "externalIds": [
+          "AVEXAM-18257",
+          "BGS-810820",
+          "ATPLQ-814388",
+          "ATPLGS-118052"
+        ],
         "explanation": ""
       }
     }
@@ -3000,7 +2453,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-126166"],
+        "externalIds": [
+          "ATPLGS-126166",
+          "ATPLGS-125809",
+          "ATPLQ-817302",
+          "AVEXAM-40441",
+          "BGS-810811"
+        ],
         "explanation": ""
       },
       "bICmSSUk": {
@@ -3035,47 +2494,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-125809"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QWWTGMGY64",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "nmHzo9gq": {
-        "id": "nmHzo9gq",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the forward limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose down position for take-off:",
-        "options": [
-          {
-            "id": "AXALD0ZV6V",
-            "text": "rotation will require a higher than normal stick force.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACCF198TKC",
-            "text": "early nose wheel raising will take place.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL4IGPJIRO",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2TKGKN13F",
-            "text": "there will be a tendency to over-rotate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-817686", "BGS-810895"],
         "explanation": ""
       }
     }
@@ -3116,7 +2534,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-20600"],
+        "externalIds": ["AVEXAM-20600", "ATPLQ-815363"],
         "explanation": ""
       }
     }
@@ -3157,7 +2575,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-125764"],
+        "externalIds": ["ATPLGS-125764", "BGS-810818", "ATPLQ-819275"],
         "explanation": ""
       }
     }
@@ -3198,7 +2616,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-815175", "BGS-811728"],
+        "externalIds": [
+          "ATPLQ-815175",
+          "BGS-811728",
+          "ATPLQ-815960",
+          "BGS-811726",
+          "ATPLGS-126390"
+        ],
         "explanation": ""
       },
       "Hl6gdoIu": {
@@ -3563,7 +2987,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-126389"],
+        "externalIds": [
+          "ATPLGS-126389",
+          "AVEXAM-44559",
+          "BGS-810808",
+          "ATPLQ-818263"
+        ],
         "explanation": ""
       }
     }
@@ -3645,7 +3074,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-812322"],
+        "externalIds": ["ATPLQ-812322", "BGS-811361"],
         "explanation": ""
       }
     }
@@ -3727,7 +3156,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-811446"],
+        "externalIds": ["ATPLQ-811446", "ATPLGS-126443"],
         "explanation": ""
       }
     }
@@ -3814,7 +3243,9 @@
           "BGS-810868",
           "ATPLQ-816235",
           "AVEXAM-46047",
-          "ATPLGS-126263"
+          "ATPLGS-126263",
+          "BGS-810867",
+          "BGS-810778"
         ],
         "explanation": ""
       },
@@ -4133,47 +3564,6 @@
     }
   },
   {
-    "id": "Q39EKPD9X8",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "pZbmwI1M": {
-        "id": "pZbmwI1M",
-        "type": "simple",
-        "question": "An aeroplane's bank angle is defined as the angle between its",
-        "options": [
-          {
-            "id": "AKDP6W7H2Y",
-            "text": "lateral axis and the horizon.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0LYI7WTEG",
-            "text": "longitudinal axis and the horizon.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASFWC5JFFN",
-            "text": "lateral axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5HTNXI8HT",
-            "text": "longitudinal axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-627073"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q3BQRI2OAQ",
     "explanation": "",
     "learningObjectives": ["081.05.08.01.02"],
@@ -4250,7 +3640,7 @@
           }
         ],
         "annexes": ["/content/media/1610080f4b204655379965105d7055fe.jpg"],
-        "externalIds": ["AVEXAM-97854"],
+        "externalIds": ["AVEXAM-97854", "ATPLQ-815393"],
         "explanation": ""
       }
     }
@@ -4291,7 +3681,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-3558"],
+        "externalIds": ["AVEXAM-3558", "ATPLQ-817183"],
         "explanation": ""
       }
     }
@@ -4332,7 +3722,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810793"],
+        "externalIds": ["BGS-810793", "ATPLQ-814264"],
         "explanation": ""
       }
     }
@@ -4373,7 +3763,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-82632"],
+        "externalIds": ["AVEXAM-82632", "ATPLQ-819810"],
         "explanation": ""
       }
     }
@@ -4414,7 +3804,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-812234"],
+        "externalIds": ["BGS-812234", "ATPLQ-815543"],
         "explanation": ""
       }
     }
@@ -4455,7 +3845,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-970032"],
+        "externalIds": ["BGS-970032", "ATPLQ-225754"],
         "explanation": ""
       }
     }
@@ -4537,7 +3927,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-813293"],
+        "externalIds": ["ATPLQ-813293", "BGS-811740"],
         "explanation": ""
       }
     }
@@ -4619,48 +4009,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-812650", "BGS-810856", "AVEXAM-91152"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q9RI6W4CF6",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.03.01"],
-    "variants": {
-      "xqADp9Lm": {
-        "id": "xqADp9Lm",
-        "type": "simple",
-        "question": "An aeroplane is provided with spoilers and both inboard and outboard ailerons. Roll control during cruise is provided by:",
-        "options": [
-          {
-            "id": "AAQ764RF60",
-            "text": "inboard ailerons and roll spoilers.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARCG9TQLRQ",
-            "text": "outboard ailerons and roll spoilers.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3MMT3JU2I",
-            "text": "inboard and outboard ailerons.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATRCKOSJAS",
-            "text": "outboard ailerons only.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "ATPLQ-812650",
+          "BGS-810856",
+          "AVEXAM-91152",
+          "ATPLGS-125640"
         ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-815173", "BGS-810824", "AVEXAM-7943"],
         "explanation": ""
       }
     }
@@ -4701,7 +4055,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-819000", "BGS-810846"],
+        "externalIds": [
+          "ATPLQ-819000",
+          "BGS-810846",
+          "ATPLGS-118089",
+          "AVEXAM-64813"
+        ],
         "explanation": ""
       }
     }
@@ -4851,7 +4210,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118664"],
+        "externalIds": ["ATPLGS-118664", "BGS-811366", "ATPLQ-814421"],
         "explanation": ""
       }
     }
@@ -4933,7 +4292,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-1790", "BGS-810869"],
+        "externalIds": [
+          "AVEXAM-1790",
+          "BGS-810869",
+          "ATPLQ-817120",
+          "ATPLGS-118092"
+        ],
         "explanation": ""
       },
       "cqtVnhf6": {
@@ -5229,129 +4593,6 @@
     }
   },
   {
-    "id": "Q86CS1I50H",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.02.01"],
-    "variants": {
-      "XrUTgFIz": {
-        "id": "XrUTgFIz",
-        "type": "simple",
-        "question": "In fully powered control systems, the pilot provides force to...",
-        "options": [
-          {
-            "id": "AGXJSAD5SD",
-            "text": "move the servo valve.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAH4UWKSO7",
-            "text": "move the servo tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAZLA4UMPY",
-            "text": "move the spring tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA9ZGWYG4J",
-            "text": "provide an aerodynamic feeling.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-8622"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q890RUK0VY",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.06"],
-    "variants": {
-      "Z56fCC4B": {
-        "id": "Z56fCC4B",
-        "type": "simple",
-        "question": "An aeroplane has a servo tab controlled elevator   What will happen if the elevator jams during flight??",
-        "options": [
-          {
-            "id": "AQYEOKOQM5",
-            "text": "Pitch control sense is reversed.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJR7GI1551",
-            "text": "The servo tab now works as a negative trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATNUSRPXTL",
-            "text": "Pitch control is lost.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4CBHB0PUB",
-            "text": "The pitch control forces double.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118089"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q8GN2GEX8C",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.03"],
-    "variants": {
-      "ATZUhEdm": {
-        "id": "ATZUhEdm",
-        "type": "simple",
-        "question": "A jet aeroplane equipped with inboard and outboard ailerons as well as spoilers is cruising at its normal cruise Mach number. In this case:",
-        "options": [
-          {
-            "id": "A0NL7RAWTL",
-            "text": "outboard ailerons are locked out.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADGEA2J5IS",
-            "text": "the inboard and outboard ailerons are active.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACCR28R7Y2",
-            "text": "only the spoilers will be active, not the ailerons.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT37O5PKT9",
-            "text": "spoilers are locked out.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810826", "AVEXAM-20591", "ATPLQ-819059"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q8RKCG2TIX",
     "explanation": "",
     "learningObjectives": ["081.05.08.03.02"],
@@ -5387,7 +4628,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118217"],
+        "externalIds": [
+          "ATPLGS-118217",
+          "AVEXAM-71539",
+          "ATPLQ-814702",
+          "ATPLQ-819011"
+        ],
         "explanation": ""
       }
     }
@@ -5509,81 +4755,6 @@
     }
   },
   {
-    "id": "QF9Q6APF65",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.01"],
-    "variants": {
-      "OavlchHf": {
-        "id": "OavlchHf",
-        "type": "simple",
-        "question": "For a given elevator deflection, aeroplane longitudinal manoeuvrability increases when:",
-        "options": [
-          {
-            "id": "AN8TP2B3SV",
-            "text": "the CG moves aft.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A726JFEUT4",
-            "text": "the CG moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASESR9YBB1",
-            "text": "IAS decreases.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF8JQHYZWU",
-            "text": "flaps are retracted at constant IAS.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-817302", "AVEXAM-40441", "BGS-810811"],
-        "explanation": ""
-      },
-      "Q4s4isnQ": {
-        "id": "Q4s4isnQ",
-        "type": "simple",
-        "question": "For a given elevator deflection, aeroplane longitudinal manoeuvrability decreases when:",
-        "options": [
-          {
-            "id": "A57E1PC5JX",
-            "text": "the CG moves forward.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AU4KJJTOA1",
-            "text": "flaps are retracted at constant IAS.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGBQHCWB7D",
-            "text": "the CG moves aft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYXTLVJ9NN",
-            "text": "IAS increases.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-84641", "ATPLQ-816322", "BGS-810812"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q8XDOLSO92",
     "explanation": "",
     "learningObjectives": ["081.05.08.03.03"],
@@ -5619,87 +4790,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118674"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QGJ0QIG2TE",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "UBXGIPjA": {
-        "id": "UBXGIPjA",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the aft limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose up position for take-off:",
-        "options": [
-          {
-            "id": "AUOE3DCJU1",
-            "text": "early nose wheel raising will take place.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKPES60FRI",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AII0VAXD6Y",
-            "text": "there will be a tendency to under-rotate.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5HIESBRHG",
-            "text": "rotation will require higher than normal stick force.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810873", "ATPLQ-819983", "AVEXAM-82321"],
-        "explanation": ""
-      },
-      "KGEO5iTi": {
-        "id": "KGEO5iTi",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the forward limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose up position for take-off:",
-        "options": [
-          {
-            "id": "A365H5BOAE",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ2DJAGX5D",
-            "text": "early nose wheel raising will take place.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAAYI2MZKJ",
-            "text": "rotation will require a higher than normal stick force.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGXALIRKEE",
-            "text": "there will be a tendency to over-rotate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-811768",
-          "BGS-810894",
-          "AVEXAM-91713",
-          "BGS-811752"
-        ],
+        "externalIds": ["ATPLGS-118674", "BGS-811747"],
         "explanation": ""
       }
     }
@@ -5746,88 +4837,6 @@
     }
   },
   {
-    "id": "Q9AMQRQRDK",
-    "explanation": "",
-    "learningObjectives": ["081.05.07.01.02"],
-    "variants": {
-      "3peGgiEH": {
-        "id": "3peGgiEH",
-        "type": "simple",
-        "question": "Considering a fly-by-wire (FBW) system, what can be an advantage of using the CG position?",
-        "options": [
-          {
-            "id": "AEL4IT028Q",
-            "text": "Elevator deflection can be optimised throughout the flight.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFBH8AKLHA",
-            "text": "It prevents pitch control becoming too sensitive as CG moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAI834UMEF",
-            "text": "It prevents roll control becoming too sensitive as CG moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AESDB30S5F",
-            "text": "It can gradually decrease elevator deflection throughout the flight.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-225754"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q9RUT1FPYZ",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.01"],
-    "variants": {
-      "TDxNlyd5": {
-        "id": "TDxNlyd5",
-        "type": "simple",
-        "question": "When the CG position is moved forward, the elevator deflection to achieve a decrease in load factor will be:",
-        "options": [
-          {
-            "id": "AVYRHU97AY",
-            "text": "larger.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANMXNRXCJ4",
-            "text": "dependent on trim position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR2V26JV95",
-            "text": "smaller.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQF58A5UBT",
-            "text": "unchanged.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-44559"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q9TGB3JHE2",
     "explanation": "",
     "learningObjectives": ["081.05.04.01.01"],
@@ -5863,7 +4872,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-811321"],
+        "externalIds": ["BGS-811321", "ATPLQ-816806"],
         "explanation": ""
       }
     }
@@ -5910,88 +4919,6 @@
     }
   },
   {
-    "id": "QABAT2O98Q",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "igZPX7fQ": {
-        "id": "igZPX7fQ",
-        "type": "simple",
-        "question": "The pilots prepare and trim the aircraft for take-off, setting the trim for a CG position at 12% of the MAC. But due to an error, the real position of the CG is at 24% of the MAC. What could this cause?",
-        "options": [
-          {
-            "id": "ATXRFATPZA",
-            "text": "Risk of over rotation that can lead to a tail strike.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AP2BJX7MSW",
-            "text": "The length of the runway may not be sufficient to take-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8PDJY00JE",
-            "text": "Large stick forces are required to achieve rotation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A86TEVMIJW",
-            "text": "Reduced climb performance after take-off.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-815543"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QALDJUR8XN",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "O3BWrGUX": {
-        "id": "O3BWrGUX",
-        "type": "simple",
-        "question": "When an aircraft with stabiliser trim is trimmed nose up, what is the position of the stabiliser and elevator compared to the horizontal axis of the aircraft? Consider the stabiliser movement to be that occurring at its trailing edge.The stabiliser will be...",
-        "options": [
-          {
-            "id": "AA720KVSI7",
-            "text": "stabiliser and elevator deflected up with the elevator in line with the stabiliser.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXTD8VLX39",
-            "text": "deflected down with the elevator in line with it.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH4R6G902X",
-            "text": "parallel to the horizontal axis, with the elevator in line with it.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE7LU5XE12",
-            "text": "deflected up with the elevator down.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811361"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QARTMQMSC0",
     "explanation": "",
     "learningObjectives": ["081.05.04.01.05"],
@@ -6027,7 +4954,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810834"],
+        "externalIds": [
+          "BGS-810834",
+          "ATPLQ-811584",
+          "AVEXAM-12165",
+          "ATPLGS-127889"
+        ],
         "explanation": ""
       },
       "sIBrRUjY": {
@@ -6136,48 +5068,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-125807"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QAY17D3FD4",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "qwVMF5m7": {
-        "id": "qwVMF5m7",
-        "type": "simple",
-        "question": "Consider two elevator control systems:\n1) is fitted with a trim tab.\n2) is fitted with fully powered hydraulic controls and an adjustable horizontal stabiliser.\nFor both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed decrease?",
-        "options": [
-          {
-            "id": "ARQH2DHP1Z",
-            "text": "1) moves aft, 2) does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AUTCKGKGKC",
-            "text": "1) does not change, 2) does not change.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9OO2Z1WQL",
-            "text": "1) does not change, 2) moves aft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2SHJDA698",
-            "text": "1) moves forward, 2) moves forward.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-71539"],
+        "externalIds": ["ATPLGS-125807", "ATPLQ-816331", "AVEXAM-93837"],
         "explanation": ""
       }
     }
@@ -6219,122 +5110,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-49226"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QKP7NR9433",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.08"],
-    "variants": {
-      "ZxiRd1cB": {
-        "id": "ZxiRd1cB",
-        "type": "simple",
-        "question": "Flaperons are controls, which combine the function of:",
-        "options": [
-          {
-            "id": "AY129YZN0E",
-            "text": "ailerons and flaps.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A86DZ3MTUU",
-            "text": "flaps and speed brakes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVP3MHJ0DM",
-            "text": "ailerons and elevator.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0WLCNWRAP",
-            "text": "flaps and elevator.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810818", "ATPLQ-819275"],
-        "explanation": ""
-      },
-      "i0TNrAP8": {
-        "id": "i0TNrAP8",
-        "type": "simple",
-        "question": "Flaperons are controls, which combine the function of:",
-        "options": [
-          {
-            "id": "AWLERJL5CH",
-            "text": "flaps and ailerons.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AE1PLK4UEU",
-            "text": "flaps and elevators.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APXF9RS7NU",
-            "text": "elevators and ailerons.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALVKV8PI4G",
-            "text": "flaps and speed brakes.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-31691"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QBLJQTAU6K",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.01"],
-    "variants": {
-      "eCHMBxVZ": {
-        "id": "eCHMBxVZ",
-        "type": "simple",
-        "question": "An aerodynamic balancing device, which makes it possible for a large surface to be deflected by a relatively small control force, is called..",
-        "options": [
-          {
-            "id": "A3U2QQ6X4Q",
-            "text": "a servo tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEBRA1GUI7",
-            "text": "a horn balance.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW8D49BQBL",
-            "text": "a balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJZWHU24GT",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-818906"],
         "explanation": ""
       }
     }
@@ -6427,47 +5202,6 @@
     }
   },
   {
-    "id": "QBYJ2OWNSH",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.02.03"],
-    "variants": {
-      "2egpqRIN": {
-        "id": "2egpqRIN",
-        "type": "simple",
-        "question": "Artificial feel is required",
-        "options": [
-          {
-            "id": "AWDWF9K4UB",
-            "text": "with fully powered flight controls.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVB8XYOU3C",
-            "text": "when there is a trimmable stabiliser.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APDOVIPVCC",
-            "text": "with power assisted flight controls.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGWQLH6WI9",
-            "text": "when the flight control surfaces are fitted with control tabs or trim tabs.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125640"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QL346IDPLV",
     "explanation": "",
     "learningObjectives": ["081.05.04.04.01"],
@@ -6503,7 +5237,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-812032", "BGS-810831"],
+        "externalIds": [
+          "ATPLQ-812032",
+          "BGS-810831",
+          "ATPLGS-125765",
+          "AVEXAM-30065"
+        ],
         "explanation": ""
       }
     }
@@ -6544,7 +5283,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-812243"],
+        "externalIds": ["BGS-812243", "ATPLQ-815287"],
         "explanation": ""
       }
     }
@@ -6585,7 +5324,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-125965"],
+        "externalIds": [
+          "ATPLGS-125965",
+          "ATPLQ-811700",
+          "BGS-810830",
+          "AVEXAM-81656"
+        ],
         "explanation": ""
       }
     }
@@ -6708,7 +5452,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-810823", "ATPLQ-819727", "AVEXAM-86207"],
+        "externalIds": [
+          "BGS-810823",
+          "ATPLQ-819727",
+          "AVEXAM-86207",
+          "ATPLGS-125962"
+        ],
         "explanation": ""
       }
     }
@@ -6831,7 +5580,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-813988", "BGS-812052"],
+        "externalIds": ["ATPLQ-813988", "BGS-812052", "ATPLGS-126442"],
         "explanation": ""
       }
     }
@@ -6872,7 +5621,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118672"],
+        "externalIds": ["ATPLGS-118672", "ATPLQ-813607"],
         "explanation": ""
       }
     }
@@ -6914,129 +5663,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-994479"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QDS00V7DER",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.01"],
-    "variants": {
-      "0VH40RL3": {
-        "id": "0VH40RL3",
-        "type": "simple",
-        "question": "Outboard ailerons (if present) are normally used",
-        "options": [
-          {
-            "id": "AFILAE3UO8",
-            "text": "in low speed flight only.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASI1LC81F2",
-            "text": "when the landing gear is up.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXDDH58RBH",
-            "text": "at transonic and supersonic speeds only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADDJGPNW52",
-            "text": "in high speed flight only.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125962"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QDUTDQMW9W",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "qZtBwBAY": {
-        "id": "qZtBwBAY",
-        "type": "simple",
-        "question": "On an airliner with stabiliser trim, an extra baggage container is loaded into the front hold, forward of the CG. When the pilot makes an adjustment to the take-off trim, how will the stabiliser move?",
-        "options": [
-          {
-            "id": "AWDL86FPKT",
-            "text": "The leading edge of the stabiliser will be lowered.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2X2Y2KB2C",
-            "text": "The leading edge of the stabiliser will be raised.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AASN606ZQR",
-            "text": "The stabiliser does not move, but the elevator will be deflected downwards.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATQ80N0LXE",
-            "text": "The trailing edge of the stabiliser will be lowered.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-815287"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QE9RGFTW90",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "PzLX6uK4": {
-        "id": "PzLX6uK4",
-        "type": "simple",
-        "question": "Consider an aeroplane with:\n1) a trim tab.\n2) fully powered hydraulic controls and an adjustable horizontal stabiliser.\nFor both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed increase?",
-        "options": [
-          {
-            "id": "A0NZ7DQAXK",
-            "text": "1) moves forward, 2) does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVG461BX7D",
-            "text": "1) moves forward, 2) moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2YU0945D2",
-            "text": "1) does not change, 2) does not change.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3VV57FGNL",
-            "text": "1) does not change, 2) moves forward.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-47348"],
         "explanation": ""
       }
     }
@@ -7200,7 +5826,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-811220"],
+        "externalIds": ["BGS-811220", "ATPLGS-129429", "ATPLQ-816349"],
         "explanation": ""
       },
       "3yrRyeuf": {
@@ -7316,7 +5942,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-818388"],
+        "externalIds": ["ATPLQ-818388", "BGS-810862"],
         "explanation": ""
       }
     }
@@ -7432,7 +6058,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-813456", "BGS-810839", "AVEXAM-54695"],
+        "externalIds": [
+          "ATPLQ-813456",
+          "BGS-810839",
+          "AVEXAM-54695",
+          "ATPLGS-125966"
+        ],
         "explanation": ""
       }
     }
@@ -7474,47 +6105,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-814916"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QGNZILHM47",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "sOWrSZCx": {
-        "id": "sOWrSZCx",
-        "type": "simple",
-        "question": "Which of the following are reasons for trimming an aircraft in pitch?\n1. Changes of speed2. Changes of power3. Varying CG positions4. Lateral displacement of CG",
-        "options": [
-          {
-            "id": "ACGWTZ7LR3",
-            "text": "1, 2, and 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5K5T9QQLN",
-            "text": "1 and 2 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATQ7C0MAYJ",
-            "text": "1 and 4 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOAZAAKACM",
-            "text": "2, 3, and 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-812635"],
         "explanation": ""
       }
     }
@@ -7681,7 +6271,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118665"],
+        "externalIds": ["ATPLGS-118665", "BGS-812030", "ATPLQ-816178"],
         "explanation": ""
       },
       "CMgfpQVw": {
@@ -7716,47 +6306,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-812030"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHS0PRLCE3",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "iTgZXdvX": {
-        "id": "iTgZXdvX",
-        "type": "simple",
-        "question": "An aeroplane's bank angle is defined as the angle between its..",
-        "options": [
-          {
-            "id": "AK0FK7FXRV",
-            "text": "lateral axis and the horizon.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOOF1JZTF7",
-            "text": "longitudinal axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AB7X27PNUK",
-            "text": "lateral axis and the relative airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG8V46A6FQ",
-            "text": "longitudinal axis and the horizon.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-816021"],
         "explanation": ""
       }
     }
@@ -7797,7 +6346,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-815910", "BGS-810797"],
+        "externalIds": [
+          "ATPLQ-815910",
+          "BGS-810797",
+          "AVEXAM-77740",
+          "ATPLGS-126104"
+        ],
         "explanation": ""
       },
       "LPAsdK59": {
@@ -7913,7 +6467,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118666"],
+        "externalIds": [
+          "ATPLGS-118666",
+          "AVEXAM-29642",
+          "BGS-811413",
+          "ATPLQ-817150"
+        ],
         "explanation": ""
       }
     }
@@ -7955,47 +6514,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-991416"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QIIAP0JWFC",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.06"],
-    "variants": {
-      "TTmASVW8": {
-        "id": "TTmASVW8",
-        "type": "simple",
-        "question": "An aeroplane has a servo tab controlled elevator. What will happen when only the elevator jams during flight?",
-        "options": [
-          {
-            "id": "AVWCUCHWMF",
-            "text": "Pitch control reverses direction.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AI29TM81OA",
-            "text": "The pitch control forces double.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4U5G3Y62F",
-            "text": "The servo tab now works as a negative trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A62V11Q1KV",
-            "text": "Pitch control has been lost.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-64813"],
         "explanation": ""
       }
     }
@@ -8047,156 +6565,6 @@
     }
   },
   {
-    "id": "QIZPMOCLIR",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "f4T6aWgo": {
-        "id": "f4T6aWgo",
-        "type": "simple",
-        "question": "Consider two elevator control systems: 1 is fitted with a trim tab. 2 is fitted with fully powered hydraulic controls and an adjustable horizontal stabiliser. For both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed increase?",
-        "options": [
-          {
-            "id": "AW0H6ZJSKP",
-            "text": "1 moves forward, 2 does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6UXI6VGU3",
-            "text": "1 moves forward, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVO7I5SX69",
-            "text": "1 does not change, 2 does not change.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6A4UEM7VJ",
-            "text": "1 does not change, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814702"],
-        "explanation": ""
-      },
-      "m29ZGEri": {
-        "id": "m29ZGEri",
-        "type": "simple",
-        "question": "Consider two elevator control systems:\n1. is fitted with a trim tab \n2. is fitted with fully powered hydraulic controls and an adjustable horizontal stabiliser\n\tFor both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed increase?",
-        "options": [
-          {
-            "id": "ASOBZO7ZWV",
-            "text": "1 moves forward, 2 does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKIUO10PMS",
-            "text": "1 does not change, 2 does not change.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A31HUJXMK5",
-            "text": "1 moves forward, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF8S3B68O1",
-            "text": "1 does not change, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125834"],
-        "explanation": ""
-      },
-      "BhwOVURP": {
-        "id": "BhwOVURP",
-        "type": "simple",
-        "question": "Consider two elevator control systems: 1 is fitted with a trim tab. 2 is fitted with fully powered hydraulic controls and an adjustable horizontal stabiliser. For both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed decrease?",
-        "options": [
-          {
-            "id": "AEDE6OAS2F",
-            "text": "1 moves aft, 2 does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0441YJEZT",
-            "text": "1 does not change, 2 moves aft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW82TNPH3Y",
-            "text": "1 does not change, 2 does not change.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9U62PZYQ0",
-            "text": "1 moves forward, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810711"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QW1TAMSEKL",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "xUubiH3u": {
-        "id": "xUubiH3u",
-        "type": "simple",
-        "question": "When a turn is initiated, adverse yaw is:",
-        "options": [
-          {
-            "id": "A0WG5ICKOC",
-            "text": "the tendency of an aeroplane to yaw in the opposite direction of turn mainly due to the difference in induced drag on each wing.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AUTL7RK78R",
-            "text": "the tendency of an aeroplane to yaw in the opposite direction of turn mainly due to the difference in aileron form drag.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD35GWU4UY",
-            "text": "the tendency of an aeroplane to yaw in the same direction of turn due to the different wing speeds.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVZUOARMS4",
-            "text": "a momentary yawing motion opposite to the turn due to an incorrect differential aileron movement.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-811700", "BGS-810830", "AVEXAM-81656"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QJGREVJ7JM",
     "explanation": "",
     "learningObjectives": ["081.05.04.03.01"],
@@ -8233,163 +6601,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-589"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJSCASDATQ",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.05.01"],
-    "variants": {
-      "Fk017MMK": {
-        "id": "Fk017MMK",
-        "type": "simple",
-        "question": "Frise ailerons are used to reduce adverse aileron yaw. To achieve this the...",
-        "options": [
-          {
-            "id": "A6LYH0EIBR",
-            "text": "leading edge of the up-going aileron protrudes below the lower surface of the wing, causing more drag.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AB88HVG34Z",
-            "text": "up-going aileron moves through a larger angle than the down-going aileron.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATK4WT8Q2Q",
-            "text": "leading edge of the down-going aileron protrudes above the upper surface of the wing, causing more drag.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIZ76X6XPX",
-            "text": "down-going aileron moves through a larger angle than the up-going aileron.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811366"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QJUCHVBQBS",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "Qyl5HYNL": {
-        "id": "Qyl5HYNL",
-        "type": "simple",
-        "question": "An aircraft with a forward CG has the stabiliser trim set incorrectly for take-off with insufficient nose-up trim. At the correctly determined rotate speed, the normal rotation technique is followed. However, in this situation it is likely that...",
-        "options": [
-          {
-            "id": "AT0U7WL02F",
-            "text": "higher-than-usual stick forces will be felt by the pilot and the rate of rotation may be reduced.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACDJ38DE8Y",
-            "text": "lighter-than-usual stick forces will be felt by the pilot and there maybe an increased possibility of a tail-strike.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYXK4FGAIV",
-            "text": "the aircraft will have an excessive rate of pitch change when rotated.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW8UJQEII1",
-            "text": "a shorter take-off distance will be required.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811747"],
-        "explanation": ""
-      },
-      "mauyYX1y": {
-        "id": "mauyYX1y",
-        "type": "simple",
-        "question": "An aircraft with a forward CG has the stabiliser trim set incorrectly for take-off with insufficient nose-up trim. At the correctly determined rotate speed, the normal rotation technique is followed. However, in this situation it is likely that..",
-        "options": [
-          {
-            "id": "A22ECDX3WH",
-            "text": "higher-than-usual stick forces will be felt by the pilot and the rate of rotation may be reduced.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AURSILCORQ",
-            "text": "the aircraft will have an excessive rate of pitch change when rotated.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0QBWARY5J",
-            "text": "a shorter taketoff distance will be required.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACWHI3MW17",
-            "text": "lighter-than-usual stick forces will be felt by the pilot and there maybe an increased possibility of a tail-strike.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814078"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QK3WTYQ0LC",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "KeEXtFFi": {
-        "id": "KeEXtFFi",
-        "type": "simple",
-        "question": "An aeroplane's pitch angle is defined as the angle between its:",
-        "options": [
-          {
-            "id": "AKYLH33VHP",
-            "text": "longitudinal axis and the horizontal plane.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZYPXFLWUU",
-            "text": "speed vector and the horizontal plane.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOMVR04PYO",
-            "text": "lateral axis and the horizontal plane.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWHTFJHKX9",
-            "text": "speed vector and its longitudinal axis.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814264"],
         "explanation": ""
       }
     }
@@ -8470,88 +6681,6 @@
     }
   },
   {
-    "id": "QKS35YDLLU",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.05.01"],
-    "variants": {
-      "sYJOAb93": {
-        "id": "sYJOAb93",
-        "type": "simple",
-        "question": "Frise ailerons are used to reduce adverse aileron yaw. To achieve this the..",
-        "options": [
-          {
-            "id": "A81X75VJET",
-            "text": "leading edge of the up-going aileron protrudes below the lower surface of the wing, causing more drag.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A3VPYKWX7G",
-            "text": "down-going aileron moves through a larger angle than the up-going aileron.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8G2EJCG0Q",
-            "text": "leading edge of the down-going aileron protrudes above the upper surface of the wing, causing more drag.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR5GYUQ7YU",
-            "text": "up-going aileron moves through a larger angle than the down-going aileron.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814421"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QKZ25TXCR8",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.02"],
-    "variants": {
-      "BENunIkV": {
-        "id": "BENunIkV",
-        "type": "simple",
-        "question": "Differential aileron deflection",
-        "options": [
-          {
-            "id": "AEP1IKOKGU",
-            "text": "equals the drag of the right and left aileron.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC3QC7Z7OA",
-            "text": "is required to keep the total lift constant when ailerons are deflected.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4U1T4T8X5",
-            "text": "increases the CLMAX.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARDZVB2TU0",
-            "text": "is required to achieve the required roll rate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-127889"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QLAARMOOP1",
     "explanation": "",
     "learningObjectives": ["081.05.08.01.02"],
@@ -8590,7 +6719,7 @@
           "/content/media/066fd50437512fac702db65a5860502c.jpg",
           "/content/media/066fd50437512fac702db65a5860502c.jpg"
         ],
-        "externalIds": ["AVEXAM-18218"],
+        "externalIds": ["AVEXAM-18218", "BGS-810840"],
         "explanation": ""
       }
     }
@@ -8637,81 +6766,6 @@
     }
   },
   {
-    "id": "QLLZ88WNQB",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.01"],
-    "variants": {
-      "LwUdcLsI": {
-        "id": "LwUdcLsI",
-        "type": "simple",
-        "question": "Rotation around the lateral axis is called:",
-        "options": [
-          {
-            "id": "AAFDYF0QEA",
-            "text": "pitching",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AW2ETPKROY",
-            "text": "rolling",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABW1SL0FOW",
-            "text": "slipping",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4PLS74PQK",
-            "text": "yawing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-816331"],
-        "explanation": ""
-      },
-      "7fNKJm1l": {
-        "id": "7fNKJm1l",
-        "type": "simple",
-        "question": "Rotation around the lateral axis is called:",
-        "options": [
-          {
-            "id": "AG0OBY28IM",
-            "text": "pitching.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZCV5ZUNS1",
-            "text": "yawing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI341YHKFC",
-            "text": "rolling.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUUFDDBNQ9",
-            "text": "slipping.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810796"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QLRBS7FVQG",
     "explanation": "",
     "learningObjectives": ["081.05.04.04.01"],
@@ -8747,321 +6801,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-817508", "BGS-810837"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLS8K671OV",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "T3MJeaZj": {
-        "id": "T3MJeaZj",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the forward limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose down position for take-off",
-        "options": [
-          {
-            "id": "AJM5PAYTU4",
-            "text": "rotation will require a higher than normal stick force.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM3I1T3GIY",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATDNVZW396",
-            "text": "there will be a tendency to over-rotate.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A855ILQPMY",
-            "text": "early nose wheel raising will take place.",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "ATPLQ-817508",
+          "BGS-810837",
+          "ATPLGS-125562",
+          "AVEXAM-49086"
         ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125925"],
-        "explanation": ""
-      },
-      "2ThBqpMy": {
-        "id": "2ThBqpMy",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the aft limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose down position for take-off",
-        "options": [
-          {
-            "id": "ADH7NU8H04",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFI5YW2I27",
-            "text": "early nose wheel raising will take place.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACERAGJVSM",
-            "text": "rotation will require higher than normal stick force.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG9K2CJGFH",
-            "text": "there will be a tendency to under-rotate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126044"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLYDV5G7PY",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.05"],
-    "variants": {
-      "ISpIKZcU": {
-        "id": "ISpIKZcU",
-        "type": "simple",
-        "question": "The correct aileron and rudder deflection to fly a sideslip to the right is",
-        "options": [
-          {
-            "id": "AYE03GX4K3",
-            "text": "Bank right, rudder left.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWGX89ZLLD",
-            "text": "Bank left, rudder right.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL767PBOHC",
-            "text": "Bank right, rudder right.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A40V4FVYJB",
-            "text": "Bank left, rudder left.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126442"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLYK0WZ92I",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.01"],
-    "variants": {
-      "ko4bTxl1": {
-        "id": "ko4bTxl1",
-        "type": "simple",
-        "question": "Which statement in respect of a trimmable horizontal stabiliser is correct?",
-        "options": [
-          {
-            "id": "AXVT88I5E0",
-            "text": "An aeroplane with a forward cg requires the stabiliser leading edge to be lower than for one with an aft cg in the same trimmed condition.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AX3E9NGMBA",
-            "text": "At the forward c.g. limit , stabiliser trim is adjusted fully nose down to obtain maximum elevator authority at rotation during take-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG5RVIB8BM",
-            "text": "Because take-off speeds do not vary with centre of gravity location, the need for stabiliser adjustment is dependent on flap position only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALY2B2D9BX",
-            "text": "An aeroplane with a forward cg requires the stabiliser leading edge to be higher than for one with an aft cg in the same trimmed condition.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810778"],
-        "explanation": ""
-      },
-      "qZQyAPbc": {
-        "id": "qZQyAPbc",
-        "type": "simple",
-        "question": "Which statement in respect of a trimmable horizontal stabiliser is correct?",
-        "options": [
-          {
-            "id": "AZSO4POPI2",
-            "text": "An aeroplane with a forward CG requires the stabiliser leading edge to be lower than for one with an aft CG in the same trimmed condition.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5MIJ3QTTQ",
-            "text": "At the forward CG limit, stabiliser trim is adjusted fully nose down to obtain maximum elevator authority at rotation during take-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADBV6D22DO",
-            "text": "Because take-off speeds do not vary with centre of gravity location, the need for stabiliser adjustment is dependent on flap position only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQBS7XV8TX",
-            "text": "An aeroplane with a forward CG requires the stabiliser leading edge to be higher than for one with an aft CG in the same trimmed condition.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-19554"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QM41USRICZ",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.02.02"],
-    "variants": {
-      "1tOUbwO3": {
-        "id": "1tOUbwO3",
-        "type": "simple",
-        "question": "When power assisted controls are used for pitch control",
-        "options": [
-          {
-            "id": "A2DFE298HQ",
-            "text": "a part of the aerodynamic forces is still felt on the column.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAVZYUTZFG",
-            "text": "trimming is superfluous.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ2OLQ9VGP",
-            "text": "they only function in combination with an elevator trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWB6K0W2UD",
-            "text": "aerodynamic balancing of the control surfaces is meaningless.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125766"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QM6SLLE4N2",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "V0b5c4WV": {
-        "id": "V0b5c4WV",
-        "type": "simple",
-        "question": "The device or method used to counteract adverse yaw is/are",
-        "options": [
-          {
-            "id": "AQH9PSRNDC",
-            "text": "Differential ailerons.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOMHFSSFMA",
-            "text": "A balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALHZ51E6PF",
-            "text": "An anti-balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK8CJCE7W9",
-            "text": "A link between rudder and elevator.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126443"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QN1DKOMKE2",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "6ZIxVSJk": {
-        "id": "6ZIxVSJk",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the aft limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose up position for take-off",
-        "options": [
-          {
-            "id": "A5DUKY7O4Y",
-            "text": "early nose wheel raising will take place.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVNXLYGIWW",
-            "text": "there will be a tendency to under-rotate.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADW567MJP5",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXNOEYDKM7",
-            "text": "rotation will require higher than normal stick force.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126045"],
         "explanation": ""
       }
     }
@@ -9149,47 +6894,6 @@
     }
   },
   {
-    "id": "QNPGM2I67S",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "kVlepga7": {
-        "id": "kVlepga7",
-        "type": "simple",
-        "question": "If the nose of an aeroplane yaws left, this causes",
-        "options": [
-          {
-            "id": "AJNZ14DOF5",
-            "text": "a roll to the left.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJVBF33TKZ",
-            "text": "a roll to the right.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0OSGHWGMG",
-            "text": "an increase in lift on the left wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AW8VQDZ1PE",
-            "text": "a decrease in relative airspeed on the right wing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125562"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QNQGI8KJV4",
     "explanation": "",
     "learningObjectives": ["081.05.08.02.01"],
@@ -9225,7 +6929,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-127890"],
+        "externalIds": [
+          "ATPLGS-127890",
+          "BGS-810859",
+          "AVEXAM-38844",
+          "ATPLQ-816569",
+          "AVEXAM-21808"
+        ],
         "explanation": ""
       }
     }
@@ -9272,170 +6982,6 @@
     }
   },
   {
-    "id": "QO8L8MHC5G",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "UoJhAb7d": {
-        "id": "UoJhAb7d",
-        "type": "simple",
-        "question": "When using aileron-rudder coupling to prevent adverse yaw, when the aircraft is rolled to the right, the left aileron is deflected..",
-        "options": [
-          {
-            "id": "AE6HRBPBB8",
-            "text": "down, the right aileron is deflected up, and the rudder is automatically deflected to the right.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AT1JLAE03F",
-            "text": "down, the right aileron is deflected up, and the rudder is automatically deflected to the left.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF7JKPB6UI",
-            "text": "up, the right aileron is deflected down, and the rudder is automatically deflected to the right.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7B63M32LQ",
-            "text": "up, the right aileron is deflected down, and the rudder is automatically deflected to the left.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-816178"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOGBIUG9DO",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "S7FNVSyH": {
-        "id": "S7FNVSyH",
-        "type": "simple",
-        "question": "In general jet transport aeroplanes with power-assisted flight controls are fitted with an adjustable stabiliser instead of trim tabs on the elevator\nThis is because",
-        "options": [
-          {
-            "id": "AQOGB3IHG6",
-            "text": "an adjustable stabiliser is a more powerful means to generate the tail loads required for these kind of aeroplanes.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A87DH0FAJO",
-            "text": "mechanical adjustment of trim tabs creates too many problems.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AANVZNDTD4",
-            "text": "the pilot does not feel the stick forces at all.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWXANMUCQX",
-            "text": "trim tab deflection increases VMO.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118092"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QT974PQA9M",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.02.01"],
-    "variants": {
-      "LcGwf3XX": {
-        "id": "LcGwf3XX",
-        "type": "simple",
-        "question": "If the elevator trim tab is deflected up, the cockpit trim indicator shows:",
-        "options": [
-          {
-            "id": "A1UTMLHQVV",
-            "text": "nose down.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMHH619UZ0",
-            "text": "neutral.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AITVV5H8OG",
-            "text": "nose up.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJPMO26962",
-            "text": "nose left.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810859", "AVEXAM-38844", "ATPLQ-816569"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOJZ65U5QI",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.02"],
-    "variants": {
-      "g9q1y4J9": {
-        "id": "g9q1y4J9",
-        "type": "simple",
-        "question": "A horn balance in a control system has the following purpose",
-        "options": [
-          {
-            "id": "A1I2P2JUUQ",
-            "text": "to decrease stick forces.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMQC3R35PS",
-            "text": "to obtain mass balancing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A29B9D4DET",
-            "text": "to decrease the static longitudinal stability of the aeroplane.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A098P736JT",
-            "text": "to prevent flutter.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125923"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QORG0G3WV5",
     "explanation": "",
     "learningObjectives": ["081.05.04.04.01"],
@@ -9471,48 +7017,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-14227"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOSK5HPEQP",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "GVe0MqOE": {
-        "id": "GVe0MqOE",
-        "type": "simple",
-        "question": "One method to compensate adverse yaw is",
-        "options": [
-          {
-            "id": "AI9VHDUM8C",
-            "text": "a differential aileron.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AI9VLJ7AMD",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACN7G566H9",
-            "text": "a balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A64YQP7MP6",
-            "text": "a balance panel.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125765"],
+        "externalIds": ["AVEXAM-14227", "ATPLQ-813439"],
         "explanation": ""
       }
     }
@@ -9559,115 +7064,6 @@
     }
   },
   {
-    "id": "QPG18H7UXL",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.01"],
-    "variants": {
-      "bMfYuG0V": {
-        "id": "bMfYuG0V",
-        "type": "simple",
-        "question": "When the CG position is moved forward, the elevator deflection to achieve an increase in load factor will be:",
-        "options": [
-          {
-            "id": "ATCK3PX5B2",
-            "text": "larger.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK4D0OXVHY",
-            "text": "unchanged.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMX1WBZFAQ",
-            "text": "smaller.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AORM2A4HFW",
-            "text": "dependent on trim position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810808", "ATPLQ-818263"],
-        "explanation": ""
-      },
-      "BWxrgMXN": {
-        "id": "BWxrgMXN",
-        "type": "simple",
-        "question": "When the CG position is moved forward, the elevator deflection to achieve an decrease in load factor will be:",
-        "options": [
-          {
-            "id": "ASPSE0ZG53",
-            "text": "larger.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AVN5W7JL68",
-            "text": "dependent on trim position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8I6VPBI2O",
-            "text": "unchanged.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHDBLYD5OM",
-            "text": "smaller.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811727"],
-        "explanation": ""
-      },
-      "smsWxjrq": {
-        "id": "smsWxjrq",
-        "type": "simple",
-        "question": "When the CG position is moved forward, the required elevator deflection to achieve an increase in load factor will be:",
-        "options": [
-          {
-            "id": "A7KCW58IYE",
-            "text": "larger.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A77KPTFF41",
-            "text": "smaller.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALWYGSU86G",
-            "text": "dependent on trim position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABEMJ17ZIN",
-            "text": "unchanged.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-40108"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QPKYV55HXF",
     "explanation": "",
     "learningObjectives": ["081.05.04.04.01"],
@@ -9709,81 +7105,6 @@
     }
   },
   {
-    "id": "QPO306XEKL",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "optPlrq4": {
-        "id": "optPlrq4",
-        "type": "simple",
-        "question": "The most important factor determining the required position of the Trimmable Horizontal Stabiliser (THS) for take off is the:\n ",
-        "options": [
-          {
-            "id": "A899LC820J",
-            "text": "position of the aeroplane’s centre of gravity.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APY883R4BV",
-            "text": "centre of gravity position of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2WY4RGSCX",
-            "text": "stall speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A88TCSYIV9",
-            "text": "total mass of the aeroplane.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-815363"],
-        "explanation": ""
-      },
-      "3PLCvZxu": {
-        "id": "3PLCvZxu",
-        "type": "simple",
-        "question": "The most important factor determining the required position of the Trimmable Horizontal Stabiliser (THS) for take off is the:",
-        "options": [
-          {
-            "id": "ABZOS97AJ7",
-            "text": "position of the aeroplane's centre of gravity.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AC0EK88PG6",
-            "text": "stall speed.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AH68YM8DM9",
-            "text": "centre of gravity position of the fuel.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKJ7V0J2P6",
-            "text": "total mass of the aeroplane.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810892"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QXB6Q4IODO",
     "explanation": "",
     "learningObjectives": ["081.05.06.01.01"],
@@ -9819,7 +7140,15 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-819708", "BGS-810849"],
+        "externalIds": [
+          "ATPLQ-819708",
+          "BGS-810849",
+          "BGS-811733",
+          "AVEXAM-59834",
+          "AVEXAM-10729",
+          "BGS-810847",
+          "ATPLGS-118244"
+        ],
         "explanation": ""
       },
       "zI0aBduS": {
@@ -10009,47 +7338,6 @@
     }
   },
   {
-    "id": "QQESD8DMT3",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.05.01"],
-    "variants": {
-      "AhIdl0S6": {
-        "id": "AhIdl0S6",
-        "type": "simple",
-        "question": "Low speed pitch-up can be caused by a significant thrust",
-        "options": [
-          {
-            "id": "AD2J6SFLT0",
-            "text": "increase with podded engines located beneath a low-mounted wing.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AXCOLHY7VD",
-            "text": "increase with engines located on the rear fuselage.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1X0JW7SU1",
-            "text": "decrease with engines located on the rear fuselage.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJZKAW0H7I",
-            "text": "decrease with podded engines located beneath a low-mounted wing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-127888"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQQR1S5UGB",
     "explanation": "",
     "learningObjectives": ["081.05.04.03.01"],
@@ -10132,47 +7420,6 @@
     }
   },
   {
-    "id": "QRBB45SUJ0",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.03"],
-    "variants": {
-      "UD3Rz3OB": {
-        "id": "UD3Rz3OB",
-        "type": "simple",
-        "question": "In what phase of flight are the outboard ailerons (if fitted) Not active",
-        "options": [
-          {
-            "id": "AVYSAWVRWG",
-            "text": "Cruise.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMAE5GVNT7",
-            "text": "Landing with a strong and gusty crosswind, to avoid over-controlling the aeroplane.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJMIWDFMR3",
-            "text": "Take-off, until lift-off.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHRUZLFE6M",
-            "text": "Approach.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118052"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QRFOYJSMEF",
     "explanation": "",
     "learningObjectives": ["081.05.06.01.04"],
@@ -10209,170 +7456,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-35118"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRXG3VZ99M",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.02"],
-    "variants": {
-      "RTHBgZ9l": {
-        "id": "RTHBgZ9l",
-        "type": "simple",
-        "question": "A given aileron deflection affects ..",
-        "options": [
-          {
-            "id": "AZXCU4A99C",
-            "text": "roll rate and is dependent on IAS",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9U1QWW3W9",
-            "text": "bank angle and is dependent on IAS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APKNCEOGOW",
-            "text": "bank angle and is dependent on TAS",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AORMMUVKEC",
-            "text": "roll rate and is dependent on TAS",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-819810"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QS5XLD5IPM",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.02.01"],
-    "variants": {
-      "9NR8Qu8d": {
-        "id": "9NR8Qu8d",
-        "type": "simple",
-        "question": "If the elevator trim tab is deflected down, the cockpit trim indicator shows:",
-        "options": [
-          {
-            "id": "APJXZSM9AR",
-            "text": "nose up.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8CITUS00X",
-            "text": "neutral.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR7BBFGY5H",
-            "text": "nose right.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKNC7L3FYN",
-            "text": "nose down.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-21808"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSBLYCBGQX",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.01"],
-    "variants": {
-      "nY9AlDsS": {
-        "id": "nY9AlDsS",
-        "type": "simple",
-        "question": "Examples of aerodynamic balancing of control surfaces are",
-        "options": [
-          {
-            "id": "AJ8Q45CUBK",
-            "text": "servo tab, spring tab, seal between the wing trailing edge and the leading edge of control surface.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABH2ON28N4",
-            "text": "spring tab, servo tab, and power assisted control.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4IT0PG1CH",
-            "text": "balance tab, horn balance, and mass balance.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASDU6OV1K3",
-            "text": "mass in the nose of the control surface, horn balance and mass balance.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118244"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSGOUP90GN",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "icQ5r6OY": {
-        "id": "icQ5r6OY",
-        "type": "simple",
-        "question": "Which statement about the trim position is true related to centre of gravity and adjustable stabiliser position ?",
-        "options": [
-          {
-            "id": "AFAG1C7KUG",
-            "text": "A nose heavy aeroplane requires that the stabiliser leading edge is lower than compared with a tail heavy aeroplane",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4V71ROARJ",
-            "text": "Because characteristic speeds at take off do not vary with centre of gravity location, the need for stabiliser adjustment is dependent on flap position only.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYYRKSCN2Z",
-            "text": "A nose heavy aeroplane requires that the stabiliser leading edge is higher than compared with a tail heavy aeroplane.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7Q5XP2O0V",
-            "text": "At the forward limit for centre of gravity, stabiliser trim is adjusted maximum nose down to obtain maximum elevator authority at take off rotation.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-810862"],
         "explanation": ""
       }
     }
@@ -10460,47 +7543,6 @@
     }
   },
   {
-    "id": "QSP6B4HXNX",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.02"],
-    "variants": {
-      "tq7XkjBM": {
-        "id": "tq7XkjBM",
-        "type": "simple",
-        "question": "Horn balance is used for aerodynamic balancing and...",
-        "options": [
-          {
-            "id": "AGXXXMHO6J",
-            "text": "is done by locating a part of the control surface ahead of the hinge line to protrude in the airflow.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A23LLEQHCH",
-            "text": "is done by locating a part of the control surface behind the hinge line to protrude into the airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYY7PCIXKS",
-            "text": "consists of a downspring which contributes to stick force stability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AICMWOCYWM",
-            "text": "consists of a tab which moves opposite to the movement of the main control surface.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-29642"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QSTPZIF7T3",
     "explanation": "",
     "learningObjectives": ["081.05.01.01.03"],
@@ -10583,47 +7625,6 @@
     }
   },
   {
-    "id": "QSWN2L54YN",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "MRz1Wda0": {
-        "id": "MRz1Wda0",
-        "type": "simple",
-        "question": "One method to compensate adverse yaw is a:",
-        "options": [
-          {
-            "id": "A8NX6HBLC9",
-            "text": "anti-balance tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A3HUV71MPD",
-            "text": "differential aileron.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1REFS4ELI",
-            "text": "balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A057XPG5ZY",
-            "text": "balance panel.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-30065"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QSZVLTIP88",
     "explanation": "",
     "learningObjectives": ["081.05.07.01.03"],
@@ -10665,88 +7666,6 @@
     }
   },
   {
-    "id": "QT0ARSEGHR",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "0TAIHvwW": {
-        "id": "0TAIHvwW",
-        "type": "simple",
-        "question": "When a jet transport aeroplane takes off with the CG at the forward limit and the trimmable horizontal stabiliser (THS) is positioned at the maximum allowable nose down position for take off:",
-        "options": [
-          {
-            "id": "A0U8FMSB51",
-            "text": "rotation will require a higher than normal stick force.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9LSPAOOWU",
-            "text": "early nose wheel raising will take place.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIDC1RW9N0",
-            "text": "rotation will be normal using the normal rotation technique.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AP3V369VDD",
-            "text": "there will be a tendency to over rotate.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-46813"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QT5WANRJ36",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.01"],
-    "variants": {
-      "xVbp1xij": {
-        "id": "xVbp1xij",
-        "type": "simple",
-        "question": "Which of the following aerodynamic balancing device enables big control surface change/movement with relatively small force needed to apply?",
-        "options": [
-          {
-            "id": "AXKPBVISFE",
-            "text": "Servo Tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APVFU9M4KT",
-            "text": "Horn Balance.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGB1NYXZ3Z",
-            "text": "Balance Tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU8K88XO7U",
-            "text": "Anti-balance Tab.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-817183"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QT98IIF4X3",
     "explanation": "",
     "learningObjectives": ["081.05.08.03.03"],
@@ -10783,81 +7702,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-812440"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QTKHL2Y36J",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.03"],
-    "variants": {
-      "xPPa2AQQ": {
-        "id": "xPPa2AQQ",
-        "type": "simple",
-        "question": "Which of the following affect the setting of the stabiliser trim for take-off? 1. Flap setting 2. CG position 3. Actual take-off mass 4. Outside air temperature",
-        "options": [
-          {
-            "id": "AWVCBY6L0K",
-            "text": "1, 2, and 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6IAQ08ERX",
-            "text": "1 and 4 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADPD5GA1TP",
-            "text": "2 and 3 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4F58RFKEM",
-            "text": "1, 3, and 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811740"],
-        "explanation": ""
-      },
-      "EyuW6obQ": {
-        "id": "EyuW6obQ",
-        "type": "simple",
-        "question": "Which of the following affect the setting of the stabiliser trim for take-off?\n1. Flap Setting\n2. CG position\n3. Actual take-off mass\n4. Outside air temperature",
-        "options": [
-          {
-            "id": "AEW50HZA9R",
-            "text": "1,2,and 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1ZA5DJHQS",
-            "text": "1,3 and 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4POVTHQFA",
-            "text": "2 and 3 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADUVSHQDFY",
-            "text": "1 and 4 only",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811419"],
         "explanation": ""
       }
     }
@@ -11073,88 +7917,6 @@
     }
   },
   {
-    "id": "QU8HYJ25D7",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.01"],
-    "variants": {
-      "MRU4GmbZ": {
-        "id": "MRU4GmbZ",
-        "type": "simple",
-        "question": "Rotation about the lateral axis is called:",
-        "options": [
-          {
-            "id": "AQ3JRLOYLV",
-            "text": "pitching",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKMNU13HEF",
-            "text": "rolling",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFEA0HCJ48",
-            "text": "slipping",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AB7TSKXCIY",
-            "text": "yawing",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-93837"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QUE1FFS29A",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "xyqNxCC3": {
-        "id": "xyqNxCC3",
-        "type": "simple",
-        "question": "If the nose of an aeroplane yaws to the left, this causes:",
-        "options": [
-          {
-            "id": "A18J4YOR33",
-            "text": "a roll to the left.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQ2TAR2UWY",
-            "text": "a decrease in relative airspeed on the right wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYNUQ9OHDL",
-            "text": "an increase in lift on the left wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMJY0SKF6V",
-            "text": "a roll to the right.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-49086"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QUEOCII3ER",
     "explanation": "",
     "learningObjectives": ["081.05.04.01.01"],
@@ -11237,47 +7999,6 @@
     }
   },
   {
-    "id": "QUTKJGNKDY",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.02"],
-    "variants": {
-      "uOh1nIEu": {
-        "id": "uOh1nIEu",
-        "type": "simple",
-        "question": "The horn balance is used for aerodynamic balancing. It consists...",
-        "options": [
-          {
-            "id": "ABDSPGZ12J",
-            "text": "of locating part of the control surface ahead of the hinge line to protrude in the airflow.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A30KL35T98",
-            "text": "of a downspring which contributes to stick force stability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKYGS33RTS",
-            "text": "of locating part of the control surface behind the hinge line to protrude in the airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG21OSJSLY",
-            "text": "of a tab which moves opposite to the movement of the main control surface.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811413"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QV5Q929OKE",
     "explanation": "",
     "learningObjectives": ["081.05.08.01.02"],
@@ -11314,47 +8035,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-994473"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QV8Q4F9GWW",
-    "explanation": "",
-    "learningObjectives": ["081.05.05.01.02"],
-    "variants": {
-      "PClCRzBS": {
-        "id": "PClCRzBS",
-        "type": "simple",
-        "question": "Yaw is followed by roll because the",
-        "options": [
-          {
-            "id": "ASL3HIWT26",
-            "text": "yawing motion generated by rudder deflection causes a speed increase of the outer wing, which increases the lift on that wing so that the aeroplane starts to roll in the same direction as the yaw.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AM0CG9RVD3",
-            "text": "rudder is located above the longitudinal axis and when it is deflected, it causes a rolling moment in the same direction as the yaw.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWJFAT3T3W",
-            "text": "rolling motion generated by rudder deflection causes a speed increase of the outer wing which increases the lift on that wing so the aeroplane starts to roll in the direction of the turn.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM8VRNYVRG",
-            "text": "yawing motion generated by rudder deflection causes a speed increase of the inner wing, which increase the lift on that wing so that the aeroplane starts to roll in the same direction as the yaw.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-125966"],
         "explanation": ""
       }
     }
@@ -11436,7 +8116,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-118671"],
+        "externalIds": ["ATPLGS-118671", "ATPLQ-814392"],
         "explanation": ""
       }
     }
@@ -11565,88 +8245,6 @@
     }
   },
   {
-    "id": "QWJFLIFHIP",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.03.02"],
-    "variants": {
-      "hGargvQK": {
-        "id": "hGargvQK",
-        "type": "simple",
-        "question": "Consider two elevator control systems:\n\n1 is fitted with a trim tab.2 is fitted with fully powered hydraulic controls and an adjustable horizontal stabiliser.\nFor both cases and starting from a trimmed condition, how will the neutral position of the control column change, after trimming for a speed decrease?\n ",
-        "options": [
-          {
-            "id": "A4BKQTT4H4",
-            "text": "1 moves aft, 2 does not change.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEOYEUSLXB",
-            "text": "1 moves forward, 2 moves forward.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A749EFFFTV",
-            "text": "1 does not change, 2 moves aft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8ENFYY9ME",
-            "text": "1 does not change, 2 does not change.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-819011"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QWX6RA8804",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.01.02"],
-    "variants": {
-      "Z1MjwAV1": {
-        "id": "Z1MjwAV1",
-        "type": "simple",
-        "question": "When comparing a trim tab with an anti-balance tab, which of the following statements is correct?The trim tab..",
-        "options": [
-          {
-            "id": "AS3WZ8PCPX",
-            "text": "moves in the opposite direction to the control surface and the anti-balance tab moves in the same direction as the control surface.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1R1PN0UDW",
-            "text": "increases control effectiveness and the anti-balance tab reduces it.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARUHFLSS1V",
-            "text": "is moved by pilot input and the anti-balance tab is moved by an electrical input.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG0UGW7BIA",
-            "text": "moves in the same direction as the control surface and the anti-balance tab moves in the opposite direction to the control surface.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814392"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QX188CHCJW",
     "explanation": "",
     "learningObjectives": ["081.05.08.03.06"],
@@ -11764,205 +8362,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-815206", "BGS-812032"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXJ6KALOTV",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.01"],
-    "variants": {
-      "CSTWSsKJ": {
-        "id": "CSTWSsKJ",
-        "type": "simple",
-        "question": "Rotation around the longitudinal axis is called",
-        "options": [
-          {
-            "id": "ANP376G6TN",
-            "text": "rolling.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AT69OFPMRD",
-            "text": "slipping.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARXCPPX0M2",
-            "text": "yawing",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABIVI8PEBS",
-            "text": "pitching.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126104"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXQXK77G0R",
-    "explanation": "",
-    "learningObjectives": ["081.05.06.01.02"],
-    "variants": {
-      "r1PC0fQo": {
-        "id": "r1PC0fQo",
-        "type": "simple",
-        "question": "The horn balance is used for aerodynamic balancing. It consists..\n ",
-        "options": [
-          {
-            "id": "AVO09GB1LP",
-            "text": "in locating part of the control surface ahead of the hinge line to protrude in the airflow.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A1UAWHT4J3",
-            "text": "of a tab which moves opposite to the movement of the main control surface.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APXIVDXPH4",
-            "text": "in locating part of the control surface behind the hinge line to protrude in the airflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUFL8S9NBT",
-            "text": "of a downspring which contributes to stick force stability.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-817150"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXUQHA81N8",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.01.02"],
-    "variants": {
-      "nBSJUJvq": {
-        "id": "nBSJUJvq",
-        "type": "simple",
-        "question": "Refer to figure.  \n  The tab in the figure represents:",
-        "options": [
-          {
-            "id": "A7SC9HH7ON",
-            "text": "a servo tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMU5CMVEX7",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXORCVNGPE",
-            "text": "a trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARWW1CZ0VJ",
-            "text": "a balance tab .",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-815393"],
-        "explanation": ""
-      },
-      "DVlJJY6E": {
-        "id": "DVlJJY6E",
-        "type": "simple",
-        "question": "Refer to figure.  \n  The tab in the figure represents:",
-        "options": [
-          {
-            "id": "AVBBKEPIZL",
-            "text": "a balance tab that also functions as a trim tab.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZ3L4OLDB0",
-            "text": "a trim tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX72ZSTGE2",
-            "text": "a control tab.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANJF74D51T",
-            "text": "an anti-balance tab.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-817934"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXVYMXBLT8",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "dNbFJoc8": {
-        "id": "dNbFJoc8",
-        "type": "simple",
-        "question": "The aircraft yaws to the left. This might occur because:",
-        "options": [
-          {
-            "id": "AHFCQ2P6C4",
-            "text": "You roll to the right.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASH2U9AO6K",
-            "text": "There is increased lift in the right wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADYMZR5DBR",
-            "text": "You roll the left.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AC8OAN45D4",
-            "text": "You press the right pedal.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-813439"],
+        "externalIds": ["ATPLQ-815206", "BGS-812032", "ATPLGS-118663"],
         "explanation": ""
       }
     }
@@ -12045,47 +8445,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-89541"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QY7V281TDP",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "wrbMQmOw": {
-        "id": "wrbMQmOw",
-        "type": "simple",
-        "question": "The use of ailerons induces adverse (aileron) yaw\nThis occurs as a result of the",
-        "options": [
-          {
-            "id": "AY4KTIQAHZ",
-            "text": "up-going wing producing more drag than the down-going wing.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A373ZDNF95",
-            "text": "up-going wing having a higher rate of roll when compared to the down-going wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYT67Y50I3",
-            "text": "up-going wing being subjected to more aerodynamic damping than the down-going wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGCHUV3H3K",
-            "text": "down-going wing producing more drag than the up-going wing.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-118663"],
         "explanation": ""
       }
     }
@@ -12195,163 +8554,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-627074"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYGEL1BQ5B",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.03"],
-    "variants": {
-      "AAFjw5wv": {
-        "id": "AAFjw5wv",
-        "type": "simple",
-        "question": "What is a pitching motion?",
-        "options": [
-          {
-            "id": "AYPRMZT8D6",
-            "text": "It is about the lateral axis, related to longitudinal stability.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ACZ508G9EX",
-            "text": "It is about the longitudinal axis, related to lateral stability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZMDX8VJQI",
-            "text": "It is about the lateral axis, related to lateral stability.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AY0TM4RG1X",
-            "text": "It is about the longitudinal axis, related to longitudinal stability.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-816349"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYQ27JZCV8",
-    "explanation": "",
-    "learningObjectives": ["081.05.08.01.02"],
-    "variants": {
-      "bJSJND21": {
-        "id": "bJSJND21",
-        "type": "simple",
-        "question": "A trim tab is an adjustable surface which can reduce the moment at the hinge line of the main control surface to zero. It can achieve this because its lift force..",
-        "options": [
-          {
-            "id": "A6OFA8BDH5",
-            "text": "is set far from the hinge line of the main control surface.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APCNBGPQLC",
-            "text": "is controlled from the cockpit just like the main control surface.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AII91S4UWR",
-            "text": "is set close to the hinge line of the main control surface.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A27RFP359P",
-            "text": "can be deflected through a larger angle compared to the main control surface.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-813607"],
-        "explanation": ""
-      },
-      "4tPQlU0X": {
-        "id": "4tPQlU0X",
-        "type": "simple",
-        "question": "A trim tab is an adjustable surface which can reduce the moment at the hinge line of the main control surface to zero. It can achieve this because its lift force...",
-        "options": [
-          {
-            "id": "AQBAAMNS4I",
-            "text": "is set far from the hinge line of the main control surface.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQTBAJC667",
-            "text": "is set close to the hinge line of the main control surface.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6LSX5GU8Q",
-            "text": "is controlled from the cockpit just like the main control surface.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5D3F7W0XG",
-            "text": "can be deflected through a larger angle compared to the main control surface.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-811494"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYX9E4JYCX",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.01"],
-    "variants": {
-      "TnpisbLT": {
-        "id": "TnpisbLT",
-        "type": "simple",
-        "question": "When the CG position is moved aft, the elevator deflection to achieve an decrease in load factor will be",
-        "options": [
-          {
-            "id": "ACS1TY66DQ",
-            "text": "smaller.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEPBT0FV2L",
-            "text": "larger.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD2HL27JAM",
-            "text": "unchanged.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZEE5WJP3K",
-            "text": "dependent on trim position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126390"],
         "explanation": ""
       }
     }
@@ -12906,47 +9108,6 @@
     }
   },
   {
-    "id": "QIDE78ALS9",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.01"],
-    "variants": {
-      "zxJ98WgF": {
-        "id": "zxJ98WgF",
-        "type": "simple",
-        "question": "Aileron reversal can occur at..\n ",
-        "options": [
-          {
-            "id": "A71R5FAD6U",
-            "text": "high speeds when the wing with the down-going aileron twists, reducing that wing’s Lift Coefficient.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AL8NYFUFOX",
-            "text": "high speeds when the wing with the up-going aileron causes sufficient drag, leading to adverse yaw.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1UQNWB9BP",
-            "text": "low speeds when the wing with the down-going aileron twists, increasing that wing’s camber.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVVNYNE4GP",
-            "text": "low speeds when wing with the up-going aileron exceeds that wing’s critical Angle Of Attack.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-816806"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QMTERZ54GW",
     "explanation": "",
     "learningObjectives": ["081.05.04.01.08"],
@@ -12982,48 +9143,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-813004", "AVEXAM-71785"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQXIAF1RUT",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.01.08"],
-    "variants": {
-      "pCu7NkNw": {
-        "id": "pCu7NkNw",
-        "type": "simple",
-        "question": "Aileron flutter can be caused by",
-        "options": [
-          {
-            "id": "AYW1SLSFGP",
-            "text": "cyclic deformations generated by aerodynamic, inertial and elastic loads on the wing.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8CQFR8LQ9",
-            "text": "continuous deformations in one direction generated by bending and twisting of the wing.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1PTLCZV9W",
-            "text": "aileron reversal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7EWF7OCQL",
-            "text": "the elastic centre of the wing section coinciding with the centre of gravity of that wing section.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-117966"],
+        "externalIds": ["ATPLQ-813004", "AVEXAM-71785", "ATPLGS-117966"],
         "explanation": ""
       }
     }
@@ -13187,7 +9307,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-812044"],
+        "externalIds": ["BGS-812044", "ATPLQ-814805"],
         "explanation": ""
       }
     }
@@ -13228,48 +9348,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-811194"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q7CG1AYQDX",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "ETCXpZUB": {
-        "id": "ETCXpZUB",
-        "type": "simple",
-        "question": "Which of these statements about the limiting value of 5° bank angle during V~MCA~ determination are correct or incorrect?\n1) As the bank angle is decreased from 5° to 0°, the value of V~MCA~ increases.\n2) At any bank angle beyond 5°, V~MCA~ will decrease correspondingly.",
-        "options": [
-          {
-            "id": "ARUY9X4VQK",
-            "text": "1) is correct, 2) is incorrect.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2I3IMEZKX",
-            "text": "1) is correct, 2) is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AIG7DDM3KU",
-            "text": "1) is incorrect, 2) is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHOOAXZ4K4",
-            "text": "1) is incorrect, 2) is incorrect.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-50816"],
+        "externalIds": ["BGS-811194", "ATPLGS-126528"],
         "explanation": ""
       }
     }
@@ -13310,7 +9389,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-815665"],
+        "externalIds": ["ATPLQ-815665", "BGS-811189"],
         "explanation": ""
       }
     }
@@ -13352,129 +9431,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-76470"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHWEFQ2T3H",
-    "explanation": "",
-    "learningObjectives": ["081.05.02.04.01"],
-    "variants": {
-      "Dj3ffoap": {
-        "id": "Dj3ffoap",
-        "type": "simple",
-        "question": "Select the correct statement with reference to the relationship between VMCL and CG location for a common airplane (i.e. A320 or B737):",
-        "options": [
-          {
-            "id": "ACI0F2GD0X",
-            "text": "A forward CG decreases V~MCL~.    ",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARUDC9F9DW",
-            "text": "A forward CG increases V~MCL~.        ",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AY2KIK6GB0",
-            "text": "The CG has no influence on V~MCL~.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATF1DVCWA8",
-            "text": "It depends on the airplane type.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-819254"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QK6OON5WUY",
-    "explanation": "",
-    "learningObjectives": ["081.05.01.01.02"],
-    "variants": {
-      "MYcwwMmT": {
-        "id": "MYcwwMmT",
-        "type": "simple",
-        "question": "Which of these statements about the limiting value of 5° bank angle during V~MCA~ determination are correct or incorrect?\n1) When the bank angle is decreased from 5° to 0°, the value of V~MCA~ will remain approximately constant.\n2) At any bank angle above 5 degrees, V~MCA~ will decrease correspondingly.",
-        "options": [
-          {
-            "id": "AUURM3Z35K",
-            "text": "1) is incorrect, 2) is incorrect.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMQZYJAOWF",
-            "text": "1) is incorrect, 2) is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR5FQKXO7L",
-            "text": "1) is correct, 2) is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQFJGNFJ1C",
-            "text": "1) is correct, 2) is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-13690"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMEUGC12BO",
-    "explanation": "",
-    "learningObjectives": ["081.05.04.04.01"],
-    "variants": {
-      "0uAgg0O4": {
-        "id": "0uAgg0O4",
-        "type": "simple",
-        "question": "In asymmetric flight, yawing towards the live engine gives a sideslip force on the fuselage side..",
-        "options": [
-          {
-            "id": "AS5Y8BB50V",
-            "text": "behind the CG and opposite to the rudder force.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6A75EE7DZ",
-            "text": "forward of the CG and similar to the rudder force.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACV7UM8Y1V",
-            "text": "forward of the CG and opposite to the rudder force.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0W1WIHL1I",
-            "text": "behind the CG and similar to the rudder force.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-814805"],
         "explanation": ""
       }
     }

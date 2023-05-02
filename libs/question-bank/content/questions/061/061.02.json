@@ -35,7 +35,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-43688", "ATPLQ-611268"],
+        "externalIds": ["AVEXAM-43688", "ATPLQ-611268", "ATPLGS-124334"],
         "explanation": ""
       }
     }
@@ -76,7 +76,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-625502"],
+        "externalIds": ["ATPLGS-625502", "ATPLQ-615988"],
         "explanation": ""
       }
     }
@@ -117,7 +117,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-12131"],
+        "externalIds": ["AVEXAM-12131", "ATPLGS-110180"],
         "explanation": ""
       }
     }
@@ -158,7 +158,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-617548"],
+        "externalIds": ["ATPLQ-617548", "AVEXAM-50659"],
         "explanation": ""
       }
     }
@@ -199,7 +199,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-110360"],
+        "externalIds": [
+          "ATPLGS-110360",
+          "ATPLGS-124305",
+          "BGS-610361",
+          "ATPLQ-611404"
+        ],
         "explanation": ""
       }
     }
@@ -282,47 +287,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-614954"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QCMS4LA5NS",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.06"],
-    "variants": {
-      "bEgpBiAr": {
-        "id": "bEgpBiAr",
-        "type": "simple",
-        "question": "At 10:00 UTC an aircraft departs position A 51°30’N, 001°59’W and flies on a track of 270° at a groundspeed of 390 kt.\n\nWhat is the aircraft’s position at 11:30 UTC?",
-        "options": [
-          {
-            "id": "APP2RI5OO5",
-            "text": "51°30’N, 017°39’W",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5PZA2IJS6",
-            "text": "51°30’N, 011°44’W",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWR52Y5KPK",
-            "text": "51°30’N, 014°27’W",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALDXIR70ZJ",
-            "text": "51°30’N, 008°03’W",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-615988"],
         "explanation": ""
       }
     }
@@ -451,238 +415,6 @@
     }
   },
   {
-    "id": "QKDR7GIR2Q",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.04"],
-    "variants": {
-      "GwvgAv9V": {
-        "id": "GwvgAv9V",
-        "type": "simple",
-        "question": "Consider the following factors that determine the accuracy of a DR position \n1. The flight time since the last position update\n2. The accuracy of the forecasted wind\n3. The accuracy of the TAS\n4. The accuracy of the steered heading\n\tUsing the list above which of the following contains the most complete answer?",
-        "options": [
-          {
-            "id": "AAGCSFYXGB",
-            "text": "1, 2, 3 and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AMHST384DS",
-            "text": "1, 2 and 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6372SJQFF",
-            "text": "1, 2 and 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARVKTFQQCX",
-            "text": "1 and 2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-124305"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOSWIUCEXT",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.04"],
-    "variants": {
-      "Of59tqnD": {
-        "id": "Of59tqnD",
-        "type": "simple",
-        "question": "The accuracy of the, manually calculated, DR-position of an aircraft is, among other things, affected by",
-        "options": [
-          {
-            "id": "AHM9KV9GDG",
-            "text": "the accuracy of the forecasted wind.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A4VI6GLDJ0",
-            "text": "the accuracy of the adjustment of the position lines for the motion of the aircraft between the last fix and the DR-position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AS756R638I",
-            "text": "the accuracy of the actual wind.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8HLYUT448",
-            "text": "the accuracy of the adjustment of the position lines for the motion of the aircraft between the last and the new DR-position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-124334"],
-        "explanation": ""
-      },
-      "OH77gEbB": {
-        "id": "OH77gEbB",
-        "type": "simple",
-        "question": "The accuracy of the, manually calculated, DR-position of an aircraft is, among other things, affected by",
-        "options": [
-          {
-            "id": "AUOEHEX8SS",
-            "text": "the flight time since the last position update.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQ41FAOAXZ",
-            "text": "the accuracy of the adjustment of the position lines for the motion of the aircraft between the last and the new DR-position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASHQE03GCS",
-            "text": "the accuracy of the adjustment of the position lines for the motion of the aircraft between the last fix and the DR-position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFPYO28Z12",
-            "text": "the accuracy of the actual wind.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-614553"],
-        "explanation": ""
-      },
-      "tCIsPqUP": {
-        "id": "tCIsPqUP",
-        "type": "simple",
-        "question": "The accuracy of the, manually calculated, DR-position of an aircraft is, among other things, affected by",
-        "options": [
-          {
-            "id": "A72XFOO7ME",
-            "text": "The accuracy of the forecasted wind.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASMFCE0RYG",
-            "text": "The accuracy of the adjustment of the position lines for\nthe motion of the aircraft between the last and the new\nDR-position.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AV5J17259J",
-            "text": "The accuracy of the actual wind.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXY6YUIGUU",
-            "text": "The accuracy of the adjustment of the position lines for\nthe motion of the aircraft between the last fix and the\nDR-position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-610360"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQP0283B7Q",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.04"],
-    "variants": {
-      "kaaKL9T9": {
-        "id": "kaaKL9T9",
-        "type": "simple",
-        "question": "Consider the following factors that determine the accuracy of a DR position: \n1. &nbsp;The flight time since the last position update. \n2. &nbsp;The accuracy of the forecasted wind. \n3. &nbsp;The accuracy of the TAS. \n4. &nbsp;The accuracy of the steered heading. \nUsing the list above which of the following contains the most complete answer?",
-        "options": [
-          {
-            "id": "AEW9PD2MG1",
-            "text": "1, 2, 3 and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAMLFM16R8",
-            "text": "1, 2 and 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG9D65TRQA",
-            "text": "1, 2 and 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFLZRQNMHR",
-            "text": "1 and 2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-610361"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSOJDWXDMK",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.04"],
-    "variants": {
-      "VuuDMPyU": {
-        "id": "VuuDMPyU",
-        "type": "simple",
-        "question": "Consider the following factors that determine the accuracy of a DR position:\n\n1. The flight time since the last position update.2. The accuracy of the forecasted wind.3. The accuracy of the TAS.4. The accuracy of the steered heading.\nUsing the list above which of the following contains the most complete answer?",
-        "options": [
-          {
-            "id": "A0E5NRXLFQ",
-            "text": "1, 2, 3 and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2AYW8DZM7",
-            "text": "1 and 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEEGT8WDR8",
-            "text": "1, 2 and 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9OT7OQT8C",
-            "text": "1, 2 and 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-611404"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QTMR6KL2S2",
     "explanation": "",
     "learningObjectives": ["061.02.02.01.08"],
@@ -759,7 +491,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-124322"],
+        "externalIds": ["ATPLGS-124322", "ATPLQ-619932"],
         "explanation": ""
       }
     }
@@ -882,7 +614,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-79880"],
+        "externalIds": ["AVEXAM-79880", "ATPLGS-110478"],
         "explanation": ""
       }
     }
@@ -1128,7 +860,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-611448"],
+        "externalIds": ["BGS-611448", "ATPLQ-617427"],
         "explanation": ""
       }
     }
@@ -1251,7 +983,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-619277"],
+        "externalIds": ["ATPLQ-619277", "AVEXAM-74058"],
         "explanation": ""
       }
     }
@@ -1367,7 +1099,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-610974"],
+        "externalIds": ["BGS-610974", "ATPLGS-124311"],
         "explanation": ""
       }
     }
@@ -1572,7 +1304,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-618888"],
+        "externalIds": ["ATPLQ-618888", "AVEXAM-6357"],
         "explanation": ""
       }
     }
@@ -1777,7 +1509,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-30482"],
+        "externalIds": ["AVEXAM-30482", "ATPLQ-611425"],
         "explanation": ""
       }
     }
@@ -1818,7 +1550,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-611264"],
+        "externalIds": ["BGS-611264", "ATPLQ-618462"],
         "explanation": ""
       }
     }
@@ -2064,48 +1796,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-616767"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QERZJIZENI",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.01.01"],
-    "variants": {
-      "VhvLG2ir": {
-        "id": "VhvLG2ir",
-        "type": "simple",
-        "question": "What would be the best visual marking for a VFR flight on a warm summer day?",
-        "options": [
-          {
-            "id": "AT9WIDRAIK",
-            "text": "A reservoir at a field.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AUII7FVFF5",
-            "text": "A village on the edge of a larger city.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AF0PIWJSFP",
-            "text": "4 distant windmills widely spread.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9CJB8QMOL",
-            "text": "A grass airfied in the country side.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-6357"],
+        "externalIds": ["ATPLQ-616767", "AVEXAM-19036"],
         "explanation": ""
       }
     }
@@ -2310,7 +2001,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-611419"],
+        "externalIds": ["ATPLQ-611419", "BGS-611403"],
         "explanation": ""
       }
     }
@@ -2480,47 +2171,6 @@
     }
   },
   {
-    "id": "QKZJBLQ8L3",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.02"],
-    "variants": {
-      "yArp8X5S": {
-        "id": "yArp8X5S",
-        "type": "simple",
-        "question": "An aircraft is making a VFR cross-country flight at low level. The flight involves at least four visual checkpoints on the route. What is the most suitable type of checkpoint?",
-        "options": [
-          {
-            "id": "A4IFCXLJV4",
-            "text": "Look for distinctive features such as a railway line to lead into a checkpoint.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A39A3SLV17",
-            "text": "Fly as low as possible and select aerodromes that are active for parachuting and gliding.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASKFLGJW50",
-            "text": "If flying over a wet, lowland area, choose small lakes rather than large ones.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHO1PIOIQY",
-            "text": "Choose large, built-up areas that can be seen easily from low level.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-617427"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QL9SJOC3WC",
     "explanation": "",
     "learningObjectives": ["061.02.01.02.02"],
@@ -2557,129 +2207,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-8752"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLHH844U00",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.12"],
-    "variants": {
-      "Iustyoz7": {
-        "id": "Iustyoz7",
-        "type": "simple",
-        "question": "Relief is usually portrayed by combinations of:\n1) contour lines2) shading3) frequencies4) colours5) spot heights6) graduated scale",
-        "options": [
-          {
-            "id": "AFLJDC1172",
-            "text": "1, 2, 4 and 5.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZX6Q8EAZS",
-            "text": "1, 2, 3, 4 and 5.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQPERJ0GGA",
-            "text": "1, 2, 4, 5 and 6.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9Y1J2H699",
-            "text": "2, 3, 4 and 5.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-611425"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLKGE947WE",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.09"],
-    "variants": {
-      "xw0QUKeD": {
-        "id": "xw0QUKeD",
-        "type": "simple",
-        "question": "The pilot is in radio contact with an Air Traffic Control unit, but has become unsure of the aircraft's position. What should be the pilot's initial action(s) if fuel is NOT critical?",
-        "options": [
-          {
-            "id": "A8BRLSI1U9",
-            "text": "Note the time and request assistance from the ATC unit.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGZWDD9ZL2",
-            "text": "Change frequency to 121.5 MHz and make an urgency (PAN) call.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3DGGC8E5R",
-            "text": "Continue to fly on the current heading until position is established.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A77V7PPL3A",
-            "text": "Turn back towards the aircraft's last confirmed position.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-611271"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QMA3OS8AFK",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.08"],
-    "variants": {
-      "9PxMpsCv": {
-        "id": "9PxMpsCv",
-        "type": "simple",
-        "question": "Which of the factors named hereafter should be considered by the pilot when selecting landmarks as visual reference points?\n\n1. Possibility of identification2. Transmitted frequency3. Visibility4. Closeness to the track\n ",
-        "options": [
-          {
-            "id": "AC2BCPCXG4",
-            "text": "1, 3 and 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AG2TLNLXDW",
-            "text": "2 and 3 only",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4EL7F2ZL4",
-            "text": "1, 2 and 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU0V7K3F04",
-            "text": "2, 3 and 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-619932"],
         "explanation": ""
       }
     }
@@ -2801,47 +2328,6 @@
     }
   },
   {
-    "id": "QNDJMDIY1A",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.02.02"],
-    "variants": {
-      "H0XaxVbS": {
-        "id": "H0XaxVbS",
-        "type": "simple",
-        "question": "What are problems associated with VFR navigation (without GPS) over low-flying desert late in the morning at about 11 AM?\n1. Good navigation features might be widely separated. \n 2. Visual range is likely to be restricted. \n 3. Maps might be incomplete or out-of-date. \n 4. Visibility into the Sun might be difficult due to glare.",
-        "options": [
-          {
-            "id": "ANPSMBZVNU",
-            "text": "1 and 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A89WWZZIGV",
-            "text": "1 and 2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXMNVAI58Q",
-            "text": "1, 2 and 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMM9TZ61XI",
-            "text": "2 and 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-618462"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QNP1HIOKXL",
     "explanation": "",
     "learningObjectives": ["061.02.01.01.01"],
@@ -2918,7 +2404,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-124349"],
+        "externalIds": ["ATPLGS-124349", "ATPLQ-611138"],
         "explanation": ""
       }
     }
@@ -2959,7 +2445,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-66695"],
+        "externalIds": [
+          "AVEXAM-66695",
+          "AVEXAM-46783",
+          "AVEXAM-28035",
+          "ATPLQ-618335"
+        ],
         "explanation": ""
       },
       "Yfozo60f": {
@@ -3028,47 +2519,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-28035"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOCVHOA17U",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.11"],
-    "variants": {
-      "wERvz9GF": {
-        "id": "wERvz9GF",
-        "type": "simple",
-        "question": "Contour lines on aeronautical maps and charts connect points..",
-        "options": [
-          {
-            "id": "A3GFT0H1XI",
-            "text": "having the same elevation.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9OPK08QM0",
-            "text": "with the same variation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A2OIUFZZWX",
-            "text": "of equal latitude.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJQ6KR4BPG",
-            "text": "having the same longitude.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-611138"],
         "explanation": ""
       }
     }
@@ -3192,47 +2642,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-996470"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQAFCL09GI",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.08"],
-    "variants": {
-      "CcREYfew": {
-        "id": "CcREYfew",
-        "type": "simple",
-        "question": "During visual navigation in freezing conditions, after heavy snowfall, which of the following landmark will give the best reference for a visual checkpoint:",
-        "options": [
-          {
-            "id": "ADR8SYAW8Q",
-            "text": "high-tension lines.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWLEMFVV2K",
-            "text": "a railway.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFEAKAI79W",
-            "text": "a country road.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6TIXNOZDI",
-            "text": "a river.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-618335"],
         "explanation": ""
       }
     }
@@ -3560,7 +2969,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-611266"],
+        "externalIds": ["BGS-611266", "ATPLQ-611132"],
         "explanation": ""
       }
     }
@@ -3723,47 +3132,6 @@
     }
   },
   {
-    "id": "QVL2BSVBX6",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.02.01"],
-    "variants": {
-      "kcCbFzvJ": {
-        "id": "kcCbFzvJ",
-        "type": "simple",
-        "question": "When a pilot operates a VFR cross-country flight during the day in a mountainous region at low altitudes, due to ATC restrictions, what he/she should be aware of?",
-        "options": [
-          {
-            "id": "AZCIEFLB31",
-            "text": "Visual references will be visible for a limited period of time.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A81HGXBQKM",
-            "text": "Inability to identify visual references, placed on mountain ridges.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABRQSDV9WS",
-            "text": "Loss of GPS signal.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AK2PCYNJ96",
-            "text": "Low visibility.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-19036"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QVLGMIWZYW",
     "explanation": "",
     "learningObjectives": ["061.02.01.02.02"],
@@ -3800,88 +3168,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLQ-613809"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QVXLTWIHB0",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.01.01"],
-    "variants": {
-      "KWMe8MtP": {
-        "id": "KWMe8MtP",
-        "type": "simple",
-        "question": "In winter time, a VFR flight is planned. Which of the following ground features should be used for orientation?\n\n- Coastline\n\n- Big lakes\n\n- Farmland in country side\n\n- High radio mast\n\n- Railway line</li>\n</ol>",
-        "options": [
-          {
-            "id": "AY4SXH9SBT",
-            "text": "1, 2, 4",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AT8G5OHC09",
-            "text": "2, 4, 5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATSVRD8PBP",
-            "text": "2, 3, 5",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AB8NJ88LAW",
-            "text": "1, 3, 5",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-50659"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QW5VQXWP6M",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.11"],
-    "variants": {
-      "JqEyZ5HB": {
-        "id": "JqEyZ5HB",
-        "type": "simple",
-        "question": "Levels curve on a hypsometric chart refer to",
-        "options": [
-          {
-            "id": "AOL5I19A50",
-            "text": "altitude.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ARVO1ZSU1H",
-            "text": "magnetic variation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUNEPU5ALU",
-            "text": "latitude.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYRKSC5TO4",
-            "text": "longitude.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-110478"],
         "explanation": ""
       }
     }
@@ -4092,88 +3378,6 @@
     }
   },
   {
-    "id": "QY2BOE80R5",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.01.01"],
-    "variants": {
-      "EiXUWXqr": {
-        "id": "EiXUWXqr",
-        "type": "simple",
-        "question": "A pilot is planning for a VFR cross-country flight, using visual checkpoints. The following would be the most suitable checkpoint:",
-        "options": [
-          {
-            "id": "A5Q8GIE7WR",
-            "text": "A feature that contrasts with its natural surroundings.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AHVASVX59H",
-            "text": "A feature that merges into its natural surroundings.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AU6P2DZW09",
-            "text": "A valley in an area of low hills.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANDSTA2XW9",
-            "text": "A small lake in a mountainous region.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-611132"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYEAHVLEN3",
-    "explanation": "",
-    "learningObjectives": ["061.02.01.02.01"],
-    "variants": {
-      "rSP2oa7R": {
-        "id": "rSP2oa7R",
-        "type": "simple",
-        "question": "A pilot is planning a VFR flight close to controlled airspace.&nbsp; Due to airspace restrictions, part of the flight will be flown at low level.&nbsp; Compared to flying at a greater height above the ground, which of the following is a problem&nbsp; of navigation at low level that should be considered when planning the flight?",
-        "options": [
-          {
-            "id": "AFVQ2LZP0B",
-            "text": "Visual range to the horizon is restricted at low level.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8G7UG6JH6",
-            "text": "Features with great vertical extent are harder to see.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3LRP3UHMO",
-            "text": "The feeling that you are flying more slowly over the ground changes how you perceive distance.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8TS08SDKL",
-            "text": "Navigation features can be noticed more easily, but are more difficult to identify.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-611403"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QYQXBVLBON",
     "explanation": "",
     "learningObjectives": ["061.02.01.02.01"],
@@ -4210,47 +3414,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-11147"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYT4F3J1EZ",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.06"],
-    "variants": {
-      "dYafX6eS": {
-        "id": "dYafX6eS",
-        "type": "simple",
-        "question": "When wanting to check flight progress by observation of a single visual position line (e.ga canal) the latter must be",
-        "options": [
-          {
-            "id": "ASSYYMK85W",
-            "text": "more or less perpendicular to the track.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQJFWG250J",
-            "text": "more or less parallel to the track.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGBJ8B2Q7J",
-            "text": "curved across the track.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5HXBLP5R5",
-            "text": "oblique to the track.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-124311"],
         "explanation": ""
       }
     }
@@ -4618,47 +3781,6 @@
     }
   },
   {
-    "id": "QJRDKAD0GV",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.05"],
-    "variants": {
-      "ZB6T2Ndb": {
-        "id": "ZB6T2Ndb",
-        "type": "simple",
-        "question": "Isogonic lines connect positions that have",
-        "options": [
-          {
-            "id": "AVINW8XGHF",
-            "text": "the same variation.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AB6QPL7N6K",
-            "text": "0° variation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXX6ESDCRD",
-            "text": "the same elevation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALR1HBEZE0",
-            "text": "the same angle of magnetic dip.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-110180"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QZ6NRQ0Z7Y",
     "explanation": "",
     "learningObjectives": ["061.02.02.01.12"],
@@ -4776,7 +3898,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLQ-611197", "BGS-610239"],
+        "externalIds": [
+          "ATPLQ-611197",
+          "BGS-610239",
+          "AVEXAM-41118",
+          "ATPLGS-124265"
+        ],
         "explanation": ""
       },
       "T4ETPY9C": {
@@ -4852,47 +3979,6 @@
         ],
         "annexes": ["/content/media/6213a77b33da79710e8a21788ce69362.jpg"],
         "externalIds": ["AVEXAM-26845"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q9USRII04R",
-    "explanation": "",
-    "learningObjectives": ["061.02.02.01.07"],
-    "variants": {
-      "TvmOqtzc": {
-        "id": "TvmOqtzc",
-        "type": "simple",
-        "question": "The chart that is generally used for navigation in polar areas is based on a",
-        "options": [
-          {
-            "id": "A1O0WBT967",
-            "text": "Stereographical projection",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AR35M035WW",
-            "text": "Lambert conformal projection",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0CJ62JHO1",
-            "text": "Gnomonic projection",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVT1UCPD8S",
-            "text": "Direct Mercator projection",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-124265"],
         "explanation": ""
       }
     }

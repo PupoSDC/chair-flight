@@ -158,7 +158,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-106810", "ATPLQ-225397"],
+        "externalIds": [
+          "ATPLGS-106810",
+          "ATPLQ-225397",
+          "ATPLGS-106799",
+          "BGS-221945",
+          "BGS-222240"
+        ],
         "explanation": ""
       },
       "V6nQpjbe": {
@@ -274,7 +280,16 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-106820", "ATPLQ-225397"],
+        "externalIds": [
+          "ATPLGS-106820",
+          "ATPLQ-225397",
+          "BGS-221945",
+          "BGS-222165",
+          "BGS-222240",
+          "BGS-222241",
+          "ATPLGS-106810",
+          "ATPLGS-106799"
+        ],
         "explanation": ""
       }
     }
@@ -362,93 +377,6 @@
     }
   },
   {
-    "id": "QETNR3JIV8",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.04"],
-    "variants": {
-      "Oqky8ivr": {
-        "id": "Oqky8ivr",
-        "type": "simple",
-        "question": "The GPWS receives data from the following systems:\n1) landing gear and flaps systems.\n2) engine control computer (FADEC or ECU).\n3) radio altimeter.\n4) TCAS.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "A75JWRL0RK",
-            "text": "1, 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A5IHRNRV9E",
-            "text": "1, 2, 3, 4",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AE5OR6JSNT",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFU4D4JRAD",
-            "text": "3, 4",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-106717",
-          "AVEXAM-41709",
-          "ATPLQ-221402",
-          "BGS-220746"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QXATU466HF",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.04"],
-    "variants": {
-      "KzMHj4b2": {
-        "id": "KzMHj4b2",
-        "type": "simple",
-        "question": "The GPWS receives data from the following systems:\n1. landing gear and flaps systems\n2. engine control computer (FADEC or ECU)\n3. radio altimeter\n4. TCAS\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AUFER8WP9Y",
-            "text": "1, 3.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AU1ZU472X1",
-            "text": "1, 2, 3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANEIFZLIQA",
-            "text": "3, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4N8L9FQDB",
-            "text": "1, 2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-220746", "AVEXAM-41709", "ATPLGS-106717"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q07K5MEJIQ",
     "explanation": "",
     "learningObjectives": ["022.15.01.01.01"],
@@ -485,56 +413,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-626625", "AVEXAM-97986", "ATPLQ-222465"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QA34MKD6V1",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.01"],
-    "variants": {
-      "7yEaiwK3": {
-        "id": "7yEaiwK3",
-        "type": "simple",
-        "question": "In computing, which of these statements about multitasking are correct or incorrect?\n\n1. Multitasking gives the appearance of running several programs simultaneously.2. The central processing unit (CPU) switches rapidly between each programme in turn.",
-        "options": [
-          {
-            "id": "A9X55YMCX1",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQEU58NSKI",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AODYW6SSU8",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A04F7QA4S0",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-225397",
-          "BGS-221945",
-          "BGS-222165",
-          "BGS-222240",
-          "BGS-222241",
-          "ATPLGS-106810",
-          "ATPLGS-106820",
-          "ATPLGS-106799"
-        ],
         "explanation": ""
       }
     }
@@ -1385,88 +1263,6 @@
     }
   },
   {
-    "id": "QF2STA10C6",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.01"],
-    "variants": {
-      "0txJwVh9": {
-        "id": "0txJwVh9",
-        "type": "simple",
-        "question": "In computing, which of these statements about multitasking are correct or incorrect?\n1. Multitasking gives the appearance of running several programmes simultaneously\n2. The central processing unit (CPU) switches rapidly between each programme in turn",
-        "options": [
-          {
-            "id": "A1LAKMK6EE",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AICBRQGMVK",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4E8YVVL39",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEMRPVTSMR",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222165", "ATPLQ-225397"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QFEY2BPBLM",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.03"],
-    "variants": {
-      "0Hyov0h8": {
-        "id": "0Hyov0h8",
-        "type": "simple",
-        "question": "Which of these statements about computer architecture are correct or incorrect?\n1. Multiprocessing configuration is a hardware solution\n2. Multitasking method results in more powerful performance than multiprocessing configuration",
-        "options": [
-          {
-            "id": "AXPVLX4I1G",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A9B01QWAQO",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ANK42SS515",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAGGEMT667",
-            "text": "1 is correct, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-221945", "ATPLQ-225397", "BGS-222240"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QGAN9EC02B",
     "explanation": "",
     "learningObjectives": ["022.15.01.01.02"],
@@ -1503,47 +1299,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222249"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHXIB2FH8W",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.01"],
-    "variants": {
-      "TF5GUKLQ": {
-        "id": "TF5GUKLQ",
-        "type": "simple",
-        "question": "A computer memory can consist of...",
-        "options": [
-          {
-            "id": "AYP9X83QQA",
-            "text": "capacitors.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A2AOESOR6L",
-            "text": "diodes.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AACTK37AE0",
-            "text": "resistors.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ABS84NPW17",
-            "text": "voltage.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-97986", "ATPLQ-222465", "ATPLGS-626625"],
         "explanation": ""
       }
     }
@@ -1666,7 +1421,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-222243", "ATPLGS-106799"],
+        "externalIds": [
+          "BGS-222243",
+          "ATPLGS-106799",
+          "BGS-222244",
+          "BGS-222245",
+          "BGS-222239"
+        ],
         "explanation": ""
       },
       "3ZQkq4Hc": {
@@ -1782,7 +1543,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-220831"],
+        "externalIds": ["BGS-220831", "BGS-992688"],
         "explanation": ""
       }
     }
@@ -1824,47 +1585,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222247"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QLEROQ0WEK",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.03"],
-    "variants": {
-      "IGmvIX83": {
-        "id": "IGmvIX83",
-        "type": "simple",
-        "question": "Which of these statements about computer architecture are correct or incorrect?\n1. The software part includes the programmes that make up the operating system (OS)\n2. The hardware part includes the physical components of the computer",
-        "options": [
-          {
-            "id": "ARPBX5IH0U",
-            "text": "1 is correct, 2 is correct.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ANXDEEMEAH",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AVSOFK90TC",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A51IV8DR8Z",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222245", "ATPLGS-106799"],
         "explanation": ""
       }
     }
@@ -1988,47 +1708,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-71923", "ATPLQ-227093", "ATPLGS-120915"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QNCTQYODEA",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.01"],
-    "variants": {
-      "hGnYxdoN": {
-        "id": "hGnYxdoN",
-        "type": "simple",
-        "question": "The Central Processing Unit (CPU) of a computer essentially consists of:\n&nbsp;\n1. An Arithmetic and Logic Unit (ALU)\n2. A control unit\n3. A number of registers.\n&nbsp;\nThe combination which regroups all the correct statements is:",
-        "options": [
-          {
-            "id": "AYJKOO6HKC",
-            "text": "1, 2 and 3",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAW6CXHVIQ",
-            "text": "1, 3",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACP8J96R94",
-            "text": "1, 2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGPWCV5XOC",
-            "text": "2, 3",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-992688"],
         "explanation": ""
       }
     }
@@ -2185,7 +1864,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-222248", "ATPLQ-224474"],
+        "externalIds": ["BGS-222248", "ATPLQ-224474", "BGS-222241"],
         "explanation": ""
       }
     }
@@ -2391,129 +2070,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-106801"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QR1UH9HMBH",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.03"],
-    "variants": {
-      "Ga1lq5hO": {
-        "id": "Ga1lq5hO",
-        "type": "simple",
-        "question": "In an on-board computer, the software is:",
-        "options": [
-          {
-            "id": "A7ENJCJRZE",
-            "text": "resident in a read-only memory (REPROM, EEPROM,...).",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AW4T8AGLNH",
-            "text": "loaded from a floppy disk.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APA8UGAQLH",
-            "text": "resident in a random access memory (RAM).",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A51PT3G66L",
-            "text": "loaded from a hard disk.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-98818", "ATPLGS-106806"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRHYNP49T5",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.02"],
-    "variants": {
-      "VlIZ7VKF": {
-        "id": "VlIZ7VKF",
-        "type": "simple",
-        "question": "In computer architecture, which of these statements about a bus are correct or incorrect?\n1. A bus ensures sequencing and coordination of operations \n 2. A bus transfers data between computer components",
-        "options": [
-          {
-            "id": "AOWT836SWO",
-            "text": "1 is incorrect, 2 is correct",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABFHMVHCKU",
-            "text": "1 is correct, 2 is incorrect",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5LLYHA3TM",
-            "text": "1 is correct, 2 is correct",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AKJE5SQ1NE",
-            "text": "1 is incorrect, 2 is incorrect",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-224474", "BGS-222248", "BGS-222241"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRIXODUZ5M",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.02"],
-    "variants": {
-      "ntePjKGH": {
-        "id": "ntePjKGH",
-        "type": "simple",
-        "question": "The main transfer device in a computer is the...",
-        "options": [
-          {
-            "id": "AIG6GTZNTG",
-            "text": "serial bus.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A6GY037D41",
-            "text": "autophase bus.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AL2CVCN39N",
-            "text": "hot bus.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AFNPUGO3BI",
-            "text": "universal bus.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-13833", "ATPLQ-226839"],
         "explanation": ""
       }
     }
@@ -2883,47 +2439,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-222094"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZHNZGZKX7",
-    "explanation": "",
-    "learningObjectives": ["022.15.01.01.03"],
-    "variants": {
-      "BPRfdfUA": {
-        "id": "BPRfdfUA",
-        "type": "simple",
-        "question": "Which of these statements about computer architecture are correct or incorrect?\n1. Software part does not include the programmes that make up the operating system (OS)\n2. Hardware part does not include the physical components of the computer.",
-        "options": [
-          {
-            "id": "APXUGB50E9",
-            "text": "1 is incorrect, 2 is incorrect.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIZZOECG3F",
-            "text": "1 is correct, 2 is correct.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ALW1Q2DXXS",
-            "text": "1 is correct, 2 is incorrect.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWFAG4HQZ1",
-            "text": "1 is incorrect, 2 is correct.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-222239", "ATPLGS-106799"],
         "explanation": ""
       }
     }

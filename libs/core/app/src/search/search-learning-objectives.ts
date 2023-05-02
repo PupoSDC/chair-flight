@@ -1,6 +1,6 @@
 import { default as MiniSearch } from "minisearch";
-import type { SearchQuery, SearchResults} from "./search";
 import { searchQueryValidation } from "./search";
+import type { SearchQuery, SearchResults } from "./search";
 import type {
   LearningObjective,
   QuestionBankRepository,

@@ -35,7 +35,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-625797"],
+        "externalIds": ["ATPLGS-625797", "BGS-310681", "ATPLQ-312258"],
         "explanation": ""
       }
     }
@@ -121,7 +121,8 @@
           "ATPLGS-127346",
           "AVEXAM-8902",
           "AVEXAM-66093",
-          "ATPLQ-313759"
+          "ATPLQ-313759",
+          "BGS-310683"
         ],
         "explanation": ""
       }
@@ -402,7 +403,7 @@
           }
         ],
         "annexes": ["/content/media/04b335d8801938c0973007e9dada0652.jpg"],
-        "externalIds": ["ATPLGS-107074"],
+        "externalIds": ["ATPLGS-107074", "AVEXAM-89191"],
         "explanation": ""
       }
     }
@@ -525,7 +526,7 @@
           }
         ],
         "annexes": ["/content/media/daaf7958b4ae497428453b15b7245129.jpg"],
-        "externalIds": ["ATPLGS-126636"],
+        "externalIds": ["ATPLGS-126636", "BGS-310730", "ATPLQ-315221"],
         "explanation": ""
       },
       "WjV7abtI": {
@@ -560,47 +561,6 @@
         ],
         "annexes": ["/content/media/e6c478f9e251bd9a9ac116a69cb159db.jpg"],
         "externalIds": ["BGS-310730"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "Q8FHTLBACH",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "9xteWHDT": {
-        "id": "9xteWHDT",
-        "type": "simple",
-        "question": "Refer to figure 031-19.\nUsing the data for the MRJT, what is the Maximum Compartment Load for the area between BA 286 and 343:",
-        "options": [
-          {
-            "id": "ARCS8A3E9H",
-            "text": "483 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AFQZIX1L6A",
-            "text": "314.5 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ARR4GLIDHV",
-            "text": "8.47 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AX50Y4Z6PI",
-            "text": "762 lbs",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/0c0f3f5b2cafdc9a0d9402e3daafdc55.jpg"],
-        "externalIds": ["AVEXAM-89191", "ATPLGS-107074"],
         "explanation": ""
       }
     }
@@ -770,88 +730,6 @@
     }
   },
   {
-    "id": "QLNB0E0NAC",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "5daeZYqC": {
-        "id": "5daeZYqC",
-        "type": "simple",
-        "question": "Refer to figure 031-19.\nFrom the Loading Manual for the transport aeroplane, the maximum load that can be carried in that section of the aft cargo compartment which has a Balance Arm centroid at:",
-        "options": [
-          {
-            "id": "AFFZS1A83E",
-            "text": "835.5 inches is 3&nbsp;062 kg.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APY2Y5NPWP",
-            "text": "421.5 inches is 2&nbsp;059 lb.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUX9JBPCXV",
-            "text": "421.5 inches is 4&nbsp;541 kg.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AR3E12D0EI",
-            "text": "835.5 inches is 6&nbsp;752 kg.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/0c0f3f5b2cafdc9a0d9402e3daafdc55.jpg"],
-        "externalIds": ["AVEXAM-88361"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QO22CVMW1E",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "55p9ia12": {
-        "id": "55p9ia12",
-        "type": "simple",
-        "question": "Refer to Annex-031-008-2015.  \n  Using the annex, determine the maximum allowable mass and running load of the middle compartment of the forward cargo hold.",
-        "options": [
-          {
-            "id": "A86DYO6GV5",
-            "text": "483 kg and 8.47 kg/in",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS0OHFXX57",
-            "text": "3305 kg and 8.47 kg/in",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHKJC0WGJQ",
-            "text": "483 kg and 68.0 kg/sq ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A31PKBD1JE",
-            "text": "3305 kg and 68.0 kg/sq ft",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/24b5cde7a77c05a03ad568a281f9cc7e.jpg"],
-        "externalIds": ["ATPLQ-315221", "BGS-310730"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QOVQS3YUJE",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.01"],
@@ -969,7 +847,14 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-113899"],
+        "externalIds": [
+          "ATPLGS-113899",
+          "ATPLQ-319706",
+          "BGS-310683",
+          "ATPLGS-126682",
+          "AVEXAM-8902",
+          "AVEXAM-66093"
+        ],
         "explanation": ""
       }
     }
@@ -1133,95 +1018,7 @@
           }
         ],
         "annexes": ["/content/media/04b335d8801938c0973007e9dada0652.jpg"],
-        "externalIds": ["ATPLGS-107196"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHLX3SH5EF",
-    "explanation": "",
-    "learningObjectives": ["031.06.03.01.01"],
-    "variants": {
-      "SeCNMwNx": {
-        "id": "SeCNMwNx",
-        "type": "simple",
-        "question": "A baggage weighting 50kg is tie down on the baggage zone of the aircraft and the moment is -5000KG mm\nThe arm of the baggage zone is",
-        "options": [
-          {
-            "id": "AUOVFOIPHC",
-            "text": "-100mm and is located forward of the datum",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ALGPU8MKM5",
-            "text": "+100mm and is located aft of the datum",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ADZIW9DO3W",
-            "text": "-10mm and is located forward of the datum",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUSIX7MPRS",
-            "text": "+10mm and is located aft of the datum",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-622481", "BGS-310468", "ATPLQ-316914"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOCBCVKGMH",
-    "explanation": "",
-    "learningObjectives": ["031.06.03.01.01"],
-    "variants": {
-      "Hic7yg6D": {
-        "id": "Hic7yg6D",
-        "type": "simple",
-        "question": "A baggage weighing 50 kg is tied down to the baggage zone of the aircraft and the moment is -5 000 kg.mm. The arm of the baggage zone is...",
-        "options": [
-          {
-            "id": "A3CQF30AYY",
-            "text": "-100 mm and it is located forward of the datum.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A0AW8IRGV4",
-            "text": "-100 mm and it is located aft of the datum.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3MS96I5WV",
-            "text": "+100 mm and it is located forward of the datum.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APAQK8HHI4",
-            "text": "-10 mm and it is located aft of the datum.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-316914",
-          "BGS-310468",
-          "ATPLGS-625792",
-          "ATPLGS-622481",
-          "ATPLGS-626608"
-        ],
+        "externalIds": ["ATPLGS-107196", "AVEXAM-1040"],
         "explanation": ""
       }
     }
@@ -1262,7 +1059,18 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-622451"],
+        "externalIds": [
+          "ATPLGS-622451",
+          "BGS-310115",
+          "ATPLQ-312061",
+          "AVEXAM-69821",
+          "ATPLQ-318716",
+          "ATPLGS-126774",
+          "AVEXAM-96216",
+          "ATPLGS-625778",
+          "BGS-310677",
+          "BGS-310321"
+        ],
         "explanation": ""
       }
     }
@@ -1437,56 +1245,6 @@
     }
   },
   {
-    "id": "Q24UVJERZM",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "jkmCDUQz": {
-        "id": "jkmCDUQz",
-        "type": "simple",
-        "question": "The floor limit of an aircraft cargo hold is 5 000 N/m? It is planned to load-up a cubic container measuring 0.4 m of side. Its maximum gross mass must not exceed (assume g = 10 m/s?)",
-        "options": [
-          {
-            "id": "AVCVW1ZGBE",
-            "text": "80 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AHGEB8MUD6",
-            "text": "800 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "APXHSZ8D2N",
-            "text": "320 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHA6GQSMIM",
-            "text": "32 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-310115",
-          "ATPLQ-312061",
-          "AVEXAM-69821",
-          "ATPLQ-318716",
-          "ATPLGS-126774",
-          "AVEXAM-96216",
-          "ATPLGS-625778",
-          "ATPLGS-622451"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q2IR81MZLY",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.02"],
@@ -1617,7 +1375,9 @@
           "BGS-310677",
           "ATPLQ-318716",
           "ATPLGS-625778",
-          "ATPLGS-126774"
+          "ATPLGS-126774",
+          "BGS-310321",
+          "AVEXAM-96216"
         ],
         "explanation": ""
       }
@@ -1788,47 +1548,6 @@
     }
   },
   {
-    "id": "Q85YMIKA8K",
-    "explanation": "",
-    "learningObjectives": ["031.06.01.01.01"],
-    "variants": {
-      "qnBqFjW6": {
-        "id": "qnBqFjW6",
-        "type": "simple",
-        "question": "Which of the following methods would be best suited for the transport of unconventional cargo?",
-        "options": [
-          {
-            "id": "AI2TP0NOMZ",
-            "text": "Large and irregularly shaped cargo should be loaded as palletised cargo.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASBXMG4YAQ",
-            "text": "Large and irregularly shaped cargo can only be loaded in cargo-only aircraft.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZDKKCOJ5Y",
-            "text": "Large and irregularly shaped cargo can best be loaded in Containers.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AGXT989TYL",
-            "text": "Large and irregularly shaped cargo is ideally stored as bulk cargo.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-41697", "ATPLQ-315549"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "Q8CSZCV0IW",
     "explanation": "",
     "learningObjectives": ["031.06.01.01.01"],
@@ -1957,134 +1676,6 @@
     }
   },
   {
-    "id": "Q9Q52P0ZG2",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.01"],
-    "variants": {
-      "TKlY0Vdf": {
-        "id": "TKlY0Vdf",
-        "type": "simple",
-        "question": "A box weighing 105 kg is loaded into the cargo compartment. Calculate the smallest required floor contact area of this box to avoid exceeding the maximum floor load of 600 kg/m^2^.",
-        "options": [
-          {
-            "id": "AS7GNN7B3E",
-            "text": "0.175 m^2^",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AH6K51WUCY",
-            "text": "0.571 m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A7LHA9XHPA",
-            "text": "0.157 m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZJX9W8ZVW",
-            "text": "0.155 m^2^",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-313181", "BGS-310675", "ATPLGS-626306"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QAPKVRM3VG",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "dKhIL4Fo": {
-        "id": "dKhIL4Fo",
-        "type": "simple",
-        "question": "The floor of the main cargo hold is limited to 4 000 N/m^~2~  ^  . It is planned to load a cubic container each side of which measures 0.5m.Its maximum gross mass must not exceed: (Assume g=10m/s)",
-        "options": [
-          {
-            "id": "AULMVRRVV2",
-            "text": "100 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AE7MZM10UT",
-            "text": "5 000 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6DR7TMO00",
-            "text": "500 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAYB9GSBTO",
-            "text": "1 000 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-310321",
-          "ATPLQ-312061",
-          "ATPLQ-318716",
-          "ATPLGS-126774"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QAS7DIFR6E",
-    "explanation": "",
-    "learningObjectives": ["031.06.01.01.01"],
-    "variants": {
-      "H2VrRBWs": {
-        "id": "H2VrRBWs",
-        "type": "simple",
-        "question": "Palletised cargo..",
-        "options": [
-          {
-            "id": "AWMI7VZZ85",
-            "text": "consists of multiple cargo boxes on pallets stored in the cargo holds.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEV88MCH18",
-            "text": "can be loaded without specific loading equipment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQ37M62UXD",
-            "text": "has fallen out of use due to the lack of protection.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1X6L2DUIW",
-            "text": "consists of passenger baggage on pallets stored in the cargo holds.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-312022", "BGS-310690", "ATPLGS-126625"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QBB9DJIFAN",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.01"],
@@ -2189,93 +1780,6 @@
         ],
         "annexes": [],
         "externalIds": ["BGS-310674", "ATPLQ-317174", "ATPLGS-126803"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QBBEZMVM2X",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.01"],
-    "variants": {
-      "mNPHD3Ga": {
-        "id": "mNPHD3Ga",
-        "type": "simple",
-        "question": "Which one of the following shipments can be loaded in a cargo compartment with a floor loading of 70 kg/m2? Shipment W 500 kg on a pallet sized 2 m x 2 m Shipment X 500 kg on a pallet sized 1 m x 1 m Shipment Y 600 kg on a pallet sized 2 m x 2 m Shipment Z 600 kg on a pallet sized 3 m x 3 m (All pallets are in direct contact with the cargo floor).",
-        "options": [
-          {
-            "id": "AJC89K2B63",
-            "text": "Shipment Z",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEHCTJNQIK",
-            "text": "Shipment X",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AS9H3WY7HS",
-            "text": "Shipment W",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJ63IP162Y",
-            "text": "Shipment Y",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126795", "BGS-310670", "ATPLQ-318961"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QBFRF5ZOYP",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "nEy66Gmo": {
-        "id": "nEy66Gmo",
-        "type": "simple",
-        "question": "The structural limitation of a baggage compartment is 50 lb/<span style=\"font-size:11pt\"><span style=\"font-family:Roboto\">ft^2^. A load has a mass of 320 kg and has to be distributed over an area of at least:",
-        "options": [
-          {
-            "id": "A8FQA93Z64",
-            "text": "1.31 <span style=\"font-size:11pt\"><span style=\"font-family:Roboto\">m^2^",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "APDRT09KCL",
-            "text": "6.4 <span style=\"font-size:11pt\"><span style=\"font-family:Roboto\">m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD2IME6VN9",
-            "text": "14.11 <span style=\"font-size:11pt\"><span style=\"font-family:Roboto\">m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6MJ2GQQ69",
-            "text": "0.76 <span style=\"font-size:11pt\"><span style=\"font-family:Roboto\">m^2^",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-313759",
-          "AVEXAM-8902",
-          "ATPLGS-127346",
-          "AVEXAM-66093"
-        ],
         "explanation": ""
       }
     }
@@ -2670,122 +2174,6 @@
     }
   },
   {
-    "id": "QEV84GRN1R",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "52XkVRjO": {
-        "id": "52XkVRjO",
-        "type": "simple",
-        "question": "A box weighing 300 kg has dimensions of 1 m x 1.5 m x 0.6 m. It needs to be loaded in a cargo hold compartment with a maximum running load of 257.9 kg/m. Indicate the side of the box that should be placed on the floor along the longitudinal axis of the aircraft.",
-        "options": [
-          {
-            "id": "AD010H0VYO",
-            "text": "The side that is 1.5 m long.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A48D0V2I9G",
-            "text": "The side that is 0.6 m long.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AI98ROCZW2",
-            "text": "The side that is 1 m long.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8XZM0GUU2",
-            "text": "The boxcannot be placed directly on the floor.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-313661", "BGS-310729", "ATPLGS-126801"],
-        "explanation": ""
-      },
-      "nEdFeGVX": {
-        "id": "nEdFeGVX",
-        "type": "simple",
-        "question": "A box weighing 300 kg has dimensions of 1 m x 1.5 m x 0.6 m. It needs to be loaded in a cargo hold compartment with a maximum running load of 257.9 kg/m. Indicate the side of the box that should be placed on the floor along the longitudinal axis of the aircraft.",
-        "options": [
-          {
-            "id": "AGLBOMXCRI",
-            "text": "The side that is 1.5 m long.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASDZ9X8W3D",
-            "text": "The box cannot be placed directly on the floor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A4KPSWOZUK",
-            "text": "The side that is 1 m long.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AHKR84SX83",
-            "text": "The side that is 0.6 m long.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-310729", "ATPLQ-313661", "ATPLGS-126801"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QFKWWMQ5BK",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.01"],
-    "variants": {
-      "7A9YTFWG": {
-        "id": "7A9YTFWG",
-        "type": "simple",
-        "question": "Calculate the minimum required floor contact area for a load of 0.126 metric tons, in order to avoid exceeding the cargo compartment’s maximum permissible floor load of 70 kg/m2.",
-        "options": [
-          {
-            "id": "AY92NKMU20",
-            "text": "1.80 m2",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AZCTRR60SF",
-            "text": "8.82 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZR5N33MQM",
-            "text": "0.21 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYO9E4EF7H",
-            "text": "0.56 m2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-310681", "ATPLQ-312258"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QFOIERAHLC",
     "explanation": "",
     "learningObjectives": ["031.06.03.01.02"],
@@ -2871,136 +2259,6 @@
     }
   },
   {
-    "id": "QFWC4BQCBZ",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "LMEf0vcU": {
-        "id": "LMEf0vcU",
-        "type": "simple",
-        "question": "The floor limit of an aircraft cargo hold is 5&nbsp;000 N/m². It is planned to load-up a cubic container measuring 0.4 m of side. It's maximum gross mass must not exceed (assume g = 10 m/s²):",
-        "options": [
-          {
-            "id": "AUYPR39M3D",
-            "text": "80 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIVHBNTBM3",
-            "text": "320 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5T2NH4VYR",
-            "text": "32 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZA09YOILG",
-            "text": "800 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLGS-625778",
-          "ATPLQ-312061",
-          "BGS-310677",
-          "AVEXAM-69821",
-          "ATPLQ-318716",
-          "AVEXAM-96216"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QH54J1CTX5",
-    "explanation": "",
-    "learningObjectives": ["031.06.03.01.01"],
-    "variants": {
-      "pWi5fpwI": {
-        "id": "pWi5fpwI",
-        "type": "simple",
-        "question": "What is the reason for cargo loads to be tied down?",
-        "options": [
-          {
-            "id": "A0FLKVHMGS",
-            "text": "Preventing such loads from moving and to remain within the CG limits of the aircraft.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWM42DPYH2",
-            "text": "Maintaining enough space in the compartment hold in case of evacuation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASDW54202H",
-            "text": "Maximising the performance of the aircraft during take-off and landing procedures.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AUSJ9AQ2QO",
-            "text": "Maximising the space and increasing the maximum payload of the aircraft.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-30612", "ATPLGS-625798", "ATPLQ-313230"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QHOGKLFAHU",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "4lCRrAm9": {
-        "id": "4lCRrAm9",
-        "type": "simple",
-        "question": "Assuming a baggage compartment with a structural limitation of 32 lb/sq ft, a mass of 200 kg has to be distributed over an area of",
-        "options": [
-          {
-            "id": "AXOT2N0V8A",
-            "text": "1.28 m2.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADG187UTJ9",
-            "text": "0.58 m2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA3IP3X53T",
-            "text": "6.25 m2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A93OKCN6R3",
-            "text": "13.77 m2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-319706", "BGS-310683", "ATPLGS-126682"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QIQANJXODG",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.02"],
@@ -3078,57 +2336,6 @@
         ],
         "annexes": [],
         "externalIds": ["AVEXAM-35052", "ATPLQ-315458"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QKHJ5TQXIM",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "RSB6da5c": {
-        "id": "RSB6da5c",
-        "type": "simple",
-        "question": "The floor limit of an aircraft cargo hold is 5&nbsp;000 N/m^2^. It is planned to load-up a cubic container measuring 0.4 m of side. It's maximum gross mass must not exceed (assume g = 10 m/s^2^):",
-        "options": [
-          {
-            "id": "A7RNDOXEXX",
-            "text": "80 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWXYVJEZXO",
-            "text": "32 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A5F3C5C6IC",
-            "text": "320 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A03763XX64",
-            "text": "800 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-318716",
-          "BGS-310115",
-          "BGS-310677",
-          "BGS-310321",
-          "AVEXAM-69821",
-          "ATPLGS-126774",
-          "AVEXAM-96216",
-          "ATPLGS-625778",
-          "ATPLQ-312061"
-        ],
         "explanation": ""
       }
     }
@@ -3547,7 +2754,10 @@
           "ATPLGS-126800",
           "ATPLGS-126799",
           "ATPLGS-113543",
-          "ATPLGS-126796"
+          "ATPLGS-126796",
+          "ATPLQ-315418",
+          "BGS-310671",
+          "BGS-310672"
         ],
         "explanation": ""
       }
@@ -3636,55 +2846,6 @@
     }
   },
   {
-    "id": "QPXFPGB0UY",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "3f8qI5V8": {
-        "id": "3f8qI5V8",
-        "type": "simple",
-        "question": "The floor of the main cargo hold is limited to 4 000 N/m2. It is planned to load a cubic container each side of which measures 0.5 m. Its maximum gross mass must not exceed: (assume g = 10 m/s2)",
-        "options": [
-          {
-            "id": "ANA75EHIKS",
-            "text": "100 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASUQSM55KQ",
-            "text": "5 000 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOX6DGZ206",
-            "text": "1 000 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AAYD15ALGJ",
-            "text": "500 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-310677",
-          "ATPLQ-312061",
-          "AVEXAM-69821",
-          "ATPLQ-318716",
-          "ATPLGS-126774",
-          "AVEXAM-96216",
-          "ATPLGS-625778"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QQFY4KY9I2",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.02"],
@@ -3762,180 +2923,6 @@
         ],
         "annexes": ["/content/media/ceb26ee4d73c3c336fe11af0917a60f3.jpg"],
         "externalIds": ["BGS-310698"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQNEDBY94D",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "dRQz1p7y": {
-        "id": "dRQz1p7y",
-        "type": "simple",
-        "question": "The structural limitation of a baggage compartment is 50 lb/ft^2^. A load with a mass of 320 kg should be distributed over an area of at least:",
-        "options": [
-          {
-            "id": "A8O2ZUGWZQ",
-            "text": "1.31 m2",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8SVOID2J9",
-            "text": "14.11 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWUD4XJYLV",
-            "text": "6.4 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN8L82JDKS",
-            "text": "0.76 m2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-8902",
-          "BGS-310683",
-          "ATPLGS-127346",
-          "ATPLQ-313759"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QQSR0AMB56",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.01"],
-    "variants": {
-      "jKdhwJHh": {
-        "id": "jKdhwJHh",
-        "type": "simple",
-        "question": "Calculate the minimum required floor contact area for a load of 0.126 metric tons, in order to avoid exceeding the cargo compartment’s maximum permissible floor load of 70 kg/m^2^.",
-        "options": [
-          {
-            "id": "ANKRYKTKJH",
-            "text": "1.80 m^2^",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ABUY9CYRFB",
-            "text": "8.82 m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACC9HE2VSK",
-            "text": "0.21 m^2^",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A8UROMTICA",
-            "text": "0.56 m^2^",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-312258", "BGS-310681"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QRW50BBN9N",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "QoKZFLa8": {
-        "id": "QoKZFLa8",
-        "type": "simple",
-        "question": "Refer to figure 031-19.\nA box having dimensions of 1 by 1.2 m by 0.8 m, weighing 600 kg is loaded and secured onto a 4 ft x 4 ft pallet weighing 30 kg. Where could the pallet be positioned?",
-        "options": [
-          {
-            "id": "AQJ5NXN2XC",
-            "text": "In the forward position of the forward cargo compartment.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AS8RMUD9TI",
-            "text": "In the aft position of the aft cargo compartment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AQAOAFFW1V",
-            "text": "In the mid position of the aft cargo compartment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AJI1O594VM",
-            "text": "In the aft position of the forward cargo compartment.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/0c0f3f5b2cafdc9a0d9402e3daafdc55.jpg"],
-        "externalIds": ["AVEXAM-1040", "ATPLGS-107196"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QSVEZ3FE1B",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "nFNnkBV9": {
-        "id": "nFNnkBV9",
-        "type": "simple",
-        "question": "The structural limitation of a baggage compartment is 32 lb/ft^2^. A load has a mass of 200 kg and has to be distributed over an area of at least:",
-        "options": [
-          {
-            "id": "A8FH6WNT2I",
-            "text": "1.3 m2",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGDGHL1UEN",
-            "text": "6.3 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3PYCKETFB",
-            "text": "0.6 m2",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACW9YUONE9",
-            "text": "13.8 m2",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-66093",
-          "BGS-310683",
-          "ATPLGS-127346",
-          "ATPLQ-313759"
-        ],
         "explanation": ""
       }
     }
@@ -4229,103 +3216,6 @@
     }
   },
   {
-    "id": "QUB6KW5NXW",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "SWM6QfX2": {
-        "id": "SWM6QfX2",
-        "type": "simple",
-        "question": "(Refer to Annex). A pallet having a freight platform which measures 200 cm x 250 cm has a total mass of 300 kg. The pallet is carried on two ground supports each measuring 20 cm x 200 cm. Using the loading manual for the transport aeroplane, calculate how much mass may be added to, or must be off loaded from, the pallet in order for the load intensity to match the maximum permitted distribution load intensity for lower deck forward cargo compartment.",
-        "options": [
-          {
-            "id": "A3I3X3ESHJ",
-            "text": "285.5 kg may be added.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AOMX53V31W",
-            "text": "28.5 kg must be off-loaded.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3D051UMET",
-            "text": "28.5 kg may be added.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASQS597K6K",
-            "text": "158.3 kg must be off-loaded.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": ["/content/media/7957ad0165491dfc5b1cc90066cb512a.jpg"],
-        "externalIds": [
-          "BGS-310325",
-          "AVEXAM-88402",
-          "ATPLQ-319705",
-          "ATPLGS-107192",
-          "BGS-310317"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QW8XFLG3EU",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "nhCEA2GS": {
-        "id": "nhCEA2GS",
-        "type": "simple",
-        "question": "A container has a base area of 1.44 m2 The container is loaded on two ground supports (of negligible mass), each having floor-contact dimensions of 0.2 m x 1.2 m.\n\tGiven that the maximum permissible floor load of the cargo compartment, which is 732 kg/m2, must be respected, what is the maximum mass that can be loaded in the container?",
-        "options": [
-          {
-            "id": "AUOMEUM916",
-            "text": "351 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AKAP6Y403K",
-            "text": "175 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AD9U58DUQ4",
-            "text": "1054 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A0XWW93RP3",
-            "text": "1525 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-310673",
-          "ATPLQ-315418",
-          "ATPLQ-316203",
-          "ATPLGS-113543",
-          "ATPLGS-126799",
-          "ATPLGS-126800",
-          "BGS-310671",
-          "BGS-310672"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QWDN2I3T3U",
     "explanation": "",
     "learningObjectives": ["031.06.02.01.02"],
@@ -4413,47 +3303,6 @@
     }
   },
   {
-    "id": "QWGEI8LBL3",
-    "explanation": "",
-    "learningObjectives": ["031.06.01.01.01"],
-    "variants": {
-      "3nfLVZ7I": {
-        "id": "3nfLVZ7I",
-        "type": "simple",
-        "question": "Palletised cargo",
-        "options": [
-          {
-            "id": "AMXVAJUT9X",
-            "text": "consists of multiple cargo boxes on pallets stored in the cargo holds.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AK4427O1PW",
-            "text": "can be loaded without specific loading equipment.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AMNLSKRY6E",
-            "text": "consists of passenger baggage on pallets stored in the cargo holds.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYVKHVJ1OS",
-            "text": "has fallen out of use due to the lack of protection.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-126625", "BGS-310690", "ATPLQ-312022"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QX731RUWKE",
     "explanation": "",
     "learningObjectives": ["031.06.03.01.02"],
@@ -4495,249 +3344,6 @@
           "ATPLQ-315673",
           "AVEXAM-76412"
         ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYS9QDEIKN",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "sjMDBcrz": {
-        "id": "sjMDBcrz",
-        "type": "simple",
-        "question": "Assuming a baggage compartment with a structural limitation of 32 lb/ft2, a mass of 200 kg has to be distributed over an area of...",
-        "options": [
-          {
-            "id": "AT3I9W663X",
-            "text": "1.28 m2.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A00HY436OP",
-            "text": "0.58 m2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZFDWGRBRG",
-            "text": "13.77 m2.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AWL7SF79ML",
-            "text": "6.25 m2.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-310683",
-          "AVEXAM-8902",
-          "ATPLQ-319706",
-          "AVEXAM-66093",
-          "ATPLGS-126682"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QYZBNCQASW",
-    "explanation": "",
-    "learningObjectives": ["031.06.03.01.02"],
-    "variants": {
-      "CvM9y0Rx": {
-        "id": "CvM9y0Rx",
-        "type": "simple",
-        "question": "Loads must be adequately secured in order to:",
-        "options": [
-          {
-            "id": "AW2GWD051W",
-            "text": "avoid unplanned Centre of Gravity (CG) movement and aircraft damage.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJ6HYY63SV",
-            "text": "prevent excessive 'g' loading during the landing flare.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6N5LDXGW8",
-            "text": "avoid any Centre of Gravity (CG) movement during flight.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOAF9W61LT",
-            "text": "allow steep turns.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-315673",
-          "BGS-310331",
-          "ATPLGS-107206",
-          "AVEXAM-76412"
-        ],
-        "explanation": ""
-      },
-      "2qAvxvz6": {
-        "id": "2qAvxvz6",
-        "type": "simple",
-        "question": "Loads must be adequately secured in order to:",
-        "options": [
-          {
-            "id": "AZC91GMUVJ",
-            "text": "avoid unplanned centre of gravity (cg) movement and aircraft damage.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AWN8KSGMRG",
-            "text": "prevent excessive ‘g’-loading during the landing flare.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ACSGD9PUNU",
-            "text": "allow steep turns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AERP5GOVJ1",
-            "text": "avoid any centre of gravity (cg) movement during flight.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["BGS-310331", "ATPLQ-315673", "ATPLGS-107206"],
-        "explanation": ""
-      },
-      "o1DjeUKo": {
-        "id": "o1DjeUKo",
-        "type": "simple",
-        "question": "Loads must be adequately secured in order to:",
-        "options": [
-          {
-            "id": "AT0MPENENA",
-            "text": "avoid unplanned centre of gravity (CG) movement and aircraft damage.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AQM2KS1EPO",
-            "text": "prevent excessive g-loading during the landing flare.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYQFH9GAP2",
-            "text": "allow steep turns.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AG6I6UQ0ZE",
-            "text": "avoid any centre of gravity (CG) movement during flight.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["AVEXAM-76412", "ATPLQ-315673", "ATPLGS-107206"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZA0SFRHRU",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.01"],
-    "variants": {
-      "NGYaSVrw": {
-        "id": "NGYaSVrw",
-        "type": "simple",
-        "question": "The baggage compartment of a particular aircraft is 1.2 m wide by 1.4 m long and has a maximum floor loading of 500 kg per square metre. \n The maximum capacity of the baggage compartment is: (limited by the maximum floor load only)",
-        "options": [
-          {
-            "id": "A3DDVDRP50",
-            "text": "840 kg",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AGQAO1KT4W",
-            "text": "192 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A3CXRF9VZJ",
-            "text": "298 kg",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AZWF7BGX3L",
-            "text": "1 300 kg",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLQ-315198", "AVEXAM-39993"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZMW6LHEKZ",
-    "explanation": "",
-    "learningObjectives": ["031.06.02.01.02"],
-    "variants": {
-      "xCN3rwOb": {
-        "id": "xCN3rwOb",
-        "type": "simple",
-        "question": "Which of the listed containers is acceptable for loading in a cargo compartment with a maximum permissible running load of 630 kg/m?\n&nbsp;\nContainer W (base dimensions 1.1 m x 1.1 m) loaded with 700 kg.&nbsp;\nContainer X (base dimensions 1.1 m x 1.1 m) loaded with 760 kg.&nbsp;\nContainer Y (base dimensions 1.2 m x 1.2 m) loaded with 700 kg.&nbsp;\nContainer Z (base dimensions 1.2 m x 1.2 m) loaded with 760 kg.",
-        "options": [
-          {
-            "id": "ABWY7Z8MM8",
-            "text": "Container Y",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AIKJ1MXOVN",
-            "text": "Container X",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ASZTWIL4Q6",
-            "text": "Container W",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A9UJ0586TH",
-            "text": "Container Z",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-625796", "BGS-310613", "ATPLQ-319501"],
         "explanation": ""
       }
     }

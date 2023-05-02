@@ -76,7 +76,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-627020"],
+        "externalIds": ["ATPLGS-627020", "BGS-211175"],
         "explanation": ""
       }
     }
@@ -1012,7 +1012,8 @@
           "ATPLGS-119821",
           "ATPLGS-105077",
           "ATPLQ-216883",
-          "AVEXAM-44301"
+          "AVEXAM-44301",
+          "BGS-211448"
         ],
         "explanation": ""
       }
@@ -1612,7 +1613,7 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["AVEXAM-7227"],
+        "externalIds": ["AVEXAM-7227", "ATPLGS-105107"],
         "explanation": ""
       }
     }
@@ -2002,48 +2003,13 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-105123", "ATPLQ-218305", "BGS-210248"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QF1YOKZRMK",
-    "explanation": "",
-    "learningObjectives": ["021.06.01.01.01"],
-    "variants": {
-      "NRV9BjsI": {
-        "id": "NRV9BjsI",
-        "type": "simple",
-        "question": "Consider a piston-engined aircraft. Which of the systems listed below can potentially make use of air from the pneumatic system? \r<ol>\r<li>Cabin heating</li>\r<li>Electrical power generation</li>\r<li>Hydraulic pumps</li>\r<li>De-icing system</li>\r<li>Gyroscopic instruments</li>\r<li>Pitot-static instruments</li>\r</ol>",
-        "options": [
-          {
-            "id": "A8KVU5YHR8",
-            "text": "1, 4, and 5",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A7K4FRP6JM",
-            "text": "4, 5, and 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AN9YMMZPZH",
-            "text": "1, 3, 4, and 6",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATK3G4P9CE",
-            "text": "2, 3, 5, and 6",
-            "correct": false,
-            "why": ""
-          }
+        "externalIds": [
+          "ATPLGS-105123",
+          "ATPLQ-218305",
+          "BGS-210248",
+          "AVEXAM-10335",
+          "ATPLGS-120224"
         ],
-        "annexes": [],
-        "externalIds": ["BGS-211175"],
         "explanation": ""
       }
     }
@@ -2301,54 +2267,12 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-105104", "AVEXAM-97690"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QWA4FWBKI1",
-    "explanation": "",
-    "learningObjectives": ["021.06.03.01.04"],
-    "variants": {
-      "Q6PpwJl2": {
-        "id": "Q6PpwJl2",
-        "type": "simple",
-        "question": "The term 'bootstrap', when used to identify a cabin air-conditioning and pressurisation system, refers to the",
-        "options": [
-          {
-            "id": "A6F2DFOGWN",
-            "text": "air cycle machine arrangement.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AEGJW4D9GS",
-            "text": "source of the air supply.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A6N1RVL0CT",
-            "text": "means by which pressurisation is controlled.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AA3UFNJ9NL",
-            "text": "cooling air across the inter-cooler heat exchanger.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
         "externalIds": [
-          "ATPLGS-119821",
-          "ATPLQ-216883",
-          "AVEXAM-44301",
-          "ATPLQ-212514",
-          "BGS-210252",
-          "BGS-211448"
+          "ATPLGS-105104",
+          "AVEXAM-97690",
+          "ATPLGS-119818",
+          "ATPLQ-211542",
+          "BGS-210232"
         ],
         "explanation": ""
       }
@@ -2570,53 +2494,6 @@
           "AVEXAM-45366",
           "BGS-211450",
           "BGS-210242"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QOKWIJ1NR5",
-    "explanation": "",
-    "learningObjectives": ["021.06.02.01.01"],
-    "variants": {
-      "OpQtdIsB": {
-        "id": "OpQtdIsB",
-        "type": "simple",
-        "question": "In a turbo compressor bootstrap air-conditioning system, the purpose of the heat exchangers is to...",
-        "options": [
-          {
-            "id": "AAYQX3QPZ6",
-            "text": "cool the bleed air in front of and behind the compressor of the air cycle machine.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AJT7AP85DJ",
-            "text": "cool bleed air before entering the complete pneumatic system.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AO3046B427",
-            "text": "allow a homogeneous temperature by mixing air flows from various air conditioning groups in operation.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ATPWGADNAV",
-            "text": "allow a steady compressor outlet temperature.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "BGS-210248",
-          "ATPLQ-218305",
-          "AVEXAM-10335",
-          "ATPLGS-105123",
-          "ATPLGS-120224"
         ],
         "explanation": ""
       }
@@ -2861,7 +2738,17 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["ATPLGS-119783", "ATPLQ-218717"],
+        "externalIds": [
+          "ATPLGS-119783",
+          "ATPLQ-218717",
+          "ATPLQ-216213",
+          "ATPLGS-105120",
+          "BGS-210244",
+          "AVEXAM-78195",
+          "BGS-210239",
+          "AVEXAM-2007",
+          "ATPLGS-120318"
+        ],
         "explanation": ""
       }
     }
@@ -3231,56 +3118,6 @@
     }
   },
   {
-    "id": "QZBEEGMA3L",
-    "explanation": "",
-    "learningObjectives": ["021.06.03.01.11"],
-    "variants": {
-      "lMyVb4t7": {
-        "id": "lMyVb4t7",
-        "type": "simple",
-        "question": "On large pressurised jet transport aeroplanes, the maximum cabin differential pressure is approximately..",
-        "options": [
-          {
-            "id": "AE9KOD9SFP",
-            "text": "8 psi to 9 psi.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ADCFERUJ89",
-            "text": "3 psi to 5 psi.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOSEK4T3VT",
-            "text": "22 psi.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AOK94MU7WG",
-            "text": "13 psi to 15 psi.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "ATPLQ-216213",
-          "ATPLGS-105120",
-          "BGS-210244",
-          "AVEXAM-78195",
-          "BGS-210239",
-          "ATPLGS-119783",
-          "AVEXAM-2007",
-          "ATPLGS-120318"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QZPW51D8IS",
     "explanation": "",
     "learningObjectives": ["021.06.03.01.01"],
@@ -3317,47 +3154,6 @@
         ],
         "annexes": [],
         "externalIds": ["ATPLGS-119909", "ATPLQ-218483"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QZUI62OCVK",
-    "explanation": "",
-    "learningObjectives": ["021.06.03.01.09"],
-    "variants": {
-      "ok9ESYx3": {
-        "id": "ok9ESYx3",
-        "type": "simple",
-        "question": "Cabin pressure is controlled by",
-        "options": [
-          {
-            "id": "A0W6IHMZGV",
-            "text": "the outflow valve or valves.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ASOA2379KN",
-            "text": "maintaining a constant outflow.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AATZAAP36S",
-            "text": "the cabin air recirculation system.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AT21DFQ10G",
-            "text": "the inflow valve or valves.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-119818", "ATPLQ-211542", "BGS-210232"],
         "explanation": ""
       }
     }
@@ -3832,7 +3628,8 @@
           "ATPLGS-119666",
           "BGS-210766",
           "ATPLQ-218745",
-          "AVEXAM-89737"
+          "AVEXAM-89737",
+          "ATPLGS-105796"
         ],
         "explanation": ""
       }
@@ -3967,47 +3764,6 @@
     }
   },
   {
-    "id": "Q9M1BEW7O4",
-    "explanation": "",
-    "learningObjectives": ["021.06.03.01.04"],
-    "variants": {
-      "gshIa3C6": {
-        "id": "gshIa3C6",
-        "type": "simple",
-        "question": "The turbine in a bootstrap air conditioning system (air cycle machine)",
-        "options": [
-          {
-            "id": "AXM81EEI87",
-            "text": "drives the compressor and creates a temperature drop in the conditioned air.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "A8BSKDUJQ1",
-            "text": "increases the pressure of air supply to the cabin.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AYEJNZWE79",
-            "text": "increases the air temperature and drives the compressor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AXSE52BINN",
-            "text": "is driven by the compressor and reduces the temperature of the conditioned air.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": ["ATPLGS-105107", "AVEXAM-7227"],
-        "explanation": ""
-      }
-    }
-  },
-  {
     "id": "QI3JDWFROG",
     "explanation": "",
     "learningObjectives": ["021.06.01.02.04"],
@@ -4051,53 +3807,6 @@
           "BGS-210837",
           "AVEXAM-96999",
           "ATPLGS-119841"
-        ],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QGGCQ6RUAL",
-    "explanation": "",
-    "learningObjectives": ["021.06.03.01.07"],
-    "variants": {
-      "1ttXRa7K": {
-        "id": "1ttXRa7K",
-        "type": "simple",
-        "question": "The pressurising function of the pressurising and dump valve in a gas turbine engine fuel system is:",
-        "options": [
-          {
-            "id": "AOOG7W12QL",
-            "text": "to admit fuel to the nozzles only if the fuel pressure is high enough for sufficient atomisation.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AY2O5ZXQRN",
-            "text": "to prevent fuel leakage in the combustion chamber after engine shutdown.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AEOWQB9176",
-            "text": "to admit oil to the fuel-oil heat exchanger preventing ice crystals blocking the fuel lines.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1LDOI48U4",
-            "text": "to prevent overpressure at the fuel nozzles.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
-        "externalIds": [
-          "AVEXAM-89737",
-          "BGS-210766",
-          "ATPLQ-218745",
-          "ATPLGS-105796",
-          "ATPLGS-119666"
         ],
         "explanation": ""
       }
@@ -4378,50 +4087,9 @@
           }
         ],
         "annexes": [],
-        "externalIds": ["BGS-210849", "ATPLQ-219837", "AVEXAM-98394"],
-        "explanation": ""
-      }
-    }
-  },
-  {
-    "id": "QPPLLTNX5E",
-    "explanation": "",
-    "learningObjectives": ["021.06.01.02.02"],
-    "variants": {
-      "AucRj1ZN": {
-        "id": "AucRj1ZN",
-        "type": "simple",
-        "question": "Generally, when the fire handle of the engine fire-extinguishing system on an aeroplane is pulled, the effects are:\n\n1. opening of the bleed air valves and HP valves on the engine concerned.2. arming of the extinguishing system.3. immediate discharge of extinguishing agent.4. deactivation of the electric generators.\nThe combination that regroups all of the correct statements is:",
-        "options": [
-          {
-            "id": "AT3PS41YTX",
-            "text": "2, 4.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "AAA91XOS02",
-            "text": "1, 3.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "AM34FZVQL3",
-            "text": "1, 4.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "A1HG7TSS5R",
-            "text": "2, 3.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "annexes": [],
         "externalIds": [
-          "ATPLQ-219837",
           "BGS-210849",
+          "ATPLQ-219837",
           "AVEXAM-98394",
           "AVEXAM-2166"
         ],

@@ -104,7 +104,7 @@ export type QuestionBoxReviewProps = {
 } & Pick<SheetProps, "sx" | "className" | "style" | "variant" | "component">;
 
 export type QuestionBoxReviewRef = HTMLDivElement & {
-  change: (name: TabName) => void;
+  change?: (name: TabName) => void;
 };
 
 /**
