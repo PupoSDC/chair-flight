@@ -20,7 +20,7 @@ export type QuestionReviewProps = {
 };
 
 const QuestionReview: FunctionComponent<QuestionReviewProps> = ({ testId }) => {
-  const test = useAppSelector((state) => state.tests[testId]);
+  const test = useAppSelector((state) => state.testProgress.tests[testId]);
   const totalQuestions = test.questions.length;
   const correctQuestions = test.questions.reduce(
     (acc, q) => acc + (q.correctOptionId === q.selectedOptionId ? 1 : 0),

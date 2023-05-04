@@ -1,67 +1,26 @@
 import { compress, decompress } from "shrink-string";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { NotFoundError } from "@chair-flight/base/errors";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { redis } from "@chair-flight/base/upstash";
+import { QuestionBankBaseRepository } from "./base";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type {
   LearningObjective,
   LearningObjectiveId,
   QuestionTemplate,
   QuestionTemplateId,
-  QuestionBankRepository,
 } from "@chair-flight/base/types";
 
 const COMPRESS_QUESTION_BLOCKS_NUMBER = 10;
 
-export class QuestionBankRedisRepository implements QuestionBankRepository {
-  private static allQuestions: QuestionTemplate[] = [];
-  private static allQuestionsMap: Record<QuestionTemplateId, QuestionTemplate> =
-    {};
-  private static allLearningObjectives: LearningObjective[] = [];
-  private static allLearningObjectivesMap: Record<
-    LearningObjectiveId,
-    LearningObjective
-  > = {};
-
+export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
   private chunk = <T>(arr: T[], size: number) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
       arr.slice(i * size, i * size + size)
     );
 
-  async getQuestionTemplate(questionId: string) {
-    const question =
-      QuestionBankRedisRepository.allQuestionsMap[questionId] ||
-      ((await redis.get(questionId)) as QuestionTemplate);
-    if (!question) {
-      throw new NotFoundError(`Question ${questionId} not found`);
-    }
-    return question;
-  }
-
-  async getLearningObjective(learningObjectiveId: LearningObjectiveId) {
-    const allLearningObjectives = await this.getAllLearningObjectives();
-    const learningObjective = allLearningObjectives.find(
-      (lo) => lo.id === learningObjectiveId
-    );
-    if (!learningObjective) {
-      throw new NotFoundError(
-        `Learning objective ${learningObjectiveId} not found`
-      );
-    }
-    return learningObjective;
-  }
-
-  async getLearningObjectives(learningObjectiveIds: LearningObjectiveId[]) {
-    const allLearningObjectives = await this.getAllLearningObjectives();
-    return allLearningObjectives.filter((lo) =>
-      learningObjectiveIds.includes(lo.id)
-    );
-  }
-
   async getAllQuestionTemplates() {
-    if (!QuestionBankRedisRepository.allQuestions.length) {
-      QuestionBankRedisRepository.allQuestions = (
+    if (!this.allQuestionTemplates.length) {
+      this.allQuestionTemplates = (
         await Promise.all(
           new Array(COMPRESS_QUESTION_BLOCKS_NUMBER)
             .fill(0)
@@ -74,40 +33,26 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
             })
         )
       ).flat();
-      QuestionBankRedisRepository.allQuestionsMap =
-        QuestionBankRedisRepository.allQuestions.reduce<
-          Record<QuestionTemplateId, QuestionTemplate>
-        >((acc, question) => {
-          acc[question.id] = question;
-          return acc;
-        }, {});
     }
-    return QuestionBankRedisRepository.allQuestions;
+    return this.allQuestionTemplates;
   }
 
   async getAllLearningObjectives() {
-    if (!QuestionBankRedisRepository.allLearningObjectives.length) {
+    if (!this.allLearningObjectives.length) {
       const learningObjectivesList = (await redis.get(
         "learningObjectiveList"
       )) as string;
       const learningObjectiveIds = learningObjectivesList.split(",");
       const chunks = this.chunk(learningObjectiveIds, 800);
-      QuestionBankRedisRepository.allLearningObjectives = (
+      this.allLearningObjectives = (
         await Promise.all(
           chunks.map(
             (chunk) => redis.mget(...chunk) as Promise<LearningObjective[]>
           )
         )
       ).flat();
-      QuestionBankRedisRepository.allLearningObjectivesMap =
-        QuestionBankRedisRepository.allLearningObjectives.reduce<
-          Record<LearningObjectiveId, LearningObjective>
-        >((acc, learningObjective) => {
-          acc[learningObjective.id] = learningObjective;
-          return acc;
-        }, {});
     }
-    return QuestionBankRedisRepository.allLearningObjectives;
+    return this.allLearningObjectives;
   }
 
   async writeQuestions(questions: QuestionTemplate[]) {

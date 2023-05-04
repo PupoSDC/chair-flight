@@ -53,7 +53,7 @@ const ExamPageSkeleton: FunctionComponent = () => (
 const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const test = useAppSelector((state) => state.tests[testId]);
+  const test = useAppSelector((state) => state.testProgress.tests[testId]);
   const currentQuestion = test.questions[test.currentQuestionIndex];
 
   useTestHotkeys({ testId });

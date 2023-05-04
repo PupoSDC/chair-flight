@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../store/store";
 
 export const useTestHotkeys = ({ testId }: { testId: string }) => {
   const dispatch = useAppDispatch();
-  const test = useAppSelector((state) => state.tests[testId]);
+  const test = useAppSelector((state) => state.testProgress.tests[testId]);
   const currentQuestion = test.questions[test.currentQuestionIndex];
   const selectOption = (optionIndex: number) => {
     dispatch(

@@ -3,21 +3,18 @@ import { default as path } from "path";
 import { cwd } from "process";
 import * as XLSX from "xlsx";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { NotFoundError, UnimplementedError } from "@chair-flight/base/errors";
+import { UnimplementedError } from "@chair-flight/base/errors";
+import { QuestionBankBaseRepository } from "./base";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type {
   CourseName,
-  QuestionBankRepository,
   LearningObjective,
   LearningObjectiveId,
   QuestionTemplate,
   QuestionTemplateJson,
 } from "@chair-flight/base/types";
 
-export class QuestionBankLocalRepository implements QuestionBankRepository {
-  private allQuestionTemplates: QuestionTemplate[] = [];
-  private allLearningObjectives: LearningObjective[] = [];
-
+export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
   private async getAllQuestionsFromLocalFs(
     dirPath: string = path.join(cwd(), "libs/question-bank/content/questions")
   ): Promise<QuestionTemplate[]> {
@@ -44,27 +41,11 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
     return new Promise((r) => r(questions));
   }
 
-  async getQuestionTemplate(questionId: string) {
-    const questions = await this.getAllQuestionsFromLocalFs();
-    const question = questions.find((question) => question.id === questionId);
-    if (!question) {
-      throw new NotFoundError(`Question with id ${questionId} not found`);
-    }
-    return question;
-  }
-
   async getAllQuestionTemplates() {
     if (!this.allQuestionTemplates.length) {
       this.allQuestionTemplates = await this.getAllQuestionsFromLocalFs();
     }
     return this.allQuestionTemplates;
-  }
-
-  async getLearningObjectives(learningObjectiveIds: string[]) {
-    const allLearningObjectives = await this.getAllLearningObjectives();
-    return allLearningObjectives.filter((lo) =>
-      learningObjectiveIds.includes(lo.id)
-    );
   }
 
   async getAllLearningObjectives() {
@@ -88,17 +69,22 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
             row["2020 syllabus text"]
               ?.replaceAll(":", ":\n- ")
               ?.replaceAll(";", ";\n- ") ?? "";
+          const id =
+            row["2020 syllabus reference"]
+              ?.replaceAll(".00", "")
+              ?.replaceAll(" 00", "")
+              ?.trim() ?? "";
 
           return {
+            id,
             courses: Object.keys(CourseNames)
               .filter((item) => row[item])
               .map((k) => CourseNames[k]),
             questions: [],
             text,
-            contentId: row["2020 syllabus reference"]?.replaceAll(".00", ""),
+            contentId: id,
             // some sources are just 0 (?)... ignore those!
             source: row["Source / Comment"] || "",
-            id: row["2020 syllabus reference"]?.replaceAll(".00", ""),
           };
         });
       })
@@ -132,20 +118,6 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
     this.allLearningObjectives = learningObjectives;
     return learningObjectives;
-  }
-
-  async getLearningObjective(learningObjectiveId: string) {
-    const learningObjectives = await this.getAllLearningObjectives();
-    const learningObjective = learningObjectives.find(
-      (lo) => lo.id === learningObjectiveId
-    );
-
-    if (!learningObjective) {
-      throw new NotFoundError(
-        `Learning Objective with id ${learningObjectiveId} not found`
-      );
-    }
-    return learningObjective;
   }
 
   async writeQuestions(questions: QuestionTemplate[]) {

@@ -1,4 +1,7 @@
-import type { LearningObjective } from "./learning-objectives";
+import type {
+  LearningObjective,
+  LearningObjectiveSummary,
+} from "./learning-objectives";
 import type { QuestionTemplate } from "./question-templates";
 
 export interface QuestionBankRepository {
@@ -9,4 +12,10 @@ export interface QuestionBankRepository {
   getAllLearningObjectives(): Promise<LearningObjective[]>;
   writeQuestions(questions: QuestionTemplate[]): Promise<void>;
   writeLearningObjectives(los: LearningObjective[]): Promise<void>;
+
+  /**
+   * Returns a list of subjects that can be directly selected for test
+   * generation
+   */
+  getSubjects(): Promise<LearningObjectiveSummary[]>;
 }

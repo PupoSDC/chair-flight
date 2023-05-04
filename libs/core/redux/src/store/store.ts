@@ -11,15 +11,15 @@ import {
   persistStore,
 } from "redux-persist";
 import { default as storage } from "redux-persist/lib/storage";
-import { testsReducer } from "../reducers/tests-reducer";
-import { userPreferencesReducer } from "../reducers/user-preferences-reducer";
+import { testMakerReducer } from "../reducers/test-maker-reducer";
+import { testProgressReducer } from "../reducers/test-progress-reducer";
 import { userVoyageReducer } from "../reducers/user-voyage-reducer";
 import type { TypedUseSelectorHook } from "react-redux";
 
 const combinedReducer = combineReducers({
-  tests: testsReducer,
+  testProgress: testProgressReducer,
   userVoyage: userVoyageReducer,
-  userPreferences: userPreferencesReducer,
+  testMaker: testMakerReducer,
 });
 
 const persistedReducer = persistReducer(
