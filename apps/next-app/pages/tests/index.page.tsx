@@ -118,7 +118,10 @@ const TestPage: NextPage<TestPageProps> = ({ subjects }) => {
             </AppLayout.Column>
             <AppLayout.Column
               md={9}
-              sx={{ display: { xs: "none", md: "flex" } }}
+              sx={{
+                display: { xs: "none", md: "flex" },
+                height: "100%",
+              }}
             >
               <TestCreation subjects={subjects} />
             </AppLayout.Column>

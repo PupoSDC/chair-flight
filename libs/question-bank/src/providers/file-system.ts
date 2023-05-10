@@ -15,6 +15,8 @@ import type {
 } from "@chair-flight/base/types";
 
 export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
+  private intentionallyLeftBlankPattern = /Intentionally left blank/i;
+
   private async getAllQuestionsFromLocalFs(
     dirPath: string = path.join(cwd(), "libs/question-bank/content/questions")
   ): Promise<QuestionTemplate[]> {
@@ -65,10 +67,13 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
           string
         >[];
         return sheet.map<LearningObjective>((row) => {
-          const text =
-            row["2020 syllabus text"]
-              ?.replaceAll(":", ":\n- ")
-              ?.replaceAll(";", ";\n- ") ?? "";
+          const text = (row["2020 syllabus text"] ?? "")
+            .replaceAll(":", ":\n- ")
+            .replaceAll(";", ";\n- ")
+            .replace(/\b[A-Z]+\b/g, (match) => {
+              return match.charAt(0) + match.slice(1).toLowerCase();
+            })
+            .split("Remark:")[0];
           const id =
             row["2020 syllabus reference"]
               ?.replaceAll(".00", "")
@@ -88,6 +93,7 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
           };
         });
       })
+      .filter((lo) => !this.intentionallyLeftBlankPattern.test(lo.text))
       .reduce<Record<LearningObjectiveId, LearningObjective>>((s, k) => {
         if (!k.contentId) return s;
         s[k.contentId] = k;

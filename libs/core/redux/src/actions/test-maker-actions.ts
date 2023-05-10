@@ -1,18 +1,18 @@
 import { createAction } from "@reduxjs/toolkit";
 import type { LearningObjectiveId, TestMode } from "@chair-flight/base/types";
 
-export const setSubject = createAction<{ subject: LearningObjectiveId }>(
-  "test-maker/subject-set"
-);
+export const setTestMakerSubject = createAction<{
+  subject: LearningObjectiveId;
+}>("test-maker/subject-set");
 
-export const toggleChapter = createAction<{ chapter: LearningObjectiveId }>(
-  "test-maker/chapter-toggled"
-);
+export const setTestMakerChapters = createAction<
+  Array<{ chapter: LearningObjectiveId; value: boolean }>
+>("test-maker/chapters-set");
 
-export const setNumberOfQuestions = createAction<{ numberOfQuestions: number }>(
-  "test-maker/number-of-questions-set"
-);
+export const setTestMakerNumberOfQuestions = createAction<{
+  numberOfQuestions: number;
+}>("test-maker/number-of-questions-set");
 
-export const setTestMode = createAction<{ mode: TestMode }>(
+export const setTestMakerTestMode = createAction<{ mode: TestMode }>(
   "test-maker/mode-set"
 );

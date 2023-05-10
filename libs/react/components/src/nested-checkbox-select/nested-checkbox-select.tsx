@@ -3,12 +3,12 @@ import { ChevronRight } from "@mui/icons-material";
 import { Box, Button, Checkbox, Sheet, Typography, styled } from "@mui/joy";
 import type { BoxProps } from "@mui/joy";
 
-type NestedCheckboxItem = {
+export type NestedCheckboxItem = {
   id: string;
   checked: boolean;
   label: string;
   subLabel: string;
-  children: Omit<NestedCheckboxItem, "children">[];
+  children: Array<NestedCheckboxItem & { children: never[] }>;
 };
 
 const ChapterControlButton = styled(Button)<{ open: boolean }>`
@@ -29,7 +29,7 @@ const ChapterControlButton = styled(Button)<{ open: boolean }>`
 
 export type NestedCheckboxSelectProps = {
   items?: NestedCheckboxItem[];
-  onChange?: (toggled: string) => void;
+  onChange?: (item: NestedCheckboxItem, value: boolean) => void;
 } & Pick<BoxProps, "sx" | "style" | "className">;
 
 export const NestedCheckboxSelect = forwardRef<
@@ -42,6 +42,7 @@ export const NestedCheckboxSelect = forwardRef<
       {...props}
       ref={ref}
       sx={{ ...props.sx, display: "flex", flexDirection: "column", p: 1 }}
+      role="group"
     >
       {items?.map((item) => {
         const open = openChapter === item.id;
@@ -65,7 +66,7 @@ export const NestedCheckboxSelect = forwardRef<
                 label={item.label}
                 indeterminate={indeterminate}
                 checked={item.checked}
-                onChange={() => onChange?.(item.id)}
+                onChange={() => onChange?.(item, !item.checked)}
                 sx={{ p: 1, flex: 1 }}
               />
               <Typography level="body3" sx={{ pr: 2 }}>
@@ -98,7 +99,7 @@ export const NestedCheckboxSelect = forwardRef<
                       id={child.id}
                       label={child.label}
                       checked={child.checked}
-                      onChange={() => onChange?.(child.id)}
+                      onChange={() => onChange?.(child, !child.checked)}
                       sx={{ p: 1, flex: 1, pl: 4 }}
                     />
                     <Typography level="body3" sx={{ pr: 2 }}>

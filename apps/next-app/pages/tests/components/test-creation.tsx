@@ -1,17 +1,21 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   FormControl,
   FormLabel,
   Select,
   Option,
   Box,
-  Slider,
-  Input,
+  Checkbox,
   Button,
+  styled,
 } from "@mui/joy";
 import { useAppSelector, actions } from "@chair-flight/core/redux";
 import { useAppDispatch } from "@chair-flight/core/redux";
-import { NestedCheckboxSelect } from "@chair-flight/react/components";
+import {
+  NestedCheckboxItem,
+  NestedCheckboxSelect,
+  SliderWithInput,
+} from "@chair-flight/react/components";
 import type { FormEventHandler, FunctionComponent } from "react";
 import type {
   LearningObjectiveId,
@@ -24,56 +28,125 @@ type TestPageProps = {
   subjects: LearningObjectiveSummary[];
 };
 
+const Form = styled("form")`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
+
 export const TestCreation: FunctionComponent<TestPageProps> = ({
   subjects,
 }) => {
+  const hasDoneInitialRender = useRef(false);
   const [loading] = useState(false);
   const dispatch = useAppDispatch();
-  // const router = useRouter();
-  const mode = useAppSelector((state) => state.testMaker.mode);
-  const subject = useAppSelector((state) => state.testMaker.subject);
-  const chapters = useAppSelector((state) => state.testMaker.chapters);
+  const { numberOfQuestions, mode, subject, chapters } = useAppSelector(
+    (state) => state.testMaker
+  );
+
+  useEffect(() => {
+    if (hasDoneInitialRender.current) return;
+    dispatch(
+      actions.setTestMakerChapters(
+        Object.values(subjects)
+          .flatMap((c) => c.children ?? [])
+          .flatMap((c) => c.children ?? [])
+          .filter((c) => typeof chapters[c.id] === "undefined")
+          .map((c) => ({ chapter: c.id, value: true }))
+      )
+    );
+    hasDoneInitialRender.current = true;
+  });
+
+  const subjectsAsItems = useMemo(
+    (): Required<NestedCheckboxSelectProps>["items"] =>
+      subjects
+        .find((s) => s.id === subject)
+        ?.children?.map((c) => {
+          const children =
+            c.children?.map((c) => ({
+              id: c.id,
+              checked: chapters[c.id] ?? false,
+              label: c.text,
+              subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
+              children: [],
+            })) ?? [];
+
+          const checked = children.every((c) => c.checked);
+
+          return {
+            id: c.id,
+            checked,
+            label: c.text,
+            subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
+            children,
+          };
+        }) ?? [],
+    [chapters, subject, subjects]
+  );
+
+  const allSelected = subjectsAsItems.every((s) => s.checked);
+  const someSelected = !allSelected && subjectsAsItems.some((s) => s.checked);
 
   const setMode = (mode: TestMode) =>
     dispatch(
-      actions.setTestMode({
+      actions.setTestMakerTestMode({
         mode,
       })
     );
+
   const setSubject = (subject: LearningObjectiveId) =>
     dispatch(
-      actions.setSubject({
+      actions.setTestMakerSubject({
         subject,
       })
     );
-  //const toggleChapter = (chapter: LearningObjectiveId) =>
-  //  dispatch(
-  //    actions.toggleChapter({
-  //      chapter,
-  //    })
-  //  );
 
-  const subjectsAsItems =
-    useMemo((): Required<NestedCheckboxSelectProps>["items"] => {
-      return (
-        subjects
-          .find((s) => s.id === subject)
-          ?.children?.map((c) => ({
-            id: c.id,
-            checked: chapters.includes(c.id),
-            label: c.text,
-            subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-            children:
-              c.children?.map((c) => ({
-                id: c.id,
-                checked: chapters.includes(c.id),
-                label: c.text,
-                subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-                children: [],
-              })) ?? [],
-          })) ?? []
+  const setAllSubjects = (value: boolean) =>
+    dispatch(
+      actions.setTestMakerChapters(
+        subjectsAsItems
+          .flatMap((s) => s.children)
+          .map((c) => ({
+            chapter: c.id,
+            value,
+          }))
+      )
+    );
+
+  const setNumberOfQuestions = (numberOfQuestions: number) =>
+    dispatch(
+      actions.setTestMakerNumberOfQuestions({
+        numberOfQuestions,
+      })
+    );
+
+  const setChapter: NestedCheckboxSelectProps["onChange"] = (
+    chapter,
+    value
+  ) => {
+    const castChapter = chapter as NestedCheckboxItem;
+    if (castChapter.children.length) {
+      dispatch(
+        actions.setTestMakerChapters(
+          castChapter.children.map((c) => ({
+            chapter: c.id,
+            value,
+          }))
+        )
       );
-    }, [chapters, subject, subjects]);
+      return;
+    }
+
+    dispatch(
+      actions.setTestMakerChapters([
+        {
+          chapter: chapter.id,
+          value,
+        },
+      ])
+    );
+  };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async () => {
     // e.preventDefault();
@@ -89,7 +162,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <FormControl sx={{ py: 1 }}>
         <FormLabel>Mode</FormLabel>
         <Select
@@ -117,19 +190,37 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
             ))}
         </Select>
       </FormControl>
-      <FormControl sx={{ py: 1 }}>
-        <FormLabel>Chapters</FormLabel>
-        <NestedCheckboxSelect items={subjectsAsItems} />
-      </FormControl>
-      <FormControl sx={{ py: 1 }}>
-        <FormLabel>Number of Questions</FormLabel>
-        <Box sx={{ display: "flex" }}>
-          <Input type="number" sx={{ maxWidth: "6em" }} />
-          <Slider defaultValue={3} max={200} />
+      <Box sx={{ my: 1, flex: 1, overflow: "hidden" }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <FormLabel>Chapters</FormLabel>
+          <Checkbox
+            label={"select all"}
+            checked={allSelected}
+            indeterminate={someSelected}
+            onChange={(evt) => setAllSubjects(evt.target.checked)}
+            sx={{
+              display: "flex",
+              flexDirection: "row-reverse",
+              "& label": {
+                px: 1,
+              },
+            }}
+          />
         </Box>
-      </FormControl>
+        <NestedCheckboxSelect
+          sx={{ overflow: "auto", height: "90%", my: 1, pr: 5 }}
+          items={subjectsAsItems}
+          onChange={setChapter}
+        />
+      </Box>
       <FormControl sx={{ py: 1 }}>
         <FormLabel>Number of Questions</FormLabel>
+        <SliderWithInput
+          min={0}
+          max={200}
+          value={numberOfQuestions}
+          onChange={(v) => setNumberOfQuestions(v)}
+        />
       </FormControl>
       <Button
         size="lg"
@@ -140,6 +231,6 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
       >
         Start!
       </Button>
-    </form>
+    </Form>
   );
 };

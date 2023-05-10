@@ -7,6 +7,7 @@ import {
   Input,
   Typography,
 } from "@mui/joy";
+import { mergeRefs } from "react-merge-refs";
 import type { InputProps } from "@mui/joy";
 
 export type CtaSearchProps = {
@@ -31,9 +32,9 @@ export type CtaSearchProps = {
  * a fake loading spinner as soon as the user starts typing.
  */
 export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
-  ({ value, onChange, loading, sx, numberOfResults, ...props }) => {
-    // todo merge refs
+  ({ value, onChange, loading, sx, numberOfResults, ...props }, ref) => {
     const inputRef = useRef<HTMLDivElement>(null);
+    const mergedRef = mergeRefs([ref, inputRef]);
     const [search, setSearch] = useState<string>(value);
     const [isDebouncing, setIsDebouncing] = useState(false);
 
@@ -79,7 +80,7 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
           type="search"
           role="search"
           {...props}
-          ref={inputRef}
+          ref={mergedRef}
           value={search}
           size="lg"
           onChange={(e) => {

@@ -1,7 +1,30 @@
 import { forwardRef } from "react";
-import { Input, Sheet, Slider, sliderClasses, inputClasses } from "@mui/joy";
+import {
+  Input,
+  Sheet,
+  Slider,
+  sliderClasses,
+  inputClasses,
+  styled,
+} from "@mui/joy";
 import type { SliderProps } from "@mui/base";
 import type { SheetProps } from "@mui/joy";
+
+const NumberInputWithoutNativeControls = styled(Input)`
+  max-width: 4em;
+  text-align: right;
+  & input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  & input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  & input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+`;
 
 export type SliderWithInputProps = {
   value?: number;
@@ -35,7 +58,7 @@ export const SliderWithInput = forwardRef<
       ...sx,
     }}
   >
-    <Input
+    <NumberInputWithoutNativeControls
       type="number"
       value={value}
       ref={ref}
@@ -43,21 +66,6 @@ export const SliderWithInput = forwardRef<
       onChange={(e) =>
         onChange?.(Math.min(Math.max(Number(e.target.value), min), max))
       }
-      sx={{
-        maxWidth: "4em",
-        textAlign: "right",
-        "& input[type=number]": {
-          "-moz-appearance": "textfield",
-        },
-        "& input[type=number]::-webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
-          margin: 0,
-        },
-        "& input[type=number]::-webkit-inner-spin-button": {
-          "-webkit-appearance": "none",
-          margin: 0,
-        },
-      }}
     />
     <Slider
       {...props}

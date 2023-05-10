@@ -85,10 +85,10 @@ export abstract class QuestionBankBaseRepository
         });
 
         if (!subject) throw new Error(`${path[0]} should be defined!`);
+        subject.numberOfLearningObjectives += 1;
+        subject.numberOfQuestions += lo.questions.length;
 
         if (path.length === 2) {
-          subject.numberOfLearningObjectives += 1;
-          subject.numberOfQuestions += lo.questions.length;
           subject.children ??= [];
           subject.children.push({
             id: lo.id,
@@ -101,9 +101,10 @@ export abstract class QuestionBankBaseRepository
 
         const chapter = subject.children?.find((t) => t.id === path[1]);
         if (!chapter) throw new Error(`${path[1]} should be defined!`);
+        chapter.numberOfLearningObjectives += 1;
+        chapter.numberOfQuestions += lo.questions.length;
+
         if (path.length === 3) {
-          chapter.numberOfLearningObjectives += 1;
-          chapter.numberOfQuestions += lo.questions.length;
           chapter.children ??= [];
           chapter.children.push({
             id: lo.id,
