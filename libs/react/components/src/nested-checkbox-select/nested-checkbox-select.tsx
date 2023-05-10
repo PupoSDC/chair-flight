@@ -16,7 +16,7 @@ const ChapterControlButton = styled(Button)<{ open: boolean }>`
   border-bottom-left-radius: 0;
   border-bottom-right-radius: ${({ open, theme }) =>
     open ? 0 : theme.radius.sm};
-  height: 36px;
+  min-height: 36px;
   border-left: 1px solid;
   border-left-color: ${({ theme }) => theme.palette.neutral.outlinedBorder};
   animation: "";
@@ -56,7 +56,7 @@ export const NestedCheckboxSelect = forwardRef<
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "center",
+                alignItems: "stretch",
                 borderBottom: open ? "1px solid" : "initial",
                 color: (t) => t.palette.neutral.outlinedBorder,
               }}
@@ -67,9 +67,9 @@ export const NestedCheckboxSelect = forwardRef<
                 indeterminate={indeterminate}
                 checked={item.checked}
                 onChange={() => onChange?.(item, !item.checked)}
-                sx={{ p: 1, flex: 1 }}
+                sx={{ p: 1, flex: 1, alignSelf: "center" }}
               />
-              <Typography level="body3" sx={{ pr: 2 }}>
+              <Typography level="body3" sx={{ pr: 2, alignSelf: "center" }}>
                 {item.subLabel}
               </Typography>
               <ChapterControlButton

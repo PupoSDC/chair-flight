@@ -1,7 +1,6 @@
 import { default as Image } from "next/image";
 import { MDXProvider } from "@mdx-js/react";
-import { Box, Divider, Typography } from "@mui/joy";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { Divider, Typography } from "@mui/joy";
 import { AppHead } from "@chair-flight/next/components";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import type { FunctionComponent, PropsWithChildren } from "react";
@@ -25,27 +24,11 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
         title={meta.title}
         linkTitle={meta.linkTitle}
         description={meta.description}
-        imageUrl={`${getEnvVariableOrThrow("NEXT_PUBLIC_APP_URL")}${
-          meta.imageUrl
-        }`}
       />
       <Header />
-      <Box
-        sx={{
-          overflow: "hidden",
-          position: "fixed",
-          width: "100%",
-          height: "100%",
-          "& > img": {
-            width: "600px",
-            maxWidth: "600px",
-            height: "auto",
-            mask: "linear-gradient(90deg,rgba(0,0,0,0.2),transparent) top right /cover",
-          },
-        }}
-      >
-        <Image src="/images/article-background.png" fill alt="cool cockpit" />
-      </Box>
+      <AppLayout.BackgroundImageContainer>
+        <Image src="/images/background-article.png" fill alt="cool cockpit" />
+      </AppLayout.BackgroundImageContainer>
       <AppLayout.Main
         sx={{
           p: { xs: 2, md: 4 },

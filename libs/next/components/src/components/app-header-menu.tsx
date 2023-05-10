@@ -1,3 +1,4 @@
+import { default as AddCircleOutlineIcon } from "@mui/icons-material/AddCircleOutline";
 import { default as ListIcon } from "@mui/icons-material/List";
 import { default as QuestionAnswerIcon } from "@mui/icons-material/QuestionAnswer";
 import { default as QuizIcon } from "@mui/icons-material/Quiz";
@@ -34,8 +35,14 @@ const items: HeaderNavProps["items"] = [
       {
         icon: QuizIcon,
         title: "My Tests",
-        subtitle: "Create and manage your tests",
+        subtitle: "Manage your in progress and completed tests",
         href: "/tests",
+      },
+      {
+        icon: AddCircleOutlineIcon,
+        title: "New Test",
+        subtitle: "Create a new test or Exam",
+        href: "/tests/new",
       },
     ],
   },

@@ -12,7 +12,6 @@ import {
 import { useAppSelector, actions } from "@chair-flight/core/redux";
 import { useAppDispatch } from "@chair-flight/core/redux";
 import {
-  NestedCheckboxItem,
   NestedCheckboxSelect,
   SliderWithInput,
 } from "@chair-flight/react/components";
@@ -22,7 +21,10 @@ import type {
   LearningObjectiveSummary,
   TestMode,
 } from "@chair-flight/base/types";
-import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
+import type {
+  NestedCheckboxSelectProps,
+  NestedCheckboxItem,
+} from "@chair-flight/react/components";
 
 type TestPageProps = {
   subjects: LearningObjectiveSummary[];

@@ -54,6 +54,20 @@ const ScrollableContainer = styled(Box)`
   list-style: none;
 `;
 
+const BackgroundImageContainer = styled(Box)`
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  & > img {
+    width: 600px;
+    max-width: 600px;
+    height: auto;
+    mask: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent) top right /
+      cover;
+  }
+`;
+
 /**
  * CSS building blocks to build consistent page layouts for the more
  * "app-like" pages.
@@ -64,4 +78,5 @@ export const AppLayout = {
   Column: Column as typeof MuiGrid,
   Header: Header as typeof Box,
   ScrollableContainer: ScrollableContainer as typeof Box,
+  BackgroundImageContainer: BackgroundImageContainer as typeof Box,
 };
