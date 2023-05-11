@@ -1,4 +1,4 @@
-import { Link } from "@mui/joy";
+import { Grid, Link } from "@mui/joy";
 import { DateTime } from "luxon";
 import { TestPreview } from "./test-preview";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -18,12 +18,47 @@ export const Playground: Story = {
   argTypes: {},
 };
 
-export const LinkComponent: Story = {
-  args: {
-    ...Playground.args,
-    component: Link,
+export const Overview: Story = {
+  ...Playground,
+  render: function Render(args) {
+    return (
+      <Grid container spacing={2}>
+        <Grid xs={12} md={4}>
+          <TestPreview {...args} title="finished" status="finished" />
+        </Grid>
+        <Grid xs={12} md={4}>
+          <TestPreview {...args} title="started" status="started" />
+        </Grid>
+        <Grid xs={12} md={4}>
+          <TestPreview {...args} title="created" status="created" />
+        </Grid>
+        <Grid xs={12} md={4}>
+          <TestPreview
+            {...args}
+            title="finished with link"
+            status="finished"
+            component={Link}
+          />
+        </Grid>
+        <Grid xs={12} md={4}>
+          <TestPreview
+            {...args}
+            title="started with link"
+            status="started"
+            component={Link}
+          />
+        </Grid>
+        <Grid xs={12} md={4}>
+          <TestPreview
+            {...args}
+            title="created with link"
+            status="created"
+            component={Link}
+          />
+        </Grid>
+      </Grid>
+    );
   },
-  argTypes: {},
 };
 
 const meta: Meta<typeof TestPreview> = {
@@ -32,11 +67,19 @@ const meta: Meta<typeof TestPreview> = {
   tags: ["autodocs"],
   argTypes: {
     status: {
-      options: ["finished", "started"],
+      options: ["finished", "started", "created"],
       control: { type: "radio" },
     },
     score: {
       control: { type: "slider" },
+    },
+    component: {
+      control: { type: "radio" },
+      options: ["none", "Link"],
+      mapping: {
+        none: undefined,
+        Link: Link,
+      },
     },
   },
 };

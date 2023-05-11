@@ -1,6 +1,7 @@
-import { Grid, Link } from "@mui/joy";
+import React from "react";
+import { Box, Grid, Link, Typography } from "@mui/joy";
 import { useAppSelector } from "@chair-flight/core/redux";
-import { TestPreview } from "@chair-flight/react/components";
+import { AppLayout, TestPreview, Ups } from "@chair-flight/react/components";
 import type { FunctionComponent } from "react";
 
 export const PreviewTests: FunctionComponent = () => {
@@ -9,39 +10,79 @@ export const PreviewTests: FunctionComponent = () => {
     (a, b) => b.createdAtEpochMs - a.createdAtEpochMs
   );
 
+  const entries = [
+    {
+      title: "In Progress tests",
+      items: testsAsList.filter((test) => !test.finishedAtEpochMs),
+      noItemsMessage: (
+        <Typography>
+          No tests in progress. You can{" "}
+          <Link href="/tests/new">Create a New Test</Link>!
+        </Typography>
+      ),
+      topRightCorner: <Link href="/tests/new">Create New Test</Link>,
+    },
+    {
+      title: "Completed tests",
+      items: testsAsList.filter((test) => test.finishedAtEpochMs),
+      noItemsMessage: "No tests completed so far",
+    },
+  ];
+
   return (
-    <Grid container component="ul" sx={{ py: 0 }} spacing={2}>
-      {testsAsList.map((test) => (
-        <Grid
-          component="li"
-          sx={{ pb: 1 }}
-          key={test.id}
-          xs={12}
-          sm={6}
-          md={4}
-          lg={3}
-        >
-          <TestPreview
-            component={Link}
-            href={`/tests/${test.id}/${
-              test.status === "finished" ? "review" : "exam"
-            }`}
-            title={test.title}
-            status={test.status}
-            numberOfQuestions={test.questions.length}
-            epochTimeInMs={test.createdAtEpochMs}
-            timeToCompleteInMs={test.timeSpentInMs / 1000}
-            timeLeftInMs={(test.durationInMs - test.timeSpentInMs) / 1000}
-            score={
-              test.questions.reduce(
-                (s, q) =>
-                  s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
-                0
-              ) / test.questions.length
-            }
-          />
-        </Grid>
+    <Box>
+      {entries.map(({ title, items, noItemsMessage, topRightCorner }) => (
+        <React.Fragment key={title}>
+          <AppLayout.Header>
+            <Typography level="h3">{title}</Typography>
+            {topRightCorner}
+          </AppLayout.Header>
+          <Grid
+            container
+            component="ul"
+            sx={{ p: 0, listStyleType: "none" }}
+            spacing={2}
+          >
+            {items.map((test) => (
+              <Grid
+                component="li"
+                sx={{ pb: 1 }}
+                key={test.id}
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+              >
+                <TestPreview
+                  component={Link}
+                  href={`/tests/${test.id}/${
+                    test.status === "finished" ? "review" : "exam"
+                  }`}
+                  title={test.title}
+                  status={test.status}
+                  numberOfQuestions={test.questions.length}
+                  epochTimeInMs={test.createdAtEpochMs}
+                  timeToCompleteInMs={test.timeSpentInMs / 1000}
+                  timeLeftInMs={(test.durationInMs - test.timeSpentInMs) / 1000}
+                  score={
+                    test.questions.reduce(
+                      (s, q) =>
+                        s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
+                      0
+                    ) / test.questions.length
+                  }
+                />
+              </Grid>
+            ))}
+            {items.length === 0 && (
+              <Ups
+                children={noItemsMessage}
+                sx={{ minHeight: "initial", py: 2 }}
+              />
+            )}
+          </Grid>
+        </React.Fragment>
       ))}
-    </Grid>
+    </Box>
   );
 };

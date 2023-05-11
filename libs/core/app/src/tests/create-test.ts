@@ -5,6 +5,7 @@ import type { Test, QuestionBankRepository } from "@chair-flight/base/types";
 
 export const newTestConfigurationSchema = z.object({
   title: z.string(),
+  mode: z.enum(["study", "exam"]),
   learningObjectives: z.array(z.string()),
   numberOfQuestions: z.number().optional(),
   seed: z.string().optional(),

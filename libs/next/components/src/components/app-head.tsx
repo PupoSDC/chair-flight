@@ -24,6 +24,6 @@ export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta name="msapplication-TileColor" content={"#000"} />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </Head>
 );

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/router";
 import {
   FormControl,
   FormLabel,
@@ -9,12 +10,17 @@ import {
   Button,
   styled,
 } from "@mui/joy";
+import { default as axios } from "axios";
 import { useAppSelector, actions } from "@chair-flight/core/redux";
 import { useAppDispatch } from "@chair-flight/core/redux";
 import {
   NestedCheckboxSelect,
   SliderWithInput,
 } from "@chair-flight/react/components";
+import type {
+  CreateTestBody,
+  CreateTestResponse,
+} from "../../api/tests/index.api";
 import type { FormEventHandler, FunctionComponent } from "react";
 import type {
   LearningObjectiveId,
@@ -39,9 +45,10 @@ const Form = styled("form")`
 export const TestCreation: FunctionComponent<TestPageProps> = ({
   subjects,
 }) => {
-  const hasDoneInitialRender = useRef(false);
-  const [loading] = useState(false);
+  const router = useRouter();
   const dispatch = useAppDispatch();
+  const hasDoneInitialRender = useRef(false);
+  const [loading, setLoading] = useState(false);
   const { numberOfQuestions, mode, subject, chapters } = useAppSelector(
     (state) => state.testMaker
   );
@@ -58,6 +65,15 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
       )
     );
     hasDoneInitialRender.current = true;
+  });
+
+  useEffect(() => {
+    if (!subject)
+      dispatch(
+        actions.setTestMakerSubject({
+          subject: subjects[0].id,
+        })
+      );
   });
 
   const subjectsAsItems = useMemo(
@@ -150,17 +166,19 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
     );
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = async () => {
-    // e.preventDefault();
-    // setLoading(true);
-    // const body: CreateTestBody = {
-    //     title: subjects.find((s) => s.id === selected)?.title || "",
-    //     learningObjectives: [selected],
-    // };
-    // const { data } = await axios.post<CreateTestResponse>("/api/tests", body);
-    // store.dispatch(actions.addTest({ test: data }));
-    // setLoading(false);
-    // router.push(`/tests/${data.id}/exam`);
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const body: CreateTestBody = {
+      title: subjects.find((s) => s.id === subject)?.text || "",
+      learningObjectives: subjectsAsItems.map((s) => s.id),
+      numberOfQuestions,
+      mode,
+    };
+    const { data } = await axios.post<CreateTestResponse>("/api/tests", body);
+    dispatch(actions.addTest({ test: data }));
+    await router.push(`/tests/${data.id}/exam`);
+    setLoading(false);
   };
 
   return (

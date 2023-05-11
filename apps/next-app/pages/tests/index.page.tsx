@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Button,
   Modal,
   ModalDialog,
   ModalClose,
@@ -34,20 +33,11 @@ const TestPage: NextPage<TestPageProps> = ({ subjects }) => {
       <Header>
         <AppHeaderMenu />
       </Header>
-      <AppLayout.Main>
+      <AppLayout.Main sx={{ maxWidth: (t) => t.breakpoints.values.lg }}>
         <ReduxProvider loading={"loading..."}>
           <AlphaWarning />
-          <AppLayout.Grid>
-            <AppLayout.Column xs={12} md={3}>
-              <Button
-                sx={{ my: 1, display: { md: "none" } }}
-                children="Create New Test"
-                onClick={() => setTestCreationOpen(true)}
-              />
-              <Divider sx={{ mb: 0.5, display: { md: "none" } }} />
-              <PreviewTests />
-            </AppLayout.Column>
-          </AppLayout.Grid>
+          <PreviewTests />
+          <AppLayout.Grid></AppLayout.Grid>
           <Modal
             open={testCreationOpen}
             onClose={() => setTestCreationOpen(false)}

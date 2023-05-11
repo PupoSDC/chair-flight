@@ -108,7 +108,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
         children="Finish"
         onClick={() => {
           dispatch(actions.finishTest({ testId: test.id }));
-          router.push(`/tests/${test.id}/review`);
+          router.replace(`/tests/${test.id}/review`);
         }}
       />
     </>
