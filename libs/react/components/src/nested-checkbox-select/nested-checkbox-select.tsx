@@ -1,6 +1,14 @@
 import { forwardRef, useState } from "react";
 import { ChevronRight } from "@mui/icons-material";
-import { Box, Button, Checkbox, Sheet, Typography, styled } from "@mui/joy";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Sheet,
+  Typography,
+  checkboxClasses,
+  styled,
+} from "@mui/joy";
 import type { BoxProps } from "@mui/joy";
 
 export type NestedCheckboxItem = {
@@ -62,14 +70,24 @@ export const NestedCheckboxSelect = forwardRef<
               }}
             >
               <Checkbox
+                overlay
                 id={item.id}
                 label={item.label}
                 indeterminate={indeterminate}
                 checked={item.checked}
                 onChange={() => onChange?.(item, !item.checked)}
-                sx={{ p: 1, flex: 1, alignSelf: "center" }}
+                className={checkboxClasses.focusVisible}
+                sx={{
+                  p: 1,
+                  flex: 1,
+                  alignSelf: "center",
+                  [checkboxClasses.focusVisible]: {
+                    borderRadius: "sm",
+                    color: "primary.solidColor",
+                  },
+                }}
               />
-              <Typography level="body3" sx={{ pr: 2, alignSelf: "center" }}>
+              <Typography level="body3" sx={{ px: 2, alignSelf: "center" }}>
                 {item.subLabel}
               </Typography>
               <ChapterControlButton
@@ -89,12 +107,14 @@ export const NestedCheckboxSelect = forwardRef<
                 {item.children.map((child) => (
                   <Box
                     sx={{
+                      position: "relative",
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
                   >
                     <Checkbox
+                      overlay
                       key={child.id}
                       id={child.id}
                       label={child.label}

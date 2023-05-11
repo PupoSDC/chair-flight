@@ -30,7 +30,7 @@ export const AlphaPreview: FunctionComponent = () => (
         </Button>
       </Grid>
       <Grid xs={12} sm={4}>
-        <Button variant="outlined" component={Link} href="/tests" fullWidth>
+        <Button variant="outlined" component={Link} href="/tests/new" fullWidth>
           Create a Test
         </Button>
       </Grid>

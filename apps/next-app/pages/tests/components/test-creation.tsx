@@ -177,7 +177,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
     };
     const { data } = await axios.post<CreateTestResponse>("/api/tests", body);
     dispatch(actions.addTest({ test: data }));
-    await router.push(`/tests/${data.id}/exam`);
+    await router.push(`/tests/${data.id}/${data.mode}`);
     setLoading(false);
   };
 
@@ -215,10 +215,13 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
           <FormLabel>Chapters</FormLabel>
           <Checkbox
             label={"select all"}
+            size="sm"
             checked={allSelected}
             indeterminate={someSelected}
             onChange={(evt) => setAllSubjects(evt.target.checked)}
             sx={{
+              my: 0.5,
+              mr: 1,
               display: "flex",
               flexDirection: "row-reverse",
               "& label": {

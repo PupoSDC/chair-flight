@@ -45,7 +45,7 @@ export const createTest = async ({
     id: getRandomId(),
     title: title,
     status: "created",
-    mode: "exam",
+    mode: config.mode,
     currentQuestionIndex: 0,
     timeSpentInMs: 0,
     durationInMs: 40 * 60 * 1000,

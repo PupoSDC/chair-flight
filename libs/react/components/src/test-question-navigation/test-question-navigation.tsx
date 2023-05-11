@@ -92,7 +92,7 @@ export type TestQuestionNavigationProps = {
     selectedOption?: string;
   }>;
   loading?: boolean;
-  status?: "in-progress" | "show-result";
+  status?: "in-progress" | "in-progress-with-results" | "show-result";
   currentId?: string;
   pageSize?: number;
   onQuestionClicked?: (id: string, index: number) => void;
@@ -169,6 +169,12 @@ export const TestQuestionNavigation = forwardRef<
                     if (status === "in-progress") {
                       return "neutral";
                     }
+                    if (
+                      status === "in-progress-with-results" &&
+                      !item.selectedOption
+                    ) {
+                      return "neutral";
+                    }
                     if (item.correctOption === item.selectedOption) {
                       return "success";
                     }
@@ -193,55 +199,57 @@ export const TestQuestionNavigation = forwardRef<
                   );
                 })}
         </Box>
-        <Box component="nav">
-          <Button
-            variant="outlined"
-            size="sm"
-            color="neutral"
-            disabled={loading || totalPages === 1}
-            onClick={() => setCurrentPage(0)}
-          >
-            <KeyboardDoubleArrowLeftIcon />
-          </Button>
-          <Button
-            variant="outlined"
-            size="sm"
-            color="neutral"
-            disabled={loading || totalPages === 1}
-            onClick={() => setCurrentPage((p) => Math.max(p - 1, 0))}
-          >
-            <KeyboardArrowLeftIcon />
-          </Button>
-          <Button
-            variant="outlined"
-            size="sm"
-            color="neutral"
-            disabled={loading || totalPages === 1}
-            onClick={() => setCurrentPage(currentQuestionPage)}
-          >
-            {currentPage + 1} / {totalPages}
-          </Button>
-          <Button
-            variant="outlined"
-            size="sm"
-            color="neutral"
-            disabled={loading || totalPages === 1}
-            onClick={() =>
-              setCurrentPage((p) => Math.min(p + 1, totalPages - 1))
-            }
-          >
-            <KeyboardArrowRightIcon />
-          </Button>
-          <Button
-            variant="outlined"
-            size="sm"
-            color="neutral"
-            disabled={loading || totalPages === 1}
-            onClick={() => setCurrentPage(totalPages - 1)}
-          >
-            <KeyboardDoubleArrowRightIcon />
-          </Button>
-        </Box>
+        {(loading || totalPages > 1) && (
+          <Box component="nav">
+            <Button
+              variant="outlined"
+              size="sm"
+              color="neutral"
+              disabled={loading || totalPages === 1}
+              onClick={() => setCurrentPage(0)}
+            >
+              <KeyboardDoubleArrowLeftIcon />
+            </Button>
+            <Button
+              variant="outlined"
+              size="sm"
+              color="neutral"
+              disabled={loading || totalPages === 1}
+              onClick={() => setCurrentPage((p) => Math.max(p - 1, 0))}
+            >
+              <KeyboardArrowLeftIcon />
+            </Button>
+            <Button
+              variant="outlined"
+              size="sm"
+              color="neutral"
+              disabled={loading || totalPages === 1}
+              onClick={() => setCurrentPage(currentQuestionPage)}
+            >
+              {currentPage + 1} / {totalPages}
+            </Button>
+            <Button
+              variant="outlined"
+              size="sm"
+              color="neutral"
+              disabled={loading || totalPages === 1}
+              onClick={() =>
+                setCurrentPage((p) => Math.min(p + 1, totalPages - 1))
+              }
+            >
+              <KeyboardArrowRightIcon />
+            </Button>
+            <Button
+              variant="outlined"
+              size="sm"
+              color="neutral"
+              disabled={loading || totalPages === 1}
+              onClick={() => setCurrentPage(totalPages - 1)}
+            >
+              <KeyboardDoubleArrowRightIcon />
+            </Button>
+          </Box>
+        )}
       </StyledBox>
     );
   }

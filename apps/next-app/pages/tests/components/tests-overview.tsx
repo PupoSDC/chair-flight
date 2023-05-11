@@ -41,19 +41,24 @@ export const PreviewTests: FunctionComponent = () => {
             container
             component="ul"
             sx={{ p: 0, listStyleType: "none" }}
-            spacing={2}
+            spacing={{ xs: 1, sm: 2 }}
           >
             {items.map((test) => (
               <Grid
                 component="li"
-                sx={{ pb: 1 }}
+                sx={{
+                  pb: 1,
+                  display: "flex",
+                  alignItems: "stretch",
+                  justifyContent: "stretch",
+                }}
                 key={test.id}
                 xs={12}
                 sm={6}
                 md={4}
-                lg={3}
               >
                 <TestPreview
+                  sx={{ width: "100%" }}
                   component={Link}
                   href={`/tests/${test.id}/${
                     test.status === "finished" ? "review" : "exam"
@@ -62,8 +67,8 @@ export const PreviewTests: FunctionComponent = () => {
                   status={test.status}
                   numberOfQuestions={test.questions.length}
                   epochTimeInMs={test.createdAtEpochMs}
-                  timeToCompleteInMs={test.timeSpentInMs / 1000}
-                  timeLeftInMs={(test.durationInMs - test.timeSpentInMs) / 1000}
+                  timeToCompleteInMs={test.timeSpentInMs}
+                  timeLeftInMs={test.durationInMs - test.timeSpentInMs}
                   score={
                     test.questions.reduce(
                       (s, q) =>

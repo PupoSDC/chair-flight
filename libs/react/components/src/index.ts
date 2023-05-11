@@ -15,7 +15,7 @@ export * from "./question-box-review";
 export * from "./question-multiple-choice";
 export * from "./question-variant-preview";
 export * from "./skeleton";
-export * from "./slider-with-input";
+export * from "./input-slider";
 export * from "./test-preview";
 export * from "./test-question-navigation";
 export * from "./test-question-result";

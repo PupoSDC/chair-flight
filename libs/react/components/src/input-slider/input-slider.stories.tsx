@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { SliderWithInput } from "./slider-with-input";
+import { InputSlider } from "./input-slider";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof SliderWithInput>;
+type Story = StoryObj<typeof InputSlider>;
 
 export const Playground: Story = {
   args: {},
@@ -16,7 +16,7 @@ export const Playground: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(0);
     return (
-      <SliderWithInput
+      <InputSlider
         {...args}
         value={value}
         onChange={(v) => {
@@ -28,9 +28,9 @@ export const Playground: Story = {
   },
 };
 
-const meta: Meta<typeof SliderWithInput> = {
-  title: "Components/SliderWithInput",
-  component: SliderWithInput,
+const meta: Meta<typeof InputSlider> = {
+  title: "Components/InputSlider",
+  component: InputSlider,
   tags: ["autodocs"],
 };
 

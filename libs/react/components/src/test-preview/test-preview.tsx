@@ -47,6 +47,7 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
       <Sheet
         ref={ref}
         color={color}
+        {...props}
         sx={{
           p: { xs: 1, sm: 2 },
           display: "flex",
@@ -59,7 +60,6 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
           },
           ...props.sx,
         }}
-        {...props}
       >
         <Box>
           {status === "finished" && (

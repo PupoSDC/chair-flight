@@ -87,11 +87,13 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
     <>
       <TestQuestionNavigation
         sx={{ width: "100%" }}
-        status="in-progress"
+        status="in-progress-with-results"
+        pageSize={80}
         currentId={currentQuestion.questionId}
         questions={test.questions.map((q) => ({
           id: q.questionId,
           selectedOption: q.selectedOptionId,
+          correctOption: q.correctOptionId,
         }))}
         onQuestionClicked={(questionId) =>
           dispatch(
@@ -120,7 +122,7 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
 
   return (
     <>
-      <Header removeLogo removeGithubLink>
+      <Header>
         <Box
           sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column" }}
         >
@@ -143,8 +145,14 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
               question={
                 <QuestionMultipleChoice
                   question={currentQuestion.question}
-                  status="in-progress"
+                  disabled={currentQuestion.selectedOptionId !== undefined}
+                  status={
+                    currentQuestion.selectedOptionId
+                      ? "show-result"
+                      : "in-progress"
+                  }
                   selectedOptionId={currentQuestion.selectedOptionId}
+                  correctOptionId={currentQuestion.correctOptionId}
                   onOptionClicked={(optionId) =>
                     dispatch(
                       actions.answerTestQuestion({
