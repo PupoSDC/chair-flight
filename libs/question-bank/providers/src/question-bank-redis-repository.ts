@@ -1,18 +1,24 @@
 import { compress, decompress } from "shrink-string";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { redis } from "@chair-flight/base/upstash";
+import { getRedis } from "@chair-flight/base/upstash";
 import { QuestionBankBaseRepository } from "./question-bank-base-repository";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type {
   LearningObjective,
   LearningObjectiveId,
   QuestionTemplate,
   QuestionTemplateId,
 } from "@chair-flight/base/types";
+import type { Redis } from "@chair-flight/base/upstash";
 
 const COMPRESS_QUESTION_BLOCKS_NUMBER = 10;
 
 export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
+  private redis: Redis;
+
+  constructor() {
+    super();
+    this.redis = getRedis();
+  }
+
   private chunk = <T>(arr: T[], size: number) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
       arr.slice(i * size, i * size + size)
@@ -25,7 +31,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
           new Array(COMPRESS_QUESTION_BLOCKS_NUMBER)
             .fill(0)
             .map(async (_, i) => {
-              const compressedQuestions = await redis.get(
+              const compressedQuestions = await this.redis.get(
                 `questionsCompressed${i}`
               );
               const string = await decompress(compressedQuestions as string);
@@ -39,7 +45,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
 
   async getAllLearningObjectives() {
     if (!this.allLearningObjectives.length) {
-      const learningObjectivesList = (await redis.get(
+      const learningObjectivesList = (await this.redis.get(
         "learningObjectiveList"
       )) as string;
       const learningObjectiveIds = learningObjectivesList.split(",");
@@ -47,7 +53,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
       this.allLearningObjectives = (
         await Promise.all(
           chunks.map(
-            (chunk) => redis.mget(...chunk) as Promise<LearningObjective[]>
+            (chunk) => this.redis.mget(...chunk) as Promise<LearningObjective[]>
           )
         )
       ).flat();
@@ -61,7 +67,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
 
     await Promise.all(
       questionBlocks.map(async (block) => {
-        await redis.mset(
+        await this.redis.mset(
           block.reduce<Record<QuestionTemplateId, QuestionTemplate>>(
             (sum, question) => {
               sum[question.id] = question;
@@ -77,7 +83,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
       })
     );
     const questionList = questions.map((q) => q.id).join(",");
-    await redis.set("questionList", questionList);
+    await this.redis.set("questionList", questionList);
 
     const questionBlocks2 = this.chunk(
       questions,
@@ -88,7 +94,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
     await Promise.all(
       questionBlocks2.map(async (block, i) => {
         const textBlock = await compress(JSON.stringify(block));
-        await redis.set(`questionsCompressed${i}`, textBlock);
+        await this.redis.set(`questionsCompressed${i}`, textBlock);
         completedEntries2 += 1;
         console.log(
           `Migrated questions blocks ${completedEntries2}/${questionBlocks2.length}`
@@ -102,7 +108,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
     let completedEntries = 0;
     await Promise.all(
       loBlocks.map(async (block) => {
-        await redis.mset(
+        await this.redis.mset(
           block.reduce<Record<LearningObjectiveId, LearningObjective>>(
             (sum, lo) => {
               sum[lo.id] = lo;
@@ -118,6 +124,6 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
       })
     );
     const learningObjectiveList = learningObjectives.map((q) => q.id).join(",");
-    await redis.set("learningObjectiveList", learningObjectiveList);
+    await this.redis.set("learningObjectiveList", learningObjectiveList);
   }
 }

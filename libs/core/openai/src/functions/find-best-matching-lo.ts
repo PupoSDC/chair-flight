@@ -1,5 +1,5 @@
 import { NotFoundError } from "@chair-flight/base/errors";
-import { redis } from "@chair-flight/base/upstash";
+import { getRedis } from "@chair-flight/base/upstash";
 import { openAi } from "../providers/openai";
 import { cosineSimilarity } from "./cosine-similarity";
 import type { QuestionBankRepository } from "@chair-flight/base/types";
@@ -59,7 +59,7 @@ export const createLearningObjectivesEmbeddings = async ({
   const embeddings = chunck(currentEmbeddings, 100);
   for (let i = 0; i < embeddings.length; i++) {
     const thisEmbeddings = embeddings[i];
-    await redis.set(`learning-objectives-embeddings-${i}`, thisEmbeddings);
+    await getRedis().set(`learning-objectives-embeddings-${i}`, thisEmbeddings);
   }
 };
 
@@ -93,7 +93,7 @@ export const createQuestionTemplateEmbeddings = async ({
             model: "text-embedding-ada-002",
             input: text,
           });
-          await redis.set(`question-template-embeddings-${id}`, {
+          await getRedis().set(`question-template-embeddings-${id}`, {
             id,
             text,
             embeddings: completion.data.data[0].embedding,
@@ -110,11 +110,11 @@ export const createQuestionTemplateEmbeddings = async ({
 };
 
 const getAllLearningObjectivesEmbeddings = async () => {
-  const keys = await redis.keys("learning-objectives-embeddings-*");
+  const keys = await getRedis().keys("learning-objectives-embeddings-*");
   const allEmbeddings: RedisEmbedding[] = [];
 
   for (const key of keys) {
-    const embeddings = await redis.get<RedisEmbedding[]>(key);
+    const embeddings = await getRedis().get<RedisEmbedding[]>(key);
     if (!embeddings) throw new NotFoundError("No embeddings found");
     allEmbeddings.push(...embeddings);
   }
@@ -138,7 +138,7 @@ export const applyBestMatchingLoToAllQuestions = async ({
   for (let i = 0; i < filteredTemplates.length; i++) {
     const template = filteredTemplates[i];
     console.log(`processing ${i} / ${filteredTemplates.length}`);
-    const templateEmbedding = await redis.get<RedisEmbedding>(
+    const templateEmbedding = await getRedis().get<RedisEmbedding>(
       `question-template-embeddings-${template.id}`
     );
     if (!templateEmbedding) continue;
