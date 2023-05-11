@@ -12,7 +12,7 @@ import {
   AlphaWarning,
   AppHead,
   AppHeaderMenu,
-} from "@chair-flight/next/components";
+} from "@chair-flight/next/client";
 import { ssrHandler } from "@chair-flight/next/server";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import { TestCreation } from "./components/test-creation";

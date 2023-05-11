@@ -1,7 +1,7 @@
 {
-  "name": "next-components",
+  "name": "next-client",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/next/components/src",
+  "sourceRoot": "libs/next/client/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,15 +9,15 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/next/components/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/next/client/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "tsc": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "tsc -p libs/next/components/tsconfig.lib.json --noEmit",
-          "tsc -p libs/next/components/tsconfig.spec.json --noEmit"
+          "tsc -p libs/next/client/tsconfig.lib.json --noEmit",
+          "tsc -p libs/next/client/tsconfig.spec.json --noEmit"
         ]
       }
     },
@@ -25,7 +25,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/next/components/jest.config.ts",
+        "jestConfig": "libs/next/client/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

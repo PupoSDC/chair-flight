@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { default as KeyboardArrowRightRoundedIcon } from "@mui/icons-material/KeyboardArrowRightRounded";
 import { Box, Button, Link, List, useTheme } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import { useWindowSize } from "@chair-flight/react/components";
 import {
   Header,

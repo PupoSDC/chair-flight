@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
 import { ReduxProvider, useAppSelector } from "@chair-flight/core/redux";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,

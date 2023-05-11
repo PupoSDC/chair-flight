@@ -1,5 +1,5 @@
 import { Link, Typography } from "@mui/joy";
-import { AppHead } from "@chair-flight/next/components";
+import { AppHead } from "@chair-flight/next/client";
 import { Header, AppLayout, Ups } from "@chair-flight/react/components";
 import type { NextPage } from "next";
 

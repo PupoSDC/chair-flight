@@ -11,11 +11,7 @@ import {
   getRandomId,
   getRandomShuffler,
 } from "@chair-flight/core/app";
-import {
-  AppHead,
-  APP_NAME,
-  AppHeaderMenu,
-} from "@chair-flight/next/components";
+import { AppHead, APP_NAME, AppHeaderMenu } from "@chair-flight/next/client";
 import { ssrHandler } from "@chair-flight/next/server";
 import {
   Header,

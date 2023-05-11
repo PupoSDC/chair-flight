@@ -8,7 +8,7 @@ import {
   ReduxProvider,
   useTestHotkeys,
 } from "@chair-flight/core/redux";
-import { AppHead } from "@chair-flight/next/components";
+import { AppHead } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,

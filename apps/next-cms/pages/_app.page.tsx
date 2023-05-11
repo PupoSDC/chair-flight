@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
-import { theme } from "@chair-flight/next/components";
+import { theme } from "@chair-flight/next/client";
 import { Toaster } from "@chair-flight/react/components";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";

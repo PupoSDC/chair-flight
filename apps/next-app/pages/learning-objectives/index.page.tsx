@@ -16,7 +16,7 @@ import {
 } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
 import { CourseNames } from "@chair-flight/core/app";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,

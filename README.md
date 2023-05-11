@@ -31,7 +31,7 @@ pnpm run dev
 | core-app         | Business logic blocks sharable between React SPA/SSR and RN | ----- |
 | core-openai      | Chat GPT based solutions to some recurrent issues we solve  | ----- |
 | core-redux       | Redux store to manage client side data                      | ----- |
-| next-components  | Next specific components, hooks, and logic blocks           | ----- |
+| next-client      | Next specific components, hooks, and logic blocks           | ----- |
 | next-server      | Next specific server utilities                              | ----- |
 | react-components | Shared components with Storybook                            | :4250 |
 | question-bank    | Static question bank files                                  | ----- |

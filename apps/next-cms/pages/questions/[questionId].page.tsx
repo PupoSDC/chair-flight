@@ -26,7 +26,7 @@ import {
   getRandomIdGenerator,
   questionSchema,
 } from "@chair-flight/core/app";
-import { AppHead } from "@chair-flight/next/components";
+import { AppHead } from "@chair-flight/next/client";
 import { getQuestionFromLocalFs } from "@chair-flight/next/server";
 import {
   Header,

@@ -5,7 +5,7 @@ import {
   LandingScreen,
   CoolSlidingThing,
   AlphaPreview,
-} from "@chair-flight/next/components";
+} from "@chair-flight/next/client";
 import { staticHandler } from "@chair-flight/next/server";
 import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
 import type { NextPage } from "next";
