@@ -8,8 +8,8 @@ import {
 } from "@chair-flight/next/client";
 import { staticHandler } from "@chair-flight/next/server";
 import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
-import type { NextPage } from "next";
 import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { NextPage } from "next";
 
 const sectionHeight = `calc(100vh - ${HEADER_HEIGHT}px)`;
 

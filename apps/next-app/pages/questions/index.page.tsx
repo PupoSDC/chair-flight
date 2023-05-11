@@ -11,8 +11,8 @@ import {
   QuestionVariantPreview,
   Ups,
 } from "@chair-flight/react/components";
-import type { GetStaticProps, NextPage } from "next";
 import type { SearchQuestionsResults } from "@chair-flight/core/app";
+import type { GetStaticProps, NextPage } from "next";
 
 const QuestionsIndexPage: NextPage = () => {
   const window = useWindowSize();

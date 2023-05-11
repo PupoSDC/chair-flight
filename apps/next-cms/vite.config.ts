@@ -4,26 +4,28 @@ import { defineConfig } from "vite";
 import { default as viteTsConfigPaths } from "vite-tsconfig-paths";
 
 export default defineConfig({
-  cacheDir: "../../../node_modules/.vite/chair-flight-components",
+  cacheDir: "../../node_modules/.vite/next-cms",
 
   plugins: [
     react(),
     viteTsConfigPaths({
-      root: "../../../",
+      root: "../../",
     }),
   ],
 
   test: {
     globals: true,
+    environment: "jsdom",
     cache: {
-      dir: "../../../node_modules/.vitest",
+      dir: "../../node_modules/.vitest",
     },
     coverage: {
       all: true,
       provider: "istanbul",
     },
-    environment: "jsdom",
-    setupFiles: "./src/__tests__/setup-tests.ts",
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    include: [
+      "src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+      "pages/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+    ],
   },
 });

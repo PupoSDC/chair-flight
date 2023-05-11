@@ -1,4 +1,5 @@
 import { useId, useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { default as CreateIcon } from "@mui/icons-material/Create";
 import {
@@ -10,15 +11,14 @@ import {
   Switch,
   Typography,
 } from "@mui/joy";
-import { Controller, useFormContext } from "react-hook-form";
 import { getRandomIdGenerator } from "@chair-flight/core/app";
 import { AppLayout } from "@chair-flight/react/components";
 import { AutoExpandTextArea } from "./AutoExpandTextArea";
-import type { FunctionComponent } from "react";
 import type {
   QuestionTemplate,
   QuestionVariantSimple,
 } from "@chair-flight/base/types";
+import type { FunctionComponent } from "react";
 
 export type FormSnippetEditVariantSimpleProps = {
   variantId: string;

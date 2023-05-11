@@ -1,0 +1,30 @@
+{
+  "name": "question-bank-schemas",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/question-bank/schemas/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/question-bank/schemas/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/question-bank/schemas"],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/question-bank/schemas/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": []
+}

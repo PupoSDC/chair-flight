@@ -1,14 +1,14 @@
+import { useFormContext } from "react-hook-form";
 import { default as CreateIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Box, IconButton, Typography } from "@mui/joy";
-import { useFormContext } from "react-hook-form";
 import { AppLayout } from "@chair-flight/react/components";
 import { AutoExpandTextArea } from "./AutoExpandTextArea";
-import type { FunctionComponent } from "react";
 import type {
   QuestionTemplate,
   QuestionVariantOneTwo,
 } from "@chair-flight/base/types";
+import type { FunctionComponent } from "react";
 
 export type FormSnippetEditVariantOneTwoProps = {
   variantId: string;

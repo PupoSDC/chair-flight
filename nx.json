@@ -41,8 +41,7 @@
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/.storybook/**/*",
-      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-      "!{projectRoot}/jest.config.[jt]s"
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)"
     ],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },

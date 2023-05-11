@@ -1,19 +1,19 @@
 {
-  "name": "question-bank",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/question-bank/src",
+  "name": "question-bank-content",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/question-bank/content/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/question-bank/**/*.ts"]
+        "lintFilePatterns": ["libs/question-bank/content/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/question-bank"],
+      "outputs": ["coverage/libs/question-bank/content"],
       "options": {
         "passWithNoTests": true
       }
@@ -23,9 +23,15 @@
       "options": {
         "commands": [
           "mkdir -p apps/next-app/public/content",
-          "cp -r libs/question-bank/content/media apps/next-app/public/content"
+          "cp -r libs/question-bank/content/src/media apps/next-app/public/content"
         ],
         "parallel": false
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/question-bank/content/tsconfig.json --noEmit"]
       }
     }
   },

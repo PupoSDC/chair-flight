@@ -21,7 +21,6 @@ import type {
   CreateTestBody,
   CreateTestResponse,
 } from "../../api/tests/index.api";
-import type { FormEventHandler, FunctionComponent } from "react";
 import type {
   LearningObjectiveId,
   LearningObjectiveSummary,
@@ -31,6 +30,7 @@ import type {
   NestedCheckboxSelectProps,
   NestedCheckboxItem,
 } from "@chair-flight/react/components";
+import type { FormEventHandler, FunctionComponent } from "react";
 
 type TestPageProps = {
   subjects: LearningObjectiveSummary[];

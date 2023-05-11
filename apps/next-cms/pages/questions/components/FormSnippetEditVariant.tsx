@@ -1,10 +1,10 @@
-import { FormControl, FormLabel, Box } from "@mui/joy";
 import { useFormContext } from "react-hook-form";
+import { FormControl, FormLabel, Box } from "@mui/joy";
 import { AutoExpandTextArea } from "./AutoExpandTextArea";
 import { FormSnippetEditVariantOneTwo } from "./FormSnippetEditVariantOneTwo";
 import { FormSnippetEditVariantSimple } from "./FormSnippetEditVariantSimple";
-import type { FunctionComponent } from "react";
 import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { FunctionComponent } from "react";
 
 export type FormSnippetEditVariantProps = {
   variantId: string;

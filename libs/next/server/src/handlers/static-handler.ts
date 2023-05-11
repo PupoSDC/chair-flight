@@ -1,4 +1,5 @@
-import { QuestionBankLocalRepository } from "@chair-flight/question-bank";
+import { QuestionBankLocalRepository } from "@chair-flight/question-bank/providers";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
 import type {
   GetStaticProps,
   GetStaticPropsContext,
@@ -6,7 +7,6 @@ import type {
   PreviewData,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
-import type { QuestionBankRepository } from "@chair-flight/base/types";
 
 export type HandleGetStaticProps<
   Props extends Record<string, unknown>,

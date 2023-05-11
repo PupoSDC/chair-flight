@@ -10,8 +10,8 @@ import {
 } from "@chair-flight/react/components";
 import { getMerge } from "../api/questions/merge.api";
 import type { MergeRequestBody } from "../api/questions/merge.api";
-import type { NextPage } from "next";
 import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { NextPage } from "next";
 
 export type MergePageProps = {
   q0: QuestionTemplate;

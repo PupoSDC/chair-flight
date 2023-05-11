@@ -1,7 +1,7 @@
 import {
   QuestionBankRedisRepository,
   QuestionBankLocalRepository,
-} from "@chair-flight/question-bank";
+} from "@chair-flight/question-bank/providers";
 
 const updateQuestionBank = async () => {
   const redisRepository = new QuestionBankRedisRepository();

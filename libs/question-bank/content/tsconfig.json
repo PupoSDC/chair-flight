@@ -1,0 +1,10 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../../dist/out-tsc",
+    "types": ["node", "vitest/globals"]
+  },
+  "files": [],
+  "include": ["src/**/*.ts", "vite.config.ts", "__tests__/**/*.ts"]
+}

@@ -1,6 +1,4 @@
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { NotFoundError } from "@chair-flight/base/errors";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type {
   QuestionBankRepository,
   LearningObjective,

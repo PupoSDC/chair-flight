@@ -28,11 +28,19 @@
       "@chair-flight/base/types": ["libs/base/types/src/index.ts"],
       "@chair-flight/base/upstash": ["libs/base/upstash/src/index.ts"],
       "@chair-flight/core/app": ["libs/core/app/src/index.ts"],
-      "@chair-flight/core/redux": ["libs/core/redux/src/index.ts"],
       "@chair-flight/core/openai": ["libs/core/openai/src/index.ts"],
+      "@chair-flight/core/redux": ["libs/core/redux/src/index.ts"],
       "@chair-flight/next/client": ["libs/next/client/src/index.ts"],
       "@chair-flight/next/server": ["libs/next/server/src/index.ts"],
-      "@chair-flight/question-bank": ["libs/question-bank/src/index.ts"],
+      "@chair-flight/question-bank/content": [
+        "libs/question-bank/content/src/index.ts"
+      ],
+      "@chair-flight/question-bank/providers": [
+        "libs/question-bank/providers/src/index.ts"
+      ],
+      "@chair-flight/question-bank/schemas": [
+        "libs/question-bank/schemas/src/index.ts"
+      ],
       "@chair-flight/react/components": ["libs/react/components/src/index.ts"]
     }
   },

@@ -1,7 +1,7 @@
 import { compress, decompress } from "shrink-string";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { redis } from "@chair-flight/base/upstash";
-import { QuestionBankBaseRepository } from "./base";
+import { QuestionBankBaseRepository } from "./question-bank-base-repository";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type {
   LearningObjective,

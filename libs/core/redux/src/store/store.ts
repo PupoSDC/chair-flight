@@ -1,5 +1,5 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, useStore } from "react-redux";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {
   FLUSH,
   PAUSE,

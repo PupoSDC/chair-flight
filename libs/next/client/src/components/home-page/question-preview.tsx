@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { Box, Button, Link, Sheet, Typography } from "@mui/joy";
 import { default as RenderIfVisible } from "react-render-if-visible";
+import { Box, Button, Link, Sheet, Typography } from "@mui/joy";
 import {
   getQuestion,
   getRandomId,
@@ -11,8 +11,8 @@ import {
   CountUp,
   QuestionMultipleChoice,
 } from "@chair-flight/react/components";
-import type { FunctionComponent } from "react";
 import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { FunctionComponent } from "react";
 
 export type QuestionPreviewProps = {
   numberOfQuestions: number;

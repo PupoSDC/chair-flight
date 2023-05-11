@@ -24,12 +24,12 @@ import {
 } from "@chair-flight/react/components";
 import { getQuestionTemplate } from "../../api/questions/[questionId].api";
 import type { GetQuestionTemplateResponse } from "../../api/questions/[questionId].api";
-import type { NextPage } from "next";
 import type {
   QuestionMultipleChoiceStatus,
   QuestionBoxReviewRef,
   DrawingPoints,
 } from "@chair-flight/react/components";
+import type { NextPage } from "next";
 
 type QuestionPageProps = GetQuestionTemplateResponse & {
   initialVariantId?: string;

@@ -6,8 +6,8 @@ import {
   HeaderNavDesktop,
   HeaderNavMobile,
 } from "@chair-flight/react/components";
-import type { FunctionComponent } from "react";
 import type { HeaderNavProps } from "@chair-flight/react/components";
+import type { FunctionComponent } from "react";
 
 const items: HeaderNavProps["items"] = [
   {

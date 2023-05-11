@@ -1,7 +1,7 @@
 import { memo } from "react";
+import { default as ReactMarkdown } from "react-markdown";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Link, styled } from "@mui/joy";
-import { default as ReactMarkdown } from "react-markdown";
 import { default as remarkGfm } from "remark-gfm";
 import type { LearningObjectivesTableRowProps } from "./learning-objectives-table.types";
 

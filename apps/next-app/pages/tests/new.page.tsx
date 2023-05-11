@@ -6,11 +6,11 @@ import {
   AppHead,
   AppHeaderMenu,
 } from "@chair-flight/next/client";
-import { ssrHandler } from "@chair-flight/next/server";
+import { staticHandler } from "@chair-flight/next/server";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import { TestCreation } from "./components/test-creation";
-import type { NextPage } from "next";
 import type { LearningObjectiveSummary } from "@chair-flight/base/types";
+import type { NextPage } from "next";
 
 type NewTestPageProps = {
   subjects: LearningObjectiveSummary[];
@@ -52,7 +52,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
   );
 };
 
-export const getStaticProps = ssrHandler<NewTestPageProps>(
+export const getStaticProps = staticHandler<NewTestPageProps>(
   async ({ questionBank }) => {
     const subjects = (await questionBank.getSubjects()).filter(
       (lo) => !["034", "082"].includes(lo.id)

@@ -111,7 +111,6 @@
     "react-test-renderer": "^18.2.0",
     "redux-persist": "^6.0.0",
     "storybook-dark-mode": "^3.0.0",
-    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.5.0",
@@ -133,13 +132,13 @@
       "@trivago/prettier-plugin-sort-imports"
     ],
     "importOrder": [
-      "^react(/.*)?$",
-      "^next(/.*)?$",
+      "^react(.*)?$",
+      "^next(.*)?$",
       "<THIRD_PARTY_MODULES>",
-      "^@chair-flight(/.*)?$",
+      "^@chair-flight(.*)?$",
       "^[./]",
       "<THIRD_PARTY_TS_TYPES>",
-      "<TS_TYPES>^@chair-flight(/.*)?",
+      "<TS_TYPES>",
       "^@fontsource(/.*)?$"
     ]
   }

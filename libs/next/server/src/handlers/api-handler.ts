@@ -11,13 +11,13 @@ import {
 import {
   QuestionBankLocalRepository,
   QuestionBankRedisRepository,
-} from "@chair-flight/question-bank";
+} from "@chair-flight/question-bank/providers";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
 import type {
   NextApiHandler,
   NextApiRequest,
   NextApiResponse,
 } from "next/types";
-import type { QuestionBankRepository } from "@chair-flight/base/types";
 
 type ApiContext = {
   req: NextApiRequest;

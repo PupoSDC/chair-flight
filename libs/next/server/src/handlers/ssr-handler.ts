@@ -3,7 +3,8 @@ import { NotFoundError } from "@chair-flight/base/errors";
 import {
   QuestionBankLocalRepository,
   QuestionBankRedisRepository,
-} from "@chair-flight/question-bank";
+} from "@chair-flight/question-bank/providers";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -11,7 +12,6 @@ import type {
   PreviewData,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
-import type { QuestionBankRepository } from "@chair-flight/base/types";
 
 const handleError = <T>(
   error: unknown

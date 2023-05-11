@@ -1,4 +1,5 @@
 import { useId, useState } from "react";
+import { Controller, FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
@@ -20,7 +21,6 @@ import {
   Typography,
 } from "@mui/joy";
 import axios from "axios";
-import { Controller, FormProvider, useForm } from "react-hook-form";
 import {
   getQuestionPreview,
   getRandomIdGenerator,
@@ -38,12 +38,12 @@ import { AutoExpandTextArea } from "./components/AutoExpandTextArea";
 import { FormSnippetEditVariant } from "./components/FormSnippetEditVariant";
 import { LearningObjectivesAutoComplete } from "./components/LearningObjectivesAutoComplete";
 import type { putBodySchema } from "../api/questions/[questionId].api";
-import type { GetServerSideProps, NextPage } from "next";
 import type {
   QuestionTemplate,
   QuestionVariant,
   QuestionVariantType,
 } from "@chair-flight/base/types";
+import type { GetServerSideProps, NextPage } from "next";
 
 type QuestionPageProps = {
   question: QuestionTemplate;

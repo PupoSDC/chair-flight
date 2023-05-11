@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["node", "vitest/globals", "@testing-library/jest-dom"],
+    "types": ["node", "vitest/globals"],
     "jsx": "react-jsx"
   },
   "include": [

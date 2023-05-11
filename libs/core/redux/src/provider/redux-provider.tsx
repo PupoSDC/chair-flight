@@ -1,5 +1,5 @@
-import { NoSsr } from "@mui/base";
 import { Provider } from "react-redux";
+import { NoSsr } from "@mui/base";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "../store/store";
 import type { FunctionComponent, PropsWithChildren } from "react";

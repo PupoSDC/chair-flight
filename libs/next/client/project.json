@@ -22,17 +22,11 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/next/client"],
       "options": {
-        "jestConfig": "libs/next/client/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/libs/next/client"
       }
     }
   }

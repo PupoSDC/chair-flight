@@ -41,11 +41,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Prettier
+      - name: Run Prettier
         run: pnpm prettier
 
-      - name: Lint
+      - name: Run Lint
         run: pnpm lint
 
-      - name: Typescript
+      - name: Run Typescript
         run: pnpm tsc
+
+      - name: Run Tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build

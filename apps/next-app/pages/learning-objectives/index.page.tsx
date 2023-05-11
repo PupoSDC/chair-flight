@@ -24,9 +24,9 @@ import {
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
-import type { GetStaticProps, NextPage } from "next";
 import type { CourseName, LearningObjective } from "@chair-flight/base/types";
 import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
+import type { GetStaticProps, NextPage } from "next";
 
 const TdWithMarkdown = styled("td")`
   margin: ${({ theme }) => theme.spacing(0.5, 0)};
@@ -48,14 +48,19 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   const [results, setResults] = useState<LearningObjective[]>([]);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [{ data, loading }] = useAxios<SearchLearningObjectivesResults>({
-    url: "/api/search/learning-objectives",
-    params: {
-      q: search,
-      pageSize: 20,
-      page: page,
+  const [{ data, loading }] = useAxios<SearchLearningObjectivesResults>(
+    {
+      url: "/api/search/learning-objectives",
+      params: {
+        q: search,
+        pageSize: 20,
+        page: page,
+      },
     },
-  });
+    {
+      ssr: false,
+    }
+  );
 
   const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
     const target = e.target as HTMLDivElement;

@@ -2,10 +2,8 @@ import { default as fs } from "fs";
 import { default as path } from "path";
 import { cwd } from "process";
 import * as XLSX from "xlsx";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { UnimplementedError } from "@chair-flight/base/errors";
-import { QuestionBankBaseRepository } from "./base";
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { QuestionBankBaseRepository } from "./question-bank-base-repository";
 import type {
   CourseName,
   LearningObjective,
@@ -16,9 +14,19 @@ import type {
 
 export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
   private intentionallyLeftBlankPattern = /Intentionally left blank/i;
+  private contentPath = "libs/question-bank/content/src";
+  private courseNames: Record<string, CourseName> = {
+    "ATPL(A)": "ATPL_A",
+    "CPL(A)": "CPL_A",
+    "ATPL(H)/IR": "ATPL_H_IR",
+    "ATPL(H)/VFR": "ATPL_H_VFR",
+    "CPL(H)": "CPL_H",
+    IR: "IR",
+    "CBIR(A)": "CBIR_A",
+  };
 
   private async getAllQuestionsFromLocalFs(
-    dirPath: string = path.join(cwd(), "libs/question-bank/content/questions")
+    dirPath: string = path.join(cwd(), this.contentPath, "questions")
   ): Promise<QuestionTemplate[]> {
     const files = fs.readdirSync(dirPath);
     const questions: QuestionTemplate[] = [];
@@ -54,7 +62,8 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
     if (this.allLearningObjectives.length) return this.allLearningObjectives;
     const fileName = path.join(
       cwd(),
-      "libs/question-bank/content/external/tk-syllabus.xlsx"
+      this.contentPath,
+      "external/tk-syllabus.xlsx"
     );
     const questions = await this.getAllQuestionsFromLocalFs();
     const workbook = XLSX.readFile(fileName);
@@ -82,9 +91,9 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
 
           return {
             id,
-            courses: Object.keys(CourseNames)
+            courses: Object.keys(this.courseNames)
               .filter((item) => row[item])
-              .map((k) => CourseNames[k]),
+              .map((k) => this.courseNames[k]),
             questions: [],
             text,
             contentId: id,
@@ -139,7 +148,7 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
       return sum;
     }, {});
 
-    const basePath = path.join(cwd(), "libs/question-bank/content/questions");
+    const basePath = path.join(cwd(), this.contentPath, "questions");
     fs.rmdirSync(path.join(basePath), { recursive: true });
 
     Object.entries(filesToSave).forEach(([file, questions]) => {
@@ -164,13 +173,3 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
     throw new UnimplementedError("We are not EASA. We don't write LOs");
   }
 }
-
-const CourseNames: Record<string, CourseName> = {
-  "ATPL(A)": "ATPL_A",
-  "CPL(A)": "CPL_A",
-  "ATPL(H)/IR": "ATPL_H_IR",
-  "ATPL(H)/VFR": "ATPL_H_VFR",
-  "CPL(H)": "CPL_H",
-  IR: "IR",
-  "CBIR(A)": "CBIR_A",
-};

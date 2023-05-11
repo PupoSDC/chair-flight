@@ -1,4 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
+import { mergeRefs } from "react-merge-refs";
 import { default as SearchIcon } from "@mui/icons-material/Search";
 import {
   CircularProgress,
@@ -7,7 +8,6 @@ import {
   Input,
   Typography,
 } from "@mui/joy";
-import { mergeRefs } from "react-merge-refs";
 import type { InputProps } from "@mui/joy";
 
 export type CtaSearchProps = {
