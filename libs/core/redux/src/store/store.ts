@@ -16,35 +16,38 @@ import { testProgressReducer } from "../reducers/test-progress-reducer";
 import { userVoyageReducer } from "../reducers/user-voyage-reducer";
 import type { TypedUseSelectorHook } from "react-redux";
 
-const combinedReducer = combineReducers({
-  testProgress: testProgressReducer,
-  userVoyage: userVoyageReducer,
-  testMaker: testMakerReducer,
-});
+export const getStoreAndPersistor = () => {
+  const combinedReducer = combineReducers({
+    testProgress: testProgressReducer,
+    userVoyage: userVoyageReducer,
+    testMaker: testMakerReducer,
+  });
 
-const persistedReducer = persistReducer(
-  {
-    key: "root",
-    version: 1,
-    storage,
-  },
-  combinedReducer
-);
+  const persistedReducer = persistReducer(
+    {
+      key: "root",
+      version: 1,
+      storage,
+    },
+    combinedReducer
+  );
 
-export const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
+  const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        },
+      }),
+  });
+  const persistor = persistStore(store);
+  return { store, persistor };
+};
 
-export const persistor = persistStore(store);
-
-type RootState = ReturnType<typeof store.getState>;
-type AppDispatch = typeof store.dispatch;
+type Store = ReturnType<typeof getStoreAndPersistor>["store"];
+type RootState = ReturnType<Store["getState"]>;
+type AppDispatch = Store["dispatch"];
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

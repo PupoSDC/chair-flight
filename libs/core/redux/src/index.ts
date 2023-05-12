@@ -4,12 +4,7 @@ import * as userVoyageActions from "./actions/user-voyage-actions";
 import { useTestHotkeys } from "./hooks/use-test-hotkeys";
 import { useUserVoyageFlag } from "./hooks/use-user-voyage-flag";
 import { ReduxProvider } from "./provider/redux-provider";
-import {
-  store,
-  useAppDispatch,
-  useAppSelector,
-  persistor,
-} from "./store/store";
+import { useAppDispatch, useAppSelector } from "./store/store";
 
 const actions = {
   ...testActions,
@@ -18,8 +13,6 @@ const actions = {
 };
 
 export {
-  store,
-  persistor,
   actions,
   ReduxProvider,
   useAppDispatch,

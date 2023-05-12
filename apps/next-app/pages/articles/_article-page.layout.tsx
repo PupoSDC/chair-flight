@@ -1,3 +1,5 @@
+"use client";
+
 import { default as Image } from "next/image";
 import { MDXProvider } from "@mdx-js/react";
 import { Divider, Typography } from "@mui/joy";
