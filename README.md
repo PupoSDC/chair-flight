@@ -41,7 +41,7 @@ pnpm run dev
 ```md
 UPSTASH_URL=<See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup>
 UPSTASH_TOKEN=<See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup>
-QUESTION_BANK_PROVIDER=<Set to `redis` to use redis locally. Otherwise local fs is used>
+QUESTION_BANK_PROVIDER=<Set to `redis` to use redis locally. or `local` for local fs>
 OPENAI_API_KEY=<Create here https://platform.openai.com/account/api-keys>
 ```
 

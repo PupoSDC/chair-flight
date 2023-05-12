@@ -4,6 +4,9 @@ on:
   - push
   - pull_request
 
+env: 
+  QUESTION_BANK_PROVIDER: local
+
 jobs:
   cache-and-install:
     runs-on: ubuntu-latest
