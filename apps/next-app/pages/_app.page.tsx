@@ -1,11 +1,7 @@
 import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
-import {
-  AppTransition,
-  theme,
-  useLambdaColdStart,
-} from "@chair-flight/next/client";
+import { AppTransition, theme } from "@chair-flight/next/client";
 import { Toaster } from "@chair-flight/react/components";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";
@@ -16,8 +12,6 @@ if (typeof document === "undefined") {
 }
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
-  useLambdaColdStart();
-
   return (
     <StrictMode>
       <Head>

@@ -1,9 +1,7 @@
 name: Code Check
 
-on:
-  - push
-  - pull_request
-
+on: push
+ 
 env:
   QUESTION_BANK_PROVIDER: local
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
@@ -55,6 +53,3 @@ jobs:
 
       - name: Run Tests
         run: pnpm test
-
-      - name: Build
-        run: pnpm build
