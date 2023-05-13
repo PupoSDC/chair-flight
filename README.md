@@ -27,6 +27,7 @@ manually.
 ```sh
 git clone git@github.com:PupoSDC/chair-flight.git
 fnm use
+cp .env.example .env
 pnpm install
 pnpm run dev
 ```
@@ -78,6 +79,7 @@ powered by openAI) you will need to provide some env variables in an `.env` file
 located at the repository root.
 
 ```sh
+NEXT_PUBLIC_BASE_URL="Set to localhost:4200 for local development."
 QUESTION_BANK_PROVIDER="Set to `redis` to use redis locally. or `local` for local fs"
 UPSTASH_URL="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"
 UPSTASH_TOKEN="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"

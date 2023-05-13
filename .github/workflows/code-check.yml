@@ -6,7 +6,7 @@ on:
 
 env:
   QUESTION_BANK_PROVIDER: local
-
+  NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
 jobs:
   cache-and-install:
     runs-on: ubuntu-latest

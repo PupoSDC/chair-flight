@@ -25,7 +25,7 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
       <AppHead
         title={meta.title}
         linkTitle={meta.linkTitle}
-        description={meta.description}
+        linkDescription={meta.description}
       />
       <Header />
       <AppLayout.BackgroundImageContainer>

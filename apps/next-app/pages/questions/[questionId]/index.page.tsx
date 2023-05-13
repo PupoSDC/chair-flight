@@ -81,7 +81,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
     <>
       <AppHead
         linkTitle={`${APP_NAME}: ${variant.id}`}
-        description={variant.question}
+        linkDescription={variant.question}
       />
       <Header>
         <AppHeaderMenu />

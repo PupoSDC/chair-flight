@@ -1,26 +1,32 @@
 import { default as Head } from "next/head";
-import { APP_DESC, APP_NAME } from "../constants/text";
+import { APP_DESC, APP_NAME, BASE_URL } from "../constants/text";
 import type { FunctionComponent } from "react";
 
 export type AppHtmlHeadProps = {
   title?: string;
   linkTitle?: string;
-  description?: string;
-  imageUrl?: string;
+  linkDescription?: string;
+  linkImage?: string;
 };
 
 export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
   title = APP_NAME,
   linkTitle = APP_NAME,
-  description = APP_DESC,
-  imageUrl,
+  linkDescription = APP_DESC,
+  linkImage = `/images/background-article.png`,
 }) => (
   <Head>
     <title>{title}</title>
+    <meta name="description" content={linkDescription} key="dec" />
     <meta property="og:title" content={linkTitle} key="title" />
-    <meta name="description" content={description} key="dec" />
-    <meta property="og:description" content={description} key="desc2" />
-    <meta property="og:image" content={imageUrl} key="image" />
+    <meta property="og:image" content={`${BASE_URL}${linkImage}`} />
+    <meta property="og:description" content={linkDescription} />
+    <meta property="twitter:title" content={linkTitle} />
+    <meta property="twitter:image" content={`${BASE_URL}${linkImage}`} />
+    <meta
+      property="twitter:description"
+      content="Twitter link preview description"
+    />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta name="msapplication-TileColor" content={"#000"} />
     <link rel="shortcut icon" href="favicon.ico" />
