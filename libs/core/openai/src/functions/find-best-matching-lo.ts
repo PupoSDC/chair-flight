@@ -1,6 +1,6 @@
 import { NotFoundError } from "@chair-flight/base/errors";
-import { getRedis } from "@chair-flight/base/upstash";
-import { openAi } from "../providers/openai";
+import { getOpenAi } from "@chair-flight/external/openai";
+import { getRedis } from "@chair-flight/external/upstash";
 import { cosineSimilarity } from "./cosine-similarity";
 import type { QuestionBankRepository } from "@chair-flight/base/types";
 
@@ -28,6 +28,7 @@ export const createLearningObjectivesEmbeddings = async ({
 }: {
   questionBank: QuestionBankRepository;
 }) => {
+  const openAi = getOpenAi();
   const learningObjectives = await questionBank.getAllLearningObjectives();
   const snippetLos = learningObjectives.filter(
     (lo) => lo.id.split(".").length === 5
@@ -68,6 +69,7 @@ export const createQuestionTemplateEmbeddings = async ({
 }: {
   questionBank: QuestionBankRepository;
 }) => {
+  const openAi = getOpenAi();
   const questionTemplates = await questionBank.getAllQuestionTemplates();
   const acceptableTemplates = questionTemplates.filter(
     (template) =>

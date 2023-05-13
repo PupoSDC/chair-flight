@@ -1,20 +1,20 @@
 {
-  "name": "base-upstash",
+  "name": "external-openai",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/base/upstash/src",
+  "sourceRoot": "libs/external/openai/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/base/upstash/**/*.ts"]
+        "lintFilePatterns": ["libs/external/openai/**/*.ts"]
       }
     },
     "tsc": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/base/upstash/tsconfig.json --noEmit"]
+        "commands": ["tsc -p libs/external/openai/tsconfig.json --noEmit"]
       }
     }
   },

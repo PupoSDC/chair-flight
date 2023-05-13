@@ -1,5 +1,5 @@
 import { compress, decompress } from "shrink-string";
-import { getRedis } from "@chair-flight/base/upstash";
+import { getRedis } from "@chair-flight/external/upstash";
 import { QuestionBankBaseRepository } from "./question-bank-base-repository";
 import type {
   LearningObjective,
@@ -7,7 +7,7 @@ import type {
   QuestionTemplate,
   QuestionTemplateId,
 } from "@chair-flight/base/types";
-import type { Redis } from "@chair-flight/base/upstash";
+import type { Redis } from "@chair-flight/external/upstash";
 
 const COMPRESS_QUESTION_BLOCKS_NUMBER = 10;
 

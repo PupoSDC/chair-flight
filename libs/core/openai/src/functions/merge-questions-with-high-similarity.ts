@@ -1,5 +1,5 @@
 import { getQuestionPreview } from "@chair-flight/core/app";
-import { openAi } from "../providers/openai";
+import { getOpenAi } from "@chair-flight/external/openai";
 import { chunck } from "./chunck";
 import { cosineSimilarity } from "./cosine-similarity";
 import type { QuestionBankRepository } from "@chair-flight/base/types";
@@ -27,6 +27,7 @@ export const mergeQuestionsWithHighSimilarity = async ({
 }: {
   questionBank: QuestionBankRepository;
 }) => {
+  const openAi = getOpenAi();
   const templates = await questionBank.getAllQuestionTemplates();
   for (const subject of subjects) {
     const embeddings: Record<string, number[]> = {};

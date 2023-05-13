@@ -1,8 +1,8 @@
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import { ConfigurationError } from "@chair-flight/base/errors";
-import type { QuestionBankRepository } from "@chair-flight/base/types";
 import { QuestionBankLocalRepository } from "./question-bank-file-system-repository";
 import { QuestionBankRedisRepository } from "./question-bank-redis-repository";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
 
 const qbProvider = getEnvVariableOrDefault("QUESTION_BANK_PROVIDER", "local");
 
