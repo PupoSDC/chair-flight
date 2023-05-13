@@ -3,7 +3,11 @@ import { dedent } from "ts-dedent";
 export const APP_NAME = "Chair Flight";
 export const APP_DESC = dedent`
   Chair Flight is a community driven Aviation Question Bank built by students for students.
+  Now available for Alpha testing. 
 `;
+
+export const BASE_URL =
+  process.env["NEXT_PUBLIC_BASE_URL"] || "http://chair-flight.com";
 
 export const SUBJECTS = [
   {
