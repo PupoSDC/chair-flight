@@ -30,7 +30,7 @@
       }
     },
     "dev": {
-      "executor": "@nrwl/storybook:storybook",
+      "executor": "@nx/storybook:storybook",
       "options": {
         "port": 4250,
         "configDir": "libs/react/components/.storybook"
@@ -42,7 +42,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/storybook:build",
+      "executor": "@nx/storybook:build",
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "apps/next-app/public/storybook",

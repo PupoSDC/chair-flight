@@ -59,6 +59,7 @@ export const PreviewTests: FunctionComponent = () => {
               >
                 <TestPreview
                   sx={{ width: "100%" }}
+                  data-cy="test-preview"
                   component={Link}
                   href={`/tests/${test.id}/${
                     test.status === "finished" ? "review" : "exam"

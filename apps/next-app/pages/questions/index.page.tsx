@@ -72,6 +72,7 @@ const QuestionsIndexPage: NextPage = () => {
           >
             {data.results.map(({ result }) => (
               <Box
+                data-cy="question-preview"
                 component="li"
                 sx={{
                   px: { xs: 0, md: 1 },

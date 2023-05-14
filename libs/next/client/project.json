@@ -16,7 +16,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "tsc -p libs/next/client/tsconfig.lib.json --noEmit",
+          "tsc -p libs/next/client/tsconfig.json --noEmit",
           "tsc -p libs/next/client/tsconfig.spec.json --noEmit"
         ]
       }

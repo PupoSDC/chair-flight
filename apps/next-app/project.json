@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "dev": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
         "port": 4200,
@@ -20,7 +20,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "options": {
         "root": "apps/next-app",
@@ -28,7 +28,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "next-app:build",
         "dev": false

@@ -86,6 +86,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
   const navigation = (
     <>
       <TestQuestionNavigation
+        data-cy="test-question-navigation"
         sx={{ width: "100%" }}
         status="in-progress"
         currentId={currentQuestion.questionId}
@@ -156,6 +157,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
               }}
               question={
                 <QuestionMultipleChoice
+                  data-cy="question"
                   question={currentQuestion.question}
                   status="in-progress"
                   selectedOptionId={currentQuestion.selectedOptionId}
