@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@mui/joy";
 import {
@@ -10,6 +9,7 @@ import {
   TestQuestionNavigation,
   useHeaderContext,
 } from "@chair-flight/react/components";
+import type { FunctionComponent } from "react";
 
 export type ExamNavigationProps = {
   testId: string;

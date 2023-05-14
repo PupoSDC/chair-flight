@@ -3,7 +3,7 @@ import { screens } from "../utils/screens";
 const NUMBER_OF_QUESTIONS = 10;
 
 describe("Create Test", () => {
-  screens.slice(0, 1).forEach((screen) => {
+  screens.forEach((screen) => {
     describe(`on ${screen}`, () => {
       beforeEach(() => {
         cy.viewport(screen);
@@ -37,7 +37,7 @@ describe("Create Test", () => {
         cy.get("button").contains("Start!").click();
         cy.url().should("include", "/exam");
 
-        for (let i = 0; i < NUMBER_OF_QUESTIONS; i++) {
+        for (let i = 1; i <= NUMBER_OF_QUESTIONS; i++) {
           cy.get("[data-cy='question']").find("button").first().click();
 
           if (["iphone-6", "ipad-2"].includes(screen)) {
@@ -46,15 +46,18 @@ describe("Create Test", () => {
 
           cy.get('[data-cy="test-question-navigation"]:visible')
             .find("button")
-            .contains(String(i + 1))
+            .contains(String(i))
             .click();
-        }
-      });
-    });
 
-    xit("tbd", () => {
-      cy.get("[data-cy='test-preview']").first().click();
-      cy.url().should("include", "/exam");
+          cy.get('[data-cy="question"]').find("button").first().click();
+        }
+
+        if (["iphone-6", "ipad-2"].includes(screen)) {
+          cy.get('[data-testid="MenuIcon"]').click();
+        }
+        cy.contains("button:visible", "Finish").click();
+        cy.url().should("include", "/review");
+      });
     });
   });
 });
