@@ -1,12 +1,21 @@
-import { forwardRef, useEffect, useState } from "react";
+import {
+  forwardRef,
+  useEffect,
+  useState,
+  createContext,
+  useContext,
+  useCallback,
+  useMemo,
+} from "react";
 import { NoSsr } from "@mui/base";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
 import { default as HamburgerIcon } from "@mui/icons-material/Menu";
-import { Box, Link, styled, useColorScheme } from "@mui/joy";
+import { Box, Link, styled, useColorScheme, useTheme } from "@mui/joy";
 import { HEADER_HEIGHT } from "../constants";
 import { Drawer } from "../drawer";
+import { useMediaQuery } from "../hooks/use-media-query";
 import { AppLogo } from "./app-logo";
 import { IconButton } from "./header-icon-button";
 import type { BoxProps } from "@mui/joy";
@@ -96,6 +105,25 @@ export type HeaderProps = {
   removeHamburger?: boolean;
 } & Partial<Pick<BoxProps, "sx" | "style" | "className" | "children">>;
 
+const HeaderContext = createContext<{
+  canDrawerBeOpened: boolean;
+  closeDrawer: () => void;
+}>({
+  canDrawerBeOpened: false,
+  closeDrawer: () => {
+    /** Intentionally empty */
+  },
+});
+
+/**
+ * An header component that can, in theory, be used for all our pages.
+ *
+ * It includes a context, that can be accessed via `useHeaderContext`, so that
+ * you can control the drawer component from withing the drawer components.
+ *
+ * Drawer becomes available only on mobile screens (breakpoint `md`) and if
+ * a children is provided to this component.
+ */
 export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
   (
     {
@@ -112,12 +140,24 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const { mode, setMode } = useColorScheme();
     const toggleTheme = () => setMode(mode === "dark" ? "light" : "dark");
+    const closeDrawer = useCallback(() => setIsDrawerOpen(false), []);
+    const theme = useTheme();
     const showDarkModeButton = !isMounted || mode === "light";
+    const canDrawerBeOpened =
+      useMediaQuery(theme.breakpoints.down("md")) && !!children;
+
+    const headerContextValue = useMemo(
+      () => ({
+        closeDrawer,
+        canDrawerBeOpened,
+      }),
+      [closeDrawer, canDrawerBeOpened]
+    );
 
     useEffect(() => setIsMounted(true), []);
 
     return (
-      <>
+      <HeaderContext.Provider value={headerContextValue}>
         <StyledHeader ref={ref} {...boxProps}>
           {removeLogo || (
             <Link href="/">
@@ -156,7 +196,9 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
         <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
           {children}
         </Drawer>
-      </>
+      </HeaderContext.Provider>
     );
   }
 );
+
+export const useHeaderContext = () => useContext(HeaderContext);
