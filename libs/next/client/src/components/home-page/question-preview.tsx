@@ -68,7 +68,13 @@ export const QuestionPreview: FunctionComponent<QuestionPreviewProps> = ({
       >
         <Typography level="h2" sx={{ fontWeight: 900 }}>
           {`Explore `}
-          <RenderIfVisible visibleOffset={0} rootElement={"span"} stayRendered>
+          <RenderIfVisible
+            visibleOffset={0}
+            defaultHeight={20}
+            placeholderElement="span"
+            rootElement={"span"}
+            stayRendered
+          >
             <CountUp
               component={"b"}
               end={numberOfQuestions}

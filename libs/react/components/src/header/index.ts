@@ -1,2 +1,2 @@
-export { Header } from "./header";
+export { Header, useHeaderContext } from "./header";
 export type { HeaderProps } from "./header";

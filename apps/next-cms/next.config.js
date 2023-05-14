@@ -1,4 +1,4 @@
-const { withNx } = require("@nrwl/next/plugins/with-nx");
+const { withNx } = require("@nx/next/plugins/with-nx");
 
 module.exports = withNx({
   nx: {

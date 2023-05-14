@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { Box, Button, Sheet } from "@mui/joy";
+import { Box, Sheet } from "@mui/joy";
 import {
   useAppDispatch,
   useAppSelector,
@@ -15,8 +15,8 @@ import {
   QuestionBoxExam,
   QuestionMultipleChoice,
   Skeleton,
-  TestQuestionNavigation,
 } from "@chair-flight/react/components";
+import { ExamNavigation } from "./components/exam-navigation";
 import type { GetServerSideProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
 
@@ -83,37 +83,6 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
     return () => clearInterval(interval);
   }, [dispatch, test.id]);
 
-  const navigation = (
-    <>
-      <TestQuestionNavigation
-        sx={{ width: "100%" }}
-        status="in-progress"
-        currentId={currentQuestion.questionId}
-        questions={test.questions.map((q) => ({
-          id: q.questionId,
-          selectedOption: q.selectedOptionId,
-        }))}
-        onQuestionClicked={(questionId) =>
-          dispatch(
-            actions.navigateToTestQuestion({
-              testId: test.id,
-              questionId,
-            })
-          )
-        }
-      />
-      <Button
-        fullWidth
-        sx={{ mt: 2 }}
-        children="Finish"
-        onClick={() => {
-          dispatch(actions.finishTest({ testId: test.id }));
-          router.replace(`/tests/${test.id}/review`);
-        }}
-      />
-    </>
-  );
-
   if (test.status === "finished") {
     return <ExamPageSkeleton />;
   }
@@ -124,7 +93,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
         <Box
           sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column" }}
         >
-          {navigation}
+          <ExamNavigation testId={testId} />
         </Box>
       </Header>
       <AppLayout.Main>
@@ -156,6 +125,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
               }}
               question={
                 <QuestionMultipleChoice
+                  data-cy="question"
                   question={currentQuestion.question}
                   status="in-progress"
                   selectedOptionId={currentQuestion.selectedOptionId}
@@ -186,7 +156,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
             }}
           >
             <Sheet variant="outlined" sx={{ p: 2 }}>
-              {navigation}
+              <ExamNavigation testId={testId} />
             </Sheet>
           </AppLayout.Column>
         </AppLayout.Grid>
