@@ -1,21 +1,32 @@
 import { compress, decompress } from "shrink-string";
+import { NotFoundError } from "@chair-flight/base/errors";
 import { getRedis } from "@chair-flight/external/upstash";
-import { QuestionBankBaseRepository } from "./question-bank-base-repository";
 import type {
   LearningObjective,
   LearningObjectiveId,
+  LearningObjectiveSummary,
+  QuestionBankRepository,
   QuestionTemplate,
   QuestionTemplateId,
 } from "@chair-flight/base/types";
 import type { Redis } from "@chair-flight/external/upstash";
 
 const COMPRESS_QUESTION_BLOCKS_NUMBER = 10;
+const QUESTION_COMPRESSED = "question-compressed-";
+const QUESTION = "question-";
+const LEARNING_OBJECTIVE_LIST = "learning-objective-list";
+const LEARNING_OBJECTIVE = "learning-objective-";
+const SUBJECTS = "subjects";
 
-export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
+export class QuestionBankRedisRepository implements QuestionBankRepository {
   private redis: Redis;
+  private allQuestionTemplates: QuestionTemplate[] = [];
+  private allLearningObjectives: LearningObjective[] = [];
+  private allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
+  private allLearningObjectivesMap: Record<string, LearningObjective> = {};
+  private subjects: LearningObjectiveSummary[] = [];
 
   constructor() {
-    super();
     this.redis = getRedis();
   }
 
@@ -32,23 +43,49 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
             .fill(0)
             .map(async (_, i) => {
               const compressedQuestions = await this.redis.get(
-                `questionsCompressed${i}`
+                `${QUESTION_COMPRESSED}${i}`
               );
               const string = await decompress(compressedQuestions as string);
               return JSON.parse(string) as QuestionTemplate[];
             })
         )
       ).flat();
+      this.allQuestionTemplatesMap = this.allQuestionTemplates.reduce<
+        Record<string, QuestionTemplate>
+      >((sum, question) => {
+        sum[question.id] = question;
+        return sum;
+      }, {});
     }
     return this.allQuestionTemplates;
+  }
+
+  async getQuestionTemplate(questionId: string): Promise<QuestionTemplate> {
+    return (
+      this.allQuestionTemplatesMap[questionId] ??
+      (this.redis.get(`${QUESTION}${questionId}`) as Promise<QuestionTemplate>)
+    );
+  }
+
+  async getQuestionTemplates(
+    questionIds: string[]
+  ): Promise<QuestionTemplate[]> {
+    return (
+      this.allQuestionTemplates.filter((q) => questionIds.includes(q.id)) ??
+      (this.redis.mget(
+        ...questionIds.map((id) => `${QUESTION}${id}`)
+      ) as Promise<QuestionTemplate[]>)
+    );
   }
 
   async getAllLearningObjectives() {
     if (!this.allLearningObjectives.length) {
       const learningObjectivesList = (await this.redis.get(
-        "learningObjectiveList"
+        LEARNING_OBJECTIVE_LIST
       )) as string;
-      const learningObjectiveIds = learningObjectivesList.split(",");
+      const learningObjectiveIds = learningObjectivesList
+        .split(",")
+        .map((id) => `${LEARNING_OBJECTIVE}${id}`);
       const chunks = this.chunk(learningObjectiveIds, 800);
       this.allLearningObjectives = (
         await Promise.all(
@@ -57,8 +94,43 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
           )
         )
       ).flat();
+      this.allLearningObjectivesMap = this.allLearningObjectives.reduce<
+        Record<string, LearningObjective>
+      >((sum, lo) => {
+        sum[lo.id] = lo;
+        return sum;
+      }, {});
     }
     return this.allLearningObjectives;
+  }
+
+  async getLearningObjective(id: string) {
+    return (
+      this.allLearningObjectivesMap[id] ??
+      (this.redis.get(
+        `${LEARNING_OBJECTIVE}${id}`
+      ) as Promise<LearningObjective>)
+    );
+  }
+
+  async getLearningObjectives(ids: string[]) {
+    return (
+      this.allLearningObjectives.filter((lo) => ids.includes(lo.id)) ??
+      (this.redis.mget(
+        ...ids.map((id) => `${LEARNING_OBJECTIVE}${id}`)
+      ) as Promise<LearningObjective[]>)
+    );
+  }
+
+  async getSubjects() {
+    if (!this.subjects.length) {
+      const subjects = await this.redis.get<LearningObjectiveSummary[]>(
+        SUBJECTS
+      );
+      if (!subjects) throw new NotFoundError("Subjects not found");
+      this.subjects = subjects;
+    }
+    return this.subjects;
   }
 
   async writeQuestions(questions: QuestionTemplate[]) {
@@ -70,7 +142,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
         await this.redis.mset(
           block.reduce<Record<QuestionTemplateId, QuestionTemplate>>(
             (sum, question) => {
-              sum[question.id] = question;
+              sum[`${QUESTION}${question.id}`] = question;
               return sum;
             },
             {}
@@ -82,8 +154,6 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
         );
       })
     );
-    const questionList = questions.map((q) => q.id).join(",");
-    await this.redis.set("questionList", questionList);
 
     const questionBlocks2 = this.chunk(
       questions,
@@ -94,7 +164,7 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
     await Promise.all(
       questionBlocks2.map(async (block, i) => {
         const textBlock = await compress(JSON.stringify(block));
-        await this.redis.set(`questionsCompressed${i}`, textBlock);
+        await this.redis.set(`${QUESTION_COMPRESSED}${i}`, textBlock);
         completedEntries2 += 1;
         console.log(
           `Migrated questions blocks ${completedEntries2}/${questionBlocks2.length}`
@@ -124,6 +194,10 @@ export class QuestionBankRedisRepository extends QuestionBankBaseRepository {
       })
     );
     const learningObjectiveList = learningObjectives.map((q) => q.id).join(",");
-    await this.redis.set("learningObjectiveList", learningObjectiveList);
+    await this.redis.set(LEARNING_OBJECTIVE_LIST, learningObjectiveList);
+  }
+
+  async writeSubjects(subjects: LearningObjectiveSummary[]) {
+    await this.redis.set(SUBJECTS, subjects);
   }
 }
