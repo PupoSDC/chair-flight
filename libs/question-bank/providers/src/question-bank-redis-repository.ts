@@ -199,6 +199,5 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
 
   async writeSubjects(subjects: LearningObjectiveSummary[]) {
     await this.redis.set(SUBJECTS, subjects);
-    console.log(`Migrated subjects`);
   }
 }
