@@ -11,7 +11,7 @@ export interface QuestionBankRepository {
   getAllLearningObjectives(): Promise<LearningObjective[]>;
   getLearningObjective(id: string): Promise<LearningObjective>;
   getLearningObjectives(ids: string[]): Promise<LearningObjective[]>;
-  getSubjects(): Promise<LearningObjectiveSummary[]>;
+  getAllSubjects(): Promise<LearningObjectiveSummary[]>;
   writeQuestions(questions: QuestionTemplate[]): Promise<void>;
   writeLearningObjectives(los: LearningObjective[]): Promise<void>;
   writeSubjects(subjects: LearningObjectiveSummary[]): Promise<void>;

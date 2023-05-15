@@ -70,12 +70,12 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   async getQuestionTemplates(
     questionIds: string[]
   ): Promise<QuestionTemplate[]> {
-    return (
-      this.allQuestionTemplates.filter((q) => questionIds.includes(q.id)) ??
-      (this.redis.mget(
+    if (!this.allQuestionTemplates.length) {
+      return this.redis.mget<QuestionTemplate[]>(
         ...questionIds.map((id) => `${QUESTION}${id}`)
-      ) as Promise<QuestionTemplate[]>)
-    );
+      );
+    }
+    return this.allQuestionTemplates.filter((q) => questionIds.includes(q.id));
   }
 
   async getAllLearningObjectives() {
@@ -122,7 +122,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
     );
   }
 
-  async getSubjects() {
+  async getAllSubjects() {
     if (!this.subjects.length) {
       const subjects = await this.redis.get<LearningObjectiveSummary[]>(
         SUBJECTS
@@ -181,7 +181,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
         await this.redis.mset(
           block.reduce<Record<LearningObjectiveId, LearningObjective>>(
             (sum, lo) => {
-              sum[lo.id] = lo;
+              sum[`${LEARNING_OBJECTIVE}${lo.id}`] = lo;
               return sum;
             },
             {}

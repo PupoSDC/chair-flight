@@ -8,8 +8,10 @@ const updateQuestionBank = async () => {
   const localRepository = new QuestionBankLocalRepository();
   const questions = await localRepository.getAllQuestionTemplates();
   const learningObjectives = await localRepository.getAllLearningObjectives();
+  const subjects = await localRepository.getAllSubjects();
   await redisRepository.writeQuestions(questions);
   await redisRepository.writeLearningObjectives(learningObjectives);
+  await redisRepository.writeSubjects(subjects);
 };
 
 updateQuestionBank();
