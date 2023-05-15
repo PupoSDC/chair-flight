@@ -54,7 +54,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
 
 export const getStaticProps = staticHandler<NewTestPageProps>(
   async ({ questionBank }) => {
-    const subjects = (await questionBank.getSubjects()).filter(
+    const subjects = (await questionBank.getAllSubjects()).filter(
       (lo) => !["034", "082"].includes(lo.id)
     );
 

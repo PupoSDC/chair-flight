@@ -170,7 +170,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
     return this.allLearningObjectives.filter((lo) => ids.includes(lo.id));
   }
 
-  async getSubjects() {
+  async getAllSubjects() {
     const allLearningObjectives = await this.getAllLearningObjectives();
     return allLearningObjectives.reduce<LearningObjectiveSummary[]>(
       (acc, lo) => {

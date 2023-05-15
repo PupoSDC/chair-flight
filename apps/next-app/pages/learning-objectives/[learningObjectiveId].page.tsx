@@ -45,26 +45,30 @@ export const LearningObjectivePage: FunctionComponent<
                   }}
                 >
                   <thead>
-                    {Object.values(CourseNames).map((courseName) => (
-                      <th
-                        className="course-name"
-                        key={courseName}
-                        children={courseName}
-                        style={{
-                          fontSize: 10,
-                          width: 14 + courseName.length * 6,
-                        }}
-                      />
-                    ))}
+                    <tr>
+                      {Object.values(CourseNames).map((courseName) => (
+                        <th
+                          className="course-name"
+                          key={courseName}
+                          children={courseName}
+                          style={{
+                            fontSize: 10,
+                            width: 14 + courseName.length * 6,
+                          }}
+                        />
+                      ))}
+                    </tr>
                   </thead>
                   <tbody>
-                    {Object.keys(CourseNames).map((courseName) => (
-                      <td key={courseName} className="course-name">
-                        {learningObjective.courses.includes(
-                          courseName as CourseName
-                        ) && <CheckIcon />}
-                      </td>
-                    ))}
+                    <tr>
+                      {Object.keys(CourseNames).map((courseName) => (
+                        <td key={courseName} className="course-name">
+                          {learningObjective.courses.includes(
+                            courseName as CourseName
+                          ) && <CheckIcon />}
+                        </td>
+                      ))}
+                    </tr>
                   </tbody>
                 </Table>
               </Grid>
