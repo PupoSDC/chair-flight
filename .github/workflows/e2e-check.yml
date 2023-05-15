@@ -6,7 +6,6 @@ jobs:
     if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
 
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -40,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run e2e 
+      - name: Run e2e
         run: pnpm e2e
-          env:
-              BASE_URL: ${{ github.event.deployment_status.target_url }}
+        env:
+          BASE_URL: ${{ github.event.deployment_status.target_url }}
