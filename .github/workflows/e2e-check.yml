@@ -2,8 +2,7 @@ name: E2E Check
 on: deployment_status
 
 jobs:
-  E2E_Check:
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+  checkout_and_install:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,7 +38,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+  run_e2e_tests:
+    runs-on: ubuntu-latest
+    needs: [checkout_and_install]
+
+    steps:
       - name: Run e2e
-        run: pnpm e2e
-        env:
-          BASE_URL: ${{ github.event.deployment_status.target_url }}
+        run: pnpm e2e --basePath= ${{ github.event.deployment_status.target_url }}
