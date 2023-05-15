@@ -9,8 +9,11 @@ jobs:
   run_checks:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
-        uses: ./.github/workflows/checkout-and-install.yml
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install
+        uses: ./.github/workflows/install.yml
 
       - name: Run Prettier
         run: pnpm prettier
