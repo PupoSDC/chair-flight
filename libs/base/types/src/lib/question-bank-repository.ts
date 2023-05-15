@@ -5,17 +5,14 @@ import type {
 import type { QuestionTemplate } from "./question-templates";
 
 export interface QuestionBankRepository {
+  getAllQuestionTemplates(): Promise<QuestionTemplate[]>;
   getQuestionTemplate(questionId: string): Promise<QuestionTemplate>;
+  getQuestionTemplates(questionIds: string[]): Promise<QuestionTemplate[]>;
+  getAllLearningObjectives(): Promise<LearningObjective[]>;
   getLearningObjective(id: string): Promise<LearningObjective>;
   getLearningObjectives(ids: string[]): Promise<LearningObjective[]>;
-  getAllQuestionTemplates(): Promise<QuestionTemplate[]>;
-  getAllLearningObjectives(): Promise<LearningObjective[]>;
+  getSubjects(): Promise<LearningObjectiveSummary[]>;
   writeQuestions(questions: QuestionTemplate[]): Promise<void>;
   writeLearningObjectives(los: LearningObjective[]): Promise<void>;
-
-  /**
-   * Returns a list of subjects that can be directly selected for test
-   * generation
-   */
-  getSubjects(): Promise<LearningObjectiveSummary[]>;
+  writeSubjects(subjects: LearningObjectiveSummary[]): Promise<void>;
 }

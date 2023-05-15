@@ -4,6 +4,7 @@ import { NoSsr } from "@mui/base";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import {
   Box,
+  Link,
   List,
   ListDivider,
   ListItem,
@@ -110,7 +111,9 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                     <React.Fragment key={result.id}>
                       <ListItem>
                         <ListItemContent>
-                          <Typography>{result.id}</Typography>
+                          <Link href={`/learning-objectives/${result.id}`}>
+                            <Typography>{result.id}</Typography>
+                          </Link>
                           <Typography level="body2">{result.text}</Typography>
                           <Typography level="body3">
                             source: {result.text}
@@ -129,7 +132,6 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                       <th>Description</th>
                       {Object.values(CourseNames).map((courseName) => (
                         <th
-                          className="course-name"
                           key={courseName}
                           children={courseName}
                           style={{
@@ -145,20 +147,29 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                     {results.map((result) => (
                       <tr key={result.id}>
                         <td>
-                          <Typography>{result.contentId}</Typography>
+                          <Link href={`/learning-objectives/${result.id}`}>
+                            <Typography>{result.contentId}</Typography>
+                          </Link>
                         </td>
                         <TdWithMarkdown>
                           <MarkdownClient>{result.text}</MarkdownClient>
                           <Typography level="body3">{result.source}</Typography>
                         </TdWithMarkdown>
                         {Object.keys(CourseNames).map((courseName) => (
-                          <td key={courseName} className="course-name">
+                          <td key={courseName}>
                             {result.courses.includes(
                               courseName as CourseName
                             ) && <CheckIcon />}
                           </td>
                         ))}
-                        <td>{result.questions.length}</td>
+                        <Box
+                          component={"td"}
+                          children={result.questions.length}
+                          sx={{
+                            textAlign: "right",
+                            pr: `2em !important`,
+                          }}
+                        />
                       </tr>
                     ))}
                   </tbody>

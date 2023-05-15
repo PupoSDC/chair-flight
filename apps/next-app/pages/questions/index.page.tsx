@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import { default as KeyboardArrowRightRoundedIcon } from "@mui/icons-material/KeyboardArrowRightRounded";
-import { Box, Button, Link, List, useTheme } from "@mui/joy";
+import { useTheme } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
-import { useWindowSize } from "@chair-flight/react/components";
+import {
+  AppHead,
+  AppHeaderMenu,
+  QuestionPreviewList,
+} from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,
   CtaSearch,
-  QuestionVariantPreview,
   Ups,
+  useWindowSize,
 } from "@chair-flight/react/components";
 import type { SearchQuestionsResults } from "@chair-flight/core/app";
 import type { GetStaticProps, NextPage } from "next";
@@ -38,6 +40,7 @@ const QuestionsIndexPage: NextPage = () => {
   const hasResults = hasSearched && (data?.totalResults ?? 0) > 0;
   const hasError = !loading && error;
   const hasNoResults = hasSearched && !loading && !hasResults && !hasError;
+  const results = data?.results.map((d) => d.result);
 
   useEffect(() => {
     if (data?.results) setHasSearched(true);
@@ -59,72 +62,7 @@ const QuestionsIndexPage: NextPage = () => {
           placeholder="search Questions..."
           numberOfResults={data?.totalResults}
         />
-
-        {hasResults && data && (
-          <List
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              overflow: "scroll",
-            }}
-          >
-            {data.results.map(({ result }) => (
-              <Box
-                data-cy="question-preview"
-                component="li"
-                sx={{
-                  px: { xs: 0, md: 1 },
-                  py: 1,
-                  width: { xs: 1, md: 1 / 2, lg: 1 / 3 },
-                }}
-                key={result.variantId}
-              >
-                <QuestionVariantPreview
-                  showCorrect
-                  id={result.questionId}
-                  variantId={`${result.variantId} ${
-                    result.numberOfVariants > 1
-                      ? `(+${+result.numberOfVariants - 1})`
-                      : ""
-                  }`}
-                  text={result.text}
-                  learningObjectives={result.learningObjectives}
-                  externalIds={result.externalIds}
-                  highLightTerms={[]}
-                  topRightCorner={
-                    <>
-                      <Button
-                        size="sm"
-                        variant="plain"
-                        href={`/questions/${result.questionId}`}
-                        component={Link}
-                        children={"Go To Question"}
-                        endDecorator={<KeyboardArrowRightRoundedIcon />}
-                        sx={{
-                          px: 1,
-                          display: { xs: "none", sm: "flex" },
-                        }}
-                      />
-                      <Button
-                        size="sm"
-                        variant="plain"
-                        href={`/questions/${result.questionId}`}
-                        component={Link}
-                        children={<KeyboardArrowRightRoundedIcon />}
-                        sx={{
-                          px: 1,
-                          display: { xs: "flex", sm: "none" },
-                        }}
-                      />
-                    </>
-                  }
-                />
-              </Box>
-            ))}
-          </List>
-        )}
+        {hasResults && <QuestionPreviewList questions={results ?? []} />}
         {hasError && <Ups message="Error fetching questions" color="danger" />}
         {hasNoResults && <Ups message="No questions found" />}
       </AppLayout.Main>

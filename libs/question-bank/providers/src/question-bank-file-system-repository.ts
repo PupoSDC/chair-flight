@@ -2,17 +2,18 @@ import { default as fs } from "fs";
 import { default as path } from "path";
 import { cwd } from "process";
 import * as XLSX from "xlsx";
-import { UnimplementedError } from "@chair-flight/base/errors";
-import { QuestionBankBaseRepository } from "./question-bank-base-repository";
+import { NotFoundError, UnimplementedError } from "@chair-flight/base/errors";
 import type {
   CourseName,
   LearningObjective,
   LearningObjectiveId,
+  LearningObjectiveSummary,
+  QuestionBankRepository,
   QuestionTemplate,
   QuestionTemplateJson,
 } from "@chair-flight/base/types";
 
-export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
+export class QuestionBankLocalRepository implements QuestionBankRepository {
   private intentionallyLeftBlankPattern = /Intentionally left blank/i;
   private contentPath = "libs/question-bank/content/src";
   private courseNames: Record<string, CourseName> = {
@@ -24,6 +25,8 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
     IR: "IR",
     "CBIR(A)": "CBIR_A",
   };
+  private allQuestionTemplates: QuestionTemplate[] = [];
+  private allLearningObjectives: LearningObjective[] = [];
 
   private async getAllQuestionsFromLocalFs(
     dirPath: string = path.join(cwd(), this.contentPath, "questions")
@@ -56,6 +59,22 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
       this.allQuestionTemplates = await this.getAllQuestionsFromLocalFs();
     }
     return this.allQuestionTemplates;
+  }
+
+  async getQuestionTemplate(questionId: string) {
+    if (!this.allQuestionTemplates.length) {
+      this.allQuestionTemplates = await this.getAllQuestionsFromLocalFs();
+    }
+    const question = this.allQuestionTemplates.find((q) => q.id === questionId);
+    if (!question) throw new NotFoundError(`Question ${questionId} not found`);
+    return question;
+  }
+
+  async getQuestionTemplates(questionIds: string[]) {
+    if (!this.allQuestionTemplates.length) {
+      this.allQuestionTemplates = await this.getAllQuestionsFromLocalFs();
+    }
+    return this.allQuestionTemplates.filter((q) => questionIds.includes(q.id));
   }
 
   async getAllLearningObjectives() {
@@ -135,6 +154,87 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
     return learningObjectives;
   }
 
+  async getLearningObjective(id: string) {
+    if (!this.allLearningObjectives.length) {
+      this.allLearningObjectives = await this.getAllLearningObjectives();
+    }
+    const lo = this.allLearningObjectives.find((lo) => lo.id === id);
+    if (!lo) throw new NotFoundError(`Lo ${id} not found`);
+    return lo;
+  }
+
+  async getLearningObjectives(ids: string[]) {
+    if (!this.allLearningObjectives.length) {
+      this.allLearningObjectives = await this.getAllLearningObjectives();
+    }
+    return this.allLearningObjectives.filter((lo) => ids.includes(lo.id));
+  }
+
+  async getSubjects() {
+    const allLearningObjectives = await this.getAllLearningObjectives();
+    return allLearningObjectives.reduce<LearningObjectiveSummary[]>(
+      (acc, lo) => {
+        const path = lo.id
+          .split(".")
+          .map((_, index, arr) => arr.slice(0, index + 1).join("."));
+
+        if (path.length == 1) {
+          acc.push({
+            id: lo.id,
+            text: lo.text,
+            numberOfQuestions: lo.questions.length,
+            numberOfLearningObjectives: 0,
+          });
+          return acc;
+        }
+
+        const subject = acc.find((s) => {
+          const key = path[0] === "071" ? "070" : path[0];
+          return s.id === key;
+        });
+
+        if (!subject) throw new Error(`${path[0]} should be defined!`);
+        subject.numberOfLearningObjectives += 1;
+        subject.numberOfQuestions += lo.questions.length;
+
+        if (path.length === 2) {
+          subject.children ??= [];
+          subject.children.push({
+            id: lo.id,
+            text: lo.text,
+            numberOfQuestions: lo.questions.length,
+            numberOfLearningObjectives: 0,
+          });
+          return acc;
+        }
+
+        const chapter = subject.children?.find((t) => t.id === path[1]);
+        if (!chapter) throw new Error(`${path[1]} should be defined!`);
+        chapter.numberOfLearningObjectives += 1;
+        chapter.numberOfQuestions += lo.questions.length;
+
+        if (path.length === 3) {
+          chapter.children ??= [];
+          chapter.children.push({
+            id: lo.id,
+            text: lo.text,
+            numberOfQuestions: lo.questions.length,
+            numberOfLearningObjectives: 0,
+          });
+          return acc;
+        }
+
+        const topic = chapter.children?.find((t) => t.id === path[2]);
+        if (!topic) throw new Error(`${path[2]} should be defined!`);
+        topic.numberOfLearningObjectives += 1;
+        topic.numberOfQuestions += lo.questions.length;
+
+        return acc;
+      },
+      []
+    );
+  }
+
   async writeQuestions(questions: QuestionTemplate[]) {
     const filesToSave = Object.values(questions).reduce<
       Record<string, QuestionTemplateJson[]>
@@ -170,6 +270,10 @@ export class QuestionBankLocalRepository extends QuestionBankBaseRepository {
   }
 
   async writeLearningObjectives(): Promise<void> {
+    throw new UnimplementedError("We are not EASA. We don't write LOs");
+  }
+
+  async writeSubjects(): Promise<void> {
     throw new UnimplementedError("We are not EASA. We don't write LOs");
   }
 }

@@ -5,8 +5,9 @@ on: push
 env:
   QUESTION_BANK_PROVIDER: local
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
+
 jobs:
-  cache-and-install:
+  Code Check:
     runs-on: ubuntu-latest
 
     steps:
