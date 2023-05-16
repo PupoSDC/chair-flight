@@ -608,7 +608,7 @@
       "dtTKQy1c": {
         "id": "dtTKQy1c",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 213px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 73px;\">TAS:\n\t\t\t<td style=\"width: 119px;\">90 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 73px;\">True Track:\n\t\t\t<td style=\"width: 119px;\">340º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 73px;\">Crosswind:\n\t\t\t<td style=\"width: 119px;\">20 kt from the right\n\nCalculate the approximate WCA (wind correction angle).",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>90 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>True Track:\n\t\t\t<td>340º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Crosswind:\n\t\t\t<td>20 kt from the right\n\nCalculate the approximate WCA (wind correction angle).",
         "options": [
           {
             "id": "ACZF6TTT5I",
@@ -731,7 +731,7 @@
       "kXtZmcpE": {
         "id": "kXtZmcpE",
         "type": "simple",
-        "question": "Refer to figure Enroute_ED-4_VFR_09.\nAt 11:08 your location is over the intersection of highways A3 and A92 (N48º49.1' E012º56.4'). Consider the DR positions (DR1 to DR4) which are shown on the annex. Given the following information, determine your DR position at 11:20.\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 170px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 61px;\">Heading:\n\t\t\t<td style=\"width: 85px;\">085º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 61px;\">TAS:\n\t\t\t<td style=\"width: 85px;\">120 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 61px;\">W/V:\n\t\t\t<td style=\"width: 85px;\">075º(T)/40 kt",
+        "question": "Refer to figure Enroute_ED-4_VFR_09.\nAt 11:08 your location is over the intersection of highways A3 and A92 (N48º49.1' E012º56.4'). Consider the DR positions (DR1 to DR4) which are shown on the annex. Given the following information, determine your DR position at 11:20.\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Heading:\n\t\t\t<td>085º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>120 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>075º(T)/40 kt",
         "options": [
           {
             "id": "AYQSYX57Y7",
@@ -3512,7 +3512,7 @@
       "WtpbJE8r": {
         "id": "WtpbJE8r",
         "type": "simple",
-        "question": "Halfway between two reporting points the navigation log gives the following information:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 273px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 167px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 85px;\">360 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 167px;\">W/V:\n\t\t\t<td style=\"text-align: right; width: 85px;\">330°(T)/80 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 167px;\">Variation:\n\t\t\t<td style=\"text-align: right; width: 85px;\">19°W\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 167px;\">Compass heading:\n\t\t\t<td style=\"text-align: right; width: 85px;\">237°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 167px;\">Deviation on this heading:\n\t\t\t<td style=\"text-align: right; width: 85px;\">-5°\n\nWhat is the average groundspeed for this leg?",
+        "question": "Halfway between two reporting points the navigation log gives the following information:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>360 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>330°(T)/80 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Variation:\n\t\t\t<td>19°W\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Compass heading:\n\t\t\t<td>237°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Deviation on this heading:\n\t\t\t<td>-5°\n\nWhat is the average groundspeed for this leg?",
         "options": [
           {
             "id": "AYC4WSP0QB",
@@ -4207,7 +4207,7 @@
       "B9Y7gDxc": {
         "id": "B9Y7gDxc",
         "type": "simple",
-        "question": "<p style=\"\">A pilot is using conventional navigation to fly on a non-RNAV airway defined by the fixes ASMIK-SEVAN-PEMAN, with a published course of 104°(T). To fly the centre line of the airway he/she maintains a heading of 099°(T). After having overflown waypoint SEVAN and having travelled for 20 NM, the pilot plots the position to be 3 NM off-course towards the North. Calculate the average drift after overflying waypoint SEVAN.",
+        "question": "<p>A pilot is using conventional navigation to fly on a non-RNAV airway defined by the fixes ASMIK-SEVAN-PEMAN, with a published course of 104°(T). To fly the centre line of the airway he/she maintains a heading of 099°(T). After having overflown waypoint SEVAN and having travelled for 20 NM, the pilot plots the position to be 3 NM off-course towards the North. Calculate the average drift after overflying waypoint SEVAN.",
         "options": [
           {
             "id": "AUC2MGBQT6",
@@ -5592,7 +5592,7 @@
       "9KIjIieq": {
         "id": "9KIjIieq",
         "type": "simple",
-        "question": "Given the following information and using a mechanical computer, calculate the TAS of the aircraft:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 168px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 71px;\">Altitude:\n\t\t\t<td style=\"width: 76px;\">3 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 71px;\">QNH:\n\t\t\t<td style=\"width: 76px;\">1 046 hPa\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 71px;\">OAT:\n\t\t\t<td style=\"width: 76px;\">+10 °C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 71px;\">CAS:\n\t\t\t<td style=\"width: 76px;\">154 kt",
+        "question": "Given the following information and using a mechanical computer, calculate the TAS of the aircraft:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Altitude:\n\t\t\t<td>3 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>QNH:\n\t\t\t<td>1 046 hPa\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>+10 °C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>CAS:\n\t\t\t<td>154 kt",
         "options": [
           {
             "id": "AW502Q72NZ",
@@ -6808,7 +6808,7 @@
       "XEmgXA7m": {
         "id": "XEmgXA7m",
         "type": "simple",
-        "question": "Given the following data, calculate the wind direction (°T) and speed.\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 207px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">TAS:\n\t\t\t<td style=\"width: 49px;\">465 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">GS:\n\t\t\t<td style=\"width: 49px;\">480 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Track:\n\t\t\t<td style=\"width: 49px;\">090º(M)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Variation:\n\t\t\t<td style=\"width: 49px;\">15ºE\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Wind Correction Angle:\n\t\t\t<td style=\"width: 49px;\">+13º\n\n ",
+        "question": "Given the following data, calculate the wind direction (°T) and speed.\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>465 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>GS:\n\t\t\t<td>480 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Track:\n\t\t\t<td>090º(M)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Variation:\n\t\t\t<td>15ºE\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind Correction Angle:\n\t\t\t<td>+13º\n\n ",
         "options": [
           {
             "id": "ASXEMIM7AT",
@@ -6842,7 +6842,7 @@
       "H1rEgOTg": {
         "id": "H1rEgOTg",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 225px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Cruising level:\n\t\t\t<td style=\"width: 62px;\">FL410\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Magnetic heading:\n\t\t\t<td style=\"width: 62px;\">130°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Calibrated airspeed:\n\t\t\t<td style=\"width: 62px;\">237 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Magnetic track:\n\t\t\t<td style=\"width: 62px;\">122°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Wind component:\n\t\t\t<td style=\"width: 62px;\">+25 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Variation:\n\t\t\t<td style=\"width: 62px;\">40°W\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 156px;\">Compressibility factor:\n\t\t\t<td style=\"width: 62px;\">0.95\n\n \nAssuming ISA conditions, calculate the (true) wind direction and velocity:",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Cruising level:\n\t\t\t<td>FL410\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Magnetic heading:\n\t\t\t<td>130°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Calibrated airspeed:\n\t\t\t<td>237 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Magnetic track:\n\t\t\t<td>122°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind component:\n\t\t\t<td>+25 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Variation:\n\t\t\t<td>40°W\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Compressibility factor:\n\t\t\t<td>0.95\n\n \nAssuming ISA conditions, calculate the (true) wind direction and velocity:",
         "options": [
           {
             "id": "ASBFF9BBTN",
@@ -8286,7 +8286,7 @@
       "kmGQi1TH": {
         "id": "kmGQi1TH",
         "type": "simple",
-        "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">Leg\n\t\t\t<td style=\"text-align: center;\">TAS (kt)\n\t\t\t<td style=\"text-align: center;\">t (min)\n\t\t</tr>\n\t\t<tr> 1 216 22\n\t\t</tr>\n\t\t<tr> 2 228 17\n\t\t</tr>\n\t\t<tr> 3 221 13\n\t\t</tr>\n\t\t<tr> 4 224 16\n\t\t</tr>\n\t\t<tr> 5 224 8",
+        "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Leg\n\t\t\t<td>TAS (kt)\n\t\t\t<td>t (min)\n\t\t</tr>\n\t\t<tr> 1 216 22\n\t\t</tr>\n\t\t<tr> 2 228 17\n\t\t</tr>\n\t\t<tr> 3 221 13\n\t\t</tr>\n\t\t<tr> 4 224 16\n\t\t</tr>\n\t\t<tr> 5 224 8",
         "options": [
           {
             "id": "AFI5O5EJFJ",
@@ -8320,7 +8320,7 @@
       "UsARmEpa": {
         "id": "UsARmEpa",
         "type": "simple",
-        "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">Leg\n\t\t\t<td style=\"text-align: center;\">TAS (kt)\n\t\t\t<td style=\"text-align: center;\">t (min)\n\t\t</tr>\n\t\t<tr> 1 312 18\n\t\t</tr>\n\t\t<tr> 2 297 13\n\t\t</tr>\n\t\t<tr> 3 304 15\n\t\t</tr>\n\t\t<tr> 4 304 9",
+        "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Leg\n\t\t\t<td>TAS (kt)\n\t\t\t<td>t (min)\n\t\t</tr>\n\t\t<tr> 1 312 18\n\t\t</tr>\n\t\t<tr> 2 297 13\n\t\t</tr>\n\t\t<tr> 3 304 15\n\t\t</tr>\n\t\t<tr> 4 304 9",
         "options": [
           {
             "id": "A84ZZ5HNJ5",
@@ -8354,7 +8354,7 @@
       "zJlZ2zqI": {
         "id": "zJlZ2zqI",
         "type": "simple",
-        "question": "Refer to the OFP.\nThe average TAS for the given route segments is:\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:200px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong>LEG</strong>\n\t\t\t<td style=\"text-align:center\"><strong>TAS (kt)</strong>\n\t\t\t<td style=\"text-align:center\"><strong>t (min</strong>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">1\n\t\t\t<td style=\"text-align:center\">426\n\t\t\t<td style=\"text-align:center\">12\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2\n\t\t\t<td style=\"text-align:center\">434\n\t\t\t<td style=\"text-align:center\">15\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">3\n\t\t\t<td style=\"text-align:center\">434\n\t\t\t<td style=\"text-align:center\">12\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">4\n\t\t\t<td style=\"text-align:center\">430\n\t\t\t<td style=\"text-align:center\">8\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">5\n\t\t\t<td style=\"text-align:center\">423\n\t\t\t<td style=\"text-align:center\">9",
+        "question": "Refer to the OFP.\nThe average TAS for the given route segments is:\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td><strong>LEG</strong>\n\t\t\t<td><strong>TAS (kt)</strong>\n\t\t\t<td><strong>t (min</strong>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>1\n\t\t\t<td>426\n\t\t\t<td>12\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>2\n\t\t\t<td>434\n\t\t\t<td>15\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>3\n\t\t\t<td>434\n\t\t\t<td>12\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>4\n\t\t\t<td>430\n\t\t\t<td>8\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>5\n\t\t\t<td>423\n\t\t\t<td>9",
         "options": [
           {
             "id": "A323H80PNO",
@@ -8639,7 +8639,7 @@
       "hNLI2UVJ": {
         "id": "hNLI2UVJ",
         "type": "simple",
-        "question": "<p style=\"\">Given the following information, what is the TAS of an aircraft flying at FL310?<p style=\"\">OAT: -56°C \n Mach number: 0.80",
+        "question": "<p>Given the following information, what is the TAS of an aircraft flying at FL310?<p>OAT: -56°C \n Mach number: 0.80",
         "options": [
           {
             "id": "A906LL19RE",
@@ -8680,7 +8680,7 @@
       "K2uQERUZ": {
         "id": "K2uQERUZ",
         "type": "simple",
-        "question": "Given:\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"letter-spacing:0.7px; width:160px\">\n\t<tbody>\n\t\t\n- Course:\t040°(T)\n- TAS:\t120 kts\n- Wind speed:\t30 kts\n\nMaximum drift angle will be obtained for a wind direction of:",
+        "question": "Given:\n<table>\n\t<tbody>\n\t\t\n- Course:\t040°(T)\n- TAS:\t120 kts\n- Wind speed:\t30 kts\n\nMaximum drift angle will be obtained for a wind direction of:",
         "options": [
           {
             "id": "AKNK6R9NAY",
@@ -8890,7 +8890,7 @@
       "iMjOVpDS": {
         "id": "iMjOVpDS",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 135px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 64px;\">Heading:  \n\t\t\t<td style=\"text-align: right; width: 50px;\"> 090° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 64px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 50px;\">180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 64px;\">GS:\n\t\t\t<td style=\"text-align: right; width: 50px;\">180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 64px;\">Drift:\n\t\t\t<td style=\"text-align: right; width: 50px;\">5° R\n\nCalculate the W/V.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Heading:  \n\t\t\t<td> 090° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>GS:\n\t\t\t<td>180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Drift:\n\t\t\t<td>5° R\n\nCalculate the W/V.",
         "options": [
           {
             "id": "AVXCUOYCAL",
@@ -8924,7 +8924,7 @@
       "VZTvDymO": {
         "id": "VZTvDymO",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 146px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 40px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 85px;\">250 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 40px;\">HDG:\n\t\t\t<td style=\"text-align: right; width: 85px;\">029° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 40px;\">W/V:\n\t\t\t<td style=\"text-align: right; width: 85px;\">035º(T) /45 kt\n\nCalculate the drift and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>250 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>HDG:\n\t\t\t<td>029° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>035º(T) /45 kt\n\nCalculate the drift and GS.",
         "options": [
           {
             "id": "AHMJCI739G",
@@ -8958,7 +8958,7 @@
       "9uJ79Hki": {
         "id": "9uJ79Hki",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 152px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 39px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 90px;\">205 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 39px;\">HDG:\n\t\t\t<td style=\"text-align: right; width: 90px;\">180° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 39px;\">W/V:\n\t\t\t<td style=\"text-align: right; width: 90px;\">240º (T)/25 kt\n\nCalculate the drift and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>205 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>HDG:\n\t\t\t<td>180° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>240º (T)/25 kt\n\nCalculate the drift and GS.",
         "options": [
           {
             "id": "A2LYVUQQOE",
@@ -8992,7 +8992,7 @@
       "xVUhd0WV": {
         "id": "xVUhd0WV",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 137px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 56px;\">CAS:\n\t\t\t<td style=\"text-align: right; width: 60px;\">320 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 56px;\">OAT:\n\t\t\t<td style=\"text-align: right; width: 60px;\">ISA+15°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 56px;\">Altitude:\n\t\t\t<td style=\"text-align: right; width: 60px;\">FL330\n\nTAS is approximately (compressibility factor 0.939):",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>CAS:\n\t\t\t<td>320 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>ISA+15°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Altitude:\n\t\t\t<td>FL330\n\nTAS is approximately (compressibility factor 0.939):",
         "options": [
           {
             "id": "A8ZVNW1HLJ",
@@ -9026,7 +9026,7 @@
       "ZOCNRGwn": {
         "id": "ZOCNRGwn",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 201px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 119px;\">Mach number:\n\t\t\t<td style=\"text-align: right; width: 60px;\">0.63\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 119px;\">Pressure altitude:\n\t\t\t<td style=\"text-align: right; width: 60px;\">20 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 119px;\">OAT:\n\t\t\t<td style=\"text-align: right; width: 60px;\">-32°C\n\nWhat is the True Air Speed (TAS)?",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Mach number:\n\t\t\t<td>0.63\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Pressure altitude:\n\t\t\t<td>20 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>-32°C\n\nWhat is the True Air Speed (TAS)?",
         "options": [
           {
             "id": "A0FLYBU7G3",
@@ -9873,7 +9873,7 @@
       "ynzAwzFu": {
         "id": "ynzAwzFu",
         "type": "simple",
-        "question": "Given:\n<table border=\"1\" style=\"padding:1px !important\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 32.55pt; text-align: center;\"><strong>TT</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 85px; text-align: center;\"><strong>Wind</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 26.8pt; text-align: center;\"><strong>TH</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 31.8pt; text-align: center;\"><strong>Var.</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 30.15pt; text-align: center;\"><strong>MH</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 33.8pt; text-align: center;\"><strong>Dev.</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 27.5pt; text-align: center;\"><strong>CH</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 45.25pt; text-align: center;\"><strong>CAS</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 48.75pt; text-align: center;\"><strong>PA</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 41.8pt; text-align: center;\"><strong>Temp.</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 40px; text-align: center;\"><strong>TAS</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 19.25pt; text-align: center;\"><strong>GS</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 60px; text-align: center;\"><strong>Dis.</strong></th>\n\t\t\t<th scope=\"col\" style=\"vertical-align: top; width: 45px; text-align: center;\"><strong>Time</strong></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"vertical-align:top; width:32.55pt\">274º\n\t\t\t<td style=\"vertical-align:top; width:85px\">135º/20 kt\n\t\t\t<td style=\"vertical-align:top; width:26.8pt\"> \n\n\t\t<td style=\"vertical-align:top; width:31.8pt\">6ºE\n\t\t\t<td style=\"vertical-align:top; width:30.15pt\"> \n\n\t\t<td style=\"vertical-align:top; width:33.8pt\">2ºW\n\t\t\t<td style=\"vertical-align:top; width:27.5pt\"> \n\n\t\t<td style=\"vertical-align:top; width:45.25pt\">125 kt\n\t\t\t<td style=\"vertical-align:top; width:48.75pt\">7 000 ft\n\t\t\t<td style=\"vertical-align:top; width:41.8pt\">+5ºC\n\t\t\t<td style=\"vertical-align:top; width:30px\"> \n\n\t\t<td style=\"vertical-align:top; width:19.25pt\"> \n\n\t\t<td style=\"vertical-align:top; width:60px\">32 NM\n\t\t\t<td style=\"vertical-align:top; width:45px\"> \n\nCalculate GS (Ground Speed) and time..",
+        "question": "Given:\n<table>\n\t<thead>\n\t\t<tr>\n\t\t\t<th><strong>TT</strong></th>\n\t\t\t<th><strong>Wind</strong></th>\n\t\t\t<th><strong>TH</strong></th>\n\t\t\t<th><strong>Var.</strong></th>\n\t\t\t<th><strong>MH</strong></th>\n\t\t\t<th><strong>Dev.</strong></th>\n\t\t\t<th><strong>CH</strong></th>\n\t\t\t<th><strong>CAS</strong></th>\n\t\t\t<th><strong>PA</strong></th>\n\t\t\t<th><strong>Temp.</strong></th>\n\t\t\t<th><strong>TAS</strong></th>\n\t\t\t<th><strong>GS</strong></th>\n\t\t\t<th><strong>Dis.</strong></th>\n\t\t\t<th><strong>Time</strong></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>274º\n\t\t\t<td>135º/20 kt\n\t\t\t<td> \n\n\t\t<td>6ºE\n\t\t\t<td> \n\n\t\t<td>2ºW\n\t\t\t<td> \n\n\t\t<td>125 kt\n\t\t\t<td>7 000 ft\n\t\t\t<td>+5ºC\n\t\t\t<td> \n\n\t\t<td> \n\n\t\t<td>32 NM\n\t\t\t<td> \n\nCalculate GS (Ground Speed) and time..",
         "options": [
           {
             "id": "AZCTC6OLHL",
@@ -16671,7 +16671,7 @@
       "e2mPg3Gm": {
         "id": "e2mPg3Gm",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 171px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 63px;\">Track:\n\t\t\t<td style=\"width: 84px;\">060º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 63px;\">TAS:\n\t\t\t<td style=\"width: 84px;\">180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 63px;\">W/V:\n\t\t\t<td style=\"width: 84px;\">210º(T)/24 kt\n\nUsing Mental Dead Reckoning, calculate the true heading and the groundspeed.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Track:\n\t\t\t<td>060º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>210º(T)/24 kt\n\nUsing Mental Dead Reckoning, calculate the true heading and the groundspeed.",
         "options": [
           {
             "id": "AHJ17BP8QH",
@@ -16705,7 +16705,7 @@
       "JYuSHzS0": {
         "id": "JYuSHzS0",
         "type": "simple",
-        "question": "Calculate the true wind direction and speed given the following information:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 206px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">TAS:\n\t\t\t<td style=\"width: 48px;\">165 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Track: \n\t\t\t<td style=\"width: 48px;\">022º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Wind Correction Angle:\n\t\t\t<td style=\"width: 48px;\">-15º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 135px;\">Ground Speed:\n\t\t\t<td style=\"width: 48px;\">160 kt",
+        "question": "Calculate the true wind direction and speed given the following information:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>165 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Track: \n\t\t\t<td>022º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind Correction Angle:\n\t\t\t<td>-15º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Ground Speed:\n\t\t\t<td>160 kt",
         "options": [
           {
             "id": "AZMFGSSTX2",
@@ -18577,7 +18577,7 @@
       "Z89KMsMS": {
         "id": "Z89KMsMS",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 171px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 93px;\">True altitude:\n\t\t\t<td style=\"width: 54px;\">9 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 93px;\">OAT:\n\t\t\t<td style=\"width: 54px;\">-32°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 93px;\">CAS:\n\t\t\t<td style=\"width: 54px;\">200 kt\n\nWhat is the TAS?",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True altitude:\n\t\t\t<td>9 000 ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>-32°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>CAS:\n\t\t\t<td>200 kt\n\nWhat is the TAS?",
         "options": [
           {
             "id": "AYZIN87JH4",
@@ -18611,7 +18611,7 @@
       "dUQWvoFF": {
         "id": "dUQWvoFF",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 169px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">Cruising level:\n\t\t\t<td style=\"width: 58px;\">FL250\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">OAT:\n\t\t\t<td style=\"width: 58px;\">-15°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">TAS:\n\t\t\t<td style=\"width: 58px;\">250 kt\n\nCalculate the Mach number.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Cruising level:\n\t\t\t<td>FL250\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>-15°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>250 kt\n\nCalculate the Mach number.",
         "options": [
           {
             "id": "ACJE54ALY5",
@@ -18645,7 +18645,7 @@
       "YSHicc5u": {
         "id": "YSHicc5u",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 169px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 97px;\">True track:\n\t\t\t<td style=\"width: 51px;\">037°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 97px;\">True heading:\n\t\t\t<td style=\"width: 51px;\">042°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 97px;\">True airspeed:\n\t\t\t<td style=\"width: 51px;\">440 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 97px;\">Ground speed:\n\t\t\t<td style=\"width: 51px;\">400 kt\n\nCalculate the true wind direction and velocity:",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True track:\n\t\t\t<td>037°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>True heading:\n\t\t\t<td>042°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>True airspeed:\n\t\t\t<td>440 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Ground speed:\n\t\t\t<td>400 kt\n\nCalculate the true wind direction and velocity:",
         "options": [
           {
             "id": "A10SGUYTQL",
@@ -18809,7 +18809,7 @@
       "uuhVt4pa": {
         "id": "uuhVt4pa",
         "type": "simple",
-        "question": "Given:\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 137px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 60px;\">Heading:\n\t\t\t<td style=\"width: 54px;\">307º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 60px;\">TAS:\n\t\t\t<td style=\"width: 54px;\">230 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 60px;\">Track:\n\t\t\t<td style=\"width: 54px;\">313º (T)\n\nThe aircraft travels 168 NM in 48 minutes.\nCalculate the W/V...",
+        "question": "Given:\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Heading:\n\t\t\t<td>307º(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>230 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Track:\n\t\t\t<td>313º (T)\n\nThe aircraft travels 168 NM in 48 minutes.\nCalculate the W/V...",
         "options": [
           {
             "id": "ANJVXZYY2W",
@@ -19055,7 +19055,7 @@
       "LJKMc9Yw": {
         "id": "LJKMc9Yw",
         "type": "simple",
-        "question": "<div style=\"clear:both;\">An aircraft departs from 05º52'N, 000ºE/W and flies\n- 720 NM westwards\n- 720 NM southwards\n- 1 334 km eastwards\n- 500 min northwards\nWhat is its final position?",
+        "question": "<div>An aircraft departs from 05º52'N, 000ºE/W and flies\n- 720 NM westwards\n- 720 NM southwards\n- 1 334 km eastwards\n- 500 min northwards\nWhat is its final position?",
         "options": [
           {
             "id": "A5BY6XU55E",
@@ -19991,7 +19991,7 @@
       "8ADZLrTK": {
         "id": "8ADZLrTK",
         "type": "simple",
-        "question": "Given the following information, calculate the True Heading (TH) and true airspeed (TAS):\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 210px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">True Track:\n\t\t\t<td style=\"width: 91px;\">119°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">Groundspeed:\n\t\t\t<td style=\"width: 91px;\">195 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">W/V:\n\t\t\t<td style=\"width: 91px;\">181°(T)/41 kt",
+        "question": "Given the following information, calculate the True Heading (TH) and true airspeed (TAS):\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True Track:\n\t\t\t<td>119°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Groundspeed:\n\t\t\t<td>195 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>181°(T)/41 kt",
         "options": [
           {
             "id": "AWTNZDXX73",
@@ -20401,7 +20401,7 @@
       "hfHzdqvS": {
         "id": "hfHzdqvS",
         "type": "simple",
-        "question": "<p style=\"\">You are planning to fly from waypoint A (46°35'00''N, 175°26'39''E) to waypoint B (28°24'00''S, 175°26'39''E). What is the distance between these two waypoints?",
+        "question": "<p>You are planning to fly from waypoint A (46°35'00''N, 175°26'39''E) to waypoint B (28°24'00''S, 175°26'39''E). What is the distance between these two waypoints?",
         "options": [
           {
             "id": "AKUUAKA7LS",
@@ -21326,7 +21326,7 @@
       "CARddSX9": {
         "id": "CARddSX9",
         "type": "simple",
-        "question": "Given the following information:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 163px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 49px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 93px;\">465 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 49px;\">Track: \n\t\t\t<td style=\"text-align: right; width: 93px;\">007° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 49px;\">W/V:\n\t\t\t<td style=\"text-align: right; width: 93px;\">  300° (T) / 80 kt\n\nCalculate the HDG and GS.",
+        "question": "Given the following information:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>465 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Track: \n\t\t\t<td>007° (T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>  300° (T) / 80 kt\n\nCalculate the HDG and GS.",
         "options": [
           {
             "id": "AJSWC3AAXS",
@@ -22492,7 +22492,7 @@
       "fEM17Bwn": {
         "id": "fEM17Bwn",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 227px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 114px;\">Desired track (DTK):\n\t\t\t<td style=\"width: 89px;\">095°(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 114px;\">True airspeed:\n\t\t\t<td style=\"width: 89px;\">380 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 114px;\">Wind: \n\t\t\t<td style=\"width: 89px;\">060°(T)/60 kt\n\nCalculate the required true heading to maintain the desired track:",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Desired track (DTK):\n\t\t\t<td>095°(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>True airspeed:\n\t\t\t<td>380 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind: \n\t\t\t<td>060°(T)/60 kt\n\nCalculate the required true heading to maintain the desired track:",
         "options": [
           {
             "id": "AA7G1D8432",
@@ -22943,7 +22943,7 @@
       "XisMYBPG": {
         "id": "XisMYBPG",
         "type": "simple",
-        "question": "<div style=\"\">An aircraft circles the Earth along the parallel of 88°N at a groundspeed of 150 kt. If the actual time of departure from point A is 08:25, the ETA at point A is approximately...",
+        "question": "<div>An aircraft circles the Earth along the parallel of 88°N at a groundspeed of 150 kt. If the actual time of departure from point A is 08:25, the ETA at point A is approximately...",
         "options": [
           {
             "id": "AOON5J0S4T",
@@ -24302,7 +24302,7 @@
       "fyzBlcBn": {
         "id": "fyzBlcBn",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 202px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 101px;\">Mach number:\n\t\t\t<td style=\"width: 79px;\">0.8\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 101px;\">Flight level:\n\t\t\t<td style=\"width: 79px;\">330\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 101px;\">OAT:\n\t\t\t<td style=\"width: 79px;\">ISA +15°C\n\nTAS is approximately (compressibility factor 0.94):",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Mach number:\n\t\t\t<td>0.8\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Flight level:\n\t\t\t<td>330\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>ISA +15°C\n\nTAS is approximately (compressibility factor 0.94):",
         "options": [
           {
             "id": "AXB4BZHEE2",
@@ -25106,7 +25106,7 @@
       "WlJSNMOq": {
         "id": "WlJSNMOq",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 182px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">Altitude: \n\t\t\t<td style=\"width: 63px;\">**3500** ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">Rate of descent:\n\t\t\t<td style=\"width: 63px;\">300 ft/min\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 96px;\">Ground Speed:\n\t\t\t<td style=\"width: 63px;\">135 kt\n\nCalculate the distance travelled during the descent to an aerodrome at MSL.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Altitude: \n\t\t\t<td>**3500** ft\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Rate of descent:\n\t\t\t<td>300 ft/min\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Ground Speed:\n\t\t\t<td>135 kt\n\nCalculate the distance travelled during the descent to an aerodrome at MSL.",
         "options": [
           {
             "id": "AIAJROQGIZ",
@@ -25468,7 +25468,7 @@
       "XmVGSCto": {
         "id": "XmVGSCto",
         "type": "simple",
-        "question": "<p style=\"\">Given the following information, calculate the true wind direction and speed.<p style=\"\">True Track: 096° \n Groundspeed: 238 kt \n True Heading: 087° \n TAS: 254 kt",
+        "question": "<p>Given the following information, calculate the true wind direction and speed.<p>True Track: 096° \n Groundspeed: 238 kt \n True Heading: 087° \n TAS: 254 kt",
         "options": [
           {
             "id": "A257Q58D48",
@@ -26422,7 +26422,7 @@
       "KC8HqmLo": {
         "id": "KC8HqmLo",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 176px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">True Track:\n\t\t\t<td style=\"width: 83px;\">180º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">TAS:\n\t\t\t<td style=\"width: 83px;\">180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">W/V:\n\t\t\t<td style=\"width: 83px;\">100º(T)/18 kt\n\nCalculate True Heading (TH) and Groundspeed (GS).",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True Track:\n\t\t\t<td>180º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>100º(T)/18 kt\n\nCalculate True Heading (TH) and Groundspeed (GS).",
         "options": [
           {
             "id": "A6SEJW5KVJ",
@@ -26456,7 +26456,7 @@
       "RYU09Dm2": {
         "id": "RYU09Dm2",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 237px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 120px;\">True Heading:\n\t\t\t<td style=\"width: 94px;\">305º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 120px;\">TAS:\n\t\t\t<td style=\"width: 94px;\">143 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 120px;\">W/V:\n\t\t\t<td style=\"width: 94px;\">283º(T)/22 kt\n\nCalculate true track (TT) and groundspeed (GS):",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True Heading:\n\t\t\t<td>305º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>143 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>283º(T)/22 kt\n\nCalculate true track (TT) and groundspeed (GS):",
         "options": [
           {
             "id": "AEBM5NRWXK",
@@ -26490,7 +26490,7 @@
       "JQuJvEH6": {
         "id": "JQuJvEH6",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 187px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 84px;\">TAS:\n\t\t\t<td style=\"width: 82px;\">233 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 84px;\">True Heading:\n\t\t\t<td style=\"width: 82px;\">115º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 84px;\">W/V:\n\t\t\t<td style=\"width: 82px;\">353º(T)/17 kt\n\nCalculate true track (TT) and groundspeed (GS):",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>233 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>True Heading:\n\t\t\t<td>115º\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>353º(T)/17 kt\n\nCalculate true track (TT) and groundspeed (GS):",
         "options": [
           {
             "id": "AOIW6XZCN6",
@@ -26531,7 +26531,7 @@
       "tcZLTJOA": {
         "id": "tcZLTJOA",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 136px;\">\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 80px;\">200 kt\n- Track:\n\t\t\t<td style=\"text-align: right; width: 80px;\">073° (T)\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 80px;\">210º(T)/20 kt\n\nCalculate the HDG and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td>200 kt\n- Track:\n\t\t\t<td>073° (T)\n- W/V:\n\t\t\t<td>210º(T)/20 kt\n\nCalculate the HDG and GS.",
         "options": [
           {
             "id": "AQ9IU098AP",
@@ -26565,7 +26565,7 @@
       "Mv5LuznL": {
         "id": "Mv5LuznL",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 140px;\">\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 82px;\">270 kt\n- Track:\n\t\t\t<td style=\"text-align: right; width: 82px;\">260° (T)\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 82px;\">275º(T) /30 kt\n\nCalculate the HDG and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td>270 kt\n- Track:\n\t\t\t<td>260° (T)\n- W/V:\n\t\t\t<td>275º(T) /30 kt\n\nCalculate the HDG and GS.",
         "options": [
           {
             "id": "AD10WSTCER",
@@ -26599,7 +26599,7 @@
       "s0tMGQld": {
         "id": "s0tMGQld",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 162px;\">\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 78px;\">155 kt\n- True HDG:\n\t\t\t<td style=\"text-align: right; width: 78px;\">216°\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 78px;\">090º(T)/60 kt\n\nCalculate the True track and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td>155 kt\n- True HDG:\n\t\t\t<td>216°\n- W/V:\n\t\t\t<td>090º(T)/60 kt\n\nCalculate the True track and GS.",
         "options": [
           {
             "id": "AFEZL7GF7S",
@@ -26633,7 +26633,7 @@
       "Y8hRdAD9": {
         "id": "Y8hRdAD9",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 201px;\">\n\t<tbody>\n\t\t\n- Course required:\n\t\t\t<td style=\"text-align: right; width: 84px;\">085° (T)\n- Forecast W/V:\n\t\t\t<td style=\"text-align: right; width: 84px;\">030º(T)/100 kt\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 84px;\">470 kt\n- Distance:\n\t\t\t<td style=\"text-align: right; width: 84px;\">265 NM\n\nCalculate the true HDG and flight time.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- Course required:\n\t\t\t<td>085° (T)\n- Forecast W/V:\n\t\t\t<td>030º(T)/100 kt\n- TAS:\n\t\t\t<td>470 kt\n- Distance:\n\t\t\t<td>265 NM\n\nCalculate the true HDG and flight time.",
         "options": [
           {
             "id": "AZUNK2WZY8",
@@ -26879,7 +26879,7 @@
       "r0Riq9sz": {
         "id": "r0Riq9sz",
         "type": "simple",
-        "question": "<b>Given:</b>\nTAS: 220 kt\nPlanned cruising level: FL180\nTrack during climb: 080°\n<b>Wind:</b>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t\n- <b>Level</b>\t<b>Direction/Speed</b>\n- AGL 260° / 25 kt\n- FL30 270° / 30 kt\n- FL60 270° / 35 kt\n- FL90 270° / 40 kt\n- FL120 280° / 50 kt\n- FL150 285° / 55 kt\n- FL180 290° / 55 kt\n\nIf your aircraft climbs from the ground up to FL180, what will be your average ground speed (GS) during climb?",
+        "question": "<b>Given:</b>\nTAS: 220 kt\nPlanned cruising level: FL180\nTrack during climb: 080°\n<b>Wind:</b>\n<table>\n\t<tbody>\n\t\t\n- <b>Level</b>\t<b>Direction/Speed</b>\n- AGL 260° / 25 kt\n- FL30 270° / 30 kt\n- FL60 270° / 35 kt\n- FL90 270° / 40 kt\n- FL120 280° / 50 kt\n- FL150 285° / 55 kt\n- FL180 290° / 55 kt\n\nIf your aircraft climbs from the ground up to FL180, what will be your average ground speed (GS) during climb?",
         "options": [
           {
             "id": "AWBX1Z9WMJ",
@@ -28183,7 +28183,7 @@
       "bzGEIUaV": {
         "id": "bzGEIUaV",
         "type": "simple",
-        "question": "<p style=\"\">Given the following information, using a mechanical computer, calculate the equivalent wind component.<p style=\"\">Track: 240°(T) \n Wind vector: 030°(T)/25 kt \n TAS: 90 kt",
+        "question": "<p>Given the following information, using a mechanical computer, calculate the equivalent wind component.<p>Track: 240°(T) \n Wind vector: 030°(T)/25 kt \n TAS: 90 kt",
         "options": [
           {
             "id": "A21WOKICF5",
@@ -28912,7 +28912,7 @@
       "TMRlbD4g": {
         "id": "TMRlbD4g",
         "type": "simple",
-        "question": "During an approach, the Flight Management Display indicates the following values:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 211px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 90px;\">Heading:\n\t\t\t<td style=\"width: 99px;\">270°(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 90px;\">Groundspeed:\n\t\t\t<td style=\"width: 99px;\">220 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 90px;\">Wind:\n\t\t\t<td style=\"width: 99px;\">240°/ 20 kt\n\nFind the crosswind component (XWC) and the approach track...",
+        "question": "During an approach, the Flight Management Display indicates the following values:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Heading:\n\t\t\t<td>270°(T)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Groundspeed:\n\t\t\t<td>220 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind:\n\t\t\t<td>240°/ 20 kt\n\nFind the crosswind component (XWC) and the approach track...",
         "options": [
           {
             "id": "A6X1BV8631",
@@ -29281,7 +29281,7 @@
       "jcfIIIje": {
         "id": "jcfIIIje",
         "type": "simple",
-        "question": "<p style=\"\">An aerodrome is located at Mean Sea Level and its traffic pattern altitude is at 1500 ft. Given the following information, to reach downwind at the traffic pattern altitude, a 3° path descent must be initiated at (1)__ prior to downwind, and it will last for (2)__.<p style=\"\">Cruise altitude : 4500 ft \n Average rate of descent for a 3° path: 850 ft/min",
+        "question": "<p>An aerodrome is located at Mean Sea Level and its traffic pattern altitude is at 1500 ft. Given the following information, to reach downwind at the traffic pattern altitude, a 3° path descent must be initiated at (1)__ prior to downwind, and it will last for (2)__.<p>Cruise altitude : 4500 ft \n Average rate of descent for a 3° path: 850 ft/min",
         "options": [
           {
             "id": "AQOWPBDXS7",
@@ -29896,7 +29896,7 @@
       "rbk2OG9E": {
         "id": "rbk2OG9E",
         "type": "simple",
-        "question": "When descending on a 3^o^  path with an average rate of descent of 1600 ft/min from 10000 ft to 2000 ft, you will cover a distance of (1)<span style=\"text-decoration: underline;\">       ,in (2)<span style=\"text-decoration: underline;\">         \r \r ",
+        "question": "When descending on a 3^o^  path with an average rate of descent of 1600 ft/min from 10000 ft to 2000 ft, you will cover a distance of (1)<span>       ,in (2)<span>         \r \r ",
         "options": [
           {
             "id": "AOTKXY0Z4V",
@@ -29937,7 +29937,7 @@
       "vzB8WU9F": {
         "id": "vzB8WU9F",
         "type": "simple",
-        "question": "<p style=\"\">The Earth's spin axis is inclined to the plane of the ecliptic. What effect does that have on the duration of daylight at Cambridge (52°N, 000°E) compared with that at La Palma in the Canary islands (29°N, 018°W) on the same day?\n<p style=\"\">Cambridge will have (1) __ hours of daylight on the 1st July and (2) __ hours of daylight on the 1st January.",
+        "question": "<p>The Earth's spin axis is inclined to the plane of the ecliptic. What effect does that have on the duration of daylight at Cambridge (52°N, 000°E) compared with that at La Palma in the Canary islands (29°N, 018°W) on the same day?\n<p>Cambridge will have (1) __ hours of daylight on the 1st July and (2) __ hours of daylight on the 1st January.",
         "options": [
           {
             "id": "AH3MJUA0V7",
@@ -31829,7 +31829,7 @@
       "38Gm4gqI": {
         "id": "38Gm4gqI",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 191px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 95px;\">TAS:\n\t\t\t<td style=\"width: 74px;\">480 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 95px;\">OAT:\n\t\t\t<td style=\"width: 74px;\">ISA + 8°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 95px;\">Cruising level:\n\t\t\t<td style=\"width: 74px;\">FL410\n\nCalculate the Mach number:",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>480 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>ISA + 8°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Cruising level:\n\t\t\t<td>FL410\n\nCalculate the Mach number:",
         "options": [
           {
             "id": "ADF0XAY0B5",
@@ -31863,7 +31863,7 @@
       "8of3xOup": {
         "id": "8of3xOup",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 187px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">TAS:\n\t\t\t<td style=\"width: 75px;\">485 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">OAT:\n\t\t\t<td style=\"width: 75px;\">ISA + 10°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 89px;\">Cruising level:\n\t\t\t<td style=\"width: 75px;\">FL410\n\nCalculate the Mach number:",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>485 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>OAT:\n\t\t\t<td>ISA + 10°C\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Cruising level:\n\t\t\t<td>FL410\n\nCalculate the Mach number:",
         "options": [
           {
             "id": "AZF3PVT4E0",
@@ -32628,7 +32628,7 @@
       "gpApvUxP": {
         "id": "gpApvUxP",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align: center;\">Waypoint\n\t\t\t<td rowspan=\"2\" style=\"text-align: center;\">Leg Time\n\t\t\t(min)\n\t\t\t<td rowspan=\"2\" style=\"text-align: center;\">Acc. Time\n\t\t\t(min)\n\t\t\t<td rowspan=\"2\" style=\"text-align: center;\">TAS\n\t\t\t(kt)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">From\n\t\t\t<td style=\"text-align: center;\">To\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">1\n\t\t\t<td style=\"text-align: center;\">2\n\t\t\t<td style=\"text-align: center;\">19\n\t\t\t<td style=\"text-align: center;\">19\n\t\t\t<td style=\"text-align: center;\">252\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">2\n\t\t\t<td style=\"text-align: center;\">3\n\t\t\t<td style=\"text-align: center;\">26\n\t\t\t<td style=\"text-align: center;\">45\n\t\t\t<td style=\"text-align: center;\">256\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">3\n\t\t\t<td style=\"text-align: center;\">4\n\t\t\t<td style=\"text-align: center;\">08\n\t\t\t<td style=\"text-align: center;\">53\n\t\t\t<td style=\"text-align: center;\">259\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">4\n\t\t\t<td style=\"text-align: center;\">5\n\t\t\t<td style=\"text-align: center;\">41\n\t\t\t<td style=\"text-align: center;\">94\n\t\t\t<td style=\"text-align: center;\">250\n\nCalculate the average TAS from waypoint 1 to waypoint 5.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Waypoint\n\t\t\t<td>Leg Time\n\t\t\t(min)\n\t\t\t<td>Acc. Time\n\t\t\t(min)\n\t\t\t<td>TAS\n\t\t\t(kt)\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>From\n\t\t\t<td>To\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>1\n\t\t\t<td>2\n\t\t\t<td>19\n\t\t\t<td>19\n\t\t\t<td>252\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>2\n\t\t\t<td>3\n\t\t\t<td>26\n\t\t\t<td>45\n\t\t\t<td>256\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>3\n\t\t\t<td>4\n\t\t\t<td>08\n\t\t\t<td>53\n\t\t\t<td>259\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>4\n\t\t\t<td>5\n\t\t\t<td>41\n\t\t\t<td>94\n\t\t\t<td>250\n\nCalculate the average TAS from waypoint 1 to waypoint 5.",
         "options": [
           {
             "id": "AZZSI2O3I3",
@@ -32710,7 +32710,7 @@
       "0Dh3IaPx": {
         "id": "0Dh3IaPx",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 309px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 196px;\">Mach Number:\n\t\t\t<td style=\"width: 91px;\">0.34\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 196px;\">Outside Air Temperature (OAT):\n\t\t\t<td style=\"width: 91px;\">ISA-15ºC\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 196px;\">Pressure Altitude (PA):\n\t\t\t<td style=\"width: 91px;\">9 000 ft\n\nCalculate your calibrated airspeed (CAS):",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Mach Number:\n\t\t\t<td>0.34\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Outside Air Temperature (OAT):\n\t\t\t<td>ISA-15ºC\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Pressure Altitude (PA):\n\t\t\t<td>9 000 ft\n\nCalculate your calibrated airspeed (CAS):",
         "options": [
           {
             "id": "AI0KNTOEY9",
@@ -33120,7 +33120,7 @@
       "SaMixxNd": {
         "id": "SaMixxNd",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 166px;\">\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 91px;\">125 kt\n- Heading: \n\t\t\t<td style=\"text-align: right; width: 91px;\">355° (T)\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 91px;\">  320° (T) / 30 kt\n\nCalculate the True track and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td>125 kt\n- Heading: \n\t\t\t<td>355° (T)\n- W/V:\n\t\t\t<td>  320° (T) / 30 kt\n\nCalculate the True track and GS.",
         "options": [
           {
             "id": "AUJ8V6CPL5",
@@ -33154,7 +33154,7 @@
       "FNQidcTn": {
         "id": "FNQidcTn",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 151px;\">\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 95px;\">485 kt\n- HDG: \n\t\t\t<td style=\"text-align: right; width: 95px;\">168° (T)\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 95px;\">  130° / 75 kt\n\nCalculate the True track and GS.",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t\n- TAS:\n\t\t\t<td>485 kt\n- HDG: \n\t\t\t<td>168° (T)\n- W/V:\n\t\t\t<td>  130° / 75 kt\n\nCalculate the True track and GS.",
         "options": [
           {
             "id": "AWHQQXO9QM",
@@ -33318,7 +33318,7 @@
       "D2b5dFUw": {
         "id": "D2b5dFUw",
         "type": "simple",
-        "question": "Given the following information:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 211px;\">\n\t<tbody>\n\t\t\n- True course A to B:\n\t\t\t<td style=\"text-align: right; width: 82px;\">250°\n- Distance A to B:\n\t\t\t<td style=\"text-align: right; width: 82px;\">315 NM\n- TAS:\n\t\t\t<td style=\"text-align: right; width: 82px;\">450 kt\n- W/V:\n\t\t\t<td style=\"text-align: right; width: 82px;\">200°(T)/60 kt\n- ETD A:\n\t\t\t<td style=\"text-align: right; width: 82px;\">**0650** UTC\n\nWhat is the ETA at B?",
+        "question": "Given the following information:\n \n<table>\n\t<tbody>\n\t\t\n- True course A to B:\n\t\t\t<td>250°\n- Distance A to B:\n\t\t\t<td>315 NM\n- TAS:\n\t\t\t<td>450 kt\n- W/V:\n\t\t\t<td>200°(T)/60 kt\n- ETD A:\n\t\t\t<td>**0650** UTC\n\nWhat is the ETA at B?",
         "options": [
           {
             "id": "A20ET8KS70",
@@ -34008,7 +34008,7 @@
       "cOh2iVIt": {
         "id": "cOh2iVIt",
         "type": "simple",
-        "question": "<b>Given:</b>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\"><b>TT</b>\n\t\t\t<td style=\"text-align: center;\"><b>Wind</b>\n\t\t\t<td style=\"text-align: center;\"><b>TH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Var.</b>\n\t\t\t<td style=\"text-align: center;\"><b>MH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dev.</b>\n\t\t\t<td style=\"text-align: center;\"><b>CH</b>\n\t\t\t<td style=\"text-align: center;\"><b>CAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>PA</b>\n\t\t\t<td style=\"text-align: center;\"><b>Temp.</b>\n\t\t\t<td style=\"text-align: center;\"><b>TAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>GS</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dist.</b>\n\t\t\t<td style=\"text-align: center;\"><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">274°\n\t\t\t<td style=\"text-align: center;\">135°/20kt\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">6°E\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">2°W\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">125 kt\n\t\t\t<td style=\"text-align: center;\">7 000 ft\n\t\t\t<td style=\"text-align: center;\">+5°C\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">32 NM\n\t\t\t<td style=\"text-align: center;\"> \n\nCalculate GS (Ground Speed) and time...",
+        "question": "<b>Given:</b>\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td><b>TT</b>\n\t\t\t<td><b>Wind</b>\n\t\t\t<td><b>TH</b>\n\t\t\t<td><b>Var.</b>\n\t\t\t<td><b>MH</b>\n\t\t\t<td><b>Dev.</b>\n\t\t\t<td><b>CH</b>\n\t\t\t<td><b>CAS</b>\n\t\t\t<td><b>PA</b>\n\t\t\t<td><b>Temp.</b>\n\t\t\t<td><b>TAS</b>\n\t\t\t<td><b>GS</b>\n\t\t\t<td><b>Dist.</b>\n\t\t\t<td><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>274°\n\t\t\t<td>135°/20kt\n\t\t\t<td> \n\t\t\t<td>6°E\n\t\t\t<td> \n\t\t\t<td>2°W\n\t\t\t<td> \n\t\t\t<td>125 kt\n\t\t\t<td>7 000 ft\n\t\t\t<td>+5°C\n\t\t\t<td> \n\t\t\t<td> \n\t\t\t<td>32 NM\n\t\t\t<td> \n\nCalculate GS (Ground Speed) and time...",
         "options": [
           {
             "id": "ARDIP9D9V2",
@@ -34042,7 +34042,7 @@
       "vZzPEhKE": {
         "id": "vZzPEhKE",
         "type": "simple",
-        "question": "<b>Given:</b>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\"><b>TT</b>\n\t\t\t<td style=\"text-align: center;\"><b>Wind</b>\n\t\t\t<td style=\"text-align: center;\"><b>TH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Var.</b>\n\t\t\t<td style=\"text-align: center;\"><b>MH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dev.</b>\n\t\t\t<td style=\"text-align: center;\"><b>CH</b>\n\t\t\t<td style=\"text-align: center;\"><b>CAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>PA</b>\n\t\t\t<td style=\"text-align: center;\"><b>Temp.</b>\n\t\t\t<td style=\"text-align: center;\"><b>TAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>GS</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dist.</b>\n\t\t\t<td style=\"text-align: center;\"><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">274°\n\t\t\t<td style=\"text-align: center;\">135°/20kt\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">6°E\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">2°W\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">125 kt\n\t\t\t<td style=\"text-align: center;\">7 000 ft\n\t\t\t<td style=\"text-align: center;\">+5°C\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">32 NM\n\t\t\t<td style=\"text-align: center;\"> \n\nCalculate TAS (True Air Speed) and TH (True Heading)...",
+        "question": "<b>Given:</b>\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td><b>TT</b>\n\t\t\t<td><b>Wind</b>\n\t\t\t<td><b>TH</b>\n\t\t\t<td><b>Var.</b>\n\t\t\t<td><b>MH</b>\n\t\t\t<td><b>Dev.</b>\n\t\t\t<td><b>CH</b>\n\t\t\t<td><b>CAS</b>\n\t\t\t<td><b>PA</b>\n\t\t\t<td><b>Temp.</b>\n\t\t\t<td><b>TAS</b>\n\t\t\t<td><b>GS</b>\n\t\t\t<td><b>Dist.</b>\n\t\t\t<td><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>274°\n\t\t\t<td>135°/20kt\n\t\t\t<td> \n\t\t\t<td>6°E\n\t\t\t<td> \n\t\t\t<td>2°W\n\t\t\t<td> \n\t\t\t<td>125 kt\n\t\t\t<td>7 000 ft\n\t\t\t<td>+5°C\n\t\t\t<td> \n\t\t\t<td> \n\t\t\t<td>32 NM\n\t\t\t<td> \n\nCalculate TAS (True Air Speed) and TH (True Heading)...",
         "options": [
           {
             "id": "A3PKM01PO3",
@@ -34076,7 +34076,7 @@
       "x1xXfmwX": {
         "id": "x1xXfmwX",
         "type": "simple",
-        "question": "<b>Given:</b>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"5\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\"><b>TT</b>\n\t\t\t<td style=\"text-align: center;\"><b>Wind</b>\n\t\t\t<td style=\"text-align: center;\"><b>TH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Var.</b>\n\t\t\t<td style=\"text-align: center;\"><b>MH</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dev.</b>\n\t\t\t<td style=\"text-align: center;\"><b>CH</b>\n\t\t\t<td style=\"text-align: center;\"><b>CAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>PA</b>\n\t\t\t<td style=\"text-align: center;\"><b>Temp.</b>\n\t\t\t<td style=\"text-align: center;\"><b>TAS</b>\n\t\t\t<td style=\"text-align: center;\"><b>GS</b>\n\t\t\t<td style=\"text-align: center;\"><b>Dist.</b>\n\t\t\t<td style=\"text-align: center;\"><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center;\">091°\n\t\t\t<td style=\"text-align: center;\">050°/20kt\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">5°W\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">3°E\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">140 kt\n\t\t\t<td style=\"text-align: center;\">6 000 ft\n\t\t\t<td style=\"text-align: center;\">+10°C\n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\"> \n\t\t\t<td style=\"text-align: center;\">34 NM\n\t\t\t<td style=\"text-align: center;\"> \n\nCalculate TH (true heading), MH (magnetic heading) and CH (compass heading)...",
+        "question": "<b>Given:</b>\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td><b>TT</b>\n\t\t\t<td><b>Wind</b>\n\t\t\t<td><b>TH</b>\n\t\t\t<td><b>Var.</b>\n\t\t\t<td><b>MH</b>\n\t\t\t<td><b>Dev.</b>\n\t\t\t<td><b>CH</b>\n\t\t\t<td><b>CAS</b>\n\t\t\t<td><b>PA</b>\n\t\t\t<td><b>Temp.</b>\n\t\t\t<td><b>TAS</b>\n\t\t\t<td><b>GS</b>\n\t\t\t<td><b>Dist.</b>\n\t\t\t<td><b>Time</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>091°\n\t\t\t<td>050°/20kt\n\t\t\t<td> \n\t\t\t<td>5°W\n\t\t\t<td> \n\t\t\t<td>3°E\n\t\t\t<td> \n\t\t\t<td>140 kt\n\t\t\t<td>6 000 ft\n\t\t\t<td>+10°C\n\t\t\t<td> \n\t\t\t<td> \n\t\t\t<td>34 NM\n\t\t\t<td> \n\nCalculate TH (true heading), MH (magnetic heading) and CH (compass heading)...",
         "options": [
           {
             "id": "AT868VSMF3",
@@ -34465,7 +34465,7 @@
       "yoq9Hyx4": {
         "id": "yoq9Hyx4",
         "type": "simple",
-        "question": "Given:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 172px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 82px;\">True heading:\n\t\t\t<td style=\"text-align: right; width: 67px;\">265°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 82px;\">TAS:\n\t\t\t<td style=\"text-align: right; width: 67px;\">290 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 82px;\">W/V:\n\t\t\t<td style=\"text-align: right; width: 67px;\">210°/35 kt\n\nWhat is the true track and GS?",
+        "question": "Given:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True heading:\n\t\t\t<td>265°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>TAS:\n\t\t\t<td>290 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>W/V:\n\t\t\t<td>210°/35 kt\n\nWhat is the true track and GS?",
         "options": [
           {
             "id": "ABLX66Z9PX",
@@ -36469,7 +36469,7 @@
       "GwrggnUH": {
         "id": "GwrggnUH",
         "type": "simple",
-        "question": "<div style=\"\">You are descending from FL270 in ISA conditions, maintaining a constant CAS of 300 kt. At the beginning of the descent your cross-check of the instruments shows TAS at 444 kt and Mach 0.75. You check the instruments again at some point during the descent, which option contains readings that you would expect to see?",
+        "question": "<div>You are descending from FL270 in ISA conditions, maintaining a constant CAS of 300 kt. At the beginning of the descent your cross-check of the instruments shows TAS at 444 kt and Mach 0.75. You check the instruments again at some point during the descent, which option contains readings that you would expect to see?",
         "options": [
           {
             "id": "AX96CEWW8K",
@@ -38665,7 +38665,7 @@
       "vHs0Z9rN": {
         "id": "vHs0Z9rN",
         "type": "simple",
-        "question": "An aircraft climbs from the ground level to FL180 with a constant TAS of 220 kt. The TT in climb is 080°. The W/V at various flight levels in the area are given below:\n<table border=\"1\" cellpadding=\"3\" cellspacing=\"1\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t<strong>FL</strong>\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t<strong>W/V</strong>\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\tground level\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t260°/25 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t30\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t270°/30 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t60\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t270°/35 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t90\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t270°/40 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t120\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t280°/50 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t150\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t285°/55 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">\n\t\t\t180\n\t\t\t\n\t\t\t<td style=\"text-align:center\">\n\t\t\t290°/55 kt\n\t\t\t\n\n \nCalculate the average GS in climb:",
+        "question": "An aircraft climbs from the ground level to FL180 with a constant TAS of 220 kt. The TT in climb is 080°. The W/V at various flight levels in the area are given below:\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<strong>FL</strong>\n\t\t\t\n\t\t\t<td>\n\t\t\t<strong>W/V</strong>\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\tground level\n\t\t\t\n\t\t\t<td>\n\t\t\t260°/25 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t30\n\t\t\t\n\t\t\t<td>\n\t\t\t270°/30 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t60\n\t\t\t\n\t\t\t<td>\n\t\t\t270°/35 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t90\n\t\t\t\n\t\t\t<td>\n\t\t\t270°/40 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t120\n\t\t\t\n\t\t\t<td>\n\t\t\t280°/50 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t150\n\t\t\t\n\t\t\t<td>\n\t\t\t285°/55 kt\n\t\t\t\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t180\n\t\t\t\n\t\t\t<td>\n\t\t\t290°/55 kt\n\t\t\t\n\n \nCalculate the average GS in climb:",
         "options": [
           {
             "id": "A4V9KNA3JA",
@@ -39963,7 +39963,7 @@
       "UQacjwvw": {
         "id": "UQacjwvw",
         "type": "simple",
-        "question": "Given:\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width: 172px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">True track:\n\t\t\t<td style=\"width: 81px;\">085°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">GS:\n\t\t\t<td style=\"width: 81px;\">180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">Wind:\n\t\t\t<td style=\"width: 81px;\">290° / 30 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width: 70px;\">Variation:\n\t\t\t<td style=\"width: 81px;\">4°E\n\nThe aircraft is 1.5 NM left of track after 12 minutes of flying. What is the track angle error (TKE)?",
+        "question": "Given:\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>True track:\n\t\t\t<td>085°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>GS:\n\t\t\t<td>180 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Wind:\n\t\t\t<td>290° / 30 kt\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Variation:\n\t\t\t<td>4°E\n\nThe aircraft is 1.5 NM left of track after 12 minutes of flying. What is the track angle error (TKE)?",
         "options": [
           {
             "id": "AG7OV9K7DW",
@@ -43268,7 +43268,7 @@
       "7m1oB1D4": {
         "id": "7m1oB1D4",
         "type": "simple",
-        "question": "Given the following map scales:\n \n<table border=\"0\" cellpadding=\"0\" cellspacing=\"5\" style=\"width:139px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:22px;\">A)\n\t\t\t<td style=\"width:94px;\">1/2000000\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:22px;\">B)\n\t\t\t<td style=\"width:94px;\">1 inch = 38 NM\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:22px;\">C)\n\t\t\t<td style=\"width:94px;\">1 cm = 4.5 km\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:22px;\">D)\n\t\t\t<td style=\"width:94px;\">1/500000\n\nWhich is the smallest map scale?",
+        "question": "Given the following map scales:\n \n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>A)\n\t\t\t<td>1/2000000\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B)\n\t\t\t<td>1 inch = 38 NM\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C)\n\t\t\t<td>1 cm = 4.5 km\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D)\n\t\t\t<td>1/500000\n\nWhich is the smallest map scale?",
         "options": [
           {
             "id": "A048Q8TGMN",
@@ -44017,7 +44017,7 @@
       "wmWQ4KxJ": {
         "id": "wmWQ4KxJ",
         "type": "simple",
-        "question": "<div style=\"\">Refer to figure. \n (For this question use the VFR chart ED-4 from the Jeppesen GSPRM 2017). \n A direct flight is planned between Scharding Suben (LOLS) (N48°24',E013°27) and Sonnen (EDPS) (N48°41', E013°42') aerodromes. The true track from LOLS to EDPS is (1) ___, and the distance is (2)__NM.",
+        "question": "<div>Refer to figure. \n (For this question use the VFR chart ED-4 from the Jeppesen GSPRM 2017). \n A direct flight is planned between Scharding Suben (LOLS) (N48°24',E013°27) and Sonnen (EDPS) (N48°41', E013°42') aerodromes. The true track from LOLS to EDPS is (1) ___, and the distance is (2)__NM.",
         "options": [
           {
             "id": "A07ZQPP00D",
@@ -44338,7 +44338,7 @@
       "jDKwvn4R": {
         "id": "jDKwvn4R",
         "type": "simple",
-        "question": "<div style=\"\">An aeronautical chart has a published scale of 1 inch = 15 NM. An aircraft is flying on a true heading of 089° with a groundspeed of 150 kt. Calculate the chart distance covered by the aircraft in 25 minutes.",
+        "question": "<div>An aeronautical chart has a published scale of 1 inch = 15 NM. An aircraft is flying on a true heading of 089° with a groundspeed of 150 kt. Calculate the chart distance covered by the aircraft in 25 minutes.",
         "options": [
           {
             "id": "AI068ULQGQ",
@@ -44611,7 +44611,7 @@
       "9NYrx6wg": {
         "id": "9NYrx6wg",
         "type": "simple",
-        "question": "<p style=\"\">Refer to figure. \n (For this question use the VFR chart ED-4 from the Jeppesen GSPRM 2017). \n A flight is planned as a direct flight from Sonnen (EDPS) (N48°41', E013°42') to Vilshofen (EDMV) (N48°38',E013°12'). The true track from EDPS to EDMV is (1)__, and the distance is (2)__ NM.",
+        "question": "<p>Refer to figure. \n (For this question use the VFR chart ED-4 from the Jeppesen GSPRM 2017). \n A flight is planned as a direct flight from Sonnen (EDPS) (N48°41', E013°42') to Vilshofen (EDMV) (N48°38',E013°12'). The true track from EDPS to EDMV is (1)__, and the distance is (2)__ NM.",
         "options": [
           {
             "id": "A59FFRQOFI",
