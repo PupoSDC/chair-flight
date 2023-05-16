@@ -4554,7 +4554,7 @@
       "2HeiVers": {
         "id": "2HeiVers",
         "type": "simple",
-        "question": "The wind is calm and you are flying a 090 degrees heading. Your compass card reads:\n\n\n- Heading\n\t\t\t<td> 272\n\t\t\t<td> 090\n\t\t\t<td> 183\n- Steer\n\t\t\t<td> 268\n\t\t\t<td> 088\n\t\t\t<td> 187\n\nCalculate the deviation:",
+        "question": "The wind is calm and you are flying a 090 degrees heading. Your compass card reads:\n\n\n- Heading  272  090  183\n- Steer  268  088  187\n\nCalculate the deviation:",
         "options": [
           {
             "id": "AR4GUFIP0U",
@@ -6056,7 +6056,7 @@
       "E6zFVxHl": {
         "id": "E6zFVxHl",
         "type": "simple",
-        "question": "Direct reading compass (DRC) deviation table is:\n\n<tr>\n\t\t\t<td><b>COURSE </b>   \n\t\t\t<td><b>STEER</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>000°  \n\t\t\t<td>359°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>030°  \n\t\t\t<td>030°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>060°  \n\t\t\t<td>061°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>090°  \n\t\t\t<td>092°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>120°  \n\t\t\t<td>121°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>150°  \n\t\t\t<td>150°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>180°  \n\t\t\t<td>178°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>210°  \n\t\t\t<td>209°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>240°  \n\t\t\t<td>242°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>270°  \n\t\t\t<td>272°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>300°  \n\t\t\t<td>298°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>330°  \n\t\t\t<td>331°\n\nYou have to maintain the heading 155°(T). Magnetic variation is 10°W. The compass heading to follow is:",
+        "question": "Direct reading compass (DRC) deviation table is:\n\n<tr> <b>COURSE </b>    <b>STEER</b>\n  </tr>\n  <tr> 000°   359°\n  </tr>\n  <tr> 030°   030°\n  </tr>\n  <tr> 060°   061°\n  </tr>\n  <tr> 090°   092°\n  </tr>\n  <tr> 120°   121°\n  </tr>\n  <tr> 150°   150°\n  </tr>\n  <tr> 180°   178°\n  </tr>\n  <tr> 210°   209°\n  </tr>\n  <tr> 240°   242°\n  </tr>\n  <tr> 270°   272°\n  </tr>\n  <tr> 300°   298°\n  </tr>\n  <tr> 330°   331°\n\nYou have to maintain the heading 155°(T). Magnetic variation is 10°W. The compass heading to follow is:",
         "options": [
           {
             "id": "AVUUI3DG7V",
@@ -6090,7 +6090,7 @@
       "DTFrADWS": {
         "id": "DTFrADWS",
         "type": "simple",
-        "question": "Direct reading compass (DRC) deviation table is:\n\n<tr>\n\t\t\t<td><b>COURSE</b>\n\t\t\t<td>  \n\t\t\t<td><b>STEER</b>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>000°\n\t\t\t<td> \n\t\t\t<td>359°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>030°\n\t\t\t<td> \n\t\t\t<td>030°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>060°\n\t\t\t<td> \n\t\t\t<td>061°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>090°\n\t\t\t<td> \n\t\t\t<td>092°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>120°\n\t\t\t<td> \n\t\t\t<td>121°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>150°\n\t\t\t<td> \n\t\t\t<td>150°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>180°\n\t\t\t<td> \n\t\t\t<td>178°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>210°\n\t\t\t<td> \n\t\t\t<td>209°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>240°\n\t\t\t<td> \n\t\t\t<td>242°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>270°\n\t\t\t<td> \n\t\t\t<td>272°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>300°\n\t\t\t<td> \n\t\t\t<td>298°\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>330°\n\t\t\t<td> \n\t\t\t<td>331°\n\nDirect reading compass indicates a heading 242°. Magnetic variation in this area is 22°E. The true aircraft heading is:",
+        "question": "Direct reading compass (DRC) deviation table is:\n\n<tr> <b>COURSE</b>    <b>STEER</b>\n  </tr>\n  <tr> 000°   359°\n  </tr>\n  <tr> 030°   030°\n  </tr>\n  <tr> 060°   061°\n  </tr>\n  <tr> 090°   092°\n  </tr>\n  <tr> 120°   121°\n  </tr>\n  <tr> 150°   150°\n  </tr>\n  <tr> 180°   178°\n  </tr>\n  <tr> 210°   209°\n  </tr>\n  <tr> 240°   242°\n  </tr>\n  <tr> 270°   272°\n  </tr>\n  <tr> 300°   298°\n  </tr>\n  <tr> 330°   331°\n\nDirect reading compass indicates a heading 242°. Magnetic variation in this area is 22°E. The true aircraft heading is:",
         "options": [
           {
             "id": "APUPUNWV1O",
