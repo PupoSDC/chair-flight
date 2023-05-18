@@ -1,5 +1,8 @@
 import { createAction } from "@reduxjs/toolkit";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type {
+  QuestionTemplate,
+  QuestionVariant,
+} from "@chair-flight/base/types";
 
 export const resetQuestionEditor = createAction<{
   question: QuestionTemplate;
@@ -29,3 +32,8 @@ export const updateQuestionExplanation = createAction<{
   questionId: string;
   explanation: string;
 }>("question-editor/question-explanation-updated");
+
+export const createNewQuestionVariant = createAction<{
+  questionId: string;
+  variant: QuestionVariant;
+}>("question-editor/question-variant-created");

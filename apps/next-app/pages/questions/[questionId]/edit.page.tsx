@@ -82,8 +82,6 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
     hasPushedInitialHistory.current = true;
   });
 
-  const addNewVariant = () => {};
-
   return (
     <>
       <AppLayout.Header>

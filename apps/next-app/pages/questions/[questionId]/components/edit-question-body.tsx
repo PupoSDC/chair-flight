@@ -1,11 +1,22 @@
-import { Box, FormControl, FormLabel, Textarea } from "@mui/joy";
+import type { FunctionComponent} from "react";
+import { useState } from "react";
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  Select,
+  Textarea,
+  Option,
+  Button,
+} from "@mui/joy";
+import type { QuestionVariantType } from "@chair-flight/base/types";
+import { getNewVariant } from "@chair-flight/core/app";
 import {
   actions,
   useAppDispatch,
   useAppSelector,
 } from "@chair-flight/core/redux";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";
-import type { FunctionComponent } from "react";
 
 export type EditQuestionBodyProps = {
   questionId: string;
@@ -14,6 +25,8 @@ export type EditQuestionBodyProps = {
 export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
   questionId,
 }) => {
+  const [newVariantType, setNewVariantType] =
+    useState<QuestionVariantType>("simple");
   const dispatch = useAppDispatch();
   const question = useAppSelector(
     (state) => state.questionEditor.questions[questionId]?.currentVersion
@@ -39,6 +52,15 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
     );
   };
 
+  const addNewVariant = () => {
+    dispatch(
+      actions.createNewQuestionVariant({
+        questionId,
+        variant: getNewVariant(newVariantType),
+      })
+    );
+  };
+
   return (
     <Box sx={{ p: 1 }}>
       <FormControl>
@@ -56,6 +78,23 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
           onBlur={(evt) => updateExplanation(evt.target.value)}
         />
       </FormControl>
+      <FormControl sx={{ mt: 1 }}>
+        <FormLabel>Create New Variant</FormLabel>
+        <Select
+          value={newVariantType}
+          onChange={(_, v) => v && setNewVariantType(v)}
+        >
+          <Option value="simple">Simple</Option>
+          <Option value="one-two">OneTwo</Option>
+          <Option value="calculation">Calculation</Option>
+        </Select>
+      </FormControl>
+      <Button
+        fullWidth
+        sx={{ mt: 1 }}
+        onClick={() => addNewVariant()}
+        children="Create new Variant"
+      />
     </Box>
   );
 };

@@ -7,6 +7,7 @@ import {
   deleteQuestionVariant,
   updateQuestionLearningObjectives,
   updateQuestionExplanation,
+  createNewQuestionVariant,
 } from "../actions/question-editor-actions";
 import type { InvalidStoreStateActionType } from "@chair-flight/base/errors";
 import type { QuestionTemplate } from "@chair-flight/base/types";
@@ -18,25 +19,6 @@ export type QuestionEditorEntry = {
 
 export type QuestionEditor = {
   questions: Record<string, QuestionEditorEntry | undefined>;
-};
-
-const getCurrentQuestionOrThrow = ({
-  store,
-  questionId,
-  action,
-}: {
-  store: QuestionEditor;
-  questionId: string;
-  action: InvalidStoreStateActionType;
-}): QuestionTemplate => {
-  const currentQuestion = store.questions[questionId]?.history?.at(-1);
-  if (!currentQuestion) {
-    throw new InvalidStoreState(
-      `Question ${questionId} not found in question editor`,
-      action
-    );
-  }
-  return currentQuestion;
 };
 
 const getEntryOrThrow = ({
@@ -107,6 +89,15 @@ export const questionEditorReducer = createReducer<QuestionEditor>(
         const entry = getEntryOrThrow({ store, action, questionId });
         entry.history.push(deepCopy(entry.currentVersion));
         entry.currentVersion.explanation = explanation;
+      })
+      .addCase(createNewQuestionVariant, (store, action) => {
+        const { questionId, variant } = action.payload;
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        entry.currentVersion.variants = {
+          [variant.id]: variant,
+          ...entry.currentVersion.variants,
+        };
       });
   }
 );
