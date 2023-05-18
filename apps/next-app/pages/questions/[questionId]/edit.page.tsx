@@ -1,4 +1,5 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { default as Draggable } from "react-draggable";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
@@ -21,10 +22,17 @@ import {
   Typography,
 } from "@mui/joy";
 import axios from "axios";
+import { useAppStore } from "libs/core/redux/src/store/store";
 import {
   getQuestionPreview,
   getRandomIdGenerator,
 } from "@chair-flight/core/app";
+import {
+  ReduxProvider,
+  actions,
+  useAppDispatch,
+  useAppSelector,
+} from "@chair-flight/core/redux";
 import { AppHead } from "@chair-flight/next/client";
 import { ssrHandler } from "@chair-flight/next/server";
 import { questionSchema } from "@chair-flight/question-bank/schemas";
@@ -49,218 +57,118 @@ type QuestionPageProps = {
   question: QuestionTemplate;
 };
 
-const QuestionPage: NextPage<QuestionPageProps> = ({ question }) => {
-  const randomSeed = useId();
-  const defaultValues = question;
-
-  const resolver = zodResolver(questionSchema);
-
-  const [getRandomId] = useState(() => getRandomIdGenerator(randomSeed));
-  const [openVariant, setOpenVariant] = useState<string>();
-  const [newVariantType, setNewVariantType] =
-    useState<QuestionVariantType>("simple");
-
-  const form = useForm({ resolver, defaultValues });
-  const { register, handleSubmit, control, watch, setValue } = form;
-
-  const variantsMap = watch("variants");
-  const variants = Object.values(variantsMap).sort((a, b) =>
-    a.id.localeCompare(b.id)
+const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
+  const hasPushedInitialHistory = useRef(false);
+  const dispatch = useAppDispatch();
+  const questionEditorEntry = useAppSelector(
+    (state) => state.questionEditor.questions[question.id]
   );
 
-  const createNewVariant = () => {
-    const common = {
-      id: getRandomId(),
-      type: newVariantType,
-      question: "",
-      annexes: [] as string[],
-      externalIds: [] as string[],
-      explanation: "",
-    };
-    if (newVariantType === "simple") {
-      setValue(`variants.${common.id}`, {
-        ...common,
-        type: "simple",
-        options: [1, 2, 3, 4].map((i) => ({
-          id: getRandomId(),
-          text: "",
-          correct: i === 1,
-          why: "",
-        })),
-      });
-      return;
-    }
-    if (newVariantType === "one-two") {
-      setValue(`variants.${common.id}`, {
-        ...common,
-        type: "one-two",
-        firstCorrectStatements: [""],
-        secondCorrectStatements: [""],
-        firstIncorrectStatements: [""],
-        secondIncorrectStatements: [""],
-      });
-      return;
-    }
-  };
+  const editedQuestion = questionEditorEntry?.history?.at(-1) ?? question;
 
-  const deleteVariant = (variant: QuestionVariant) => {
-    setValue(
-      "variants",
-      variants
-        .filter((v) => v.id !== variant.id)
-        .reduce((acc, v) => ({ ...acc, [v.id]: v }), {})
+  useEffect(() => {
+    if (hasPushedInitialHistory.current) return;
+    dispatch(actions.updateQuestionTemplate({ question }));
+    hasPushedInitialHistory.current = true;
+  });
+
+  const mergeVariant = (fromVariantId: string, toVariantId: string) => {
+    dispatch(
+      actions.mergeQuestionVariants({
+        questionId: question.id,
+        fromVariantId,
+        toVariantId,
+      })
     );
+    toast.success(`${fromVariantId} merged into ${toVariantId}`, {
+      duration: 8000,
+      action: {
+        label: "Revert",
+        onClick: () =>
+          dispatch(
+            actions.undoQuestionEditorLastChange({
+              questionId: question.id,
+            })
+          ),
+      },
+    });
   };
 
+  return (
+    <List
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        overflow: "scroll",
+      }}
+    >
+      {Object.values(editedQuestion.variants).map((result) => (
+        <Draggable
+          key={result.id}
+          position={{ x: 0, y: 0 }}
+          onStop={(e, data) => {
+            setTimeout(() => {
+              const target = data.node.parentNode
+                ?.querySelectorAll(":hover")?.[0]
+                ?.getAttribute("data-variant-id");
+              if (!target) return;
+              mergeVariant(result.id, target);
+            }, 10);
+          }}
+        >
+          <Box
+            component="li"
+            data-variant-id={result.id}
+            sx={{
+              px: { xs: 0, md: 1 },
+              py: 1,
+              width: { xs: 1, md: 1 / 2, lg: 1 / 3 },
+              "&.react-draggable-dragging": {
+                zIndex: 1000,
+              },
+              "&.react-draggable-dragging > *": {
+                zIndex: 1000,
+              },
+              "&:hover:not(.react-draggable-dragging)": {},
+            }}
+          >
+            <QuestionVariantPreview
+              id={question.id}
+              variantId={result.id}
+              text={getQuestionPreview(question, result.id)}
+              learningObjectives={question.learningObjectives}
+              externalIds={result.externalIds}
+              topRightCorner={
+                <Button
+                  variant="plain"
+                  //onClick={() => setOpenVariant(result.id)}
+                  children="Edit"
+                />
+              }
+              sx={{
+                flexDirection: "column",
+                alignItems: "flex-start",
+                textAlign: "left",
+              }}
+            />
+          </Box>
+        </Draggable>
+      ))}
+    </List>
+  );
+};
+
+export const QuestionPage: NextPage<QuestionPageProps> = ({ question }) => {
   return (
     <>
       <AppHead title={question.id} />
       <Header />
       <AppLayout.Main>
-        <AppLayout.Grid
-          component="form"
-          onSubmit={handleSubmit(async (question) => {
-            const promise = axios.put<void, void, PutBodySchema>(
-              `/api/questions/${question.id}`,
-              { question }
-            );
-            toast.promise(promise, {
-              loading: "Saving...",
-              success: "Saved",
-              error: "Error!",
-            });
-          })}
-        >
-          <AppLayout.Column xs={8}>
-            <FormProvider {...form}>
-              <AppLayout.Header>
-                <Typography level="h2">{question.id}</Typography>
-                <IconButton
-                  color="success"
-                  variant="plain"
-                  type="submit"
-                  children={<SaveIcon />}
-                />
-              </AppLayout.Header>
-              <AppLayout.ScrollableContainer>
-                <FormControl sx={{ my: 1 }}>
-                  <FormLabel>Learning Objectives (Common)</FormLabel>
-                  <Controller
-                    name={`learningObjectives`}
-                    control={control}
-                    render={({ field }) => (
-                      <LearningObjectivesAutoComplete {...field} />
-                    )}
-                  />
-                </FormControl>
-                <FormControl sx={{ my: 1 }}>
-                  <FormLabel>Explanation</FormLabel>
-                  <AutoExpandTextArea {...register("explanation")} />
-                </FormControl>
-                <AppLayout.Header>
-                  <Typography level="h3">Variants</Typography>
-                  <Box sx={{ flexGrow: 1 }} />
-                  <FormControl sx={{ mt: 1, mb: 1 }}>
-                    <Select
-                      value={newVariantType}
-                      onChange={(_, v) => v && setNewVariantType(v)}
-                    >
-                      <Option value="simple">Simple</Option>
-                      <Option value="one-two">OneTwo</Option>
-                      <Option value="calculation">Calculation</Option>
-                    </Select>
-                  </FormControl>
-                  <IconButton
-                    variant="plain"
-                    color="success"
-                    sx={{ my: 1 }}
-                    onClick={createNewVariant}
-                    children={<AddIcon />}
-                  />
-                </AppLayout.Header>
-                <List>
-                  {variants.map((variant) => (
-                    <Sheet
-                      component="li"
-                      key={variant.id}
-                      variant="outlined"
-                      sx={{ p: 2, my: 1 }}
-                    >
-                      <AppLayout.Header>
-                        <IconButton
-                          variant="plain"
-                          size="sm"
-                          color="neutral"
-                          sx={{ mr: 1 }}
-                          children={
-                            openVariant === variant.id ? (
-                              <KeyboardArrowDown />
-                            ) : (
-                              <KeyboardArrowRight />
-                            )
-                          }
-                          onClick={() =>
-                            setOpenVariant((oldId) =>
-                              variant.id === oldId ? undefined : variant.id
-                            )
-                          }
-                        />
-                        <Typography level="h5">
-                          {`${variant.id} - ${variant.type}`}
-                        </Typography>
-                        <Box sx={{ flex: 1 }} />
-                        <IconButton
-                          variant="plain"
-                          color="danger"
-                          onClick={() => deleteVariant(variant)}
-                          children={<CloseIcon />}
-                        />
-                      </AppLayout.Header>
-                      {openVariant === variant.id && (
-                        <FormSnippetEditVariant variantId={variant.id} />
-                      )}
-                    </Sheet>
-                  ))}
-                </List>
-              </AppLayout.ScrollableContainer>
-            </FormProvider>
-          </AppLayout.Column>
-          <AppLayout.Column xs={4}>
-            <AppLayout.Header>
-              <Typography level="h3">Variants</Typography>
-            </AppLayout.Header>
-            <AppLayout.ScrollableContainer component="ul">
-              {variants.map(({ id: variantId }) => (
-                <Box component="li" sx={{ py: 1 }} key={variantId}>
-                  <QuestionVariantPreview
-                    id={question.id}
-                    variantId={variantId}
-                    text={getQuestionPreview(watch(), variantId)}
-                    learningObjectives={question.learningObjectives}
-                    externalIds={watch(`variants.${variantId}.externalIds`)}
-                    topRightCorner={
-                      <Button
-                        variant="plain"
-                        onClick={() => setOpenVariant(variantId)}
-                      >
-                        {openVariant === variantId ? (
-                          <RadioButtonCheckedIcon color="primary" />
-                        ) : (
-                          <RadioButtonUncheckedIcon color="primary" />
-                        )}
-                      </Button>
-                    }
-                    sx={{
-                      flexDirection: "column",
-                      alignItems: "flex-start",
-                      textAlign: "left",
-                    }}
-                  />
-                </Box>
-              ))}
-            </AppLayout.ScrollableContainer>
-          </AppLayout.Column>
-        </AppLayout.Grid>
+        <ReduxProvider loading={"loading..."}>
+          <QuestionPageClient question={question} />
+        </ReduxProvider>
       </AppLayout.Main>
     </>
   );

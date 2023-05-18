@@ -1,9 +1,9 @@
-import type { FunctionComponent} from "react";
 import { useState } from "react";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
 import type { LearningObjective } from "@chair-flight/base/types";
 import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
+import type { FunctionComponent } from "react";
 
 export type LearningObjectivesAutoCompleteProps = {
   value: string[];
