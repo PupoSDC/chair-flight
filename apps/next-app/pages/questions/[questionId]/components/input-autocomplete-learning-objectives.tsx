@@ -5,13 +5,13 @@ import type { LearningObjective } from "@chair-flight/base/types";
 import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
 import type { FunctionComponent } from "react";
 
-export type LearningObjectivesAutoCompleteProps = {
+export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
   onChange: (value: string[]) => void;
 };
 
-export const LearningObjectivesAutoComplete: FunctionComponent<
-  LearningObjectivesAutoCompleteProps
+export const InputAutocompleteLearningObjectives: FunctionComponent<
+  InputAutocompleteLearningObjectivesProps
 > = ({ value, onChange }) => {
   const [search, setSearch] = useState("");
 
@@ -39,15 +39,20 @@ export const LearningObjectivesAutoComplete: FunctionComponent<
       inputValue={search}
       value={value}
       loading={loading}
-      onChange={(_, newValue) => {
-        onChange(newValue);
-      }}
-      onInputChange={(_, newInputValue) => {
-        setSearch(newInputValue);
-      }}
+      onChange={(_, newValue) => onChange(newValue)}
+      onInputChange={(_, newInputValue) => setSearch(newInputValue)}
       filterOptions={(options) => options}
       placeholder="Learning Objectives"
       options={data?.results.map((result) => result.result.id) ?? []}
+      sx={{
+        p: 0.5,
+        "& input": {
+          minWidth: "100%",
+        },
+        "& input:not(:first-child)": {
+          mt: 1,
+        },
+      }}
       renderOption={(props, id) => {
         return (
           <AutocompleteOption {...props}>
@@ -63,4 +68,5 @@ export const LearningObjectivesAutoComplete: FunctionComponent<
   );
 };
 
-LearningObjectivesAutoComplete.displayName = "LearningObjectivesAutoComplete";
+InputAutocompleteLearningObjectives.displayName =
+  "InputLearningObjectivesAutoComplete";

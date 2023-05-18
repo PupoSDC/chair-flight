@@ -10,7 +10,7 @@ export type ReduxProviderProps = PropsWithChildren<{
 
 const ReduxProviderClientOnly: FunctionComponent<ReduxProviderProps> = ({
   loading,
-  children
+  children,
 }) => {
   const [{ store, persistor }] = useState(getStoreAndPersistor);
   return (
@@ -19,8 +19,8 @@ const ReduxProviderClientOnly: FunctionComponent<ReduxProviderProps> = ({
         {children}
       </PersistGate>
     </Provider>
-  )
-}
+  );
+};
 
 export const ReduxProvider: FunctionComponent<ReduxProviderProps> = (props) => (
   <NoSsr fallback={props.loading}>

@@ -1,14 +1,15 @@
 import { createRef, useEffect, useId, useRef, useState } from "react";
 import { default as Draggable } from "react-draggable";
 import { Controller, FormProvider, useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
+import { default as EditIcon } from "@mui/icons-material/Edit";
 import { default as KeyboardArrowDown } from "@mui/icons-material/KeyboardArrowDown";
 import { default as KeyboardArrowRight } from "@mui/icons-material/KeyboardArrowRight";
 import { default as RadioButtonCheckedIcon } from "@mui/icons-material/RadioButtonChecked";
 import { default as RadioButtonUncheckedIcon } from "@mui/icons-material/RadioButtonUnchecked";
-import { default as EditIcon } from '@mui/icons-material/Edit';
 import { default as SaveIcon } from "@mui/icons-material/Save";
 import {
   Box,
@@ -51,7 +52,9 @@ import {
 } from "@chair-flight/react/components";
 import { AutoExpandTextArea } from "./components/AutoExpandTextArea";
 import { FormSnippetEditVariant } from "./components/FormSnippetEditVariant";
-import { LearningObjectivesAutoComplete } from "./components/LearningObjectivesAutoComplete";
+import { EditDraggableVariant } from "./components/edit-draggable-variant";
+import { EditQuestionBody } from "./components/edit-question-body";
+import { InputAutocompleteLearningObjectives } from "./components/input-autocomplete-learning-objectives";
 import type { PutBodySchema } from "../../api/questions/[questionId].api";
 import type {
   QuestionTemplate,
@@ -67,116 +70,33 @@ type QuestionPageProps = {
 const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
   const dispatch = useAppDispatch();
   const hasPushedInitialHistory = useRef(false);
-  const editedQuestion = useAppSelector(
-    (state) => state.questionEditor.questions[question.id]?.history?.at(-1)
-  ) ?? question;
+  const editedQuestion =
+    useAppSelector(
+      (state) => state.questionEditor.questions[question.id]?.currentVersion
+    ) ?? question;
   const [openVariant, setOpenVariant] = useState<string | null>(null);
 
   useEffect(() => {
     if (hasPushedInitialHistory.current) return;
-    dispatch(actions.updateQuestionTemplate({ question }));
+    dispatch(actions.resetQuestionEditor({ question }));
     hasPushedInitialHistory.current = true;
   });
 
-  const mergeVariant = (fromVariantId: string, toVariantId: string) => {
-    if (fromVariantId === toVariantId) return;
-    dispatch(
-      actions.mergeQuestionVariants({
-        questionId: question.id,
-        fromVariantId,
-        toVariantId,
-      })
-    );
-    toast.success(`${fromVariantId} merged into ${toVariantId}`, {
-      duration: 8000,
-      action: {
-        label: "Revert",
-        onClick: () =>
-          dispatch(
-            actions.undoQuestionEditorLastChange({
-              questionId: question.id,
-            })
-          ),
-      },
-    });
-  };
-
-  const deleteVariant = (variantId: string) => {
-    dispatch(
-      actions.deleteQuestionVariant({
-        questionId: question.id,
-        variantId,
-      })
-    );
-    toast.success(`${variantId} deleted`, {
-      duration: 8000,
-      action: {
-        label: "Revert",
-        onClick: () =>
-          dispatch(
-            actions.undoQuestionEditorLastChange({
-              questionId: question.id,
-            })
-          ),
-      },
-    });
-  };
-
-  const updateLearningObjectives = (learningObjectives: string[]) => {
-    dispatch(actions.updateQuestionLearningObjectives({
-      questionId: question.id,
-      learningObjectives
-    }));
-  } 
-
-  const addNewVariant = () => {
-  }
+  const addNewVariant = () => {};
 
   return (
     <>
       <AppLayout.Header>
-        <Box sx={{ display: "flex", alignItems: "baseline" }} >
+        <Box sx={{ display: "flex", alignItems: "baseline" }}>
           <EditIcon sx={{ mx: 1 }} fontSize="xl2" />
           <Typography level="h4">
-            {`Editing Question ${question.id}`}</Typography>
+            {`Editing Question ${question.id}`}
+          </Typography>
         </Box>
       </AppLayout.Header>
       <Grid container sx={{ flex: 1, overflow: "hidden" }}>
         <Grid xs={6} lg={4}>
-          <Box sx={{ p: 1 }}>
-            <FormControl>
-              <FormLabel>Learning Objectives</FormLabel>
-              <LearningObjectivesAutoComplete
-                value={editedQuestion.learningObjectives}
-                onChange={updateLearningObjectives}
-              />
-            </FormControl>
-            <FormControl sx={{ my: 1 }}>
-              <FormLabel>Explanation</FormLabel>
-              <Textarea 
-                minRows={5}
-                value={editedQuestion.explanation}
-                onChange={() => {}} 
-              />
-            </FormControl>
-            <FormControl sx={{ mt: 1, mb: 1 }}>
-              <Select
-                value={newVariantType}
-                onChange={(_, v) => v && setNewVariantType(v)}
-              >
-                <Option value="simple">Simple</Option>
-                <Option value="one-two">OneTwo</Option>
-                <Option value="calculation">Calculation</Option>
-              </Select>
-            </FormControl>
-            <IconButton
-              variant="plain"
-              color="success"
-              sx={{ my: 1 }}
-              onClick={createNewVariant}
-              children={<AddIcon />}
-            />
-          </Box>
+          <EditQuestionBody questionId={question.id} />
         </Grid>
         <Grid xs={6} lg={8} sx={{ height: "100%" }}>
           <List
@@ -186,76 +106,16 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
-              overflow: "scroll"
+              overflow: "scroll",
             }}
-          >
-            {Object.values(editedQuestion.variants).map((result) => {
-              const ref = createRef<HTMLLIElement>();
-              return (
-              <Draggable
-                nodeRef={ref}
-                key={result.id}
-                position={{ x: 0, y: 0 }}
-                onStop={(_, data) => {
-                  setTimeout(() => {
-                    const target = data.node.parentNode
-                      ?.querySelectorAll(":hover")?.[0]
-                      ?.getAttribute("data-variant-id");
-                    if (!target) return;
-                    mergeVariant(result.id, target);
-                  }, 10);
-                }}
-              >
-                <Box
-                   ref={ref}
-                  component="li"
-                  data-variant-id={result.id}
-                  sx={{
-                    px: { xs: 0, md: 1 },
-                    py: 1,
-                    width: { xs: 1, lg: 1 / 2 },
-                    "&.react-draggable-dragging": {
-                      zIndex: 1000,
-                    },
-                    "&.react-draggable-dragging > *": {
-                      zIndex: 1000,
-                    },
-                    "&:hover:not(.react-draggable-dragging)": {},
-                  }}
-                >
-                  <QuestionVariantPreview
-                    id={question.id}
-                    variantId={result.id}
-                    text={getQuestionPreview(question, result.id)}
-                    learningObjectives={question.learningObjectives}
-                    externalIds={result.externalIds}
-                    topRightCorner={
-                      <>
-                        <Button
-                          variant="plain"
-                          sx={{ mr: 1 }}
-                          onClick={() => setOpenVariant(result.id)}
-                          children="Edit"
-                        />
-                        <Button
-                          variant="plain"
-                          color="danger"
-                          onClick={() => deleteVariant(result.id)}
-                          children="Delete"
-                        />
-                      </>
-                    }
-                    sx={{
-                      flexDirection: "column",
-                      alignItems: "flex-start",
-                      textAlign: "left",
-                    }}
-                  />
-                </Box>
-              </Draggable>
-              )
-            })}
-          </List>
+            children={Object.values(editedQuestion.variants).map((variant) => (
+              <EditDraggableVariant
+                key={variant.id}
+                questionId={question.id}
+                variantId={variant.id}
+              />
+            ))}
+          />
         </Grid>
       </Grid>
       <Modal

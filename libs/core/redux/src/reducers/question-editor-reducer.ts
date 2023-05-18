@@ -1,18 +1,18 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { InvalidStoreState, InvalidStoreStateActionType } from "@chair-flight/base/errors";
-import { questionSchema } from "@chair-flight/question-bank/schemas";
+import { InvalidStoreState } from "@chair-flight/base/errors";
 import {
-  updateQuestionTemplate,
   mergeQuestionVariants,
   resetQuestionEditor,
   undoQuestionEditorLastChange,
   deleteQuestionVariant,
   updateQuestionLearningObjectives,
+  updateQuestionExplanation,
 } from "../actions/question-editor-actions";
+import type { InvalidStoreStateActionType } from "@chair-flight/base/errors";
 import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export type QuestionEditorEntry = {
-  // the last element in the array is the current version of the question
+  currentVersion: QuestionTemplate;
   history: QuestionTemplate[];
 };
 
@@ -20,36 +20,43 @@ export type QuestionEditor = {
   questions: Record<string, QuestionEditorEntry | undefined>;
 };
 
-const getQuestionEditorEntryOrDefault = (
-  store: QuestionEditor,
-  questionId: string
-): QuestionEditorEntry => {
-  store.questions[questionId] ??= {
-    history: [],
-  };
-  return store.questions[questionId] as QuestionEditorEntry;
+const getCurrentQuestionOrThrow = ({
+  store,
+  questionId,
+  action,
+}: {
+  store: QuestionEditor;
+  questionId: string;
+  action: InvalidStoreStateActionType;
+}): QuestionTemplate => {
+  const currentQuestion = store.questions[questionId]?.history?.at(-1);
+  if (!currentQuestion) {
+    throw new InvalidStoreState(
+      `Question ${questionId} not found in question editor`,
+      action
+    );
+  }
+  return currentQuestion;
 };
 
-const getDeepCopyOfLastEntryOrThrow = ({
-    store,
-    questionId,
+const getEntryOrThrow = ({
+  store,
+  questionId,
+  action,
+}: {
+  store: QuestionEditor;
+  questionId: string;
+  action: InvalidStoreStateActionType;
+}): QuestionEditorEntry => {
+  const entry = store.questions[questionId];
+  if (entry) return entry;
+  throw new InvalidStoreState(
+    `Question ${questionId} not found in question editor`,
     action
-} : {
-    store: QuestionEditor,
-    questionId: string,
-    action: InvalidStoreStateActionType
-}): QuestionTemplate => {
-    const currentQuestion = store.questions[questionId]?.history?.at(-1);
-    if (!currentQuestion) {
-        throw new InvalidStoreState(
-            `Question ${questionId} not found in question editor`,
-            action
-        );
-    }
-    const newQuestion = questionSchema.parse(currentQuestion);
-    store.questions[questionId]?.history.push(newQuestion);
-    return newQuestion;
-}
+  );
+};
+
+const deepCopy = <T>(a: T): T => JSON.parse(JSON.stringify(a));
 
 export const questionEditorReducer = createReducer<QuestionEditor>(
   {
@@ -59,54 +66,47 @@ export const questionEditorReducer = createReducer<QuestionEditor>(
     builder
       .addCase(resetQuestionEditor, (store, action) => {
         const { question } = action.payload;
-        const entry = getQuestionEditorEntryOrDefault(store, question.id);
-        entry.history = [question];
-      })
-      .addCase(updateQuestionTemplate, (store, action) => {
-        const { question } = action.payload;
-        const entry = getQuestionEditorEntryOrDefault(store, question.id);
-        entry.history.push(question);
+        store.questions[question.id] = {
+          currentVersion: question,
+          history: [],
+        };
       })
       .addCase(undoQuestionEditorLastChange, (store, action) => {
         const { questionId } = action.payload;
-        const entry = getQuestionEditorEntryOrDefault(store, questionId);
-        entry.history.pop();
+        const entry = getEntryOrThrow({ store, action, questionId });
+        const pop = store.questions[questionId]?.history.pop();
+        if (!pop) return;
+        entry.currentVersion = pop;
       })
       .addCase(mergeQuestionVariants, (store, action) => {
         const { questionId, fromVariantId, toVariantId } = action.payload;
-        const question = getDeepCopyOfLastEntryOrThrow({
-            store, 
-            questionId, 
-            action
-        });
-
-        const fromVariant = question.variants[fromVariantId];
-        const toVariant = question.variants[toVariantId];
-        toVariant.externalIds = [
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        entry.currentVersion.variants[toVariantId].externalIds = [
           ...new Set([
-            ...toVariant.externalIds,
-            ...fromVariant.externalIds
-          ])
+            ...entry.currentVersion.variants[toVariantId].externalIds,
+            ...entry.currentVersion.variants[fromVariantId].externalIds,
+          ]),
         ];
-        delete question.variants[fromVariantId];
+        delete entry.currentVersion.variants[fromVariantId];
       })
       .addCase(deleteQuestionVariant, (store, action) => {
         const { questionId, variantId } = action.payload;
-        const question = getDeepCopyOfLastEntryOrThrow({
-            store, 
-            questionId, 
-            action
-        });
-        delete question.variants[variantId];
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        delete entry.currentVersion.variants[variantId];
       })
       .addCase(updateQuestionLearningObjectives, (store, action) => {
         const { questionId, learningObjectives } = action.payload;
-        const question = getDeepCopyOfLastEntryOrThrow({
-            store, 
-            questionId, 
-            action
-        });
-        question.learningObjectives = learningObjectives;
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        entry.currentVersion.learningObjectives = learningObjectives;
       })
+      .addCase(updateQuestionExplanation, (store, action) => {
+        const { questionId, explanation } = action.payload;
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        entry.currentVersion.explanation = explanation;
+      });
   }
 );

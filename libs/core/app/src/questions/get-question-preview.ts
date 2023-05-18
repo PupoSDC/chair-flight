@@ -1,5 +1,6 @@
 import type {
   QuestionTemplate,
+  QuestionVariant,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
 } from "@chair-flight/base/types";
@@ -33,12 +34,7 @@ const getQuestionVariantOneTwoPreview = (
   return `${variant.question}\n\n${correctOptions}\n${wrongOptions}`;
 };
 
-export const getQuestionPreview = (
-  question: QuestionTemplate,
-  variantId: string
-) => {
-  const variant = question.variants[variantId];
-  if (!variant) throw new Error("Variant not found");
+export const getVariantPreview = (variant: QuestionVariant) => {
   switch (variant.type) {
     case "simple":
       return getQuestionVariantSimplePreview(variant);
@@ -47,4 +43,13 @@ export const getQuestionPreview = (
     case "calculation":
       return "Calculation questions are not supported yet";
   }
+};
+
+export const getQuestionPreview = (
+  question: QuestionTemplate,
+  variantId: string
+) => {
+  const variant = question.variants[variantId];
+  if (!variant) throw new Error("Variant not found");
+  return getVariantPreview(variant);
 };
