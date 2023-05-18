@@ -1,6 +1,9 @@
 import { UnimplementedEndpointError } from "@chair-flight/base/errors";
-import type { QuestionVariant, QuestionVariantType } from "@chair-flight/base/types";
 import { getRandomId } from "../random/random";
+import type {
+  QuestionVariant,
+  QuestionVariantType,
+} from "@chair-flight/base/types";
 
 export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
   const common = {

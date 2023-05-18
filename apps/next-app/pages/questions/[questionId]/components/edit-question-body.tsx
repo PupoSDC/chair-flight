@@ -1,4 +1,3 @@
-import type { FunctionComponent} from "react";
 import { useState } from "react";
 import {
   Box,
@@ -9,7 +8,6 @@ import {
   Option,
   Button,
 } from "@mui/joy";
-import type { QuestionVariantType } from "@chair-flight/base/types";
 import { getNewVariant } from "@chair-flight/core/app";
 import {
   actions,
@@ -17,6 +15,8 @@ import {
   useAppSelector,
 } from "@chair-flight/core/redux";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";
+import type { QuestionVariantType } from "@chair-flight/base/types";
+import type { FunctionComponent } from "react";
 
 export type EditQuestionBodyProps = {
   questionId: string;

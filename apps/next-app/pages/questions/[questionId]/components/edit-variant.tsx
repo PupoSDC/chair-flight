@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { default as Draggable } from "react-draggable";
+import { useRouter } from "next/router";
 import { Box, Button } from "@mui/joy";
 import { getVariantPreview } from "@chair-flight/core/app";
 import {
@@ -15,11 +16,12 @@ export type DraggableVariantProps = {
   questionId: string;
 };
 
-export const EditDraggableVariant: FunctionComponent<DraggableVariantProps> = ({
+export const EditVariant: FunctionComponent<DraggableVariantProps> = ({
   variantId,
   questionId,
 }) => {
   const ref = useRef<HTMLLinkElement>(null);
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const variant = useAppSelector(
     (state) =>
@@ -28,6 +30,7 @@ export const EditDraggableVariant: FunctionComponent<DraggableVariantProps> = ({
       ]
   );
 
+  // Just here to (hopefully) silence TS
   if (!variant) return null;
 
   const revert = () =>
@@ -51,7 +54,7 @@ export const EditDraggableVariant: FunctionComponent<DraggableVariantProps> = ({
     });
   };
 
-  const deleteVariant = (variantId: string) => {
+  const deleteVariant = () => {
     dispatch(
       actions.deleteQuestionVariant({
         questionId,
@@ -65,6 +68,11 @@ export const EditDraggableVariant: FunctionComponent<DraggableVariantProps> = ({
         onClick: revert,
       },
     });
+  };
+
+  const openModal = () => {
+    router.query["variantId"] = variantId;
+    router.replace(router);
   };
 
   return (
@@ -100,23 +108,22 @@ export const EditDraggableVariant: FunctionComponent<DraggableVariantProps> = ({
         }}
       >
         <QuestionVariantPreview
-          id={questionId}
-          variantId={variant.id}
+          id={variant.id}
           text={getVariantPreview(variant)}
           learningObjectives={[]}
           externalIds={variant.externalIds}
           topRightCorner={
             <>
               <Button
+                children="Edit"
                 variant="plain"
                 sx={{ mr: 1 }}
-                //onClick={() => setOpenVariant(variant.id)}
-                children="Edit"
+                onClick={openModal}
               />
               <Button
                 variant="plain"
                 color="danger"
-                onClick={() => deleteVariant(variant.id)}
+                onClick={deleteVariant}
                 children="Delete"
               />
             </>

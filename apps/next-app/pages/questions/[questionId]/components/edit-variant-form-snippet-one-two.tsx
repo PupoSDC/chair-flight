@@ -10,7 +10,7 @@ import type {
 } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
-export type FormSnippetEditVariantOneTwoProps = {
+export type EditVariantFormSnippetOneTwoProps = {
   variantId: string;
 };
 
@@ -27,8 +27,8 @@ const statements: Statements[] = [
   "secondIncorrectStatements",
 ];
 
-export const FormSnippetEditVariantOneTwo: FunctionComponent<
-  FormSnippetEditVariantOneTwoProps
+export const EditVariantFormSnippetOneTwo: FunctionComponent<
+  EditVariantFormSnippetOneTwoProps
 > = ({ variantId }) => {
   const { register, setValue, watch } = useFormContext<QuestionTemplate>();
   const variant = watch(`variants.${variantId}`) as QuestionVariantOneTwo;

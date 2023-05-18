@@ -1,40 +1,6 @@
-import { createRef, useEffect, useId, useRef, useState } from "react";
-import { default as Draggable } from "react-draggable";
-import { Controller, FormProvider, useForm } from "react-hook-form";
-import { useRouter } from "next/router";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { default as AddIcon } from "@mui/icons-material/Add";
-import { default as CloseIcon } from "@mui/icons-material/Close";
+import { useEffect, useRef } from "react";
 import { default as EditIcon } from "@mui/icons-material/Edit";
-import { default as KeyboardArrowDown } from "@mui/icons-material/KeyboardArrowDown";
-import { default as KeyboardArrowRight } from "@mui/icons-material/KeyboardArrowRight";
-import { default as RadioButtonCheckedIcon } from "@mui/icons-material/RadioButtonChecked";
-import { default as RadioButtonUncheckedIcon } from "@mui/icons-material/RadioButtonUnchecked";
-import { default as SaveIcon } from "@mui/icons-material/Save";
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  IconButton,
-  List,
-  Select,
-  Option,
-  Sheet,
-  Textarea,
-  Typography,
-  Modal,
-  ModalDialog,
-  ModalClose,
-  Divider,
-  Grid,
-} from "@mui/joy";
-import axios from "axios";
-import { useAppStore } from "libs/core/redux/src/store/store";
-import {
-  getQuestionPreview,
-  getRandomIdGenerator,
-} from "@chair-flight/core/app";
+import { Box, List, Typography, Grid, FormLabel } from "@mui/joy";
 import {
   ReduxProvider,
   actions,
@@ -43,24 +9,11 @@ import {
 } from "@chair-flight/core/redux";
 import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import { ssrHandler } from "@chair-flight/next/server";
-import { questionSchema } from "@chair-flight/question-bank/schemas";
-import {
-  Header,
-  AppLayout,
-  QuestionVariantPreview,
-  toast,
-} from "@chair-flight/react/components";
-import { AutoExpandTextArea } from "./components/AutoExpandTextArea";
-import { FormSnippetEditVariant } from "./components/FormSnippetEditVariant";
-import { EditDraggableVariant } from "./components/edit-draggable-variant";
+import { AppLayout, Header } from "@chair-flight/react/components";
 import { EditQuestionBody } from "./components/edit-question-body";
-import { InputAutocompleteLearningObjectives } from "./components/input-autocomplete-learning-objectives";
-import type { PutBodySchema } from "../../api/questions/[questionId].api";
-import type {
-  QuestionTemplate,
-  QuestionVariant,
-  QuestionVariantType,
-} from "@chair-flight/base/types";
+import { EditVariant } from "./components/edit-variant";
+import { EditVariantModal } from "./components/edit-variant-modal";
+import type { QuestionTemplate } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
 type QuestionPageProps = {
@@ -74,7 +27,7 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
     useAppSelector(
       (state) => state.questionEditor.questions[question.id]?.currentVersion
     ) ?? question;
-  const [openVariant, setOpenVariant] = useState<string | null>(null);
+  const variants = Object.values(editedQuestion.variants);
 
   useEffect(() => {
     if (hasPushedInitialHistory.current) return;
@@ -97,6 +50,9 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
           <EditQuestionBody questionId={question.id} />
         </Grid>
         <Grid xs={6} lg={8} sx={{ height: "100%" }}>
+          <FormLabel sx={{ ml: 1 }}>
+            {`Variants (${variants.length})`}
+          </FormLabel>
           <List
             sx={{
               width: "100%",
@@ -106,8 +62,8 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
               flexWrap: "wrap",
               overflow: "scroll",
             }}
-            children={Object.values(editedQuestion.variants).map((variant) => (
-              <EditDraggableVariant
+            children={variants.map((variant) => (
+              <EditVariant
                 key={variant.id}
                 questionId={question.id}
                 variantId={variant.id}
@@ -116,30 +72,7 @@ const QuestionPageClient: NextPage<QuestionPageProps> = ({ question }) => {
           />
         </Grid>
       </Grid>
-      <Modal
-        open={Boolean(openVariant)}
-        onClose={() => toast.warn("Please save or discard your changes!")}
-      >
-        <ModalDialog>
-          <Typography>Edit Variant</Typography>
-          <Divider />
-          <Box sx={{ display: "flex" }}>
-            <Button
-              color="danger"
-              variant="outlined"
-              onClick={() => setOpenVariant(null)}
-              children="Discard"
-            />
-            <Button
-              color="success"
-              variant="solid"
-              role="submit"
-              children="Save"
-              onClick={() => setOpenVariant(null)}
-            />
-          </Box>
-        </ModalDialog>
-      </Modal>
+      <EditVariantModal />
     </>
   );
 };

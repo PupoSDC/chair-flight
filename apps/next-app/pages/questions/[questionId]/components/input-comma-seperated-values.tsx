@@ -2,11 +2,11 @@ import { forwardRef, useEffect, useState } from "react";
 import { Chip, ChipDelete, Textarea, textareaClasses } from "@mui/joy";
 import type { TextareaProps } from "@mui/joy";
 
-export const InputOfCommaSeparatedValue = forwardRef<
+export const InputCommaSeparatedValues = forwardRef<
   HTMLDivElement,
   Omit<
     TextareaProps,
-    "value" | "onKeyPress" | "startDecorator" | "onKeyPress"
+    "value" | "onKeyPress" | "startDecorator" | "onKeyPress" | "onChange"
   > & {
     value?: string[];
     onChange?: (value: string[]) => void;
@@ -67,4 +67,4 @@ export const InputOfCommaSeparatedValue = forwardRef<
   );
 });
 
-InputOfCommaSeparatedValue.displayName = "InputOfCommaSeparatedValue";
+InputCommaSeparatedValues.displayName = "InputCommaSeparatedValues";

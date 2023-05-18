@@ -14,29 +14,21 @@ import {
 import { getRandomIdGenerator } from "@chair-flight/core/app";
 import { AppLayout } from "@chair-flight/react/components";
 import { AutoExpandTextArea } from "./AutoExpandTextArea";
-import type {
-  QuestionTemplate,
-  QuestionVariantSimple,
-} from "@chair-flight/base/types";
+import type { QuestionVariant } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
-export type FormSnippetEditVariantSimpleProps = {
-  variantId: string;
-  //onVariantDelete: (variant: QuestionVariantSimple) => void;
-};
-
-export const FormSnippetEditVariantSimple: FunctionComponent<
-  FormSnippetEditVariantSimpleProps
-> = ({ variantId }) => {
+export const EditVariantFormSnippetSimple: FunctionComponent = () => {
   const randomSeed = useId();
   const [getRandomId] = useState(() => getRandomIdGenerator(randomSeed));
-  const { control, register, setValue, watch } =
-    useFormContext<QuestionTemplate>();
-  const variant = watch(`variants.${variantId}`) as QuestionVariantSimple;
+  const { control, register, setValue, watch } = useFormContext<{
+    variant: QuestionVariant;
+  }>();
+
+  const options = watch("variant.options");
 
   const createOption = () => {
     const id = getRandomId();
-    setValue(`variants.${variant.id}.options.${variant.options.length}`, {
+    setValue(`variant.options.${options.length}`, {
       id: id,
       text: "",
       correct: false,
@@ -55,7 +47,7 @@ export const FormSnippetEditVariantSimple: FunctionComponent<
           onClick={createOption}
         />
       </AppLayout.Header>
-      {variant.options.map((option, index) => (
+      {options.map((option, index) => (
         <Sheet key={option.id} sx={{ p: 2, my: 1 }} variant="outlined">
           <AppLayout.Header>
             <FormControl sx={{ my: 1, alignItems: "flex-start" }}>
