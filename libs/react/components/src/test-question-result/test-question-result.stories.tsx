@@ -5,11 +5,10 @@ type Story = StoryObj<typeof TestQuestionResult>;
 
 export const Playground: Story = {
   args: {
-    questionId: "12412412",
-    questionIndex: 5,
     correct: false,
+    title: "Question 5",
     question: "what is the capital of France?",
-    correctOptions: "Paris",
+    correctOption: "Paris",
     selectedOption: "Berlin",
     learningObjectives: ["010.03.01.01"],
   },

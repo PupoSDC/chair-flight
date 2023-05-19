@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { NotFoundError, UnimplementedError } from "@chair-flight/base/errors";
+import { UnimplementedError } from "@chair-flight/base/errors";
 import { apiHandler } from "@chair-flight/next/server";
 import { questionSchema } from "@chair-flight/question-bank/schemas";
 import type {
@@ -20,8 +20,6 @@ export const getQuestionTemplate = async (
   questionBank: QuestionBankRepository
 ): Promise<GetQuestionTemplateResponse> => {
   const questionTemplate = await questionBank.getQuestionTemplate(questionId);
-
-  if (!questionTemplate) throw new NotFoundError("Question not found");
   const learningObjectives = await questionBank.getLearningObjectives(
     questionTemplate.learningObjectives
   );

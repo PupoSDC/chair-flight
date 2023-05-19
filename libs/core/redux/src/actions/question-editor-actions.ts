@@ -4,6 +4,10 @@ import type {
   QuestionVariant,
 } from "@chair-flight/base/types";
 
+export const deleteEditorState = createAction<{
+  questionId: string;
+}>("question-editor/question-deleted");
+
 export const resetQuestionEditor = createAction<{
   question: QuestionTemplate;
 }>("question-editor/question-reset");
