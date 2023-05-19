@@ -8,6 +8,7 @@ import {
   updateQuestionLearningObjectives,
   updateQuestionExplanation,
   createNewQuestionVariant,
+  updateQuestionVariant,
 } from "../actions/question-editor-actions";
 import type { InvalidStoreStateActionType } from "@chair-flight/base/errors";
 import type { QuestionTemplate } from "@chair-flight/base/types";
@@ -98,6 +99,12 @@ export const questionEditorReducer = createReducer<QuestionEditor>(
           [variant.id]: variant,
           ...entry.currentVersion.variants,
         };
+      })
+      .addCase(updateQuestionVariant, (store, action) => {
+        const { questionId, variant } = action.payload;
+        const entry = getEntryOrThrow({ store, action, questionId });
+        entry.history.push(deepCopy(entry.currentVersion));
+        entry.currentVersion.variants[variant.id] = variant;
       });
   }
 );

@@ -1,7 +1,7 @@
 import { useId, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
+import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
-import { default as CreateIcon } from "@mui/icons-material/Create";
 import {
   Box,
   FormControl,
@@ -9,19 +9,18 @@ import {
   IconButton,
   Sheet,
   Switch,
-  Typography,
+  Textarea,
 } from "@mui/joy";
 import { getRandomIdGenerator } from "@chair-flight/core/app";
-import { AppLayout } from "@chair-flight/react/components";
-import { AutoExpandTextArea } from "./AutoExpandTextArea";
-import type { QuestionVariant } from "@chair-flight/base/types";
+import { HookFormTextArea } from "@chair-flight/react/components";
+import type { QuestionVariantSimple } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
 export const EditVariantFormSnippetSimple: FunctionComponent = () => {
   const randomSeed = useId();
   const [getRandomId] = useState(() => getRandomIdGenerator(randomSeed));
-  const { control, register, setValue, watch } = useFormContext<{
-    variant: QuestionVariant;
+  const { control, register, setValue, watch, formState } = useFormContext<{
+    variant: QuestionVariantSimple;
   }>();
 
   const options = watch("variant.options");
@@ -36,59 +35,71 @@ export const EditVariantFormSnippetSimple: FunctionComponent = () => {
     });
   };
 
+  const deleteOption = (id: string) => {
+    setValue(
+      `variant.options`,
+      options.filter((opt) => id !== opt.id)
+    );
+  };
+
   return (
     <>
-      <AppLayout.Header>
-        <Typography level="h5">Options</Typography>
+      <FormControl sx={{ mt: 1 }}>
+        <FormLabel>Question</FormLabel>
+        <Textarea
+          placeholder="Write a question here"
+          {...register("variant.question")}
+        />
+      </FormControl>
+      <FormLabel sx={{ mt: 1 }}>
+        Options
         <IconButton
+          sx={{ ml: "auto" }}
           variant="plain"
           color="success"
-          children={<CreateIcon />}
           onClick={createOption}
+          children={<AddIcon />}
         />
-      </AppLayout.Header>
+      </FormLabel>
       {options.map((option, index) => (
-        <Sheet key={option.id} sx={{ p: 2, my: 1 }} variant="outlined">
-          <AppLayout.Header>
-            <FormControl sx={{ my: 1, alignItems: "flex-start" }}>
-              <Controller
-                name={`variants.${variant.id}.options.${index}.correct`}
-                control={control}
-                render={({ field }) => (
-                  <Switch
-                    {...field}
-                    sx={{ width: "100%" }}
-                    color={field.value ? "success" : "danger"}
-                    endDecorator={field.value ? "Correct" : "Wrong"}
-                  />
-                )}
-              />
-            </FormControl>
+        <Sheet key={option.id} sx={{ p: 1, my: 1 }} variant="outlined">
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Controller
+              name={`variant.options.${index}.correct`}
+              control={control}
+              render={({ field }) => (
+                <Switch
+                  {...field}
+                  sx={{ width: "100%" }}
+                  color={field.value ? "success" : "danger"}
+                  endDecorator={field.value ? "Correct" : "Wrong"}
+                />
+              )}
+            />
             <Box sx={{ flex: 1 }} />
             <IconButton
               variant="plain"
               color="danger"
-              onClick={() =>
-                setValue(
-                  `variants.${variant.id}.options`,
-                  variant.options.filter((_, i) => i !== index)
-                )
-              }
-            >
-              <CloseIcon />
-            </IconButton>
-          </AppLayout.Header>
+              onClick={() => deleteOption(option.id)}
+              children={<CloseIcon />}
+            />
+          </Box>
           <FormControl sx={{ mt: 1 }}>
             <FormLabel>Text</FormLabel>
-            <AutoExpandTextArea
-              {...register(`variants.${variant.id}.options.${index}.text`)}
+            <HookFormTextArea
+              minRows={1}
+              placeholder="Write an option here"
+              errors={formState.errors}
+              {...register(`variant.options.${index}.text`)}
             />
           </FormControl>
           <FormControl sx={{ my: 1 }}>
             <FormLabel>why</FormLabel>
-            <AutoExpandTextArea
+            <HookFormTextArea
+              minRows={1}
               placeholder="use This to briefly justify this option"
-              {...register(`variants.${variant.id}.options.${index}.why`)}
+              errors={formState.errors}
+              {...register(`variant.options.${index}.why`)}
             />
           </FormControl>
         </Sheet>

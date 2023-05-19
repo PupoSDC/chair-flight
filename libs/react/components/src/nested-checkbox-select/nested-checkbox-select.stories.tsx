@@ -11,25 +11,24 @@ export const Playground: Story = {
   },
   render: function Render(args) {
     const [items, setItems] = useState(args.items);
-
     return (
       <NestedCheckboxSelect
         {...args}
         items={items}
-        onChange={(v) => {
-          args.onChange?.(v);
+        onChange={(...val) => {
+          args.onChange?.(...val);
           setItems((oldItems) =>
             oldItems?.map((oldItem) => ({
               ...oldItem,
               checked: (() => {
-                if (oldItem.id === v) return !oldItem.checked;
+                if (oldItem.id === val[0].id) return !oldItem.checked;
                 return oldItem.checked;
               })(),
               children: oldItem.children.map((oldChild) => ({
                 ...oldChild,
                 checked: (() => {
-                  if (oldItem.id === v) return !oldItem.checked;
-                  if (oldChild.id === v) return !oldChild.checked;
+                  if (oldItem.id === val[0].id) return !oldItem.checked;
+                  if (oldChild.id === val[0].id) return !oldChild.checked;
                   return oldChild.checked;
                 })(),
               })),

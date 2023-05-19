@@ -86,7 +86,9 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
         >
           <Option value="simple">Simple</Option>
           <Option value="one-two">OneTwo</Option>
-          <Option value="calculation">Calculation</Option>
+          <Option disabled value="calculation">
+            Calculation
+          </Option>
         </Select>
       </FormControl>
       <Button

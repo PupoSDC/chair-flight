@@ -37,3 +37,8 @@ export const createNewQuestionVariant = createAction<{
   questionId: string;
   variant: QuestionVariant;
 }>("question-editor/question-variant-created");
+
+export const updateQuestionVariant = createAction<{
+  questionId: string;
+  variant: QuestionVariant;
+}>("question-editor/question-variant-updated");

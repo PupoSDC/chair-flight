@@ -1,0 +1,12 @@
+import { Title, Canvas, Meta, Story, Stories } from "@storybook/blocks";
+import { default as HookFormStories } from "./hook-form.stories";
+
+<Meta of={HookFormStories} />
+
+<Title />
+
+We are using [`react-hook-form`](https://react-hook-form.com/) to build forms.
+Integration with Joy ui is not as straight forward as it could be, so we have
+wrapper components for the form primitives available.
+
+<Stories />

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import { Modal } from "@mui/joy";
+import { Modal, Typography } from "@mui/joy";
 import { useAppSelector } from "@chair-flight/core/redux";
 import { toast } from "@chair-flight/react/components";
-import { EditVariantForm } from "./edit-variant-form";
+import { EditVariantModalDialog } from "./edit-variant-modal-dialog";
 import type { FunctionComponent } from "react";
 
 export const EditVariantModal: FunctionComponent = () => {
@@ -24,9 +24,9 @@ export const EditVariantModal: FunctionComponent = () => {
   return (
     <Modal open={!!variantId} onClose={disableCloseWithoutAction}>
       {variant ? (
-        <EditVariantForm questionId={questionId} variant={variant} />
+        <EditVariantModalDialog questionId={questionId} variant={variant} />
       ) : (
-        "loading..."
+        <Typography level="h5">loading...</Typography>
       )}
     </Modal>
   );

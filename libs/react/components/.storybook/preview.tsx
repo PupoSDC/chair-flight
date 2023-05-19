@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
 import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
-import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
+import {
+  DocsContainer,
+  DocsContainerProps,
+  CodeOrSourceMdx,
+} from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import { useDarkMode } from "storybook-dark-mode";
@@ -30,8 +34,10 @@ const joyTheme = extendTheme({
 });
 
 // Violence is, as far as i know, the only solution.
-themes.dark.appContentBg = "var(--joy-palette-background-body)";
-themes.light.appContentBg = "var(--joy-palette-background-body)";
+// these colors were picked from the final computed theme. Using CSS vars
+// crashes code blocks
+themes.dark.appContentBg = "#131318";
+themes.light.appContentBg = "#F4FAFF";
 
 const preview: Preview = {
   parameters: {
@@ -59,6 +65,11 @@ const preview: Preview = {
     },
     actions: {
       argTypesRegex: "^on.*",
+    },
+    options: {
+      storySort: {
+        order: ["docs", "components", "demos"],
+      },
     },
   },
   decorators: [

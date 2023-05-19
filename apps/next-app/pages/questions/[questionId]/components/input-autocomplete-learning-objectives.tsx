@@ -67,6 +67,3 @@ export const InputAutocompleteLearningObjectives: FunctionComponent<
     />
   );
 };
-
-InputAutocompleteLearningObjectives.displayName =
-  "InputLearningObjectivesAutoComplete";
