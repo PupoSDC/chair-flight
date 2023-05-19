@@ -71,7 +71,12 @@ const meta: Meta<typeof TestPreview> = {
       control: { type: "radio" },
     },
     score: {
-      control: { type: "slider" },
+      control: {
+        type: "range",
+        min: 0,
+        max: 100,
+        step: 1,
+      },
     },
     component: {
       control: { type: "radio" },

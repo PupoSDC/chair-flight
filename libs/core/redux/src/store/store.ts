@@ -11,6 +11,7 @@ import {
   persistStore,
 } from "redux-persist";
 import { default as storage } from "redux-persist/lib/storage";
+import { questionEditorReducer } from "../reducers/question-editor-reducer";
 import { testMakerReducer } from "../reducers/test-maker-reducer";
 import { testProgressReducer } from "../reducers/test-progress-reducer";
 import { userVoyageReducer } from "../reducers/user-voyage-reducer";
@@ -21,6 +22,7 @@ export const getStoreAndPersistor = () => {
     testProgress: testProgressReducer,
     userVoyage: userVoyageReducer,
     testMaker: testMakerReducer,
+    questionEditor: questionEditorReducer,
   });
 
   const persistedReducer = persistReducer(

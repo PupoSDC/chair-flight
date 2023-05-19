@@ -8,18 +8,22 @@ export type ReduxProviderProps = PropsWithChildren<{
   loading: React.ReactNode;
 }>;
 
-export const ReduxProvider: FunctionComponent<ReduxProviderProps> = ({
-  children,
+const ReduxProviderClientOnly: FunctionComponent<ReduxProviderProps> = ({
   loading,
+  children,
 }) => {
   const [{ store, persistor }] = useState(getStoreAndPersistor);
   return (
-    <NoSsr fallback={loading}>
-      <Provider store={store}>
-        <PersistGate loading={loading} persistor={persistor}>
-          {children}
-        </PersistGate>
-      </Provider>
-    </NoSsr>
+    <Provider store={store}>
+      <PersistGate loading={loading} persistor={persistor}>
+        {children}
+      </PersistGate>
+    </Provider>
   );
 };
+
+export const ReduxProvider: FunctionComponent<ReduxProviderProps> = (props) => (
+  <NoSsr fallback={props.loading}>
+    <ReduxProviderClientOnly {...props} />
+  </NoSsr>
+);

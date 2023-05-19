@@ -5,7 +5,7 @@ import { AppLayout } from "./app-layout";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof AppLayout.Main> = {
-  title: "Components/AppLayout",
+  title: "demos/AppLayout",
   component: AppLayout.Main,
 };
 

@@ -1,18 +1,18 @@
-import { forwardRef, useState } from "react";
+import { useState } from "react";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
 import { default as useAxios } from "axios-hooks";
 import type { LearningObjective } from "@chair-flight/base/types";
 import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
+import type { FunctionComponent } from "react";
 
-export type LearningObjectivesAutoCompleteProps = {
+export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
   onChange: (value: string[]) => void;
 };
 
-export const LearningObjectivesAutoComplete = forwardRef<
-  HTMLDivElement,
-  LearningObjectivesAutoCompleteProps
->(({ value, onChange }, ref) => {
+export const InputAutocompleteLearningObjectives: FunctionComponent<
+  InputAutocompleteLearningObjectivesProps
+> = ({ value, onChange }) => {
   const [search, setSearch] = useState("");
 
   const [{ data, loading }] = useAxios<SearchLearningObjectivesResults>({
@@ -34,21 +34,25 @@ export const LearningObjectivesAutoComplete = forwardRef<
   return (
     <Autocomplete
       multiple
-      ref={ref}
       freeSolo
       forcePopupIcon
       inputValue={search}
       value={value}
       loading={loading}
-      onChange={(_, newValue) => {
-        onChange(newValue);
-      }}
-      onInputChange={(_, newInputValue) => {
-        setSearch(newInputValue);
-      }}
+      onChange={(_, newValue) => onChange(newValue)}
+      onInputChange={(_, newInputValue) => setSearch(newInputValue)}
       filterOptions={(options) => options}
       placeholder="Learning Objectives"
       options={data?.results.map((result) => result.result.id) ?? []}
+      sx={{
+        p: 0.5,
+        "& input": {
+          minWidth: "100%",
+        },
+        "& input:not(:first-child)": {
+          mt: 1,
+        },
+      }}
       renderOption={(props, id) => {
         return (
           <AutocompleteOption {...props}>
@@ -62,6 +66,4 @@ export const LearningObjectivesAutoComplete = forwardRef<
       }}
     />
   );
-});
-
-LearningObjectivesAutoComplete.displayName = "LearningObjectivesAutoComplete";
+};

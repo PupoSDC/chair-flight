@@ -1,3 +1,4 @@
+import * as questionEditorActions from "./actions/question-editor-actions";
 import * as testActions from "./actions/test-actions";
 import * as testMakerActions from "./actions/test-maker-actions";
 import * as userVoyageActions from "./actions/user-voyage-actions";
@@ -10,6 +11,7 @@ const actions = {
   ...testActions,
   ...testMakerActions,
   ...userVoyageActions,
+  ...questionEditorActions,
 };
 
 export {

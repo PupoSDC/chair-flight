@@ -3,7 +3,7 @@ import { z } from "zod";
 export const questionSimpleSchema = z.object({
   type: z.literal("simple"),
   id: z.string(),
-  question: z.string(),
+  question: z.string().min(5),
   options: z
     .object({
       id: z.string(),

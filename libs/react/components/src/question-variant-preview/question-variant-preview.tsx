@@ -5,10 +5,10 @@ import type { SheetProps } from "@mui/joy";
 
 export type QuestionVariantPreviewProps = {
   id: string;
-  variantId: string;
-  text: string;
-  learningObjectives: string[];
-  externalIds: string[];
+  variantId?: string;
+  text?: string;
+  learningObjectives?: string[];
+  externalIds?: string[];
   highLightTerms?: string[];
   topRightCorner?: JSX.Element;
   showCorrect?: boolean;
@@ -66,41 +66,45 @@ export const QuestionVariantPreview = forwardRef<
         }}
       >
         <Typography level="h5">{`${id}`}</Typography>{" "}
-        <Typography level="body3">{`${variantId}`}</Typography>
+        {variantId && <Typography level="body3">{`${variantId}`}</Typography>}
         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
           {topRightCorner}
         </Box>
       </Box>
       <Divider component="div" sx={{ my: 1 }} />
       <Box sx={{ gap: 2, display: "block", overflowX: "auto" }}>
-        <MarkdownClient>{text}</MarkdownClient>
+        <MarkdownClient>{text ?? ""}</MarkdownClient>
       </Box>
       <Divider component="div" sx={{ my: 1 }} />
       <Box sx={{ display: "block", width: "100%" }}>
-        <Box sx={{ display: "flex", gap: 1, overflow: "auto" }}>
-          {learningObjectives.map((lo) => (
-            <Chip
-              key={lo}
-              variant="outlined"
-              color="neutral"
-              size="sm"
-              sx={{ borderRadius: "sm", mb: 1 }}
-              children={lo}
-            />
-          ))}
-        </Box>
-        <Box sx={{ display: "flex", gap: 1, overflow: "auto" }}>
-          {externalIds.map((id) => (
-            <Chip
-              key={id}
-              variant="outlined"
-              color="neutral"
-              size="sm"
-              sx={{ borderRadius: "sm", mb: 1 }}
-              children={id}
-            />
-          ))}
-        </Box>
+        {learningObjectives && (
+          <Box sx={{ display: "flex", gap: 1, overflow: "auto" }}>
+            {learningObjectives.map((lo) => (
+              <Chip
+                key={lo}
+                variant="outlined"
+                color="neutral"
+                size="sm"
+                sx={{ borderRadius: "sm", mb: 1 }}
+                children={lo}
+              />
+            ))}
+          </Box>
+        )}
+        {externalIds && (
+          <Box sx={{ display: "flex", gap: 1, overflow: "auto" }}>
+            {externalIds.map((id) => (
+              <Chip
+                key={id}
+                variant="outlined"
+                color="neutral"
+                size="sm"
+                sx={{ borderRadius: "sm", mb: 1 }}
+                children={id}
+              />
+            ))}
+          </Box>
+        )}
       </Box>
     </Sheet>
   )
