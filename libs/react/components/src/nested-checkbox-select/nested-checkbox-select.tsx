@@ -81,6 +81,7 @@ export const NestedCheckboxSelect = forwardRef<
                   p: 1,
                   flex: 1,
                   alignSelf: "center",
+                  position: "relative",
                   [checkboxClasses.focusVisible]: {
                     borderRadius: "sm",
                     color: "primary.solidColor",
