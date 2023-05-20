@@ -26,6 +26,21 @@ export const getQuestionTemplate = async (
   return { questionTemplate, learningObjectives };
 };
 
+export const updateQuestionTemplateLocally = async (
+  question: QuestionTemplate,
+  questionBank: QuestionBankRepository
+) => {
+  const allQuestions = await questionBank.getAllQuestionTemplates();
+  const newQuestions = allQuestions.map((q) => {
+    if (q.id === question.id) {
+      return question;
+    }
+    return q;
+  });
+  await questionBank.writeQuestions(newQuestions);
+  return { url: "" };
+};
+
 export const putBodySchema = z.object({
   question: questionSchema,
 });
@@ -47,15 +62,7 @@ export default apiHandler(
       const isLocal = provider === "local";
       const { question } = putBodySchema.parse(req.body);
       if (isLocal) {
-        const allQuestions = await questionBank.getAllQuestionTemplates();
-        const newQuestions = allQuestions.map((q) => {
-          if (q.id === question.id) {
-            return question;
-          }
-          return q;
-        });
-        await questionBank.writeQuestions(newQuestions);
-        return { url: "" };
+        return await updateQuestionTemplateLocally(question, questionBank);
       } else {
         return await createNewQuestionPr(req.body.question);
       }
