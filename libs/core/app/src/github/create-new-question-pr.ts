@@ -1,5 +1,5 @@
 import { default as axios } from "axios";
-import { default as prettier } from "prettier";
+//import { default as prettier } from "prettier";
 import { getOctokit } from "@chair-flight/external/github";
 import { getRandomId } from "../random/random";
 import type { QuestionTemplate } from "@chair-flight/base/types";
@@ -28,9 +28,7 @@ export const createNewQuestionPr = async (question: QuestionTemplate) => {
     q.id === question.id ? questionWithoutSource : q
   );
 
-  const newFile = prettier.format(JSON.stringify(newQuestions, null, 2), {
-    parser: "json",
-  });
+  const newFile = JSON.stringify(newQuestions, null, 2);
 
   const newBranchRef = await octokit.rest.git.createRef({
     owner,

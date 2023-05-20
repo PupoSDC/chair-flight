@@ -1,6 +1,6 @@
+import { kv } from "@vercel/kv";
 import { compress, decompress } from "shrink-string";
 import { NotFoundError } from "@chair-flight/base/errors";
-import { getRedis } from "@chair-flight/external/upstash";
 import type {
   LearningObjective,
   LearningObjectiveId,
@@ -9,7 +9,6 @@ import type {
   QuestionTemplate,
   QuestionTemplateId,
 } from "@chair-flight/base/types";
-import type { Redis } from "@chair-flight/external/upstash";
 
 const COMPRESS_QUESTION_BLOCKS_NUMBER = 10;
 const QUESTION_COMPRESSED = "question-compressed-";
@@ -19,16 +18,12 @@ const LEARNING_OBJECTIVE = "learning-objective-";
 const SUBJECTS = "subjects";
 
 export class QuestionBankRedisRepository implements QuestionBankRepository {
-  private redis: Redis;
+  private redis = kv;
   private allQuestionTemplates: QuestionTemplate[] = [];
   private allLearningObjectives: LearningObjective[] = [];
   private allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
   private allLearningObjectivesMap: Record<string, LearningObjective> = {};
   private subjects: LearningObjectiveSummary[] = [];
-
-  constructor() {
-    this.redis = getRedis();
-  }
 
   private chunk = <T>(arr: T[], size: number) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>

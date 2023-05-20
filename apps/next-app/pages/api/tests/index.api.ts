@@ -19,3 +19,7 @@ export default apiHandler(
     requiresAuthentication: false,
   }
 );
+
+export const config = {
+  runtime: "edge",
+};

@@ -43,11 +43,11 @@ can and will be introduced in patch releases.
 
 \*Note: `dev` indicates the port the service is availabel when running `pnpm run dev`
 
-| Name     | Desc                                                           | dev   |
-| -------- | -------------------------------------------------------------- | ----- |
-| next-app | Next.js server for static/SSR pages and API                    | :4200 |
-| next-cms | CMS for question bank development                              | :4210 |
-| upstash  | Not a real app, rather an executor to update the QB in upstash |       |
+| Name     | Desc                                                             | dev   |
+| -------- | ---------------------------------------------------------------- | ----- |
+| next-app | Next.js server for static/SSR pages and API                      | :4200 |
+| next-cms | CMS for question bank development                                | :4210 |
+| upstash  | Not a real app, rather an executor to update the QB in vercel-kv |       |
 
 ### Libs
 
@@ -68,8 +68,8 @@ can and will be introduced in patch releases.
 | question-bank-schemas   | Zod Question bank content validation schemas                | ----- |
 | react-components        | Shared components with Storybook                            | :4250 |
 | question-bank           | Static question bank files                                  | ----- |
-| external-upstash        | Upstash connection provider                                 | ----- |
 | external-openai         | OpenAi connection provider                                  | ----- |
+| external-github         | Github connection provider                                  | ----- |
 
 ### .env
 
@@ -81,12 +81,14 @@ located at the repository root.
 ```sh
 NEXT_PUBLIC_BASE_URL="Set to localhost:4200 for local development."
 QUESTION_BANK_PROVIDER="Set to `redis` to use redis locally. or `local` for local fs"
-UPSTASH_URL="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"
-UPSTASH_TOKEN="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"
 OPENAI_API_KEY="Create here https://platform.openai.com/account/api-keys"
 GITHUB_TOKEN="See https://github.com/settings/tokens/new?scopes=repo"
 GITHUB_PROJECT_OWNER=PupoSDC
 GITHUB_PROJECT_NAME=chair-flight
+KV_URL="see https://vercel.com/docs/storage/vercel-kv/kv-reference"
+KV_REST_API_URL="see https://vercel.com/docs/storage/vercel-kv/kv-reference"
+KV_REST_API_TOKEN="see https://vercel.com/docs/storage/vercel-kv/kv-reference"
+KV_REST_API_READ_ONLY_TOKEN="see https://vercel.com/docs/storage/vercel-kv/kv-reference"
 ```
 
 ## Contributing
