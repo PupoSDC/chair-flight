@@ -48,15 +48,17 @@ const items: HeaderNavProps["items"] = [
   },
 ];
 
-export const AppHeaderMenu: FunctionComponent = () => {
+export const AppHeaderMenu: FunctionComponent<{
+  otherItems?: HeaderNavProps["items"];
+}> = ({ otherItems = [] }) => {
   return (
     <>
       <HeaderNavMobile
-        items={items}
+        items={[...items, ...otherItems]}
         sx={{ display: { xs: "flex", md: "none" } }}
       />
       <HeaderNavDesktop
-        items={items}
+        items={[...items, ...otherItems]}
         sx={{ display: { xs: "none", md: "flex" } }}
       />
     </>

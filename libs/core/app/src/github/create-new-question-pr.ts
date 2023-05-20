@@ -1,8 +1,8 @@
 import { default as axios } from "axios";
 import { default as prettier } from "prettier";
-import type { QuestionTemplate } from "@chair-flight/base/types";
 import { getOctokit } from "@chair-flight/external/github";
 import { getRandomId } from "../random/random";
+import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export const createNewQuestionPr = async (question: QuestionTemplate) => {
   const prId = getRandomId();
@@ -21,10 +21,13 @@ export const createNewQuestionPr = async (question: QuestionTemplate) => {
   const { data: oldQuestions } = await axios.get<QuestionTemplate[]>(
     `https://raw.githubusercontent.com/${owner}/${repo}/main/${srcLocation}`
   );
+
   const questionWithoutSource = { ...question, srcLocation: undefined };
+
   const newQuestions = oldQuestions.map((q) =>
     q.id === question.id ? questionWithoutSource : q
   );
+
   const newFile = prettier.format(JSON.stringify(newQuestions, null, 2), {
     parser: "json",
   });

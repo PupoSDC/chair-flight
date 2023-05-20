@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { default as EditIcon } from "@mui/icons-material/Edit";
-import { Box, List, Typography, Grid, FormLabel, Button } from "@mui/joy";
+import { default as GitHubIcon } from "@mui/icons-material/GitHub";
+import { Box, List, Typography, Grid, FormLabel, Button, Link } from "@mui/joy";
 import axios from "axios";
 import {
   ReduxProvider,
@@ -15,8 +16,12 @@ import { AppLayout, Header, toast } from "@chair-flight/react/components";
 import { EditQuestionBody } from "./components/edit-question-body";
 import { EditVariant } from "./components/edit-variant";
 import { EditVariantModal } from "./components/edit-variant-modal";
-import type { PutBodySchema } from "../../api/questions/[questionId].api";
+import type {
+  PutBodySchema,
+  PutResponseSchema,
+} from "../../api/questions/[questionId].api";
 import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { AxiosResponse } from "axios";
 import type { NextPage } from "next";
 
 type EditQuestionPageProps = {
@@ -51,17 +56,27 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
   }, [editor, question, dispatch]);
 
   const submitQuestion = async () => {
-    await toast.promise(
-      axios.put<void, void, PutBodySchema>(`/api/questions/${question.id}`, {
-        question: editedQuestion,
-      }),
+    toast.promise(
+      axios.put<PutResponseSchema, void, PutBodySchema>(
+        `/api/questions/${question.id}`,
+        {
+          question: editedQuestion,
+        }
+      ),
       {
         loading: "Saving...",
         error: "Failed to save",
-        success: () => {
+        success: (response: AxiosResponse<PutResponseSchema>) => {
           router.push(`/questions/${question.id}`);
           dispatch(actions.deleteEditorState({ questionId: question.id }));
-          return "Saved!";
+          return (
+            <Typography>
+              Saved <br />
+              <Link href={response.data.url} target="_blank">
+                You can follow up on github!
+              </Link>
+            </Typography>
+          );
         },
       }
     );
@@ -78,10 +93,11 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
         </Box>
         <Button
           sx={{ ml: "auto" }}
-          color="success"
+          color={hasChanges ? "success" : "neutral"}
           disabled={!hasChanges}
           onClick={submitQuestion}
-          children={"Save"}
+          children={"Create a Pull Request"}
+          endDecorator={<GitHubIcon />}
         />
       </AppLayout.Header>
       <Grid container sx={{ flex: 1, overflow: "hidden" }}>

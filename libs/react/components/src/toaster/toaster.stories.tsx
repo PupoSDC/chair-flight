@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/joy";
+import { Box, Button, Link, Typography } from "@mui/joy";
 import { Toaster, toast } from "./toaster";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -50,6 +50,25 @@ export const Playground: Story = {
           }
           children="Loading toast"
           color="info"
+          sx={{ mx: 1 }}
+        />
+        <Button
+          onClick={() =>
+            toast.promise(
+              () => new Promise<string>((r) => setTimeout(r, 2000)),
+              {
+                loading: "loading",
+                error: "failed",
+                success: () => (
+                  <Typography>
+                    Success! <Link href="#">Click here</Link>
+                  </Typography>
+                ),
+              }
+            )
+          }
+          children="success with link toast"
+          color="success"
           sx={{ mx: 1 }}
         />
       </Box>
