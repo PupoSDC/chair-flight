@@ -1,5 +1,11 @@
 {
   "buildCommand": "pnpm build",
   "outputDirectory": "dist/apps/next-app/.next",
-  "rewrites": []
+  "rewrites": [],
+  "crons": [
+    {
+      "path": "/api/search/questions?q=123",
+      "schedule": "*/15 * * * *"
+    }
+  ]
 }
