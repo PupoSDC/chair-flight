@@ -7,3 +7,4 @@ export * from "./tests/create-test";
 export * from "./search/search-questions";
 export * from "./search/search-learning-objectives";
 export * from "./search/search";
+export * from "./github/create-new-question-pr";

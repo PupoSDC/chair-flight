@@ -84,6 +84,9 @@ QUESTION_BANK_PROVIDER="Set to `redis` to use redis locally. or `local` for loca
 UPSTASH_URL="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"
 UPSTASH_TOKEN="See https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup"
 OPENAI_API_KEY="Create here https://platform.openai.com/account/api-keys"
+GITHUB_TOKEN="See https://github.com/settings/tokens/new?scopes=repo"
+GITHUB_PROJECT_OWNER=PupoSDC
+GITHUB_PROJECT_NAME=chair-flight
 ```
 
 ## Contributing

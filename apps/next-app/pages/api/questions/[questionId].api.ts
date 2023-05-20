@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { UnimplementedError } from "@chair-flight/base/errors";
+import { createNewQuestionPr } from "@chair-flight/core/app";
 import { apiHandler } from "@chair-flight/next/server";
 import { questionSchema } from "@chair-flight/question-bank/schemas";
 import type {
@@ -39,21 +39,21 @@ export default apiHandler(
       return getQuestionTemplate(questionId, questionBank);
     },
     put: async ({ req, questionBank }) => {
-      const isLocal = getEnvVariableOrThrow("QUESTION_BANK_PROVIDER");
-      if (!isLocal) {
-        throw new UnimplementedError(
-          "Cannot edit questions outside local mode"
-        );
-      }
+      const provider = getEnvVariableOrThrow("QUESTION_BANK_PROVIDER");
+      const isLocal = provider === "local";
       const { question } = putBodySchema.parse(req.body);
-      const allQuestions = await questionBank.getAllQuestionTemplates();
-      const newQuestions = allQuestions.map((q) => {
-        if (q.id === question.id) {
-          return question;
-        }
-        return q;
-      });
-      await questionBank.writeQuestions(newQuestions);
+      if (isLocal) {
+        const allQuestions = await questionBank.getAllQuestionTemplates();
+        const newQuestions = allQuestions.map((q) => {
+          if (q.id === question.id) {
+            return question;
+          }
+          return q;
+        });
+        await questionBank.writeQuestions(newQuestions);
+      } else {
+        await createNewQuestionPr(req.body.question);
+      }
     },
   },
   {
