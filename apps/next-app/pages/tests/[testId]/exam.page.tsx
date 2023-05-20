@@ -28,24 +28,24 @@ const ExamPageSkeleton: FunctionComponent = () => (
   <>
     <Header removeLogo removeGithubLink />
     <AppLayout.Main>
-      <AppLayout.Grid sx={{ maxWidth: 3000, margin: "auto" }}>
-        <AppLayout.Column
+      <AppLayout.MainGrid sx={{ maxWidth: 3000, margin: "auto" }}>
+        <AppLayout.MainGridFixedColumn
           xs={12}
           md={8}
           lg={9}
           sx={{ justifyContent: "center" }}
         >
           <Skeleton height={"500px"} />
-        </AppLayout.Column>
-        <AppLayout.Column
+        </AppLayout.MainGridFixedColumn>
+        <AppLayout.MainGridFixedColumn
           xs={0}
           md={4}
           lg={3}
           sx={{ justifyContent: "center" }}
         >
           <Skeleton height={"350px"} />
-        </AppLayout.Column>
-      </AppLayout.Grid>
+        </AppLayout.MainGridFixedColumn>
+      </AppLayout.MainGrid>
     </AppLayout.Main>
   </>
 );
@@ -97,8 +97,8 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
         </Box>
       </Header>
       <AppLayout.Main>
-        <AppLayout.Grid sx={{ maxWidth: 3000, margin: "auto" }}>
-          <AppLayout.Column
+        <AppLayout.MainGrid sx={{ maxWidth: 3000, margin: "auto" }}>
+          <AppLayout.MainGridFixedColumn
             xs={12}
             md={8}
             lg={9}
@@ -145,8 +145,8 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
                 />
               }
             />
-          </AppLayout.Column>
-          <AppLayout.Column
+          </AppLayout.MainGridFixedColumn>
+          <AppLayout.MainGridFixedColumn
             xs={0}
             md={4}
             lg={3}
@@ -158,8 +158,8 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
             <Sheet variant="outlined" sx={{ p: 2 }}>
               <ExamNavigation testId={testId} />
             </Sheet>
-          </AppLayout.Column>
-        </AppLayout.Grid>
+          </AppLayout.MainGridFixedColumn>
+        </AppLayout.MainGrid>
       </AppLayout.Main>
     </>
   );

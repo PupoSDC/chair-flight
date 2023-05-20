@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/react";
-import { Typography } from "@mui/joy";
+import { Sheet, Typography } from "@mui/joy";
 import { Header } from "../header/header";
 import { AppLayout } from "./app-layout";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -44,28 +44,23 @@ export const GridLayout: Story = {
       />
       <Header />
       <AppLayout.Main>
-        <AppLayout.Grid>
-          <AppLayout.Column xs={8}>
+        <AppLayout.MainGrid>
+          <AppLayout.MainGridFixedColumn xs={8}>
             <AppLayout.Header>
               <Typography level="h2">Hello World</Typography>
             </AppLayout.Header>
-            <AppLayout.ScrollableContainer>
-              <Typography level="body1">
-                This is a more opinionated layout
-              </Typography>
-            </AppLayout.ScrollableContainer>
-          </AppLayout.Column>
-          <AppLayout.Column xs={4}>
-            <AppLayout.Header>
-              <Typography level="h2">Hello World</Typography>
-            </AppLayout.Header>
-            <AppLayout.ScrollableContainer>
-              <Typography level="body1">
-                This is a more opinionated layout
-              </Typography>
-            </AppLayout.ScrollableContainer>
-          </AppLayout.Column>
-        </AppLayout.Grid>
+          </AppLayout.MainGridFixedColumn>
+          <AppLayout.MainGridScrollableColumn xs={4}>
+            <Typography level="h2" sx={{ pt: 2 }}>
+              This section Can be scrolled
+            </Typography>
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => (
+              <Sheet sx={{ my: 1, p: 2 }}>
+                <Typography level="h3">Card number {i}</Typography>
+              </Sheet>
+            ))}
+          </AppLayout.MainGridScrollableColumn>
+        </AppLayout.MainGrid>
       </AppLayout.Main>
     </>
   ),

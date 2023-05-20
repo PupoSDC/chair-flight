@@ -87,11 +87,10 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
         <AppHeaderMenu />
       </Header>
       <AppLayout.Main>
-        <AppLayout.Grid>
-          <AppLayout.Column xs={12} md={7} lg={8} xl={9}>
+        <AppLayout.MainGrid>
+          <AppLayout.MainGridFixedColumn xs={12} md={7} lg={8} xl={9}>
             <QuestionBoxReview
               ref={questionBoxRef}
-              sx={{ flex: 1 }}
               explanation={question.explanation}
               question={
                 <>
@@ -183,39 +182,44 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
               }
               imgSrc={currentAnnex ?? ""}
             />
-          </AppLayout.Column>
-          <AppLayout.Column
+          </AppLayout.MainGridFixedColumn>
+          <AppLayout.MainGridScrollableColumn
             sx={{ display: { xs: "none", md: "block" } }}
-            md={5}
-            lg={4}
-            xl={3}
+            xs
           >
-            <AppLayout.ScrollableContainer>
-              {allVariants.map((otherVariant) => (
-                <Box component="li" key={otherVariant.id} sx={{ pb: 1 }}>
-                  <QuestionVariantPreview
-                    component={Button}
-                    id={otherVariant.id}
-                    variantId={otherVariant.id}
-                    text={getQuestionPreview(questionTemplate, otherVariant.id)}
-                    learningObjectives={questionTemplate.learningObjectives}
-                    externalIds={otherVariant.externalIds}
-                    onClick={() =>
-                      navigateToVariant(otherVariant.id, getRandomId())
-                    }
-                    topRightCorner={
-                      variantId === otherVariant.id ? (
-                        <RadioButtonCheckedIcon color="primary" />
-                      ) : (
-                        <RadioButtonUncheckedIcon color="primary" />
-                      )
-                    }
-                  />
-                </Box>
-              ))}
-            </AppLayout.ScrollableContainer>
-          </AppLayout.Column>
-        </AppLayout.Grid>
+            {allVariants.map((otherVariant) => (
+              <Box
+                component="li"
+                key={otherVariant.id}
+                sx={{
+                  pb: 1,
+                  "&:first-of-type  ": {
+                    my: 2,
+                  },
+                }}
+              >
+                <QuestionVariantPreview
+                  component={Button}
+                  id={otherVariant.id}
+                  variantId={otherVariant.id}
+                  text={getQuestionPreview(questionTemplate, otherVariant.id)}
+                  learningObjectives={questionTemplate.learningObjectives}
+                  externalIds={otherVariant.externalIds}
+                  onClick={() =>
+                    navigateToVariant(otherVariant.id, getRandomId())
+                  }
+                  topRightCorner={
+                    variantId === otherVariant.id ? (
+                      <RadioButtonCheckedIcon color="primary" />
+                    ) : (
+                      <RadioButtonUncheckedIcon color="primary" />
+                    )
+                  }
+                />
+              </Box>
+            ))}
+          </AppLayout.MainGridScrollableColumn>
+        </AppLayout.MainGrid>
       </AppLayout.Main>
     </>
   );

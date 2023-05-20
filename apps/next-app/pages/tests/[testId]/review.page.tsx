@@ -36,7 +36,7 @@ const QuestionReview: FunctionComponent<QuestionReviewProps> = ({ testId }) => {
     DateTime.fromMillis(test.startedAtEpochMs).toFormat("HH:mm:ss");
 
   return (
-    <AppLayout.ScrollableContainer sx={{ p: 0 }}>
+    <>
       <Box
         sx={{
           height: "200px",
@@ -113,7 +113,7 @@ const QuestionReview: FunctionComponent<QuestionReviewProps> = ({ testId }) => {
           />
         ))}
       </Box>
-    </AppLayout.ScrollableContainer>
+    </>
   );
 };
 
