@@ -84,7 +84,14 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
         linkDescription={variant.question}
       />
       <Header>
-        <AppHeaderMenu />
+        <AppHeaderMenu
+          otherItems={[
+            {
+              title: "Edit This Question",
+              href: `/questions/${questionTemplate.id}/edit`,
+            },
+          ]}
+        />
       </Header>
       <AppLayout.Main>
         <AppLayout.MainGrid>

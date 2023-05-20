@@ -44,7 +44,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
         ) as QuestionTemplateJson[];
         const jsonDataWithSrcLocation = jsonData.map((q) => ({
           ...q,
-          srcLocation: filePath,
+          srcLocation: filePath.replace(cwd(), ""),
         }));
         questions.push(...jsonDataWithSrcLocation);
       }

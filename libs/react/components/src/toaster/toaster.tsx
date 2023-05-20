@@ -26,8 +26,8 @@ export const Toaster: FunctionComponent = () => {
             --error-bg: ${theme.vars.palette.danger.solidBg};
             --error-border: ${theme.vars.palette.danger.outlinedBorder};
             --error-text: ${theme.vars.palette.danger.solidColor};
-            font-family: ${theme.fontFamily};
-            font-size: ${theme.fontSize.md};
+            //font-family: ${theme.fontFamily};
+            //font-size: ${theme.fontSize.md};
           }
 
           .sonner-toast-warn {

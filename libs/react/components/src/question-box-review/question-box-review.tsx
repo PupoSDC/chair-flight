@@ -91,6 +91,7 @@ export type QuestionBoxReviewProps = {
   preview?: JSX.Element;
   title?: string;
   loading?: boolean;
+  editable?: boolean;
   disableAllButQuestion?: boolean;
   learningObjectives?: Array<{
     id: string;
