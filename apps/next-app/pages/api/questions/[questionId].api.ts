@@ -32,13 +32,17 @@ export const putBodySchema = z.object({
 
 export type PutBodySchema = z.infer<typeof putBodySchema>;
 
+export type PutResponseSchema = {
+  url: string;
+};
+
 export default apiHandler(
   {
     get: ({ req, questionBank }) => {
       const questionId = req.query["questionId"] as string;
       return getQuestionTemplate(questionId, questionBank);
     },
-    put: async ({ req, questionBank }) => {
+    put: async ({ req, questionBank }): Promise<PutResponseSchema> => {
       const provider = getEnvVariableOrThrow("QUESTION_BANK_PROVIDER");
       const isLocal = provider === "local";
       const { question } = putBodySchema.parse(req.body);
@@ -51,8 +55,9 @@ export default apiHandler(
           return q;
         });
         await questionBank.writeQuestions(newQuestions);
+        return { url: "" };
       } else {
-        await createNewQuestionPr(req.body.question);
+        return await createNewQuestionPr(req.body.question);
       }
     },
   },
