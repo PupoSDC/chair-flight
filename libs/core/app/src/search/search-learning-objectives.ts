@@ -77,6 +77,7 @@ export const searchLearningObjectives = async (
 
   const results = await Promise.all([
     ...searchResults
+      .sort((a, b) => String(a.id).localeCompare(String(b.id)))
       .slice(page * pageSize, (page + 1) * pageSize)
       .map(async (result) => ({
         result: await questionBank.getLearningObjective(result.id as string),
