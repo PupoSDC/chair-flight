@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { Box, Button, Sheet } from "@mui/joy";
+import { Box, Button, Sheet, useTheme } from "@mui/joy";
 import {
   useAppDispatch,
   useAppSelector,
@@ -16,6 +16,8 @@ import {
   Skeleton,
   TestQuestionNavigation,
   QuestionBoxReview,
+  useMediaQuery,
+  QuestionBoxExam,
 } from "@chair-flight/react/components";
 import type { GetServerSideProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
@@ -52,8 +54,10 @@ const StudyPageSkeleton: FunctionComponent = () => (
 
 const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
   const router = useRouter();
+  const theme = useTheme();
   const dispatch = useAppDispatch();
   const test = useAppSelector((state) => state.testProgress.tests[testId]);
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const currentQuestion = test.questions[test.currentQuestionIndex];
 
   useTestHotkeys({ testId });
@@ -116,6 +120,34 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
     </>
   );
 
+  const questionMultipleChoice = (
+    <QuestionMultipleChoice
+      data-cy="question"
+      question={currentQuestion.question}
+      disabled={currentQuestion.selectedOptionId !== undefined}
+      status={currentQuestion.selectedOptionId ? "show-result" : "in-progress"}
+      selectedOptionId={currentQuestion.selectedOptionId}
+      correctOptionId={currentQuestion.correctOptionId}
+      onOptionClicked={(optionId) =>
+        dispatch(
+          actions.answerTestQuestion({
+            optionId,
+            testId: test.id,
+            questionId: currentQuestion.questionId,
+          })
+        )
+      }
+      options={currentQuestion.options.map((opt) => ({
+        optionId: opt.id,
+        text: opt.text,
+      }))}
+    />
+  );
+
+  const title = `Question ${test.currentQuestionIndex + 1} / ${
+    test.questions.length
+  }`;
+
   if (test.status === "finished") {
     return <StudyPageSkeleton />;
   }
@@ -137,38 +169,33 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
             lg={9}
             sx={{ justifyContent: "flex-start" }}
           >
-            <QuestionBoxReview
-              sx={{ width: "100%", maxHeight: "100%" }}
-              title={`Question ${test.currentQuestionIndex + 1} / ${
-                test.questions.length
-              }`}
-              question={
-                <QuestionMultipleChoice
-                  question={currentQuestion.question}
-                  disabled={currentQuestion.selectedOptionId !== undefined}
-                  status={
-                    currentQuestion.selectedOptionId
-                      ? "show-result"
-                      : "in-progress"
-                  }
-                  selectedOptionId={currentQuestion.selectedOptionId}
-                  correctOptionId={currentQuestion.correctOptionId}
-                  onOptionClicked={(optionId) =>
-                    dispatch(
-                      actions.answerTestQuestion({
-                        optionId,
-                        testId: test.id,
-                        questionId: currentQuestion.questionId,
-                      })
-                    )
-                  }
-                  options={currentQuestion.options.map((opt) => ({
-                    optionId: opt.id,
-                    text: opt.text,
-                  }))}
-                />
-              }
-            />
+            {isSmallScreen ? (
+              <QuestionBoxExam
+                sx={{ width: "100%", maxHeight: "100%" }}
+                title={title}
+                timeSpentInMs={test.timeSpentInMs}
+                timeTotalInMs={test.durationInMs}
+                questionIndex={test.currentQuestionIndex}
+                totalQuestions={test.questions.length}
+                onNavigationClick={(p) => {
+                  const question = test.questions[p];
+                  if (!question) return;
+                  dispatch(
+                    actions.navigateToTestQuestion({
+                      testId: test.id,
+                      questionId: question.questionId,
+                    })
+                  );
+                }}
+                question={questionMultipleChoice}
+              />
+            ) : (
+              <QuestionBoxReview
+                sx={{ width: "100%", maxHeight: "100%" }}
+                title={title}
+                question={questionMultipleChoice}
+              />
+            )}
           </AppLayout.MainGridFixedColumn>
           <AppLayout.MainGridFixedColumn
             xs={0}

@@ -43,7 +43,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
           <AppLayout.Header>
             <Typography level="h2">New Test</Typography>
           </AppLayout.Header>
-          <Box sx={{ flex: 1, height: 100 }}>
+          <Box sx={{ flex: 1, height: 100, pb: 2 }}>
             <TestCreation subjects={subjects} />
           </Box>
         </ReduxProvider>
