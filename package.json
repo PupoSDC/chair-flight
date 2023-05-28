@@ -23,12 +23,14 @@
     "@hookform/resolvers": "^3.1.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@mui/base": "^5.0.0-beta.1",
+    "@mui/base": "^5.0.0-beta.2",
     "@mui/icons-material": "^5.11.16",
-    "@mui/joy": "5.0.0-alpha.80",
-    "@mui/material": "npm:@mui/joy@5.0.0-alpha.80",
+    "@mui/joy": "5.0.0-alpha.81",
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.81",
     "@napi-rs/image": "^1.6.1",
     "@next/mdx": "^13.4.3",
+    "@react-three/drei": "^9.70.0",
+    "@react-three/fiber": "^8.13.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@upstash/redis": "^1.20.6",
     "axios": "^1.4.0",
@@ -57,6 +59,7 @@
     "sharp": "^0.32.1",
     "shrink-string": "^3.1.6",
     "sonner": "^0.3.5",
+    "three": "^0.152.2",
     "ts-dedent": "^2.2.0",
     "use-image": "^1.1.0",
     "zod": "^3.21.4"
@@ -92,6 +95,7 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/three": "^0.152.1",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "@vitejs/plugin-react": "^4.0.0",
@@ -130,7 +134,7 @@
     "xlsx": "^0.18.5"
   },
   "overrides": {
-    "@mui/material": "npm:@mui/joy@5.0.0-alpha.79"
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.81"
   },
   "prettier": {
     "plugins": [
@@ -146,5 +150,10 @@
       "<TS_TYPES>",
       "^@fontsource(/.*)?$"
     ]
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@mui/system@5.13.2": "patches/@mui__system@5.13.2.patch"
+    }
   }
 }
