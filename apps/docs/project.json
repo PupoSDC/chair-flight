@@ -1,0 +1,30 @@
+{
+  "name": "docs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/docs",
+  "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["react-*"],
+  "targets": {
+    "dev": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4220,
+        "configDir": "apps/docs/.storybook"
+      }
+    },
+    "build": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "apps/next-app/public/storybook",
+        "configDir": "apps/docs/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

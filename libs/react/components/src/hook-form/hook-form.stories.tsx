@@ -13,7 +13,7 @@ import { HookFormInput } from "./hook-form-input";
 import type { Meta, StoryFn } from "@storybook/react";
 
 const meta: Meta = {
-  title: "demos/Hook Form Components",
+  title: "Components/Hook Form Components",
 };
 
 /**
