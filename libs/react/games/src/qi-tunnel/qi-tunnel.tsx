@@ -1,141 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { useRef } from "react";
-import { Tube, Box, PerspectiveCamera } from "@react-three/drei";
+import React, { useEffect } from "react";
+import { Typography, useTheme } from "@mui/joy";
+import { Box } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
-import { QiTunnelJoystick } from "./qi-tunnel-joystick";
+import { SafeBox } from "../safe-box";
+import { QiTunnelControls } from "./qi-tunnel-controls";
+import { QiTunnelGameLogic } from "./qi-tunnel-game-logic";
+import { useGameState } from "./qi-tunnel-game-state";
 import { obstacleIndex } from "./qi-tunnel-obstacles";
+import { QiTunnelPlayer } from "./qi-tunnel-player";
+import { QiTunnelTunnel } from "./qi-tunnel-tunnel";
 import type { FunctionComponent } from "react";
 
-const TubeGeometry = ({ radius, angle }: { radius: number; angle: number }) => {
-  const tubePath = React.useMemo(() => {
-    const x = radius * Math.cos(angle);
-    const y = radius * Math.sin(angle);
-    const pathPoints = [
-      new THREE.Vector3(x, y, 0), // Start point
-      new THREE.Vector3(x, y, -10000), // End point
-    ];
-
-    return new THREE.CatmullRomCurve3(pathPoints);
-  }, [radius, angle]);
-
-  return (
-    <Tube args={[tubePath, 2, 0.5, 20, true]}>
-      <meshBasicMaterial color="#979695" />
-    </Tube>
-  );
-};
-
-const MAX_SPEED = 2;
-
 export const QiTunnel: FunctionComponent = () => {
-  const collisionBox = useRef<THREE.Mesh>(null);
-  const [position, setPosition] = useState<[number, number]>([0, 0]);
-  const velocity = useRef(1);
-  const acceleration = useRef(0.02);
-  const [obstacles, setObstacles] = useState<
-    Array<{
-      id: number;
-      ref: React.MutableRefObject<THREE.Mesh | null>;
-      rotation: number;
-      name: keyof typeof obstacleIndex;
-      position: number;
-      rotationDirection: 1 | -1;
-    }>
-  >([]);
+  const theme = useTheme();
+  const obstacles = useGameState((state) => state.obstacles);
+  const passedObstacles = useGameState((state) => state.passedObstacles);
+  const failedObstacles = useGameState((state) => state.failedObstacles);
+  const velocity = useGameState((state) => state.velocity);
 
-  useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setObstacles((oldObstacles) => {
-          velocity.current = Math.min(
-            velocity.current + acceleration.current,
-            MAX_SPEED
-          );
-          const startPosition = -1000;
-          const distanceBetweenObstacles = 200;
-          const obstacleCopy = oldObstacles
-            .map((obstacle) => ({
-              ...obstacle,
-              position: obstacle.position + velocity.current,
-            }))
-            .filter((obstacle) => {
-              return obstacle.position < 0;
-            });
-          const firstObject = obstacleCopy.at(0);
-          const lastObject = obstacleCopy.at(-1);
-          if (
-            firstObject &&
-            firstObject.position > -5 &&
-            collisionBox.current &&
-            firstObject.ref.current
-          ) {
-            if (checkIfInside(collisionBox.current, firstObject.ref.current)) {
-              velocity.current = -1;
-            }
-          }
-          if (
-            !lastObject ||
-            Math.abs(lastObject.position - startPosition) >
-              distanceBetweenObstacles
-          ) {
-            const id = Math.random();
-            const allNames = Object.keys(obstacleIndex);
-            const name = allNames[Math.floor(id * allNames.length)];
-            obstacleCopy.push({
-              id,
-              ref: React.createRef(),
-              rotation: id * Math.PI * 2,
-              name: name as keyof typeof obstacleIndex,
-              position: startPosition,
-              rotationDirection: id > 0.5 ? 1 : -1,
-            });
-          }
-          return obstacleCopy;
-        }),
-      1000 / 60
-    );
+  const startGame = useGameState((state) => state.startGame);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  console.log(position);
+  useEffect(() => startGame(), [startGame]);
 
   return (
-    <>
+    <SafeBox sx={{ width: "100%", minWidth: 500 }}>
+      <Box>
+        <Typography>
+          SCORE: {passedObstacles}/{failedObstacles}
+        </Typography>
+        <Typography>TIME: {Math.floor(velocity)}</Typography>
+        <Typography>SPEED: {Math.floor(velocity)}</Typography>
+      </Box>
       <Canvas
         style={{
+          margin: "auto",
           height: 500,
           width: 500,
-          backgroundColor: "#2a6fb5",
+          backgroundColor: theme.palette.primary.solidBg,
         }}
       >
-        <PerspectiveCamera
-          makeDefault
-          fov={75}
-          position={[
-            0 + (position[0] / 100) * 18,
-            0 - (position[1] / 100) * 18,
-            0,
-          ]}
-        />
-        <Box
-          ref={collisionBox}
-          args={[0.1, 0.1, 0.1]}
-          position={[
-            0 + (position[0] / 100) * 18,
-            0 - (position[1] / 100) * 18,
-            -0.001,
-          ]}
-        />
+        <QiTunnelGameLogic />
+        <QiTunnelPlayer />
+        <QiTunnelTunnel />
         <pointLight position={[0, 0, 0]} />
-        {[...new Array(6).keys()].map((i, j, arr) => (
-          <TubeGeometry
-            key={i}
-            radius={21}
-            angle={((i * Math.PI) / arr.length) * 2}
-          />
-        ))}
         {obstacles.map((obstacle) => {
           const ObstacleComponent = obstacleIndex[obstacle.name];
           return (
@@ -149,20 +56,17 @@ export const QiTunnel: FunctionComponent = () => {
           );
         })}
       </Canvas>
-      <QiTunnelJoystick position={position} onPositionChange={setPosition} />
-    </>
+      <SafeBox
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: 500,
+          pt: 2,
+          margin: "auto",
+        }}
+      >
+        <QiTunnelControls />
+      </SafeBox>
+    </SafeBox>
   );
-};
-
-const raycaster = new THREE.Raycaster();
-
-const checkIfInside = (meshA: THREE.Mesh, meshB: THREE.Mesh) => {
-  const origin = meshA.position.clone();
-  const direction = new THREE.Vector3(0, 0, -1);
-  raycaster.set(origin, direction);
-
-  const intersects = raycaster.intersectObject(meshB);
-  const isInside = intersects.length > 0;
-
-  return isInside;
 };

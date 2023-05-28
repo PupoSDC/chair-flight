@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { SafeBox } from "../safe-box";
 import { QiTunnel } from "./qi-tunnel";
-import { QiTunnelJoystick } from "./qi-tunnel-joystick";
+import { QiTunnelControls } from "./qi-tunnel-controls";
 import { obstacleIndex } from "./qi-tunnel-obstacles";
 import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 
@@ -39,10 +38,7 @@ export const Obstacles: StoryFn = () => {
 };
 
 export const Joystick: StoryFn = () => {
-  const [position, setPosition] = useState<[number, number]>([0, 0]);
-  return (
-    <QiTunnelJoystick position={position} onPositionChange={setPosition} />
-  );
+  return <QiTunnelControls />;
 };
 
 const meta: Meta<typeof QiTunnel> = {
