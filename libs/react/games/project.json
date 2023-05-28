@@ -1,7 +1,7 @@
 {
-  "name": "react-components",
+  "name": "react-games",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/react/components/src",
+  "sourceRoot": "libs/react/games/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,23 +9,23 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/react/components/src/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/react/games/src/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/react/components"],
+      "outputs": ["coverage/libs/react/games"],
       "options": {
         "passWithNoTests": false,
-        "reportsDirectory": "../../../coverage/libs/react/components"
+        "reportsDirectory": "../../../coverage/libs/react/games"
       }
     },
     "tsc": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "tsc -p libs/react/components/tsconfig.lib.json --noEmit",
-          "tsc -p libs/react/components/tsconfig.spec.json --noEmit"
+          "tsc -p libs/react/games/tsconfig.lib.json --noEmit",
+          "tsc -p libs/react/games/tsconfig.spec.json --noEmit"
         ]
       }
     }

@@ -4,8 +4,8 @@ import {
   NotFoundError,
   UnimplementedEndpointError,
 } from "@chair-flight/base/errors";
-import type { QuestionTemplate } from "@chair-flight/base/types";
 import { apiHandler } from "@chair-flight/next/server";
+import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export type MergeQuestionsPostBody = {
   sourceQuestionId: string;

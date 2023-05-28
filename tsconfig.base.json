@@ -10,6 +10,7 @@
     "noEmit": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "isolatedModules": true,
     "skipDefaultLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -43,7 +44,8 @@
       "@chair-flight/question-bank/schemas": [
         "libs/question-bank/schemas/src/index.ts"
       ],
-      "@chair-flight/react/components": ["libs/react/components/src/index.ts"]
+      "@chair-flight/react/components": ["libs/react/components/src/index.ts"],
+      "@chair-flight/react/games": ["libs/react/games/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

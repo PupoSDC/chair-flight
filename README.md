@@ -47,29 +47,29 @@ can and will be introduced in patch releases.
 | -------- | -------------------------------------------------------------- | ----- |
 | next-app | Next.js server for static/SSR pages and API                    | :4200 |
 | next-cms | CMS for question bank development                              | :4210 |
+| docs     | Storybook used for docs                                        | :4220 |
 | upstash  | Not a real app, rather an executor to update the QB in upstash |       |
 
 ### Libs
 
-\*Note: `dev` indicates the port the service is availabel when running `pnpm run dev`
-
-| Name                    | Desc                                                        | dev   |
-| ----------------------- | ----------------------------------------------------------- | ----- |
-| base-env                | Utility to safely access env variables                      | ----- |
-| base-errors             | Errors that can be handled in the front or in the backend   | ----- |
-| base-types              | Base Business types used across the app                     | ----- |
-| core-app                | Business logic blocks sharable between React SPA/SSR and RN | ----- |
-| core-openai             | Chat GPT based solutions to some recurrent issues we solve  | ----- |
-| core-redux              | Redux store to manage client side data                      | ----- |
-| next-client             | Next specific components, hooks, and logic blocks           | ----- |
-| next-server             | Next specific server utilities                              | ----- |
-| question-bank-content   | Static Question Bank Content                                | ----- |
-| question-bank-providers | Question Bank providers (Redis & local fs)                  | ----- |
-| question-bank-schemas   | Zod Question bank content validation schemas                | ----- |
-| react-components        | Shared components with Storybook                            | :4250 |
-| question-bank           | Static question bank files                                  | ----- |
-| external-upstash        | Upstash connection provider                                 | ----- |
-| external-openai         | OpenAi connection provider                                  | ----- |
+| Name                    | Desc                                                        |
+| ----------------------- | ----------------------------------------------------------- |
+| base-env                | Utility to safely access env variables                      |
+| base-errors             | Errors that can be handled in the front or in the backend   |
+| base-types              | Base Business types used across the app                     |
+| core-app                | Business logic blocks sharable between React SPA/SSR and RN |
+| core-openai             | Chat GPT based solutions to some recurrent issues we solve  |
+| core-redux              | Redux store to manage client side data                      |
+| next-client             | Next specific components, hooks, and logic blocks           |
+| next-server             | Next specific server utilities                              |
+| question-bank-content   | Static Question Bank Content                                |
+| question-bank-providers | Question Bank providers (Redis & local fs)                  |
+| question-bank-schemas   | Zod Question bank content validation schemas                |
+| react-components        | Shared react (DOM) components                               |
+| react-games             | Shared react (three.js) components                          |
+| question-bank           | Static question bank files                                  |
+| external-upstash        | Upstash connection provider                                 |
+| external-openai         | OpenAi connection provider                                  |
 
 ### .env
 
