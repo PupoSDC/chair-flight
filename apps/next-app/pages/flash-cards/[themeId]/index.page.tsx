@@ -47,7 +47,6 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
 
 export const getStaticProps = staticHandler<FlashCardsThemePageProps>(
   async ({ questionBank, context }) => {
-    console.log(context.params);
     const { params } = context;
     const { themeId } = params as { themeId: string };
     const flashCards = (await questionBank.getAllFlashCards())[themeId];
@@ -64,10 +63,10 @@ export const getStaticPaths = staticPathsHandler(async (questionBank) => {
   const flashCardCollections = await questionBank.getAllFlashCards();
 
   return {
+    fallback: false,
     paths: Object.keys(flashCardCollections).map((themeId) => ({
       params: { themeId },
     })),
-    fallback: true,
   };
 });
 
