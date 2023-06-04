@@ -1,4 +1,5 @@
 import { default as AddCircleOutlineIcon } from "@mui/icons-material/AddCircleOutline";
+import { default as BoltIcon } from "@mui/icons-material/Bolt";
 import { default as ListIcon } from "@mui/icons-material/List";
 import { default as QuestionAnswerIcon } from "@mui/icons-material/QuestionAnswer";
 import { default as QuizIcon } from "@mui/icons-material/Quiz";
@@ -25,6 +26,12 @@ const items: HeaderNavProps["items"] = [
         title: "Learning Objectives",
         subtitle: "Explore EASA official Learning Objectives",
         href: "/learning-objectives",
+      },
+      {
+        icon: BoltIcon,
+        title: "Flashcards",
+        subtitle: "Practice for open-ended interview questions.",
+        href: "/flash-cards",
       },
     ],
   },

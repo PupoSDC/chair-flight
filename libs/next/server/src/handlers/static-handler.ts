@@ -5,6 +5,7 @@ import type {
   GetStaticPropsContext,
   GetStaticPropsResult,
   PreviewData,
+  GetStaticPathsResult,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
 
@@ -37,4 +38,16 @@ export const staticHandler = <
       context,
       questionBank,
     });
+};
+
+export const staticPathsHandler = <
+  Params extends ParsedUrlQuery = ParsedUrlQuery
+>(
+  handler: (
+    questionBank: QuestionBankRepository
+  ) => Promise<GetStaticPathsResult<Params>>
+) => {
+  const questionBank = new QuestionBankLocalRepository();
+
+  return async () => handler(questionBank);
 };

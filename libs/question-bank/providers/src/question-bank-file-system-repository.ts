@@ -5,6 +5,7 @@ import * as XLSX from "xlsx";
 import { NotFoundError, UnimplementedError } from "@chair-flight/base/errors";
 import type {
   CourseName,
+  FlashCardContent,
   LearningObjective,
   LearningObjectiveId,
   LearningObjectiveSummary,
@@ -27,6 +28,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
   };
   private allQuestionTemplates: QuestionTemplate[] = [];
   private allLearningObjectives: LearningObjective[] = [];
+  private allFlashCards: Record<string, FlashCardContent[]> = {};
 
   private async getAllQuestionsFromLocalFs(
     dirPath: string = path.join(cwd(), this.contentPath, "questions")
@@ -52,6 +54,23 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
     // todo reimplement this function as non blocking
     return new Promise((r) => r(questions));
+  }
+
+  private async getAllFlashCardsFromLocalFs(
+    dirPath: string = path.join(cwd(), this.contentPath, "flash-cards")
+  ): Promise<Record<string, FlashCardContent[]>> {
+    const files = fs.readdirSync(dirPath);
+    const flashCards: Record<string, FlashCardContent[]> = {};
+    for (const file of files) {
+      const filePath = path.join(dirPath, file);
+      const jsonData = JSON.parse(
+        fs.readFileSync(filePath, "utf-8")
+      ) as FlashCardContent[];
+      flashCards[file.replace(".json", "")] = jsonData;
+    }
+
+    // todo reimplement this function as non blocking
+    return new Promise((r) => r(flashCards));
   }
 
   async getAllQuestionTemplates() {
@@ -235,6 +254,13 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
     );
   }
 
+  async getAllFlashCards() {
+    if (!Object.values(this.allFlashCards).length) {
+      this.allFlashCards = await this.getAllFlashCardsFromLocalFs();
+    }
+    return this.allFlashCards;
+  }
+
   async writeQuestions(questions: QuestionTemplate[]) {
     const filesToSave = Object.values(questions).reduce<
       Record<string, QuestionTemplateJson[]>
@@ -275,5 +301,11 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
   async writeSubjects(): Promise<void> {
     throw new UnimplementedError("We are not EASA. We don't write LOs");
+  }
+
+  async writeFlashCards(): Promise<void> {
+    throw new UnimplementedError(
+      "Writing flash cards to FS is not implemented"
+    );
   }
 }

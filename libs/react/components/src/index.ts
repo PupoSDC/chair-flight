@@ -3,6 +3,7 @@ export * from "./constants";
 export * from "./count-up";
 export * from "./cta-search";
 export * from "./drawer";
+export * from "./flash-card";
 export * from "./header";
 export * from "./header-nav";
 export * from "./hooks/use-media-query";
