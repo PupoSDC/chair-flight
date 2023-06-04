@@ -23,10 +23,7 @@ export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
     <meta property="og:description" content={linkDescription} />
     <meta property="twitter:title" content={linkTitle} />
     <meta property="twitter:image" content={`${BASE_URL}${linkImage}`} />
-    <meta
-      property="twitter:description"
-      content="Twitter link preview description"
-    />
+    <meta property="twitter:description" content={linkDescription} />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta name="msapplication-TileColor" content={"#000"} />
     <link rel="shortcut icon" href="favicon.ico" />

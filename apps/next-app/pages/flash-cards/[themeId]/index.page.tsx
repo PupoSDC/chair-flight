@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Grid } from "@mui/joy";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
+import {
+  AppHead,
+  AppHeaderMenu,
+  FLASH_CARDS_DESC,
+} from "@chair-flight/next/client";
 import { staticHandler, staticPathsHandler } from "@chair-flight/next/server";
 import { Header, AppLayout, FlashCard } from "@chair-flight/react/components";
 import type { FlashCardContent } from "@chair-flight/base/types";
@@ -29,7 +33,11 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
   flashCards,
 }) => (
   <>
-    <AppHead />
+    <AppHead
+      title="Chair Flight - Flash Cards"
+      linkTitle="Chair Flight - Flash Cards"
+      linkDescription={FLASH_CARDS_DESC}
+    />
     <Header>
       <AppHeaderMenu />
     </Header>

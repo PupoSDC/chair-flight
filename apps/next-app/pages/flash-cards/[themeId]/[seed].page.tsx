@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Grid } from "@mui/joy";
 import { NotFoundError } from "@chair-flight/base/errors";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
+import {
+  AppHead,
+  AppHeaderMenu,
+  FLASH_CARDS_DESC,
+} from "@chair-flight/next/client";
 import { ssrHandler } from "@chair-flight/next/server";
 import { Header, AppLayout, FlashCard } from "@chair-flight/react/components";
 import type { FlashCardContent } from "@chair-flight/base/types";
@@ -31,14 +35,25 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
   flashCards,
 }) => (
   <>
-    <AppHead />
+    <AppHead
+      title="Chair Flight - Flash Cards"
+      linkTitle="Chair Flight - Flash Cards"
+      linkDescription={FLASH_CARDS_DESC}
+    />
     <Header>
       <AppHeaderMenu />
     </Header>
     <AppLayout.Main>
       <AppLayout.MainGrid>
         {flashCards.map((fc) => (
-          <Grid key={fc.id} xs={12} sm={6} md={4} lg={3} sx={{ height: 400 }}>
+          <Grid
+            key={fc.id}
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            sx={{ height: 400, pb: { xs: 1, md: 0 } }}
+          >
             <FlashCardWithOwnControl key={fc.id} {...fc} />
           </Grid>
         ))}
@@ -62,6 +77,7 @@ export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
     }
 
     const collection = (await questionBank.getAllFlashCards())[themeId];
+    console.log(Object.keys(await questionBank.getAllFlashCards()));
     if (!collection) throw new NotFoundError("Flash card collection not found");
 
     const shuffle = getRandomShuffler(seed);

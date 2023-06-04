@@ -3,6 +3,7 @@ export * from "./components/home-page/alpha-preview";
 export * from "./components/home-page/cool-sliding-thing";
 export * from "./components/home-page/landing-screen";
 export * from "./components/home-page/question-preview";
+export * from "./components/home-page/flash-card-preview";
 export * from "./components/questions/question-preview-list";
 export * from "./constants/text";
 export * from "./components/theme";

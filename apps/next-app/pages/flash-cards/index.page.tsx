@@ -10,7 +10,11 @@ import {
   Box,
 } from "@mui/joy";
 import dedent from "ts-dedent";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
+import {
+  AppHead,
+  AppHeaderMenu,
+  FLASH_CARDS_DESC,
+} from "@chair-flight/next/client";
 import { staticHandler } from "@chair-flight/next/server";
 import { Header, AppLayout } from "@chair-flight/react/components";
 import type { NextPage } from "next";
@@ -28,7 +32,11 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
 }) => {
   return (
     <>
-      <AppHead />
+      <AppHead
+        title="Chair Flight - Flash Cards"
+        linkTitle="Chair Flight - Flash Cards"
+        linkDescription={FLASH_CARDS_DESC}
+      />
       <Header>
         <AppHeaderMenu />
       </Header>
@@ -43,15 +51,7 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
                 Practice for open-ended interview questions.
               `}
               <br />
-              {dedent`
-                Use these flash cards to practice for your interview. You can review
-                all flash cards at once, or get 10 random cards to review. Try to
-                answer the question outloud as you would in an interview. Consider
-                recording your answer and playing it back to see how you sound.
-  
-                Once you are satisfied with the answer, Flip the card to see if you
-                are close enough".
-              `}
+              {FLASH_CARDS_DESC}
             </Typography>
             <Typography sx={{ mt: 3 }} level="h3" color="primary">
               Have fun!

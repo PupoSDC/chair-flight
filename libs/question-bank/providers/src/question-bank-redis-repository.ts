@@ -20,13 +20,15 @@ const LEARNING_OBJECTIVE = "learning-objective-";
 const SUBJECTS = "subjects";
 const FLASH_CARDS = "flash-cards";
 
+type FlashCardsMap = Record<string, FlashCardContent[]>;
+
 export class QuestionBankRedisRepository implements QuestionBankRepository {
   private redis: Redis;
   private allQuestionTemplates: QuestionTemplate[] = [];
   private allLearningObjectives: LearningObjective[] = [];
   private allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
   private allLearningObjectivesMap: Record<string, LearningObjective> = {};
-  private allFlashCards: Record<string, FlashCardContent[]> = {};
+  private allFlashCards: FlashCardsMap = {};
   private subjects: LearningObjectiveSummary[] = [];
 
   constructor() {
@@ -137,10 +139,8 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   }
 
   async getAllFlashCards() {
-    if (Object.values(this.allFlashCards).length) {
-      const flashCards = await this.redis.get<
-        Record<string, FlashCardContent[]>
-      >(FLASH_CARDS);
+    if (!Object.values(this.allFlashCards).length) {
+      const flashCards = await this.redis.get<FlashCardsMap>(FLASH_CARDS);
       if (!flashCards) throw new NotFoundError("Flash cards not found");
       this.allFlashCards = flashCards;
     }
