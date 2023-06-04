@@ -1,4 +1,4 @@
-import { FlashCardContent } from "./flash-cards";
+import type { FlashCardContent } from "./flash-cards";
 import type {
   LearningObjective,
   LearningObjectiveSummary,
