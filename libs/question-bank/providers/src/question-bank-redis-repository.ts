@@ -219,5 +219,6 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
     flashCards: Record<string, FlashCardContent[]>
   ): Promise<void> {
     await this.redis.set(FLASH_CARDS, flashCards);
+    console.log(`Migrated Flash Cards`);
   }
 }
