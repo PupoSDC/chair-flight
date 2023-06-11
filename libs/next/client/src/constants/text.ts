@@ -6,6 +6,16 @@ export const APP_DESC = dedent`
   Now available for Alpha testing. 
 `;
 
+export const FLASH_CARDS_DESC = dedent`
+  Use these flash cards to practice for your interview. You can review
+  all flash cards at once, or get 10 random cards to review. Try to
+  answer the question outloud as you would in an interview. Consider
+  recording your answer and playing it back to see how you sound.
+
+  Once you are satisfied with the answer, Flip the card to see if you
+  are close enough".
+`;
+
 export const BASE_URL =
   process.env["NEXT_PUBLIC_BASE_URL"] || "http://chair-flight.com";
 

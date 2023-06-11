@@ -1,6 +1,11 @@
 import { Typography, Button, Link, Grid, Box } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
+const buttonLayout = {
+  xs: 12,
+  sm: 6,
+};
+
 export const AlphaPreview: FunctionComponent = () => (
   <Box
     sx={{
@@ -24,17 +29,17 @@ export const AlphaPreview: FunctionComponent = () => (
         maxWidth: (t) => t.breakpoints.values.md,
       }}
     >
-      <Grid xs={12} sm={4}>
+      <Grid {...buttonLayout}>
         <Button variant="outlined" component={Link} href="/questions" fullWidth>
           Search Questions
         </Button>
       </Grid>
-      <Grid xs={12} sm={4}>
+      <Grid {...buttonLayout}>
         <Button variant="outlined" component={Link} href="/tests/new" fullWidth>
           Create a Test
         </Button>
       </Grid>
-      <Grid xs={12} sm={4}>
+      <Grid {...buttonLayout}>
         <Button
           sx={{ textAlign: "center" }}
           variant="outlined"
@@ -43,6 +48,17 @@ export const AlphaPreview: FunctionComponent = () => (
           fullWidth
         >
           Search Learning Objectives
+        </Button>
+      </Grid>
+      <Grid {...buttonLayout}>
+        <Button
+          sx={{ textAlign: "center" }}
+          variant="outlined"
+          component={Link}
+          href="/flash-cards"
+          fullWidth
+        >
+          Flash Cards
         </Button>
       </Grid>
     </Grid>

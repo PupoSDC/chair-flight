@@ -1,15 +1,20 @@
 import { Box, styled, GlobalStyles } from "@mui/joy";
 import dedent from "ts-dedent";
+import { NotFoundError } from "@chair-flight/base/errors";
 import {
   AppHead,
   QuestionPreview,
   LandingScreen,
   CoolSlidingThing,
   AlphaPreview,
+  FlashCardPreview,
 } from "@chair-flight/next/client";
 import { staticHandler } from "@chair-flight/next/server";
 import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type {
+  FlashCardContent,
+  QuestionTemplate,
+} from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
 const sectionHeight = `calc(100vh - ${HEADER_HEIGHT}px)`;
@@ -44,11 +49,15 @@ const StyledSectionB = styled(StyledSection)`
 export type IndexPageProps = {
   numberOfQuestions: number;
   demoQuestion: QuestionTemplate;
+  flashCard: FlashCardContent;
+  numberOfFlashCards: number;
 };
 
 export const IndexPage: NextPage<IndexPageProps> = ({
   demoQuestion,
   numberOfQuestions,
+  flashCard,
+  numberOfFlashCards,
 }) => (
   <>
     <AppHead
@@ -71,8 +80,14 @@ export const IndexPage: NextPage<IndexPageProps> = ({
         />
       </StyledSectionB>
       <StyledSectionA>
-        <AlphaPreview />
+        <FlashCardPreview
+          flashCard={flashCard}
+          numberOfFlashCards={numberOfFlashCards}
+        />
       </StyledSectionA>
+      <StyledSectionB>
+        <AlphaPreview />
+      </StyledSectionB>
     </StyledMain>
     <GlobalStyles
       styles={{
@@ -85,16 +100,27 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   </>
 );
 
-export const getStaticProps = staticHandler(async ({ questionBank }) => {
-  const allQuestions = await questionBank.getAllQuestionTemplates();
-  const demoQuestion = await questionBank.getQuestionTemplate("QYFPA3CY4E");
+export const getStaticProps = staticHandler<IndexPageProps>(
+  async ({ questionBank }) => {
+    const allQuestions = await questionBank.getAllQuestionTemplates();
+    const demoQuestion = await questionBank.getQuestionTemplate("QYFPA3CY4E");
+    const allFlashCards = await questionBank.getAllFlashCards();
+    const allFlashCardsArray = Object.values(allFlashCards).flat();
+    const numberOfFlashCards = allFlashCardsArray.length;
+    const flashCard = allFlashCardsArray.find(
+      (f) => f.id === "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0"
+    );
+    if (!flashCard) throw new NotFoundError("Missing showcase flash card!");
 
-  return {
-    props: {
-      numberOfQuestions: allQuestions.length,
-      demoQuestion,
-    },
-  };
-});
+    return {
+      props: {
+        numberOfQuestions: allQuestions.length,
+        demoQuestion,
+        numberOfFlashCards,
+        flashCard,
+      },
+    };
+  }
+);
 
 export default IndexPage;

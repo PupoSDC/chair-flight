@@ -59,7 +59,10 @@ export const QuestionPreview: FunctionComponent<QuestionPreviewProps> = ({
           width: { xs: "100%", md: "50%" },
           pr: 2,
           mb: 2,
-          height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+          height: {
+            xs: "100%",
+            md: `calc(100vh - ${HEADER_HEIGHT}px)`,
+          },
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",

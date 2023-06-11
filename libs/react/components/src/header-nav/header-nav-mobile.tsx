@@ -23,6 +23,7 @@ export const HeaderNavMobile = forwardRef<HTMLDivElement, HeaderNavProps>(
               href={item.href}
               level="h4"
               children={item.title}
+              onClick={item.onClick}
               sx={{
                 cursor: "pointer",
                 color: "primary.plainColor",

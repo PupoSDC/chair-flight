@@ -1,10 +1,12 @@
 import { default as AddCircleOutlineIcon } from "@mui/icons-material/AddCircleOutline";
+import { default as BoltIcon } from "@mui/icons-material/Bolt";
 import { default as ListIcon } from "@mui/icons-material/List";
 import { default as QuestionAnswerIcon } from "@mui/icons-material/QuestionAnswer";
 import { default as QuizIcon } from "@mui/icons-material/Quiz";
 import {
   HeaderNavDesktop,
   HeaderNavMobile,
+  useHeaderContext,
 } from "@chair-flight/react/components";
 import type { HeaderNavProps } from "@chair-flight/react/components";
 import type { FunctionComponent } from "react";
@@ -25,6 +27,12 @@ const items: HeaderNavProps["items"] = [
         title: "Learning Objectives",
         subtitle: "Explore EASA official Learning Objectives",
         href: "/learning-objectives",
+      },
+      {
+        icon: BoltIcon,
+        title: "Flashcards",
+        subtitle: "Practice for open-ended interview questions.",
+        href: "/flash-cards",
       },
     ],
   },
@@ -51,10 +59,19 @@ const items: HeaderNavProps["items"] = [
 export const AppHeaderMenu: FunctionComponent<{
   otherItems?: HeaderNavProps["items"];
 }> = ({ otherItems = [] }) => {
+  const { closeDrawer } = useHeaderContext();
+
   return (
     <>
       <HeaderNavMobile
-        items={[...items, ...otherItems]}
+        items={[...items, ...otherItems].map((item) => ({
+          ...item,
+          onClick: closeDrawer,
+          subItems: item.subItems?.map((subItem) => ({
+            ...subItem,
+            onClick: closeDrawer,
+          })),
+        }))}
         sx={{ display: { xs: "flex", md: "none" } }}
       />
       <HeaderNavDesktop

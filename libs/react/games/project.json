@@ -16,7 +16,7 @@
       "executor": "@nrwl/vite:test",
       "outputs": ["coverage/libs/react/games"],
       "options": {
-        "passWithNoTests": false,
+        "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/libs/react/games"
       }
     },

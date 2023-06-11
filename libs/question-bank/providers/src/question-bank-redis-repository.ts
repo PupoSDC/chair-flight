@@ -2,6 +2,7 @@ import { compress, decompress } from "shrink-string";
 import { NotFoundError } from "@chair-flight/base/errors";
 import { getRedis } from "@chair-flight/external/upstash";
 import type {
+  FlashCardContent,
   LearningObjective,
   LearningObjectiveId,
   LearningObjectiveSummary,
@@ -17,6 +18,9 @@ const QUESTION = "question-";
 const LEARNING_OBJECTIVE_LIST = "learning-objective-list";
 const LEARNING_OBJECTIVE = "learning-objective-";
 const SUBJECTS = "subjects";
+const FLASH_CARDS = "flash-cards";
+
+type FlashCardsMap = Record<string, FlashCardContent[]>;
 
 export class QuestionBankRedisRepository implements QuestionBankRepository {
   private redis: Redis;
@@ -24,6 +28,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   private allLearningObjectives: LearningObjective[] = [];
   private allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
   private allLearningObjectivesMap: Record<string, LearningObjective> = {};
+  private allFlashCards: FlashCardsMap = {};
   private subjects: LearningObjectiveSummary[] = [];
 
   constructor() {
@@ -133,6 +138,15 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
     return this.subjects;
   }
 
+  async getAllFlashCards() {
+    if (!Object.values(this.allFlashCards).length) {
+      const flashCards = await this.redis.get<FlashCardsMap>(FLASH_CARDS);
+      if (!flashCards) throw new NotFoundError("Flash cards not found");
+      this.allFlashCards = flashCards;
+    }
+    return this.allFlashCards;
+  }
+
   async writeQuestions(questions: QuestionTemplate[]) {
     const questionBlocks = this.chunk(questions, 800);
     let completedEntries = 0;
@@ -199,5 +213,12 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
 
   async writeSubjects(subjects: LearningObjectiveSummary[]) {
     await this.redis.set(SUBJECTS, subjects);
+  }
+
+  async writeFlashCards(
+    flashCards: Record<string, FlashCardContent[]>
+  ): Promise<void> {
+    await this.redis.set(FLASH_CARDS, flashCards);
+    console.log(`Migrated Flash Cards`);
   }
 }

@@ -13,5 +13,6 @@ export type HeaderNavProps = {
     title: string;
     href: string;
     subItems?: Array<HeaderNavMenuItemProps>;
+    onClick?: () => void;
   }>;
 } & Partial<Pick<BoxProps, "sx" | "style" | "className">>;

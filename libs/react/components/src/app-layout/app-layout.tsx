@@ -26,7 +26,7 @@ const Main = styled(
 
 const MainGrid = styled(
   forwardRef<HTMLDivElement, GridProps>(
-    ({ container = true, spacing = { xs: 0, md: 2 }, ...props }, ref) => (
+    ({ container = true, spacing = { xs: 0, sm: 2 }, ...props }, ref) => (
       <MuiGrid container={container} spacing={spacing} ref={ref} {...props} />
     )
   )
@@ -34,8 +34,7 @@ const MainGrid = styled(
   height: 100%;
   width: 100%;
   display: flex;
-  margin-top: ${({ theme }) => theme.spacing(0)};
-  margin-bottom: ${({ theme }) => theme.spacing(0)};
+  margin: ${({ theme }) => theme.spacing(0)};
 `;
 
 const MainGridFixedColumn = styled(MuiGrid)`
