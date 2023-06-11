@@ -6,6 +6,7 @@ import { default as QuizIcon } from "@mui/icons-material/Quiz";
 import {
   HeaderNavDesktop,
   HeaderNavMobile,
+  useHeaderContext,
 } from "@chair-flight/react/components";
 import type { HeaderNavProps } from "@chair-flight/react/components";
 import type { FunctionComponent } from "react";
@@ -58,10 +59,19 @@ const items: HeaderNavProps["items"] = [
 export const AppHeaderMenu: FunctionComponent<{
   otherItems?: HeaderNavProps["items"];
 }> = ({ otherItems = [] }) => {
+  const { closeDrawer } = useHeaderContext();
+
   return (
     <>
       <HeaderNavMobile
-        items={[...items, ...otherItems]}
+        items={[...items, ...otherItems].map((item) => ({
+          ...item,
+          onClick: closeDrawer,
+          subItems: item.subItems?.map((subItem) => ({
+            ...subItem,
+            onClick: closeDrawer,
+          })),
+        }))}
         sx={{ display: { xs: "flex", md: "none" } }}
       />
       <HeaderNavDesktop

@@ -86,10 +86,15 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
                 />
                 <CardContent sx={{ justifyContent: "space-between" }}>
                   <Box>
-                    <Typography level="h2" fontSize="lg">
+                    <Typography level="h2" fontSize="lg" textColor={"#fff"}>
                       {fc.name}
                     </Typography>
-                    <Typography level="h4" fontSize="md" mb={4}>
+                    <Typography
+                      level="h4"
+                      fontSize="md"
+                      mb={4}
+                      textColor={"#fff"}
+                    >
                       {fc.numberOfCards} cards
                     </Typography>
                   </Box>

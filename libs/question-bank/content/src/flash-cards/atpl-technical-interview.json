@@ -1,7 +1,7 @@
 [
   {
     "question": "What does a bypass ratio of 11:1 mean?",
-    "answer": "For every 1kg of air passing through the combustion combustion chamber, 11kg of air passes around the combustion chamber.",
+    "answer": "For every 1kg of air passing through the combustion chamber, 11kg of air pass bypass the combustion chamber.",
     "id": "526528f2-350c-4d00-8eef-03d752857c18"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "question": "What is N1, N2, EGT and EPR?",
-    "answer": "N1= Low pressure compressor spool or fan rotation speed. Usually expressed as a % of Max N1.\n\nN2= High pressure compressor rotation speed.\nEGT= Exhaust gas temperature, indicates the temperature at the first stage of the turbine, which is the most critical temperature in the engine.\n\nEPR= Engine pressure ratio of the inlet to the jet pipe, displayed on the EPR gauge to use as a parameter for setting engine thrust",
+    "answer": "N1= Low pressure compressor spool or fan rotation speed. Usually expressed as a % of Max N1.\n\nN2= High pressure compressor rotation speed.\n\nEGT= Exhaust gas temperature, indicates the temperature at the first stage of the turbine, which is the most critical temperature in the engine.\n\nEPR= Engine pressure ratio of the inlet to the jet pipe, displayed on the EPR gauge to use as a parameter for setting engine thrust",
     "id": "78fea1b0-7b51-450e-b838-ec9f34715f2a"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "question": "How do you get out of a spiral dive on a Cessna?",
-    "answer": "1. Throttle idle\n\n2. Stop the turn by using coordinated ailerons until wings are level\n\n3.gently pull back on the control wheel to ease out of the dive.\n\nWhen slowed down to a safe airspeed apply throttle as needed.\n\n(N.b.: Do not confuse a spiral dive with a spin)",
+    "answer": "1. **Unload.** Make sure you are no longer 'pulling G's'\n\n2. **Roll wings level**\n\n3. **Power** Reduce the power to avoid overspeeding.\n\n4. gently pull back on the control wheel to ease out of the dive.\n\nWhen slowed down to a safe airspeed apply throttle as needed.\n\n(N.b.: Do not confuse a spiral dive with a spin)",
     "id": "00257701-0b12-42c1-aeff-4dcd02220e74"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "question": "Where does the wing stall first on a typical SEP Aircraft (Cessna, Tecnam, ...)?",
-    "answer": "At the wing root.",
+    "answer": "At the wing root. This is a property of rectangular wings, but it's also common to find close to the wing root devices that make it so that the wing root stalls first.",
     "id": "bc1afadd-c2ad-4f81-ad15-703c28ec6dd9"
   },
   {
@@ -104,7 +104,6 @@
     "answer": "To notify the crew of the aircraft of a particular position on the IAP.\n\nLocators have been largely replaced with Distance Measuring Equipment (DME), but they can sometimes be found associated with Outer or Middle Markers where they are referred to as Locator Outer Marker (LOM) or Locator Middle Marker (LMM).",
     "id": "01d4436f-3034-40ef-ae2d-ae38843f9f94"
   },
-
   {
     "question": "How much thrust comes from the N1 fan?",
     "answer": "Depends on the engine.\n\nIn the case of the 737-800 CFM56, 27,300lbs total thrust at a ratio of 5.5:1",
@@ -119,16 +118,6 @@
     "question": "If you are outside the range of any VOR’s/NDB's, how does the aircraft know where it is?",
     "answer": "Via INS/IRS/GPS",
     "id": "bbd48b34-89a9-4e22-af7f-07e5ec5f9eb4"
-  },
-  {
-    "question": "Where the brakes and gear hydraulically operated on the Seneca?",
-    "answer": "Only hydraulic gear.",
-    "id": "623c5260-9bc8-43a9-992e-a572adf8caac"
-  },
-  {
-    "question": "What engines do we use on our aircraft?",
-    "answer": "Approximately 146 million",
-    "id": "1a14e887-b055-4a5e-b764-7b70f4a6a55f"
   },
 
   {
@@ -228,7 +217,7 @@
   },
   {
     "question": "Are jet streams there all year round?",
-    "answer": "Yes",
+    "answer": "Yes.\n\nThere are permanent jet streams in the...",
     "id": "84447eb5-e832-46c1-aeec-d1da64eca160"
   },
   {
@@ -256,7 +245,6 @@
     "answer": "Yes",
     "id": "d0dbc086-327b-440b-9e51-a17a0492cff6"
   },
-
   {
     "question": "If you have a fire from the engine in the Warrior, what do you do?",
     "answer": "On the Warrior, I would perform the following items:\n\nthrottle closed\nmixture closed\nfuel selector off\nfuel pump off\nmagnetos off\n(mayday + 7700 if time permits) and check if fire is out\nheater defrost off\nbatt alt switches off\ntop door latch unlatch\nseat belts erect secure and make a forced landing",
@@ -272,7 +260,6 @@
     "answer": "Inform ATC.",
     "id": "1726c0f6-5140-4324-82c0-75e4681a340f"
   },
-
   {
     "question": "Does the N1 compressor produce thrust?",
     "answer": "Yes, with the modern high bypass turbofans the N1 compressor works as a huge propeller, it takes a big mass of air and gives it a relative small acceleration.\n\nAround 70% of the air will bypass the core of the engine, only 30% of air will be compressed further and will eventually go through the combustion chamber.",
@@ -295,7 +282,7 @@
   },
   {
     "question": "If you where picking up 10.000 litres of fuel in Newfoundland (cold weather), and 10.000 litres of fuel in Lima, Peru (hot weather), where would you have picked up the most fuel?",
-    "answer": "In Newfoundland, cold weather means the volume of fuel gets less, therefore the density per litre goes up.",
+    "answer": "In Newfoundland. With cold weather density increases, therefore you would pick up a higher mass in Newfoundland.",
     "id": "18316e4b-fcef-4c83-9c12-600d482a1777"
   },
   {
@@ -403,7 +390,6 @@
     "answer": "Average range over land 20 - 25 miles.\n\nRange for an NDB can be calculated with:\n\n2√power output in Watts = Range (Land)\n3√ power output in Watts = Range (Water)",
     "id": "980713a1-5813-49dd-bc8a-5cb84dbeb4a6"
   },
-
   {
     "question": "What is an anti-servo tab?",
     "answer": "An anti-servo tab works in the opposite way to a servo tab.\n\nIt deploys in the same direction as the control surface, making the movement of the control surface more difficult and requires more force applied to the controls by the pilot.",
@@ -419,13 +405,11 @@
     "answer": "Transmitting uses more power.",
     "id": "a2975fac-72be-4fca-adf1-8458ca74f05c"
   },
-
   {
     "question": "What is alternate air? And what is its relation with the air filter?",
-    "answer": "Blue",
+    "answer": "Alternate air is....",
     "id": "27fbf7d7-fc09-49f7-a00d-02738fec1f35"
   },
-
   {
     "question": "Which flight will take the shortest time, from London to New York or New York to London?",
     "answer": "New York to London (flying east) would take less time because of the Polar front westerly jet stream.",
@@ -463,7 +447,7 @@
   },
   {
     "question": "What are the effects on the human body in case of depressurisation?",
-    "answer": "Hypoxia, a lack of oxygen to tissues of the body due to low partial pressure at altitude.\n\nSymptoms are: blue lips, apparent personality change, impaired judgement, muscular impairment, short term memory loss, sensory loss, hyperventilation, unconsciousness.",
+    "answer": "Hypoxia, a lack of oxygen to tissues of the body due to low partial pressure at altitude.\n\nSymptoms are: blue lips, apparent personality change, impaired judgement, muscular impairment, short term memory loss, sensory loss, hyperventilation, unconsciousness.\n\nOther possible effects:\n\n- Baurotrauma\n\n- Lung damage",
     "id": "eee82f32-5e1b-481e-a8e7-46503408b5ca"
   },
   {
@@ -481,7 +465,6 @@
     "answer": "Mostly in the fan, but also from the exhaust nozzle duct.",
     "id": "79c502af-5929-497c-a52c-2ca3638d6a23"
   },
-
   {
     "question": "On A high wing anhedral airplane, like a BAE146, and a high wing straight winged aircraft like a Fokker 50, why they don’t have dihedral wings if it has so many advantages?",
     "answer": "A high wing location like the BAE and the Fokker give a natural stable contribution.\n\nThis is because the Center of Gravity is underneath the wing, therefore when disturbed the C.G. provides a positive momentum opposite to the distortion.",
@@ -492,7 +475,6 @@
     "answer": "The total pressure (static and dynamic pressure).",
     "id": "ce5e6530-7dcb-43cb-9cb4-a96f414bf6b6"
   },
-
   {
     "question": "Is carb heat an electrical system?",
     "answer": "No. Carburetor heat uses exhaust air to heat air going into the carburetor. No electrics are involved.",
@@ -528,15 +510,14 @@
     "answer": "1kg = 2.2lbs",
     "id": "c154a3ea-4bf8-4668-9d51-892683bffc7a"
   },
-
   {
     "question": "What can you tell about adiabatic lapse rates?",
-    "answer": "The Lapse Rate is the rate at which temperature changes with height in the atmosphere.\n\nThe Environmental Lapse Rate (ELR) is according to ISA 2°C per 1000 feet increasing altitude.\n\nFor unsaturated air, the lapse rate is 3°C per 1000 feet, this is called the Dry Adiabatic Lapse Rate (DALR).\n\nThe Saturated Adiabatic Lapse Rate (SALR) is the rate at which saturated air cools with height and is, at low levels and latitudes, 1.8°C per 1000 feet.",
+    "answer": "When considering a volume of air, adiabatic lapse rate is the temperature change that is caused by the vertical movement of the volume, andThe Lapse Rate is the rate at which temperature changes with height in the atmosphere.\n\nThe Environmental Lapse Rate (ELR) is according to ISA 2°C per 1000 feet increasing altitude.\n\nFor unsaturated air, the lapse rate is 3°C per 1000 feet, this is called the Dry Adiabatic Lapse Rate (DALR).\n\nThe Saturated Adiabatic Lapse Rate (SALR) is the rate at which saturated air cools with height and is, at low levels and latitudes, 1.8°C per 1000 feet.",
     "id": "1db1d922-f504-4905-a2e0-94d3690be7f0"
   },
   {
     "question": "Name the different aircraft categories, speeds and on which speed these categories are based.",
-    "answer": "Aircraft categories are based on Vat (in knots):\n\nA <91\nB 91-120\nC 121-140\nD 141-165\nE 166 - 210",
+    "answer": "Aircraft categories are based on Vat (in knots):\n\nA <91\n\nB 91-120\n\nC 121-140\n\nD 141-165\n\nE 166 - 210",
     "id": "f491f7f3-bb8d-401b-a4ff-34197d810e0e"
   },
   {
@@ -604,7 +585,6 @@
     "answer": "In a high bypass design, the vast majority of the thrust is derived from the ducted fan, rather than from combustion gases expanding in a nozzle.\n\nA high bypass ratio provides a lower thrust specific fuel consumption (grams/sec fuel per unit of thrust in kN using SI units), especially at zero velocity (at takeoff) and at the cruise speed of most commercial jet aircraft.",
     "id": "4125c15b-ee67-4ea2-a938-0ae24307139e"
   },
-
   {
     "question": "Why do we use Jeppesen charts/plates?",
     "answer": "Jeppesen charts and plates are simplified and uniform.",
@@ -675,7 +655,6 @@
     "answer": "Contingency fuel is carried to account for additional enroute fuel consumption caused by wind, routing changes or ATM: ATM/CNS restrictions.",
     "id": "47cd1ae3-1102-4ecb-8eaa-4114bb3b726e"
   },
-
   {
     "question": "What frequency range and band is an NDB in?",
     "answer": "Frequency range from 200-1750kHz, medium and low range frequency bands.",
@@ -772,11 +751,6 @@
     "id": "5684e64f-29aa-4a13-b02a-b9aab4d0b8f1"
   },
   {
-    "question": "How many hydraulic systems does the Boeing 737 have?",
-    "answer": "The Boeing 737 has 2 hydraulic systems.",
-    "id": "90fdf32a-5b97-4139-822a-83ce648dcf1d"
-  },
-  {
     "question": "What is DOM?",
     "answer": "The Dry Operating Mass (DOM) is the Basic Empty Mass and the Variable Load, also called the Aircraft Prepared for Service (APS) weight.",
     "id": "19efbc20-a889-4102-8c1c-4a7e223abcff"
@@ -785,11 +759,6 @@
     "question": "What is the maximum operating ceiling of a typical jet?",
     "answer": "41.000ft",
     "id": "f7ba6a1a-e4ae-44a5-a0ae-ea0a90e213eb"
-  },
-  {
-    "question": "What is dihedral?",
-    "answer": "Upward inclination of a wing from the root to the tip.",
-    "id": "d6183ee0-f0e4-4b9d-a561-6341536df576"
   },
   {
     "question": "Explain V1, V2, VR, VMCA and VMCG",
@@ -866,7 +835,6 @@
     "answer": "To monitor the flight management and aircraft control actions of the Pilot Flying and carry out support duties such as communications and check-list reading.",
     "id": "6f7fef67-b6e6-434f-9928-f7d278cf9fd7"
   },
-
   {
     "question": "What are winglets and what is the advantage of winglets?",
     "answer": "They are aerodynamically efficient surfaces located at the wing tips, designed to reduce induced drag and increase fuel efficiency.\n\nThey increase efficiency by reducing the size of the wingtip vortices, which are created by the difference between the pressure on the upper surface of the wing and that on the lower surface.",
@@ -959,11 +927,6 @@
     "question": "You are flying at FL350 and the temperature reads -30°C, is the aircraft at its optimum temperature?",
     "answer": "No because it is warmer, according to ISA temperature should be -55°C",
     "id": "a3f05122-2655-4753-a34a-7d0eec4df26b"
-  },
-  {
-    "question": "Why are swept wings effective?",
-    "answer": "Swept wings are effective, because they have:\n\nHigh mach cruise speeds\nSpeed stability at turbulence\nA higher Mcrit",
-    "id": "641a797b-3fd5-4780-b907-cc4b4ca84413"
   },
   {
     "question": "How would you explain to your neighbour what the difference is between a precision and a non-precision approach?",
@@ -1062,7 +1025,7 @@
   },
   {
     "question": "What are the disadvantages of a swept wing?",
-    "answer": "Swept wings have:\n\nPoor lift qualities\nHigher stall speeds\nSpeed instability at low speeds\nA wing-tip stalling tendency",
+    "answer": "Swept wings have:\n\n- Poor lift qualities\n- Higher stall speeds\n\n- Speed instability at low speeds\n\n- A wing-tip stalling tendency",
     "id": "88986238-a560-40f1-bbae-ea5c5426d670"
   },
   {
@@ -1143,5 +1106,125 @@
     "question": "What is an orographic cloud?",
     "answer": "An orographic cloud is formed as the air rises up the slope and will often envelope the summit.\n\nWhen the air is humid, some of the moisture will fall on the windward slope and on the summit of the mountain.",
     "id": "64af0cdc-6391-4fb5-971f-98ed37e255f0"
+  },
+  {
+    "question": "What are the forces acting on an aircraft in flight?",
+    "answer": "Lift, Drag, Weight and Thrust.",
+    "id": "01d4436f-3034-40ef-ae2d-ae38843f9f95"
+  },
+  {
+    "question": "What produces the maximum glide range?",
+    "answer": "Flying at Vmd. At this speed the aircraft is flying at the maximum ratio of Lift and Drag, maximizing the potential energy consumption in terms of distance travelled.",
+    "id": "33c8397e-06b6-44f0-8914-d6bdde3cb681"
+  },
+  {
+    "question": "What is the effect of weight on the glide range?",
+    "answer": "The glide range is not affected by the weight. Howver Vmd is. The heavier the aircraft, the higher the Vmd.",
+    "id": "01856f8a-da58-427b-8893-0f92284d37c1"
+  },
+  {
+    "question": "What is rate of climb/descent?",
+    "answer": "It's vertical velocity of the aircraft usually expressed in feet per minute.",
+    "id": "1a0b076e-7e50-4d07-aef7-7cfd9c56fdba"
+  },
+  {
+    "question": "What is the effect of weight on rate of descent? ",
+    "answer": "To be the most efficient, aircraft descend at Vmd. Vmd increases with Weight, and therefore the rate of descent increases as well with weight.",
+    "id": "2424a743-d013-42e1-a232-c61ac845c8a3"
+  },
+  {
+    "question": "What is an aerofoil chord line?",
+    "answer": "A straight line conecting the leading edge with the trailing edge of an aerofoil.",
+    "id": "3dca3323-134a-4405-875f-85462dbc2e2e"
+  },
+  {
+    "question": "What is the mean chord line?",
+    "answer": "It's the wing area divided by the wing span.",
+    "id": "d7b69389-d18a-4baa-a680-840ca3ef66fb"
+  },
+  {
+    "question": "What is the mean camberine?",
+    "answer": "a line extending from the leading edge to the trailing edge equidistent from the upper and lower surface of the aerofoil.",
+    "id": "7df6b78d-5e7c-4156-a6d4-c6e93d39d7a6"
+  },
+  {
+    "question": "What is the angle of incidence?",
+    "answer": "The angle between between the chord line and the aircraft's longitudinal axis. It's a fixed angle for wings, but variable for variable incidence tailplanes.",
+    "id": "4cf574c6-01df-4a28-925f-5e4ecccf426a"
+  },
+  {
+    "question": "What is the critical angle of attack?",
+    "answer": "The angle between the chordline and the incoming airflow.",
+    "id": "aa060ed0-a956-44e0-ba84-d114630db0a7"
+  },
+  {
+    "question": "What is the washout on a wing?",
+    "answer": "A wing design feature where the angle of incidence of the wing decreases from the root to the tip.\n\nThis makes it so that the wing as a tendency to stall at the root first, maintaining aileron control for a longer time and providing a resistence to spinning, facilitating recovery.",
+    "id": "d661dba7-698c-44e3-9981-c5de3567ce64"
+  },
+  {
+    "question": "What is dihedral?",
+    "answer": "Dihedral is the upward inclinitation of the wing from the root to the tip.",
+    "id": "4d6bb2e2-2aa0-4f4a-817e-4aa7ac3cfea9"
+  },
+  {
+    "question": "What is anhedral?",
+    "answer": "anhedral is the downward inclinitation of the wing from the root to the tip.",
+    "id": "2751588a-29b0-4348-a5f7-ee55cf5d2a2d"
+  },
+  {
+    "question": "What is lift?",
+    "answer": "Lift is the component of the total aerodynamic force perpendicular to the relative airflow.\n\nLift is generated when a streamlined body, such as an aerofoil, is placed in a flow of air.",
+    "id": "1b1088e2-dec1-4e57-8f06-60c5ece12a24"
+  },
+  {
+    "question": "What is drag?",
+    "answer": "Drag is the component of the total aerodynamic force parallel to the relative airflow.\n\nDrag is generated by any body placed in a flow and it's composed of friction, form, and pressure drag.",
+    "id": "e66ceb56-3270-428f-974a-50df3672b56b"
+  },
+  {
+    "question": "What is the formula for Lift?",
+    "answer": "L = 1/2 * rho * Cl * A * V^2",
+    "id": "39326f2a-44e4-4388-b610-48d4921d2f83"
+  },
+  {
+    "question": "What is the coefficient of Lift?",
+    "answer": "An adymensional number relating the lift with the dynamic pressure of the incoming flow. It is dependent on the form of the object and the angle of attack.",
+    "id": "c8f682a2-8bfb-4800-90f8-6c6511c1585e"
+  },
+  {
+    "question": "What is the center of pressure?",
+    "answer": "An aerofoil when placed in a flow will (normally) cause said flow to accelerate over the aerofoil and decelerate below it.\n\nThis will cause a pressure differential between the upper and lower surface of the aerofoil, and the resultant force will be applied at the **center of pressure**.",
+    "id": "de51e843-958a-4685-86ef-91ad17a6204b"
+  },
+  {
+    "question": "Describe the movement of the center of pressure with varying angle of attack.",
+    "answer": "The Center of pressure position is dependent of the angle of attack. As the angle of attack increases the center of pressure moves closer to the leading edge.",
+    "id": "2a9c94d8-a561-472f-a232-e9d185b0765f"
+  },
+  {
+    "question": "Describe the lift-weight pitching moments.",
+    "answer": "The weight of an aircraft is applied at the CG. The lift at the CP. The relative position between these 2 points determines the stability of the aircraft. For an Aircraft with a tail surface, a CG in front of the CP constitutes a stable system, while a CG behind the CP an unstable system.",
+    "id": "43a0913e-6a49-4edb-bb5c-1e40edc2da5b"
+  },
+  {
+    "question": "Describe aspect ratio.",
+    "answer": "The ratio between the wing span and the mean chord line.\n\nA high aspect ratio is associated with good lift to drag ratio, i.e.: Gliders.\n\n A low aspect ratio is usually associated with fast aircraft, i.e.: Fighter jets.",
+    "id": "43a0913e-6a49-4edb-bb5c-1e403dc2da5b"
+  },
+  {
+    "question": "During what phase of flight is lift the greatest?",
+    "answer": "For a commerical aeroplane: During take off. At this point the aircraft has it it's maximum weight, and accelerating in the vertical plane requiring the highest ammount of lift to counteract the weight.",
+    "id": "43a0x13e-6a49-4edb-bb5c-1e403dc2da5b"
+  },
+  {
+    "question": "What systems protect against a stall?",
+    "answer": "Stall warning, stick shaker, stick pusher, etc...\n\nGenerically we can destinguish between systems that alert the pilot of the impeding stall, like stall the stall warning or stick shaker, and systems that try to correct the situation, like a stick pusher.",
+    "id": "43a0x13e-6a49-4edc-bb5c-1e403dc2da5b"
+  },
+  {
+    "question": "What is Dutch roll?",
+    "answer": "Dutch roll is an aircraft stability issue involving oscillations of rolling and yawing motions. It occurs when the aircraft's nose deviates from its path, causing rolling in the opposite direction due to the vertical fin's side force. This generates a yawing moment, resulting in a cycle of yawing and rolling motions. Dutch roll can be problematic for passenger comfort and pilot control. Measures like tail fin design, yaw dampers, and control inputs are used to counteract it and maintain stability.",
+    "id": "43a0x13e-6a49-4edb-bb5c-1e4034c2da5b"
   }
 ]

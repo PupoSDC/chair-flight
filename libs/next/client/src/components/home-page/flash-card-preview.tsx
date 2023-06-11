@@ -37,9 +37,12 @@ export const FlashCardPreview: FunctionComponent<FlashCardPreviewProps> = ({
       <Box
         sx={{
           width: { xs: "100%", md: "50%" },
+          height: {
+            xs: "100%",
+            md: `calc(100vh - ${HEADER_HEIGHT}px)`,
+          },
           pr: 2,
           mb: 2,
-          height: `calc(100vh - ${HEADER_HEIGHT}px)`,
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
@@ -74,11 +77,14 @@ export const FlashCardPreview: FunctionComponent<FlashCardPreviewProps> = ({
           of being able to select the best out of 4 answers. You will have to
           explain the topics you have learned in the theory classes without any
           crutches. <br />
-          With the help of our flash cards you can practice answering to open
-          ended questions and secure your first job.
+          Use our flash cards to practice answering open ended questions and
+          secure your first job.
         </Typography>
         <Button
-          sx={{ mt: 2 }}
+          sx={{
+            mt: 2,
+            mx: { xs: "auto", md: "initial" },
+          }}
           size="lg"
           component={Link}
           variant="outlined"
