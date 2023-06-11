@@ -16,7 +16,7 @@ import type {
 
 export class QuestionBankLocalRepository implements QuestionBankRepository {
   private intentionallyLeftBlankPattern = /Intentionally left blank/i;
-  private contentPath = "libs/question-bank/content/src";
+  private contentPath = "../../libs/question-bank/content/src";
   private courseNames: Record<string, CourseName> = {
     "ATPL(A)": "ATPL_A",
     "CPL(A)": "CPL_A",
