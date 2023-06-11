@@ -10,7 +10,7 @@ import {
   persistReducer,
   persistStore,
 } from "redux-persist";
-import { default as storage } from "redux-persist/lib/storage";
+import { default as createWebStorage } from "redux-persist/lib/storage/createWebStorage";
 import { questionEditorReducer } from "../reducers/question-editor-reducer";
 import { testMakerReducer } from "../reducers/test-maker-reducer";
 import { testProgressReducer } from "../reducers/test-progress-reducer";
@@ -24,6 +24,8 @@ export const getStoreAndPersistor = () => {
     testMaker: testMakerReducer,
     questionEditor: questionEditorReducer,
   });
+
+  const storage = createWebStorage("local");
 
   const persistedReducer = persistReducer(
     {
