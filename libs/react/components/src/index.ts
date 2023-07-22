@@ -1,4 +1,5 @@
 export * from "./app-layout";
+export * from "./blog-post-chip";
 export * from "./constants";
 export * from "./count-up";
 export * from "./cta-search";

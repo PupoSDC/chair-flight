@@ -81,7 +81,9 @@ const BackgroundImageContainer = styled(Box)`
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: -1;
   & > img {
+    user-select: none;
     width: 600px;
     max-width: 600px;
     height: auto;

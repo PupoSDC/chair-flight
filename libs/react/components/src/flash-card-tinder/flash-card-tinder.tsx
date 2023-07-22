@@ -1,10 +1,10 @@
-import type { ReactElement} from "react";
 import { forwardRef, useRef, useState } from "react";
 import { default as ArrowBackIosNewIcon } from "@mui/icons-material/ArrowBackIosNew";
 import { default as ArrowForwardIosIcon } from "@mui/icons-material/ArrowForwardIos";
-import type { BoxProps} from "@mui/joy";
 import { Box, IconButton, LinearProgress, styled } from "@mui/joy";
 import { GlobalStyles } from "@mui/material";
+import type { BoxProps } from "@mui/joy";
+import type { ReactElement } from "react";
 
 const CARD_WIDTH = 420;
 
