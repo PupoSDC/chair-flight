@@ -1,0 +1,33 @@
+{
+  "name": "next-containers",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next/containers/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/next/containers/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/next/containers/tsconfig.json --noEmit",
+          "tsc -p libs/next/containers/tsconfig.spec.json --noEmit"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/libs/next/containers"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/libs/next/containers"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "types": ["node", "vitest"],
+    "jsx": "react"
+  },
+  "include": ["src/**/*.test.ts", "src/**/*.test.tsx"]
+}

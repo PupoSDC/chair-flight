@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { createNewQuestionPr } from "@chair-flight/core/app";
-import { apiHandler } from "@chair-flight/next/server";
+import { apiHandler, getQuestionTemplate } from "@chair-flight/next/server";
 import { questionSchema } from "@chair-flight/question-bank/schemas";
 import type {
   LearningObjective,
@@ -9,22 +9,6 @@ import type {
   QuestionTemplateId,
   QuestionBankRepository,
 } from "@chair-flight/base/types";
-
-export type GetQuestionTemplateResponse = {
-  questionTemplate: QuestionTemplate;
-  learningObjectives: LearningObjective[];
-};
-
-export const getQuestionTemplate = async (
-  questionId: QuestionTemplateId,
-  questionBank: QuestionBankRepository,
-): Promise<GetQuestionTemplateResponse> => {
-  const questionTemplate = await questionBank.getQuestionTemplate(questionId);
-  const learningObjectives = await questionBank.getLearningObjectives(
-    questionTemplate.learningObjectives,
-  );
-  return { questionTemplate, learningObjectives };
-};
 
 export const updateQuestionTemplateLocally = async (
   question: QuestionTemplate,
