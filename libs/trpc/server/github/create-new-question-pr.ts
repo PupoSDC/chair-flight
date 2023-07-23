@@ -1,7 +1,8 @@
+/**
 import { default as axios } from "axios";
 import { format } from "prettier/standalone";
 import { getOctokit } from "@chair-flight/external/github";
-import { getRandomId } from "../random/random";
+import { getRandomId } from "../../../core/app/src/random/random";
 import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export const createNewQuestionPr = async (question: QuestionTemplate) => {
@@ -92,4 +93,4 @@ export const createNewQuestionPr = async (question: QuestionTemplate) => {
   });
 
   return { url: response.data.html_url };
-};
+}; */

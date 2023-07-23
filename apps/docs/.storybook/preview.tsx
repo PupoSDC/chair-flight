@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
+import { trpc } from "@chair-flight/trpc/client";
 import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
 import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
+import { initialize, mswLoader } from 'msw-storybook-addon';
 import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
@@ -9,6 +11,8 @@ import { useDarkMode } from "storybook-dark-mode";
 import { theme } from "../../../libs/react/components/src/theme";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
+
+initialize();
 
 const ToggleDarkMode = ({}) => {
   const isDarkMode = useDarkMode();
@@ -76,7 +80,9 @@ const preview: Preview = {
         <Story />
       </CssVarsProvider>
     ),
+    (Story) => <>{trpc.withTRPC(Story)}</>,
   ],
+  loaders: [mswLoader],
 };
 
 export default preview;

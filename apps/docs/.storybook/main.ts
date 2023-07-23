@@ -16,6 +16,9 @@ const config: StorybookConfig = {
     "@nx/react/plugins/storybook",
     "storybook-dark-mode",
   ],
+  staticDirs: [
+    '../public'
+  ],
   typescript: {
     reactDocgen: "react-docgen-typescript",
     skipBabel: true,
@@ -29,13 +32,13 @@ const config: StorybookConfig = {
             path.dirname(__dirname),
             "../../libs/core/app/src",
           ),
-          "@chair-flight/next/server": path.resolve(
-            path.dirname(__dirname),
-            "../../libs/next/server/src",
-          ),
           "@chair-flight/react/components": path.resolve(
             path.dirname(__dirname),
             "../../libs/react/components/src",
+          ),
+          "@chair-flight/trpc/client": path.resolve(
+            path.dirname(__dirname),
+            "../../libs/trpc/client/src",
           ),
           "@chair-flight/question-bank/providers": path.resolve(
             path.dirname(__dirname),
@@ -48,10 +51,6 @@ const config: StorybookConfig = {
           "@chair-flight/base/env": path.resolve(
             path.dirname(__dirname),
             "../../libs/base/env/src",
-          ),
-          "@chair-flight/external/upstash": path.resolve(
-            path.dirname(__dirname),
-            "../../libs/external/upstash/src",
           ),
         },
       },

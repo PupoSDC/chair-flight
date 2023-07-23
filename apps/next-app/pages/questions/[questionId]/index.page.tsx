@@ -30,6 +30,7 @@ import type {
   DrawingPoints,
 } from "@chair-flight/react/components";
 import type { NextPage } from "next";
+import { trpc } from "@chair-flight/trpc/client";
 
 type QuestionPageProps = GetQuestionTemplateResponse & {
   initialVariantId?: string;
@@ -77,6 +78,8 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
     questionBoxRef.current?.change?.("question");
   };
 
+  console.log(hello.data);
+  
   return (
     <>
       <AppHead

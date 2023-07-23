@@ -20,14 +20,15 @@ import {
   tabListClasses,
   tabPanelClasses,
 } from "@mui/joy";
-import { QuestionTemplateId } from "@chair-flight/base/types";
+import type { 
+  QuestionTemplateId 
+} from "@chair-flight/base/types";
 import {
   getQuestion,
   getQuestionPreview,
   getRandomId,
   getRandomShuffler,
 } from "@chair-flight/core/app";
-import { useGetQuestionTemplate } from "@chair-flight/next/server";
 import {
   DrawingPoints,
   ImageViewer,
@@ -35,6 +36,9 @@ import {
   QuestionMultipleChoice,
   QuestionMultipleChoiceStatus,
 } from "@chair-flight/react/components";
+import {
+  trpc,
+} from "@chair-flight/trpc/client";
 
 const StyledTabs = styled(Tabs)`
   --Tabs-gap: 0px;
@@ -136,7 +140,9 @@ export const QuestionReview = forwardRef<
     { title, questionId, variantId, seed, onNavigateToVariant, ...props },
     ref,
   ) => {
-    const { data, isLoading } = useGetQuestionTemplate(questionId);
+    const { data, isLoading } = trpc.questionReview.getQuestion.useQuery({
+      questionId,
+    });
     const [value, setValue] = useState<TabName>("question");
     const [selectedOption, setSelectedOption] = useState<string>();
     const [selectedStatus, setSelectedStatus] =

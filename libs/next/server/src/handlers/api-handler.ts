@@ -62,22 +62,6 @@ export const apiHandler = (
     const callback = handlers[method as "get"];
     const questionBank = getQuestionBank();
 
-    // const getFirebaseAdmin = async () => {
-    //   if (!firebaseAdmin) {
-    //     const { getFirebaseAdmin } = await import("@cf/config/firebaseAdmin");
-    //     firebaseAdmin = await getFirebaseAdmin();
-    //   }
-    //   return firebaseAdmin;
-    // };
-
-    //const getCurrentUserToken = async () => {
-    //  if (!currentUser) {
-    //    const { getCurrentUserToken } = await import("./getCurrentUserToken");
-    //    currentUser = await getCurrentUserToken(req, getFirebaseAdmin);
-    //  }
-    //  return currentUser as DecodedIdToken;
-    //};
-
     try {
       const { isAvailable, requiresAuthentication } = options;
       if (!isAvailable) {
