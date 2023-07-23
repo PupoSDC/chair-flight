@@ -19,7 +19,7 @@ let initializationWork: Promise<void> | undefined;
 
 export const searchLearningObjectives = async (
   questionBank: QuestionBankRepository,
-  searchArgs: SearchQuery
+  searchArgs: SearchQuery,
 ): Promise<SearchLearningObjectivesResults> => {
   const documents = await questionBank.getAllLearningObjectives();
   const { q, page, pageSize } = searchQueryValidation.parse(searchArgs);

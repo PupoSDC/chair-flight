@@ -14,7 +14,7 @@ export const EditVariantModal: FunctionComponent = () => {
     (state) =>
       state?.questionEditor?.questions[questionId]?.currentVersion?.variants[
         variantId
-      ]
+      ],
   );
 
   const disableCloseWithoutAction = () => {

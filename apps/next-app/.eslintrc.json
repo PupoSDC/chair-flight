@@ -1,6 +1,7 @@
 {
   "extends": [
-    "plugin:@nrwl/nx/react",
+    // Recover ths with bumb to nx 17
+    // "plugin:@nrwl/nx/react",
     "next",
     "next/core-web-vitals",
     "../../.eslintrc.json"

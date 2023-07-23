@@ -5,11 +5,11 @@ export const searchQueryValidation = z.object({
   q: z.string().optional(),
   page: z.preprocess(
     (a) => Number(a ?? 0),
-    z.number().min(0).optional().default(0)
+    z.number().min(0).optional().default(0),
   ),
   pageSize: z.preprocess(
     (a) => Number(a ?? 25),
-    z.number().min(1).max(100).optional().default(25)
+    z.number().min(1).max(100).optional().default(25),
   ),
 });
 

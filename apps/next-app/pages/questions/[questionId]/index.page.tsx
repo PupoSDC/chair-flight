@@ -60,12 +60,12 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
 
   const question = useMemo(
     () => getQuestion(questionTemplate, { variantId, seed }),
-    [variantId, questionTemplate, seed]
+    [variantId, questionTemplate, seed],
   );
 
   const randomizedOptions = useMemo(
     () => getRandomShuffler(seed ?? "")(question.options),
-    [question.options, seed]
+    [question.options, seed],
   );
 
   const navigateToVariant = (variantId: string, seed: string) => {
@@ -123,7 +123,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
                     onClick={() => {
                       navigateToVariant(
                         shuffle(allVariants)[0].id,
-                        getRandomId()
+                        getRandomId(),
                       );
                       setSelectedOption(undefined);
                       setSelectedStatus("in-progress");
@@ -177,7 +177,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
                   ...old,
                   [currentAnnex ?? ""]: (old[currentAnnex ?? ""] ?? []).slice(
                     0,
-                    -1
+                    -1,
                   ),
                 }))
               }
@@ -253,7 +253,7 @@ export const getServerSideProps = ssrHandler<QuestionPageProps>(
   async ({ context, questionBank }) => {
     const { questionTemplate, learningObjectives } = await getQuestionTemplate(
       context.params?.["questionId"] as string,
-      questionBank
+      questionBank,
     );
 
     const initialVariantId =
@@ -271,7 +271,7 @@ export const getServerSideProps = ssrHandler<QuestionPageProps>(
         initialSeed,
       },
     };
-  }
+  },
 );
 
 export default QuestionPage;

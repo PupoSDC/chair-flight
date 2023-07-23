@@ -48,7 +48,7 @@ export const QuestionBoxExam = forwardRef<HTMLDivElement, QuestionBoxExamProps>(
       onNavigationClick,
       ...props
     },
-    ref
+    ref,
   ) => {
     const timeLeft = Math.max(timeTotalInMs - timeElapsedInMs, 0);
     const rawPercentage = (timeElapsedInMs / timeTotalInMs) * 100;
@@ -119,5 +119,5 @@ export const QuestionBoxExam = forwardRef<HTMLDivElement, QuestionBoxExamProps>(
         />
       </Sheet>
     );
-  }
+  },
 );

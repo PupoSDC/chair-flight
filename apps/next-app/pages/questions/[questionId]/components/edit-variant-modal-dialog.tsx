@@ -24,7 +24,7 @@ import type { FunctionComponent } from "react";
 const resolver = zodResolver(
   z.object({
     variant: questionVariantSchema,
-  })
+  }),
 );
 
 export type EditQuestionVariantFormProps = {

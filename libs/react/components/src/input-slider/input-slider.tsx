@@ -51,7 +51,7 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
       onChange,
       ...props
     },
-    ref
+    ref,
   ) => {
     const [instantValue, setInstantValue] = useState(value);
 
@@ -83,5 +83,5 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
         }
       />
     );
-  }
+  },
 );

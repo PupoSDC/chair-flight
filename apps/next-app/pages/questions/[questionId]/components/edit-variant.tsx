@@ -27,7 +27,7 @@ export const EditVariant: FunctionComponent<DraggableVariantProps> = ({
     (state) =>
       state.questionEditor.questions[questionId]?.currentVersion?.variants?.[
         variantId
-      ]
+      ],
   );
 
   // Just here to (hopefully) silence TS
@@ -37,13 +37,13 @@ export const EditVariant: FunctionComponent<DraggableVariantProps> = ({
     dispatch(
       actions.undoQuestionEditorLastChange({
         questionId,
-      })
+      }),
     );
 
   const mergeVariant = (fromVariantId: string, toVariantId: string) => {
     if (fromVariantId === toVariantId) return;
     dispatch(
-      actions.mergeQuestionVariants({ questionId, fromVariantId, toVariantId })
+      actions.mergeQuestionVariants({ questionId, fromVariantId, toVariantId }),
     );
     toast.success(`${fromVariantId} merged into ${toVariantId}`, {
       duration: 8000,
@@ -59,7 +59,7 @@ export const EditVariant: FunctionComponent<DraggableVariantProps> = ({
       actions.deleteQuestionVariant({
         questionId,
         variantId,
-      })
+      }),
     );
     toast.success(`${variantId} deleted`, {
       duration: 8000,

@@ -12,7 +12,7 @@ export const useTestHotkeys = ({ testId }: { testId: string }) => {
         testId: test.id,
         questionId: currentQuestion.questionId,
         optionId: currentQuestion.options[optionIndex].id,
-      })
+      }),
     );
   };
 
@@ -23,7 +23,7 @@ export const useTestHotkeys = ({ testId }: { testId: string }) => {
       actions.navigateToTestQuestion({
         testId: test.id,
         questionId,
-      })
+      }),
     );
   };
 

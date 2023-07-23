@@ -31,7 +31,7 @@ export const createLearningObjectivesEmbeddings = async ({
   const openAi = getOpenAi();
   const learningObjectives = await questionBank.getAllLearningObjectives();
   const snippetLos = learningObjectives.filter(
-    (lo) => lo.id.split(".").length === 5
+    (lo) => lo.id.split(".").length === 5,
   );
 
   let processed = 0;
@@ -54,7 +54,7 @@ export const createLearningObjectivesEmbeddings = async ({
         });
         console.log(`processed ${processed++} / ${snippetLos.length}`);
       }
-    })
+    }),
   );
 
   const embeddings = chunck(currentEmbeddings, 100);
@@ -74,7 +74,7 @@ export const createQuestionTemplateEmbeddings = async ({
   const acceptableTemplates = questionTemplates.filter(
     (template) =>
       template.learningObjectives.length === 1 &&
-      template.learningObjectives[0].split(".").length === 2
+      template.learningObjectives[0].split(".").length === 2,
   );
 
   const chunks = chunck(acceptableTemplates, PARALLEL_REQUESTS);
@@ -107,7 +107,7 @@ export const createQuestionTemplateEmbeddings = async ({
           i--;
         }
       }
-    })
+    }),
   );
 };
 
@@ -134,19 +134,19 @@ export const applyBestMatchingLoToAllQuestions = async ({
   const filteredTemplates = allTemplates.filter(
     (template) =>
       template.learningObjectives.length === 1 &&
-      template.learningObjectives[0] === "010.01"
+      template.learningObjectives[0] === "010.01",
   );
 
   for (let i = 0; i < filteredTemplates.length; i++) {
     const template = filteredTemplates[i];
     console.log(`processing ${i} / ${filteredTemplates.length}`);
     const templateEmbedding = await getRedis().get<RedisEmbedding>(
-      `question-template-embeddings-${template.id}`
+      `question-template-embeddings-${template.id}`,
     );
     if (!templateEmbedding) continue;
 
     const relevantLos = loEmbeddings.filter((lo) =>
-      lo.id.startsWith(template.learningObjectives[0].split(".")[0])
+      lo.id.startsWith(template.learningObjectives[0].split(".")[0]),
     );
 
     const result = relevantLos
@@ -155,7 +155,7 @@ export const applyBestMatchingLoToAllQuestions = async ({
         text: lo.text,
         similarity: cosineSimilarity(
           templateEmbedding.embeddings,
-          lo.embeddings
+          lo.embeddings,
         ),
       }))
       .sort((a, b) => b.similarity - a.similarity)[0];

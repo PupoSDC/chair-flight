@@ -18,6 +18,6 @@ export interface QuestionBankRepository {
   writeLearningObjectives(los: LearningObjective[]): Promise<void>;
   writeSubjects(subjects: LearningObjectiveSummary[]): Promise<void>;
   writeFlashCards(
-    flashCards: Record<string, FlashCardContent[]>
+    flashCards: Record<string, FlashCardContent[]>,
   ): Promise<void>;
 }

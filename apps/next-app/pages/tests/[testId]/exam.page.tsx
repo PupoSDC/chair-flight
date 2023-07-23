@@ -77,7 +77,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
         actions.tickTestTime({
           testId: test.id,
           timeSpentInMs,
-        })
+        }),
       );
     }, 1000);
     return () => clearInterval(interval);
@@ -120,7 +120,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
                   actions.navigateToTestQuestion({
                     testId: test.id,
                     questionId: question.questionId,
-                  })
+                  }),
                 );
               }}
               question={
@@ -135,7 +135,7 @@ const ExamPageClient: FunctionComponent<ExamPageProps> = ({ testId }) => {
                         optionId,
                         testId: test.id,
                         questionId: currentQuestion.questionId,
-                      })
+                      }),
                     )
                   }
                   options={currentQuestion.options.map((opt) => ({
@@ -175,7 +175,7 @@ export const ExamPage: NextPage<ExamPageProps> = (props) => (
 );
 
 export const getServerSideProps: GetServerSideProps<ExamPageProps> = async (
-  ctx
+  ctx,
 ) => {
   const testId = ctx.params?.["testId"];
   if (typeof testId !== "string") return { notFound: true };

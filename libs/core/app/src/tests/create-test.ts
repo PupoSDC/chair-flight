@@ -30,7 +30,7 @@ export const createTest = async ({
   const possibleQuestions = Object.values(allQuestions).filter((q) => {
     const hasLearningObjectives = q.learningObjectives.some((questionLo) => {
       return learningObjectives.some((targetLo) =>
-        questionLo.startsWith(targetLo)
+        questionLo.startsWith(targetLo),
       );
     });
 

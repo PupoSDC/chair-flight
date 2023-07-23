@@ -81,7 +81,7 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
         actions.tickTestTime({
           testId: test.id,
           timeSpentInMs,
-        })
+        }),
       );
     }, 1000);
     return () => clearInterval(interval);
@@ -104,7 +104,7 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
             actions.navigateToTestQuestion({
               testId: test.id,
               questionId,
-            })
+            }),
           )
         }
       />
@@ -134,7 +134,7 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
             optionId,
             testId: test.id,
             questionId: currentQuestion.questionId,
-          })
+          }),
         )
       }
       options={currentQuestion.options.map((opt) => ({
@@ -184,7 +184,7 @@ const StudyPageClient: FunctionComponent<StudyPageProps> = ({ testId }) => {
                     actions.navigateToTestQuestion({
                       testId: test.id,
                       questionId: question.questionId,
-                    })
+                    }),
                   );
                 }}
                 question={questionMultipleChoice}
@@ -226,7 +226,7 @@ export const StudyPage: NextPage<StudyPageProps> = (props) => (
 );
 
 export const getServerSideProps: GetServerSideProps<StudyPageProps> = async (
-  ctx
+  ctx,
 ) => {
   const testId = ctx.params?.["testId"];
   if (typeof testId !== "string") return { notFound: true };

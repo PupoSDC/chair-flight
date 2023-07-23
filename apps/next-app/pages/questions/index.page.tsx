@@ -34,7 +34,7 @@ const QuestionsIndexPage: NextPage = () => {
     {
       ssr: false,
       manual: !search,
-    }
+    },
   );
 
   const hasResults = hasSearched && (data?.totalResults ?? 0) > 0;

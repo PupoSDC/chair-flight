@@ -25,7 +25,7 @@ type FlashCardsThemePageProps = {
 };
 
 const FlashCardWithOwnControl: FunctionComponent<FlashCardContent> = (
-  props
+  props,
 ) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
@@ -119,7 +119,7 @@ export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
         flashCards,
       },
     };
-  }
+  },
 );
 
 export default FlashCardsThemePage;

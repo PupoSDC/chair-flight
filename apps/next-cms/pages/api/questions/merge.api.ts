@@ -22,7 +22,7 @@ export const getMerge = async (questionBank: QuestionBankRepository) => {
   const diffs = fs
     .readFileSync(
       path.join(cwd(), "./apps/next-cms/pages/api/questions/diffs.txt"),
-      "utf-8"
+      "utf-8",
     )
     .split("\n")
     .map((d) => d.trim().split(" "))
@@ -42,7 +42,7 @@ export const getMerge = async (questionBank: QuestionBankRepository) => {
     if (!q0 || !q1) {
       fs.writeFileSync(
         path.join(cwd(), "./apps/next-cms/pages/api/questions/diffs.txt"),
-        diffs.join("\n")
+        diffs.join("\n"),
       );
       continue;
     }
@@ -65,13 +65,13 @@ export default apiHandler(
         const diffs = fs
           .readFileSync(
             path.join(cwd(), "./apps/next-cms/pages/api/questions/diffs.txt"),
-            "utf-8"
+            "utf-8",
           )
           .split("\n");
         diffs.shift();
         fs.writeFileSync(
           path.join(cwd(), "./apps/next-cms/pages/api/questions/diffs.txt"),
-          diffs.join("\n")
+          diffs.join("\n"),
         );
       }
 
@@ -84,7 +84,7 @@ export default apiHandler(
       if (body.resolution === "delete_left") {
         questions.splice(
           questions.findIndex((q) => q.id === body.q0),
-          1
+          1,
         );
         Object.values(q1.variants)[0].externalIds = [
           ...new Set([
@@ -95,7 +95,7 @@ export default apiHandler(
       } else if (body.resolution === "merge_left") {
         questions.splice(
           questions.findIndex((q) => q.id === body.q0),
-          1
+          1,
         );
         q1.variants = {
           ...q1.variants,
@@ -104,7 +104,7 @@ export default apiHandler(
       } else if (body.resolution === "merge_right") {
         questions.splice(
           questions.findIndex((q) => q.id === body.q1),
-          1
+          1,
         );
         q0.variants = {
           ...q0.variants,
@@ -113,7 +113,7 @@ export default apiHandler(
       } else if (body.resolution === "delete_right") {
         questions.splice(
           questions.findIndex((q) => q.id === body.q1),
-          1
+          1,
         );
         Object.values(q0.variants)[0].externalIds = [
           ...new Set([
@@ -141,7 +141,7 @@ export default apiHandler(
         };
         questions.splice(
           questions.findIndex((q) => q.id === questionIds[i]),
-          1
+          1,
         );
       }
       questionBank.writeQuestions(questions);
@@ -150,5 +150,5 @@ export default apiHandler(
   {
     isAvailable: true,
     requiresAuthentication: false,
-  }
+  },
 );

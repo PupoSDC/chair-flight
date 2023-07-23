@@ -49,7 +49,7 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
       onReset,
       ...props
     },
-    ref
+    ref,
   ) => {
     const stageRef = useRef<Konva.Stage>(null);
     const imageRef = useRef<Konva.Image>(null);
@@ -73,11 +73,11 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
       const ratio = imgWidth / imgHeight;
       const newStageWidth = Math.min(
         windowSize.width * 0.8,
-        theme.breakpoints.values.lg - 7 * 8
+        theme.breakpoints.values.lg - 7 * 8,
       );
       const newStageHeight = Math.min(
         windowSize.height * 0.8,
-        theme.breakpoints.values.md
+        theme.breakpoints.values.md,
       );
       const isOversizeWidth = imgWidth > newStageWidth;
       const isOversizeHeight = imgHeight > newStageHeight;
@@ -123,7 +123,7 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
       const y = (pointer.y - stage.y()) / oldScale;
       const newScale = Math.max(
         1.0,
-        e.evt.deltaY < 0 ? oldScale * scaleBy : oldScale / scaleBy
+        e.evt.deltaY < 0 ? oldScale * scaleBy : oldScale / scaleBy,
       );
       setStageScale(newScale);
       setStageX(-(x - pointer.x / newScale) * newScale);
@@ -135,7 +135,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseDownOnDrawMode = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       const pos = e.target.getStage()?.getPointerPosition();
       if (!pos) return;
@@ -148,7 +150,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseDownOnLineMode = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       const pos = e.target.getStage()?.getPointerPosition();
       if (!pos) return;
@@ -161,14 +165,18 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseDown = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       if (mode === "draw") handleMouseDownOnDrawMode(e);
       if (mode === "line") handleMouseDownOnLineMode(e);
     };
 
     const handleMouseMoveOnDrawMode = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       const pos = e.target.getStage()?.getPointerPosition();
       if (currentDrawing === undefined || !pos) return;
@@ -180,7 +188,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseMoveOnLineMode = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       const pos = e.target.getStage()?.getPointerPosition();
       if (!currentDrawing || !pos) return;
@@ -194,7 +204,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseMove = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       if (mode === "draw") handleMouseMoveOnDrawMode(e);
       if (mode === "line") handleMouseMoveOnLineMode(e);
@@ -207,7 +219,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseUpOnLineMode = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       const pos = e.target.getStage()?.getPointerPosition();
       if (!pos || !currentDrawing) return;
@@ -222,7 +236,9 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     };
 
     const handleMouseUp = (
-      e: Konva.KonvaEventObject<MouseEvent> | Konva.KonvaEventObject<TouchEvent>
+      e:
+        | Konva.KonvaEventObject<MouseEvent>
+        | Konva.KonvaEventObject<TouchEvent>,
     ) => {
       if (mode === "draw") handleMouseUpOnDrawMode();
       if (mode === "line") handleMouseUpOnLineMode(e);
@@ -399,5 +415,5 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
         </ModalDialog>
       </Modal>
     );
-  }
+  },
 );

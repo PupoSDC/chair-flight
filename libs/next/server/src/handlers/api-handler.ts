@@ -54,7 +54,7 @@ const handleError = (res: NextApiResponse, error: unknown) => {
 
 export const apiHandler = (
   handlers: Handlers,
-  options: HandlerOptions
+  options: HandlerOptions,
 ): NextApiHandler => {
   return async (req, res) => {
     const start = performance.now();

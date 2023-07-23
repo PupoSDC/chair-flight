@@ -134,7 +134,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
       children,
       ...boxProps
     },
-    ref
+    ref,
   ) => {
     const [isMounted, setIsMounted] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -151,7 +151,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
         closeDrawer,
         canDrawerBeOpened,
       }),
-      [closeDrawer, canDrawerBeOpened]
+      [closeDrawer, canDrawerBeOpened],
     );
 
     useEffect(() => setIsMounted(true), []);
@@ -198,7 +198,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
         </Drawer>
       </HeaderContext.Provider>
     );
-  }
+  },
 );
 
 export const useHeaderContext = () => useContext(HeaderContext);

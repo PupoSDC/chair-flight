@@ -24,7 +24,7 @@ const QuestionReview: FunctionComponent<QuestionReviewProps> = ({ testId }) => {
   const totalQuestions = test.questions.length;
   const correctQuestions = test.questions.reduce(
     (acc, q) => acc + (q.correctOptionId === q.selectedOptionId ? 1 : 0),
-    0
+    0,
   );
   const grade = Math.round((correctQuestions / totalQuestions) * 100);
   const mainColor = grade >= 75 ? "success" : "danger";
@@ -134,7 +134,7 @@ export const ReviewPage: NextPage<ReviewPageProps> = ({ testId }) => {
 };
 
 export const getServerSideProps: GetServerSideProps<ReviewPageProps> = async (
-  ctx
+  ctx,
 ) => {
   const testId = ctx.params?.["testId"];
   if (typeof testId !== "string") return { notFound: true };

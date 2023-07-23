@@ -55,7 +55,7 @@ export const NestedCheckboxSelect = forwardRef<
       {items?.map((item) => {
         const open = openChapter === item.id;
         const indeterminate = ![0, item.children.length].includes(
-          item.children.reduce((s, r) => s + Number(r.checked), 0)
+          item.children.reduce((s, r) => s + Number(r.checked), 0),
         );
 
         return (
@@ -96,7 +96,7 @@ export const NestedCheckboxSelect = forwardRef<
                 children={<ChevronRight />}
                 onClick={() =>
                   setOpenChapter((old) =>
-                    old === item.id ? undefined : item.id
+                    old === item.id ? undefined : item.id,
                   )
                 }
                 open={open}

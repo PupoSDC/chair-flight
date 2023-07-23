@@ -16,7 +16,7 @@ type FlashCardsThemePageProps = {
 };
 
 const FlashCardWithOwnControl: FunctionComponent<FlashCardContent> = (
-  props
+  props,
 ) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
@@ -64,7 +64,7 @@ export const getStaticProps = staticHandler<FlashCardsThemePageProps>(
         flashCards,
       },
     };
-  }
+  },
 );
 
 export const getStaticPaths = staticPathsHandler(async (questionBank) => {

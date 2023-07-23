@@ -38,7 +38,7 @@ export const EditVariantFormSnippetSimple: FunctionComponent = () => {
   const deleteOption = (id: string) => {
     setValue(
       `variant.options`,
-      options.filter((opt) => id !== opt.id)
+      options.filter((opt) => id !== opt.id),
     );
   };
 

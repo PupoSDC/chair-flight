@@ -57,5 +57,5 @@ export const Ups = forwardRef<HTMLDivElement, UpsProps>(
       />
       {children}
     </Box>
-  )
+  ),
 );

@@ -21,5 +21,5 @@ export const HookFormInput = forwardRef<HTMLInputElement, HookFormInputProps>(
         )}
       </>
     );
-  }
+  },
 );

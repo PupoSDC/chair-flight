@@ -148,5 +148,5 @@ export const FlashCardTinder = forwardRef<HTMLDivElement, FlashCardTinderProps>(
         />
       </WrapperContainer>
     );
-  }
+  },
 );

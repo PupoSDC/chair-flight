@@ -17,7 +17,7 @@ describe("questionEditorReducer", () => {
     store.dispatch(
       resetQuestionEditor({
         question,
-      })
+      }),
     );
     store.dispatch(
       updateQuestionVariant({
@@ -26,12 +26,12 @@ describe("questionEditorReducer", () => {
           ...question.variants["Wuyr5cGQ"],
           question: "123-456",
         },
-      })
+      }),
     );
     expect(
       store.getState().questions[question.id]?.currentVersion.variants[
         "Wuyr5cGQ"
-      ].question
+      ].question,
     ).toBe("123-456");
   });
 });

@@ -32,7 +32,7 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
       numberOfQuestions,
       ...props
     },
-    ref
+    ref,
   ) => {
     const color = ((): "warning" | "success" | "danger" | "primary" => {
       if (status === "created") return "primary";
@@ -90,7 +90,7 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
           {status === "finished" && timeToCompleteInMs && (
             <Typography level="body2">
               {`Completed in ${getClockTime(
-                timeToCompleteInMs / 1000
+                timeToCompleteInMs / 1000,
               )} minutes`}
             </Typography>
           )}
@@ -111,5 +111,5 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
         </Box>
       </Sheet>
     );
-  }
+  },
 );

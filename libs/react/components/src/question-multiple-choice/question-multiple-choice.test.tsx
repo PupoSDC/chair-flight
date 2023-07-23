@@ -15,7 +15,7 @@ describe("QuestionMultipleChoice", () => {
           { optionId: "789", text: "Jack" },
           { optionId: "102", text: "Jill" },
         ]}
-      />
+      />,
     );
 
     expect(screen.getByText("What is your name?")).toBeInTheDocument();

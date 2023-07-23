@@ -36,7 +36,7 @@ const getEntryOrThrow = ({
   if (entry) return entry;
   throw new InvalidStoreState(
     `Question ${questionId} not found in question editor`,
-    action
+    action,
   );
 };
 
@@ -111,5 +111,5 @@ export const questionEditorReducer = createReducer<QuestionEditor>(
         const { questionId } = action.payload;
         delete store.questions[questionId];
       });
-  }
+  },
 );

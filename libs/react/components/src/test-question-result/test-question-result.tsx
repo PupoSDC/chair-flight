@@ -32,7 +32,7 @@ export const TestQuestionResult = forwardRef<
       learningObjectives,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <Sheet
@@ -75,5 +75,5 @@ export const TestQuestionResult = forwardRef<
         )}
       </Sheet>
     );
-  }
+  },
 );

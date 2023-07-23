@@ -50,7 +50,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
   const hasDoneInitialRender = useRef(false);
   const [loading, setLoading] = useState(false);
   const { numberOfQuestions, mode, subject, chapters } = useAppSelector(
-    (state) => state.testMaker
+    (state) => state.testMaker,
   );
 
   useEffect(() => {
@@ -61,8 +61,8 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
           .flatMap((c) => c.children ?? [])
           .flatMap((c) => c.children ?? [])
           .filter((c) => typeof chapters[c.id] === "undefined")
-          .map((c) => ({ chapter: c.id, value: true }))
-      )
+          .map((c) => ({ chapter: c.id, value: true })),
+      ),
     );
     hasDoneInitialRender.current = true;
   });
@@ -72,7 +72,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
       dispatch(
         actions.setTestMakerSubject({
           subject: subjects[0].id,
-        })
+        }),
       );
   });
 
@@ -100,7 +100,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
             children,
           };
         }) ?? [],
-    [chapters, subject, subjects]
+    [chapters, subject, subjects],
   );
 
   const allSelected = subjectsAsItems.every((s) => s.checked);
@@ -110,14 +110,14 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
     dispatch(
       actions.setTestMakerTestMode({
         mode,
-      })
+      }),
     );
 
   const setSubject = (subject: LearningObjectiveId) =>
     dispatch(
       actions.setTestMakerSubject({
         subject,
-      })
+      }),
     );
 
   const setAllSubjects = (value: boolean) =>
@@ -128,20 +128,20 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
           .map((c) => ({
             chapter: c.id,
             value,
-          }))
-      )
+          })),
+      ),
     );
 
   const setNumberOfQuestions = (numberOfQuestions: number) =>
     dispatch(
       actions.setTestMakerNumberOfQuestions({
         numberOfQuestions,
-      })
+      }),
     );
 
   const setChapter: NestedCheckboxSelectProps["onChange"] = (
     chapter,
-    value
+    value,
   ) => {
     const castChapter = chapter as NestedCheckboxItem;
     if (castChapter.children.length) {
@@ -150,8 +150,8 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
           castChapter.children.map((c) => ({
             chapter: c.id,
             value,
-          }))
-        )
+          })),
+        ),
       );
       return;
     }
@@ -162,7 +162,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
           chapter: chapter.id,
           value,
         },
-      ])
+      ]),
     );
   };
 

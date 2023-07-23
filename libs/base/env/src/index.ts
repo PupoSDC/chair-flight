@@ -7,7 +7,7 @@ export const getEnvVariableOrThrow = (name: string): string => {
 
 export const getEnvVariableOrDefault = (
   name: string,
-  defaultValue: string
+  defaultValue: string,
 ): string => {
   if (process.env[name]) return process.env[name] as string;
   return defaultValue;

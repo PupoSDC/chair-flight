@@ -70,7 +70,7 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
                 <Typography
                   level="body2"
                   children={DateTime.fromISO(meta.isoDate).toFormat(
-                    "dd LLL yyyy"
+                    "dd LLL yyyy",
                   )}
                 />
                 <Typography

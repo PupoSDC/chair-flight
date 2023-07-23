@@ -40,5 +40,5 @@ export const testMakerReducer = createReducer<TestMaker>(
         const { mode } = action.payload;
         store.mode = mode;
       });
-  }
+  },
 );

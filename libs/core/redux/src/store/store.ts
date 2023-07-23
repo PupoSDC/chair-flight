@@ -33,7 +33,7 @@ export const getStoreAndPersistor = () => {
       version: 1,
       storage,
     },
-    combinedReducer
+    combinedReducer,
   );
 
   const store = configureStore({

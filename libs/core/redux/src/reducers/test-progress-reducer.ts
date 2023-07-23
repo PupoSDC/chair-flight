@@ -45,12 +45,12 @@ export const testProgressReducer = createReducer<TestProgressReducer>(
         const { testId, questionId, optionId } = action.payload;
         const test = store.tests[testId];
         const question = test.questions.find(
-          (q) => q.questionId === questionId
+          (q) => q.questionId === questionId,
         );
         if (!question) {
           throw new InvalidStoreState(
             `Question ${questionId} not found in test ${testId}`,
-            action
+            action,
           );
         }
         question.selectedOptionId = optionId;
@@ -60,7 +60,7 @@ export const testProgressReducer = createReducer<TestProgressReducer>(
             if (store.examModeAutoSkip) {
               test.currentQuestionIndex = Math.min(
                 test.currentQuestionIndex + 1,
-                test.questions.length - 1
+                test.questions.length - 1,
               );
             }
             return;
@@ -68,7 +68,7 @@ export const testProgressReducer = createReducer<TestProgressReducer>(
             if (store.studyModeAutoSkip) {
               test.currentQuestionIndex = Math.min(
                 test.currentQuestionIndex + 1,
-                test.questions.length - 1
+                test.questions.length - 1,
               );
             }
             return;
@@ -78,12 +78,12 @@ export const testProgressReducer = createReducer<TestProgressReducer>(
         const { testId, questionId } = action.payload;
         const test = store.tests[testId];
         const questionIndex = test.questions.findIndex(
-          (q) => q.questionId === questionId
+          (q) => q.questionId === questionId,
         );
         if (questionIndex === -1) {
           throw new InvalidStoreState(
             `Question ${questionId} not found in test ${testId}`,
-            action
+            action,
           );
         }
         test.currentQuestionIndex = questionIndex;
@@ -105,5 +105,5 @@ export const testProgressReducer = createReducer<TestProgressReducer>(
       .addCase(setStudyModeAutoSkip, (store, action) => {
         store.studyModeAutoSkip = action.payload.value;
       });
-  }
+  },
 );

@@ -85,12 +85,12 @@ const getQuestionMultipleChoiceFromOneTwo = ({
     questionPrelude,
     `1) ${
       shuffle(
-        isFirstCorrect ? firstCorrectStatements : firstIncorrectStatements
+        isFirstCorrect ? firstCorrectStatements : firstIncorrectStatements,
       )[0]
     }`,
     `2) ${
       shuffle(
-        isSecondCorrect ? secondCorrectStatements : secondIncorrectStatements
+        isSecondCorrect ? secondCorrectStatements : secondIncorrectStatements,
       )[0]
     }`,
   ].join("\n\n");
@@ -174,7 +174,7 @@ export const getQuestion = (
     variantId?: string;
     seed?: string;
     type?: QuestionType;
-  }
+  },
 ): Question => {
   const { variantId, seed } = options;
   const randomSeed = seed ?? getRandomId();

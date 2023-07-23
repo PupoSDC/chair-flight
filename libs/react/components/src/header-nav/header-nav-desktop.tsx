@@ -82,5 +82,5 @@ export const HeaderNavDesktop = forwardRef<HTMLDivElement, HeaderNavProps>(
         </StyledMenu>
       </StyledBox>
     );
-  }
+  },
 );

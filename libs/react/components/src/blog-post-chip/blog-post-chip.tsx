@@ -34,5 +34,5 @@ export const BlogPostChip = forwardRef<HTMLDivElement, BlogPostChipProps>(
         {...props}
       />
     );
-  }
+  },
 );

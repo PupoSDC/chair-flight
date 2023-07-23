@@ -99,7 +99,7 @@ export const QuestionMultipleChoice = forwardRef<
       onOptionClicked,
       ...others
     },
-    ref
+    ref,
   ) => (
     <QuestionMultipleChoiceBox ref={ref} {...others}>
       <Box className="question-text-container">
@@ -145,7 +145,7 @@ export const QuestionMultipleChoice = forwardRef<
             );
 
           const isRelevantOption = [correctOptionId, selectedOptionId].includes(
-            optionId
+            optionId,
           );
 
           if (hideIrrelevant && status === "show-result" && !isRelevantOption) {
@@ -173,5 +173,5 @@ export const QuestionMultipleChoice = forwardRef<
         })}
       </Box>
     </QuestionMultipleChoiceBox>
-  )
+  ),
 );

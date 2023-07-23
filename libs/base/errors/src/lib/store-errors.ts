@@ -7,8 +7,8 @@ export class InvalidStoreState extends Error {
   constructor(message: string, action: InvalidStoreStateActionType) {
     super(
       `Invalid store action: ${action.type} (${JSON.stringify(
-        action.payload
-      )}). ${message}`
+        action.payload,
+      )}). ${message}`,
     );
     this.name = InvalidStoreState.name;
   }

@@ -62,5 +62,5 @@ export const LearningObjectivesTableRow = memo<LearningObjectivesTableRowProps>(
         )}
       </tr>
     );
-  }
+  },
 );

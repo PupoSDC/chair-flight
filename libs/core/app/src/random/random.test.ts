@@ -6,7 +6,7 @@ describe("getRandomShuffler", () => {
     const shuffler1 = getRandomShuffler("seed");
     const shuffler2 = getRandomShuffler("seed");
     expect(shuffler1(arrayWith100Numbers)).toEqual(
-      shuffler2(arrayWith100Numbers)
+      shuffler2(arrayWith100Numbers),
     );
   });
 });

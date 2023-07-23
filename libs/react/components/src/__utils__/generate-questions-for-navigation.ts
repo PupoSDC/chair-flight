@@ -1,6 +1,6 @@
 export const generateQuestionsForNavigation = (
   count: number,
-  filled: number
+  filled: number,
 ) => {
   return [...Array(count).keys()].map((id) => ({
     id: `${id}`,

@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps<
 > = async () => {
   const folderPath = path.join(process.cwd(), "pages/articles/blog");
   const files = (await fs.readdir(folderPath)).filter((file) =>
-    file.endsWith(".mdx")
+    file.endsWith(".mdx"),
   );
   const content = await Promise.all(files.map((f) => import(`./${f}`)));
   const blogPostsMeta = content.map<BlogPageMeta>((c) => c.meta);

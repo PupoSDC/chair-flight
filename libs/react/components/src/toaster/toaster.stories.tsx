@@ -45,7 +45,7 @@ export const Playground: Story = {
                 loading: "loading",
                 success: "Success!",
                 error: "failed",
-              }
+              },
             )
           }
           children="Loading toast"
@@ -64,7 +64,7 @@ export const Playground: Story = {
                     Success! <Link href="#">Click here</Link>
                   </Typography>
                 ),
-              }
+              },
             )
           }
           children="success with link toast"

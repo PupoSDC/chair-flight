@@ -56,7 +56,7 @@ const ExtrudeGeometry = forwardRef<THREE.Mesh, ExtrudeGeometryProps>(
         />
       </mesh>
     );
-  }
+  },
 );
 
 export const DiskWithThreeHoles = forwardRef<THREE.Mesh, QiTunnelObstacleProps>(
@@ -80,7 +80,7 @@ export const DiskWithThreeHoles = forwardRef<THREE.Mesh, QiTunnelObstacleProps>(
     }, []);
 
     return <ExtrudeGeometry ref={ref} {...props} path={path} />;
-  }
+  },
 );
 
 export const DiskWithRectangleSlot = forwardRef<
@@ -149,7 +149,7 @@ export const DiskWithKeyHole = forwardRef<THREE.Mesh, QiTunnelObstacleProps>(
       keyHolePath.absarc(0, 0, cutoutSize, 0, Math.PI * 2, false);
       keyHolePath.moveTo(
         pizzaRadius * Math.cos(pizzaAngle),
-        pizzaRadius * Math.sin(pizzaAngle)
+        pizzaRadius * Math.sin(pizzaAngle),
       );
       keyHolePath.lineTo(0, 0);
 
@@ -158,7 +158,7 @@ export const DiskWithKeyHole = forwardRef<THREE.Mesh, QiTunnelObstacleProps>(
     }, []);
 
     return <ExtrudeGeometry ref={ref} {...props} path={path} />;
-  }
+  },
 );
 
 export const obstacleIndex = {

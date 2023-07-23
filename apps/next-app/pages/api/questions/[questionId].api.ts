@@ -17,18 +17,18 @@ export type GetQuestionTemplateResponse = {
 
 export const getQuestionTemplate = async (
   questionId: QuestionTemplateId,
-  questionBank: QuestionBankRepository
+  questionBank: QuestionBankRepository,
 ): Promise<GetQuestionTemplateResponse> => {
   const questionTemplate = await questionBank.getQuestionTemplate(questionId);
   const learningObjectives = await questionBank.getLearningObjectives(
-    questionTemplate.learningObjectives
+    questionTemplate.learningObjectives,
   );
   return { questionTemplate, learningObjectives };
 };
 
 export const updateQuestionTemplateLocally = async (
   question: QuestionTemplate,
-  questionBank: QuestionBankRepository
+  questionBank: QuestionBankRepository,
 ) => {
   const allQuestions = await questionBank.getAllQuestionTemplates();
   const newQuestions = allQuestions.map((q) => {
@@ -71,5 +71,5 @@ export default apiHandler(
   {
     isAvailable: true,
     requiresAuthentication: false,
-  }
+  },
 );

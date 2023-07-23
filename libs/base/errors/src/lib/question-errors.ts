@@ -6,14 +6,14 @@ export class BadQuestionError extends DataError {
   configurationParams: Record<string, unknown>;
   constructor(
     question: QuestionTemplate,
-    configurationParams: Record<string, unknown>
+    configurationParams: Record<string, unknown>,
   ) {
     super(
       `Question ${
         question.id
       } is misconfigured with configuration params: ${JSON.stringify(
-        configurationParams
-      )}`
+        configurationParams,
+      )}`,
     );
     this.question = question;
     this.configurationParams = configurationParams;
