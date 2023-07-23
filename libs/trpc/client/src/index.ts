@@ -1,6 +1,5 @@
 import { httpBatchLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
-import { createTRPCMsw } from "msw-trpc";
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
 
@@ -24,5 +23,3 @@ export const trpc = createTRPCNext<AppRouter>({
     };
   },
 });
-
-export const trpcMsw = createTRPCMsw<AppRouter>();

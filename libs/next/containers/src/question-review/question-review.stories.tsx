@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/client";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { QuestionReview } from "./question-review";
 import type { Meta, StoryObj } from "@storybook/react";
 
