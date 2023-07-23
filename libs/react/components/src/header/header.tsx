@@ -119,7 +119,7 @@ const HeaderContext = createContext<{
  * An header component that can, in theory, be used for all our pages.
  *
  * It includes a context, that can be accessed via `useHeaderContext`, so that
- * you can control the drawer component from withing the drawer components.
+ * you can control the drawer component from within the drawer components.
  *
  * Drawer becomes available only on mobile screens (breakpoint `md`) and if
  * a children is provided to this component.

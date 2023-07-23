@@ -8,6 +8,5 @@ export * from "./components/questions/question-preview-list";
 export * from "./constants/text";
 export * from "./components/theme";
 export * from "./components/app-header-menu";
-export * from "./hooks/useLambdaColdStart";
 export * from "./components/page-transition";
 export * from "./components/alpha-warning";
