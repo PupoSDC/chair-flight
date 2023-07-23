@@ -3,6 +3,7 @@ import { default as Link } from "next/link";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { Sheet } from "@mui/joy";
 import { default as dedent } from "ts-dedent";
+import { QuestionReview } from "@chair-flight/next/containers";
 import { QuestionMultipleChoice } from "@chair-flight/react/components";
 import { BlogPageLayout } from "./_blog-page.layout";
 
@@ -14,7 +15,7 @@ export const meta = {
     "This blog will be used to share technical improvements, new features, and other updates about Chair Flight. There will also be articles oriented to make your journey as a flight student as smooth as possible.",
   tags: ["Technical"],
   author: "PupoSDC",
-  isoDate: "2023-07-22T20:26:01.746Z",
+  isoDate: "2023-07-23T20:26:01.746Z",
 };
 
 # Welcome To Chair Flight Blog!
@@ -92,7 +93,29 @@ incorrect. For this simple question it's possible to write 18 variations!
 That's 16 times more seeing this question than you really need to see it. In
 Chair Flight this question variants is combined into a single question:
 
-... to be continued.
+<QuestionReview questionId={"QYFPA3CY4E"} sx={{ maxHeight: "600px" }} />
+
+Feel free to spend some time playing around. You will notice all these possible
+combinations of this one question are collapsed into one. There is one Shared
+`Explanation` for all the variations, and on the `Variants` tab you can see all
+the possible variations.
+
+The advantage of this approach is that you will be able to flag this variant as
+seen without having to go over all the possible variations. Alternatively, if
+you struggle with this question, you can practice it as many times as you want,
+without finding yourself "memorizing and moving on".
+
+## What's next?
+
+Chair Flight is still in its early stages, and we have a lot of work to do. Most
+of our questions are still not grouped into variants, and most of them are lacking
+explanations. We are also working on a new question editor that will allow you to
+create questions and variants in a more intuitive way.
+
+In the next few weeks we will be working on these features and publishing updates
+in this blog as we go.
+
+**See you in the skies!**
 
 export default ({ children }) => (
   <BlogPageLayout meta={meta}>{children}</BlogPageLayout>

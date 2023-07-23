@@ -31,11 +31,7 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
 }) => {
   return (
     <>
-      <AppHead
-        linkDescription={dedent`
-
-                `}
-      />
+      <AppHead linkDescription={dedent``} />
       <Header>
         <AppHeaderMenu />
       </Header>

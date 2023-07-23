@@ -1,4 +1,4 @@
-import { type inferAsyncReturnType } from '@trpc/server';
+import { type inferAsyncReturnType } from "@trpc/server";
 import { getQuestionBank } from "@chair-flight/question-bank/providers";
 
 export const createContext = async () => {

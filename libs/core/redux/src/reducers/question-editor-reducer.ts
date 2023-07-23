@@ -40,7 +40,7 @@ const getEntryOrThrow = ({
   );
 };
 
-const deepCopy = <T>(a: T): T => JSON.parse(JSON.stringify(a));
+const deepCopy = <T>(a: T): T => JSON.parse(JSON.stringify(a)) as T;
 
 export const questionEditorReducer = createReducer<QuestionEditor>(
   {

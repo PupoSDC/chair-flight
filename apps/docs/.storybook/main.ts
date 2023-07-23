@@ -16,9 +16,7 @@ const config: StorybookConfig = {
     "@nx/react/plugins/storybook",
     "storybook-dark-mode",
   ],
-  staticDirs: [
-    '../public'
-  ],
+  staticDirs: ["../public"],
   typescript: {
     reactDocgen: "react-docgen-typescript",
     skipBabel: true,

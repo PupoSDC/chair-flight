@@ -1,4 +1,4 @@
-import { Fragment, forwardRef, useMemo, useState } from "react";
+import { Fragment, forwardRef, useEffect, useMemo, useState } from "react";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
 import {
@@ -8,7 +8,6 @@ import {
   Link,
   List,
   ListItem,
-  SheetProps,
   Tab,
   TabList,
   TabPanel,
@@ -20,9 +19,6 @@ import {
   tabListClasses,
   tabPanelClasses,
 } from "@mui/joy";
-import type { 
-  QuestionTemplateId 
-} from "@chair-flight/base/types";
 import {
   getQuestion,
   getQuestionPreview,
@@ -30,15 +26,17 @@ import {
   getRandomShuffler,
 } from "@chair-flight/core/app";
 import {
-  DrawingPoints,
   ImageViewer,
   MarkdownClient,
   QuestionMultipleChoice,
+} from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
+import type { QuestionTemplateId } from "@chair-flight/base/types";
+import type {
+  DrawingPoints,
   QuestionMultipleChoiceStatus,
 } from "@chair-flight/react/components";
-import {
-  trpc,
-} from "@chair-flight/trpc/client";
+import type { SheetProps } from "@mui/joy";
 
 const StyledTabs = styled(Tabs)`
   --Tabs-gap: 0px;
@@ -107,70 +105,86 @@ const Fab = styled(Button)`
   width: ${({ theme }) => theme.spacing(5)};
   height: ${({ theme }) => theme.spacing(5)};
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   bottom: ${({ theme }) => theme.spacing(2)};
   right: ${({ theme }) => theme.spacing(2)};
-
-  ${({ theme }) => theme.breakpoints.up("md")} {
-    position: absolute;
-  }
 `;
 
 const shuffle = getRandomShuffler("123");
 
-export type TabName = "question" | "explanation" | "meta" | "preview";
-
-export type QuestionReviewRef = HTMLDivElement & {
-  change?: (name: TabName) => void;
-};
+type TabName = "question" | "explanation" | "meta" | "preview";
 
 export type QuestionReviewProps = {
-  title?: string;
   questionId: QuestionTemplateId;
-  variantId: string;
-  seed: string;
-  onNavigateToVariant: (variantId: string, seed: string) => void;
-} & Pick<SheetProps, "sx" | "className" | "style" | "variant" | "component">;
+  title?: string;
+  variantId?: string;
+  seed?: string;
+  onQuestionChanged?: (args: { variantId: string; seed: string }) => void;
+} & Pick<SheetProps, "sx" | "className" | "style" | "component">;
 
-export const QuestionReview = forwardRef<
-  QuestionReviewRef,
-  QuestionReviewProps
->(
+/**
+ * Self contained component to review a question.
+ * Component can be left uncontrolled, but the seed and variantId if supplied
+ * make the component controlled.
+ *
+ * Uses TRPC to fetch the question data. Data is immutable
+ */
+export const QuestionReview = forwardRef<HTMLDivElement, QuestionReviewProps>(
   (
-    { title, questionId, variantId, seed, onNavigateToVariant, ...props },
+    {
+      title,
+      questionId,
+      variantId: initialVariantId,
+      seed: initialSeed,
+      onQuestionChanged,
+      ...props
+    },
     ref,
   ) => {
-    const { data, isLoading } = trpc.questionReview.getQuestion.useQuery({
-      questionId,
-    });
-    const [value, setValue] = useState<TabName>("question");
+    const [currentTab, setCurrentTab] = useState<TabName>("question");
+    const [seed, setSeed] = useState<string>(initialSeed ?? getRandomId());
+    const [variantId, setVariantId] = useState(initialVariantId);
     const [selectedOption, setSelectedOption] = useState<string>();
+    const [currentAnnex, setCurrentAnnex] = useState<string>();
     const [selectedStatus, setSelectedStatus] =
       useState<QuestionMultipleChoiceStatus>("in-progress");
-    const [currentAnnex, setCurrentAnnex] = useState<string>();
     const [annexDrawings, setAnnexDrawings] = useState<
       Record<string, DrawingPoints[]>
     >({});
 
-    if (!data) return undefined;
-
-    const { questionTemplate, learningObjectives } = data;
-    const allVariants = Object.values(questionTemplate.variants);
-    const variant = questionTemplate.variants[variantId];
+    const { data, isLoading } = trpc.questionReview.getQuestion.useQuery({
+      questionId,
+    });
 
     const question = useMemo(
-      () => getQuestion(data?.questionTemplate, { variantId, seed }),
-      [variantId, questionTemplate, seed],
+      () =>
+        data ? getQuestion(data?.questionTemplate, { variantId, seed }) : null,
+      [variantId, data, seed],
     );
 
     const randomizedOptions = useMemo(
-      () => getRandomShuffler(seed ?? "")(question.options),
-      [question.options, seed],
+      () => (question ? getRandomShuffler(seed ?? "")(question.options) : []),
+      [question, seed],
     );
 
-    if (ref && typeof ref === "object" && ref.current) {
-      ref.current.change = (name) => setValue(name);
-    }
+    const allVariantsMap = data?.questionTemplate?.variants ?? {};
+    const allVariantsArray = Object.values(allVariantsMap);
+    const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
+    const learningObjectives = data?.learningObjectives ?? [];
+
+    const navigateToVariant = (variantId: string, seed: string) => {
+      setSelectedOption(undefined);
+      setVariantId(variantId);
+      setCurrentTab("question");
+      setSelectedStatus("in-progress");
+      setSeed(seed);
+      onQuestionChanged?.({ seed, variantId });
+    };
+
+    useEffect(() => {
+      if (initialSeed) setSeed(initialSeed);
+      if (initialVariantId) setVariantId(initialVariantId);
+    }, [initialSeed, initialVariantId]);
 
     return (
       <>
@@ -178,8 +192,8 @@ export const QuestionReview = forwardRef<
           ref={ref}
           size="sm"
           as={Tabs}
-          value={value}
-          onChange={(e, v) => setValue(v as TabName)}
+          value={currentTab}
+          onChange={(e, v) => setCurrentTab(v as TabName)}
           variant="outlined"
           defaultValue={"question"}
           {...props}
@@ -203,36 +217,43 @@ export const QuestionReview = forwardRef<
               Variants
             </Tab>
           </TabList>
-          <TabPanel value={"question"}>
-            <QuestionMultipleChoice
-              sx={{ p: 0 }}
-              question={question.question}
-              correctOptionId={question.correctOptionId}
-              selectedOptionId={selectedOption}
-              status={selectedStatus}
-              disabled={selectedStatus === "show-result"}
-              options={randomizedOptions.map((option) => ({
-                optionId: option.id,
-                text: option.text,
-              }))}
-              onOptionClicked={(optionId) => {
-                setSelectedOption(optionId);
-                setSelectedStatus("show-result");
-              }}
-              annexes={question.annexes}
-              onAnnexClicked={(annex) => setCurrentAnnex(annex)}
-            />
-            <Fab
-              children={<RefreshIcon />}
-              onClick={() => {
-                onNavigateToVariant(shuffle(allVariants)[0].id, getRandomId());
-                setSelectedOption(undefined);
-                setSelectedStatus("in-progress");
-              }}
-            />
+          <TabPanel value={"question"} sx={{ mb: 8 }}>
+            {question && (
+              <>
+                <QuestionMultipleChoice
+                  sx={{ p: 0 }}
+                  question={question.question}
+                  correctOptionId={question.correctOptionId}
+                  selectedOptionId={selectedOption}
+                  status={selectedStatus}
+                  disabled={selectedStatus === "show-result"}
+                  options={randomizedOptions.map((option) => ({
+                    optionId: option.id,
+                    text: option.text,
+                  }))}
+                  onOptionClicked={(optionId) => {
+                    setSelectedOption(optionId);
+                    setSelectedStatus("show-result");
+                  }}
+                  annexes={question.annexes}
+                  onAnnexClicked={(annex) => setCurrentAnnex(annex)}
+                />
+                <Fab
+                  children={<RefreshIcon />}
+                  onClick={() =>
+                    navigateToVariant(
+                      shuffle(allVariantsArray)[0].id,
+                      getRandomId(),
+                    )
+                  }
+                />
+              </>
+            )}
           </TabPanel>
           <TabPanel value={"explanation"}>
-            <MarkdownClient>{question.explanation}</MarkdownClient>
+            {question && (
+              <MarkdownClient>{question.explanation}</MarkdownClient>
+            )}
           </TabPanel>
           <TabPanel value={"meta"}>
             <Typography level="h4" sx={{ mt: 2 }}>
@@ -268,7 +289,7 @@ export const QuestionReview = forwardRef<
             <Typography level="h4">External References</Typography>
             <Divider />
             <List aria-label="basic-list">
-              {variant.externalIds
+              {variant?.externalIds
                 .map((id) => ({ name: id, href: "" }))
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((ref) => (
@@ -282,21 +303,22 @@ export const QuestionReview = forwardRef<
             </List>
           </TabPanel>
           <TabPanel value={"preview"}>
-            {allVariants.map(({ id }) => {
-              const preview = getQuestionPreview(questionTemplate, id);
-              return (
-                <Fragment key={id}>
-                  <MarkdownClient children={preview} />
-                  <Button
-                    sx={{ mb: 2, mx: "auto" }}
-                    children="Generate This Variant"
-                    variant="outlined"
-                    onClick={() => onNavigateToVariant(id, getRandomId())}
-                  />
-                  <Divider />
-                </Fragment>
-              );
-            })}
+            {data &&
+              allVariantsArray.map(({ id }) => {
+                const preview = getQuestionPreview(data.questionTemplate, id);
+                return (
+                  <Fragment key={id}>
+                    <MarkdownClient children={preview} />
+                    <Button
+                      sx={{ mb: 2, mx: "auto" }}
+                      children="Generate This Variant"
+                      variant="outlined"
+                      onClick={() => navigateToVariant(id, getRandomId())}
+                    />
+                    <Divider />
+                  </Fragment>
+                );
+              })}
           </TabPanel>
         </StyledTabs>
         <ImageViewer

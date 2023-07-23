@@ -1,6 +1,5 @@
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { createNewQuestionPr } from "@chair-flight/core/app";
 import { apiHandler } from "@chair-flight/next/server";
 import { questionSchema } from "@chair-flight/question-bank/schemas";
 import type {
@@ -24,14 +23,6 @@ export const getQuestionTemplate = async (
     questionTemplate.learningObjectives,
   );
   return { questionTemplate, learningObjectives };
-};
-
-export const getQuestionTemplateFromApi = async (
-  questionId: QuestionTemplateId,
-): Promise<GetQuestionTemplateResponse> => {
-  const response = await fetch(`/api/questions/${questionId}`);
-  const json = await response.json();
-  return json;
 };
 
 export const updateQuestionTemplateLocally = async (
@@ -72,7 +63,8 @@ export default apiHandler(
       if (isLocal) {
         return await updateQuestionTemplateLocally(question, questionBank);
       } else {
-        return await createNewQuestionPr(req.body.question);
+        throw new Error("Not implemented");
+        //return await createNewQuestionPr(req.body.question);
       }
     },
   },

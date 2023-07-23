@@ -1,20 +1,20 @@
-import { httpBatchLink } from '@trpc/client';
-import { createTRPCNext } from '@trpc/next';
-import { createTRPCMsw } from 'msw-trpc'
+import { httpBatchLink } from "@trpc/client";
+import { createTRPCNext } from "@trpc/next";
+import { createTRPCMsw } from "msw-trpc";
+import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
 
 function getBaseUrl() {
-  if (typeof window !== 'undefined') 
-    return '';
-  if (process.env['VERCEL_URL']) 
-    return `https://${process.env.VERCEL_URL}`;
-  else
-    return `http://localhost:${process.env.PORT ?? 3000}`;
+  const VERCEL_URL = getEnvVariableOrDefault("VERCEL_URL", "");
+  const PORT = getEnvVariableOrDefault("PORT", "3000");
+  if (typeof window !== "undefined") return "";
+  if (VERCEL_URL) return `https://${VERCEL_URL}`;
+  else return `http://localhost:${PORT}`;
 }
 
 export const trpc = createTRPCNext<AppRouter>({
   ssr: false,
-  config(opts) {
+  config() {
     return {
       links: [
         httpBatchLink({
@@ -25,4 +25,4 @@ export const trpc = createTRPCNext<AppRouter>({
   },
 });
 
-export const trpcMsw = createTRPCMsw<AppRouter>() 
+export const trpcMsw = createTRPCMsw<AppRouter>();
