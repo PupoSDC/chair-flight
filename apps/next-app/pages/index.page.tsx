@@ -1,5 +1,4 @@
 import { Box, styled, GlobalStyles } from "@mui/joy";
-import dedent from "ts-dedent";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
   AppHead,
@@ -61,11 +60,11 @@ export const IndexPage: NextPage<IndexPageProps> = ({
 }) => (
   <>
     <AppHead
-      linkDescription={dedent`
-        Chair Flight is a community driven Aviation Question Bank built by students for students.
-        Now available for Alpha testing. Explore ${numberOfQuestions} questions, create tests, and
-        improve your knowledge... for free!
-      `}
+      linkDescription={[
+        "Chair Flight is a community driven Aviation Question Bank built by students for students. ",
+        "Now available for Alpha testing. Explore ${numberOfQuestions} questions, create tests, and ",
+        "improve your knowledge... for free!",
+      ].join("")}
     />
     <Header />
     <StyledMain>

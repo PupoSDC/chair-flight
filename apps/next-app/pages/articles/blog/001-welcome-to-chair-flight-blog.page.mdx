@@ -2,7 +2,6 @@ import { useState } from "react";
 import { default as Link } from "next/link";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { Sheet } from "@mui/joy";
-import { default as dedent } from "ts-dedent";
 import { QuestionReview } from "@chair-flight/next/containers";
 import { QuestionMultipleChoice } from "@chair-flight/react/components";
 import { BlogPageLayout } from "./_blog-page.layout";
@@ -11,11 +10,11 @@ export const meta = {
   title: "Welcome to Chair Flight Blog!",
   linkTitle: "Welcome to Chair Flight Blog!",
   file: "001-welcome-to-chair-flight-blog",
-  description: dedent`
-    "This blog will be used to share technical improvements, new features, and 
-    other updates about Chair Flight. There will also be articles oriented to make 
-    your journey as a flight student as smooth as possible.
-  `,
+  description: [
+    "This blog will be used to share technical improvements, new features, and ",
+    "other updates about Chair Flight. There will also be articles oriented to ",
+    "make your journey as a flight student as smooth as possible.",
+  ].join(""),
   tags: ["Technical"],
   author: "PupoSDC",
   isoDate: "2023-07-23T20:26:01.746Z",
@@ -96,7 +95,7 @@ incorrect. For this simple question it's possible to write 18 variations!
 That's 16 times more seeing this question than you really need to see it. In
 Chair Flight this question variants is combined into a single question:
 
-<QuestionReview questionId={"QYFPA3CY4E"} sx={{ maxHeight: "600px" }} />
+<QuestionReview questionId={"QYFPA3CY4E"} sx={{ maxHeight: "620px" }} />
 
 Feel free to spend some time playing around. You will notice all these possible
 combinations of this one question are collapsed into one. There is one Shared
