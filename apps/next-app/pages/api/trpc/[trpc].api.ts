@@ -11,3 +11,7 @@ export default trpcNext.createNextApiHandler({
     };
   },
 });
+
+export const config = {
+  runtime: "edge",
+};
