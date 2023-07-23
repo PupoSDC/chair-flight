@@ -4,11 +4,13 @@ import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
 
 function getBaseUrl() {
-  const VERCEL_URL = getEnvVariableOrDefault("VERCEL_URL", "");
-  const PORT = getEnvVariableOrDefault("PORT", "3000");
   if (typeof window !== "undefined") return "";
+
+  const VERCEL_URL = getEnvVariableOrDefault("VERCEL_URL", "");
   if (VERCEL_URL) return `https://${VERCEL_URL}`;
-  else return `http://localhost:${PORT}`;
+
+  const PORT = getEnvVariableOrDefault("PORT", "3000");
+  return `http://localhost:${PORT}`;
 }
 
 export const trpc = createTRPCNext<AppRouter>({

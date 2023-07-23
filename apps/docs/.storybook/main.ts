@@ -34,6 +34,10 @@ const config: StorybookConfig = {
             path.dirname(__dirname),
             "../../libs/react/components/src",
           ),
+          "@chair-flight/trpc/mock": path.resolve(
+            path.dirname(__dirname),
+            "../../libs/trpc/mock/src",
+          ),
           "@chair-flight/trpc/client": path.resolve(
             path.dirname(__dirname),
             "../../libs/trpc/client/src",
