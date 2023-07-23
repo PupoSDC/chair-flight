@@ -40,7 +40,7 @@ export const ExamNavigation: FunctionComponent<ExamNavigationProps> = ({
             actions.navigateToTestQuestion({
               testId: test.id,
               questionId,
-            })
+            }),
           );
           closeDrawer();
         }}

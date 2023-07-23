@@ -44,7 +44,7 @@ let initializationWork: Promise<void> | undefined;
 
 export const searchQuestions = async (
   questionBank: QuestionBankRepository,
-  searchArgs: SearchQuery
+  searchArgs: SearchQuery,
 ): Promise<SearchQuestionsResults> => {
   if (initializationWork) await initializationWork;
   if (searchIndex.documentCount === 0) {
@@ -58,7 +58,7 @@ export const searchQuestions = async (
           externalIds: variant.externalIds.join(", "),
           numberOfVariants: Object.values(question.variants).length,
           text: getQuestionPreview(question, variant.id),
-        }))
+        })),
       );
       await searchIndex.addAllAsync(itemsToPush);
     })();
@@ -87,7 +87,7 @@ export const searchQuestions = async (
       });
       return sum;
     },
-    []
+    [],
   );
   return {
     results: results.slice(page * pageSize, (page + 1) * pageSize),

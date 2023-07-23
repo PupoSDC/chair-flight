@@ -31,7 +31,7 @@ export const QuestionVariantPreview = forwardRef<
       component,
       onClick,
     },
-    ref
+    ref,
   ) => (
     <Sheet
       ref={ref}
@@ -107,5 +107,5 @@ export const QuestionVariantPreview = forwardRef<
         )}
       </Box>
     </Sheet>
-  )
+  ),
 );

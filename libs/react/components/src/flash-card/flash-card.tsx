@@ -73,5 +73,5 @@ export const FlashCard = forwardRef<HTMLDivElement, FlashCardProps>(
         </FlipCard>
       </Box>
     );
-  }
+  },
 );

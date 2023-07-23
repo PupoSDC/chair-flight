@@ -12,5 +12,5 @@ export type SafeBoxProps = Omit<BoxProps, "component">;
 export const SafeBox = forwardRef<HTMLDivElement, SafeBoxProps>(
   (props, ref) => {
     return <MuiBox {...props} ref={ref} component="div" />;
-  }
+  },
 );

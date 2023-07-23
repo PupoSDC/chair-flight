@@ -31,12 +31,12 @@ export const QuestionPreview: FunctionComponent<QuestionPreviewProps> = ({
 
   const variantId = useMemo(
     () => shuffler(Object.values(questionTemplate.variants))[0].id,
-    [shuffler, questionTemplate.variants]
+    [shuffler, questionTemplate.variants],
   );
 
   const question = useMemo(
     () => getQuestion(questionTemplate, { variantId, seed }),
-    [variantId, questionTemplate, seed]
+    [variantId, questionTemplate, seed],
   );
 
   const options = question.options.map((option) => ({

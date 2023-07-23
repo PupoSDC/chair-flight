@@ -17,5 +17,5 @@ export default apiHandler(
   {
     isAvailable: true,
     requiresAuthentication: false,
-  }
+  },
 );

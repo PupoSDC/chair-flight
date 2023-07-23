@@ -127,7 +127,7 @@ export const QuestionBoxReview = forwardRef<
       externalReferences = [],
       ...others
     },
-    ref
+    ref,
   ) => {
     const [value, setValue] = useState<TabName>("question");
 
@@ -213,5 +213,5 @@ export const QuestionBoxReview = forwardRef<
         <TabPanel value={"preview"}>{preview}</TabPanel>
       </StyledTabs>
     );
-  }
+  },
 );

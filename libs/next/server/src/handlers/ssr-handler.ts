@@ -10,7 +10,7 @@ import type {
 import type { ParsedUrlQuery } from "querystring";
 
 const handleError = <T>(
-  error: unknown
+  error: unknown,
 ): GetServerSidePropsResult<T> | undefined => {
   if (error instanceof NotFoundError) {
     return {
@@ -23,7 +23,7 @@ const handleError = <T>(
 export const ssrHandler = <
   Props extends Record<string, unknown>,
   Params extends ParsedUrlQuery = ParsedUrlQuery,
-  Preview extends PreviewData = PreviewData
+  Preview extends PreviewData = PreviewData,
 >(
   handler: ({
     context,
@@ -31,7 +31,7 @@ export const ssrHandler = <
   }: {
     context: GetServerSidePropsContext<Params, Preview>;
     questionBank: QuestionBankRepository;
-  }) => Promise<GetServerSidePropsResult<Props>>
+  }) => Promise<GetServerSidePropsResult<Props>>,
 ): GetServerSideProps<Props, Params, Preview> => {
   const questionBank = getQuestionBank();
 

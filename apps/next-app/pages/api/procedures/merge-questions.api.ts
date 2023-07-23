@@ -29,10 +29,10 @@ export default apiHandler(
 
       const allQuestions = await questionBank.getAllQuestionTemplates();
       const sourceQuestion = allQuestions.find(
-        (q) => q.id === sourceQuestionId
+        (q) => q.id === sourceQuestionId,
       );
       const destinationQuestion = allQuestions.find(
-        (q) => q.id === destinationQuestionId
+        (q) => q.id === destinationQuestionId,
       );
 
       if (!sourceQuestion || !destinationQuestion) {
@@ -63,5 +63,5 @@ export default apiHandler(
   {
     isAvailable: true,
     requiresAuthentication: false,
-  }
+  },
 );

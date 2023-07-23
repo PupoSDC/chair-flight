@@ -32,7 +32,7 @@ export const mergeQuestionsWithHighSimilarity = async ({
   for (const subject of subjects) {
     const embeddings: Record<string, number[]> = {};
     const relevantTemplates = templates.filter((template) =>
-      template.learningObjectives[0].startsWith(subject)
+      template.learningObjectives[0].startsWith(subject),
     );
 
     let processed = 0;
@@ -45,7 +45,7 @@ export const mergeQuestionsWithHighSimilarity = async ({
             model: "text-embedding-ada-002",
             input: getQuestionPreview(
               template,
-              Object.keys(template.variants)[0]
+              Object.keys(template.variants)[0],
             ),
           });
           if (!embedding) continue;
@@ -53,16 +53,16 @@ export const mergeQuestionsWithHighSimilarity = async ({
           console.log(
             `[${subject}] processed ${++processed} / ${
               relevantTemplates.length
-            }`
+            }`,
           );
         }
-      })
+      }),
     );
 
     const relevantMatches: [string, string, number][] = [];
     for (let i = 0; i < relevantTemplates.length; i++) {
       console.log(
-        `[${subject}] comparing ${i + 1} / ${relevantTemplates.length}`
+        `[${subject}] comparing ${i + 1} / ${relevantTemplates.length}`,
       );
 
       for (let j = i + 1; j < relevantTemplates.length; j++) {
@@ -71,7 +71,7 @@ export const mergeQuestionsWithHighSimilarity = async ({
 
         const similarity = cosineSimilarity(
           embeddings[template1.id],
-          embeddings[template2.id]
+          embeddings[template2.id],
         );
 
         if (similarity > 0.98) {
@@ -87,7 +87,7 @@ export const mergeQuestionsWithHighSimilarity = async ({
 
       templates.splice(
         templates.findIndex((q) => q.id === template2Id),
-        1
+        1,
       );
 
       Object.values(template1.variants)[0].externalIds = [

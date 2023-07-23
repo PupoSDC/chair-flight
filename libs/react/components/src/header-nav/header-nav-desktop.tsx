@@ -44,7 +44,11 @@ export const HeaderNavDesktop = forwardRef<HTMLDivElement, HeaderNavProps>(
           <Link
             key={item.href}
             onMouseOver={(e) => {
-              if (!item.subItems?.length) return;
+              if (!item.subItems?.length) {
+                setAnchorEl(null);
+                setSelectedIndex(0);
+                return;
+              }
               setAnchorEl(e.target as HTMLElement);
               setSelectedIndex(i);
               clearTimeout(timeoutRef.current);
@@ -82,5 +86,5 @@ export const HeaderNavDesktop = forwardRef<HTMLDivElement, HeaderNavProps>(
         </StyledMenu>
       </StyledBox>
     );
-  }
+  },
 );

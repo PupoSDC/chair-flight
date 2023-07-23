@@ -57,16 +57,17 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
 
   const submitQuestion = async () => {
     toast.promise(
-      axios.put<PutResponseSchema, void, PutBodySchema>(
-        `/api/questions/${question.id}`,
-        {
-          question: editedQuestion,
-        }
-      ),
+      axios.put<
+        PutResponseSchema,
+        AxiosResponse<PutResponseSchema>,
+        PutBodySchema
+      >(`/api/questions/${question.id}`, {
+        question: editedQuestion,
+      }),
       {
         loading: "Saving...",
         error: "Failed to save",
-        success: (response: AxiosResponse<PutResponseSchema>) => {
+        success: (response) => {
           router.push(`/questions/${question.id}`);
           dispatch(actions.deleteEditorState({ questionId: question.id }));
           return (
@@ -78,7 +79,7 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
             </Typography>
           );
         },
-      }
+      },
     );
   };
 
@@ -159,7 +160,7 @@ export const getServerSideProps = ssrHandler<EditQuestionPageProps>(
         question,
       },
     };
-  }
+  },
 );
 
 export default EditQuestionPage;

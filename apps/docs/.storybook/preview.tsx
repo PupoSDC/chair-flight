@@ -1,14 +1,29 @@
-import { useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
 import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
 import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
+import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
+import { trpc } from "@chair-flight/trpc/client";
 import { theme } from "../../../libs/react/components/src/theme";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
+
+initialize({
+  onUnhandledRequest: ({ method, url }) => {
+    if (url.pathname.startsWith("/trpc")) {
+      console.error(`Unhandled ${method} request to ${url}.
+
+        This exception has been only logged in the console, however, it's strongly recommended to resolve this error as you don't want unmocked data in Storybook stories.
+
+        If you wish to mock an error response, please refer to this guide: https://mswjs.io/docs/recipes/mocking-error-responses
+      `);
+    }
+  },
+});
 
 const ToggleDarkMode = ({}) => {
   const isDarkMode = useDarkMode();
@@ -76,7 +91,12 @@ const preview: Preview = {
         <Story />
       </CssVarsProvider>
     ),
+    (Story) => {
+      const Component = trpc.withTRPC(Story);
+      return <Component />;
+    },
   ],
+  loaders: [mswLoader],
 };
 
 export default preview;

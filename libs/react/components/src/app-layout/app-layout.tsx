@@ -7,8 +7,8 @@ const Main = styled(
   forwardRef<HTMLDivElement, BoxProps>(
     ({ component = "main", ...props }, ref) => (
       <Box component={component} ref={ref} {...props} />
-    )
-  )
+    ),
+  ),
 )`
   width: 100%;
   display: flex;
@@ -28,8 +28,8 @@ const MainGrid = styled(
   forwardRef<HTMLDivElement, GridProps>(
     ({ container = true, spacing = { xs: 0, sm: 2 }, ...props }, ref) => (
       <MuiGrid container={container} spacing={spacing} ref={ref} {...props} />
-    )
-  )
+    ),
+  ),
 )`
   height: 100%;
   width: 100%;
@@ -54,7 +54,7 @@ const MainGridFixedColumn = styled(MuiGrid)`
 const MainGridScrollableColumn = styled(
   forwardRef<HTMLDivElement, GridProps>(({ xs = true, ...props }, ref) => (
     <MuiGrid xs={xs} ref={ref} {...props} />
-  ))
+  )),
 )`
   height: 100%;
   display: flex;
@@ -81,7 +81,9 @@ const BackgroundImageContainer = styled(Box)`
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: -1;
   & > img {
+    user-select: none;
     width: 600px;
     max-width: 600px;
     height: auto;

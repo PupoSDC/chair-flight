@@ -55,7 +55,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
 export const getStaticProps = staticHandler<NewTestPageProps>(
   async ({ questionBank }) => {
     const subjects = (await questionBank.getAllSubjects()).filter(
-      (lo) => !["034", "082"].includes(lo.id)
+      (lo) => !["034", "082"].includes(lo.id),
     );
 
     return {
@@ -63,7 +63,7 @@ export const getStaticProps = staticHandler<NewTestPageProps>(
         subjects,
       },
     };
-  }
+  },
 );
 
 export default NewTestPage;

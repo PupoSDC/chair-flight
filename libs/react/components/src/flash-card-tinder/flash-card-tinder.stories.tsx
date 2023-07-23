@@ -1,9 +1,9 @@
-import type { FunctionComponent } from "react";
 import { Global, css } from "@emotion/react";
 import { Box } from "@mui/joy";
 import { Playground as FlashCard } from "../flash-card/flash-card.stories";
 import { FlashCardTinder } from "./flash-card-tinder";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { FunctionComponent } from "react";
 
 type Story = StoryObj<typeof FlashCardTinder>;
 

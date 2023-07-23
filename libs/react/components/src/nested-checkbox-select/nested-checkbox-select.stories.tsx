@@ -17,22 +17,23 @@ export const Playground: Story = {
         items={items}
         onChange={(...val) => {
           args.onChange?.(...val);
-          setItems((oldItems) =>
-            oldItems?.map((oldItem) => ({
-              ...oldItem,
-              checked: (() => {
-                if (oldItem.id === val[0].id) return !oldItem.checked;
-                return oldItem.checked;
-              })(),
-              children: oldItem.children.map((oldChild) => ({
-                ...oldChild,
+          setItems(
+            (oldItems) =>
+              oldItems?.map((oldItem) => ({
+                ...oldItem,
                 checked: (() => {
                   if (oldItem.id === val[0].id) return !oldItem.checked;
-                  if (oldChild.id === val[0].id) return !oldChild.checked;
-                  return oldChild.checked;
+                  return oldItem.checked;
                 })(),
+                children: oldItem.children.map((oldChild) => ({
+                  ...oldChild,
+                  checked: (() => {
+                    if (oldItem.id === val[0].id) return !oldItem.checked;
+                    if (oldChild.id === val[0].id) return !oldChild.checked;
+                    return oldChild.checked;
+                  })(),
+                })),
               })),
-            }))
           );
         }}
       />

@@ -26,7 +26,7 @@ export const ExampleLoginForm: StoryFn = () => {
     z.object({
       userName: z.string().email(),
       password: z.string().min(8),
-    })
+    }),
   );
   const defaultValues = {
     userName: "",

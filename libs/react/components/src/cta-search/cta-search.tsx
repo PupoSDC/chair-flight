@@ -53,7 +53,7 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
           clearTimeout(timer);
         };
       },
-      [value, search, onChange]
+      [value, search, onChange],
     );
 
     useEffect(
@@ -62,7 +62,7 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
           setIsDebouncing(false);
         }
       },
-      [value, search]
+      [value, search],
     );
 
     const isLoading = isDebouncing || loading;
@@ -100,5 +100,5 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
         </FormLabel>
       </FormControl>
     );
-  }
+  },
 );

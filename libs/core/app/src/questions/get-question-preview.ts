@@ -6,18 +6,18 @@ import type {
 } from "@chair-flight/base/types";
 
 const getQuestionVariantSimplePreview = (
-  variant: QuestionVariantSimple
+  variant: QuestionVariantSimple,
 ): string => {
   const options = variant.options.map((option) =>
     option.correct
       ? `- :white_check_mark: ${option.text}`
-      : `- :x: ${option.text}`
+      : `- :x: ${option.text}`,
   );
   return `${variant.question}\n\n${options.join("\n")}`;
 };
 
 const getQuestionVariantOneTwoPreview = (
-  variant: QuestionVariantOneTwo
+  variant: QuestionVariantOneTwo,
 ): string => {
   const correctOptions = [
     ...variant.firstCorrectStatements,
@@ -47,7 +47,7 @@ export const getVariantPreview = (variant: QuestionVariant) => {
 
 export const getQuestionPreview = (
   question: QuestionTemplate,
-  variantId: string
+  variantId: string,
 ) => {
   const variant = question.variants[variantId];
   if (!variant) throw new Error("Variant not found");

@@ -8,7 +8,7 @@ async function wait(time: number) {
 }
 
 async function* automaticType(
-  steps: (string | number)[]
+  steps: (string | number)[],
 ): AsyncGenerator<string> {
   let i = 1;
   let lastStep = steps[0] as string;

@@ -14,5 +14,5 @@ export const setTestMakerNumberOfQuestions = createAction<{
 }>("test-maker/number-of-questions-set");
 
 export const setTestMakerTestMode = createAction<{ mode: TestMode }>(
-  "test-maker/mode-set"
+  "test-maker/mode-set",
 );

@@ -60,7 +60,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
     },
     {
       ssr: false,
-    }
+    },
   );
 
   const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
@@ -75,7 +75,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
       const newResults = data?.results.map((result) => result.result) ?? [];
       setResults((results) => [...results, ...newResults]);
     },
-    [data]
+    [data],
   );
 
   useEffect(
@@ -85,7 +85,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
       setResults([]);
       setPage(0);
     },
-    [search]
+    [search],
   );
 
   return (
@@ -158,7 +158,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                         {Object.keys(CourseNames).map((courseName) => (
                           <td key={courseName}>
                             {result.courses.includes(
-                              courseName as CourseName
+                              courseName as CourseName,
                             ) && <CheckIcon />}
                           </td>
                         ))}

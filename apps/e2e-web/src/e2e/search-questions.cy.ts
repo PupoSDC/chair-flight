@@ -32,7 +32,7 @@ describe("Search questions", { scrollBehavior: false }, () => {
           cy.get(preview).first().should("contain", QUESTION_ID);
           cy.get(preview).first().find("a:visible").click();
           cy.url().should("include", `/questions/${QUESTION_ID}`);
-        }
+        },
       );
 
       it("is possible to access all components of a question", () => {

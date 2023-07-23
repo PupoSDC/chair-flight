@@ -72,7 +72,7 @@ const StyledSheet = styled(Sheet)`
 export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
   (
     { open = false, variant = "outlined", onClose, className, ...props },
-    ref
+    ref,
   ) => {
     const [delayedOpen, setDelayedOpen] = useState(false);
     useEffect(() => {
@@ -93,5 +93,5 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
         />
       </Modal>
     );
-  }
+  },
 );

@@ -29,7 +29,7 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
     useState<QuestionVariantType>("simple");
   const dispatch = useAppDispatch();
   const question = useAppSelector(
-    (state) => state.questionEditor.questions[questionId]?.currentVersion
+    (state) => state.questionEditor.questions[questionId]?.currentVersion,
   );
 
   if (!question) return null;
@@ -39,7 +39,7 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
       actions.updateQuestionLearningObjectives({
         questionId,
         learningObjectives,
-      })
+      }),
     );
   };
 
@@ -48,7 +48,7 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
       actions.updateQuestionExplanation({
         questionId,
         explanation,
-      })
+      }),
     );
   };
 
@@ -57,7 +57,7 @@ export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
       actions.createNewQuestionVariant({
         questionId,
         variant: getNewVariant(newVariantType),
-      })
+      }),
     );
   };
 

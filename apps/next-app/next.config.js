@@ -37,6 +37,6 @@ module.exports = withNx(
           destination: `/storybook/${source}/:path*`,
         }));
       },
-    })
-  )
+    }),
+  ),
 );

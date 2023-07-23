@@ -54,29 +54,13 @@ const handleError = (res: NextApiResponse, error: unknown) => {
 
 export const apiHandler = (
   handlers: Handlers,
-  options: HandlerOptions
+  options: HandlerOptions,
 ): NextApiHandler => {
   return async (req, res) => {
     const start = performance.now();
     const method = req.method?.toLowerCase();
     const callback = handlers[method as "get"];
     const questionBank = getQuestionBank();
-
-    // const getFirebaseAdmin = async () => {
-    //   if (!firebaseAdmin) {
-    //     const { getFirebaseAdmin } = await import("@cf/config/firebaseAdmin");
-    //     firebaseAdmin = await getFirebaseAdmin();
-    //   }
-    //   return firebaseAdmin;
-    // };
-
-    //const getCurrentUserToken = async () => {
-    //  if (!currentUser) {
-    //    const { getCurrentUserToken } = await import("./getCurrentUserToken");
-    //    currentUser = await getCurrentUserToken(req, getFirebaseAdmin);
-    //  }
-    //  return currentUser as DecodedIdToken;
-    //};
 
     try {
       const { isAvailable, requiresAuthentication } = options;

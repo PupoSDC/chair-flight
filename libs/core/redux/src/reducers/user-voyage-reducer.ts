@@ -15,5 +15,5 @@ export const userVoyageReducer = createReducer<UserVoyageReducer>(
       const { flag, value } = action.payload;
       store.flags[flag] = value;
     });
-  }
+  },
 );

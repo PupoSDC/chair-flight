@@ -138,11 +138,11 @@ export const getStaticProps = staticHandler<FlashCardsIndexPageProps>(
               .map((s) => s[0].toUpperCase() + s.slice(1))
               .join(" "),
             numberOfCards: items.length,
-          })
+          }),
         ),
       },
     };
-  }
+  },
 );
 
 export default QuestionsIndexPage;

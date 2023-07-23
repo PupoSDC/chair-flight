@@ -54,6 +54,10 @@ const items: HeaderNavProps["items"] = [
       },
     ],
   },
+  {
+    title: "Blog",
+    href: "/articles/blog",
+  },
 ];
 
 export const AppHeaderMenu: FunctionComponent<{

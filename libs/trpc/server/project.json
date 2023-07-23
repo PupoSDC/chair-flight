@@ -1,0 +1,22 @@
+{
+  "name": "next-trpc",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/trpc/server/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/trpc/server/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/trpc/server/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": []
+}

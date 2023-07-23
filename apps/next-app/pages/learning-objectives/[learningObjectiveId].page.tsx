@@ -64,7 +64,7 @@ export const LearningObjectivePage: FunctionComponent<
                       {Object.keys(CourseNames).map((courseName) => (
                         <td key={courseName} className="course-name">
                           {learningObjective.courses.includes(
-                            courseName as CourseName
+                            courseName as CourseName,
                           ) && <CheckIcon />}
                         </td>
                       ))}
@@ -90,10 +90,10 @@ export const getServerSideProps = ssrHandler<LearningObjectivePageProps>(
       "learningObjectiveId"
     ] as string;
     const learningObjective = await questionBank.getLearningObjective(
-      learningObjectiveId
+      learningObjectiveId,
     );
     const questionTemplates = await questionBank.getQuestionTemplates(
-      learningObjective.questions
+      learningObjective.questions,
     );
     const questions = questionTemplates.map<QuestionPreview>((template) => {
       const allVariants = Object.values(template.variants);
@@ -117,7 +117,7 @@ export const getServerSideProps = ssrHandler<LearningObjectivePageProps>(
         questions,
       },
     };
-  }
+  },
 );
 
 export default LearningObjectivePage;

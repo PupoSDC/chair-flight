@@ -32,7 +32,7 @@ describe("Create Test", () => {
           .first()
           .invoke("val", "");
         cy.contains("label", "Number of Questions").type(
-          String(NUMBER_OF_QUESTIONS)
+          String(NUMBER_OF_QUESTIONS),
         );
         cy.get("button").contains("Start!").click();
         cy.url().should("include", "/exam");

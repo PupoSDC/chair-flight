@@ -77,7 +77,7 @@ export const EditVariantFormSnippetOneTwo: FunctionComponent = () => {
                     onClick={() =>
                       setValue(
                         `variant.${statementType}`,
-                        statements.filter((_, i) => i !== index)
+                        statements.filter((_, i) => i !== index),
                       )
                     }
                   />

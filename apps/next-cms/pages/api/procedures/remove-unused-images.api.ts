@@ -10,14 +10,14 @@ export default apiHandler(
       ).reduce<string[]>((acc, template) => {
         Object.values(template.variants).forEach((variant) => {
           variant.annexes.forEach((annex) =>
-            acc.push(annex.split("/").pop() ?? "")
+            acc.push(annex.split("/").pop() ?? ""),
           );
         });
         return acc;
       }, []);
 
       fs.readdirSync(
-        path.join(process.cwd(), "libs", "question-bank", "content", "media")
+        path.join(process.cwd(), "libs", "question-bank", "content", "media"),
       )
         .filter((image) => !imagesInQuestions.includes(image))
         .forEach((image) =>
@@ -28,9 +28,9 @@ export default apiHandler(
               "question-bank",
               "content",
               "media",
-              image
-            )
-          )
+              image,
+            ),
+          ),
         );
 
       return "ok";
@@ -39,5 +39,5 @@ export default apiHandler(
   {
     isAvailable: true,
     requiresAuthentication: false,
-  }
+  },
 );

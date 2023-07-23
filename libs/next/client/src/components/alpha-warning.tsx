@@ -6,7 +6,7 @@ import type { FunctionComponent } from "react";
 
 export const AlphaWarning: FunctionComponent = () => {
   const [, setHasSeenAlphaFlag, getHasSeenAlphaFlag] = useUserVoyageFlag(
-    "has-seen-alpha-warning"
+    "has-seen-alpha-warning",
   );
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export const AlphaWarning: FunctionComponent = () => {
         `,
         {
           duration: 10000,
-        }
+        },
       );
     }, 3000);
   }, [getHasSeenAlphaFlag, setHasSeenAlphaFlag]);

@@ -108,7 +108,7 @@ export const getStaticProps = staticHandler<IndexPageProps>(
     const allFlashCardsArray = Object.values(allFlashCards).flat();
     const numberOfFlashCards = allFlashCardsArray.length;
     const flashCard = allFlashCardsArray.find(
-      (f) => f.id === "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0"
+      (f) => f.id === "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0",
     );
     if (!flashCard) throw new NotFoundError("Missing showcase flash card!");
 
@@ -120,7 +120,7 @@ export const getStaticProps = staticHandler<IndexPageProps>(
         flashCard,
       },
     };
-  }
+  },
 );
 
 export default IndexPage;

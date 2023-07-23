@@ -31,7 +31,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
   private allFlashCards: Record<string, FlashCardContent[]> = {};
 
   private async getAllQuestionsFromLocalFs(
-    dirPath: string = path.join(cwd(), this.contentPath, "questions")
+    dirPath: string = path.join(cwd(), this.contentPath, "questions"),
   ): Promise<QuestionTemplate[]> {
     const files = fs.readdirSync(dirPath);
     const questions: QuestionTemplate[] = [];
@@ -42,7 +42,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
         questions.push(...(await this.getAllQuestionsFromLocalFs(filePath)));
       } else if (path.extname(filePath) === ".json") {
         const jsonData = JSON.parse(
-          fs.readFileSync(filePath, "utf-8")
+          fs.readFileSync(filePath, "utf-8"),
         ) as QuestionTemplateJson[];
         const jsonDataWithSrcLocation = jsonData.map((q) => ({
           ...q,
@@ -57,14 +57,14 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
   }
 
   private async getAllFlashCardsFromLocalFs(
-    dirPath: string = path.join(cwd(), this.contentPath, "flash-cards")
+    dirPath: string = path.join(cwd(), this.contentPath, "flash-cards"),
   ): Promise<Record<string, FlashCardContent[]>> {
     const files = fs.readdirSync(dirPath);
     const flashCards: Record<string, FlashCardContent[]> = {};
     for (const file of files) {
       const filePath = path.join(dirPath, file);
       const jsonData = JSON.parse(
-        fs.readFileSync(filePath, "utf-8")
+        fs.readFileSync(filePath, "utf-8"),
       ) as FlashCardContent[];
       flashCards[file.replace(".json", "")] = jsonData;
     }
@@ -101,7 +101,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
     const fileName = path.join(
       cwd(),
       this.contentPath,
-      "external/tk-syllabus.xlsx"
+      "external/tk-syllabus.xlsx",
     );
     const questions = await this.getAllQuestionsFromLocalFs();
     const workbook = XLSX.readFile(fileName);
@@ -250,7 +250,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
         return acc;
       },
-      []
+      [],
     );
   }
 
@@ -288,7 +288,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
       fs.writeFileSync(
         path.join(basePath, dir, `${file}.json`),
-        JSON.stringify(questions, null, 2)
+        JSON.stringify(questions, null, 2),
       );
     });
 
@@ -305,7 +305,7 @@ export class QuestionBankLocalRepository implements QuestionBankRepository {
 
   async writeFlashCards(): Promise<void> {
     throw new UnimplementedError(
-      "Writing flash cards to FS is not implemented"
+      "Writing flash cards to FS is not implemented",
     );
   }
 }

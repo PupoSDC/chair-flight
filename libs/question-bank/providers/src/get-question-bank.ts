@@ -19,7 +19,7 @@ export const getQuestionBank = (): QuestionBankRepository => {
         break;
       default:
         throw new ConfigurationError(
-          `Question Bank Provider not found. QUESTION_BANK_PROVIDER=${qbProvider}`
+          `Question Bank Provider not found. QUESTION_BANK_PROVIDER=${qbProvider}`,
         );
     }
   }

@@ -7,7 +7,7 @@ import type { FunctionComponent } from "react";
 export const PreviewTests: FunctionComponent = () => {
   const tests = useAppSelector((store) => store.testProgress.tests);
   const testsAsList = Object.values(tests).sort(
-    (a, b) => b.createdAtEpochMs - a.createdAtEpochMs
+    (a, b) => b.createdAtEpochMs - a.createdAtEpochMs,
   );
 
   const entries = [
@@ -74,7 +74,7 @@ export const PreviewTests: FunctionComponent = () => {
                     test.questions.reduce(
                       (s, q) =>
                         s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
-                      0
+                      0,
                     ) / test.questions.length
                   }
                 />

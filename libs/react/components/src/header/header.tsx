@@ -119,7 +119,7 @@ const HeaderContext = createContext<{
  * An header component that can, in theory, be used for all our pages.
  *
  * It includes a context, that can be accessed via `useHeaderContext`, so that
- * you can control the drawer component from withing the drawer components.
+ * you can control the drawer component from within the drawer components.
  *
  * Drawer becomes available only on mobile screens (breakpoint `md`) and if
  * a children is provided to this component.
@@ -134,7 +134,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
       children,
       ...boxProps
     },
-    ref
+    ref,
   ) => {
     const [isMounted, setIsMounted] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -151,7 +151,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
         closeDrawer,
         canDrawerBeOpened,
       }),
-      [closeDrawer, canDrawerBeOpened]
+      [closeDrawer, canDrawerBeOpened],
     );
 
     useEffect(() => setIsMounted(true), []);
@@ -198,7 +198,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
         </Drawer>
       </HeaderContext.Provider>
     );
-  }
+  },
 );
 
 export const useHeaderContext = () => useContext(HeaderContext);

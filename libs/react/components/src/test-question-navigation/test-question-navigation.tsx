@@ -112,14 +112,14 @@ export const TestQuestionNavigation = forwardRef<
       onQuestionClicked,
       ...boxProps
     },
-    ref
+    ref,
   ) => {
     const window = useWindowSize();
     const ulRef = useRef<HTMLUListElement>(null);
     const totalPages = Math.ceil(questions.length / pageSize);
     const currentQuestionIndex = Math.max(
       questions.findIndex((q) => q.id === currentId),
-      0
+      0,
     );
     const currentQuestionPage = Math.floor(currentQuestionIndex / pageSize);
     const [currentPage, setCurrentPage] = useState(currentQuestionPage);
@@ -187,7 +187,7 @@ export const TestQuestionNavigation = forwardRef<
                         onClick={() =>
                           onQuestionClicked?.(
                             item.id,
-                            currentPage * pageSize + i
+                            currentPage * pageSize + i,
                           )
                         }
                         variant={item.selectedOption ? "solid" : "outlined"}
@@ -252,5 +252,5 @@ export const TestQuestionNavigation = forwardRef<
         )}
       </StyledBox>
     );
-  }
+  },
 );

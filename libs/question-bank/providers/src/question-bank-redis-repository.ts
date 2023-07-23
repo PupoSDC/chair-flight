@@ -37,7 +37,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
 
   private chunk = <T>(arr: T[], size: number) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-      arr.slice(i * size, i * size + size)
+      arr.slice(i * size, i * size + size),
     );
 
   async getAllQuestionTemplates() {
@@ -48,11 +48,11 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
             .fill(0)
             .map(async (_, i) => {
               const compressedQuestions = await this.redis.get(
-                `${QUESTION_COMPRESSED}${i}`
+                `${QUESTION_COMPRESSED}${i}`,
               );
               const string = await decompress(compressedQuestions as string);
               return JSON.parse(string) as QuestionTemplate[];
-            })
+            }),
         )
       ).flat();
       this.allQuestionTemplatesMap = this.allQuestionTemplates.reduce<
@@ -73,11 +73,11 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   }
 
   async getQuestionTemplates(
-    questionIds: string[]
+    questionIds: string[],
   ): Promise<QuestionTemplate[]> {
     if (!this.allQuestionTemplates.length) {
       return this.redis.mget<QuestionTemplate[]>(
-        ...questionIds.map((id) => `${QUESTION}${id}`)
+        ...questionIds.map((id) => `${QUESTION}${id}`),
       );
     }
     return this.allQuestionTemplates.filter((q) => questionIds.includes(q.id));
@@ -86,7 +86,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   async getAllLearningObjectives() {
     if (!this.allLearningObjectives.length) {
       const learningObjectivesList = (await this.redis.get(
-        LEARNING_OBJECTIVE_LIST
+        LEARNING_OBJECTIVE_LIST,
       )) as string;
       const learningObjectiveIds = learningObjectivesList
         .split(",")
@@ -95,8 +95,9 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
       this.allLearningObjectives = (
         await Promise.all(
           chunks.map(
-            (chunk) => this.redis.mget(...chunk) as Promise<LearningObjective[]>
-          )
+            (chunk) =>
+              this.redis.mget(...chunk) as Promise<LearningObjective[]>,
+          ),
         )
       ).flat();
       this.allLearningObjectivesMap = this.allLearningObjectives.reduce<
@@ -113,7 +114,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
     return (
       this.allLearningObjectivesMap[id] ??
       (this.redis.get(
-        `${LEARNING_OBJECTIVE}${id}`
+        `${LEARNING_OBJECTIVE}${id}`,
       ) as Promise<LearningObjective>)
     );
   }
@@ -122,7 +123,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
     return (
       this.allLearningObjectives.filter((lo) => ids.includes(lo.id)) ??
       (this.redis.mget(
-        ...ids.map((id) => `${LEARNING_OBJECTIVE}${id}`)
+        ...ids.map((id) => `${LEARNING_OBJECTIVE}${id}`),
       ) as Promise<LearningObjective[]>)
     );
   }
@@ -130,7 +131,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   async getAllSubjects() {
     if (!this.subjects.length) {
       const subjects = await this.redis.get<LearningObjectiveSummary[]>(
-        SUBJECTS
+        SUBJECTS,
       );
       if (!subjects) throw new NotFoundError("Subjects not found");
       this.subjects = subjects;
@@ -159,19 +160,19 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
               sum[`${QUESTION}${question.id}`] = question;
               return sum;
             },
-            {}
-          )
+            {},
+          ),
         );
         completedEntries += block.length;
         console.log(
-          `Migrated questions ${completedEntries}/${questions.length}`
+          `Migrated questions ${completedEntries}/${questions.length}`,
         );
-      })
+      }),
     );
 
     const questionBlocks2 = this.chunk(
       questions,
-      Math.ceil(questions.length / COMPRESS_QUESTION_BLOCKS_NUMBER)
+      Math.ceil(questions.length / COMPRESS_QUESTION_BLOCKS_NUMBER),
     );
 
     let completedEntries2 = 0;
@@ -181,9 +182,9 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
         await this.redis.set(`${QUESTION_COMPRESSED}${i}`, textBlock);
         completedEntries2 += 1;
         console.log(
-          `Migrated questions blocks ${completedEntries2}/${questionBlocks2.length}`
+          `Migrated questions blocks ${completedEntries2}/${questionBlocks2.length}`,
         );
-      })
+      }),
     );
   }
 
@@ -198,14 +199,14 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
               sum[`${LEARNING_OBJECTIVE}${lo.id}`] = lo;
               return sum;
             },
-            {}
-          )
+            {},
+          ),
         );
         completedEntries += block.length;
         console.log(
-          `Migrated learning Objectives ${completedEntries}/${learningObjectives.length}`
+          `Migrated learning Objectives ${completedEntries}/${learningObjectives.length}`,
         );
-      })
+      }),
     );
     const learningObjectiveList = learningObjectives.map((q) => q.id).join(",");
     await this.redis.set(LEARNING_OBJECTIVE_LIST, learningObjectiveList);
@@ -216,7 +217,7 @@ export class QuestionBankRedisRepository implements QuestionBankRepository {
   }
 
   async writeFlashCards(
-    flashCards: Record<string, FlashCardContent[]>
+    flashCards: Record<string, FlashCardContent[]>,
   ): Promise<void> {
     await this.redis.set(FLASH_CARDS, flashCards);
     console.log(`Migrated Flash Cards`);
