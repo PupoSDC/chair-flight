@@ -35,7 +35,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const { query, replace } = useRouter();
   const seed = (query["seed"] ?? initialSeed) as string;
   const variantId = (query["variantId"] ?? initialVariantId) as string;
-  const { data } = trpc.questionReview.getQuestion.useQuery({
+  const { data } = trpc.questions.getQuestion.useQuery({
     questionId: initialQuestionId,
   });
 
@@ -126,7 +126,7 @@ export const getServerSideProps: GetServerSideProps<QuestionPageProps> = async (
 ) => {
   const helper = await getTrpcHelper();
   const initialQuestionId = context.params?.["questionId"] as string;
-  const { questionTemplate } = await helper.questionReview.getQuestion.fetch({
+  const { questionTemplate } = await helper.questions.getQuestion.fetch({
     questionId: initialQuestionId,
   });
   const variantIdFromQuery = context.query?.["variantId"] as string;

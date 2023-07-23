@@ -31,7 +31,7 @@ const meta: Meta<typeof QuestionReview> = {
   },
   parameters: {
     msw: [
-      trpcMsw.questionReview.getQuestion.query((req, res, ctx) => {
+      trpcMsw.questions.getQuestion.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({

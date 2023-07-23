@@ -152,7 +152,7 @@ export const QuestionReview = forwardRef<HTMLDivElement, QuestionReviewProps>(
       Record<string, DrawingPoints[]>
     >({});
 
-    const { data, isLoading } = trpc.questionReview.getQuestion.useQuery({
+    const { data, isLoading } = trpc.questions.getQuestion.useQuery({
       questionId,
     });
 
