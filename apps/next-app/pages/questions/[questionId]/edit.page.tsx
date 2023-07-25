@@ -11,18 +11,14 @@ import {
   useAppSelector,
 } from "@chair-flight/core/redux";
 import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
-import { ssrHandler } from "@chair-flight/next/server";
 import { AppLayout, Header, toast } from "@chair-flight/react/components";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
 import { EditQuestionBody } from "./components/edit-question-body";
 import { EditVariant } from "./components/edit-variant";
 import { EditVariantModal } from "./components/edit-variant-modal";
-import type {
-  PutBodySchema,
-  PutResponseSchema,
-} from "../../api/questions/[questionId].api";
 import type { QuestionTemplate } from "@chair-flight/base/types";
 import type { AxiosResponse } from "axios";
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 
 type EditQuestionPageProps = {
   question: QuestionTemplate;
@@ -151,16 +147,20 @@ export const EditQuestionPage: NextPage<EditQuestionPageProps> = ({
   );
 };
 
-export const getServerSideProps = ssrHandler<EditQuestionPageProps>(
-  async ({ context, questionBank }) => {
-    const questionId = context.params?.["questionId"] as string;
-    const question = await questionBank.getQuestionTemplate(questionId);
-    return {
-      props: {
-        question,
-      },
-    };
-  },
-);
+export const getServerSideProps: GetServerSideProps<
+  EditQuestionPageProps
+> = async ({ params }) => {
+  const questionId = params?.["questionId"] as string;
+  const helper = await getTrpcHelper();
+  const { questionTemplate } = await helper.questions.getQuestion.fetch({
+    questionId,
+  });
+
+  return {
+    props: {
+      question: questionTemplate,
+    },
+  };
+};
 
 export default EditQuestionPage;

@@ -1,17 +1,25 @@
 import { default as KeyboardArrowRightRoundedIcon } from "@mui/icons-material/KeyboardArrowRightRounded";
 import { Box, Button, Link, List } from "@mui/joy";
 import { QuestionVariantPreview } from "@chair-flight/react/components";
-import type { QuestionPreview } from "@chair-flight/core/app";
 import type { ListProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
+type QuestionPreview = {
+  questionId: string;
+  variantId: string;
+  text: string;
+  numberOfVariants: number;
+  learningObjectives: string[];
+  externalIds: string[];
+};
+
 export type QuestionPreviewListProps = {
   questions: QuestionPreview[];
-} & Pick<ListProps, "sx">;
+} & ListProps;
 
 export const QuestionPreviewList: FunctionComponent<
   QuestionPreviewListProps
-> = ({ questions, sx }) => {
+> = ({ questions, sx, ...otherListProps }) => {
   return (
     <List
       sx={{
@@ -22,6 +30,7 @@ export const QuestionPreviewList: FunctionComponent<
         overflow: "scroll",
         ...sx,
       }}
+      {...otherListProps}
     >
       {questions.map((result) => (
         <Box

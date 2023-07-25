@@ -6,11 +6,11 @@ import {
   AppHead,
   AppHeaderMenu,
 } from "@chair-flight/next/client";
-import { staticHandler } from "@chair-flight/next/server";
 import { AppLayout, Header } from "@chair-flight/react/components";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
 import { TestCreation } from "./components/test-creation";
 import type { LearningObjectiveSummary } from "@chair-flight/base/types";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 
 type NewTestPageProps = {
   subjects: LearningObjectiveSummary[];
@@ -52,18 +52,16 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
   );
 };
 
-export const getStaticProps = staticHandler<NewTestPageProps>(
-  async ({ questionBank }) => {
-    const subjects = (await questionBank.getAllSubjects()).filter(
-      (lo) => !["034", "082"].includes(lo.id),
-    );
-
-    return {
-      props: {
-        subjects,
-      },
-    };
-  },
-);
+export const getStaticProps: GetStaticProps<NewTestPageProps> = async () => {
+  const helper = await getTrpcHelper();
+  const subjects = (await helper.tests.getAllSubjects.fetch()).filter(
+    (lo) => !["034", "082"].includes(lo.id),
+  );
+  return {
+    props: {
+      subjects,
+    },
+  };
+};
 
 export default NewTestPage;

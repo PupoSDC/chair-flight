@@ -1,25 +1,29 @@
+import type { NextPage } from "next";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Box, Grid, Sheet, Table, Typography } from "@mui/joy";
-import { CourseNames, getQuestionPreview } from "@chair-flight/core/app";
-import {
-  AppHead,
-  AppHeaderMenu,
-  QuestionPreviewList,
-} from "@chair-flight/next/client";
-import { ssrHandler } from "@chair-flight/next/server";
+import { CourseNames } from "@chair-flight/core/app";
+import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import { AppLayout, Header } from "@chair-flight/react/components";
-import type { CourseName, LearningObjective } from "@chair-flight/base/types";
-import type { QuestionPreview } from "@chair-flight/core/app";
-import type { FunctionComponent } from "react";
+import { trpc } from "@chair-flight/trpc/client";
+import { ssrHandler } from "@chair-flight/trpc/server";
+import type { CourseName } from "@chair-flight/base/types";
 
-type LearningObjectivePageProps = {
-  learningObjective: LearningObjective;
-  questions: QuestionPreview[];
+type LearningObjectivePageParams = {
+  learningObjectiveId: string;
 };
 
-export const LearningObjectivePage: FunctionComponent<
-  LearningObjectivePageProps
-> = ({ questions, learningObjective }) => {
+type LearningObjectivePageProps = {
+  learningObjectiveId: string;
+};
+
+export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
+  learningObjectiveId,
+}) => {
+  const [{ learningObjective }] =
+    trpc.learningObjectives.getLearningObjective.useSuspenseQuery({
+      learningObjectiveId,
+    });
+
   return (
     <>
       <AppHead />
@@ -75,49 +79,30 @@ export const LearningObjectivePage: FunctionComponent<
             </Grid>
           </Sheet>
         </Box>
+        {/** 
         <QuestionPreviewList
-          questions={questions}
           sx={{ overflow: "initial" }}
-        />
+        />*/}
       </AppLayout.Main>
     </>
   );
 };
 
-export const getServerSideProps = ssrHandler<LearningObjectivePageProps>(
-  async ({ context, questionBank }) => {
-    const learningObjectiveId = context.params?.[
-      "learningObjectiveId"
-    ] as string;
-    const learningObjective = await questionBank.getLearningObjective(
+export const getServerSideProps = ssrHandler<
+  LearningObjectivePageProps,
+  LearningObjectivePageParams
+>(async ({ helper, params }) => {
+  const { learningObjectiveId } = params;
+
+  await helper.learningObjectives.getLearningObjective.prefetch({
+    learningObjectiveId,
+  });
+
+  return {
+    props: {
       learningObjectiveId,
-    );
-    const questionTemplates = await questionBank.getQuestionTemplates(
-      learningObjective.questions,
-    );
-    const questions = questionTemplates.map<QuestionPreview>((template) => {
-      const allVariants = Object.values(template.variants);
-      const variant = allVariants[0];
-      const text = getQuestionPreview(template, variant.id);
-      const externalIds = [
-        ...new Set(allVariants.flatMap((v) => v.externalIds)),
-      ];
-      return {
-        questionId: template.id,
-        variantId: variant.id,
-        text: text,
-        learningObjectives: template.learningObjectives,
-        externalIds: externalIds,
-        numberOfVariants: allVariants.length,
-      };
-    });
-    return {
-      props: {
-        learningObjective,
-        questions,
-      },
-    };
-  },
-);
+    },
+  };
+});
 
 export default LearningObjectivePage;

@@ -24,7 +24,7 @@
       "options": {
         "commands": [
           "tsc -p libs/core/app/tsconfig.lib.json --noEmit",
-          "tsc -p libs/core/app/tsconfig.spec.json --noEmit"
+          "tsc -p libs/core/app/tsconfig.test.json --noEmit"
         ]
       }
     }

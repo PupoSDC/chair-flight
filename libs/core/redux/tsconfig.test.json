@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "composite": true,
+  "include": ["vite.config.ts", "src/**/*.test.*"],
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  }
+}

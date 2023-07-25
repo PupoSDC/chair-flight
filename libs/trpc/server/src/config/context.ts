@@ -1,9 +1,45 @@
-import { type inferAsyncReturnType } from "@trpc/server";
-import { getQuestionBank } from "@chair-flight/question-bank/providers";
+import type { QuestionBankRepository} from "@chair-flight/base/types";
+import {
+  getAllQuestionsFromRedis,
+  getQuestionsFromRedis,
+  getAllLearningObjectivesFromRedis,
+  getLearningObjectivesFromRedis,
+  getAllSubjectsFromRedis,
+  getAllFlashCardsFromRedis,
+} from "@chair-flight/question-bank/redis";
 
-export const createContext = async () => {
-  const questionBank = getQuestionBank();
-  return { questionBank };
+export type Context = {
+  questionBank: QuestionBankRepository;
 };
 
-export type Context = inferAsyncReturnType<typeof createContext>;
+export const createContext = async (): Promise<Context> => ({
+  questionBank: {
+    getQuestionTemplate: async (questionId: string) => {
+      return (await getQuestionsFromRedis([questionId]))[0];
+    },
+    getQuestionTemplates: async (questionIds: string[]) => {
+      return getQuestionsFromRedis(questionIds);
+    },
+    getAllQuestionTemplates: async () => {
+      return getAllQuestionsFromRedis();
+    },
+    getLearningObjective: async (learningObjectiveId: string) => {
+      return (await getLearningObjectivesFromRedis([learningObjectiveId]))[0];
+    },
+    getLearningObjectives: async (learningObjectiveIds: string[]) => {
+      return getLearningObjectivesFromRedis(learningObjectiveIds);
+    },
+    getAllLearningObjectives: async () => {
+      return getAllLearningObjectivesFromRedis();
+    },
+    getAllSubjects: async () => {
+      return getAllSubjectsFromRedis();
+    },
+    getFlashCards: async (collection: string) => {
+      return (await getAllFlashCardsFromRedis())[collection];
+    },
+    getAllFlashCards: async () => {
+      return getAllFlashCardsFromRedis();
+    },
+  },
+});

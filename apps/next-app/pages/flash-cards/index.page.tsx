@@ -15,13 +15,13 @@ import {
   AppHeaderMenu,
   FLASH_CARDS_DESC,
 } from "@chair-flight/next/client";
-import { staticHandler } from "@chair-flight/next/server";
 import { Header, AppLayout } from "@chair-flight/react/components";
-import type { NextPage } from "next";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
+import type { GetStaticProps, NextPage } from "next";
 
 type FlashCardsIndexPageProps = {
   flashCardCollections: Array<{
-    id: string;
+    collectionId: string;
     name: string;
     numberOfCards: number;
   }>;
@@ -64,7 +64,7 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
               sm={6}
               md={4}
               lg={3}
-              key={fc.id}
+              key={fc.collectionId}
               sx={{ pb: { xs: 1, sm: 0 }, pt: 2 }}
             >
               <Card sx={{ height: 250 }}>
@@ -105,13 +105,13 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
                       children="View All"
                       variant="outlined"
                       component={Link}
-                      href={`/flash-cards/${fc.id}`}
+                      href={`/flash-cards/${fc.collectionId}`}
                     />
                     <Button
                       sx={{ mr: 1 }}
                       children="Start!"
                       component={Link}
-                      href={`/flash-cards/${fc.id}/start`}
+                      href={`/flash-cards/${fc.collectionId}/start`}
                     />
                   </Box>
                 </CardContent>
@@ -124,25 +124,18 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
   );
 };
 
-export const getStaticProps = staticHandler<FlashCardsIndexPageProps>(
-  async ({ questionBank }) => {
-    const flashCards = await questionBank.getAllFlashCards();
+export const getStaticProps: GetStaticProps<
+  FlashCardsIndexPageProps
+> = async () => {
+  const helper = await getTrpcHelper();
+  const { flashCardCollections } =
+    await helper.flashCards.getFlashCardCollections.fetch();
 
-    return {
-      props: {
-        flashCardCollections: Object.entries(flashCards).map(
-          ([name, items]) => ({
-            id: name,
-            name: name
-              .split("-")
-              .map((s) => s[0].toUpperCase() + s.slice(1))
-              .join(" "),
-            numberOfCards: items.length,
-          }),
-        ),
-      },
-    };
-  },
-);
+  return {
+    props: {
+      flashCardCollections: flashCardCollections,
+    },
+  };
+};
 
 export default QuestionsIndexPage;

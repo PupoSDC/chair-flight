@@ -1,6 +1,11 @@
-export class NotFoundError extends Error {
+import { TRPCError } from "@trpc/server";
+
+export class NotFoundError extends TRPCError {
   constructor(message?: string) {
-    super(message);
+    super({
+      code: "NOT_FOUND",
+      message: message ?? "Not found",
+    });
     this.name = NotFoundError.name;
   }
 }
@@ -32,6 +37,13 @@ export class MissingEnvVariableError extends Error {
   constructor(envVariableName: string) {
     super(`Missing required env variable: ${envVariableName}`);
     this.name = MissingEnvVariableError.name;
+  }
+}
+
+export class InvalidEnvVariableError extends Error {
+  constructor(envVariableName: string, value: string) {
+    super(`Invalid required env variable: ${envVariableName} -> ${value}`);
+    this.name = InvalidEnvVariableError.name;
   }
 }
 

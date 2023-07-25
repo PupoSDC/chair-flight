@@ -11,13 +11,6 @@
         "lintFilePatterns": ["libs/question-bank/content/**/*.ts"]
       }
     },
-    "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/question-bank/content"],
-      "options": {
-        "passWithNoTests": true
-      }
-    },
     "build": {
       "executor": "nx:run-commands",
       "options": {

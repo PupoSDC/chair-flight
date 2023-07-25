@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTheme } from "@mui/joy";
-import { default as useAxios } from "axios-hooks";
 import {
   AppHead,
   AppHeaderMenu,
@@ -11,40 +10,49 @@ import {
   AppLayout,
   CtaSearch,
   Ups,
-  useWindowSize,
+  useMediaQuery,
 } from "@chair-flight/react/components";
-import type { SearchQuestionsResults } from "@chair-flight/core/app";
+import { trpc } from "@chair-flight/trpc/client";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
-const QuestionsIndexPage: NextPage = () => {
-  const window = useWindowSize();
+type QuestionsIndexPageProps = {
+  numberOfQuestions: number;
+};
+
+const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
+  numberOfQuestions,
+}) => {
   const theme = useTheme();
-  const [search, setSearch] = useState<string>("");
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [search, setSearch] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
 
-  const [{ data, loading, error }] = useAxios<SearchQuestionsResults>(
-    {
-      url: "/api/search/questions",
-      params: {
+  const { data, isLoading, isError, fetchNextPage } =
+    trpc.search.searchQuestions.useInfiniteQuery(
+      {
         q: search,
-        pageSize: window.width > theme.breakpoints.values.md ? 24 : 12,
-        page: 0,
+        limit: isMobile ? 12 : 24,
       },
-    },
-    {
-      ssr: false,
-      manual: !search,
-    },
-  );
+      {
+        getNextPageParam: (lastPage) => lastPage.nextCursor,
+        initialCursor: 0,
+        enabled: hasSearched,
+      },
+    );
 
-  const hasResults = hasSearched && (data?.totalResults ?? 0) > 0;
-  const hasError = !loading && error;
-  const hasNoResults = hasSearched && !loading && !hasResults && !hasError;
-  const results = data?.results.map((d) => d.result);
+  const hasResults = !isLoading && !isError && data?.pages[0].totalResults > 0;
+  const hasNoResults = !isLoading && !isError && !hasResults && !!search.length;
+  const results = (data?.pages ?? [])
+    .flatMap((p) => p.items)
+    .map((d) => d.result);
 
-  useEffect(() => {
-    if (data?.results) setHasSearched(true);
-  }, [search, data]);
+  const onScroll = (e: React.UIEvent<HTMLUListElement, UIEvent>) => {
+    const target = e.target as HTMLUListElement;
+    const { scrollHeight, scrollTop, clientHeight } = target;
+    const distance = scrollHeight - scrollTop - clientHeight;
+    if (distance < 500 && !isLoading) fetchNextPage();
+  };
 
   return (
     <>
@@ -55,15 +63,22 @@ const QuestionsIndexPage: NextPage = () => {
       <AppLayout.Main sx={{ overflow: "hidden", pb: 0 }}>
         <CtaSearch
           value={search}
-          loading={loading}
-          style={{ marginTop: hasSearched ? 15 : -75 }}
-          onChange={(value) => setSearch(value)}
+          loading={hasSearched && isLoading}
+          style={{ marginTop: hasResults ? 15 : -75 }}
+          onChange={(value) => {
+            setSearch(value);
+            setHasSearched(true);
+          }}
           sx={{ margin: "auto" }}
           placeholder="search Questions..."
-          numberOfResults={data?.totalResults}
+          numberOfResults={
+            hasResults ? data?.pages[0].totalResults : numberOfQuestions
+          }
         />
-        {hasResults && <QuestionPreviewList questions={results ?? []} />}
-        {hasError && <Ups message="Error fetching questions" color="danger" />}
+        {hasResults && (
+          <QuestionPreviewList questions={results} onScroll={onScroll} />
+        )}
+        {isError && <Ups message="Error fetching questions" color="danger" />}
         {hasNoResults && <Ups message="No questions found" />}
       </AppLayout.Main>
     </>
@@ -71,8 +86,14 @@ const QuestionsIndexPage: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const helper = await getTrpcHelper();
+
+  const [{ numberOfQuestions }] = await Promise.all([
+    helper.questions.getNumberOfQuestions.fetch(),
+  ]);
+
   return {
-    props: {},
+    props: { numberOfQuestions },
   };
 };
 

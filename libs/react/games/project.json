@@ -12,14 +12,6 @@
         "lintFilePatterns": ["libs/react/games/src/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/react/games"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/react/games"
-      }
-    },
     "tsc": {
       "executor": "nx:run-commands",
       "options": {

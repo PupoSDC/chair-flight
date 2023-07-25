@@ -16,8 +16,12 @@ import {
   QuestionVariantPreview,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
-import type { GetServerSideProps, NextPage } from "next";
+import { ssrHandler } from "@chair-flight/trpc/server";
+import type { NextPage } from "next";
+
+type QuestionPageParams = {
+  questionId: string;
+};
 
 type QuestionPageProps = {
   initialVariantId: string;
@@ -32,9 +36,10 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   initialQuestionId,
   initialSeed,
 }) => {
-  const { query, replace } = useRouter();
+  const { query } = useRouter();
   const seed = (query["seed"] ?? initialSeed) as string;
   const variantId = (query["variantId"] ?? initialVariantId) as string;
+
   const { data } = trpc.questions.getQuestion.useQuery({
     questionId: initialQuestionId,
   });
@@ -43,12 +48,6 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const allVariantsMap = data?.questionTemplate?.variants ?? {};
   const allVariantsArray = Object.values(allVariantsMap);
   const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
-
-  const navigateToVariant = (variantId: string, seed: string) => {
-    replace({ query: { ...query, variantId, seed } }, undefined, {
-      shallow: true,
-    });
-  };
 
   return (
     <>
@@ -121,19 +120,22 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps<QuestionPageProps> = async (
-  context,
-) => {
-  const helper = await getTrpcHelper();
-  const initialQuestionId = context.params?.["questionId"] as string;
-  const { questionTemplate } = await helper.questions.getQuestion.fetch({
-    questionId: initialQuestionId,
-  });
+export const getServerSideProps = ssrHandler<
+  QuestionPageProps,
+  QuestionPageParams
+>(async ({ params, helper, context }) => {
+  const { questionId } = params;
   const variantIdFromQuery = context.query?.["variantId"] as string;
+  const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
+  const initialQuestionId = questionId;
+
+  const { questionTemplate } = await helper.questions.getQuestion.fetch({
+    questionId,
+  });
+
   const initialVariantId = questionTemplate.variants[variantIdFromQuery]
     ? variantIdFromQuery
     : shuffle(Object.values(questionTemplate.variants))[0].id;
-  const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
 
   return {
     props: {
@@ -143,6 +145,6 @@ export const getServerSideProps: GetServerSideProps<QuestionPageProps> = async (
       trpcState: helper.dehydrate(),
     },
   };
-};
+});
 
 export default QuestionPage;

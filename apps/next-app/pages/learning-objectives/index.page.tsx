@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import React from "react";
+import React, { Fragment } from "react";
+import { useState } from "react";
 import { NoSsr } from "@mui/base";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import {
@@ -15,7 +15,6 @@ import {
   styled,
   useTheme,
 } from "@mui/joy";
-import { default as useAxios } from "axios-hooks";
 import { CourseNames } from "@chair-flight/core/app";
 import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
@@ -25,9 +24,10 @@ import {
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
-import type { CourseName, LearningObjective } from "@chair-flight/base/types";
-import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
-import type { GetStaticProps, NextPage } from "next";
+import { trpc } from "@chair-flight/trpc/client";
+import { ssrHandler } from "@chair-flight/trpc/server";
+import type { CourseName } from "@chair-flight/base/types";
+import type { NextPage } from "next";
 
 const TdWithMarkdown = styled("td")`
   margin: ${({ theme }) => theme.spacing(0.5, 0)};
@@ -42,51 +42,32 @@ const TdWithMarkdown = styled("td")`
 `;
 
 export const LearningObjectivesIndexPage: NextPage = () => {
-  const lastSearch = useRef("");
   const theme = useTheme();
-  const [search, setSearch] = useState("");
-  const [page, setPage] = useState(0);
-  const [results, setResults] = useState<LearningObjective[]>([]);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [search, setSearch] = useState("");
 
-  const [{ data, loading }] = useAxios<SearchLearningObjectivesResults>(
-    {
-      url: "/api/search/learning-objectives",
-      params: {
+  const { data, isLoading, fetchNextPage } =
+    trpc.search.searchLearningObjectives.useInfiniteQuery(
+      {
         q: search,
-        pageSize: 20,
-        page: page,
+        limit: 20,
       },
-    },
-    {
-      ssr: false,
-    },
-  );
+      {
+        getNextPageParam: (lastPage) => lastPage.nextCursor,
+        initialCursor: 0,
+      },
+    );
+
+  const results = (data?.pages ?? [])
+    .flatMap((p) => p.items)
+    .map((d) => d.result);
 
   const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
     const target = e.target as HTMLDivElement;
-    if (target.scrollTop + target.clientHeight >= target.scrollHeight - 200) {
-      setPage((page) => page + 1);
-    }
+    const { scrollHeight, scrollTop, clientHeight } = target;
+    const distance = scrollHeight - scrollTop - clientHeight;
+    if (distance < 200 && !isLoading) fetchNextPage();
   };
-
-  useEffect(
-    function updateResultsAfterEverySearch() {
-      const newResults = data?.results.map((result) => result.result) ?? [];
-      setResults((results) => [...results, ...newResults]);
-    },
-    [data],
-  );
-
-  useEffect(
-    function resetResultsOnNewSearch() {
-      if (lastSearch.current === search) return;
-      lastSearch.current = search;
-      setResults([]);
-      setPage(0);
-    },
-    [search],
-  );
 
   return (
     <>
@@ -97,7 +78,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
       <AppLayout.Main sx={{ overflow: "hidden" }}>
         <CtaSearch
           value={search}
-          loading={loading}
+          loading={isLoading}
           onChange={(value) => setSearch(value)}
           sx={{ my: 1, mx: "auto" }}
           placeholder="search Learning Objectives..."
@@ -108,7 +89,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
               {isMobile ? (
                 <List>
                   {results.map((result) => (
-                    <React.Fragment key={result.id}>
+                    <Fragment key={result.id}>
                       <ListItem>
                         <ListItemContent>
                           <Link href={`/learning-objectives/${result.id}`}>
@@ -121,7 +102,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                         </ListItemContent>
                       </ListItem>
                       <ListDivider inset={"gutter"} />
-                    </React.Fragment>
+                    </Fragment>
                   ))}
                 </List>
               ) : (
@@ -183,10 +164,11 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  };
-};
+export const getStaticProps = ssrHandler(async ({ helper }) => {
+  await helper.search.searchLearningObjectives.prefetchInfinite({
+    q: "",
+    limit: 20,
+  });
+});
 
 export default LearningObjectivesIndexPage;

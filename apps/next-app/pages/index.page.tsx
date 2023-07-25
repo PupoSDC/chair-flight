@@ -1,5 +1,4 @@
 import { Box, styled, GlobalStyles } from "@mui/joy";
-import { NotFoundError } from "@chair-flight/base/errors";
 import {
   AppHead,
   QuestionPreview,
@@ -8,13 +7,13 @@ import {
   AlphaPreview,
   FlashCardPreview,
 } from "@chair-flight/next/client";
-import { staticHandler } from "@chair-flight/next/server";
 import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type {
   FlashCardContent,
   QuestionTemplate,
 } from "@chair-flight/base/types";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 
 const sectionHeight = `calc(100vh - ${HEADER_HEIGHT}px)`;
 
@@ -47,15 +46,15 @@ const StyledSectionB = styled(StyledSection)`
 
 export type IndexPageProps = {
   numberOfQuestions: number;
-  demoQuestion: QuestionTemplate;
-  flashCard: FlashCardContent;
   numberOfFlashCards: number;
+  demoQuestion: QuestionTemplate;
+  demoFlashCard: FlashCardContent;
 };
 
 export const IndexPage: NextPage<IndexPageProps> = ({
   demoQuestion,
   numberOfQuestions,
-  flashCard,
+  demoFlashCard,
   numberOfFlashCards,
 }) => (
   <>
@@ -80,7 +79,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
       </StyledSectionB>
       <StyledSectionA>
         <FlashCardPreview
-          flashCard={flashCard}
+          flashCard={demoFlashCard}
           numberOfFlashCards={numberOfFlashCards}
         />
       </StyledSectionA>
@@ -99,27 +98,30 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   </>
 );
 
-export const getStaticProps = staticHandler<IndexPageProps>(
-  async ({ questionBank }) => {
-    const allQuestions = await questionBank.getAllQuestionTemplates();
-    const demoQuestion = await questionBank.getQuestionTemplate("QYFPA3CY4E");
-    const allFlashCards = await questionBank.getAllFlashCards();
-    const allFlashCardsArray = Object.values(allFlashCards).flat();
-    const numberOfFlashCards = allFlashCardsArray.length;
-    const flashCard = allFlashCardsArray.find(
-      (f) => f.id === "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0",
-    );
-    if (!flashCard) throw new NotFoundError("Missing showcase flash card!");
+export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
+  const helper = await getTrpcHelper();
+  const flashCardId = "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0";
+  const questionId = "QYFPA3CY4E";
+  const [
+    { numberOfQuestions },
+    { numberOfFlashCards },
+    { questionTemplate: demoQuestion },
+    { flashCard: demoFlashCard },
+  ] = await Promise.all([
+    helper.questions.getNumberOfQuestions.fetch(),
+    helper.flashCards.getNumberOfFlashCards.fetch(),
+    helper.questions.getQuestion.fetch({ questionId }),
+    helper.flashCards.getFlashCard.fetch({ flashCardId }),
+  ]);
 
-    return {
-      props: {
-        numberOfQuestions: allQuestions.length,
-        demoQuestion,
-        numberOfFlashCards,
-        flashCard,
-      },
-    };
-  },
-);
+  return {
+    props: {
+      numberOfQuestions,
+      numberOfFlashCards,
+      demoQuestion,
+      demoFlashCard,
+    },
+  };
+};
 
 export default IndexPage;

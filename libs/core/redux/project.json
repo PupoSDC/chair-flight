@@ -15,7 +15,6 @@
       "executor": "@nrwl/vite:test",
       "outputs": ["coverage/libs/core/redux"],
       "options": {
-        "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/libs/core/redux"
       }
     },
@@ -24,7 +23,7 @@
       "options": {
         "commands": [
           "tsc -p libs/core/redux/tsconfig.lib.json --noEmit",
-          "tsc -p libs/core/redux/tsconfig.spec.json --noEmit"
+          "tsc -p libs/core/redux/tsconfig.test.json --noEmit"
         ]
       }
     }

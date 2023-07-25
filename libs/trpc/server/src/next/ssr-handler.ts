@@ -1,0 +1,64 @@
+import { NotFoundError } from "@chair-flight/base/errors";
+import type { TrpcHelper} from "./trpc-helper";
+import { getTrpcHelper } from "./trpc-helper";
+import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  GetServerSidePropsResult,
+  PreviewData,
+} from "next/types";
+import type { ParsedUrlQuery } from "querystring";
+
+const handleError = <T>(
+  error: unknown,
+): GetServerSidePropsResult<T> | undefined => {
+  if (error instanceof NotFoundError) {
+    return {
+      notFound: true,
+    };
+  }
+  return undefined;
+};
+
+/** Can be used for both `getServerSideProps`, and `getStaticProps */
+export const ssrHandler = <
+  Props extends Record<string, unknown>,
+  Params extends ParsedUrlQuery = ParsedUrlQuery,
+  Preview extends PreviewData = PreviewData,
+>(
+  handler: ({
+    context,
+    helper,
+  }: {
+    params: Params;
+    context: GetServerSidePropsContext<Params, Preview>;
+    helper: TrpcHelper;
+  }) => Promise<GetServerSidePropsResult<Props> | void>,
+): GetServerSideProps<Props, Params, Preview> => {
+  return async (context) => {
+    try {
+      const helper = await getTrpcHelper();
+
+      const handlerResponse = await handler({
+        params: context.params ?? ({} as Params),
+        context,
+        helper,
+      });
+
+      const response = handlerResponse ?? { props: {} as Props };
+      const castResponse = response as { props?: Record<string, unknown> };
+
+      if (castResponse.props) {
+        castResponse.props["trpcState"] = JSON.parse(
+          JSON.stringify(helper.dehydrate()),
+        );
+      }
+
+      return response;
+    } catch (error) {
+      const resolution = handleError<Props>(error);
+      if (resolution) return resolution;
+      throw error;
+    }
+  };
+};

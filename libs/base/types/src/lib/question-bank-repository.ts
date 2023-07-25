@@ -13,11 +13,6 @@ export interface QuestionBankRepository {
   getLearningObjective(id: string): Promise<LearningObjective>;
   getLearningObjectives(ids: string[]): Promise<LearningObjective[]>;
   getAllSubjects(): Promise<LearningObjectiveSummary[]>;
+  getFlashCards(collection: string): Promise<FlashCardContent[]>;
   getAllFlashCards(): Promise<Record<string, FlashCardContent[]>>;
-  writeQuestions(questions: QuestionTemplate[]): Promise<void>;
-  writeLearningObjectives(los: LearningObjective[]): Promise<void>;
-  writeSubjects(subjects: LearningObjectiveSummary[]): Promise<void>;
-  writeFlashCards(
-    flashCards: Record<string, FlashCardContent[]>,
-  ): Promise<void>;
 }

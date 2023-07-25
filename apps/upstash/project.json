@@ -16,6 +16,14 @@
       "options": {
         "lintFilePatterns": ["apps/upstash/**/*.ts"]
       }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/next-app"],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../../coverage/apps/upstash"
+      }
     }
   },
   "tags": []

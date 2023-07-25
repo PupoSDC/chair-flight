@@ -3,7 +3,7 @@ import { createTRPCNext } from "@trpc/next";
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
 
-function getBaseUrl() {
+const getBaseUrl = (): string => {
   if (typeof window !== "undefined") return "";
 
   const VERCEL_URL = getEnvVariableOrDefault("VERCEL_URL", "");
@@ -11,10 +11,9 @@ function getBaseUrl() {
 
   const PORT = getEnvVariableOrDefault("PORT", "3000");
   return `http://localhost:${PORT}`;
-}
+};
 
 export const trpc = createTRPCNext<AppRouter>({
-  ssr: false,
   config() {
     return {
       links: [
@@ -22,6 +21,14 @@ export const trpc = createTRPCNext<AppRouter>({
           url: `${getBaseUrl()}/api/trpc`,
         }),
       ],
+      queryClientConfig: {
+        defaultOptions: {
+          queries: {
+            refetchOnMount: false,
+            refetchOnWindowFocus: false,
+          },
+        },
+      },
     };
   },
 });

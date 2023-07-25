@@ -4,10 +4,9 @@ import {
   AppHead,
   AppHeaderMenu,
 } from "@chair-flight/next/client";
-import { staticHandler } from "@chair-flight/next/server";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import { PreviewTests } from "./components/tests-overview";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 
 const TestPage: NextPage = () => (
   <>
@@ -24,8 +23,8 @@ const TestPage: NextPage = () => (
   </>
 );
 
-export const getStaticProps = staticHandler(() => {
+export const getStaticProps: GetStaticProps = () => {
   return { props: {} };
-});
+};
 
 export default TestPage;

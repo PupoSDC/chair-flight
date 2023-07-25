@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
-import { default as useAxios } from "axios-hooks";
+import { trpc } from "@chair-flight/trpc/client";
 import type { LearningObjective } from "@chair-flight/base/types";
-import type { SearchLearningObjectivesResults } from "@chair-flight/core/app";
 import type { FunctionComponent } from "react";
 
 export type InputAutocompleteLearningObjectivesProps = {
@@ -15,16 +14,13 @@ export const InputAutocompleteLearningObjectives: FunctionComponent<
 > = ({ value, onChange }) => {
   const [search, setSearch] = useState("");
 
-  const [{ data, loading }] = useAxios<SearchLearningObjectivesResults>({
-    url: "/api/search/learning-objectives",
-    params: {
-      q: search,
-      pageSize: 10,
-      page: 0,
-    },
+  const { data, isLoading } = trpc.search.searchLearningObjectives.useQuery({
+    q: search,
+    limit: 10,
+    cursor: 0,
   });
 
-  const optionsMap = (data?.results ?? []).reduce<
+  const optionsMap = (data?.items ?? []).reduce<
     Record<string, LearningObjective>
   >((acc, result) => {
     acc[result.result.id] = result.result;
@@ -38,12 +34,12 @@ export const InputAutocompleteLearningObjectives: FunctionComponent<
       forcePopupIcon
       inputValue={search}
       value={value}
-      loading={loading}
+      loading={isLoading}
       onChange={(_, newValue) => onChange(newValue)}
       onInputChange={(_, newInputValue) => setSearch(newInputValue)}
       filterOptions={(options) => options}
       placeholder="Learning Objectives"
-      options={data?.results.map((result) => result.result.id) ?? []}
+      options={data?.items.map((result) => result.result.id) ?? []}
       sx={{
         p: 0.5,
         "& input": {

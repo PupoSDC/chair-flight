@@ -1,17 +1,5 @@
-import { createServerSideHelpers } from "@trpc/react-query/server";
-import { createContext } from "./config/context";
-import { router } from "./config/trpc";
-import { questionsRouter } from "./routers/question";
+export { apiHandler } from "./next/api-handler";
+export { ssrHandler } from "./next/ssr-handler";
+export { getTrpcHelper } from "./next/trpc-helper";
 
-export const appRouter = router({
-  questions: questionsRouter,
-});
-
-export const getTrpcHelper = async () => {
-  return createServerSideHelpers({
-    router: appRouter,
-    ctx: await createContext(),
-  });
-};
-
-export type AppRouter = typeof appRouter;
+export type { AppRouter } from "./config/app-router";
