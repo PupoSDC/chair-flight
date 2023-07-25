@@ -1,0 +1,25 @@
+{
+  "name": "react-analytics",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/analytics/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/analytics/**/*.ts",
+          "libs/react/analytics/**/*.tsx"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/react/analytics/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": []
+}
