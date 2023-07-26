@@ -1,0 +1,24 @@
+{
+  "name": "provider-question-bank-redis",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/providers/question-bank-redis/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/providers/question-bank-redis/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/providers/question-bank-redis/tsconfig.json --noEmit"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

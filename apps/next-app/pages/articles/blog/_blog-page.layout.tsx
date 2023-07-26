@@ -5,12 +5,12 @@ import { MDXProvider } from "@mdx-js/react";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Link, Divider, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   AppLayout,
   BlogPostChip,
   Header,
 } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import type { BlogPostTag } from "@chair-flight/react/components";
 import type { FunctionComponent, PropsWithChildren } from "react";
 

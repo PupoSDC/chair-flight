@@ -4,13 +4,6 @@
   "sourceRoot": "libs/question-bank/content/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/question-bank/content/**/*.ts"]
-      }
-    },
     "build": {
       "executor": "nx:run-commands",
       "options": {
@@ -19,12 +12,6 @@
           "cp -r libs/question-bank/content/src/media apps/next-app/public/content"
         ],
         "parallel": false
-      }
-    },
-    "tsc": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p libs/question-bank/content/tsconfig.json --noEmit"]
       }
     }
   },

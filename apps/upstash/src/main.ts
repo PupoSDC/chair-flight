@@ -3,13 +3,13 @@ import {
   getAllFlashCardsFromLocalFs,
   getAllLearningObjectivesFromLocalFs,
   getAllSubjectsFromLocalFs,
-} from "@chair-flight/question-bank/local";
+} from "@chair-flight/providers/question-bank-local";
 import {
   writeQuestionsToRedis,
   writeLearningObjectivesToRedis,
   writeSubjectsToRedis,
   writeFlashCardsToRedis,
-} from "@chair-flight/question-bank/redis";
+} from "@chair-flight/providers/question-bank-redis";
 import { validateQuestions } from "./validation/validate-questions";
 
 const writeLocalToRemoteQuestionBank = async () => {

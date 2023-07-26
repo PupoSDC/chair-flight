@@ -8,7 +8,6 @@ import {
   ReduxProvider,
   useTestHotkeys,
 } from "@chair-flight/core/redux";
-import { AppHead } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,
@@ -16,6 +15,7 @@ import {
   QuestionMultipleChoice,
   Skeleton,
 } from "@chair-flight/react/components";
+import { AppHead } from "@chair-flight/react/containers";
 import { ExamNavigation } from "./components/exam-navigation";
 import type { GetServerSideProps, NextPage } from "next";
 import type { FunctionComponent } from "react";

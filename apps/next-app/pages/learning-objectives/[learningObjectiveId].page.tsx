@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Box, Grid, Sheet, Table, Typography } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import { AppLayout, Header } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
+import type { NextPage } from "next";
 
 type LearningObjectivePageParams = {
   learningObjectiveId: string;

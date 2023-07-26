@@ -8,13 +8,16 @@ import {
   getRandomId,
   getRandomShuffler,
 } from "@chair-flight/core/app";
-import { AppHead, APP_NAME, AppHeaderMenu } from "@chair-flight/next/client";
-import { QuestionReview } from "@chair-flight/next/containers";
 import {
   Header,
   AppLayout,
   QuestionVariantPreview,
 } from "@chair-flight/react/components";
+import {
+  AppHead,
+  QuestionReview,
+  AppHeaderMenu,
+} from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
@@ -52,7 +55,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   return (
     <>
       <AppHead
-        linkTitle={`${APP_NAME}: ${variant.id}`}
+        linkTitle={`Chair Flight: ${variant.id}`}
         linkDescription={variant.question}
       />
       <Header>

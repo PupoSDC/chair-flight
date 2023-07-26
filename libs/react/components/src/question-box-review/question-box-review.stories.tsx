@@ -1,4 +1,4 @@
-import dedent from "ts-dedent";
+import { default as dedent } from "ts-dedent";
 import { QuestionMultipleChoice } from "../question-multiple-choice/question-multiple-choice";
 import { Playground as QuestionMultipleChoicePlayground } from "../question-multiple-choice/question-multiple-choice.stories";
 import { QuestionBoxReview } from "./question-box-review";

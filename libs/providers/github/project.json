@@ -1,0 +1,22 @@
+{
+  "name": "provider-github",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/providers/github/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/providers/github/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/providers/github/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": []
+}

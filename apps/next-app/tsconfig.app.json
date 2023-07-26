@@ -1,14 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {},
-  "include": [
-    "src/**/**/*.ts",
-    "src/**/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "next-env.d.ts",
-    "index.d.ts"
-  ],
+  "include": ["pages/**/*.ts", "pages/**/*.tsx", "next-env.d.ts", "index.d.ts"],
   "exclude": [
     "node_modules",
     "vite.config.ts",

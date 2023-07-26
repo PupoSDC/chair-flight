@@ -1,0 +1,23 @@
+{
+  "name": "core-schemas",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/schemas/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/schemas/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/core/schemas/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": []
+}

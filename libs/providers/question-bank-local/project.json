@@ -1,0 +1,24 @@
+{
+  "name": "provider-question-bank-local",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/providers/question-bank-local/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/providers/question-bank-local/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/providers/question-bank-local/tsconfig.json --noEmit"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

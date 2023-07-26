@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { useTheme } from "@mui/joy";
 import {
-  AppHead,
-  AppHeaderMenu,
-  QuestionPreviewList,
-} from "@chair-flight/next/client";
-import {
   Header,
   AppLayout,
   CtaSearch,
   Ups,
   useMediaQuery,
 } from "@chair-flight/react/components";
+import {
+  AppHead,
+  AppHeaderMenu,
+  QuestionPreviewList,
+} from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";

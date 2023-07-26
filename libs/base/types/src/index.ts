@@ -1,3 +1,4 @@
+export * from "./lib/analytics";
 export * from "./lib/ids";
 export * from "./lib/flash-cards";
 export * from "./lib/learning-objectives";

@@ -1,10 +1,10 @@
 import { ReduxProvider } from "@chair-flight/core/redux";
+import { AppLayout, Header } from "@chair-flight/react/components";
 import {
   AlphaWarning,
   AppHead,
   AppHeaderMenu,
-} from "@chair-flight/next/client";
-import { AppLayout, Header } from "@chair-flight/react/components";
+} from "@chair-flight/react/containers";
 import { PreviewTests } from "./components/tests-overview";
 import type { GetStaticProps, NextPage } from "next";
 

@@ -9,13 +9,8 @@ import {
   CardCover,
   Box,
 } from "@mui/joy";
-import dedent from "ts-dedent";
-import {
-  AppHead,
-  AppHeaderMenu,
-  FLASH_CARDS_DESC,
-} from "@chair-flight/next/client";
 import { Header, AppLayout } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
@@ -35,7 +30,15 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
-        linkDescription={FLASH_CARDS_DESC}
+        linkDescription={[
+          "Use these flash cards to practice for your interview. You can review",
+          "all flash cards at once, or get 10 random cards to review. Try to",
+          "answer the question outloud as you would in an interview. Consider",
+          "recording your answer and playing it back to see how you sound.",
+          "\n\n",
+          "Once you are satisfied with the answer, Flip the card to see if you",
+          "are close enough.",
+        ].join(" ")}
       />
       <Header>
         <AppHeaderMenu />
@@ -47,11 +50,16 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
               <Typography level="h1">Flash Cards</Typography>
             </AppLayout.Header>
             <Typography>
-              {dedent`
-                Practice for open-ended interview questions.
-              `}
+              Practice for open-ended interview questions.
               <br />
-              {FLASH_CARDS_DESC}
+              Use these flash cards to practice for your interview. You can
+              review all flash cards at once, or get 10 random cards to review.
+              Try to answer the question outloud as you would in an interview.
+              Consider recording your answer and playing it back to see how you
+              sound.
+              <br />
+              Once you are satisfied with the answer, Flip the card to see if
+              you are close enough.
             </Typography>
             <Typography sx={{ mt: 3 }} level="h3" color="primary">
               Have fun!

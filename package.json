@@ -10,9 +10,11 @@
     "e2e": "nx run-many --target=e2e",
     "lint": "nx run-many --target=lint --max-warnings=0",
     "tsc": "nx run-many --target=tsc",
+    "migrate": "nx run-many --target=migrate",
     "build": "nx build next-app",
     "prettier": "prettier . --write",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "nx run-many --target=generate-types",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,10 +27,11 @@
     "@mdx-js/react": "^2.3.0",
     "@mui/base": "5.0.0-beta.8",
     "@mui/icons-material": "^5.14.1",
-    "@mui/joy": "5.0.0-alpha.88",
-    "@mui/material": "npm:@mui/joy@5.0.0-alpha.88",
+    "@mui/joy": "5.0.0-alpha.89",
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.89",
     "@napi-rs/image": "^1.6.1",
     "@next/mdx": "^13.4.12",
+    "@prisma/client": "^5.0.0",
     "@react-three/drei": "^9.79.3",
     "@react-three/fiber": "^8.13.5",
     "@reduxjs/toolkit": "^1.9.5",
@@ -46,7 +49,6 @@
     "minisearch": "^6.1.0",
     "next": "^13.4.12",
     "octokit": "^2.1.0",
-    "openai": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
@@ -128,6 +130,7 @@
     "msw-trpc": "^1.3.3",
     "nx": "^16.5.5",
     "prettier": "^3.0.0",
+    "prisma": "^5.0.0",
     "react-test-renderer": "^18.2.0",
     "redux-persist": "^6.0.0",
     "storybook-dark-mode": "^3.0.0",
@@ -145,7 +148,7 @@
     "xlsx": "^0.18.5"
   },
   "overrides": {
-    "@mui/material": "npm:@mui/joy@5.0.0-alpha.88"
+    "@mui/material": "npm:@mui/joy@5.0.0-alpha.89"
   },
   "prettier": {
     "plugins": [

@@ -8,7 +8,6 @@ import {
   ReduxProvider,
   useTestHotkeys,
 } from "@chair-flight/core/redux";
-import { AppHead } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,
@@ -19,6 +18,7 @@ import {
   useMediaQuery,
   QuestionBoxExam,
 } from "@chair-flight/react/components";
+import { AppHead } from "@chair-flight/react/containers";
 import type { GetServerSideProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
 

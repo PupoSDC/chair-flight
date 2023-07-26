@@ -1,4 +1,5 @@
 import { Box, styled, GlobalStyles } from "@mui/joy";
+import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
 import {
   AppHead,
   QuestionPreview,
@@ -6,8 +7,7 @@ import {
   CoolSlidingThing,
   AlphaPreview,
   FlashCardPreview,
-} from "@chair-flight/next/client";
-import { Header, HEADER_HEIGHT } from "@chair-flight/react/components";
+} from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type {
   FlashCardContent,

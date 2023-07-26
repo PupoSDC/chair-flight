@@ -1,4 +1,3 @@
-import type { QuestionBankRepository} from "@chair-flight/base/types";
 import {
   getAllQuestionsFromRedis,
   getQuestionsFromRedis,
@@ -6,7 +5,8 @@ import {
   getLearningObjectivesFromRedis,
   getAllSubjectsFromRedis,
   getAllFlashCardsFromRedis,
-} from "@chair-flight/question-bank/redis";
+} from "@chair-flight/providers/question-bank-redis";
+import type { QuestionBankRepository } from "@chair-flight/base/types";
 
 export type Context = {
   questionBank: QuestionBankRepository;

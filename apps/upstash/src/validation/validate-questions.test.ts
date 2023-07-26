@@ -1,5 +1,5 @@
-import { getAllQuestionsFromLocalFs } from "@chair-flight/question-bank/local";
-import { questionSchema } from "@chair-flight/question-bank/schemas";
+import { questionSchema } from "@chair-flight/core/schemas";
+import { getAllQuestionsFromLocalFs } from "@chair-flight/providers/question-bank-local";
 
 describe("validate questions", async () => {
   const allTemplates = await getAllQuestionsFromLocalFs();

@@ -10,8 +10,8 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "@chair-flight/core/redux";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import { AppLayout, Header, toast } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import { EditQuestionBody } from "./components/edit-question-body";
 import { EditVariant } from "./components/edit-variant";

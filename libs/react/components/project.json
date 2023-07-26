@@ -12,21 +12,21 @@
         "lintFilePatterns": ["libs/react/components/src/**/*.{ts,tsx,js,jsx}"]
       }
     },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/react/components/tsconfig.json --noEmit",
+          "tsc -p libs/react/components/tsconfig.spec.json --noEmit"
+        ]
+      }
+    },
     "test": {
       "executor": "@nrwl/vite:test",
       "outputs": ["coverage/libs/react/components"],
       "options": {
         "passWithNoTests": false,
         "reportsDirectory": "../../../coverage/libs/react/components"
-      }
-    },
-    "tsc": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "tsc -p libs/react/components/tsconfig.lib.json --noEmit",
-          "tsc -p libs/react/components/tsconfig.spec.json --noEmit"
-        ]
       }
     }
   }

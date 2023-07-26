@@ -12,12 +12,12 @@ import { default as fs } from "fs/promises";
 import { DateTime } from "luxon";
 import { default as path } from "path";
 import { default as dedent } from "ts-dedent";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   AppLayout,
   BlogPostChip,
   Header,
 } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import type { BlogPageMeta } from "./_blog-page.layout";
 import type { GetStaticProps } from "next";
 import type { FunctionComponent } from "react";

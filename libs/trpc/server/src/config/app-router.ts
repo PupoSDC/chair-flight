@@ -1,3 +1,4 @@
+import { analyticsRouter } from "../routers/analytics";
 import { flashCardsRouter } from "../routers/flash-cards";
 import { learningObjectivesRouter } from "../routers/learning-objectives";
 import { questionsRouter } from "../routers/questions";
@@ -6,6 +7,7 @@ import { testsRouter } from "../routers/tests";
 import { router } from "./trpc";
 
 export const appRouter = router({
+  analytics: analyticsRouter,
   questions: questionsRouter,
   search: searchRouter,
   flashCards: flashCardsRouter,

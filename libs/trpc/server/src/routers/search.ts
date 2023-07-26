@@ -1,9 +1,9 @@
-import type { MatchInfo } from "minisearch";
 import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
-import type { LearningObjective } from "@chair-flight/base/types";
 import { getQuestionPreview } from "@chair-flight/core/app";
 import { publicProcedure, router } from "../config/trpc";
+import type { LearningObjective } from "@chair-flight/base/types";
+import type { MatchInfo } from "minisearch";
 
 type QuestionPreview = {
   questionId: string;

@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { Grid } from "@mui/joy";
-import {
-  AppHead,
-  AppHeaderMenu,
-  FLASH_CARDS_DESC,
-} from "@chair-flight/next/client";
 import { Header, AppLayout, FlashCard } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { FlashCardContent } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -36,7 +32,15 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
     <AppHead
       title="Chair Flight - Flash Cards"
       linkTitle="Chair Flight - Flash Cards"
-      linkDescription={FLASH_CARDS_DESC}
+      linkDescription={[
+        "Use these flash cards to practice for your interview. You can review",
+        "all flash cards at once, or get 10 random cards to review. Try to",
+        "answer the question outloud as you would in an interview. Consider",
+        "recording your answer and playing it back to see how you sound.",
+        "\n\n",
+        "Once you are satisfied with the answer, Flip the card to see if you",
+        "are close enough.",
+      ].join(" ")}
     />
     <Header>
       <AppHeaderMenu />

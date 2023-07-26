@@ -1,4 +1,4 @@
-export { apiHandler } from "./next/api-handler";
+export { edgeApiHandler, apiHandler } from "./next/api-handler";
 export { ssrHandler } from "./next/ssr-handler";
 export { getTrpcHelper } from "./next/trpc-helper";
 

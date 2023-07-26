@@ -3,8 +3,8 @@
 import { default as Image } from "next/image";
 import { MDXProvider } from "@mdx-js/react";
 import { Divider, Typography } from "@mui/joy";
-import { AppHead } from "@chair-flight/next/client";
 import { AppLayout, Header } from "@chair-flight/react/components";
+import { AppHead } from "@chair-flight/react/containers";
 import type { FunctionComponent, PropsWithChildren } from "react";
 
 type ArticlePageLayoutProps = PropsWithChildren<{

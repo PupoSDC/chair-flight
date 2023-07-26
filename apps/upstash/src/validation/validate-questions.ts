@@ -1,6 +1,6 @@
 import { z } from "zod";
+import { questionSchema } from "@chair-flight/core/schemas";
 import type { QuestionTemplate } from "@chair-flight/base/types";
-import { questionSchema } from "@chair-flight/question-bank/schemas";
 
 const questionTemplateArraySchema = z.array(questionSchema);
 

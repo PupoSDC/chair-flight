@@ -1,6 +1,6 @@
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { TrpcHelper} from "./trpc-helper";
 import { getTrpcHelper } from "./trpc-helper";
+import type { TrpcHelper } from "./trpc-helper";
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,

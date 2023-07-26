@@ -1,12 +1,12 @@
 import { Box, CircularProgress, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
 import { ReduxProvider, useAppSelector } from "@chair-flight/core/redux";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,
   TestQuestionResult,
 } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import type { GetServerSideProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
 

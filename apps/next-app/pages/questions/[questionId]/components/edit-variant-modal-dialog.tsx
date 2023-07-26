@@ -13,7 +13,7 @@ import {
 import { z } from "zod";
 import { getVariantPreview } from "@chair-flight/core/app";
 import { actions, useAppDispatch } from "@chair-flight/core/redux";
-import { questionVariantSchema } from "@chair-flight/question-bank/schemas";
+import { questionVariantSchema } from "@chair-flight/core/schemas";
 import { AppLayout, MarkdownClient } from "@chair-flight/react/components";
 import { EditVariantFormSnippetOneTwo } from "./edit-variant-form-snippet-one-two";
 import { EditVariantFormSnippetSimple } from "./edit-variant-form-snippet-simple";

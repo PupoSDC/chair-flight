@@ -27,19 +27,22 @@ dependencies:
     version: 5.0.0-beta.8(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
   '@mui/icons-material':
     specifier: ^5.14.1
-    version: 5.14.1(@mui/joy@5.0.0-alpha.88)(@types/react@18.2.15)(react@18.2.0)
+    version: 5.14.1(@mui/joy@5.0.0-alpha.89)(@types/react@18.2.15)(react@18.2.0)
   '@mui/joy':
-    specifier: 5.0.0-alpha.88
-    version: 5.0.0-alpha.88(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 5.0.0-alpha.89
+    version: 5.0.0-alpha.89(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
   '@mui/material':
-    specifier: npm:@mui/joy@5.0.0-alpha.88
-    version: /@mui/joy@5.0.0-alpha.88(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
+    specifier: npm:@mui/joy@5.0.0-alpha.89
+    version: /@mui/joy@5.0.0-alpha.89(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
   '@napi-rs/image':
     specifier: ^1.6.1
     version: 1.6.1
   '@next/mdx':
     specifier: ^13.4.12
     version: 13.4.12(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)
+  '@prisma/client':
+    specifier: ^5.0.0
+    version: 5.0.0(prisma@5.0.0)
   '@react-three/drei':
     specifier: ^9.79.3
     version: 9.79.3(@react-three/fiber@8.13.5)(@types/three@0.154.0)(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
@@ -91,9 +94,6 @@ dependencies:
   octokit:
     specifier: ^2.1.0
     version: 2.1.0
-  openai:
-    specifier: ^3.3.0
-    version: 3.3.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -333,6 +333,9 @@ devDependencies:
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
+  prisma:
+    specifier: ^5.0.0
+    version: 5.0.0
   react-test-renderer:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -2934,11 +2937,11 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/core-downloads-tracker@5.14.1:
-    resolution: {integrity: sha512-mIa1WmDmNr1LoupV1Rbxt9bTFKMbIn10RHG1bnZ/FJCkAYpuU/D4n+R+ttiycgcZNngU++zyh/OQeJblzbQPzg==}
+  /@mui/core-downloads-tracker@5.14.2:
+    resolution: {integrity: sha512-x+c/MgDL1t/IIy5lDbMlrDouFG5DYZbl3DP4dbbuhlpPFBnE9glYwmJEee/orVHQpOPwLxCAIWQs+2DKSaBVWQ==}
     dev: false
 
-  /@mui/icons-material@5.14.1(@mui/joy@5.0.0-alpha.88)(@types/react@18.2.15)(react@18.2.0):
+  /@mui/icons-material@5.14.1(@mui/joy@5.0.0-alpha.89)(@types/react@18.2.15)(react@18.2.0):
     resolution: {integrity: sha512-xV/f26muQqtWzerzOIdGPrXoxp/OKaE2G2Wp9gnmG47mHua5Slup/tMc3fA4ZYUreGGrK6+tT81TEvt1Wsng8Q==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -2950,13 +2953,13 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.6
-      '@mui/material': /@mui/joy@5.0.0-alpha.88(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/material': /@mui/joy@5.0.0-alpha.89(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
       '@types/react': 18.2.15
       react: 18.2.0
     dev: false
 
-  /@mui/joy@5.0.0-alpha.88(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zG+kYy7JV07nQWHXtZP7+78pf3erv+X07aHetbwb9etx7pqGhxTxeBeT2WltH3hAUEUEr9GqfChcBe2MWy2ziQ==}
+  /@mui/joy@5.0.0-alpha.89(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CuU3RB0QCDhRWioJdMx4itjcI6x0sKQ4PHFW/IbhRmzxnmwXT8uMTixOcKvSp1xTTDJq7/WCu1ouUCKPcxkbEg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@emotion/react': ^11.5.0
@@ -2976,7 +2979,7 @@ packages:
       '@emotion/react': 11.11.1(@types/react@18.2.15)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.15)(react@18.2.0)
       '@mui/base': 5.0.0-beta.8(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
-      '@mui/core-downloads-tracker': 5.14.1
+      '@mui/core-downloads-tracker': 5.14.2
       '@mui/system': 5.14.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.15)(react@18.2.0)
       '@mui/types': 7.2.4(@types/react@18.2.15)
       '@mui/utils': 5.14.1(react@18.2.0)
@@ -4456,6 +4459,28 @@ packages:
   /@popperjs/core@2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
+
+  /@prisma/client@5.0.0(prisma@5.0.0):
+    resolution: {integrity: sha512-XlO5ELNAQ7rV4cXIDJUNBEgdLwX3pjtt9Q/RHqDpGf43szpNJx2hJnggfFs7TKNx0cOFsl6KJCSfqr5duEU/bQ==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
+      prisma: 5.0.0
+    dev: false
+
+  /@prisma/engines-version@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584:
+    resolution: {integrity: sha512-HHiUF6NixsldsP3JROq07TYBLEjXFKr6PdH8H4gK/XAoTmIplOJBCgrIUMrsRAnEuGyRoRLXKXWUb943+PFoKQ==}
+    dev: false
+
+  /@prisma/engines@5.0.0:
+    resolution: {integrity: sha512-kyT/8fd0OpWmhAU5YnY7eP31brW1q1YrTGoblWrhQJDiN/1K+Z8S1kylcmtjqx5wsUGcP1HBWutayA/jtyt+sg==}
+    requiresBuild: true
 
   /@react-spring/animated@9.6.1(react@18.2.0):
     resolution: {integrity: sha512-ls/rJBrAqiAYozjLo5EPPLLOb1LM0lNVQcXODTC1SMtS6DbuBCPaKco5svFUQFMP2dso3O+qcC4k9FsKc0KxMQ==}
@@ -7587,14 +7612,6 @@ packages:
     resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
     engines: {node: '>=4'}
     dev: true
-
-  /axios@0.26.1:
-    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
-    dependencies:
-      follow-redirects: 1.15.2
-    transitivePeerDependencies:
-      - debug
-    dev: false
 
   /axios@1.4.0:
     resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
@@ -14300,15 +14317,6 @@ packages:
       is-wsl: 2.2.0
     dev: true
 
-  /openai@3.3.0:
-    resolution: {integrity: sha512-uqxI/Au+aPRnsaQRe8CojU0eCR7I0mBiKjD3sNMzY6DaC1ZVrc85u98mtJW6voDug8fgGN+DIZmTDxTthxb7dQ==}
-    dependencies:
-      axios: 0.26.1
-      form-data: 4.0.0
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
   /opener@1.5.2:
     resolution: {integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==}
     hasBin: true
@@ -15192,6 +15200,14 @@ packages:
     dependencies:
       parse-ms: 2.1.0
     dev: true
+
+  /prisma@5.0.0:
+    resolution: {integrity: sha512-KYWk83Fhi1FH59jSpavAYTt2eoMVW9YKgu8ci0kuUnt6Dup5Qy47pcB4/TLmiPAbhGrxxSz7gsSnJcCmkyPANA==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.0.0
 
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}

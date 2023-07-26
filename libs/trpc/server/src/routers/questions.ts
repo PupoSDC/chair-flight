@@ -1,8 +1,8 @@
-import type { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { questionSchema } from "@chair-flight/question-bank/schemas";
+import { questionSchema } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
+import type { TRPCError } from "@trpc/server";
 
 export const questionsRouter = router({
   getNumberOfQuestions: publicProcedure.query(async ({ ctx }) => {

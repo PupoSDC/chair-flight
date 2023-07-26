@@ -16,7 +16,6 @@ import {
   useTheme,
 } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
-import { AppHead, AppHeaderMenu } from "@chair-flight/next/client";
 import {
   Header,
   AppLayout,
@@ -24,6 +23,7 @@ import {
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
+import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";

@@ -29,26 +29,20 @@
       "@chair-flight/base/types": ["libs/base/types/src/index.ts"],
       "@chair-flight/core/app": ["libs/core/app/src/index.ts"],
       "@chair-flight/core/redux": ["libs/core/redux/src/index.ts"],
-      "@chair-flight/external/openai": ["libs/external/openai/src/index.ts"],
-      "@chair-flight/external/upstash": ["libs/external/upstash/src/index.ts"],
-      "@chair-flight/external/github": ["libs/external/github/src/index.ts"],
-      "@chair-flight/next/client": ["libs/next/client/src/index.ts"],
-      "@chair-flight/next/containers": ["libs/next/containers/src/index.ts"],
-      "@chair-flight/next/server": ["libs/next/server/src/index.ts"],
-      "@chair-flight/question-bank/content": [
-        "libs/question-bank/content/src/index.ts"
+      "@chair-flight/core/schemas": ["libs/core/schemas/src/index.ts"],
+      "@chair-flight/providers/analytics": [
+        "libs/providers/analytics/src/index.ts"
       ],
-      "@chair-flight/question-bank/local": [
-        "libs/question-bank/local/src/index.ts"
+      "@chair-flight/providers/github": ["libs/providers/github/src/index.ts"],
+      "@chair-flight/providers/question-bank-local": [
+        "libs/providers/question-bank-local/src/index.ts"
       ],
-      "@chair-flight/question-bank/redis": [
-        "libs/question-bank/redis/src/index.ts"
-      ],
-      "@chair-flight/question-bank/schemas": [
-        "libs/question-bank/schemas/src/index.ts"
+      "@chair-flight/providers/question-bank-redis": [
+        "libs/providers/question-bank-redis/src/index.ts"
       ],
       "@chair-flight/react/analytics": ["libs/react/analytics/src/index.ts"],
       "@chair-flight/react/components": ["libs/react/components/src/index.ts"],
+      "@chair-flight/react/containers": ["libs/react/containers/src/index.ts"],
       "@chair-flight/react/games": ["libs/react/games/src/index.ts"],
       "@chair-flight/trpc/client": ["libs/trpc/client/src/index.ts"],
       "@chair-flight/trpc/mock": ["libs/trpc/mock/src/index.ts"],

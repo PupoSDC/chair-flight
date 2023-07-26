@@ -2,21 +2,8 @@
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "allowJs": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "types": ["node"],
     "lib": ["dom"]
   },
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

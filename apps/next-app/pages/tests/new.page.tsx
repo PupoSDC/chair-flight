@@ -1,12 +1,12 @@
 import { default as Image } from "next/image";
 import { Box, Typography } from "@mui/joy";
 import { ReduxProvider } from "@chair-flight/core/redux";
+import { AppLayout, Header } from "@chair-flight/react/components";
 import {
   AlphaWarning,
   AppHead,
   AppHeaderMenu,
-} from "@chair-flight/next/client";
-import { AppLayout, Header } from "@chair-flight/react/components";
+} from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import { TestCreation } from "./components/test-creation";
 import type { LearningObjectiveSummary } from "@chair-flight/base/types";

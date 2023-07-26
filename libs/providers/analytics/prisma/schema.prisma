@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+ 
+datasource db {
+  provider = "postgresql"
+  url = env("PROVIDER_ANALYTICS_POSTGRES_PRISMA_URL") 
+  directUrl = env("PROVIDER_ANALYTICS_POSTGRES_URL_NON_POOLING") 
+}
+ 
+model PageEvent {
+  id          String   @id @default(uuid())
+  timestamp   DateTime @default(now())
+  anonymousId String
+  title       String
+  url         String
+  referrer    String
+  environment String
+  height      Int
+  width       Int
+}
+
+model TrackEvent {
+  id          String   @id @default(uuid())
+  timestamp   DateTime @default(now())
+  url         String
+  anonymousId String
+  eventName   String
+  environment String
+  properties  Json
+}
