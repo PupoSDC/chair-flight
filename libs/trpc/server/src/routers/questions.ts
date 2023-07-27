@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { questionSchema } from "@chair-flight/core/schemas";
+import { createNewQuestionPr } from "@chair-flight/providers/github";
 import { publicProcedure, router } from "../config/trpc";
 import type { TRPCError } from "@trpc/server";
 
@@ -42,11 +43,16 @@ export const questionsRouter = router({
         question: questionSchema,
       }),
     )
-    .mutation(async ({ ctx, input }) => {
+    .mutation(async ({ input }) => {
       const { question } = input;
-      const { questionBank } = ctx;
       const provider = getEnvVariableOrThrow("QUESTION_BANK_PROVIDER");
       const isLocal = provider === "local";
+      if (isLocal) {
+        return { url: "" };
+      } else {
+        createNewQuestionPr(question);
+      }
+
       return { url: "" };
     }),
 });

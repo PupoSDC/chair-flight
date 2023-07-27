@@ -1,11 +1,11 @@
 import { NotFoundError } from "@chair-flight/base/errors";
+import { getRedis } from "../config/redis";
 import {
-  getRedis,
   QUESTION,
   LEARNING_OBJECTIVE,
   SUBJECTS,
   FLASH_CARDS,
-} from "./redis-connection";
+} from "../config/redis-keys";
 import type {
   FlashCardContent,
   LearningObjective,

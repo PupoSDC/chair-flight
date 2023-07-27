@@ -11,4 +11,4 @@ export {
   getLearningObjectivesFromRedis,
   getAllSubjectsFromRedis,
   getAllFlashCardsFromRedis,
-} from "./question-bank-redis";
+} from "./functions/question-bank";

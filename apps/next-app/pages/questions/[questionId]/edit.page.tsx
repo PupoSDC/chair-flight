@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { default as EditIcon } from "@mui/icons-material/Edit";
 import { default as GitHubIcon } from "@mui/icons-material/GitHub";
 import { Box, List, Typography, Grid, FormLabel, Button, Link } from "@mui/joy";
-import axios from "axios";
 import {
   ReduxProvider,
   actions,
@@ -12,12 +11,12 @@ import {
 } from "@chair-flight/core/redux";
 import { AppLayout, Header, toast } from "@chair-flight/react/components";
 import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { trpc } from "@chair-flight/trpc/client";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import { EditQuestionBody } from "./components/edit-question-body";
 import { EditVariant } from "./components/edit-variant";
 import { EditVariantModal } from "./components/edit-variant-modal";
 import type { QuestionTemplate } from "@chair-flight/base/types";
-import type { AxiosResponse } from "axios";
 import type { GetServerSideProps, NextPage } from "next";
 
 type EditQuestionPageProps = {
@@ -29,6 +28,7 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const updateQuestion = trpc.questions.updateQuestion.useMutation();
   const hasShownStartMessage = useRef(false);
   const editor = useAppSelector((s) => s.questionEditor.questions[question.id]);
   const editedQuestion = editor?.currentVersion ?? question;
@@ -52,31 +52,22 @@ const EditQuestionPageClient: NextPage<EditQuestionPageProps> = ({
   }, [editor, question, dispatch]);
 
   const submitQuestion = async () => {
-    toast.promise(
-      axios.put<
-        PutResponseSchema,
-        AxiosResponse<PutResponseSchema>,
-        PutBodySchema
-      >(`/api/questions/${question.id}`, {
-        question: editedQuestion,
-      }),
-      {
-        loading: "Saving...",
-        error: "Failed to save",
-        success: (response) => {
-          router.push(`/questions/${question.id}`);
-          dispatch(actions.deleteEditorState({ questionId: question.id }));
-          return (
-            <Typography>
-              Saved <br />
-              <Link href={response.data.url} target="_blank">
-                You can follow up on github!
-              </Link>
-            </Typography>
-          );
-        },
+    toast.promise(updateQuestion.mutateAsync({ question: editedQuestion }), {
+      loading: "Saving...",
+      error: "Failed to save",
+      success: (response) => {
+        router.push(`/questions/${question.id}`);
+        dispatch(actions.deleteEditorState({ questionId: question.id }));
+        return (
+          <Typography>
+            Saved <br />
+            <Link href={response.url} target="_blank">
+              You can follow up on github!
+            </Link>
+          </Typography>
+        );
       },
-    );
+    });
   };
 
   return (

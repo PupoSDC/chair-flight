@@ -10,17 +10,13 @@ import {
   Button,
   styled,
 } from "@mui/joy";
-import { default as axios } from "axios";
 import { useAppSelector, actions } from "@chair-flight/core/redux";
 import { useAppDispatch } from "@chair-flight/core/redux";
 import {
   NestedCheckboxSelect,
   SliderWithInput,
 } from "@chair-flight/react/components";
-import type {
-  CreateTestBody,
-  CreateTestResponse,
-} from "../../api/tests/index.api";
+import { trpc } from "@chair-flight/trpc/client";
 import type {
   LearningObjectiveId,
   LearningObjectiveSummary,
@@ -47,6 +43,7 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
 }) => {
   const router = useRouter();
   const dispatch = useAppDispatch();
+  const createTest = trpc.tests.createTest.useMutation();
   const hasDoneInitialRender = useRef(false);
   const [loading, setLoading] = useState(false);
   const { numberOfQuestions, mode, subject, chapters } = useAppSelector(
@@ -169,13 +166,14 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const body: CreateTestBody = {
-      title: subjects.find((s) => s.id === subject)?.text || "",
-      learningObjectives: subjectsAsItems.map((s) => s.id),
-      numberOfQuestions,
-      mode,
-    };
-    const { data } = await axios.post<CreateTestResponse>("/api/tests", body);
+    const data = await createTest.mutateAsync({
+      config: {
+        title: subjects.find((s) => s.id === subject)?.text || "",
+        learningObjectives: subjectsAsItems.map((s) => s.id),
+        numberOfQuestions,
+        mode,
+      },
+    });
     dispatch(actions.addTest({ test: data }));
     await router.push(`/tests/${data.id}/${data.mode}`);
     setLoading(false);

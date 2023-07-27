@@ -1,7 +1,6 @@
-import { default as axios } from "axios";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/core/app";
-import { getOctokit } from "@chair-flight/external/github";
+import { getOctokit } from "../config/oktokit";
 import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export const createNewQuestionPr = async (question: QuestionTemplate) => {
@@ -18,9 +17,23 @@ export const createNewQuestionPr = async (question: QuestionTemplate) => {
     ref: `heads/${baseBranch}`,
   });
 
-  const { data: oldQuestions } = await axios.get<QuestionTemplate[]>(
-    `https://raw.githubusercontent.com/${owner}/${repo}/main/${srcLocation}`,
-  );
+  const getContentResponse = await octokit.rest.repos.getContent({
+    owner,
+    repo,
+    path: srcLocation,
+    ref: baseBranchRef.data.object.sha,
+    mediaType: {
+      format: "raw",
+    },
+  });
+
+  if (!("content" in getContentResponse.data)) {
+    throw new Error("No content found in file");
+  }
+
+  const oldQuestions = JSON.parse(
+    getContentResponse.data.content,
+  ) as QuestionTemplate[];
 
   const questionWithoutSource = { ...question, srcLocation: undefined };
 

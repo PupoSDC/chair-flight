@@ -75,9 +75,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
               questionId={initialQuestionId}
               variantId={variantId}
               seed={seed}
-              onQuestionChanged={(question) => {
-                navigateToVariant(question.variantId, question.seed);
-              }}
+              onQuestionChanged={() => {}}
             />
           </AppLayout.MainGridFixedColumn>
           <AppLayout.MainGridScrollableColumn
@@ -103,9 +101,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
                     text={getQuestionPreview(questionTemplate, otherVariant.id)}
                     learningObjectives={questionTemplate.learningObjectives}
                     externalIds={otherVariant.externalIds}
-                    onClick={() =>
-                      navigateToVariant(otherVariant.id, getRandomId())
-                    }
+                    onClick={() => {}}
                     topRightCorner={
                       variantId === otherVariant.id ? (
                         <RadioButtonCheckedIcon color="primary" />
