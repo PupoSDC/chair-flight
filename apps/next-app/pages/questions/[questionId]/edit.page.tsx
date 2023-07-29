@@ -1,9 +1,13 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Box, Grid } from "@mui/joy";
+import { Grid } from "@mui/joy";
 import { questionEditSchema } from "@chair-flight/core/schemas";
-import { AppLayout, Header } from "@chair-flight/react/components";
+import {
+  AppLayout,
+  HEADER_HEIGHT,
+  Header,
+} from "@chair-flight/react/components";
 import {
   AppHead,
   AppHeaderMenu,
@@ -44,22 +48,27 @@ export const EditQuestionPage: NextPage = () => {
       <Header>
         <AppHeaderMenu />
       </Header>
-      <AppLayout.Main>
+      <AppLayout.Main
+        sx={{
+          height: {
+            xs: "auto",
+            md: `calc(100vh - ${HEADER_HEIGHT}px)`,
+          },
+        }}
+      >
         <FormProvider {...form}>
-          <Box>
-            <EditQuestionHeader />
-            <Grid container sx={{ flex: 1, overflow: "hidden" }}>
-              <Grid xs={6} lg={4}>
-                <EditQuestionBody />
-              </Grid>
-              <Grid xs={6} lg={8} sx={{ height: "100%" }}>
-                <EditVariants />
-              </Grid>
+          <EditQuestionHeader />
+          <Grid container sx={{ flex: 1, overflow: "hidden" }}>
+            <Grid xs={12} md={6} lg={4}>
+              <EditQuestionBody />
             </Grid>
-            <EditVariantModal />
-            <ReviewPrModal />
-            <RestoreFormHistory id={questionId} />
-          </Box>
+            <Grid xs={12} md={6} lg={8} sx={{ height: "100%" }}>
+              <EditVariants />
+            </Grid>
+          </Grid>
+          <EditVariantModal />
+          <ReviewPrModal />
+          <RestoreFormHistory id={questionId} />
         </FormProvider>
       </AppLayout.Main>
     </>

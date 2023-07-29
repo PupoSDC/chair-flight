@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { create } from "zustand";
 import { devtools, persist, subscribeWithSelector } from "zustand/middleware";
+import { toast } from "@chair-flight/react/components";
 
 interface FormPersistence<T> {
   history: Record<string, T[] | undefined>;
@@ -70,7 +71,6 @@ export const useFormHistory = (id: string) => {
   const undo = useCallback(() => {
     const newState = useFormHistoryZustand.getState().history[id]?.at(-2);
     if (newState) {
-      console.log("resetting form", newState);
       reset(newState);
       popEntry(id);
     }
@@ -85,6 +85,7 @@ export const useFormHistory = (id: string) => {
   }, [id, clearHistory]);
 
   return {
+    historyLength,
     hasHistory: historyLength > 0,
     isUndoAvailable: historyLength > 1,
     save,
@@ -95,13 +96,31 @@ export const useFormHistory = (id: string) => {
 
 export const RestoreFormHistory = ({ id }: { id: string }) => {
   const hasMounted = useRef(false);
+  const lastState = useFormHistoryZustand((s) => s.history[id]?.at(-1));
+  const clearHistory = useFormHistoryZustand((s) => s.clearHistory);
+  const { reset } = useFormContext<object>();
   const { save, hasHistory } = useFormHistory(id);
 
   useEffect(() => {
     if (hasMounted.current) return;
     hasMounted.current = true;
-    if (hasHistory) {
-      // offer to restore history
+    if (hasHistory && lastState) {
+      setTimeout(() => {
+        toast.message(
+          "We found a work in progress version of this form. would you like to restore it?",
+          {
+            duration: 10000,
+            action: {
+              label: "restore",
+              onClick: () => reset(lastState),
+            },
+            onAutoClose: () => {
+              clearHistory(id);
+              save();
+            },
+          },
+        );
+      }, 1000);
     } else {
       save();
     }

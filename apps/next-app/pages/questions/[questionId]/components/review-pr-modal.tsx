@@ -61,7 +61,22 @@ export const ReviewPrModal: FunctionComponent = () => {
 
   return (
     <Modal open={isOpen} onClose={navigateAwayFromModal}>
-      <ModalDialog component="form" onSubmit={onSubmit}>
+      <ModalDialog
+        component="form"
+        onSubmit={onSubmit}
+        sx={(theme) => ({
+          overflowY: "auto",
+          [theme.breakpoints.down("md")]: {
+            top: "unset",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            borderRadius: 0,
+            transform: "none",
+            maxWidth: "unset",
+          },
+        })}
+      >
         <ModalClose />
         <div>
           <Typography level="h4" component="h1">

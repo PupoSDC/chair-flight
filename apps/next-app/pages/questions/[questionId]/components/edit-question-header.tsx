@@ -6,7 +6,7 @@ import { default as EditIcon } from "@mui/icons-material/Edit";
 import { default as GitHubIcon } from "@mui/icons-material/GitHub";
 import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
-import { Box, Button, IconButton, Tooltip, Typography } from "@mui/joy";
+import { Badge, Box, Button, IconButton, Tooltip, Typography } from "@mui/joy";
 import { AppLayout, toast } from "@chair-flight/react/components";
 import { useFormHistory } from "@chair-flight/react/containers";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
@@ -14,7 +14,7 @@ import type { EditQuestionFormValues } from "../types/edit-question-form-values"
 export const EditQuestionHeader = () => {
   const form = useFormContext<EditQuestionFormValues>();
   const questionId = form.watch("question.id");
-  const { undo, isUndoAvailable } = useFormHistory(questionId);
+  const { undo, isUndoAvailable, historyLength } = useFormHistory(questionId);
   const [isValidated, setIsValidated] = useState(false);
 
   const validate = async () => {
@@ -66,8 +66,16 @@ export const EditQuestionHeader = () => {
               color={"primary"}
               variant="plain"
               onClick={() => undo()}
-              children={<UndoIcon />}
-            />
+            >
+              <Badge
+                badgeContent={historyLength - 1}
+                size="sm"
+                variant="soft"
+                max={99}
+              >
+                <UndoIcon />
+              </Badge>
+            </IconButton>
           </Tooltip>
           <Tooltip title="re-validate" variant="soft">
             <IconButton

@@ -6,7 +6,7 @@ import { default as CodeIcon } from "@mui/icons-material/Code";
 import { default as CodeOffIcon } from "@mui/icons-material/CodeOff";
 import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
-import { IconButton, Modal, Tooltip, Typography } from "@mui/joy";
+import { Badge, IconButton, Modal, Tooltip, Typography } from "@mui/joy";
 import { Box, FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
 import { getVariantPreview } from "@chair-flight/core/app";
 import { toast } from "@chair-flight/react/components";
@@ -26,7 +26,8 @@ export const EditVariantModal: FunctionComponent = () => {
   const variantId = router.query["variantId"] as string;
   const name = `question.variants.${router.query["variantId"]}` as const;
   const variant = form.watch(name);
-  const { clear, save, undo, isUndoAvailable } = useFormHistory(name);
+  const history = useFormHistory(name);
+  const { clear, save } = history;
 
   const variantSpecificFormSnippet = {
     "one-two": <EditVariantModalOneTwo />,
@@ -72,12 +73,19 @@ export const EditVariantModal: FunctionComponent = () => {
                 </Tooltip>
                 <Tooltip title="undo" variant="soft">
                   <IconButton
-                    disabled={!isUndoAvailable}
+                    disabled={!history.isUndoAvailable}
                     color={"primary"}
                     variant="plain"
-                    onClick={() => undo()}
+                    onClick={() => history.undo()}
                   >
-                    <UndoIcon />
+                    <Badge
+                      badgeContent={history.historyLength - 1}
+                      size="sm"
+                      variant="soft"
+                      max={99}
+                    >
+                      <UndoIcon />
+                    </Badge>
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="re-validate" variant="soft">
