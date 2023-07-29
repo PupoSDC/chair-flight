@@ -24,7 +24,7 @@ let allLearningObjectives: LearningObjective[] = [];
 let allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
 let allLearningObjectivesMap: Record<string, LearningObjective> = {};
 let allFlashCards: FlashCardsMap = {};
-const allSubjects: LearningObjectiveSummary[] = [];
+let allSubjects: LearningObjectiveSummary[] = [];
 
 const chunk = <T>(arr: T[], size: number) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
@@ -221,6 +221,7 @@ export const getAllSubjectsFromRedis = async (): Promise<
   if (allSubjects.length) return allSubjects;
   const newSubjects = await redis.get<LearningObjectiveSummary[]>(SUBJECTS);
   if (!newSubjects) throw new NotFoundError("Subjects not found");
+  allSubjects = newSubjects;
   return allSubjects;
 };
 
