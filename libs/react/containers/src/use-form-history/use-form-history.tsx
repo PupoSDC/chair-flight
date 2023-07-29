@@ -99,12 +99,12 @@ export const RestoreFormHistory = ({ id }: { id: string }) => {
   const lastState = useFormHistoryZustand((s) => s.history[id]?.at(-1));
   const clearHistory = useFormHistoryZustand((s) => s.clearHistory);
   const { reset } = useFormContext<object>();
-  const { save, hasHistory } = useFormHistory(id);
+  const { save, isUndoAvailable } = useFormHistory(id);
 
   useEffect(() => {
     if (hasMounted.current) return;
     hasMounted.current = true;
-    if (hasHistory && lastState) {
+    if (isUndoAvailable && lastState) {
       setTimeout(() => {
         toast.message(
           "We found a work in progress version of this form. would you like to restore it?",

@@ -23,14 +23,17 @@ and [`nx`](https://nx.dev/).
 
 You will need to install
 [`Git`](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners),
-[`pnpm`](https://pnpm.io/installation), and
-[`fnm`](https://github.com/Schniz/fnm) manually.
+[`pnpm`](https://pnpm.io/installation),
+[`fnm`](https://github.com/Schniz/fnm)
+[`docker`](https://docs.docker.com/get-docker/),
+manually.
 
 ```sh
 git clone git@github.com:PupoSDC/chair-flight.git
 fnm use
-cp .env.example .env
+cp .env.local .env
 pnpm install
+pnpm infra
 pnpm run dev
 ```
 
@@ -45,11 +48,10 @@ can and will be introduced in patch releases.
 
 \*Note: `dev` indicates the port the service is available when running `pnpm run dev`
 
-| Name     | Desc                                                           | dev   |
-| -------- | -------------------------------------------------------------- | ----- |
-| next-app | Next.js server for static/SSR pages and API                    | :4200 |
-| docs     | Storybook used for docs                                        | :4220 |
-| upstash  | Not a real app, rather an executor to update the QB in upstash |       |
+| Name     | Desc                                        | dev   |
+| -------- | ------------------------------------------- | ----- |
+| next-app | Next.js server for static/SSR pages and API | :4200 |
+| docs     | Storybook used for docs                     | :4220 |
 
 ### Libs
 
@@ -63,7 +65,7 @@ can and will be introduced in patch releases.
 | core-schemas                  | Zod Schemas shared across our application (from base-types) |
 | providers-analytics           | Analytics provider (currently a custom solution)            |
 | providers-github              | Github related functionalities                              |
-| providers-question-bank-local | Local FS question bank provider                             |
+| providers-question-bank-local | Local file system based question bank provider              |
 | providers-question-bank-redis | Redis question bank provider                                |
 | react/analytics               | React hooks to interact with our analytics provider         |
 | react/components              | Shared react (DOM) components                               |
@@ -75,11 +77,12 @@ can and will be introduced in patch releases.
 
 ### .env
 
-When running locally, the webapp is self contained and no external services are
-required. Nonetheless, to run remotely, or to run some CMS features (which are
-powered by openAI) you will need to provide some env variables in an `.env` file
-located at the repository root. Please check the `.env.example` file for the
-variables you need to fill out.
+A docker-compose file is provided to run the required services locally.
+Alternatively you can set up your own instances of all the required providers
+(`upstash`, `postgres`, ...). For this you will need to provide some env
+variables in an `.env` file located at the repository root.
+
+Please check the `.env.local` file for the variables you need to fill out.
 
 Relevant links:
 

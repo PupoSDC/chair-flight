@@ -46,6 +46,11 @@ const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
   const results = (data?.pages ?? [])
     .flatMap((p) => p.items)
     .map((d) => d.result);
+  const numberOfResults = (() => {
+    if (hasResults) return data?.pages[0].totalResults;
+    if (hasNoResults) return 0;
+    return numberOfQuestions;
+  })();
 
   const onScroll = (e: React.UIEvent<HTMLUListElement, UIEvent>) => {
     const target = e.target as HTMLUListElement;
@@ -60,21 +65,24 @@ const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
       <Header>
         <AppHeaderMenu />
       </Header>
-      <AppLayout.Main sx={{ overflow: "hidden", pb: 0 }}>
+      <AppLayout.Main sx={{ height: "auto", justifyContent: "flex-start" }}>
         <CtaSearch
           value={search}
           loading={hasSearched && isLoading}
-          style={{ marginTop: hasResults ? 15 : -75 }}
           onChange={(value) => {
             setSearch(value);
             setHasSearched(true);
           }}
-          sx={{ margin: "auto" }}
+          sx={{
+            margin: (t) => (hasSearched ? t.spacing(3, "auto") : "auto"),
+            minHeight: 40,
+          }}
           placeholder="search Questions..."
-          numberOfResults={
-            hasResults ? data?.pages[0].totalResults : numberOfQuestions
-          }
+          numberOfResults={numberOfResults}
         />
+        {hasResults && (
+          <QuestionPreviewList questions={results} onScroll={onScroll} />
+        )}
         {hasResults && (
           <QuestionPreviewList questions={results} onScroll={onScroll} />
         )}

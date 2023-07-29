@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps<
     file.endsWith(".mdx"),
   );
   const content = await Promise.all(files.map((f) => import(`./${f}`)));
-  const blogPostsMeta = content.map<BlogPageMeta>((c) => c.meta);
+  const blogPostsMeta = content.map<BlogPageMeta>((c) => c.meta).reverse();
   return {
     props: {
       blogPostsMeta,

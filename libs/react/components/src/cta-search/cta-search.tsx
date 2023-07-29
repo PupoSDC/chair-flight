@@ -92,10 +92,12 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
           }
         />
         <FormLabel sx={{ ml: "auto", pr: 1 }}>
-          {numberOfResults && (
+          {!isLoading ? (
             <Typography level="body4">
               Number of Results: {numberOfResults}
             </Typography>
+          ) : (
+            <Typography level="body4">Loading results...</Typography>
           )}
         </FormLabel>
       </FormControl>

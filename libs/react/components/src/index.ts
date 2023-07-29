@@ -14,6 +14,7 @@ export * from "./hooks/use-window-resize";
 export * from "./image-viewer/image-viewer";
 export * from "./input-slider";
 export * from "./markdown-client";
+export * from "./markdown-client-demo";
 export * from "./nested-checkbox-select";
 export * from "./question-box-exam";
 export * from "./question-box-review";

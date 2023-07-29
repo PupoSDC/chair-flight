@@ -22,26 +22,25 @@ export const QuestionPreviewList: FunctionComponent<
 > = ({ questions, sx, ...otherListProps }) => {
   return (
     <List
+      {...otherListProps}
       sx={{
         width: "100%",
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        overflow: "scroll",
         ...sx,
       }}
-      {...otherListProps}
     >
       {questions.map((result) => (
         <Box
           data-cy="question-preview"
+          key={result.variantId}
           component="li"
           sx={{
-            px: { xs: 0, md: 1 },
+            px: { xs: 0, sm: 1 },
             py: 1,
-            width: { xs: 1, md: 1 / 2, lg: 1 / 3 },
+            width: { xs: 1, sm: 1 / 2, lg: 1 / 3 },
           }}
-          key={result.variantId}
         >
           <QuestionVariantPreview
             showCorrect

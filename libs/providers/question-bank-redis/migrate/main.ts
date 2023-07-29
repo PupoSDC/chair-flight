@@ -9,7 +9,7 @@ import {
   writeLearningObjectivesToRedis,
   writeSubjectsToRedis,
   writeFlashCardsToRedis,
-} from "@chair-flight/providers/question-bank-redis";
+} from "../src/functions/question-bank";
 import { validateQuestions } from "./validation/validate-questions";
 
 const writeLocalToRemoteQuestionBank = async () => {
@@ -17,6 +17,7 @@ const writeLocalToRemoteQuestionBank = async () => {
   const flashCards = await getAllFlashCardsFromLocalFs();
   const learningObjectives = await getAllLearningObjectivesFromLocalFs();
   const subjects = await getAllSubjectsFromLocalFs();
+  console.log("read the entire question bank");
 
   validateQuestions(questions);
 

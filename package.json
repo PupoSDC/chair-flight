@@ -10,6 +10,7 @@
     "e2e": "nx run-many --target=e2e",
     "lint": "nx run-many --target=lint --max-warnings=0",
     "tsc": "nx run-many --target=tsc",
+    "infra": "docker-compose up -d",
     "migrate": "nx run-many --target=migrate",
     "build": "nx build next-app",
     "prettier": "prettier . --write",

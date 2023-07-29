@@ -17,6 +17,7 @@ const Main = styled(MainRoot)`
   flex-direction: column;
   justify-content: flex-start;
   height: calc(100vh - ${HEADER_HEIGHT}px);
+  min-height: calc(100vh - ${HEADER_HEIGHT}px);
   max-width: ${({ theme }) => theme.breakpoints.values.xl}px;
   margin: ${({ theme }) => theme.spacing(0, "auto")};
   padding: ${({ theme }) => theme.spacing(0, 1)};
