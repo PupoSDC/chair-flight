@@ -9,7 +9,7 @@ type Story = StoryObj<typeof Drawer>;
 
 export const Playground: Story = {
   args: {
-    children: <h1>"Drawer content"</h1>,
+    children: <h1>{"Drawer content"}</h1>,
   },
   argTypes: {
     children: {

@@ -121,3 +121,5 @@ export const QuestionBoxExam = forwardRef<HTMLDivElement, QuestionBoxExamProps>(
     );
   },
 );
+
+QuestionBoxExam.displayName = "QuestionBoxExam";

@@ -77,3 +77,5 @@ export const TestQuestionResult = forwardRef<
     );
   },
 );
+
+TestQuestionResult.displayName = "TestQuestionResult";

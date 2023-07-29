@@ -26,7 +26,7 @@ export const EditVariantModal: FunctionComponent = () => {
   const variantId = router.query["variantId"] as string;
   const name = `question.variants.${router.query["variantId"]}` as const;
   const variant = form.watch(name);
-  const history = useFormHistory(name);
+  const { clear, save, undo, isUndoAvailable } = useFormHistory(name);
 
   const variantSpecificFormSnippet = {
     "one-two": <EditVariantModalOneTwo />,
@@ -48,10 +48,10 @@ export const EditVariantModal: FunctionComponent = () => {
   };
 
   useEffect(() => {
-    history.clear();
-    history.save();
-    return () => history.clear();
-  }, [variantId]);
+    clear();
+    save();
+    return () => clear();
+  }, [clear, save]);
 
   return (
     <Modal open={!!variant}>
@@ -72,10 +72,10 @@ export const EditVariantModal: FunctionComponent = () => {
                 </Tooltip>
                 <Tooltip title="undo" variant="soft">
                   <IconButton
-                    disabled={!history.isUndoAvailable}
+                    disabled={!isUndoAvailable}
                     color={"primary"}
                     variant="plain"
-                    onClick={() => history.undo()}
+                    onClick={() => undo()}
                   >
                     <UndoIcon />
                   </IconButton>
@@ -102,7 +102,7 @@ export const EditVariantModal: FunctionComponent = () => {
               container
               spacing={2}
               sx={{ height: "100%", overflow: "hidden" }}
-              onBlur={() => history.save()}
+              onBlur={() => save()}
             >
               <Grid xs={8} sx={{ overflow: "scroll", height: "100%", pr: 2 }}>
                 {codeEditor ? (

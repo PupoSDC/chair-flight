@@ -18,6 +18,20 @@
           "tsc -p libs/providers/question-bank-redis/tsconfig.json --noEmit"
         ]
       }
+    },
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node ./libs/providers/question-bank-redis/migrate/main.ts --project ./libs/providers/question-bank-redis/tsconfig.json"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/next-app"],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../../coverage/libs/providers/question-bank-redis"
+      }
     }
   },
   "tags": []

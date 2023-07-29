@@ -201,4 +201,6 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
   },
 );
 
+Header.displayName = "Header";
+
 export const useHeaderContext = () => useContext(HeaderContext);

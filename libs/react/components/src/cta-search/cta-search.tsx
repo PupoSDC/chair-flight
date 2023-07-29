@@ -102,3 +102,5 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
     );
   },
 );
+
+CtaSearch.displayName = "CtaSearch";

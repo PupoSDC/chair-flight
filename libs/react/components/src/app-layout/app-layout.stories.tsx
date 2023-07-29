@@ -55,7 +55,7 @@ export const GridLayout: Story = {
               This section Can be scrolled
             </Typography>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => (
-              <Sheet sx={{ my: 1, p: 2 }}>
+              <Sheet sx={{ my: 1, p: 2 }} key={i}>
                 <Typography level="h3">Card number {i}</Typography>
               </Sheet>
             ))}

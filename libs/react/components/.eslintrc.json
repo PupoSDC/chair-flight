@@ -1,5 +1,13 @@
 {
-  "extends": ["plugin:@nrwl/nx/react", "../../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
-  "overrides": []
+  "extends": [
+    // Recover ths with bumb to nx 17
+    // "plugin:@nrwl/nx/react",
+    "next",
+    "../../../.eslintrc.json"
+  ],
+  "rules": {
+    // Consider reviewing the policy on this...
+    "@next/next/no-img-element": "off"
+  },
+  "ignorePatterns": ["!**/*"]
 }

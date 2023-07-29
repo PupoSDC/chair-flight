@@ -306,6 +306,7 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
             <Layer>
               <Image
                 ref={imageRef}
+                alt=""
                 image={image}
                 width={imageWidth}
                 height={imageHeight}
@@ -417,3 +418,5 @@ export const ImageViewer = forwardRef<HTMLDivElement, ImageViewerProps>(
     );
   },
 );
+
+ImageViewer.displayName = "ImageViewer";

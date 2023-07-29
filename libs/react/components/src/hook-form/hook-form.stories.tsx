@@ -79,7 +79,7 @@ export const ExampleLoginForm: StoryFn = () => {
           fontSize="sm"
           sx={{ alignSelf: "center" }}
         >
-          Don't have an account?
+          Don&apos;t have an account?
         </Typography>
         <DevTool {...form} />
       </FormProvider>

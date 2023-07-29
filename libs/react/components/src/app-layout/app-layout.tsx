@@ -3,13 +3,15 @@ import { Box, Grid as MuiGrid, styled } from "@mui/joy";
 import { HEADER_HEIGHT } from "../constants";
 import type { BoxProps, GridProps } from "@mui/joy";
 
-const Main = styled(
-  forwardRef<HTMLDivElement, BoxProps>(
-    ({ component = "main", ...props }, ref) => (
-      <Box component={component} ref={ref} {...props} />
-    ),
+const MainRoot = forwardRef<HTMLDivElement, BoxProps>(
+  ({ component = "main", ...props }, ref) => (
+    <Box component={component} ref={ref} {...props} />
   ),
-)`
+);
+
+MainRoot.displayName = "MainRoot";
+
+const Main = styled(MainRoot)`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,13 +26,15 @@ const Main = styled(
   }
 `;
 
-const MainGrid = styled(
-  forwardRef<HTMLDivElement, GridProps>(
-    ({ container = true, spacing = { xs: 0, sm: 2 }, ...props }, ref) => (
-      <MuiGrid container={container} spacing={spacing} ref={ref} {...props} />
-    ),
+const MainGridRoot = forwardRef<HTMLDivElement, GridProps>(
+  ({ container = true, spacing = { xs: 0, sm: 2 }, ...props }, ref) => (
+    <MuiGrid container={container} spacing={spacing} ref={ref} {...props} />
   ),
-)`
+);
+
+MainGridRoot.displayName = "MainGridRoot";
+
+const MainGrid = styled(MainGridRoot)`
   height: 100%;
   width: 100%;
   display: flex;
@@ -51,11 +55,13 @@ const MainGridFixedColumn = styled(MuiGrid)`
   }
 `;
 
-const MainGridScrollableColumn = styled(
-  forwardRef<HTMLDivElement, GridProps>(({ xs = true, ...props }, ref) => (
-    <MuiGrid xs={xs} ref={ref} {...props} />
-  )),
-)`
+const MainGridScrollableColumnRoot = forwardRef<HTMLDivElement, GridProps>(
+  ({ xs = true, ...props }, ref) => <MuiGrid xs={xs} ref={ref} {...props} />,
+);
+
+MainGridScrollableColumnRoot.displayName = "MainGridScrollableColumnRoot";
+
+const MainGridScrollableColumn = styled(MainGridScrollableColumnRoot)`
   height: 100%;
   display: flex;
   flex-direction: column;

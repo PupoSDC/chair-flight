@@ -53,3 +53,5 @@ export const HeaderNavMobile = forwardRef<HTMLDivElement, HeaderNavProps>(
     );
   },
 );
+
+HeaderNavMobile.displayName = "HeaderNavMobile";

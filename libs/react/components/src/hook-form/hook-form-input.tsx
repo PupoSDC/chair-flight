@@ -61,3 +61,5 @@ export const HookFormInput = forwardRef<HTMLInputElement, HookFormInputProps>(
     );
   },
 );
+
+HookFormInput.displayName = "HookFormInput";

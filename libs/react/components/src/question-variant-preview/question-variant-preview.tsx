@@ -112,3 +112,5 @@ export const QuestionVariantPreview = forwardRef<
     </Sheet>
   ),
 );
+
+QuestionVariantPreview.displayName = "QuestionVariantPreview";

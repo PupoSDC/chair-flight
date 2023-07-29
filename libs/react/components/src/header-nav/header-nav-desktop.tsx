@@ -88,3 +88,5 @@ export const HeaderNavDesktop = forwardRef<HTMLDivElement, HeaderNavProps>(
     );
   },
 );
+
+HeaderNavDesktop.displayName = "HeaderNavDesktop";

@@ -31,3 +31,5 @@ export const HookFormErrorMessage = forwardRef<
     </Typography>
   );
 });
+
+HookFormErrorMessage.displayName = "HookFormErrorMessage";

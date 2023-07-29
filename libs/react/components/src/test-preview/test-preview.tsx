@@ -113,3 +113,5 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
     );
   },
 );
+
+TestPreview.displayName = "TestPreview";

@@ -77,3 +77,5 @@ export const HeaderNavMenuItem = forwardRef<
     </StyledMenuItem>
   );
 });
+
+HeaderNavMenuItem.displayName = "HeaderNavMenuItem";

@@ -19,3 +19,5 @@ export const MarkdownClient = memo<MarkdownClientProps>(({ children }) => (
     {children}
   </ReactMarkdown>
 ));
+
+MarkdownClient.displayName = "MarkdownClient";

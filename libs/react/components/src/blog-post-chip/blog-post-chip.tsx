@@ -36,3 +36,5 @@ export const BlogPostChip = forwardRef<HTMLDivElement, BlogPostChipProps>(
     );
   },
 );
+
+BlogPostChip.displayName = "BlogPostChip";

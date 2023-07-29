@@ -59,3 +59,5 @@ export const Ups = forwardRef<HTMLDivElement, UpsProps>(
     </Box>
   ),
 );
+
+Ups.displayName = "Ups";

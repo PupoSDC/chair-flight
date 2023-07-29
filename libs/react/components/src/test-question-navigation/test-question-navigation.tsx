@@ -254,3 +254,5 @@ export const TestQuestionNavigation = forwardRef<
     );
   },
 );
+
+TestQuestionNavigation.displayName = "TestQuestionNavigation";

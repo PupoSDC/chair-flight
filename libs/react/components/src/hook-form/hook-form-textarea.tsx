@@ -44,3 +44,5 @@ export const HookFormTextArea = forwardRef<
     </FormControl>
   );
 });
+
+HookFormTextArea.displayName = "HookFormTextArea";

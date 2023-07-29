@@ -175,3 +175,5 @@ export const QuestionMultipleChoice = forwardRef<
     </QuestionMultipleChoiceBox>
   ),
 );
+
+QuestionMultipleChoice.displayName = "QuestionMultipleChoice";

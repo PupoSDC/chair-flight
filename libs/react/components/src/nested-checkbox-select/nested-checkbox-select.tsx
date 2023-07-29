@@ -107,6 +107,7 @@ export const NestedCheckboxSelect = forwardRef<
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 {item.children.map((child) => (
                   <Box
+                    key={child.id}
                     sx={{
                       position: "relative",
                       display: "flex",
@@ -136,3 +137,5 @@ export const NestedCheckboxSelect = forwardRef<
     </Sheet>
   );
 });
+
+NestedCheckboxSelect.displayName = "NestedCheckboxSelect";

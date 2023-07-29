@@ -85,3 +85,5 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
     );
   },
 );
+
+InputSlider.displayName = "InputSlider";

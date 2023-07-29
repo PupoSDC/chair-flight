@@ -76,7 +76,7 @@ export type FlashCardTinderProps = {
 } & Pick<BoxProps, "sx" | "style" | "className">;
 
 /**
- * A swipeable container designed to flash cards, and inspired by Tinder.
+ * A swipable container designed to flash cards, and inspired by Tinder.
  *
  * Children must be an array.
  */
@@ -150,3 +150,5 @@ export const FlashCardTinder = forwardRef<HTMLDivElement, FlashCardTinderProps>(
     );
   },
 );
+
+FlashCardTinder.displayName = "FlashCardTinder";

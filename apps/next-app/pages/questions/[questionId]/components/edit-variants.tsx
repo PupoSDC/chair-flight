@@ -115,39 +115,40 @@ export const EditVariants: FunctionComponent = () => {
   const questionId = router.query["questionId"] as string;
   const variants = Object.values(form.watch("question.variants"));
   const errors = form.formState.errors;
-  const history = useFormHistory(questionId);
+  const { undo, save } = useFormHistory(questionId);
+  const { getValues, setValue } = form;
 
   const mergeVariants = useCallback(
     (fromId: string, toId: string) => {
       if (fromId === toId) return;
-      const allVariants = form.getValues("question.variants");
+      const allVariants = getValues("question.variants");
       const newAllVariants = deepCopy(allVariants);
       const to = newAllVariants[toId];
       const from = newAllVariants[fromId];
       to.externalIds = [...new Set([...to.externalIds, ...from.externalIds])];
       delete newAllVariants[fromId];
-      history.save();
-      form.setValue(`question.variants`, newAllVariants);
+      save();
+      setValue(`question.variants`, newAllVariants);
       toast.success(`${fromId} merged into ${toId}`, {
         duration: 8000,
-        action: { label: "Revert", onClick: history.undo },
+        action: { label: "Revert", onClick: undo },
       });
     },
-    [history.undo, history.save, form.setValue, form.getValues],
+    [undo, save, setValue, getValues],
   );
 
   const deleteVariant = useCallback(
     (variantId: string) => {
       const { [variantId]: _, ...remainingValues } =
-        form.getValues("question.variants");
-      history.save();
-      form.setValue(`question.variants`, remainingValues);
+        getValues("question.variants");
+      save();
+      setValue(`question.variants`, remainingValues);
       toast.success(`${variantId} deleted`, {
         duration: 8000,
-        action: { label: "Revert", onClick: history.undo },
+        action: { label: "Revert", onClick: undo },
       });
     },
-    [history.undo, history.save, form.setValue, form.getValues],
+    [undo, save, setValue, getValues],
   );
 
   const openVariant = useCallback(

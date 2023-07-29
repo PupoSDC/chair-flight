@@ -215,3 +215,5 @@ export const QuestionBoxReview = forwardRef<
     );
   },
 );
+
+QuestionBoxReview.displayName = "QuestionBoxReview";

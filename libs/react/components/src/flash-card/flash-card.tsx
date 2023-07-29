@@ -75,3 +75,5 @@ export const FlashCard = forwardRef<HTMLDivElement, FlashCardProps>(
     );
   },
 );
+
+FlashCard.displayName = "FlashCard";

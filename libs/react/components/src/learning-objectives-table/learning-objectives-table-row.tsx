@@ -64,3 +64,5 @@ export const LearningObjectivesTableRow = memo<LearningObjectivesTableRowProps>(
     );
   },
 );
+
+LearningObjectivesTableRow.displayName = "LearningObjectivesTableRow";
