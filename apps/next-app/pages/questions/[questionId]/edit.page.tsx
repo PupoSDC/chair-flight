@@ -2,7 +2,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Grid } from "@mui/joy";
-import { questionSchema } from "@chair-flight/core/schemas";
+import { questionEditSchema } from "@chair-flight/core/schemas";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import {
   AppHead,
@@ -16,40 +16,27 @@ import { EditQuestionHeader } from "./components/edit-question-header";
 import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
 import { ReviewPrModal } from "./components/review-pr-modal";
+import type { EditQuestionFormValues } from "./types/edit-question-form-values";
 import type { NextPage } from "next";
 
-const resolver = zodResolver(questionSchema);
+const resolver = zodResolver(questionEditSchema);
 
 export const EditQuestionPage: NextPage = () => {
-  const { query } = useRouter();
-  const questionId = query["questionId"] as string;
+  const router = useRouter();
+  const questionId = router.query["questionId"] as string;
 
-  const { mutateAsync: updateQuestion } =
-    trpc.questions.updateQuestion.useMutation();
-
-  const [{ questionTemplate: defaultValues }] =
+  const [{ questionTemplate }] =
     trpc.questions.getQuestionFromGithub.useSuspenseQuery({ questionId });
 
-  const form = useForm({ resolver, defaultValues, mode: "onBlur" });
+  const defaultValues: EditQuestionFormValues = {
+    question: questionTemplate,
+    requestData: {
+      title: "",
+      description: "",
+    },
+  };
 
-  const onSubmit = form.handleSubmit(async (editedQuestion) => {
-    // toast.promise(updateQuestion({ question: editedQuestion }), {
-    //   loading: "Saving...",
-    //   error: "Failed to save",
-    //   success: (response) => {
-    //     router.push(`/questions/${question.id}`);
-    //     dispatch(actions.deleteEditorState({ questionId: question.id }));
-    //     return (
-    //       <Typography>
-    //         Saved <br />
-    //         <Link href={response.url} target="_blank">
-    //           You can follow up on github!
-    //         </Link>
-    //       </Typography>
-    //     );
-    //   },
-    // });
-  });
+  const form = useForm({ resolver, defaultValues, mode: "onBlur" });
 
   return (
     <>
@@ -69,10 +56,10 @@ export const EditQuestionPage: NextPage = () => {
                 <EditVariants />
               </Grid>
             </Grid>
+            <EditVariantModal />
+            <ReviewPrModal />
+            <RestoreFormHistory id={questionId} />
           </Box>
-          <EditVariantModal />
-          <ReviewPrModal />
-          <RestoreFormHistory id={questionId} />
         </FormProvider>
       </AppLayout.Main>
     </>

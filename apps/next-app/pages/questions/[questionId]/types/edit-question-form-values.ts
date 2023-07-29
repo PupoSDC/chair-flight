@@ -1,5 +1,3 @@
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { RouterInput } from "@chair-flight/trpc/client";
 
-export type EditQuestionFormValues = {
-  question: QuestionTemplate;
-};
+export type EditQuestionFormValues = RouterInput["questions"]["updateQuestion"];

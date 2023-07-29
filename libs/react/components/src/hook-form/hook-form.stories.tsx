@@ -1,13 +1,7 @@
 import { FormProvider, useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Button,
-  FormControl,
-  FormLabel,
-  Link,
-  Sheet,
-  Typography,
-} from "@mui/joy";
+import { Button, Link, Sheet, Typography } from "@mui/joy";
 import { z } from "zod";
 import { HookFormInput } from "./hook-form-input";
 import { HookFormTextArea } from "./hook-form-textarea";
@@ -29,18 +23,15 @@ export const ExampleLoginForm: StoryFn = () => {
       password: z.string().min(8),
     }),
   );
+
   const defaultValues = {
     userName: "",
     password: "",
   };
-  const form = useForm({ resolver, defaultValues });
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = form;
 
-  const onSubmit = handleSubmit((data) => {
+  const form = useForm({ resolver, defaultValues });
+
+  const onSubmit = form.handleSubmit((data) => {
     alert(`Success! ${data.userName}`);
   });
 
@@ -62,40 +53,36 @@ export const ExampleLoginForm: StoryFn = () => {
       component={"form"}
       onSubmit={onSubmit}
     >
-      <div>
-        <Typography level="h4" component="h1">
-          <b>Welcome!</b>
+      <FormProvider {...form}>
+        <div>
+          <Typography level="h4" component="h1">
+            <b>Welcome!</b>
+          </Typography>
+          <Typography level="body2">Sign in to continue.</Typography>
+        </div>
+        <HookFormInput
+          {...form.register("userName")}
+          formLabel="Email"
+          placeholder="Email"
+        />
+        <HookFormInput
+          {...form.register("password")}
+          formLabel="Password"
+          type="password"
+          placeholder="Password"
+        />
+        <Button sx={{ mt: 1 }} type="submit">
+          Log in
+        </Button>
+        <Typography
+          endDecorator={<Link href="#">Sign up</Link>}
+          fontSize="sm"
+          sx={{ alignSelf: "center" }}
+        >
+          Don't have an account?
         </Typography>
-        <Typography level="body2">Sign in to continue.</Typography>
-      </div>
-      <FormControl>
-        <FormLabel>Email</FormLabel>
-        <HookFormInput
-          {...register("password")}
-          errors={errors}
-          type="password"
-          placeholder="Password"
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel>Password</FormLabel>
-        <HookFormInput
-          {...register("password")}
-          errors={errors}
-          type="password"
-          placeholder="Password"
-        />
-      </FormControl>
-      <Button sx={{ mt: 1 }} type="submit">
-        Log in
-      </Button>
-      <Typography
-        endDecorator={<Link href="#">Sign up</Link>}
-        fontSize="sm"
-        sx={{ alignSelf: "center" }}
-      >
-        Don't have an account?
-      </Typography>
+        <DevTool {...form} />
+      </FormProvider>
     </Sheet>
   );
 };
@@ -112,11 +99,19 @@ export const ExampleTextArea: StoryFn = () => {
 
   const form = useForm({ resolver, defaultValues });
 
+  const onSubmit = form.handleSubmit((data) => {
+    alert(`Success! ${data.text}`);
+  });
+
   return (
-    <Sheet>
+    <Sheet component={"form"} onSubmit={onSubmit}>
       <FormProvider {...form}>
-        <HookFormTextArea name="text" />
+        <HookFormTextArea {...form.register("text")} />
+        <Button sx={{ mt: 1 }} type="submit">
+          Log in
+        </Button>
       </FormProvider>
+      <DevTool {...form} />
     </Sheet>
   );
 };

@@ -4,7 +4,7 @@ import { default as CreateIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Box, FormLabel, IconButton, Sheet } from "@mui/joy";
 import { HookFormTextArea } from "@chair-flight/react/components";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 import type { FunctionComponent } from "react";
 
 type Statements =
@@ -22,18 +22,20 @@ const statementTypes: Statements[] = [
 
 export const EditVariantModalOneTwo: FunctionComponent = () => {
   const router = useRouter();
-  const form = useFormContext<QuestionTemplate>();
+  const form = useFormContext<EditQuestionFormValues>();
   const variantId = router.query["variantId"] as string;
 
   return (
     <>
       <HookFormTextArea
-        {...form.register(`variants.${variantId}.question`)}
+        {...form.register(`question.variants.${variantId}.question`)}
         formLabel={"Question"}
         minRows={1}
       />
       {statementTypes.map((statementType) => {
-        const statements = form.watch(`variants.${variantId}.${statementType}`);
+        const statements = form.watch(
+          `question.variants.${variantId}.${statementType}`,
+        );
         const error = get(
           form.formState.errors,
           `variants.${variantId}.${statementType}`,
@@ -60,10 +62,12 @@ export const EditVariantModalOneTwo: FunctionComponent = () => {
                 onClick={() => {
                   const length = statements.length;
                   form.setValue(
-                    `variants.${variantId}.${statementType}.${length}`,
+                    `question.variants.${variantId}.${statementType}.${length}`,
                     "",
                   );
-                  form.clearErrors(`variants.${variantId}.${statementType}`);
+                  form.clearErrors(
+                    `question.variants.${variantId}.${statementType}`,
+                  );
                 }}
               />
             </Box>
@@ -75,7 +79,7 @@ export const EditVariantModalOneTwo: FunctionComponent = () => {
                 >
                   <HookFormTextArea
                     {...form.register(
-                      `variants.${variantId}.${statementType}.${index}`,
+                      `question.variants.${variantId}.${statementType}.${index}`,
                     )}
                     formLabel={"Question"}
                     minRows={1}
@@ -86,7 +90,7 @@ export const EditVariantModalOneTwo: FunctionComponent = () => {
                     children={<CloseIcon />}
                     onClick={() =>
                       form.setValue(
-                        `variants.${variantId}.${statementType}`,
+                        `question.variants.${variantId}.${statementType}`,
                         statements.filter((_, i) => i !== index),
                       )
                     }

@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { create } from "zustand";
 import { devtools, persist, subscribeWithSelector } from "zustand/middleware";
@@ -94,13 +94,18 @@ export const useFormHistory = (id: string) => {
 };
 
 export const RestoreFormHistory = ({ id }: { id: string }) => {
+  const hasMounted = useRef(false);
   const { save, hasHistory } = useFormHistory(id);
+
   useEffect(() => {
+    if (hasMounted.current) return;
+    hasMounted.current = true;
     if (hasHistory) {
       // offer to restore history
     } else {
       save();
     }
-  }, []);
+  });
+
   return null;
 };

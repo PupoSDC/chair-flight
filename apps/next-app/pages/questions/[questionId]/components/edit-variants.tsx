@@ -10,10 +10,8 @@ import {
   QuestionVariantPreview,
 } from "@chair-flight/react/components";
 import { useFormHistory } from "@chair-flight/react/containers";
-import type {
-  QuestionTemplate,
-  QuestionVariant,
-} from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
+import type { QuestionVariant } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
 const ListContainer = styled(Box)`
@@ -113,26 +111,23 @@ const deepCopy = <T,>(a: T): T => JSON.parse(JSON.stringify(a)) as T;
 
 export const EditVariants: FunctionComponent = () => {
   const router = useRouter();
-  const form = useFormContext<QuestionTemplate>();
+  const form = useFormContext<EditQuestionFormValues>();
   const questionId = router.query["questionId"] as string;
-  const variants = Object.values(form.watch("variants"));
+  const variants = Object.values(form.watch("question.variants"));
   const errors = form.formState.errors;
   const history = useFormHistory(questionId);
-  const error = get(errors, "variants");
-
-  console.log(error);
 
   const mergeVariants = useCallback(
     (fromId: string, toId: string) => {
       if (fromId === toId) return;
-      const allVariants = form.getValues("variants");
+      const allVariants = form.getValues("question.variants");
       const newAllVariants = deepCopy(allVariants);
       const to = newAllVariants[toId];
       const from = newAllVariants[fromId];
       to.externalIds = [...new Set([...to.externalIds, ...from.externalIds])];
       delete newAllVariants[fromId];
       history.save();
-      form.setValue(`variants`, newAllVariants);
+      form.setValue(`question.variants`, newAllVariants);
       toast.success(`${fromId} merged into ${toId}`, {
         duration: 8000,
         action: { label: "Revert", onClick: history.undo },
@@ -143,9 +138,10 @@ export const EditVariants: FunctionComponent = () => {
 
   const deleteVariant = useCallback(
     (variantId: string) => {
-      const { [variantId]: _, ...remainingValues } = form.getValues("variants");
+      const { [variantId]: _, ...remainingValues } =
+        form.getValues("question.variants");
       history.save();
-      form.setValue(`variants`, remainingValues);
+      form.setValue(`question.variants`, remainingValues);
       toast.success(`${variantId} deleted`, {
         duration: 8000,
         action: { label: "Revert", onClick: history.undo },
@@ -175,7 +171,7 @@ export const EditVariants: FunctionComponent = () => {
       <ListContainer component={"ul"}>
         {variants.map((variant) => (
           <EditVariant
-            error={get(errors, `variants.${variant.id}`)}
+            error={!!get(errors, `question.variants.${variant.id}`)}
             key={variant.id}
             variant={variant}
             openVariant={openVariant}

@@ -1,6 +1,5 @@
-import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { questionSchema } from "@chair-flight/core/schemas";
+import { questionEditSchema } from "@chair-flight/core/schemas";
 import {
   createNewQuestionPr,
   getQuestionFromGit,
@@ -52,13 +51,8 @@ export const questionsRouter = router({
       return { questionTemplate };
     }),
   updateQuestion: publicProcedure
-    .input(
-      z.object({
-        question: questionSchema,
-      }),
-    )
+    .input(questionEditSchema)
     .mutation(async ({ input }) => {
-      const { question } = input;
-      createNewQuestionPr(question);
+      return createNewQuestionPr(input);
     }),
 });

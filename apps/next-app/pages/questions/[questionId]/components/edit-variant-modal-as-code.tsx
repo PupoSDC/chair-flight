@@ -4,7 +4,7 @@ import { default as dynamic } from "next/dynamic";
 import { useRouter } from "next/router";
 import { Sheet, Typography, useColorScheme } from "@mui/joy";
 import { questionVariantSchema } from "@chair-flight/core/schemas";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 import type { ChangeEvent, FunctionComponent } from "react";
 
 const CodeEditor = dynamic(
@@ -13,13 +13,13 @@ const CodeEditor = dynamic(
 );
 
 export const EditVariantModalAsCode: FunctionComponent = () => {
-  const form = useFormContext<QuestionTemplate>();
+  const form = useFormContext<EditQuestionFormValues>();
   const router = useRouter();
   const variantId = router.query["variantId"] as string;
   const { mode } = useColorScheme();
   const [error, setError] = useState("");
   const [code, setCode] = useState(() =>
-    JSON.stringify(form.watch(`variants.${variantId}`), null, 2),
+    JSON.stringify(form.watch(`question.variants.${variantId}`), null, 2),
   );
 
   const onCodeChanged = (evt: ChangeEvent<HTMLTextAreaElement>) => {
@@ -28,7 +28,7 @@ export const EditVariantModalAsCode: FunctionComponent = () => {
     startTransition(() => {
       try {
         const value = questionVariantSchema.parse(JSON.parse(code));
-        form.setValue(`variants.${variantId}`, value);
+        form.setValue(`question.variants.${variantId}`, value);
         setError("");
       } catch (error) {
         setError((error as Error).message);

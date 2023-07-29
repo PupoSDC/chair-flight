@@ -9,17 +9,17 @@ import {
   HookFormErrorMessage,
   HookFormTextArea,
 } from "@chair-flight/react/components";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 import type { FunctionComponent } from "react";
 import type { ZodError } from "zod";
 
 export const EditVariantModalSimple: FunctionComponent = () => {
   const router = useRouter();
-  const form = useFormContext<QuestionTemplate>();
+  const form = useFormContext<EditQuestionFormValues>();
   const randomSeed = useId();
   const [getRandomId] = useState(() => getRandomIdGenerator(randomSeed));
   const variantId = router.query["variantId"] as string;
-  const options = form.watch(`variants.${variantId}.options`);
+  const options = form.watch(`question.variants.${variantId}.options`);
   const optionsError = get(
     form.formState.errors,
     `variants.${variantId}.options`,
@@ -27,7 +27,7 @@ export const EditVariantModalSimple: FunctionComponent = () => {
 
   const createOption = () => {
     const id = getRandomId();
-    form.setValue(`variants.${variantId}.options.${options.length}`, {
+    form.setValue(`question.variants.${variantId}.options.${options.length}`, {
       id: id,
       text: "",
       correct: false,
@@ -37,7 +37,7 @@ export const EditVariantModalSimple: FunctionComponent = () => {
 
   const deleteOption = (id: string) => {
     form.setValue(
-      `variants.${variantId}.options`,
+      `question.variants.${variantId}.options`,
       options.filter((opt) => id !== opt.id),
     );
   };
@@ -45,7 +45,7 @@ export const EditVariantModalSimple: FunctionComponent = () => {
   return (
     <>
       <HookFormTextArea
-        {...form.register(`variants.${variantId}.question`)}
+        {...form.register(`question.variants.${variantId}.question`)}
         formLabel={"Question"}
         minRows={1}
       />
@@ -60,7 +60,8 @@ export const EditVariantModalSimple: FunctionComponent = () => {
         />
       </FormLabel>
       {options.map((option, index) => {
-        const optionPath = `variants.${variantId}.options.${index}` as const;
+        const optionPath =
+          `question.variants.${variantId}.options.${index}` as const;
 
         return (
           <Sheet
@@ -104,9 +105,7 @@ export const EditVariantModalSimple: FunctionComponent = () => {
               minRows={1}
               sx={{ mt: 1 }}
             />
-            <HookFormErrorMessage
-              {...form.register(`variants.${variantId}.explanation`)}
-            />
+            <HookFormErrorMessage name={`${optionPath}`} />
           </Sheet>
         );
       })}

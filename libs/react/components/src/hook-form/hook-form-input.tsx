@@ -1,27 +1,63 @@
-import { forwardRef } from "react";
+import { forwardRef, startTransition, useEffect, useState } from "react";
 import { get, useFormContext } from "react-hook-form";
-import { FormHelperText, Input } from "@mui/joy";
-import type { InputProps } from "@mui/joy";
-import type { FieldValues, FieldErrors } from "react-hook-form";
+import { FormControl, FormLabel, Input } from "@mui/joy";
+import { HookFormErrorMessage } from "./hook-form-error-message";
+import type { FormControlProps, InputProps } from "@mui/joy";
 
-export type HookFormInputProps = Omit<InputProps, "error" | "name"> & {
+type StyleProps = "sx" | "style" | "className";
+
+export type HookFormInputProps = {
   name: string;
-  errors: FieldErrors<FieldValues>;
-};
+  formLabel?: string;
+  optional?: boolean;
+} & Pick<FormControlProps, StyleProps> &
+  Omit<InputProps, StyleProps | "onChange" | "onBlur" | "value"> &
+  Required<Pick<InputProps, "onChange" | "onBlur">>;
 
 export const HookFormInput = forwardRef<HTMLInputElement, HookFormInputProps>(
-  (props, ref) => {
-    const methods = useFormContext();
-    const error = get(props.errors || methods.formState.errors, props.name);
+  (
+    {
+      sx,
+      style,
+      className,
+      name,
+      formLabel,
+      onChange,
+      optional,
+      ...otherProps
+    },
+    ref,
+  ) => {
+    const form = useFormContext();
+    const error = get(form.formState.errors, name);
+    const watchedValue = form.watch(name);
+    const [localValue, setLocalValue] = useState(watchedValue);
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setLocalValue(event.target.value);
+      startTransition(() => onChange?.(event));
+    };
+
+    useEffect(() => setLocalValue(watchedValue), [watchedValue]);
+
     return (
-      <>
-        <Input ref={ref} {...props} error={!!error} />
-        {error?.message && (
-          <FormHelperText sx={{ color: "danger", fontSize: "xs" }}>
-            {error.message}
-          </FormHelperText>
+      <FormControl sx={sx} style={style} className={className}>
+        {formLabel && (
+          <FormLabel
+            sx={{ color: optional ? "text.tertiary" : "text.primary" }}
+            children={formLabel}
+          />
         )}
-      </>
+        <Input
+          ref={ref}
+          error={!!error}
+          name={name}
+          value={localValue}
+          onChange={handleChange}
+          {...otherProps}
+        />
+        <HookFormErrorMessage name={name} />
+      </FormControl>
     );
   },
 );

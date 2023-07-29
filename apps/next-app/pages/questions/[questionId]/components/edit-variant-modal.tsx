@@ -16,15 +16,15 @@ import { EditVariantModalAsCode } from "./edit-variant-modal-as-code";
 import { EditVariantModalOneTwo } from "./edit-variant-modal-one-two";
 import { EditVariantModalSimple } from "./edit-variant-modal-simple";
 import { InputCommaSeparatedValues } from "./input-comma-seperated-values";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 
 export const EditVariantModal: FunctionComponent = () => {
   const [codeEditor, setCodeEditor] = useState(false);
   const router = useRouter();
-  const form = useFormContext<QuestionTemplate>();
+  const form = useFormContext<EditQuestionFormValues>();
   const questionId = router.query["questionId"] as string;
   const variantId = router.query["variantId"] as string;
-  const name = `variants.${router.query["variantId"]}` as const;
+  const name = `question.variants.${router.query["variantId"]}` as const;
   const variant = form.watch(name);
   const history = useFormHistory(name);
 
@@ -39,7 +39,7 @@ export const EditVariantModal: FunctionComponent = () => {
   };
 
   const validate = async () => {
-    const isValid = await form.trigger(`variants.${variantId}`);
+    const isValid = await form.trigger(`question.variants.${variantId}`);
     if (isValid) {
       toast.success("Validation successful! 🎉");
     } else {
@@ -114,7 +114,7 @@ export const EditVariantModal: FunctionComponent = () => {
                       <FormLabel>Annexes</FormLabel>
                       <Controller
                         control={form.control}
-                        name={`variants.${variantId}.annexes`}
+                        name={`question.variants.${variantId}.annexes`}
                         render={({ field: { onChange, onBlur, value } }) => (
                           <InputCommaSeparatedValues
                             onChange={onChange}
@@ -128,7 +128,7 @@ export const EditVariantModal: FunctionComponent = () => {
                       <FormLabel>External Ids</FormLabel>
                       <Controller
                         control={form.control}
-                        name={`variants.${variantId}.externalIds`}
+                        name={`question.variants.${variantId}.externalIds`}
                         render={({ field: { onChange, onBlur, value } }) => (
                           <InputCommaSeparatedValues
                             onChange={onChange}

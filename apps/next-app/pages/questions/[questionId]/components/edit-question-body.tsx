@@ -1,33 +1,24 @@
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import {
-  Box,
-  FormControl,
-  FormLabel,
-  Select,
-  Textarea,
-  Option,
-  Button,
-} from "@mui/joy";
+import { Box, FormControl, FormLabel, Select, Option, Button } from "@mui/joy";
 import { getNewVariant } from "@chair-flight/core/app";
+import { HookFormTextArea } from "@chair-flight/react/components";
 import { useFormHistory } from "@chair-flight/react/containers";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";
-import type {
-  QuestionTemplate,
-  QuestionVariantType,
-} from "@chair-flight/base/types";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
+import type { QuestionVariantType } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
 export const EditQuestionBody: FunctionComponent = () => {
-  const form = useFormContext<QuestionTemplate>();
-  const history = useFormHistory(form.watch("id"));
+  const form = useFormContext<EditQuestionFormValues>();
+  const history = useFormHistory(form.watch("question.id"));
 
   const [newVariantType, setNewVariantType] =
     useState<QuestionVariantType>("simple");
 
   const addNewVariant = () => {
     const newVariant = getNewVariant(newVariantType);
-    form.setValue(`variants.${newVariant.id}`, newVariant);
+    form.setValue(`question.variants.${newVariant.id}`, newVariant);
     history.save();
   };
 
@@ -37,16 +28,18 @@ export const EditQuestionBody: FunctionComponent = () => {
         <FormLabel>Learning Objectives</FormLabel>
         <Controller
           control={form.control}
-          name="learningObjectives"
+          name="question.learningObjectives"
           render={({ field }) => (
             <InputAutocompleteLearningObjectives {...field} />
           )}
         />
       </FormControl>
-      <FormControl sx={{ mt: 1 }}>
-        <FormLabel>Explanation</FormLabel>
-        <Textarea minRows={5} {...form.register("explanation")} />
-      </FormControl>
+      <HookFormTextArea
+        {...form.register("question.explanation")}
+        name={"question.explanation"}
+        minRows={5}
+        sx={{ mt: 1 }}
+      />
       <FormControl sx={{ mt: 1 }}>
         <FormLabel>Create New Variant</FormLabel>
         <Select

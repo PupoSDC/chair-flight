@@ -64,3 +64,6 @@ export const InputAutocompleteLearningObjectives = forwardRef<
     />
   );
 });
+
+InputAutocompleteLearningObjectives.displayName =
+  "InputAutocompleteLearningObjectives";

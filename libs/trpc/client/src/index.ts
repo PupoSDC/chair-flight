@@ -2,6 +2,7 @@ import { httpBatchLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
+import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 
 const getBaseUrl = (): string => {
   if (typeof window !== "undefined") return "";
@@ -32,3 +33,6 @@ export const trpc = createTRPCNext<AppRouter>({
     };
   },
 });
+
+export type RouterInput = inferRouterInputs<AppRouter>;
+export type RouterOutput = inferRouterOutputs<AppRouter>;
