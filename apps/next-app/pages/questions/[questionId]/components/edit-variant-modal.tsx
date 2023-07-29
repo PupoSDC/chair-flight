@@ -1,33 +1,153 @@
+import { useState, type FunctionComponent, useEffect } from "react";
+import { Controller, useFormContext } from "react-hook-form";
 import { useRouter } from "next/router";
-import { Modal, Typography } from "@mui/joy";
-import { useAppSelector } from "@chair-flight/core/redux";
+import { default as CloseIcon } from "@mui/icons-material/Close";
+import { default as CodeIcon } from "@mui/icons-material/Code";
+import { default as CodeOffIcon } from "@mui/icons-material/CodeOff";
+import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
+import { default as UndoIcon } from "@mui/icons-material/Undo";
+import { IconButton, Modal, Tooltip, Typography } from "@mui/joy";
+import { Box, FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
+import { getVariantPreview } from "@chair-flight/core/app";
 import { toast } from "@chair-flight/react/components";
-import { EditVariantModalDialog } from "./edit-variant-modal-dialog";
-import type { FunctionComponent } from "react";
+import { AppLayout, MarkdownClient } from "@chair-flight/react/components";
+import { useFormHistory } from "@chair-flight/react/containers";
+import { EditVariantModalAsCode } from "./edit-variant-modal-as-code";
+import { EditVariantModalOneTwo } from "./edit-variant-modal-one-two";
+import { EditVariantModalSimple } from "./edit-variant-modal-simple";
+import { InputCommaSeparatedValues } from "./input-comma-seperated-values";
+import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export const EditVariantModal: FunctionComponent = () => {
+  const [codeEditor, setCodeEditor] = useState(false);
   const router = useRouter();
+  const form = useFormContext<QuestionTemplate>();
   const questionId = router.query["questionId"] as string;
   const variantId = router.query["variantId"] as string;
+  const name = `variants.${router.query["variantId"]}` as const;
+  const variant = form.watch(name);
+  const history = useFormHistory(name);
 
-  const variant = useAppSelector(
-    (state) =>
-      state?.questionEditor?.questions[questionId]?.currentVersion?.variants[
-        variantId
-      ],
-  );
+  const variantSpecificFormSnippet = {
+    "one-two": <EditVariantModalOneTwo />,
+    simple: <EditVariantModalSimple />,
+    calculation: <div>Not Implemented!</div>,
+  }[variant?.type ?? "one-two"];
 
-  const disableCloseWithoutAction = () => {
-    toast.warn("Please save or discard your changes!");
+  const closeModal = () => {
+    router.push(`/questions/${questionId}/edit`, undefined, { shallow: true });
   };
 
+  const validate = async () => {
+    const isValid = await form.trigger(`variants.${variantId}`);
+    if (isValid) {
+      toast.success("Validation successful! 🎉");
+    } else {
+      toast.error("Validation failed! 😢");
+    }
+  };
+
+  useEffect(() => {
+    history.clear();
+    history.save();
+    return () => history.clear();
+  }, [variantId]);
+
   return (
-    <Modal open={!!variantId} onClose={disableCloseWithoutAction}>
-      {variant ? (
-        <EditVariantModalDialog questionId={questionId} variant={variant} />
-      ) : (
-        <Typography level="h5">loading...</Typography>
-      )}
+    <Modal open={!!variant}>
+      <ModalDialog layout="fullscreen">
+        {variant && (
+          <>
+            <AppLayout.Header>
+              <Typography>Edit Variant</Typography>
+              <Box sx={{ display: "flex" }}>
+                <Tooltip title="undo" variant="soft">
+                  <IconButton
+                    color={"primary"}
+                    variant="plain"
+                    onClick={() => setCodeEditor((v) => !v)}
+                  >
+                    {codeEditor ? <CodeOffIcon /> : <CodeIcon />}
+                  </IconButton>
+                </Tooltip>
+                <Tooltip title="undo" variant="soft">
+                  <IconButton
+                    disabled={!history.isUndoAvailable}
+                    color={"primary"}
+                    variant="plain"
+                    onClick={() => history.undo()}
+                  >
+                    <UndoIcon />
+                  </IconButton>
+                </Tooltip>
+                <Tooltip title="re-validate" variant="soft">
+                  <IconButton
+                    color={"primary"}
+                    variant="plain"
+                    onClick={() => validate()}
+                  >
+                    <RestartAltIcon />
+                  </IconButton>
+                </Tooltip>
+                <IconButton
+                  color="primary"
+                  variant="plain"
+                  children={<CloseIcon />}
+                  onClick={closeModal}
+                  sx={{ mr: 2 }}
+                />
+              </Box>
+            </AppLayout.Header>
+            <Grid
+              container
+              spacing={2}
+              sx={{ height: "100%", overflow: "hidden" }}
+              onBlur={() => history.save()}
+            >
+              <Grid xs={8} sx={{ overflow: "scroll", height: "100%", pr: 2 }}>
+                {codeEditor ? (
+                  <EditVariantModalAsCode />
+                ) : (
+                  <>
+                    {variantSpecificFormSnippet}
+                    <FormControl sx={{ mt: 1 }}>
+                      <FormLabel>Annexes</FormLabel>
+                      <Controller
+                        control={form.control}
+                        name={`variants.${variantId}.annexes`}
+                        render={({ field: { onChange, onBlur, value } }) => (
+                          <InputCommaSeparatedValues
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            value={value}
+                          />
+                        )}
+                      />
+                    </FormControl>
+                    <FormControl sx={{ mt: 1 }}>
+                      <FormLabel>External Ids</FormLabel>
+                      <Controller
+                        control={form.control}
+                        name={`variants.${variantId}.externalIds`}
+                        render={({ field: { onChange, onBlur, value } }) => (
+                          <InputCommaSeparatedValues
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            value={value}
+                          />
+                        )}
+                      />
+                    </FormControl>
+                  </>
+                )}
+              </Grid>
+              <Grid md={4}>
+                <MarkdownClient>{getVariantPreview(variant)}</MarkdownClient>
+              </Grid>
+            </Grid>
+          </>
+        )}
+      </ModalDialog>
     </Modal>
   );
 };

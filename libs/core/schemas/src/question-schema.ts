@@ -15,5 +15,10 @@ export const questionSchema: z.ZodType<QuestionTemplate> = z.object({
   learningObjectives: LearningObjectiveId.array(),
   explanation: z.string(),
   srcLocation: z.string(),
-  variants: z.record(questionVariantSchema),
+  variants: z
+    .record(questionVariantSchema)
+    .refine(
+      (v) => Object.keys(v).length > 0,
+      "At least one variant must be defined",
+    ),
 });

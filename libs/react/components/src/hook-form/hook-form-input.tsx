@@ -17,7 +17,9 @@ export const HookFormInput = forwardRef<HTMLInputElement, HookFormInputProps>(
       <>
         <Input ref={ref} {...props} error={!!error} />
         {error?.message && (
-          <FormHelperText color="danger">{error.message}</FormHelperText>
+          <FormHelperText sx={{ color: "danger", fontSize: "xs" }}>
+            {error.message}
+          </FormHelperText>
         )}
       </>
     );

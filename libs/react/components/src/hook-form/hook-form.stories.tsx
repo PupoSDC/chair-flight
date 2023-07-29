@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
@@ -10,6 +10,7 @@ import {
 } from "@mui/joy";
 import { z } from "zod";
 import { HookFormInput } from "./hook-form-input";
+import { HookFormTextArea } from "./hook-form-textarea";
 import type { Meta, StoryFn } from "@storybook/react";
 
 const meta: Meta = {
@@ -95,6 +96,27 @@ export const ExampleLoginForm: StoryFn = () => {
       >
         Don't have an account?
       </Typography>
+    </Sheet>
+  );
+};
+
+export const ExampleTextArea: StoryFn = () => {
+  const resolver = zodResolver(
+    z.object({
+      text: z.string(),
+    }),
+  );
+  const defaultValues = {
+    text: "",
+  };
+
+  const form = useForm({ resolver, defaultValues });
+
+  return (
+    <Sheet>
+      <FormProvider {...form}>
+        <HookFormTextArea name="text" />
+      </FormProvider>
     </Sheet>
   );
 };

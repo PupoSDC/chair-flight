@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
 import type { LearningObjective } from "@chair-flight/base/types";
-import type { FunctionComponent } from "react";
 
 export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
   onChange: (value: string[]) => void;
+  onBlur?: () => void;
 };
 
-export const InputAutocompleteLearningObjectives: FunctionComponent<
+export const InputAutocompleteLearningObjectives = forwardRef<
+  HTMLDivElement,
   InputAutocompleteLearningObjectivesProps
-> = ({ value, onChange }) => {
+>(({ value, onChange, onBlur }) => {
   const [search, setSearch] = useState("");
 
   const { data, isLoading } = trpc.search.searchLearningObjectives.useQuery({
@@ -35,13 +36,13 @@ export const InputAutocompleteLearningObjectives: FunctionComponent<
       inputValue={search}
       value={value}
       loading={isLoading}
+      onBlur={onBlur}
       onChange={(_, newValue) => onChange(newValue)}
       onInputChange={(_, newInputValue) => setSearch(newInputValue)}
       filterOptions={(options) => options}
       placeholder="Learning Objectives"
       options={data?.items.map((result) => result.result.id) ?? []}
       sx={{
-        p: 0.5,
         "& input": {
           minWidth: "100%",
         },
@@ -62,4 +63,4 @@ export const InputAutocompleteLearningObjectives: FunctionComponent<
       }}
     />
   );
-};
+});

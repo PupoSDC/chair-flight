@@ -7,6 +7,7 @@ export type QuestionVariantPreviewProps = {
   id: string;
   variantId?: string;
   text?: string;
+  error?: boolean;
   learningObjectives?: string[];
   externalIds?: string[];
   highLightTerms?: string[];
@@ -27,6 +28,7 @@ export const QuestionVariantPreview = forwardRef<
       externalIds,
       topRightCorner,
       sx,
+      error,
       className,
       component,
       onClick,
@@ -39,6 +41,7 @@ export const QuestionVariantPreview = forwardRef<
       className={className}
       component={component as "div"}
       onClick={onClick}
+      color={error ? "danger" : "neutral"}
       sx={{
         p: 2,
         width: "100%",

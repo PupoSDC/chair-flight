@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
 import {
   Box,
   FormControl,
@@ -9,74 +10,42 @@ import {
   Button,
 } from "@mui/joy";
 import { getNewVariant } from "@chair-flight/core/app";
-import {
-  actions,
-  useAppDispatch,
-  useAppSelector,
-} from "@chair-flight/core/redux";
+import { useFormHistory } from "@chair-flight/react/containers";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";
-import type { QuestionVariantType } from "@chair-flight/base/types";
+import type {
+  QuestionTemplate,
+  QuestionVariantType,
+} from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
-export type EditQuestionBodyProps = {
-  questionId: string;
-};
+export const EditQuestionBody: FunctionComponent = () => {
+  const form = useFormContext<QuestionTemplate>();
+  const history = useFormHistory(form.watch("id"));
 
-export const EditQuestionBody: FunctionComponent<EditQuestionBodyProps> = ({
-  questionId,
-}) => {
   const [newVariantType, setNewVariantType] =
     useState<QuestionVariantType>("simple");
-  const dispatch = useAppDispatch();
-  const question = useAppSelector(
-    (state) => state.questionEditor.questions[questionId]?.currentVersion,
-  );
-
-  if (!question) return null;
-
-  const updateLearningObjectives = (learningObjectives: string[]) => {
-    dispatch(
-      actions.updateQuestionLearningObjectives({
-        questionId,
-        learningObjectives,
-      }),
-    );
-  };
-
-  const updateExplanation = (explanation: string) => {
-    dispatch(
-      actions.updateQuestionExplanation({
-        questionId,
-        explanation,
-      }),
-    );
-  };
 
   const addNewVariant = () => {
-    dispatch(
-      actions.createNewQuestionVariant({
-        questionId,
-        variant: getNewVariant(newVariantType),
-      }),
-    );
+    const newVariant = getNewVariant(newVariantType);
+    form.setValue(`variants.${newVariant.id}`, newVariant);
+    history.save();
   };
 
   return (
-    <Box sx={{ p: 1 }}>
+    <Box sx={{ p: 1 }} onBlur={() => history.save()}>
       <FormControl>
         <FormLabel>Learning Objectives</FormLabel>
-        <InputAutocompleteLearningObjectives
-          value={question.learningObjectives}
-          onChange={updateLearningObjectives}
+        <Controller
+          control={form.control}
+          name="learningObjectives"
+          render={({ field }) => (
+            <InputAutocompleteLearningObjectives {...field} />
+          )}
         />
       </FormControl>
       <FormControl sx={{ mt: 1 }}>
         <FormLabel>Explanation</FormLabel>
-        <Textarea
-          minRows={5}
-          defaultValue={question.explanation}
-          onBlur={(evt) => updateExplanation(evt.target.value)}
-        />
+        <Textarea minRows={5} {...form.register("explanation")} />
       </FormControl>
       <FormControl sx={{ mt: 1 }}>
         <FormLabel>Create New Variant</FormLabel>

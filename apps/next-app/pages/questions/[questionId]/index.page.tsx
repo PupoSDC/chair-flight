@@ -39,9 +39,9 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   initialQuestionId,
   initialSeed,
 }) => {
-  const { query } = useRouter();
-  const seed = (query["seed"] ?? initialSeed) as string;
-  const variantId = (query["variantId"] ?? initialVariantId) as string;
+  const router = useRouter();
+  const seed = (router.query["seed"] ?? initialSeed) as string;
+  const variantId = (router.query["variantId"] ?? initialVariantId) as string;
 
   const { data } = trpc.questions.getQuestion.useQuery({
     questionId: initialQuestionId,
@@ -51,6 +51,14 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const allVariantsMap = data?.questionTemplate?.variants ?? {};
   const allVariantsArray = Object.values(allVariantsMap);
   const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
+
+  const updateVariantAndSeed = (query: { variantId: string; seed: string }) => {
+    router.push(
+      { pathname: `/questions/${initialQuestionId}`, query },
+      undefined,
+      { shallow: true },
+    );
+  };
 
   return (
     <>
@@ -75,7 +83,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
               questionId={initialQuestionId}
               variantId={variantId}
               seed={seed}
-              onQuestionChanged={() => {}}
+              onQuestionChanged={updateVariantAndSeed}
             />
           </AppLayout.MainGridFixedColumn>
           <AppLayout.MainGridScrollableColumn
@@ -87,12 +95,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
                 <Box
                   component="li"
                   key={otherVariant.id}
-                  sx={{
-                    pb: 1,
-                    "&:first-of-type  ": {
-                      my: 2,
-                    },
-                  }}
+                  sx={{ pb: 1, "&:first-of-type": { my: 2 } }}
                 >
                   <QuestionVariantPreview
                     component={Button}
