@@ -28,13 +28,15 @@ You will need to install
 [`docker`](https://docs.docker.com/get-docker/),
 manually.
 
+To get the app running locally:
+
 ```sh
 git clone git@github.com:PupoSDC/chair-flight.git
 fnm use
-cp .env.local .env
+cp .env.example .env.local
 pnpm install
 pnpm infra
-pnpm run dev
+pnpm run:local
 ```
 
 ## Project state
@@ -46,9 +48,9 @@ can and will be introduced in patch releases.
 
 ### Apps
 
-\*Note: `dev` indicates the port the service is available when running `pnpm run dev`
+\*Note: `dev` indicates the port the service is available when running `pnpm run:*`
 
-| Name     | Desc                                        | dev   |
+| Name     | Desc                                        | local |
 | -------- | ------------------------------------------- | ----- |
 | next-app | Next.js server for static/SSR pages and API | :4200 |
 | docs     | Storybook used for docs                     | :4220 |

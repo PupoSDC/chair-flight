@@ -13,7 +13,11 @@
         "dev": true
       },
       "configurations": {
-        "development": {
+        "local": {
+          "buildTarget": "next-app:build:local",
+          "dev": true
+        },
+        "dev": {
           "buildTarget": "next-app:build:development",
           "dev": true
         }

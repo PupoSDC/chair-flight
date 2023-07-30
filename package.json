@@ -5,7 +5,8 @@
   "author": "PupoSDC",
   "sideEffects": false,
   "scripts": {
-    "dev": "nx run-many --target=dev",
+    "run:local": "nx run-many --target=dev --configuration=local",
+    "run:dev": "nx run-many --target=dev --configuration=dev",
     "test": "nx run-many --target=test",
     "e2e": "nx run-many --target=e2e",
     "lint": "nx run-many --target=lint --max-warnings=0",
