@@ -26,8 +26,8 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
       <AppLayout.BackgroundImageContainer>
         <Image
           src="/images/background-test-creation.png"
-          fill
           alt="cool cockpit"
+          fill
         />
       </AppLayout.BackgroundImageContainer>
       <AppLayout.Main
