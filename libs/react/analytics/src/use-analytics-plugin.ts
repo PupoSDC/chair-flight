@@ -1,3 +1,4 @@
+import { useRouter } from "next/dist/client/router";
 import { trpc } from "@chair-flight/trpc/client";
 import type { AnalyticsPlugin } from "analytics";
 
@@ -25,6 +26,7 @@ type OriginalTrackEventProps = {
 };
 
 export const useAnalyticsPlugin = (): AnalyticsPlugin => {
+  const router = useRouter();
   const createPageEvent = trpc.analytics.createPageEvent.useMutation();
   const trackEvent = trpc.analytics.trackEvent.useMutation();
 
@@ -36,9 +38,10 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
     identify: () => {},
     page: (props: OriginalPageViewProps) => {
       createPageEvent.mutate({
+        path: router.pathname,
+        resolvedPath: router.asPath,
         anonymousId: props.payload.anonymousId,
         title: props.payload.properties.title,
-        url: props.payload.properties.url,
         height: props.payload.properties.height,
         width: props.payload.properties.width,
         referrer: props.payload.properties.referrer,
@@ -47,8 +50,9 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
     },
     track: (props: OriginalTrackEventProps) => {
       trackEvent.mutate({
+        path: router.pathname,
+        resolvedPath: router.asPath,
         eventName: props.payload.event,
-        url: window.location.href,
         anonymousId: props.payload.anonymousId,
         properties: props.payload.properties,
         timestamp: Date.now(),

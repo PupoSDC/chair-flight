@@ -12,10 +12,11 @@ export const createPageEvent = async (event: PageEvent) => {
       timestamp: new Date(event.timestamp),
       anonymousId: event.anonymousId,
       title: event.title,
-      url: event.url,
+      path: event.path,
+      resolvedPath: event.resolvedPath,
       height: event.height,
       width: event.width,
-      referrer: event.referrer,
+      referrer: event.referrer ?? "",
     },
   });
 };
@@ -27,7 +28,8 @@ export const createTrackEvent = async (event: SimplifiedTrackEvent) => {
       timestamp: new Date(event.timestamp),
       anonymousId: event.anonymousId,
       eventName: event.eventName,
-      url: event.url,
+      path: event.path,
+      resolvedPath: event.resolvedPath,
       properties: event.properties as Prisma.InputJsonValue,
     },
   });
