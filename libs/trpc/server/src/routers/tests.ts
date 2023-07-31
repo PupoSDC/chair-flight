@@ -6,7 +6,7 @@ export const testsRouter = router({
   getAllSubjects: publicProcedure.query(async ({ ctx }) => {
     const { questionBank } = ctx;
     const subjects = await questionBank.getAllSubjects();
-    return subjects;
+    return { subjects };
   }),
   createTest: publicProcedure
     .input(
@@ -17,7 +17,7 @@ export const testsRouter = router({
     .mutation(async ({ ctx, input }) => {
       const { config } = input;
       const { questionBank } = ctx;
-      const test = createTest({ config, questionBank });
-      return test;
+      const test = await createTest({ config, questionBank });
+      return { test };
     }),
 });

@@ -3,15 +3,24 @@ import { getQuestion } from "../questions/get-question";
 import { getRandomId, getRandomShuffler } from "../random/random";
 import type { Test, QuestionBankRepository } from "@chair-flight/base/types";
 
-export const newTestConfigurationSchema = z.object({
-  title: z.string(),
-  mode: z.enum(["study", "exam"]),
-  learningObjectives: z.array(z.string()),
-  numberOfQuestions: z.number().optional(),
-  seed: z.string().optional(),
-});
+export type NewTestConfiguration = {
+  mode: "study" | "exam";
+  subject: string;
+  numberOfQuestions: number;
+  learningObjectives: Record<string, boolean>;
+  seed?: string;
+  title?: string;
+};
 
-export type NewTestConfiguration = z.infer<typeof newTestConfigurationSchema>;
+export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> =
+  z.object({
+    mode: z.enum(["study", "exam"]),
+    subject: z.string(),
+    learningObjectives: z.record(z.boolean()),
+    numberOfQuestions: z.number().min(1).max(200),
+    seed: z.string().optional(),
+    title: z.string().optional(),
+  });
 
 export const createTest = async ({
   config,
@@ -23,7 +32,7 @@ export const createTest = async ({
   const allQuestions = await questionBank.getAllQuestionTemplates();
   const numberOfQuestions = config.numberOfQuestions ?? 40;
   const learningObjectives = config.learningObjectives;
-  const title = config.title;
+  const title = config.title ?? `${config.subject} ${config.mode}`;
   const seed = config.seed ?? getRandomId();
   const shuffler = getRandomShuffler(seed);
 

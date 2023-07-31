@@ -32,7 +32,7 @@ export type InputSliderProps = {
   value?: number;
   onChange?: (value: number) => void;
 } & Pick<SliderProps, "max" | "min" | "step"> &
-  Pick<InputProps, "sx" | "variant" | "className">;
+  Pick<InputProps, "disabled" | "sx" | "variant" | "className">;
 
 /**
  * A combo of an input and a slider. That functions exactly like a normal input.
@@ -47,6 +47,7 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
       variant = "outlined",
       max = 100,
       min = 0,
+      disabled,
       className,
       onChange,
       ...props
@@ -65,6 +66,7 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
         variant={variant}
         type="number"
         sx={sx}
+        disabled={disabled}
         className={className}
         value={instantValue}
         onChange={(e) =>
@@ -73,6 +75,7 @@ export const InputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
         endDecorator={
           <Slider
             {...props}
+            disabled={disabled}
             tabIndex={-1}
             max={max}
             min={min}

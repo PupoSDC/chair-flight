@@ -164,7 +164,8 @@ export const TestCreation: FunctionComponent<TestPageProps> = ({
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
+    e.preventDef;
+    ault();
     setLoading(true);
     const data = await createTest.mutateAsync({
       config: {

@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 import { trpc } from "@chair-flight/trpc/client";
+import type { NextPage } from "next";
 
 const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
 
