@@ -9,7 +9,6 @@ const config: StorybookConfig = {
     "../**/*.mdx",
     "../../../libs/react/**/src/**/*.stories.tsx",
     "../../../libs/react/**/src/**/*.mdx",
-    "../../../libs/next/**/src/**/*.stories.tsx",
   ],
   addons: [
     "@storybook/addon-essentials",

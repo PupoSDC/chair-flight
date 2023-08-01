@@ -36,7 +36,7 @@ fnm use
 cp .env.example .env.local
 pnpm install
 pnpm infra
-pnpm run:local
+pnpm dev:local
 ```
 
 ## Project state

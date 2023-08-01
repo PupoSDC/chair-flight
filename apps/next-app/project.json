@@ -6,21 +6,10 @@
   "targets": {
     "dev": {
       "executor": "@nx/next:server",
-      "defaultConfiguration": "development",
       "options": {
         "port": 4200,
         "buildTarget": "next-app:build",
         "dev": true
-      },
-      "configurations": {
-        "local": {
-          "buildTarget": "next-app:build:local",
-          "dev": true
-        },
-        "dev": {
-          "buildTarget": "next-app:build:development",
-          "dev": true
-        }
       }
     },
     "build": {
