@@ -10,9 +10,9 @@ import type {
   FlashCardContent,
   LearningObjective,
   LearningObjectiveId,
-  LearningObjectiveSummary,
   QuestionTemplate,
   QuestionTemplateId,
+  Subject,
 } from "@chair-flight/base/types";
 
 type FlashCardsMap = Record<string, FlashCardContent[]>;
@@ -24,7 +24,7 @@ let allLearningObjectives: LearningObjective[] = [];
 let allQuestionTemplatesMap: Record<string, QuestionTemplate> = {};
 let allLearningObjectivesMap: Record<string, LearningObjective> = {};
 let allFlashCards: FlashCardsMap = {};
-let allSubjects: LearningObjectiveSummary[] = [];
+let allSubjects: Subject[] = [];
 
 const chunk = <T>(arr: T[], size: number) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
@@ -81,9 +81,7 @@ export const writeLearningObjectivesToRedis = async (
   );
 };
 
-export const writeSubjectsToRedis = async (
-  subjects: LearningObjectiveSummary[],
-) => {
+export const writeSubjectsToRedis = async (subjects: Subject[]) => {
   await redis.set(SUBJECTS, subjects);
   console.info(`Migrated Subjects`);
 };
@@ -215,11 +213,9 @@ export const getLearningObjectivesFromRedis = async (
   return learningObjectives;
 };
 
-export const getAllSubjectsFromRedis = async (): Promise<
-  LearningObjectiveSummary[]
-> => {
+export const getAllSubjectsFromRedis = async (): Promise<Subject[]> => {
   if (allSubjects.length) return allSubjects;
-  const newSubjects = await redis.get<LearningObjectiveSummary[]>(SUBJECTS);
+  const newSubjects = await redis.get<Subject[]>(SUBJECTS);
   if (!newSubjects) throw new NotFoundError("Subjects not found");
   allSubjects = newSubjects;
   return allSubjects;

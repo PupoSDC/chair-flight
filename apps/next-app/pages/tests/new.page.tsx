@@ -1,22 +1,18 @@
 import { default as Image } from "next/image";
+import { useRouter } from "next/router";
 import { Box, Typography } from "@mui/joy";
-import { ReduxProvider } from "@chair-flight/core/redux";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import {
   AlphaWarning,
   AppHead,
   AppHeaderMenu,
+  TestMaker,
 } from "@chair-flight/react/containers";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
-import { TestCreation } from "./components/test-creation";
-import type { LearningObjectiveSummary } from "@chair-flight/base/types";
-import type { GetStaticProps, NextPage } from "next";
+import { ssrHandler } from "@chair-flight/trpc/server";
+import type { NextPage } from "next";
 
-type NewTestPageProps = {
-  subjects: LearningObjectiveSummary[];
-};
-
-const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
+const NewTestPage: NextPage = () => {
+  const router = useRouter();
   return (
     <>
       <AppHead />
@@ -38,30 +34,24 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ subjects }) => {
           overflow: "hidden",
         }}
       >
-        <ReduxProvider loading={"loading..."}>
-          <AlphaWarning />
-          <AppLayout.Header>
-            <Typography level="h2">New Test</Typography>
-          </AppLayout.Header>
-          <Box sx={{ flex: 1, height: 100, pb: 2 }}>
-            <TestCreation subjects={subjects} />
-          </Box>
-        </ReduxProvider>
+        <AppLayout.Header>
+          <Typography level="h2">New Test</Typography>
+        </AppLayout.Header>
+        <Box sx={{ flex: 1, height: 100, pb: 2 }}>
+          <TestMaker
+            onSuccessfulTestCreation={(test) =>
+              router.push(`/tests/${test.id}/${test.mode}`)
+            }
+          />
+        </Box>
+        <AlphaWarning />
       </AppLayout.Main>
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps<NewTestPageProps> = async () => {
-  const helper = await getTrpcHelper();
-  const subjects = (await helper.tests.getAllSubjects.fetch()).filter(
-    (lo) => !["034", "082"].includes(lo.id),
-  );
-  return {
-    props: {
-      subjects,
-    },
-  };
-};
+export const getStaticProps = ssrHandler(async ({ helper }) => {
+  await helper.tests.getAllSubjects.prefetch();
+});
 
 export default NewTestPage;

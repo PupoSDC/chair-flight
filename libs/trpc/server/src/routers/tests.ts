@@ -5,7 +5,10 @@ import { publicProcedure, router } from "../config/trpc";
 export const testsRouter = router({
   getAllSubjects: publicProcedure.query(async ({ ctx }) => {
     const { questionBank } = ctx;
-    const subjects = await questionBank.getAllSubjects();
+    const allSubjects = await questionBank.getAllSubjects();
+    const subjects = allSubjects.filter(
+      (lo) => !["034", "082"].includes(lo.id),
+    );
     return { subjects };
   }),
   createTest: publicProcedure

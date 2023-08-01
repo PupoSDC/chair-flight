@@ -10,15 +10,9 @@ import {
   Checkbox,
   Button,
 } from "@mui/joy";
-import type { Test } from "@chair-flight/base/types";
-import type {
-  NewTestConfiguration} from "@chair-flight/core/app";
+import { newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
-  newTestConfigurationSchema,
-} from "@chair-flight/core/app";
-import type {
-  NestedCheckboxSelectProps} from "@chair-flight/react/components";
-import {
+  HookFormErrorMessage,
   HookFormSelect,
   NestedCheckboxSelect,
   SliderWithInput,
@@ -26,6 +20,9 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../use-persistence";
+import type { Test } from "@chair-flight/base/types";
+import type { NewTestConfiguration } from "@chair-flight/core/app";
+import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
 const resolver = zodResolver(newTestConfigurationSchema);
 const useSubjects = trpc.tests.getAllSubjects.useSuspenseQuery;
@@ -34,11 +31,14 @@ const useTestMakerPersistence =
   createUsePersistenceHook<NewTestConfiguration>("test-maker");
 
 export type TestMakerProps = {
-  onSuccessfulTestCreation?: (test: Test) => void;
+  onSuccessfulTestCreation: (test: Test) => void;
 };
 
 /**
- * Container to create tests. Uses trpc to get subjects.
+ * Container to create tests.
+ *
+ * - Uses trpc to get subjects.
+ * - Uses Zustand persistence to restore progress from previous session.
  */
 export const TestMaker: FunctionComponent<TestMakerProps> = ({
   onSuccessfulTestCreation,
@@ -99,11 +99,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const onSubmit = form.handleSubmit(async (config) => {
     try {
       const { test } = await createTest.mutateAsync({ config });
-      if (onSuccessfulTestCreation) {
-        onSuccessfulTestCreation(test);
-      } else {
-        toast.success("Test created! 🎉");
-      }
+      onSuccessfulTestCreation(test);
     } catch (error) {
       toast.error("Something went wrong while creating the test. 😥");
     }
@@ -120,13 +116,9 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   });
 
   useEffect(() => {
-    if (hasMountedInitialValues.current) {
-      setPersistedData(form.getValues());
-      return;
-    }
+    if (!hasMountedInitialValues.current) return;
     hasMountedInitialValues.current = true;
     const persistedData = getPersistedData();
-    if (!persistedData) return;
     form.reset(persistedData);
   });
 
@@ -134,6 +126,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
     <Box
       component="form"
       onSubmit={onSubmit}
+      onBlur={() => setPersistedData(form.getValues())}
       sx={{ display: "flex", flexDirection: "column", height: "100%" }}
     >
       <FormProvider {...form}>
@@ -152,7 +145,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
         >
           {subjects.map((item) => (
             <Option value={item.id} key={item.id}>
-              {item.text}
+              {`${item.id} - ${item.longName}`}
             </Option>
           ))}
         </HookFormSelect>
@@ -221,6 +214,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
             }}
           />
         )}
+        <HookFormErrorMessage {...form.register("learningObjectives")} />
         <Controller
           control={form.control}
           name="numberOfQuestions"

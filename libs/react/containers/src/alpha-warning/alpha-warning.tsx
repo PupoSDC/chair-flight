@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import dedent from "ts-dedent";
-import { useUserVoyageFlag } from "@chair-flight/core/redux";
 import { toast } from "@chair-flight/react/components";
+import { useUserVoyageFlag } from "../use-user-voyage-flag/use-user-voyage-flag";
 import type { FunctionComponent } from "react";
 
 export const AlphaWarning: FunctionComponent = () => {

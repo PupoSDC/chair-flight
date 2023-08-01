@@ -5,3 +5,4 @@ export type ExternalQuestionId = string;
 export type QuestionId = string;
 export type ContentId = string;
 export type LearningObjectiveId = string;
+export type CourseId = string;

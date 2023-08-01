@@ -17,12 +17,3 @@ export type LearningObjective = {
   contentId: string;
   source: string;
 };
-
-export type LearningObjectiveSummary = {
-  id: LearningObjectiveId;
-  text: string;
-  numberOfQuestions: number;
-  numberOfExamQuestions: number;
-  numberOfLearningObjectives: number;
-  children?: LearningObjectiveSummary[];
-};

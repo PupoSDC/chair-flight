@@ -6,5 +6,7 @@ export * from "./home-page";
 export * from "./question-review";
 export * from "./question-preview-list";
 export * from "./theme";
+export * from "./test-maker";
+export * from "./use-persistence";
 export * from "./use-form-history";
 export * from "./question-search-demo";

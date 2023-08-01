@@ -22,6 +22,7 @@ export const createUsePersistenceHook = <T>(key: string, initialValue?: T) => {
   );
 
   return () => ({
+    persistedData: useZustand((state) => state.data),
     getPersistedData: useZustand((state) => state.getData),
     setPersistedData: useZustand((state) => state.setData),
   });

@@ -17,6 +17,7 @@ export const HookFormErrorMessage = forwardRef<
 >(({ name, ...props }, ref) => {
   const form = useFormContext();
   const error = get(form.formState.errors, name) as ZodError;
+
   if (!error) return null;
 
   return (

@@ -11,16 +11,12 @@ import {
   persistStore,
 } from "redux-persist";
 import { default as createWebStorage } from "redux-persist/lib/storage/createWebStorage";
-import { testMakerReducer } from "../reducers/test-maker-reducer";
 import { testProgressReducer } from "../reducers/test-progress-reducer";
-import { userVoyageReducer } from "../reducers/user-voyage-reducer";
 import type { TypedUseSelectorHook } from "react-redux";
 
 export const getStoreAndPersistor = () => {
   const combinedReducer = combineReducers({
     testProgress: testProgressReducer,
-    userVoyage: userVoyageReducer,
-    testMaker: testMakerReducer,
   });
 
   const storage = createWebStorage("local");
