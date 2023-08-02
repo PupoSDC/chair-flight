@@ -7,12 +7,14 @@ import {
   AppHead,
   AppHeaderMenu,
   TestMaker,
+  useTestProgress,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
 const NewTestPage: NextPage = () => {
   const router = useRouter();
+  const addTest = useTestProgress((s) => s.addTest);
   return (
     <>
       <AppHead />
@@ -39,9 +41,10 @@ const NewTestPage: NextPage = () => {
         </AppLayout.Header>
         <Box sx={{ flex: 1, height: 100, pb: 2 }}>
           <TestMaker
-            onSuccessfulTestCreation={(test) =>
-              router.push(`/tests/${test.id}/${test.mode}`)
-            }
+            onSuccessfulTestCreation={(test) => {
+              addTest({ test });
+              router.push(`/tests/${test.id}/${test.mode}`);
+            }}
           />
         </Box>
         <AlphaWarning />

@@ -1,11 +1,11 @@
-import { ReduxProvider } from "@chair-flight/core/redux";
+import { NoSsr } from "@mui/base";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import {
   AlphaWarning,
   AppHead,
   AppHeaderMenu,
+  TestsOverview,
 } from "@chair-flight/react/containers";
-import { PreviewTests } from "./components/tests-overview";
 import type { GetStaticProps, NextPage } from "next";
 
 const TestPage: NextPage = () => (
@@ -15,10 +15,10 @@ const TestPage: NextPage = () => (
       <AppHeaderMenu />
     </Header>
     <AppLayout.Main sx={{ maxWidth: (t) => t.breakpoints.values.lg }}>
-      <ReduxProvider loading={"loading..."}>
-        <AlphaWarning />
-        <PreviewTests />
-      </ReduxProvider>
+      <AlphaWarning />
+      <NoSsr fallback="Loading tests...">
+        <TestsOverview />
+      </NoSsr>
     </AppLayout.Main>
   </>
 );

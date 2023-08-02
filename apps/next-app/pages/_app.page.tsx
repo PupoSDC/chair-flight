@@ -2,7 +2,6 @@ import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { AnalyticsProvider } from "@chair-flight/react/analytics";
 import { Toaster } from "@chair-flight/react/components";
 import { AppTransition, theme } from "@chair-flight/react/containers";
@@ -13,7 +12,6 @@ import "@fontsource/public-sans";
 
 if (typeof document === "undefined") {
   React.useLayoutEffect = React.useEffect;
-  console.log(getEnvVariableOrThrow("ENV_FILE_NAME"));
 }
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {

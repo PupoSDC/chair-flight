@@ -22,7 +22,7 @@ export * from "./question-multiple-choice";
 export * from "./question-variant-preview";
 export * from "./skeleton";
 export * from "./test-preview";
-export * from "./test-question-navigation";
+export * from "./question-navigation";
 export * from "./test-question-result";
 export * from "./theme";
 export * from "./toaster";

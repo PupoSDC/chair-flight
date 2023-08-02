@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Typography } from "@mui/joy";
 import { generateQuestionsForNavigation } from "../__utils__/generate-questions-for-navigation";
-import { TestQuestionNavigation } from "../test-question-navigation/test-question-navigation";
+import { QuestionNavigation } from "../question-navigation/question-navigation";
 import { Drawer } from "./drawer";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -32,7 +32,7 @@ export const Playground: Story = {
         "Test question Navigation": (
           <>
             <Typography level="h4">Test Question Navigation</Typography>
-            <TestQuestionNavigation
+            <QuestionNavigation
               questions={generateQuestionsForNavigation(100, 14)}
             />
           </>

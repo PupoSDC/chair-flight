@@ -11,7 +11,7 @@ Built with
 [`Storybook`](https://storybook.js.org/),
 [`Prisma`](https://www.prisma.io/),
 [`Trpc`](https://trpc.io/),
-[`Redux`](https://redux.js.org/),
+[`Zustand`](https://github.com/pmndrs/zustand),
 and [`MDX`](https://mdxjs.com/).
 
 Managed with

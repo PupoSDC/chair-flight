@@ -23,7 +23,7 @@ const useUserVoyageZustand = create<UserVoyageZustandStore>()(
           })),
         getData: (key: UserVoyageFlag) => get().data[key] ?? false,
       }),
-      { name: "user-voyage" },
+      { name: "cf-user-voyage" },
     ),
   ),
 );

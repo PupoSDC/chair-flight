@@ -1,7 +1,7 @@
 import { Global, css } from "@emotion/react";
 import { Box, Typography } from "@mui/joy";
 import { generateQuestionsForNavigation } from "../__utils__/generate-questions-for-navigation";
-import { TestQuestionNavigation } from "../test-question-navigation";
+import { QuestionNavigation } from "../question-navigation";
 import { Header, useHeaderContext } from "./header";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -18,7 +18,7 @@ const TestNavigationExample = () => {
   }
 
   return (
-    <TestQuestionNavigation
+    <QuestionNavigation
       questions={generateQuestionsForNavigation(40, 27)}
       currentId="13"
       onQuestionClicked={() => closeDrawer()}

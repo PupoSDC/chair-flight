@@ -54,7 +54,7 @@ const useFormHistoryZustand = create<FormPersistence<object>>()(
           }),
       })),
       {
-        name: "form-history",
+        name: "cf-form-history",
       },
     ),
   ),
