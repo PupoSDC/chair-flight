@@ -4,12 +4,6 @@
   "sourceRoot": "libs/providers/analytics/src",
   "projectType": "library",
   "targets": {
-    "prisma": {
-      "command": "prisma",
-      "options": {
-        "cwd": "libs/providers/analytics"
-      }
-    },
     "generate": {
       "command": "prisma generate",
       "options": {

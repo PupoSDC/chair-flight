@@ -3,7 +3,6 @@ name: Code Check
 on: push
 
 env:
-  QUESTION_BANK_PROVIDER: local
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
 
 jobs:
@@ -42,6 +41,12 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Generate Prisma types
+        run: pnpm generate
 
       - name: Run Prettier
         run: pnpm prettier
