@@ -12,9 +12,14 @@ import {
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
-const NewTestPage: NextPage = () => {
+type NewTestPageProps = {
+  initialSubjectId: string | null;
+};
+
+const NewTestPage: NextPage<NewTestPageProps> = ({ initialSubjectId }) => {
   const router = useRouter();
   const addTest = useTestProgress((s) => s.addTest);
+
   return (
     <>
       <AppHead />
@@ -41,6 +46,7 @@ const NewTestPage: NextPage = () => {
         </AppLayout.Header>
         <Box sx={{ flex: 1, height: 100, pb: 2 }}>
           <TestMaker
+            initialSubject={initialSubjectId ?? undefined}
             onSuccessfulTestCreation={(test) => {
               addTest({ test });
               router.push(`/tests/${test.id}/${test.mode}`);
@@ -53,8 +59,12 @@ const NewTestPage: NextPage = () => {
   );
 };
 
-export const getStaticProps = ssrHandler(async ({ helper }) => {
-  await helper.tests.getAllSubjects.prefetch();
-});
+export const getServerSideProps = ssrHandler<NewTestPageProps>(
+  async ({ helper, context }) => {
+    await helper.tests.getAllSubjects.prefetch();
+    const initialSubjectId = (context.query["subject"] as string) ?? null;
+    return { props: { initialSubjectId } };
+  },
+);
 
 export default NewTestPage;

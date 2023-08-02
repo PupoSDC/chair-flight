@@ -1,0 +1,64 @@
+import { Suspense } from "react";
+import { useRouter } from "next/router";
+import { NoSsr } from "@mui/base";
+import { Sheet, Skeleton } from "@mui/joy";
+import { TestMaker, useTestProgress } from "@chair-flight/react/containers";
+import { BlogPageLayout } from "./_blog-page.layout";
+
+export const meta = {
+  title: "Introducing Our New 737 Type Rating Theory Question Bank",
+  linkTitle: "Introducing Our New 737 Type Rating Theory Question Bank",
+  file: "003-new-737-question-bank",
+  description: [
+    "We are thrilled to announce the launch of our latest addition to the question ",
+    "bank family: the comprehensive 737 Type Rating Theory Question Bank. ",
+    "",
+    "With over 300 thoughtfully curated questions, this question bank is designed to ",
+    "challenge and enhance your understanding of the 737's  systems, procedures, and ",
+    "aircraft limitations.",
+  ].join(""),
+  tags: ["Content"],
+  author: "PupoSDC",
+  isoDate: "2023-08-02T20:00:00.000Z",
+};
+
+# 737 Type Rating Questions
+
+We are thrilled to announce the launch of our latest addition to the question
+bank family: the comprehensive 737 Type Rating Theory Question Bank.
+
+With over 300 thoughtfully curated questions, this question bank is designed to
+challenge and enhance your understanding of the 737's systems, procedures, and
+aircraft limitations.
+
+You can create a [new test here](/tests/new?subject=737).
+
+export const InLocoTestMakeer = () => {
+  const router = useRouter();
+  const addTest = useTestProgress((s) => s.addTest);
+  const fallback = <Skeleton sx={{ height: 400, position: "initial" }} />
+
+return (
+<Sheet sx={{ p: 1 }}>
+<NoSsr fallback={fallback}>
+<Suspense fallback={fallback}>
+<TestMaker
+initialSubject={"737"}
+onSuccessfulTestCreation={(test) => {
+addTest({ test });
+router.push(`/tests/${test.id}/${test.mode}`);
+}}
+/>
+</Suspense>
+</NoSsr>
+</Sheet>
+)
+}
+
+<InLocoTestMakeer />
+
+**See you in the skies!**
+
+export default ({ children }) => (
+  <BlogPageLayout meta={meta}>{children}</BlogPageLayout>
+);

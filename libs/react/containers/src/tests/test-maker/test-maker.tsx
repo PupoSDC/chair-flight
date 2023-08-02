@@ -31,6 +31,7 @@ const useTestMakerPersistence =
   createUsePersistenceHook<NewTestConfiguration>("cf-test-maker");
 
 export type TestMakerProps = {
+  initialSubject?: string;
   onSuccessfulTestCreation: (test: Test) => void;
 };
 
@@ -42,6 +43,7 @@ export type TestMakerProps = {
  */
 export const TestMaker: FunctionComponent<TestMakerProps> = ({
   onSuccessfulTestCreation,
+  initialSubject,
 }) => {
   const { getPersistedData, setPersistedData } = useTestMakerPersistence();
   const [{ subjects }] = useSubjects();
@@ -50,14 +52,14 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const defaultValues = useMemo<NewTestConfiguration>(
     () => ({
       mode: "exam",
-      subject: subjects[0].id,
+      subject: initialSubject ?? subjects[0].id,
       learningObjectives: subjects
         .flatMap((s) => s.children ?? [])
         .flatMap((c) => c.children?.map((c) => c.id) ?? [])
         .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
     }),
-    [subjects],
+    [subjects, initialSubject],
   );
 
   const form = useForm({ defaultValues, resolver });
@@ -127,7 +129,11 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
     if (hasMountedInitialValues.current) return;
     hasMountedInitialValues.current = true;
     const persistedData = getPersistedData();
-    form.reset(persistedData);
+    if (!persistedData) return;
+    form.reset({
+      ...persistedData,
+      subject: initialSubject ?? persistedData?.subject,
+    });
   });
 
   return (
