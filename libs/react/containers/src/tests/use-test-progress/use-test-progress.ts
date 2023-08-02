@@ -117,11 +117,11 @@ export const useTestProgress = create<TestProgress>()(
         },
         finishTest: ({ testId }) => {
           const test = get().tests[testId];
-          if (!test) {
-            throw new Error(`Test ${testId} not found`);
-          }
+          if (!test) throw new Error(`Test ${testId} not found`);
+
           const newTest: Test = {
             ...test,
+            finishedAtEpochMs: Date.now(),
             status: "finished",
           };
           set({ tests: { ...get().tests, [testId]: newTest } });

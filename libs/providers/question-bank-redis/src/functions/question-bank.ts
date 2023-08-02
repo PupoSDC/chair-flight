@@ -210,7 +210,7 @@ export const getLearningObjectivesFromRedis = async (
   }
   const keys = learningObjectiveIds.map((id) => `${LEARNING_OBJECTIVE}${id}`);
   const learningObjectives = await redis.mget<LearningObjective[]>(...keys);
-  return learningObjectives;
+  return learningObjectives.filter(Boolean);
 };
 
 export const getAllSubjectsFromRedis = async (): Promise<Subject[]> => {

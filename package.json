@@ -5,11 +5,9 @@
   "author": "PupoSDC",
   "sideEffects": false,
   "scripts": {
-    "dev": "           env-cmd -f .end.local nx run-many --target=dev",
     "dev:dev": "       env-cmd -f .env.dev   nx run-many --target=dev",
     "dev:local": "     env-cmd -f .env.local nx run-many --target=dev",
     "dev:prod": "      env-cmd -f .env.prod  nx run-many --target=dev",
-    "migrate": "       env-cmd -f .env.local nx run-many --target=migrate",
     "migrate:dev": "   env-cmd -f .env.dev   nx run-many --target=migrate",
     "migrate:local": " env-cmd -f .env.local nx run-many --target=migrate",
     "migrate:prod": "  env-cmd -f .env.prod  nx run-many --target=migrate",

@@ -13,7 +13,7 @@ export const TestsOverview: FunctionComponent = () => {
   const entries = [
     {
       title: "In Progress tests",
-      items: testsAsList.filter((test) => !test.finishedAtEpochMs),
+      items: testsAsList.filter((test) => test.status !== "finished"),
       noItemsMessage: (
         <Typography>
           No tests in progress. You can{" "}
@@ -24,7 +24,7 @@ export const TestsOverview: FunctionComponent = () => {
     },
     {
       title: "Completed tests",
-      items: testsAsList.filter((test) => test.finishedAtEpochMs),
+      items: testsAsList.filter((test) => test.status === "finished"),
       noItemsMessage: "No tests completed so far",
     },
   ];
@@ -71,11 +71,13 @@ export const TestsOverview: FunctionComponent = () => {
                   timeToCompleteInMs={test.timeSpentInMs}
                   timeLeftInMs={test.durationInMs - test.timeSpentInMs}
                   score={
-                    test.questions.reduce(
+                    (test.questions.reduce(
                       (s, q) =>
                         s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
                       0,
-                    ) / test.questions.length
+                    ) /
+                      test.questions.length) *
+                    100
                   }
                 />
               </Grid>

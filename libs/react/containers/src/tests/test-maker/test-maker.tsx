@@ -98,7 +98,15 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
 
   const onSubmit = form.handleSubmit(async (config) => {
     try {
-      const { test } = await createTest.mutateAsync({ config });
+      const { test } = await createTest.mutateAsync({
+        config: {
+          ...config,
+          learningObjectives: {
+            ...config.learningObjectives,
+            [config.subject]: true,
+          },
+        },
+      });
       onSuccessfulTestCreation(test);
     } catch (error) {
       toast.error("Something went wrong while creating the test. 😥");
@@ -116,7 +124,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   });
 
   useEffect(() => {
-    if (!hasMountedInitialValues.current) return;
+    if (hasMountedInitialValues.current) return;
     hasMountedInitialValues.current = true;
     const persistedData = getPersistedData();
     form.reset(persistedData);
