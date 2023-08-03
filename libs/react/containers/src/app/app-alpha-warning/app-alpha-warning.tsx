@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import dedent from "ts-dedent";
 import { toast } from "@chair-flight/react/components";
-import { useUserVoyageFlag } from "../use-user-voyage-flag/use-user-voyage-flag";
+import { useUserVoyageFlag } from "../../hooks/use-user-voyage-flag";
 import type { FunctionComponent } from "react";
 
-export const AlphaWarning: FunctionComponent = () => {
+export const AppAlphaWarning: FunctionComponent = () => {
   const [, setHasSeenAlphaFlag, getHasSeenAlphaFlag] = useUserVoyageFlag(
     "has-seen-alpha-warning",
   );

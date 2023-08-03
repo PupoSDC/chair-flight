@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
-import { Box, Button, styled } from "@mui/joy";
+import { Box, Button, Skeleton, styled } from "@mui/joy";
 import { MarkdownClient } from "../markdown-client";
-import { Skeleton } from "../skeleton";
 import { getOptionColor } from "../utils/get-question-status-color";
 import type { BoxProps } from "@mui/joy";
 

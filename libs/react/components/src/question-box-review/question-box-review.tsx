@@ -1,4 +1,5 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
+import { mergeRefs } from "react-merge-refs";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import {
   Box,
@@ -129,15 +130,16 @@ export const QuestionBoxReview = forwardRef<
     },
     ref,
   ) => {
+    const localRef = useRef<QuestionBoxReviewRef>();
     const [value, setValue] = useState<TabName>("question");
 
-    if (ref && typeof ref === "object" && ref.current) {
-      ref.current.change = (name) => setValue(name);
+    if (localRef.current) {
+      localRef.current.change = (name) => setValue(name);
     }
 
     return (
       <StyledTabs
-        ref={ref}
+        ref={mergeRefs([localRef, ref])}
         size="sm"
         as={Tabs}
         value={value}

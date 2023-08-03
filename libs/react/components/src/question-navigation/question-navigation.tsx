@@ -10,9 +10,8 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import { Box, Button, styled } from "@mui/joy";
+import { Box, Button, Skeleton, styled } from "@mui/joy";
 import { useWindowSize } from "../hooks/use-window-resize";
-import { Skeleton } from "../skeleton";
 import type { BoxProps } from "@mui/joy";
 
 const StyledBox = styled(Box)`

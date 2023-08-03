@@ -12,7 +12,7 @@ type TestQuestionExamProps = {
 export const TestQuestionExam: FunctionComponent<TestQuestionExamProps> = ({
   testId,
 }) => {
-  const test = useTestProgress((state) => state.tests[testId]);
+  const test = useTestProgress((s) => s.tests[testId]);
   const navigateToQuestion = useTestProgress((s) => s.navigateToTestQuestion);
   const answerTestQuestion = useTestProgress((s) => s.answerTestQuestion);
 

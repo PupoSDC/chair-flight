@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Box, Typography } from "@mui/joy";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import {
-  AlphaWarning,
+  AppAlphaWarning,
   AppHead,
   AppHeaderMenu,
   TestMaker,
@@ -53,7 +53,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ initialSubjectId }) => {
             }}
           />
         </Box>
-        <AlphaWarning />
+        <AppAlphaWarning />
       </AppLayout.Main>
     </>
   );

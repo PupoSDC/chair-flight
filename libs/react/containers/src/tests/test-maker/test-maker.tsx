@@ -19,7 +19,7 @@ import {
   toast,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { createUsePersistenceHook } from "../../use-persistence";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import type { Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";

@@ -12,7 +12,7 @@ export const Playground: Story = {
 };
 
 const meta: Meta<typeof QuestionReview> = {
-  title: "Containers/QuestionReview",
+  title: "Containers/Questions/QuestionReview",
   component: QuestionReview,
   tags: ["autodocs"],
   argTypes: {
@@ -38,7 +38,8 @@ const meta: Meta<typeof QuestionReview> = {
             questionTemplate: {
               id: "Q00YQLC8JS",
               srcLocation: "",
-              explanation: "",
+              explanation:
+                "This is an explantion to the question.\n\n - It can contain markdown!\n\n`niiiice`",
               learningObjectives: ["081.01.09.02.07"],
               variants: {
                 Cy1C8vfr: {

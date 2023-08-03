@@ -71,7 +71,7 @@ export const PlaygroundWithErrorOnSubmit: Story = {
 };
 
 const meta: Meta<typeof TestMaker> = {
-  title: "Containers/TestMaker",
+  title: "Containers/Test/TestMaker",
   component: TestMaker,
   tags: ["autodocs"],
   argTypes: {},

@@ -1,7 +1,7 @@
 import { NoSsr } from "@mui/base";
 import { AppLayout, Header } from "@chair-flight/react/components";
 import {
-  AlphaWarning,
+  AppAlphaWarning,
   AppHead,
   AppHeaderMenu,
   TestsOverview,
@@ -15,7 +15,7 @@ const TestPage: NextPage = () => (
       <AppHeaderMenu />
     </Header>
     <AppLayout.Main sx={{ maxWidth: (t) => t.breakpoints.values.lg }}>
-      <AlphaWarning />
+      <AppAlphaWarning />
       <NoSsr fallback="Loading tests...">
         <TestsOverview />
       </NoSsr>
