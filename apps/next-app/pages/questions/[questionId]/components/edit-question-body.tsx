@@ -36,7 +36,6 @@ export const EditQuestionBody: FunctionComponent = () => {
       </FormControl>
       <HookFormTextArea
         {...form.register("question.explanation")}
-        name={"question.explanation"}
         minRows={5}
         sx={{ mt: 1 }}
       />

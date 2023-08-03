@@ -1,6 +1,10 @@
 import { z } from "zod";
 import { getQuestion } from "../questions/get-question";
-import { getRandomId, getRandomShuffler } from "../random/random";
+import {
+  getRandomId,
+  getRandomIdGenerator,
+  getRandomShuffler,
+} from "../random/random";
 import type { Test, QuestionBankRepository } from "@chair-flight/base/types";
 
 export type NewTestConfiguration = {
@@ -53,6 +57,7 @@ export const createTest = async ({
   const title = config.title ?? `${subject} ${mode}`;
   const seed = config.seed ?? getRandomId();
   const shuffler = getRandomShuffler(seed);
+  const getRandomRandomId = getRandomIdGenerator(seed);
 
   const learningObjectives = Object.entries(config.learningObjectives).reduce<
     string[]
@@ -73,7 +78,7 @@ export const createTest = async ({
 
   const questions = shuffler(possibleQuestions)
     .slice(0, numberOfQuestions)
-    .map((q) => getQuestion(q, { seed }));
+    .map((q) => getQuestion(q, { seed: getRandomRandomId() }));
 
   return {
     id: getRandomId(),

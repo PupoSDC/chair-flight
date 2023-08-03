@@ -40,7 +40,11 @@ export const EditQuestionPage: NextPage = () => {
     },
   };
 
-  const form = useForm({ resolver, defaultValues, mode: "onBlur" });
+  const form = useForm<EditQuestionFormValues>({
+    resolver,
+    defaultValues,
+    mode: "onBlur",
+  });
 
   return (
     <>
