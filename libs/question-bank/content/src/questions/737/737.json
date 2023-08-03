@@ -1428,7 +1428,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "> ## Landing\n>\n> When a landing autobrake selection is made, the system performs a turn–on–\n> self–test. If the turn–on–self–test is not successful, the AUTO BRAKE DISARM\n> light illuminates and the autobrake system does not arm.\n> \n> Four levels of deceleration can be selected for landing. However, on dry runways,\n> the maximum autobrake deceleration rate in the landing mode is less than that\n> produced by full pedal braking.\n> \n> After landing, autobrake application begins when:\n> -  both forward thrust levers are retarded to IDLE\n> -  the main wheels spin–up.\n> \n> **Note**: **Landing autobrake settings may be selected after touchdown prior to**\n> **decelerating through 30 kts of ground speed**. Braking initiates immediately\n> if the above conditions are met.\n>\n> To maintain the selected landing deceleration rate, autobrake pressure is reduced\n> as other controls, such as thrust reversers and spoilers, contribute to total\n> deceleration. The deceleration level can be changed (without disarming the\n> system) by rotating the selector. The autobrake system brings the airplane to a\n> complete stop unless the braking is terminated by the pilot.",
         "annexes": [],
         "externalIds": []
       }
@@ -4544,7 +4544,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "> ## AFS Failures\n> \n> Power interruption or loss may cause disengagement of the AFDS and/or A/T.\n> Re–engagement is possible after power is restored.\n> Dual channel A/P operation is possible only when two generators are powering the\n> busses.\n> \n> Two independent radio altimeters provide radio altitude to the respective FCCs.\n> With a radio altimeter inoperative, the autopilot will disengage two seconds after\n> LOC and GS capture.",
         "annexes": [],
         "externalIds": []
       }
@@ -5700,7 +5700,7 @@
   },
   {
     "id": "q7ngd",
-    "explanation": "",
+    "explanation": "> ## Cargo Compartment Fire Protection\n> \n> Cargo fire protection consists of these systems:\n> - cargo compartment smoke detection powered by DC bus 1 and DC bus 2\n> - cargo compartment fire suppression powered by the hot battery bus.",
     "learningObjectives": ["737"],
     "variants": {
       "achgrd": {
@@ -5724,13 +5724,47 @@
             "id": "fc7qzg",
             "text": "Hot battery bus",
             "correct": false,
-            "why": ""
+            "why": "Supplies cargo compartment fire supression"
           },
           {
             "id": "noroca",
             "text": "DC bus 1 and DC bus 2",
             "correct": true,
+            "why": "Supplies cargo compartment smoke detection"
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "bchgrd": {
+        "id": "bchgrd",
+        "type": "simple",
+        "question": "Cargo compartment fire supression is powered from:",
+        "options": [
+          {
+            "id": "ktv2w9",
+            "text": "DC standby bus",
+            "correct": false,
             "why": ""
+          },
+          {
+            "id": "cs2wri",
+            "text": "AC standby bus",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "fc7qzg",
+            "text": "Hot battery bus",
+            "correct": true,
+            "why": "Supplies cargo compartment fire supression"
+          },
+          {
+            "id": "noroca",
+            "text": "DC bus 1 and DC bus 2",
+            "correct": false,
+            "why": "Supplies cargo compartment smoke detection"
           }
         ],
         "explanation": "",
@@ -6233,7 +6267,7 @@
   },
   {
     "id": "xtecr",
-    "explanation": "",
+    "explanation": "> ## Automatic Slat Failure (AUTO SLAT FAIL) Light\n> \n> Illuminated (amber)\n> - indicates failure of the auto slat system\n> - indicates failure of a single Stall Management/Yaw Damper (SMYD) computer when illuminated during MASTER CAUTION recall and extinguishes when master caution system is reset.",
     "learningObjectives": ["737"],
     "variants": {
       "dm3a6q": {
@@ -6478,47 +6512,6 @@
     }
   },
   {
-    "id": "1heur",
-    "explanation": "",
-    "learningObjectives": ["737"],
-    "variants": {
-      "sbmbm": {
-        "id": "sbmbm",
-        "type": "simple",
-        "question": "The APU may be used as electrical and bleed source simultaneously up to:",
-        "options": [
-          {
-            "id": "c299yr",
-            "text": "17,000 ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "1zbdug",
-            "text": "10,000 ft",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "cx5q5a",
-            "text": "25,000 ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "im6mn",
-            "text": "30,000 ft",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "explanation": "",
-        "annexes": [],
-        "externalIds": []
-      }
-    }
-  },
-  {
     "id": "6r9a0d",
     "explanation": "",
     "learningObjectives": ["737"],
@@ -6684,9 +6677,43 @@
   },
   {
     "id": "qjhnr",
-    "explanation": "",
+    "explanation": "> ## APU\n> \n> - APU bleed + electrical load: max alt 10,000 ft.\n> - APU bleed: max alt 17,000 ft.\n> - APU electrical load: max alt 41,000 ft.",
     "learningObjectives": ["737"],
     "variants": {
+      "sbmbm": {
+        "id": "sbmbm",
+        "type": "simple",
+        "question": "The APU may be used as electrical and bleed source simultaneously up to:",
+        "options": [
+          {
+            "id": "c299yr",
+            "text": "17,000 ft",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "1zbdug",
+            "text": "10,000 ft",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "cx5q5a",
+            "text": "25,000 ft",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "im6mn",
+            "text": "30,000 ft",
+            "correct": false,
+            "why": ""
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
       "aouuho": {
         "id": "aouuho",
         "type": "simple",
@@ -6714,6 +6741,40 @@
             "id": "9jj7p",
             "text": "10,000 feet",
             "correct": false,
+            "why": ""
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "qhx4c": {
+        "id": "qhx4c",
+        "type": "simple",
+        "question": "The APU starts, operates and can supply electrical power alone up to:",
+        "options": [
+          {
+            "id": "df8jzl",
+            "text": "14,000 ft",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "9lcwef",
+            "text": "37,000 ft",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "0gwnul",
+            "text": "25,000 ft",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "j19f97",
+            "text": "41,000 ft",
+            "correct": true,
             "why": ""
           }
         ],
@@ -8404,47 +8465,7 @@
       }
     }
   },
-  {
-    "id": "yiqw3q",
-    "explanation": "",
-    "learningObjectives": ["737"],
-    "variants": {
-      "qhx4c": {
-        "id": "qhx4c",
-        "type": "simple",
-        "question": "The APU starts, operates and can supply electrical power alone up to:",
-        "options": [
-          {
-            "id": "df8jzl",
-            "text": "14,000 ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "9lcwef",
-            "text": "37,000 ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "0gwnul",
-            "text": "25,000 ft",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "j19f97",
-            "text": "41,000 ft",
-            "correct": true,
-            "why": ""
-          }
-        ],
-        "explanation": "",
-        "annexes": [],
-        "externalIds": []
-      }
-    }
-  },
+
   {
     "id": "tqhmou",
     "explanation": "",
@@ -11104,7 +11125,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": ">The yaw damper system consists of a main and standby yaw damper. Both yaw dampers are controlled through **Stall Management/Yaw Damper (SMYD) computers**. **The SMYD computers receive inputs from both ADIRUs, both control wheels and the YAW DAMPER switch**. SMYDs provide yaw damper inputs to the main rudder Power Control Unit (PCU) or standby rudder PCU, as appropriate. ",
         "annexes": [],
         "externalIds": []
       }
@@ -12580,7 +12601,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "The 'Pitch Limit Indication' are the 'yellow eyebrows that indicate maximum pitch you should input.\n\n>## Pitch Limit Indication (amber)\n\n> Indicates pitch limit (stick shaker activation for existing flight conditions). Displayed when the flaps are not up.",
         "annexes": [],
         "externalIds": []
       }
@@ -14242,7 +14263,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": ">## EEC Alternate Mode\n\n> The EEC can operate in either of two alternate modes, soft or hard. If required signals are not available to operate in the normal mode, the EEC automatically changes to the soft alternate mode. When this occurs, the ALTN switch illuminates and the ON indication remains visible. In the soft alternate mode, the EEC uses the last valid flight conditions to define engine parameters which allows the mode change to occur with no immediate change in engine thrust. Thrust rating shortfalls or exceedances may occur as flight conditions change. **The soft alternate mode remains until the hard alternate mode is entered by either retarding the thrust lever to idle or manually selecting ALTN with the EEC switch on the aft overhead panel.**",
         "annexes": [],
         "externalIds": []
       }
@@ -14578,7 +14599,7 @@
   },
   {
     "id": "ixpure",
-    "explanation": "",
+    "explanation": "> ## PACK Light\n> \n> Illuminated (amber)\n> - indicates pack trip off or failure of both primary and standby pack controls\n> - during Master Caution recall, indicates failure of either primary or standby pack control. Extinguishes when Master Caution is reset.",
     "learningObjectives": ["737"],
     "variants": {
       "jg857a": {
