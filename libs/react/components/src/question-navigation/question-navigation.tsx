@@ -95,7 +95,8 @@ export type QuestionNavigationProps = {
   currentId?: string;
   pageSize?: number;
   onQuestionClicked?: (id: string, index: number) => void;
-} & Pick<BoxProps, "className" | "sx" | "style" | "component">;
+  component?: React.ElementType;
+} & Pick<BoxProps, "className" | "sx" | "style">;
 
 export const QuestionNavigation = forwardRef<
   HTMLDivElement,

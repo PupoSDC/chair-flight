@@ -3,11 +3,9 @@ import { Box, Grid as MuiGrid, styled } from "@mui/joy";
 import { HEADER_HEIGHT } from "../constants";
 import type { BoxProps, GridProps } from "@mui/joy";
 
-const MainRoot = forwardRef<HTMLDivElement, BoxProps>(
-  ({ component = "main", ...props }, ref) => (
-    <Box component={component} ref={ref} {...props} />
-  ),
-);
+const MainRoot = forwardRef<HTMLDivElement, BoxProps>(({ ...props }, ref) => (
+  <Box component={"main"} ref={ref} {...props} />
+));
 
 MainRoot.displayName = "MainRoot";
 

@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
 import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
@@ -79,11 +79,21 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["docs", "components", "demos"],
+        order: ["docs", "components", "containers"],
       },
     },
   },
+  // note: Loaders are loaded in reverse order
   decorators: [
+    (Story) => (
+      <Suspense fallback="Loading...">
+        <Story />
+      </Suspense>
+    ),
+    (Story) => {
+      const Component = trpc.withTRPC(Story);
+      return <Component />;
+    },
     (Story) => (
       <CssVarsProvider theme={joyTheme}>
         <CssBaseline />
@@ -91,10 +101,6 @@ const preview: Preview = {
         <Story />
       </CssVarsProvider>
     ),
-    (Story) => {
-      const Component = trpc.withTRPC(Story);
-      return <Component />;
-    },
   ],
   loaders: [mswLoader],
 };

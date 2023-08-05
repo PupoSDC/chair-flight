@@ -13,6 +13,7 @@ import type {
   FlashCardContent,
   QuestionTemplate,
 } from "@chair-flight/base/types";
+import type { BoxProps } from "@mui/joy";
 import type { GetStaticProps, NextPage } from "next";
 
 const sectionHeight = `calc(100vh - ${HEADER_HEIGHT}px)`;
@@ -23,18 +24,16 @@ const StyledMain = styled("main")`
   height: calc(100vh - ${HEADER_HEIGHT}px);
 `;
 
-const StyledSection = styled(Box)`
+const Section = (props: BoxProps) => <Box component="section" {...props} />;
+
+const StyledSection = styled(Section)`
   position: relative;
   min-height: ${sectionHeight};
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.spacing(0)};
   scroll-snap-align: start;
-`;
-
-StyledSection.defaultProps = {
-  component: "section",
-};
+` as typeof Box;
 
 const StyledSectionA = styled(StyledSection)`
   background-color: ${({ theme }) => theme.vars.palette.background.body};

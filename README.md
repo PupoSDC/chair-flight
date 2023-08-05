@@ -36,6 +36,7 @@ fnm use
 cp .env.example .env.local
 pnpm install
 pnpm infra
+pnpm generate:local
 pnpm dev:local
 ```
 

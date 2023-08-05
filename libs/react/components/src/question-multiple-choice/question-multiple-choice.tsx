@@ -77,7 +77,8 @@ export type QuestionMultipleChoiceProps = {
   annexes?: string[];
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
-} & Pick<BoxProps, "component" | "sx" | "className">;
+  component?: React.ElementType;
+} & Pick<BoxProps, "sx" | "className">;
 
 export const QuestionMultipleChoice = forwardRef<
   HTMLDivElement,

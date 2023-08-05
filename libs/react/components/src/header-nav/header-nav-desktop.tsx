@@ -15,7 +15,7 @@ const StyledBox = styled(Box)`
     color: ${({ theme }) => theme.vars.palette.text.secondary};
     text-decoration: none;
   }
-`;
+` as typeof Box;
 
 const StyledMenu = styled(Menu)`
   padding: ${({ theme }) => theme.spacing(1, 0)};

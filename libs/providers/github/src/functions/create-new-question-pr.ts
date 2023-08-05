@@ -1,5 +1,4 @@
 import { default as babelPlugin } from "prettier/plugins/babel";
-// @ts-expect-error - no types, but not mission critical to us...
 import { default as estreePlugin } from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/core/app";
