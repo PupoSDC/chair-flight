@@ -12,7 +12,7 @@ export type InputAutocompleteLearningObjectivesProps = {
 export const InputAutocompleteLearningObjectives = forwardRef<
   HTMLDivElement,
   InputAutocompleteLearningObjectivesProps
->(({ value, onChange, onBlur }) => {
+>(({ value, onChange, onBlur }, ref) => {
   const [search, setSearch] = useState("");
 
   const { data, isLoading } = trpc.search.searchLearningObjectives.useQuery({
@@ -27,6 +27,9 @@ export const InputAutocompleteLearningObjectives = forwardRef<
     acc[result.result.id] = result.result;
     return acc;
   }, {});
+
+  // todo foward this when joy fixes autocomplete
+  ref = ref ?? null;
 
   return (
     <Autocomplete

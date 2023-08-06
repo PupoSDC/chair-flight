@@ -5,10 +5,10 @@ import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
 import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
-import { initialize, mswLoader } from "msw-storybook-addon";
+import { initialize, mswDecorator, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
 import { trpc } from "@chair-flight/trpc/client";
-import { theme } from "../../../libs/react/components/src/theme";
+import { theme } from "@chair-flight/react/components";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
 
@@ -90,6 +90,7 @@ const preview: Preview = {
         <Story />
       </Suspense>
     ),
+    mswDecorator,
     (Story) => {
       const Component = trpc.withTRPC(Story);
       return <Component />;
@@ -102,7 +103,6 @@ const preview: Preview = {
       </CssVarsProvider>
     ),
   ],
-  loaders: [mswLoader],
 };
 
 export default preview;

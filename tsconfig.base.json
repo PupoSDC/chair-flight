@@ -6,6 +6,7 @@
     "moduleResolution": "node",
     "target": "es2015",
     "module": "esnext",
+    "allowJs": false,
     "strict": true,
     "noEmit": true,
     "sourceMap": true,
@@ -14,39 +15,72 @@
     "skipDefaultLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": false,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "noImplicitReturns": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": false,
     "importHelpers": true,
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
+    "jsx": "preserve",
     "paths": {
-      "@chair-flight/base/env": ["libs/base/env/src/index.ts"],
-      "@chair-flight/base/errors": ["libs/base/errors/src/index.ts"],
-      "@chair-flight/base/types": ["libs/base/types/src/index.ts"],
-      "@chair-flight/core/app": ["libs/core/app/src/index.ts"],
-      "@chair-flight/core/schemas": ["libs/core/schemas/src/index.ts"],
+      "@chair-flight/base/env": [
+        "libs/base/env/src/index.ts"
+      ],
+      "@chair-flight/base/errors": [
+        "libs/base/errors/src/index.ts"
+      ],
+      "@chair-flight/base/types": [
+        "libs/base/types/src/index.ts"
+      ],
+      "@chair-flight/core/app": [
+        "libs/core/app/src/index.ts"
+      ],
+      "@chair-flight/core/schemas": [
+        "libs/core/schemas/src/index.ts"
+      ],
       "@chair-flight/providers/analytics": [
         "libs/providers/analytics/src/index.ts"
       ],
-      "@chair-flight/providers/github": ["libs/providers/github/src/index.ts"],
+      "@chair-flight/providers/github": [
+        "libs/providers/github/src/index.ts"
+      ],
       "@chair-flight/providers/question-bank-local": [
         "libs/providers/question-bank-local/src/index.ts"
       ],
       "@chair-flight/providers/question-bank-redis": [
         "libs/providers/question-bank-redis/src/index.ts"
       ],
-      "@chair-flight/react/analytics": ["libs/react/analytics/src/index.ts"],
-      "@chair-flight/react/components": ["libs/react/components/src/index.ts"],
-      "@chair-flight/react/containers": ["libs/react/containers/src/index.ts"],
-      "@chair-flight/react/games": ["libs/react/games/src/index.ts"],
-      "@chair-flight/trpc/client": ["libs/trpc/client/src/index.ts"],
-      "@chair-flight/trpc/mock": ["libs/trpc/mock/src/index.ts"],
-      "@chair-flight/trpc/server": ["libs/trpc/server/src/index.ts"]
+      "@chair-flight/react/analytics": [
+        "libs/react/analytics/src/index.ts"
+      ],
+      "@chair-flight/react/components": [
+        "libs/react/components/src/index.ts"
+      ],
+      "@chair-flight/react/containers": [
+        "libs/react/containers/src/index.ts"
+      ],
+      "@chair-flight/react/games": [
+        "libs/react/games/src/index.ts"
+      ],
+      "@chair-flight/trpc/client": [
+        "libs/trpc/client/src/index.ts"
+      ],
+      "@chair-flight/trpc/mock": [
+        "libs/trpc/mock/src/index.ts"
+      ],
+      "@chair-flight/trpc/server": [
+        "libs/trpc/server/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

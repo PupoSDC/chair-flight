@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "vitest"],
-    "jsx": "react"
+    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "target": "ESNext",
+    "types": ["node", "jest",  "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*.test.ts", "src/**/*.test.tsx", "vite.config.ts"]
+  "include": [
+    "src/**/*.test.ts", 
+    "src/**/*.test.tsx",
+    "src/__tests__/**/*",
+    "jest.config.ts"
+  ]
 }

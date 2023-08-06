@@ -23,7 +23,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/react/components"],
+      "outputs": [],
       "options": {
         "passWithNoTests": false,
         "reportsDirectory": "../../../coverage/libs/react/components"

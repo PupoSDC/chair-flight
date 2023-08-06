@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Typography, useTheme } from "@mui/joy";
 import { Box } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";

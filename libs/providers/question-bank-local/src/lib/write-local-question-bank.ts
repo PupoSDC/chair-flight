@@ -1,5 +1,5 @@
-import { default as fs } from "fs";
-import { default as path } from "path";
+import * as fs from "fs";
+import * as path from "path";
 import { cwd } from "process";
 import type {
   QuestionTemplate,

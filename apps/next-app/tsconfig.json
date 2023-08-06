@@ -4,9 +4,16 @@
     "jsx": "preserve",
     "isolatedModules": true,
     "incremental": true,
-    "types": ["node", "react"],
-    "lib": ["esnext", "dom"],
-    "allowJs": true
+    "types": [
+      "node",
+      "react"
+    ],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "allowJs": true,
+    "esModuleInterop": true
   },
   "include": [],
   "references": [

@@ -23,9 +23,9 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/react/containers"],
+      "outputs": [],
       "options": {
-        "passWithNoTests": true,
+        "passWithNoTests": false,
         "reportsDirectory": "../../../coverage/libs/react/containers"
       }
     }

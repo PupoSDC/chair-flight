@@ -11,6 +11,7 @@ import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
 import { ReviewPrModal } from "./review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
+import { useEffect } from "react";
 
 const resolver = zodResolver(questionEditSchema);
 const useQuestion = trpc.questions.getQuestionFromGithub.useSuspenseQuery;
