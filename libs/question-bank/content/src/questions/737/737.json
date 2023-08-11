@@ -4060,7 +4060,7 @@
   },
   {
     "id": "kiemmq",
-    "explanation": "",
+    "explanation": "> ## DUAL BLEED Light\n>\n> The DUAL BLEED light illuminates whenever the APU bleed air valve is open\n> and the position of the engine bleed air switches and isolation valve would permit\n> possible backpressure of the APU. Therefore, thrust must be limited to idle with\n> the DUAL BLEED light illuminated.",
     "learningObjectives": ["737"],
     "variants": {
       "qf6tid": {
@@ -4071,6 +4071,12 @@
           {
             "id": "0dxuv3",
             "text": "Nothing, this is normal condition before engine start",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "0dxuv4",
+            "text": "Limit thrust to idle to avoid possible backpressure to the APU",
             "correct": true,
             "why": ""
           },
@@ -4090,6 +4096,74 @@
             "id": "fj2eyv",
             "text": "Use a pneumatic ground cart for starting engines",
             "correct": false,
+            "why": ""
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "p4qudi": {
+        "id": "p4qudi",
+        "type": "simple",
+        "question": "When does the amber DUAL BLEED Light illuminate",
+        "options": [
+          {
+            "id": "1dys3p",
+            "text": "When the APU bleed valve is open and the No 2 engine bleed switch is on and the isolation valve is closed",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "i4cq9f",
+            "text": "When the APU bleed valve is open and the No 1 engine bleed switch is off",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "er34gg",
+            "text": "When the APU bleed valve is open",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "wfm2y",
+            "text": "When the APU bleed valve is open and the No 1 engine bleed switch is on",
+            "correct": true,
+            "why": ""
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "b0vgiu": {
+        "id": "b0vgiu",
+        "type": "simple",
+        "question": "After normal engine start, what should be done if the DUAL BLEED light is illuminated:",
+        "options": [
+          {
+            "id": "0o8ku",
+            "text": "Pack switch, affected side, OFF",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "e10ejb",
+            "text": "Isolation valve to close, bleed air switch(es) affected side off",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "dc5gld",
+            "text": "Engine start lever affected side to cut off",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "4xxbe",
+            "text": "Place the APU bleed switch to OFF",
+            "correct": true,
             "why": ""
           }
         ],
@@ -4954,7 +5028,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "> ## APU Start\n> \n> The automatic start sequence begins by moving the APU switch momentarily to\n> START. This initiates opening of the air inlet door. When the APU inlet door\n> reaches the full open position the start sequence begins. After the APU reaches the\n> proper speed, ignition and fuel are provided. When the APU is ready to accept a\n> bleed air or electrical load the APU GEN OFF BUS light illuminates.\n> \n> If the APU does not reach the proper speed with the proper acceleration rate within\n> the time limit of the starter, the start cycle automatically terminates. \n> **The start cycle may take as long as 120 seconds**. Automatic shutdown occurs \n> in the event of EGT exceedance.",
         "annexes": [],
         "externalIds": []
       }
@@ -6060,47 +6134,7 @@
       }
     }
   },
-  {
-    "id": "7vbo4m",
-    "explanation": "",
-    "learningObjectives": ["737"],
-    "variants": {
-      "p4qudi": {
-        "id": "p4qudi",
-        "type": "simple",
-        "question": "When does the amber DUAL BLEED Light illuminate",
-        "options": [
-          {
-            "id": "1dys3p",
-            "text": "When the APU bleed valve is open and the No 2 engine bleed switch is on and the isolation valve is closed",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "i4cq9f",
-            "text": "When the APU bleed valve is open and the No 1 engine bleed switch is off",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "er34gg",
-            "text": "When the APU bleed valve is open",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "wfm2y",
-            "text": "When the APU bleed valve is open and the No 1 engine bleed switch is on",
-            "correct": true,
-            "why": ""
-          }
-        ],
-        "explanation": "",
-        "annexes": [],
-        "externalIds": []
-      }
-    }
-  },
+
   {
     "id": "qrglu",
     "explanation": "",
@@ -6595,7 +6629,7 @@
   },
   {
     "id": "119ob",
-    "explanation": "",
+    "explanation": "> ## Overboard Exhaust Valve\n> \n> On the ground and in flight with low differential pressure, the overboard exhaust\n> valve is open and warm air from the E & E bay is discharged overboard. In flight,\n> at higher cabin differential pressures, the overboard exhaust valve is normally\n> closed and exhaust air is diffused to the lining of the forward cargo compartment.\n> \n> **However, the overboard exhaust valve is driven open if either pack switch is in high and the recirculation fan is off.** \n> This allows for increased ventilation in the smoke removal configuration.\n",
     "learningObjectives": ["737"],
     "variants": {
       "3p4ebp": {
@@ -6815,47 +6849,6 @@
           {
             "id": "w68uzc",
             "text": "IAS/MACH displays opens up and show FMC target speed",
-            "correct": true,
-            "why": ""
-          }
-        ],
-        "explanation": "",
-        "annexes": [],
-        "externalIds": []
-      }
-    }
-  },
-  {
-    "id": "e1jm9f",
-    "explanation": "",
-    "learningObjectives": ["737"],
-    "variants": {
-      "b0vgiu": {
-        "id": "b0vgiu",
-        "type": "simple",
-        "question": "After normal engine start, what should be done if the DUAL BLEED light is illuminated:",
-        "options": [
-          {
-            "id": "0o8ku",
-            "text": "Pack switch, affected side, OFF",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "e10ejb",
-            "text": "Isolation valve to close, bleed air switch(es) affected side off",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "dc5gld",
-            "text": "Engine start lever affected side to cut off",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "4xxbe",
-            "text": "Place the APU bleed switch to OFF",
             "correct": true,
             "why": ""
           }
@@ -9362,7 +9355,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "> ## Landing Gear Transfer Unit\n> \n> The purpose of the landing gear transfer unit is to supply the volume of hydraulic\n> fluid needed to raise the landing gear at the normal rate when system A\n> engine–driven pump volume is lost. The system B engine–driven pump supplies\n> the volume of hydraulic fluid needed to operate the landing gear transfer unit\n> when all of the following conditions exist:\n> - airborne\n> - No. 1 engine RPM drops below a limit value\n> - landing gear lever is positioned UP\n> - either main landing gear is not up and locked.",
         "annexes": [],
         "externalIds": []
       }
@@ -9944,7 +9937,7 @@
   },
   {
     "id": "b207p8",
-    "explanation": "",
+    "explanation": "> ## REFILL Indication (RF) (white)\n> \n> Illuminated (white) – hydraulic quantity below 76%.\n> Note: Valid only when airplane is on ground with both engines shutdown or after\n> landing with flaps up during taxi–in.",
     "learningObjectives": ["737"],
     "variants": {
       "sd0jf7": {
@@ -12910,7 +12903,7 @@
             "why": ""
           }
         ],
-        "explanation": "",
+        "explanation": "> After LIFT-OFF:\n> - if an engine failure occurs, the pitch command target speed is:\n> - V2, if airspeed is below V2.\n> - existing speed, if airspeed is between V2 and V2 + 20.\n> - V2 + 20, if airspeed is above V2 + 20.\n> - **the A/T remains in THR HLD until 800 feet above field elevation**. A/T annunciation then changes from THR HLD to ARM and reduction to climb thrust can be made by pushing the N1 switch.",
         "annexes": [],
         "externalIds": []
       }
@@ -14318,7 +14311,7 @@
       "rnfji": {
         "id": "rnfji",
         "type": "simple",
-        "question": "If during RECALL on TAXI CHECKLIST, you push and release the system annunciator, the IRS light comes ON. The GPS light is illuminated on the AFT OVERHEAD PANEL, and extinguishes when Master Caution is reset. (not A/C YE003):",
+        "question": "If during RECALL on TAXI CHECKLIST, you push and release the system annunciator, the IRS light comes ON. The GPS light is illuminated on the AFT OVERHEAD PANEL, and extinguishes when Master Caution is reset:",
         "options": [
           {
             "id": "jcc0zh",
