@@ -38,6 +38,7 @@ pnpm install
 pnpm infra
 pnpm generate:local
 pnpm dev:local
+pnpm build:local
 ```
 
 ## Project state
