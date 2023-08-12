@@ -3,6 +3,7 @@ export * from "./app/app-head";
 export * from "./app/app-header-menu";
 export * from "./app/app-transition";
 export * from "./home-page";
+export * from "./questions/question-editor";
 export * from "./questions/question-review";
 export * from "./questions/question-preview-list";
 export * from "./questions/question-search-demo";

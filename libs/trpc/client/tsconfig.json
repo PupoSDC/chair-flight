@@ -1,9 +1,9 @@
 {
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["DOM"]
+    "lib": ["dom"]
   },
   "files": [],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "../mock/src/trpc-mock.tsx"],
   "references": []
 }

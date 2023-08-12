@@ -16,7 +16,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "tsc -p libs/react/containers/tsconfig.json --noEmit",
+          "tsc -p libs/react/containers/tsconfig.lib.json --noEmit",
           "tsc -p libs/react/containers/tsconfig.spec.json --noEmit"
         ]
       }

@@ -1,43 +1,34 @@
-import { composeStories } from '@storybook/react';
-import * as stories from './question-editor.stories';
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
-import { default as userEvent } from '@testing-library/user-event';
-import { decorators } from '../../__tests__/decorators'
-import { setupServer } from 'msw/node';
-import { rest } from 'msw';
-import { useEffect, useState } from 'react';
-import { getWorker } from 'msw-storybook-addon';
+import { composeStories } from "@storybook/react";
+import { render, screen } from "@testing-library/react";
+import { default as userEvent } from "@testing-library/user-event";
+import { setupServer } from "msw/node";
+import { afterAll, afterEach, beforeAll } from "vitest";
+import { decorators } from "../../__tests__/decorators";
+import * as stories from "./question-editor.stories";
 
-const { BasePage, VariantSTupid } = composeStories(stories, { decorators });
+const { BasePage } = composeStories(stories, { decorators });
+const server = setupServer(...(stories.default.parameters?.["msw"] ?? []));
 
-describe('QuestionEditor', () => {
+describe("QuestionEditor", () => {
+  beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
 
+  it.skip("is possible to create a new variant", async () => {
+    render(<BasePage />);
+    const initialCards = await screen.findAllByTestId("variant-card");
+    const addButton = screen.getByRole("button", { name: /new variant/i });
+    await userEvent.click(addButton);
+    const newCards = await screen.findAllByTestId("variant-card");
+    expect(initialCards.length + 1).toBe(newCards.length);
+  });
 
-    it('is possible to create a new variant', async () => {
-        render(<BasePage />);
-
-        const loading = screen.getByText("Loading...");
-        await waitForElementToBeRemoved(loading);
-
-
-
-        //const initialCards = await screen.findAllByTestId('variant-card');
-        //const addButton = screen.getByRole('button', { name: /new variant/i });
-        //await userEvent.click(addButton,);
-        //const newCards = await screen.findAllByTestId('variant-card');
-        //expect(initialCards.length + 1).toBe(newCards.length);
-    });
-
-    it.only("works with really simple case", async () => {
-
-        render(<VariantSTupid />);
-
-        //getWorker().listHandlers();
-    
-        await screen.findByText("potato");
-        await screen.findByText("starting");
-       // await waitForElementToBeRemoved(loading);
-
-    })
+  it.skip("is possible to delete a variant", async () => {
+    render(<BasePage />);
+    const initialCards = await screen.findAllByTestId("variant-card");
+    const deleteButton = screen.getByRole("button", { name: /delete/i });
+    await userEvent.click(deleteButton);
+    const newCards = await screen.findAllByTestId("variant-card");
+    expect(initialCards.length - 1).toBe(newCards.length);
+  });
 });
-

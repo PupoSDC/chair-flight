@@ -12,6 +12,7 @@ export type InputAutocompleteLearningObjectivesProps = {
 export const InputAutocompleteLearningObjectives = forwardRef<
   HTMLDivElement,
   InputAutocompleteLearningObjectivesProps
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(({ value, onChange, onBlur }, ref) => {
   const [search, setSearch] = useState("");
 
@@ -27,9 +28,6 @@ export const InputAutocompleteLearningObjectives = forwardRef<
     acc[result.result.id] = result.result;
     return acc;
   }, {});
-
-  // todo foward this when joy fixes autocomplete
-  ref = ref ?? null;
 
   return (
     <Autocomplete
