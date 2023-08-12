@@ -1,5 +1,5 @@
-import { default as babelPlugin } from "prettier/plugins/babel";
-import { default as estreePlugin } from "prettier/plugins/estree";
+import * as babelPlugin from "prettier/plugins/babel";
+import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/core/app";
 import { getOctokit } from "../config/oktokit";

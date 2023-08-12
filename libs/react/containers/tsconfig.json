@@ -1,19 +1,11 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "lib": ["dom"]
-  },
-  "files": [
-    "../../../node_modules/@nx/react/typings/cssmodule.d.ts",
-    "../../../node_modules/@nx/next/typings/image.d.ts"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/tests/test-question-study",
-    "src/tests/test-question-navigation",
-    "src/tests/test-question-exam"
-  ],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"]
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }

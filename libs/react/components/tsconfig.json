@@ -1,9 +1,11 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "lib": ["dom"]
-  },
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }

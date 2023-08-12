@@ -1,6 +1,6 @@
-import { default as fs } from "fs";
-import { default as path } from "path";
-import { cwd } from "process";
+import * as fs from "fs";
+import * as path from "path";
+import * as process from "process";
 import * as XLSX from "xlsx";
 import type {
   CourseName,
@@ -26,7 +26,7 @@ const courseNames: Record<string, CourseName> = {
 };
 
 export const getAllQuestionsFromLocalFs = async (
-  dirPath: string = path.join(cwd(), contentPath, "questions"),
+  dirPath: string = path.join(process.cwd(), contentPath, "questions"),
 ): Promise<QuestionTemplate[]> => {
   const files = fs.readdirSync(dirPath);
   const questions: QuestionTemplate[] = [];
@@ -41,7 +41,7 @@ export const getAllQuestionsFromLocalFs = async (
       ) as QuestionTemplateJson[];
       const jsonDataWithSrcLocation = jsonData.map((q) => ({
         ...q,
-        srcLocation: filePath.replace(cwd(), ""),
+        srcLocation: filePath.replace(process.cwd(), ""),
       }));
       questions.push(...jsonDataWithSrcLocation);
     }
@@ -52,7 +52,7 @@ export const getAllQuestionsFromLocalFs = async (
 };
 
 export const getAllFlashCardsFromLocalFs = async (
-  dirPath: string = path.join(cwd(), contentPath, "flash-cards"),
+  dirPath: string = path.join(process.cwd(), contentPath, "flash-cards"),
 ): Promise<Record<string, FlashCardContent[]>> => {
   const files = fs.readdirSync(dirPath);
   const flashCards: Record<string, FlashCardContent[]> = {};
@@ -69,7 +69,7 @@ export const getAllFlashCardsFromLocalFs = async (
 };
 
 export const getAllLearningObjectivesFromLocalFs = async () => {
-  const fileName = path.join(cwd(), contentPath, "external/tk-syllabus.xlsx");
+  const fileName = path.join(process.cwd(), contentPath, "external/tk-syllabus.xlsx");
   const questions = await getAllQuestionsFromLocalFs();
   const workbook = XLSX.readFile(fileName);
   const sheetNames = workbook.SheetNames;
@@ -141,7 +141,7 @@ export const getAllLearningObjectivesFromLocalFs = async () => {
 
 export const getAllSubjectsFromLocalFs = async () => {
   const allLearningObjectives = await getAllLearningObjectivesFromLocalFs();
-  const filePath = path.join(cwd(), contentPath, "subjects/subjects.json");
+  const filePath = path.join(process.cwd(), contentPath, "subjects/subjects.json");
   const fileBuffer = fs.readFileSync(filePath, "utf-8");
   const subjects = JSON.parse(fileBuffer) as SubjectJson[];
 

@@ -12,7 +12,8 @@ export type InputAutocompleteLearningObjectivesProps = {
 export const InputAutocompleteLearningObjectives = forwardRef<
   HTMLDivElement,
   InputAutocompleteLearningObjectivesProps
->(({ value, onChange, onBlur }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+>(({ value, onChange, onBlur }, ref) => {
   const [search, setSearch] = useState("");
 
   const { data, isLoading } = trpc.search.searchLearningObjectives.useQuery({

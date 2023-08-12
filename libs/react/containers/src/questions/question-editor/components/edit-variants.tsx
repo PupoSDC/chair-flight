@@ -178,6 +178,7 @@ export const EditVariants: FunctionComponent = () => {
             openVariant={openVariant}
             deleteVariant={deleteVariant}
             mergeVariants={mergeVariants}
+            data-testid={`variant-card`}
           />
         ))}
       </ListContainer>

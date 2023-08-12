@@ -1,11 +1,12 @@
 /// <reference types="vitest" />
+import { default as react } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import viteTsConfigPaths from "vite-tsconfig-paths";
+import { default as viteTsConfigPaths } from "vite-tsconfig-paths";
 
 export default defineConfig({
-  cacheDir: "../../../node_modules/.vite/next-client",
-
+  cacheDir: "../../../node_modules/.vite/chair-flight-components",
   plugins: [
+    react(),
     viteTsConfigPaths({
       root: "../../../",
     }),
@@ -20,7 +21,15 @@ export default defineConfig({
       all: true,
       provider: "istanbul",
     },
+    deps: {
+      optimizer: {
+        web: {
+          include: ["storybook/nextjs", "next/config"],
+        }
+      }
+    },
     environment: "jsdom",
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    setupFiles: "./src/__tests__/setup-tests.ts",
+    include: ["src/**/*.test.{ts,tsx}"],
   },
 });

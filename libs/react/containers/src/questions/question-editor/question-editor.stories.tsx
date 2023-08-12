@@ -63,6 +63,12 @@ const meta: Meta<typeof QuestionEditor> = {
           ctx.data({ questionTemplate: mockQuestion }),
         );
       }),
+      trpcMsw.search.searchLearningObjectives.query((req, res, ctx) => {
+        return res(
+          ctx.status(200),
+          ctx.data({ items: [], totalResults: 0, nextCursor: -1 }),
+        );
+      }),
     ],
   },
 };
