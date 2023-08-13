@@ -32,10 +32,20 @@ module.exports = withNx(
           "iframe.html",
           "project.json",
           "stories.json",
+          "mockServiceWorker.js",
         ].map((source) => ({
           source: `/${source}/:path*`,
           destination: `/storybook/${source}/:path*`,
         }));
+      },
+      async redirects() {
+        return [
+          {
+            source: "/storybook",
+            destination: "/storybook/index.html",
+            permanent: true,
+          },
+        ];
       },
     }),
   ),

@@ -5,7 +5,7 @@ import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
 import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
-import { initialize, mswDecorator, mswLoader } from "msw-storybook-addon";
+import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
 import { theme } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
@@ -104,8 +104,8 @@ const preview: Preview = {
       const Component = trpc.withTRPC(Story);
       return <Component />;
     },
-    mswDecorator,
   ],
+  loaders: [mswLoader],
 };
 
 export default preview;
