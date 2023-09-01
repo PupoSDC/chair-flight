@@ -15,7 +15,8 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "tsc -p libs/providers/question-bank-local/tsconfig.json --noEmit"
+          "tsc -p libs/providers/question-bank-local/tsconfig.lib.json --noEmit",
+          "tsc -p libs/providers/question-bank-local/tsconfig.spec.json --noEmit"
         ]
       }
     }
