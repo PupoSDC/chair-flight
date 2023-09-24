@@ -163,71 +163,67 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
             </Option>
           ))}
         </HookFormSelect>
-        {!!currentCheckboxItems.length && (
-          <Controller
-            control={form.control}
-            name="learningObjectives"
-            render={({ field: { onChange, value } }) => {
-              const allSelected = currentCheckboxItems.every((s) => s.checked);
-              const someSelected = currentCheckboxItems.some((s) => s.checked);
+        <Controller
+          control={form.control}
+          name="learningObjectives"
+          render={({ field: { onChange, value } }) => {
+            const allSelected = currentCheckboxItems.every((s) => s.checked);
+            const someSelected = currentCheckboxItems.some((s) => s.checked);
 
-              return (
-                <Box sx={{ py: 1, flex: 1, overflow: "hidden" }}>
-                  <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <FormLabel>Chapters</FormLabel>
-                    <Checkbox
-                      label={"select all"}
-                      size="sm"
-                      checked={allSelected}
-                      indeterminate={!allSelected && someSelected}
-                      onChange={() =>
-                        onChange(
-                          Object.keys(value)
-                            .filter((k) => k.startsWith(currentSubject))
-                            .reduce(
-                              (acc, curr) => {
-                                acc[curr] = !allSelected;
-                                return acc;
-                              },
-                              { ...value },
-                            ),
-                        )
-                      }
-                      sx={{
-                        my: 0.5,
-                        mr: 1,
-                        display: "flex",
-                        flexDirection: "row-reverse",
-                        "& label": {
-                          px: 1,
-                        },
-                      }}
-                    />
-                  </Box>
-                  <NestedCheckboxSelect
-                    sx={{ overflow: "auto", height: "90%", my: 1, pr: 5 }}
-                    items={currentCheckboxItems}
-                    onChange={(chapter, newValue) =>
+            return (
+              <Box sx={{ py: 1, flex: 1, overflow: "hidden" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                  <FormLabel>Chapters</FormLabel>
+                  <Checkbox
+                    label={"select all"}
+                    size="sm"
+                    checked={allSelected}
+                    indeterminate={!allSelected && someSelected}
+                    onChange={() =>
                       onChange(
                         Object.keys(value)
-                          .filter((k) => k.startsWith(chapter.id))
+                          .filter((k) => k.startsWith(currentSubject))
                           .reduce(
                             (acc, curr) => {
-                              acc[curr] = newValue;
+                              acc[curr] = !allSelected;
                               return acc;
                             },
                             { ...value },
                           ),
                       )
                     }
+                    sx={{
+                      my: 0.5,
+                      mr: 1,
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                      "& label": {
+                        px: 1,
+                      },
+                    }}
                   />
                 </Box>
-              );
-            }}
-          />
-        )}
+                <NestedCheckboxSelect
+                  sx={{ overflow: "auto", height: "90%", my: 1, pr: 5 }}
+                  items={currentCheckboxItems}
+                  onChange={(chapter, newValue) =>
+                    onChange(
+                      Object.keys(value)
+                        .filter((k) => k.startsWith(chapter.id))
+                        .reduce(
+                          (acc, curr) => {
+                            acc[curr] = newValue;
+                            return acc;
+                          },
+                          { ...value },
+                        ),
+                    )
+                  }
+                />
+              </Box>
+            );
+          }}
+        />
         <HookFormErrorMessage {...form.register("learningObjectives")} />
         <Controller
           control={form.control}

@@ -21,5 +21,5 @@ export type Subject = {
 
 export type SubjectJson = Omit<
   Subject,
-  "children" | "numberOfQuestions" | "numberOfLearningObjectives"
+  "numberOfQuestions" | "numberOfLearningObjectives"
 >;

@@ -69,7 +69,11 @@ export const getAllFlashCardsFromLocalFs = async (
 };
 
 export const getAllLearningObjectivesFromLocalFs = async () => {
-  const fileName = path.join(process.cwd(), contentPath, "external/tk-syllabus.xlsx");
+  const fileName = path.join(
+    process.cwd(),
+    contentPath,
+    "external/tk-syllabus.xlsx",
+  );
   const questions = await getAllQuestionsFromLocalFs();
   const workbook = XLSX.readFile(fileName);
   const sheetNames = workbook.SheetNames;
@@ -141,7 +145,11 @@ export const getAllLearningObjectivesFromLocalFs = async () => {
 
 export const getAllSubjectsFromLocalFs = async () => {
   const allLearningObjectives = await getAllLearningObjectivesFromLocalFs();
-  const filePath = path.join(process.cwd(), contentPath, "subjects/subjects.json");
+  const filePath = path.join(
+    process.cwd(),
+    contentPath,
+    "subjects/subjects.json",
+  );
   const fileBuffer = fs.readFileSync(filePath, "utf-8");
   const subjects = JSON.parse(fileBuffer) as SubjectJson[];
 
@@ -205,7 +213,7 @@ export const getAllSubjectsFromLocalFs = async () => {
       ...s,
       numberOfQuestions: 0,
       numberOfLearningObjectives: 0,
-      children: [],
+      children: s.children ?? [],
     })),
   );
 };

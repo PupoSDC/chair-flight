@@ -23,7 +23,7 @@
     "migrate": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "ts-node ./libs/providers/question-bank-redis/migrate/main.ts --project ./libs/providers/question-bank-redis/tsconfig.json"
+        "command": "tsx --tsconfig ./libs/providers/question-bank-redis/tsconfig.json ./libs/providers/question-bank-redis/migrate/main.ts"
       }
     },
     "test": {
