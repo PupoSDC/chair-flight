@@ -18,6 +18,9 @@ export const createNewQuestionPr = async (
   const { octokit, owner, repo } = getOctokit();
   const baseBranch = "main";
   const newBranch = `feat-question-${question.id}-${prId}`;
+  const normalizedSrcLocation = srcLocation
+    .replace(/\\/g, "/")
+    .replace(/^\//, "");
 
   const baseBranchRef = await octokit.rest.git.getRef({
     owner,
@@ -28,7 +31,7 @@ export const createNewQuestionPr = async (
   const getContentResponse = await octokit.rest.repos.getContent({
     owner,
     repo,
-    path: srcLocation.replace(/^\//, ""),
+    path: normalizedSrcLocation,
     ref: baseBranchRef.data.object.sha,
     mediaType: {
       format: "raw",
@@ -65,7 +68,7 @@ export const createNewQuestionPr = async (
     repo,
     tree: [
       {
-        path: srcLocation,
+        path: normalizedSrcLocation,
         mode: "100644",
         type: "blob",
         content: newFile,
