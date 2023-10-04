@@ -83,9 +83,6 @@ const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
         {hasResults && (
           <QuestionPreviewList questions={results} onScroll={onScroll} />
         )}
-        {hasResults && (
-          <QuestionPreviewList questions={results} onScroll={onScroll} />
-        )}
         {isError && <Ups message="Error fetching questions" color="danger" />}
         {hasNoResults && <Ups message="No questions found" />}
       </AppLayout.Main>
