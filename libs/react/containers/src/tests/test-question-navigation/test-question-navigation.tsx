@@ -28,7 +28,9 @@ export const TestQuestionNavigation: FunctionComponent<
     <>
       <QuestionNavigation
         sx={{ width: "100%" }}
-        status="in-progress-with-results"
+        status={
+          test.mode === "exam" ? "in-progress" : "in-progress-with-results"
+        }
         pageSize={80}
         currentId={question.questionId}
         questions={test.questions.map((q) => ({
