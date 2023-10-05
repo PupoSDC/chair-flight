@@ -12,7 +12,9 @@ export const getQuestionsFromGit = async ({
   baseBranch?: string;
 }): Promise<QuestionTemplate[]> => {
   const { octokit, owner, repo } = getOctokit();
-  const path = srcLocation.replace(/^\//, "");
+  const normalizedSrcLocation = srcLocation
+    .replace(/\\/g, "/")
+    .replace(/^\//, "");
 
   const baseBranchRef = await octokit.rest.git.getRef({
     owner,
@@ -23,7 +25,7 @@ export const getQuestionsFromGit = async ({
   const getContentResponse = await octokit.rest.repos.getContent({
     owner,
     repo,
-    path: srcLocation,
+    path: normalizedSrcLocation,
     ref: baseBranchRef.data.object.sha,
     mediaType: {
       format: "raw",
@@ -32,7 +34,10 @@ export const getQuestionsFromGit = async ({
 
   const assumedString = getContentResponse.data as unknown as string;
   const assumedArray = JSON.parse(assumedString) as QuestionTemplate[];
-  const arrayWithSrc = assumedArray.map((q) => ({ ...q, srcLocation: path }));
+  const arrayWithSrc = assumedArray.map((q) => ({
+    ...q,
+    srcLocation: normalizedSrcLocation,
+  }));
   return z.array(questionSchema).parse(arrayWithSrc);
 };
 
