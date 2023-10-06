@@ -113,8 +113,8 @@ dependencies:
     specifier: ^18.2.10
     version: 18.2.10(konva@9.2.1)(react-dom@18.2.0)(react@18.2.0)
   react-markdown:
-    specifier: ^8.0.7
-    version: 8.0.7(@types/react@18.2.22)(react@18.2.0)
+    specifier: ^9.0.0
+    version: 9.0.0(@types/react@18.2.22)(react@18.2.0)
   react-merge-refs:
     specifier: ^2.0.2
     version: 2.0.2
@@ -7008,6 +7008,12 @@ packages:
       '@types/unist': 2.0.8
     dev: false
 
+  /@types/hast@3.0.1:
+    resolution: {integrity: sha512-hs/iBJx2aydugBQx5ETV3ZgeSS0oIreQrFJ4bjBl0XvM4wAmDjFEALY7p0rTSLt2eL+ibjRAAs9dTPiCLtmbqQ==}
+    dependencies:
+      '@types/unist': 3.0.0
+    dev: false
+
   /@types/html-minifier-terser@6.1.0:
     resolution: {integrity: sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==}
     dev: true
@@ -7491,6 +7497,10 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       rehype: 12.0.1
       rehype-prism-plus: 1.6.3
+    dev: false
+
+  /@ungap/structured-clone@1.2.0:
+    resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
   /@upstash/redis@1.22.0:
@@ -12393,6 +12403,20 @@ packages:
       zwitch: 2.0.4
     dev: false
 
+  /hast-util-to-jsx-runtime@2.2.0:
+    resolution: {integrity: sha512-wSlp23N45CMjDg/BPW8zvhEi3R+8eRE1qFbjEyAUzMCzu2l1Wzwakq+Tlia9nkCtEl5mDxa7nKHsvYJ6Gfn21A==}
+    dependencies:
+      '@types/hast': 3.0.1
+      '@types/unist': 3.0.0
+      comma-separated-tokens: 2.0.3
+      hast-util-whitespace: 3.0.0
+      property-information: 6.3.0
+      space-separated-tokens: 2.0.2
+      style-to-object: 0.4.2
+      unist-util-position: 5.0.0
+      vfile-message: 4.0.2
+    dev: false
+
   /hast-util-to-parse5@7.1.0:
     resolution: {integrity: sha512-YNRgAJkH2Jky5ySkIqFXTQiaqcAtJyVE+D5lkN6CdtOqrnkLfGYYrEcKuHOJZlp+MwjSwuD3fZuawI+sic/RBw==}
     dependencies:
@@ -12412,6 +12436,12 @@ packages:
 
   /hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
+    dev: false
+
+  /hast-util-whitespace@3.0.0:
+    resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
+    dependencies:
+      '@types/hast': 3.0.1
     dev: false
 
   /hastscript@7.2.0:
@@ -12500,6 +12530,10 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
     dev: true
+
+  /html-url-attributes@3.0.0:
+    resolution: {integrity: sha512-/sXbVCWayk6GDVg3ctOX6nxaVj7So40FcFAnWlWGNAB1LpYKcV5Cd10APjPjW80O7zYW2MsjBV4zZ7IZO5fVow==}
+    dev: false
 
   /html-void-elements@2.0.1:
     resolution: {integrity: sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==}
@@ -14528,6 +14562,19 @@ packages:
       unist-util-generated: 2.0.1
       unist-util-position: 4.0.4
       unist-util-visit: 4.1.2
+    dev: false
+
+  /mdast-util-to-hast@13.0.2:
+    resolution: {integrity: sha512-U5I+500EOOw9e3ZrclN3Is3fRpw8c19SMyNZlZ2IS+7vLsNzb2Om11VpIVOR+/0137GhZsFEF6YiKD5+0Hr2Og==}
+    dependencies:
+      '@types/hast': 3.0.1
+      '@types/mdast': 4.0.0
+      '@ungap/structured-clone': 1.2.0
+      devlop: 1.1.0
+      micromark-util-sanitize-uri: 2.0.0
+      trim-lines: 3.0.1
+      unist-util-position: 5.0.0
+      unist-util-visit: 5.0.0
     dev: false
 
   /mdast-util-to-markdown@1.5.0:
@@ -17122,29 +17169,25 @@ packages:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: false
 
-  /react-markdown@8.0.7(@types/react@18.2.22)(react@18.2.0):
-    resolution: {integrity: sha512-bvWbzG4MtOU62XqBx3Xx+zB2raaFFsq4mYiAzfjXJMEz2sixgeAfraA3tvzULF02ZdOMUOKTBFFaZJDDrq+BJQ==}
+  /react-markdown@9.0.0(@types/react@18.2.22)(react@18.2.0):
+    resolution: {integrity: sha512-v6yNf3AB8GfJ8lCpUvzxAXKxgsHpdmWPlcVRQ6Nocsezp255E/IDrF31kLQsPJeB/cKto/geUwjU36wH784FCA==}
     peerDependencies:
-      '@types/react': '>=16'
-      react: '>=16'
+      '@types/react': '>=18'
+      react: '>=18'
     dependencies:
-      '@types/hast': 2.3.6
-      '@types/prop-types': 15.7.7
+      '@types/hast': 3.0.1
       '@types/react': 18.2.22
-      '@types/unist': 2.0.8
-      comma-separated-tokens: 2.0.3
-      hast-util-whitespace: 2.0.1
-      prop-types: 15.8.1
-      property-information: 6.3.0
+      devlop: 1.1.0
+      hast-util-to-jsx-runtime: 2.2.0
+      html-url-attributes: 3.0.0
+      mdast-util-to-hast: 13.0.2
+      micromark-util-sanitize-uri: 2.0.0
       react: 18.2.0
-      react-is: 18.2.0
-      remark-parse: 10.0.2
-      remark-rehype: 10.1.0
-      space-separated-tokens: 2.0.2
-      style-to-object: 0.4.2
-      unified: 10.1.2
-      unist-util-visit: 4.1.2
-      vfile: 5.3.7
+      remark-parse: 11.0.0
+      remark-rehype: 11.0.0
+      unified: 11.0.3
+      unist-util-visit: 5.0.0
+      vfile: 6.0.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -17652,6 +17695,16 @@ packages:
       '@types/mdast': 3.0.12
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
+    dev: false
+
+  /remark-rehype@11.0.0:
+    resolution: {integrity: sha512-vx8x2MDMcxuE4lBmQ46zYUDfcFMmvg80WYX+UNLeG6ixjdCCLcw1lrgAukwBTuOFsS78eoAedHGn9sNM0w7TPw==}
+    dependencies:
+      '@types/hast': 3.0.1
+      '@types/mdast': 4.0.0
+      mdast-util-to-hast: 13.0.2
+      unified: 11.0.3
+      vfile: 6.0.1
     dev: false
 
   /remark-slug@6.1.0:
@@ -19629,6 +19682,12 @@ packages:
     resolution: {integrity: sha512-kUBE91efOWfIVBo8xzh/uZQ7p9ffYRtUbMRZBNFYwf0RK8koUMx6dGUfwylLOKmaT2cs4wSW96QoYUSXAyEtpg==}
     dependencies:
       '@types/unist': 2.0.8
+    dev: false
+
+  /unist-util-position@5.0.0:
+    resolution: {integrity: sha512-fucsC7HjXvkB5R3kTCO7kUjRdrS0BJt3M/FPxmHMBOm8JQi2BsHAHFsy27E0EolP8rp0NzXsJ+jNPyDWvOJZPA==}
+    dependencies:
+      '@types/unist': 3.0.0
     dev: false
 
   /unist-util-remove-position@4.0.2:

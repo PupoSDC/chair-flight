@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { RouterContext } from "next/dist/shared/lib/router-context";
+import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
 import { vi } from "vitest";
 import { trpc } from "@chair-flight/trpc/client";
