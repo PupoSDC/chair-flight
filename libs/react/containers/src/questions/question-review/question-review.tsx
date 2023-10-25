@@ -43,6 +43,7 @@ const shuffle = getRandomShuffler("123");
 
 export type QuestionReviewProps = {
   questionId: QuestionTemplateId;
+  questionBank?: "questions" | "questionBank737"
   title?: string;
   variantId?: string;
   seed?: string;
@@ -63,6 +64,7 @@ export const QuestionReview = forwardRef<
   (
     {
       title,
+      questionBank = "questions",
       questionId,
       variantId: initialVariantId,
       seed: initialSeed,
@@ -82,7 +84,7 @@ export const QuestionReview = forwardRef<
       Record<string, DrawingPoints[]>
     >({});
 
-    const { data, isLoading } = trpc.questions.getQuestion.useQuery({
+    const { data, isLoading } = trpc[questionBank].getQuestion.useQuery({
       questionId,
     });
 

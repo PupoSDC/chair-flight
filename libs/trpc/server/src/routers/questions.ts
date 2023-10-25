@@ -14,17 +14,12 @@ export const questionsRouter = router({
     return { numberOfQuestions };
   }),
   getQuestion: publicProcedure
-    .input(
-      z.object({
-        questionId: z.string(),
-      }),
-    )
+    .input(z.object({ questionId: z.string() }))
     .query(async ({ ctx, input }) => {
       const { questionId } = input;
       const { questionBank } = ctx;
-      const questionTemplate = await questionBank.getQuestionTemplate(
-        questionId,
-      );
+      const questionTemplate =
+        await questionBank.getQuestionTemplate(questionId);
       const learningObjectives = await questionBank.getLearningObjectives(
         questionTemplate.learningObjectives,
       );
@@ -39,9 +34,8 @@ export const questionsRouter = router({
     .query(async ({ ctx, input }) => {
       const { questionId } = input;
       const { questionBank } = ctx;
-      const { srcLocation } = await questionBank.getQuestionTemplate(
-        questionId,
-      );
+      const { srcLocation } =
+        await questionBank.getQuestionTemplate(questionId);
       const questionTemplate = await getQuestionFromGit({
         questionId: questionId,
         srcLocation: srcLocation,

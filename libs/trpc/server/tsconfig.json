@@ -1,6 +1,8 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "compilerOptions": {},
+  "compilerOptions": {
+    "lib": ["dom"]
+  },
   "files": [],
   "include": ["src/**/*.ts"],
   "references": []

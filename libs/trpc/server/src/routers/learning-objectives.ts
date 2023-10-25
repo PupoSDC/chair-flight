@@ -11,9 +11,8 @@ export const learningObjectivesRouter = router({
     .query(async ({ ctx, input }) => {
       const { learningObjectiveId } = input;
       const { questionBank } = ctx;
-      const learningObjective = await questionBank.getLearningObjective(
-        learningObjectiveId,
-      );
+      const learningObjective =
+        await questionBank.getLearningObjective(learningObjectiveId);
       const questionTemplates = await questionBank.getQuestionTemplates(
         learningObjective.questions,
       );

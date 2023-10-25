@@ -10,7 +10,8 @@ type QuestionPreview = {
   text: string;
   numberOfVariants: number;
   learningObjectives: string[];
-  externalIds: string[];
+  href: string;
+  externalIds?: string[];
 };
 
 export type QuestionPreviewListProps = {
@@ -52,14 +53,14 @@ export const QuestionPreviewList: FunctionComponent<
             }`}
             text={result.text}
             learningObjectives={result.learningObjectives}
-            externalIds={result.externalIds}
+            externalIds={result.externalIds ?? []}
             highLightTerms={[]}
             topRightCorner={
               <>
                 <Button
                   size="sm"
                   variant="plain"
-                  href={`/questions/${result.questionId}`}
+                  href={result.href}
                   component={Link}
                   children={"Go To Question"}
                   endDecorator={<KeyboardArrowRightRoundedIcon />}
@@ -71,7 +72,7 @@ export const QuestionPreviewList: FunctionComponent<
                 <Button
                   size="sm"
                   variant="plain"
-                  href={`/questions/${result.questionId}`}
+                  href={result.href}
                   component={Link}
                   children={<KeyboardArrowRightRoundedIcon />}
                   sx={{

@@ -25,8 +25,8 @@ export default defineConfig({
       optimizer: {
         web: {
           include: ["storybook/nextjs", "next/config"],
-        }
-      }
+        },
+      },
     },
     environment: "jsdom",
     setupFiles: "./src/__tests__/setup-tests.ts",

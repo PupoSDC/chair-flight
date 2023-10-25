@@ -32,8 +32,8 @@ const searchQuestionsFields = [
   "questionId",
   "text",
   "learningObjectives",
-  "numberOfVariants",
   "externalIds",
+  "numberOfVariants",
 ];
 
 const searchQuestionsIndex = new MiniSearch<{
