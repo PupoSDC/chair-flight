@@ -43,7 +43,7 @@ const shuffle = getRandomShuffler("123");
 
 export type QuestionReviewProps = {
   questionId: QuestionTemplateId;
-  questionBank?: "questions" | "questionBank737"
+  questionBank?: "questions" | "questionBank737";
   title?: string;
   variantId?: string;
   seed?: string;

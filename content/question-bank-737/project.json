@@ -7,8 +7,8 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "mkdir -p apps/next-app/public/content/question-bank/737",
-          "rm -rf apps/next-app/public/content/question-bank/737/*",
+          "mkdir -p apps/next-app/public/content/question-bank-737",
+          "rm -rf apps/next-app/public/content/question-bank-737/*",
           "tsx --tsconfig ./content/question-bank-737/tsconfig.json ./content/question-bank-737/scripts/build.ts"
         ],
         "parallel": false
@@ -25,6 +25,14 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p content/question-bank-737/tsconfig.json --noEmit"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/next-app"],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../coverage/content/question-bank-737"
       }
     }
   },

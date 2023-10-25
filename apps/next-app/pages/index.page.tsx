@@ -108,9 +108,9 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
     { flashCard: demoFlashCard },
   ] = await Promise.all([
     helper.questions.getNumberOfQuestions.fetch(),
-    helper.flashCards.getNumberOfFlashCards.fetch(),
+    helper.interviewPrep.getNumberOfFlashCards.fetch(),
     helper.questions.getQuestion.fetch({ questionId }),
-    helper.flashCards.getFlashCard.fetch({ flashCardId }),
+    helper.interviewPrep.getFlashCard.fetch({ flashCardId }),
   ]);
 
   return {

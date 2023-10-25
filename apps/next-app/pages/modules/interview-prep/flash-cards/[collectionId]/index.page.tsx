@@ -62,9 +62,10 @@ export const getStaticProps: GetStaticProps<FlashCardsThemePageProps> = async ({
 }) => {
   const helper = await getTrpcHelper();
   const { collectionId } = params as { collectionId: string };
-  const { flashCards } = await helper.flashCards.getFlashCardsCollection.fetch({
-    collectionId,
-  });
+  const { flashCards } =
+    await helper.interviewPrep.getFlashCardsCollection.fetch({
+      collectionId,
+    });
 
   return {
     props: {
@@ -76,7 +77,7 @@ export const getStaticProps: GetStaticProps<FlashCardsThemePageProps> = async ({
 export const getStaticPaths: GetStaticPaths = async () => {
   const helper = await getTrpcHelper();
   const { flashCardCollections } =
-    await helper.flashCards.getFlashCardCollections.fetch();
+    await helper.interviewPrep.getFlashCardsCollections.fetch();
 
   return {
     fallback: false,

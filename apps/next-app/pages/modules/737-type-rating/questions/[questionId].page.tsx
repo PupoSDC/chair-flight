@@ -53,12 +53,10 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
 
   const updateVariantAndSeed = (query: { variantId: string; seed: string }) => {
-    router.pathname
-    router.push(
-      { pathname: router.pathname, query },
-      undefined,
-      { shallow: true },
-    );
+    router.pathname;
+    router.push({ pathname: router.pathname, query }, undefined, {
+      shallow: true,
+    });
   };
 
   return (

@@ -113,13 +113,13 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
                       children="View All"
                       variant="outlined"
                       component={Link}
-                      href={`/flash-cards/${fc.collectionId}`}
+                      href={`/modules/interview-prep/flash-cards/${fc.collectionId}`}
                     />
                     <Button
                       sx={{ mr: 1 }}
                       children="Start!"
                       component={Link}
-                      href={`/flash-cards/${fc.collectionId}/start`}
+                      href={`/modules/interview-prep/flash-cards/${fc.collectionId}/start`}
                     />
                   </Box>
                 </CardContent>
@@ -137,7 +137,7 @@ export const getStaticProps: GetStaticProps<
 > = async () => {
   const helper = await getTrpcHelper();
   const { flashCardCollections } =
-    await helper.flashCards.getFlashCardCollections.fetch();
+    await helper.interviewPrep.getFlashCardsCollections.fetch();
 
   return {
     props: {

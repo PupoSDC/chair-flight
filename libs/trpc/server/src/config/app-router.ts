@@ -1,5 +1,5 @@
 import { analyticsRouter } from "../routers/analytics";
-import { flashCardsRouter } from "../routers/flash-cards";
+import { interviewPrepRouter } from "../routers/interview-prep";
 import { learningObjectivesRouter } from "../routers/learning-objectives";
 import { questionBank737Router } from "../routers/question-bank-737";
 import { questionsRouter } from "../routers/questions";
@@ -12,7 +12,7 @@ export const appRouter = router({
   analytics: analyticsRouter,
   questions: questionsRouter,
   search: searchRouter,
-  flashCards: flashCardsRouter,
+  interviewPrep: interviewPrepRouter,
   tests: testsRouter,
   learningObjectives: learningObjectivesRouter,
   status: statusRouter,

@@ -1,14 +1,15 @@
-import { QuestionTemplate, Subject } from "@chair-flight/base/types";
-import { getQuestionPreview } from "@chair-flight/core/app";
-import { publicProcedure, router } from "../config/trpc";
-import { SearchResponseItem, makeSearchHandler } from "../common/search";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { z } from "zod";
+import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
+import { getQuestionPreview } from "@chair-flight/core/app";
+import { makeSearchHandler } from "../common/search";
+import { publicProcedure, router } from "../config/trpc";
+import type { SearchResponseItem } from "../common/search";
+import type { QuestionTemplate, Subject } from "@chair-flight/base/types";
 
 const basePath = getEnvVariableOrThrow("NEXT_PUBLIC_BASE_URL");
-const SUBJECT_PATH = `${basePath}/content/question-bank/737/subject.json`;
-const QUESTIONS_PATH = `${basePath}/content/question-bank/737/questions.json`;
+const SUBJECT_PATH = `${basePath}/content/question-bank-737/subject.json`;
+const QUESTIONS_PATH = `${basePath}/content/question-bank-737/questions.json`;
 
 type QuestionPreview = {
   questionId: string;
@@ -35,20 +36,23 @@ const getQuestions = async () => {
   if (!questions) {
     const response = await fetch(QUESTIONS_PATH);
     questions = (await response.json()) as QuestionTemplate[];
-    questionsMap = questions.reduce((s, q) => {
-      s[q.id] = q;
-      return s;
-    }, {} as typeof questionsMap)
+    questionsMap = questions.reduce(
+      (s, q) => {
+        s[q.id] = q;
+        return s;
+      },
+      {} as typeof questionsMap,
+    );
   }
   return questions;
 };
 
 const getQuestion = async (questionId: string) => {
   const questions = await getQuestions();
-  const question = questions.find(q => q.id === questionId);
+  const question = questions.find((q) => q.id === questionId);
   if (!question) throw new NotFoundError(`Question "${questionId}" not Found!`);
   return question;
-}
+};
 
 export const questionBank737Router = router({
   getSubject: publicProcedure.query(getSubject),
@@ -91,7 +95,7 @@ export const questionBank737Router = router({
         },
         [],
       );
-    }
+    },
   }),
   getQuestion: publicProcedure
     .input(z.object({ questionId: z.string() }))
@@ -99,8 +103,9 @@ export const questionBank737Router = router({
       const { questionId } = input;
       const questionTemplate = await getQuestion(questionId);
       const subject = await getSubject();
-      const learningObjectives = (subject.children ?? [])
-        .filter(lo => questionTemplate?.learningObjectives.includes(lo.id));
+      const learningObjectives = (subject.children ?? []).filter(
+        (lo) => questionTemplate?.learningObjectives.includes(lo.id),
+      );
       return { questionTemplate, learningObjectives };
     }),
 });

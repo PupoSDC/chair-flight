@@ -116,7 +116,7 @@ export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
     }
 
     const { flashCards } =
-      await helper.flashCards.getFlashCardsCollection.fetch({
+      await helper.interviewPrep.getFlashCardsCollection.fetch({
         collectionId,
       });
 
