@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
   getSubject,
   getQuestion,
+  getQuestionsMap,
   getQuestions,
 } from "@chair-flight/content/question-bank-737";
 import { getQuestionPreview } from "@chair-flight/core/app";
@@ -9,8 +10,19 @@ import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
 
+type QuestionPreview = {
+  questionId: string;
+  variantId: string;
+  text: string;
+  numberOfVariants: number;
+  learningObjectives: string[];
+  href: string;
+};
+
 export const questionBank737Router = router({
-  getSubject: publicProcedure.query(getSubject),
+  getSubject: publicProcedure.query(() => {
+    return getSubject();
+  }),
   searchQuestions: makeSearchHandler({
     searchFields: ["id", "questionId", "learningObjectives", "text"],
     getData: getQuestions,
@@ -24,15 +36,16 @@ export const questionBank737Router = router({
         })),
       );
     },
-    processResults: (_, searchResults) => {
+    processResults: async (_, searchResults) => {
       const seenQuestions: Record<string, number> = {};
+      const questionMap = await getQuestionsMap();
       return searchResults.reduce<SearchResponseItem<QuestionPreview>[]>(
         (sum, result) => {
           const questionId = result["questionId"];
           const variantId = result["id"];
           if (seenQuestions[questionId]) return sum;
           seenQuestions[questionId] = 1;
-          const variants = questionsMap[questionId]?.variants;
+          const variants = questionMap[questionId]?.variants;
           sum.push({
             result: {
               questionId: result["questionId"],

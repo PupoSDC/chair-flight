@@ -1,0 +1,43 @@
+{
+  "name": "content-interview-flashcards",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/content/interview-flashcards/src",
+  "targets": {
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p apps/next-app/public/content/interview-flashcards",
+          "rm -rf apps/next-app/public/content/interview-flashcards/*",
+          "tsx --tsconfig ./libs/content/interview-flashcards/tsconfig.json ./libs/content/interview-flashcards/migrate"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/content/interview-flashcards/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/content/interview-flashcards/tsconfig.json --noEmit"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": [],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/libs/content/interview-flashcards"
+      }
+    }
+  },
+  "tags": []
+}

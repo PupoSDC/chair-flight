@@ -1,0 +1,34 @@
+{
+  "name": "core-analytics",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/analytics/src",
+  "projectType": "library",
+  "targets": {
+    "generate": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "libs/core/analytics"
+      }
+    },
+    "migrate": {
+      "command": "prisma migrate dev",
+      "options": {
+        "cwd": "libs/core/analytics"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/analytics/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/core/analytics/tsconfig.json --noEmit"]
+      }
+    }
+  },
+  "tags": []
+}

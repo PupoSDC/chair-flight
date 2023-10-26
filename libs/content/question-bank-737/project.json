@@ -1,0 +1,43 @@
+{
+  "name": "content-question-bank-737",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/content/question-bank-737/src",
+  "targets": {
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p apps/next-app/public/content/question-bank-737",
+          "rm -rf apps/next-app/public/content/question-bank-737/*",
+          "tsx --tsconfig ./libs/content/question-bank-737/tsconfig.json ./libs/content/question-bank-737/migrate"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/content/question-bank-737/**/*.ts"]
+      }
+    },
+    "tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/content/question-bank-737/tsconfig.json --noEmit"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": [],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../coverage/libs/content/question-bank-737"
+      }
+    }
+  },
+  "tags": []
+}

@@ -26,7 +26,7 @@ export const makeSearchHandler = <
   processResults: (
     data: BaseType[],
     results: SearchResult[],
-  ) => SearchResponseItem<ResultType>[];
+  ) => Promise<SearchResponseItem<ResultType>[]>;
 }) => {
   let initializationWork: Promise<void> | undefined;
   let data: BaseType[];
@@ -54,7 +54,7 @@ export const makeSearchHandler = <
 
     const { q, limit, cursor = 0 } = input;
     const results = q ? index.search(q, { fuzzy: 0.2 }) : [];
-    const processedResults = processResults(data, results);
+    const processedResults = await processResults(data, results);
     const items = processedResults.slice(cursor, cursor + limit);
 
     return {
