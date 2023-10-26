@@ -89,7 +89,7 @@ export const FlashCardPreview: FunctionComponent<FlashCardPreviewProps> = ({
           component={Link}
           variant="outlined"
           children={"Explore Flash Cards"}
-          href="/flash-cards"
+          href="/flashcards"
         />
       </Box>
       <Box

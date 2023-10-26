@@ -1,32 +1,18 @@
 import { z } from "zod";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
+import { getFlashcards } from "@chair-flight/content/interview-flashcards";
 import { publicProcedure, router } from "../config/trpc";
-import type { FlashCardContent } from "@chair-flight/base/types";
-
-const basePath = getEnvVariableOrThrow("NEXT_PUBLIC_BASE_URL");
-const FLASH_CARDS_PATH = `${basePath}/content/interview-flash-cards/flash-cards.json`;
-
-let flashCards: Record<string, FlashCardContent[]>;
-
-const getFlashCards = async () => {
-  if (!flashCards) {
-    const response = await fetch(FLASH_CARDS_PATH);
-    flashCards = (await response.json()) as Record<string, FlashCardContent[]>;
-  }
-  return flashCards;
-};
 
 export const interviewPrepRouter = router({
-  getNumberOfFlashCards: publicProcedure //
+  getNumberOfFlashcards: publicProcedure //
     .query(async () => {
-      const cards = await getFlashCards();
+      const flashCards = await getFlashcards();
       const numberOfFlashCards = Object.values(flashCards).flat().length;
       return { numberOfFlashCards };
     }),
-  getFlashCardsCollections: publicProcedure //
+  getFlashcardsCollections: publicProcedure //
     .query(async () => {
-      const allCards = await getFlashCards();
+      const allCards = await getFlashcards();
       const flashCardCollections = Object.entries(allCards).map(
         ([collectionId, flashCards]) => ({
           collectionId,
@@ -39,7 +25,7 @@ export const interviewPrepRouter = router({
       );
       return { flashCardCollections };
     }),
-  getFlashCardsCollection: publicProcedure
+  getFlashcardsCollection: publicProcedure
     .input(z.object({ collectionId: z.string() }))
     .query(async ({ input }) => {
       const { collectionId } = input;
@@ -52,7 +38,7 @@ export const interviewPrepRouter = router({
       }
       return { flashCards };
     }),
-  getFlashCard: publicProcedure
+  getFlashcard: publicProcedure
     .input(z.object({ flashCardId: z.string() }))
     .query(async ({ input }) => {
       const { flashCardId } = input;

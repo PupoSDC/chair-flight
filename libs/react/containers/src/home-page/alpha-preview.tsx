@@ -55,7 +55,7 @@ export const AlphaPreview: FunctionComponent = () => (
           sx={{ textAlign: "center" }}
           variant="outlined"
           component={Link}
-          href="/flash-cards"
+          href="/flashcards"
           fullWidth
         >
           Flash Cards

@@ -1,4 +1,4 @@
-import type { FlashCardContent } from "./flash-cards";
+import type { FlashCardContent } from "./flashcards";
 import type { LearningObjective } from "./learning-objectives";
 import type { QuestionTemplate } from "./question-templates";
 import type { Subject } from "./subjects";

@@ -32,7 +32,7 @@ const items: HeaderNavProps["items"] = [
         icon: BoltIcon,
         title: "Flashcards",
         subtitle: "Practice for open-ended interview questions.",
-        href: "/flash-cards",
+        href: "/flashcards",
       },
     ],
   },
