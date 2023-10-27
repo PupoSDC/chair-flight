@@ -5,7 +5,7 @@ import {
   getRandomIdGenerator,
   getRandomShuffler,
 } from "../random/random";
-import type { Test, QuestionBankRepository } from "@chair-flight/base/types";
+import type { QuestionTemplate, Test } from "@chair-flight/base/types";
 
 export type NewTestConfiguration = {
   mode: "study" | "exam";
@@ -45,12 +45,11 @@ export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> = z
 
 export const createTest = async ({
   config,
-  questionBank,
+  questions: allQuestions,
 }: {
   config: NewTestConfiguration;
-  questionBank: QuestionBankRepository;
+  questions: QuestionTemplate[];
 }): Promise<Test> => {
-  const allQuestions = await questionBank.getAllQuestionTemplates();
   const numberOfQuestions = config.numberOfQuestions ?? 40;
   const subject = config.subject;
   const mode = config.mode;

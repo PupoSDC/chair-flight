@@ -13,6 +13,7 @@ import type {
 let questions: QuestionTemplate[];
 let questionsMap: Record<string, QuestionTemplate | undefined>;
 let learningObjectives: LearningObjective[];
+let learningObjectivesMap: Record<string, LearningObjective | undefined>;
 let subjects: Subject[];
 
 export const getSubjects = async () => {
@@ -23,7 +24,7 @@ export const getSubjects = async () => {
   return subjects;
 };
 
-export const getQuestions = async () => {
+export const getAllQuestionTemplates = async () => {
   if (!questions) {
     const response = await fetch(API_QUESTIONS_PATH);
     questions = (await response.json()) as QuestionTemplate[];
@@ -38,13 +39,18 @@ export const getQuestions = async () => {
   return questions;
 };
 
-export const getQuestionsMap = async () => {
-  await getQuestions();
+export const getAllQuestionTemplateMap = async () => {
+  await getAllQuestionTemplates();
   return questionsMap;
 };
 
-export const getQuestion = async (questionId: string) => {
-  const questions = await getQuestionsMap();
+export const getSomeQuestionTemplates = async (questionIds: string[]) => {
+  const map = await getAllQuestionTemplateMap();
+  return questionIds.map((id) => map[id]).filter(Boolean);
+};
+
+export const getQuestionTemplate = async (questionId: string) => {
+  const questions = await getAllQuestionTemplateMap();
   const question = questions[questionId];
   if (!question) throw new NotFoundError(`Question "${questionId}" not Found!`);
   return question;
@@ -54,8 +60,33 @@ export const getAllLearningObjectives = async () => {
   if (!learningObjectives) {
     const response = await fetch(API_LEARNING_OBJECTIVES_PATH);
     learningObjectives = (await response.json()) as LearningObjective[];
+    learningObjectivesMap = learningObjectives.reduce(
+      (s, lo) => {
+        s[lo.id] = lo;
+        return s;
+      },
+      {} as typeof learningObjectivesMap,
+    );
   }
   return learningObjectives;
+};
+
+export const getAllLearningObjectivesMap = async () => {
+  await getAllLearningObjectives();
+  return learningObjectivesMap;
+};
+
+export const getSomeLearningObjectives = async (loIds: string[]) => {
+  const map = await getAllLearningObjectivesMap();
+  return loIds.map((id) => map[id]).filter(Boolean);
+};
+
+export const getLearningObjective = async (learningObjectiveId: string) => {
+  const learningObjectiveMap = await getAllLearningObjectivesMap();
+  const learningObjective = learningObjectiveMap[learningObjectiveId];
+  const errorMessage = `Learning Objective "${learningObjectiveId}" not Found!`;
+  if (!learningObjective) throw new NotFoundError(errorMessage);
+  return learningObjective;
 };
 
 export const getSubject = async (subjectId: string) => {
@@ -63,10 +94,4 @@ export const getSubject = async (subjectId: string) => {
   const subject = subjects.find((s) => s.id === subjectId);
   if (!subject) throw new NotFoundError(`Subject "${subjectId}" not Found!`);
   return subject;
-};
-
-export const getSubjectLearningObjectives = async (subjectId: string) => {
-  const subject = await getSubject(subjectId);
-  const learningObjectives = subject.children ?? [];
-  return learningObjectives;
 };

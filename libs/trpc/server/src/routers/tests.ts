@@ -3,9 +3,8 @@ import { newTestConfigurationSchema, createTest } from "@chair-flight/core/app";
 import { publicProcedure, router } from "../config/trpc";
 
 export const testsRouter = router({
-  getAllSubjects: publicProcedure.query(async ({ ctx }) => {
-    const { questionBank } = ctx;
-    const allSubjects = await questionBank.getAllSubjects();
+  getAllSubjects: publicProcedure.query(async () => {
+    //const allSubjects = await
     const subjects = allSubjects.filter(
       (lo) => !["034", "082"].includes(lo.id),
     );

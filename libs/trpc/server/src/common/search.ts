@@ -18,13 +18,17 @@ export const makeSearchHandler = <
   searchFields,
   getData,
   processData,
+  preprocessResults = async () => undefined,
   processResults,
 }: {
   searchFields: (keyof SearchType)[];
   getData: () => Promise<BaseType[]>;
   processData: (data: BaseType[]) => SearchType[];
-  processResults: (
+  preprocessResults?: (
     data: BaseType[],
+    q: string | undefined,
+  ) => Promise<SearchResponseItem<ResultType>[] | undefined>;
+  processResults: (
     results: SearchResult[],
   ) => Promise<SearchResponseItem<ResultType>[]>;
 }) => {
@@ -53,13 +57,16 @@ export const makeSearchHandler = <
     }
 
     const { q, limit, cursor = 0 } = input;
-    const results = q ? index.search(q, { fuzzy: 0.2 }) : [];
-    const processedResults = await processResults(data, results);
+
+    const processedResults =
+      (await preprocessResults(data, q)) ??
+      (await processResults(q ? index.search(q, { fuzzy: 0.2 }) : []));
+
     const items = processedResults.slice(cursor, cursor + limit);
 
     return {
       items,
-      totalResults: results.length,
+      totalResults: processedResults.length,
       nextCursor: cursor + items.length,
     };
   });

@@ -1,10 +1,13 @@
 import { z } from "zod";
 import {
-  getLearningObjectives,
-  getQuestion,
-  getQuestions,
-  getQuestionsMap,
+  getAllLearningObjectives,
+  getQuestionTemplate,
+  getAllQuestionTemplates,
+  getAllQuestionTemplateMap,
   getSubjects,
+  getAllLearningObjectivesMap,
+  getLearningObjective,
+  getSomeQuestionTemplates,
 } from "@chair-flight/content/question-bank-atpl";
 import { getQuestionPreview } from "@chair-flight/core/app";
 import {
@@ -15,6 +18,7 @@ import { questionEditSchema } from "@chair-flight/core/schemas";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
+import type { LearningObjective } from "@chair-flight/base/types";
 
 type QuestionPreview = {
   questionId: string;
@@ -25,7 +29,7 @@ type QuestionPreview = {
   href: string;
 };
 
-export const questionBank737Router = router({
+export const questionBankAtplRouter = router({
   getSubjects: publicProcedure.query(async () => {
     const subjects = await getSubjects();
     return { subjects };
@@ -34,20 +38,18 @@ export const questionBank737Router = router({
     .input(z.object({ questionId: z.string() }))
     .query(async ({ input }) => {
       const { questionId } = input;
-      const questionTemplate = await getQuestion(questionId);
-      const subject = await getSubject();
-      const learningObjectives = (subject.children ?? []).filter(
+      const questionTemplate = await getQuestionTemplate(questionId);
+      const allLearningObjectives = await getAllLearningObjectives();
+      const learningObjectives = allLearningObjectives.filter(
         (lo) => questionTemplate?.learningObjectives.includes(lo.id),
       );
       return { questionTemplate, learningObjectives };
     }),
   getQuestionFromGithub: publicProcedure
     .input(z.object({ questionId: z.string() }))
-    .query(async ({ ctx, input }) => {
+    .query(async ({ input }) => {
       const { questionId } = input;
-      const { questionBank } = ctx;
-      const { srcLocation } =
-        await questionBank.getQuestionTemplate(questionId);
+      const { srcLocation } = await getQuestionTemplate(questionId);
       const questionTemplate = await getQuestionFromGit({
         questionId: questionId,
         srcLocation: srcLocation,
@@ -67,22 +69,16 @@ export const questionBank737Router = router({
         learningObjectiveId: z.string(),
       }),
     )
-    .query(async ({ ctx, input }) => {
+    .query(async ({ input }) => {
       const { learningObjectiveId } = input;
-      const { questionBank } = ctx;
-      const learningObjective =
-        await questionBank.getLearningObjective(learningObjectiveId);
-      const questionTemplates = await questionBank.getQuestionTemplates(
-        learningObjective.questions,
-      );
-      return {
-        learningObjective,
-        questionTemplates,
-      };
+      const learningObjective = await getLearningObjective(learningObjectiveId);
+      const questionIds = learningObjective.questions;
+      const questionTemplates = await getSomeQuestionTemplates(questionIds);
+      return { learningObjective, questionTemplates };
     }),
   searchQuestions: makeSearchHandler({
     searchFields: ["id", "questionId", "learningObjectives", "text"],
-    getData: getQuestions,
+    getData: getAllQuestionTemplates,
     processData: (questions) => {
       return questions.flatMap((question) =>
         Object.values(question.variants).map((variant) => ({
@@ -93,8 +89,8 @@ export const questionBank737Router = router({
         })),
       );
     },
-    processResults: async (_, searchResults) => {
-      const questionMap = await getQuestionsMap();
+    processResults: async (searchResults) => {
+      const questionMap = await getAllQuestionTemplateMap();
       const seenQuestions: Record<string, number> = {};
       return searchResults.reduce<SearchResponseItem<QuestionPreview>[]>(
         (sum, result) => {
@@ -110,7 +106,7 @@ export const questionBank737Router = router({
               text: result["text"],
               numberOfVariants: variants ? Object.values(variants).length : 1,
               learningObjectives: result["learningObjectives"].split(", "),
-              href: `/modules/737-type-rating/questions/${questionId}?variantId=${variantId}`,
+              href: `/modules/atpl-theory/questions/${questionId}?variantId=${variantId}`,
             },
             score: result.score,
             match: result.match,
@@ -123,86 +119,26 @@ export const questionBank737Router = router({
     },
   }),
   searchLearningObjectives: makeSearchHandler({
-    searchFields: ["id", "questionId", "learningObjectives", "text"],
-    getData: getLearningObjectives,
-    processData: (questions) => {
-      return questions.flatMap((question) =>
-        Object.values(question.variants).map((variant) => ({
-          id: variant.id,
-          questionId: question.id,
-          learningObjectives: question.learningObjectives.join(", "),
-          text: getQuestionPreview(question, variant.id),
-        })),
-      );
+    searchFields: ["id", "text"],
+    getData: getAllLearningObjectives,
+    processData: (data) => {
+      return data.map(({ questions, ...lo }) => ({
+        ...lo,
+        courses: lo.courses.join(", "),
+      }));
     },
-    processResults: async (_, searchResults) => {
-      const questionMap = await getQuestionsMap();
-      const seenQuestions: Record<string, number> = {};
-      return searchResults.reduce<SearchResponseItem<QuestionPreview>[]>(
-        (sum, result) => {
-          const questionId = result["questionId"];
-          const variantId = result["id"];
-          if (seenQuestions[questionId]) return sum;
-          seenQuestions[questionId] = 1;
-          const variants = questionMap[questionId]?.variants;
-          sum.push({
-            result: {
-              questionId: result["questionId"],
-              variantId: result["id"],
-              text: result["text"],
-              numberOfVariants: variants ? Object.values(variants).length : 1,
-              learningObjectives: result["learningObjectives"].split(", "),
-              href: `/modules/737-type-rating/questions/${questionId}?variantId=${variantId}`,
-            },
-            score: result.score,
-            match: result.match,
-            terms: result.terms,
-          });
-          return sum;
-        },
-        [],
-      );
-    },
-  }),
-});
-
-/**
-  publicProcedure
-    .input(searchQueryValidation)
-    .query(async ({ ctx, input }) => {
-      if (searchLearningObjectivesInitializationWork) {
-        await searchLearningObjectivesInitializationWork;
-      }
-      if (searchLearningObjectivesIndex.documentCount === 0) {
-        searchLearningObjectivesInitializationWork = (async () => {
-          const learningObjectives =
-            await ctx.questionBank.getAllLearningObjectives();
-          await searchLearningObjectivesIndex.addAllAsync(learningObjectives);
-        })();
-        await searchLearningObjectivesInitializationWork;
-      }
-
-      const { q, limit, cursor = 0 } = input;
-      const learningObjectives =
-        await ctx.questionBank.getAllLearningObjectives();
-      const learningObjectiveMap = learningObjectives.reduce<
-        Record<string, LearningObjective>
-      >((sum, lo) => {
-        sum[lo.id] = lo;
-        return sum;
-      }, {});
-
+    preprocessResults: async (data, q) => {
       const MATCH_LO_ID = /^[0-9]{3}(.[0-9]{2}){0,3}$/;
-      let searchResultItems: SearchResult<LearningObjective>[];
       if (!q) {
-        searchResultItems = learningObjectives.map((result) => ({
+        return data.map((result) => ({
           result,
           score: 1,
           match: {},
           terms: [],
         }));
-      } else if (MATCH_LO_ID.test(q)) {
-        searchResultItems = learningObjectives
+      }
+      if (MATCH_LO_ID.test(q)) {
+        return data
           .filter((doc) => doc.id.startsWith(q))
           .map((result) => ({
             result,
@@ -210,27 +146,19 @@ export const questionBank737Router = router({
             match: {},
             terms: [],
           }));
-      } else {
-        const miniSearchResults = await searchLearningObjectivesIndex.search(
-          q,
-          {
-            boost: { id: 100, text: 0 },
-            weights: { fuzzy: 0, prefix: 10 },
-          },
-        );
-        searchResultItems = miniSearchResults.map((result) => ({
-          result: learningObjectiveMap[result.id as string],
+      }
+      return undefined;
+    },
+    processResults: async (searchResults) => {
+      const learningObjectivesMap = await getAllLearningObjectivesMap();
+      return searchResults.map<SearchResponseItem<LearningObjective>>(
+        (result) => ({
+          result: learningObjectivesMap[result.id] as LearningObjective,
           score: result.score,
           match: result.match,
           terms: result.terms,
-        }));
-      }
-
-      return {
-        items: searchResultItems.slice(cursor, cursor + limit),
-        totalResults: learningObjectives.length,
-        nextCursor: cursor + limit,
-      };
-    }),
+        }),
+      );
+    },
+  }),
 });
-*/

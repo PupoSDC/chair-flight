@@ -36,7 +36,7 @@ export const questionBank737Router = router({
         })),
       );
     },
-    processResults: async (_, searchResults) => {
+    processResults: async (searchResults) => {
       const seenQuestions: Record<string, number> = {};
       const questionMap = await getQuestionsMap();
       return searchResults.reduce<SearchResponseItem<QuestionPreview>[]>(

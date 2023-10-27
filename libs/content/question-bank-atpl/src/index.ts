@@ -1,7 +1,1 @@
-export {
-  getSubjects,
-  getQuestions,
-  getQuestionsMap,
-  getQuestion,
-  getLearningObjectives,
-} from "./question-bank-atpl";
+export * from "./question-bank-atpl";

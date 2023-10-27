@@ -29,7 +29,7 @@ export const interviewPrepRouter = router({
     .input(z.object({ collectionId: z.string() }))
     .query(async ({ input }) => {
       const { collectionId } = input;
-      const allFlashCards = await getFlashCards();
+      const allFlashCards = await getFlashcards();
       const flashCards = allFlashCards[collectionId];
       if (!flashCards) {
         throw new NotFoundError(
@@ -42,7 +42,7 @@ export const interviewPrepRouter = router({
     .input(z.object({ flashCardId: z.string() }))
     .query(async ({ input }) => {
       const { flashCardId } = input;
-      const flashCards = await getFlashCards();
+      const flashCards = await getFlashcards();
       const flashCard = Object.values(flashCards)
         .flat()
         .find((flashCard) => flashCard.id === flashCardId);
