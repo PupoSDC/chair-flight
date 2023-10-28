@@ -13,7 +13,8 @@ import { ReviewPrModal } from "./review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
 
 const resolver = zodResolver(questionEditSchema);
-const useQuestion = trpc.questions.getQuestionFromGithub.useSuspenseQuery;
+const useQuestion =
+  trpc.questionBankAtpl.getQuestionFromGithub.useSuspenseQuery;
 
 export const QuestionEditor = () => {
   const router = useRouter();

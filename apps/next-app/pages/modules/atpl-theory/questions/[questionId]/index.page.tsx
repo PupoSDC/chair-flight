@@ -43,7 +43,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const seed = (router.query["seed"] ?? initialSeed) as string;
   const variantId = (router.query["variantId"] ?? initialVariantId) as string;
 
-  const { data } = trpc.questions.getQuestion.useQuery({
+  const { data } = trpc.questionBankAtpl.getQuestion.useQuery({
     questionId: initialQuestionId,
   });
 
@@ -131,7 +131,7 @@ export const getServerSideProps = ssrHandler<
   const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
   const initialQuestionId = questionId;
 
-  const { questionTemplate } = await helper.questions.getQuestion.fetch({
+  const { questionTemplate } = await helper.questionBankAtpl.getQuestion.fetch({
     questionId,
   });
 

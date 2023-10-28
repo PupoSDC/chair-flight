@@ -6,11 +6,11 @@ import {
   LandingScreen,
   CoolSlidingThing,
   AlphaPreview,
-  FlashCardPreview,
+  FlashcardPreview,
 } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type {
-  FlashCardContent,
+  FlashcardContent,
   QuestionTemplate,
 } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
@@ -45,16 +45,16 @@ const StyledSectionB = styled(StyledSection)`
 
 export type IndexPageProps = {
   numberOfQuestions: number;
-  numberOfFlashCards: number;
+  numberOfFlashcards: number;
   demoQuestion: QuestionTemplate;
-  demoFlashCard: FlashCardContent;
+  demoFlashcard: FlashcardContent;
 };
 
 export const IndexPage: NextPage<IndexPageProps> = ({
   demoQuestion,
   numberOfQuestions,
-  demoFlashCard,
-  numberOfFlashCards,
+  demoFlashcard,
+  numberOfFlashcards,
 }) => (
   <>
     <AppHead
@@ -77,9 +77,9 @@ export const IndexPage: NextPage<IndexPageProps> = ({
         />
       </StyledSectionB>
       <StyledSectionA>
-        <FlashCardPreview
-          flashCard={demoFlashCard}
-          numberOfFlashCards={numberOfFlashCards}
+        <FlashcardPreview
+          flashcard={demoFlashcard}
+          numberOfFlashcards={numberOfFlashcards}
         />
       </StyledSectionA>
       <StyledSectionB>
@@ -99,26 +99,26 @@ export const IndexPage: NextPage<IndexPageProps> = ({
 
 export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
   const helper = await getTrpcHelper();
-  const flashCardId = "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0";
+  const flashcardId = "3b1ba81a-df7a-4e9a-a04d-c15a09820eb0";
   const questionId = "QYFPA3CY4E";
   const [
     { numberOfQuestions },
-    { numberOfFlashCards },
     { questionTemplate: demoQuestion },
-    { flashCard: demoFlashCard },
+    { numberOfFlashcards },
+    { flashcard: demoFlashcard },
   ] = await Promise.all([
-    helper.questions.getNumberOfQuestions.fetch(),
-    helper.interviewPrep.getNumberOfFlashCards.fetch(),
-    helper.questions.getQuestion.fetch({ questionId }),
-    helper.interviewPrep.getFlashCard.fetch({ flashCardId }),
+    helper.questionBankAtpl.getNumberOfQuestions.fetch(),
+    helper.questionBankAtpl.getQuestion.fetch({ questionId }),
+    helper.interviewPrep.getNumberOfFlashcards.fetch(),
+    helper.interviewPrep.getFlashcard.fetch({ flashcardId }),
   ]);
 
   return {
     props: {
       numberOfQuestions,
-      numberOfFlashCards,
+      numberOfFlashcards,
       demoQuestion,
-      demoFlashCard,
+      demoFlashcard,
     },
   };
 };

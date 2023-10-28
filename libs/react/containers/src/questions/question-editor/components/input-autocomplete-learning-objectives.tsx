@@ -16,11 +16,12 @@ export const InputAutocompleteLearningObjectives = forwardRef<
 >(({ value, onChange, onBlur }, ref) => {
   const [search, setSearch] = useState("");
 
-  const { data, isLoading } = trpc.search.searchLearningObjectives.useQuery({
-    q: search,
-    limit: 10,
-    cursor: 0,
-  });
+  const { data, isLoading } =
+    trpc.questionBankAtpl.searchLearningObjectives.useQuery({
+      q: search,
+      limit: 10,
+      cursor: 0,
+    });
 
   const optionsMap = (data?.items ?? []).reduce<
     Record<string, LearningObjective>

@@ -20,7 +20,7 @@ export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
   learningObjectiveId,
 }) => {
   const [{ learningObjective }] =
-    trpc.learningObjectives.getLearningObjective.useSuspenseQuery({
+    trpc.questionBankAtpl.getLearningObjective.useSuspenseQuery({
       learningObjectiveId,
     });
 
@@ -94,7 +94,7 @@ export const getServerSideProps = ssrHandler<
 >(async ({ helper, params }) => {
   const { learningObjectiveId } = params;
 
-  await helper.learningObjectives.getLearningObjective.prefetch({
+  await helper.questionBankAtpl.getLearningObjective.prefetch({
     learningObjectiveId,
   });
 

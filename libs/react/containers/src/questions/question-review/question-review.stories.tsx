@@ -31,7 +31,7 @@ const meta: Meta<typeof QuestionReview> = {
   },
   parameters: {
     msw: [
-      trpcMsw.questions.getQuestion.query((req, res, ctx) => {
+      trpcMsw.questionBankAtpl.getQuestion.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({
@@ -39,7 +39,7 @@ const meta: Meta<typeof QuestionReview> = {
               id: "Q00YQLC8JS",
               srcLocation: "",
               explanation:
-                "This is an explantion to the question.\n\n - It can contain markdown!\n\n`niiiice`",
+                "This is an explanation to the question.\n\n - It can contain markdown!\n\n`niiiice`",
               learningObjectives: ["081.01.09.02.07"],
               variants: {
                 Cy1C8vfr: {

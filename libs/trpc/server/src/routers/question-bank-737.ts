@@ -1,11 +1,16 @@
 import { z } from "zod";
+import type { LearningObjective } from "@chair-flight/base/types";
 import {
   getSubject,
-  getQuestion,
-  getQuestionsMap,
-  getQuestions,
+  getQuestionTemplate,
+  getAllQuestionTemplateMap,
+  getAllQuestionTemplates,
 } from "@chair-flight/content/question-bank-737";
-import { getQuestionPreview } from "@chair-flight/core/app";
+import {
+  createTest,
+  getQuestionPreview,
+  newTestConfigurationSchema,
+} from "@chair-flight/core/app";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
@@ -20,12 +25,21 @@ type QuestionPreview = {
 };
 
 export const questionBank737Router = router({
-  getSubject: publicProcedure.query(() => {
-    return getSubject();
+  getSubject: publicProcedure.query(async () => {
+    const subject = await getSubject();
+    return { subject };
   }),
+  getQuestion: publicProcedure
+    .input(z.object({ questionId: z.string() }))
+    .query(async ({ input }) => {
+      const { questionId } = input;
+      const questionTemplate = await getQuestionTemplate(questionId);
+      const learningObjectives: LearningObjective[] = [];
+      return { questionTemplate, learningObjectives };
+    }),
   searchQuestions: makeSearchHandler({
     searchFields: ["id", "questionId", "learningObjectives", "text"],
-    getData: getQuestions,
+    getData: getAllQuestionTemplates,
     processData: (questions) => {
       return questions.flatMap((question) =>
         Object.values(question.variants).map((variant) => ({
@@ -38,7 +52,7 @@ export const questionBank737Router = router({
     },
     processResults: async (searchResults) => {
       const seenQuestions: Record<string, number> = {};
-      const questionMap = await getQuestionsMap();
+      const questionMap = await getAllQuestionTemplateMap();
       return searchResults.reduce<SearchResponseItem<QuestionPreview>[]>(
         (sum, result) => {
           const questionId = result["questionId"];
@@ -65,15 +79,12 @@ export const questionBank737Router = router({
       );
     },
   }),
-  getQuestion: publicProcedure
-    .input(z.object({ questionId: z.string() }))
-    .query(async ({ input }) => {
-      const { questionId } = input;
-      const questionTemplate = await getQuestion(questionId);
-      const subject = await getSubject();
-      const learningObjectives = (subject.children ?? []).filter(
-        (lo) => questionTemplate?.learningObjectives.includes(lo.id),
-      );
-      return { questionTemplate, learningObjectives };
+  createTest: publicProcedure
+    .input(z.object({ config: newTestConfigurationSchema }))
+    .mutation(async ({ input }) => {
+      const { config } = input;
+      const questions = await getAllQuestionTemplates();
+      const test = await createTest({ config, questions });
+      return { test };
     }),
 });

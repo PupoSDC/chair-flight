@@ -4,32 +4,32 @@ import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
 import {
   Header,
   AppLayout,
-  FlashCard,
-  FlashCardTinder,
+  Flashcard,
+  FlashcardTinder,
 } from "@chair-flight/react/components";
 import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import type { FlashCardContent } from "@chair-flight/base/types";
+import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 import type { FunctionComponent } from "react";
 
-type FlashCardsThemePagePropsParams = {
+type flashcardsThemePagePropsParams = {
   collectionId: string;
   seed: string;
 };
 
-type FlashCardsThemePageProps = {
+type flashcardsThemePageProps = {
   seed: string;
   collectionId: string;
-  flashCards: Array<FlashCardContent>;
+  flashcards: Array<FlashcardContent>;
 };
 
-const FlashCardWithOwnControl: FunctionComponent<FlashCardContent> = (
+const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
   props,
 ) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <FlashCard
+    <Flashcard
       {...props}
       sx={{ width: "100%", height: "100%" }}
       flipped={isFlipped}
@@ -38,8 +38,8 @@ const FlashCardWithOwnControl: FunctionComponent<FlashCardContent> = (
   );
 };
 
-const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
-  flashCards,
+const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
+  flashcards,
   collectionId,
   seed,
 }) => {
@@ -62,9 +62,9 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
         <AppHeaderMenu />
       </Header>
       <AppLayout.Main sx={{ p: { xs: 0, md: 0 } }}>
-        <FlashCardTinder>
-          {flashCards
-            .map((fc) => <FlashCardWithOwnControl key={fc.id} {...fc} />)
+        <FlashcardTinder>
+          {flashcards
+            .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)
             .concat([
               <Card
                 sx={{
@@ -93,16 +93,16 @@ const FlashCardsThemePage: NextPage<FlashCardsThemePageProps> = ({
                 />
               </Card>,
             ])}
-        </FlashCardTinder>
+        </FlashcardTinder>
       </AppLayout.Main>
     </>
   );
 };
 
-export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
+export const getServerSideProps = ssrHandler<flashcardsThemePageProps>(
   async ({ helper, context }) => {
     const { params } = context;
-    const { collectionId, seed } = params as FlashCardsThemePagePropsParams;
+    const { collectionId, seed } = params as flashcardsThemePagePropsParams;
     const shuffle = getRandomShuffler(seed);
 
     if (seed === "start") {
@@ -115,8 +115,8 @@ export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
       };
     }
 
-    const { flashCards } =
-      await helper.interviewPrep.getFlashCardsCollection.fetch({
+    const { flashcards } =
+      await helper.interviewPrep.getFlashcardsCollection.fetch({
         collectionId,
       });
 
@@ -124,10 +124,10 @@ export const getServerSideProps = ssrHandler<FlashCardsThemePageProps>(
       props: {
         seed,
         collectionId,
-        flashCards: shuffle(flashCards).slice(0, 10),
+        flashcards: shuffle(flashcards).slice(0, 10),
       },
     };
   },
 );
 
-export default FlashCardsThemePage;
+export default flashcardsThemePage;

@@ -1,16 +1,16 @@
-import { API_FLASHCARDS_PATH } from "./constants";
-import type { FlashCardContent } from "@chair-flight/base/types";
+import { API_flashcardS_PATH } from "./constants";
+import type { FlashcardContent } from "@chair-flight/base/types";
 
 export const getFlashcards = (() => {
-  let flashCards: Record<string, FlashCardContent[]>;
+  let flashcards: Record<string, FlashcardContent[]>;
   return async () => {
-    if (!flashCards) {
-      const response = await fetch(API_FLASHCARDS_PATH);
-      flashCards = (await response.json()) as Record<
+    if (!flashcards) {
+      const response = await fetch(API_flashcardS_PATH);
+      flashcards = (await response.json()) as Record<
         string,
-        FlashCardContent[]
+        FlashcardContent[]
       >;
     }
-    return flashCards;
+    return flashcards;
   };
 })();

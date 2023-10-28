@@ -93,12 +93,12 @@ const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
 export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();
 
-  const [{ numberOfQuestions }] = await Promise.all([
+  const [{ subject }] = await Promise.all([
     helper.questionBank737.getSubject.fetch(),
   ]);
 
   return {
-    props: { numberOfQuestions },
+    props: { numberOfQuestions: subject.numberOfQuestions },
   };
 };
 

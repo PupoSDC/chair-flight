@@ -47,7 +47,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   const [search, setSearch] = useState("");
 
   const { data, isLoading, fetchNextPage } =
-    trpc.search.searchLearningObjectives.useInfiniteQuery(
+    trpc.questionBankAtpl.searchLearningObjectives.useInfiniteQuery(
       {
         q: search,
         limit: 20,
@@ -165,7 +165,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
 };
 
 export const getStaticProps = ssrHandler(async ({ helper }) => {
-  await helper.search.searchLearningObjectives.prefetchInfinite({
+  await helper.questionBankAtpl.searchLearningObjectives.prefetchInfinite({
     q: "",
     limit: 20,
   });

@@ -1,6 +1,1 @@
-export {
-  getSubject,
-  getQuestions,
-  getQuestion,
-  getQuestionsMap,
-} from "./question-bank-737";
+export * from "./question-bank-737";

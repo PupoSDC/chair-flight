@@ -4,12 +4,16 @@ import {
   getQuestionTemplate,
   getAllQuestionTemplates,
   getAllQuestionTemplateMap,
-  getSubjects,
   getAllLearningObjectivesMap,
   getLearningObjective,
   getSomeQuestionTemplates,
+  getAllSubjects,
 } from "@chair-flight/content/question-bank-atpl";
-import { getQuestionPreview } from "@chair-flight/core/app";
+import {
+  createTest,
+  getQuestionPreview,
+  newTestConfigurationSchema,
+} from "@chair-flight/core/app";
 import {
   createNewQuestionPr,
   getQuestionFromGit,
@@ -26,14 +30,11 @@ type QuestionPreview = {
   text: string;
   numberOfVariants: number;
   learningObjectives: string[];
+  externalIds: string[];
   href: string;
 };
 
 export const questionBankAtplRouter = router({
-  getSubjects: publicProcedure.query(async () => {
-    const subjects = await getSubjects();
-    return { subjects };
-  }),
   getQuestion: publicProcedure
     .input(z.object({ questionId: z.string() }))
     .query(async ({ input }) => {
@@ -58,6 +59,10 @@ export const questionBankAtplRouter = router({
 
       return { questionTemplate };
     }),
+  getNumberOfQuestions: publicProcedure.query(async () => {
+    const allQuestion = await getAllQuestionTemplates();
+    return { numberOfQuestions: allQuestion.length };
+  }),
   updateQuestion: publicProcedure
     .input(questionEditSchema)
     .mutation(async ({ input }) => {
@@ -76,8 +81,29 @@ export const questionBankAtplRouter = router({
       const questionTemplates = await getSomeQuestionTemplates(questionIds);
       return { learningObjective, questionTemplates };
     }),
+  getAllSubjects: publicProcedure.query(async () => {
+    const allSubjects = await getAllSubjects();
+    const subjects = allSubjects.filter(
+      (lo) => !["034", "082"].includes(lo.id),
+    );
+    return { subjects };
+  }),
+  createTest: publicProcedure
+    .input(z.object({ config: newTestConfigurationSchema }))
+    .mutation(async ({ input }) => {
+      const { config } = input;
+      const questions = await getAllQuestionTemplates();
+      const test = await createTest({ config, questions });
+      return { test };
+    }),
   searchQuestions: makeSearchHandler({
-    searchFields: ["id", "questionId", "learningObjectives", "text"],
+    searchFields: [
+      "id",
+      "questionId",
+      "learningObjectives",
+      "text",
+      "externalIds",
+    ],
     getData: getAllQuestionTemplates,
     processData: (questions) => {
       return questions.flatMap((question) =>
@@ -85,6 +111,7 @@ export const questionBankAtplRouter = router({
           id: variant.id,
           questionId: question.id,
           learningObjectives: question.learningObjectives.join(", "),
+          externalIds: variant.externalIds.join(", "),
           text: getQuestionPreview(question, variant.id),
         })),
       );
@@ -106,6 +133,7 @@ export const questionBankAtplRouter = router({
               text: result["text"],
               numberOfVariants: variants ? Object.values(variants).length : 1,
               learningObjectives: result["learningObjectives"].split(", "),
+              externalIds: result["externalIds"].split(", "),
               href: `/modules/atpl-theory/questions/${questionId}?variantId=${variantId}`,
             },
             score: result.score,

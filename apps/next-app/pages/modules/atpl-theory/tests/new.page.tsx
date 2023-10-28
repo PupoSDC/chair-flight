@@ -61,7 +61,7 @@ const NewTestPage: NextPage<NewTestPageProps> = ({ initialSubjectId }) => {
 
 export const getServerSideProps = ssrHandler<NewTestPageProps>(
   async ({ helper, context }) => {
-    await helper.tests.getAllSubjects.prefetch();
+    await helper.questionBankAtpl.getAllSubjects.prefetch();
     const initialSubjectId = (context.query["subject"] as string) ?? null;
     return { props: { initialSubjectId } };
   },

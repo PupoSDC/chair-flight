@@ -25,8 +25,8 @@ import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
 const resolver = zodResolver(newTestConfigurationSchema);
-const useSubjects = trpc.tests.getAllSubjects.useSuspenseQuery;
-const useCreateTest = trpc.tests.createTest.useMutation;
+const useSubjects = trpc.questionBankAtpl.getAllSubjects.useSuspenseQuery;
+const useCreateTest = trpc.questionBankAtpl.createTest.useMutation;
 const useTestMakerPersistence =
   createUsePersistenceHook<NewTestConfiguration>("cf-test-maker");
 

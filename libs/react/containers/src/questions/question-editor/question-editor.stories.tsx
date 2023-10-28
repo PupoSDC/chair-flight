@@ -57,18 +57,20 @@ const meta: Meta<typeof QuestionEditor> = {
       },
     },
     msw: [
-      trpcMsw.questions.getQuestionFromGithub.query((req, res, ctx) => {
+      trpcMsw.questionBankAtpl.getQuestionFromGithub.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({ questionTemplate: mockQuestion }),
         );
       }),
-      trpcMsw.search.searchLearningObjectives.query((req, res, ctx) => {
-        return res(
-          ctx.status(200),
-          ctx.data({ items: [], totalResults: 0, nextCursor: -1 }),
-        );
-      }),
+      trpcMsw.questionBankAtpl.searchLearningObjectives.query(
+        (req, res, ctx) => {
+          return res(
+            ctx.status(200),
+            ctx.data({ items: [], totalResults: 0, nextCursor: -1 }),
+          );
+        },
+      ),
     ],
   },
 };

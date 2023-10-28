@@ -14,7 +14,7 @@ export const getSubject = async () => {
   return subject;
 };
 
-export const getQuestions = async () => {
+export const getAllQuestionTemplates = async () => {
   if (!questions) {
     const response = await fetch(API_QUESTIONS_PATH);
     questions = (await response.json()) as QuestionTemplate[];
@@ -29,13 +29,13 @@ export const getQuestions = async () => {
   return questions;
 };
 
-export const getQuestionsMap = async () => {
-  await getQuestions();
+export const getAllQuestionTemplateMap = async () => {
+  await getAllQuestionTemplates();
   return questionsMap;
 };
 
-export const getQuestion = async (questionId: string) => {
-  const questions = await getQuestions();
+export const getQuestionTemplate = async (questionId: string) => {
+  const questions = await getAllQuestionTemplates();
   const question = questions.find((q) => q.id === questionId);
   if (!question) throw new NotFoundError(`Question "${questionId}" not Found!`);
   return question;

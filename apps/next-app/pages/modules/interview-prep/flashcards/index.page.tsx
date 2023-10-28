@@ -14,16 +14,16 @@ import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
-type FlashCardsIndexPageProps = {
-  flashCardCollections: Array<{
+type flashcardsIndexPageProps = {
+  flashcardCollections: Array<{
     collectionId: string;
     name: string;
     numberOfCards: number;
   }>;
 };
 
-const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
-  flashCardCollections,
+const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
+  flashcardCollections,
 }) => {
   return (
     <>
@@ -66,7 +66,7 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
             </Typography>
           </Grid>
 
-          {flashCardCollections.map((fc) => (
+          {flashcardCollections.map((fc) => (
             <Grid
               xs={12}
               sm={6}
@@ -133,15 +133,15 @@ const QuestionsIndexPage: NextPage<FlashCardsIndexPageProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<
-  FlashCardsIndexPageProps
+  flashcardsIndexPageProps
 > = async () => {
   const helper = await getTrpcHelper();
-  const { flashCardCollections } =
-    await helper.interviewPrep.getFlashCardsCollections.fetch();
+  const { flashcardCollections } =
+    await helper.interviewPrep.getFlashcardsCollections.fetch();
 
   return {
     props: {
-      flashCardCollections: flashCardCollections,
+      flashcardCollections: flashcardCollections,
     },
   };
 };

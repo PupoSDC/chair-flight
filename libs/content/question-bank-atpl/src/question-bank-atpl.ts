@@ -16,14 +16,6 @@ let learningObjectives: LearningObjective[];
 let learningObjectivesMap: Record<string, LearningObjective | undefined>;
 let subjects: Subject[];
 
-export const getSubjects = async () => {
-  if (!subjects) {
-    const response = await fetch(API_SUBJECTS_PATH);
-    subjects = (await response.json()) as Subject[];
-  }
-  return subjects;
-};
-
 export const getAllQuestionTemplates = async () => {
   if (!questions) {
     const response = await fetch(API_QUESTIONS_PATH);
@@ -89,8 +81,16 @@ export const getLearningObjective = async (learningObjectiveId: string) => {
   return learningObjective;
 };
 
+export const getAllSubjects = async () => {
+  if (!subjects) {
+    const response = await fetch(API_SUBJECTS_PATH);
+    subjects = (await response.json()) as Subject[];
+  }
+  return subjects;
+};
+
 export const getSubject = async (subjectId: string) => {
-  const subjects = await getSubjects();
+  const subjects = await getAllSubjects();
   const subject = subjects.find((s) => s.id === subjectId);
   if (!subject) throw new NotFoundError(`Subject "${subjectId}" not Found!`);
   return subject;

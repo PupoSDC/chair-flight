@@ -43,7 +43,7 @@ const shuffle = getRandomShuffler("123");
 
 export type QuestionReviewProps = {
   questionId: QuestionTemplateId;
-  questionBank?: "questions" | "questionBank737";
+  questionBank?: "questionBankAtpl" | "questionBank737";
   title?: string;
   variantId?: string;
   seed?: string;
@@ -64,7 +64,7 @@ export const QuestionReview = forwardRef<
   (
     {
       title,
-      questionBank = "questions",
+      questionBank = "questionBankAtpl",
       questionId,
       variantId: initialVariantId,
       seed: initialSeed,
@@ -83,10 +83,9 @@ export const QuestionReview = forwardRef<
     const [annexDrawings, setAnnexDrawings] = useState<
       Record<string, DrawingPoints[]>
     >({});
-
-    const { data, isLoading } = trpc[questionBank].getQuestion.useQuery({
-      questionId,
-    });
+    const procedure = trpc[questionBank]
+      .getQuestion as (typeof trpc)["questionBankAtpl"]["getQuestion"];
+    const { data, isLoading } = procedure.useQuery({ questionId });
 
     const question = useMemo(
       () =>

@@ -29,7 +29,7 @@ const QuestionsIndexPage: NextPage<QuestionsIndexPageProps> = ({
   const [hasSearched, setHasSearched] = useState(false);
 
   const { data, isLoading, isError, fetchNextPage } =
-    trpc.search.searchQuestions.useInfiniteQuery(
+    trpc.questionBankAtpl.searchQuestions.useInfiniteQuery(
       {
         q: search,
         limit: isMobile ? 12 : 24,
@@ -94,7 +94,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();
 
   const [{ numberOfQuestions }] = await Promise.all([
-    helper.questions.getNumberOfQuestions.fetch(),
+    helper.questionBankAtpl.getNumberOfQuestions.fetch(),
   ]);
 
   return {

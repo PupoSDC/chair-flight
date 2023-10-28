@@ -8,7 +8,7 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import type { FunctionComponent } from "react";
 
-const useSearchQuestions = trpc.search.searchQuestions.useQuery;
+const useSearchQuestions = trpc.questionBankAtpl.searchQuestions.useQuery;
 
 export const QuestionSearchDemo: FunctionComponent = () => {
   const [search, setSearch] = useState("Air Law");

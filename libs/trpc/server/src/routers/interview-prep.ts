@@ -6,49 +6,49 @@ import { publicProcedure, router } from "../config/trpc";
 export const interviewPrepRouter = router({
   getNumberOfFlashcards: publicProcedure //
     .query(async () => {
-      const flashCards = await getFlashcards();
-      const numberOfFlashCards = Object.values(flashCards).flat().length;
-      return { numberOfFlashCards };
+      const flashcards = await getFlashcards();
+      const numberOfFlashcards = Object.values(flashcards).flat().length;
+      return { numberOfFlashcards };
     }),
   getFlashcardsCollections: publicProcedure //
     .query(async () => {
       const allCards = await getFlashcards();
-      const flashCardCollections = Object.entries(allCards).map(
-        ([collectionId, flashCards]) => ({
+      const flashcardCollections = Object.entries(allCards).map(
+        ([collectionId, flashcards]) => ({
           collectionId,
           name: collectionId
             .split("-")
             .map((s) => s[0].toUpperCase() + s.slice(1))
             .join(" "),
-          numberOfCards: flashCards.length,
+          numberOfCards: flashcards.length,
         }),
       );
-      return { flashCardCollections };
+      return { flashcardCollections };
     }),
   getFlashcardsCollection: publicProcedure
     .input(z.object({ collectionId: z.string() }))
     .query(async ({ input }) => {
       const { collectionId } = input;
-      const allFlashCards = await getFlashcards();
-      const flashCards = allFlashCards[collectionId];
-      if (!flashCards) {
+      const allflashcards = await getFlashcards();
+      const flashcards = allflashcards[collectionId];
+      if (!flashcards) {
         throw new NotFoundError(
-          `Flashcard Collection "${collectionId}" not found!"`,
+          `flashcard Collection "${collectionId}" not found!"`,
         );
       }
-      return { flashCards };
+      return { flashcards };
     }),
   getFlashcard: publicProcedure
-    .input(z.object({ flashCardId: z.string() }))
+    .input(z.object({ flashcardId: z.string() }))
     .query(async ({ input }) => {
-      const { flashCardId } = input;
-      const flashCards = await getFlashcards();
-      const flashCard = Object.values(flashCards)
+      const { flashcardId } = input;
+      const flashcards = await getFlashcards();
+      const flashcard = Object.values(flashcards)
         .flat()
-        .find((flashCard) => flashCard.id === flashCardId);
-      if (!flashCard) {
-        throw new NotFoundError(`Flashcard "${flashCardId}" not found!"`);
+        .find((flashcard) => flashcard.id === flashcardId);
+      if (!flashcard) {
+        throw new NotFoundError(`flashcard "${flashcardId}" not found!"`);
       }
-      return { flashCard };
+      return { flashcard };
     }),
 });
