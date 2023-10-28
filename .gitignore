@@ -1,7 +1,8 @@
 # compiled output
 dist
 tmp
-/out-tsc
+
+
 
 # dependencies
 node_modules
@@ -27,10 +28,12 @@ node_modules
 /connect.lock
 /coverage
 /libpeerconnection.log
+/typings
+/out-tsc
 npm-debug.log
 yarn-error.log
 testem.log
-/typings
+*.tsbuildinfo
 
 # System Files
 .DS_Store
@@ -42,8 +45,10 @@ Thumbs.db
 !.env.example
 !.env.local
 
-*.tsbuildinfo
+# Next.js static export
 .vercel
+.nx
+.dist
 
 # Content produced by build steps
 apps/next-app/public/storybook

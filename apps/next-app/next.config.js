@@ -45,6 +45,21 @@ module.exports = withNx(
             destination: "/storybook/index.html",
             permanent: true,
           },
+          {
+            source: "/questions",
+            destination: "/modules/atpl-theory/questions",
+            permanent: true,
+          },
+          {
+            source: "/tests",
+            destination: "/modules/atpl-theory/tests",
+            permanent: true,
+          },
+          {
+            source: "/learning-objectives",
+            destination: "/modules/atpl-theory/learning-objectives",
+            permanent: true,
+          },
         ];
       },
     }),
