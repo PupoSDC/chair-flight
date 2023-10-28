@@ -69,7 +69,7 @@ export const QuestionPreview: FunctionComponent<QuestionPreviewProps> = ({
           justifyContent: "center",
         }}
       >
-        <Typography level="h2" sx={{ fontWeight: 900 }}>
+        <Typography level="h2">
           {`Explore `}
           <RenderIfVisible
             visibleOffset={0}
@@ -79,7 +79,7 @@ export const QuestionPreview: FunctionComponent<QuestionPreviewProps> = ({
             stayRendered
           >
             <CountUp
-              component={"b"}
+              component={"span"}
               end={numberOfQuestions}
               duration={2000}
               sx={{

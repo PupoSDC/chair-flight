@@ -82,7 +82,7 @@ export const ReviewPrModal: FunctionComponent = () => {
           <Typography level="h4" component="h1">
             <b>Open a Pull Request</b>
           </Typography>
-          <Typography level="body2" sx={{ mt: 2 }}>
+          <Typography level="body-sm" sx={{ mt: 2 }}>
             By completing the following steps you will open a Pull Request on
             GitHub.
             <br />

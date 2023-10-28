@@ -23,7 +23,7 @@ export const HookFormErrorMessage = forwardRef<
   return (
     <Typography
       ref={ref}
-      level="body2"
+      level="body-sm"
       color="danger"
       {...props}
       sx={{ mt: 0.5, ml: 2, ...props.sx }}

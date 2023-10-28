@@ -37,6 +37,7 @@ export const BlogPostChip = forwardRef<HTMLDivElement, BlogPostChipProps>(
         startDecorator={<Icon />}
         color={tagToColor[tag]}
         variant={variant}
+        sx={{ px: 1, py: 0.5, ...props.sx }}
         {...props}
       />
     );

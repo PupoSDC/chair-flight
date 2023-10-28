@@ -47,10 +47,10 @@ export const TestQuestionResult = forwardRef<
           ...props.sx,
         }}
       >
-        <Typography level="body2" fontWeight={900}>
+        <Typography level="body-sm" fontWeight={900}>
           {`${questionTemplateId} (${questionVariantId})`}
         </Typography>
-        <Typography level="body2">
+        <Typography level="body-sm">
           <MarkdownClient>{question ?? ""}</MarkdownClient>
         </Typography>
         <Box sx={{ display: "flex", pt: 1 }}>
@@ -59,7 +59,7 @@ export const TestQuestionResult = forwardRef<
               <CheckIcon fontSize={"lg"} sx={{ color: "success.solidColor" }} />
             )}
           </Box>
-          <Typography level="body2" sx={{ ml: 1 }}>
+          <Typography level="body-sm" sx={{ ml: 1 }}>
             {correctOption}
           </Typography>
         </Box>
@@ -68,7 +68,7 @@ export const TestQuestionResult = forwardRef<
             <Box sx={{ height: 18, width: 18, bgcolor: "danger.solidBg" }}>
               <CrossIcon fontSize={"lg"} sx={{ color: "danger.solidColor" }} />
             </Box>
-            <Typography level="body2" sx={{ ml: 1 }}>
+            <Typography level="body-sm" sx={{ ml: 1 }}>
               {selectedOption ?? "No option selected"}
             </Typography>
           </Box>

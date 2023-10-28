@@ -44,48 +44,28 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
           components={{
             h1: ({ children }) => (
               <Typography
-                level="h2"
+                level="h1"
                 component="h1"
-                sx={{ fontWeight: "bold", mb: 0.5 }}
+                sx={{ mb: 0.5 }}
                 children={children}
               />
             ),
             h2: ({ children }) => (
-              <Typography
-                level="h4"
-                component="h2"
-                sx={{ fontWeight: 900 }}
-                children={children}
-              />
+              <Typography level="h2" component="h2" children={children} />
             ),
             h3: ({ children }) => (
-              <Typography
-                level="h5"
-                component="h3"
-                sx={{ fontWeight: 900 }}
-                children={children}
-              />
+              <Typography level="h3" component="h3" children={children} />
             ),
             h4: ({ children }) => (
-              <Typography
-                level="h5"
-                component="h4"
-                sx={{ fontWeight: 700 }}
-                children={children}
-              />
+              <Typography level="h4" component="h4" children={children} />
             ),
             h5: ({ children }) => (
-              <Typography
-                level="h5"
-                component="h5"
-                sx={{ fontWeight: 500 }}
-                children={children}
-              />
-            ),
-            h6: ({ children }) => (
-              <Typography level="h6" component="h6" children={children} />
+              <Typography level="h5" component="h5" children={children} />
             ),
             hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
+            p: ({ children }) => (
+              <Typography level="body-md" component="p" children={children} />
+            ),
           }}
         />
       </AppLayout.Main>

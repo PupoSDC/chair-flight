@@ -95,8 +95,8 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                           <Link href={`/learning-objectives/${result.id}`}>
                             <Typography>{result.id}</Typography>
                           </Link>
-                          <Typography level="body2">{result.text}</Typography>
-                          <Typography level="body3">
+                          <Typography level="body-sm">{result.text}</Typography>
+                          <Typography level="body-sm">
                             source: {result.text}
                           </Typography>
                         </ListItemContent>
@@ -134,7 +134,9 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                         </td>
                         <TdWithMarkdown>
                           <MarkdownClient>{result.text}</MarkdownClient>
-                          <Typography level="body3">{result.source}</Typography>
+                          <Typography level="body-sm">
+                            {result.source}
+                          </Typography>
                         </TdWithMarkdown>
                         {Object.keys(CourseNames).map((courseName) => (
                           <td key={courseName}>

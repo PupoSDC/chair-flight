@@ -42,7 +42,7 @@ const StyledMenuItem = styled("li")`
   }
 
   & > a:hover > div:nth-of-type(1) > span:nth-of-type(1) {
-    font-weight: 900;
+    font-weight: 700;
   }
 
   & > a > svg:nth-of-type(2) {
@@ -68,9 +68,9 @@ export const HeaderNavMenuItem = forwardRef<
       <Link href={href}>
         <Icon fontSize={"xl2"} />
         <Box>
-          <Typography level="body2" component="span" children={title} />
+          <Typography level="body-sm" component="span" children={title} />
           <br />
-          <Typography level="body3" component="span" children={subtitle} />
+          <Typography level="body-xs" component="span" children={subtitle} />
         </Box>
         <FlightTakeoffIcon fontSize={"xl2"} />
       </Link>

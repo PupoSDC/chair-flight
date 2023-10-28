@@ -25,10 +25,10 @@ export const QiTunnelControls: FunctionComponent = () => {
         }}
       >
         <Button sx={{ height: 96, width: "100%", mb: 0.5 }}>
-          <KeyboardDoubleArrowUpIcon fontSize="xl7" />
+          <KeyboardDoubleArrowUpIcon sx={{ fontSize: "6rem" }} />
         </Button>
         <Button sx={{ height: 96, width: "100%", mt: 0.5 }}>
-          <KeyboardDoubleArrowDownIcon fontSize="xl7" />
+          <KeyboardDoubleArrowDownIcon sx={{ fontSize: "6rem" }} />
         </Button>
       </SafeBox>
       <SafeBox

@@ -58,7 +58,7 @@ export const ExampleLoginForm: StoryFn = () => {
           <Typography level="h4" component="h1">
             <b>Welcome!</b>
           </Typography>
-          <Typography level="body2">Sign in to continue.</Typography>
+          <Typography level="body-sm">Sign in to continue.</Typography>
         </div>
         <HookFormInput
           {...form.register("userName")}

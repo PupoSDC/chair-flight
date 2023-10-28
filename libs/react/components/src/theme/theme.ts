@@ -1,6 +1,36 @@
-import type { CssVarsThemeOptions } from "@mui/joy";
+import { extendTheme, type CssVarsThemeOptions } from "@mui/joy";
 
-export const theme: CssVarsThemeOptions = {
+declare module "@mui/joy/styles" {
+  interface TypographySystemOverrides {
+    h1: true;
+    h2: true;
+    h3: true;
+    h4: true;
+    h5: true;
+    "title-lg": false;
+    "title-md": false;
+    "title-sm": false;
+    "body-lg": true;
+    "body-md": true;
+    "body-sm": true;
+    "body-xs": true;
+  }
+}
+
+export const theme: CssVarsThemeOptions = extendTheme({
+  typography: {
+    h1: {
+      fontSize: "2.8rem",
+      fontWeight: "var(--joy-fontWeight-xl)",
+    },
+    h5: {
+      fontSize: "var(--joy-fontSize-lg)",
+      fontWeight: "var(--joy-fontWeight-lg)",
+    },
+    "title-lg": undefined,
+    "title-md": undefined,
+    "title-sm": undefined,
+  },
   colorSchemes: {
     light: {
       palette: {
@@ -37,4 +67,4 @@ export const theme: CssVarsThemeOptions = {
       },
     },
   },
-};
+});

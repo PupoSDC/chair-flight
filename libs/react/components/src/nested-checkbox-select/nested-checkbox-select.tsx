@@ -88,7 +88,7 @@ export const NestedCheckboxSelect = forwardRef<
                   },
                 }}
               />
-              <Typography level="body3" sx={{ px: 2, alignSelf: "center" }}>
+              <Typography level="body-sm" sx={{ px: 2, alignSelf: "center" }}>
                 {item.subLabel}
               </Typography>
               <ChapterControlButton
@@ -124,7 +124,7 @@ export const NestedCheckboxSelect = forwardRef<
                       onChange={() => onChange?.(child, !child.checked)}
                       sx={{ p: 1, flex: 1, pl: 4 }}
                     />
-                    <Typography level="body3" sx={{ pr: 2 }}>
+                    <Typography level="body-sm" sx={{ pr: 2 }}>
                       {child.subLabel}
                     </Typography>
                   </Box>

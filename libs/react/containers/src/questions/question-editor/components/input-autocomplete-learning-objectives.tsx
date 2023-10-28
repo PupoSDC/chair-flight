@@ -55,7 +55,7 @@ export const InputAutocompleteLearningObjectives = forwardRef<
       renderOption={(props, id) => {
         return (
           <AutocompleteOption {...props}>
-            <Typography level="body1">
+            <Typography level="body-md">
               <b> {optionsMap[id].id}</b>
               <br />
               {optionsMap[id].text}

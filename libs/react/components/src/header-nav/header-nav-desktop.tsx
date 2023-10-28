@@ -7,7 +7,7 @@ const StyledBox = styled(Box)`
   & > a {
     color: ${({ theme }) => theme.vars.palette.text.tertiary};
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     margin-right: ${({ theme }) => theme.spacing(3)};
   }
 
@@ -57,7 +57,7 @@ export const HeaderNavDesktop = forwardRef<HTMLDivElement, HeaderNavProps>(
               }, 2500);
             }}
             href={item.href}
-            level="body2"
+            level="body-sm"
             children={item.title}
           />
         ))}

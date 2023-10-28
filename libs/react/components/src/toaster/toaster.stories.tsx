@@ -49,7 +49,7 @@ export const Playground: Story = {
             )
           }
           children="Loading toast"
-          color="info"
+          color="neutral"
           sx={{ mx: 1 }}
         />
         <Button

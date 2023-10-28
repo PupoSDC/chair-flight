@@ -83,7 +83,7 @@ export const QuestionBoxExam = forwardRef<HTMLDivElement, QuestionBoxExamProps>(
             onClick={() => onNavigationClick?.(questionIndex - 1)}
           />
           <HeaderBox>
-            <Typography level="body3">{title}</Typography>
+            <Typography level="body-sm">{title}</Typography>
           </HeaderBox>
           <HeaderBox>
             <Typography>{timeClock}</Typography>

@@ -51,8 +51,8 @@ module.exports = withNx(
             permanent: true,
           },
           {
-            source: "/tests",
-            destination: "/modules/atpl-theory/tests",
+            source: "/tests/:path*'",
+            destination: "/modules/atpl-theory/tests/:path*",
             permanent: true,
           },
           {

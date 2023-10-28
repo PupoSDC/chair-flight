@@ -68,7 +68,7 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
                   children="Back"
                 />
                 <Typography
-                  level="body2"
+                  level="body-sm"
                   children={DateTime.fromISO(meta.isoDate).toFormat(
                     "dd LLL yyyy",
                   )}
@@ -128,9 +128,6 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
                 sx={{ fontWeight: 500 }}
                 children={children}
               />
-            ),
-            h6: ({ children }) => (
-              <Typography level="h6" component="h6" children={children} />
             ),
             hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
           }}

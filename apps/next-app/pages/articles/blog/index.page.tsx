@@ -36,7 +36,7 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
         <AppHeaderMenu />
       </Header>
       <AppLayout.Main sx={{ maxWidth: "md" }}>
-        <Typography component="h2" level="h3" fontWeight="bold" sx={{ pt: 4 }}>
+        <Typography level="h2" sx={{ pt: 4 }}>
           Posts
         </Typography>
         {blogPostsMeta.map((meta) => (
@@ -47,17 +47,15 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
                   <BlogPostChip key={tag} tag={tag} size="sm" />
                 ))}
               </Box>
-              <Typography level="h4" fontWeight="lg" color="primary">
+              <Typography level="h3" color="primary">
                 {meta.title}
               </Typography>
-              <Typography level="body2">{meta.description}</Typography>
+              <Typography level="body-sm">{meta.description}</Typography>
             </CardContent>
             <CardActions>
               <Box>
-                <Typography level="body1" fontSize={"small"}>
-                  {meta.author}
-                </Typography>
-                <Typography level="body2" fontSize={"small"}>
+                <Typography level="body-sm">{meta.author}</Typography>
+                <Typography level="body-xs">
                   {DateTime.fromISO(meta.isoDate).toFormat("dd LLL yyyy")}
                 </Typography>
               </Box>

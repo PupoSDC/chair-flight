@@ -11,7 +11,7 @@ const TestNavigationExample = () => {
   const { closeDrawer, canDrawerBeOpened } = useHeaderContext();
   if (!canDrawerBeOpened) {
     return (
-      <Typography level="body2">
+      <Typography level="body-sm">
         This demo is only available on mobile screen
       </Typography>
     );

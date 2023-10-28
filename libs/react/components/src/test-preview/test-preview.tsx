@@ -88,18 +88,18 @@ export const TestPreview = forwardRef<HTMLDivElement, TestPreviewProps>(
             </Typography>
           )}
           {status === "finished" && timeToCompleteInMs && (
-            <Typography level="body2">
+            <Typography level="body-sm">
               {`Completed in ${getClockTime(
                 timeToCompleteInMs / 1000,
               )} minutes`}
             </Typography>
           )}
           {status !== "finished" && timeLeftInMs && (
-            <Typography level="body2">
+            <Typography level="body-sm">
               {`Time Left: ${getClockTime(timeLeftInMs / 1000)} minutes`}
             </Typography>
           )}
-          <Typography level="body3">
+          <Typography level="body-sm">
             {[
               epochTimeInMs &&
                 DateTime.fromMillis(epochTimeInMs).toFormat("DDD"),

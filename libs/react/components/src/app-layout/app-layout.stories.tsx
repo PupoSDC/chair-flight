@@ -24,7 +24,7 @@ export const BasicLayout: Story = {
       <Header />
       <AppLayout.Main>
         <Typography level="h1">Hello World</Typography>
-        <Typography level="body1">
+        <Typography level="body-md">
           This is the least opinionated layout
         </Typography>
       </AppLayout.Main>

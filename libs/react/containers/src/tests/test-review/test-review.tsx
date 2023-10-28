@@ -54,7 +54,7 @@ export const TestReview: FunctionComponent<TestReviewProps> = ({ testId }) => {
             <Typography level="h4" component="h1">
               Test results
             </Typography>
-            <Typography level="body1" fontWeight={900}>
+            <Typography level="body-md" fontWeight={900}>
               {[
                 test.id,
                 startTimeInEnglish,

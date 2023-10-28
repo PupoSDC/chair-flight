@@ -53,7 +53,7 @@ export const EditVariantModalAsCode: FunctionComponent = () => {
         }}
       />
       {error && (
-        <Typography level="body2" sx={{ mt: 0.5, ml: 2 }} color="danger">
+        <Typography level="body-sm" sx={{ mt: 0.5, ml: 2 }} color="danger">
           {error}
         </Typography>
       )}

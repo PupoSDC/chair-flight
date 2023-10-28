@@ -36,8 +36,10 @@ export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
             <Grid container>
               <Grid xs={12} md={6}>
                 <Typography>{learningObjective.id}</Typography>
-                <Typography level="body2">{learningObjective.text}</Typography>
-                <Typography level="body3">
+                <Typography level="body-sm">
+                  {learningObjective.text}
+                </Typography>
+                <Typography level="body-sm">
                   source: {learningObjective.text}
                 </Typography>
               </Grid>

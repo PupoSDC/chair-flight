@@ -35,12 +35,7 @@ const StyledTabs = styled(Tabs)`
     font-weight: ${({ theme }) => theme.fontWeight.lg};
     background-color: ${({ theme }) => theme.vars.palette.background.body};
     position: relative;
-
-    font-size: ${({ theme }) => theme.typography.body3.fontSize};
-
-    ${({ theme }) => theme.breakpoints.up("sm")} {
-      font-size: ${({ theme }) => theme.typography.body2.fontSize};
-    }
+    font-size: ${({ theme }) => theme.typography["body-sm"].fontSize};
 
     &.${tabClasses.selected} {
       color: ${({ theme }) => theme.vars.palette.primary[500]};
@@ -151,7 +146,7 @@ export const QuestionBoxReview = forwardRef<
         <TabList>
           {title && (
             <Box className="title">
-              <Typography level="body1">{title}</Typography>
+              <Typography level="body-md">{title}</Typography>
             </Box>
           )}
           <Tab disabled={loading} value={"question"}>
