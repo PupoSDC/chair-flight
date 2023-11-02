@@ -1,7 +1,5 @@
 import { default as Image } from "next/image";
 import { Box, styled } from "@mui/joy";
-import { getRandomShuffler } from "@chair-flight/core/app";
-import { HEADER_HEIGHT } from "@chair-flight/react/components";
 import { default as HomeAeroplane } from "./images/home-aeroplane.png";
 import { default as HomeCessna } from "./images/home-cessna.png";
 import { default as HomeCockpit } from "./images/home-cockpit.png";
@@ -33,15 +31,16 @@ const items = [
   HomeAeroplane,
 ];
 
-const shuffle = getRandomShuffler("some random seed");
-const itemsOne = shuffle(items);
-const itemsTwo = shuffle(items);
-const itemsThree = shuffle(items);
+const orderTwo = [6, 7, 2, 3, 4, 5, 8, 0, 1];
+const orderThree = [1, 4, 7, 0, 3, 6, 2, 5, 8];
+const itemsOne = items;
+const itemsTwo = orderTwo.map((i) => items[i]);
+const itemsThree = orderThree.map((i) => items[i]);
 
 const StyledContainer = styled("div")<StyledContainerProps>`
   display: flex;
   width: ${HEIGHT}px;
-  height: calc(100vh - ${HEADER_HEIGHT}px);
+  height: "100%";
   padding-right: ${({ theme }) => theme.spacing(2)};
   flex-direction: column-reverse;
   overflow: hidden;
@@ -72,22 +71,20 @@ const StyledContainer = styled("div")<StyledContainerProps>`
     mask-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.4)
     );
   }
 
   & .sixtyToNinety {
     mask-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.95)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.75)
     );
   }
 `;
 
-export type CoolSlidingThingProps = {
-  animate?: boolean;
-} & BoxProps;
+export type CoolSlidingThingProps = BoxProps;
 
 export const CoolSlidingThing: FunctionComponent<CoolSlidingThingProps> = ({
   sx,
@@ -99,10 +96,11 @@ export const CoolSlidingThing: FunctionComponent<CoolSlidingThingProps> = ({
       sx={{
         position: "fixed",
         overflow: "hidden",
-        width: "100vw",
-        height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+        width: "100%",
+        height: "100%",
         display: "flex",
         justifyContent: "flex-end",
+        zIndex: -1,
         ...sx,
       }}
     >

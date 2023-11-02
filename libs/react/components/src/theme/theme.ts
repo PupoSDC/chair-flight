@@ -1,5 +1,7 @@
 import { extendTheme, type CssVarsThemeOptions } from "@mui/joy";
 
+const basicTheme = extendTheme();
+
 declare module "@mui/joy/styles" {
   interface TypographySystemOverrides {
     h1: true;
@@ -15,7 +17,62 @@ declare module "@mui/joy/styles" {
     "body-sm": true;
     "body-xs": true;
   }
+  interface ColorSchemeOverrides {
+    light: false;
+    dark: false;
+    lightBlue: true;
+    lightTeal: true;
+    lightRose: true;
+    darkBlue: true;
+    darkTeal: true;
+    darkRose: true;
+  }
 }
+
+const extraColors = {
+  primaryBlue: {
+    "50": "#EDF5FD",
+    "100": "#E3EFFB",
+    "200": "#C7DFF7",
+    "300": "#97C3F0",
+    "400": "#4393E4",
+    "500": "#0B6BCB",
+    "600": "#185EA5",
+    "700": "#12467B",
+    "800": "#0A2744",
+    "900": "#051423",
+  },
+  primaryTeal: {
+    "50": "#f0fdf4",
+    "100": "#dcfce7",
+    "200": "#bbf7d0",
+    "300": "#86efac",
+    "400": "#4ade80",
+    "500": "#22c55e",
+    "600": "#16a34a",
+    "700": "#15803d",
+    "800": "#166534",
+    "900": "#14532d",
+  },
+  primaryRose: {
+    "50": "#fff1f2",
+    "100": "#ffe4e6",
+    "200": "#fecdd3",
+    "300": "#fda4af",
+    "400": "#fb7185",
+    "500": "#f43f5e",
+    "600": "#e11d48",
+    "700": "#be123c",
+    "800": "#9f1239",
+    "900": "#881337",
+  },
+};
+
+const lightBackground = {
+  background: {
+    body: "var(--joy-palette-primary-50)",
+  },
+};
 
 export const theme: CssVarsThemeOptions = extendTheme({
   typography: {
@@ -32,11 +89,53 @@ export const theme: CssVarsThemeOptions = extendTheme({
     "title-sm": undefined,
   },
   colorSchemes: {
-    light: {
+    lightBlue: {
+      ...basicTheme.colorSchemes.light,
       palette: {
-        background: {
-          body: "var(--joy-palette-primary-50)",
-        },
+        ...basicTheme.colorSchemes.light.palette,
+        ...extraColors,
+        ...lightBackground,
+      },
+    },
+    lightTeal: {
+      ...basicTheme.colorSchemes.light,
+      palette: {
+        ...basicTheme.colorSchemes.light.palette,
+        ...extraColors,
+        ...lightBackground,
+        primary: extraColors.primaryTeal,
+      },
+    },
+    lightRose: {
+      ...basicTheme.colorSchemes.light,
+      palette: {
+        ...basicTheme.colorSchemes.light.palette,
+        ...extraColors,
+        ...lightBackground,
+        primary: extraColors.primaryRose,
+      },
+    },
+    darkBlue: {
+      ...basicTheme.colorSchemes.dark,
+      palette: {
+        ...basicTheme.colorSchemes.dark.palette,
+        ...extraColors,
+      },
+    },
+    darkTeal: {
+      ...basicTheme.colorSchemes.dark,
+      palette: {
+        ...basicTheme.colorSchemes.dark.palette,
+        ...extraColors,
+        primary: extraColors.primaryTeal,
+      },
+    },
+    darkRose: {
+      ...basicTheme.colorSchemes.dark,
+      palette: {
+        ...basicTheme.colorSchemes.dark.palette,
+        ...extraColors,
+        primary: extraColors.primaryRose,
       },
     },
   },

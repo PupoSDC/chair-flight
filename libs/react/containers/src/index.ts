@@ -2,7 +2,6 @@ export * from "./app/app-alpha-warning";
 export * from "./app/app-head";
 export * from "./app/app-header-menu";
 export * from "./app/app-transition";
-export * from "./home-page";
 export * from "./questions/question-editor";
 export * from "./questions/question-review";
 export * from "./questions/question-preview-list";

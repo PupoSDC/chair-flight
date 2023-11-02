@@ -62,7 +62,6 @@ const preview: Preview = {
         h3: (props: TypographyProps) => <Typography level="h3" {...props} />,
         h4: (props: TypographyProps) => <Typography level="h4" {...props} />,
         h5: (props: TypographyProps) => <Typography level="h5" {...props} />,
-        h6: (props: TypographyProps) => <Typography level="h6" {...props} />,
         p: (props: TypographyProps) => (
           <Typography level="body-md" {...props} />
         ),

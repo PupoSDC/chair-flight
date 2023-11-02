@@ -1,5 +1,4 @@
 import { z } from "zod";
-import type { LearningObjective } from "@chair-flight/base/types";
 import {
   getSubject,
   getQuestionTemplate,
@@ -14,6 +13,7 @@ import {
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
+import type { LearningObjective } from "@chair-flight/base/types";
 
 type QuestionPreview = {
   questionId: string;
@@ -37,6 +37,10 @@ export const questionBank737Router = router({
       const learningObjectives: LearningObjective[] = [];
       return { questionTemplate, learningObjectives };
     }),
+  getNumberOfQuestions: publicProcedure.query(async () => {
+    const questions = await getAllQuestionTemplates();
+    return { numberOfQuestions: questions.length };
+  }),
   searchQuestions: makeSearchHandler({
     searchFields: ["id", "questionId", "learningObjectives", "text"],
     getData: getAllQuestionTemplates,
