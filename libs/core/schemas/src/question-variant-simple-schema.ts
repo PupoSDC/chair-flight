@@ -12,8 +12,7 @@ export const questionSimpleSchema = z.object({
       why: z.string(),
     })
     .array()
-    // TODO should be 4
-    .min(3)
+    .min(4)
     .superRefine((data, ctx) => {
       const correct = data.filter((d) => d.correct).length;
       const wrong = data.filter((d) => !d.correct).length;
@@ -26,8 +25,7 @@ export const questionSimpleSchema = z.object({
           message: "At least one correct answer must exist!",
         });
       }
-      // TODO should be 2
-      if (wrong < 2) {
+      if (wrong < 3) {
         ctx.addIssue({
           code: z.ZodIssueCode.too_small,
           minimum: 3,

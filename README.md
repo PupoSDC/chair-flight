@@ -82,9 +82,9 @@ can and will be introduced in patch releases.
 ### .env
 
 A docker-compose file is provided to run the required services locally.
-Alternatively you can set up your own instances of all the required providers
-(`upstash`, `postgres`, ...). For this you will need to provide some env
-variables in an `.env` file located at the repository root.
+Alternatively you can set up your own instances of all the required providers.
+For this you will need to provide some env variables in an `.env` file located
+at the `.env` folder.
 
 Please check the `.env.local` file for the variables you need to fill out.
 

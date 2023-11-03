@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import type { default as SearchIcon } from "@mui/icons-material/Search";
 import {
   Link,
   ListItemButton,
   ListItemContent,
   ListItemDecorator,
 } from "@mui/joy";
+import type { default as SearchIcon } from "@mui/icons-material/Search";
 
 export type SidebarDrawerListItemProps = {
   icon: typeof SearchIcon;

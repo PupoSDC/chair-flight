@@ -1,22 +1,6 @@
 version: "3"
 
 services:
-  INTERNAL_REDIS:
-    image: redis
-    container_name: INTERNAL_REDIS
-    ports:
-      - "6379:6379"
-
-  PROVIDER_QUESTION_BANK_REDIS_UPSTASH:
-    image: hiett/serverless-redis-http:latest
-    container_name: PROVIDER_QUESTION_BANK_REDIS_UPSTASH
-    ports:
-      - "8079:80"
-    environment:
-      SRH_MODE: env
-      SRH_TOKEN: this0is0a0secret0password
-      SRH_CONNECTION_STRING: "redis://INTERNAL_REDIS:6379"
-
   PROVIDER_ANALYTICS_POSTGRES:
     image: postgres:latest
     container_name: PROVIDER_ANALYTICS_POSTGRES

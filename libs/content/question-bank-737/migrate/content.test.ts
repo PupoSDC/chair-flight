@@ -8,6 +8,7 @@ describe("validate questions", async () => {
   describe.each(allTemplatesWithId)("%s", async (_, question) => {
     it("passes schema validation", () => {
       expect(questionSchema.parse(question)).toBeTruthy();
+      console.log(questionSchema.parse(question));
     });
   });
 

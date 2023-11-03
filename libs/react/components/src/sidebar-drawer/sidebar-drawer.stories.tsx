@@ -5,9 +5,9 @@ import { default as LibraryBooksIcon } from "@mui/icons-material/LibraryBooks";
 import { default as SearchIcon } from "@mui/icons-material/Search";
 import { default as SettingsIcon } from "@mui/icons-material/Settings";
 import { Box } from "@mui/joy";
-import type { SidebarDrawerProps } from "./sidebar-drawer";
 import { SidebarDrawer } from "./sidebar-drawer";
 import { SidebarDrawerListItem } from "./sidebar-drawer-list-item";
+import type { SidebarDrawerProps } from "./sidebar-drawer";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof SidebarDrawer>;

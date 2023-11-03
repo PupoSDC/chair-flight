@@ -19,3 +19,5 @@ export * from "./tests/use-test-progress-time";
 export * from "./hooks/use-persistence";
 export * from "./hooks/use-form-history";
 export * from "./theme";
+export * from "./sidebar/sidebar-737";
+export * from "./sidebar/sidebar-atpl";

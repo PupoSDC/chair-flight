@@ -1,5 +1,5 @@
 import { Header } from "@chair-flight/react/components";
-import { AppHead, SidebarAtpl } from "@chair-flight/react/containers";
+import { AppHead, Sidebar737 } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
@@ -8,7 +8,7 @@ const ModuleIndexPage: NextPage = () => {
     <>
       <AppHead />
       <Header borderStyle="outlined" />
-      <SidebarAtpl />
+      <Sidebar737 />
       <main></main>
     </>
   );

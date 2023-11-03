@@ -1,5 +1,5 @@
-import type { CssVarsThemeOptions} from "@mui/joy";
 import { extendTheme } from "@mui/joy";
+import type { CssVarsThemeOptions } from "@mui/joy";
 
 const basicTheme = extendTheme();
 

@@ -2,7 +2,7 @@ import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Box, Grid, Sheet, Table, Typography } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
 import { AppLayout, Header } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead, SidebarAtpl } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
@@ -27,10 +27,17 @@ export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
   return (
     <>
       <AppHead />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
-      <AppLayout.Main>
+      <Header borderStyle="outlined" />
+      <SidebarAtpl />
+      <AppLayout.Main
+        sx={(t) => ({
+          overflow: "hidden",
+          width: `var(${t.dimensions.vars.sidebarRemainingWidth})`,
+          marginLeft: "auto",
+          marginRight: 0,
+          transition: "margin-left 0.25s, width 0.25s",
+        })}
+      >
         <Box sx={{ mb: 1 }}>
           <Sheet sx={{ p: 2, mx: { xs: 0, md: 1 } }}>
             <Grid container>

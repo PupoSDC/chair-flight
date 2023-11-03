@@ -23,7 +23,7 @@ import {
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead, SidebarAtpl } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
@@ -72,10 +72,17 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   return (
     <>
       <AppHead />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
-      <AppLayout.Main sx={{ overflow: "hidden" }}>
+      <Header borderStyle="outlined" />
+      <SidebarAtpl />
+      <AppLayout.Main
+        sx={(t) => ({
+          overflow: "hidden",
+          width: `var(${t.dimensions.vars.sidebarRemainingWidth})`,
+          marginLeft: "auto",
+          marginRight: 0,
+          transition: "margin-left 0.25s, width 0.25s",
+        })}
+      >
         <CtaSearch
           value={search}
           loading={isLoading}
@@ -92,7 +99,9 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                     <Fragment key={result.id}>
                       <ListItem>
                         <ListItemContent>
-                          <Link href={`/learning-objectives/${result.id}`}>
+                          <Link
+                            href={`/modules/atpl-theory/learning-objectives/${result.id}`}
+                          >
                             <Typography>{result.id}</Typography>
                           </Link>
                           <Typography level="body-sm">{result.text}</Typography>
@@ -128,7 +137,9 @@ export const LearningObjectivesIndexPage: NextPage = () => {
                     {results.map((result) => (
                       <tr key={result.id}>
                         <td>
-                          <Link href={`/learning-objectives/${result.id}`}>
+                          <Link
+                            href={`/modules/atpl-theory/learning-objectives/${result.id}`}
+                          >
                             <Typography>{result.contentId}</Typography>
                           </Link>
                         </td>

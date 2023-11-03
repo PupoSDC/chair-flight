@@ -1,10 +1,7 @@
-import type { ReactElement} from "react";
 import { forwardRef, useState } from "react";
 import { Global } from "@emotion/react";
 import { ChevronRight } from "@mui/icons-material";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
-import type {
-  SheetProps} from "@mui/joy";
 import {
   Box,
   Button,
@@ -21,6 +18,8 @@ import {
 import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
 import type { SidebarDrawerListItemProps } from "./sidebar-drawer-list-item";
+import type { SheetProps } from "@mui/joy";
+import type { ReactElement } from "react";
 
 export type SidebarDrawerProps = {
   children: ReactElement<SidebarDrawerListItemProps>[];

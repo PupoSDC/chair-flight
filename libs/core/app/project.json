@@ -13,7 +13,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/core/app"],
+      "outputs": ["{workspaceRoot}/coverage/libs/core/app"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/libs/core/app"

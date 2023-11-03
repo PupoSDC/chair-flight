@@ -68,7 +68,7 @@ const StyledHeader = styled("header")`
     background: #ffc107;
     top: 4px;
     left: -25px;
-    z-index: 3000;
+    z-index: 999999;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;

@@ -18,7 +18,7 @@
       "dependsOn": ["^migrate", "docs:build"],
       "options": {
         "root": "apps/next-app",
-        "outputPath": "dist/apps/next-app"
+        "outputPath": ".dist/apps/next-app"
       }
     },
     "serve": {
@@ -30,7 +30,6 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/apps/next-app"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/next-app"

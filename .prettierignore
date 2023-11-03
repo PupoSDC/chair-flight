@@ -1,12 +1,15 @@
 dist
 coverage
 tmp
-pnpm-lock.yaml
+.dist
 .next
 .expo
 .gitignore
 .editorconfig
 .prettierignore
+
+# files
+pnpm-lock.yaml
 
 # Content produced by build steps
 apps/next-app/public/storybook

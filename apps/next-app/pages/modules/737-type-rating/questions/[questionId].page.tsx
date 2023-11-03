@@ -2,21 +2,17 @@ import React from "react";
 import { useRouter } from "next/router";
 import { default as RadioButtonCheckedIcon } from "@mui/icons-material/RadioButtonChecked";
 import { default as RadioButtonUncheckedIcon } from "@mui/icons-material/RadioButtonUnchecked";
-import { Box, Button } from "@mui/joy";
+import { Box, Button, Grid, useTheme } from "@mui/joy";
 import {
   getQuestionPreview,
   getRandomId,
   getRandomShuffler,
 } from "@chair-flight/core/app";
-import {
-  Header,
-  AppLayout,
-  QuestionVariantPreview,
-} from "@chair-flight/react/components";
+import { Header, QuestionVariantPreview } from "@chair-flight/react/components";
 import {
   AppHead,
   QuestionReview,
-  AppHeaderMenu,
+  Sidebar737,
 } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
@@ -39,6 +35,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   initialQuestionId,
   initialSeed,
 }) => {
+  const theme = useTheme();
   const router = useRouter();
   const seed = (router.query["seed"] ?? initialSeed) as string;
   const variantId = (router.query["variantId"] ?? initialVariantId) as string;
@@ -65,12 +62,18 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
         linkTitle={`Chair Flight: ${variant.id}`}
         linkDescription={variant.question}
       />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
-      <AppLayout.Main>
-        <AppLayout.MainGrid>
-          <AppLayout.MainGridFixedColumn xs={12} md={7} lg={8} xl={9}>
+      <Header borderStyle="outlined" />
+      <main>
+        <Sidebar737 />
+        <Grid
+          component="section"
+          container
+          spacing={2}
+          padding={2}
+          marginLeft="auto"
+          width={`var(${theme.dimensions.vars.sidebarRemainingWidth})`}
+        >
+          <Grid xs={12} md={7} lg={8} xl={9}>
             <QuestionReview
               questionBank="questionBank737"
               questionId={initialQuestionId}
@@ -78,11 +81,8 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
               seed={seed}
               onQuestionChanged={updateVariantAndSeed}
             />
-          </AppLayout.MainGridFixedColumn>
-          <AppLayout.MainGridScrollableColumn
-            sx={{ display: { xs: "none", md: "block" } }}
-            xs
-          >
+          </Grid>
+          <Grid sx={{ display: { xs: "none", md: "block" } }} xs>
             {questionTemplate &&
               allVariantsArray.map((otherVariant) => (
                 <Box
@@ -108,9 +108,9 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
                   />
                 </Box>
               ))}
-          </AppLayout.MainGridScrollableColumn>
-        </AppLayout.MainGrid>
-      </AppLayout.Main>
+          </Grid>
+        </Grid>
+      </main>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { HEADER_HEIGHT, Header } from "@chair-flight/react/components";
 import {
   AppHead,
   QuestionSearch,
-  SidebarAtpl,
+  Sidebar737,
 } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
@@ -19,11 +19,11 @@ const QuestionsIndexPage: NextPage = () => {
       <AppHead />
       <Header borderStyle="outlined" />
       <main>
-        <SidebarAtpl />
+        <Sidebar737 />
         <QuestionSearch
           component={"section"}
-          searchQuestions={trpc.questionBankAtpl.searchQuestions}
-          getNumberOfQuestions={trpc.questionBankAtpl.getNumberOfQuestions}
+          searchQuestions={trpc.questionBank737.searchQuestions}
+          getNumberOfQuestions={trpc.questionBank737.getNumberOfQuestions}
           sx={{
             minHeight: HEIGHT,
             width: `var(${theme.dimensions.vars.sidebarRemainingWidth})`,
@@ -40,7 +40,7 @@ const QuestionsIndexPage: NextPage = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();
-  await Promise.all([helper.questionBankAtpl.getNumberOfQuestions.fetch()]);
+  await Promise.all([helper.questionBank737.getNumberOfQuestions.fetch()]);
 
   return {
     props: {
