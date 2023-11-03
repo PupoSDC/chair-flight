@@ -26,7 +26,7 @@ export const Playground: Story = {
 };
 
 const meta: Meta<typeof Flashcard> = {
-  title: "Components/flashcard",
+  title: "Components/Flashcard",
   component: Flashcard,
   tags: ["autodocs"],
 };

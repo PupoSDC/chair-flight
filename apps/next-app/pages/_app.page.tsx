@@ -1,5 +1,6 @@
 import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
+import { NoSsr } from "@mui/base";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AnalyticsProvider } from "@chair-flight/react/analytics";
@@ -25,8 +26,10 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <CssVarsProvider defaultMode="system" theme={theme}>
           <CssBaseline />
           <Component {...pageProps} />
-          <AppTransition />
-          <Toaster />
+          <NoSsr>
+            <AppTransition />
+            <Toaster />
+          </NoSsr>
         </CssVarsProvider>
       </AnalyticsProvider>
     </StrictMode>

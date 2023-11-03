@@ -2,13 +2,16 @@ import { useEffect, type FunctionComponent, useMemo, useRef } from "react";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { NoSsr } from "@mui/base";
+import type {
+  BoxProps} from "@mui/joy";
 import {
   Box,
   FormControl,
   FormLabel,
   Option,
   Checkbox,
-  Button,
+  Button
 } from "@mui/joy";
 import { newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
@@ -18,22 +21,38 @@ import {
   SliderWithInput,
   toast,
 } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
+import type { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import type { Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
 const resolver = zodResolver(newTestConfigurationSchema);
-const useSubjects = trpc.questionBankAtpl.getAllSubjects.useSuspenseQuery;
-const useCreateTest = trpc.questionBankAtpl.createTest.useMutation;
-const useTestMakerPersistence =
-  createUsePersistenceHook<NewTestConfiguration>("cf-test-maker");
 
-export type TestMakerProps = {
-  initialSubject?: string;
-  onSuccessfulTestCreation: (test: Test) => void;
+const testMakerPersistence = {
+  "cf-test-maker-atpl":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-atpl"),
+  "cf-test-maker-737":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-737"),
 };
+
+export type TestMakerProps = Omit<
+  BoxProps,
+  "onBlur" | "onSubmit" | "component"
+> & {
+  onSuccessfulTestCreation: (test: Test) => void;
+} & (
+    | {
+        getAllSubjects: typeof trpc.questionBankAtpl.getAllSubjects;
+        createTest: typeof trpc.questionBankAtpl.createTest;
+        testPersistenceKey: "cf-test-maker-atpl";
+      }
+    | {
+        getAllSubjects: typeof trpc.questionBank737.getAllSubjects;
+        createTest: typeof trpc.questionBank737.createTest;
+        testPersistenceKey: "cf-test-maker-737";
+      }
+  );
 
 /**
  * Container to create tests.
@@ -42,9 +61,14 @@ export type TestMakerProps = {
  * - Uses Zustand persistence to restore progress from previous session.
  */
 export const TestMaker: FunctionComponent<TestMakerProps> = ({
+  getAllSubjects: { useSuspenseQuery: useSubjects },
+  createTest: { useMutation: useCreateTest },
+  testPersistenceKey,
   onSuccessfulTestCreation,
-  initialSubject,
+  ...otherProps
 }) => {
+  const useTestMakerPersistence = testMakerPersistence[testPersistenceKey];
+
   const { getPersistedData, setPersistedData } = useTestMakerPersistence();
   const [{ subjects }] = useSubjects();
   const createTest = useCreateTest();
@@ -52,14 +76,14 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const defaultValues = useMemo<NewTestConfiguration>(
     () => ({
       mode: "exam",
-      subject: initialSubject ?? subjects[0].id,
+      subject: subjects[0].id,
       learningObjectives: subjects
         .flatMap((s) => s.children ?? [])
-        .flatMap((c) => c.children?.map((c) => c.id) ?? [])
+        .flatMap((c) => [c.id, ...(c.children?.map((c) => c.id) ?? [])])
         .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
     }),
-    [subjects, initialSubject],
+    [subjects],
   );
 
   const form = useForm({ defaultValues, resolver });
@@ -76,6 +100,8 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
       subjects
         .find((s) => s.id === currentSubject)
         ?.children?.map((c) => {
+          const hasChildren = Boolean(c.children?.length);
+
           const children =
             c.children?.map((c) => ({
               id: c.id,
@@ -85,7 +111,9 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
               children: [],
             })) ?? [];
 
-          const checked = children.every((c) => c.checked);
+          const checked = hasChildren
+            ? children.every((c) => c.checked)
+            : currentLearningObjectives[c.id] ?? false;
 
           return {
             id: c.id,
@@ -130,10 +158,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
     hasMountedInitialValues.current = true;
     const persistedData = getPersistedData();
     if (!persistedData) return;
-    form.reset({
-      ...persistedData,
-      subject: initialSubject ?? persistedData?.subject,
-    });
+    form.reset({ ...persistedData });
   });
 
   return (
@@ -141,7 +166,12 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
       component="form"
       onSubmit={onSubmit}
       onBlur={() => setPersistedData(form.getValues())}
-      sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+      {...otherProps}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        ...otherProps.sx,
+      }}
     >
       <FormProvider {...form}>
         <HookFormSelect
@@ -152,17 +182,19 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
           <Option value="exam">Exam</Option>
           <Option value="study">Study</Option>
         </HookFormSelect>
-        <HookFormSelect
-          {...form.register("subject")}
-          sx={{ py: 1 }}
-          formLabel={"Subject"}
-        >
-          {subjects.map((item) => (
-            <Option value={item.id} key={item.id}>
-              {`${item.id} - ${item.longName}`}
-            </Option>
-          ))}
-        </HookFormSelect>
+        {subjects.length > 1 && (
+          <HookFormSelect
+            {...form.register("subject")}
+            sx={{ py: 1 }}
+            formLabel={"Subject"}
+          >
+            {subjects.map((item) => (
+              <Option value={item.id} key={item.id}>
+                {`${item.id} - ${item.longName}`}
+              </Option>
+            ))}
+          </HookFormSelect>
+        )}
         <Controller
           control={form.control}
           name="learningObjectives"
@@ -250,7 +282,9 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
         >
           Start!
         </Button>
-        <DevTool control={form.control} />
+        <NoSsr>
+          <DevTool control={form.control} />
+        </NoSsr>
       </FormProvider>
     </Box>
   );

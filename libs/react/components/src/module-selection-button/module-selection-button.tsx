@@ -32,7 +32,7 @@ export const ModuleSelectionButton = forwardRef<
     const [delayedMode, setDelayedMode] = useState<typeof mode>("light");
     const capitalColor = color.charAt(0).toUpperCase() + color.slice(1);
     const primaryColor = `--joy-palette-primary${capitalColor}`;
-    const bgWeight = delayedMode === "dark" ? 900 : 200;
+    const bgWeight = delayedMode === "dark" ? 800 : 200;
 
     useEffect(() => setDelayedMode(mode), [mode]);
 
@@ -58,13 +58,14 @@ export const ModuleSelectionButton = forwardRef<
           [t.breakpoints.down("sm")]: {
             p: 1,
           },
-          [t.breakpoints.down("md")]: {
+          [t.breakpoints.down("sm")]: {
             [`& .${buttonClasses.startDecorator}`]: {
               display: "none",
             },
           },
           [`& .${buttonClasses.startDecorator}`]: {
             color: `var(${primaryColor}-500)`,
+            p: 2,
           },
           [`& .${buttonClasses.startDecorator} svg`]: {
             fontSize: "32px",

@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Box, Button, Skeleton, styled } from "@mui/joy";
+import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
 import { MarkdownClient } from "../markdown-client";
 import { getOptionColor } from "../utils/get-question-status-color";
 import type { BoxProps } from "@mui/joy";
@@ -14,14 +14,14 @@ const QuestionMultipleChoiceBox = styled(Box)`
 ` as typeof Box;
 
 const QuestionMultipleChoiceOption = styled(Button)`
-  margin: ${({ theme }) => theme.spacing(0.5, 0)};
+  margin: ${({ theme }) => theme.spacing(1, 0)};
   padding: ${({ theme }) => theme.spacing(1)};
   text-align: left;
   justify-content: flex-start;
 
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    margin: ${({ theme }) => theme.spacing(1, 0)};
-    padding: ${({ theme }) => theme.spacing(2)};
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    margin: ${({ theme }) => theme.spacing(0.5, 0)};
+    padding: ${({ theme }) => theme.spacing(1)};
   }
 
   &,
@@ -49,18 +49,30 @@ const QuestionMultipleChoiceOption = styled(Button)`
     }};
   }
 
-  & .MuiButton-startDecorator {
+  &.${buttonClasses.disabled} {
+  }
+
+  & .${buttonClasses.startDecorator} {
     font-size: 2.5em;
+    padding-right: ${({ theme }) => theme.spacing(1)};
     color: ${({ theme, variant, color = "primary" }) =>
       variant === "outlined"
         ? theme.vars.palette[color].solidBg
         : theme.vars.palette.primary.solidColor};
 
-    ${({ theme }) => theme.breakpoints.up("sm")} {
-      padding-right: ${({ theme }) => theme.spacing(1)};
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      padding-right: ${({ theme }) => theme.spacing(0)};
+      font-size: 1.5em;
     }
   }
-  &.Joy-disabled {
+
+  &.${buttonClasses.sizeSm} {
+    margin: ${({ theme }) => theme.spacing(0.5, 0)};
+    padding: ${({ theme }) => theme.spacing(1)};
+
+    & .${buttonClasses.startDecorator} {
+      font-size: 1.2em;
+    }
   }
 `;
 export type QuestionMultipleChoiceStatus = "in-progress" | "show-result";
@@ -73,6 +85,7 @@ export type QuestionMultipleChoiceProps = {
   selectedOptionId?: string;
   hideIrrelevant?: boolean;
   loading?: boolean;
+  compact?: boolean;
   disabled?: boolean;
   annexes?: string[];
   onAnnexClicked?: (annexId: string) => void;
@@ -91,6 +104,7 @@ export const QuestionMultipleChoice = forwardRef<
       selectedOptionId,
       status = "in-progress",
       loading,
+      compact,
       hideIrrelevant,
       options = [],
       disabled,
@@ -102,7 +116,7 @@ export const QuestionMultipleChoice = forwardRef<
     ref,
   ) => (
     <QuestionMultipleChoiceBox ref={ref} {...others}>
-      <Box className="question-text-container">
+      <Box>
         {loading ? (
           <>
             <Skeleton sx={{ height: "3em", width: "100%", mb: 1, mt: 2 }} />
@@ -136,6 +150,7 @@ export const QuestionMultipleChoice = forwardRef<
               <QuestionMultipleChoiceOption
                 key={optionId}
                 fullWidth
+                size={compact ? "sm" : "lg"}
                 variant="outlined"
                 color="primary"
                 children={
@@ -161,6 +176,7 @@ export const QuestionMultipleChoice = forwardRef<
           return (
             <QuestionMultipleChoiceOption
               fullWidth
+              size={compact ? "sm" : "lg"}
               startDecorator={String.fromCharCode(65 + index)}
               disabled={disabled}
               key={optionId}

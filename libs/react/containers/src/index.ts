@@ -6,6 +6,7 @@ export * from "./questions/question-editor";
 export * from "./questions/question-review";
 export * from "./questions/question-preview-list";
 export * from "./questions/question-search-demo";
+export * from "./questions/question-search";
 export * from "./tests/test-question-exam";
 export * from "./tests/test-question-navigation";
 export * from "./tests/test-question-study";

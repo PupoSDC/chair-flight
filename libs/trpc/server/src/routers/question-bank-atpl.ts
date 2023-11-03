@@ -19,6 +19,7 @@ import {
   getQuestionFromGit,
 } from "@chair-flight/core/github";
 import { questionEditSchema } from "@chair-flight/core/schemas";
+import { makeCountHandler } from "../common/count";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
@@ -59,9 +60,8 @@ export const questionBankAtplRouter = router({
 
       return { questionTemplate };
     }),
-  getNumberOfQuestions: publicProcedure.query(async () => {
-    const allQuestion = await getAllQuestionTemplates();
-    return { numberOfQuestions: allQuestion.length };
+  getNumberOfQuestions: makeCountHandler({
+    getData: getAllQuestionTemplates,
   }),
   updateQuestion: publicProcedure
     .input(questionEditSchema)

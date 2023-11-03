@@ -26,12 +26,17 @@ const ChapterControlButton = styled(Button)<{ open: boolean }>`
     open ? 0 : theme.radius.sm};
   min-height: 36px;
   border-left: 1px solid;
-  border-left-color: ${({ theme }) => theme.palette.neutral.outlinedBorder};
+  border-left-color: ${({ theme }) =>
+    theme.vars.palette.neutral.outlinedBorder};
   animation: "";
 
   & > svg {
     transition-duration: 250ms;
     transform: ${({ open }) => (open ? "rotate(90deg)" : "initial")};
+  }
+
+  &:disabled > svg {
+    visibility: hidden;
   }
 `;
 
@@ -66,7 +71,7 @@ export const NestedCheckboxSelect = forwardRef<
                 justifyContent: "space-between",
                 alignItems: "stretch",
                 borderBottom: open ? "1px solid" : "initial",
-                color: (t) => t.palette.neutral.outlinedBorder,
+                color: (t) => t.vars.palette.neutral.outlinedBorder,
               }}
             >
               <Checkbox
@@ -75,8 +80,20 @@ export const NestedCheckboxSelect = forwardRef<
                 label={item.label}
                 indeterminate={indeterminate}
                 checked={item.checked}
-                onChange={() => onChange?.(item, !item.checked)}
                 className={checkboxClasses.focusVisible}
+                onChange={() =>
+                  onChange?.(
+                    {
+                      ...item,
+                      checked: !item.checked,
+                      children: item.children.map((child) => ({
+                        ...child,
+                        checked: !item.checked,
+                      })),
+                    },
+                    !item.checked,
+                  )
+                }
                 sx={{
                   p: 1,
                   flex: 1,
@@ -94,13 +111,13 @@ export const NestedCheckboxSelect = forwardRef<
               <ChapterControlButton
                 variant="plain"
                 children={<ChevronRight />}
+                open={open}
+                disabled={item.children.length === 0}
                 onClick={() =>
                   setOpenChapter((old) =>
                     old === item.id ? undefined : item.id,
                   )
                 }
-                open={open}
-                disabled={item.children.length === 0}
               />
             </Box>
             {open && (
@@ -121,8 +138,18 @@ export const NestedCheckboxSelect = forwardRef<
                       id={child.id}
                       label={child.label}
                       checked={child.checked}
-                      onChange={() => onChange?.(child, !child.checked)}
                       sx={{ p: 1, flex: 1, pl: 4 }}
+                      onChange={() => {
+                        const children = item.children.map((c) => ({
+                          ...c,
+                          checked: c.id === child.id ? !c.checked : c.checked,
+                        }));
+                        const checked = children.every((c) => c.checked);
+                        onChange?.(
+                          { ...item, children, checked },
+                          !child.checked,
+                        );
+                      }}
                     />
                     <Typography level="body-sm" sx={{ pr: 2 }}>
                       {child.subLabel}

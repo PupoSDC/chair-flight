@@ -1,15 +1,13 @@
 import { z } from "zod";
 import { NotFoundError } from "@chair-flight/base/errors";
 import { getFlashcards } from "@chair-flight/content/interview-flashcards";
+import { makeCountHandler } from "../common/count";
 import { publicProcedure, router } from "../config/trpc";
 
 export const interviewPrepRouter = router({
-  getNumberOfFlashcards: publicProcedure //
-    .query(async () => {
-      const flashcards = await getFlashcards();
-      const numberOfFlashcards = Object.values(flashcards).flat().length;
-      return { numberOfFlashcards };
-    }),
+  getNumberOfFlashcards: makeCountHandler({
+    getData: async () => Object.values(await getFlashcards()).flat(),
+  }),
   getFlashcardsCollections: publicProcedure //
     .query(async () => {
       const allCards = await getFlashcards();

@@ -10,6 +10,7 @@ import {
   getQuestionPreview,
   newTestConfigurationSchema,
 } from "@chair-flight/core/app";
+import { makeCountHandler } from "../common/count";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
@@ -25,9 +26,9 @@ type QuestionPreview = {
 };
 
 export const questionBank737Router = router({
-  getSubject: publicProcedure.query(async () => {
+  getAllSubjects: publicProcedure.query(async () => {
     const subject = await getSubject();
-    return { subject };
+    return { subjects: [subject] };
   }),
   getQuestion: publicProcedure
     .input(z.object({ questionId: z.string() }))
@@ -37,9 +38,8 @@ export const questionBank737Router = router({
       const learningObjectives: LearningObjective[] = [];
       return { questionTemplate, learningObjectives };
     }),
-  getNumberOfQuestions: publicProcedure.query(async () => {
-    const questions = await getAllQuestionTemplates();
-    return { numberOfQuestions: questions.length };
+  getNumberOfQuestions: makeCountHandler({
+    getData: getAllQuestionTemplates,
   }),
   searchQuestions: makeSearchHandler({
     searchFields: ["id", "questionId", "learningObjectives", "text"],

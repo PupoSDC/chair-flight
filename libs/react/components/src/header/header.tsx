@@ -37,7 +37,6 @@ const StyledHeader = styled("header")`
   padding: 0 1rem 0 2rem;
   background-color: ${({ theme }) => theme.vars.palette.neutral.plainHoverBg};
   z-index: 1000;
-  box-shadow: ${({ theme }) => theme.shadow.md};
 
   & > a:nth-of-type(1) {
     margin-left: ${({ theme }) => theme.spacing(1)};
@@ -103,7 +102,8 @@ export type HeaderProps = {
   removeThemeControl?: boolean;
   removeGithubLink?: boolean;
   removeHamburger?: boolean;
-} & Partial<Pick<BoxProps, "sx" | "style" | "className" | "children">>;
+  borderStyle?: "shadow" | "outlined";
+} & Partial<Pick<BoxProps, "sx" | "className" | "children">>;
 
 const HeaderContext = createContext<{
   canDrawerBeOpened: boolean;
@@ -131,6 +131,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
       removeThemeControl,
       removeGithubLink,
       removeHamburger,
+      borderStyle = "shadow",
       children,
       ...boxProps
     },
@@ -158,7 +159,18 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
 
     return (
       <HeaderContext.Provider value={headerContextValue}>
-        <StyledHeader ref={ref} {...boxProps}>
+        <StyledHeader
+          ref={ref}
+          {...boxProps}
+          sx={
+            borderStyle === "outlined"
+              ? {
+                  borderBottom: "1px solid",
+                  borderColor: "var(--joy-palette-neutral-outlinedBorder)",
+                }
+              : { boxShadow: "md" }
+          }
+        >
           {removeLogo || (
             <Link href="/">
               <AppLogo />
@@ -180,7 +192,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
           )}
           {!removeThemeControl && (
             <IconButton onClick={toggleTheme}>
-              {showDarkModeButton ? <LightModeIcon /> : <DarkModeIcon />}
+              {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
             </IconButton>
           )}
           {children && !removeHamburger && (

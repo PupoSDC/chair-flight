@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useColorScheme } from "@mui/joy";
 import type { DefaultColorScheme } from "@mui/joy/styles/types";
 
@@ -10,10 +10,15 @@ export const useThemeSwitcher = (): [
   setCurrentTheme: (theme: "rose" | "teal" | "blue") => void,
 ] => {
   const { setColorScheme, colorScheme } = useColorScheme();
-  const currentTheme = (colorScheme ?? "blue")
-    .toLocaleLowerCase()
-    .replace("light", "")
-    .replace("dark", "") as ThemeColor;
+  const [currentTheme, setStateCurrentTheme] = useState<ThemeColor>("blue");
+
+  useEffect(() => {
+    const newCurrentTheme = (colorScheme ?? "blue")
+      .toLocaleLowerCase()
+      .replace("light", "")
+      .replace("dark", "") as ThemeColor;
+    setStateCurrentTheme(newCurrentTheme);
+  }, [colorScheme]);
 
   const setCurrentTheme = useCallback(
     (theme: ThemeColor) => {
