@@ -5,17 +5,7 @@ import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import StyleIcon from "@mui/icons-material/Style";
-import {
-  Box,
-  styled,
-  Grid,
-  Typography,
-  Button,
-  Link,
-  Divider,
-} from "@mui/joy";
-import type {
-  ThemeColor} from "@chair-flight/react/components";
+import { Box, styled, Grid, Typography, Button, Link, Divider } from "@mui/joy";
 import {
   CoolSlidingThing,
   CountUp,
@@ -27,6 +17,7 @@ import {
 } from "@chair-flight/react/components";
 import { AppHead } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
+import type { ThemeColor } from "@chair-flight/react/components";
 import type { GetStaticProps, NextPage } from "next";
 
 const fadeIn = keyframes`
@@ -334,9 +325,9 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                     {` flashcards`}
                   </Typography>
                   <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                    When you get to your first job interview, you won`&apos;t 
-                    have the benefit of being able to select the best out of 4 
-                    answers. You will have to explain the topics you have 
+                    When you get to your first job interview, you won`&apos;t
+                    have the benefit of being able to select the best out of 4
+                    answers. You will have to explain the topics you have
                     learned in the theory classes without any crutches. <br />
                     Use our flash cards to practice answering open ended
                     questions and secure your first job.

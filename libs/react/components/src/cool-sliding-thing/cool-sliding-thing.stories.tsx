@@ -6,7 +6,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 type Story = StoryObj<typeof CoolSlidingThing>;
 
 export const Playground: Story = {
-  parameters: {},
   render: () => (
     <>
       <CoolSlidingThing />

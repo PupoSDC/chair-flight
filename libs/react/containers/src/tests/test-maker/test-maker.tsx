@@ -3,15 +3,13 @@ import { Controller, FormProvider, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { NoSsr } from "@mui/base";
-import type {
-  BoxProps} from "@mui/joy";
 import {
   Box,
   FormControl,
   FormLabel,
   Option,
   Checkbox,
-  Button
+  Button,
 } from "@mui/joy";
 import { newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
@@ -21,11 +19,12 @@ import {
   SliderWithInput,
   toast,
 } from "@chair-flight/react/components";
-import type { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import type { Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
+import type { trpc } from "@chair-flight/trpc/client";
+import type { BoxProps } from "@mui/joy";
 
 const resolver = zodResolver(newTestConfigurationSchema);
 

@@ -1,6 +1,4 @@
-import type { FC} from "react";
 import { useState } from "react";
-import type { BoxProps} from "@mui/joy";
 import { Box, useTheme } from "@mui/joy";
 import {
   CtaSearch,
@@ -8,8 +6,10 @@ import {
   Ups,
   useMediaQuery,
 } from "@chair-flight/react/components";
-import { QuestionPreviewList } from '../question-preview-list/question-preview-list';
+import { QuestionPreviewList } from "../question-preview-list/question-preview-list";
 import type { trpc } from "@chair-flight/trpc/client";
+import type { BoxProps } from "@mui/joy";
+import type { FC } from "react";
 
 export type QuestionSearchProps = BoxProps &
   (

@@ -22,6 +22,7 @@ export * from "./question-box-exam";
 export * from "./question-box-review";
 export * from "./question-multiple-choice";
 export * from "./question-variant-preview";
+export * from "./sidebar-drawer";
 export * from "./test-preview";
 export * from "./question-navigation";
 export * from "./test-question-result";

@@ -1,4 +1,5 @@
-import { extendTheme, type CssVarsThemeOptions } from "@mui/joy";
+import type { CssVarsThemeOptions} from "@mui/joy";
+import { extendTheme } from "@mui/joy";
 
 const basicTheme = extendTheme();
 
@@ -17,6 +18,7 @@ declare module "@mui/joy/styles" {
     "body-sm": true;
     "body-xs": true;
   }
+
   interface ColorSchemeOverrides {
     light: false;
     dark: false;
@@ -27,6 +29,23 @@ declare module "@mui/joy/styles" {
     darkTeal: true;
     darkRose: true;
   }
+
+  interface CustomDimensions {
+    dimensions: {
+      values: {
+        headerHeight: number;
+        sidebarCollapsedWidth: number;
+        sidebarExpandedWidth: number;
+      };
+      vars: {
+        sidebarWidth: string;
+        sidebarRemainingWidth: string;
+      };
+    };
+  }
+
+  interface CssVarsThemeOptions extends CustomDimensions {}
+  interface Theme extends CustomDimensions {}
 }
 
 const extraColors = {
@@ -137,6 +156,17 @@ export const theme: CssVarsThemeOptions = extendTheme({
         ...extraColors,
         primary: extraColors.primaryRose,
       },
+    },
+  },
+  dimensions: {
+    values: {
+      headerHeight: 40,
+      sidebarCollapsedWidth: 56,
+      sidebarExpandedWidth: 240,
+    },
+    vars: {
+      sidebarWidth: "--joy-dimensions-sidebarExpandedWidth",
+      sidebarRemainingWidth: "--joy-dimensions-sidebarRemainingWidth",
     },
   },
   components: {

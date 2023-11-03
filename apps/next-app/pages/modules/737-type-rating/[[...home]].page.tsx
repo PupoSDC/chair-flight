@@ -1,15 +1,14 @@
 import { useRouter } from "next/router";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import { default as AddCircleIcon } from "@mui/icons-material/AddCircle";
+import { default as ConnectingAirportsIcon } from "@mui/icons-material/ConnectingAirports";
+import { default as SearchIcon } from "@mui/icons-material/Search";
+import { useTheme } from "@mui/joy";
 import {
-  Link,
-  List,
-  ListItemButton,
-  ListItemContent,
-  ListItemDecorator,
-  Sheet,
-  listItemButtonClasses,
-} from "@mui/joy";
-import { HEADER_HEIGHT, Header } from "@chair-flight/react/components";
+  HEADER_HEIGHT,
+  Header,
+  SidebarDrawer,
+  SidebarDrawerListItem,
+} from "@chair-flight/react/components";
 import {
   AppHead,
   QuestionSearch,
@@ -20,105 +19,55 @@ import { trpc } from "@chair-flight/trpc/client";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
+const HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;
+
 const QuestionsIndexPage: NextPage = () => {
   const router = useRouter();
   const addTest = useTestProgress((s) => s.addTest);
+  const theme = useTheme();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isHome = !isQuestions && !isTests;
+  const mainContentSx = {
+    minHeight: HEIGHT,
+    width: `var(${theme.dimensions.vars.sidebarRemainingWidth})`,
+    marginLeft: "auto",
+    marginRight: 0,
+    p: { xs: 0.5, md: 2 },
+    transition: "margin-left 0.25s, width 0.25s",
+  };
 
   return (
     <>
       <AppHead />
       <Header borderStyle="outlined" />
       <main>
-        <Sheet
-          sx={{
-            position: "fixed",
-            width: 260,
-            height: "100%",
-            overflow: "auto",
-            borderTop: 0,
-            borderBottom: 0,
-            borderLeft: 0,
-            borderRadius: 0,
-          }}
-        >
-          <List
-            sx={{
-              p: 0,
-              [`& > .${listItemButtonClasses.root}`]: {
-                py: 2,
-                borderRight: 0,
-                borderLeft: 4,
-                borderLeftColor: "transparent",
-
-                "&:first-of-type": {
-                  borderTop: 0,
-                },
-                "&:not(:last-of-type)": {
-                  borderBottom: 0,
-                },
-                "&:hover": {
-                  textDecoration: "none",
-                },
-                "&:focus-visible": {
-                  outline: "none !important",
-                  textDecoration: "underline",
-                },
-                [`&.${listItemButtonClasses.selected}`]: {
-                  color: "var(--joy-palette-primary-plainColor)",
-                  borderLeftColor: "var(--joy-palette-primary-plainColor)",
-                  bgcolor: "transparent",
-                },
-              },
-            }}
-          >
-            <ListItemButton
-              variant="outlined"
-              selected={isHome}
-              component={Link}
-              href={"./"}
-            >
-              <ListItemDecorator>
-                <FlightTakeoffIcon sx={{ fontSize: 24 }} />
-              </ListItemDecorator>
-              <ListItemContent>Home</ListItemContent>
-            </ListItemButton>
-            <ListItemButton
-              variant="outlined"
-              selected={isQuestions}
-              component={Link}
-              href={"./questions"}
-            >
-              <ListItemDecorator>
-                <FlightTakeoffIcon sx={{ fontSize: 24 }} />
-              </ListItemDecorator>
-              <ListItemContent>Search Questions</ListItemContent>
-            </ListItemButton>
-            <ListItemButton
-              variant="outlined"
-              selected={isTests}
-              component={Link}
-              href={"./tests"}
-            >
-              <ListItemDecorator>
-                <FlightTakeoffIcon sx={{ fontSize: 24 }} />
-              </ListItemDecorator>
-              <ListItemContent>Create Test</ListItemContent>
-            </ListItemButton>
-          </List>
-        </Sheet>
+        <SidebarDrawer sx={{ height: HEIGHT }}>
+          <SidebarDrawerListItem
+            href={"./"}
+            selected={isHome}
+            icon={ConnectingAirportsIcon}
+            title={"Home"}
+          />
+          <SidebarDrawerListItem
+            href={"./questions"}
+            selected={isQuestions}
+            icon={SearchIcon}
+            title={"Search Questions"}
+          />
+          <SidebarDrawerListItem
+            href={"./tests"}
+            selected={isTests}
+            icon={AddCircleIcon}
+            title={"Create Test"}
+          />
+        </SidebarDrawer>
         {isQuestions && (
           <QuestionSearch
+            component={"section"}
             searchQuestions={trpc.questionBank737.searchQuestions}
             getNumberOfQuestions={trpc.questionBank737.getNumberOfQuestions}
-            sx={{
-              minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
-              width: "calc(100% - 260px)",
-              ml: "260px",
-              p: 2,
-            }}
+            sx={mainContentSx}
           />
         )}
         {isTests && (
@@ -126,15 +75,10 @@ const QuestionsIndexPage: NextPage = () => {
             createTest={trpc.questionBank737.createTest}
             getAllSubjects={trpc.questionBank737.getAllSubjects}
             testPersistenceKey="cf-test-maker-737"
+            sx={mainContentSx}
             onSuccessfulTestCreation={(test) => {
               addTest({ test });
               router.push(`./tests/${test.id}/${test.mode}`);
-            }}
-            sx={{
-              height: `calc(100vh - ${HEADER_HEIGHT}px)`,
-              width: "calc(100% - 260px)",
-              ml: "260px",
-              p: 2,
             }}
           />
         )}
