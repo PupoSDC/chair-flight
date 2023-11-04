@@ -16,19 +16,6 @@ export const Playground: Story = {
   args: {
     children: "5 children" as unknown as SidebarDrawerProps["children"],
   },
-  render: (args) => (
-    <>
-      <SidebarDrawer {...args} key={1} />
-      <Box sx={{ minHeight: 400 }} />
-      <Global
-        styles={css`
-          body {
-            padding: 0 !important;
-          }
-        `}
-      />
-    </>
-  ),
 };
 
 const meta: Meta<typeof SidebarDrawer> = {
@@ -108,6 +95,26 @@ const meta: Meta<typeof SidebarDrawer> = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <Box
+        sx={{
+          width: "100%",
+          minHeight: "400px",
+          overflow: "hidden",
+        }}
+      >
+        <Story />
+        <Global
+          styles={css`
+            body {
+              padding: 0 !important;
+            }
+          `}
+        />
+      </Box>
+    ),
+  ],
 };
 
 export default meta;

@@ -1,10 +1,11 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 import { Global } from "@emotion/react";
-import { ChevronRight } from "@mui/icons-material";
+import styled from "@emotion/styled";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
+import type {
+  SheetProps} from "@mui/joy";
 import {
   Box,
-  Button,
   List,
   ListItemButton,
   ListItemContent,
@@ -18,164 +19,150 @@ import {
 import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
 import type { SidebarDrawerListItemProps } from "./sidebar-drawer-list-item";
-import type { SheetProps } from "@mui/joy";
 import type { ReactElement } from "react";
 
 export type SidebarDrawerProps = {
   children: ReactElement<SidebarDrawerListItemProps>[];
-} & SheetProps;
+  sx?: SheetProps["sx"];
+  className?: SheetProps["className"];
+};
+
+export type SidebarDrawerRef = HTMLDivElement & {
+  toggleDrawer: () => void;
+};
+
+export type SidebarDrawerComponent = React.ForwardRefExoticComponent<
+  SidebarDrawerProps & React.RefAttributes<SidebarDrawerRef>
+> & {
+  css: {
+    remainingWidth: string;
+    widthTransition: string;
+  };
+};
+
+const VAR_SIDEBAR_WIDTH = "--joy-sidebar-drawer-width";
+const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-drawer-remaining-width";
+const SIDEBAR_EXPANDED_WIDTH = 240;
+const SIDEBAR_COLLAPSED_WIDTH = 56;
 
 export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
   ({ children = [], ...otherProps }, ref) => {
-    const [isToggled, setIsToggled] = useState(false);
+    const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const [isDesktopOpen, setDesktopOpen] = useState(true);
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-    const cssVars = theme.dimensions.vars;
-    const cssValues = theme.dimensions.values;
+    const isOpen = isSmallScreen ? isMobileOpen : isDesktopOpen;
+
+    useImperativeHandle(
+      ref,
+      () =>
+        ({
+          toggleDrawer: () => setIsMobileOpen((t) => !t),
+        }) as SidebarDrawerRef,
+    );
 
     return (
-      <>
+      <Sheet
+        {...otherProps}
+        ref={ref}
+        component="nav"
+        sx={{
+          position: "fixed",
+          height: "100%",
+          width: `var(${VAR_SIDEBAR_WIDTH})`,
+          overflow: "auto",
+          borderTop: 0,
+          borderBottom: 0,
+          borderLeft: 0,
+          borderRadius: 0,
+          borderRightWidth: { xs: 0, sm: 1 },
+          transition: "width 250ms",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          zIndex: "modal",
+
+          [`& .${listClasses.root}`]: {
+            p: 0,
+          },
+
+          [`& .${listItemContentClasses.root}`]: {
+            textWrap: "nowrap",
+            overflowY: "hidden",
+          },
+
+          [`& .${listItemButtonClasses.root}`]: {
+            py: { xs: 1, sm: 2 },
+            borderRight: 0,
+            borderLeft: 4,
+            borderLeftColor: "transparent",
+
+            "&:first-of-type": {
+              borderTop: 0,
+            },
+            "&:not(:last-of-type)": {
+              borderBottom: 0,
+            },
+            "&:hover": {
+              textDecoration: "none",
+            },
+            "&:focus-visible": {
+              outline: "none !important",
+              textDecoration: "underline",
+            },
+            [`&.${listItemButtonClasses.selected}`]: {
+              color: "var(--joy-palette-primary-plainColor)",
+              borderLeftColor: "var(--joy-palette-primary-plainColor)",
+              bgcolor: "transparent",
+            },
+          },
+
+          ["& .chevron"]: {
+            fontSize: 24,
+            transitionDuration: "250ms",
+            transform: isOpen ? "rotate(0deg)" : "rotate(-180deg)",
+          },
+
+          ...otherProps.sx,
+        }}
+      >
         <Global
           styles={{
             body: {
-              [theme.breakpoints.up("md")]: {
-                "--chevron-transform": isToggled
-                  ? "rotate(-180deg)"
-                  : "rotate(0deg)",
-                [cssVars.sidebarWidth]: isToggled
-                  ? `${cssValues.sidebarCollapsedWidth}px`
-                  : `${cssValues.sidebarExpandedWidth}px`,
-                [cssVars.sidebarRemainingWidth]: `calc(100vw - var(${cssVars.sidebarWidth}))`,
-              },
-
-              [theme.breakpoints.down("md")]: {
-                "--chevron-transform": isToggled
-                  ? "rotate(0deg)"
-                  : "rotate(-180deg)",
-                [cssVars.sidebarWidth]: isToggled
-                  ? `${cssValues.sidebarExpandedWidth}px`
-                  : `${cssValues.sidebarCollapsedWidth}px`,
-                [cssVars.sidebarRemainingWidth]: `calc(100vw - var(${cssVars.sidebarWidth}))`,
+              [theme.breakpoints.up("sm")]: {
+                [VAR_SIDEBAR_WIDTH]: isDesktopOpen
+                  ? `${SIDEBAR_EXPANDED_WIDTH}px`
+                  : `${SIDEBAR_COLLAPSED_WIDTH}px`,
+                [VAR_SIDEBAR_REMAINING_WIDTH]: `calc(100vw - var(${VAR_SIDEBAR_WIDTH}))`,
               },
 
               [theme.breakpoints.down("sm")]: {
-                [cssVars.sidebarWidth]: isToggled
-                  ? `${cssValues.sidebarExpandedWidth}px`
-                  : `0px`,
-                [cssVars.sidebarRemainingWidth]: "calc(100vw - 16px)",
+                [VAR_SIDEBAR_WIDTH]: isMobileOpen
+                  ? `${SIDEBAR_COLLAPSED_WIDTH}px`
+                  : "0px",
+                [VAR_SIDEBAR_REMAINING_WIDTH]: "100vw",
               },
             },
           }}
         />
-        <Sheet
-          {...otherProps}
-          ref={ref}
-          component="nav"
-          sx={{
-            position: "fixed",
-            height: "100%",
-            width: `var(${cssVars.sidebarWidth})`,
-            overflow: "auto",
-            borderTop: 0,
-            borderBottom: 0,
-            borderLeft: 0,
-            borderRadius: 0,
-            transition: "width 250ms",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            zIndex: "modal",
-
-            [`& .${listClasses.root}`]: {
-              p: 0,
-            },
-
-            [`& .${listItemContentClasses.root}`]: {
-              textWrap: "nowrap",
-              overflowY: "hidden",
-            },
-
-            [`& .${listItemButtonClasses.root}`]: {
-              py: { xs: 1, sm: 2 },
-              borderRight: 0,
-              borderLeft: 4,
-              borderLeftColor: "transparent",
-
-              "&:first-of-type": {
-                borderTop: 0,
-              },
-              "&:not(:last-of-type)": {
-                borderBottom: 0,
-              },
-              "&:hover": {
-                textDecoration: "none",
-              },
-              "&:focus-visible": {
-                outline: "none !important",
-                textDecoration: "underline",
-              },
-              [`&.${listItemButtonClasses.selected}`]: {
-                color: "var(--joy-palette-primary-plainColor)",
-                borderLeftColor: "var(--joy-palette-primary-plainColor)",
-                bgcolor: "transparent",
-              },
-            },
-
-            ["& .chevron"]: {
-              fontSize: 24,
-              transitionDuration: "250ms",
-              transform: "var(--chevron-transform)",
-            },
-
-            ...otherProps.sx,
-          }}
-        >
-          <List
-            onClick={(e) => {
-              if (!(e.target instanceof HTMLAnchorElement)) return;
-              if (isSmallScreen) setIsToggled(false);
-            }}
+        <List onClick={() => setIsMobileOpen(false)}>
+          {children}
+          <Box sx={{ flex: 1 }} />
+          <ListItemButton
+            variant="outlined"
+            onClick={() => setDesktopOpen((t) => !t)}
+            className="toggle-button"
           >
-            {children}
-            <Box sx={{ flex: 1 }} />
-            <ListItemButton
-              variant="outlined"
-              onClick={() => setIsToggled((t) => !t)}
-              className="toggle-button"
-            >
-              <ListItemDecorator>
-                <ChevronLeftIcon className="chevron" />
-              </ListItemDecorator>
-              <ListItemContent>Collapse</ListItemContent>
-            </ListItemButton>
-          </List>
-        </Sheet>
-        {!isToggled && (
-          <Button
-            onClick={() => setIsToggled(true)}
-            sx={(t) => ({
-              position: "fixed",
-              bottom: t.spacing(0.5),
-              zIndex: t.zIndex.modal - 1,
-              left: 0,
-              borderRadius: 0,
-              borderTopRightRadius: "50%",
-              borderBottomRightRadius: "50%",
-              height: t.spacing(5),
-              width: t.spacing(2),
-              p: 0,
-
-              [t.breakpoints.up("md")]: {
-                display: "none",
-              },
-            })}
-          >
-            <ChevronRight fontSize="sm" />
-          </Button>
-        )}
+            <ListItemDecorator>
+              <ChevronLeftIcon className="chevron" />
+            </ListItemDecorator>
+            <ListItemContent>Collapse</ListItemContent>
+          </ListItemButton>
+        </List>
         <Box
+          className="backdrop"
           aria-hidden
-          onClick={() => setIsToggled(false)}
+          onClick={() => setIsMobileOpen(false)}
           sx={(t) => ({
             position: "fixed",
             top: HEADER_HEIGHT,
@@ -186,12 +173,20 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
             backdropFilter: "blur(8px)",
             zIndex: t.zIndex.modal - 1,
             opacity: 1,
-            display: isToggled && isSmallScreen ? "block" : "none",
+            display: isSmallScreen && isMobileOpen ? "block" : "none",
           })}
         />
-      </>
+      </Sheet>
     );
   },
-);
+) as SidebarDrawerComponent;
+
+export const SidebarCompanionBox = styled(Box)`
+  width: var(--joy-sidebar-drawer-remaining-width);
+`;
 
 SidebarDrawer.displayName = "SidebarDrawer";
+SidebarDrawer.css = {
+  remainingWidth: `var(${VAR_SIDEBAR_REMAINING_WIDTH})`,
+  widthTransition: "width 250ms",
+};

@@ -19,3 +19,4 @@ export * from "./hooks/use-form-history";
 export * from "./theme";
 export * from "./sidebar/sidebar-737";
 export * from "./sidebar/sidebar-atpl";
+export * from "./layouts/layout-module-737";

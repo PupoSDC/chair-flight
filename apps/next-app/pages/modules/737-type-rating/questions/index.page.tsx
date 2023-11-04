@@ -1,42 +1,23 @@
-import { useTheme } from "@mui/joy";
-import { HEADER_HEIGHT, Header } from "@chair-flight/react/components";
 import {
   AppHead,
+  LayoutModule737,
   QuestionSearch,
-  Sidebar737,
 } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
-const HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;
-
-const QuestionsIndexPage: NextPage = () => {
-  const theme = useTheme();
-
-  return (
-    <>
-      <AppHead />
-      <Header borderStyle="outlined" />
-      <main>
-        <Sidebar737 />
-        <QuestionSearch
-          component={"section"}
-          searchQuestions={trpc.questionBank737.searchQuestions}
-          getNumberOfQuestions={trpc.questionBank737.getNumberOfQuestions}
-          sx={{
-            minHeight: HEIGHT,
-            width: `var(${theme.dimensions.vars.sidebarRemainingWidth})`,
-            marginLeft: "auto",
-            marginRight: 0,
-            p: { xs: 0.5, md: 2 },
-            transition: "margin-left 0.25s, width 0.25s",
-          }}
-        />
-      </main>
-    </>
-  );
-};
+const QuestionsIndexPage: NextPage = () => (
+  <LayoutModule737>
+    <AppHead />
+    <QuestionSearch
+      component={"section"}
+      searchQuestions={trpc.questionBank737.searchQuestions}
+      getNumberOfQuestions={trpc.questionBank737.getNumberOfQuestions}
+      sx={{ p: { xs: 0.5, md: 2 } }}
+    />
+  </LayoutModule737>
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();
