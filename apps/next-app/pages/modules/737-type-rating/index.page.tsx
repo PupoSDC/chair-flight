@@ -1,18 +1,12 @@
-import { Header } from "@chair-flight/react/components";
-import { AppHead, Sidebar737 } from "@chair-flight/react/containers";
+import { AppHead, LayoutModule737 } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
-const ModuleIndexPage: NextPage = () => {
-  return (
-    <>
-      <AppHead />
-      <Header borderStyle="outlined" />
-      <Sidebar737 />
-      <main></main>
-    </>
-  );
-};
+const ModuleIndexPage: NextPage = () => (
+  <LayoutModule737>
+    <AppHead />
+  </LayoutModule737>
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();

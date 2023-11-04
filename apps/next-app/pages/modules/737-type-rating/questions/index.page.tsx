@@ -11,10 +11,9 @@ const QuestionsIndexPage: NextPage = () => (
   <LayoutModule737>
     <AppHead />
     <QuestionSearch
-      component={"section"}
+      component="section"
       searchQuestions={trpc.questionBank737.searchQuestions}
       getNumberOfQuestions={trpc.questionBank737.getNumberOfQuestions}
-      sx={{ p: { xs: 0.5, md: 2 } }}
     />
   </LayoutModule737>
 );

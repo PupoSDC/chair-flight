@@ -17,13 +17,11 @@ import {
 } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
 import {
-  Header,
-  AppLayout,
   CtaSearch,
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
-import { AppHead, SidebarAtpl } from "@chair-flight/react/containers";
+import { AppHead, LayoutModuleAtpl } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
@@ -70,18 +68,13 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   };
 
   return (
-    <>
+    <LayoutModuleAtpl fixedHeight>
       <AppHead />
-      <Header borderStyle="outlined" />
-      <SidebarAtpl />
-      <AppLayout.Main
-        sx={(t) => ({
-          overflow: "hidden",
-          width: `var(${t.dimensions.vars.sidebarRemainingWidth})`,
-          marginLeft: "auto",
-          marginRight: 0,
-          transition: "margin-left 0.25s, width 0.25s",
-        })}
+      <Box
+        component="section"
+        height="100%"
+        display="flex"
+        flexDirection="column"
       >
         <CtaSearch
           value={search}
@@ -172,8 +165,8 @@ export const LearningObjectivesIndexPage: NextPage = () => {
             </NoSsr>
           </Box>
         </Sheet>
-      </AppLayout.Main>
-    </>
+      </Box>
+    </LayoutModuleAtpl>
   );
 };
 

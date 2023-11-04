@@ -1,177 +1,154 @@
-import {
-  forwardRef,
-  useEffect,
-  useState,
-  createContext,
-  useContext,
-  useCallback,
-  useMemo,
-} from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { NoSsr } from "@mui/base";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
 import { default as HamburgerIcon } from "@mui/icons-material/Menu";
-import { Box, Link, styled, useColorScheme, useTheme } from "@mui/joy";
-import { HEADER_HEIGHT } from "../constants";
-import { Drawer } from "../drawer";
-import { useMediaQuery } from "../hooks/use-media-query";
+import {
+  Box,
+  GlobalStyles,
+  IconButton,
+  Link,
+  iconButtonClasses,
+  useColorScheme,
+} from "@mui/joy";
 import { AppLogo } from "./app-logo";
-import { IconButton } from "./header-icon-button";
 import type { BoxProps } from "@mui/joy";
 
-const StyledHeaderCompanion = styled("div")`
-  height: ${HEADER_HEIGHT}px;
-  width: 100%;
-  content: "";
-`;
-
-const StyledHeader = styled("header")`
-  color: ${({ theme }) => theme.vars.palette.text.primary};
-  width: 100%;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: ${HEADER_HEIGHT}px;
-  padding: 0 1rem 0 2rem;
-  background-color: ${({ theme }) => theme.vars.palette.neutral.plainHoverBg};
-  z-index: 1000;
-
-  & > a:nth-of-type(1) {
-    margin-left: ${({ theme }) => theme.spacing(1)};
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  & > a:nth-of-type(1) > h2 {
-    font-size: 14px;
-    margin: 0 6px;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-    color: var(--joy-palette-neutral-plainColor);
-  }
-
-  & > a:nth-of-type(1) > svg {
-    width: 25px;
-    height: 25px;
-    fill: var(--joy-palette-primary-plainColor);
-  }
-
-  &:after {
-    content: "alpha";
-    position: absolute;
-    width: 80px;
-    height: 25px;
-    background: #ffc107;
-    top: 4px;
-    left: -25px;
-    z-index: 999999;
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-    line-height: 27px;
-    transform: rotate(-45deg);
-  }
-
-  & .children {
-    flex: 1;
-    padding-left: ${({ theme }) => theme.spacing(2)};
-    display: none;
-
-    ${({ theme }) => theme.breakpoints.up("md")} {
-      display: flex;
-    }
-  }
-
-  & .hamburger {
-    display: flex;
-
-    ${({ theme }) => theme.breakpoints.up("md")} {
-      display: none;
-    }
-  }
-`;
+const VAR_HEADER_HEIGHT = "--joy-header-height";
+const HEADER_HEIGHT = 40;
+const GITHUB_URL = "https://github.com/PupoSDC/chair-flight";
 
 export type HeaderProps = {
-  removeLogo?: boolean;
-  removeThemeControl?: boolean;
-  removeGithubLink?: boolean;
-  removeHamburger?: boolean;
+  remove?: ("logo" | "theme" | "github" | "hamburger")[] | "all";
   borderStyle?: "shadow" | "outlined";
+  onHamburgerClick?: () => void;
 } & Partial<Pick<BoxProps, "sx" | "className" | "children">>;
 
-const HeaderContext = createContext<{
-  canDrawerBeOpened: boolean;
-  closeDrawer: () => void;
-}>({
-  canDrawerBeOpened: false,
-  closeDrawer: () => {
-    /** Intentionally empty */
-  },
-});
+export type HeaderComponent = React.ForwardRefExoticComponent<
+  HeaderProps & React.RefAttributes<HTMLHeadingElement>
+> & {
+  css: {
+    headerHeight: string;
+  };
+};
 
 /**
  * An header component that can, in theory, be used for all our pages.
  *
- * It includes a context, that can be accessed via `useHeaderContext`, so that
- * you can control the drawer component from within the drawer components.
+ * The header height is available as a CSS variable, in `Header.css`
  *
- * Drawer becomes available only on mobile screens (breakpoint `md`) and if
- * a children is provided to this component.
+ * Hamburger button is hidden for sizes below `sm`.
  */
 export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
   (
     {
-      removeLogo,
-      removeThemeControl,
-      removeGithubLink,
-      removeHamburger,
-      borderStyle = "shadow",
+      remove = [],
       children,
+      borderStyle = "shadow",
+      onHamburgerClick,
       ...boxProps
     },
     ref,
   ) => {
     const [isMounted, setIsMounted] = useState(false);
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const { mode, setMode } = useColorScheme();
-    const toggleTheme = () => setMode(mode === "dark" ? "light" : "dark");
-    const closeDrawer = useCallback(() => setIsDrawerOpen(false), []);
-    const theme = useTheme();
     const showDarkModeButton = !isMounted || mode === "light";
-    const canDrawerBeOpened =
-      useMediaQuery(theme.breakpoints.down("md")) && !!children;
+    const removeAll = remove === "all";
+    const removeLogo = removeAll || remove.includes("logo");
+    const removeTheme = removeAll || remove?.includes("theme");
+    const removeGithub = removeAll || remove?.includes("github");
+    const removeHamburger = removeAll || remove?.includes("hamburger");
 
-    const headerContextValue = useMemo(
-      () => ({
-        closeDrawer,
-        canDrawerBeOpened,
-      }),
-      [closeDrawer, canDrawerBeOpened],
-    );
+    const toggleTheme = () => setMode(mode === "dark" ? "light" : "dark");
 
     useEffect(() => setIsMounted(true), []);
 
     return (
-      <HeaderContext.Provider value={headerContextValue}>
-        <StyledHeader
+      <>
+        <GlobalStyles
+          styles={{
+            body: {
+              [VAR_HEADER_HEIGHT]: `${HEADER_HEIGHT}px`,
+            },
+          }}
+        />
+        <Box
+          component="header"
           ref={ref}
           {...boxProps}
-          sx={
-            borderStyle === "outlined"
+          sx={{
+            color: "text.primary",
+            width: "100%",
+            position: "fixed",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: `${HEADER_HEIGHT}px`,
+            padding: (t) => t.spacing(0, 2, 0, 1),
+            backgroundColor: "neutral.plainHoverBg",
+            zIndex: 1000,
+
+            "& > a:nth-of-type(1)": {
+              marginLeft: (t) => t.spacing(1),
+              display: "flex",
+              verticalAlign: "center",
+              alignItems: "center",
+              textDecoration: "none",
+
+              "> h2": {
+                fontSize: "14px",
+                ml: 2,
+                fontWeight: 700,
+                letterSpacing: "0.05rem",
+                color: "var(--joy-palette-neutral-plainColor)",
+              },
+
+              "> svg": {
+                width: "25px",
+                height: "25px",
+                fill: "var(--joy-palette-primary-plainColor)",
+              },
+            },
+
+            ".children": {
+              flex: 1,
+              pl: 2,
+              display: "flex",
+            },
+
+            [`.${iconButtonClasses.root}`]: {
+              border: "none",
+              margin: 0,
+              flex: 0,
+              padding: 0,
+
+              "& svg ": {
+                fontSize: "20px",
+                color: (t) => t.vars.palette.text.primary,
+              },
+
+              "&:hover svg": {
+                color: (t) => t.vars.palette.primary.plainColor,
+              },
+            },
+
+            ".hamburger": {
+              display: { xs: "flex", sm: "none" },
+            },
+
+            ...(borderStyle === "shadow"
               ? {
-                  borderBottom: "1px solid",
-                  borderColor: "var(--joy-palette-neutral-outlinedBorder)",
+                  boxShadow: (t) => t.shadow.md,
                 }
-              : { boxShadow: "md" }
-          }
+              : {
+                  borderBottom: "1px solid",
+                  borderBottomColor: (t) =>
+                    t.vars.palette.neutral.outlinedBorder,
+                }),
+          }}
         >
-          {removeLogo || (
+          {!removeLogo && (
             <Link href="/">
               <AppLogo />
               <h2>CHAIR FLIGHT</h2>
@@ -181,38 +158,37 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
             <NoSsr>{children}</NoSsr>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          {!removeGithubLink && (
-            <IconButton
-              component={Link}
-              target="_blank"
-              href="https://github.com/PupoSDC/chair-flight"
-            >
+          {!removeGithub && (
+            <IconButton component={Link} target="_blank" href={GITHUB_URL}>
               <GithubIcon />
             </IconButton>
           )}
-          {!removeThemeControl && (
+          {!removeTheme && (
             <IconButton onClick={toggleTheme}>
               {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
             </IconButton>
           )}
-          {children && !removeHamburger && (
-            <IconButton
-              onClick={() => setIsDrawerOpen(true)}
-              className="hamburger"
-            >
+          {!removeHamburger && (
+            <IconButton onClick={onHamburgerClick} className="hamburger">
               <HamburgerIcon />
             </IconButton>
           )}
-        </StyledHeader>
-        <StyledHeaderCompanion />
-        <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-          {children}
-        </Drawer>
-      </HeaderContext.Provider>
+        </Box>
+        <Box
+          className="header-companion"
+          sx={{
+            height: `var(${VAR_HEADER_HEIGHT})`,
+            width: "100%",
+            content: '""',
+          }}
+        />
+      </>
     );
   },
-);
+) as HeaderComponent;
+
+Header.css = {
+  headerHeight: `var(${VAR_HEADER_HEIGHT})`,
+};
 
 Header.displayName = "Header";
-
-export const useHeaderContext = () => useContext(HeaderContext);

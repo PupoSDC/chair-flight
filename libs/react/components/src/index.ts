@@ -4,7 +4,6 @@ export * from "./constants";
 export * from "./cool-sliding-thing";
 export * from "./count-up";
 export * from "./cta-search";
-export * from "./drawer";
 export * from "./flashcard";
 export * from "./flashcard-tinder";
 export * from "./header";

@@ -1,11 +1,8 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
-import { Global } from "@emotion/react";
-import styled from "@emotion/styled";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
-import type {
-  SheetProps} from "@mui/joy";
 import {
   Box,
+  GlobalStyles,
   List,
   ListItemButton,
   ListItemContent,
@@ -19,6 +16,7 @@ import {
 import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
 import type { SidebarDrawerListItemProps } from "./sidebar-drawer-list-item";
+import type { SheetProps } from "@mui/joy";
 import type { ReactElement } from "react";
 
 export type SidebarDrawerProps = {
@@ -62,71 +60,8 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
     );
 
     return (
-      <Sheet
-        {...otherProps}
-        ref={ref}
-        component="nav"
-        sx={{
-          position: "fixed",
-          height: "100%",
-          width: `var(${VAR_SIDEBAR_WIDTH})`,
-          overflow: "auto",
-          borderTop: 0,
-          borderBottom: 0,
-          borderLeft: 0,
-          borderRadius: 0,
-          borderRightWidth: { xs: 0, sm: 1 },
-          transition: "width 250ms",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          zIndex: "modal",
-
-          [`& .${listClasses.root}`]: {
-            p: 0,
-          },
-
-          [`& .${listItemContentClasses.root}`]: {
-            textWrap: "nowrap",
-            overflowY: "hidden",
-          },
-
-          [`& .${listItemButtonClasses.root}`]: {
-            py: { xs: 1, sm: 2 },
-            borderRight: 0,
-            borderLeft: 4,
-            borderLeftColor: "transparent",
-
-            "&:first-of-type": {
-              borderTop: 0,
-            },
-            "&:not(:last-of-type)": {
-              borderBottom: 0,
-            },
-            "&:hover": {
-              textDecoration: "none",
-            },
-            "&:focus-visible": {
-              outline: "none !important",
-              textDecoration: "underline",
-            },
-            [`&.${listItemButtonClasses.selected}`]: {
-              color: "var(--joy-palette-primary-plainColor)",
-              borderLeftColor: "var(--joy-palette-primary-plainColor)",
-              bgcolor: "transparent",
-            },
-          },
-
-          ["& .chevron"]: {
-            fontSize: 24,
-            transitionDuration: "250ms",
-            transform: isOpen ? "rotate(0deg)" : "rotate(-180deg)",
-          },
-
-          ...otherProps.sx,
-        }}
-      >
-        <Global
+      <>
+        <GlobalStyles
           styles={{
             body: {
               [theme.breakpoints.up("sm")]: {
@@ -138,32 +73,97 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
 
               [theme.breakpoints.down("sm")]: {
                 [VAR_SIDEBAR_WIDTH]: isMobileOpen
-                  ? `${SIDEBAR_COLLAPSED_WIDTH}px`
+                  ? `${SIDEBAR_EXPANDED_WIDTH}px`
                   : "0px",
                 [VAR_SIDEBAR_REMAINING_WIDTH]: "100vw",
               },
             },
           }}
         />
-        <List onClick={() => setIsMobileOpen(false)}>
-          {children}
-          <Box sx={{ flex: 1 }} />
-          <ListItemButton
-            variant="outlined"
-            onClick={() => setDesktopOpen((t) => !t)}
-            className="toggle-button"
-          >
-            <ListItemDecorator>
-              <ChevronLeftIcon className="chevron" />
-            </ListItemDecorator>
-            <ListItemContent>Collapse</ListItemContent>
-          </ListItemButton>
-        </List>
+        <Sheet
+          {...otherProps}
+          ref={ref}
+          component="nav"
+          sx={{
+            position: "fixed",
+            height: "100%",
+            width: `var(${VAR_SIDEBAR_WIDTH})`,
+            overflow: "auto",
+            borderTop: 0,
+            borderBottom: 0,
+            borderLeft: 0,
+            borderRadius: 0,
+            borderRightWidth: { xs: 0, sm: 1 },
+            transition: "width 250ms",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            zIndex: "modal",
+
+            [`& .${listClasses.root}`]: {
+              p: 0,
+            },
+
+            [`& .${listItemContentClasses.root}`]: {
+              textWrap: "nowrap",
+              overflowY: "hidden",
+            },
+
+            [`& .${listItemButtonClasses.root}`]: {
+              py: { xs: 1, sm: 2 },
+              borderRight: 0,
+              borderLeft: 4,
+              borderLeftColor: "transparent",
+
+              "&:first-of-type": {
+                borderTop: 0,
+              },
+              "&:not(:last-of-type)": {
+                borderBottom: 0,
+              },
+              "&:hover": {
+                textDecoration: "none",
+              },
+              "&:focus-visible": {
+                outline: "none !important",
+                textDecoration: "underline",
+              },
+              [`&.${listItemButtonClasses.selected}`]: {
+                color: "var(--joy-palette-primary-plainColor)",
+                borderLeftColor: "var(--joy-palette-primary-plainColor)",
+                bgcolor: "transparent",
+              },
+            },
+
+            ["& .chevron"]: {
+              fontSize: 24,
+              transitionDuration: "250ms",
+              transform: isOpen ? "rotate(0deg)" : "rotate(-180deg)",
+            },
+
+            ...otherProps.sx,
+          }}
+        >
+          <List onClick={() => setIsMobileOpen(false)}>
+            {children}
+            <Box sx={{ flex: 1 }} />
+            <ListItemButton
+              variant="outlined"
+              onClick={() => setDesktopOpen((t) => !t)}
+              className="toggle-button"
+            >
+              <ListItemDecorator>
+                <ChevronLeftIcon className="chevron" />
+              </ListItemDecorator>
+              <ListItemContent>Collapse</ListItemContent>
+            </ListItemButton>
+          </List>
+        </Sheet>
         <Box
           className="backdrop"
           aria-hidden
           onClick={() => setIsMobileOpen(false)}
-          sx={(t) => ({
+          sx={{
             position: "fixed",
             top: HEADER_HEIGHT,
             bottom: 0,
@@ -171,19 +171,15 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
             right: 0,
             backgroundColor: "var(--joy-palette-background-backdrop)",
             backdropFilter: "blur(8px)",
-            zIndex: t.zIndex.modal - 1,
+            zIndex: (t) => t.zIndex.modal - 1,
             opacity: 1,
             display: isSmallScreen && isMobileOpen ? "block" : "none",
-          })}
+          }}
         />
-      </Sheet>
+      </>
     );
   },
 ) as SidebarDrawerComponent;
-
-export const SidebarCompanionBox = styled(Box)`
-  width: var(--joy-sidebar-drawer-remaining-width);
-`;
 
 SidebarDrawer.displayName = "SidebarDrawer";
 SidebarDrawer.css = {

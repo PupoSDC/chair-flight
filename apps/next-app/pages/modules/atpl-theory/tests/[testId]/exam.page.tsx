@@ -21,7 +21,7 @@ export const ExamPage: NextPage<ExamPageProps> = ({ testId }) => {
   return (
     <>
       <AppHead />
-      <Header removeLogo removeGithubLink />
+      <Header remove="all" />
       <AppLayout.Main>
         <AppLayout.MainGrid sx={{ maxWidth: 3000, margin: "auto" }}>
           <AppLayout.MainGridFixedColumn
