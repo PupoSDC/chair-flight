@@ -7,7 +7,7 @@ import {
   Flashcard,
   FlashcardTinder,
 } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -58,9 +58,7 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.Main sx={{ p: { xs: 0, md: 0 } }}>
         <FlashcardTinder>
           {flashcards

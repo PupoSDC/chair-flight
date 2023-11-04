@@ -13,11 +13,7 @@ import {
   AppLayout,
   QuestionVariantPreview,
 } from "@chair-flight/react/components";
-import {
-  AppHead,
-  QuestionReview,
-  AppHeaderMenu,
-} from "@chair-flight/react/containers";
+import { AppHead, QuestionReview } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
@@ -66,16 +62,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
         linkTitle={`Chair Flight: ${variant.id}`}
         linkDescription={variant.question}
       />
-      <Header>
-        <AppHeaderMenu
-          otherItems={[
-            {
-              title: "Edit This Question",
-              href: `/questions/${questionTemplate?.id}/edit`,
-            },
-          ]}
-        />
-      </Header>
+      <Header />
       <AppLayout.Main>
         <AppLayout.MainGrid>
           <AppLayout.MainGridFixedColumn xs={12} md={7} lg={8} xl={9}>

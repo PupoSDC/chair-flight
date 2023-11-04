@@ -17,7 +17,7 @@ import {
   BlogPostChip,
   Header,
 } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/containers";
 import type { BlogPageMeta } from "./_blog-page.layout";
 import type { GetStaticProps } from "next";
 import type { FunctionComponent } from "react";
@@ -32,9 +32,7 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
   return (
     <>
       <AppHead linkDescription={dedent``} />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.Main sx={{ maxWidth: "md" }}>
         <Typography level="h2" sx={{ pt: 4 }}>
           Posts

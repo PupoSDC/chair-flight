@@ -10,7 +10,7 @@ import {
   BlogPostChip,
   Header,
 } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/containers";
 import type { BlogPostTag } from "@chair-flight/react/components";
 import type { FunctionComponent, PropsWithChildren } from "react";
 
@@ -40,9 +40,7 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
         linkTitle={meta.linkTitle}
         linkDescription={meta.description}
       />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.BackgroundImageContainer>
         <Image src="/images/background-article.png" fill alt="cool cockpit" />
       </AppLayout.BackgroundImageContainer>

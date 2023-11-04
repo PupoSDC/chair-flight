@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/joy";
 import { Header, AppLayout } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
@@ -40,9 +40,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.Main>
         <AppLayout.MainGrid sx={{ height: "auto", pb: 2 }}>
           <Grid xs={12}>

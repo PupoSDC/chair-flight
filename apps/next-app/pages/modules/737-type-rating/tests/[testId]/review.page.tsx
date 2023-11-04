@@ -1,11 +1,7 @@
 import { NoSsr } from "@mui/base";
 import { Skeleton } from "@mui/joy";
 import { Header, AppLayout } from "@chair-flight/react/components";
-import {
-  AppHead,
-  AppHeaderMenu,
-  TestReview,
-} from "@chair-flight/react/containers";
+import { AppHead, TestReview } from "@chair-flight/react/containers";
 import type { GetServerSideProps, NextPage } from "next";
 
 export type ReviewPageProps = {
@@ -16,9 +12,7 @@ export const ReviewPage: NextPage<ReviewPageProps> = ({ testId }) => {
   return (
     <>
       <AppHead />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.Main sx={{ p: { xs: 0, md: 0 } }}>
         <NoSsr fallback={<Skeleton height={"500px"} />}>
           <TestReview testId={testId} />

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Grid } from "@mui/joy";
 import { Header, AppLayout, Flashcard } from "@chair-flight/react/components";
-import { AppHead, AppHeaderMenu } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -42,9 +42,7 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
         "are close enough.",
       ].join(" ")}
     />
-    <Header>
-      <AppHeaderMenu />
-    </Header>
+    <Header />
     <AppLayout.Main>
       <AppLayout.MainGrid>
         {flashcards.map((fc) => (

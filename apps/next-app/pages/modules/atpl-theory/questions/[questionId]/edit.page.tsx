@@ -4,11 +4,7 @@ import {
   HEADER_HEIGHT,
   Header,
 } from "@chair-flight/react/components";
-import {
-  AppHead,
-  AppHeaderMenu,
-  QuestionEditor,
-} from "@chair-flight/react/containers";
+import { AppHead, QuestionEditor } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
@@ -18,9 +14,7 @@ export const EditQuestionPage: NextPage = () => {
   return (
     <>
       <AppHead title={questionId} />
-      <Header>
-        <AppHeaderMenu />
-      </Header>
+      <Header />
       <AppLayout.Main
         sx={{
           height: {
