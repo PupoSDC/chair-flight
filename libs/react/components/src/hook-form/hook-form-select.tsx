@@ -11,8 +11,11 @@ export type HookFormSelectProps = {
   formLabel?: string;
   optional?: boolean;
 } & Pick<FormControlProps, StyleProps> &
-  Omit<SelectProps<object>, StyleProps | "onChange" | "onBlur" | "value"> &
-  Required<Pick<SelectProps<object>, "onBlur">>;
+  Omit<
+    SelectProps<object, false>,
+    StyleProps | "onChange" | "onBlur" | "value"
+  > &
+  Required<Pick<SelectProps<object, false>, "onBlur">>;
 
 export const HookFormSelect = forwardRef<
   HTMLButtonElement,
