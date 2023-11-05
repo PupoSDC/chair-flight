@@ -189,4 +189,7 @@ export const questionBankAtplRouter = router({
       );
     },
   }),
+  getNumberOfLearningObjectives: makeCountHandler({
+    getData: getAllLearningObjectives,
+  }),
 });

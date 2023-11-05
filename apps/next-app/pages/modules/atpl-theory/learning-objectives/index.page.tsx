@@ -23,9 +23,9 @@ import {
 } from "@chair-flight/react/components";
 import { AppHead, LayoutModuleAtpl } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
-import { ssrHandler } from "@chair-flight/trpc/server";
+import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 
 const TdWithMarkdown = styled("td")`
   margin: ${({ theme }) => theme.spacing(0.5, 0)};
@@ -39,7 +39,13 @@ const TdWithMarkdown = styled("td")`
   }
 `;
 
-export const LearningObjectivesIndexPage: NextPage = () => {
+type LearningObjectivesIndexPageProps = {
+  totalNumberOfLearningObjectives: number;
+};
+
+export const LearningObjectivesIndexPage: NextPage<
+  LearningObjectivesIndexPageProps
+> = ({ totalNumberOfLearningObjectives }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [search, setSearch] = useState("");
@@ -59,6 +65,9 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   const results = (data?.pages ?? [])
     .flatMap((p) => p.items)
     .map((d) => d.result);
+
+  const numberOfResults =
+    data?.pages[0].totalResults ?? totalNumberOfLearningObjectives;
 
   const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
     const target = e.target as HTMLDivElement;
@@ -80,6 +89,7 @@ export const LearningObjectivesIndexPage: NextPage = () => {
           value={search}
           loading={isLoading}
           onChange={(value) => setSearch(value)}
+          numberOfResults={numberOfResults}
           sx={{ my: 1, mx: "auto" }}
           placeholder="search Learning Objectives..."
         />
@@ -170,11 +180,22 @@ export const LearningObjectivesIndexPage: NextPage = () => {
   );
 };
 
-export const getStaticProps = ssrHandler(async ({ helper }) => {
-  await helper.questionBankAtpl.searchLearningObjectives.prefetchInfinite({
-    q: "",
-    limit: 20,
-  });
-});
+export const getStaticProps: GetStaticProps<
+  LearningObjectivesIndexPageProps
+> = async () => {
+  const helper = await getTrpcHelper();
+  const qb = helper.questionBankAtpl;
+  const [, { count: totalNumberOfLearningObjectives }] = await Promise.all([
+    qb.searchLearningObjectives.prefetchInfinite({ q: "", limit: 20 }),
+    qb.getNumberOfLearningObjectives.fetch(),
+  ]);
+
+  return {
+    props: {
+      trpcState: helper.dehydrate(),
+      totalNumberOfLearningObjectives,
+    },
+  };
+};
 
 export default LearningObjectivesIndexPage;

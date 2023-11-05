@@ -21,7 +21,7 @@ const TestsIndexPage: NextPage = () => {
         testPersistenceKey="cf-test-maker-atpl"
         sx={{ height: "100%" }}
         onSuccessfulTestCreation={(test) =>
-          router.push(`./${test.id}/${test.mode}`)
+          router.push(`/modules/atpl-theory/tests/${test.id}/${test.mode}`)
         }
       />
     </LayoutModuleAtpl>

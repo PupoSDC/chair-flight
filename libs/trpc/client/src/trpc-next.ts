@@ -1,5 +1,6 @@
 import { httpLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
+import { default as superJson } from "superjson";
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import type { AppRouter } from "@chair-flight/trpc/server";
 import type { QueryClientConfig } from "@tanstack/react-query";
@@ -35,5 +36,5 @@ const queryClientConfig: QueryClientConfig = {
 const links = [httpLink({ url: `${getBaseUrl()}/api/trpc` })];
 
 export const trpc = createTRPCNext<AppRouter>({
-  config: () => ({ queryClientConfig, links }),
+  config: () => ({ queryClientConfig, links, transformer: superJson }),
 });

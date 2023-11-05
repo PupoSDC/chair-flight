@@ -20,8 +20,9 @@ const HEADER_HEIGHT = 40;
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight";
 
 export type HeaderProps = {
-  remove?: ("logo" | "theme" | "github" | "hamburger")[] | "all";
+  remove?: ("logo" | "theme" | "github")[] | "all";
   borderStyle?: "shadow" | "outlined";
+  hamburgerBreakpoint?: "xs" | "sm" | "md" | "lg" | "xl";
   onHamburgerClick?: () => void;
 } & Partial<Pick<BoxProps, "sx" | "className" | "children">>;
 
@@ -46,6 +47,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
       remove = [],
       children,
       borderStyle = "shadow",
+      hamburgerBreakpoint = "sm",
       onHamburgerClick,
       ...boxProps
     },
@@ -58,7 +60,6 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
     const removeLogo = removeAll || remove.includes("logo");
     const removeTheme = removeAll || remove?.includes("theme");
     const removeGithub = removeAll || remove?.includes("github");
-    const removeHamburger = removeAll || remove?.includes("hamburger");
 
     const toggleTheme = () => setMode(mode === "dark" ? "light" : "dark");
 
@@ -134,7 +135,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
             },
 
             ".hamburger": {
-              display: { xs: "flex", sm: "none" },
+              display: { xs: "flex", [hamburgerBreakpoint]: "none" },
             },
 
             ...(borderStyle === "shadow"
@@ -168,7 +169,7 @@ export const Header = forwardRef<HTMLHeadingElement, HeaderProps>(
               {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
             </IconButton>
           )}
-          {!removeHamburger && (
+          {onHamburgerClick && (
             <IconButton onClick={onHamburgerClick} className="hamburger">
               <HamburgerIcon />
             </IconButton>

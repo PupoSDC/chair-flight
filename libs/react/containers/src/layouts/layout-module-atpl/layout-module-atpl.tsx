@@ -29,7 +29,7 @@ export const LayoutModuleAtpl: FunctionComponent<{
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isLearningObjectives = router.asPath.includes("learning-objectives");
-  const isHome = !isQuestions && !isTests;
+  const isHome = !isQuestions && !isTests && !isLearningObjectives;
   const sidebarHeight = `calc(100vh - ${Header.css.headerHeight})`;
   const openMenu = () => sidebarRef.current?.toggleDrawer();
 
