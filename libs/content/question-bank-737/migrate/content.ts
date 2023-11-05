@@ -40,7 +40,7 @@ export const readSubjectFromFs = async (): Promise<Subject> => {
       ...child,
       numberOfLearningObjectives: 0,
       numberOfQuestions: allQuestions.filter((question) =>
-        question.id.includes(child.id),
+        question.learningObjectives.includes(child.id),
       ).length,
     })),
   };
