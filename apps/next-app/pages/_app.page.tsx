@@ -4,7 +4,7 @@ import { NoSsr } from "@mui/base";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AnalyticsProvider } from "@chair-flight/react/analytics";
-import { Toaster } from "@chair-flight/react/components";
+import { StopResizeAnimation, Toaster } from "@chair-flight/react/components";
 import { AppTransition, theme } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import type { AppProps } from "next/app";
@@ -25,6 +25,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         </Head>
         <CssVarsProvider defaultMode="system" theme={theme}>
           <CssBaseline />
+          <StopResizeAnimation />
           <Component {...pageProps} />
           <NoSsr>
             <AppTransition />

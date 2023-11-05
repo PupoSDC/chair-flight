@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useState } from "react";
+import { forwardRef, useImperativeHandle } from "react";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import {
   Box,
@@ -13,6 +13,7 @@ import {
   listItemContentClasses,
   useTheme,
 } from "@mui/joy";
+import { create } from "zustand";
 import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
 import type { SidebarDrawerListItemProps } from "./sidebar-drawer-list-item";
@@ -43,10 +44,22 @@ const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-drawer-remaining-width";
 const SIDEBAR_EXPANDED_WIDTH = 240;
 const SIDEBAR_COLLAPSED_WIDTH = 56;
 
+const useSidebarDrawerStore = create<{
+  isMobileOpen: boolean;
+  isDesktopOpen: boolean;
+  setMobileOpen: (isMobileOpen: boolean) => void;
+  setDesktopOpen: (isDesktopOpen: boolean) => void;
+}>((set) => ({
+  isMobileOpen: false,
+  isDesktopOpen: true,
+  setMobileOpen: (isMobileOpen) => set({ isMobileOpen }),
+  setDesktopOpen: (isDesktopOpen) => set({ isDesktopOpen }),
+}));
+
 export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
   ({ children = [], ...otherProps }, ref) => {
-    const [isMobileOpen, setIsMobileOpen] = useState(false);
-    const [isDesktopOpen, setDesktopOpen] = useState(true);
+    const { isMobileOpen, isDesktopOpen, setMobileOpen, setDesktopOpen } =
+      useSidebarDrawerStore();
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const isOpen = isSmallScreen ? isMobileOpen : isDesktopOpen;
@@ -55,7 +68,7 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
       ref,
       () =>
         ({
-          toggleDrawer: () => setIsMobileOpen((t) => !t),
+          toggleDrawer: () => setMobileOpen(!isMobileOpen),
         }) as SidebarDrawerRef,
     );
 
@@ -144,12 +157,12 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
             ...otherProps.sx,
           }}
         >
-          <List onClick={() => setIsMobileOpen(false)}>
+          <List onClick={() => setMobileOpen(false)}>
             {children}
             <Box sx={{ flex: 1 }} />
             <ListItemButton
               variant="outlined"
-              onClick={() => setDesktopOpen((t) => !t)}
+              onClick={() => setDesktopOpen(!isDesktopOpen)}
               className="toggle-button"
             >
               <ListItemDecorator>
@@ -162,7 +175,7 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
         <Box
           className="backdrop"
           aria-hidden
-          onClick={() => setIsMobileOpen(false)}
+          onClick={() => setMobileOpen(false)}
           sx={{
             position: "fixed",
             top: HEADER_HEIGHT,
