@@ -2,8 +2,8 @@
 
 import { default as Image } from "next/image";
 import { MDXProvider } from "@mdx-js/react";
-import { Divider, Typography } from "@mui/joy";
-import { AppLayout, Header } from "@chair-flight/react/components";
+import { Divider, Typography, styled } from "@mui/joy";
+import { Header } from "@chair-flight/react/components";
 import { AppHead } from "@chair-flight/react/containers";
 import type { FunctionComponent, PropsWithChildren } from "react";
 
@@ -15,6 +15,28 @@ type ArticlePageLayoutProps = PropsWithChildren<{
     imageUrl: string;
   };
 }>;
+
+const BackgroundImageContainer = styled("div")`
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  & > img {
+    user-select: none;
+    width: 600px;
+    max-width: 600px;
+    height: auto;
+    mask: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent) top right /
+      cover;
+  }
+`;
+
+const Main = styled("main")`
+  width: 100%;
+  margin: ${({ theme }) => theme.spacing(0, "auto")};
+  padding: ${({ theme }) => theme.spacing(0, 1)};
+`;
 
 export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
   meta,
@@ -28,10 +50,10 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
         linkDescription={meta.description}
       />
       <Header />
-      <AppLayout.BackgroundImageContainer>
+      <BackgroundImageContainer>
         <Image src="/images/background-article.png" fill alt="cool cockpit" />
-      </AppLayout.BackgroundImageContainer>
-      <AppLayout.Main
+      </BackgroundImageContainer>
+      <Main
         sx={{
           p: { xs: 2, md: 4 },
           height: "initial",
@@ -68,7 +90,7 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
             ),
           }}
         />
-      </AppLayout.Main>
+      </Main>
     </>
   );
 };

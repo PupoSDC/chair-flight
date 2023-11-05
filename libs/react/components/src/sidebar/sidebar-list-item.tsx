@@ -7,7 +7,7 @@ import {
 } from "@mui/joy";
 import type { default as SearchIcon } from "@mui/icons-material/Search";
 
-export type SidebarDrawerListItemProps = {
+export type SidebarListItemProps = {
   icon: typeof SearchIcon;
   href: string;
   title: string;
@@ -15,9 +15,9 @@ export type SidebarDrawerListItemProps = {
   onClick?: () => void;
 };
 
-export const SidebarDrawerListItem = forwardRef<
+export const SidebarListItem = forwardRef<
   HTMLAnchorElement,
-  SidebarDrawerListItemProps
+  SidebarListItemProps
 >(({ icon: Icon, selected, href, title, onClick }, ref) => {
   return (
     <ListItemButton
@@ -36,4 +36,4 @@ export const SidebarDrawerListItem = forwardRef<
   );
 });
 
-SidebarDrawerListItem.displayName = "SidebarDrawerListItem";
+SidebarListItem.displayName = "SidebarListItem";

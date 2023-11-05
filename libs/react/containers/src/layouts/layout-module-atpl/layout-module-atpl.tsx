@@ -7,13 +7,10 @@ import { default as SearchIcon } from "@mui/icons-material/Search";
 import { Box } from "@mui/joy";
 import {
   Header,
-  SidebarDrawer,
-  SidebarDrawerListItem,
+  Sidebar,
+  SidebarListItem,
 } from "@chair-flight/react/components";
-import type {
-  HeaderProps,
-  SidebarDrawerRef,
-} from "@chair-flight/react/components";
+import type { HeaderProps, SidebarRef } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
 
 export const LayoutModuleAtpl: FunctionComponent<{
@@ -24,7 +21,7 @@ export const LayoutModuleAtpl: FunctionComponent<{
     main?: BoxProps;
   };
 }> = ({ children, fixedHeight, slots }) => {
-  const sidebarRef = useRef<SidebarDrawerRef>(null);
+  const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -40,39 +37,39 @@ export const LayoutModuleAtpl: FunctionComponent<{
         onHamburgerClick={openMenu}
         {...slots?.header}
       />
-      <SidebarDrawer sx={{ height: sidebarHeight }} ref={sidebarRef}>
-        <SidebarDrawerListItem
+      <Sidebar sx={{ height: sidebarHeight }} ref={sidebarRef}>
+        <SidebarListItem
           href={"/modules/atpl-theory"}
           selected={isHome}
           icon={ConnectingAirportsIcon}
           title={"Home"}
         />
-        <SidebarDrawerListItem
+        <SidebarListItem
           href={"/modules/atpl-theory/questions"}
           selected={isQuestions}
           icon={SearchIcon}
           title={"Questions"}
         />
-        <SidebarDrawerListItem
+        <SidebarListItem
           href={"/modules/atpl-theory/learning-objectives"}
           selected={isLearningObjectives}
           icon={FormatListBulletedIcon}
           title={"Learning Objectives"}
         />
-        <SidebarDrawerListItem
+        <SidebarListItem
           href={"/modules/atpl-theory/tests"}
           selected={isTests}
           icon={AddCircleIcon}
           title={"Create Test"}
         />
-      </SidebarDrawer>
+      </Sidebar>
       <Box
         component={"main"}
         children={children}
         {...slots?.main}
         sx={{
-          width: SidebarDrawer.css.remainingWidth,
-          transition: SidebarDrawer.css.widthTransition,
+          width: Sidebar.css.remainingWidth,
+          transition: Sidebar.css.widthTransition,
           marginLeft: "auto",
           p: { xs: 0.5, md: 2 },
           ...(fixedHeight

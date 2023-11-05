@@ -16,22 +16,22 @@ import {
 import { create } from "zustand";
 import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
-import type { SidebarDrawerListItemProps } from "./sidebar-drawer-list-item";
+import type { SidebarListItemProps } from "./sidebar-list-item";
 import type { SheetProps } from "@mui/joy";
 import type { ReactElement } from "react";
 
-export type SidebarDrawerProps = {
-  children: ReactElement<SidebarDrawerListItemProps>[];
+export type SidebarProps = {
+  children: ReactElement<SidebarListItemProps>[];
   sx?: SheetProps["sx"];
   className?: SheetProps["className"];
 };
 
-export type SidebarDrawerRef = HTMLDivElement & {
+export type SidebarRef = HTMLDivElement & {
   toggleDrawer: () => void;
 };
 
-export type SidebarDrawerComponent = React.ForwardRefExoticComponent<
-  SidebarDrawerProps & React.RefAttributes<SidebarDrawerRef>
+export type SidebarComponent = React.ForwardRefExoticComponent<
+  SidebarProps & React.RefAttributes<SidebarRef>
 > & {
   css: {
     remainingWidth: string;
@@ -39,12 +39,12 @@ export type SidebarDrawerComponent = React.ForwardRefExoticComponent<
   };
 };
 
-const VAR_SIDEBAR_WIDTH = "--joy-sidebar-drawer-width";
-const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-drawer-remaining-width";
+const VAR_SIDEBAR_WIDTH = "--joy-sidebar-width";
+const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-remaining-width";
 const SIDEBAR_EXPANDED_WIDTH = 240;
 const SIDEBAR_COLLAPSED_WIDTH = 56;
 
-const useSidebarDrawerStore = create<{
+const useSidebarStore = create<{
   isMobileOpen: boolean;
   isDesktopOpen: boolean;
   setMobileOpen: (isMobileOpen: boolean) => void;
@@ -56,10 +56,10 @@ const useSidebarDrawerStore = create<{
   setDesktopOpen: (isDesktopOpen) => set({ isDesktopOpen }),
 }));
 
-export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
+export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
   ({ children = [], ...otherProps }, ref) => {
     const { isMobileOpen, isDesktopOpen, setMobileOpen, setDesktopOpen } =
-      useSidebarDrawerStore();
+      useSidebarStore();
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const isOpen = isSmallScreen ? isMobileOpen : isDesktopOpen;
@@ -69,7 +69,7 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
       () =>
         ({
           toggleDrawer: () => setMobileOpen(!isMobileOpen),
-        }) as SidebarDrawerRef,
+        }) as SidebarRef,
     );
 
     return (
@@ -192,10 +192,10 @@ export const SidebarDrawer = forwardRef<HTMLDivElement, SidebarDrawerProps>(
       </>
     );
   },
-) as SidebarDrawerComponent;
+) as SidebarComponent;
 
-SidebarDrawer.displayName = "SidebarDrawer";
-SidebarDrawer.css = {
+Sidebar.displayName = "Sidebar";
+Sidebar.css = {
   remainingWidth: `var(${VAR_SIDEBAR_REMAINING_WIDTH})`,
   widthTransition: "width 250ms",
 };

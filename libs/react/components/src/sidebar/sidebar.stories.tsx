@@ -5,22 +5,22 @@ import { default as LibraryBooksIcon } from "@mui/icons-material/LibraryBooks";
 import { default as SearchIcon } from "@mui/icons-material/Search";
 import { default as SettingsIcon } from "@mui/icons-material/Settings";
 import { Box } from "@mui/joy";
-import { SidebarDrawer } from "./sidebar-drawer";
-import { SidebarDrawerListItem } from "./sidebar-drawer-list-item";
-import type { SidebarDrawerProps } from "./sidebar-drawer";
+import { Sidebar } from "./sidebar";
+import { SidebarListItem } from "./sidebar-list-item";
+import type { SidebarProps } from "./sidebar";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof SidebarDrawer>;
+type Story = StoryObj<typeof Sidebar>;
 
 export const Playground: Story = {
   args: {
-    children: "5 children" as unknown as SidebarDrawerProps["children"],
+    children: "5 children" as unknown as SidebarProps["children"],
   },
 };
 
-const meta: Meta<typeof SidebarDrawer> = {
-  title: "Components/SidebarDrawer",
-  component: SidebarDrawer,
+const meta: Meta<typeof Sidebar> = {
+  title: "Components/Sidebar",
+  component: Sidebar,
   tags: ["autodocs"],
   argTypes: {
     children: {
@@ -28,31 +28,31 @@ const meta: Meta<typeof SidebarDrawer> = {
       options: ["5 children", "5 children with selected"],
       mapping: {
         "5 children": [
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={1}
             icon={ConnectingAirportsIcon}
             href={"#"}
             title={"Home"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={2}
             icon={SearchIcon}
             href={"#"}
             title={"Search Questions"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={3}
             icon={AddCircleIcon}
             href={"#"}
             title={"New Test"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={4}
             icon={LibraryBooksIcon}
             href={"#"}
             title={"Library"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={5}
             icon={SettingsIcon}
             href={"#"}
@@ -60,32 +60,32 @@ const meta: Meta<typeof SidebarDrawer> = {
           />,
         ],
         "5 children with selected": [
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={1}
             icon={ConnectingAirportsIcon}
             href={"#"}
             title={"Home"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={2}
             icon={SearchIcon}
             href={"#"}
             title={"Search Questions"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={3}
             icon={AddCircleIcon}
             href={"#"}
             selected
             title={"New Test"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={4}
             icon={LibraryBooksIcon}
             href={"#"}
             title={"Library"}
           />,
-          <SidebarDrawerListItem
+          <SidebarListItem
             key={5}
             icon={SettingsIcon}
             href={"#"}
