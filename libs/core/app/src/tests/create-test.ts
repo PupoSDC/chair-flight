@@ -61,7 +61,8 @@ export const createTest = async ({
   const learningObjectives = Object.entries(config.learningObjectives).reduce<
     string[]
   >((acc, [lo, selected]) => {
-    if (selected && lo.startsWith(subject)) acc.push(lo);
+    const safeSubject = subject === "070" ? "071" : subject;
+    if (selected && lo.startsWith(safeSubject)) acc.push(lo);
     return acc;
   }, []);
 

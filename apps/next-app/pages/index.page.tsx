@@ -287,7 +287,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Create a Test"}
-                        href="/modules/atpl-theory/tests/new"
+                        href="/modules/atpl-theory/tests"
                       />
                     </Grid>
                     <Grid xs={12} sm={6}>
