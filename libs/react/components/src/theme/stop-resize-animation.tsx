@@ -1,5 +1,6 @@
-import { FunctionComponent, useEffect } from "react";
+import { useEffect } from "react";
 import { GlobalStyles } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 const RESIZE_CLASS_NAME = "resize-animation-stopper";
 let resizeTimer: ReturnType<typeof setTimeout>;

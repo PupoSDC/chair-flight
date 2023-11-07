@@ -2,8 +2,6 @@ import { useRef } from "react";
 import { NoSsr } from "@mui/base";
 import { Grid, Skeleton } from "@mui/joy";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type {
-  TestQuestionNavigationRef} from "@chair-flight/react/containers";
 import {
   AppHead,
   LayoutModuleAtpl,
@@ -13,6 +11,7 @@ import {
   useTestProgressTime,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
+import type { TestQuestionNavigationRef } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type StudyPageProps = {

@@ -40,7 +40,7 @@ export const QuestionPreviewList: FunctionComponent<
           sx={{
             px: { xs: 0, sm: 1 },
             py: 1,
-            width: { xs: 1, sm: 1 / 2, lg: 1 / 3 },
+            width: { xs: 1, sm: 1 / 2, xl: 1 / 3 },
           }}
         >
           <QuestionVariantPreview

@@ -13,29 +13,28 @@ import {
   styled,
 } from "@mui/joy";
 import { default as Tab, tabClasses } from "@mui/joy/Tab";
-import { default as TabList, tabListClasses } from "@mui/joy/TabList";
+import { default as TabList } from "@mui/joy/TabList";
 import { default as TabPanel, tabPanelClasses } from "@mui/joy/TabPanel";
 import { MarkdownClient } from "../markdown-client";
 import type { SheetProps } from "@mui/joy";
 
 const StyledTabs = styled(Tabs)`
   --Tabs-gap: 0px;
-  overflow-y: auto;
+  border: 0;
+  background-color: initial;
   position: relative;
-
-  & .${tabListClasses.root} {
-    border-radius: ${({ theme }) => theme.radius.sm}
-      ${({ theme }) => theme.radius.sm} 0 0;
-  }
 
   & .${tabClasses.root} {
     flex: 1;
     border-radius: 0;
     padding: ${({ theme }) => theme.spacing(2, 2)};
-    font-weight: ${({ theme }) => theme.fontWeight.lg};
-    background-color: ${({ theme }) => theme.vars.palette.background.body};
+    height: calc(${({ theme }) => theme.spacing(7)} + 1px);
+    background-color: ${({ theme }) => theme.vars.palette.background.surface};
     position: relative;
+    font-weight: ${({ theme }) => theme.fontWeight.lg};
     font-size: ${({ theme }) => theme.typography["body-sm"].fontSize};
+    border-bottom-color: ${({ theme }) =>
+      theme.vars.palette.neutral.outlinedBorder};
 
     &.${tabClasses.selected} {
       color: ${({ theme }) => theme.vars.palette.primary[500]};
@@ -57,10 +56,9 @@ const StyledTabs = styled(Tabs)`
   }
 
   & .${tabPanelClasses.root} {
-    max-height: 100%;
-    min-height: 20px;
-    overflow-y: auto;
-    border-top: 1px solid ${({ theme }) => theme.vars.palette.divider};
+    width: 100%;
+    max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+    margin: auto;
     padding: ${({ theme }) => theme.spacing(1)};
 
     ${({ theme }) => theme.breakpoints.up("sm")} {

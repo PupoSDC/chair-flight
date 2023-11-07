@@ -14,7 +14,7 @@ import { makeCountHandler } from "../common/count";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
-import type { LearningObjective } from "@chair-flight/base/types";
+import type { LearningObjectiveWithHref } from "@chair-flight/base/types";
 
 type QuestionPreview = {
   questionId: string;
@@ -35,7 +35,7 @@ export const questionBank737Router = router({
     .query(async ({ input }) => {
       const { questionId } = input;
       const questionTemplate = await getQuestionTemplate(questionId);
-      const learningObjectives: LearningObjective[] = [];
+      const learningObjectives: LearningObjectiveWithHref[] = [];
       return { questionTemplate, learningObjectives };
     }),
   getNumberOfQuestions: makeCountHandler({

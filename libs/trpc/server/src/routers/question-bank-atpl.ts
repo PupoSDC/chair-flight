@@ -23,7 +23,10 @@ import { makeCountHandler } from "../common/count";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
 import type { SearchResponseItem } from "../common/search";
-import type { LearningObjective } from "@chair-flight/base/types";
+import type {
+  LearningObjective,
+  LearningObjectiveWithHref,
+} from "@chair-flight/base/types";
 
 type QuestionPreview = {
   questionId: string;
@@ -42,9 +45,12 @@ export const questionBankAtplRouter = router({
       const { questionId } = input;
       const questionTemplate = await getQuestionTemplate(questionId);
       const allLearningObjectives = await getAllLearningObjectives();
-      const learningObjectives = allLearningObjectives.filter(
-        (lo) => questionTemplate?.learningObjectives.includes(lo.id),
-      );
+      const learningObjectives = allLearningObjectives
+        .filter((lo) => questionTemplate?.learningObjectives.includes(lo.id))
+        .map<LearningObjectiveWithHref>((lo) => ({
+          ...lo,
+          href: `/modules/atpl-theory/learning-objectives/${lo.id}`,
+        }));
       return { questionTemplate, learningObjectives };
     }),
   getQuestionFromGithub: publicProcedure

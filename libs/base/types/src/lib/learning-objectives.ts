@@ -17,3 +17,7 @@ export type LearningObjective = {
   contentId: string;
   source: string;
 };
+
+export type LearningObjectiveWithHref = LearningObjective & {
+  href: string;
+};

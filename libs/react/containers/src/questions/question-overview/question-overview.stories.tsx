@@ -1,19 +1,18 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
-import { QuestionReview } from "./question-review";
+import { QuestionOverview } from "./question-overview";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof QuestionReview>;
+type Story = StoryObj<typeof QuestionOverview>;
 
 export const Playground: Story = {
   args: {
-    title: "multiple-choice",
     questionId: "Q00YQLC8JS",
   },
 };
 
-const meta: Meta<typeof QuestionReview> = {
+const meta: Meta<typeof QuestionOverview> = {
   title: "Containers/Questions/QuestionReview",
-  component: QuestionReview,
+  component: QuestionOverview,
   tags: ["autodocs"],
   argTypes: {
     questionId: {

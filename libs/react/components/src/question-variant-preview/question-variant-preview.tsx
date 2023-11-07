@@ -75,7 +75,15 @@ export const QuestionVariantPreview = forwardRef<
         </Box>
       </Box>
       <Divider component="div" sx={{ my: 1 }} />
-      <Box sx={{ gap: 2, display: "block", overflowX: "auto" }}>
+      <Box
+        sx={{
+          gap: 2,
+          display: "block",
+          overflowX: "auto",
+          overflowY: "hidden",
+          height: "14rem",
+        }}
+      >
         <MarkdownClient>{text ?? ""}</MarkdownClient>
       </Box>
       <Divider component="div" sx={{ my: 1 }} />
