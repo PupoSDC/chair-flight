@@ -45,6 +45,12 @@ export const LayoutModuleAtpl: FunctionComponent<{
           title={"Home"}
         />
         <SidebarListItem
+          href={"/modules/atpl-theory/tests"}
+          selected={isTests}
+          icon={AddCircleIcon}
+          title={"Tests"}
+        />
+        <SidebarListItem
           href={"/modules/atpl-theory/questions"}
           selected={isQuestions}
           icon={SearchIcon}
@@ -55,12 +61,6 @@ export const LayoutModuleAtpl: FunctionComponent<{
           selected={isLearningObjectives}
           icon={FormatListBulletedIcon}
           title={"Learning Objectives"}
-        />
-        <SidebarListItem
-          href={"/modules/atpl-theory/tests"}
-          selected={isTests}
-          icon={AddCircleIcon}
-          title={"Create Test"}
         />
       </Sidebar>
       <Box

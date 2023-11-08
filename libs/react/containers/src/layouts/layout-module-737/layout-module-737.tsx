@@ -52,7 +52,7 @@ export const LayoutModule737: FunctionComponent<{
           href={"/modules/737-type-rating/tests"}
           selected={isTests}
           icon={AddCircleIcon}
-          title={"Create Test"}
+          title={"Tests"}
         />
       </Sidebar>
       <Box
