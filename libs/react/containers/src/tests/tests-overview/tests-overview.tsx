@@ -1,14 +1,20 @@
 import React from "react";
+import type { BoxProps} from "@mui/joy";
 import { Box, Grid, Link, Typography } from "@mui/joy";
+import type { QuestionBank } from "@chair-flight/base/types";
 import { AppLayout, TestPreview, Ups } from "@chair-flight/react/components";
 import { useTestProgress } from "../use-test-progress";
 import type { FunctionComponent } from "react";
 
-export const TestsOverview: FunctionComponent = () => {
+export type TestsOverviewProps = {
+  questionBank: QuestionBank;
+} & BoxProps;
+
+export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
   const tests = useTestProgress((s) => s.tests);
-  const testsAsList = Object.values(tests).sort(
-    (a, b) => b.createdAtEpochMs - a.createdAtEpochMs,
-  );
+  const testsAsList = Object.values(tests)
+    .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)
+    .filter((test) => test.questionBank === props.questionBank);
 
   const entries = [
     {
@@ -30,7 +36,7 @@ export const TestsOverview: FunctionComponent = () => {
   ];
 
   return (
-    <Box>
+    <Box {...props}>
       {entries.map(({ title, items, noItemsMessage, topRightCorner }) => (
         <React.Fragment key={title}>
           <AppLayout.Header>

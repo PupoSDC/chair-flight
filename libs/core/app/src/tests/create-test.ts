@@ -5,10 +5,15 @@ import {
   getRandomIdGenerator,
   getRandomShuffler,
 } from "../random/random";
-import type { QuestionTemplate, Test } from "@chair-flight/base/types";
+import type {
+  QuestionBank,
+  QuestionTemplate,
+  Test,
+} from "@chair-flight/base/types";
 
 export type NewTestConfiguration = {
   mode: "study" | "exam";
+  questionBank: QuestionBank;
   subject: string;
   numberOfQuestions: number;
   learningObjectives: Record<string, boolean>;
@@ -19,6 +24,7 @@ export type NewTestConfiguration = {
 export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> = z
   .object({
     mode: z.enum(["study", "exam"]),
+    questionBank: z.enum(["737", "atpl"]),
     subject: z.string(),
     learningObjectives: z.record(z.boolean()),
     numberOfQuestions: z.number().min(1).max(200),
@@ -82,6 +88,7 @@ export const createTest = async ({
 
   return {
     id: getRandomId(),
+    questionBank: config.questionBank,
     title: title,
     status: "created",
     mode: config.mode,

@@ -25,6 +25,7 @@ export const Playground: Story = {
           ctx.data({
             test: {
               id: "1",
+              questionBank: "atpl",
               title: "Test",
               mode: "exam",
               status: "created",

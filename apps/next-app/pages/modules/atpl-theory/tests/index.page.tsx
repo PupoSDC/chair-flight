@@ -9,9 +9,7 @@ import type { GetStaticProps, NextPage } from "next";
 const TestsIndexPage: NextPage = () => (
   <LayoutModuleAtpl>
     <AppHead />
-    <section>
-      <TestsOverview />
-    </section>
+    <TestsOverview component={"section"} questionBank="atpl" />
   </LayoutModuleAtpl>
 );
 

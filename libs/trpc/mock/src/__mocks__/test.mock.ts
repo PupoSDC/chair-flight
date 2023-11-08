@@ -2,6 +2,7 @@ import type { Test } from "@chair-flight/base/types";
 
 export const mockTest: Test = {
   id: "PlfjmvaR",
+  questionBank: "atpl",
   title: "010 study",
   status: "finished",
   mode: "study",

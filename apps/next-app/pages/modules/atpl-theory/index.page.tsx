@@ -1,17 +1,11 @@
-import {
-  AppHead,
-  LayoutModuleAtpl,
-  TestsOverview,
-} from "@chair-flight/react/containers";
+import { AppHead, LayoutModuleAtpl } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
 const ModuleIndexPage: NextPage = () => (
   <LayoutModuleAtpl>
     <AppHead />
-    <section>
-      <TestsOverview />
-    </section>
+    <section></section>
   </LayoutModuleAtpl>
 );
 

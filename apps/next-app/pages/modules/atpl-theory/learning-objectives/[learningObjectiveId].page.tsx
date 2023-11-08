@@ -92,6 +92,8 @@ export const getServerSideProps = ssrHandler<
     learningObjectiveId,
   });
 
+  console.log("learningObjectiveId", learningObjectiveId);
+
   return {
     props: {
       learningObjectiveId,

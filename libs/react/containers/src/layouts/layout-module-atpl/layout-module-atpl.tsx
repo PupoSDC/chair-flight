@@ -1,9 +1,9 @@
 import { useRef, type FunctionComponent } from "react";
 import { useRouter } from "next/router";
-import { default as AddCircleIcon } from "@mui/icons-material/AddCircle";
-import { default as ConnectingAirportsIcon } from "@mui/icons-material/ConnectingAirports";
-import { default as FormatListBulletedIcon } from "@mui/icons-material/FormatListBulleted";
-import { default as SearchIcon } from "@mui/icons-material/Search";
+import { default as HomeIcon } from "@mui/icons-material/ConnectingAirports";
+import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
+import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
+import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { Box } from "@mui/joy";
 import {
   Header,
@@ -41,25 +41,25 @@ export const LayoutModuleAtpl: FunctionComponent<{
         <SidebarListItem
           href={"/modules/atpl-theory"}
           selected={isHome}
-          icon={ConnectingAirportsIcon}
+          icon={HomeIcon}
           title={"Home"}
         />
         <SidebarListItem
           href={"/modules/atpl-theory/tests"}
           selected={isTests}
-          icon={AddCircleIcon}
+          icon={TestIcon}
           title={"Tests"}
         />
         <SidebarListItem
           href={"/modules/atpl-theory/questions"}
           selected={isQuestions}
-          icon={SearchIcon}
+          icon={QuestionsIcon}
           title={"Questions"}
         />
         <SidebarListItem
           href={"/modules/atpl-theory/learning-objectives"}
           selected={isLearningObjectives}
-          icon={FormatListBulletedIcon}
+          icon={LearningObjectivesIcon}
           title={"Learning Objectives"}
         />
       </Sidebar>

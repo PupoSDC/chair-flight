@@ -19,12 +19,12 @@ import {
   SliderWithInput,
   toast,
 } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { useTestProgress } from "../use-test-progress";
 import type { Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
-import type { trpc } from "@chair-flight/trpc/client";
 import type { BoxProps } from "@mui/joy";
 
 const resolver = zodResolver(newTestConfigurationSchema);
@@ -38,18 +38,8 @@ const testMakerPersistence = {
 
 export type TestMakerProps = Omit<BoxProps, "onBlur" | "onSubmit"> & {
   onSuccessfulTestCreation: (test: Test) => void;
-} & (
-    | {
-        getAllSubjects: typeof trpc.questionBankAtpl.getAllSubjects;
-        createTest: typeof trpc.questionBankAtpl.createTest;
-        testPersistenceKey: "cf-test-maker-atpl";
-      }
-    | {
-        getAllSubjects: typeof trpc.questionBank737.getAllSubjects;
-        createTest: typeof trpc.questionBank737.createTest;
-        testPersistenceKey: "cf-test-maker-737";
-      }
-  );
+  questionBank: "Atpl" | "737";
+};
 
 /**
  * Container to create tests.
@@ -58,13 +48,16 @@ export type TestMakerProps = Omit<BoxProps, "onBlur" | "onSubmit"> & {
  * - Uses Zustand persistence to restore progress from previous session.
  */
 export const TestMaker: FunctionComponent<TestMakerProps> = ({
-  getAllSubjects: { useSuspenseQuery: useSubjects },
-  createTest: { useMutation: useCreateTest },
-  testPersistenceKey,
+  questionBank,
   onSuccessfulTestCreation,
   ...otherProps
 }) => {
-  const useTestMakerPersistence = testMakerPersistence[testPersistenceKey];
+  const lowerCasedKey = questionBank.toLocaleLowerCase() as "737";
+  const persistenceKey = `cf-test-maker-${lowerCasedKey}` as const;
+  const bankKey = `questionBank${questionBank}` as const;
+  const useSubjects = trpc[bankKey].getAllSubjects.useSuspenseQuery;
+  const useCreateTest = trpc[bankKey].createTest.useMutation;
+  const useTestMakerPersistence = testMakerPersistence[persistenceKey];
 
   const { getPersistedData, setPersistedData } = useTestMakerPersistence();
   const [{ subjects }] = useSubjects();
@@ -74,6 +67,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const defaultValues = useMemo<NewTestConfiguration>(
     () => ({
       mode: "exam",
+      questionBank: lowerCasedKey,
       subject: subjects[0].id,
       learningObjectives: subjects
         .flatMap((s) => s.children ?? [])
@@ -81,7 +75,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
         .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
     }),
-    [subjects],
+    [subjects, lowerCasedKey],
   );
 
   const form = useForm({ defaultValues, resolver });
