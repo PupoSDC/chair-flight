@@ -47,17 +47,17 @@ module.exports = withNx(
           },
           {
             source: "/questions",
-            destination: "/modules/atpl-theory/questions",
+            destination: "/modules/atpl/questions",
             permanent: true,
           },
           {
             source: "/tests/:path*'",
-            destination: "/modules/atpl-theory/tests/:path*",
+            destination: "/modules/atpl/tests/:path*",
             permanent: true,
           },
           {
             source: "/learning-objectives",
-            destination: "/modules/atpl-theory/learning-objectives",
+            destination: "/modules/atpl/learning-objectives",
             permanent: true,
           },
         ];

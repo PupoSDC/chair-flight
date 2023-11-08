@@ -80,13 +80,13 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
                   component={Link}
                   variant="plain"
                   sx={{ mb: 2 }}
-                  href={`/flashcards/${collectionId}/${seed}`}
+                  href={`/modules/prep/flashcards/${collectionId}/${seed}`}
                   target="_blank"
                   children={"Share Link"}
                 />
                 <Button
                   component={Link}
-                  href={"/flashcards"}
+                  href={"/modules/prep/flashcards"}
                   children="Finish"
                 />
               </Card>,
@@ -108,7 +108,7 @@ export const getServerSideProps = ssrHandler<flashcardsThemePageProps>(
       return {
         redirect: {
           permanent: false,
-          destination: `/flashcards/${collectionId}/${randomId}`,
+          destination: `/modules/prep/flashcards/${collectionId}/${randomId}`,
         },
       };
     }

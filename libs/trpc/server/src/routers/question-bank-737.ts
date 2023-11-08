@@ -71,7 +71,7 @@ export const questionBank737Router = router({
               text: result["text"],
               numberOfVariants: variants ? Object.values(variants).length : 1,
               learningObjectives: result["learningObjectives"].split(", "),
-              href: `/modules/737-type-rating/questions/${questionId}?variantId=${variantId}`,
+              href: `/modules/737/questions/${questionId}?variantId=${variantId}`,
             },
             score: result.score,
             match: result.match,

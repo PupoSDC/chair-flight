@@ -1,8 +1,7 @@
 import { useRef, type FunctionComponent } from "react";
 import { useRouter } from "next/router";
-import { default as AddCircleIcon } from "@mui/icons-material/AddCircle";
-import { default as ConnectingAirportsIcon } from "@mui/icons-material/ConnectingAirports";
-import { default as SearchIcon } from "@mui/icons-material/Search";
+import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
+import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { Box } from "@mui/joy";
 import {
   Header,
@@ -24,7 +23,6 @@ export const LayoutModule737: FunctionComponent<{
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
-  const isHome = !isQuestions && !isTests;
   const sidebarHeight = `calc(100vh - ${Header.css.headerHeight})`;
   const openMenu = () => sidebarRef.current?.toggleDrawer();
 
@@ -37,22 +35,16 @@ export const LayoutModule737: FunctionComponent<{
       />
       <Sidebar sx={{ height: sidebarHeight }} ref={sidebarRef}>
         <SidebarListItem
-          href={"/modules/737-type-rating"}
-          selected={isHome}
-          icon={ConnectingAirportsIcon}
-          title={"Home"}
-        />
-        <SidebarListItem
-          href={"/modules/737-type-rating/questions"}
-          selected={isQuestions}
-          icon={SearchIcon}
-          title={"Search Questions"}
-        />
-        <SidebarListItem
-          href={"/modules/737-type-rating/tests"}
+          href={"/modules/737/tests"}
           selected={isTests}
-          icon={AddCircleIcon}
+          icon={TestIcon}
           title={"Tests"}
+        />
+        <SidebarListItem
+          href={"/modules/737/questions"}
+          selected={isQuestions}
+          icon={QuestionsIcon}
+          title={"Search Questions"}
         />
       </Sidebar>
       <Box

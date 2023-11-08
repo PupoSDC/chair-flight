@@ -166,7 +166,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 active={activeTheme === "blue"}
                 icon={<AirplaneTicketIcon />}
                 onClick={() => goToTheme("blue")}
-                showMoreHref="/modules/atpl-theory"
+                showMoreHref="/modules/atpl"
               />
               <ModuleSelectionButton
                 fullWidth
@@ -180,7 +180,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 active={activeTheme === "teal"}
                 icon={<StyleIcon />}
                 onClick={() => goToTheme("teal")}
-                showMoreHref="/modules/interview-prep"
+                showMoreHref="/modules/prep"
               />
               <ModuleSelectionButton
                 fullWidth
@@ -194,7 +194,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 ].join("")}
                 icon={<FlightTakeoffIcon />}
                 onClick={() => goToTheme("rose")}
-                showMoreHref="/modules/737-type-rating"
+                showMoreHref="/modules/737"
               />
             </Box>
             <Link
@@ -269,7 +269,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Explore Learning Objectives"}
-                        href="/modules/atpl-theory/learning-objectives"
+                        href="/modules/atpl/learning-objectives"
                       />
                     </Grid>
                     <Grid xs={12} sm={6}>
@@ -278,7 +278,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Explore Questions"}
-                        href="/modules/atpl-theory/questions"
+                        href="/modules/atpl/questions"
                       />
                     </Grid>
                     <Grid xs={12} sm={6}>
@@ -287,7 +287,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Create a Test"}
-                        href="/modules/atpl-theory/tests"
+                        href="/modules/atpl/tests/create"
                       />
                     </Grid>
                     <Grid xs={12} sm={6}>
@@ -337,7 +337,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                     size="lg"
                     component={Link}
                     children={"Explore Flash Cards"}
-                    href="/modules/interview-prep/flashcards"
+                    href="/modules/prep/flashcards"
                   />
                 </RightContainer>
               )}
@@ -373,7 +373,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Explore Questions"}
-                        href="/modules/737-type-rating/questions"
+                        href="/modules/737/questions"
                       />
                     </Grid>
                     <Grid xs={6}>
@@ -382,7 +382,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                         size="lg"
                         component={Link}
                         children={"Create a Test"}
-                        href="/modules/737-type-rating/tests/new"
+                        href="/modules/737/tests/new"
                       />
                     </Grid>
                   </Grid>

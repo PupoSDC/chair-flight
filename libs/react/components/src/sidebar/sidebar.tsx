@@ -134,6 +134,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               "&:not(:last-of-type)": {
                 borderBottom: 0,
               },
+
               "&:hover": {
                 textDecoration: "none",
               },
@@ -145,6 +146,10 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
                 color: "var(--joy-palette-primary-plainColor)",
                 borderLeftColor: "var(--joy-palette-primary-plainColor)",
                 bgcolor: "transparent",
+              },
+
+              "&.toggle-button": {
+                borderBottom: 0,
               },
             },
 

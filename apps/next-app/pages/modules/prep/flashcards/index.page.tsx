@@ -111,13 +111,13 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
                       children="View All"
                       variant="outlined"
                       component={Link}
-                      href={`/modules/interview-prep/flashcards/${fc.collectionId}`}
+                      href={`/modules/prep/flashcards/${fc.collectionId}`}
                     />
                     <Button
                       sx={{ mr: 1 }}
                       children="Start!"
                       component={Link}
-                      href={`/modules/interview-prep/flashcards/${fc.collectionId}/start`}
+                      href={`/modules/prep/flashcards/${fc.collectionId}/start`}
                     />
                   </Box>
                 </CardContent>

@@ -1,33 +1,33 @@
 import { useRouter } from "next/router";
 import {
   AppHead,
-  LayoutModuleAtpl,
+  LayoutModule737,
   TestMaker,
 } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
-const TestsCreatePage: NextPage = () => {
+const TestsIndexPage: NextPage = () => {
   const router = useRouter();
 
   return (
-    <LayoutModuleAtpl fixedHeight>
+    <LayoutModule737 fixedHeight>
       <AppHead />
       <TestMaker
         component="section"
-        questionBank="Atpl"
+        questionBank="737"
         sx={{ height: "100%" }}
-        onSuccessfulTestCreation={(test) =>
-          router.push(`/modules/atpl-theory/tests/${test.id}/${test.mode}`)
-        }
+        onSuccessfulTestCreation={(test) => {
+          router.push(`/modules/737/tests/${test.id}/${test.mode}`);
+        }}
       />
-    </LayoutModuleAtpl>
+    </LayoutModule737>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
   const helper = await getTrpcHelper();
-  await Promise.all([helper.questionBankAtpl.getAllSubjects.fetch()]);
+  await Promise.all([helper.questionBank737.getAllSubjects.fetch()]);
 
   return {
     props: {
@@ -36,4 +36,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default TestsCreatePage;
+export default TestsIndexPage;

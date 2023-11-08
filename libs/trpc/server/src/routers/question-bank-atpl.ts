@@ -49,7 +49,7 @@ export const questionBankAtplRouter = router({
         .filter((lo) => questionTemplate?.learningObjectives.includes(lo.id))
         .map<LearningObjectiveWithHref>((lo) => ({
           ...lo,
-          href: `/modules/atpl-theory/learning-objectives/${lo.id}`,
+          href: `/modules/atpl/learning-objectives/${lo.id}`,
         }));
       return { questionTemplate, learningObjectives };
     }),
@@ -140,7 +140,7 @@ export const questionBankAtplRouter = router({
               numberOfVariants: variants ? Object.values(variants).length : 1,
               learningObjectives: result["learningObjectives"].split(", "),
               externalIds: result["externalIds"].split(", "),
-              href: `/modules/atpl-theory/questions/${questionId}?variantId=${variantId}`,
+              href: `/modules/atpl/questions/${questionId}?variantId=${variantId}`,
             },
             score: result.score,
             match: result.match,
