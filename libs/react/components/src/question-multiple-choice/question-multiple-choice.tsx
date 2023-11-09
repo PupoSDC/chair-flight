@@ -14,6 +14,7 @@ const QuestionMultipleChoiceBox = styled(Box)`
 ` as typeof Box;
 
 const QuestionMultipleChoiceOption = styled(Button)`
+  font-weight: 400;
   margin: ${({ theme }) => theme.spacing(1, 0)};
   padding: ${({ theme }) => theme.spacing(1)};
   text-align: left;
@@ -49,11 +50,9 @@ const QuestionMultipleChoiceOption = styled(Button)`
     }};
   }
 
-  &.${buttonClasses.disabled} {
-  }
-
   & .${buttonClasses.startDecorator} {
     font-size: 2.5em;
+    padding-left: ${({ theme }) => theme.spacing(1)};
     padding-right: ${({ theme }) => theme.spacing(1)};
     color: ${({ theme, variant, color = "primary" }) =>
       variant === "outlined"

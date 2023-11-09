@@ -11,6 +11,7 @@ import {
   listClasses,
   listItemButtonClasses,
   listItemContentClasses,
+  listItemDecoratorClasses,
   useTheme,
 } from "@mui/joy";
 import { create } from "zustand";
@@ -41,8 +42,8 @@ export type SidebarComponent = React.ForwardRefExoticComponent<
 
 const VAR_SIDEBAR_WIDTH = "--joy-sidebar-width";
 const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-remaining-width";
-const SIDEBAR_EXPANDED_WIDTH = 240;
-const SIDEBAR_COLLAPSED_WIDTH = 56;
+const SIDEBAR_EXPANDED_WIDTH = 210;
+const SIDEBAR_COLLAPSED_WIDTH = 42;
 
 const useSidebarStore = create<{
   isMobileOpen: boolean;
@@ -106,7 +107,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             borderBottom: 0,
             borderLeft: 0,
             borderRadius: 0,
-            borderRightWidth: { xs: 0, sm: 1 },
+            borderRightWidth: 1,
             transition: "width 250ms",
             display: "flex",
             flexDirection: "column",
@@ -123,7 +124,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             },
 
             [`& .${listItemButtonClasses.root}`]: {
-              py: { xs: 1, sm: 2 },
+              p: 1,
               borderRight: 0,
               borderLeft: 4,
               borderLeftColor: "transparent",
@@ -153,8 +154,10 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               },
             },
 
+            [`& .${listItemDecoratorClasses.root}`]: {},
+
             ["& .chevron"]: {
-              fontSize: 24,
+              fontSize: 20,
               transitionDuration: "250ms",
               transform: isOpen ? "rotate(0deg)" : "rotate(-180deg)",
             },

@@ -1,4 +1,4 @@
-import { useRef, type FunctionComponent } from "react";
+import { useRef, type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
@@ -8,6 +8,7 @@ import {
   Header,
   Sidebar,
   SidebarListItem,
+  useThemeSwitcher,
 } from "@chair-flight/react/components";
 import type { HeaderProps, SidebarRef } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
@@ -20,6 +21,7 @@ export const LayoutModuleAtpl: FunctionComponent<{
     main?: BoxProps;
   };
 }> = ({ children, fixedHeight, slots }) => {
+  const [, setCurrentTheme] = useThemeSwitcher();
   const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
@@ -27,6 +29,8 @@ export const LayoutModuleAtpl: FunctionComponent<{
   const isLearningObjectives = router.asPath.includes("learning-objectives");
   const sidebarHeight = `calc(100vh - ${Header.css.headerHeight})`;
   const openMenu = () => sidebarRef.current?.toggleDrawer();
+
+  useEffect(() => setCurrentTheme("blue"), [setCurrentTheme]);
 
   return (
     <>

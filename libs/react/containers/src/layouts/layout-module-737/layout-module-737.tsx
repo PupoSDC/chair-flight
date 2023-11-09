@@ -1,4 +1,4 @@
-import { useRef, type FunctionComponent } from "react";
+import { useRef, type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
@@ -7,6 +7,7 @@ import {
   Header,
   Sidebar,
   SidebarListItem,
+  useThemeSwitcher,
 } from "@chair-flight/react/components";
 import type { HeaderProps, SidebarRef } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
@@ -19,12 +20,15 @@ export const LayoutModule737: FunctionComponent<{
     main?: BoxProps;
   };
 }> = ({ children, fixedHeight, slots }) => {
+  const [, setCurrentTheme] = useThemeSwitcher();
   const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const sidebarHeight = `calc(100vh - ${Header.css.headerHeight})`;
   const openMenu = () => sidebarRef.current?.toggleDrawer();
+
+  useEffect(() => setCurrentTheme("rose"), [setCurrentTheme]);
 
   return (
     <>
@@ -44,7 +48,7 @@ export const LayoutModule737: FunctionComponent<{
           href={"/modules/737/questions"}
           selected={isQuestions}
           icon={QuestionsIcon}
-          title={"Search Questions"}
+          title={"Questions"}
         />
       </Sidebar>
       <Box
@@ -55,7 +59,7 @@ export const LayoutModule737: FunctionComponent<{
           width: Sidebar.css.remainingWidth,
           transition: Sidebar.css.widthTransition,
           marginLeft: "auto",
-          p: { xs: 0.5, md: 2 },
+          p: { xs: 0.5, sm: 2 },
           ...(fixedHeight
             ? { height: sidebarHeight }
             : { minHeight: sidebarHeight }),

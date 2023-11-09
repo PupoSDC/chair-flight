@@ -1,7 +1,6 @@
 import { useTheme } from "@mui/joy";
 import {
-  QuestionBoxExam,
-  QuestionBoxReview,
+  QuestionBoxStudy,
   QuestionMultipleChoice,
   useMediaQuery,
 } from "@chair-flight/react/components";
@@ -50,26 +49,8 @@ export const TestQuestionStudy: FunctionComponent<TestQuestionStudyProps> = ({
     />
   );
 
-  return isSmallScreen ? (
-    <QuestionBoxExam
-      sx={{ width: "100%", maxHeight: "100%" }}
-      title={title}
-      timeSpentInMs={test.timeSpentInMs}
-      timeTotalInMs={test.durationInMs}
-      questionIndex={test.currentQuestionIndex}
-      totalQuestions={test.questions.length}
-      onNavigationClick={(p) => {
-        const question = test.questions[p];
-        if (!question) return;
-        navigateToQuestion({
-          testId: test.id,
-          questionId: question.questionId,
-        });
-      }}
-      question={questionMultipleChoice}
-    />
-  ) : (
-    <QuestionBoxReview
+  return (
+    <QuestionBoxStudy
       sx={{ width: "100%", maxHeight: "100%" }}
       title={title}
       question={questionMultipleChoice}

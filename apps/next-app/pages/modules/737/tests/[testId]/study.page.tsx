@@ -25,8 +25,12 @@ export const StudyPage: NextPage<StudyPageProps> = ({ testId }) => {
   useTestProgressTime({ testId });
 
   return (
-    <LayoutModule737>
+    <LayoutModule737 slots={{ main: { sx: { p: 0 } } }}>
       <AppHead />
+      <NoSsr fallback={<Skeleton height={"500px"} />}>
+        <TestQuestionStudy testId={testId} />
+      </NoSsr>
+
       <Grid container spacing={2} sx={{ maxWidth: 3000, margin: "auto" }}>
         <Grid xs={12} md={8} lg={9}>
           <NoSsr fallback={<Skeleton height={"500px"} />}>

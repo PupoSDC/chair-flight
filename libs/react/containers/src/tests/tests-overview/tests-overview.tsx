@@ -1,9 +1,10 @@
 import React from "react";
-import type { BoxProps} from "@mui/joy";
+import { NoSsr } from "@mui/base";
 import { Box, Grid, Link, Typography } from "@mui/joy";
-import type { QuestionBank } from "@chair-flight/base/types";
 import { AppLayout, TestPreview, Ups } from "@chair-flight/react/components";
 import { useTestProgress } from "../use-test-progress";
+import type { QuestionBank } from "@chair-flight/base/types";
+import type { BoxProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
 export type TestsOverviewProps = {
@@ -23,10 +24,10 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
       noItemsMessage: (
         <Typography>
           No tests in progress. You can{" "}
-          <Link href="/tests/new">Create a New Test</Link>!
+          <Link href="./tests/create">Create a New Test</Link>!
         </Typography>
       ),
-      topRightCorner: <Link href="/tests/new">Create New Test</Link>,
+      topRightCorner: <Link href="./tests/create">Create New Test</Link>,
     },
     {
       title: "Completed tests",
@@ -49,51 +50,54 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
             sx={{ p: 0, listStyleType: "none" }}
             spacing={{ xs: 1, sm: 2 }}
           >
-            {items.map((test) => (
-              <Grid
-                component="li"
-                sx={{
-                  pb: 1,
-                  display: "flex",
-                  alignItems: "stretch",
-                  justifyContent: "stretch",
-                }}
-                key={test.id}
-                xs={12}
-                sm={6}
-                md={4}
-              >
-                <TestPreview
-                  sx={{ width: "100%" }}
-                  data-cy="test-preview"
-                  component={Link}
-                  href={`/tests/${test.id}/${
-                    test.status === "finished" ? "review" : "exam"
-                  }`}
-                  title={test.title}
-                  status={test.status}
-                  numberOfQuestions={test.questions.length}
-                  epochTimeInMs={test.createdAtEpochMs}
-                  timeToCompleteInMs={test.timeSpentInMs}
-                  timeLeftInMs={test.durationInMs - test.timeSpentInMs}
-                  score={
-                    (test.questions.reduce(
-                      (s, q) =>
-                        s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
-                      0,
-                    ) /
-                      test.questions.length) *
-                    100
-                  }
+            <NoSsr>
+              {items.map((test) => (
+                <Grid
+                  component="li"
+                  sx={{
+                    pb: 1,
+                    display: "flex",
+                    alignItems: "stretch",
+                    justifyContent: "stretch",
+                  }}
+                  key={test.id}
+                  xs={12}
+                  sm={6}
+                  md={4}
+                >
+                  <TestPreview
+                    sx={{ width: "100%" }}
+                    data-cy="test-preview"
+                    component={Link}
+                    href={`./tests/${test.id}/${
+                      test.status === "finished" ? "review" : "exam"
+                    }`}
+                    title={test.title}
+                    status={test.status}
+                    numberOfQuestions={test.questions.length}
+                    epochTimeInMs={test.createdAtEpochMs}
+                    timeToCompleteInMs={test.timeSpentInMs}
+                    timeLeftInMs={test.durationInMs - test.timeSpentInMs}
+                    score={
+                      (test.questions.reduce(
+                        (s, q) =>
+                          s +
+                          (q.selectedOptionId === q.correctOptionId ? 1 : 0),
+                        0,
+                      ) /
+                        test.questions.length) *
+                      100
+                    }
+                  />
+                </Grid>
+              ))}
+              {items.length === 0 && (
+                <Ups
+                  children={noItemsMessage}
+                  sx={{ minHeight: "initial", py: 2 }}
                 />
-              </Grid>
-            ))}
-            {items.length === 0 && (
-              <Ups
-                children={noItemsMessage}
-                sx={{ minHeight: "initial", py: 2 }}
-              />
-            )}
+              )}
+            </NoSsr>
           </Grid>
         </React.Fragment>
       ))}

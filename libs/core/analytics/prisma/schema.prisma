@@ -6,7 +6,7 @@ generator client {
 datasource db {
   provider  = "postgresql"
   url       = env("PROVIDER_POSTGRES_ANALYTICS_PRISMA_URL")
-  directUrl = env("PROVIDER_ANALYTICS_POSTGRES_URL_NON_POOLING")
+  directUrl = env("PROVIDER_POSTGRES_ANALYTICS_URL_NON_POOLING")
 }
 
 model PageEvent {

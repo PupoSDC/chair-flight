@@ -18,7 +18,7 @@ export * from "./markdown-client";
 export * from "./markdown-client-demo";
 export * from "./nested-checkbox-select";
 export * from "./question-box-exam";
-export * from "./question-box-review";
+export * from "./question-box-study";
 export * from "./question-multiple-choice";
 export * from "./question-variant-preview";
 export * from "./sidebar";

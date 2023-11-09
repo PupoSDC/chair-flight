@@ -47,6 +47,14 @@ export const readAllQuestionsFromFs = async (
         ...q,
         srcLocation: filePath.replace(process.cwd(), ""),
       }));
+      jsonDataWithSrcLocation.forEach((q) => {
+        Object.keys(q.variants).forEach((id) => {
+          q.variants[id].annexes = q.variants[id].annexes.map((a) =>
+            a.replace("/content/media", "/content/question-bank-atpl/media"),
+          );
+        });
+      });
+
       questions.push(...jsonDataWithSrcLocation);
     }
   }

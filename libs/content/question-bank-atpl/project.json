@@ -10,7 +10,8 @@
         "commands": [
           "mkdir -p apps/next-app/public/content/question-bank-atpl",
           "rm -rf apps/next-app/public/content/question-bank-atpl/*",
-          "tsx --tsconfig ./libs/content/question-bank-atpl/tsconfig.json ./libs/content/question-bank-atpl/migrate"
+          "tsx --tsconfig ./libs/content/question-bank-atpl/tsconfig.json ./libs/content/question-bank-atpl/migrate",
+          "cp -r libs/content/question-bank-atpl/content/media apps/next-app/public/content/question-bank-atpl/media"
         ],
         "parallel": false
       }

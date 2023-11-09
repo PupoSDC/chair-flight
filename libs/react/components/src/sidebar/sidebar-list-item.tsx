@@ -29,7 +29,7 @@ export const SidebarListItem = forwardRef<
       onClick={onClick}
     >
       <ListItemDecorator>
-        <Icon sx={{ fontSize: 24 }} />
+        <Icon sx={{ fontSize: 20 }} />
       </ListItemDecorator>
       <ListItemContent>{title}</ListItemContent>
     </ListItemButton>

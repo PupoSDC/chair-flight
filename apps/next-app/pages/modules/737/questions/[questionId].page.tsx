@@ -34,7 +34,8 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   const seed = (router.query["seed"] ?? initialSeed) as string;
   const variantId = (router.query["variantId"] ?? initialVariantId) as string;
 
-  const updateVariantAndSeed = (query: { variantId: string; seed: string }) => {
+  const updateVariantAndSeed = (args: { variantId: string; seed: string }) => {
+    const query = { ...args, questionId: initialQuestionId };
     router.push({ pathname: router.pathname, query }, undefined, {
       shallow: true,
     });

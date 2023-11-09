@@ -132,6 +132,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
       addTest({ test });
       onSuccessfulTestCreation(test);
     } catch (error) {
+      console.log(error);
       toast.error("Something went wrong while creating the test. 😥");
     }
   });
@@ -151,7 +152,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
     hasMountedInitialValues.current = true;
     const persistedData = getPersistedData();
     if (!persistedData) return;
-    form.reset({ ...persistedData });
+    form.reset({ ...defaultValues, ...persistedData });
   });
 
   return (
@@ -276,6 +277,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
             sx={{ mt: 2 }}
             type="submit"
             fullWidth
+            disabled={!form.formState.isValid}
             loading={createTest.isLoading}
           >
             Start!

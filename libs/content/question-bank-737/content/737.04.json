@@ -88,36 +88,22 @@
     "variants": {
       "p0n3ij": {
         "id": "p0n3ij",
-        "type": "simple",
-        "question": "The autopilot disengages automatically 2 seconds after touchdown.",
-        "options": [
-          {
-            "id": "vm9cj",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "epk7li",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "eg08f",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "zdyco",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
+        "type": "one-two",
+        "firstCorrectStatements": [
+          "The A/T automatically disengages approximately 2 seconds after touchdown."
         ],
-        "explanation": "",
-        "annexes": [],
+        "firstIncorrectStatements": [
+          "The A/T must be manually disengaged after touchdown."
+        ],
+        "secondCorrectStatements": [
+          "The A/P must be manually disengaged after touchdown.",
+          "Landing roll-out is executed manually after disengaging the A/P."
+        ],
+        "secondIncorrectStatements": [
+          "The A/P  automatically disengages approximately 2 seconds after touchdown.",
+          "Landing roll-out is executed automatically by the A/P."
+        ],
+        "explanation": "- The A/T automatically disengages approximately 2 seconds after touchdown.\n- the A/P must be manually disengaged after touchdown. Landing roll-out is executed manually after disengaging the A/P.",
         "externalIds": []
       }
     }

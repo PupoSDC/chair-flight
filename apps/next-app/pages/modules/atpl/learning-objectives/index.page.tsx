@@ -103,7 +103,7 @@ export const LearningObjectivesIndexPage: NextPage<
                       <ListItem>
                         <ListItemContent>
                           <Link
-                            href={`/modules/atpl-theory/learning-objectives/${result.id}`}
+                            href={`/modules/atpl/learning-objectives/${result.id}`}
                           >
                             <Typography>{result.id}</Typography>
                           </Link>
@@ -141,7 +141,7 @@ export const LearningObjectivesIndexPage: NextPage<
                       <tr key={result.id}>
                         <td>
                           <Link
-                            href={`/modules/atpl-theory/learning-objectives/${result.id}`}
+                            href={`/modules/atpl/learning-objectives/${result.id}`}
                           >
                             <Typography>{result.contentId}</Typography>
                           </Link>
