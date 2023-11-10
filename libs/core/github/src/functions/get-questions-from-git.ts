@@ -11,20 +11,28 @@ export const getQuestionsFromGit = async ({
   srcLocation: string;
   baseBranch?: string;
 }): Promise<QuestionTemplate[]> => {
-  const { octokit, owner, repo } = getOctokit();
+  const { octokit, originOwner, originRepo, upstreamOwner } = getOctokit();
   const normalizedSrcLocation = srcLocation
     .replace(/\\/g, "/")
     .replace(/^\//, "");
 
+  if (originOwner !== upstreamOwner) {
+    await octokit.rest.repos.mergeUpstream({
+      owner: originOwner,
+      repo: originRepo,
+      branch: baseBranch,
+    });
+  }
+
   const baseBranchRef = await octokit.rest.git.getRef({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     ref: `heads/${baseBranch}`,
   });
 
   const getContentResponse = await octokit.rest.repos.getContent({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     path: normalizedSrcLocation,
     ref: baseBranchRef.data.object.sha,
     mediaType: {
