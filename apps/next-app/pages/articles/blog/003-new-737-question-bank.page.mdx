@@ -35,18 +35,17 @@ You can create a [new test here](/tests/new?subject=737).
 
 export const InLocoTestMakeer = () => {
   const router = useRouter();
-  const addTest = useTestProgress((s) => s.addTest);
   const fallback = <Skeleton sx={{ height: 400, position: "initial" }} />
 
   return (
-    <Sheet sx={{ p: 1 }}>
+    <Sheet sx={{ p: 1, my: 2, height: 600 }}>
       <NoSsr fallback={fallback}>
         <Suspense fallback={fallback}>
           <TestMaker
-            initialSubject={"737"}
+            sx={{ height: "100%" }}
+            questionBank={"737"}
             onSuccessfulTestCreation={(test) => {
-              ddTest({ test });
-              router.push(`/tests/${test.id}/${test.mode}`);
+              router.push(`/modules/737/tests/${test.id}/${test.mode}`);
             }}
           />
         </Suspense>

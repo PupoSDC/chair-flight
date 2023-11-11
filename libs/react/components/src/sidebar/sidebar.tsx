@@ -56,6 +56,12 @@ const useSidebarStore = create<{
   setDesktopOpen: (isDesktopOpen) => set({ isDesktopOpen }),
 }));
 
+export const useSidebar = () => {
+  const setMobileOpen = useSidebarStore((s) => s.setMobileOpen);
+  const openSidebar = () => setMobileOpen(true);
+  return { openSidebar };
+};
+
 export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
   ({ children = [], ...otherProps }, ref) => {
     const { isMobileOpen, isDesktopOpen, setMobileOpen, setDesktopOpen } =

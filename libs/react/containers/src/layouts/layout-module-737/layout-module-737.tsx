@@ -1,4 +1,4 @@
-import { useRef, type FunctionComponent, useEffect } from "react";
+import { type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
@@ -9,15 +9,19 @@ import {
   SidebarListItem,
   useThemeSwitcher,
 } from "@chair-flight/react/components";
-import type { SidebarRef } from "@chair-flight/react/components";
 
-export const LayoutModule737: FunctionComponent<{
+export type LayoutModule737Props = {
   children: React.ReactNode;
   fixedHeight?: boolean;
   noPadding?: boolean;
-}> = ({ children, fixedHeight, noPadding }) => {
+};
+
+export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
+  children,
+  fixedHeight,
+  noPadding,
+}) => {
   const [, setCurrentTheme] = useThemeSwitcher();
-  const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -26,7 +30,7 @@ export const LayoutModule737: FunctionComponent<{
 
   return (
     <>
-      <Sidebar sx={{ height: "100vh" }} ref={sidebarRef}>
+      <Sidebar sx={{ height: "100vh" }}>
         <SidebarListItem
           href={"/"}
           icon={AppLogo}
@@ -35,7 +39,7 @@ export const LayoutModule737: FunctionComponent<{
             height: (t) => t.spacing(6),
             pl: 0.5,
             svg: {
-              fill: (t) => t.palette.primary.plainColor,
+              fill: (t) => t.vars.palette.primary.plainColor,
               fontSize: 24,
               marginLeft: "-2px",
               marginRight: "2px",
@@ -43,7 +47,7 @@ export const LayoutModule737: FunctionComponent<{
             [`& .${listItemContentClasses.root}`]: {
               fontWeight: 700,
               letterSpacing: "0.05rem",
-              color: (t) => t.palette.neutral.plainColor,
+              color: (t) => t.vars.palette.neutral.plainColor,
             },
           }}
         />
@@ -68,7 +72,7 @@ export const LayoutModule737: FunctionComponent<{
           transition: Sidebar.css.widthTransition,
           marginLeft: "auto",
           ...(noPadding ? { p: 0 } : { p: { xs: 1, sm: 2 } }),
-          ...(fixedHeight ? { height: "100vh" } : { minHeight: "100vh" }),
+          ...(fixedHeight ? { height: "100vh" } : {}),
         }}
       />
     </>

@@ -32,7 +32,7 @@ export const useTestProgressTime = ({ testId }: { testId: string }) => {
       const timeSpentInMs = currentTime - lastTime;
       lastTime = currentTime;
       tickTestTimer({ testId: test.id, timeSpentInMs });
-    }, 1000);
+    }, 500);
     return () => clearInterval(interval);
   }, [testId, getTest, tickTestTimer]);
 };

@@ -13,7 +13,7 @@ export const MarkdownClientDemo: FunctionComponent<MarkdownClientDemoProps> = ({
   const [markdown, setMarkdown] = useState(initialMarkdown ?? "");
 
   return (
-    <Grid container spacing={1} sx={{ height: 400, mb: 2 }}>
+    <Grid container spacing={1} sx={{ height: 400, my: 2 }}>
       <Grid xs={12} sm={6}>
         <Textarea
           minRows={16}

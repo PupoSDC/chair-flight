@@ -40,7 +40,7 @@ export type IndexPageProps = {
   numberOfFlashcards: number;
 };
 
-const MEDIA_LONG_SCREEN = "@media (min-height: 560px)";
+const MEDIA_LONG_SCREEN = "@media (min-height: 560px) and (min-width: 440px)";
 
 export const IndexPage: NextPage<IndexPageProps> = ({
   numberOfFlashcards,
@@ -55,8 +55,13 @@ export const IndexPage: NextPage<IndexPageProps> = ({
     setCurrentTheme(theme);
     setActiveTheme(theme);
     const top = rightSideContainer.current?.offsetTop ?? 0;
-    window.scrollTo({ top: top, behavior: "smooth" });
+    setTimeout(
+      () => window.scrollTo({ top: top - 50, behavior: "smooth" }),
+      200,
+    );
   };
+
+  const headerHeight = LayoutPublic.css.headerHeight;
 
   return (
     <LayoutPublic fixedHeight noPadding background={<CoolSlidingThing />}>
@@ -72,7 +77,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
       <Box
         sx={{
           display: "flex",
-          p: { xs: 1, md: 4 },
+          p: { xs: 2, md: 4 },
           flexDirection: { xs: "column", md: "row" },
           minHeight: "100%",
           maxWidth: 1240,
@@ -86,7 +91,6 @@ export const IndexPage: NextPage<IndexPageProps> = ({
             alignItems: "flex-start",
             mx: "auto",
             top: "50%",
-
             justifyContent: {
               xs: "space-around",
               md: "center",
@@ -97,9 +101,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
               lg: `calc(${620}px - ${t.spacing(2)})`,
             },
             minHeight: {
-              xs: `calc(100vh - ${
-                LayoutPublic.css.headerHeight
-              }px - ${t.spacing(2)})`,
+              xs: `calc(100vh - ${headerHeight} - ${t.spacing(2)})`,
               md: `100%`,
             },
             position: {
@@ -108,7 +110,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
             },
             transform: {
               xs: "none",
-              md: `translate(0, calc(-50% + ${LayoutPublic.css.headerHeight} / 2))`,
+              md: `translate(0, calc(-50% + ${headerHeight} / 2))`,
             },
             "& > *": {
               mb: 1,
@@ -225,9 +227,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
               lg: `calc(100% - ${620}px - ${t.spacing(2)})`,
             },
             minHeight: {
-              xs: `calc(100vh - ${
-                LayoutPublic.css.headerHeight
-              }px - ${t.spacing(2)})`,
+              xs: `calc(100vh - ${headerHeight} - ${t.spacing(2)})`,
               md: `100%`,
             },
           })}
@@ -337,6 +337,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   component={Link}
                   children={"Explore Flash Cards"}
                   href="/modules/prep/flashcards"
+                  sx={{ my: 2 }}
                 />
               </RightContainer>
             )}
@@ -366,7 +367,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   rating initial tech exam.
                 </Typography>
                 <Grid container spacing={2} sx={{ pt: 2 }}>
-                  <Grid xs={6}>
+                  <Grid xs={12} sm={6}>
                     <Button
                       fullWidth
                       size="lg"
@@ -375,13 +376,13 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       href="/modules/737/questions"
                     />
                   </Grid>
-                  <Grid xs={6}>
+                  <Grid xs={12} sm={6}>
                     <Button
                       fullWidth
                       size="lg"
                       component={Link}
                       children={"Create a Test"}
-                      href="/modules/737/tests/new"
+                      href="/modules/737/tests/create"
                     />
                   </Grid>
                 </Grid>

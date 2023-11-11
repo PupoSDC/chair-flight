@@ -40,11 +40,11 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
     <Box {...props}>
       {entries.map(({ title, items, noItemsMessage, topRightCorner }) => (
         <React.Fragment key={title}>
-          <Stack direction="row">
+          <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
             <Typography level="h3">{title}</Typography>
             {topRightCorner}
           </Stack>
-          <Divider />
+          <Divider sx={{ mb: 2 }} />
           <Grid
             container
             component="ul"

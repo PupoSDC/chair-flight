@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { default as KeyboardArrowRightRoundedIcon } from "@mui/icons-material/KeyboardArrowRightRounded";
-import { Box, Button, Link, List } from "@mui/joy";
+import { Box, Button, Link, List, Sheet } from "@mui/joy";
 import {
   CtaSearch,
   QuestionVariantPreview,
@@ -30,7 +30,7 @@ export const QuestionSearchDemo: FunctionComponent = () => {
   })();
 
   return (
-    <>
+    <Sheet sx={{ my: 2 }}>
       <CtaSearch
         value={search}
         loading={hasSearched && isLoading}
@@ -107,6 +107,6 @@ export const QuestionSearchDemo: FunctionComponent = () => {
           </Box>
         ))}
       </List>
-    </>
+    </Sheet>
   );
 };

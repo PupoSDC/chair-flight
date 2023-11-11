@@ -1,6 +1,7 @@
 import { NoSsr } from "@mui/base";
 import { Skeleton } from "@mui/joy";
 import { NotFoundError } from "@chair-flight/base/errors";
+import { useSidebar } from "@chair-flight/react/components";
 import {
   AppHead,
   LayoutModule737,
@@ -13,14 +14,17 @@ type StudyPageProps = {
   testId: string;
 };
 
-export const StudyPage: NextPage<StudyPageProps> = ({ testId }) => (
-  <LayoutModule737 noPadding fixedHeight>
-    <AppHead />
-    <NoSsr fallback={<Skeleton height={"500px"} />}>
-      <TestStudy testId={testId} />
-    </NoSsr>
-  </LayoutModule737>
-);
+export const StudyPage: NextPage<StudyPageProps> = ({ testId }) => {
+  const { openSidebar } = useSidebar();
+  return (
+    <LayoutModule737 noPadding fixedHeight>
+      <AppHead />
+      <NoSsr fallback={<Skeleton height={"500px"} />}>
+        <TestStudy testId={testId} onMenuClicked={openSidebar} />
+      </NoSsr>
+    </LayoutModule737>
+  );
+};
 
 export const getServerSideProps = ssrHandler<StudyPageProps>(
   async ({ context }) => {

@@ -9,7 +9,11 @@ import type { GetStaticProps, NextPage } from "next";
 const TestsIndexPage: NextPage = () => (
   <LayoutModuleAtpl>
     <AppHead />
-    <TestsOverview component={"section"} questionBank="atpl" />
+    <TestsOverview
+      component={"section"}
+      sx={{ mx: "auto", maxWidth: "lg", width: "100%" }}
+      questionBank="atpl"
+    />
   </LayoutModuleAtpl>
 );
 

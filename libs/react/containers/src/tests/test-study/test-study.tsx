@@ -6,6 +6,7 @@ import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as CloseOutlinedIcon } from "@mui/icons-material/CloseOutlined";
 import { default as FormatListBulletedOutlinedIcon } from "@mui/icons-material/FormatListBulletedOutlined";
+import { default as MenuOutlinedIcon } from "@mui/icons-material/MenuOutlined";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNewOutlined";
 import {
   useTheme,
@@ -23,8 +24,9 @@ import {
   DialogTitle,
   Link,
   DialogContent,
+  iconButtonClasses,
 } from "@mui/joy";
-import { DateTime } from "luxon";
+import { Duration } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
   MarkdownClient,
@@ -39,9 +41,13 @@ import { useTestProgressTime } from "../use-test-progress-time";
 
 type TestStudyProps = {
   testId: string;
+  onMenuClicked?: () => void;
 };
 
-export const TestStudy: FunctionComponent<TestStudyProps> = ({ testId }) => {
+export const TestStudy: FunctionComponent<TestStudyProps> = ({
+  testId,
+  onMenuClicked,
+}) => {
   useTestHotkeys({ testId });
   useTestProgressTime({ testId });
 
@@ -93,6 +99,16 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({ testId }) => {
             fontSize: { xs: "0.8rem", md: "1rem" },
             textAlign: "center",
           },
+
+          [`& .${iconButtonClasses.root}`]: {
+            p: 0,
+            fontSize: { xs: "20px", md: "24px" },
+            minWidth: { xs: "24px", md: "32px" },
+
+            "& svg": {
+              fontSize: "inherit",
+            },
+          },
         }}
       >
         <Tooltip title="Previous Question" variant="soft">
@@ -110,15 +126,30 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({ testId }) => {
           {test.title}
         </Typography>
         <Divider orientation="vertical" sx={{ mx: { xs: 0.5, sm: 2 } }} />
-        <Typography level="h4">
-          {`Question ${currentQuestion} / ${totalQuestions}`}
+        <Typography level="h4" sx={{ display: "flex" }}>
+          <Box sx={{ display: { xs: "none", sm: "initial" } }} component="span">
+            Question&nbsp;
+          </Box>
+          <Box component="span">{`${currentQuestion}/${totalQuestions}`}</Box>
         </Typography>
         <Divider orientation="vertical" sx={{ mx: { xs: 0.5, sm: 2 } }} />
-        <AccessAlarmsOutlinedIcon sx={{ fontSize: 20, mr: 1 }} />
+        <AccessAlarmsOutlinedIcon sx={{ fontSize: 20, mr: 0 }} />
         <Typography level="h4" sx={{ minWidth: "4.8em" }}>
-          {DateTime.fromMillis(test.timeSpentInMs).toFormat("hh:mm:ss")}
+          {Duration.fromMillis(test.timeSpentInMs).toFormat("hh:mm:ss")}
         </Typography>
         <Divider orientation="vertical" sx={{ mx: { xs: 0.5, sm: 2 } }} />
+        {onMenuClicked && (
+          <Tooltip
+            title="Open Menu"
+            variant="soft"
+            sx={{ display: { sm: "none" } }}
+          >
+            <IconButton
+              children={<MenuOutlinedIcon />}
+              onClick={() => onMenuClicked?.()}
+            />
+          </Tooltip>
+        )}
         <Tooltip title="Explanation & Meta" variant="soft">
           <IconButton
             children={<FormatListBulletedOutlinedIcon />}
@@ -240,6 +271,15 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({ testId }) => {
           <Button
             fullWidth
             sx={{ mt: 2 }}
+            variant="outlined"
+            children="Exit without finishing"
+            color="warning"
+            onClick={() => {
+              router.push(`../`);
+            }}
+          />
+          <Button
+            fullWidth
             children="Finish"
             color="danger"
             onClick={() => {
