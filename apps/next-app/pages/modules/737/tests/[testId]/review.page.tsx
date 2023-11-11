@@ -15,7 +15,7 @@ export type ReviewPageProps = {
 
 export const ReviewPage: NextPage<ReviewPageProps> = ({ testId }) => {
   return (
-    <LayoutModuleAtpl slots={{ main: { sx: { p: 0 } } }}>
+    <LayoutModuleAtpl noPadding>
       <AppHead />
       <NoSsr fallback={<Skeleton height={"500px"} />}>
         <TestReview testId={testId} />

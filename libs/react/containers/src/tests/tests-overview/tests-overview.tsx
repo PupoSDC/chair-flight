@@ -1,7 +1,7 @@
 import React from "react";
 import { NoSsr } from "@mui/base";
-import { Box, Grid, Link, Typography } from "@mui/joy";
-import { AppLayout, TestPreview, Ups } from "@chair-flight/react/components";
+import { Box, Divider, Grid, Link, Stack, Typography } from "@mui/joy";
+import { TestPreview, Ups } from "@chair-flight/react/components";
 import { useTestProgress } from "../use-test-progress";
 import type { QuestionBank } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
@@ -40,10 +40,11 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
     <Box {...props}>
       {entries.map(({ title, items, noItemsMessage, topRightCorner }) => (
         <React.Fragment key={title}>
-          <AppLayout.Header>
+          <Stack direction="row">
             <Typography level="h3">{title}</Typography>
             {topRightCorner}
-          </AppLayout.Header>
+          </Stack>
+          <Divider />
           <Grid
             container
             component="ul"
@@ -70,7 +71,7 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
                     data-cy="test-preview"
                     component={Link}
                     href={`./tests/${test.id}/${
-                      test.status === "finished" ? "review" : "exam"
+                      test.status === "finished" ? "review" : test.mode
                     }`}
                     title={test.title}
                     status={test.status}

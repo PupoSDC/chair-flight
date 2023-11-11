@@ -5,8 +5,8 @@ import {
   ListItemContent,
   ListItemDecorator,
 } from "@mui/joy";
-import type { SxProps } from "@mui/joy/styles/types";
 import type { ListItemButtonProps } from "@mui/joy";
+import type { SxProps } from "@mui/joy/styles/types";
 import type { FunctionComponent } from "react";
 
 export type SidebarListItemProps = {

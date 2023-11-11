@@ -7,9 +7,8 @@ import {
 import {
   AppHead,
   LayoutModule737,
-  QuestionReview,
+  QuestionOverview,
 } from "@chair-flight/react/containers";
-import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
@@ -42,14 +41,14 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   };
 
   return (
-    <LayoutModule737 slots={{ main: { sx: { p: 0 } } }}>
+    <LayoutModule737 noPadding>
       <AppHead
         linkTitle={`Chair Flight: ${variantId}`}
         linkDescription={linkDescription}
       />
-      <QuestionReview
+      <QuestionOverview
         component={"section"}
-        getQuestion={trpc.questionBank737.getQuestion}
+        questionBank="737"
         questionId={initialQuestionId}
         variantId={variantId}
         seed={seed}

@@ -6,6 +6,7 @@ import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as CloseOutlinedIcon } from "@mui/icons-material/CloseOutlined";
 import { default as FormatListBulletedOutlinedIcon } from "@mui/icons-material/FormatListBulletedOutlined";
+import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNewOutlined";
 import {
   useTheme,
   IconButton,
@@ -20,6 +21,8 @@ import {
   Tooltip,
   Drawer,
   DialogTitle,
+  Link,
+  DialogContent,
 } from "@mui/joy";
 import { DateTime } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
@@ -207,21 +210,26 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({ testId }) => {
         anchor="right"
         open={isMetaOpen}
         onClose={() => setIsMetaOpen(false)}
-        sx={{ "--Drawer-horizontalSize": "460px" }}
+        sx={{ "--Drawer-horizontalSize": "640px" }}
       >
         <ModalClose />
         <DialogTitle>Question Meta</DialogTitle>
-        <Box sx={{ p: 2 }}>
-          <Typography level="h4" sx={{ mb: 2 }}>
-            Explanation
-          </Typography>
+        <DialogContent sx={{ p: 2 }}>
+          <Button
+            component={Link}
+            variant="outlined"
+            target="_blank"
+            startDecorator={<OpenInNewIcon />}
+            href={`../../questions/${question.templateId}?variant=${question.variantId}`}
+            children="Explore Question"
+          />
+          <Divider sx={{ my: 2 }}>Explanation</Divider>
           {question.explanation ? (
             <MarkdownClient children={question.explanation} />
           ) : (
             <Ups message="No explanation is available" />
           )}
-          <Divider sx={{ my: 2 }}>Learning Objectives</Divider>
-        </Box>
+        </DialogContent>
       </Drawer>
       <Modal open={isFinishTestOpen} onClose={() => setIsFinishTestOpen(false)}>
         <ModalDialog>

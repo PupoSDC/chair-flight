@@ -15,7 +15,6 @@ import {
   useTheme,
 } from "@mui/joy";
 import { create } from "zustand";
-import { HEADER_HEIGHT } from "../constants";
 import { useMediaQuery } from "../hooks/use-media-query";
 import type { SidebarListItemProps } from "./sidebar-list-item";
 import type { SheetProps } from "@mui/joy";
@@ -186,7 +185,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
           onClick={() => setMobileOpen(false)}
           sx={{
             position: "fixed",
-            top: HEADER_HEIGHT,
+            top: 0,
             bottom: 0,
             left: 0,
             right: 0,

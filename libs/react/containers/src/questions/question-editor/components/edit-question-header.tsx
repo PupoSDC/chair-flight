@@ -6,8 +6,16 @@ import { default as EditIcon } from "@mui/icons-material/Edit";
 import { default as GitHubIcon } from "@mui/icons-material/GitHub";
 import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
-import { Badge, Box, Button, IconButton, Tooltip, Typography } from "@mui/joy";
-import { AppLayout, toast } from "@chair-flight/react/components";
+import {
+  Badge,
+  Box,
+  Button,
+  IconButton,
+  Stack,
+  Tooltip,
+  Typography,
+} from "@mui/joy";
+import { toast } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 
@@ -42,7 +50,7 @@ export const EditQuestionHeader = () => {
   };
 
   return (
-    <AppLayout.Header>
+    <Stack>
       <Box sx={{ display: "flex", alignItems: "baseline" }}>
         <EditIcon sx={{ mx: 1 }} fontSize="xl2" />
         <Typography level="h4">{`Editing Question ${questionId}`}</Typography>
@@ -89,6 +97,6 @@ export const EditQuestionHeader = () => {
           />
         </NoSsr>
       </Box>
-    </AppLayout.Header>
+    </Stack>
   );
 };

@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import {
-  Header,
-  AppLayout,
-  Flashcard,
-  FlashcardTinder,
-} from "@chair-flight/react/components";
-import { AppHead } from "@chair-flight/react/containers";
+import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
+import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -44,7 +39,7 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
   seed,
 }) => {
   return (
-    <>
+    <LayoutPublic noPadding fixedHeight>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -58,42 +53,39 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <Header />
-      <AppLayout.Main sx={{ p: { xs: 0, md: 0 } }}>
-        <FlashcardTinder>
-          {flashcards
-            .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)
-            .concat([
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-                key={"last card"}
-              >
-                <Typography sx={{ mb: "2", textAlign: "center" }} level={"h5"}>
-                  You have reached the end of the test!
-                </Typography>
-                <Button
-                  component={Link}
-                  variant="plain"
-                  sx={{ mb: 2 }}
-                  href={`/modules/prep/flashcards/${collectionId}/${seed}`}
-                  target="_blank"
-                  children={"Share Link"}
-                />
-                <Button
-                  component={Link}
-                  href={"/modules/prep/flashcards"}
-                  children="Finish"
-                />
-              </Card>,
-            ])}
-        </FlashcardTinder>
-      </AppLayout.Main>
-    </>
+      <FlashcardTinder>
+        {flashcards
+          .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)
+          .concat([
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+              key={"last card"}
+            >
+              <Typography sx={{ mb: "2", textAlign: "center" }} level={"h5"}>
+                You have reached the end of the test!
+              </Typography>
+              <Button
+                component={Link}
+                variant="plain"
+                sx={{ mb: 2 }}
+                href={`/modules/prep/flashcards/${collectionId}/${seed}`}
+                target="_blank"
+                children={"Share Link"}
+              />
+              <Button
+                component={Link}
+                href={"/modules/prep/flashcards"}
+                children="Finish"
+              />
+            </Card>,
+          ])}
+      </FlashcardTinder>
+    </LayoutPublic>
   );
 };
 

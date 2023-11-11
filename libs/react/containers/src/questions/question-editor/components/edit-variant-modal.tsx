@@ -6,11 +6,11 @@ import { default as CodeIcon } from "@mui/icons-material/Code";
 import { default as CodeOffIcon } from "@mui/icons-material/CodeOff";
 import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
-import { Badge, IconButton, Modal, Tooltip, Typography } from "@mui/joy";
+import { Badge, IconButton, Modal, Stack, Tooltip, Typography } from "@mui/joy";
 import { Box, FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
 import { getVariantPreview } from "@chair-flight/core/app";
 import { toast } from "@chair-flight/react/components";
-import { AppLayout, MarkdownClient } from "@chair-flight/react/components";
+import { MarkdownClient } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import { EditVariantModalAsCode } from "./edit-variant-modal-as-code";
 import { EditVariantModalOneTwo } from "./edit-variant-modal-one-two";
@@ -59,7 +59,7 @@ export const EditVariantModal: FunctionComponent = () => {
       <ModalDialog layout="fullscreen">
         {variant && (
           <>
-            <AppLayout.Header>
+            <Stack direction="row">
               <Typography>Edit Variant</Typography>
               <Box sx={{ display: "flex" }}>
                 <Tooltip title="undo" variant="soft">
@@ -105,7 +105,7 @@ export const EditVariantModal: FunctionComponent = () => {
                   sx={{ mr: 2 }}
                 />
               </Box>
-            </AppLayout.Header>
+            </Stack>
             <Grid
               container
               spacing={2}

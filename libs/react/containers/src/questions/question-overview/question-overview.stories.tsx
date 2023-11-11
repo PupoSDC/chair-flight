@@ -11,7 +11,7 @@ export const Playground: Story = {
 };
 
 const meta: Meta<typeof QuestionOverview> = {
-  title: "Containers/Questions/QuestionReview",
+  title: "Containers/Questions/QuestionOverview",
   component: QuestionOverview,
   tags: ["autodocs"],
   argTypes: {

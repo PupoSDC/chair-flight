@@ -12,15 +12,18 @@ import { default as fs } from "fs/promises";
 import { DateTime } from "luxon";
 import { default as path } from "path";
 import { default as dedent } from "ts-dedent";
+import { BlogPostChip } from "@chair-flight/react/components";
 import {
-  AppLayout,
-  BlogPostChip,
-  Header,
-} from "@chair-flight/react/components";
-import { AppHead } from "@chair-flight/react/containers";
+  AppHead,
+  LayoutBackground,
+  LayoutPublic,
+} from "@chair-flight/react/containers";
 import type { BlogPageMeta } from "./_blog-page.layout";
 import type { GetStaticProps } from "next";
 import type { FunctionComponent } from "react";
+
+const bgSrc = "/images/background-article.png";
+const bgAlt = "cool cockpit";
 
 export type ArticlesIndexPageProps = {
   blogPostsMeta: BlogPageMeta[];
@@ -30,47 +33,45 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
   blogPostsMeta,
 }) => {
   return (
-    <>
+    <LayoutPublic background={<LayoutBackground src={bgSrc} alt={bgAlt} />}>
       <AppHead linkDescription={dedent``} />
-      <Header />
-      <AppLayout.Main sx={{ maxWidth: "md" }}>
-        <Typography level="h2" sx={{ pt: 4 }}>
-          Posts
-        </Typography>
-        {blogPostsMeta.map((meta) => (
-          <Card sx={{ mt: 2 }} key={meta.file}>
-            <CardContent>
-              <Box sx={{ mb: 2 }}>
-                {meta.tags.map((tag) => (
-                  <BlogPostChip key={tag} tag={tag} size="sm" />
-                ))}
-              </Box>
-              <Typography level="h3" color="primary">
-                {meta.title}
+      <Typography level="h2" sx={{ pt: 4 }}>
+        Posts
+      </Typography>
+      {blogPostsMeta.map((meta) => (
+        <Card sx={{ mt: 2 }} key={meta.file}>
+          <CardContent>
+            <Box sx={{ mb: 2 }}>
+              {meta.tags.map((tag) => (
+                <BlogPostChip key={tag} tag={tag} size="sm" />
+              ))}
+            </Box>
+            <Typography level="h3" color="primary">
+              {meta.title}
+            </Typography>
+            <Typography level="body-sm">{meta.description}</Typography>
+          </CardContent>
+          <CardActions>
+            <Box>
+              <Typography level="body-sm">{meta.author}</Typography>
+              <Typography level="body-xs">
+                {DateTime.fromISO(meta.isoDate).toFormat("dd LLL yyyy")}
               </Typography>
-              <Typography level="body-sm">{meta.description}</Typography>
-            </CardContent>
-            <CardActions>
-              <Box>
-                <Typography level="body-sm">{meta.author}</Typography>
-                <Typography level="body-xs">
-                  {DateTime.fromISO(meta.isoDate).toFormat("dd LLL yyyy")}
-                </Typography>
-              </Box>
-              <Button
-                color="primary"
-                variant="plain"
-                component={Link}
-                href={`/articles/blog/${meta.file}`}
-                children="Read&nbsp;More"
-                endDecorator={<KeyboardArrowRightIcon />}
-                sx={{ flex: 0, ml: "auto" }}
-              />
-            </CardActions>
-          </Card>
-        ))}
-      </AppLayout.Main>
-    </>
+            </Box>
+            <Button
+              color="primary"
+              variant="plain"
+              component={Link}
+              href={`/articles/blog/${meta.file}`}
+              children="Read&nbsp;More"
+              endDecorator={<KeyboardArrowRightIcon />}
+              sx={{ flex: 0, ml: "auto" }}
+            />
+          </CardActions>
+        </Card>
+      ))}
+      <Box component="footer" sx={{ py: 2 }} />
+    </LayoutPublic>
   );
 };
 

@@ -2,7 +2,6 @@ import { forwardRef, useRef, useState } from "react";
 import { default as ArrowBackIosNewIcon } from "@mui/icons-material/ArrowBackIosNew";
 import { default as ArrowForwardIosIcon } from "@mui/icons-material/ArrowForwardIos";
 import { Box, IconButton, LinearProgress, styled } from "@mui/joy";
-import { GlobalStyles } from "@mui/material";
 import type { BoxProps } from "@mui/joy";
 import type { ReactElement } from "react";
 
@@ -105,14 +104,6 @@ export const FlashcardTinder = forwardRef<HTMLDivElement, FlashcardTinderProps>(
 
     return (
       <WrapperContainer {...boxProps} ref={ref}>
-        <GlobalStyles
-          styles={{
-            body: {
-              "overscroll-behavior-y": "none",
-              "overscroll-behavior-x": "none",
-            },
-          }}
-        />
         <CardsContainer ref={containerRef} onScroll={handleScroll}>
           {children.map((child) => (
             <FlashcardTinderCardWrapper key={child.key}>

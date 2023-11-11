@@ -11,16 +11,12 @@ import {
   useThemeSwitcher,
 } from "@chair-flight/react/components";
 import type { SidebarRef } from "@chair-flight/react/components";
-import type { BoxProps } from "@mui/joy";
 
 export const LayoutModuleAtpl: FunctionComponent<{
   children: React.ReactNode;
   fixedHeight?: boolean;
   noPadding?: boolean;
-  slots?: {
-    main?: BoxProps;
-  };
-}> = ({ children, fixedHeight, noPadding, slots }) => {
+}> = ({ children, fixedHeight, noPadding }) => {
   const [, setCurrentTheme] = useThemeSwitcher();
   const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
@@ -75,14 +71,12 @@ export const LayoutModuleAtpl: FunctionComponent<{
       <Box
         component={"main"}
         children={children}
-        {...slots?.main}
         sx={{
           width: Sidebar.css.remainingWidth,
           transition: Sidebar.css.widthTransition,
           marginLeft: "auto",
           ...(noPadding ? { p: 0 } : { p: { xs: 1, sm: 2 } }),
           ...(fixedHeight ? { height: "100vh" } : { minHeight: "100vh" }),
-          ...slots?.main?.sx,
         }}
       />
     </>

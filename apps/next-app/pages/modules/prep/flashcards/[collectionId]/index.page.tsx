@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Grid } from "@mui/joy";
-import { Header, AppLayout, Flashcard } from "@chair-flight/react/components";
-import { AppHead } from "@chair-flight/react/containers";
+import { Flashcard } from "@chair-flight/react/components";
+import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import { getTrpcHelper } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -28,7 +28,7 @@ const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
 const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
   flashcards,
 }) => (
-  <>
+  <LayoutPublic noPadding>
     <AppHead
       title="Chair Flight - Flash Cards"
       linkTitle="Chair Flight - Flash Cards"
@@ -42,17 +42,14 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
         "are close enough.",
       ].join(" ")}
     />
-    <Header />
-    <AppLayout.Main>
-      <AppLayout.MainGrid>
-        {flashcards.map((fc) => (
-          <Grid key={fc.id} xs={12} sm={6} md={4} lg={3} sx={{ height: 400 }}>
-            <FlashcardWithOwnControl {...fc} />
-          </Grid>
-        ))}
-      </AppLayout.MainGrid>
-    </AppLayout.Main>
-  </>
+    <Grid container spacing={2} maxWidth="lg" margin="auto">
+      {flashcards.map((fc) => (
+        <Grid key={fc.id} xs={12} sm={6} md={4} lg={3} sx={{ height: 400 }}>
+          <FlashcardWithOwnControl {...fc} />
+        </Grid>
+      ))}
+    </Grid>
+  </LayoutPublic>
 );
 
 export const getStaticProps: GetStaticProps<flashcardsThemePageProps> = async ({

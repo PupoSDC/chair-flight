@@ -1,10 +1,9 @@
 import { useRouter } from "next/router";
 import {
-  AppLayout,
-  HEADER_HEIGHT,
-  Header,
-} from "@chair-flight/react/components";
-import { AppHead, QuestionEditor } from "@chair-flight/react/containers";
+  AppHead,
+  LayoutModuleAtpl,
+  QuestionEditor,
+} from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
@@ -12,20 +11,10 @@ export const EditQuestionPage: NextPage = () => {
   const router = useRouter();
   const questionId = router.query["questionId"] as string;
   return (
-    <>
+    <LayoutModuleAtpl noPadding fixedHeight>
       <AppHead title={questionId} />
-      <Header />
-      <AppLayout.Main
-        sx={{
-          height: {
-            xs: "auto",
-            md: `calc(100vh - ${HEADER_HEIGHT}px)`,
-          },
-        }}
-      >
-        <QuestionEditor />
-      </AppLayout.Main>
-    </>
+      <QuestionEditor />
+    </LayoutModuleAtpl>
   );
 };
 

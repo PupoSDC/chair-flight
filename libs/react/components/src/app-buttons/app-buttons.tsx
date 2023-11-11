@@ -14,10 +14,17 @@ const StyledButton = styled(IconButton)`
   margin: 0;
   flex: 0;
   padding: 0;
+  font-size: 20px;
+  min-width: 30px;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    min-width: 36px;
+    font-size: 24px;
+  }
 
   & > svg {
-    font-size: 24px;
-    color: ${({ theme }) => theme.vars.palette.text.primary};
+    color: ${({ theme }) => theme.vars.palette.neutral.plainColor};
+    font-size: inherit;
   }
 
   &:hover {

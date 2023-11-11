@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { default as Link } from "next/link";
-import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { Sheet } from "@mui/joy";
 import { default as dedent } from "ts-dedent";
 import { QuestionMultipleChoice } from "@chair-flight/react/components";
-import { QuestionReview } from "@chair-flight/react/containers";
+import { QuestionOverview } from "@chair-flight/react/containers";
 import { BlogPageLayout } from "./_blog-page.layout";
 
 export const meta = {
@@ -96,10 +94,21 @@ incorrect. For this simple question, it's possible to write 18 variations!
 That's 16 times more seeing this question than you really need to see it. In
 Chair Flight, these question variants are combined into a single question:
 
-<QuestionReview questionId={"QYFPA3CY4E"} sx={{ maxHeight: "620px" }} />
+<QuestionOverview
+  questionId={"QYFPA3CY4E"}
+  questionBank="Atpl"
+  sx={{
+    maxHeight: "620px",
+    bgcolor: "background.surface",
+    overflow: "auto",
+    borderRadius: "8px",
+    py: 1,
+    my: 2,
+  }}
+/>
 
 Feel free to spend some time playing around. You will notice all these possible
-combinations of this one question are collapsed into one. There is one shared
+combinations of this one question8are collapsed into one. There is one shared
 `Explanation` for all the variations, and on the `Variants` tab you can see all
 the possible variations.
 

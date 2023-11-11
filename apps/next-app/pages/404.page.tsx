@@ -1,20 +1,25 @@
-import { Link, Typography } from "@mui/joy";
-import { Header, AppLayout, Ups } from "@chair-flight/react/components";
-import { AppHead } from "@chair-flight/react/containers";
+import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNewOutlined";
+import { Link, Button, Stack } from "@mui/joy";
+import { Ups } from "@chair-flight/react/components";
+import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 const PageNotFound: NextPage = () => {
   return (
-    <>
+    <LayoutPublic>
       <AppHead />
-      <Header />
-      <AppLayout.Main>
-        <Ups message="Not found" sx={{ flex: 3 }} />
-        <Typography sx={{ margin: "auto", flex: 1 }}>
-          <Link href="/">Go back to the Hangar</Link>
-        </Typography>
-      </AppLayout.Main>
-    </>
+      <Ups message="Not found" sx={{ flex: 3 }} />
+      <Stack>
+        <Button
+          component={Link}
+          href="/"
+          variant="outlined"
+          startDecorator={<OpenInNewIcon />}
+          children="Go back to the Hangar"
+          sx={{ mx: "auto" }}
+        />
+      </Stack>
+    </LayoutPublic>
   );
 };
 
