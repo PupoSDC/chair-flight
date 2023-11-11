@@ -91,7 +91,7 @@ export type QuestionNavigationProps = {
     selectedOption?: string;
   }>;
   loading?: boolean;
-  status?: "in-progress" | "in-progress-with-results" | "show-result";
+  status?: "in-progress" | "show-result" | "both";
   currentId?: string;
   pageSize?: number;
   onQuestionClicked?: (id: string, index: number) => void;
@@ -169,10 +169,7 @@ export const QuestionNavigation = forwardRef<
                     if (status === "in-progress") {
                       return "neutral";
                     }
-                    if (
-                      status === "in-progress-with-results" &&
-                      !item.selectedOption
-                    ) {
+                    if (status === "both" && !item.selectedOption) {
                       return "neutral";
                     }
                     if (item.correctOption === item.selectedOption) {

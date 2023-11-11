@@ -14,10 +14,9 @@ type TestProgress = {
     questionId: string;
     optionId: string;
   }) => void;
-  navigateToTestQuestion: (args: {
-    testId: string;
-    questionId: string;
-  }) => void;
+  goToTestQuestion: (args: { testId: string; questionId: string }) => void;
+  goToNextQuestion: (args: { testId: string }) => void;
+  goToPreviousQuestion: (args: { testId: string }) => void;
   tickTestTimer: (args: { testId: string; timeSpentInMs: number }) => void;
   finishTest: (args: { testId: string }) => void;
   setExamModeAutoSkip: (args: { enabled: boolean }) => void;
@@ -88,7 +87,7 @@ export const useTestProgress = create<TestProgress>()(
           };
           set({ tests: { ...get().tests, [testId]: newTest } });
         },
-        navigateToTestQuestion: ({ testId, questionId }) => {
+        goToTestQuestion: ({ testId, questionId }) => {
           const test = get().tests[testId];
           const question = test.questions.find(
             (q) => q.questionId === questionId,
@@ -101,6 +100,26 @@ export const useTestProgress = create<TestProgress>()(
           const newTest = {
             ...test,
             currentQuestionIndex: test.questions.indexOf(question),
+          };
+          set({ tests: { ...get().tests, [testId]: newTest } });
+        },
+        goToNextQuestion: ({ testId }) => {
+          const test = get().tests[testId];
+          const question = test.questions[test.currentQuestionIndex + 1];
+          if (!question) return;
+          const newTest = {
+            ...test,
+            currentQuestionIndex: test.currentQuestionIndex + 1,
+          };
+          set({ tests: { ...get().tests, [testId]: newTest } });
+        },
+        goToPreviousQuestion: ({ testId }) => {
+          const test = get().tests[testId];
+          const question = test.questions[test.currentQuestionIndex - 1];
+          if (!question) return;
+          const newTest = {
+            ...test,
+            currentQuestionIndex: test.currentQuestionIndex - 1,
           };
           set({ tests: { ...get().tests, [testId]: newTest } });
         },

@@ -11,7 +11,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     redirect: {
       statusCode: 303,
-      destination: "/modules/atpl/tests",
+      destination: "/modules/737/tests",
     },
   };
 };

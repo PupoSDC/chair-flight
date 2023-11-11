@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { mockTest } from "@chair-flight/trpc/mock";
 import { useTestProgress } from "../use-test-progress";
-import { TestQuestionStudy } from "./test-question-study";
+import { TestExam } from "./test-exam";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof TestQuestionStudy>;
+type Story = StoryObj<typeof TestExam>;
 
 export const Playground: Story = {};
 
-const meta: Meta<typeof TestQuestionStudy> = {
-  title: "Containers/Test/TestQuestionStudy",
-  component: TestQuestionStudy,
+const meta: Meta<typeof TestExam> = {
+  title: "Containers/Test/TestExam",
+  component: TestExam,
   tags: ["autodocs"],
   args: {
     testId: mockTest.id,

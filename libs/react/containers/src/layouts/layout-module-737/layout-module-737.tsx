@@ -2,42 +2,55 @@ import { useRef, type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
-import { Box } from "@mui/joy";
+import { Box, listItemContentClasses } from "@mui/joy";
 import {
-  Header,
+  AppLogo,
   Sidebar,
   SidebarListItem,
   useThemeSwitcher,
 } from "@chair-flight/react/components";
-import type { HeaderProps, SidebarRef } from "@chair-flight/react/components";
+import type { SidebarRef } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
 
 export const LayoutModule737: FunctionComponent<{
   children: React.ReactNode;
   fixedHeight?: boolean;
+  noPadding?: boolean;
   slots?: {
-    header?: HeaderProps;
     main?: BoxProps;
   };
-}> = ({ children, fixedHeight, slots }) => {
+}> = ({ children, fixedHeight, noPadding, slots }) => {
   const [, setCurrentTheme] = useThemeSwitcher();
   const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
-  const sidebarHeight = `calc(100vh - ${Header.css.headerHeight})`;
-  const openMenu = () => sidebarRef.current?.toggleDrawer();
 
   useEffect(() => setCurrentTheme("rose"), [setCurrentTheme]);
 
   return (
     <>
-      <Header
-        borderStyle="outlined"
-        onHamburgerClick={openMenu}
-        {...slots?.header}
-      />
-      <Sidebar sx={{ height: sidebarHeight }} ref={sidebarRef}>
+      <Sidebar sx={{ height: "100vh" }} ref={sidebarRef}>
+        <SidebarListItem
+          href={"/"}
+          icon={AppLogo}
+          title={"Chair Flight"}
+          sx={{
+            height: (t) => t.spacing(6),
+            pl: 0.5,
+            svg: {
+              fill: (t) => t.palette.primary.plainColor,
+              fontSize: 24,
+              marginLeft: "-2px",
+              marginRight: "2px",
+            },
+            [`& .${listItemContentClasses.root}`]: {
+              fontWeight: 700,
+              letterSpacing: "0.05rem",
+              color: (t) => t.palette.neutral.plainColor,
+            },
+          }}
+        />
         <SidebarListItem
           href={"/modules/737/tests"}
           selected={isTests}
@@ -59,10 +72,8 @@ export const LayoutModule737: FunctionComponent<{
           width: Sidebar.css.remainingWidth,
           transition: Sidebar.css.widthTransition,
           marginLeft: "auto",
-          p: { xs: 0.5, sm: 2 },
-          ...(fixedHeight
-            ? { height: sidebarHeight }
-            : { minHeight: sidebarHeight }),
+          ...(noPadding ? { p: 0 } : { p: { xs: 1, sm: 2 } }),
+          ...(fixedHeight ? { height: "100vh" } : { minHeight: "100vh" }),
           ...slots?.main?.sx,
         }}
       />

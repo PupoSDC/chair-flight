@@ -4,7 +4,7 @@ import { useTestProgress } from "../use-test-progress/use-test-progress";
 export const useTestHotkeys = ({ testId }: { testId: string }) => {
   const getTest = useTestProgress((s) => s.getTest);
   const answerQuestion = useTestProgress((s) => s.answerTestQuestion);
-  const navigateToQuestion = useTestProgress((s) => s.navigateToTestQuestion);
+  const goToTestQuestion = useTestProgress((s) => s.goToTestQuestion);
 
   const selectOption = (optionIndex: number) => {
     const test = getTest({ testId });
@@ -21,10 +21,7 @@ export const useTestHotkeys = ({ testId }: { testId: string }) => {
     const questionIndex = test.currentQuestionIndex + questionIndexDiff;
     const questionId = test.questions[questionIndex]?.questionId;
     if (!questionId) return;
-    navigateToQuestion({
-      testId: test.id,
-      questionId,
-    });
+    goToTestQuestion({ testId: test.id, questionId });
   };
 
   useHotkeys("left", () => navigateToIndex(-1));

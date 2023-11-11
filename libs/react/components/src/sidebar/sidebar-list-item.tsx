@@ -5,20 +5,22 @@ import {
   ListItemContent,
   ListItemDecorator,
 } from "@mui/joy";
-import type { default as SearchIcon } from "@mui/icons-material/Search";
+import type { SxProps } from "@mui/joy/styles/types";
+import type { ListItemButtonProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 export type SidebarListItemProps = {
-  icon: typeof SearchIcon;
+  icon: FunctionComponent<{ sx: SxProps }>;
   href: string;
   title: string;
   selected?: boolean;
   onClick?: () => void;
-};
+} & ListItemButtonProps;
 
 export const SidebarListItem = forwardRef<
   HTMLAnchorElement,
   SidebarListItemProps
->(({ icon: Icon, selected, href, title, onClick }, ref) => {
+>(({ icon: Icon, selected, href, title, onClick, ...other }, ref) => {
   return (
     <ListItemButton
       ref={ref}
@@ -27,6 +29,7 @@ export const SidebarListItem = forwardRef<
       component={Link}
       href={href}
       onClick={onClick}
+      {...other}
     >
       <ListItemDecorator>
         <Icon sx={{ fontSize: 20 }} />

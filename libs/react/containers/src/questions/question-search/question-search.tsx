@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { Box, useTheme } from "@mui/joy";
-import {
-  CtaSearch,
-  HEADER_HEIGHT,
-  Ups,
-  useMediaQuery,
-} from "@chair-flight/react/components";
+import { CtaSearch, Ups, useMediaQuery } from "@chair-flight/react/components";
 import { QuestionPreviewList } from "../question-preview-list/question-preview-list";
 import type { trpc } from "@chair-flight/trpc/client";
 import type { BoxProps } from "@mui/joy";
@@ -79,7 +74,6 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
       <Box
         sx={{
           height: 90,
-          top: HEADER_HEIGHT,
           position: "sticky",
           zIndex: 2,
           bgcolor: "background.body",
