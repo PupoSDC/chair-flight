@@ -13,7 +13,6 @@ export * from "./module-selection-button";
 export * from "./image-viewer/image-viewer";
 export * from "./input-slider";
 export * from "./markdown-client";
-export * from "./markdown-client-demo";
 export * from "./nested-checkbox-select";
 export * from "./question-multiple-choice";
 export * from "./question-variant-preview";

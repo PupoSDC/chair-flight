@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Grid, Sheet, Textarea } from "@mui/joy";
-import { MarkdownClient } from "../markdown-client/markdown-client";
+import { MarkdownClient } from "./markdown-client";
 import type { FunctionComponent } from "react";
 
 export type MarkdownClientDemoProps = {

@@ -13,6 +13,9 @@ const waitMs = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 const easeInOutQuad = (x: number): number =>
   x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
 
+/**
+ * A span component that counts up from 0 to a given number.
+ */
 export const CountUp: FunctionComponent<CountUpProps> = ({
   end,
   duration,
