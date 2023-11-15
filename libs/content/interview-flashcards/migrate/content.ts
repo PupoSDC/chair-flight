@@ -1,7 +1,7 @@
 import { default as fs } from "fs/promises";
 import { default as path } from "path";
-import type { FlashcardContent } from "@chair-flight/base/types";
 import { BUILD_PATH_FLASHCARDS, CONTENT_PATH } from "../src/constants";
+import type { FlashcardContent } from "@chair-flight/base/types";
 
 const readAllFlashcardsFromFs = async (): Promise<
   Record<string, FlashcardContent[]>
