@@ -1,6 +1,6 @@
-import { getEnvVariableOrDefault } from "@chair-flight/base/env";
+import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 
-const BASE_PATH = getEnvVariableOrDefault("NEXT_PUBLIC_BASE_URL", "");
+const BASE_PATH = `https://${getEnvVariableOrThrow("VERCEL_URL")}`;
 const PUBLIC_DIST_PATH = "/content/question-bank-atpl";
 const READ_PATH = `/public${PUBLIC_DIST_PATH}`;
 const BUILD_PATH = `/apps/next-app${READ_PATH}`;

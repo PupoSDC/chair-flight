@@ -1,6 +1,6 @@
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 
-const BASE_PATH = getEnvVariableOrThrow("NEXT_PUBLIC_BASE_URL");
+const BASE_PATH = `https://${getEnvVariableOrThrow("VERCEL_URL")}`;
 const PUBLIC_DIST_PATH = "/content/interview-flashcards";
 const READ_PATH = `/public${PUBLIC_DIST_PATH}`;
 const BUILD_PATH = `/apps/next-app${READ_PATH}`;

@@ -8,8 +8,7 @@ export const APP_DESC = [
   "for students. Now available for Alpha testing.",
 ].join(" ");
 
-export const BASE_URL =
-  process.env["NEXT_PUBLIC_BASE_URL"] || "http://chair-flight.com";
+export const BASE_URL = "http://chair-flight.com";
 
 export type AppHtmlHeadProps = {
   title?: string;
