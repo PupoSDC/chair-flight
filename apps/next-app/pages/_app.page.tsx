@@ -2,6 +2,7 @@ import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { NoSsr } from "@mui/base";
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
+import { DefaultColorScheme } from "@mui/joy/styles/types";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AnalyticsProvider } from "@chair-flight/react/analytics";
 import { StopResizeAnimation, Toaster } from "@chair-flight/react/components";
@@ -23,7 +24,11 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <Head>
           <title>Welcome to chair-flight!</title>
         </Head>
-        <CssVarsProvider defaultMode="system" theme={theme}>
+        <CssVarsProvider
+          defaultMode="light"
+          defaultColorScheme={"lightBlue" as DefaultColorScheme}
+          theme={theme}
+        >
           <CssBaseline />
           <StopResizeAnimation />
           <Component {...pageProps} />

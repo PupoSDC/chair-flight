@@ -12,14 +12,6 @@ export const useThemeSwitcher = (): [
   const { setColorScheme, colorScheme } = useColorScheme();
   const [currentTheme, setStateCurrentTheme] = useState<ThemeColor>("blue");
 
-  useEffect(() => {
-    const newCurrentTheme = (colorScheme ?? "blue")
-      .toLocaleLowerCase()
-      .replace("light", "")
-      .replace("dark", "") as ThemeColor;
-    setStateCurrentTheme(newCurrentTheme);
-  }, [colorScheme]);
-
   const setCurrentTheme = useCallback(
     (theme: ThemeColor) => {
       const themeWithUppercase = theme[0].toUpperCase() + theme.slice(1);
@@ -30,6 +22,19 @@ export const useThemeSwitcher = (): [
     },
     [setColorScheme],
   );
+
+  useEffect(() => {
+    const newCurrentTheme = (colorScheme ?? "blue")
+      .toLocaleLowerCase()
+      .replace("light", "")
+      .replace("dark", "");
+
+    if (["rose", "teal", "blue"].includes(newCurrentTheme)) {
+      setStateCurrentTheme(newCurrentTheme as ThemeColor);
+    } else {
+      setCurrentTheme("blue");
+    }
+  }, [colorScheme, setCurrentTheme]);
 
   return [currentTheme, setCurrentTheme];
 };
