@@ -6,7 +6,7 @@ import {
 } from "@chair-flight/react/components";
 import type { FunctionComponent, ReactElement } from "react";
 
-const HEADER_HEIGHT = 40;
+const HEADER_HEIGHT = 48;
 const HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;
 
 export type LayoutPublicProps = {

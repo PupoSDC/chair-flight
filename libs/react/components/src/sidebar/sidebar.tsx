@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef } from "react";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import {
   Box,
@@ -11,7 +11,6 @@ import {
   listClasses,
   listItemButtonClasses,
   listItemContentClasses,
-  listItemDecoratorClasses,
   useTheme,
 } from "@mui/joy";
 import { create } from "zustand";
@@ -26,12 +25,8 @@ export type SidebarProps = {
   className?: SheetProps["className"];
 };
 
-export type SidebarRef = HTMLDivElement & {
-  toggleDrawer: () => void;
-};
-
 export type SidebarComponent = React.ForwardRefExoticComponent<
-  SidebarProps & React.RefAttributes<SidebarRef>
+  SidebarProps & React.RefAttributes<HTMLDivElement>
 > & {
   css: {
     remainingWidth: string;
@@ -43,6 +38,7 @@ const VAR_SIDEBAR_WIDTH = "--joy-sidebar-width";
 const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-remaining-width";
 const SIDEBAR_EXPANDED_WIDTH = 210;
 const SIDEBAR_COLLAPSED_WIDTH = 42;
+const SIDEBAR_MOBILE_COLLAPSED_WIDTH = 24;
 
 const useSidebarStore = create<{
   isMobileOpen: boolean;
@@ -69,14 +65,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const isOpen = isSmallScreen ? isMobileOpen : isDesktopOpen;
-
-    useImperativeHandle(
-      ref,
-      () =>
-        ({
-          toggleDrawer: () => setMobileOpen(!isMobileOpen),
-        }) as SidebarRef,
-    );
+    const setOpen = isSmallScreen ? setMobileOpen : setDesktopOpen;
 
     return (
       <>
@@ -84,17 +73,17 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
           styles={{
             body: {
               [theme.breakpoints.up("sm")]: {
+                [VAR_SIDEBAR_REMAINING_WIDTH]: `calc(100vw - var(${VAR_SIDEBAR_WIDTH}))`,
                 [VAR_SIDEBAR_WIDTH]: isDesktopOpen
                   ? `${SIDEBAR_EXPANDED_WIDTH}px`
                   : `${SIDEBAR_COLLAPSED_WIDTH}px`,
-                [VAR_SIDEBAR_REMAINING_WIDTH]: `calc(100vw - var(${VAR_SIDEBAR_WIDTH}))`,
               },
 
               [theme.breakpoints.down("sm")]: {
+                [VAR_SIDEBAR_REMAINING_WIDTH]: `calc(100vw - ${SIDEBAR_MOBILE_COLLAPSED_WIDTH}px)`,
                 [VAR_SIDEBAR_WIDTH]: isMobileOpen
                   ? `${SIDEBAR_EXPANDED_WIDTH}px`
-                  : "0px",
-                [VAR_SIDEBAR_REMAINING_WIDTH]: "100vw",
+                  : `${SIDEBAR_MOBILE_COLLAPSED_WIDTH}px`,
               },
             },
           }}
@@ -118,6 +107,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             flexDirection: "column",
             justifyContent: "space-between",
             zIndex: "modal",
+            overflowX: "hidden",
 
             [`& .${listClasses.root}`]: {
               p: 0,
@@ -129,9 +119,9 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             },
 
             [`& .${listItemButtonClasses.root}`]: {
-              p: 1,
+              p: { xs: 0.125, sm: 1 },
               borderRight: 0,
-              borderLeft: 4,
+              borderLeftWidth: { xs: 0, sm: 4 },
               borderLeftColor: "transparent",
 
               "&:first-of-type": {
@@ -159,23 +149,24 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               },
             },
 
-            [`& .${listItemDecoratorClasses.root}`]: {},
-
             ["& .chevron"]: {
               fontSize: 20,
               transitionDuration: "250ms",
-              transform: isOpen ? "rotate(0deg)" : "rotate(-180deg)",
+              transform: {
+                xs: isMobileOpen ? "rotate(0deg)" : "rotate(-180deg)",
+                sm: isDesktopOpen ? "rotate(0deg)" : "rotate(-180deg)",
+              },
             },
 
             ...otherProps.sx,
           }}
         >
-          <List onClick={() => setMobileOpen(false)}>
+          <List onClick={() => isMobileOpen && setMobileOpen(false)}>
             {children}
             <Box sx={{ flex: 1 }} />
             <ListItemButton
               variant="outlined"
-              onClick={() => setDesktopOpen(!isDesktopOpen)}
+              onClick={() => setOpen(!isOpen)}
               className="toggle-button"
             >
               <ListItemDecorator>

@@ -86,7 +86,7 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
         sx={{
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: { xs: "space-around", sm: "center" },
           backgroundColor: "background.surface",
           borderBottom: "1px solid",
           borderColor: "divider",
@@ -104,6 +104,7 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
             p: 0,
             fontSize: { xs: "20px", md: "24px" },
             minWidth: { xs: "24px", md: "32px" },
+            minHeight: { xs: "24px", md: "32px" },
 
             "& svg": {
               fontSize: "inherit",

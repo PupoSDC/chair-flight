@@ -132,7 +132,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
       addTest({ test });
       onSuccessfulTestCreation(test);
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toast.error("Something went wrong while creating the test. 😥");
     }
   });

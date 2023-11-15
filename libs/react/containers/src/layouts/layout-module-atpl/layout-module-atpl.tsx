@@ -1,4 +1,4 @@
-import { useRef, type FunctionComponent, useEffect } from "react";
+import { type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
@@ -10,7 +10,6 @@ import {
   SidebarListItem,
   useThemeSwitcher,
 } from "@chair-flight/react/components";
-import type { SidebarRef } from "@chair-flight/react/components";
 
 export const LayoutModuleAtpl: FunctionComponent<{
   children: React.ReactNode;
@@ -18,7 +17,6 @@ export const LayoutModuleAtpl: FunctionComponent<{
   noPadding?: boolean;
 }> = ({ children, fixedHeight, noPadding }) => {
   const [, setCurrentTheme] = useThemeSwitcher();
-  const sidebarRef = useRef<SidebarRef>(null);
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -28,7 +26,7 @@ export const LayoutModuleAtpl: FunctionComponent<{
 
   return (
     <>
-      <Sidebar sx={{ height: "100vh" }} ref={sidebarRef}>
+      <Sidebar sx={{ height: "100vh" }}>
         <SidebarListItem
           href={"/"}
           icon={AppLogo}
@@ -38,9 +36,9 @@ export const LayoutModuleAtpl: FunctionComponent<{
             pl: 0.5,
             svg: {
               fill: (t) => t.palette.primary.plainColor,
-              fontSize: 24,
-              marginLeft: "-2px",
-              marginRight: "2px",
+              fontSize: { xs: 20, sm: 24 },
+              marginLeft: { sm: "-2px" },
+              marginRight: { sm: "2px" },
             },
             [`& .${listItemContentClasses.root}`]: {
               fontWeight: 700,
