@@ -15,7 +15,7 @@
     "build": {
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
-      "dependsOn": ["^migrate"],
+      "dependsOn": ["^migrate", "docs:build"],
       "options": {
         "root": "apps/next-app",
         "outputPath": ".dist/apps/next-app"

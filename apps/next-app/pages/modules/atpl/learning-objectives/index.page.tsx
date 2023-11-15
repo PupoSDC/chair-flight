@@ -23,7 +23,10 @@ import {
 } from "@chair-flight/react/components";
 import { AppHead, LayoutModuleAtpl } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
 import type { GetStaticProps, NextPage } from "next";
 
@@ -183,6 +186,7 @@ export const LearningObjectivesIndexPage: NextPage<
 export const getStaticProps: GetStaticProps<
   LearningObjectivesIndexPageProps
 > = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const qb = helper.questionBankAtpl;
   const [, { count: totalNumberOfLearningObjectives }] = await Promise.all([

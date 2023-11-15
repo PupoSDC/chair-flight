@@ -20,6 +20,16 @@ const config: StorybookConfig = {
     check: false,
   },
   features: {},
+  webpackFinal: async (config) => ({
+    ...config,
+    resolve: {
+      ...config.resolve,
+      fallback: {
+        ...config.resolve?.fallback,
+        crypto: false,
+      },
+    },
+  }),
 };
 
 export default config;
