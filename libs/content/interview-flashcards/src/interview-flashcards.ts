@@ -1,4 +1,3 @@
-import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import { API_PATH_FLASHCARDS, READ_PATH_FLASHCARDS } from "./constants";
 import type { FlashcardContent } from "@chair-flight/base/types";
 
@@ -18,9 +17,6 @@ export const preloadInterviewFlashcardsForStaticRender = async ({
 }: {
   readFile: (path: string, string: "utf-8") => Promise<string>;
 }) => {
-  const stage = getEnvVariableOrDefault("NEXT_PHASE", "N/A");
-  const doNotUseMessage = "Do not use this method outside NEXT.JS build time.";
-  if (stage !== "phase-production-build") throw new Error(doNotUseMessage);
   const path = `${process.cwd()}${READ_PATH_FLASHCARDS}`;
   const file = JSON.parse(await readFile(path, "utf-8"));
   flashcards = file as Record<string, FlashcardContent[]>;

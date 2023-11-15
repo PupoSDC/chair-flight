@@ -1,4 +1,3 @@
-import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
   API_PATH_LOS,
@@ -109,11 +108,8 @@ export const preloadQuestionBankAtplForStaticRender = async ({
   readFile,
 }: {
   readFile: (path: string, string: "utf-8") => Promise<string>;
-}) => {
-  const stage = getEnvVariableOrDefault("NEXT_PHASE", "N/A");
-  const doNotUseMessage = "Do not use this method outside NEXT.JS build time.";
-  if (stage !== "phase-production-build") throw new Error(doNotUseMessage);
-  await Promise.all([
+}) =>
+  Promise.all([
     (async () => {
       const path = `${process.cwd()}${READ_PATH_SUBJECTS}`;
       const file = JSON.parse(await readFile(path, "utf-8"));
@@ -130,4 +126,3 @@ export const preloadQuestionBankAtplForStaticRender = async ({
       learningObjectives = file as LearningObjective[];
     })(),
   ]);
-};
