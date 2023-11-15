@@ -10,7 +10,10 @@ import {
   Box,
 } from "@mui/joy";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
 type flashcardsIndexPageProps = {
@@ -124,6 +127,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
 export const getStaticProps: GetStaticProps<
   flashcardsIndexPageProps
 > = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const { flashcardCollections } =
     await helper.interviewPrep.getFlashcardsCollections.fetch();

@@ -4,7 +4,7 @@
   "sourceRoot": "apps/docs",
   "projectType": "application",
   "tags": [],
-  "implicitDependencies": ["react-*"],
+  "implicitDependencies": ["react-components", "react-containers"],
   "targets": {
     "dev": {
       "executor": "@nx/storybook:storybook",

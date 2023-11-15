@@ -1,6 +1,10 @@
 import { default as fs } from "fs/promises";
 import { default as path } from "path";
-import { CONTENT_PATH, BUILD_PATH } from "../src/constants";
+import {
+  CONTENT_PATH,
+  BUILD_PATH_QUESTIONS,
+  BUILD_PATH_SUBJECT,
+} from "../src/constants";
 import type {
   QuestionTemplate,
   QuestionTemplateJson,
@@ -51,11 +55,11 @@ export const buildQuestionBank = async () => {
   const subject = await readSubjectFromFs();
 
   await fs.writeFile(
-    path.join(process.cwd(), BUILD_PATH, "questions.json"),
+    path.join(process.cwd(), BUILD_PATH_QUESTIONS),
     JSON.stringify(questions),
   );
   await fs.writeFile(
-    path.join(process.cwd(), BUILD_PATH, "subject.json"),
+    path.join(process.cwd(), BUILD_PATH_SUBJECT),
     JSON.stringify(subject),
   );
 };

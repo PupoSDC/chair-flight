@@ -1,8 +1,15 @@
 import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 
-export const BASE_PATH = getEnvVariableOrDefault("NEXT_PUBLIC_BASE_URL", "");
+const BASE_PATH = getEnvVariableOrDefault("NEXT_PUBLIC_BASE_URL", "");
+const PUBLIC_DIST_PATH = "/content/question-bank-737";
+const READ_PATH = `/public${PUBLIC_DIST_PATH}`;
+const BUILD_PATH = `/apps/next-app${READ_PATH}`;
+const API_PATH = `${BASE_PATH}${PUBLIC_DIST_PATH}`;
+
 export const CONTENT_PATH = "./libs/content/question-bank-737/content";
-export const PUBLIC_PATH = "/content/question-bank-737";
-export const BUILD_PATH = `./apps/next-app/public${PUBLIC_PATH}`;
-export const API_SUBJECT_PATH = `${BASE_PATH}${PUBLIC_PATH}/subject.json`;
-export const API_QUESTIONS_PATH = `${BASE_PATH}${PUBLIC_PATH}/questions.json`;
+export const BUILD_PATH_SUBJECT = `${BUILD_PATH}/subject.json`;
+export const BUILD_PATH_QUESTIONS = `${BUILD_PATH}/questions.json`;
+export const READ_PATH_SUBJECT = `${READ_PATH}/subject.json`;
+export const READ_PATH_QUESTIONS = `${READ_PATH}/questions.json`;
+export const API_PATH_SUBJECT = `${API_PATH}/subject.json`;
+export const API_PATH_QUESTIONS = `${API_PATH}/questions.json`;

@@ -1,6 +1,14 @@
+import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import { API_QUESTIONS_PATH, API_SUBJECT_PATH } from "./constants";
+import {
+  API_PATH_QUESTIONS,
+  API_PATH_SUBJECT,
+  READ_PATH_QUESTIONS,
+  READ_PATH_SUBJECT,
+} from "./constants";
 import type { QuestionTemplate, Subject } from "@chair-flight/base/types";
+
+type QuestionsMap = Record<string, QuestionTemplate | undefined>;
 
 let questions: QuestionTemplate[];
 let questionsMap: Record<string, QuestionTemplate | undefined>;
@@ -8,7 +16,7 @@ let subject: Subject;
 
 export const getSubject = async () => {
   if (!subject) {
-    const response = await fetch(API_SUBJECT_PATH);
+    const response = await fetch(API_PATH_SUBJECT);
     subject = (await response.json()) as Subject;
   }
   return subject;
@@ -16,21 +24,20 @@ export const getSubject = async () => {
 
 export const getAllQuestionTemplates = async () => {
   if (!questions) {
-    const response = await fetch(API_QUESTIONS_PATH);
+    const response = await fetch(API_PATH_QUESTIONS);
     questions = (await response.json()) as QuestionTemplate[];
-    questionsMap = questions.reduce(
-      (s, q) => {
-        s[q.id] = q;
-        return s;
-      },
-      {} as typeof questionsMap,
-    );
   }
   return questions;
 };
 
 export const getAllQuestionTemplateMap = async () => {
-  await getAllQuestionTemplates();
+  if (!questionsMap) {
+    const questions = await getAllQuestionTemplates();
+    questionsMap = questions.reduce<QuestionsMap>((s, q) => {
+      s[q.id] = q;
+      return s;
+    }, {});
+  }
   return questionsMap;
 };
 
@@ -39,4 +46,26 @@ export const getQuestionTemplate = async (questionId: string) => {
   const question = questions.find((q) => q.id === questionId);
   if (!question) throw new NotFoundError(`Question "${questionId}" not Found!`);
   return question;
+};
+
+export const preloadQuestionBank737ForStaticRender = async ({
+  readFile,
+}: {
+  readFile: (path: string, string: "utf-8") => Promise<string>;
+}) => {
+  const stage = getEnvVariableOrDefault("NEXT_PHASE", "N/A");
+  const doNotUseMessage = "Do not use this method outside NEXT.JS build time.";
+  if (stage !== "phase-production-build") throw new Error(doNotUseMessage);
+  await Promise.all([
+    (async () => {
+      const path = `${process.cwd()}${READ_PATH_SUBJECT}`;
+      const file = JSON.parse(await readFile(path, "utf-8"));
+      subject = file as Subject;
+    })(),
+    (async () => {
+      const path = `${process.cwd()}${READ_PATH_QUESTIONS}`;
+      const file = JSON.parse(await readFile(path, "utf-8"));
+      questions = file as QuestionTemplate[];
+    })(),
+  ]);
 };

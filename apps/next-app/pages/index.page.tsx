@@ -14,7 +14,10 @@ import {
   useThemeSwitcher,
 } from "@chair-flight/react/components";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { ThemeColor } from "@chair-flight/react/components";
 import type { GetStaticProps, NextPage } from "next";
 
@@ -396,6 +399,8 @@ export const IndexPage: NextPage<IndexPageProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
+
   const helper = await getTrpcHelper();
   const [
     { count: numberOfFlashcards },

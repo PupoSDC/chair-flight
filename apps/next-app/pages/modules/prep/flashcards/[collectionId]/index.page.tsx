@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Grid } from "@mui/joy";
 import { Flashcard } from "@chair-flight/react/components";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
@@ -55,6 +58,7 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
 export const getStaticProps: GetStaticProps<flashcardsThemePageProps> = async ({
   params,
 }) => {
+  await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const { collectionId } = params as { collectionId: string };
   const { flashcards } =
@@ -70,6 +74,7 @@ export const getStaticProps: GetStaticProps<flashcardsThemePageProps> = async ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const { flashcardCollections } =
     await helper.interviewPrep.getFlashcardsCollections.fetch();

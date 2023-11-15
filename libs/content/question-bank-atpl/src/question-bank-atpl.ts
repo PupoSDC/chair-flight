@@ -1,8 +1,12 @@
+import { getEnvVariableOrDefault } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
-  API_LEARNING_OBJECTIVES_PATH,
-  API_QUESTIONS_PATH,
-  API_SUBJECTS_PATH,
+  API_PATH_LOS,
+  API_PATH_QUESTIONS,
+  API_PATH_SUBJECTS,
+  READ_PATH_LOS,
+  READ_PATH_QUESTIONS,
+  READ_PATH_SUBJECTS,
 } from "./contants";
 import type {
   LearningObjective,
@@ -10,29 +14,31 @@ import type {
   Subject,
 } from "@chair-flight/base/types";
 
+type QuestionsMap = Record<string, QuestionTemplate | undefined>;
+type LearningObjectivesMap = Record<string, LearningObjective | undefined>;
+
 let questions: QuestionTemplate[];
 let questionsMap: Record<string, QuestionTemplate | undefined>;
 let learningObjectives: LearningObjective[];
-let learningObjectivesMap: Record<string, LearningObjective | undefined>;
+let learningObjectivesMap: LearningObjectivesMap;
 let subjects: Subject[];
 
 export const getAllQuestionTemplates = async () => {
   if (!questions) {
-    const response = await fetch(API_QUESTIONS_PATH);
+    const response = await fetch(API_PATH_QUESTIONS);
     questions = (await response.json()) as QuestionTemplate[];
-    questionsMap = questions.reduce(
-      (s, q) => {
-        s[q.id] = q;
-        return s;
-      },
-      {} as typeof questionsMap,
-    );
   }
   return questions;
 };
 
 export const getAllQuestionTemplateMap = async () => {
-  await getAllQuestionTemplates();
+  if (!questionsMap) {
+    const questions = await getAllQuestionTemplates();
+    questionsMap = questions.reduce<QuestionsMap>((s, q) => {
+      s[q.id] = q;
+      return s;
+    }, {});
+  }
   return questionsMap;
 };
 
@@ -50,9 +56,16 @@ export const getQuestionTemplate = async (questionId: string) => {
 
 export const getAllLearningObjectives = async () => {
   if (!learningObjectives) {
-    const response = await fetch(API_LEARNING_OBJECTIVES_PATH);
+    const response = await fetch(API_PATH_LOS);
     learningObjectives = (await response.json()) as LearningObjective[];
-    learningObjectivesMap = learningObjectives.reduce(
+  }
+  return learningObjectives;
+};
+
+export const getAllLearningObjectivesMap = async () => {
+  if (!learningObjectivesMap) {
+    const learningObjectives = await getAllLearningObjectives();
+    learningObjectivesMap = learningObjectives.reduce<LearningObjectivesMap>(
       (s, lo) => {
         s[lo.id] = lo;
         return s;
@@ -60,11 +73,7 @@ export const getAllLearningObjectives = async () => {
       {} as typeof learningObjectivesMap,
     );
   }
-  return learningObjectives;
-};
 
-export const getAllLearningObjectivesMap = async () => {
-  await getAllLearningObjectives();
   return learningObjectivesMap;
 };
 
@@ -83,7 +92,7 @@ export const getLearningObjective = async (learningObjectiveId: string) => {
 
 export const getAllSubjects = async () => {
   if (!subjects) {
-    const response = await fetch(API_SUBJECTS_PATH);
+    const response = await fetch(API_PATH_SUBJECTS);
     subjects = (await response.json()) as Subject[];
   }
   return subjects;
@@ -94,4 +103,31 @@ export const getSubject = async (subjectId: string) => {
   const subject = subjects.find((s) => s.id === subjectId);
   if (!subject) throw new NotFoundError(`Subject "${subjectId}" not Found!`);
   return subject;
+};
+
+export const preloadQuestionBankAtplForStaticRender = async ({
+  readFile,
+}: {
+  readFile: (path: string, string: "utf-8") => Promise<string>;
+}) => {
+  const stage = getEnvVariableOrDefault("NEXT_PHASE", "N/A");
+  const doNotUseMessage = "Do not use this method outside NEXT.JS build time.";
+  if (stage !== "phase-production-build") throw new Error(doNotUseMessage);
+  await Promise.all([
+    (async () => {
+      const path = `${process.cwd()}${READ_PATH_SUBJECTS}`;
+      const file = JSON.parse(await readFile(path, "utf-8"));
+      subjects = file as Subject[];
+    })(),
+    (async () => {
+      const path = `${process.cwd()}${READ_PATH_QUESTIONS}`;
+      const file = JSON.parse(await readFile(path, "utf-8"));
+      questions = file as QuestionTemplate[];
+    })(),
+    (async () => {
+      const path = `${process.cwd()}${READ_PATH_LOS}`;
+      const file = JSON.parse(await readFile(path, "utf-8"));
+      learningObjectives = file as LearningObjective[];
+    })(),
+  ]);
 };

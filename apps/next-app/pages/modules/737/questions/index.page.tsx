@@ -4,7 +4,10 @@ import {
   QuestionSearch,
 } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
 const QuestionsIndexPage: NextPage = () => (
@@ -19,6 +22,7 @@ const QuestionsIndexPage: NextPage = () => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   await Promise.all([helper.questionBank737.getNumberOfQuestions.fetch()]);
 

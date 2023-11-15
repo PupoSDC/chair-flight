@@ -4,7 +4,10 @@ import {
   LayoutModuleAtpl,
   TestMaker,
 } from "@chair-flight/react/containers";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import {
+  getTrpcHelper,
+  preloadContentForStaticRender,
+} from "@chair-flight/trpc/server";
 import type { GetStaticProps, NextPage } from "next";
 
 const TestsCreatePage: NextPage = () => {
@@ -26,6 +29,8 @@ const TestsCreatePage: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  await preloadContentForStaticRender(await import("fs/promises"));
+
   const helper = await getTrpcHelper();
   await Promise.all([helper.questionBankAtpl.getAllSubjects.fetch()]);
 

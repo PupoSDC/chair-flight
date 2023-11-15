@@ -1,1 +1,1 @@
-export { getFlashcards } from "./interview-flashcards";
+export * from "./interview-flashcards";

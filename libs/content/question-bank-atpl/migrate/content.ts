@@ -3,7 +3,7 @@ import * as path from "path";
 import * as process from "process";
 import * as XLSX from "xlsx";
 import {
-  BUILD_PATH_LEARNING_OBJECTIVES,
+  BUILD_PATH_LOS,
   BUILD_PATH_QUESTIONS,
   BUILD_PATH_SUBJECTS,
   CONTENT_PATH,
@@ -226,7 +226,7 @@ export const buildQuestionBank = async () => {
     JSON.stringify(subject),
   );
   await fs.writeFile(
-    path.join(process.cwd(), BUILD_PATH_LEARNING_OBJECTIVES),
+    path.join(process.cwd(), BUILD_PATH_LOS),
     JSON.stringify(learningObjectives),
   );
 };

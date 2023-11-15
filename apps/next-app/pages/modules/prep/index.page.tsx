@@ -1,14 +1,12 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 
 const ModuleIndexPage: NextPage = () => <></>;
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      statusCode: 303,
-      destination: "/modules/prep/flashcards",
-    },
-  };
-};
+export const getServerSideProps: GetServerSideProps = async () => ({
+  redirect: {
+    statusCode: 303,
+    destination: "/modules/737/tests",
+  },
+});
 
 export default ModuleIndexPage;
