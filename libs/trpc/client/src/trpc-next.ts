@@ -24,7 +24,6 @@ const queryClientConfig: QueryClientConfig = {
     queries: {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
-
       networkMode: "always",
     },
     mutations: {

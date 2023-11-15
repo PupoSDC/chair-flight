@@ -1,3 +1,3 @@
-import { buildflashcards } from "./content";
+import { buildFlashcards } from "./content";
 
-buildflashcards();
+buildFlashcards();
