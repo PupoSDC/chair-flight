@@ -5,7 +5,7 @@ const ModuleIndexPage: NextPage = () => <></>;
 export const getServerSideProps: GetServerSideProps = async () => ({
   redirect: {
     statusCode: 303,
-    destination: "/modules/737/tests",
+    destination: "/modules/prep/flashcards",
   },
 });
 

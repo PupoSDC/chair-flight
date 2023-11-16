@@ -98,6 +98,7 @@ export const ModuleSelectionButton = forwardRef<
           </Typography>
           <Link
             href={showMoreHref}
+            onClick={(e) => e.stopPropagation()}
             endDecorator={<ChevronRightIcon />}
             sx={{
               fontSize: "sm",
