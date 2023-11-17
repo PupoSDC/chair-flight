@@ -34,6 +34,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 *.tsbuildinfo
+**/**/debug.log
 
 # System Files
 .DS_Store
@@ -42,7 +43,6 @@ Thumbs.db
 # Env files
 .env.*
 !.env.example
-!.env.local
 
 # Content produced by build steps
 apps/next-app/public/storybook
