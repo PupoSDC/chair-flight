@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
+import {
+  Flashcard,
+  FlashcardTinder,
+  useThemeSwitcher,
+} from "@chair-flight/react/components";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 import type { FunctionComponent } from "react";
 
-type flashcardsThemePagePropsParams = {
+type FlashcardsThemePagePropsParams = {
   collectionId: string;
   seed: string;
 };
 
-type flashcardsThemePageProps = {
+type FlashcardsThemePageProps = {
   seed: string;
   collectionId: string;
   flashcards: Array<FlashcardContent>;
@@ -33,11 +37,15 @@ const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
   );
 };
 
-const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
+const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
   flashcards,
   collectionId,
   seed,
 }) => {
+  const [, setCurrentTheme] = useThemeSwitcher();
+
+  useEffect(() => setCurrentTheme("teal"), [setCurrentTheme]);
+
   return (
     <LayoutPublic noPadding fixedHeight>
       <AppHead
@@ -89,10 +97,10 @@ const flashcardsThemePage: NextPage<flashcardsThemePageProps> = ({
   );
 };
 
-export const getServerSideProps = ssrHandler<flashcardsThemePageProps>(
+export const getServerSideProps = ssrHandler<FlashcardsThemePageProps>(
   async ({ helper, context }) => {
     const { params } = context;
-    const { collectionId, seed } = params as flashcardsThemePagePropsParams;
+    const { collectionId, seed } = params as FlashcardsThemePagePropsParams;
     const shuffle = getRandomShuffler(seed);
 
     if (seed === "start") {
@@ -120,4 +128,4 @@ export const getServerSideProps = ssrHandler<flashcardsThemePageProps>(
   },
 );
 
-export default flashcardsThemePage;
+export default FlashcardsThemePage;

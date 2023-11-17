@@ -27,8 +27,7 @@ const ControlsContainer = styled(Box)`
   margin: auto;
 
   ${({ theme }) => theme.breakpoints.up("md")} {
-    --IconButton-size: 60px;
-    padding: ${({ theme }) => theme.spacing(2, 0)};
+    display: none;
   }
 `;
 
@@ -37,6 +36,7 @@ const CardsContainer = styled(Box)`
   width: 100%;
   height: 100%;
   max-height: 500px;
+  margin: auto;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 
@@ -64,9 +64,6 @@ const FlashcardTinderCardWrapper = styled(Box)`
   }
 
   ${({ theme }) => theme.breakpoints.up("sm")} {
-    & > * {
-      transform: translate(calc(50vw - ${CARD_WIDTH / 2}px), 0);
-    }
   }
 `;
 

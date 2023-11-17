@@ -1,0 +1,82 @@
+import { Suspense } from "react";
+import { useRouter } from "next/router";
+import { NoSsr } from "@mui/base";
+import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicket";
+import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
+import { default as StyleIcon } from "@mui/icons-material/Style";
+import { Stack, Link } from "@mui/joy";
+import { ModuleSelectionButton } from "@chair-flight/react/components";
+import { TestMaker, useTestProgress } from "@chair-flight/react/containers";
+import { BlogPageLayout } from "./_blog-page.layout";
+
+export const meta = {
+  title: "We refactored our Web App!",
+  linkTitle: "We refactored our Web App!",
+  file: "004-webapp-redesign",
+  description: [
+    "In order to keep our focus we decided to restructure our application in three ",
+    "different segments. The main ovjective with this refactor is to allow students",
+    "on each of the 3 stages of their aeronautical careers a customized experience ",
+    "without being distracted by contents that are not geared towards them. ",
+  ].join(""),
+  tags: ["Feature"],
+  author: "PupoSDC",
+  isoDate: "2023-11-17T20:00:00.000Z",
+};
+
+# We refactored our webapp!
+
+In order to keep our focus we decided to restructure our application in three
+different segments. The main ovjective with this refactor is to allow students
+on each of the 3 stages of their aeronautical careers a customized experience
+without being distracted by contents that are not geared towards them.
+
+<br />
+
+**Enjoy your new home pages:**
+
+<Stack>
+  <ModuleSelectionButton
+    fullWidth
+    component={Link}
+    sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
+    color={"blue"}
+    title={"ATPL theory"}
+    description={[
+      "Explore questions, learning objectives, and theory reviews ",
+      "from the EASA QB ATPL exams.",
+    ].join("")}
+    icon={<AirplaneTicketIcon />}
+    href="/modules/atpl"
+  />
+  <ModuleSelectionButton
+    fullWidth
+    component={Link}
+    sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
+    color={"teal"}
+    title={"Interview Prep"}
+    description={[
+      "Use our flash cards to practice answering open ended ",
+      "questions and secure your first job.",
+    ].join("")}
+    icon={<StyleIcon />}
+    href="/modules/prep"
+  />
+  <ModuleSelectionButton
+    fullWidth
+    component={Link}
+    sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
+    color={"rose"}
+    title={"737 Type rating"}
+    description={[
+      `Prepare or review your theory knowledge for a type rating `,
+      `on the Boeing 737.`,
+    ].join("")}
+    icon={<FlightTakeoffIcon />}
+    href="/modules/737"
+  />
+</Stack>
+
+export default ({ children }) => (
+  <BlogPageLayout meta={meta}>{children}</BlogPageLayout>
+);

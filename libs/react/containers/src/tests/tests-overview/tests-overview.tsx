@@ -11,11 +11,14 @@ export type TestsOverviewProps = {
   questionBank: QuestionBank;
 } & BoxProps;
 
-export const TestsOverview: FunctionComponent<TestsOverviewProps> = (props) => {
+export const TestsOverview: FunctionComponent<TestsOverviewProps> = ({
+  questionBank,
+  ...props
+}) => {
   const tests = useTestProgress((s) => s.tests);
   const testsAsList = Object.values(tests)
     .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)
-    .filter((test) => test.questionBank === props.questionBank);
+    .filter((test) => test.questionBank === questionBank);
 
   const entries = [
     {

@@ -265,7 +265,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   promptly skip variants of questions you already comprehend.
                 </Typography>
                 <Grid container spacing={{ xs: 1, sm: 2 }} sx={{ pt: 2 }}>
-                  <Grid xs={12} sm={6}>
+                  <Grid xs={12} lg={6}>
                     <Button
                       fullWidth
                       size="lg"
@@ -274,7 +274,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       href="/modules/atpl/learning-objectives"
                     />
                   </Grid>
-                  <Grid xs={12} sm={6}>
+                  <Grid xs={12} lg={6}>
                     <Button
                       fullWidth
                       size="lg"
@@ -283,7 +283,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       href="/modules/atpl/questions"
                     />
                   </Grid>
-                  <Grid xs={12} sm={6}>
+                  <Grid xs={12} lg={6}>
                     <Button
                       fullWidth
                       size="lg"
@@ -292,7 +292,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       href="/modules/atpl/tests/create"
                     />
                   </Grid>
-                  <Grid xs={12} sm={6}>
+                  <Grid xs={12} lg={6}>
                     <Button
                       fullWidth
                       disabled
@@ -327,7 +327,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   {` flashcards`}
                 </Typography>
                 <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                  When you get to your first job interview, you won`&apos;t have
+                  When you get to your first job interview, you won&apos;t have
                   the benefit of being able to select the best out of 4 answers.
                   You will have to explain the topics you have learned in the
                   theory classes without any crutches. <br />

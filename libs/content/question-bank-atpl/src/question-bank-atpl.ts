@@ -24,6 +24,7 @@ let subjects: Subject[];
 
 export const getAllQuestionTemplates = async () => {
   if (!questions) {
+    console.log(API_PATH_QUESTIONS);
     const response = await fetch(API_PATH_QUESTIONS);
     questions = (await response.json()) as QuestionTemplate[];
   }

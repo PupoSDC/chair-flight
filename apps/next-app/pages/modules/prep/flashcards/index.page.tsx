@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { default as Image } from "next/image";
 import {
   Button,
@@ -9,6 +10,7 @@ import {
   CardCover,
   Box,
 } from "@mui/joy";
+import { useThemeSwitcher } from "@chair-flight/react/components";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
@@ -27,6 +29,10 @@ type flashcardsIndexPageProps = {
 const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
   flashcardCollections,
 }) => {
+  const [, setCurrentTheme] = useThemeSwitcher();
+
+  useEffect(() => setCurrentTheme("teal"), [setCurrentTheme]);
+
   return (
     <LayoutPublic noPadding>
       <AppHead

@@ -16,7 +16,7 @@ export type ModuleSelectionButtonProps = {
   title: string;
   icon: ReactNode;
   description: ReactNode;
-  showMoreHref: string;
+  showMoreHref?: string;
   active?: boolean;
 } & Omit<ButtonProps, "color" | "children" | "startDecorator" | "endDecorator">;
 
@@ -96,19 +96,21 @@ export const ModuleSelectionButton = forwardRef<
           <Typography level="body-xs" component="span">
             {description}
           </Typography>
-          <Link
-            href={showMoreHref}
-            onClick={(e) => e.stopPropagation()}
-            endDecorator={<ChevronRightIcon />}
-            sx={{
-              fontSize: "sm",
-              mt: 1,
-              color: `var(${primaryColor}-500)`,
-              textDecorationColor: `var(${primaryColor}-500)`,
-            }}
-          >
-            Show more
-          </Link>
+          {showMoreHref && (
+            <Link
+              href={showMoreHref}
+              onClick={(e) => e.stopPropagation()}
+              endDecorator={<ChevronRightIcon />}
+              sx={{
+                fontSize: "sm",
+                mt: 1,
+                color: `var(${primaryColor}-500)`,
+                textDecorationColor: `var(${primaryColor}-500)`,
+              }}
+            >
+              Show more
+            </Link>
+          )}
         </Box>
       </Button>
     );

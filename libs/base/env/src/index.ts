@@ -1,7 +1,4 @@
-import {
-  InvalidEnvVariableError,
-  MissingEnvVariableError,
-} from "@chair-flight/base/errors";
+import { MissingEnvVariableError } from "@chair-flight/base/errors";
 
 export const getEnvVariableOrThrow = (name: string): string => {
   if (process.env[name]) return process.env[name] as string;
@@ -16,10 +13,8 @@ export const getEnvVariableOrDefault = (
   return defaultValue;
 };
 
-export type EnvQuestionBankProvider = "redis" | "local";
-
-export const getEnvQuestionBankProvider = (): EnvQuestionBankProvider => {
-  const env = getEnvVariableOrDefault("QUESTION_BANK_PROVIDER", "local");
-  if (env === "redis" || env === "local") return env;
-  throw new InvalidEnvVariableError("QUESTION_BANK_PROVIDER", env);
+export const getUrlPathOnServer = () => {
+  const VERCEL_URL = getEnvVariableOrThrow("VERCEL_URL");
+  const PROTOCOL = VERCEL_URL.includes("localhost") ? "http" : "https";
+  return `${PROTOCOL}://${VERCEL_URL}`;
 };

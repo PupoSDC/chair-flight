@@ -37,22 +37,22 @@ export const InLocoTestMakeer = () => {
   const router = useRouter();
   const fallback = <Skeleton sx={{ height: 400, position: "initial" }} />
 
-  return (
-    <Sheet sx={{ p: 1, my: 2, height: 600 }}>
-      <NoSsr fallback={fallback}>
-        <Suspense fallback={fallback}>
-          <TestMaker
-            sx={{ height: "100%" }}
-            questionBank={"737"}
-            onSuccessfulTestCreation={(test) => {
-              router.push(`/modules/737/tests/${test.id}/${test.mode}`);
-            }}
-          />
-        </Suspense>
-      </NoSsr>
-    </Sheet>
-  );
-}
+return (
+
+<Sheet sx={{ p: 1, my: 2, height: 600 }}>
+  <NoSsr fallback={fallback}>
+    <Suspense fallback={fallback}>
+      <TestMaker
+        sx={{ height: "100%" }}
+        questionBank={"737"}
+        onSuccessfulTestCreation={(test) => {
+          router.push(`/modules/737/tests/${test.id}/${test.mode}`);
+        }}
+      />
+    </Suspense>
+  </NoSsr>
+</Sheet>
+); }
 
 <InLocoTestMakeer />
 
