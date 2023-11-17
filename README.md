@@ -59,25 +59,25 @@ can and will be introduced in patch releases.
 
 ### Libs
 
-| Name                          | Desc                                                        |
-| ----------------------------- | ----------------------------------------------------------- |
-| base-env                      | Utility to safely access env variables                      |
-| base-errors                   | Errors that can be handled in the front or in the backend   |
-| base-types                    | Base Business types used across the app                     |
-| core-app                      | Business logic blocks sharable between React SPA/SSR and RN |
-| core-redux                    | Redux state management for the more "Appy" logic of the app |
-| core-schemas                  | Zod Schemas shared across our application (from base-types) |
-| providers-analytics           | Analytics provider (currently a custom solution)            |
-| providers-github              | Github related functionalities                              |
-| providers-question-bank-local | Local file system based question bank provider              |
-| providers-question-bank-redis | Redis question bank provider                                |
-| react/analytics               | React hooks to interact with our analytics provider         |
-| react/components              | Shared react (DOM) components                               |
-| react/containers              | Next.js specific components                                 |
-| react/games                   | Shared react (three.js) components                          |
-| trpc/client                   | trpc next js specific client                                |
-| trpc/mock                     | trpc mock server, for storybook and RTL tests               |
-| trpc/server                   | main trpc server. All our backend logic starts here         |
+| Name                         | Desc                                                        |
+| ---------------------------- | ----------------------------------------------------------- |
+| base-env                     | Utility to safely access env variables                      |
+| base-errors                  | Errors that can be handled in the front or in the backend   |
+| base-types                   | Base Business types used across the app                     |
+| content-interview-flashcards | Content bank for the interview prep module                  |
+| content-question-bank-737    | Content bank for the 737 TR module                          |
+| content-question-bank-atpl   | Content bank for the ATPL theory module                     |
+| core-analytics               | Analytics provider (currently a custom solution)            |
+| core-app                     | Business logic blocks sharable between React SPA/SSR and RN |
+| core-github                  | Github related functionalities                              |
+| core-schemas                 | Zod Schemas shared across our application (from base-types) |
+| react-analytics              | React hooks to interact with our analytics provider         |
+| react-components             | Shared react (DOM) components                               |
+| react-containers             | Next.js specific components                                 |
+| react-games                  | Shared react (three.js) components                          |
+| trpc-client                  | trpc next js specific client                                |
+| trpc-mock                    | trpc mock server, for storybook and RTL tests               |
+| trpc-server                  | main trpc server. All our backend logic starts here         |
 
 ### .env
 
@@ -86,7 +86,7 @@ Alternatively you can set up your own instances of all the required providers.
 For this you will need to provide some env variables in an `.env` file located
 at the `.env` folder.
 
-Please check the `.env.local` file for the variables you need to fill out.
+Please check the `.env.example` file for the variables you need to fill out.
 
 Relevant links:
 
