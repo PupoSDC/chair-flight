@@ -42,11 +42,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Generate Prisma types
-        run: pnpm generate:prod
+        run: pnpm generate -c=prod
 
       - name: Run Prettier
         run: pnpm prettier
