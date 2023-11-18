@@ -6,6 +6,7 @@
   "targets": {
     "dev": {
       "executor": "@nx/next:server",
+      "dependsOn": ["^migrate"],
       "options": {
         "port": 4200,
         "buildTarget": "next-app:build",

@@ -5,15 +5,35 @@
   "projectType": "library",
   "targets": {
     "generate": {
-      "command": "prisma generate",
+      "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics"
+        "cwd": "libs/core/analytics",
+        "command": "env-cmd -f ../../../.env.local prisma generate"
+      },
+      "configurations": {
+        "local": {},
+        "dev": {
+          "command": "env-cmd -f ../../../.env.dev prisma generate"
+        },
+        "prod": {
+          "command": "env-cmd -f ../../../.env.prod prisma generate"
+        }
       }
     },
     "migrate": {
-      "command": "prisma migrate dev",
+      "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics"
+        "cwd": "libs/core/analytics",
+        "command": "env-cmd -f ../../../.env.local prisma migrate dev"
+      },
+      "configurations": {
+        "local": {},
+        "dev": {
+          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
+        },
+        "prod": {
+          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
+        }
       }
     },
     "lint": {

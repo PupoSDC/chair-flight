@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm build",
+  "buildCommand": "pnpm build -c=prod",
   "outputDirectory": ".dist/apps/next-app/.next",
   "rewrites": [],
   "crons": [
