@@ -15,7 +15,8 @@ export const createNewQuestionPr = async (
     requestData,
   } = schema;
   const prId = getRandomId();
-  const { octokit, owner, repo } = getOctokit();
+  const { octokit, originOwner, originRepo, upstreamOwner, upstreamRepo } =
+    getOctokit();
   const baseBranch = "main";
   const newBranch = `feat-question-${question.id}-${prId}`;
   const normalizedSrcLocation = srcLocation
@@ -23,14 +24,14 @@ export const createNewQuestionPr = async (
     .replace(/^\//, "");
 
   const baseBranchRef = await octokit.rest.git.getRef({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     ref: `heads/${baseBranch}`,
   });
 
   const getContentResponse = await octokit.rest.repos.getContent({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     path: normalizedSrcLocation,
     ref: baseBranchRef.data.object.sha,
     mediaType: {
@@ -51,21 +52,21 @@ export const createNewQuestionPr = async (
   });
 
   const newBranchRef = await octokit.rest.git.createRef({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     ref: `refs/heads/${newBranch}`,
     sha: baseBranchRef.data.object.sha,
   });
 
   const currentCommit = await octokit.rest.git.getCommit({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     commit_sha: newBranchRef.data.object.sha,
   });
 
   const newTree = await octokit.rest.git.createTree({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     tree: [
       {
         path: normalizedSrcLocation,
@@ -90,8 +91,8 @@ export const createNewQuestionPr = async (
   ].join("\n");
 
   const newCommit = await octokit.rest.git.createCommit({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     author: {
       name: requestData.authorName || "Chair Flight Bot",
       email: requestData.email || "bot@chair-flight.com",
@@ -102,16 +103,16 @@ export const createNewQuestionPr = async (
   });
 
   await octokit.rest.git.updateRef({
-    owner,
-    repo,
+    owner: originOwner,
+    repo: originRepo,
     ref: `heads/${newBranch}`,
     sha: newCommit.data.sha,
   });
 
   const response = await octokit.rest.pulls.create({
-    owner,
-    repo,
-    head: newBranch,
+    owner: upstreamOwner,
+    repo: upstreamRepo,
+    head: originOwner + ":" + newBranch,
     base: baseBranch,
     title,
     body,
