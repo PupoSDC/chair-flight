@@ -43,7 +43,7 @@ jobs:
         run: pnpm install
 
       - name: Generate Prisma types
-        run: pnpm generate -c=prod
+        run: pnpm generate
 
       - name: Run Prettier
         run: pnpm prettier
