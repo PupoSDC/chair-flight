@@ -16,7 +16,7 @@ import {
   toast,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import type { EditQuestionFormValues } from "./types/edit-question-form-values";
+import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 import type { FunctionComponent } from "react";
 
 const useUpdateQuestion = trpc.questionBankAtpl.updateQuestion.useMutation;
@@ -28,9 +28,8 @@ export const ReviewPrModal: FunctionComponent = () => {
   const updateQuestion = useUpdateQuestion();
 
   const navigateAwayFromModal = () => {
-    router.push(`/questions/${router.query["questionId"]}/edit`, undefined, {
-      shallow: true,
-    });
+    const { modal, ...query } = router.query;
+    router.replace({ query }, undefined, { shallow: true });
   };
 
   const onSubmit = form.handleSubmit(async (variables) => {
@@ -39,7 +38,7 @@ export const ReviewPrModal: FunctionComponent = () => {
       loading: "Submitting...",
       error: "Failed to Submit 😔",
       success: (response) => {
-        setTimeout(() => router.push(`/questions/${questionId}`), 3000);
+        setTimeout(() => router.push(`../${questionId}`), 3000);
         return (
           <Box>
             <Typography

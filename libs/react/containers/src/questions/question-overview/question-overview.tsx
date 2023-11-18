@@ -4,6 +4,7 @@ import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
 import {
   Button,
+  CircularProgress,
   Divider,
   Link,
   List,
@@ -177,6 +178,9 @@ export const QuestionOverview: FunctionComponent<QuestionOverviewProps> = ({
         <Tab indicatorInset value={"variants"}>
           Variants
         </Tab>
+        <Tab href={`${questionId}/edit`} component={Link} value="edit">
+          Edit
+        </Tab>
       </TabList>
       <TabPanel value={"question"} sx={{ maxWidth: "md" }}>
         <QuestionMultipleChoice
@@ -311,6 +315,12 @@ export const QuestionOverview: FunctionComponent<QuestionOverviewProps> = ({
           );
         })}
         <Divider />
+      </TabPanel>
+      <TabPanel value={"edit"} sx={{ maxWidth: "lg" }}>
+        <CircularProgress
+          sx={{ mx: "auto", display: "flex", my: 4 }}
+          size="lg"
+        />
       </TabPanel>
     </Tabs>
   );

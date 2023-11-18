@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import {
   AppHead,
-  LayoutModuleAtpl,
+  LayoutModule737,
   QuestionEditor,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
@@ -11,16 +11,16 @@ export const EditQuestionPage: NextPage = () => {
   const router = useRouter();
   const questionId = router.query["questionId"] as string;
   return (
-    <LayoutModuleAtpl fixedHeight noPadding>
+    <LayoutModule737 fixedHeight noPadding>
       <AppHead title={questionId} />
-      <QuestionEditor questionBank="Atpl" />
-    </LayoutModuleAtpl>
+      <QuestionEditor questionBank="737" />
+    </LayoutModule737>
   );
 };
 
 export const getServerSideProps = ssrHandler(async ({ helper, context }) => {
   const questionId = context.params?.["questionId"] as string;
-  await helper.questionBankAtpl.getQuestionFromGithub.prefetch({ questionId });
+  await helper.questionBank737.getQuestionFromGithub.prefetch({ questionId });
 });
 
 export default EditQuestionPage;

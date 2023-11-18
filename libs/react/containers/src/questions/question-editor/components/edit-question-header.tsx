@@ -11,6 +11,7 @@ import {
   Box,
   Button,
   IconButton,
+  Link,
   Stack,
   Tooltip,
   Typography,
@@ -41,62 +42,76 @@ export const EditQuestionHeader = () => {
     const isValid = await form.trigger("question");
     if (isValid) {
       setIsValidated(true);
-      router.push(`/questions/${questionId}/edit?modal=review`, undefined, {
-        shallow: true,
-      });
+      const query = { ...router.query, modal: "review" };
+      router.replace({ query }, undefined, { shallow: true });
     } else {
       toast.error("Validation failed! 😢");
     }
   };
 
   return (
-    <Stack>
-      <Box sx={{ display: "flex", alignItems: "baseline" }}>
-        <EditIcon sx={{ mx: 1 }} fontSize="xl2" />
-        <Typography level="h4">{`Editing Question ${questionId}`}</Typography>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          "& button": { mr: 1 },
-        }}
-      >
-        <NoSsr>
-          <Tooltip title="undo" variant="soft">
-            <IconButton
-              disabled={!isUndoAvailable}
-              color={"primary"}
-              variant="plain"
-              onClick={() => undo()}
+    <Stack
+      sx={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: "background.surface",
+        height: (t) => t.spacing(6),
+        boxSizing: "content-box",
+        borderBottom: "1px solid",
+        borderColor: "divider",
+        px: 2,
+      }}
+    >
+      <EditIcon sx={{ mx: 1 }} fontSize="xl2" />
+      <Typography level="h4" sx={{ fontWeight: 400 }}>
+        Editing Question&nbsp;
+        <Link href={`../${questionId}`}>{questionId}</Link>
+      </Typography>
+      <Box sx={{ flexGrow: 1 }} />
+      <NoSsr>
+        <Tooltip title="undo" variant="soft">
+          <IconButton
+            sx={{ ml: 1 }}
+            disabled={!isUndoAvailable}
+            color={"primary"}
+            variant="plain"
+            onClick={() => undo()}
+          >
+            <Badge
+              badgeContent={historyLength - 1}
+              size="sm"
+              variant="soft"
+              max={99}
             >
-              <Badge
-                badgeContent={historyLength - 1}
-                size="sm"
-                variant="soft"
-                max={99}
-              >
-                <UndoIcon />
-              </Badge>
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="re-validate" variant="soft">
-            <IconButton
-              color={"primary"}
-              variant="plain"
-              onClick={() => validate()}
-              children={<RestartAltIcon />}
-            />
-          </Tooltip>
+              <UndoIcon />
+            </Badge>
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="re-validate" variant="soft">
+          <IconButton
+            sx={{ ml: 1 }}
+            color={"primary"}
+            variant="plain"
+            onClick={() => validate()}
+            children={<RestartAltIcon />}
+          />
+        </Tooltip>
+        <Tooltip
+          title={
+            isValidated ? "Create a Pull Request" : "Validate and Create a PR"
+          }
+          variant="soft"
+        >
           <Button
-            sx={{ ml: "auto" }}
+            sx={{ ml: 1 }}
             color={isValidated ? "success" : "neutral"}
             onClick={() => navigateToValidation()}
             endDecorator={<GitHubIcon />}
             children={"Create a Pull Request"}
           />
-        </NoSsr>
-      </Box>
+        </Tooltip>
+      </NoSsr>
     </Stack>
   );
 };

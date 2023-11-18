@@ -7,7 +7,7 @@ import { default as CodeOffIcon } from "@mui/icons-material/CodeOff";
 import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
 import { Badge, IconButton, Modal, Stack, Tooltip, Typography } from "@mui/joy";
-import { Box, FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
+import { FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
 import { getVariantPreview } from "@chair-flight/core/app";
 import { toast } from "@chair-flight/react/components";
 import { MarkdownClient } from "@chair-flight/react/components";
@@ -22,7 +22,6 @@ export const EditVariantModal: FunctionComponent = () => {
   const [codeEditor, setCodeEditor] = useState(false);
   const router = useRouter();
   const form = useFormContext<EditQuestionFormValues>();
-  const questionId = router.query["questionId"] as string;
   const variantId = router.query["variantId"] as string;
   const name = `question.variants.${router.query["variantId"]}` as const;
   const variant = form.watch(name);
@@ -36,7 +35,8 @@ export const EditVariantModal: FunctionComponent = () => {
   }[variant?.type ?? "one-two"];
 
   const closeModal = () => {
-    router.push(`/questions/${questionId}/edit`, undefined, { shallow: true });
+    const { variantId, ...query } = router.query;
+    router.replace({ query }, undefined, { shallow: true });
   };
 
   const validate = async () => {
@@ -59,52 +59,55 @@ export const EditVariantModal: FunctionComponent = () => {
       <ModalDialog layout="fullscreen">
         {variant && (
           <>
-            <Stack direction="row">
-              <Typography>Edit Variant</Typography>
-              <Box sx={{ display: "flex" }}>
-                <Tooltip title="undo" variant="soft">
-                  <IconButton
-                    color={"primary"}
-                    variant="plain"
-                    onClick={() => setCodeEditor((v) => !v)}
+            <Stack direction="row" alignItems="center">
+              <Typography level="h4">Edit Variant</Typography>
+              <Tooltip title="undo" variant="soft">
+                <IconButton
+                  disabled={!history.isUndoAvailable}
+                  color={"primary"}
+                  variant="plain"
+                  onClick={() => history.undo()}
+                  sx={{ ml: 1 }}
+                >
+                  <Badge
+                    badgeContent={history.historyLength - 1}
+                    size="sm"
+                    variant="soft"
+                    max={99}
                   >
-                    {codeEditor ? <CodeOffIcon /> : <CodeIcon />}
-                  </IconButton>
-                </Tooltip>
-                <Tooltip title="undo" variant="soft">
-                  <IconButton
-                    disabled={!history.isUndoAvailable}
-                    color={"primary"}
-                    variant="plain"
-                    onClick={() => history.undo()}
-                  >
-                    <Badge
-                      badgeContent={history.historyLength - 1}
-                      size="sm"
-                      variant="soft"
-                      max={99}
-                    >
-                      <UndoIcon />
-                    </Badge>
-                  </IconButton>
-                </Tooltip>
-                <Tooltip title="re-validate" variant="soft">
-                  <IconButton
-                    color={"primary"}
-                    variant="plain"
-                    onClick={() => validate()}
-                  >
-                    <RestartAltIcon />
-                  </IconButton>
-                </Tooltip>
+                    <UndoIcon />
+                  </Badge>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Code Editor" variant="soft">
+                <IconButton
+                  color={"primary"}
+                  variant="plain"
+                  sx={{ ml: 1 }}
+                  onClick={() => setCodeEditor((v) => !v)}
+                >
+                  {codeEditor ? <CodeOffIcon /> : <CodeIcon />}
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="re-validate" variant="soft">
+                <IconButton
+                  color={"primary"}
+                  variant="plain"
+                  onClick={() => validate()}
+                  sx={{ ml: 1 }}
+                >
+                  <RestartAltIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Save and Close" variant="soft">
                 <IconButton
                   color="primary"
                   variant="plain"
                   children={<CloseIcon />}
                   onClick={closeModal}
-                  sx={{ mr: 2 }}
+                  sx={{ ml: 1 }}
                 />
-              </Box>
+              </Tooltip>
             </Stack>
             <Grid
               container

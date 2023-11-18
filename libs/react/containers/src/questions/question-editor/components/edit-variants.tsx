@@ -153,13 +153,10 @@ export const EditVariants: FunctionComponent = () => {
 
   const openVariant = useCallback(
     (variantId: string) => {
-      router.push(
-        `/questions/${questionId}/edit?variantId=${variantId}`,
-        undefined,
-        { shallow: true },
-      );
+      const query = { ...router.query, variantId };
+      router.replace({ query }, undefined, { shallow: true });
     },
-    [questionId, router],
+    [router],
   );
 
   return (
@@ -168,7 +165,6 @@ export const EditVariants: FunctionComponent = () => {
         {`Variants (${variants.length})`}
         <HookFormErrorMessage name="variants" sx={{ mt: 0 }} />
       </FormLabel>
-
       <ListContainer component={"ul"}>
         {variants.map((variant) => (
           <EditVariant

@@ -9,14 +9,22 @@ import { EditQuestionBody } from "./components/edit-question-body";
 import { EditQuestionHeader } from "./components/edit-question-header";
 import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
-import { ReviewPrModal } from "./review-pr-modal";
+import { ReviewPrModal } from "./components/review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
+import type { FunctionComponent } from "react";
 
 const resolver = zodResolver(questionEditSchema);
-const useQuestion =
-  trpc.questionBankAtpl.getQuestionFromGithub.useSuspenseQuery;
 
-export const QuestionEditor = () => {
+export type QuestionEditorProps = {
+  questionBank: "737" | "Atpl";
+};
+
+export const QuestionEditor: FunctionComponent<QuestionEditorProps> = ({
+  questionBank,
+}) => {
+  const trpcBank = trpc[`questionBank${questionBank}`];
+  const useQuestion = trpcBank.getQuestionFromGithub.useSuspenseQuery;
+
   const router = useRouter();
   const questionId = router.query["questionId"] as string;
   const [{ questionTemplate }] = useQuestion({ questionId });
@@ -38,7 +46,7 @@ export const QuestionEditor = () => {
   return (
     <FormProvider {...form}>
       <EditQuestionHeader />
-      <Grid container sx={{ flex: 1, overflow: "hidden" }}>
+      <Grid container sx={{ flex: 1, overflow: "hidden", p: 2 }}>
         <Grid xs={12} md={6} lg={4}>
           <EditQuestionBody />
         </Grid>

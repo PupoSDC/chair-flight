@@ -10,6 +10,7 @@ import {
   getQuestionPreview,
   newTestConfigurationSchema,
 } from "@chair-flight/core/app";
+import { getQuestionFromGit } from "@chair-flight/core/github";
 import { makeCountHandler } from "../common/count";
 import { makeSearchHandler } from "../common/search";
 import { publicProcedure, router } from "../config/trpc";
@@ -37,6 +38,19 @@ export const questionBank737Router = router({
       const questionTemplate = await getQuestionTemplate(questionId);
       const learningObjectives: LearningObjectiveWithHref[] = [];
       return { questionTemplate, learningObjectives };
+    }),
+  getQuestionFromGithub: publicProcedure
+    .input(z.object({ questionId: z.string() }))
+    .query(async ({ input }) => {
+      const { questionId } = input;
+      const { srcLocation } = await getQuestionTemplate(questionId);
+      const questionTemplate = await getQuestionFromGit({
+        questionId: questionId,
+        srcLocation: srcLocation,
+        baseBranch: "main",
+      });
+
+      return { questionTemplate };
     }),
   getNumberOfQuestions: makeCountHandler({
     getData: getAllQuestionTemplates,

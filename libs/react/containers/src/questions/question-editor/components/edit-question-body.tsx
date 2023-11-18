@@ -34,6 +34,7 @@ export const EditQuestionBody: FunctionComponent = () => {
           )}
         />
       </FormControl>
+      <FormLabel sx={{ mt: 1 }}>Explanation</FormLabel>
       <HookFormTextArea
         {...form.register("question.explanation")}
         minRows={5}
@@ -54,7 +55,7 @@ export const EditQuestionBody: FunctionComponent = () => {
       </FormControl>
       <Button
         fullWidth
-        sx={{ mt: 1 }}
+        sx={{ mt: 2 }}
         onClick={() => addNewVariant()}
         children="Create new Variant"
       />
