@@ -8,17 +8,30 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "libs/core/analytics",
-        "command": "env-cmd -f ../../../.env.local prisma generate"
+        "command": "prisma generate"
+      },
+      "configurations": {
+        "local": {
+          "command": "env-cmd -f ../../../.env.local prisma generate"
+        },
+        "dev": {
+          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
+        },
+        "prod": {
+          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
+        }
       }
     },
     "migrate": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "libs/core/analytics",
-        "command": "env-cmd -f ../../../.env.local prisma migrate dev"
+        "command": "prisma migrate dev"
       },
       "configurations": {
-        "local": {},
+        "local": {
+          "command": "env-cmd -f ../../../.env.local prisma migrate dev"
+        },
         "dev": {
           "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
         },
