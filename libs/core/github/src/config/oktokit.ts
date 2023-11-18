@@ -1,5 +1,8 @@
 import { Octokit } from "octokit";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import {
+  getEnvVariableOrDefault,
+  getEnvVariableOrThrow,
+} from "@chair-flight/base/env";
 
 let octokit: Octokit;
 
@@ -15,17 +18,20 @@ export const getOctokit = (): {
       auth: getEnvVariableOrThrow("PROVIDER_GITHUB_TOKEN"),
     });
   }
-  const originOwner = getEnvVariableOrThrow(
-    "PROVIDER_GITHUB_PROJECT_ORIGIN_OWNER",
-  );
-  const originRepo = getEnvVariableOrThrow(
-    "PROVIDER_GITHUB_PROJECT_ORIGIN_REPO",
-  );
   const upstreamOwner = getEnvVariableOrThrow(
     "PROVIDER_GITHUB_PROJECT_UPSTREAM_OWNER",
   );
   const upstreamRepo = getEnvVariableOrThrow(
     "PROVIDER_GITHUB_PROJECT_UPSTREAM_REPO",
   );
+  const originOwner = getEnvVariableOrDefault(
+    "PROVIDER_GITHUB_PROJECT_ORIGIN_OWNER",
+    upstreamOwner,
+  );
+  const originRepo = getEnvVariableOrDefault(
+    "PROVIDER_GITHUB_PROJECT_ORIGIN_REPO",
+    upstreamRepo,
+  );
+
   return { octokit, originOwner, originRepo, upstreamOwner, upstreamRepo };
 };

@@ -16,4 +16,12 @@ export default defineConfig({
       provider: "istanbul",
     },
   },
+
+  define: {
+    process: {
+      env: {
+        VERCEL_URL: "localhost:4200",
+      },
+    },
+  },
 });
