@@ -9,15 +9,6 @@
       "options": {
         "cwd": "libs/core/analytics",
         "command": "env-cmd -f ../../../.env.local prisma generate"
-      },
-      "configurations": {
-        "local": {},
-        "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma generate"
-        },
-        "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma generate"
-        }
       }
     },
     "migrate": {
