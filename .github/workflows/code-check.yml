@@ -46,7 +46,7 @@ jobs:
         run: pnpm generate
 
       - name: Run Prettier
-        run: pnpm prettier
+        run: pnpm prettier --check
 
       - name: Run Lint
         run: pnpm lint
