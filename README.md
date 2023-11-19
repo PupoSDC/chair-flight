@@ -7,7 +7,7 @@ Built with
 [`React`](https://react.dev/),
 [`joy-ui`](https://mui.com/joy-ui/getting-started/overview/),
 [`Next`](https://nextjs.org/),
-[`Vite`](https://vitejs.dev/),
+[`Vitest`](https://vitest.dev/),
 [`Storybook`](https://storybook.js.org/),
 [`Prisma`](https://www.prisma.io/),
 [`Trpc`](https://trpc.io/),
@@ -36,9 +36,9 @@ fnm use
 cp .env.example .env.local
 pnpm install
 pnpm infra
-pnpm generate:local
-pnpm dev:local
-pnpm build:local
+pnpm generate
+pnpm dev
+pnpm build
 ```
 
 ## Project state
@@ -81,18 +81,38 @@ can and will be introduced in patch releases.
 
 ### .env
 
-A docker-compose file is provided to run the required services locally.
-Alternatively you can set up your own instances of all the required providers.
-For this you will need to provide some env variables in an `.env` file located
-at the `.env` folder.
+To run the application you will need to provide some env variables in an `.env`
+file. You can get started by copying over the `.env.example`:
 
-Please check the `.env.example` file for the variables you need to fill out.
+```sh
+cp .env.example .env.local
+```
 
-Relevant links:
+If you create the required services remotely, you can create other env files to
+point to those services. For example:
 
-- https://github.com/settings/tokens/new?scopes=repo
-- https://docs.upstash.com/redis/quickstarts/nextjs13#database-setup
-- https://vercel.com/docs/storage/vercel-postgres
+```sh
+cp .env.example .env.production
+```
+
+You can then run specific configurations using the nx `-c` flag:
+
+```sh
+pnpm run dev -c production
+pnpm run build -c production
+pnpm run migrate -c production
+pnpm run generate -c production
+```
+
+For more information on managing `.env` variables within an `nx` project you can
+read more [here](https://nx.dev/recipes/tips-n-tricks/define-environment-variables).
+
+### Local development
+
+A [docker-compose](https://docs.docker.com/get-started/08_using_compose/) file
+is provided to run the required services locally. You will need to run
+`pnpm infra` to initialize the required services. The provided `.env.example`
+is configured to connect to this local setup.
 
 ## Contributing
 
