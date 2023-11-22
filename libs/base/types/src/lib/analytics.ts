@@ -10,7 +10,7 @@ export type PageEvent = {
 };
 
 export type TrackEventMap = {
-  "exploreQuestions.click": Record<string, unknown>;
+  "themeButton.switch": Record<string, never>;
 };
 
 export type TrackEventName = keyof TrackEventMap;

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { useAnalyticsPlugin } from "./use-analytics-plugin";
 import type {
   TrackEventName,
@@ -7,27 +7,21 @@ import type {
 import type { AnalyticsInstance } from "analytics";
 import type { FunctionComponent, PropsWithChildren } from "react";
 
-const analyticsContext = createContext<AnalyticsInstance | null>(null);
+const analyticsContext = createContext<Promise<AnalyticsInstance>>(
+  null as unknown as Promise<AnalyticsInstance>,
+);
 
 export const AnalyticsProvider: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   const plugin = useAnalyticsPlugin();
-  const [analytics, setAnalytics] = useState<AnalyticsInstance | null>(null);
-
-  useEffect(() => {
-    (async () => {
-      const Analytics = (await import("analytics")).default;
-      setAnalytics(
-        Analytics({
-          app: "chair-flight",
-          version: "1",
-          plugins: [plugin],
-        }),
-      );
-    })();
-  }, [plugin]);
-
+  const [analytics] = useState(async () =>
+    (await import("analytics")).default({
+      app: "chair-flight",
+      version: "1",
+      plugins: [plugin],
+    }),
+  );
   return (
     <analyticsContext.Provider value={analytics}>
       {children}
@@ -40,14 +34,14 @@ export const useAnalytics = () => {
 
   return {
     page: () => {
-      analytics?.page();
+      analytics.then((a) => a.page());
     },
 
     track: <T extends TrackEventName>(
       name: T,
       payload: TrackEventPayload<T> = {},
     ) => {
-      analytics?.track(name, payload);
+      analytics.then((a) => a.track(name, payload));
     },
   };
 };

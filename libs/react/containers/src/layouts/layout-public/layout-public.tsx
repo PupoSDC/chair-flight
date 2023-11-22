@@ -1,4 +1,5 @@
 import { Box, Link, Stack } from "@mui/joy";
+import { useAnalytics } from "@chair-flight/react/analytics";
 import {
   AppLogo,
   GithubButton,
@@ -28,6 +29,8 @@ export const LayoutPublic: LayoutPublicComponent = ({
   background,
   noPadding,
 }) => {
+  const { track } = useAnalytics();
+
   return (
     <>
       <Stack
@@ -87,7 +90,7 @@ export const LayoutPublic: LayoutPublicComponent = ({
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <GithubButton />
-        <ThemeButton />
+        <ThemeButton onClick={() => track("themeButton.switch")} />
       </Stack>
       <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />
       {background}

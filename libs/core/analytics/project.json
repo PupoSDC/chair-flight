@@ -40,6 +40,24 @@
         }
       }
     },
+    "studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/core/analytics",
+        "command": "prisma studio"
+      },
+      "configurations": {
+        "local": {
+          "command": "env-cmd -f ../../../.env.local prisma migrate dev"
+        },
+        "dev": {
+          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
+        },
+        "prod": {
+          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
+        }
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],

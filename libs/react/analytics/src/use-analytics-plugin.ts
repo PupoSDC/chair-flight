@@ -50,10 +50,10 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
     },
     track: (props: OriginalTrackEventProps) => {
       trackEvent.mutate({
-        path: router.pathname,
-        resolvedPath: router.asPath,
         eventName: props.payload.event,
         anonymousId: props.payload.anonymousId,
+        path: router.pathname,
+        resolvedPath: router.asPath,
         properties: props.payload.properties,
         timestamp: Date.now(),
       });

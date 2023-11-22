@@ -1,5 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -23,10 +23,10 @@ model PageEvent {
 
 model PageEventDailyCount {
   id          String   @id @default(uuid())
-  timestamp   DateTime
   environment String
   count       Int
   path        String
+  timestamp   DateTime
 }
 
 model TrackEvent {
