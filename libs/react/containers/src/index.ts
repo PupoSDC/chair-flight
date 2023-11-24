@@ -14,3 +14,4 @@ export * from "./theme";
 export * from "./layouts/layout-module-737";
 export * from "./layouts/layout-module-atpl";
 export * from "./layouts/layout-public";
+export * from "./user/user-settings";

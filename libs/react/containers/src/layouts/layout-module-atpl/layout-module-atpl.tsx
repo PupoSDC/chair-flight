@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
+import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { Box, listItemContentClasses } from "@mui/joy";
 import {
   AppLogo,
@@ -21,6 +22,7 @@ export const LayoutModuleAtpl: FunctionComponent<{
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isLearningObjectives = router.asPath.includes("learning-objectives");
+  const isSettings = router.asPath.includes("settings");
 
   useEffect(() => setCurrentTheme("blue"), [setCurrentTheme]);
 
@@ -64,6 +66,13 @@ export const LayoutModuleAtpl: FunctionComponent<{
           selected={isLearningObjectives}
           icon={LearningObjectivesIcon}
           title={"Learning Objectives"}
+        />
+        <SidebarListItem
+          bottom
+          href={"/modules/atpl/settings"}
+          selected={isSettings}
+          icon={SettingsIcon}
+          title={"Settings"}
         />
       </Sidebar>
       <Box

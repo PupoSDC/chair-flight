@@ -1,11 +1,10 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
+import { useUserPreferences } from "../../hooks/use-user-preferences";
 import type { Test } from "@chair-flight/base/types";
 
 type TestProgress = {
   tests: Record<string, Test>;
-  examModeAutoSkip: boolean;
-  studyModeAutoSkip: boolean;
   getTest: (args: { testId: string }) => Test;
   addTest: (args: { test: Test }) => void;
   startTest: (args: { testId: string }) => void;
@@ -19,8 +18,6 @@ type TestProgress = {
   goToPreviousQuestion: (args: { testId: string }) => void;
   tickTestTimer: (args: { testId: string; timeSpentInMs: number }) => void;
   finishTest: (args: { testId: string }) => void;
-  setExamModeAutoSkip: (args: { enabled: boolean }) => void;
-  setStudyModeAutoSkip: (args: { enabled: boolean }) => void;
 };
 
 export const useTestProgress = create<TestProgress>()(
@@ -61,9 +58,11 @@ export const useTestProgress = create<TestProgress>()(
           question.selectedOptionId = optionId;
 
           let currentQuestionIndex = test.currentQuestionIndex;
+          const { examModeAutoSkip = false, studyModeAutoSkip = false } =
+            useUserPreferences.getState();
           switch (test.mode) {
             case "exam": {
-              if (get().examModeAutoSkip) {
+              if (examModeAutoSkip) {
                 currentQuestionIndex = Math.min(
                   test.currentQuestionIndex + 1,
                   test.questions.length - 1,
@@ -72,7 +71,7 @@ export const useTestProgress = create<TestProgress>()(
               break;
             }
             case "study": {
-              if (get().studyModeAutoSkip) {
+              if (studyModeAutoSkip) {
                 currentQuestionIndex = Math.min(
                   test.currentQuestionIndex + 1,
                   test.questions.length - 1,
@@ -144,12 +143,6 @@ export const useTestProgress = create<TestProgress>()(
             status: "finished",
           };
           set({ tests: { ...get().tests, [testId]: newTest } });
-        },
-        setExamModeAutoSkip: ({ enabled }) => {
-          set({ examModeAutoSkip: enabled });
-        },
-        setStudyModeAutoSkip: ({ enabled }) => {
-          set({ studyModeAutoSkip: enabled });
         },
       }),
       { name: "cf-test-progress" },

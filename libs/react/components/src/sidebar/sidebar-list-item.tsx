@@ -14,6 +14,7 @@ export type SidebarListItemProps = {
   href: string;
   title: string;
   selected?: boolean;
+  bottom?: boolean;
   onClick?: () => void;
 } & ListItemButtonProps;
 

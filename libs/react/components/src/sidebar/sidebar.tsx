@@ -127,7 +127,9 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               "&:first-of-type": {
                 borderTop: 0,
               },
-              "&:not(:last-of-type)": {
+
+              // TODO fix this, should be a sibling selector
+              "&": {
                 borderBottom: 0,
               },
 
@@ -162,8 +164,9 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
           }}
         >
           <List onClick={() => isMobileOpen && setMobileOpen(false)}>
-            {children}
+            {children.filter((c) => !c.props.bottom)}
             <Box sx={{ flex: 1 }} />
+            {children.filter((c) => c.props.bottom)}
             <ListItemButton
               variant="outlined"
               onClick={() => setOpen(!isOpen)}

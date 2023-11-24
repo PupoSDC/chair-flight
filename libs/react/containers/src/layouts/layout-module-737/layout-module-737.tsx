@@ -2,6 +2,7 @@ import { type FunctionComponent, useEffect } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
+import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { Box, listItemContentClasses } from "@mui/joy";
 import {
   AppLogo,
@@ -25,6 +26,7 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
+  const isSettings = router.asPath.includes("settings");
 
   useEffect(() => setCurrentTheme("rose"), [setCurrentTheme]);
 
@@ -62,6 +64,13 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
           selected={isQuestions}
           icon={QuestionsIcon}
           title={"Questions"}
+        />
+        <SidebarListItem
+          bottom
+          href={"/modules/737/settings"}
+          selected={isSettings}
+          icon={SettingsIcon}
+          title={"Settings"}
         />
       </Sidebar>
       <Box
