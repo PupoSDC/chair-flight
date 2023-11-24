@@ -9,7 +9,7 @@ export default defineConfig({
     globals: true,
     include: ["**/*.{test,spec}.{ts,tsx}"],
     cache: {
-      dir: "../../node_modules/.vitest",
+      dir: "../../../node_modules/.vitest",
     },
     coverage: {
       all: true,
