@@ -40,6 +40,24 @@
         }
       }
     },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/core/analytics",
+        "command": "prisma migrate deploy"
+      },
+      "configurations": {
+        "local": {
+          "command": "env-cmd -f ../../../.env.local prisma migrate deploy"
+        },
+        "dev": {
+          "command": "env-cmd -f ../../../.env.dev prisma migrate deploy"
+        },
+        "prod": {
+          "command": "env-cmd -f ../../../.env.prod prisma migrate deploy"
+        }
+      }
+    },
     "studio": {
       "executor": "nx:run-commands",
       "options": {
