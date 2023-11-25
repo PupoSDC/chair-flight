@@ -33,7 +33,8 @@
       "executor": "@nrwl/vite:test",
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/next-app"
+        "reportsDirectory": "../../coverage/apps/next-app",
+        "config": "{projectRoot}/vitest.config.ts"
       }
     },
     "lint": {

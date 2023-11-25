@@ -1,19 +1,13 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  cacheDir: "../../../node_modules/.vite/core-app",
-
-  plugins: [
-    viteTsConfigPaths({
-      root: "../../../",
-    }),
-  ],
+  plugins: [viteTsConfigPaths({ root: "../../" })],
 
   test: {
     globals: true,
-    environment: "jsdom",
+    include: ["**/*.{test,spec}.{ts,tsx}"],
     cache: {
       dir: "../../../node_modules/.vitest",
     },
@@ -21,6 +15,13 @@ export default defineConfig({
       all: true,
       provider: "istanbul",
     },
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+  },
+
+  define: {
+    process: {
+      env: {
+        VERCEL_URL: "localhost:4200",
+      },
+    },
   },
 });
