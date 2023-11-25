@@ -57,7 +57,13 @@ export const ThemeButton: FunctionComponent<IconButtonProps> = (props) => {
   useEffect(() => setIsMounted(true), []);
 
   return (
-    <StyledButton onClick={toggleTheme} {...props}>
+    <StyledButton
+      {...props}
+      onClick={(...args) => {
+        toggleTheme();
+        props.onClick?.(...args);
+      }}
+    >
       {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
     </StyledButton>
   );

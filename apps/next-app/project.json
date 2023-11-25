@@ -6,7 +6,7 @@
   "targets": {
     "dev": {
       "executor": "@nx/next:server",
-      "dependsOn": ["^migrate"],
+      "dependsOn": ["^deploy"],
       "options": {
         "port": 4200,
         "buildTarget": "next-app:build",
@@ -16,7 +16,7 @@
     "build": {
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
-      "dependsOn": ["^migrate", "docs:build"],
+      "dependsOn": ["^deploy", "docs:build"],
       "options": {
         "root": "apps/next-app",
         "outputPath": ".dist/apps/next-app"
