@@ -15,8 +15,9 @@
       "executor": "@nrwl/vite:test",
       "outputs": ["{workspaceRoot}/coverage/libs/core/app"],
       "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/core/app"
+        "passWithNoTests": false,
+        "reportsDirectory": "{workspaceRoot}/coverage/libs/core/app",
+        "config": "{projectRoot}/vitest.config.ts"
       }
     },
     "tsc": {

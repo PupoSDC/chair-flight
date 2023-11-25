@@ -35,7 +35,8 @@
       "outputs": [],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../coverage/libs/content/interview-flashcards"
+        "reportsDirectory": "../coverage/libs/content/interview-flashcards",
+        "config": "{projectRoot}/vitest.config.ts"
       }
     }
   },

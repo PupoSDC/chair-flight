@@ -1,7 +1,14 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
-  framework: "@storybook/nextjs",
+  framework: {
+    name: "@storybook/nextjs",
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
+  },
   stories: [
     "../**/*.stories.tsx",
     "../**/*.mdx",
@@ -16,19 +23,11 @@ const config: StorybookConfig = {
   staticDirs: ["../public"],
   typescript: {
     reactDocgen: "react-docgen-typescript",
-    skipBabel: false,
-    check: false,
+    skipBabel: true,
   },
   features: {},
   webpackFinal: async (config) => ({
     ...config,
-    resolve: {
-      ...config.resolve,
-      fallback: {
-        ...config.resolve?.fallback,
-        crypto: false,
-      },
-    },
     ignoreWarnings: [/Failed to parse source map/],
   }),
 };

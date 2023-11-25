@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   plugins: [viteTsConfigPaths({ root: "../../" })],
@@ -14,14 +14,6 @@ export default defineConfig({
     coverage: {
       all: true,
       provider: "istanbul",
-    },
-  },
-
-  define: {
-    process: {
-      env: {
-        VERCEL_URL: "localhost:4200",
-      },
     },
   },
 });
