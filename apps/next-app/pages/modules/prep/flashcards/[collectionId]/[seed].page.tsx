@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import {
-  Flashcard,
-  FlashcardTinder,
-  useThemeSwitcher,
-} from "@chair-flight/react/components";
-import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
+import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
+import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -42,12 +38,8 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
   collectionId,
   seed,
 }) => {
-  const [, setCurrentTheme] = useThemeSwitcher();
-
-  useEffect(() => setCurrentTheme("teal"), [setCurrentTheme]);
-
   return (
-    <LayoutPublic noPadding fixedHeight>
+    <LayoutModulePrep noPadding fixedHeight>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -93,7 +85,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
             </Card>,
           ])}
       </FlashcardTinder>
-    </LayoutPublic>
+    </LayoutModulePrep>
   );
 };
 

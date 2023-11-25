@@ -1,14 +1,14 @@
-import { type FunctionComponent, useEffect } from "react";
+import { type FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
-import { Box, listItemContentClasses } from "@mui/joy";
+import { Box, listItemContentClasses, GlobalStyles } from "@mui/joy";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
-  useThemeSwitcher,
+  getGlobalColorScheme,
 } from "@chair-flight/react/components";
 
 export type LayoutModule737Props = {
@@ -22,16 +22,18 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
   fixedHeight,
   noPadding,
 }) => {
-  const [, setCurrentTheme] = useThemeSwitcher();
   const router = useRouter();
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isSettings = router.asPath.includes("settings");
 
-  useEffect(() => setCurrentTheme("rose"), [setCurrentTheme]);
-
   return (
     <>
+      <GlobalStyles
+        styles={(t) => {
+          return getGlobalColorScheme(t.colorSchemes.light.palette.primaryRose);
+        }}
+      />
       <Sidebar sx={{ height: "100vh" }}>
         <SidebarListItem
           href={"/"}

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Grid } from "@mui/joy";
-import { Flashcard, useThemeSwitcher } from "@chair-flight/react/components";
-import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
+import { Flashcard } from "@chair-flight/react/components";
+import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
@@ -31,12 +31,8 @@ const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
 const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
   flashcards,
 }) => {
-  const [, setCurrentTheme] = useThemeSwitcher();
-
-  useEffect(() => setCurrentTheme("teal"), [setCurrentTheme]);
-
   return (
-    <LayoutPublic noPadding>
+    <LayoutModulePrep noPadding>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -57,7 +53,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
           </Grid>
         ))}
       </Grid>
-    </LayoutPublic>
+    </LayoutModulePrep>
   );
 };
 

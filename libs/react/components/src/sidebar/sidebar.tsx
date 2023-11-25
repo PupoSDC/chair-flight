@@ -128,9 +128,8 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
                 borderTop: 0,
               },
 
-              // TODO fix this, should be a sibling selector
-              "&": {
-                borderBottom: 0,
+              "& + .filler": {
+                borderBottom: "1px",
               },
 
               "&:hover": {
@@ -144,10 +143,6 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
                 color: "var(--joy-palette-primary-plainColor)",
                 borderLeftColor: "var(--joy-palette-primary-plainColor)",
                 bgcolor: "transparent",
-              },
-
-              "&.toggle-button": {
-                borderBottom: 0,
               },
             },
 
@@ -165,7 +160,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
         >
           <List onClick={() => isMobileOpen && setMobileOpen(false)}>
             {children.filter((c) => !c.props.bottom)}
-            <Box sx={{ flex: 1 }} />
+            <Box sx={{ flex: 1 }} className="filler" />
             {children.filter((c) => c.props.bottom)}
             <ListItemButton
               variant="outlined"
