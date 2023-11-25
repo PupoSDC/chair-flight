@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
 import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
@@ -11,6 +11,9 @@ import { theme } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
+
+// TODO this is a complete hack. Open ticket with SB
+window.React = React;
 
 initialize({
   onUnhandledRequest: ({ method, url }) => {
