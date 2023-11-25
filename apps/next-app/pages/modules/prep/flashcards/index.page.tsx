@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { default as Image } from "next/image";
 import {
   Button,
@@ -10,8 +9,7 @@ import {
   CardCover,
   Box,
 } from "@mui/joy";
-import { useThemeSwitcher } from "@chair-flight/react/components";
-import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
+import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
@@ -29,12 +27,8 @@ type flashcardsIndexPageProps = {
 const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
   flashcardCollections,
 }) => {
-  const [, setCurrentTheme] = useThemeSwitcher();
-
-  useEffect(() => setCurrentTheme("teal"), [setCurrentTheme]);
-
   return (
-    <LayoutPublic noPadding>
+    <LayoutModulePrep noPadding>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -62,7 +56,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
             Once you are satisfied with the answer, Flip the card to see if you
             are close enough.
           </Typography>
-          <Typography sx={{ mt: 3 }} level="h3" color="primary">
+          <Typography level="h3" sx={{ mt: 3, color: "primary.500" }}>
             Have fun!
           </Typography>
         </Grid>
@@ -126,7 +120,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
           </Grid>
         ))}
       </Grid>
-    </LayoutPublic>
+    </LayoutModulePrep>
   );
 };
 

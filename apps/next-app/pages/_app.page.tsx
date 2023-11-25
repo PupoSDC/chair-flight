@@ -7,13 +7,19 @@ import { AnalyticsProvider } from "@chair-flight/react/analytics";
 import { StopResizeAnimation } from "@chair-flight/react/components";
 import { theme } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
-import type { DefaultColorScheme } from "@mui/joy/styles/types";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";
 import "@fontsource/public-sans";
 
 if (typeof document === "undefined") {
   React.useLayoutEffect = React.useEffect;
+}
+
+if (typeof document !== "undefined") {
+  // temporary fix to rollback the custom scheme colors.
+  // remove me if you are reading this in 2024
+  localStorage.setItem("joy-color-scheme-light", "light");
+  localStorage.setItem("joy-color-scheme-dark", "dark");
 }
 
 const DynamicToaster = dynamic(
@@ -34,11 +40,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <Head>
           <title>Welcome to chair-flight!</title>
         </Head>
-        <CssVarsProvider
-          defaultMode="light"
-          defaultColorScheme={"lightBlue" as DefaultColorScheme}
-          theme={theme}
-        >
+        <CssVarsProvider defaultMode="light" theme={theme}>
           <CssBaseline />
           <StopResizeAnimation />
           <Component {...pageProps} />

@@ -5,20 +5,28 @@ import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicke
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as StyleIcon } from "@mui/icons-material/Style";
-import { Box, styled, Grid, Typography, Button, Link, Divider } from "@mui/joy";
+import {
+  Box,
+  styled,
+  Grid,
+  Typography,
+  Button,
+  Link,
+  Divider,
+  GlobalStyles,
+} from "@mui/joy";
 import {
   CoolSlidingThing,
   CountUp,
   ModuleSelectionButton,
   Typical,
-  useThemeSwitcher,
+  getGlobalColorScheme,
 } from "@chair-flight/react/components";
 import { AppHead, LayoutPublic } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
-import type { ThemeColor } from "@chair-flight/react/components";
 import type { GetStaticProps, NextPage } from "next";
 
 const fadeIn = keyframes`
@@ -37,11 +45,13 @@ const RightContainer = styled(Grid)`
   }
 `;
 
-export type IndexPageProps = {
+type IndexPageProps = {
   numberOfAtplQuestions: number;
   numberOf737Questions: number;
   numberOfFlashcards: number;
 };
+
+type Theme = "737" | "atpl" | "prep";
 
 const MEDIA_LONG_SCREEN = "@media (min-height: 560px) and (min-width: 440px)";
 
@@ -51,11 +61,9 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   numberOf737Questions,
 }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
-  const [activeTheme, setActiveTheme] = useState<ThemeColor | undefined>();
-  const [, setCurrentTheme] = useThemeSwitcher();
+  const [activeTheme, setActiveTheme] = useState<Theme | undefined>();
 
-  const goToTheme = (theme: ThemeColor) => {
-    setCurrentTheme(theme);
+  const goToTheme = (theme: Theme) => {
     setActiveTheme(theme);
     const top = rightSideContainer.current?.offsetTop ?? 0;
     setTimeout(
@@ -68,6 +76,21 @@ export const IndexPage: NextPage<IndexPageProps> = ({
 
   return (
     <LayoutPublic fixedHeight noPadding background={<CoolSlidingThing />}>
+      <GlobalStyles
+        styles={(t) => {
+          const palette = t.colorSchemes.light.palette;
+          switch (activeTheme) {
+            case "737":
+              return getGlobalColorScheme(palette.primaryRose);
+            case "prep":
+              return getGlobalColorScheme(palette.primaryTeal);
+            case "atpl":
+              return getGlobalColorScheme(palette.primaryBlue);
+            default:
+              return getGlobalColorScheme(palette.primaryBlue);
+          }
+        }}
+      />
       <AppHead
         linkDescription={[
           "Chair Flight is a community driven Aviation Question Bank built by ",
@@ -76,7 +99,6 @@ export const IndexPage: NextPage<IndexPageProps> = ({
           "improve your knowledge... for free!",
         ].join("")}
       />
-
       <Box
         sx={{
           display: "flex",
@@ -166,9 +188,9 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 "Explore questions, learning objectives, and theory reviews ",
                 "from the EASA QB ATPL exams.",
               ].join("")}
-              active={activeTheme === "blue"}
+              active={activeTheme === "atpl"}
               icon={<AirplaneTicketIcon />}
-              onClick={() => goToTheme("blue")}
+              onClick={() => goToTheme("atpl")}
               showMoreHref="/modules/atpl"
             />
             <ModuleSelectionButton
@@ -180,9 +202,9 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 "Use our flash cards to practice answering open ended ",
                 "questions and secure your first job.",
               ].join("")}
-              active={activeTheme === "teal"}
+              active={activeTheme === "prep"}
               icon={<StyleIcon />}
-              onClick={() => goToTheme("teal")}
+              onClick={() => goToTheme("prep")}
               showMoreHref="/modules/prep"
             />
             <ModuleSelectionButton
@@ -190,13 +212,13 @@ export const IndexPage: NextPage<IndexPageProps> = ({
               sx={{ mb: { xs: 1, md: 2 } }}
               color={"rose"}
               title={"737 Type rating"}
-              active={activeTheme === "rose"}
+              active={activeTheme === "737"}
               description={[
                 `Prepare or review your theory knowledge for a type rating `,
                 `on the Boeing 737 with ${numberOf737Questions} questions.`,
               ].join("")}
               icon={<FlightTakeoffIcon />}
-              onClick={() => goToTheme("rose")}
+              onClick={() => goToTheme("737")}
               showMoreHref="/modules/737"
             />
           </Box>
@@ -236,7 +258,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
           })}
         >
           <NoSsr>
-            {activeTheme === "blue" && (
+            {activeTheme === "atpl" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"
@@ -305,7 +327,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 </Grid>
               </RightContainer>
             )}
-            {activeTheme === "teal" && (
+            {activeTheme === "prep" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"
@@ -344,7 +366,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 />
               </RightContainer>
             )}
-            {activeTheme === "rose" && (
+            {activeTheme === "737" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"

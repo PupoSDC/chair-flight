@@ -19,15 +19,10 @@ declare module "@mui/joy/styles" {
     "body-xs": true;
   }
 
-  interface ColorSchemeOverrides {
-    light: false;
-    dark: false;
-    lightBlue: true;
-    lightTeal: true;
-    lightRose: true;
-    darkBlue: true;
-    darkTeal: true;
-    darkRose: true;
+  interface PaletteOverrides {
+    primaryBlue: true;
+    primaryTeal: true;
+    primaryRose: true;
   }
 }
 
@@ -43,6 +38,9 @@ const extraColors = {
     "700": "#12467B",
     "800": "#0A2744",
     "900": "#051423",
+    mainChannel: "11 107 203",
+    darkChannel: "18 70 123",
+    lightChannel: "199 223 247",
   },
   primaryTeal: {
     "50": "#f0fdf4",
@@ -55,6 +53,9 @@ const extraColors = {
     "700": "#15803d",
     "800": "#166534",
     "900": "#14532d",
+    mainChannel: "34 197 94",
+    darkChannel: "21 128 61",
+    lightChannel: "187 247 208",
   },
   primaryRose: {
     "50": "#ffebee",
@@ -67,6 +68,9 @@ const extraColors = {
     "700": "#d32f2f",
     "800": "#c62828",
     "900": "#b71c1c",
+    mainChannel: "244 67 54",
+    darkChannel: "211 47 47",
+    lightChannel: "239 154 154",
   },
 };
 
@@ -91,53 +95,21 @@ export const theme: CssVarsThemeOptions = extendTheme({
     "title-sm": undefined,
   },
   colorSchemes: {
-    lightBlue: {
+    light: {
       ...basicTheme.colorSchemes.light,
       palette: {
         ...basicTheme.colorSchemes.light.palette,
         ...extraColors,
         ...lightBackground,
+        primary: extraColors.primaryBlue,
       },
     },
-    lightTeal: {
-      ...basicTheme.colorSchemes.light,
-      palette: {
-        ...basicTheme.colorSchemes.light.palette,
-        ...extraColors,
-        ...lightBackground,
-        primary: extraColors.primaryTeal,
-      },
-    },
-    lightRose: {
-      ...basicTheme.colorSchemes.light,
-      palette: {
-        ...basicTheme.colorSchemes.light.palette,
-        ...extraColors,
-        ...lightBackground,
-        primary: extraColors.primaryRose,
-      },
-    },
-    darkBlue: {
+    dark: {
       ...basicTheme.colorSchemes.dark,
       palette: {
         ...basicTheme.colorSchemes.dark.palette,
         ...extraColors,
-      },
-    },
-    darkTeal: {
-      ...basicTheme.colorSchemes.dark,
-      palette: {
-        ...basicTheme.colorSchemes.dark.palette,
-        ...extraColors,
-        primary: extraColors.primaryTeal,
-      },
-    },
-    darkRose: {
-      ...basicTheme.colorSchemes.dark,
-      palette: {
-        ...basicTheme.colorSchemes.dark.palette,
-        ...extraColors,
-        primary: extraColors.primaryRose,
+        primary: extraColors.primaryBlue,
       },
     },
   },
