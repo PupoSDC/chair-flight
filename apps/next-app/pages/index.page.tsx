@@ -61,7 +61,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   numberOf737Questions,
 }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
-  const [activeTheme, setActiveTheme] = useState<Theme>("atpl");
+  const [activeTheme, setActiveTheme] = useState<Theme | undefined>();
 
   const goToTheme = (theme: Theme) => {
     setActiveTheme(theme);
@@ -78,16 +78,16 @@ export const IndexPage: NextPage<IndexPageProps> = ({
     <LayoutPublic fixedHeight noPadding background={<CoolSlidingThing />}>
       <GlobalStyles
         styles={(t) => {
-          const primaryRose = t.colorSchemes.light.palette.primaryRose;
-          const primaryTeal = t.colorSchemes.light.palette.primaryTeal;
-          const primaryBlue = t.colorSchemes.light.palette.primaryBlue;
+          const palette = t.colorSchemes.light.palette;
           switch (activeTheme) {
-            case "atpl":
-              return getGlobalColorScheme(primaryBlue);
             case "737":
-              return getGlobalColorScheme(primaryRose);
+              return getGlobalColorScheme(palette.primaryRose);
             case "prep":
-              return getGlobalColorScheme(primaryTeal);
+              return getGlobalColorScheme(palette.primaryTeal);
+            case "atpl":
+              return getGlobalColorScheme(palette.primaryBlue);
+            default:
+              return getGlobalColorScheme(palette.primaryBlue);
           }
         }}
       />
