@@ -29,6 +29,7 @@ const config: StorybookConfig = {
         crypto: false,
       },
     },
+    ignoreWarnings: [/Failed to parse source map/],
   }),
 };
 

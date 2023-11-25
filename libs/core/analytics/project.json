@@ -66,13 +66,13 @@
       },
       "configurations": {
         "local": {
-          "command": "env-cmd -f ../../../.env.local prisma migrate dev"
+          "command": "env-cmd -f ../../../.env.local prisma studio"
         },
         "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
+          "command": "env-cmd -f ../../../.env.dev prisma studio"
         },
         "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
+          "command": "env-cmd -f ../../../.env.prod prisma studio"
         }
       }
     },
