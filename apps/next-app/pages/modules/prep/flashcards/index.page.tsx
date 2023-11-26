@@ -42,38 +42,31 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <Grid container spacing={2} maxWidth="lg" margin="auto">
-        <Grid xs={12}>
-          <Typography level="h1">Flash Cards</Typography>
-          <Typography>
-            Practice for open-ended interview questions.
-            <br />
-            Use these flash cards to practice for your interview. You can review
-            all flash cards at once, or get 10 random cards to review. Try to
-            answer the question outloud as you would in an interview. Consider
-            recording your answer and playing it back to see how you sound.
-            <br />
-            Once you are satisfied with the answer, Flip the card to see if you
-            are close enough.
-          </Typography>
-          <Typography level="h3" sx={{ mt: 3, color: "primary.500" }}>
-            Have fun!
-          </Typography>
-        </Grid>
+      <Box component="section" maxWidth="lg" margin="auto" p={2}>
+        <Typography level="h1">Flash Cards</Typography>
+        <Typography>
+          Practice for open-ended interview questions.
+          <br />
+          Use these flash cards to practice for your interview. You can review
+          all flash cards at once, or get 10 random cards to review. Try to
+          answer the question outloud as you would in an interview. Consider
+          recording your answer and playing it back to see how you sound.
+          <br />
+          Once you are satisfied with the answer, Flip the card to see if you
+          are close enough.
+        </Typography>
+        <Typography level="h3" sx={{ mt: 3, color: "primary.500" }}>
+          Have fun!
+        </Typography>
+      </Box>
 
+      <Grid container spacing={2} maxWidth="lg" margin="auto">
         {flashcardCollections.map((fc) => (
-          <Grid
-            xs={12}
-            sm={6}
-            md={4}
-            lg={3}
-            key={fc.collectionId}
-            sx={{ pb: { xs: 1, sm: 0 }, pt: 2 }}
-          >
-            <Card sx={{ height: 250 }}>
+          <Grid xs={12} sm={6} md={4} lg={3} key={fc.collectionId}>
+            <Card sx={{ height: { xs: 160, sm: 250 } }}>
               <CardCover>
                 <Image
-                  src="/images/flashcards/737.png"
+                  src={`/images/flashcards/${fc.collectionId}.png`}
                   loading="lazy"
                   alt="Aircraft landing"
                   fill
