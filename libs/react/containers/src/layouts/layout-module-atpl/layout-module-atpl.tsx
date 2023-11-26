@@ -33,10 +33,9 @@ export const LayoutModuleAtpl: FunctionComponent<{
             height: (t) => t.spacing(6),
             pl: 0.5,
             svg: {
-              fill: (t) => t.palette.primary.plainColor,
-              fontSize: { xs: 20, sm: 24 },
-              marginLeft: { sm: "-2px" },
-              marginRight: { sm: "2px" },
+              fill: (t) => t.vars.palette.primary.plainColor,
+              fontSize: { xs: 18, sm: 24 },
+              marginLeft: { xs: "2px", sm: "-2px" },
             },
             [`& .${listItemContentClasses.root}`]: {
               fontWeight: 700,

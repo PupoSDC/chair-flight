@@ -44,14 +44,13 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
             pl: 0.5,
             svg: {
               fill: (t) => t.vars.palette.primary.plainColor,
-              fontSize: 24,
-              marginLeft: "-2px",
-              marginRight: "2px",
+              fontSize: { xs: 18, sm: 24 },
+              marginLeft: { xs: "2px", sm: "-2px" },
             },
             [`& .${listItemContentClasses.root}`]: {
               fontWeight: 700,
               letterSpacing: "0.05rem",
-              color: (t) => t.vars.palette.neutral.plainColor,
+              color: (t) => t.vars.palette.text.primary,
             },
           }}
         />

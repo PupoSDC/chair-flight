@@ -121,6 +121,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             [`& .${listItemButtonClasses.root}`]: {
               p: { xs: 0.125, sm: 1 },
               borderRight: 0,
+              borderBottom: 0,
               borderLeftWidth: { xs: 0, sm: 4 },
               borderLeftColor: "transparent",
 
@@ -129,7 +130,8 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               },
 
               "& + .filler": {
-                borderBottom: "1px",
+                borderTop: "solid 1px",
+                borderTopColor: "var(--joy-palette-divider)",
               },
 
               "&:hover": {

@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Button, Card, Link, Typography } from "@mui/joy";
+import { Box, Button, Card, GlobalStyles, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
-import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
+import {
+  Flashcard,
+  FlashcardTinder,
+  getGlobalColorScheme,
+} from "@chair-flight/react/components";
+import { AppHead } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -39,7 +43,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
   seed,
 }) => {
   return (
-    <LayoutModulePrep noPadding fixedHeight>
+    <Box sx={{ width: "100vw", height: "100vh" }}>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -52,6 +56,11 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
           "Once you are satisfied with the answer, Flip the card to see if you",
           "are close enough.",
         ].join(" ")}
+      />
+      <GlobalStyles
+        styles={(t) => {
+          return getGlobalColorScheme(t.colorSchemes.light.palette.primaryTeal);
+        }}
       />
       <FlashcardTinder>
         {flashcards
@@ -85,7 +94,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
             </Card>,
           ])}
       </FlashcardTinder>
-    </LayoutModulePrep>
+    </Box>
   );
 };
 
