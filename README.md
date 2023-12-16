@@ -66,6 +66,7 @@ can and will be introduced in patch releases.
 | base-types                   | Base Business types used across the app                     |
 | content-interview-flashcards | Content bank for the interview prep module                  |
 | content-question-bank-737    | Content bank for the 737 TR module                          |
+| content-question-bank-a320   | Content bank for the A320 TR module                         |
 | content-question-bank-atpl   | Content bank for the ATPL theory module                     |
 | core-analytics               | Analytics provider (currently a custom solution)            |
 | core-app                     | Business logic blocks sharable between React SPA/SSR and RN |

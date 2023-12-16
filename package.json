@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nx run-many --target=dev",
     "generate": "nx run-many -t=generate",
+    "compile": "nx run-many -t=compile",
     "migrate": "nx run-many -t=migrate",
     "build": "nx run-many --target=build",
     "test": "nx run-many --target=test",
