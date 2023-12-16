@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Box, FormLabel, IconButton, Sheet, Switch } from "@mui/joy";
+import type { QuestionVariantSimple } from "@chair-flight/base/types";
 import { getRandomIdGenerator } from "@chair-flight/core/app";
 import {
   HookFormErrorMessage,
@@ -19,7 +20,9 @@ export const EditVariantModalSimple: FunctionComponent = () => {
   const randomSeed = useId();
   const [getRandomId] = useState(() => getRandomIdGenerator(randomSeed));
   const variantId = router.query["variantId"] as string;
-  const options = form.watch(`question.variants.${variantId}.options`);
+  const options = form.watch(
+    `question.variants.${variantId}.options`,
+  ) as QuestionVariantSimple["options"];
   const optionsError = get(
     form.formState.errors,
     `variants.${variantId}.options`,

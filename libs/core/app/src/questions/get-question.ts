@@ -12,6 +12,7 @@ import type {
   QuestionVariantCalculation,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
+  QuestionVariantTrueOrFalse,
 } from "@chair-flight/base/types";
 
 const getQuestionMultipleChoiceFromSimple = ({
@@ -54,6 +55,47 @@ const getQuestionMultipleChoiceFromSimple = ({
     annexes: variant.annexes,
     correctOptionId: correctOption.id,
     options: shuffler([correctOption, ...wrongOptions]),
+    explanation: [variant.explanation, template.explanation]
+      .filter(Boolean)
+      .join("\n\n---\n\n"),
+  };
+};
+
+const getQuestionMultipleChoiceFromTrueOrFalse = ({
+  template,
+  variant,
+  randomSeed,
+}: {
+  template: QuestionTemplate;
+  variant: QuestionVariantTrueOrFalse;
+  randomSeed: string;
+}): QuestionMultipleChoice => {
+  const shuffler = getRandomShuffler(randomSeed);
+  const options = shuffler(variant.options).map((option) => ({
+    ...option,
+    text: option.id === "true" ? "True" : "False",
+    why: "",
+  }));
+  const correctOption = options.find((option) => option.correct);
+
+  if (!correctOption) {
+    throw new BadQuestionError(template, {
+      message: "No correct option found",
+      variantId: variant.id,
+      options,
+    });
+  }
+
+  return {
+    questionId: getRandomId(),
+    templateId: template.id,
+    variantId: variant.id,
+    seed: randomSeed,
+    type: "multiple-choice",
+    question: variant.question,
+    annexes: variant.annexes,
+    correctOptionId: correctOption.id,
+    options: options,
     explanation: [variant.explanation, template.explanation]
       .filter(Boolean)
       .join("\n\n---\n\n"),
@@ -188,6 +230,12 @@ export const getQuestion = (
   switch (variant.type) {
     case "simple":
       return getQuestionMultipleChoiceFromSimple({
+        template: template,
+        variant,
+        randomSeed,
+      });
+    case "true-or-false":
+      return getQuestionMultipleChoiceFromTrueOrFalse({
         template: template,
         variant,
         randomSeed,

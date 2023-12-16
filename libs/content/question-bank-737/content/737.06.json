@@ -88,32 +88,16 @@
     "variants": {
       "1ygmh": {
         "id": "1ygmh",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The DC standby Bus is powered from the batteries through the static Inverter.  Select one:",
         "options": [
           {
-            "id": "kc9ln",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "pujct",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "zup2ig",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "q2l53",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -375,32 +359,16 @@
     "variants": {
       "dby88i": {
         "id": "dby88i",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The Static Inverter, converts the Battery's 22-30V DC voltage range to a constant 24V.",
         "options": [
           {
-            "id": "y49id",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "u4wh8",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "3mug3",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "tx0is",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -457,32 +425,16 @@
     "variants": {
       "t7259": {
         "id": "t7259",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When external ground power is connected to the aircraft through the External AC Receptacle, the GRD POWER AVAILABLE light does not illuminate unless the power supplied meets the quality requirements of 115v AC, 200 Hz, 3 phase.",
         "options": [
           {
-            "id": "03phz",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "jh96",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ulc3p",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "dgah",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -949,32 +901,16 @@
     "variants": {
       "rnhne": {
         "id": "rnhne",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The 2 basic rules of the B737-800 electrical system are:  Only one AC power source can be connected at one time.  A second source connecting to a transfer bus will automatically disconnect the existing source.",
         "options": [
           {
-            "id": "1ufr",
-            "text": "True",
-            "correct": true,
-            "why": ""
+            "id": "true",
+            "correct": true
           },
           {
-            "id": "fea9a",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "o6rjp",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "l92b",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": false
           }
         ],
         "explanation": "",
@@ -1031,32 +967,16 @@
     "variants": {
       "73af4": {
         "id": "73af4",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "If operating on a single IDG and an overload is sensed, the electrical system will shed the galleys and main bus from Transfer Bus 1 and then Transfer Bus 2 before then shedding the IFE busses if an overload is still sensed.",
         "options": [
           {
-            "id": "28mih",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "n90f4",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "axn3y",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "c48ld",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -1067,13 +987,13 @@
   },
   {
     "id": "lpergg",
-    "explanation": "",
+    "explanation": "TR UNIT Light Illuminated (amber)\n- on the ground:\n  - any TR has failed.\n- in flight:\n  - TR1 failed; or\n  - TR2 and TR3 failed.",
     "learningObjectives": ["737.06"],
     "variants": {
       "q0lgx": {
         "id": "q0lgx",
         "type": "simple",
-        "question": "The TR UNIT light illuminated when on the ground indicates: ?",
+        "question": "The TR UNIT light illuminated when on the ground indicates:",
         "options": [
           {
             "id": "ras6j",
@@ -1091,6 +1011,40 @@
             "id": "ccmwri",
             "text": "any TR has failed",
             "correct": true,
+            "why": ""
+          },
+          {
+            "id": "nkdhk",
+            "text": "All three TRs have failed",
+            "correct": false,
+            "why": ""
+          }
+        ],
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "q0lgz": {
+        "id": "q0lgz",
+        "type": "simple",
+        "question": "The TR UNIT light illuminated when on the air indicates:",
+        "options": [
+          {
+            "id": "ras6j",
+            "text": "any two TRs have failed",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "6qejm",
+            "text": "TR1 has failed or TR2 and TR3 have failed",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "ccmwri",
+            "text": "any TR has failed",
+            "correct": false,
             "why": ""
           },
           {
@@ -1400,32 +1354,16 @@
     "variants": {
       "7khe5": {
         "id": "7khe5",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The SOURCE OFF light illuminates whenever an IDG has tripped offline due to overheating.",
         "options": [
           {
-            "id": "d7ima",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "vq6t6i",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "6hahq",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "1ac51",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",

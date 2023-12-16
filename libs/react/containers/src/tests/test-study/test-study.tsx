@@ -67,15 +67,6 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
   if (!test) throw new NotFoundError(`Test with id ${testId} not found`);
 
   const question = test.questions[test.currentQuestionIndex];
-  // const learningObjectives = question.learningObjectives;
-  // const showMeta = !!learningObjectives.length;
-  // const questionTemplate = questionData.questionTemplate;
-  // const allVariantsMap = questionData.questionTemplate.variants;
-  // const learningObjectives = questionData.learningObjectives;
-  // const allVariantsArray = Object.values(allVariantsMap);
-  // const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
-  // const externalReferences = variant.externalIds;
-  // const showMeta = !!learningObjectives.length;
   const status = test.mode === "exam" ? "in-progress" : "both";
   const currentQuestion = test.currentQuestionIndex + 1;
   const totalQuestions = test.questions.length;

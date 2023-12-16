@@ -17,7 +17,7 @@ export const useTestProgressTime = ({ testId }: { testId: string }) => {
   useEffect(() => {
     const test = getTest({ testId });
     if (test.status === "finished") {
-      router.push(`/tests/${test.id}/review`, undefined, { shallow: true });
+      router.push(`../${test.id}/review`, undefined, { shallow: true });
     }
     if (test.status === "created") {
       startTest({ testId: test.id });

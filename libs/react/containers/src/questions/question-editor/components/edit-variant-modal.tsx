@@ -32,6 +32,7 @@ export const EditVariantModal: FunctionComponent = () => {
     "one-two": <EditVariantModalOneTwo />,
     simple: <EditVariantModalSimple />,
     calculation: <div>Not Implemented!</div>,
+    "true-or-false": <div>Not Implemented!</div>,
   }[variant?.type ?? "one-two"];
 
   const closeModal = () => {

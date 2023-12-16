@@ -88,32 +88,16 @@
     "variants": {
       "hmkql": {
         "id": "hmkql",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT and BLEED TRIP OFF, it isolates the associated valve and extinguishes the alert.",
         "options": [
           {
-            "id": "jugze",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "t97y",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "dgb33",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "e8w2r",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -170,32 +154,16 @@
     "variants": {
       "ho68d": {
         "id": "ho68d",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The APU is capable of supplying bleed air for two packs on the ground, or one pack in flight.",
         "options": [
           {
-            "id": "7skbrg",
-            "text": "True",
-            "correct": true,
-            "why": ""
+            "id": "true",
+            "correct": true
           },
           {
-            "id": "2gm4u",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ekoj0h",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "po1p",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": false
           }
         ],
         "explanation": "",
@@ -252,32 +220,16 @@
     "variants": {
       "u24a1": {
         "id": "u24a1",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Engine bleed air pressure is controlled by means of the bleed air valve which acts as both a shutoff and pressure regulating valve.",
         "options": [
           {
-            "id": "krtlh",
-            "text": "True",
-            "correct": true,
-            "why": ""
+            "id": "true",
+            "correct": true
           },
           {
-            "id": "n7ct2",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "vav2qg",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "qslw2",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": false
           }
         ],
         "explanation": "",
@@ -334,32 +286,16 @@
     "variants": {
       "y1wpo": {
         "id": "y1wpo",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Conditioned air from the left hand pack flows directly to the Flight Deck from the Mix Manifold.",
         "options": [
           {
-            "id": "2d5c5",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "u9l7h",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "l6irr",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "mpp1qi",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -375,32 +311,16 @@
     "variants": {
       "wd9mb": {
         "id": "wd9mb",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The packs produce the coolest temperature selected in any of the zones, with the other zones temperature controlled by adding hot trim air to produce the required temperature.",
         "options": [
           {
-            "id": "8hfm8",
-            "text": "True",
-            "correct": true,
-            "why": ""
+            "id": "true",
+            "correct": true
           },
           {
-            "id": "na7qk",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "xbel7",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "4ar9bi",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": false
           }
         ],
         "explanation": "",
@@ -521,7 +441,7 @@
           },
           {
             "id": "rlnd2",
-            "text": "---",
+            "text": "----",
             "correct": false,
             "why": ""
           }
@@ -580,32 +500,16 @@
     "variants": {
       "f4zwnj": {
         "id": "f4zwnj",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Bleed air is taken from stage 4 and stage 10 of the high pressure compressor.",
         "options": [
           {
-            "id": "lpl0yl",
-            "text": "True",
-            "correct": false,
-            "why": ""
+            "id": "true",
+            "correct": false
           },
           {
-            "id": "7hw44",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "x8qpb",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "uf8lk",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": true
           }
         ],
         "explanation": "",
@@ -726,7 +630,7 @@
           },
           {
             "id": "mljcp",
-            "text": "---",
+            "text": "----",
             "correct": false,
             "why": ""
           }
@@ -744,32 +648,16 @@
     "variants": {
       "dmky7": {
         "id": "dmky7",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Cabin pressurisation is controlled by the position of the Outflow Valve, but some air is also exhausted through the toilet and galley vents.",
         "options": [
           {
-            "id": "ud8zc",
-            "text": "True",
-            "correct": true,
-            "why": ""
+            "id": "true",
+            "correct": true
           },
           {
-            "id": "b2ynp",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "wqz8e",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "rdobth",
-            "text": "---",
-            "correct": false,
-            "why": ""
+            "id": "false",
+            "correct": false
           }
         ],
         "explanation": "",
