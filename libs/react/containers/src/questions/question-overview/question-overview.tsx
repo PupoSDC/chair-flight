@@ -247,11 +247,9 @@ export const QuestionOverview: FunctionComponent<QuestionOverviewProps> = ({
       <TabPanel value={"explanation"} sx={{ maxWidth: "lg" }}>
         {showExplanation ? (
           <MarkdownClient>
-            {[
-              variant.explanation,
-              "\n\n---\n\n",
-              questionTemplate.explanation,
-            ].join("")}
+            {[variant.explanation, questionTemplate.explanation]
+              .filter((v) => !!v)
+              .join("\n\n---\n\n")}
           </MarkdownClient>
         ) : (
           <Ups message="No explanation to this question is available" />

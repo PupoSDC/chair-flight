@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { questionOneTwoSchema } from "./question-variant-one-two-schema";
 import { questionSimpleSchema } from "./question-variant-simple-schema";
+import { questionTrueOrFalseSchema } from "./question-variant-true-or-false-schema";
 import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export const LearningObjectiveId = z.string();
@@ -8,6 +9,7 @@ export const LearningObjectiveId = z.string();
 export const questionVariantSchema = z.discriminatedUnion("type", [
   questionSimpleSchema,
   questionOneTwoSchema,
+  questionTrueOrFalseSchema,
 ]);
 
 export const questionSchema: z.ZodType<QuestionTemplate> = z.object({

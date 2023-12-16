@@ -28,7 +28,7 @@ export const TestReview: FunctionComponent<TestReviewProps> = ({ testId }) => {
     <>
       <Box
         sx={{
-          height: "200px",
+          height: "172px",
           width: "100%",
           bgcolor: `${mainColor}.softBg`,
         }}

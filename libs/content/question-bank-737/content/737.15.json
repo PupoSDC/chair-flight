@@ -1,7 +1,7 @@
 [
   {
     "id": "d9okg",
-    "explanation": "",
+    "explanation": "Altitude alerting occurs when approaching or departing the MCP–selected altitude. Altitude alerting is inhibited when trailing edge flaps are extended to 25 or greater, or while G/S is captured.",
     "learningObjectives": ["737.15"],
     "variants": {
       "cmhnj": {
@@ -47,34 +47,9 @@
     "variants": {
       "5ryjsg": {
         "id": "5ryjsg",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "In Flight, the Intuvue radar will provide a windshear warning from 0.5nm to 3nm ahead of the aircraft.",
-        "options": [
-          {
-            "id": "569pd",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "tyiri",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "imsqs",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "0vt08k",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -252,34 +227,9 @@
     "variants": {
       "f81bj": {
         "id": "f81bj",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "As well as providing outputs for all stall warnings, the SMYD computers also provide outputs for GPWS Windshear Detection and Alert.",
-        "options": [
-          {
-            "id": "6cun9",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "rwvhil",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "bt5h6",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "1jgwd",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -293,34 +243,9 @@
     "variants": {
       "40n9qj": {
         "id": "40n9qj",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When an Annunciator Panel is pressed, all lights on both panel initially illuminate.",
-        "options": [
-          {
-            "id": "qqpu4",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "bxa54",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "7os4e",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "j91io",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -498,34 +423,9 @@
     "variants": {
       "4v6rw": {
         "id": "4v6rw",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The stall warning test can only be carried out on the ground, the No1 and No2 systems must be carried out separately to ensure the clacker sounds when each system is tested.",
-        "options": [
-          {
-            "id": "hs4yd",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "p2wn",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "1fu9a",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "9gdyf",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -826,34 +726,9 @@
     "variants": {
       "nc0lxi": {
         "id": "nc0lxi",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The predictive windshear aural alerts will be heard through flightdeck speakers and the headsets at a pre-set volume.  They cannot be controlled or turned off by the crew.",
-        "options": [
-          {
-            "id": "l91em",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "17ra4j",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "0zgez",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "3vgu1",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -867,34 +742,9 @@
     "variants": {
       "28sgh": {
         "id": "28sgh",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The PSEU light, located on the forward overhead panel, will illuminate on the ground if a fault is detected in the PSEU or if an overwing exit flight lock fails to disengage when commanded.",
-        "options": [
-          {
-            "id": "47tc3h",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "4dqnx",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "90fgfl",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "f6siv",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -990,34 +840,9 @@
     "variants": {
       "1w3bx": {
         "id": "1w3bx",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The EGPWS displays terrain within 2,500 feet of the aircraft barometric altitude on the Navigation display.",
-        "options": [
-          {
-            "id": "fm2wsk",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "irszg",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "p2w3b",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ccupq",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1154,34 +979,9 @@
     "variants": {
       "fndqp": {
         "id": "fndqp",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When configured for landing, the GPWS will NOT alert if attempting an off-airport landing.",
-        "options": [
-          {
-            "id": "up5k4",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "obnon",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "zv29q",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "u50c6",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1277,34 +1077,9 @@
     "variants": {
       "yw3pf": {
         "id": "yw3pf",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The Stall Warning System Stick Shaker can be tested by pressing the STALL WARNING TEST buttons on the AFT overhead panel.  Pressing No1 switch will activate the Captain's Stick Shaker and the Captain's column will vibrate.  Pressing N02 switch will activate the FO's Stick Shaker and the FO's column will vibrate.",
-        "options": [
-          {
-            "id": "isja",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "0yylh",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ew2ar",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "bsikd",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1400,34 +1175,9 @@
     "variants": {
       "kkoq3": {
         "id": "kkoq3",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Pushing the ground proximity BELOW G/S P-INHIBIT light cancels or inhibits the alert when below 1,000 feet RA.",
-        "options": [
-          {
-            "id": "b44x2",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "2yupm",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "zvt4p",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "h7z3qi",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1441,34 +1191,9 @@
     "variants": {
       "ecylbf": {
         "id": "ecylbf",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When testing the Mach/Airspeed warning system in flight, the No1 and No2 systems must be tested separately to identify that the clacker sounds for both systems independently.",
-        "options": [
-          {
-            "id": "ckfmm",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ylga3",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "9utew",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "18cuo",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []

@@ -58,8 +58,10 @@ export const useTestProgress = create<TestProgress>()(
           question.selectedOptionId = optionId;
 
           let currentQuestionIndex = test.currentQuestionIndex;
+          const isCorrect = question.correctOptionId === optionId;
           const { examModeAutoSkip = false, studyModeAutoSkip = false } =
             useUserPreferences.getState();
+
           switch (test.mode) {
             case "exam": {
               if (examModeAutoSkip) {
@@ -71,7 +73,7 @@ export const useTestProgress = create<TestProgress>()(
               break;
             }
             case "study": {
-              if (studyModeAutoSkip) {
+              if (studyModeAutoSkip && isCorrect) {
                 currentQuestionIndex = Math.min(
                   test.currentQuestionIndex + 1,
                   test.questions.length - 1,

@@ -12,6 +12,7 @@ import type {
   QuestionVariantCalculation,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
+  QuestionVariantTrueOrFalse,
 } from "@chair-flight/base/types";
 
 const getQuestionMultipleChoiceFromSimple = ({
@@ -54,6 +55,46 @@ const getQuestionMultipleChoiceFromSimple = ({
     annexes: variant.annexes,
     correctOptionId: correctOption.id,
     options: shuffler([correctOption, ...wrongOptions]),
+    explanation: [variant.explanation, template.explanation]
+      .filter(Boolean)
+      .join("\n\n---\n\n"),
+  };
+};
+
+const getQuestionMultipleChoiceFromTrueOrFalse = ({
+  template,
+  variant,
+  randomSeed,
+}: {
+  template: QuestionTemplate;
+  variant: QuestionVariantTrueOrFalse;
+  randomSeed: string;
+}): QuestionMultipleChoice => {
+  const options = [
+    {
+      id: "true",
+      text: "True",
+      correct: variant.answer,
+      why: "",
+    },
+    {
+      id: "false",
+      text: "False",
+      correct: !variant.answer,
+      why: "",
+    },
+  ];
+
+  return {
+    questionId: getRandomId(),
+    templateId: template.id,
+    variantId: variant.id,
+    seed: randomSeed,
+    type: "multiple-choice",
+    question: variant.question,
+    annexes: variant.annexes,
+    correctOptionId: variant.answer ? "true" : "false",
+    options: options,
     explanation: [variant.explanation, template.explanation]
       .filter(Boolean)
       .join("\n\n---\n\n"),
@@ -188,6 +229,12 @@ export const getQuestion = (
   switch (variant.type) {
     case "simple":
       return getQuestionMultipleChoiceFromSimple({
+        template: template,
+        variant,
+        randomSeed,
+      });
+    case "true-or-false":
+      return getQuestionMultipleChoiceFromTrueOrFalse({
         template: template,
         variant,
         randomSeed,

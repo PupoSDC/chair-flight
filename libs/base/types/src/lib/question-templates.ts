@@ -5,7 +5,11 @@ import type {
   QuestionVariantId,
 } from "./ids";
 
-export type QuestionVariantType = "simple" | "one-two" | "calculation";
+export type QuestionVariantType =
+  | "simple"
+  | "one-two"
+  | "calculation"
+  | "true-or-false";
 
 export type QuestionVariantGeneric<T extends QuestionVariantType> = {
   type: T;
@@ -24,6 +28,13 @@ export type QuestionVariantSimple = QuestionVariantGeneric<"simple"> & {
   }>;
   explanation: string;
 };
+
+export type QuestionVariantTrueOrFalse =
+  QuestionVariantGeneric<"true-or-false"> & {
+    question: string;
+    answer: boolean;
+    explanation: string;
+  };
 
 export type QuestionVariantOneTwo = QuestionVariantGeneric<"one-two"> & {
   question: string;
@@ -51,6 +62,7 @@ export type QuestionVariantCalculation =
 export type QuestionVariant =
   | QuestionVariantOneTwo
   | QuestionVariantSimple
+  | QuestionVariantTrueOrFalse
   | QuestionVariantCalculation;
 
 export type QuestionTemplate = {

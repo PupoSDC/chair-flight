@@ -3,7 +3,7 @@ import { Skeleton } from "@mui/joy";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
   AppHead,
-  LayoutModuleAtpl,
+  LayoutModule737,
   TestReview,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
@@ -15,12 +15,12 @@ export type ReviewPageProps = {
 
 export const ReviewPage: NextPage<ReviewPageProps> = ({ testId }) => {
   return (
-    <LayoutModuleAtpl noPadding>
+    <LayoutModule737 noPadding>
       <AppHead />
       <NoSsr fallback={<Skeleton height={"500px"} />}>
         <TestReview testId={testId} />
       </NoSsr>
-    </LayoutModuleAtpl>
+    </LayoutModule737>
   );
 };
 

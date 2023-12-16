@@ -3,6 +3,7 @@ import type {
   QuestionVariant,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
+  QuestionVariantTrueOrFalse,
 } from "@chair-flight/base/types";
 
 const getQuestionVariantSimplePreview = (
@@ -14,6 +15,14 @@ const getQuestionVariantSimplePreview = (
       : `- :x: ${option.text}`,
   );
   return `${variant.question}\n\n${options.join("\n")}`;
+};
+
+const getQuestionVariantTrueOrFalse = (
+  variant: QuestionVariantTrueOrFalse,
+): string => {
+  const answer = variant.answer ? ":white_check_mark: True" : ":x: False";
+
+  return `${variant.question}\n\n${answer}`;
 };
 
 const getQuestionVariantOneTwoPreview = (
@@ -40,6 +49,8 @@ export const getVariantPreview = (variant: QuestionVariant) => {
       return getQuestionVariantSimplePreview(variant);
     case "one-two":
       return getQuestionVariantOneTwoPreview(variant);
+    case "true-or-false":
+      return getQuestionVariantTrueOrFalse(variant);
     case "calculation":
       return "Calculation questions are not supported yet";
   }
