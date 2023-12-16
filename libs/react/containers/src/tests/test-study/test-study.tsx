@@ -28,7 +28,10 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
+import type {
+  DrawingPoints} from "@chair-flight/react/components";
 import {
+  ImageViewer,
   MarkdownClient,
   QuestionMultipleChoice,
   QuestionNavigation,
@@ -38,6 +41,8 @@ import {
 import { useTestProgress } from "../use-test-progress";
 import { useTestHotkeys } from "../use-test-progress-hotkeys";
 import { useTestProgressTime } from "../use-test-progress-time";
+
+type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
 type TestStudyProps = {
   testId: string;
@@ -63,19 +68,12 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isMetaOpen, setIsMetaOpen] = useState(false);
   const [isFinishTestOpen, setIsFinishTestOpen] = useState(false);
+  const [currentAnnex, setCurrentAnnex] = useState<string>();
+  const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
 
   if (!test) throw new NotFoundError(`Test with id ${testId} not found`);
 
   const question = test.questions[test.currentQuestionIndex];
-  // const learningObjectives = question.learningObjectives;
-  // const showMeta = !!learningObjectives.length;
-  // const questionTemplate = questionData.questionTemplate;
-  // const allVariantsMap = questionData.questionTemplate.variants;
-  // const learningObjectives = questionData.learningObjectives;
-  // const allVariantsArray = Object.values(allVariantsMap);
-  // const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
-  // const externalReferences = variant.externalIds;
-  // const showMeta = !!learningObjectives.length;
   const status = test.mode === "exam" ? "in-progress" : "both";
   const currentQuestion = test.currentQuestionIndex + 1;
   const totalQuestions = test.questions.length;
@@ -202,6 +200,32 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
           optionId: opt.id,
           text: opt.text,
         }))}
+        annexes={question.annexes}
+        onAnnexClicked={(annex) => setCurrentAnnex(annex)}
+      />
+      <ImageViewer
+        open={currentAnnex !== undefined}
+        onClose={() => setCurrentAnnex(undefined)}
+        drawings={annexDrawings[currentAnnex ?? ""] ?? []}
+        onDrawingsChanged={(newDrawings) =>
+          setAnnexDrawings((oldDrawings) => ({
+            ...oldDrawings,
+            [currentAnnex ?? ""]: newDrawings,
+          }))
+        }
+        onUndo={() =>
+          setAnnexDrawings((old) => ({
+            ...old,
+            [currentAnnex ?? ""]: (old[currentAnnex ?? ""] ?? []).slice(0, -1),
+          }))
+        }
+        onReset={() =>
+          setAnnexDrawings((old) => ({
+            ...old,
+            [currentAnnex ?? ""]: [],
+          }))
+        }
+        imgSrc={currentAnnex ?? ""}
       />
       <Drawer
         anchor="right"
