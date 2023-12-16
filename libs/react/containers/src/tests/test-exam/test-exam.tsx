@@ -22,7 +22,10 @@ import {
 } from "@mui/joy";
 import { DateTime } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
+import type {
+  DrawingPoints} from "@chair-flight/react/components";
 import {
+  ImageViewer,
   QuestionMultipleChoice,
   QuestionNavigation,
   useMediaQuery,
@@ -30,6 +33,8 @@ import {
 import { useTestProgress } from "../use-test-progress";
 import { useTestHotkeys } from "../use-test-progress-hotkeys";
 import { useTestProgressTime } from "../use-test-progress-time";
+
+type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
 type TestExamProps = {
   testId: string;
@@ -50,6 +55,8 @@ export const TestExam: FunctionComponent<TestExamProps> = ({ testId }) => {
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isFinishTestOpen, setIsFinishTestOpen] = useState(false);
+  const [currentAnnex, setCurrentAnnex] = useState<string>();
+  const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
 
   if (!test) throw new NotFoundError(`Test with id ${testId} not found`);
 
@@ -149,6 +156,32 @@ export const TestExam: FunctionComponent<TestExamProps> = ({ testId }) => {
           optionId: opt.id,
           text: opt.text,
         }))}
+        annexes={question.annexes}
+        onAnnexClicked={(annex) => setCurrentAnnex(annex)}
+      />
+      <ImageViewer
+        open={currentAnnex !== undefined}
+        onClose={() => setCurrentAnnex(undefined)}
+        drawings={annexDrawings[currentAnnex ?? ""] ?? []}
+        onDrawingsChanged={(newDrawings) =>
+          setAnnexDrawings((oldDrawings) => ({
+            ...oldDrawings,
+            [currentAnnex ?? ""]: newDrawings,
+          }))
+        }
+        onUndo={() =>
+          setAnnexDrawings((old) => ({
+            ...old,
+            [currentAnnex ?? ""]: (old[currentAnnex ?? ""] ?? []).slice(0, -1),
+          }))
+        }
+        onReset={() =>
+          setAnnexDrawings((old) => ({
+            ...old,
+            [currentAnnex ?? ""]: [],
+          }))
+        }
+        imgSrc={currentAnnex ?? ""}
       />
       <Drawer
         anchor="right"
