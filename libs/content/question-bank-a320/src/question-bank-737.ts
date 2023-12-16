@@ -47,7 +47,7 @@ export const getQuestionTemplate = async (questionId: string) => {
   return question;
 };
 
-export const preloadQuestionBank737ForStaticRender = async ({
+export const preloadQuestionBankA320ForStaticRender = async ({
   readFile,
 }: {
   readFile: (path: string, string: "utf-8") => Promise<string>;
