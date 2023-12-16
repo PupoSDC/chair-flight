@@ -32,10 +32,7 @@ export type QuestionVariantSimple = QuestionVariantGeneric<"simple"> & {
 export type QuestionVariantTrueOrFalse =
   QuestionVariantGeneric<"true-or-false"> & {
     question: string;
-    options: [
-      { id: "true"; correct: boolean },
-      { id: "false"; correct: boolean },
-    ];
+    answer: boolean;
     explanation: string;
   };
 

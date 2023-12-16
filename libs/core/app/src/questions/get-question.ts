@@ -70,21 +70,20 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
   variant: QuestionVariantTrueOrFalse;
   randomSeed: string;
 }): QuestionMultipleChoice => {
-  const shuffler = getRandomShuffler(randomSeed);
-  const options = shuffler(variant.options).map((option) => ({
-    ...option,
-    text: option.id === "true" ? "True" : "False",
-    why: "",
-  }));
-  const correctOption = options.find((option) => option.correct);
-
-  if (!correctOption) {
-    throw new BadQuestionError(template, {
-      message: "No correct option found",
-      variantId: variant.id,
-      options,
-    });
-  }
+  const options = [
+    {
+      id: "true",
+      text: "True",
+      correct: variant.answer,
+      why: "",
+    },
+    {
+      id: "false",
+      text: "False",
+      correct: !variant.answer,
+      why: "",
+    },
+  ];
 
   return {
     questionId: getRandomId(),
@@ -94,7 +93,7 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
     type: "multiple-choice",
     question: variant.question,
     annexes: variant.annexes,
-    correctOptionId: correctOption.id,
+    correctOptionId: variant.answer ? "true" : "false",
     options: options,
     explanation: [variant.explanation, template.explanation]
       .filter(Boolean)

@@ -20,10 +20,7 @@ const getQuestionVariantSimplePreview = (
 const getQuestionVariantTrueOrFalse = (
   variant: QuestionVariantTrueOrFalse,
 ): string => {
-  const answer =
-    variant.options.find((a) => a.correct)?.id === "true"
-      ? ":white_check_mark: True"
-      : ":x: False";
+  const answer = variant.answer ? ":white_check_mark: True" : ":x: False";
 
   return `${variant.question}\n\n${answer}`;
 };
