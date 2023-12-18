@@ -379,7 +379,6 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       fullWidth
                       size="lg"
                       component={Link}
-                      variant="outlined"
                       children={"Create 737 Test"}
                       href="/modules/737/tests/create"
                     />
@@ -398,7 +397,6 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       fullWidth
                       size="lg"
                       component={Link}
-                      variant="outlined"
                       children={"Create A320 Test"}
                       href="/modules/737/tests/create"
                     />
