@@ -41,7 +41,7 @@ export const ModulesOverview: FC<ModulesOverviewProps> = ({
     {
       id: "a320" as ModuleName,
       name: "A320 Type Rating Questions",
-      imgUrl: "/images/modules/A320.png",
+      imgUrl: "/images/modules/a320.png",
       imgAlt: "A320 Looking super cool doing Airbus stuff",
       tagLine: `${questionsA320.count} Questions`,
     },
