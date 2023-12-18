@@ -67,3 +67,10 @@ export class MissingDataError extends Error {
     this.name = MissingDataError.name;
   }
 }
+
+export class MissingPathParameter extends Error {
+  constructor(parameter: string) {
+    super(`Missing Parameter "${parameter}". Please check your file path.`);
+    this.name = MissingDataError.name;
+  }
+}

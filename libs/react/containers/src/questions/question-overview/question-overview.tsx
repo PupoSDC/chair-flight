@@ -179,7 +179,11 @@ export const QuestionOverview: FunctionComponent<QuestionOverviewProps> = ({
         <Tab indicatorInset value={"variants"}>
           Variants
         </Tab>
-        <Tab href={`${questionId}/edit`} component={Link} value="edit">
+        <Tab
+          href={`/modules/${questionBank}/questions/${questionId}/edit`}
+          component={Link}
+          value="edit"
+        >
           Edit
         </Tab>
       </TabList>

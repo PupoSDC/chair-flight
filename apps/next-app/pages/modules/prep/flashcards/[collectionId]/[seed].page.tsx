@@ -1,12 +1,8 @@
 import { useState } from "react";
-import { Box, Button, Card, GlobalStyles, Link, Typography } from "@mui/joy";
+import { Box, Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import {
-  Flashcard,
-  FlashcardTinder,
-  getGlobalColorScheme,
-} from "@chair-flight/react/components";
-import { AppHead } from "@chair-flight/react/containers";
+import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
+import { AppHead, GlobalColorScheme } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { FlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -57,11 +53,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <GlobalStyles
-        styles={(t) => {
-          return getGlobalColorScheme(t.colorSchemes.light.palette.primaryTeal);
-        }}
-      />
+      <GlobalColorScheme module="prep" />
       <FlashcardTinder>
         {flashcards
           .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)

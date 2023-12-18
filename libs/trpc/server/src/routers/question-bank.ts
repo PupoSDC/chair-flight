@@ -13,7 +13,10 @@ import {
   createNewQuestionPr,
   getQuestionFromGit,
 } from "@chair-flight/core/github";
-import { questionEditSchema } from "@chair-flight/core/schemas";
+import {
+  questionBankNameSchema,
+  questionEditSchema,
+} from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
 import type {
   LearningObjectiveWithHref,
@@ -21,8 +24,6 @@ import type {
   QuestionBankName,
 } from "@chair-flight/base/types";
 import type { MatchInfo } from "minisearch";
-
-const questionBank = z.enum(["737", "a320", "atpl"]);
 
 const keyToQuestionBank: Record<QuestionBankName, QuestionBank> = {
   "737": new QuestionBank737(),
@@ -89,14 +90,23 @@ export type QuestionPreview = {
 
 export const questionBankRouter = router({
   getAllSubjects: publicProcedure
-    .input(z.object({ questionBank }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const subjects = await questionBank.getAllSubjects();
       return { subjects };
     }),
   getQuestion: publicProcedure
-    .input(z.object({ questionBank, questionId: z.string() }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        questionId: z.string(),
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const [questionTemplate, learningObjectives] = await Promise.all([
@@ -106,7 +116,12 @@ export const questionBankRouter = router({
       return { questionTemplate, learningObjectives };
     }),
   getQuestionFromGithub: publicProcedure
-    .input(z.object({ questionBank, questionId: z.string() }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        questionId: z.string(),
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const question = await questionBank.getQuestionTemplate(input);
@@ -117,21 +132,34 @@ export const questionBankRouter = router({
       return { questionTemplate };
     }),
   getLearningObjective: publicProcedure
-    .input(z.object({ questionBank, learningObjectiveId: z.string() }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        learningObjectiveId: z.string(),
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const learningObjective = await questionBank.getLearningObjective(input);
       return { learningObjective };
     }),
   getNumberOfQuestions: publicProcedure
-    .input(z.object({ questionBank }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const allQuestions = await questionBank.getAllQuestionTemplates();
       return { count: allQuestions.length };
     }),
   getNumberOfLearningObjectives: publicProcedure
-    .input(z.object({ questionBank }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
     .query(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const allLearningObjectives =
@@ -141,7 +169,7 @@ export const questionBankRouter = router({
   searchQuestions: publicProcedure
     .input(
       z.object({
-        questionBank,
+        questionBank: questionBankNameSchema,
         q: z.string().optional(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
@@ -149,6 +177,7 @@ export const questionBankRouter = router({
     )
     .query(async ({ input }) => {
       if (initializationWork) await initializationWork;
+      const questionBankName = input.questionBank;
       const questionBank = getQuestionBank(input);
       const searchIndex = questionSearchIndexes[input.questionBank];
       const questions = await questionBank.getAllQuestionTemplates();
@@ -189,7 +218,7 @@ export const questionBankRouter = router({
             numberOfVariants: variants ? Object.values(variants).length : 1,
             learningObjectives: result["learningObjectives"].split(", "),
             externalIds: result["externalIds"].split(", "),
-            href: `/modules/atpl/questions/${questionId}?variantId=${variantId}`,
+            href: `/modules/${questionBankName}/questions/${questionId}?variantId=${variantId}`,
           },
           score: result.score,
           match: result.match,
@@ -209,7 +238,7 @@ export const questionBankRouter = router({
   searchLearningObjectives: publicProcedure
     .input(
       z.object({
-        questionBank,
+        questionBank: questionBankNameSchema,
         q: z.string().optional(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
@@ -270,7 +299,12 @@ export const questionBankRouter = router({
       };
     }),
   createTest: publicProcedure
-    .input(z.object({ questionBank, config: newTestConfigurationSchema }))
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        config: newTestConfigurationSchema,
+      }),
+    )
     .mutation(async ({ input }) => {
       const questionBank = getQuestionBank(input);
       const questions = await questionBank.getAllQuestionTemplates();

@@ -30,6 +30,7 @@ export const QuestionEditor: FunctionComponent<QuestionEditorProps> = ({
 
   const defaultValues: EditQuestionFormValues = {
     question: questionTemplate,
+    questionBank: questionBank,
     requestData: {
       title: "",
       description: "",

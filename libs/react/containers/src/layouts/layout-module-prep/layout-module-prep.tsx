@@ -1,11 +1,11 @@
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
-import { Box, GlobalStyles, listItemContentClasses } from "@mui/joy";
+import { Box, listItemContentClasses } from "@mui/joy";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
-  getGlobalColorScheme,
 } from "@chair-flight/react/components";
+import { GlobalColorScheme } from "../global-color-scheme";
 import type { FunctionComponent, ReactNode } from "react";
 
 export type LayoutModulePrepProps = {
@@ -20,11 +20,7 @@ export const LayoutModulePrep: FunctionComponent<LayoutModulePrepProps> = ({
   noPadding,
 }) => (
   <>
-    <GlobalStyles
-      styles={(t) => {
-        return getGlobalColorScheme(t.colorSchemes.light.palette.primaryTeal);
-      }}
-    />
+    <GlobalColorScheme module="prep" />
     <Sidebar sx={{ height: "100vh" }}>
       <SidebarListItem
         href={"/"}
