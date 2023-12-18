@@ -1,6 +1,5 @@
 import { ErrorBoundary } from "react-error-boundary";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import {
   AppHead,
   GlobalColorScheme,
@@ -8,6 +7,7 @@ import {
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import { ErrorBoundaryFallback } from "./study.page";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
 type ExamPageProps = {

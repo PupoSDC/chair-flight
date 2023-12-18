@@ -12,8 +12,6 @@ import {
   ModuleSelectionButton,
   Typical,
 } from "@chair-flight/react/components";
-import type {
-  GlobalColorSchemeProps} from "@chair-flight/react/containers";
 import {
   AppHead,
   GlobalColorScheme,
@@ -23,6 +21,7 @@ import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
+import type { GlobalColorSchemeProps } from "@chair-flight/react/containers";
 import type { GetStaticProps, NextPage } from "next";
 
 const fadeIn = keyframes`
@@ -195,11 +194,12 @@ export const IndexPage: NextPage<IndexPageProps> = ({
               fullWidth
               sx={{ mb: { xs: 1, md: 2 } }}
               color={"rose"}
-              title={"737 Type rating"}
-              active={module === "737"}
+              title={"Type Rating"}
+              active={["737", "a320"].includes(module ?? "")}
               description={[
                 `Prepare or review your theory knowledge for a type rating `,
-                `on the Boeing 737 with ${numberOf737Questions} questions.`,
+                `on the Boeing 737 with ${numberOf737Questions} questions, `,
+                `or the Airbus A320 with ${numberOfA320Questions} questions.`,
               ].join("")}
               icon={<FlightTakeoffIcon />}
               onClick={() => goToTheme("737")}

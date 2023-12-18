@@ -4,6 +4,7 @@ import type { QuestionTemplate } from "./question-templates";
 import type { Subject } from "./subjects";
 
 export type QuestionBankName = "737" | "atpl" | "a320";
+export type ModuleName = QuestionBankName | "prep";
 
 export type QuestionsMap = Record<QuestionId, QuestionTemplate | undefined>;
 

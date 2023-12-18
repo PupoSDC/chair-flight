@@ -1,10 +1,8 @@
-import type { FC } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { useRouter } from "next/router";
 import { NoSsr } from "@mui/base";
 import { Link, Skeleton, Typography } from "@mui/joy";
 import { MissingPathParameter, NotFoundError } from "@chair-flight/base/errors";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import { Ups } from "@chair-flight/react/components";
 import {
   AppHead,
@@ -12,7 +10,9 @@ import {
   TestStudy,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
+import type { FC } from "react";
 
 type StudyPageProps = {
   testId: string;

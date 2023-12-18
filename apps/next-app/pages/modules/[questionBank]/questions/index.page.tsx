@@ -1,5 +1,4 @@
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import {
   AppHead,
   LayoutModuleBank,
@@ -9,6 +8,7 @@ import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type QuestionsPageProps = {

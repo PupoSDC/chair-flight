@@ -1,18 +1,18 @@
 import { type FunctionComponent } from "react";
 import { useRouter } from "next/router";
+import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
-import { default as HomeIcon } from "@mui/icons-material/HomeOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { Box, listItemContentClasses } from "@mui/joy";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
 } from "@chair-flight/react/components";
 import { GlobalColorScheme } from "../global-color-scheme";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 export type LayoutModuleProps = {
   children: React.ReactNode;

@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import {
   AppHead,
   LayoutModuleBank,
   QuestionEditor,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
 type QuestionPageProps = {

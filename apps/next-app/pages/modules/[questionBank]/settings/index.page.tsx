@@ -1,11 +1,11 @@
 import { NoSsr } from "@mui/base";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import {
   AppHead,
   LayoutModuleBank,
   UserSettings,
 } from "@chair-flight/react/containers";
 import { preloadContentForStaticRender } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type SettingsPageProps = {
