@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { questionBankNameSchema } from "@chair-flight/core/schemas";
 import { getQuestion } from "../questions/get-question";
 import {
   getRandomId,
@@ -24,7 +25,7 @@ export type NewTestConfiguration = {
 export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> = z
   .object({
     mode: z.enum(["study", "exam"]),
-    questionBank: z.enum(["737", "atpl"]),
+    questionBank: questionBankNameSchema,
     subject: z.string(),
     learningObjectives: z.record(z.boolean()),
     numberOfQuestions: z.number().min(1).max(200),
