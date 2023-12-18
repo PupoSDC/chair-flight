@@ -1,10 +1,10 @@
 import { GlobalStyles } from "@mui/material";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { ModuleName } from "@chair-flight/base/types";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";
 
 export type GlobalColorSchemeProps = {
-  module?: QuestionBankName | "prep";
+  module?: ModuleName;
 };
 
 const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({

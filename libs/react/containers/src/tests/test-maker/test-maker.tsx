@@ -56,8 +56,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   onSuccessfulTestCreation,
   ...otherProps
 }) => {
-  const lowerCasedKey = questionBank.toLocaleLowerCase() as "737";
-  const persistenceKey = `cf-test-maker-${lowerCasedKey}` as const;
+  const persistenceKey = `cf-test-maker-${questionBank}` as const;
   const useTestMakerPersistence = testMakerPersistence[persistenceKey];
 
   const { getPersistedData, setPersistedData } = useTestMakerPersistence();
@@ -68,7 +67,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const defaultValues = useMemo<NewTestConfiguration>(
     () => ({
       mode: "exam",
-      questionBank: lowerCasedKey,
+      questionBank,
       subject: subjects[0].id,
       learningObjectives: subjects
         .flatMap((s) => s.children ?? [])
@@ -76,7 +75,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
         .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
     }),
-    [subjects, lowerCasedKey],
+    [subjects, questionBank],
   );
 
   const form = useForm({ defaultValues, resolver });
