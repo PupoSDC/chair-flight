@@ -357,37 +357,12 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   component="h2"
                   sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
                 >
-                  {`Prepare your next Type Rating exam with `}
-                  <br />
-                  <CountUp
-                    component={"span"}
-                    end={numberOf737Questions}
-                    duration={2000}
-                    sx={{
-                      color: "primary.500",
-                      width: "2.0em",
-                      display: "inline-flex",
-                      justifyContent: "flex-end",
-                    }}
-                  />
-                  {` 737 questions, and `}
-                  <br />
-                  <CountUp
-                    component={"span"}
-                    end={numberOfA320Questions}
-                    duration={2000}
-                    sx={{
-                      color: "primary.500",
-                      width: "2.0em",
-                      display: "inline-flex",
-                      justifyContent: "flex-end",
-                    }}
-                  />
-                  {` A320 questions.`}
+                  {`Prepare your next Type Rating exam`}
                 </Typography>
                 <Typography level="h4" component="p" sx={{ mt: 2 }}>
                   Review the most commonly asked tech knowledge questions for
-                  the 2 most popular aircraft in the world.
+                  the 2 most popular aircraft in the world: the Airbus A320 and
+                  Boeing 737
                 </Typography>
                 <Grid container spacing={2} sx={{ pt: 2 }}>
                   <Grid xs={12} sm={6}>
@@ -395,7 +370,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       fullWidth
                       size="lg"
                       component={Link}
-                      children={"Explore Questions"}
+                      children={"Explore 737 Questions"}
                       href="/modules/737/questions"
                     />
                   </Grid>
@@ -404,7 +379,27 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       fullWidth
                       size="lg"
                       component={Link}
-                      children={"Create a Test"}
+                      variant="outlined"
+                      children={"Create 737 Test"}
+                      href="/modules/737/tests/create"
+                    />
+                  </Grid>
+                  <Grid xs={12} sm={6}>
+                    <Button
+                      fullWidth
+                      size="lg"
+                      component={Link}
+                      children={"Explore A320 Questions"}
+                      href="/modules/737/questions"
+                    />
+                  </Grid>
+                  <Grid xs={12} sm={6}>
+                    <Button
+                      fullWidth
+                      size="lg"
+                      component={Link}
+                      variant="outlined"
+                      children={"Create A320 Test"}
                       href="/modules/737/tests/create"
                     />
                   </Grid>

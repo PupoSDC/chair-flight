@@ -62,11 +62,11 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
               <Typography
                 level="h2"
                 component="h1"
-                sx={{ fontWeight: "bold", mb: 0.5 }}
+                sx={{ fontWeight: "bold" }}
                 children={children}
               />
-              <Divider sx={{ width: "100%", my: 2 }} />
-              <Box>
+              <Divider sx={{ width: "100%", mb: 1 }} />
+              <Box sx={{ mb: 2 }}>
                 {meta.tags.map((tag) => (
                   <BlogPostChip
                     key={tag}
