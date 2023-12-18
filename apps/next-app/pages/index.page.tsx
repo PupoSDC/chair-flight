@@ -389,7 +389,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       size="lg"
                       component={Link}
                       children={"Explore A320 Questions"}
-                      href="/modules/737/questions"
+                      href="/modules/a320/questions"
                     />
                   </Grid>
                   <Grid xs={12} sm={6}>
@@ -398,7 +398,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       size="lg"
                       component={Link}
                       children={"Create A320 Test"}
-                      href="/modules/737/tests/create"
+                      href="/modules/a320/tests/create"
                     />
                   </Grid>
                 </Grid>
