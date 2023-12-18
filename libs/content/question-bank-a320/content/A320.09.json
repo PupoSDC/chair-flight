@@ -1441,34 +1441,9 @@
     "variants": {
       "xctwy": {
         "id": "xctwy",
-        "type": "simple",
-        "question": "In flight the eng 1 pump fault light illuminates amber in case of: &middot;A reservoir low level &middot;A reservoir overheat &middot;A reservoir low air press &middot;A pump low press",
-        "options": [
-          {
-            "id": "o65zh",
-            "text": "TRUE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "5y627i",
-            "text": "FALSE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "kmxtj",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "fuuuh",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "type": "true-or-false",
+        "question": "In flight the eng 1 pump fault light illuminates amber in case of:\n\n- A reservoir low level\n\n- A reservoir overheat\n\n- A reservoir low air press\n\n- A pump low press",
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -2794,34 +2769,9 @@
     "variants": {
       "mr7gb": {
         "id": "mr7gb",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The green pump pressure is low (inhibited on the ground, when the engine is stopped). The FAULT light goes out, when the crew selects OFF, except during an overheat.",
-        "options": [
-          {
-            "id": "6gewt",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "1i9v8",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "gqpx7",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "1nvr2",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []

@@ -47,34 +47,9 @@
     "variants": {
       "u5cjt": {
         "id": "u5cjt",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When the smoke detector in the air extraction duct of the avionics ventilation system detects smoke for more than 5 seconds: -A single chime sounds. -The MASTER CAUTION lights, on the glareshield, light up. -The ECAM displays a caution on the E/WD. -The SMOKE light, on the EMER ELEC PWR panel, lights up. -The BLOWER and EXTRACT FAULT, on the VENTILATION panel, light up",
-        "options": [
-          {
-            "id": "mofxv",
-            "text": "TRUE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "jwgrr",
-            "text": "FALSE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "cpwl",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "rqla",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -457,34 +432,9 @@
     "variants": {
       "ug7tz": {
         "id": "ug7tz",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The FIRE TEST PB on the ENG FIRE panel permits the flight crew to test the operation of the fire detection and extinguishing system: A continuous repetitive chime sounds, the MASTER WARN lights flash, ENG FIRE warning appears on ECAM. On the FIRE panel: The ENG FIRE P/B lights up red, the SQUIB lights come on white if discharge supplies are available, the DISCH lights come on amber. On the ENG panel (pedestal): The FIRE lights come on red.",
-        "options": [
-          {
-            "id": "cubo",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "yhtve",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "mmifg",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "tr6cth",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -580,34 +530,9 @@
     "variants": {
       "xq8xk": {
         "id": "xq8xk",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "When engine FIRE PB is released out, the following sequence occurs: &middot;Silences the aural fire warning &middot;Arms the fire extinguisher squibs &middot;Closes the low-pressure fuel valve &middot;Closes the hydraulic fire shut off valve &middot;Closes the engine bleed valve &middot;Closes the paclk flow control valve &middot;Cuts off the FADEC power supply &middot;Deactivated the IDG",
-        "options": [
-          {
-            "id": "krpbu",
-            "text": "TRUE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "qnxbkl",
-            "text": "FALSE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "617ut",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "m4hhz",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -2138,34 +2063,9 @@
     "variants": {
       "eqyyt": {
         "id": "eqyyt",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "During an emergency situation with smoke you always get an ECAM warning.",
-        "options": [
-          {
-            "id": "ui6m9",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "bnjwy",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "avn9e",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "qrst9",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []

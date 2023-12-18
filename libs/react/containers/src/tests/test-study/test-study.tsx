@@ -28,8 +28,6 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type {
-  DrawingPoints} from "@chair-flight/react/components";
 import {
   ImageViewer,
   MarkdownClient,
@@ -41,6 +39,7 @@ import {
 import { useTestProgress } from "../use-test-progress";
 import { useTestHotkeys } from "../use-test-progress-hotkeys";
 import { useTestProgressTime } from "../use-test-progress-time";
+import type { DrawingPoints } from "@chair-flight/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 

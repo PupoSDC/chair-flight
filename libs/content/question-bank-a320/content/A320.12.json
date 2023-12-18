@@ -375,34 +375,9 @@
     "variants": {
       "azpwz": {
         "id": "azpwz",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "On the ramp with APU running, PARK BRK is set ON, message on ECAM shows PARK BRK.",
-        "options": [
-          {
-            "id": "goed2",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "8c75e",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "dvecgh",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "x7kpz",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1154,34 +1129,9 @@
     "variants": {
       "sygmr": {
         "id": "sygmr",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Setting the parking brake ON deactivates all braking modes, except the anti-skid.",
-        "options": [
-          {
-            "id": "9wjya",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "b23r9",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "mtluqj",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "roeej",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1482,34 +1432,9 @@
     "variants": {
       "qmi8a": {
         "id": "qmi8a",
-        "type": "simple",
-        "question": "The landing gear positions are indicated by 2 triangles for each gear. Each triangle is controlled by one LGCIU: &middot;a green triangle indicates that one LGCIU detects a landing gear downlocked. &middot;a red triangle indicates that one LGCIU detects a landing gear which is not locked in the selected position.",
-        "options": [
-          {
-            "id": "471z4g",
-            "text": ") TRUE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ldiux",
-            "text": "FALSE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "5ef3pg",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "hkcvul",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "type": "true-or-false",
+        "question": "The landing gear positions are indicated by 2 triangles for each gear. Each triangle is controlled by one LGCIU:\n\n- a green triangle indicates that one LGCIU detects a landing gear downlocked.\n\n- a red triangle indicates that one LGCIU detects a landing gear which is not locked in the selected position.",
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []

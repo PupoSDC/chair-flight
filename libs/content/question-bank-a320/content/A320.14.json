@@ -47,34 +47,9 @@
     "variants": {
       "a6k4b": {
         "id": "a6k4b",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "If both FMGCs fail, the flight crew can use the RMPs (Radio Management Panels 1 and 2) on the pedestal for back up tuning. The CAPT RMP controls VOR 1, ADF 1 and ILS 1 & the F/O RMP controls VOR 2 and ILS 2.",
-        "options": [
-          {
-            "id": "fvc5ih",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "xn2u2",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "t3lpt",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "hg5rq",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -129,34 +104,9 @@
     "variants": {
       "67aoh": {
         "id": "67aoh",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Some TCAS advisories are inhibited depending on the aircraft altitude.",
-        "options": [
-          {
-            "id": "ox41f",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "jcai5",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "nh2mj",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "6liqh",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -170,34 +120,9 @@
     "variants": {
       "hez0o": {
         "id": "hez0o",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "Following messages can be displayed to draw pilot's attention: &bull; TCAS: REDUCE RANGE displayed when a TA or RA is detected and ND range above 40 NM. &bull; TCAS : CHANGE MODE displayed when a TA or RA is detected and ND mode is PLAN.",
-        "options": [
-          {
-            "id": "1etbwh",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "216gl",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "g5nv1",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "hm8mp",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1441,34 +1366,9 @@
     "variants": {
       "1872f": {
         "id": "1872f",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The Air Data and Inertial Reference System (ADIRS) supplies temperature, anemometric, barometric and inertial parameters to the EFIS system (PFD and ND) and to other user systems (FMGC , FADEC, ELAC, SEC, FAC, FWC, SFCC, ATC, GPWS, CFDIU, CPC).",
-        "options": [
-          {
-            "id": "7i5uq",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "7b93z",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "sn4xc",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "j5sqpi",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1482,34 +1382,9 @@
     "variants": {
       "egl5u": {
         "id": "egl5u",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The ADIRU is supplied by: ADIRU 1: CAPT probes / ADIRU 2: F/O probes / ADIRU 3: STBY probes and CAPT TAT.",
-        "options": [
-          {
-            "id": "4vionh",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "r5bwb",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "1a7x6",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "od4h7",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1605,34 +1480,9 @@
     "variants": {
       "tjii7": {
         "id": "tjii7",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "In normal operation, the FMGC tunes navaids automatically, with each FMGC controlling its own receivers.",
-        "options": [
-          {
-            "id": "f5p5u",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "gpydn",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "u07km",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "ui0sk",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -1687,34 +1537,9 @@
     "variants": {
       "qqq4g": {
         "id": "qqq4g",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The NAV key (transparent switchguard) engages the radio navigation backup mode. It takes control of the VOR, ILS, MLS, and ADF receivers away from the FMGC and gives it to the RMP.",
-        "options": [
-          {
-            "id": "75cv9",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "7hjr8",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "jood8j",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "51yzdj",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -2302,34 +2127,9 @@
     "variants": {
       "syyv4": {
         "id": "syyv4",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The ADIRU gives true heading instead of magnetic heading: above 80&deg; North; above 75&deg; North between 90&deg; and 120&deg; West (magnetic polar region); and above 60&deg; South",
-        "options": [
-          {
-            "id": "3y06a",
-            "text": "True",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "myjag",
-            "text": "False",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "jv97qg",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "pgkwp",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": false,
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -2343,34 +2143,9 @@
     "variants": {
       "e9b1c": {
         "id": "e9b1c",
-        "type": "simple",
+        "type": "true-or-false",
         "question": "The ATT HDG and AIR DATA selector operates as follows: NORM: ADIRU 1 supplies data to PFD 1, ND 1, RMI and VOR/DME. ADIRU 2 supplies data to PFD 2, and ND2. CAPT 3 : ADR 3 or IR 3 replaces ADR 1 or IR 1. F/0 3 : ADR 3 or IR 3 replaces ADR 2 or IR 2",
-        "options": [
-          {
-            "id": "28pz",
-            "text": "True",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "43y3a",
-            "text": "False",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "8685pg",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "dn5z5",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []

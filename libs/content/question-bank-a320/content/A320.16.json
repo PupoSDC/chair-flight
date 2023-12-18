@@ -1359,34 +1359,9 @@
     "variants": {
       "pv2u1g": {
         "id": "pv2u1g",
-        "type": "simple",
-        "question": "Engine-Bleed valve opens if: &middot;Upstream pressure is above 8 psi &middot;APU bleed pushbutton switch is off or APU  bleed valve is closed. &middot;There is no onside wing or pylon leak, and no overpressure or overtemperature has been  detected. &middot;The ENG FIRE pushbutton has not been popped out and the engine start valve is closed",
-        "options": [
-          {
-            "id": "ru873j",
-            "text": "TRUE",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "ty4od",
-            "text": "FALSE",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "o350d",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "whdvxf",
-            "text": "---",
-            "correct": false,
-            "why": ""
-          }
-        ],
+        "type": "true-or-false",
+        "question": "Engine-Bleed valve opens if:\n\n- Upstream pressure is above 8 psi\n\n- APU bleed pushbutton switch is off or APU  bleed valve is closed.\n\n- There is no onside wing or pylon leak, and no overpressure or overtemperature has been  detected.\n\n- The ENG FIRE pushbutton has not been popped out and the engine start valve is closed",
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []

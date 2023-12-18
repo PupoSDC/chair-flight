@@ -21,6 +21,7 @@ export const readAllQuestionsFromFs = async (): Promise<QuestionTemplate[]> => {
     const filePath = path.join(dirPath, file);
     const jsonString = await fs.readFile(filePath, "utf-8");
     const jsonData = JSON.parse(jsonString) as QuestionTemplateJson[];
+    console.log(file);
     const jsonDataWithSrcLocation = jsonData.map((q) => ({
       ...q,
       srcLocation: filePath.replace(process.cwd(), ""),
