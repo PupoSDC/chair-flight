@@ -28,7 +28,7 @@ import {
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
-import type { GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 const TdWithMarkdown = styled("td")`
   margin: ${({ theme }) => theme.spacing(0.5, 0)};
@@ -204,6 +204,13 @@ export const getStaticProps: GetStaticProps<
       trpcState: helper.dehydrate(),
       totalNumberOfLearningObjectives,
     },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [{ params: { questionBank: "atpl" } }],
+    fallback: false,
   };
 };
 
