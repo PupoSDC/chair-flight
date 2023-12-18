@@ -54,10 +54,11 @@ export const LearningObjectivesIndexPage: NextPage<
   const [search, setSearch] = useState("");
 
   const { data, isLoading, fetchNextPage } =
-    trpc.questionBankAtpl.searchLearningObjectives.useInfiniteQuery(
+    trpc.questionBank.searchLearningObjectives.useInfiniteQuery(
       {
         q: search,
         limit: 20,
+        questionBank: "atpl",
       },
       {
         getNextPageParam: (lastPage) => lastPage.nextCursor,
@@ -188,10 +189,14 @@ export const getStaticProps: GetStaticProps<
 > = async () => {
   await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
-  const qb = helper.questionBankAtpl;
+  const qb = helper.questionBank;
   const [, { count: totalNumberOfLearningObjectives }] = await Promise.all([
-    qb.searchLearningObjectives.prefetchInfinite({ q: "", limit: 20 }),
-    qb.getNumberOfLearningObjectives.fetch(),
+    qb.searchLearningObjectives.prefetchInfinite({
+      q: "",
+      limit: 20,
+      questionBank: "atpl",
+    }),
+    qb.getNumberOfLearningObjectives.fetch({ questionBank: "atpl" }),
   ]);
 
   return {

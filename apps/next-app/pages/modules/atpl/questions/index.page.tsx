@@ -3,7 +3,6 @@ import {
   LayoutModuleAtpl,
   QuestionSearch,
 } from "@chair-flight/react/containers";
-import { trpc } from "@chair-flight/trpc/client";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
@@ -13,11 +12,7 @@ import type { GetStaticProps, NextPage } from "next";
 const QuestionsIndexPage: NextPage = () => (
   <LayoutModuleAtpl>
     <AppHead />
-    <QuestionSearch
-      component="section"
-      searchQuestions={trpc.questionBankAtpl.searchQuestions}
-      getNumberOfQuestions={trpc.questionBankAtpl.getNumberOfQuestions}
-    />
+    <QuestionSearch component="section" questionBank="atpl" />
   </LayoutModuleAtpl>
 );
 
@@ -25,7 +20,11 @@ export const getStaticProps: GetStaticProps = async () => {
   await preloadContentForStaticRender(await import("fs/promises"));
 
   const helper = await getTrpcHelper();
-  await Promise.all([helper.questionBankAtpl.getNumberOfQuestions.fetch()]);
+  await Promise.all([
+    helper.questionBank.getNumberOfQuestions.fetch({
+      questionBank: "a320",
+    }),
+  ]);
 
   return {
     props: {

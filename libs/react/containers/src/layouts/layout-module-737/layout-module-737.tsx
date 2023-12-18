@@ -1,6 +1,7 @@
 import { type FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
+import { default as HomeIcon } from "@mui/icons-material/HomeOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { Box, listItemContentClasses, GlobalStyles } from "@mui/joy";
@@ -26,6 +27,7 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isSettings = router.asPath.includes("settings");
+  const isHome = !isQuestions && !isTests && !isSettings;
 
   return (
     <>
@@ -53,6 +55,12 @@ export const LayoutModule737: FunctionComponent<LayoutModule737Props> = ({
               color: (t) => t.vars.palette.text.primary,
             },
           }}
+        />
+        <SidebarListItem
+          href={"/modules/737"}
+          selected={isHome}
+          icon={HomeIcon}
+          title={"Home"}
         />
         <SidebarListItem
           href={"/modules/737/tests"}

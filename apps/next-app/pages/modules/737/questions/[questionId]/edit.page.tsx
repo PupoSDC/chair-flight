@@ -19,8 +19,12 @@ export const EditQuestionPage: NextPage = () => {
 };
 
 export const getServerSideProps = ssrHandler(async ({ helper, context }) => {
+  const questionBank = "737";
   const questionId = context.params?.["questionId"] as string;
-  await helper.questionBank737.getQuestionFromGithub.prefetch({ questionId });
+  await helper.questionBank.getQuestionFromGithub.prefetch({
+    questionId,
+    questionBank,
+  });
 });
 
 export default EditQuestionPage;

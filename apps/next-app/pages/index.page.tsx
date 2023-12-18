@@ -48,6 +48,7 @@ const RightContainer = styled(Grid)`
 type IndexPageProps = {
   numberOfAtplQuestions: number;
   numberOf737Questions: number;
+  numberOfA320Questions: number;
   numberOfFlashcards: number;
 };
 
@@ -59,6 +60,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   numberOfFlashcards,
   numberOfAtplQuestions,
   numberOf737Questions,
+  numberOfA320Questions,
 }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
   const [activeTheme, setActiveTheme] = useState<Theme | undefined>();
@@ -373,7 +375,8 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                   component="h2"
                   sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
                 >
-                  {`Review your 737 knowledge with `}
+                  {`Prepare your next Type Rating exam with `}
+                  <br />
                   <CountUp
                     component={"span"}
                     end={numberOf737Questions}
@@ -385,11 +388,24 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       justifyContent: "flex-end",
                     }}
                   />
-                  {` questions`}
+                  {` 737 questions, and `}
+                  <br />
+                  <CountUp
+                    component={"span"}
+                    end={numberOfA320Questions}
+                    duration={2000}
+                    sx={{
+                      color: "primary.500",
+                      width: "2.0em",
+                      display: "inline-flex",
+                      justifyContent: "flex-end",
+                    }}
+                  />
+                  {` A320 questions.`}
                 </Typography>
                 <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                  Review the most commonly asked questions during a 737 type
-                  rating initial tech exam.
+                  Review the most commonly asked tech knowledge questions for
+                  the 2 most popular aircraft in the world.
                 </Typography>
                 <Grid container spacing={2} sx={{ pt: 2 }}>
                   <Grid xs={12} sm={6}>
@@ -428,10 +444,12 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
     { count: numberOfFlashcards },
     { count: numberOfAtplQuestions },
     { count: numberOf737Questions },
+    { count: numberOfA320Questions },
   ] = await Promise.all([
     helper.interviewPrep.getNumberOfFlashcards.fetch(),
-    helper.questionBankAtpl.getNumberOfQuestions.fetch(),
-    helper.questionBank737.getNumberOfQuestions.fetch(),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "737" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
   ]);
 
   return {
@@ -439,6 +457,7 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
       numberOfFlashcards,
       numberOfAtplQuestions,
       numberOf737Questions,
+      numberOfA320Questions,
     },
   };
 };

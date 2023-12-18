@@ -30,7 +30,7 @@ const meta: Meta<typeof QuestionOverview> = {
   },
   parameters: {
     msw: [
-      trpcMsw.questionBankAtpl.getQuestion.query((req, res, ctx) => {
+      trpcMsw.questionBank.getQuestion.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({

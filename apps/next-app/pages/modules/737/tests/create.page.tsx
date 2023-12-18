@@ -29,9 +29,12 @@ const TestsCreatePage: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const questionBank = "737";
   await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
-  await Promise.all([helper.questionBank737.getAllSubjects.fetch()]);
+  await Promise.all([
+    helper.questionBank.getAllSubjects.fetch({ questionBank }),
+  ]);
 
   return {
     props: {

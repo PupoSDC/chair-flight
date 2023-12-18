@@ -18,7 +18,7 @@ const TestsCreatePage: NextPage = () => {
       <AppHead />
       <TestMaker
         component="section"
-        questionBank="Atpl"
+        questionBank="atpl"
         sx={{ height: "100%" }}
         onSuccessfulTestCreation={(test) =>
           router.push(`/modules/atpl/tests/${test.id}/${test.mode}`)
@@ -29,10 +29,15 @@ const TestsCreatePage: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const questionBank = "atpl";
   await preloadContentForStaticRender(await import("fs/promises"));
 
   const helper = await getTrpcHelper();
-  await Promise.all([helper.questionBankAtpl.getAllSubjects.fetch()]);
+  await Promise.all([
+    helper.questionBank.getAllSubjects.fetch({
+      questionBank,
+    }),
+  ]);
 
   return {
     props: {

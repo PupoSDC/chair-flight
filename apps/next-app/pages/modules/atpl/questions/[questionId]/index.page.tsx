@@ -47,7 +47,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
       />
       <QuestionOverview
         component={"section"}
-        questionBank="Atpl"
+        questionBank="atpl"
         questionId={initialQuestionId}
         variantId={variantId}
         seed={seed}
@@ -62,13 +62,15 @@ export const getServerSideProps = ssrHandler<
   QuestionPageParams
 >(async ({ params, helper, context }) => {
   const { questionId } = params;
+  const questionBank = "atpl";
   const variantIdFromQuery = context.query?.["variantId"] as string;
   const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
   const initialQuestionId = questionId;
   const shuffle = getRandomShuffler("123");
 
-  const { questionTemplate } = await helper.questionBankAtpl.getQuestion.fetch({
+  const { questionTemplate } = await helper.questionBank.getQuestion.fetch({
     questionId,
+    questionBank,
   });
 
   const initialVariantId = questionTemplate.variants[variantIdFromQuery]

@@ -6,14 +6,14 @@ import {
   getRandomShuffler,
 } from "../random/random";
 import type {
-  QuestionBank,
+  QuestionBankName,
   QuestionTemplate,
   Test,
 } from "@chair-flight/base/types";
 
 export type NewTestConfiguration = {
   mode: "study" | "exam";
-  questionBank: QuestionBank;
+  questionBank: QuestionBankName;
   subject: string;
   numberOfQuestions: number;
   learningObjectives: Record<string, boolean>;

@@ -13,14 +13,17 @@ export const EditQuestionPage: NextPage = () => {
   return (
     <LayoutModuleAtpl fixedHeight noPadding>
       <AppHead title={questionId} />
-      <QuestionEditor questionBank="Atpl" />
+      <QuestionEditor questionBank="atpl" />
     </LayoutModuleAtpl>
   );
 };
 
 export const getServerSideProps = ssrHandler(async ({ helper, context }) => {
   const questionId = context.params?.["questionId"] as string;
-  await helper.questionBankAtpl.getQuestionFromGithub.prefetch({ questionId });
+  await helper.questionBank.getQuestionFromGithub.prefetch({
+    questionId,
+    questionBank: "atpl",
+  });
 });
 
 export default EditQuestionPage;

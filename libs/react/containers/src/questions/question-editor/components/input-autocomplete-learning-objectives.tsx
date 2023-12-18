@@ -17,10 +17,11 @@ export const InputAutocompleteLearningObjectives = forwardRef<
   const [search, setSearch] = useState("");
 
   const { data, isLoading } =
-    trpc.questionBankAtpl.searchLearningObjectives.useQuery({
+    trpc.questionBank.searchLearningObjectives.useQuery({
       q: search,
       limit: 10,
       cursor: 0,
+      questionBank: "atpl",
     });
 
   const optionsMap = (data?.items ?? []).reduce<

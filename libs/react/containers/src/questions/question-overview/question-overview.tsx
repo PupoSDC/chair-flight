@@ -32,7 +32,10 @@ import {
   Ups,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import type { QuestionTemplateId } from "@chair-flight/base/types";
+import type {
+  QuestionBankName,
+  QuestionTemplateId,
+} from "@chair-flight/base/types";
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
@@ -44,13 +47,14 @@ type DrawingPointsMap = Record<string, DrawingPoints[]>;
 type TabName = "question" | "explanation" | "meta" | "variants";
 
 const shuffle = getRandomShuffler("123");
+const useQuestion = trpc.questionBank.getQuestion.useSuspenseQuery;
 
 export type QuestionOverviewProps = {
   questionId: QuestionTemplateId;
   variantId?: string;
   seed?: string;
   onQuestionChanged?: (args: { variantId: string; seed: string }) => void;
-  questionBank: "Atpl" | "737";
+  questionBank: QuestionBankName;
 } & Pick<TabProps, "sx" | "className" | "style" | "component">;
 
 /**
@@ -68,11 +72,8 @@ export const QuestionOverview: FunctionComponent<QuestionOverviewProps> = ({
   questionBank,
   ...props
 }) => {
-  const bank = `questionBank${questionBank}` as const;
-  const useQuestion = trpc[bank].getQuestion.useSuspenseQuery;
-
   const [tab, setTab] = useState<TabName>("question");
-  const [questionData] = useQuestion({ questionId });
+  const [questionData] = useQuestion({ questionId, questionBank });
   const [seed, setSeed] = useState<string>(initialSeed ?? getRandomId());
   const [variantId, setVariantId] = useState(initialVariantId);
   const [selectedOption, setSelectedOption] = useState<string>();

@@ -68,8 +68,9 @@ export const getServerSideProps = ssrHandler<
   const initialQuestionId = questionId;
   const shuffle = getRandomShuffler("123");
 
-  const { questionTemplate } = await helper.questionBank737.getQuestion.fetch({
+  const { questionTemplate } = await helper.questionBank.getQuestion.fetch({
     questionId,
+    questionBank: "737",
   });
 
   const initialVariantId = questionTemplate.variants[variantIdFromQuery]
