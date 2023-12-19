@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {},
-  "include": ["pages/**/*.ts", "pages/**/*.tsx", "next-env.d.ts", "index.d.ts"],
+  "files": ["next-env.d.ts", "index.d.ts"],
+  "include": ["pages/**/*.ts", "pages/**/*.tsx"],
   "exclude": [
     "node_modules",
     "vite.config.ts",

@@ -10,7 +10,7 @@ type Story = StoryObj<typeof TestMaker>;
 export const Playground: Story = {
   parameters: {
     msw: [
-      trpcMsw.questionBankAtpl.getAllSubjects.query((req, res, ctx) => {
+      trpcMsw.questionBank.getAllSubjects.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({
@@ -18,7 +18,7 @@ export const Playground: Story = {
           }),
         );
       }),
-      trpcMsw.questionBankAtpl.createTest.mutation(async (req, res, ctx) => {
+      trpcMsw.questionBank.createTest.mutation(async (req, res, ctx) => {
         await new Promise((resolve) => setTimeout(resolve, 1500));
         return res(
           ctx.status(200),
@@ -47,7 +47,7 @@ export const Playground: Story = {
 export const PlaygroundWithErrorOnSubmit: Story = {
   parameters: {
     msw: [
-      trpcMsw.questionBankAtpl.getAllSubjects.query((req, res, ctx) => {
+      trpcMsw.questionBank.getAllSubjects.query((req, res, ctx) => {
         return res(
           ctx.status(200),
           ctx.data({
@@ -55,7 +55,7 @@ export const PlaygroundWithErrorOnSubmit: Story = {
           }),
         );
       }),
-      trpcMsw.questionBankAtpl.createTest.mutation(async (req, res, ctx) => {
+      trpcMsw.questionBank.createTest.mutation(async (req, res, ctx) => {
         await new Promise((resolve) => setTimeout(resolve, 1500));
         return res(
           ctx.status(500),

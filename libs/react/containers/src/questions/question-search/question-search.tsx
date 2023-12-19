@@ -1,37 +1,43 @@
 import { useState } from "react";
 import { Box, useTheme } from "@mui/joy";
 import { CtaSearch, Ups, useMediaQuery } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
 import { QuestionPreviewList } from "../question-preview-list/question-preview-list";
-import type { trpc } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
 import type { FC } from "react";
 
-export type QuestionSearchProps = BoxProps &
-  (
-    | {
-        searchQuestions: typeof trpc.questionBank737.searchQuestions;
-        getNumberOfQuestions: typeof trpc.questionBank737.getNumberOfQuestions;
-      }
-    | {
-        searchQuestions: typeof trpc.questionBankAtpl.searchQuestions;
-        getNumberOfQuestions: typeof trpc.questionBankAtpl.getNumberOfQuestions;
-      }
-  );
+export type QuestionSearchProps = BoxProps & {
+  questionBank: QuestionBankName;
+};
+
+const useSearchQuestions = trpc.questionBank.searchQuestions.useInfiniteQuery;
+const useNumberOfQuestions = trpc.questionBank.getNumberOfQuestions.useQuery;
 
 export const QuestionSearch: FC<QuestionSearchProps> = ({
-  searchQuestions: { useInfiniteQuery: useSearchQuestions },
-  getNumberOfQuestions: { useSuspenseQuery: useNumberOfQuestions },
+  questionBank,
   ...otherProps
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [search, setSearch] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
-  const [{ count: totalNumberOfQuestions }] = useNumberOfQuestions();
 
-  const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
+  const {
+    data: numberOfQuestionsData,
+    isLoading: numberOfQuestionsLoading,
+    isError: numberOfQuestionsError,
+  } = useNumberOfQuestions({ questionBank });
+
+  const {
+    data: searchQuestionsData,
+    isLoading: searchQuestionsLoading,
+    isError: searchQuestionsError,
+    fetchNextPage,
+  } = useSearchQuestions(
     {
       q: search,
+      questionBank,
       limit: isMobile ? 12 : 24,
     },
     {
@@ -41,24 +47,34 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
     },
   );
 
-  const hasResults = !isLoading && !isError && data?.pages[0].totalResults > 0;
-  const hasNoResults = !isLoading && !isError && !hasResults && !!search.length;
+  const hasResults =
+    !searchQuestionsLoading &&
+    !searchQuestionsError &&
+    searchQuestionsData?.pages[0].totalResults > 0;
 
-  const results = (data?.pages ?? [])
+  const hasNoResults =
+    !searchQuestionsLoading &&
+    !searchQuestionsError &&
+    !hasResults &&
+    !!search.length;
+
+  const hasError = searchQuestionsError || numberOfQuestionsError;
+
+  const results = (searchQuestionsData?.pages ?? [])
     .flatMap((p) => p.items)
     .map((d) => d.result);
 
   const numberOfResults = (() => {
-    if (hasResults) return data?.pages[0].totalResults;
+    if (hasResults) return searchQuestionsData?.pages[0].totalResults;
     if (hasNoResults) return 0;
-    return totalNumberOfQuestions;
+    return numberOfQuestionsData?.count;
   })();
 
   const onScroll = (e: React.UIEvent<HTMLUListElement, UIEvent>) => {
     const target = e.target as HTMLUListElement;
     const { scrollHeight, scrollTop, clientHeight } = target;
     const distance = scrollHeight - scrollTop - clientHeight;
-    if (distance < 500 && !isLoading) fetchNextPage();
+    if (distance < 500 && !searchQuestionsLoading) fetchNextPage();
   };
 
   return (
@@ -83,7 +99,9 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
       >
         <CtaSearch
           value={search}
-          loading={hasSearched && isLoading}
+          loading={
+            (hasSearched && searchQuestionsLoading) || numberOfQuestionsLoading
+          }
           onChange={(value) => {
             setSearch(value);
             setHasSearched(true);
@@ -100,7 +118,7 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
       {hasResults && (
         <QuestionPreviewList questions={results} onScroll={onScroll} />
       )}
-      {isError && <Ups message="Error fetching questions" color="danger" />}
+      {hasError && <Ups message="Error fetching questions" color="danger" />}
       {hasNoResults && <Ups message="No questions found" />}
     </Box>
   );

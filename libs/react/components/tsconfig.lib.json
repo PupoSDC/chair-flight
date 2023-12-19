@@ -1,5 +1,10 @@
 {
   "extends": "./tsconfig.json",
+  "files": [
+    "../../../node_modules/@nx/react/typings/cssmodule.d.ts",
+    "../../../node_modules/@nx/next/typings/image.d.ts",
+    "../../base/types/src/index.ts"
+  ],
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
 }

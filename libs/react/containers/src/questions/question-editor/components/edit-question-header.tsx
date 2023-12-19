@@ -23,6 +23,7 @@ import type { EditQuestionFormValues } from "../types/edit-question-form-values"
 export const EditQuestionHeader = () => {
   const form = useFormContext<EditQuestionFormValues>();
   const questionId = form.watch("question.id");
+  const questionBank = form.watch("questionBank");
   const { undo, isUndoAvailable, historyLength } = useFormHistory(questionId);
   const [isValidated, setIsValidated] = useState(false);
 
@@ -66,7 +67,9 @@ export const EditQuestionHeader = () => {
       <EditIcon sx={{ mx: 1 }} fontSize="xl2" />
       <Typography level="h4" sx={{ fontWeight: 400 }}>
         Editing Question&nbsp;
-        <Link href={`../${questionId}`}>{questionId}</Link>
+        <Link href={`/modules/${questionBank}/questions/${questionId}`}>
+          {questionId}
+        </Link>
       </Typography>
       <Box sx={{ flexGrow: 1 }} />
       <NoSsr>

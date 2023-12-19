@@ -22,23 +22,27 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { useTestProgress } from "../use-test-progress";
-import type { Test } from "@chair-flight/base/types";
+import type { QuestionBankName, Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
 
 const resolver = zodResolver(newTestConfigurationSchema);
+const useSubjects = trpc.questionBank.getAllSubjects.useSuspenseQuery;
+const useCreateTest = trpc.questionBank.createTest.useMutation;
 
 const testMakerPersistence = {
   "cf-test-maker-atpl":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-atpl"),
   "cf-test-maker-737":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-737"),
+  "cf-test-maker-a320":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-a320"),
 };
 
 export type TestMakerProps = Omit<BoxProps, "onBlur" | "onSubmit"> & {
   onSuccessfulTestCreation: (test: Test) => void;
-  questionBank: "Atpl" | "737";
+  questionBank: QuestionBankName;
 };
 
 /**
@@ -52,22 +56,18 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   onSuccessfulTestCreation,
   ...otherProps
 }) => {
-  const lowerCasedKey = questionBank.toLocaleLowerCase() as "737";
-  const persistenceKey = `cf-test-maker-${lowerCasedKey}` as const;
-  const bankKey = `questionBank${questionBank}` as const;
-  const useSubjects = trpc[bankKey].getAllSubjects.useSuspenseQuery;
-  const useCreateTest = trpc[bankKey].createTest.useMutation;
+  const persistenceKey = `cf-test-maker-${questionBank}` as const;
   const useTestMakerPersistence = testMakerPersistence[persistenceKey];
 
   const { getPersistedData, setPersistedData } = useTestMakerPersistence();
-  const [{ subjects }] = useSubjects();
+  const [{ subjects }] = useSubjects({ questionBank });
   const createTest = useCreateTest();
   const addTest = useTestProgress((s) => s.addTest);
 
   const defaultValues = useMemo<NewTestConfiguration>(
     () => ({
       mode: "exam",
-      questionBank: lowerCasedKey,
+      questionBank,
       subject: subjects[0].id,
       learningObjectives: subjects
         .flatMap((s) => s.children ?? [])
@@ -75,7 +75,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
         .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
     }),
-    [subjects, lowerCasedKey],
+    [subjects, questionBank],
   );
 
   const form = useForm({ defaultValues, resolver });
@@ -121,6 +121,7 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
   const onSubmit = form.handleSubmit(async (config) => {
     try {
       const { test } = await createTest.mutateAsync({
+        questionBank,
         config: {
           ...config,
           learningObjectives: {

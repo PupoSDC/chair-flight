@@ -3,18 +3,19 @@ import { NoSsr } from "@mui/base";
 import { Box, Divider, Grid, Link, Stack, Typography } from "@mui/joy";
 import { TestPreview, Ups } from "@chair-flight/react/components";
 import { useTestProgress } from "../use-test-progress";
-import type { QuestionBank } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
 export type TestsOverviewProps = {
-  questionBank: QuestionBank;
+  questionBank: QuestionBankName;
 } & BoxProps;
 
 export const TestsOverview: FunctionComponent<TestsOverviewProps> = ({
   questionBank,
   ...props
 }) => {
+  const createTestHref = `/modules/${questionBank}/tests/create`;
   const tests = useTestProgress((s) => s.tests);
   const testsAsList = Object.values(tests)
     .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)
@@ -27,10 +28,10 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = ({
       noItemsMessage: (
         <Typography>
           No tests in progress. You can{" "}
-          <Link href="./tests/create">Create a New Test</Link>!
+          <Link href={createTestHref}>Create a New Test</Link>!
         </Typography>
       ),
-      topRightCorner: <Link href="./tests/create">Create New Test</Link>,
+      topRightCorner: <Link href={createTestHref}>Create New Test</Link>,
     },
     {
       title: "Completed tests",
@@ -73,7 +74,7 @@ export const TestsOverview: FunctionComponent<TestsOverviewProps> = ({
                     sx={{ width: "100%" }}
                     data-cy="test-preview"
                     component={Link}
-                    href={`./tests/${test.id}/${
+                    href={`/modules/${questionBank}/tests/${test.id}/${
                       test.status === "finished" ? "review" : test.mode
                     }`}
                     title={test.title}

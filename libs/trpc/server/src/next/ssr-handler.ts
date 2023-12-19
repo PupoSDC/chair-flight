@@ -57,6 +57,7 @@ export const ssrHandler = <
       return response;
     } catch (error) {
       const resolution = handleError<Props>(error);
+
       if (resolution) return resolution;
       throw error;
     }

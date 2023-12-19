@@ -20,7 +20,7 @@ import type { SheetProps } from "@mui/joy";
 import type { ReactElement } from "react";
 
 export type SidebarProps = {
-  children: ReactElement<SidebarListItemProps>[];
+  children: (ReactElement<SidebarListItemProps> | false)[];
   sx?: SheetProps["sx"];
   className?: SheetProps["className"];
 };
@@ -66,6 +66,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const isOpen = isSmallScreen ? isMobileOpen : isDesktopOpen;
     const setOpen = isSmallScreen ? setMobileOpen : setDesktopOpen;
+    const definedChildren = children.filter(Boolean);
 
     return (
       <>
@@ -161,9 +162,9 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
           }}
         >
           <List onClick={() => isMobileOpen && setMobileOpen(false)}>
-            {children.filter((c) => !c.props.bottom)}
+            {definedChildren.filter((c) => !c.props.bottom)}
             <Box sx={{ flex: 1 }} className="filler" />
-            {children.filter((c) => c.props.bottom)}
+            {definedChildren.filter((c) => c.props.bottom)}
             <ListItemButton
               variant="outlined"
               onClick={() => setOpen(!isOpen)}

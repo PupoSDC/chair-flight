@@ -11,26 +11,26 @@ import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
 import { ReviewPrModal } from "./components/review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { FunctionComponent } from "react";
 
 const resolver = zodResolver(questionEditSchema);
+const useQuestion = trpc.questionBank.getQuestionFromGithub.useSuspenseQuery;
 
 export type QuestionEditorProps = {
-  questionBank: "737" | "Atpl";
+  questionBank: QuestionBankName;
 };
 
 export const QuestionEditor: FunctionComponent<QuestionEditorProps> = ({
   questionBank,
 }) => {
-  const trpcBank = trpc[`questionBank${questionBank}`];
-  const useQuestion = trpcBank.getQuestionFromGithub.useSuspenseQuery;
-
   const router = useRouter();
   const questionId = router.query["questionId"] as string;
-  const [{ questionTemplate }] = useQuestion({ questionId });
+  const [{ questionTemplate }] = useQuestion({ questionId, questionBank });
 
   const defaultValues: EditQuestionFormValues = {
     question: questionTemplate,
+    questionBank: questionBank,
     requestData: {
       title: "",
       description: "",

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["migrate/**/*.ts", "src/**/*.ts"],
+  "exclude": ["migrate/**/*.test.ts", "src/**/*.test.ts"]
+}

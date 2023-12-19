@@ -1,9 +1,5 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "files": [
-    "../../../node_modules/@nx/react/typings/cssmodule.d.ts",
-    "../../../node_modules/@nx/next/typings/image.d.ts"
-  ],
   "compilerOptions": {
     "lib": ["dom"]
   },
