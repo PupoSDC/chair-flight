@@ -1,18 +1,12 @@
 {
-  "extends": [
-    // Recover ths with bumb to nx 17
-    // "plugin:@nrwl/nx/react",
-    "next",
-    "next/core-web-vitals",
-    "../../.eslintrc.json"
-  ],
+  "extends": ["next", "next/core-web-vitals", "../../.eslintrc.json"],
   "ignorePatterns": ["!**/*", ".next/**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "@next/next/no-html-link-for-pages": ["error", "apps/next-app/pages"],
-        "@nrwl/nx/enforce-module-boundaries": ["off"]
+        "@nx/enforce-module-boundaries": ["off"]
       }
     },
     {

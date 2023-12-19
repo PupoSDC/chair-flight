@@ -11,7 +11,7 @@
         "lintFilePatterns": ["libs/base/env/**/*.ts"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p libs/base/env/tsconfig.json --noEmit"]

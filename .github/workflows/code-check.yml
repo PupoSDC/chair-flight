@@ -52,7 +52,7 @@ jobs:
         run: pnpm lint
 
       - name: Run Typescript
-        run: pnpm tsc
+        run: pnpm typecheck
 
       - name: Run Tests
         run: pnpm test

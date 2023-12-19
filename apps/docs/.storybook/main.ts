@@ -15,11 +15,7 @@ const config: StorybookConfig = {
     "../../../libs/react/**/src/**/*.stories.tsx",
     "../../../libs/react/**/src/**/*.mdx",
   ],
-  addons: [
-    "@storybook/addon-essentials",
-    "@nx/react/plugins/storybook",
-    "storybook-dark-mode",
-  ],
+  addons: ["@storybook/addon-essentials", "storybook-dark-mode"],
   staticDirs: ["../public"],
   typescript: {
     reactDocgen: "react-docgen-typescript",

@@ -22,7 +22,7 @@
         "lintFilePatterns": ["libs/content/question-bank-a320/**/*.ts"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
@@ -31,7 +31,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "outputs": [],
       "options": {
         "passWithNoTests": false,

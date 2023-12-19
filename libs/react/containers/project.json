@@ -12,14 +12,14 @@
         "lintFilePatterns": ["libs/react/containers/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p libs/react/containers/tsconfig.lib.json --noEmit"]
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "outputs": [],
       "options": {
         "passWithNoTests": false,

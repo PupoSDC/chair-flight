@@ -19,7 +19,7 @@
         "lintFilePatterns": ["apps/e2e-web/**/*.{js,ts}"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p apps/e2e-web/tsconfig.json --noEmit"]

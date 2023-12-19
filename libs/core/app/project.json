@@ -12,7 +12,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "outputs": ["{workspaceRoot}/coverage/libs/core/app"],
       "options": {
         "passWithNoTests": false,
@@ -20,7 +20,7 @@
         "config": "{projectRoot}/vitest.config.ts"
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [

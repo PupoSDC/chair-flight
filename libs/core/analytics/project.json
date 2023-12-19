@@ -83,7 +83,7 @@
         "lintFilePatterns": ["libs/core/analytics/**/*.ts"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p libs/core/analytics/tsconfig.json --noEmit"]
