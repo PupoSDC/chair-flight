@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import { default as react } from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
 import { default as viteTsConfigPaths } from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   cacheDir: "../../../node_modules/.vite/chair-flight-components",
