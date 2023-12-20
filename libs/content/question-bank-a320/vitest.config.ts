@@ -12,10 +12,6 @@ export default defineConfig({
     cache: {
       dir: "../../../node_modules/.vitest",
     },
-    coverage: {
-      all: true,
-      provider: "istanbul",
-    },
   },
   define: {
     process: {
