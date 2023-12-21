@@ -1,10 +1,5 @@
 {
-  "extends": [
-    // Recover ths with bumb to nx 17
-    // "plugin:@nrwl/nx/react",
-    "next",
-    "../../../.eslintrc.json"
-  ],
+  "extends": ["next", "../../../.eslintrc.json"],
   "rules": {
     // Consider reviewing the policy on this...
     "@next/next/no-img-element": "off"

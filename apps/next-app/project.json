@@ -30,7 +30,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/next-app",
@@ -44,7 +44,7 @@
         "lintFilePatterns": ["apps/next-app/pages/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [

@@ -12,7 +12,7 @@
         "lintFilePatterns": ["libs/react/games/src/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [

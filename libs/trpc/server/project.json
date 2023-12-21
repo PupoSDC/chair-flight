@@ -11,7 +11,7 @@
         "lintFilePatterns": ["libs/trpc/server/**/*.ts"]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p libs/trpc/server/tsconfig.json --noEmit"]

@@ -7,16 +7,12 @@ export default defineConfig({
 
   test: {
     globals: true,
+    reporters: ["default"],
     include: ["**/*.{test,spec}.{ts,tsx}"],
     cache: {
       dir: "../../../node_modules/.vitest",
     },
-    coverage: {
-      all: true,
-      provider: "istanbul",
-    },
   },
-
   define: {
     process: {
       env: {

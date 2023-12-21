@@ -14,7 +14,7 @@
         ]
       }
     },
-    "tsc": {
+    "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["tsc -p libs/react/analytics/tsconfig.json --noEmit"]
