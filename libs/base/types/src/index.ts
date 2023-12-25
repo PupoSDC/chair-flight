@@ -9,4 +9,4 @@ export * from "./lib/question-templates";
 export * from "./lib/questions";
 export * from "./lib/subjects";
 export * from "./lib/tests";
-export * from "./lib/media";
+export * from "./lib/annexes";

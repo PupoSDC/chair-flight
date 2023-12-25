@@ -166,6 +166,17 @@ export const questionBankRouter = router({
         await questionBank.getAllLearningObjectives();
       return { count: allLearningObjectives.length };
     }),
+  getNumberOfAnnexes: publicProcedure
+   .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
+    .query(async ({ input }) => {
+      const questionBank = getQuestionBank(input);
+      //const allAnnexes = await questionBank.getAllAnnexes();
+      return { count: 0 };
+    }),
   searchQuestions: publicProcedure
     .input(
       z.object({
