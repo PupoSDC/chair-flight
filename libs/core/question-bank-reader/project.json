@@ -1,0 +1,24 @@
+{
+  "name": "core-question-bank-reader",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/core/question-bank-reader/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/question-bank-reader/**/*.ts"]
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc -p libs/core/question-bank-reader/tsconfig.json --noEmit"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
