@@ -9,15 +9,17 @@ export type CourseName =
   | "IR"
   | "CBIR_A";
 
-export type LearningObjective = {
+export type QuestionBankLearningObjective = {
   id: LearningObjectiveId;
   courses: CourseName[];
   questions: QuestionTemplateId[];
   text: string;
   contentId: string;
   source: string;
-};
-
-export type LearningObjectiveWithHref = LearningObjective & {
   href: string;
 };
+
+export type QuestionBankLearningObjectiveJson = Omit<
+  QuestionBankLearningObjective,
+  "href"
+>;

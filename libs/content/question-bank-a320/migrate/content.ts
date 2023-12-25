@@ -6,21 +6,25 @@ import {
   BUILD_PATH_SUBJECT,
 } from "../src/constants";
 import type {
-  QuestionTemplate,
-  QuestionTemplateJson,
+  QuestionBankQuestionTemplate,
+  QuestionBankQuestionTemplateJson,
   Subject,
   SubjectJson,
 } from "@chair-flight/base/types";
 
-export const readAllQuestionsFromFs = async (): Promise<QuestionTemplate[]> => {
+export const readAllQuestionsFromFs = async (): Promise<
+  QuestionBankQuestionTemplate[]
+> => {
   const dirPath = path.join(process.cwd(), CONTENT_PATH);
   const files = await fs.readdir(dirPath);
   const questionFiles = files.filter((f) => f.startsWith("A320"));
-  const questions: QuestionTemplate[] = [];
+  const questions: QuestionBankQuestionTemplate[] = [];
   for (const file of questionFiles) {
     const filePath = path.join(dirPath, file);
     const jsonString = await fs.readFile(filePath, "utf-8");
-    const jsonData = JSON.parse(jsonString) as QuestionTemplateJson[];
+    const jsonData = JSON.parse(
+      jsonString,
+    ) as QuestionBankQuestionTemplateJson[];
     const jsonDataWithSrcLocation = jsonData.map((q) => ({
       ...q,
       srcLocation: filePath.replace(process.cwd(), ""),

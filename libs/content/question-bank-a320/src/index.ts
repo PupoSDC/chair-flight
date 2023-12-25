@@ -1,1 +1,1 @@
-export * from "./question-bank-737";
+export * from "./question-bank-a320";

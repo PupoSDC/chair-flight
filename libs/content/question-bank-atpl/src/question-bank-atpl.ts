@@ -8,25 +8,28 @@ import {
   READ_PATH_SUBJECTS,
 } from "./contants";
 import type {
-  QuestionTemplate,
+  QuestionBankQuestionTemplate,
   QuestionBank,
-  Subject,
+  QuestionBankSubject,
   QuestionsMap,
-  LearningObjectiveWithHref,
+  QuestionBankLearningObjective,
   LearningObjectivesMap,
+  QuestionBankMedia,
 } from "@chair-flight/base/types";
 
 export class QuestionBankAtpl implements QuestionBank {
-  private static questions: QuestionTemplate[];
+  private static questions: QuestionBankQuestionTemplate[];
   private static questionsMap: QuestionsMap;
-  private static learningObjectives: LearningObjectiveWithHref[];
+  private static learningObjectives: QuestionBankLearningObjective[];
   private static learningObjectivesMap: LearningObjectivesMap;
-  private static subjects: Subject[];
+  private static subjects: QuestionBankSubject[];
+  private static media: QuestionBankMedia[];
 
   public async getAllSubjects() {
     if (!QuestionBankAtpl.subjects) {
       const response = await fetch(API_PATH_SUBJECTS);
-      QuestionBankAtpl.subjects = (await response.json()) as Subject[];
+      QuestionBankAtpl.subjects =
+        (await response.json()) as QuestionBankSubject[];
     }
     return QuestionBankAtpl.subjects;
   }
@@ -35,7 +38,7 @@ export class QuestionBankAtpl implements QuestionBank {
     if (!QuestionBankAtpl.questions) {
       const response = await fetch(API_PATH_QUESTIONS);
       QuestionBankAtpl.questions =
-        (await response.json()) as QuestionTemplate[];
+        (await response.json()) as QuestionBankQuestionTemplate[];
     }
     return QuestionBankAtpl.questions;
   }
@@ -55,7 +58,7 @@ export class QuestionBankAtpl implements QuestionBank {
     if (!QuestionBankAtpl.learningObjectives) {
       const response = await fetch(API_PATH_LOS);
       QuestionBankAtpl.learningObjectives =
-        (await response.json()) as LearningObjectiveWithHref[];
+        (await response.json()) as QuestionBankLearningObjective[];
     }
     return QuestionBankAtpl.learningObjectives;
   }
@@ -74,6 +77,10 @@ export class QuestionBankAtpl implements QuestionBank {
     }
 
     return QuestionBankAtpl.learningObjectivesMap;
+  }
+
+  public async getAllMedia() {
+    return [];
   }
 
   public async getSubject(args: { subjectId: string }) {
@@ -125,18 +132,18 @@ export class QuestionBankAtpl implements QuestionBank {
       (async () => {
         const path = `${process.cwd()}${READ_PATH_SUBJECTS}`;
         const file = JSON.parse(await readFile(path, "utf-8"));
-        QuestionBankAtpl.subjects = file as Subject[];
+        QuestionBankAtpl.subjects = file as QuestionBankSubject[];
       })(),
       (async () => {
         const path = `${process.cwd()}${READ_PATH_QUESTIONS}`;
         const file = JSON.parse(await readFile(path, "utf-8"));
-        QuestionBankAtpl.questions = file as QuestionTemplate[];
+        QuestionBankAtpl.questions = file as QuestionBankQuestionTemplate[];
       })(),
       (async () => {
         const path = `${process.cwd()}${READ_PATH_LOS}`;
         const file = JSON.parse(await readFile(path, "utf-8"));
         QuestionBankAtpl.learningObjectives =
-          file as LearningObjectiveWithHref[];
+          file as QuestionBankLearningObjective[];
       })(),
     ]);
   }

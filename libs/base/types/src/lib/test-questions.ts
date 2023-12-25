@@ -5,16 +5,16 @@ import type {
   QuestionVariantId,
 } from "./ids";
 
-export type QuestionType = "multiple-choice";
+export type TestQuestionType = "multiple-choice";
 
-export type QuestionMultipleChoice = {
+export type TestQuestionMultipleChoice = {
   questionId: QuestionId;
   templateId: QuestionTemplateId;
   variantId: QuestionVariantId;
   selectedOptionId?: QuestionOptionId;
   correctOptionId: QuestionOptionId;
   seed: string;
-  type: QuestionType;
+  type: TestQuestionType;
   question: string;
   explanation: string;
   annexes: string[];
@@ -25,4 +25,4 @@ export type QuestionMultipleChoice = {
   }>;
 };
 
-export type Question = QuestionMultipleChoice;
+export type TestQuestion = TestQuestionMultipleChoice;

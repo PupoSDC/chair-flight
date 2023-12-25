@@ -1,9 +1,9 @@
 import { z } from "zod";
+import { questionBankQuestionSchema } from "./question-bank-question-schema";
 import { questionBankNameSchema } from "./question-bank-schema";
-import { questionSchema } from "./question-schema";
 
 export const questionEditSchema = z.object({
-  question: questionSchema,
+  question: questionBankQuestionSchema,
   questionBank: questionBankNameSchema,
   requestData: z.object({
     authorName: z.string().min(3).optional().or(z.literal("")),

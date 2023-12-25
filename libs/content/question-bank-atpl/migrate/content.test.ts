@@ -1,4 +1,4 @@
-import { questionSchema } from "@chair-flight/core/schemas";
+import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
 import { readAllQuestionsFromFs } from "./content";
 
 describe("validate questions", async () => {
@@ -7,7 +7,7 @@ describe("validate questions", async () => {
 
   describe.each(allTemplatesWithId)("%s", async (_, question) => {
     it("passes schema validation", () => {
-      expect(questionSchema.parse(question)).toBeTruthy();
+      expect(questionBankQuestionSchema.parse(question)).toBeTruthy();
     });
   });
 

@@ -1,6 +1,6 @@
-import type { Subject } from "@chair-flight/base/types";
+import type { QuestionBankSubject } from "@chair-flight/base/types";
 
-export const mockSubjects: Subject[] = [
+export const mockSubjects: QuestionBankSubject[] = [
   {
     id: "010",
     longName: "Air Law",

@@ -8,7 +8,7 @@ export type LearningObjectiveSummary = {
   children?: LearningObjectiveSummary[];
 };
 
-export type Subject = {
+export type QuestionBankSubject = {
   id: string;
   longName: string;
   shortName: string;
@@ -20,6 +20,6 @@ export type Subject = {
 };
 
 export type SubjectJson = Omit<
-  Subject,
+  QuestionBankSubject,
   "numberOfQuestions" | "numberOfLearningObjectives"
 >;

@@ -1,5 +1,5 @@
 import type { QuestionBankName } from "./question-bank";
-import type { Question } from "./questions";
+import type { TestQuestion } from "./test-questions";
 
 export type TestMode = "exam" | "study";
 export type TestStatus = "created" | "started" | "finished";
@@ -16,5 +16,5 @@ export type Test = {
   timeSpentInMs: number;
   durationInMs: number;
   currentQuestionIndex: number;
-  questions: Question[];
+  questions: TestQuestion[];
 };

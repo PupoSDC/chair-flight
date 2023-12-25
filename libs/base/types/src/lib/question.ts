@@ -1,9 +1,4 @@
-import type {
-  LearningObjectiveId,
-  QuestionOptionId,
-  QuestionTemplateId,
-  QuestionVariantId,
-} from "./ids";
+import type { QuestionOptionId, QuestionVariantId } from "./ids";
 
 export type QuestionVariantType =
   | "simple"
@@ -64,13 +59,3 @@ export type QuestionVariant =
   | QuestionVariantSimple
   | QuestionVariantTrueOrFalse
   | QuestionVariantCalculation;
-
-export type QuestionTemplate = {
-  id: QuestionTemplateId;
-  explanation: string;
-  srcLocation: string;
-  learningObjectives: LearningObjectiveId[];
-  variants: Record<QuestionVariantId, QuestionVariant>;
-};
-
-export type QuestionTemplateJson = Omit<QuestionTemplate, "srcLocation">;

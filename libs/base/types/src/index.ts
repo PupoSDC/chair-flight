@@ -1,12 +1,13 @@
 import "@total-typescript/ts-reset";
 
 export * from "./lib/analytics";
-export * from "./lib/ids";
 export * from "./lib/flashcards";
-export * from "./lib/learning-objectives";
+export * from "./lib/ids";
+export * from "./lib/question";
 export * from "./lib/question-bank";
-export * from "./lib/question-templates";
-export * from "./lib/questions";
-export * from "./lib/subjects";
-export * from "./lib/tests";
-export * from "./lib/annexes";
+export * from "./lib/question-bank-learning-objectives";
+export * from "./lib/question-bank-media";
+export * from "./lib/question-bank-question-templates";
+export * from "./lib/question-bank-subjects";
+export * from "./lib/test";
+export * from "./lib/test-questions";

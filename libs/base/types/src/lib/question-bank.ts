@@ -1,52 +1,49 @@
-import { Media } from "./annexes";
 import type { LearningObjectiveId, MediaId, QuestionId } from "./ids";
-import type { LearningObjectiveWithHref } from "./learning-objectives";
-import type { QuestionTemplate } from "./question-templates";
-import type { Subject } from "./subjects";
+import type { QuestionBankLearningObjective } from "./question-bank-learning-objectives";
+import type { QuestionBankMedia } from "./question-bank-media";
+import type { QuestionBankQuestionTemplate } from "./question-bank-question-templates";
+import type { QuestionBankSubject } from "./question-bank-subjects";
 
 export type QuestionBankName = "737" | "atpl" | "a320";
 export type ModuleName = QuestionBankName | "prep";
 
 export type QuestionsMap = Record<
-  QuestionId, 
-  QuestionTemplate | undefined
+  QuestionId,
+  QuestionBankQuestionTemplate | undefined
 >;
 
 export type LearningObjectivesMap = Record<
   LearningObjectiveId,
-  LearningObjectiveWithHref | undefined
+  QuestionBankLearningObjective | undefined
 >;
 
-export type MediaMap = Record<
-  MediaId, 
-  Media
->;
+export type MediaMap = Record<MediaId, QuestionBankMedia | undefined>;
 
 export interface QuestionBank {
-  getAllSubjects: () => Promise<Subject[]>;
-  getAllLearningObjectives: () => Promise<LearningObjectiveWithHref[]>;
+  getAllSubjects: () => Promise<QuestionBankSubject[]>;
+  getAllLearningObjectives: () => Promise<QuestionBankLearningObjective[]>;
   getAllLearningObjectivesMap: () => Promise<LearningObjectivesMap>;
-  getAllQuestionTemplates: () => Promise<QuestionTemplate[]>;
+  getAllQuestionTemplates: () => Promise<QuestionBankQuestionTemplate[]>;
   getAllQuestionTemplatesMap: () => Promise<QuestionsMap>;
- // getAllMediaData: () => Promise<Record<string, string>>;
+  getAllMedia: () => Promise<QuestionBankMedia[]>;
 
-  getSubject: (args: { subjectId: string }) => Promise<Subject>;
+  getSubject: (args: { subjectId: string }) => Promise<QuestionBankSubject>;
 
   getLearningObjective: (args: {
     learningObjectiveId: string;
-  }) => Promise<LearningObjectiveWithHref>;
+  }) => Promise<QuestionBankLearningObjective>;
 
   getSomeLearningObjectives: (args: {
     questionId: string;
-  }) => Promise<LearningObjectiveWithHref[]>;
+  }) => Promise<QuestionBankLearningObjective[]>;
 
   getQuestionTemplate: (args: {
     questionId: string;
-  }) => Promise<QuestionTemplate>;
+  }) => Promise<QuestionBankQuestionTemplate>;
 
   getSomeQuestionTemplates: (args: {
     questionIds: string[];
-  }) => Promise<QuestionTemplate[]>;
+  }) => Promise<QuestionBankQuestionTemplate[]>;
 
   preloadQuestionBankForStaticRender: (args: {
     readFile: (path: string, string: "utf-8") => Promise<string>;

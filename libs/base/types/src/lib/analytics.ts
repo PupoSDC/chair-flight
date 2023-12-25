@@ -9,13 +9,6 @@ export type PageEvent = {
   timestamp: number;
 };
 
-export type TrackEventMap = {
-  "themeButton.switch": Record<string, never>;
-};
-
-export type TrackEventName = keyof TrackEventMap;
-export type TrackEventPayload<T extends TrackEventName> = TrackEventMap[T];
-
 export type TrackEvent<T extends TrackEventName> = {
   eventName: T;
   anonymousId: string;
@@ -33,3 +26,11 @@ export type SimplifiedTrackEvent = {
   resolvedPath: string;
   properties: Record<string, unknown>;
 };
+
+export type TrackEventMap = {
+  "themeButton.switch": Record<string, never>;
+};
+
+export type TrackEventName = keyof TrackEventMap;
+
+export type TrackEventPayload<T extends TrackEventName> = TrackEventMap[T];

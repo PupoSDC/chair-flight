@@ -15,8 +15,8 @@ import type {
   LearningObjectiveId,
   Media,
   MediaJson,
-  QuestionTemplate,
-  QuestionTemplateJson,
+  QuestionBankQuestionTemplate,
+  QuestionBankQuestionTemplateJson,
   Subject,
   SubjectJson,
 } from "@chair-flight/base/types";
@@ -35,9 +35,9 @@ const courseNames: Record<string, CourseName> = {
 
 export const readAllQuestionsFromFs = async (
   dirPath: string = path.join(process.cwd(), CONTENT_PATH, "questions"),
-): Promise<QuestionTemplate[]> => {
+): Promise<QuestionBankQuestionTemplate[]> => {
   const files = await fs.readdir(dirPath);
-  const questions: QuestionTemplate[] = [];
+  const questions: QuestionBankQuestionTemplate[] = [];
   for (const file of files) {
     const filePath = path.join(dirPath, file);
 
@@ -45,7 +45,7 @@ export const readAllQuestionsFromFs = async (
       questions.push(...(await readAllQuestionsFromFs(filePath)));
     } else if (path.extname(filePath) === ".json") {
       const json = await fs.readFile(filePath, "utf-8");
-      const jsonData = JSON.parse(json) as QuestionTemplateJson[];
+      const jsonData = JSON.parse(json) as QuestionBankQuestionTemplateJson[];
       const jsonDataWithSrcLocation = jsonData.map((q) => ({
         ...q,
         srcLocation: filePath.replace(process.cwd(), ""),

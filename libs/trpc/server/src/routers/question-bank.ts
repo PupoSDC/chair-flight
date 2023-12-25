@@ -19,7 +19,7 @@ import {
 } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
 import type {
-  LearningObjectiveWithHref,
+  QuestionBankLearningObjective,
   QuestionBank,
   QuestionBankName,
 } from "@chair-flight/base/types";
@@ -167,13 +167,13 @@ export const questionBankRouter = router({
       return { count: allLearningObjectives.length };
     }),
   getNumberOfAnnexes: publicProcedure
-   .input(
+    .input(
       z.object({
         questionBank: questionBankNameSchema,
       }),
     )
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
+      // const questionBank = getQuestionBank(input);
       //const allAnnexes = await questionBank.getAllAnnexes();
       return { count: 0 };
     }),
@@ -275,7 +275,7 @@ export const questionBankRouter = router({
 
       const MATCH_LO_ID = /^[0-9]{3}(.[0-9]{2}){0,3}$/;
 
-      let results: SearchResponseItem<LearningObjectiveWithHref>[] = [];
+      let results: SearchResponseItem<QuestionBankLearningObjective>[] = [];
       if (!q) {
         results = los.map((result) => ({
           result,
@@ -294,7 +294,7 @@ export const questionBankRouter = router({
           }));
       } else {
         results = searchIndex.search(q, { fuzzy: 0.2 }).map((result) => ({
-          result: result as unknown as LearningObjectiveWithHref,
+          result: result as unknown as QuestionBankLearningObjective,
           score: result.score,
           match: result.match,
           terms: result.terms,

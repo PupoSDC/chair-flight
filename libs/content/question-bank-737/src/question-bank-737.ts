@@ -6,22 +6,22 @@ import {
   READ_PATH_SUBJECT,
 } from "./constants";
 import type {
-  LearningObjectiveWithHref,
+  QuestionBankLearningObjective,
   QuestionBank,
-  QuestionTemplate,
+  QuestionBankQuestionTemplate,
   QuestionsMap,
-  Subject,
+  QuestionBankSubject,
 } from "@chair-flight/base/types";
 
 export class QuestionBank737 implements QuestionBank {
-  private static questions: QuestionTemplate[];
+  private static questions: QuestionBankQuestionTemplate[];
   private static questionsMap: QuestionsMap;
-  private static subject: Subject;
+  private static subject: QuestionBankSubject;
 
   public async getAllSubjects() {
     if (!QuestionBank737.subject) {
       const response = await fetch(API_PATH_SUBJECT);
-      QuestionBank737.subject = (await response.json()) as Subject;
+      QuestionBank737.subject = (await response.json()) as QuestionBankSubject;
     }
     return [QuestionBank737.subject];
   }
@@ -37,7 +37,8 @@ export class QuestionBank737 implements QuestionBank {
   public async getAllQuestionTemplates() {
     if (!QuestionBank737.questions) {
       const response = await fetch(API_PATH_QUESTIONS);
-      QuestionBank737.questions = (await response.json()) as QuestionTemplate[];
+      QuestionBank737.questions =
+        (await response.json()) as QuestionBankQuestionTemplate[];
     }
     return QuestionBank737.questions;
   }
@@ -51,6 +52,10 @@ export class QuestionBank737 implements QuestionBank {
       }, {});
     }
     return QuestionBank737.questionsMap;
+  }
+
+  public async getAllMedia() {
+    return [];
   }
 
   public async getSubject(args: { subjectId: string }) {
@@ -74,10 +79,10 @@ export class QuestionBank737 implements QuestionBank {
     const map = await this.getAllQuestionTemplatesMap();
     return args.questionIds
       .map((id) => map[id])
-      .filter(Boolean) as QuestionTemplate[];
+      .filter(Boolean) as QuestionBankQuestionTemplate[];
   }
 
-  public async getLearningObjective(): Promise<LearningObjectiveWithHref> {
+  public async getLearningObjective(): Promise<QuestionBankLearningObjective> {
     throw new NotFoundError(`QuestionBank has no LearningObjectives`);
   }
 
@@ -94,12 +99,12 @@ export class QuestionBank737 implements QuestionBank {
       (async () => {
         const path = `${process.cwd()}${READ_PATH_SUBJECT}`;
         const file = JSON.parse(await readFile(path, "utf-8"));
-        QuestionBank737.subject = file as Subject;
+        QuestionBank737.subject = file as QuestionBankSubject;
       })(),
       (async () => {
         const path = `${process.cwd()}${READ_PATH_QUESTIONS}`;
         const file = JSON.parse(await readFile(path, "utf-8"));
-        QuestionBank737.questions = file as QuestionTemplate[];
+        QuestionBank737.questions = file as QuestionBankQuestionTemplate[];
       })(),
     ]);
   }

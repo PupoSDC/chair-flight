@@ -1,6 +1,6 @@
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
 
-export const mockQuestion: QuestionTemplate = {
+export const mockQuestion: QuestionBankQuestionTemplate = {
   id: "Q00YQLC8JS",
   srcLocation: "",
   explanation:
