@@ -4,6 +4,7 @@ import * as process from "process";
 import * as XLSX from "xlsx";
 import {
   BUILD_PATH_LOS,
+  BUILD_PATH_MEDIA,
   BUILD_PATH_QUESTIONS,
   BUILD_PATH_SUBJECTS,
   CONTENT_PATH,
@@ -12,6 +13,8 @@ import type {
   CourseName,
   LearningObjective,
   LearningObjectiveId,
+  Media,
+  MediaJson,
   QuestionTemplate,
   QuestionTemplateJson,
   Subject,
@@ -212,10 +215,42 @@ export const readAllSubjectsFromFs = async () => {
   );
 };
 
+export const readAllMediaFromFs = async () => {
+  const mediaPath = path.join(process.cwd(), CONTENT_PATH, "media/media.json");
+  const questions = await readAllQuestionsFromFs();
+  const file = await fs.readFile(mediaPath, "utf-8");
+  const allMedia = (JSON.parse(file) as MediaJson[]).map<Media>((m) => ({
+    ...m,
+    questions: [],
+    variants: [],
+    learningObjectives: [],
+  }));
+
+  // connect questions to media
+  questions.forEach((q) => {
+    Object.values(q.variants).forEach((v) => {
+      v.annexes.forEach((a) => {
+        const annex = a.split("/").pop()?.split(".")[0] ?? "";
+        const media = allMedia.find((m) => m.id === annex);
+        if (media) {
+          media.questions = [...new Set([...media.questions, q.id])];
+          media.variants = [...new Set([...media.variants, v.id])];
+          media.learningObjectives = [
+            ...new Set([...media.learningObjectives, ...q.learningObjectives]),
+          ];
+        }
+      });
+    });
+  });
+
+  return allMedia;
+};
+
 export const buildQuestionBank = async () => {
   const questions = await readAllQuestionsFromFs();
   const subject = await readAllSubjectsFromFs();
   const learningObjectives = await readAllLearningObjectivesFromFs();
+  const media = await readAllMediaFromFs();
 
   await fs.writeFile(
     path.join(process.cwd(), BUILD_PATH_QUESTIONS),
@@ -228,5 +263,9 @@ export const buildQuestionBank = async () => {
   await fs.writeFile(
     path.join(process.cwd(), BUILD_PATH_LOS),
     JSON.stringify(learningObjectives),
+  );
+  await fs.writeFile(
+    path.join(process.cwd(), BUILD_PATH_MEDIA),
+    JSON.stringify(media),
   );
 };
