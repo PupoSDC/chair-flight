@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { Box, Button, Card, Typography, styled } from "@mui/joy";
 import { MarkdownClient } from "../markdown-client";
+import { Ups } from "../ups";
 import type { CardProps } from "@mui/joy";
 
 const FlipCard = styled(Card)`
@@ -68,7 +69,13 @@ export const Flashcard = forwardRef<HTMLDivElement, FlashcardProps>(
             {question}
           </Typography>
           <Box sx={{ flex: 1, overflowY: "scroll" }}>
-            <MarkdownClient>{answer}</MarkdownClient>
+            {answer ? (
+              <MarkdownClient>{answer}</MarkdownClient>
+            ) : (
+              <Ups sx={{ minHeight: 0 }}>
+                <Typography>We are missing the answer.</Typography>
+              </Ups>
+            )}
           </Box>
         </FlipCard>
       </Box>

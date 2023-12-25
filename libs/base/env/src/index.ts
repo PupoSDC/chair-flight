@@ -18,3 +18,22 @@ export const getUrlPathOnServer = () => {
   const PROTOCOL = VERCEL_URL.includes("localhost") ? "http" : "https";
   return `${PROTOCOL}://${VERCEL_URL}`;
 };
+
+export const getRepositoryUrl = () => {
+  const upstreamOwner = getEnvVariableOrThrow(
+    "PROVIDER_GITHUB_PROJECT_UPSTREAM_OWNER",
+  );
+  const upstreamRepo = getEnvVariableOrThrow(
+    "PROVIDER_GITHUB_PROJECT_UPSTREAM_REPO",
+  );
+  const originOwner = getEnvVariableOrDefault(
+    "PROVIDER_GITHUB_PROJECT_ORIGIN_OWNER",
+    upstreamOwner,
+  );
+  const originRepo = getEnvVariableOrDefault(
+    "PROVIDER_GITHUB_PROJECT_ORIGIN_REPO",
+    upstreamRepo,
+  );
+
+  return `https://github.com/${originOwner}/${originRepo}`;
+};
