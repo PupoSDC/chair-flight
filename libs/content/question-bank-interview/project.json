@@ -1,14 +1,15 @@
 {
-  "name": "content-question-bank-a320",
+  "name": "content-question-bank-interview",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {
     "compile": {
       "executor": "@chair-flight/core/question-bank:compile",
       "options": {
+        "skipQuestions": true,
         "skipLearningObjectives": true,
-        "skipMedia": true,
-        "skipFlashcards": true
+        "skipSubjects": true,
+        "skipMedia": true
       }
     }
   },

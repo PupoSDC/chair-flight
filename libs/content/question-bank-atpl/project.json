@@ -2,42 +2,11 @@
   "name": "content-question-bank-atpl",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/content/question-bank-atpl/src",
   "targets": {
     "compile": {
-      "executor": "nx:run-commands",
+      "executor": "@chair-flight/core/question-bank:compile",
       "options": {
-        "commands": [
-          "mkdir -p apps/next-app/public/content/question-bank-atpl",
-          "rm -rf apps/next-app/public/content/question-bank-atpl/*",
-          "tsx --tsconfig ./libs/content/question-bank-atpl/tsconfig.json ./libs/content/question-bank-atpl/migrate",
-          "cp -r libs/content/question-bank-atpl/content/media apps/next-app/public/content/question-bank-atpl/media"
-        ],
-        "parallel": false
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/content/question-bank-atpl/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "tsc -p libs/content/question-bank-atpl/tsconfig.json --noEmit"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [],
-      "options": {
-        "passWithNoTests": false,
-        "reportsDirectory": "../../coverage/libs/content/question-bank-atpl",
-        "config": "{projectRoot}/vitest.config.ts"
+        "skipFlashcards": true
       }
     }
   },

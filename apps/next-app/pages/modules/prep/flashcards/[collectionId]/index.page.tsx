@@ -6,17 +6,17 @@ import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
-import type { FlashcardContent } from "@chair-flight/base/types";
+import type { QuestionBankFlashcardContent } from "@chair-flight/base/types";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { FunctionComponent } from "react";
 
 type FlashcardsThemePageProps = {
-  flashcards: Array<FlashcardContent>;
+  flashcards: Array<QuestionBankFlashcardContent>;
 };
 
-const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
-  props,
-) => {
+const FlashcardWithOwnControl: FunctionComponent<
+  QuestionBankFlashcardContent
+> = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <Flashcard

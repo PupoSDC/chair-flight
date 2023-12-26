@@ -2,41 +2,13 @@
   "name": "content-question-bank-737",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/content/question-bank-737/src",
   "targets": {
     "compile": {
-      "executor": "nx:run-commands",
+      "executor": "@chair-flight/core/question-bank:compile",
       "options": {
-        "commands": [
-          "mkdir -p apps/next-app/public/content/question-bank-737",
-          "rm -rf apps/next-app/public/content/question-bank-737/*",
-          "tsx --tsconfig ./libs/content/question-bank-737/tsconfig.json ./libs/content/question-bank-737/migrate"
-        ],
-        "parallel": false
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/content/question-bank-737/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "tsc -p libs/content/question-bank-737/tsconfig.json --noEmit"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [],
-      "options": {
-        "passWithNoTests": false,
-        "reportsDirectory": "../../coverage/libs/content/question-bank-737",
-        "config": "{projectRoot}/vitest.config.ts"
+        "skipLearningObjectives": true,
+        "skipMedia": true,
+        "skipFlashcards": true
       }
     }
   },

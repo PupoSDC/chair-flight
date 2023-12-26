@@ -36,17 +36,4 @@ export const interviewPrepRouter = router({
       }
       return { flashcards };
     }),
-  getFlashcard: publicProcedure
-    .input(z.object({ flashcardId: z.string() }))
-    .query(async ({ input }) => {
-      const { flashcardId } = input;
-      const flashcards = await getFlashcards();
-      const flashcard = Object.values(flashcards)
-        .flat()
-        .find((flashcard) => flashcard.id === flashcardId);
-      if (!flashcard) {
-        throw new NotFoundError(`flashcard "${flashcardId}" not found!"`);
-      }
-      return { flashcard };
-    }),
 });

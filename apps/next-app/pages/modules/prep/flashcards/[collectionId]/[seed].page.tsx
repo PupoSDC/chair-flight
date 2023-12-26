@@ -4,7 +4,7 @@ import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
 import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
 import { AppHead, GlobalColorScheme } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import type { FlashcardContent } from "@chair-flight/base/types";
+import type { QuestionBankFlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 import type { FunctionComponent } from "react";
 
@@ -16,12 +16,12 @@ type FlashcardsThemePagePropsParams = {
 type FlashcardsThemePageProps = {
   seed: string;
   collectionId: string;
-  flashcards: Array<FlashcardContent>;
+  flashcards: Array<QuestionBankFlashcardContent>;
 };
 
-const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
-  props,
-) => {
+const FlashcardWithOwnControl: FunctionComponent<
+  QuestionBankFlashcardContent
+> = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <Flashcard

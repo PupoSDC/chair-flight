@@ -1,9 +1,6 @@
 import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
-import { UnimplementedError } from "@chair-flight/base/errors";
-import { QuestionBank737 } from "@chair-flight/content/question-bank-737";
-import { QuestionBankA320 } from "@chair-flight/content/question-bank-a320";
-import { QuestionBankAtpl } from "@chair-flight/content/question-bank-atpl";
+import { NotFoundError, UnimplementedError } from "@chair-flight/base/errors";
 import {
   createTest,
   getQuestionPreview,
@@ -13,6 +10,12 @@ import {
   createNewQuestionPr,
   getQuestionFromGit,
 } from "@chair-flight/core/github";
+import {
+  QuestionBank737,
+  QuestionBankA320,
+  QuestionBankAtpl,
+  QuestionBankInterview,
+} from "@chair-flight/core/question-bank";
 import {
   questionBankNameSchema,
   questionEditSchema,
@@ -26,9 +29,10 @@ import type {
 import type { MatchInfo } from "minisearch";
 
 const keyToQuestionBank: Record<QuestionBankName, QuestionBank> = {
-  "737": new QuestionBank737(),
-  a320: new QuestionBankA320(),
-  atpl: new QuestionBankAtpl(),
+  "737": QuestionBank737,
+  a320: QuestionBankA320,
+  atpl: QuestionBankAtpl,
+  interview: QuestionBankInterview,
 };
 
 const questionSearchFields = [
@@ -49,6 +53,10 @@ const questionSearchIndexes: Record<QuestionBankName, MiniSearch> = {
     storeFields: questionSearchFields,
   }),
   atpl: new MiniSearch({
+    fields: questionSearchFields,
+    storeFields: questionSearchFields,
+  }),
+  interview: new MiniSearch({
     fields: questionSearchFields,
     storeFields: questionSearchFields,
   }),
@@ -143,6 +151,36 @@ export const questionBankRouter = router({
       const learningObjective = await questionBank.getLearningObjective(input);
       return { learningObjective };
     }),
+  getFlashCardsCollections: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
+    .query(async ({ input }) => {
+      const questionBank = getQuestionBank(input);
+      const rawCollections = await questionBank.getAllFlashcards();
+      const flashcardCollections = rawCollections.map((collection) => ({
+        id: collection.id,
+        title: collection.title,
+        numberOfFlashcards: collection.flashcards.length,
+      }));
+      return { flashcardCollections };
+    }),
+  getFlashCardsCollection: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        collectionId: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const questionBank = getQuestionBank(input);
+      const flashcardCollection =
+        await questionBank.getFlashCardCollection(input);
+
+      return { flashcardCollection };
+    }),
   getNumberOfQuestions: publicProcedure
     .input(
       z.object({
@@ -176,6 +214,18 @@ export const questionBankRouter = router({
       // const questionBank = getQuestionBank(input);
       //const allAnnexes = await questionBank.getAllAnnexes();
       return { count: 0 };
+    }),
+  getNumberOfFlashcards: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
+    .query(async ({ input }) => {
+      const questionBank = getQuestionBank(input);
+      const allFlashcards = await questionBank.getAllFlashcards();
+      const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
+      return { count };
     }),
   searchQuestions: publicProcedure
     .input(

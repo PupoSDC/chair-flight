@@ -1,10 +1,14 @@
+import {
+  QuestionBankFlashcardCollection,
+  QuestionBankFlashcardContent,
+} from "./question-bank-flashcards";
 import type { LearningObjectiveId, MediaId, QuestionId } from "./ids";
 import type { QuestionBankLearningObjective } from "./question-bank-learning-objectives";
 import type { QuestionBankMedia } from "./question-bank-media";
 import type { QuestionBankQuestionTemplate } from "./question-bank-question-templates";
 import type { QuestionBankSubject } from "./question-bank-subjects";
 
-export type QuestionBankName = "737" | "atpl" | "a320";
+export type QuestionBankName = "737" | "atpl" | "a320" | "interview";
 export type ModuleName = QuestionBankName | "prep";
 
 export type QuestionsMap = Record<
@@ -26,8 +30,13 @@ export interface QuestionBank {
   getAllQuestionTemplates: () => Promise<QuestionBankQuestionTemplate[]>;
   getAllQuestionTemplatesMap: () => Promise<QuestionsMap>;
   getAllMedia: () => Promise<QuestionBankMedia[]>;
+  getAllFlashcardCollections: () => Promise<QuestionBankFlashcardCollection[]>;
 
   getSubject: (args: { subjectId: string }) => Promise<QuestionBankSubject>;
+
+  getFlashCardCollection: (args: {
+    collectionId: string;
+  }) => Promise<QuestionBankFlashcardCollection>;
 
   getLearningObjective: (args: {
     learningObjectiveId: string;

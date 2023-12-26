@@ -19,7 +19,7 @@ export type QuestionBankSubject = {
   children?: LearningObjectiveSummary[];
 };
 
-export type SubjectJson = Omit<
+export type QuestionBankSubjectJson = Omit<
   QuestionBankSubject,
   "numberOfQuestions" | "numberOfLearningObjectives"
 >;
