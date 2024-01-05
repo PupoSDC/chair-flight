@@ -11,7 +11,7 @@
     "compile": "nx run-many -t=compile",
     "migrate": "nx run-many -t=migrate",
     "build": "nx run-many --target=build",
-    "test": "nx run-many --target=test",
+    "test": "vitest",
     "e2e": "nx run-many --target=e2e",
     "lint": "nx run-many --target=lint --max-warnings=0",
     "typecheck": "nx run-many --target=typecheck",

@@ -11,22 +11,10 @@
         "lintFilePatterns": ["libs/core/app/**/*.ts"]
       }
     },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{workspaceRoot}/coverage/libs/core/app"],
-      "options": {
-        "passWithNoTests": false,
-        "reportsDirectory": "{workspaceRoot}/coverage/libs/core/app",
-        "config": "{projectRoot}/vitest.config.ts"
-      }
-    },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "tsc -p libs/core/app/tsconfig.lib.json --noEmit",
-          "tsc -p libs/core/app/tsconfig.test.json --noEmit"
-        ]
+        "commands": ["tsc -p libs/core/app/tsconfig.json"]
       }
     }
   },

@@ -86,7 +86,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/analytics/tsconfig.json --noEmit"]
+        "commands": ["tsc -p libs/core/analytics/tsconfig.json"]
       }
     }
   },

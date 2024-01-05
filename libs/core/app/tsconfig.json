@@ -1,11 +1,7 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.test.json"
-    }
-  ]
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  }
 }

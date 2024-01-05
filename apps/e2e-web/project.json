@@ -22,7 +22,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p apps/e2e-web/tsconfig.json --noEmit"]
+        "commands": ["tsc -p apps/e2e-web/tsconfig.json"]
       }
     }
   },

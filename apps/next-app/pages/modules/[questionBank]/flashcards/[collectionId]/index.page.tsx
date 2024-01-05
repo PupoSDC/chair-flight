@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Grid } from "@mui/joy";
 import { Flashcard } from "@chair-flight/react/components";
-import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
+import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
@@ -32,7 +32,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
   flashcards,
 }) => {
   return (
-    <LayoutModulePrep noPadding>
+    <LayoutModuleBank noPadding questionBank="prep">
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -53,7 +53,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
           </Grid>
         ))}
       </Grid>
-    </LayoutModulePrep>
+    </LayoutModuleBank>
   );
 };
 
@@ -63,14 +63,15 @@ export const getStaticProps: GetStaticProps<FlashcardsThemePageProps> = async ({
   await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const { collectionId } = params as { collectionId: string };
-  const { flashcards } =
-    await helper.interviewPrep.getFlashcardsCollection.fetch({
+  const { flashcardCollection } =
+    await helper.questionBank.getFlashcardsCollection.fetch({
+      questionBank: "b737",
       collectionId,
     });
 
   return {
     props: {
-      flashcards,
+      flashcards: flashcardCollection.flashcards,
     },
   };
 };
@@ -79,12 +80,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   await preloadContentForStaticRender(await import("fs/promises"));
   const helper = await getTrpcHelper();
   const { flashcardCollections } =
-    await helper.interviewPrep.getFlashcardsCollections.fetch();
+    await helper.questionBank.getFlashcardsCollections.fetch({
+      questionBank: "b737",
+    });
 
   return {
     fallback: false,
-    paths: flashcardCollections.map(({ collectionId }) => ({
-      params: { collectionId },
+    paths: flashcardCollections.map(({ id }) => ({
+      params: { collectionId: id },
     })),
   };
 };

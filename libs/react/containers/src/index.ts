@@ -13,7 +13,6 @@ export * from "./tests/tests-overview";
 export * from "./theme";
 export * from "./layouts/global-color-scheme";
 export * from "./layouts/layout-module-bank";
-export * from "./layouts/layout-module-prep";
 export * from "./layouts/layout-public";
 export * from "./overviews/modules-overview";
 export * from "./user/user-settings";

@@ -14,23 +14,15 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/question-bank/tsconfig.json --noEmit"]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/next-app",
-        "config": "{projectRoot}/vitest.config.ts"
+        "commands": ["tsc -p libs/core/question-bank/tsconfig.json"]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "content-question-bank-737",
+    "content-question-bank-b737",
     "content-question-bank-a320",
     "content-question-bank-atpl",
-    "content-question-bank-interview"
+    "content-question-bank-prep"
   ]
 }

@@ -1,3 +1,5 @@
+import "./types";
+
 export * from "./app-buttons";
 export * from "./app-logo";
 export * from "./blog-post-chip";

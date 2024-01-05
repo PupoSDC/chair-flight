@@ -53,7 +53,7 @@ const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
           "are close enough.",
         ].join(" ")}
       />
-      <GlobalColorScheme module="prep" />
+      <GlobalColorScheme questionBank="prep" />
       <FlashcardTinder>
         {flashcards
           .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)
@@ -106,8 +106,9 @@ export const getServerSideProps = ssrHandler<FlashcardsThemePageProps>(
       };
     }
 
-    const { flashcards } =
-      await helper.interviewPrep.getFlashcardsCollection.fetch({
+    const { flashcardCollection } =
+      await helper.questionBank.getFlashcardsCollection.fetch({
+        questionBank: "prep",
         collectionId,
       });
 
@@ -115,7 +116,7 @@ export const getServerSideProps = ssrHandler<FlashcardsThemePageProps>(
       props: {
         seed,
         collectionId,
-        flashcards: shuffle(flashcards).slice(0, 10),
+        flashcards: shuffle(flashcardCollection.flashcards).slice(0, 10),
       },
     };
   },

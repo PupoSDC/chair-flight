@@ -1,10 +1,10 @@
 import { GlobalStyles } from "@mui/material";
-import type { ModuleName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";
 
 export type GlobalColorSchemeProps = {
-  module?: ModuleName;
+  questionBank?: QuestionBankName;
 };
 
 const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({
@@ -25,12 +25,14 @@ const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({
   },
 });
 
-export const GlobalColorScheme: FC<GlobalColorSchemeProps> = ({ module }) => (
+export const GlobalColorScheme: FC<GlobalColorSchemeProps> = ({
+  questionBank,
+}) => (
   <GlobalStyles
     styles={(t) => {
       const palette = t.colorSchemes.light.palette;
-      switch (module) {
-        case "737":
+      switch (questionBank) {
+        case "b737":
           return getGlobalColorScheme(palette.primaryRose);
         case "a320":
           return getGlobalColorScheme(palette.primaryRose);

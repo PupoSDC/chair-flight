@@ -4,18 +4,11 @@
     "jsx": "preserve",
     "isolatedModules": true,
     "incremental": true,
-    "types": ["node", "react"],
+    "types": ["node", "react", "vitest/globals"],
     "lib": ["esnext", "dom"],
     "allowJs": true,
     "esModuleInterop": true
   },
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+  "include": ["index.d.ts", "next-env.d.ts", "pages/**/*.ts", "pages/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

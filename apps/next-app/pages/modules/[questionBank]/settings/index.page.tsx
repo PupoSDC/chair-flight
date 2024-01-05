@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps<
 };
 
 export const getStaticPaths: GetStaticPaths<SettingsPageParams> = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };

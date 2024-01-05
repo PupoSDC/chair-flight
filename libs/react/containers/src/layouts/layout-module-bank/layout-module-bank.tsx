@@ -5,14 +5,18 @@ import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
+import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
 import { Box, listItemContentClasses } from "@mui/joy";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
 } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
 import { GlobalColorScheme } from "../global-color-scheme";
 import type { QuestionBankName } from "@chair-flight/base/types";
+
+const useConfig = trpc.questionBank.getConfig.useSuspenseQuery;
 
 export type LayoutModuleProps = {
   children: React.ReactNode;
@@ -28,17 +32,18 @@ export const LayoutModuleBank: FunctionComponent<LayoutModuleProps> = ({
   questionBank,
 }) => {
   const router = useRouter();
+  const [config] = useConfig({ questionBank });
+
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
   const isSettings = router.asPath.includes("settings");
   const isLearningObjectives = router.asPath.includes("learning-objectives");
-  const isHome = !isQuestions && !isTests && !isSettings;
-
-  const supportsLearningsObjectives = questionBank === "atpl";
+  const isFlashcards = router.asPath.includes("flashcards");
+  const isHome = !isQuestions && !isTests && !isSettings && !isFlashcards;
 
   return (
     <>
-      <GlobalColorScheme module={questionBank} />
+      <GlobalColorScheme questionBank={questionBank} />
       <Sidebar sx={{ height: "100vh" }}>
         <SidebarListItem
           href={"/"}
@@ -65,24 +70,41 @@ export const LayoutModuleBank: FunctionComponent<LayoutModuleProps> = ({
           icon={HomeIcon}
           title={"Home"}
         />
-        <SidebarListItem
-          href={`/modules/${questionBank}/tests`}
-          selected={isTests}
-          icon={TestIcon}
-          title={"Tests"}
-        />
-        <SidebarListItem
-          href={`/modules/${questionBank}/questions`}
-          selected={isQuestions}
-          icon={QuestionsIcon}
-          title={"Questions"}
-        />
-        {supportsLearningsObjectives && (
+        {config.hasQuestions && (
+          <SidebarListItem
+            href={`/modules/${questionBank}/tests`}
+            selected={isTests}
+            icon={TestIcon}
+            title={"Tests"}
+          />
+        )}
+        {config.hasQuestions && (
+          <SidebarListItem
+            href={`/modules/${questionBank}/questions`}
+            selected={isQuestions}
+            icon={QuestionsIcon}
+            title={"Questions"}
+          />
+        )}
+        {config.hasLearningObjectives && (
           <SidebarListItem
             href={"/modules/atpl/learning-objectives"}
             selected={isLearningObjectives}
             icon={LearningObjectivesIcon}
             title={"Learning Objectives"}
+          />
+        )}
+        {config.hasFlashcards && (
+          <SidebarListItem
+            href={"/modules/prep/flashcards"}
+            selected={isFlashcards}
+            icon={CardIcon}
+            title={"Flash Cards"}
+            sx={{
+              "& svg": {
+                transform: "rotate(180deg)",
+              },
+            }}
           />
         )}
         <SidebarListItem

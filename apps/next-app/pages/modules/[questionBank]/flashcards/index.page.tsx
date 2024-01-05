@@ -9,26 +9,34 @@ import {
   CardCover,
   Box,
 } from "@mui/joy";
-import { AppHead, LayoutModulePrep } from "@chair-flight/react/containers";
+import { MissingPathParameter } from "@chair-flight/base/errors";
+import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
+import { trpc } from "@chair-flight/trpc/client";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
-import type { GetStaticProps, NextPage } from "next";
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-type flashcardsIndexPageProps = {
-  flashcardCollections: Array<{
-    collectionId: string;
-    name: string;
-    numberOfCards: number;
-  }>;
+type FlashcardsIndexPageParams = {
+  questionBank: QuestionBankName;
 };
 
-const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
-  flashcardCollections,
+type FlashcardsIndexPageProps = {
+  questionBank: QuestionBankName;
+};
+
+const FlashcardsIndexPage: NextPage<FlashcardsIndexPageProps> = ({
+  questionBank,
 }) => {
+  const [{ flashcardCollections }] =
+    trpc.questionBank.getFlashcardsCollections.useSuspenseQuery({
+      questionBank,
+    });
+
   return (
-    <LayoutModulePrep noPadding>
+    <LayoutModuleBank noPadding questionBank="prep">
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -62,11 +70,11 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
 
       <Grid container spacing={2} maxWidth="lg" margin="auto">
         {flashcardCollections.map((fc) => (
-          <Grid xs={12} sm={6} md={4} lg={3} key={fc.collectionId}>
+          <Grid xs={12} sm={6} md={4} lg={3} key={fc.id}>
             <Card sx={{ height: { xs: 160, sm: 250 } }}>
               <CardCover>
                 <Image
-                  src={`/images/flashcards/${fc.collectionId}.png`}
+                  src={`/images/flashcards/${fc.id}.png`}
                   loading="lazy"
                   alt="Aircraft landing"
                   fill
@@ -83,7 +91,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
               <CardContent sx={{ justifyContent: "space-between" }}>
                 <Box>
                   <Typography level="h2" fontSize="lg" textColor={"#fff"}>
-                    {fc.name}
+                    {fc.title}
                   </Typography>
                   <Typography
                     level="h4"
@@ -91,7 +99,7 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
                     mb={4}
                     textColor={"#fff"}
                   >
-                    {fc.numberOfCards} cards
+                    {fc.numberOfFlashcards} cards
                   </Typography>
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -99,13 +107,13 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
                     children="View All"
                     variant="outlined"
                     component={Link}
-                    href={`/modules/prep/flashcards/${fc.collectionId}`}
+                    href={`/modules/prep/flashcards/${fc.id}`}
                   />
                   <Button
                     sx={{ mr: 1 }}
                     children="Start!"
                     component={Link}
-                    href={`/modules/prep/flashcards/${fc.collectionId}/start`}
+                    href={`/modules/prep/flashcards/${fc.id}/start`}
                   />
                 </Box>
               </CardContent>
@@ -113,23 +121,35 @@ const QuestionsIndexPage: NextPage<flashcardsIndexPageProps> = ({
           </Grid>
         ))}
       </Grid>
-    </LayoutModulePrep>
+    </LayoutModuleBank>
   );
 };
 
 export const getStaticProps: GetStaticProps<
-  flashcardsIndexPageProps
-> = async () => {
-  await preloadContentForStaticRender(await import("fs/promises"));
+  FlashcardsIndexPageProps,
+  FlashcardsIndexPageParams
+> = async ({ params }) => {
   const helper = await getTrpcHelper();
-  const { flashcardCollections } =
-    await helper.interviewPrep.getFlashcardsCollections.fetch();
+  const questionBank = params?.questionBank;
+  if (!questionBank) throw new MissingPathParameter("questionBank");
+  await preloadContentForStaticRender(await import("fs/promises"));
+
+  await Promise.all([
+    helper.questionBank.getFlashcardsCollections.fetch({ questionBank }),
+    helper.questionBank.getConfig.fetch({ questionBank }),
+  ]);
 
   return {
-    props: {
-      flashcardCollections: flashcardCollections,
-    },
+    props: { questionBank },
   };
 };
 
-export default QuestionsIndexPage;
+export const getStaticPaths: GetStaticPaths<
+  FlashcardsIndexPageParams
+> = async () => {
+  const banks: QuestionBankName[] = ["prep"];
+  const paths = banks.map((questionBank) => ({ params: { questionBank } }));
+  return { fallback: false, paths };
+};
+
+export default FlashcardsIndexPage;

@@ -23,7 +23,7 @@ type ExamPageParams = {
 export const ExamPage: NextPage<ExamPageProps> = ({ testId, questionBank }) => (
   <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
     <AppHead />
-    <GlobalColorScheme module={questionBank} />
+    <GlobalColorScheme questionBank={questionBank} />
     <TestExam testId={testId} />
   </ErrorBoundary>
 );

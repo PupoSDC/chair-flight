@@ -26,7 +26,7 @@ const QuestionBankIndexPage: NextPage<QuestionBankIndexPageProps> = ({
     <AppHead />
     <Typography level="h2">Question Bank</Typography>
     <Divider />
-    <ModulesOverview module={questionBank} sx={{ my: 2 }} />
+    <ModulesOverview questionBank={questionBank} sx={{ my: 2 }} />
     <Typography level="h2">Tests</Typography>
     <Divider sx={{ mb: 2 }} />
     <Link href={`/modules/${questionBank}/tests/create`}>Create New Test</Link>
@@ -44,7 +44,8 @@ export const getStaticProps: GetStaticProps<
   await Promise.all([
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "737" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
+    helper.questionBank.getConfig.fetch(params),
   ]);
 
   return {
@@ -58,7 +59,7 @@ export const getStaticProps: GetStaticProps<
 export const getStaticPaths: GetStaticPaths<
   QuestionBankIndexPageParams
 > = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl", "prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };

@@ -59,7 +59,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     losXlsx: path.join(contentRoot, "subjects", "tk-syllabus.xlsx"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl` */
     outputDir: outputDir,
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/question.json` */
+    /** i.e.: `apps/next-app/public/content/question-bank-atpl/questions.json` */
     outputQuestionsJson: path.join(outputDir, "questions.json"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/media` */
     outputMediaDir: path.join(outputDir, "media"),
@@ -67,8 +67,8 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     outputMediaJson: path.join(outputDir, "media.json"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/subjects.json` */
     outputSubjectsJson: path.join(outputDir, "subjects.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/learning-objectives.json` */
-    outputLosJson: path.join(outputDir, "learning-objectives.json"),
+    /** i.e.: `apps/next-app/public/content/question-bank-atpl/learningObjectives.json` */
+    outputLosJson: path.join(outputDir, "learningObjectives.json"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/flashcards.json` */
     outputFlashcardsJson: path.join(outputDir, "flashcards.json"),
   };

@@ -21,7 +21,7 @@ import {
   getTrpcHelper,
   preloadContentForStaticRender,
 } from "@chair-flight/trpc/server";
-import type { GlobalColorSchemeProps } from "@chair-flight/react/containers";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GetStaticProps, NextPage } from "next";
 
 const fadeIn = keyframes`
@@ -42,26 +42,26 @@ const RightContainer = styled(Grid)`
 
 type IndexPageProps = {
   numberOfAtplQuestions: number;
-  numberOf737Questions: number;
+  numberOfB737Questions: number;
   numberOfA320Questions: number;
   numberOfFlashcards: number;
 };
 
-type Theme = "737" | "atpl" | "prep";
+type Theme = "b737" | "atpl" | "prep";
 
 const MEDIA_LONG_SCREEN = "@media (min-height: 560px) and (min-width: 440px)";
 
 export const IndexPage: NextPage<IndexPageProps> = ({
   numberOfFlashcards,
   numberOfAtplQuestions,
-  numberOf737Questions,
+  numberOfB737Questions,
   numberOfA320Questions,
 }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
-  const [module, setModule] = useState<GlobalColorSchemeProps["module"]>();
+  const [questionBank, setQuestionBank] = useState<QuestionBankName>();
 
   const goToTheme = (theme: Theme) => {
-    setModule(theme);
+    setQuestionBank(theme);
     const top = rightSideContainer.current?.offsetTop ?? 0;
     setTimeout(
       () => window.scrollTo({ top: top - 50, behavior: "smooth" }),
@@ -73,7 +73,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
 
   return (
     <LayoutPublic fixedHeight noPadding background={<CoolSlidingThing />}>
-      <GlobalColorScheme module={module} />
+      <GlobalColorScheme questionBank={questionBank} />
       <AppHead
         linkDescription={[
           "Chair Flight is a community driven Aviation Question Bank built by ",
@@ -171,7 +171,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 "Explore questions, learning objectives, and theory reviews ",
                 "from the EASA QB ATPL exams.",
               ].join("")}
-              active={module === "atpl"}
+              active={questionBank === "atpl"}
               icon={<AirplaneTicketIcon />}
               onClick={() => goToTheme("atpl")}
               showMoreHref="/modules/atpl"
@@ -185,7 +185,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 "Use our flash cards to practice answering open ended ",
                 "questions and secure your first job.",
               ].join("")}
-              active={module === "prep"}
+              active={questionBank === "prep"}
               icon={<StyleIcon />}
               onClick={() => goToTheme("prep")}
               showMoreHref="/modules/prep"
@@ -195,14 +195,14 @@ export const IndexPage: NextPage<IndexPageProps> = ({
               sx={{ mb: { xs: 1, md: 2 } }}
               color={"rose"}
               title={"Type Rating"}
-              active={["737", "a320"].includes(module ?? "")}
+              active={["737", "a320"].includes(questionBank ?? "")}
               description={[
                 `Prepare or review your theory knowledge for a type rating `,
-                `on the Boeing 737 with ${numberOf737Questions} questions, `,
+                `on the Boeing 737 with ${numberOfB737Questions} questions, `,
                 `or the Airbus A320 with ${numberOfA320Questions} questions.`,
               ].join("")}
               icon={<FlightTakeoffIcon />}
-              onClick={() => goToTheme("737")}
+              onClick={() => goToTheme("b737")}
               showMoreHref="/modules/737"
             />
           </Box>
@@ -242,7 +242,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
           })}
         >
           <NoSsr>
-            {module === "atpl" && (
+            {questionBank === "atpl" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"
@@ -311,7 +311,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 </Grid>
               </RightContainer>
             )}
-            {module === "prep" && (
+            {questionBank === "prep" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"
@@ -350,7 +350,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                 />
               </RightContainer>
             )}
-            {module === "737" && (
+            {questionBank === "b737" && (
               <RightContainer container xs={6}>
                 <Typography
                   level="h3"
@@ -371,7 +371,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       size="lg"
                       component={Link}
                       children={"Explore 737 Questions"}
-                      href="/modules/737/questions"
+                      href="/modules/b737/questions"
                     />
                   </Grid>
                   <Grid xs={12} sm={6}>
@@ -380,7 +380,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
                       size="lg"
                       component={Link}
                       children={"Create 737 Test"}
-                      href="/modules/737/tests/create"
+                      href="/modules/b737/tests/create"
                     />
                   </Grid>
                   <Grid xs={12} sm={6}>
@@ -418,12 +418,12 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
   const [
     { count: numberOfFlashcards },
     { count: numberOfAtplQuestions },
-    { count: numberOf737Questions },
+    { count: numberOfB737Questions },
     { count: numberOfA320Questions },
   ] = await Promise.all([
-    helper.interviewPrep.getNumberOfFlashcards.fetch(),
+    helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "737" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
   ]);
 
@@ -431,7 +431,7 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
     props: {
       numberOfFlashcards,
       numberOfAtplQuestions,
-      numberOf737Questions,
+      numberOfB737Questions,
       numberOfA320Questions,
     },
   };

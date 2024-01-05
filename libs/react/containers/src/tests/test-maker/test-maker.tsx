@@ -34,10 +34,12 @@ const useCreateTest = trpc.questionBank.createTest.useMutation;
 const testMakerPersistence = {
   "cf-test-maker-atpl":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-atpl"),
-  "cf-test-maker-737":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-737"),
+  "cf-test-maker-b737":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-b737"),
   "cf-test-maker-a320":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-a320"),
+  "cf-test-maker-prep":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-prep"),
 };
 
 export type TestMakerProps = Omit<BoxProps, "onBlur" | "onSubmit"> & {

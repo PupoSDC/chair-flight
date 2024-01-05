@@ -15,10 +15,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "tsc -p libs/react/games/tsconfig.lib.json --noEmit",
-          "tsc -p libs/react/games/tsconfig.spec.json --noEmit"
-        ]
+        "commands": ["tsc -p libs/react/games/tsconfig.json"]
       }
     }
   }

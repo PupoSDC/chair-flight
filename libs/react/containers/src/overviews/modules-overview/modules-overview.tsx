@@ -4,7 +4,7 @@ import { keyframes } from "@emotion/react";
 import { default as CheckIcon } from "@mui/icons-material/CheckOutlined";
 import { Box, Card, CardContent, CardCover, Grid, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
-import type { ModuleName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GridProps } from "@mui/joy";
 import type { FC } from "react";
 
@@ -17,43 +17,43 @@ const zoomIn = keyframes`
 `;
 
 export type ModulesOverviewProps = {
-  module: ModuleName;
+  questionBank: QuestionBankName;
 } & GridProps;
 
 export const ModulesOverview: FC<ModulesOverviewProps> = ({
-  module,
+  questionBank,
   container = true,
   spacing = 2,
   ...gridProps
 }) => {
   const [questionsAtpl] = useNumberOfQuestions({ questionBank: "atpl" });
-  const [questions737] = useNumberOfQuestions({ questionBank: "737" });
+  const [questions737] = useNumberOfQuestions({ questionBank: "b737" });
   const [questionsA320] = useNumberOfQuestions({ questionBank: "a320" });
 
   const modules = [
     {
-      id: "atpl" as ModuleName,
+      id: "atpl" as QuestionBankName,
       name: "EASA ATPL Theory",
       imgUrl: "/images/modules/atpl.png",
       imgAlt: "A320 Looking super cool doing Airbus stuff",
       tagLine: `${questionsAtpl.count} Questions`,
     },
     {
-      id: "a320" as ModuleName,
+      id: "a320" as QuestionBankName,
       name: "A320 Type Rating Questions",
       imgUrl: "/images/modules/a320.png",
       imgAlt: "A320 Looking super cool doing Airbus stuff",
       tagLine: `${questionsA320.count} Questions`,
     },
     {
-      id: "737" as ModuleName,
+      id: "b737" as QuestionBankName,
       name: "737 Type Rating Questions",
       imgUrl: "/images/modules/737.png",
       imgAlt: "737 dragging itself through the skies like an old lady",
       tagLine: `${questions737.count} Questions`,
     },
     {
-      id: "prep" as ModuleName,
+      id: "prep" as QuestionBankName,
       name: "Interview Preparation",
       imgUrl: "/images/modules/prep.png",
       imgAlt: "F16, almost no one using this website will ever fly.",
@@ -64,7 +64,7 @@ export const ModulesOverview: FC<ModulesOverviewProps> = ({
   return (
     <Grid container={container} spacing={spacing} {...gridProps}>
       {modules.map((mod) => {
-        const isSelected = mod.id === module;
+        const isSelected = mod.id === questionBank;
         return (
           <Grid xs={12} sm={6} lg={3} key={mod.id}>
             <Card
