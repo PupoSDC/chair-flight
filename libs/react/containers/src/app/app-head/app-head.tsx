@@ -5,7 +5,8 @@ export const APP_NAME = "Chair Flight";
 
 export const APP_DESC = [
   "Chair Flight is a community driven Aviation Question Bank built by students",
-  "for students. Now available for Alpha testing.",
+  "for students. Prepare yourself for your ATPL exams, Interviews, and type",
+  "rating technical exams. For Free!",
 ].join(" ");
 
 export const BASE_URL = "http://chair-flight.com";
