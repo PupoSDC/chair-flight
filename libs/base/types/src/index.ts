@@ -1,5 +1,3 @@
-import "@total-typescript/ts-reset";
-
 export * from "./lib/analytics";
 export * from "./lib/ids";
 export * from "./lib/question";

@@ -16,22 +16,8 @@ describe("QuestionBank", async () => {
       .map((b) => b.getAll("questions")),
   ).then((qs) => qs.flat().map((q) => [q.id, q] as const));
 
-  const modulesWithLos = ["atpl"] as const;
-  const allLos = await Promise.all(
-    modulesWithLos
-      .map((b) => questionBanks[b])
-      .map((b) => b.getAll("learningObjectives")),
-  ).then((qs) => qs.flat().map((q) => [q.id, q] as const));
-
-  const modulesWithMedia = ["atpl"] as const;
-  const allMedia = await Promise.all(
-    modulesWithMedia.map((b) => questionBanks[b]).map((b) => b.getAll("media")),
-  ).then((qs) => qs.flat().map((q) => [q.id, q] as const));
-
-  const modulesWithSubjects = ["atpl"] as const;
-
   const questionIds = allQuestions.map(([id]) => id);
-  const variantIds = allQuestions.flatMap(([_, q]) => Object.keys(q.variants));
+  const variantIds = allQuestions.flatMap(([, q]) => Object.keys(q.variants));
 
   test("QuestionBankB737 has correct config", () => {
     expect(questionBanks["b737"].getName()).toBe("b737");
@@ -74,7 +60,7 @@ describe("QuestionBank", async () => {
   });
 
   test("Questions are valid", () => {
-    allQuestions.forEach(([id, question]) =>
+    allQuestions.forEach(([, question]) =>
       expect
         .soft(questionBankQuestionSchema.safeParse(question))
         .toStrictEqual({ success: true, data: question }),

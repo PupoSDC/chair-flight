@@ -7,8 +7,20 @@
     "types": ["node", "react", "vitest/globals"],
     "lib": ["esnext", "dom"],
     "allowJs": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
-  "include": ["index.d.ts", "next-env.d.ts", "pages/**/*.ts", "pages/**/*.tsx"],
+  "include": [
+    "index.d.ts",
+    "next-env.d.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

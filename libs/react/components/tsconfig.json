@@ -1,6 +1,5 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "files": ["../../../node_modules/@nx/next/typings/image.d.ts"],
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
   "compilerOptions": {

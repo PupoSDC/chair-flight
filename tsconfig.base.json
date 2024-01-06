@@ -1,5 +1,6 @@
 {
   "compileOnSave": false,
+  "files": ["./types.d.ts"],
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
@@ -43,5 +44,5 @@
       "@chair-flight/trpc/mock": ["libs/trpc/mock/src/index.ts"],
       "@chair-flight/trpc/server": ["libs/trpc/server/src/index.ts"]
     },
-  }
+  },
 }

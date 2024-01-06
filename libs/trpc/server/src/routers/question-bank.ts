@@ -165,9 +165,8 @@ export const questionBankRouter = router({
     .input(z.object({ questionBank }))
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
-      // const questionBank = getQuestionBank(input);
-      //const allAnnexes = await questionBank.getAllAnnexes();
-      return { count: 0 };
+      const allAnnexes = await qb.getAll("media");
+      return { count: allAnnexes.length };
     }),
   getNumberOfFlashcards: publicProcedure
     .input(z.object({ questionBank }))
