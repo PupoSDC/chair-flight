@@ -1,27 +1,24 @@
+import * as fs from "node:fs/promises";
 import { Divider, Link, Typography } from "@mui/joy";
+import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
   AppHead,
   LayoutModuleBank,
   ModulesOverview,
 } from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, NextPage } from "next";
 
-type QuestionBankIndexPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type QuestionBankIndexPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const QuestionBankIndexPage: NextPage<QuestionBankIndexPageProps> = ({
-  questionBank,
-}) => (
+const Page: NextPage<PageProps> = ({ questionBank }) => (
   <LayoutModuleBank questionBank={questionBank}>
     <AppHead />
     <Typography level="h2">Question Bank</Typography>
@@ -33,35 +30,27 @@ const QuestionBankIndexPage: NextPage<QuestionBankIndexPageProps> = ({
   </LayoutModuleBank>
 );
 
-export const getStaticProps: GetStaticProps<
-  QuestionBankIndexPageProps,
-  QuestionBankIndexPageParams
-> = async ({ params }) => {
-  if (!params) throw new Error("Params must be defined. Check File name!");
-  await preloadContentForStaticRender(await import("fs/promises"));
-  const helper = await getTrpcHelper();
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const questionBank = params.questionBank;
+    if (!questionBank) throw new MissingPathParameter("questionBank");
 
-  await Promise.all([
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
-    helper.questionBank.getConfig.fetch(params),
-  ]);
+    await Promise.all([
+      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
+      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
+      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
+      helper.questionBank.getConfig.fetch(params),
+    ]);
 
-  return {
-    props: {
-      questionBank: params.questionBank,
-      trpcState: helper.dehydrate(),
-    },
-  };
-};
+    return { props: { questionBank } };
+  },
+  fs,
+);
 
-export const getStaticPaths: GetStaticPaths<
-  QuestionBankIndexPageParams
-> = async () => {
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
   const banks: QuestionBankName[] = ["b737", "a320", "atpl", "prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default QuestionBankIndexPage;
+export default Page;

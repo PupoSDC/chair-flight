@@ -19,36 +19,36 @@ describe("QuestionBank", async () => {
   const questionIds = allQuestions.map(([id]) => id);
   const variantIds = allQuestions.flatMap(([, q]) => Object.keys(q.variants));
 
-  test("QuestionBankB737 has correct config", () => {
+  test("QuestionBankB737 has correct config", async () => {
     expect(questionBanks["b737"].getName()).toBe("b737");
-    expect(questionBanks["b737"].has("questions")).toBe(true);
-    expect(questionBanks["b737"].has("learningObjectives")).toBe(false);
-    expect(questionBanks["b737"].has("media")).toBe(false);
-    expect(questionBanks["b737"].has("flashcards")).toBe(false);
+    expect(await questionBanks["b737"].has("questions")).toBe(true);
+    expect(await questionBanks["b737"].has("learningObjectives")).toBe(false);
+    expect(await questionBanks["b737"].has("media")).toBe(false);
+    expect(await questionBanks["b737"].has("flashcards")).toBe(false);
   });
 
-  test("QuestionBankA320 has correct config", () => {
+  test("QuestionBankA320 has correct config", async () => {
     expect(questionBanks["a320"].getName()).toBe("a320");
-    expect(questionBanks["a320"].has("questions")).toBe(true);
-    expect(questionBanks["a320"].has("learningObjectives")).toBe(false);
-    expect(questionBanks["a320"].has("media")).toBe(false);
-    expect(questionBanks["a320"].has("flashcards")).toBe(false);
+    expect(await questionBanks["a320"].has("questions")).toBe(true);
+    expect(await questionBanks["a320"].has("learningObjectives")).toBe(false);
+    expect(await questionBanks["a320"].has("media")).toBe(false);
+    expect(await questionBanks["a320"].has("flashcards")).toBe(false);
   });
 
-  test("QuestionBankAtpl has correct config", () => {
+  test("QuestionBankAtpl has correct config", async () => {
     expect(questionBanks["atpl"].getName()).toBe("atpl");
-    expect(questionBanks["atpl"].has("questions")).toBe(true);
-    expect(questionBanks["atpl"].has("learningObjectives")).toBe(true);
-    expect(questionBanks["atpl"].has("media")).toBe(true);
-    expect(questionBanks["atpl"].has("flashcards")).toBe(false);
+    expect(await questionBanks["atpl"].has("questions")).toBe(true);
+    expect(await questionBanks["atpl"].has("learningObjectives")).toBe(true);
+    expect(await questionBanks["atpl"].has("media")).toBe(true);
+    expect(await questionBanks["atpl"].has("flashcards")).toBe(false);
   });
 
-  test("QuestionBankPrep has correct config", () => {
+  test("QuestionBankPrep has correct config", async () => {
     expect(questionBanks["prep"].getName()).toBe("prep");
-    expect(questionBanks["prep"].has("questions")).toBe(false);
-    expect(questionBanks["prep"].has("learningObjectives")).toBe(false);
-    expect(questionBanks["prep"].has("media")).toBe(false);
-    expect(questionBanks["prep"].has("flashcards")).toBe(true);
+    expect(await questionBanks["prep"].has("questions")).toBe(false);
+    expect(await questionBanks["prep"].has("learningObjectives")).toBe(false);
+    expect(await questionBanks["prep"].has("media")).toBe(false);
+    expect(await questionBanks["prep"].has("flashcards")).toBe(true);
   });
 
   test("Questions have no duplicate ids", () => {

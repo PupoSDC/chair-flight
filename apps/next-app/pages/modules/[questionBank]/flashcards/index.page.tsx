@@ -1,3 +1,4 @@
+import * as fs from "node:fs/promises";
 import { default as Image } from "next/image";
 import {
   Button,
@@ -12,24 +13,19 @@ import {
 import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, NextPage } from "next";
 
-type FlashcardsIndexPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-type FlashcardsIndexPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-const FlashcardsIndexPage: NextPage<FlashcardsIndexPageProps> = ({
-  questionBank,
-}) => {
+const Page: NextPage<PageProps> = ({ questionBank }) => {
   const [{ flashcardCollections }] =
     trpc.questionBank.getFlashcardsCollections.useSuspenseQuery({
       questionBank,
@@ -125,31 +121,25 @@ const FlashcardsIndexPage: NextPage<FlashcardsIndexPageProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<
-  FlashcardsIndexPageProps,
-  FlashcardsIndexPageParams
-> = async ({ params }) => {
-  const helper = await getTrpcHelper();
-  const questionBank = params?.questionBank;
-  if (!questionBank) throw new MissingPathParameter("questionBank");
-  await preloadContentForStaticRender(await import("fs/promises"));
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const questionBank = params.questionBank;
+    if (!questionBank) throw new MissingPathParameter("questionBank");
 
-  await Promise.all([
-    helper.questionBank.getFlashcardsCollections.fetch({ questionBank }),
-    helper.questionBank.getConfig.fetch({ questionBank }),
-  ]);
+    await Promise.all([
+      helper.questionBank.getFlashcardsCollections.fetch(params),
+      helper.questionBank.getConfig.fetch(params),
+    ]);
 
-  return {
-    props: { questionBank },
-  };
-};
+    return { props: { questionBank } };
+  },
+  fs,
+);
 
-export const getStaticPaths: GetStaticPaths<
-  FlashcardsIndexPageParams
-> = async () => {
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
   const banks: QuestionBankName[] = ["prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default FlashcardsIndexPage;
+export default Page;

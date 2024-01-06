@@ -15,13 +15,6 @@ if (typeof document === "undefined") {
   React.useLayoutEffect = React.useEffect;
 }
 
-if (typeof document !== "undefined") {
-  // temporary fix to rollback the custom scheme colors.
-  // remove me if you are reading this in 2024
-  localStorage.setItem("joy-color-scheme-light", "light");
-  localStorage.setItem("joy-color-scheme-dark", "dark");
-}
-
 const DynamicToaster = dynamic(
   () => import("@chair-flight/react/components").then((m) => m.Toaster),
   { loading: () => null, ssr: false },

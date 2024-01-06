@@ -28,6 +28,15 @@ const courseNames: Record<string, CourseName> = {
   "CBIR(A)": "CBIR_A",
 };
 
+const exists = async (f: string) => {
+  try {
+    await fs.stat(f);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const projects = context.workspace?.projects ?? {};
   const nextProjectName = "next-app";
@@ -56,7 +65,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/tk-syllabus.xlsx` */
-    losXlsx: path.join(contentRoot, "subjects", "tk-syllabus.xlsx"),
+    losXlsx: path.join(contentRoot, "subjects", "learning-objectives.xlsx"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl` */
     outputDir: outputDir,
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/questions.json` */
@@ -76,14 +85,11 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
 
 export const readAllQuestionsFromFs = async ({
   questionsPath,
-  skipQuestions,
   projectName,
 }: {
-  skipQuestions?: boolean;
   questionsPath: string;
   projectName: string;
 }): Promise<QuestionBankQuestionTemplate[]> => {
-  if (skipQuestions) return [];
   const files = await fs.readdir(questionsPath);
   const questions: QuestionBankQuestionTemplate[] = [];
   for (const file of files) {
@@ -93,7 +99,6 @@ export const readAllQuestionsFromFs = async ({
       questions.push(
         ...(await readAllQuestionsFromFs({
           questionsPath: filePath,
-          skipQuestions,
           projectName,
         })),
       );
@@ -122,13 +127,11 @@ export const readAllQuestionsFromFs = async ({
 export const readAllLearningObjectivesFromFs = async ({
   questions,
   loPath,
-  skipLearningObjectives,
 }: {
   questions: QuestionBankQuestionTemplate[];
   loPath: string;
-  skipLearningObjectives?: boolean;
-}) => {
-  if (skipLearningObjectives) return [];
+}): Promise<QuestionBankLearningObjective[]> => {
+  if (!(await exists(loPath))) return [];
   const workbook = XLSX.readFile(loPath);
   const sheetNames = workbook.SheetNames;
   const learningObjectivesMap = sheetNames
@@ -205,13 +208,10 @@ export const readAllLearningObjectivesFromFs = async ({
 export const readAllSubjectsFromFs = async ({
   learningObjectives,
   subjectsPath,
-  skipSubjects,
 }: {
   learningObjectives: QuestionBankLearningObjective[];
   subjectsPath: string;
-  skipSubjects?: boolean;
 }) => {
-  if (skipSubjects) return [];
   const fileBuffer = await fs.readFile(subjectsPath, "utf-8");
   const subjects = JSON.parse(fileBuffer) as QuestionBankSubjectJson[];
 
@@ -283,13 +283,10 @@ export const readAllSubjectsFromFs = async ({
 export const readAllMediaFromFs = async ({
   questions,
   mediaPath,
-  skipMedia,
 }: {
   questions: QuestionBankQuestionTemplate[];
   mediaPath: string;
-  skipMedia?: boolean;
 }): Promise<QuestionBankMedia[]> => {
-  if (skipMedia) return [];
   const file = await fs.readFile(mediaPath, "utf-8");
   const json = JSON.parse(file) as QuestionBankMediaJson[];
   const allMedia = json.map<QuestionBankMedia>((m) => ({
@@ -321,13 +318,13 @@ export const readAllMediaFromFs = async ({
 
 export const readAllFlashcardsFromFs = async ({
   flashCardsPath,
-  skipFlashcards,
 }: {
   flashCardsPath: string;
   skipFlashcards?: boolean;
 }): Promise<QuestionBankFlashcardCollection[]> => {
-  if (skipFlashcards) return [];
-  const flashcardFiles = await fs.readdir(flashCardsPath);
+  if (!exists(flashCardsPath)) return [];
+  const files = await fs.readdir(flashCardsPath);
+  const flashcardFiles = files.filter((f) => f.endsWith(".json"));
   const flashcards: QuestionBankFlashcardCollection[] = [];
   for (const file of flashcardFiles) {
     const filePath = path.join(flashCardsPath, file);

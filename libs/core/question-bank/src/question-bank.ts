@@ -32,15 +32,11 @@ type ResourceMaps = {
   [K in Resource]: Record<string, NameToType[K]> | undefined;
 };
 
-type HasResourceMap = {
-  [K in Resource]: boolean;
-};
-
 type ReadFile = (path: string, string: "utf-8") => Promise<string>;
 
 interface IQuestionBank {
   getName: () => QuestionBankName;
-  has: (r: Resource) => boolean;
+  has: (r: Resource) => Promise<boolean>;
   getAll: <T extends Resource>(r: T) => Promise<NameToType[T][]>;
   getSome: <T extends Resource>(r: T, id: string[]) => Promise<NameToType[T][]>;
   getOne: <T extends Resource>(r: T, id: string) => Promise<NameToType[T]>;
@@ -58,11 +54,6 @@ const resources: Resource[] = [
 export class QuestionBank implements IQuestionBank {
   private questionBankName: QuestionBankName;
 
-  private hasResourceMap: HasResourceMap = resources.reduce((s, r) => {
-    s[r] = false;
-    return s;
-  }, {} as HasResourceMap);
-
   private resourceArrays: ResourceArrays = resources.reduce((s, r) => {
     s[r] = undefined;
     return s;
@@ -73,44 +64,26 @@ export class QuestionBank implements IQuestionBank {
     return s;
   }, {} as ResourceMaps);
 
-  constructor({
-    questionBankName,
-    hasQuestions,
-    hasLearningObjectives,
-    hasMedia,
-    hasFlashcards,
-  }: {
-    questionBankName: QuestionBankName;
-    hasQuestions: boolean;
-    hasLearningObjectives: boolean;
-    hasMedia: boolean;
-    hasFlashcards: boolean;
-  }) {
+  constructor(questionBankName: QuestionBankName) {
     this.questionBankName = questionBankName;
-    this.hasResourceMap.questions = hasQuestions;
-    this.hasResourceMap.subjects = hasQuestions;
-    this.hasResourceMap.learningObjectives = hasLearningObjectives;
-    this.hasResourceMap.media = hasMedia;
-    this.hasResourceMap.flashcards = hasFlashcards;
   }
 
   getName() {
     return this.questionBankName;
   }
 
-  has(resource: Resource) {
-    return this.hasResourceMap[resource];
+  async has(resource: Resource) {
+    const all = await this.getAll(resource);
+    return all.length > 0;
   }
 
   async getAll<T extends Resource>(resource: T) {
-    if (!this.has(resource)) {
-      throw new UnimplementedError(`QuestionBank has no ${resource}`);
-    }
     if (!this.resourceArrays[resource]) {
       const urlPath = getUrlPathOnServer();
       const bankPath = `/content/content-question-bank-${this.getName()}`;
       const baseApiPath = `${urlPath}${bankPath}`;
       const apiPath = `${baseApiPath}/${resource}.json`;
+      console.log("lets.goooo", apiPath);
       const response = await fetch(apiPath);
       const json = (await response.json()) as NameToType[T][];
       type ArrayType = (typeof this.resourceArrays)[typeof resource];
@@ -123,9 +96,6 @@ export class QuestionBank implements IQuestionBank {
   async getSome<T extends Resource>(resource: T, ids: string[]) {
     if (!ids.length) {
       return [];
-    }
-    if (!this.has(resource)) {
-      throw new UnimplementedError(`QuestionBank has no ${resource}`);
     }
     if (!this.resourceMaps[resource]) {
       const all = await this.getAll(resource);
@@ -154,14 +124,19 @@ export class QuestionBank implements IQuestionBank {
     readFile: (path: string, string: "utf-8") => Promise<string>;
   }) {
     await Promise.all(
-      Object.entries(this.hasResourceMap)
-        .filter(([, has]) => has)
-        .map(async ([resource]) => {
-          const path = `${process.cwd()}/apps/next-app/public/content/content-question-bank-${this.getName()}/${resource}.json`;
-          const file = JSON.parse(await readFile(path, "utf-8"));
-          // @ts-expect-error Hard to type. Covered in tests
-          this.resourceArrays[resource] = file;
-        }),
+      resources.map(async (resource) => {
+        const cwd = process.cwd();
+        const appPath = "/apps/next-app";
+        const path = [
+          cwd,
+          cwd.includes(appPath) ? "" : appPath,
+          `/public/content/content-question-bank-${this.getName()}`,
+          `/${resource}.json`,
+        ].join("");
+        const file = JSON.parse(await readFile(path, "utf-8"));
+        // @ts-expect-error Hard to type. Covered in tests
+        this.resourceArrays[resource] = file;
+      }),
     );
   }
 }

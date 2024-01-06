@@ -1,3 +1,4 @@
+import * as fs from "node:fs/promises";
 import { useRef, useState } from "react";
 import { keyframes } from "@emotion/react";
 import { NoSsr } from "@mui/base";
@@ -17,12 +18,9 @@ import {
   GlobalColorScheme,
   LayoutPublic,
 } from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 
 const fadeIn = keyframes`
   0% { opacity: 0; }
@@ -40,7 +38,7 @@ const RightContainer = styled(Grid)`
   }
 `;
 
-type IndexPageProps = {
+type PageProps = {
   numberOfAtplQuestions: number;
   numberOfB737Questions: number;
   numberOfA320Questions: number;
@@ -51,7 +49,7 @@ type Theme = "b737" | "atpl" | "prep";
 
 const MEDIA_LONG_SCREEN = "@media (min-height: 560px) and (min-width: 440px)";
 
-export const IndexPage: NextPage<IndexPageProps> = ({
+export const Page: NextPage<PageProps> = ({
   numberOfFlashcards,
   numberOfAtplQuestions,
   numberOfB737Questions,
@@ -411,10 +409,7 @@ export const IndexPage: NextPage<IndexPageProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
-  await preloadContentForStaticRender(await import("fs/promises"));
-
-  const helper = await getTrpcHelper();
+export const getStaticProps = staticHandler<PageProps>(async ({ helper }) => {
   const [
     { count: numberOfFlashcards },
     { count: numberOfAtplQuestions },
@@ -435,6 +430,6 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
       numberOfA320Questions,
     },
   };
-};
+}, fs);
 
-export default IndexPage;
+export default Page;

@@ -4,12 +4,7 @@
   "projectType": "library",
   "targets": {
     "compile": {
-      "executor": "@chair-flight/core/question-bank:compile",
-      "options": {
-        "skipLearningObjectives": true,
-        "skipMedia": true,
-        "skipFlashcards": true
-      }
+      "executor": "@chair-flight/core/question-bank:compile"
     }
   },
   "tags": []

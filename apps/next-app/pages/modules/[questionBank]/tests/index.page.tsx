@@ -1,21 +1,23 @@
+import * as fs from "node:fs/promises";
 import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
   AppHead,
   LayoutModuleBank,
   TestsOverview,
 } from "@chair-flight/react/containers";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, NextPage } from "next";
 
-type TestsIndexPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type TestsIndexPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const TestsIndexPage: NextPage<TestsIndexPageProps> = ({ questionBank }) => (
+const Page: NextPage<PageProps> = ({ questionBank }) => (
   <LayoutModuleBank questionBank={questionBank}>
     <AppHead />
     <TestsOverview
@@ -26,21 +28,22 @@ const TestsIndexPage: NextPage<TestsIndexPageProps> = ({ questionBank }) => (
   </LayoutModuleBank>
 );
 
-export const getStaticProps: GetStaticProps<
-  TestsIndexPageProps,
-  TestsIndexPageParams
-> = async ({ params }) => {
-  const questionBank = params?.questionBank;
-  if (!questionBank) throw new MissingPathParameter("questionBank");
-  return { props: { questionBank } };
-};
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const questionBank = params.questionBank;
+    if (!questionBank) throw new MissingPathParameter("questionBank");
 
-export const getStaticPaths: GetStaticPaths<
-  TestsIndexPageParams
-> = async () => {
-  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
+    await Promise.all([helper.questionBank.getConfig.fetch(params)]);
+
+    return { props: { questionBank } };
+  },
+  fs,
+);
+
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl", "prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default TestsIndexPage;
+export default Page;

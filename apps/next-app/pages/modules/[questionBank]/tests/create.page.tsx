@@ -1,3 +1,4 @@
+import * as fs from "node:fs/promises";
 import { useRouter } from "next/router";
 import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
@@ -5,22 +6,19 @@ import {
   LayoutModuleBank,
   TestMaker,
 } from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, NextPage } from "next";
 
-type TestsCreatePageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type TestsCreatePageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const TestsCreatePage: NextPage<TestsCreatePageProps> = ({ questionBank }) => {
+const Page: NextPage<PageProps> = ({ questionBank }) => {
   const router = useRouter();
 
   return (
@@ -38,31 +36,25 @@ const TestsCreatePage: NextPage<TestsCreatePageProps> = ({ questionBank }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<
-  TestsCreatePageProps,
-  TestsCreatePageParams
-> = async ({ params }) => {
-  const questionBank = params?.questionBank;
-  if (!questionBank) throw new MissingPathParameter("questionBank");
-  await preloadContentForStaticRender(await import("fs/promises"));
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const questionBank = params?.questionBank;
+    if (!questionBank) throw new MissingPathParameter("questionBank");
 
-  const helper = await getTrpcHelper();
-  await helper.questionBank.getAllSubjects.fetch({ questionBank });
+    await Promise.all([
+      helper.questionBank.getConfig.fetch(params),
+      helper.questionBank.getAllSubjects.fetch(params),
+    ]);
 
-  return {
-    props: {
-      questionBank,
-      trpcState: helper.dehydrate(),
-    },
-  };
-};
+    return { props: { questionBank } };
+  },
+  fs,
+);
 
-export const getStaticPaths: GetStaticPaths<
-  TestsCreatePageParams
-> = async () => {
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
   const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default TestsCreatePage;
+export default Page;

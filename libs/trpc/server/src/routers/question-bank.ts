@@ -132,20 +132,20 @@ export const questionBankRouter = router({
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
       const rawCollections = await qb.getAll("flashcards");
-      const flashcardCollections = rawCollections.map((collection) => ({
+      const collections = rawCollections.map((collection) => ({
         id: collection.id,
         title: collection.title,
         numberOfFlashcards: collection.flashcards.length,
       }));
-      return { flashcardCollections };
+      return { collections };
     }),
   getFlashcardsCollection: publicProcedure
     .input(z.object({ questionBank, collectionId: z.string() }))
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
       const id = input.collectionId;
-      const flashcardCollection = await qb.getOne("flashcards", id);
-      return { flashcardCollection };
+      const flashcards = await qb.getOne("flashcards", id);
+      return { flashcards };
     }),
   getNumberOfQuestions: publicProcedure
     .input(z.object({ questionBank }))
