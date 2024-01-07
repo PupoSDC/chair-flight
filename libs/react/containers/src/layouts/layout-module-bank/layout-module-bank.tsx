@@ -1,4 +1,3 @@
-import { type FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
@@ -13,26 +12,35 @@ import {
   SidebarListItem,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { ContainerComponent } from "../../types";
 import { GlobalColorScheme } from "../global-color-scheme";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
-const useConfig = trpc.questionBank.getConfig.useSuspenseQuery;
-
-export type LayoutModuleProps = {
+type Props = {
   children: React.ReactNode;
-  questionBank: QuestionBankName;
   fixedHeight?: boolean;
   noPadding?: boolean;
 };
 
-export const LayoutModuleBank: FunctionComponent<LayoutModuleProps> = ({
+type Params = {
+  questionBank: QuestionBankName;
+};
+
+type Data = {
+  hasFlashcards: boolean;
+  hasQuestions: boolean;
+  hasLearningObjectives: boolean;
+  hasMedia: boolean;
+};
+
+export const LayoutModuleBank: ContainerComponent<Props, Params, Data> = ({
   children,
   fixedHeight,
   noPadding,
   questionBank,
 }) => {
   const router = useRouter();
-  const [config] = useConfig({ questionBank });
+  const config = LayoutModuleBank.useData({ questionBank });
 
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -128,4 +136,14 @@ export const LayoutModuleBank: FunctionComponent<LayoutModuleProps> = ({
       />
     </>
   );
+};
+
+LayoutModuleBank.getData = async ({ helper, params }) => {
+  return await helper.questionBank.getConfig.fetch(params);
+};
+
+LayoutModuleBank.useData = (params) => {
+  const qb = trpc.questionBank;
+  const [config] = qb.getConfig.useSuspenseQuery(params);
+  return config;
 };

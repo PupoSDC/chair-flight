@@ -34,15 +34,9 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
     const questionBank = params.questionBank;
     if (!questionBank) throw new MissingPathParameter("questionBank");
-
-    await Promise.all([
-      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
-      helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
-      helper.questionBank.getConfig.fetch(params),
-    ]);
-
-    return { props: { questionBank } };
+    await ModulesOverview.getData({ helper, params });
+    await LayoutModuleBank.getData({ helper, params });
+    return { props: params };
   },
   fs,
 );

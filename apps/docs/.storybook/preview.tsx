@@ -15,18 +15,22 @@ import "@fontsource/public-sans";
 // TODO this is a complete hack. Open ticket with SB
 window.React = React;
 
-initialize({
+const api = initialize({
   onUnhandledRequest: ({ method, url }) => {
-    if (url.pathname.includes("/trpc")) {
-      console.error(`Unhandled ${method} request to ${url}.
-
-        This exception has been only logged in the console, however, it's strongly 
-        recommended to resolve this error as you don't want unmocked data in 
-        Storybook stories.
-
-        If you wish to mock an error response, please refer to this guide: 
-        https://mswjs.io/docs/recipes/mocking-error-responses
-      `);
+    if (url.includes("/trpc")) {
+      console.log(api.listHandlers());
+      console.error(
+        [
+          `Unhandled ${method} request to ${url}.`,
+          "",
+          "This exception has been only logged in the console, however, it's strongly ",
+          "recommended to resolve this error as you don't want unmocked data in ",
+          "Storybook stories.",
+          "",
+          "If you wish to mock an error response, please refer to this guide: ",
+          "https://mswjs.io/docs/recipes/mocking-error-responses",
+        ].join(""),
+      );
     }
   },
 });
@@ -65,9 +69,7 @@ const preview: Preview = {
         h3: (props: TypographyProps) => <Typography level="h3" {...props} />,
         h4: (props: TypographyProps) => <Typography level="h4" {...props} />,
         h5: (props: TypographyProps) => <Typography level="h5" {...props} />,
-        p: (props: TypographyProps) => (
-          <Typography level="body-md" {...props} />
-        ),
+        p: (props: TypographyProps) => <Typography {...props} />,
       },
       container: (props: DocsContainerProps) => {
         const dark = useDarkMode();

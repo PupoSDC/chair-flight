@@ -5,7 +5,16 @@ import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicke
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as StyleIcon } from "@mui/icons-material/Style";
-import { Button, Box, Divider, Grid, Link, Typography, styled } from "@mui/joy";
+import {
+  Button,
+  Box,
+  Divider,
+  Grid,
+  Link,
+  Typography,
+  styled,
+  BoxProps,
+} from "@mui/joy";
 import { QuestionBankName } from "@chair-flight/base/types";
 import {
   CountUp,
@@ -34,23 +43,25 @@ const RightContainer = styled(Grid)`
   }
 `;
 
-const MEDIA_LONG_SCREEN = "@media (min-height: 560px) and (min-width: 440px)";
+type Data = {
+  numberOfFlashcards: number;
+  numberOfAtplQuestions: number;
+  numberOfB737Questions: number;
+  numberOfA320Questions: number;
+};
 
-export const Welcome: ContainerComponent = () => {
-  const qb = trpc.questionBank;
+export const Welcome: ContainerComponent<BoxProps, {}, Data> = ({ sx }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
   const [questionBank, setQuestionBank] = useState<QuestionBankName>();
-  const [
-    [{ count: numberOfFlashcards }],
-    [{ count: numberOfAtplQuestions }],
-    [{ count: numberOfB737Questions }],
-    [{ count: numberOfA320Questions }],
-  ] = [
-    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
-  ];
+  const {
+    numberOfFlashcards,
+    numberOfAtplQuestions,
+    numberOfB737Questions,
+    numberOfA320Questions,
+  } = Welcome.useData({});
+
+  const mediaLongScreen = "@media (min-height: 560px) and (min-width: 440px)";
+  const headerHeight = LayoutPublic.css.headerHeight;
 
   const goToTheme = (theme: Theme) => {
     setQuestionBank(theme);
@@ -61,8 +72,6 @@ export const Welcome: ContainerComponent = () => {
     );
   };
 
-  const headerHeight = LayoutPublic.css.headerHeight;
-
   return (
     <Box
       sx={{
@@ -72,6 +81,8 @@ export const Welcome: ContainerComponent = () => {
         minHeight: "100%",
         maxWidth: 1240,
         mx: "auto",
+        position: "relative",
+        ...sx,
       }}
     >
       <Box
@@ -90,13 +101,9 @@ export const Welcome: ContainerComponent = () => {
             md: `calc(${460}px - ${t.spacing(2)})`,
             lg: `calc(${620}px - ${t.spacing(2)})`,
           },
-          minHeight: {
-            xs: `calc(100vh - ${headerHeight} - ${t.spacing(2)})`,
-            md: `100%`,
-          },
           position: {
             xs: "relative",
-            md: "fixed",
+            md: "absolute",
           },
           transform: {
             xs: "none",
@@ -104,7 +111,7 @@ export const Welcome: ContainerComponent = () => {
           },
           "& > *": {
             mb: 1,
-            [MEDIA_LONG_SCREEN]: { mb: 2 },
+            [mediaLongScreen]: { mb: 2 },
           },
         })}
       >
@@ -121,7 +128,7 @@ export const Welcome: ContainerComponent = () => {
             level="h3"
             component="h1"
             sx={{
-              [MEDIA_LONG_SCREEN]: { fontSize: "3em" },
+              [mediaLongScreen]: { fontSize: "3em" },
               lineHeight: 1.2,
             }}
           >
@@ -161,7 +168,7 @@ export const Welcome: ContainerComponent = () => {
           <ModuleSelectionButton
             fullWidth
             sx={{ mb: { xs: 1, md: 2 } }}
-            color={"teal"}
+            color={"blue"}
             title={"Interview Prep"}
             description={[
               "Use our flash cards to practice answering open ended ",
@@ -175,7 +182,7 @@ export const Welcome: ContainerComponent = () => {
           <ModuleSelectionButton
             fullWidth
             sx={{ mb: { xs: 1, md: 2 } }}
-            color={"rose"}
+            color={"blue"}
             title={"Type Rating"}
             active={["737", "a320"].includes(questionBank ?? "")}
             description={[
@@ -393,10 +400,43 @@ export const Welcome: ContainerComponent = () => {
 };
 
 Welcome.getData = async ({ helper }) => {
-  await Promise.all([
+  const [
+    { count: numberOfFlashcards },
+    { count: numberOfAtplQuestions },
+    { count: numberOfB737Questions },
+    { count: numberOfA320Questions },
+  ] = await Promise.all([
     helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
   ]);
+
+  return {
+    numberOfFlashcards,
+    numberOfAtplQuestions,
+    numberOfB737Questions,
+    numberOfA320Questions,
+  };
+};
+
+Welcome.useData = () => {
+  const qb = trpc.questionBank;
+  const [
+    [{ count: numberOfFlashcards }],
+    [{ count: numberOfAtplQuestions }],
+    [{ count: numberOfB737Questions }],
+    [{ count: numberOfA320Questions }],
+  ] = [
+    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
+  ];
+  return {
+    numberOfFlashcards,
+    numberOfAtplQuestions,
+    numberOfB737Questions,
+    numberOfA320Questions,
+  };
 };

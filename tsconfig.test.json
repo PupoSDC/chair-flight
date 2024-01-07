@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "libs/**/*.test.ts",
+    "libs/**/*.test.tsx",
+    "vitest.setup-tests.ts"
+  ],
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "lib": ["dom"]
+  }
+}

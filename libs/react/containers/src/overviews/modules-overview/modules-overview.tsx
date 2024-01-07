@@ -4,60 +4,77 @@ import { keyframes } from "@emotion/react";
 import { default as CheckIcon } from "@mui/icons-material/CheckOutlined";
 import { Box, Card, CardContent, CardCover, Grid, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
+import { ContainerComponent } from "../../types";
+import { default as previewA320 } from "./images/a320.png";
+import { default as previewAtpl } from "./images/atpl.png";
+import { default as previewB737 } from "./images/b737.png";
+import { default as previewPrep } from "./images/prep.png";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GridProps } from "@mui/joy";
-import type { FC } from "react";
-
-const useNumberOfQuestions =
-  trpc.questionBank.getNumberOfQuestions.useSuspenseQuery;
 
 const zoomIn = keyframes`
   0% { transform: scale(1); }
   100% { transform: scale(1.1); }
 `;
 
-export type ModulesOverviewProps = {
+type Params = {
   questionBank: QuestionBankName;
-} & GridProps;
+};
 
-export const ModulesOverview: FC<ModulesOverviewProps> = ({
+type Data = {
+  numberOfFlashcards: number;
+  numberOfAtplQuestions: number;
+  numberOfB737Questions: number;
+  numberOfA320Questions: number;
+};
+
+export const ModulesOverview: ContainerComponent<GridProps, Params, Data> = ({
   questionBank,
   container = true,
   spacing = 2,
   ...gridProps
 }) => {
-  const [questionsAtpl] = useNumberOfQuestions({ questionBank: "atpl" });
-  const [questions737] = useNumberOfQuestions({ questionBank: "b737" });
-  const [questionsA320] = useNumberOfQuestions({ questionBank: "a320" });
+  const qb = trpc.questionBank;
+  const [
+    [{ count: numberOfFlashcards }],
+    [{ count: numberOfAtplQuestions }],
+    [{ count: numberOfB737Questions }],
+    [{ count: numberOfA320Questions }],
+  ] = [
+    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
+  ];
 
   const modules = [
     {
       id: "atpl" as QuestionBankName,
       name: "EASA ATPL Theory",
-      imgUrl: "/images/modules/atpl.png",
-      imgAlt: "A320 Looking super cool doing Airbus stuff",
-      tagLine: `${questionsAtpl.count} Questions`,
+      imgSrc: previewAtpl,
+      imgAlt: "A cessna looking cute in the skies",
+      tagLine: `${numberOfAtplQuestions} Questions`,
     },
     {
       id: "a320" as QuestionBankName,
       name: "A320 Type Rating Questions",
-      imgUrl: "/images/modules/a320.png",
+      imgSrc: previewA320,
       imgAlt: "A320 Looking super cool doing Airbus stuff",
-      tagLine: `${questionsA320.count} Questions`,
+      tagLine: `${numberOfA320Questions} Questions`,
     },
     {
       id: "b737" as QuestionBankName,
       name: "737 Type Rating Questions",
-      imgUrl: "/images/modules/737.png",
+      imgSrc: previewB737,
       imgAlt: "737 dragging itself through the skies like an old lady",
-      tagLine: `${questions737.count} Questions`,
+      tagLine: `${numberOfB737Questions} Questions`,
     },
     {
       id: "prep" as QuestionBankName,
       name: "Interview Preparation",
-      imgUrl: "/images/modules/prep.png",
+      imgSrc: previewPrep,
       imgAlt: "F16, almost no one using this website will ever fly.",
-      tagLine: `Flashcards and more!`,
+      tagLine: `${numberOfFlashcards} Flashcards`,
     },
   ];
 
@@ -91,7 +108,7 @@ export const ModulesOverview: FC<ModulesOverviewProps> = ({
               }}
             >
               <CardCover sx={{ objectFit: "cover", overflow: "hidden" }}>
-                <Image src={mod.imgUrl} alt={mod.imgAlt} fill loading="lazy" />
+                <Image src={mod.imgSrc} alt={mod.imgAlt} fill loading="lazy" />
               </CardCover>
               <CardCover
                 sx={{
@@ -139,4 +156,46 @@ export const ModulesOverview: FC<ModulesOverviewProps> = ({
       })}
     </Grid>
   );
+};
+
+ModulesOverview.getData = async ({ helper }) => {
+  const [
+    { count: numberOfFlashcards },
+    { count: numberOfAtplQuestions },
+    { count: numberOfB737Questions },
+    { count: numberOfA320Questions },
+  ] = await Promise.all([
+    helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
+  ]);
+
+  return {
+    numberOfFlashcards,
+    numberOfAtplQuestions,
+    numberOfB737Questions,
+    numberOfA320Questions,
+  };
+};
+
+ModulesOverview.useData = () => {
+  const qb = trpc.questionBank;
+  const [
+    [{ count: numberOfFlashcards }],
+    [{ count: numberOfAtplQuestions }],
+    [{ count: numberOfB737Questions }],
+    [{ count: numberOfA320Questions }],
+  ] = [
+    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
+  ];
+  return {
+    numberOfFlashcards,
+    numberOfAtplQuestions,
+    numberOfB737Questions,
+    numberOfA320Questions,
+  };
 };
