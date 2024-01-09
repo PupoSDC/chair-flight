@@ -1,10 +1,10 @@
 import { useState, type FunctionComponent } from "react";
 import { useRouter } from "next/router";
-import AccessAlarmsOutlinedIcon from "@mui/icons-material/AccessAlarmsOutlined";
-import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import { default as AccessAlarmsOutlinedIcon } from "@mui/icons-material/AccessAlarmsOutlined";
+import { default as AppsOutlinedIcon } from "@mui/icons-material/AppsOutlined";
+import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
+import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
+import { default as CloseOutlinedIcon } from "@mui/icons-material/CloseOutlined";
 import {
   IconButton,
   Button,
@@ -23,26 +23,27 @@ import {
 import { DateTime } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
+  ContainerWrapper,
   ImageViewer,
   QuestionMultipleChoice,
   QuestionNavigation,
   useMediaQuery,
 } from "@chair-flight/react/components";
-import { useTestProgress } from "../use-test-progress";
-import { useTestHotkeys } from "../use-test-progress-hotkeys";
-import { useTestProgressTime } from "../use-test-progress-time";
+import { TestError } from "../components/test-error";
+import { TestLoading } from "../components/test-loading";
+import { useTestProgress } from "../hooks/use-test-progress";
+import { useTestHotkeys } from "../hooks/use-test-progress-hotkeys";
+import { useTestProgressTime } from "../hooks/use-test-progress-time";
+import type { ContainerComponent } from "../../types";
 import type { DrawingPoints } from "@chair-flight/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
-type TestExamProps = {
+type Props = {
   testId: string;
 };
 
-export const TestExam: FunctionComponent<TestExamProps> = ({ testId }) => {
-  useTestHotkeys({ testId });
-  useTestProgressTime({ testId });
-
+const TestExamComponent: FunctionComponent<Props> = ({ testId }) => {
   const theme = useTheme();
   const router = useRouter();
   const test = useTestProgress((state) => state.tests[testId]);
@@ -56,6 +57,9 @@ export const TestExam: FunctionComponent<TestExamProps> = ({ testId }) => {
   const [isFinishTestOpen, setIsFinishTestOpen] = useState(false);
   const [currentAnnex, setCurrentAnnex] = useState<string>();
   const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
+
+  useTestHotkeys({ testId });
+  useTestProgressTime({ testId });
 
   if (!test) throw new NotFoundError(`Test with id ${testId} not found`);
 
@@ -238,3 +242,16 @@ export const TestExam: FunctionComponent<TestExamProps> = ({ testId }) => {
     </Stack>
   );
 };
+
+export const TestExam: ContainerComponent<Props> = (props) => (
+  <ContainerWrapper
+    noSsr
+    ErrorFallbackComponent={TestError}
+    LoadingFallbackComponent={TestLoading}
+  >
+    <TestExamComponent {...props} />
+  </ContainerWrapper>
+);
+
+TestExam.getData = async () => ({});
+TestExam.useData = () => ({});

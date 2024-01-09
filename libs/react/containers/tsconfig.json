@@ -1,8 +1,9 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
+  "files": ["../../../node_modules/@nx/next/typings/image.d.ts"],
   "compilerOptions": {
-    "lib": ["dom"]
+    "lib": ["dom"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   }
 }

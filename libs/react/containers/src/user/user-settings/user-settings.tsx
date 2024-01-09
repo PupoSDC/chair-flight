@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { NoSsr } from "@mui/base";
 import {
   Divider,
   FormControl,
@@ -9,7 +11,9 @@ import {
   styled,
 } from "@mui/joy";
 import { ThemeButton } from "@chair-flight/react/components";
-import { useUserPreferences } from "../../hooks/use-user-preferences";
+import { useUserPreferences } from "../hooks/use-user-preferences";
+import type { ContainerComponent } from "../../types";
+import type { FunctionComponent } from "react";
 
 const StyledFormControl = styled(FormControl)`
   display: flex;
@@ -24,7 +28,9 @@ const StyledFormControl = styled(FormControl)`
   }
 `;
 
-export const UserSettings = () => {
+const UserSettingsFallback: FunctionComponent = () => null;
+
+const UserSettingsComponent: FunctionComponent = () => {
   const {
     examModeAutoSkip,
     studyModeAutoSkip,
@@ -70,3 +76,14 @@ export const UserSettings = () => {
     </Stack>
   );
 };
+
+export const UserSettings: ContainerComponent = () => (
+  <NoSsr fallback={<UserSettingsFallback />}>
+    <Suspense fallback={<UserSettingsFallback />}>
+      <UserSettingsComponent />
+    </Suspense>
+  </NoSsr>
+);
+
+UserSettings.getData = async () => ({});
+UserSettings.useData = () => ({});

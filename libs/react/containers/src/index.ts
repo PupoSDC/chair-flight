@@ -1,5 +1,3 @@
-export * from "./app/app-head";
-export * from "./app/app-transition";
 export * from "./questions/question-editor";
 export * from "./questions/question-overview";
 export * from "./questions/question-preview-list";
@@ -10,10 +8,9 @@ export * from "./tests/test-exam";
 export * from "./tests/test-maker";
 export * from "./tests/test-review";
 export * from "./tests/tests-overview";
-export * from "./theme";
-export * from "./layouts/global-color-scheme";
-export * from "./layouts/layout-module-bank";
+export * from "./layouts/layout-module";
 export * from "./layouts/layout-public";
 export * from "./overviews/welcome";
 export * from "./overviews/modules-overview";
 export * from "./user/user-settings";
+export { AppHead } from "@chair-flight/react/components";

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { mockTest } from "@chair-flight/trpc/mock";
-import { useTestProgress } from "../use-test-progress";
+import { useTestProgress } from "../hooks/use-test-progress";
 import { TestStudy } from "./test-study";
 import type { Meta, StoryObj } from "@storybook/react";
 

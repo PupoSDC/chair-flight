@@ -118,10 +118,9 @@ export const QuestionMultipleChoice = forwardRef<
       <Box>
         {loading ? (
           <>
-            <Skeleton sx={{ height: "3em", width: "100%", mb: 1, mt: 2 }} />
-            <Skeleton sx={{ height: "1em", width: "85%", my: 1 }} />
-            <Skeleton sx={{ height: "2em", width: "100%", my: 1 }} />
-            <Skeleton sx={{ height: "1em", width: "50%", my: 1 }} />
+            <Skeleton variant="text" sx={{ width: "100%" }} />
+            <Skeleton variant="text" sx={{ width: "100%" }} />
+            <Skeleton variant="text" sx={{ width: "85%", mb: 2 }} />
           </>
         ) : (
           <>
@@ -143,49 +142,49 @@ export const QuestionMultipleChoice = forwardRef<
         )}
       </Box>
       <Box className="options-container">
-        {options.map(({ optionId, text }, index) => {
-          if (loading)
+        {loading &&
+          [1, 2, 3, 4].map((key) => (
+            <Skeleton
+              key={key}
+              variant="rectangular"
+              sx={{ height: compact ? "2em" : "4em", my: 1 }}
+            />
+          ))}
+        {!loading &&
+          options.map(({ optionId, text }, index) => {
+            const isRelevantOption = [
+              correctOptionId,
+              selectedOptionId,
+            ].includes(optionId);
+
+            if (
+              hideIrrelevant &&
+              status === "show-result" &&
+              !isRelevantOption
+            ) {
+              return null;
+            }
+
+            const [variant, color] = getOptionColor({
+              correctOptionId,
+              selectedOptionId,
+              status,
+              optionId,
+            });
             return (
               <QuestionMultipleChoiceOption
-                key={optionId}
                 fullWidth
                 size={compact ? "sm" : "lg"}
-                variant="outlined"
-                color="primary"
-                children={
-                  <Skeleton sx={{ height: "2em", width: "100%", my: 1 }} />
-                }
+                startDecorator={String.fromCharCode(65 + index)}
+                disabled={disabled}
+                key={optionId}
+                variant={variant}
+                children={text}
+                color={color}
+                onClick={() => onOptionClicked?.(optionId)}
               />
             );
-
-          const isRelevantOption = [correctOptionId, selectedOptionId].includes(
-            optionId,
-          );
-
-          if (hideIrrelevant && status === "show-result" && !isRelevantOption) {
-            return null;
-          }
-
-          const [variant, color] = getOptionColor({
-            correctOptionId,
-            selectedOptionId,
-            status,
-            optionId,
-          });
-          return (
-            <QuestionMultipleChoiceOption
-              fullWidth
-              size={compact ? "sm" : "lg"}
-              startDecorator={String.fromCharCode(65 + index)}
-              disabled={disabled}
-              key={optionId}
-              variant={variant}
-              children={text}
-              color={color}
-              onClick={() => onOptionClicked?.(optionId)}
-            />
-          );
-        })}
+          })}
       </Box>
     </QuestionMultipleChoiceBox>
   ),

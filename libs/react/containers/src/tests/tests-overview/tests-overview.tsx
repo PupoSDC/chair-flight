@@ -2,7 +2,7 @@ import React from "react";
 import { NoSsr } from "@mui/base";
 import { Box, Divider, Grid, Link, Stack, Typography } from "@mui/joy";
 import { TestPreview, Ups } from "@chair-flight/react/components";
-import { useTestProgress } from "../use-test-progress";
+import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
 import type { FunctionComponent } from "react";

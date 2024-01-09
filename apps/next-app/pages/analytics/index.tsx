@@ -1,3 +1,4 @@
+import *  as fs from "fs/promises";
 import {
   LineChart,
   Line,
@@ -8,7 +9,7 @@ import {
   Legend,
 } from "recharts";
 import { trpc } from "@chair-flight/trpc/client";
-import { getTrpcHelper } from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
 const useVisitsPerDay = trpc.analytics.visitsPerDay.useSuspenseQuery;
@@ -29,17 +30,9 @@ const AnalyticsPage: NextPage = () => {
   );
 };
 
-export async function getStaticProps() {
-  const helper = await getTrpcHelper();
-
+export const getStaticProps = staticHandler(async ({ helper }) => {
   await helper.analytics.visitsPerDay.prefetch();
-
-  return {
-    props: {
-      trpcState: helper.dehydrate(),
-    },
-    revalidate: 60 * 15,
-  };
-}
+  return { props: {}, revalidate: 60 * 15 };
+}, fs);
 
 export default AnalyticsPage;

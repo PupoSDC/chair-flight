@@ -3,7 +3,7 @@ import type { QuestionBankName } from "@chair-flight/base/types";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";
 
-export type GlobalColorSchemeProps = {
+export type ThemeOverrideColorSchemeProps = {
   questionBank?: QuestionBankName;
 };
 
@@ -25,7 +25,7 @@ const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({
   },
 });
 
-export const GlobalColorScheme: FC<GlobalColorSchemeProps> = ({
+export const ThemeOverrideColorScheme: FC<ThemeOverrideColorSchemeProps> = ({
   questionBank,
 }) => (
   <GlobalStyles

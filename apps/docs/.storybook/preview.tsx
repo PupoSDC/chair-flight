@@ -1,13 +1,12 @@
 import React, { Suspense, useEffect } from "react";
-import { default as CssBaseline } from "@mui/joy/CssBaseline";
 import { default as Typography } from "@mui/joy/Typography";
-import { CssVarsProvider, extendTheme, useColorScheme } from "@mui/joy/styles";
+import { useColorScheme } from "@mui/joy/styles";
 import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
-import { theme } from "@chair-flight/react/components";
+import { ThemeProvider, theme } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
@@ -50,10 +49,6 @@ const ToggleDarkMode = ({}) => {
   return null;
 };
 
-const joyTheme = extendTheme({
-  ...theme,
-});
-
 // Violence is, as far as i know, the only solution.
 // these colors were picked from the final computed theme. Using CSS vars
 // crashes code blocks
@@ -75,11 +70,10 @@ const preview: Preview = {
         const dark = useDarkMode();
         const docsTheme = dark ? themes.dark : themes.light;
         return (
-          <CssVarsProvider theme={joyTheme}>
-            <CssBaseline />
+          <ThemeProvider>
             <ToggleDarkMode />
             <DocsContainer {...props} theme={docsTheme} />
-          </CssVarsProvider>
+          </ThemeProvider>
         );
       },
     },
@@ -100,11 +94,10 @@ const preview: Preview = {
       </Suspense>
     ),
     (Story) => (
-      <CssVarsProvider theme={joyTheme}>
-        <CssBaseline />
+      <ThemeProvider>
         <ToggleDarkMode />
         <Story />
-      </CssVarsProvider>
+      </ThemeProvider>
     ),
     (Story) => {
       const Component = trpc.withTRPC(Story);

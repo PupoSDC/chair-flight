@@ -3,7 +3,7 @@ import { Divider, Link, Typography } from "@mui/joy";
 import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
   AppHead,
-  LayoutModuleBank,
+  LayoutModule,
   ModulesOverview,
 } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
@@ -19,7 +19,7 @@ type PageParams = {
 };
 
 const Page: NextPage<PageProps> = ({ questionBank }) => (
-  <LayoutModuleBank questionBank={questionBank}>
+  <LayoutModule questionBank={questionBank}>
     <AppHead />
     <Typography level="h2">Question Bank</Typography>
     <Divider />
@@ -27,7 +27,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => (
     <Typography level="h2">Tests</Typography>
     <Divider sx={{ mb: 2 }} />
     <Link href={`/modules/${questionBank}/tests/create`}>Create New Test</Link>
-  </LayoutModuleBank>
+  </LayoutModule>
 );
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
@@ -35,7 +35,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
     const questionBank = params.questionBank;
     if (!questionBank) throw new MissingPathParameter("questionBank");
     await ModulesOverview.getData({ helper, params });
-    await LayoutModuleBank.getData({ helper, params });
+    await LayoutModule.getData({ helper, params });
     return { props: params };
   },
   fs,

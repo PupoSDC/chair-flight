@@ -2,8 +2,10 @@
 import "@chair-flight/base/types";
 
 export * from "./app-buttons";
+export * from "./app-head";
 export * from "./app-logo";
 export * from "./blog-post-chip";
+export * from "./container-wrapper";
 export * from "./cool-sliding-thing";
 export * from "./count-up";
 export * from "./cta-search";

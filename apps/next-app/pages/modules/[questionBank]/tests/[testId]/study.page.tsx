@@ -1,83 +1,40 @@
-import { ErrorBoundary } from "react-error-boundary";
-import { useRouter } from "next/router";
-import { NoSsr } from "@mui/base";
-import { Link, Skeleton, Typography } from "@mui/joy";
-import { MissingPathParameter, NotFoundError } from "@chair-flight/base/errors";
-import { Ups } from "@chair-flight/react/components";
+import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
   AppHead,
-  LayoutModuleBank,
+  LayoutModule,
   TestStudy,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
-import type { FC } from "react";
 
-type StudyPageProps = {
+type Props = {
   testId: string;
   questionBank: QuestionBankName;
 };
 
-type StudyPageParams = {
+type Params = {
   testId: string;
   questionBank: QuestionBankName;
 };
 
-export const ErrorBoundaryFallback: FC<{ error: Error }> = ({ error }) => {
-  const router = useRouter();
-  const questionBank = router.query["questionBank"] as QuestionBankName;
-
-  const [errorMessage, color] = (() => {
-    if (error instanceof NotFoundError) {
-      return ["Test not found", undefined];
-    }
-    return ["Unexpected Error", "danger" as const];
-  })();
-
-  return (
-    <Ups
-      sx={{ height: "100%" }}
-      color={color}
-      message={errorMessage}
-      children={
-        <>
-          <Typography>
-            <Link href={"."} onClick={() => router.reload()}>
-              Refresh
-            </Link>
-          </Typography>
-          <Typography>
-            or go to <Link href={`/modules/${questionBank}/tests`}>Tests</Link>
-          </Typography>
-        </>
-      }
-    />
-  );
-};
-
-export const StudyPage: NextPage<StudyPageProps> = ({
-  testId,
-  questionBank,
-}) => (
-  <LayoutModuleBank questionBank={questionBank} noPadding fixedHeight>
+export const Page: NextPage<Props> = ({ testId, questionBank }) => (
+  <LayoutModule questionBank={questionBank} noPadding fixedHeight>
     <AppHead />
-    <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
-      <NoSsr fallback={<Skeleton height={"500px"} />}>
-        <TestStudy testId={testId} />
-      </NoSsr>
-    </ErrorBoundary>
-  </LayoutModuleBank>
+    <TestStudy testId={testId} />
+  </LayoutModule>
 );
 
-export const getServerSideProps = ssrHandler<StudyPageProps, StudyPageParams>(
-  async ({ context }) => {
-    const testId = context.params?.testId;
-    const questionBank = context.params?.questionBank;
+export const getServerSideProps = ssrHandler<Props, Params>(
+  async ({ helper, params }) => {
+    const testId = params?.testId;
+    const questionBank = params?.questionBank;
     if (!testId) throw new MissingPathParameter("testId");
     if (!questionBank) throw new MissingPathParameter("questionBank");
+    await LayoutModule.getData({ helper, params });
+    await TestStudy.getData({ helper, params });
     return { props: { testId, questionBank } };
   },
 );
 
-export default StudyPage;
+export default Page;

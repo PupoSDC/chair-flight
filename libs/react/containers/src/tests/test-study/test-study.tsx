@@ -29,6 +29,7 @@ import {
 import { Duration } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
 import {
+  ContainerWrapper,
   ImageViewer,
   MarkdownClient,
   QuestionMultipleChoice,
@@ -36,19 +37,22 @@ import {
   Ups,
   useMediaQuery,
 } from "@chair-flight/react/components";
-import { useTestProgress } from "../use-test-progress";
-import { useTestHotkeys } from "../use-test-progress-hotkeys";
-import { useTestProgressTime } from "../use-test-progress-time";
+import { TestError } from "../components/test-error";
+import { TestLoading } from "../components/test-loading";
+import { useTestProgress } from "../hooks/use-test-progress";
+import { useTestHotkeys } from "../hooks/use-test-progress-hotkeys";
+import { useTestProgressTime } from "../hooks/use-test-progress-time";
+import type { ContainerComponent } from "../../types";
 import type { DrawingPoints } from "@chair-flight/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
-type TestStudyProps = {
+type Props = {
   testId: string;
   onMenuClicked?: () => void;
 };
 
-export const TestStudy: FunctionComponent<TestStudyProps> = ({
+const TestStudyComponent: FunctionComponent<Props> = ({
   testId,
   onMenuClicked,
 }) => {
@@ -316,3 +320,16 @@ export const TestStudy: FunctionComponent<TestStudyProps> = ({
     </Stack>
   );
 };
+
+export const TestStudy: ContainerComponent<Props> = (props) => (
+  <ContainerWrapper
+    noSsr
+    ErrorFallbackComponent={TestError}
+    LoadingFallbackComponent={TestLoading}
+  >
+    <TestStudyComponent {...props} />
+  </ContainerWrapper>
+);
+
+TestStudy.getData = async () => ({});
+TestStudy.useData = () => ({});

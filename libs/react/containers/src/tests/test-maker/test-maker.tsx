@@ -21,7 +21,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
-import { useTestProgress } from "../use-test-progress";
+import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName, Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";

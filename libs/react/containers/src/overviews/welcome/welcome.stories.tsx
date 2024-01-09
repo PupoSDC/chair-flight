@@ -1,4 +1,4 @@
-import { Global, css } from "@emotion/react";
+import { Global } from "@emotion/react";
 import { Box } from "@mui/joy";
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { Welcome } from "./welcome";

@@ -50,7 +50,6 @@ export const ssrHandler = <
       if (castResponse.props) {
         castResponse.props["trpcState"] = helper.dehydrate();
       }
-
       return response;
     } catch (error) {
       const resolution = handleError<Props>(error);

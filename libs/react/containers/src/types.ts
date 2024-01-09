@@ -1,9 +1,11 @@
-import { FunctionComponent } from "react";
-import { TrpcHelper } from "libs/trpc/server/src/next/trpc-helper";
+import type { TrpcHelper } from "@chair-flight/trpc/server";
+import type { FunctionComponent } from "react";
 
-export type ContainerComponent<Props, Params, Data> = FunctionComponent<
-  Props & Params
-> & {
+export type ContainerComponent<
+  Props = Record<string, never>,
+  Params = Record<string, never>,
+  Data = Params,
+> = FunctionComponent<Props & Params> & {
   getData: (args: { helper: TrpcHelper; params: Params }) => Promise<Data>;
   useData: (params: Params) => Data;
 };

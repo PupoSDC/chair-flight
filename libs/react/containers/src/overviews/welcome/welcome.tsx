@@ -5,17 +5,7 @@ import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicke
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as StyleIcon } from "@mui/icons-material/Style";
-import {
-  Button,
-  Box,
-  Divider,
-  Grid,
-  Link,
-  Typography,
-  styled,
-  BoxProps,
-} from "@mui/joy";
-import { QuestionBankName } from "@chair-flight/base/types";
+import { Button, Box, Divider, Grid, Link, Typography, styled } from "@mui/joy";
 import {
   CountUp,
   ModuleSelectionButton,
@@ -23,7 +13,9 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { LayoutPublic } from "../../layouts/layout-public";
-import { ContainerComponent } from "../../types";
+import type { ContainerComponent } from "../../types";
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { BoxProps } from "@mui/joy";
 
 type Theme = "b737" | "atpl" | "prep";
 
@@ -43,6 +35,8 @@ const RightContainer = styled(Grid)`
   }
 `;
 
+type Props = Pick<BoxProps, "sx">;
+
 type Data = {
   numberOfFlashcards: number;
   numberOfAtplQuestions: number;
@@ -50,7 +44,9 @@ type Data = {
   numberOfA320Questions: number;
 };
 
-export const Welcome: ContainerComponent<BoxProps, {}, Data> = ({ sx }) => {
+type Params = Record<string, never>;
+
+export const Welcome: ContainerComponent<Props, Params, Data> = ({ sx }) => {
   const rightSideContainer = useRef<HTMLDivElement>(null);
   const [questionBank, setQuestionBank] = useState<QuestionBankName>();
   const {

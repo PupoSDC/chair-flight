@@ -1,12 +1,13 @@
-import {
+import { questionBanks } from "@chair-flight/core/question-bank";
+import { getTrpcHelper } from "./trpc-helper";
+import type { TrpcHelper } from "./trpc-helper";
+import type {
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
   PreviewData,
 } from "next/types";
-import { ParsedUrlQuery } from "querystring";
-import { questionBanks } from "@chair-flight/core/question-bank";
-import { TrpcHelper, getTrpcHelper } from "./trpc-helper";
+import type { ParsedUrlQuery } from "querystring";
 
 type FS = {
   readFile: (path: string, string: "utf-8") => Promise<string>;

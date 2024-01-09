@@ -5,7 +5,7 @@ import type { FunctionComponent } from "react";
 const RESIZE_CLASS_NAME = "resize-animation-stopper";
 let resizeTimer: ReturnType<typeof setTimeout>;
 
-export const StopResizeAnimation: FunctionComponent = () => {
+export const ThemeStopResizeAnimation: FunctionComponent = () => {
   useEffect(() => {
     const listener = () => {
       document.body.classList.add(RESIZE_CLASS_NAME);

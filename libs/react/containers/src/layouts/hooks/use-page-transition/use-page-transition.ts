@@ -1,19 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { LinearProgress } from "@mui/joy";
 import { useAnalytics } from "@chair-flight/react/analytics";
 
-/**
- * Animates a linear progress bar on route change.
- *
- * It also triggers the page view event on route change.
- */
-export const AppTransition = () => {
+export const usePageTransition = () => {
   const hasMounted = useRef(false);
   const router = useRouter();
   const analytics = useAnalytics();
   const oldRoute = useRef<string>(router.asPath);
-  const [visible, setVisible] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   oldRoute.current = router.asPath;
 
   useEffect(() => {
@@ -31,11 +25,11 @@ export const AppTransition = () => {
   useEffect(() => {
     const onStart = (e: string) => {
       if (e.split("?")[0] === oldRoute.current.split("?")[0]) return;
-      setVisible(true);
+      setIsTransitioning(true);
     };
 
     const onEnd = () => {
-      setVisible(false);
+      setIsTransitioning(false);
     };
 
     router.events.on("routeChangeStart", onStart);
@@ -46,17 +40,5 @@ export const AppTransition = () => {
     };
   }, [router.events]);
 
-  return (
-    <LinearProgress
-      sx={{
-        "--LinearProgress-radius": 0,
-        transition: `bottom ${visible ? "0.2s" : "0.7s"} ease`,
-        position: "fixed",
-        bottom: visible ? 0 : -6,
-        left: "-5%",
-        width: "110%",
-        zIndex: 1000,
-      }}
-    />
-  );
+  return { isTransitioning };
 };

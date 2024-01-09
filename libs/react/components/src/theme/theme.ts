@@ -1,5 +1,5 @@
 import { extendTheme } from "@mui/joy";
-import type { CssVarsThemeOptions } from "@mui/joy";
+import { ThemeCustomLink } from "./theme-custom-link";
 
 const basicTheme = extendTheme();
 
@@ -80,7 +80,7 @@ const lightBackground = {
   },
 };
 
-export const theme: CssVarsThemeOptions = extendTheme({
+export const theme = extendTheme({
   typography: {
     h1: {
       fontSize: "2.8rem",
@@ -137,6 +137,11 @@ export const theme: CssVarsThemeOptions = extendTheme({
             textDecoration: "none",
           },
         }),
+      },
+    },
+    JoyLink: {
+      defaultProps: {
+        component: ThemeCustomLink,
       },
     },
   },

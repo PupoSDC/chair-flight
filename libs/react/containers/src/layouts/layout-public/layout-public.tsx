@@ -1,10 +1,11 @@
-import { Box, Link, Stack } from "@mui/joy";
+import { Box, LinearProgress, Link, Stack } from "@mui/joy";
 import { useAnalytics } from "@chair-flight/react/analytics";
 import {
   AppLogo,
   GithubButton,
   ThemeButton,
 } from "@chair-flight/react/components";
+import { usePageTransition } from "../hooks/use-page-transition";
 import type { FunctionComponent, ReactElement } from "react";
 
 const HEADER_HEIGHT = 48;
@@ -30,6 +31,7 @@ export const LayoutPublic: LayoutPublicComponent = ({
   noPadding,
 }) => {
   const { track } = useAnalytics();
+  const { isTransitioning } = usePageTransition();
 
   return (
     <>
@@ -103,6 +105,17 @@ export const LayoutPublic: LayoutPublicComponent = ({
           ...(fixedHeight ? { height: HEIGHT } : { minHeight: HEIGHT }),
           ...(noPadding ? {} : { p: { xs: 2, md: 4 } }),
           ...(noPadding ? {} : { maxWidth: "md" }),
+        }}
+      />
+      <LinearProgress
+        sx={{
+          "--LinearProgress-radius": 0,
+          transition: `bottom ${isTransitioning ? "0.2s" : "0.7s"} ease`,
+          position: "fixed",
+          bottom: isTransitioning ? 0 : -6,
+          left: "-5%",
+          width: "110%",
+          zIndex: 1000,
         }}
       />
     </>

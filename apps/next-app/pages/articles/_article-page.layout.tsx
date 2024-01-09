@@ -34,28 +34,25 @@ export const ArticlePageLayout: FunctionComponent<ArticlePageLayoutProps> = ({
         children={children}
         components={{
           h1: ({ children }) => (
-            <Typography
-              level="h1"
-              component="h1"
-              sx={{ mb: 0.5 }}
-              children={children}
-            />
+            <Typography level="h1" sx={{ mb: 0.5 }} children={children} />
           ),
           h2: ({ children }) => (
-            <Typography level="h2" component="h2" children={children} />
+            <Typography level="h2" children={children} />
           ),
           h3: ({ children }) => (
-            <Typography level="h3" component="h3" children={children} />
+            <Typography level="h3" children={children} />
           ),
           h4: ({ children }) => (
-            <Typography level="h4" component="h4" children={children} />
+            <Typography level="h4" children={children} />
           ),
           h5: ({ children }) => (
-            <Typography level="h5" component="h5" children={children} />
+            <Typography level="h5" children={children} />
           ),
-          hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
+          hr: () => (
+            <Divider sx={{ width: "100%", my: 2 }} />
+          ),
           p: ({ children }) => (
-            <Typography level="body-md" component="p" children={children} />
+            <Typography level="body-md" children={children} />
           ),
         }}
       />

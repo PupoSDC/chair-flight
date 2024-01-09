@@ -5,15 +5,16 @@ import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutli
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
-import { Box, listItemContentClasses } from "@mui/joy";
+import { Box, LinearProgress, listItemContentClasses } from "@mui/joy";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
+  ThemeOverrideColorScheme,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { ContainerComponent } from "../../types";
-import { GlobalColorScheme } from "../global-color-scheme";
+import { usePageTransition } from "../hooks/use-page-transition";
+import type { ContainerComponent } from "../../types";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
 type Props = {
@@ -33,14 +34,15 @@ type Data = {
   hasMedia: boolean;
 };
 
-export const LayoutModuleBank: ContainerComponent<Props, Params, Data> = ({
+export const LayoutModule: ContainerComponent<Props, Params, Data> = ({
   children,
   fixedHeight,
   noPadding,
   questionBank,
 }) => {
+  const { isTransitioning } = usePageTransition();
   const router = useRouter();
-  const config = LayoutModuleBank.useData({ questionBank });
+  const config = LayoutModule.useData({ questionBank });
 
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -51,7 +53,7 @@ export const LayoutModuleBank: ContainerComponent<Props, Params, Data> = ({
 
   return (
     <>
-      <GlobalColorScheme questionBank={questionBank} />
+      <ThemeOverrideColorScheme questionBank={questionBank} />
       <Sidebar sx={{ height: "100vh" }}>
         <SidebarListItem
           href={"/"}
@@ -134,16 +136,29 @@ export const LayoutModuleBank: ContainerComponent<Props, Params, Data> = ({
           ...(fixedHeight ? { height: "100vh" } : {}),
         }}
       />
+      <LinearProgress
+        sx={{
+          "--LinearProgress-radius": 0,
+          transition: `bottom ${isTransitioning ? "0.2s" : "0.7s"} ease`,
+          position: "fixed",
+          bottom: isTransitioning ? 0 : -6,
+          right: "-5%",
+          width: `calc(${Sidebar.css.remainingWidth} + 10%)`,
+          zIndex: 1000,
+        }}
+      />
     </>
   );
 };
 
-LayoutModuleBank.getData = async ({ helper, params }) => {
-  return await helper.questionBank.getConfig.fetch(params);
+LayoutModule.getData = async ({ helper, params }) => {
+  const { questionBank } = params;
+  return await helper.questionBank.getConfig.fetch({ questionBank });
 };
 
-LayoutModuleBank.useData = (params) => {
+LayoutModule.useData = (params) => {
   const qb = trpc.questionBank;
-  const [config] = qb.getConfig.useSuspenseQuery(params);
+  const { questionBank } = params;
+  const [config] = qb.getConfig.useSuspenseQuery({ questionBank });
   return config;
 };

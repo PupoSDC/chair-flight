@@ -1,14 +1,20 @@
 import { Box, CircularProgress, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { TestQuestionResult } from "@chair-flight/react/components";
-import { useTestProgress } from "../use-test-progress";
+import {
+  ContainerWrapper,
+  TestQuestionResult,
+} from "@chair-flight/react/components";
+import { TestError } from "../components/test-error";
+import { TestLoading } from "../components/test-loading";
+import { useTestProgress } from "../hooks/use-test-progress";
+import type { ContainerComponent } from "../../types";
 import type { FunctionComponent } from "react";
 
-export type TestReviewProps = {
+type Props = {
   testId: string;
 };
 
-export const TestReview: FunctionComponent<TestReviewProps> = ({ testId }) => {
+const TestReviewComponent: FunctionComponent<Props> = ({ testId }) => {
   const test = useTestProgress((s) => s.tests[testId]);
   const totalQuestions = test.questions.length;
   const correctQuestions = test.questions.reduce(
@@ -105,3 +111,16 @@ export const TestReview: FunctionComponent<TestReviewProps> = ({ testId }) => {
     </>
   );
 };
+
+export const TestReview: ContainerComponent<Props> = (props) => (
+  <ContainerWrapper
+    noSsr
+    ErrorFallbackComponent={TestError}
+    LoadingFallbackComponent={TestLoading}
+  >
+    <TestReviewComponent {...props} />
+  </ContainerWrapper>
+);
+
+TestReview.getData = async () => ({});
+TestReview.useData = () => ({});

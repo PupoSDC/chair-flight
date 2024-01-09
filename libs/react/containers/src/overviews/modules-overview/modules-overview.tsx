@@ -4,11 +4,11 @@ import { keyframes } from "@emotion/react";
 import { default as CheckIcon } from "@mui/icons-material/CheckOutlined";
 import { Box, Card, CardContent, CardCover, Grid, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
-import { ContainerComponent } from "../../types";
 import { default as previewA320 } from "./images/a320.png";
 import { default as previewAtpl } from "./images/atpl.png";
 import { default as previewB737 } from "./images/b737.png";
 import { default as previewPrep } from "./images/prep.png";
+import type { ContainerComponent } from "../../types";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GridProps } from "@mui/joy";
 

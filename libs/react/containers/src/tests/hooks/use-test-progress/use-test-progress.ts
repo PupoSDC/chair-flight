@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
-import { useUserPreferences } from "../../hooks/use-user-preferences";
+import { useUserPreferences } from "../../../user/hooks/use-user-preferences";
 import type { Test } from "@chair-flight/base/types";
 
 type TestProgress = {
