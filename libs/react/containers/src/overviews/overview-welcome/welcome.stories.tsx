@@ -1,5 +1,6 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { OverviewWelcome } from "./welcome";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof OverviewWelcome>;
@@ -10,12 +11,22 @@ const meta: Meta<typeof OverviewWelcome> = {
   title: "Containers/Overviews/OverviewWelcome",
   component: OverviewWelcome,
   tags: ["autodocs"],
+  args: {
+    sx: {
+      height: "100vh",
+    },
+  },
+  argTypes: {
+    questionBank: {
+      control: "select",
+      options: ["atpl", "a320", "b737", "prep"] as QuestionBankName[],
+    },
+  },
   parameters: {
     layout: "fullscreen",
     docs: {
       story: {
-        inline: false,
-        iframeHeight: 700,
+        height: 700,
       },
     },
     msw: {

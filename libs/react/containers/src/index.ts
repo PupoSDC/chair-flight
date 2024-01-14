@@ -1,3 +1,5 @@
+export * from "./flashcards/flashcard-test";
+export * from "./flashcards/flashcard-collection-list";
 export * from "./questions/question-editor";
 export * from "./questions/question-overview";
 export * from "./questions/question-search";

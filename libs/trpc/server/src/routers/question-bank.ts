@@ -144,8 +144,8 @@ export const questionBankRouter = router({
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
       const id = input.collectionId;
-      const flashcards = await qb.getOne("flashcards", id);
-      return { flashcards };
+      const flashcardCollection = await qb.getOne("flashcards", id);
+      return { flashcardCollection };
     }),
   getNumberOfQuestions: publicProcedure
     .input(z.object({ questionBank }))

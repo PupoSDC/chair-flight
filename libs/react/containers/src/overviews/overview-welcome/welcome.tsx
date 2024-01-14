@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { NoSsr } from "@mui/base";
 import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicket";
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
@@ -17,9 +17,11 @@ import type { QuestionBankName } from "@chair-flight/base/types";
 
 type Theme = "b737" | "atpl" | "prep";
 
-const HEADER_HEIGHT = 48;
-
-type Props = Record<string, never>;
+type Props = {
+  headerHeight?: number;
+  questionBank?: QuestionBankName;
+  onQuestionBankChanged: (questionBank: QuestionBankName) => void;
+};
 
 type Data = {
   numberOfFlashcards: number;
@@ -31,9 +33,14 @@ type Data = {
 type Params = Record<string, never>;
 
 export const OverviewWelcome = container<Props, Params, Data>(
-  ({ sx, component = "section" }) => {
+  ({
+    questionBank,
+    onQuestionBankChanged,
+    sx,
+    headerHeight = 0,
+    component = "section",
+  }) => {
     const rightSideContainer = useRef<HTMLDivElement>(null);
-    const [questionBank, setQuestionBank] = useState<QuestionBankName>();
     const {
       numberOfFlashcards,
       numberOfAtplQuestions,
@@ -44,7 +51,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
     const mediaLongScreen = "@media (min-height: 560px) and (min-width: 440px)";
 
     const goToTheme = (theme: Theme) => {
-      setQuestionBank(theme);
+      onQuestionBankChanged(theme);
       const top = rightSideContainer.current?.offsetTop ?? 0;
       setTimeout(
         () => window.scrollTo({ top: top - 50, behavior: "smooth" }),
@@ -57,12 +64,22 @@ export const OverviewWelcome = container<Props, Params, Data>(
         component={component}
         sx={{
           display: "flex",
-          p: { xs: 2, md: 4 },
-          flexDirection: { xs: "column", md: "row" },
-          minHeight: "100%",
+          p: {
+            xs: 2,
+            md: 4,
+          },
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+          height: {
+            xs: "100%",
+            md: `calc(100vh - ${headerHeight}px)`,
+          },
           maxWidth: 1240,
           mx: "auto",
           position: "relative",
+
           ...sx,
         }}
       >
@@ -72,10 +89,14 @@ export const OverviewWelcome = container<Props, Params, Data>(
             flexDirection: "column",
             alignItems: "flex-start",
             mx: "auto",
-            top: "50%",
+
             justifyContent: {
               xs: "space-around",
               md: "center",
+            },
+            minHeight: {
+              xs: `calc(100vh - ${headerHeight}px - ${t.spacing(2)})`,
+              md: `calc(100vh - ${headerHeight}px - ${t.spacing(4)})`,
             },
             maxWidth: {
               xs: 620,
@@ -86,9 +107,13 @@ export const OverviewWelcome = container<Props, Params, Data>(
               xs: "relative",
               md: "absolute",
             },
+            top: {
+              xs: "initial",
+              md: "50%",
+            },
             transform: {
               xs: "none",
-              md: `translate(0, calc(-50% + ${HEADER_HEIGHT} / 2))`,
+              md: `translate(0, -50%)`,
             },
             "& > *": {
               mb: 1,
@@ -149,7 +174,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
             <ModuleSelectionButton
               fullWidth
               sx={{ mb: { xs: 1, md: 2 } }}
-              color={"blue"}
+              color={"teal"}
               title={"Interview Prep"}
               description={[
                 "Use our flash cards to practice answering open ended ",
@@ -163,7 +188,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
             <ModuleSelectionButton
               fullWidth
               sx={{ mb: { xs: 1, md: 2 } }}
-              color={"blue"}
+              color={"rose"}
               title={"Type Rating"}
               active={["737", "a320"].includes(questionBank ?? "")}
               description={[
@@ -184,198 +209,201 @@ export const OverviewWelcome = container<Props, Params, Data>(
           />
         </Box>
         <Divider sx={{ my: 2, display: { sm: "none" } }} />
-        <Box
-          ref={rightSideContainer}
-          sx={(t) => ({
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            mx: "auto",
-            width: "100%",
-            margin: {
-              xs: "auto",
-              md: "0 0 0 auto",
-            },
-            justifyContent: {
-              xs: "space-around",
-              md: "center",
-            },
-            maxWidth: {
-              xs: 620,
-              md: `calc(100% - ${460}px - ${t.spacing(2)})`,
-              lg: `calc(100% - ${620}px - ${t.spacing(2)})`,
-            },
-            minHeight: {
-              xs: `calc(100vh - ${HEADER_HEIGHT} - ${t.spacing(2)})`,
-              md: `100%`,
-            },
-          })}
-        >
-          <NoSsr>
-            {questionBank === "atpl" && (
-              <RightContainer container xs={6}>
-                <Typography
-                  level="h3"
-                  component="h2"
-                  sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
-                >
-                  {`Explore `}
-                  <CountUp
-                    component={"span"}
-                    end={numberOfAtplQuestions}
-                    duration={2000}
-                    sx={{
-                      color: "primary.500",
-                      width: "3.2em",
-                      display: "inline-flex",
-                      justifyContent: "flex-end",
-                    }}
+        {questionBank && (
+          <Box
+            ref={rightSideContainer}
+            sx={(t) => ({
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              mx: "auto",
+              width: "100%",
+              minHeight: {
+                xs: `calc(100vh - ${headerHeight}px - ${t.spacing(2)})`,
+                md: `calc(100vh - ${headerHeight}px - ${t.spacing(4)})`,
+              },
+              margin: {
+                xs: "auto",
+                md: "0 0 0 auto",
+              },
+              justifyContent: {
+                xs: "space-around",
+                md: "center",
+              },
+              maxWidth: {
+                xs: 620,
+                md: `calc(100% - ${460}px - ${t.spacing(2)})`,
+                lg: `calc(100% - ${620}px - ${t.spacing(2)})`,
+              },
+            })}
+          >
+            <NoSsr>
+              {questionBank === "atpl" && (
+                <RightContainer container xs={6}>
+                  <Typography
+                    level="h3"
+                    component="h2"
+                    sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
+                  >
+                    {`Explore `}
+                    <CountUp
+                      component={"span"}
+                      end={numberOfAtplQuestions}
+                      duration={2000}
+                      sx={{
+                        color: "primary.500",
+                        width: "3.2em",
+                        display: "inline-flex",
+                        justifyContent: "flex-end",
+                      }}
+                    />
+                    {` questions`}
+                    <br />
+                    {`In infinite combinations`}
+                  </Typography>
+                  <Typography level="h4" component="p" sx={{ mt: 2 }}>
+                    Chair Flight&apos;s questions are organized into variants,
+                    enabling you to practice challenging questions repeatedly
+                    and promptly skip variants of questions you already
+                    comprehend.
+                  </Typography>
+                  <Grid container spacing={{ xs: 1, sm: 2 }} sx={{ pt: 2 }}>
+                    <Grid xs={12} lg={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Explore Learning Objectives"}
+                        href="/modules/atpl/learning-objectives"
+                      />
+                    </Grid>
+                    <Grid xs={12} lg={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Explore Questions"}
+                        href="/modules/atpl/questions"
+                      />
+                    </Grid>
+                    <Grid xs={12} lg={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Create a Test"}
+                        href="/modules/atpl/tests/create"
+                      />
+                    </Grid>
+                    <Grid xs={12} lg={6}>
+                      <Button
+                        fullWidth
+                        disabled
+                        size="lg"
+                        component={Link}
+                        children={"Coming soon"}
+                        href="/questions"
+                      />
+                    </Grid>
+                  </Grid>
+                </RightContainer>
+              )}
+              {questionBank === "prep" && (
+                <RightContainer container xs={6}>
+                  <Typography
+                    level="h3"
+                    component="h2"
+                    sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
+                  >
+                    {`Prepare your next interview with `}
+                    <CountUp
+                      component={"span"}
+                      end={numberOfFlashcards}
+                      duration={2000}
+                      sx={{
+                        color: "primary.500",
+                        width: "1.8em",
+                        display: "inline-flex",
+                        justifyContent: "flex-end",
+                      }}
+                    />
+                    {` flashcards`}
+                  </Typography>
+                  <Typography level="h4" component="p" sx={{ mt: 2 }}>
+                    When you get to your first job interview, you won&apos;t
+                    have the benefit of being able to select the best out of 4
+                    answers. You will have to explain the topics you have
+                    learned in the theory classes without any crutches. <br />
+                    Use our flash cards to practice answering open ended
+                    questions and secure your first job.
+                  </Typography>
+                  <Button
+                    fullWidth
+                    size="lg"
+                    component={Link}
+                    children={"Explore Flash Cards"}
+                    href="/modules/prep/flashcards"
+                    sx={{ my: 2 }}
                   />
-                  {` questions`}
-                  <br />
-                  {`In infinite combinations`}
-                </Typography>
-                <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                  Chair Flight&apos;s questions are organized into variants,
-                  enabling you to practice challenging questions repeatedly and
-                  promptly skip variants of questions you already comprehend.
-                </Typography>
-                <Grid container spacing={{ xs: 1, sm: 2 }} sx={{ pt: 2 }}>
-                  <Grid xs={12} lg={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Explore Learning Objectives"}
-                      href="/modules/atpl/learning-objectives"
-                    />
+                </RightContainer>
+              )}
+              {questionBank === "b737" && (
+                <RightContainer container xs={6}>
+                  <Typography
+                    level="h3"
+                    component="h2"
+                    sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
+                  >
+                    {`Prepare your next Type Rating exam`}
+                  </Typography>
+                  <Typography level="h4" component="p" sx={{ mt: 2 }}>
+                    Review the most commonly asked tech knowledge questions for
+                    the 2 most popular aircraft in the world: the Airbus A320
+                    and Boeing 737
+                  </Typography>
+                  <Grid container spacing={2} sx={{ pt: 2 }}>
+                    <Grid xs={12} sm={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Explore 737 Questions"}
+                        href="/modules/b737/questions"
+                      />
+                    </Grid>
+                    <Grid xs={12} sm={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Create 737 Test"}
+                        href="/modules/b737/tests/create"
+                      />
+                    </Grid>
+                    <Grid xs={12} sm={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Explore A320 Questions"}
+                        href="/modules/a320/questions"
+                      />
+                    </Grid>
+                    <Grid xs={12} sm={6}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        component={Link}
+                        children={"Create A320 Test"}
+                        href="/modules/a320/tests/create"
+                      />
+                    </Grid>
                   </Grid>
-                  <Grid xs={12} lg={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Explore Questions"}
-                      href="/modules/atpl/questions"
-                    />
-                  </Grid>
-                  <Grid xs={12} lg={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Create a Test"}
-                      href="/modules/atpl/tests/create"
-                    />
-                  </Grid>
-                  <Grid xs={12} lg={6}>
-                    <Button
-                      fullWidth
-                      disabled
-                      size="lg"
-                      component={Link}
-                      children={"Coming soon"}
-                      href="/questions"
-                    />
-                  </Grid>
-                </Grid>
-              </RightContainer>
-            )}
-            {questionBank === "prep" && (
-              <RightContainer container xs={6}>
-                <Typography
-                  level="h3"
-                  component="h2"
-                  sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
-                >
-                  {`Prepare your next interview with `}
-                  <CountUp
-                    component={"span"}
-                    end={numberOfFlashcards}
-                    duration={2000}
-                    sx={{
-                      color: "primary.500",
-                      width: "1.8em",
-                      display: "inline-flex",
-                      justifyContent: "flex-end",
-                    }}
-                  />
-                  {` flashcards`}
-                </Typography>
-                <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                  When you get to your first job interview, you won&apos;t have
-                  the benefit of being able to select the best out of 4 answers.
-                  You will have to explain the topics you have learned in the
-                  theory classes without any crutches. <br />
-                  Use our flash cards to practice answering open ended questions
-                  and secure your first job.
-                </Typography>
-                <Button
-                  fullWidth
-                  size="lg"
-                  component={Link}
-                  children={"Explore Flash Cards"}
-                  href="/modules/prep/flashcards"
-                  sx={{ my: 2 }}
-                />
-              </RightContainer>
-            )}
-            {questionBank === "b737" && (
-              <RightContainer container xs={6}>
-                <Typography
-                  level="h3"
-                  component="h2"
-                  sx={{ fontSize: { md: "3em" }, lineHeight: 1.2 }}
-                >
-                  {`Prepare your next Type Rating exam`}
-                </Typography>
-                <Typography level="h4" component="p" sx={{ mt: 2 }}>
-                  Review the most commonly asked tech knowledge questions for
-                  the 2 most popular aircraft in the world: the Airbus A320 and
-                  Boeing 737
-                </Typography>
-                <Grid container spacing={2} sx={{ pt: 2 }}>
-                  <Grid xs={12} sm={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Explore 737 Questions"}
-                      href="/modules/b737/questions"
-                    />
-                  </Grid>
-                  <Grid xs={12} sm={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Create 737 Test"}
-                      href="/modules/b737/tests/create"
-                    />
-                  </Grid>
-                  <Grid xs={12} sm={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Explore A320 Questions"}
-                      href="/modules/a320/questions"
-                    />
-                  </Grid>
-                  <Grid xs={12} sm={6}>
-                    <Button
-                      fullWidth
-                      size="lg"
-                      component={Link}
-                      children={"Create A320 Test"}
-                      href="/modules/a320/tests/create"
-                    />
-                  </Grid>
-                </Grid>
-              </RightContainer>
-            )}
-          </NoSsr>
-        </Box>
+                </RightContainer>
+              )}
+            </NoSsr>
+          </Box>
+        )}
       </Box>
     );
   },

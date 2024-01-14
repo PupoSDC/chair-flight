@@ -27,13 +27,11 @@ const meta: Meta<typeof QuestionSearch> = {
             items,
             nextCursor: 20,
             totalResults: items.length,
-          }
+          };
         }),
       ],
     },
   },
 };
-
-
 
 export default meta;

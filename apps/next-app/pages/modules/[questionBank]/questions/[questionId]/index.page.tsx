@@ -11,14 +11,14 @@ import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
-type QuestionPageParams = {
+type PageParams = {
   seed?: string;
   questionId?: string;
   variantId?: string;
   questionBank?: QuestionBankName;
 };
 
-type QuestionPageProps = {
+type PageProps = {
   initialVariantId: string;
   initialQuestionId: string;
   initialQuestionBank: QuestionBankName;
@@ -26,7 +26,7 @@ type QuestionPageProps = {
   linkDescription: string;
 };
 
-const QuestionPage: NextPage<QuestionPageProps> = ({
+const Page: NextPage<PageProps> = ({
   initialVariantId,
   initialQuestionId,
   initialQuestionBank,
@@ -34,7 +34,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   linkDescription,
 }) => {
   const router = useRouter();
-  const query = router.query as QuestionPageParams;
+  const query = router.query as PageParams;
   const seed = query.seed ?? initialSeed;
   const variantId = query.variantId ?? initialVariantId;
   const questionBank = query.questionBank ?? initialQuestionBank;
@@ -63,42 +63,41 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   );
 };
 
-export const getServerSideProps = ssrHandler<
-  QuestionPageProps,
-  QuestionPageParams
->(async ({ params, helper, context }) => {
-  const { questionId, questionBank } = params;
-  if (!questionId) throw new MissingPathParameter("questionId");
-  if (!questionBank) throw new MissingPathParameter("questionBank");
-  const variantIdFromQuery = context.query?.["variantId"] as string;
-  const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
-  const initialQuestionId = questionId;
-  const shuffle = getRandomShuffler("123");
+export const getServerSideProps = ssrHandler<PageProps, PageParams>(
+  async ({ params, helper, context }) => {
+    const { questionId, questionBank } = params;
+    if (!questionId) throw new MissingPathParameter("questionId");
+    if (!questionBank) throw new MissingPathParameter("questionBank");
+    const variantIdFromQuery = context.query?.["variantId"] as string;
+    const initialSeed = (context.query?.["seed"] ?? getRandomId()) as string;
+    const initialQuestionId = questionId;
+    const shuffle = getRandomShuffler("123");
 
-  const { questionTemplate } = await helper.questionBank.getQuestion.fetch({
-    questionId,
-    questionBank,
-  });
+    const { questionTemplate } = await helper.questionBank.getQuestion.fetch({
+      questionId,
+      questionBank,
+    });
 
-  const initialVariantId = questionTemplate.variants[variantIdFromQuery]
-    ? variantIdFromQuery
-    : shuffle(Object.values(questionTemplate.variants))[0].id;
+    const initialVariantId = questionTemplate.variants[variantIdFromQuery]
+      ? variantIdFromQuery
+      : shuffle(Object.values(questionTemplate.variants))[0].id;
 
-  const linkDescription = getQuestionPreview(
-    questionTemplate,
-    initialVariantId,
-  );
-
-  return {
-    props: {
+    const linkDescription = getQuestionPreview(
+      questionTemplate,
       initialVariantId,
-      initialQuestionId,
-      initialQuestionBank: questionBank,
-      initialSeed,
-      linkDescription,
-      trpcState: helper.dehydrate(),
-    },
-  };
-});
+    );
 
-export default QuestionPage;
+    return {
+      props: {
+        initialVariantId,
+        initialQuestionId,
+        initialQuestionBank: questionBank,
+        initialSeed,
+        linkDescription,
+        trpcState: helper.dehydrate(),
+      },
+    };
+  },
+);
+
+export default Page;

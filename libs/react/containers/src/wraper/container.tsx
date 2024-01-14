@@ -16,7 +16,7 @@ export type CommonComponentProps = {
 
 export type Container<
   Props extends Record<string, unknown> = Record<string, never>,
-  Params = Record<string, never>,
+  Params = Record<string, unknown>,
   Data = Params,
 > = FunctionComponent<Props & CommonComponentProps & CommonContainerProps> & {
   getData: (args: { helper: TrpcHelper; params: Params }) => Promise<Data>;
@@ -27,7 +27,7 @@ export type Container<
 
 export const container = <
   Props extends Record<string, unknown> = Record<string, never>,
-  Params = Record<string, never>,
+  Params = Record<string, unknown>,
   Data = Params,
 >(
   Component: FunctionComponent<

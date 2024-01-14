@@ -1,44 +1,42 @@
-import { useRouter } from "next/router";
+import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, QuestionEditor } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
 
-type QuestionPageProps = {
+type PageProps = {
+  questionId: string;
   questionBank: QuestionBankName;
 };
 
-type QuestionPageParams = {
-  questionId?: string;
-  questionBank?: QuestionBankName;
+type PageParams = {
+  questionId: string;
+  questionBank: QuestionBankName;
 };
 
-export const EditQuestionPage: NextPage<
-  QuestionPageProps,
-  QuestionPageParams
-> = ({ questionBank }) => {
-  const router = useRouter();
-  const questionId = router.query["questionId"] as string;
-  return (
-    <LayoutModule questionBank={questionBank} fixedHeight noPadding>
-      <AppHead title={questionId} />
-      <QuestionEditor questionBank={questionBank} />
-    </LayoutModule>
-  );
-};
+export const EditQuestionPage: NextPage<PageProps, PageParams> = ({
+  questionBank,
+  questionId,
+}) => (
+  <LayoutModule questionBank={questionBank} fixedHeight noPadding>
+    <AppHead title={questionId} />
+    <QuestionEditor questionBank={questionBank} questionId={questionId} />
+  </LayoutModule>
+);
 
-export const getServerSideProps = ssrHandler<QuestionPageProps>(
-  async ({ helper, context }) => {
-    const questionBank = context.params?.["questionBank"] as QuestionBankName;
-    const questionId = context.params?.["questionId"] as string;
+export const getServerSideProps = ssrHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const { questionId, questionBank } = params;
+    if (!questionId) throw new MissingPathParameter("questionId");
+    if (!questionBank) throw new MissingPathParameter("questionBank");
 
-    await helper.questionBank.getQuestionFromGithub.fetch({
-      questionId,
-      questionBank,
-    });
+    await Promise.all([
+      LayoutModule.getData({ params, helper }),
+      QuestionEditor.getData({ params, helper }),
+    ]);
 
-    return { props: { questionBank } };
+    return { props: params };
   },
 );
 

@@ -65,6 +65,10 @@ const meta: Meta<typeof QuestionEditor> = {
     questionBank: "atpl",
     questionId: "WEC930Kb",
   },
+  argTypes: {
+    questionBank: { control: false },
+    questionId: { control: false },
+  },
   parameters: {
     layout: "fullscreen",
     msw: {

@@ -69,7 +69,7 @@ const FlashcardTinderCardWrapper = styled(Box)`
 
 export type FlashcardTinderProps = {
   children: ReactElement[];
-} & Pick<BoxProps, "sx" | "style" | "className">;
+} & Pick<BoxProps, "sx" | "style" | "className" | "component">;
 
 /**
  * A swipable container designed to flash cards, and inspired by Tinder.

@@ -1,104 +1,42 @@
-import { useState } from "react";
-import { Box, Button, Card, Link, Typography } from "@mui/joy";
-import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import {
-  AppHead,
-  Flashcard,
-  FlashcardTinder,
-} from "@chair-flight/react/components";
-import { GlobalColorScheme } from "@chair-flight/react/containers";
+import { MissingPathParameter } from "@chair-flight/base/errors";
+import { getRandomId } from "@chair-flight/core/app";
+import { AppHead } from "@chair-flight/react/components";
+import { FlashcardTest, LayoutModule } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankFlashcardContent } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
-import type { FunctionComponent } from "react";
 
-type FlashcardsThemePagePropsParams = {
+type PageProps = {
+  questionBank: QuestionBankName;
   collectionId: string;
   seed: string;
 };
 
-type FlashcardsThemePageProps = {
-  seed: string;
+type PageParams = {
+  questionBank: QuestionBankName;
   collectionId: string;
-  flashcards: Array<QuestionBankFlashcardContent>;
+  seed: string;
 };
 
-const FlashcardWithOwnControl: FunctionComponent<
-  QuestionBankFlashcardContent
-> = (props) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-  return (
-    <Flashcard
-      {...props}
-      sx={{ width: "100%", height: "100%" }}
-      flipped={isFlipped}
-      onFlip={() => setIsFlipped(!isFlipped)}
+const Page: NextPage<PageProps> = ({ questionBank, collectionId, seed }) => (
+  <LayoutModule questionBank={questionBank} fixedHeight>
+    <AppHead />
+    <FlashcardTest
+      questionBank={questionBank}
+      collectionId={collectionId}
+      seed={seed}
     />
-  );
-};
+  </LayoutModule>
+);
 
-const FlashcardsThemePage: NextPage<FlashcardsThemePageProps> = ({
-  flashcards,
-  collectionId,
-  seed,
-}) => {
-  return (
-    <Box sx={{ width: "100vw", height: "100vh" }}>
-      <AppHead
-        title="Chair Flight - Flash Cards"
-        linkTitle="Chair Flight - Flash Cards"
-        linkDescription={[
-          "Use these flash cards to practice for your interview. You can review",
-          "all flash cards at once, or get 10 random cards to review. Try to",
-          "answer the question outloud as you would in an interview. Consider",
-          "recording your answer and playing it back to see how you sound.",
-          "\n\n",
-          "Once you are satisfied with the answer, Flip the card to see if you",
-          "are close enough.",
-        ].join(" ")}
-      />
-      <GlobalColorScheme questionBank="prep" />
-      <FlashcardTinder>
-        {flashcards
-          .map((fc) => <FlashcardWithOwnControl key={fc.id} {...fc} />)
-          .concat([
-            <Card
-              sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-              key={"last card"}
-            >
-              <Typography sx={{ mb: "2", textAlign: "center" }} level={"h5"}>
-                You have reached the end of the test!
-              </Typography>
-              <Button
-                component={Link}
-                variant="plain"
-                sx={{ mb: 2 }}
-                href={`/modules/prep/flashcards/${collectionId}/${seed}`}
-                target="_blank"
-                children={"Share Link"}
-              />
-              <Button
-                component={Link}
-                href={"/modules/prep/flashcards"}
-                children="Finish"
-              />
-            </Card>,
-          ])}
-      </FlashcardTinder>
-    </Box>
-  );
-};
-
-export const getServerSideProps = ssrHandler<FlashcardsThemePageProps>(
-  async ({ helper, context }) => {
-    const { params } = context;
-    const { collectionId, seed } = params as FlashcardsThemePagePropsParams;
-    const shuffle = getRandomShuffler(seed);
+export const getServerSideProps = ssrHandler<PageProps, PageParams>(
+  async ({ helper, params }) => {
+    const questionBank = params?.questionBank;
+    const collectionId = params?.seed;
+    const seed = params?.seed ?? "start";
+    if (!questionBank) throw new MissingPathParameter("questionBank");
+    if (!collectionId) throw new MissingPathParameter("collectionId");
+    if (!seed) throw new MissingPathParameter("seed");
 
     if (seed === "start") {
       const randomId = getRandomId();
@@ -110,20 +48,19 @@ export const getServerSideProps = ssrHandler<FlashcardsThemePageProps>(
       };
     }
 
-    const { flashcardCollection } =
-      await helper.questionBank.getFlashcardsCollection.fetch({
-        questionBank: "prep",
-        collectionId,
-      });
+    await Promise.all([
+      LayoutModule.getData({ helper, params }),
+      FlashcardTest.getData({ helper, params }),
+    ]);
 
     return {
       props: {
         seed,
         collectionId,
-        flashcards: shuffle(flashcardCollection.flashcards).slice(0, 10),
+        questionBank,
       },
     };
   },
 );
 
-export default FlashcardsThemePage;
+export default Page;
