@@ -3,10 +3,9 @@ import { render, screen } from "@testing-library/react";
 import { default as userEvent } from "@testing-library/user-event";
 import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll } from "vitest";
-import { decorators } from "../../__tests__/decorators";
 import * as stories from "./question-editor.stories";
 
-const { BasePage } = composeStories(stories, { decorators });
+const { BasePage } = composeStories(stories);
 const server = setupServer(...(stories.default.parameters?.["msw"] ?? []));
 
 describe("QuestionEditor", () => {

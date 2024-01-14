@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { Box, Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/core/app";
-import { Flashcard, FlashcardTinder } from "@chair-flight/react/components";
-import { AppHead, GlobalColorScheme } from "@chair-flight/react/containers";
+import {
+  AppHead,
+  Flashcard,
+  FlashcardTinder,
+} from "@chair-flight/react/components";
+import { GlobalColorScheme } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankFlashcardContent } from "@chair-flight/base/types";
 import type { NextPage } from "next";

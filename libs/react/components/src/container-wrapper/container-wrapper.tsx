@@ -46,8 +46,8 @@ const DefaultErrorComponent: FunctionComponent<FallbackProps> = () => (
  * part of the application capable of self handling errors and suspense events.
  */
 export const ContainerWrapper: FunctionComponent<ContainerWrapperProps> = ({
-  noSsr = false,
-  deferRendering = false,
+  noSsr,
+  deferRendering,
   ErrorFallbackComponent = DefaultErrorComponent,
   LoadingFallbackComponent = DefaultLoadingComponent,
   children,

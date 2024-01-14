@@ -84,12 +84,11 @@ const StyledContainer = styled("div")<StyledContainerProps>`
   }
 `;
 
-export type CoolSlidingThingProps = BoxProps;
+export type BackgroundSlidingImagesProps = BoxProps;
 
-export const CoolSlidingThing: FunctionComponent<CoolSlidingThingProps> = ({
-  sx,
-  ...props
-}) => {
+export const BackgroundSlidingImages: FunctionComponent<
+  BackgroundSlidingImagesProps
+> = ({ sx, ...props }) => {
   return (
     <Box
       {...props}

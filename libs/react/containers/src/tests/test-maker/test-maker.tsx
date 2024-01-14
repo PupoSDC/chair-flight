@@ -1,4 +1,4 @@
-import { useEffect, type FunctionComponent, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,15 +21,18 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
+import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import type { QuestionBankName, Test } from "@chair-flight/base/types";
+import type {
+  QuestionBankName,
+  QuestionBankSubject,
+  Test,
+} from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 import type { BoxProps } from "@mui/joy";
 
 const resolver = zodResolver(newTestConfigurationSchema);
-const useSubjects = trpc.questionBank.getAllSubjects.useSuspenseQuery;
-const useCreateTest = trpc.questionBank.createTest.useMutation;
 
 const testMakerPersistence = {
   "cf-test-maker-atpl":
@@ -42,136 +45,138 @@ const testMakerPersistence = {
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-prep"),
 };
 
-export type TestMakerProps = Omit<BoxProps, "onBlur" | "onSubmit"> & {
+type Props = Pick<BoxProps, "sx" | "component"> & {
   onSuccessfulTestCreation: (test: Test) => void;
   questionBank: QuestionBankName;
 };
 
-/**
- * Container to create tests.
- *
- * - Uses trpc to get subjects.
- * - Uses Zustand persistence to restore progress from previous session.
- */
-export const TestMaker: FunctionComponent<TestMakerProps> = ({
-  questionBank,
-  onSuccessfulTestCreation,
-  ...otherProps
-}) => {
-  const persistenceKey = `cf-test-maker-${questionBank}` as const;
-  const useTestMakerPersistence = testMakerPersistence[persistenceKey];
+type Params = {
+  questionBank: QuestionBankName;
+};
 
-  const { getPersistedData, setPersistedData } = useTestMakerPersistence();
-  const [{ subjects }] = useSubjects({ questionBank });
-  const createTest = useCreateTest();
-  const addTest = useTestProgress((s) => s.addTest);
+type Data = {
+  subjects: QuestionBankSubject[];
+};
 
-  const defaultValues = useMemo<NewTestConfiguration>(
-    () => ({
-      mode: "exam",
-      questionBank,
-      subject: subjects[0].id,
-      learningObjectives: subjects
-        .flatMap((s) => s.children ?? [])
-        .flatMap((c) => [c.id, ...(c.children?.map((c) => c.id) ?? [])])
-        .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
-      numberOfQuestions: subjects[0].numberOfExamQuestions,
-    }),
-    [subjects, questionBank],
-  );
+export const TestMaker = container<Props, Params, Data>(
+  ({ questionBank, onSuccessfulTestCreation, sx, component = "form" }) => {
+    const params: Params = { questionBank };
+    const persistenceKey = `cf-test-maker-${questionBank}` as const;
+    const useTestMakerPersistence = testMakerPersistence[persistenceKey];
 
-  const form = useForm({ defaultValues, resolver });
-  const currentSubject = form.watch("subject");
-  const currentMode = form.watch("mode");
-  const currentLearningObjectives = form.watch("learningObjectives");
-  const lastCurrentSubject = useRef(currentSubject);
-  const hasMountedInitialValues = useRef(false);
+    const useCreateTest = trpc.questionBank.createTest.useMutation;
+    const addTest = useTestProgress((s) => s.addTest);
 
-  const currentCheckboxItems = useMemo<
-    Required<NestedCheckboxSelectProps>["items"]
-  >(
-    () =>
-      subjects
-        .find((s) => s.id === currentSubject)
-        ?.children?.map((c) => {
-          const hasChildren = Boolean(c.children?.length);
+    const { getPersistedData, setPersistedData } = useTestMakerPersistence();
+    const { subjects } = TestMaker.useData(params);
 
-          const children =
-            c.children?.map((c) => ({
+    const defaultValues = useMemo<NewTestConfiguration>(
+      () => ({
+        mode: "exam",
+        questionBank,
+        subject: subjects[0].id,
+        learningObjectives: subjects
+          .flatMap((s) => s.children ?? [])
+          .flatMap((c) => [c.id, ...(c.children?.map((c) => c.id) ?? [])])
+          .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
+        numberOfQuestions: subjects[0].numberOfExamQuestions,
+      }),
+      [subjects, questionBank],
+    );
+
+    const createTest = useCreateTest();
+    const form = useForm({ defaultValues, resolver });
+    const currentSubject = form.watch("subject");
+    const currentMode = form.watch("mode");
+    const currentLearningObjectives = form.watch("learningObjectives");
+    const lastCurrentSubject = useRef(currentSubject);
+    const hasMountedInitialValues = useRef(false);
+
+    const currentCheckboxItems = useMemo<
+      Required<NestedCheckboxSelectProps>["items"]
+    >(
+      () =>
+        subjects
+          .find((s) => s.id === currentSubject)
+          ?.children?.map((c) => {
+            const hasChildren = Boolean(c.children?.length);
+
+            const children =
+              c.children?.map((c) => ({
+                id: c.id,
+                checked: currentLearningObjectives[c.id] ?? false,
+                label: c.text,
+                subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
+                children: [],
+              })) ?? [];
+
+            const checked = hasChildren
+              ? children.every((c) => c.checked)
+              : currentLearningObjectives[c.id] ?? false;
+
+            return {
               id: c.id,
-              checked: currentLearningObjectives[c.id] ?? false,
+              checked,
               label: c.text,
               subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-              children: [],
-            })) ?? [];
-
-          const checked = hasChildren
-            ? children.every((c) => c.checked)
-            : currentLearningObjectives[c.id] ?? false;
-
-          return {
-            id: c.id,
-            checked,
-            label: c.text,
-            subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-            children,
-          };
-        }) ?? [],
-    [subjects, currentSubject, currentLearningObjectives],
-  );
-
-  const onSubmit = form.handleSubmit(async (config) => {
-    try {
-      const { test } = await createTest.mutateAsync({
-        questionBank,
-        config: {
-          ...config,
-          learningObjectives: {
-            ...config.learningObjectives,
-            [config.subject]: true,
-          },
-        },
-      });
-      addTest({ test });
-      onSuccessfulTestCreation(test);
-    } catch (error) {
-      console.error(error);
-      toast.error("Something went wrong while creating the test. 😥");
-    }
-  });
-
-  useEffect(() => {
-    if (lastCurrentSubject.current === currentSubject) return;
-    lastCurrentSubject.current = currentSubject;
-    form.setValue(
-      "numberOfQuestions",
-      subjects.find((s) => s.id === currentSubject)?.numberOfExamQuestions ??
-        40,
+              children,
+            };
+          }) ?? [],
+      [subjects, currentSubject, currentLearningObjectives],
     );
-  });
 
-  useEffect(() => {
-    if (hasMountedInitialValues.current) return;
-    hasMountedInitialValues.current = true;
-    const persistedData = getPersistedData();
-    if (!persistedData) return;
-    form.reset({ ...defaultValues, ...persistedData });
-  });
+    const onSubmit = form.handleSubmit(async (config) => {
+      try {
+        const { test } = await createTest.mutateAsync({
+          questionBank,
+          config: {
+            ...config,
+            learningObjectives: {
+              ...config.learningObjectives,
+              [config.subject]: true,
+            },
+          },
+        });
+        addTest({ test });
+        onSuccessfulTestCreation(test);
+      } catch (error) {
+        console.error(error);
+        toast.error("Something went wrong while creating the test. 😥");
+      }
+    });
 
-  return (
-    <Box {...otherProps}>
+    useEffect(() => {
+      if (lastCurrentSubject.current === currentSubject) return;
+      lastCurrentSubject.current = currentSubject;
+      form.setValue(
+        "numberOfQuestions",
+        subjects.find((s) => s.id === currentSubject)?.numberOfExamQuestions ??
+          40,
+      );
+    });
+
+    useEffect(() => {
+      if (hasMountedInitialValues.current) return;
+      hasMountedInitialValues.current = true;
+      const persistedData = getPersistedData();
+      if (!persistedData) return;
+      form.reset({ ...defaultValues, ...persistedData });
+    });
+
+    return (
       <Box
-        component="form"
+        component={component as "form"}
         onSubmit={onSubmit}
         onBlur={() => setPersistedData(form.getValues())}
-        sx={(t) => ({
+        sx={{
           display: "flex",
           flexDirection: "column",
           width: "100%",
           height: "100%",
           margin: "auto",
-          maxWidth: t.breakpoints.values.md,
-        })}
+          maxWidth: (t) => t.breakpoints.values.md,
+          ...sx,
+        }}
       >
         <FormProvider {...form}>
           <HookFormSelect
@@ -290,6 +295,20 @@ export const TestMaker: FunctionComponent<TestMakerProps> = ({
           </NoSsr>
         </FormProvider>
       </Box>
-    </Box>
-  );
+    );
+  },
+);
+
+TestMaker.displayName = "TestMaker";
+
+TestMaker.getData = async ({ helper, params }) => {
+  const { questionBank } = params;
+  return await helper.questionBank.getAllSubjects.fetch({ questionBank });
+};
+
+TestMaker.useData = (params) => {
+  const qb = trpc.questionBank;
+  const { questionBank } = params;
+  const [{ subjects }] = qb.getAllSubjects.useSuspenseQuery({ questionBank });
+  return { subjects };
 };

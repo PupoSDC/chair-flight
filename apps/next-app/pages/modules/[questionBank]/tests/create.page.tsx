@@ -1,11 +1,8 @@
 import * as fs from "node:fs/promises";
 import { useRouter } from "next/router";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModule,
-  TestMaker,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GetStaticPaths, NextPage } from "next";
@@ -41,12 +38,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
     const questionBank = params?.questionBank;
     if (!questionBank) throw new MissingPathParameter("questionBank");
     await LayoutModule.getData({ helper, params });
-
-    await Promise.all([
-      helper.questionBank.getConfig.fetch(params),
-      helper.questionBank.getAllSubjects.fetch(params),
-    ]);
-
+    await TestMaker.getData({ helper, params });
     return { props: { questionBank } };
   },
   fs,

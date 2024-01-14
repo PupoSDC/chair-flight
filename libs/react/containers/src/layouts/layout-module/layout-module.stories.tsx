@@ -1,5 +1,3 @@
-import { Global } from "@emotion/react";
-import { Box } from "@mui/joy";
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LayoutModule } from "./layout-module";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -13,10 +11,11 @@ const meta: Meta<typeof LayoutModule> = {
   component: LayoutModule,
   tags: ["autodocs"],
   parameters: {
+    layout: "fullscreen",
     docs: {
       story: {
         inline: false,
-        iframeHeight: 700,
+        iframeHeight: 500,
       },
     },
     msw: {
@@ -30,14 +29,6 @@ const meta: Meta<typeof LayoutModule> = {
       ],
     },
   },
-  decorators: [
-    (Story) => (
-      <Box sx={{ width: "100%", height: "100vh" }}>
-        <Story />
-        <Global styles={{ body: { padding: "0 !important" } }} />
-      </Box>
-    ),
-  ],
 };
 
 export default meta;

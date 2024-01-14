@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Grid } from "@mui/joy";
 import { getTrpcHelper } from "libs/trpc/server/src/next/trpc-helper";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import { Flashcard } from "@chair-flight/react/components";
-import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
+import { AppHead, Flashcard } from "@chair-flight/react/components";
+import { LayoutModule } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type {
   QuestionBankFlashcardCollection,
@@ -39,7 +39,7 @@ const FlashcardWithOwnControl: FunctionComponent<
 
 const FlashcardsThemePage: NextPage<PageProps> = ({ flashcards }) => {
   return (
-    <LayoutModuleBank noPadding questionBank="prep">
+    <LayoutModule noPadding questionBank="prep">
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -60,7 +60,7 @@ const FlashcardsThemePage: NextPage<PageProps> = ({ flashcards }) => {
           </Grid>
         ))}
       </Grid>
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 

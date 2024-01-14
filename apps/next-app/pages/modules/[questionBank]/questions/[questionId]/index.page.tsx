@@ -5,11 +5,8 @@ import {
   getRandomId,
   getRandomShuffler,
 } from "@chair-flight/core/app";
-import {
-  AppHead,
-  LayoutModuleBank,
-  QuestionOverview,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, QuestionOverview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -49,7 +46,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
   };
 
   return (
-    <LayoutModuleBank questionBank={questionBank} noPadding>
+    <LayoutModule questionBank={questionBank} noPadding>
       <AppHead
         linkTitle={`Chair Flight: ${variantId}`}
         linkDescription={linkDescription}
@@ -62,7 +59,7 @@ const QuestionPage: NextPage<QuestionPageProps> = ({
         seed={seed}
         onQuestionChanged={updateVariantAndSeed}
       />
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 

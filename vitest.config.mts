@@ -20,8 +20,8 @@ export default defineConfig({
       provider: "istanbul",
     },
     include: [
-      "apps/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
-      "libs/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+      `${__dirname}/apps/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}`,
+      `${__dirname}/libs/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}`,
     ],
   },
 });

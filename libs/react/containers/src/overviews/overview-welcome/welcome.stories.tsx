@@ -1,18 +1,17 @@
-import { Global } from "@emotion/react";
-import { Box } from "@mui/joy";
 import { trpcMsw } from "@chair-flight/trpc/mock";
-import { Welcome } from "./welcome";
+import { OverviewWelcome } from "./welcome";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof Welcome>;
+type Story = StoryObj<typeof OverviewWelcome>;
 
 export const Playground: Story = {};
 
-const meta: Meta<typeof Welcome> = {
-  title: "Containers/Overviews/Welcome",
-  component: Welcome,
+const meta: Meta<typeof OverviewWelcome> = {
+  title: "Containers/Overviews/OverviewWelcome",
+  component: OverviewWelcome,
   tags: ["autodocs"],
   parameters: {
+    layout: "fullscreen",
     docs: {
       story: {
         inline: false,
@@ -26,14 +25,6 @@ const meta: Meta<typeof Welcome> = {
       ],
     },
   },
-  decorators: [
-    (Story) => (
-      <Box sx={{ width: "100%", height: "100vh" }}>
-        <Story />
-        <Global styles={{ body: { padding: "0 !important" } }} />
-      </Box>
-    ),
-  ],
 };
 
 export default meta;

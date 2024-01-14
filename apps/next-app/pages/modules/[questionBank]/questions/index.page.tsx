@@ -1,9 +1,6 @@
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModuleBank,
-  QuestionSearch,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, QuestionSearch } from "@chair-flight/react/containers";
 import {
   getTrpcHelper,
   preloadContentForStaticRender,
@@ -20,10 +17,10 @@ type QuestionsPageParams = {
 };
 
 const QuestionsPage: NextPage<QuestionsPageProps> = ({ questionBank }) => (
-  <LayoutModuleBank questionBank={questionBank}>
+  <LayoutModule questionBank={questionBank}>
     <AppHead />
     <QuestionSearch component="section" questionBank={questionBank} />
-  </LayoutModuleBank>
+  </LayoutModule>
 );
 
 export const getStaticProps: GetStaticProps<

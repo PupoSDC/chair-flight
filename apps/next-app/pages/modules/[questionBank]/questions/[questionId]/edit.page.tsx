@@ -1,9 +1,6 @@
 import { useRouter } from "next/router";
-import {
-  AppHead,
-  LayoutModuleBank,
-  QuestionEditor,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, QuestionEditor } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NextPage } from "next";
@@ -24,10 +21,10 @@ export const EditQuestionPage: NextPage<
   const router = useRouter();
   const questionId = router.query["questionId"] as string;
   return (
-    <LayoutModuleBank questionBank={questionBank} fixedHeight noPadding>
+    <LayoutModule questionBank={questionBank} fixedHeight noPadding>
       <AppHead title={questionId} />
       <QuestionEditor questionBank={questionBank} />
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 

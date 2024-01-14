@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { mockQuestionSearchItems, trpcMsw } from "@chair-flight/trpc/mock";
 import { QuestionSearch } from "./question-search";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -20,10 +20,20 @@ const meta: Meta<typeof QuestionSearch> = {
     msw: {
       handlers: [
         trpcMsw.questionBank.getNumberOfQuestions.query(() => ({ count: 123 })),
-        trpcMsw.questionBank.searchQuestions.query(() => ({})),
+        trpcMsw.questionBank.searchQuestions.query(() => {
+          const items = mockQuestionSearchItems;
+
+          return {
+            items,
+            nextCursor: 20,
+            totalResults: items.length,
+          }
+        }),
       ],
     },
   },
 };
+
+
 
 export default meta;

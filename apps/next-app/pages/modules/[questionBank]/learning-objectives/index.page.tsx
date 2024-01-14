@@ -17,11 +17,12 @@ import {
 } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
 import {
+  AppHead,
   CtaSearch,
   useMediaQuery,
   MarkdownClient,
 } from "@chair-flight/react/components";
-import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
+import { LayoutModule } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import {
   getTrpcHelper,
@@ -81,7 +82,7 @@ export const LearningObjectivesIndexPage: NextPage<
   };
 
   return (
-    <LayoutModuleBank questionBank="atpl" fixedHeight>
+    <LayoutModule questionBank="atpl" fixedHeight>
       <AppHead />
       <Box
         component="section"
@@ -180,7 +181,7 @@ export const LearningObjectivesIndexPage: NextPage<
           </Box>
         </Sheet>
       </Box>
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 

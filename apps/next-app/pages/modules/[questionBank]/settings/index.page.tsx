@@ -1,10 +1,7 @@
 import * as fs from "node:fs/promises";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModule,
-  UserSettings,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, UserSettings } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { GetStaticPaths, NextPage } from "next";

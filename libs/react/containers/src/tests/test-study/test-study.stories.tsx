@@ -16,9 +16,10 @@ const meta: Meta<typeof TestStudy> = {
     testId: mockTest.id,
   },
   argTypes: {
-    testId: {
-      // disable control
-    },
+    testId: { disable: true },
+  },
+  parameters: {
+    layout: "fullscreen",
   },
   decorators: [
     (Story) => {

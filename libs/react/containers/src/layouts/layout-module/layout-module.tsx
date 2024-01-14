@@ -13,14 +13,15 @@ import {
   ThemeOverrideColorScheme,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { container } from "../../wraper/container";
 import { usePageTransition } from "../hooks/use-page-transition";
-import type { ContainerComponent } from "../../types";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
 type Props = {
   children: React.ReactNode;
   fixedHeight?: boolean;
   noPadding?: boolean;
+  questionBank: QuestionBankName;
 };
 
 type Params = {
@@ -34,15 +35,11 @@ type Data = {
   hasMedia: boolean;
 };
 
-export const LayoutModule: ContainerComponent<Props, Params, Data> = ({
-  children,
-  fixedHeight,
-  noPadding,
-  questionBank,
-}) => {
+export const LayoutModule = container<Props, Params, Data>((props) => {
+  const { children, fixedHeight, noPadding, questionBank } = props;
   const { isTransitioning } = usePageTransition();
   const router = useRouter();
-  const config = LayoutModule.useData({ questionBank });
+  const config = LayoutModule.useData(props);
 
   const isQuestions = router.asPath.includes("questions");
   const isTests = router.asPath.includes("tests");
@@ -149,7 +146,9 @@ export const LayoutModule: ContainerComponent<Props, Params, Data> = ({
       />
     </>
   );
-};
+});
+
+LayoutModule.displayName = "LayoutModule";
 
 LayoutModule.getData = async ({ helper, params }) => {
   const { questionBank } = params;
@@ -159,6 +158,5 @@ LayoutModule.getData = async ({ helper, params }) => {
 LayoutModule.useData = (params) => {
   const qb = trpc.questionBank;
   const { questionBank } = params;
-  const [config] = qb.getConfig.useSuspenseQuery({ questionBank });
-  return config;
+  return qb.getConfig.useSuspenseQuery({ questionBank })[0];
 };

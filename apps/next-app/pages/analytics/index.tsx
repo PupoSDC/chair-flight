@@ -1,4 +1,4 @@
-import *  as fs from "fs/promises";
+import * as fs from "fs/promises";
 import {
   LineChart,
   Line,

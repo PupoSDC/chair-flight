@@ -11,7 +11,8 @@ import {
   Box,
 } from "@mui/joy";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -32,7 +33,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
     });
 
   return (
-    <LayoutModuleBank noPadding questionBank="prep">
+    <LayoutModule noPadding questionBank="prep">
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -117,7 +118,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
           </Grid>
         ))}
       </Grid>
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 

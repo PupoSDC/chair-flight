@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Box, useTheme } from "@mui/joy";
 import { CtaSearch, Ups, useMediaQuery } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { QuestionPreviewList } from "../question-preview-list/question-preview-list";
-import type { ContainerComponent } from "../../types";
+import { container } from "../../wraper/container";
+import { QuestionPreviewList } from "./question-preview-list";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { BoxProps } from "@mui/joy";
 
@@ -13,6 +13,10 @@ export type QuestionSearchProps = BoxProps & {
 
 const useSearchQuestions = trpc.questionBank.searchQuestions.useInfiniteQuery;
 
+type Props = {
+  questionBank: QuestionBankName;
+};
+
 type Params = {
   questionBank: QuestionBankName;
 };
@@ -21,10 +25,8 @@ type Data = {
   numberOfQuestions: number;
 };
 
-export const QuestionSearch: ContainerComponent<BoxProps, Params, Data> = ({
-  questionBank,
-  ...otherProps
-}) => {
+export const QuestionSearch = container<Props, Params, Data>((props) => {
+  const { questionBank, sx, component } = props;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [search, setSearch] = useState("");
@@ -81,12 +83,12 @@ export const QuestionSearch: ContainerComponent<BoxProps, Params, Data> = ({
 
   return (
     <Box
-      {...otherProps}
+      component={component}
       sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        ...otherProps.sx,
+        ...sx,
       }}
     >
       <Box
@@ -122,7 +124,9 @@ export const QuestionSearch: ContainerComponent<BoxProps, Params, Data> = ({
       {hasNoResults && <Ups message="No questions found" />}
     </Box>
   );
-};
+});
+
+QuestionSearch.displayName = "QuestionSearch";
 
 QuestionSearch.getData = async ({ helper, params }) => {
   const data = await helper.questionBank.getNumberOfQuestions.fetch(params);

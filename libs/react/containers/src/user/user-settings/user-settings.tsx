@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import { NoSsr } from "@mui/base";
 import {
   Divider,
   FormControl,
@@ -11,8 +9,8 @@ import {
   styled,
 } from "@mui/joy";
 import { ThemeButton } from "@chair-flight/react/components";
+import { container } from "../../wraper/container";
 import { useUserPreferences } from "../hooks/use-user-preferences";
-import type { ContainerComponent } from "../../types";
 import type { FunctionComponent } from "react";
 
 const StyledFormControl = styled(FormControl)`
@@ -30,7 +28,7 @@ const StyledFormControl = styled(FormControl)`
 
 const UserSettingsFallback: FunctionComponent = () => null;
 
-const UserSettingsComponent: FunctionComponent = () => {
+export const UserSettings = container(({ sx, component = "section" }) => {
   const {
     examModeAutoSkip,
     studyModeAutoSkip,
@@ -40,10 +38,12 @@ const UserSettingsComponent: FunctionComponent = () => {
 
   return (
     <Stack
+      component={component}
       sx={{
         m: "auto",
         maxWidth: (t) => t.breakpoints.values.md,
         width: "100%",
+        ...sx,
       }}
     >
       <Typography level="h3">Theme Configuration</Typography>
@@ -75,15 +75,9 @@ const UserSettingsComponent: FunctionComponent = () => {
       </StyledFormControl>
     </Stack>
   );
-};
+});
 
-export const UserSettings: ContainerComponent = () => (
-  <NoSsr fallback={<UserSettingsFallback />}>
-    <Suspense fallback={<UserSettingsFallback />}>
-      <UserSettingsComponent />
-    </Suspense>
-  </NoSsr>
-);
-
+UserSettings.displayName = "UserSettings";
 UserSettings.getData = async () => ({});
 UserSettings.useData = () => ({});
+UserSettings.LoadingFallback = UserSettingsFallback;

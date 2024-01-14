@@ -1,15 +1,21 @@
 import { default as Image } from "next/image";
 import { Box } from "@mui/joy";
+import { default as article } from "./images/background-article.png";
+import { default as testCreation } from "./images/background-test-creation.png";
 import type { FunctionComponent } from "react";
 
-export type BackgroundImageContainerProps = {
-  src: string;
-  alt: string;
+const backgroundImages = {
+  testCreation,
+  article,
 };
 
-export const LayoutBackground: FunctionComponent<
+export type BackgroundImageContainerProps = {
+  img: keyof typeof backgroundImages;
+};
+
+export const BackgroundFadedImage: FunctionComponent<
   BackgroundImageContainerProps
-> = ({ src, alt }) => {
+> = ({ img }) => {
   return (
     <Box
       sx={{
@@ -27,7 +33,7 @@ export const LayoutBackground: FunctionComponent<
         },
       }}
     >
-      <Image src={src} fill alt={alt} />
+      <Image src={backgroundImages[img]} fill alt={""} />
     </Box>
   );
 };

@@ -1,7 +1,8 @@
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Grid, Sheet, Table, Typography } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
-import { AppHead, LayoutModuleBank } from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { CourseName } from "@chair-flight/base/types";
@@ -25,7 +26,7 @@ export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
     });
 
   return (
-    <LayoutModuleBank questionBank="atpl">
+    <LayoutModule questionBank="atpl">
       <AppHead />
 
       <Sheet sx={{ p: 2 }}>
@@ -79,7 +80,7 @@ export const LearningObjectivePage: NextPage<LearningObjectivePageProps> = ({
       <QuestionPreviewList
         sx={{ overflow: "initial" }}
       />*/}
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 
