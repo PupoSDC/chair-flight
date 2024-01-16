@@ -259,6 +259,7 @@ export const questionBankRouter = router({
       const qb = questionBanks[input.questionBank];
       const searchIndex = learningObjectiveSearchIndexes[input.questionBank];
       const los = await qb.getAll("learningObjectives");
+
       const { q, limit, cursor = 0 } = input;
 
       if (searchIndex.documentCount === 0) {
@@ -292,8 +293,14 @@ export const questionBankRouter = router({
             terms: [],
           }));
       } else {
-        results = searchIndex.search(q, { fuzzy: 0.2 }).map((result) => ({
-          result: result as unknown as QuestionBankLearningObjective,
+        const search = searchIndex.search(q, { fuzzy: 0.2 });
+        const los = await qb.getSome(
+          "learningObjectives",
+          search.map((d) => d.id),
+        );
+
+        results = search.map((result, key) => ({
+          result: los[key],
           score: result.score,
           match: result.match,
           terms: result.terms,

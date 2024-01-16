@@ -1,6 +1,5 @@
 import * as fs from "node:fs/promises";
 import { useRouter } from "next/router";
-import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
@@ -35,11 +34,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
-    const questionBank = params?.questionBank;
-    if (!questionBank) throw new MissingPathParameter("questionBank");
     await LayoutModule.getData({ helper, params });
     await TestMaker.getData({ helper, params });
-    return { props: { questionBank } };
+    return { props: params };
   },
   fs,
 );

@@ -13,7 +13,7 @@ import {
   ThemeOverrideColorScheme,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import { usePageTransition } from "../hooks/use-page-transition";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
@@ -151,12 +151,12 @@ export const LayoutModule = container<Props, Params, Data>((props) => {
 LayoutModule.displayName = "LayoutModule";
 
 LayoutModule.getData = async ({ helper, params }) => {
-  const { questionBank } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
   return await helper.questionBank.getConfig.fetch({ questionBank });
 };
 
 LayoutModule.useData = (params) => {
   const qb = trpc.questionBank;
-  const { questionBank } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
   return qb.getConfig.useSuspenseQuery({ questionBank })[0];
 };

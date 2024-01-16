@@ -2,8 +2,8 @@ import { Button, Card, Link, Typography } from "@mui/joy";
 import { getRandomShuffler } from "@chair-flight/core/app";
 import { FlashcardTinder } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper/container";
-import { FlashcardWithOwnControl } from "./flashcard-with-own-control";
+import { container, getRequiredParam } from "../../wraper/container";
+import { FlashcardWithOwnControl } from "../components/fashcard-with-own-control";
 import type {
   QuestionBankFlashcardContent,
   QuestionBankName,
@@ -70,25 +70,33 @@ export const FlashcardTest = container<Props, Params, Data>(
 FlashcardTest.displayName = "FlashcardTest";
 
 FlashcardTest.getData = async ({ helper, params }) => {
-  const { seed, questionBank, collectionId } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const collectionId = getRequiredParam(params, "collectionId");
+  const seed = getRequiredParam(params, "seed");
   const shuffle = getRandomShuffler(seed);
+
   const data = await helper.questionBank.getFlashcardsCollection.fetch({
     questionBank,
     collectionId,
   });
+
   const rawFlashcards = data.flashcardCollection.flashcards;
   const flashcards = shuffle(rawFlashcards).slice(0, 10);
   return { flashcards };
 };
 
 FlashcardTest.useData = (params) => {
-  const { seed, questionBank, collectionId } = params;
   const qb = trpc.questionBank;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const collectionId = getRequiredParam(params, "collectionId");
+  const seed = getRequiredParam(params, "seed");
   const shuffle = getRandomShuffler(seed);
+
   const data = qb.getFlashcardsCollection.useSuspenseQuery({
     questionBank,
     collectionId,
   })[0];
+
   const rawFlashcards = data.flashcardCollection.flashcards;
   const flashcards = shuffle(rawFlashcards).slice(0, 10);
   return { flashcards };

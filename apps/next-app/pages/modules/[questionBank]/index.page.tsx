@@ -1,6 +1,5 @@
 import * as fs from "node:fs/promises";
 import { Divider, Link, Typography } from "@mui/joy";
-import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, OverviewModules } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
@@ -29,8 +28,6 @@ const Page: NextPage<PageProps> = ({ questionBank }) => (
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
-    const questionBank = params.questionBank;
-    if (!questionBank) throw new MissingPathParameter("questionBank");
     await OverviewModules.getData({ helper, params });
     await LayoutModule.getData({ helper, params });
     return { props: params };

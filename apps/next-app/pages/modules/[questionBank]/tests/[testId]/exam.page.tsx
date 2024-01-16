@@ -1,4 +1,3 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
 import {
   AppHead,
   ThemeOverrideColorScheme,
@@ -22,18 +21,14 @@ export const Page: NextPage<Props> = ({ testId, questionBank }) => (
   <>
     <AppHead />
     <ThemeOverrideColorScheme questionBank={questionBank} />
-    <TestExam testId={testId} />
+    <TestExam testId={testId} noSsr />
   </>
 );
 
 export const getServerSideProps = ssrHandler<Props, Params>(
   async ({ helper, params }) => {
-    const testId = params?.testId;
-    const questionBank = params?.questionBank;
-    if (!testId) throw new MissingPathParameter("testId");
-    if (!questionBank) throw new MissingPathParameter("questionBank");
     await TestExam.getData({ helper, params });
-    return { props: { testId, questionBank } };
+    return { props: params };
   },
 );
 

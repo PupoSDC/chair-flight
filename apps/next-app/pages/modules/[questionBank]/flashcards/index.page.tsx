@@ -1,6 +1,5 @@
 import * as fs from "node:fs/promises";
 import { Typography, Box } from "@mui/joy";
-import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead } from "@chair-flight/react/components";
 import {
   FlashcardCollectionList,
@@ -56,15 +55,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => (
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
-    const questionBank = params.questionBank;
-    if (!questionBank) throw new MissingPathParameter("questionBank");
-
-    await Promise.all([
-      LayoutModule.getData({ helper, params }),
-      FlashcardCollectionList.getData({ helper, params }),
-    ]);
-
-    return { props: { questionBank } };
+    await LayoutModule.getData({ helper, params });
+    await FlashcardCollectionList.getData({ helper, params });
+    return { props: params };
   },
   fs,
 );

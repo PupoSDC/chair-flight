@@ -2,14 +2,9 @@ import { useState } from "react";
 import { Box, useTheme } from "@mui/joy";
 import { CtaSearch, Ups, useMediaQuery } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import { QuestionPreviewList } from "./question-preview-list";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { BoxProps } from "@mui/joy";
-
-export type QuestionSearchProps = BoxProps & {
-  questionBank: QuestionBankName;
-};
 
 const useSearchQuestions = trpc.questionBank.searchQuestions.useInfiniteQuery;
 
@@ -129,12 +124,21 @@ export const QuestionSearch = container<Props, Params, Data>((props) => {
 QuestionSearch.displayName = "QuestionSearch";
 
 QuestionSearch.getData = async ({ helper, params }) => {
-  const data = await helper.questionBank.getNumberOfQuestions.fetch(params);
+  const questionBank = getRequiredParam(params, "questionBank");
+
+  const data = await helper.questionBank.getNumberOfQuestions.fetch({
+    questionBank,
+  });
+
   return { numberOfQuestions: data.count };
 };
 
 QuestionSearch.useData = (params) => {
-  const qb = trpc.questionBank;
-  const [data] = qb.getNumberOfQuestions.useSuspenseQuery(params);
+  const questionBank = getRequiredParam(params, "questionBank");
+
+  const [data] = trpc.questionBank.getNumberOfQuestions.useSuspenseQuery({
+    questionBank,
+  });
+
   return { numberOfQuestions: data.count };
 };

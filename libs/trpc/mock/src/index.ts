@@ -14,3 +14,4 @@ export { mockSubjects } from "./__mocks__/subjects.mock";
 export { mockTest } from "./__mocks__/test.mock";
 export { mockQuestion } from "./__mocks__/question.mock";
 export { mockQuestionSearchItems } from "./__mocks__/question-search.mock";
+export { mockLearningObjectiveSearchItems } from "./__mocks__/learning-objectives-search.mock";

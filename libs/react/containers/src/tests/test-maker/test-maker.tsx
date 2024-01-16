@@ -21,7 +21,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import type {
   QuestionBankName,
@@ -302,13 +302,11 @@ export const TestMaker = container<Props, Params, Data>(
 TestMaker.displayName = "TestMaker";
 
 TestMaker.getData = async ({ helper, params }) => {
-  const { questionBank } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
   return await helper.questionBank.getAllSubjects.fetch({ questionBank });
 };
 
 TestMaker.useData = (params) => {
-  const qb = trpc.questionBank;
-  const { questionBank } = params;
-  const [{ subjects }] = qb.getAllSubjects.useSuspenseQuery({ questionBank });
-  return { subjects };
+  const questionBank = getRequiredParam(params, "questionBank");
+  return trpc.questionBank.getAllSubjects.useSuspenseQuery({ questionBank })[0];
 };

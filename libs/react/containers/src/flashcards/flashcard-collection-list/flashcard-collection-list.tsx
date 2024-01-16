@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
 type Props = {
@@ -102,7 +102,7 @@ export const FlashcardCollectionList = container<Props, Params, Data>(
 FlashcardCollectionList.displayName = "FlashcardCollectionList";
 
 FlashcardCollectionList.getData = async ({ params, helper }) => {
-  const { questionBank } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
   return await helper.questionBank.getFlashcardsCollections.fetch({
     questionBank,
   });
@@ -110,6 +110,6 @@ FlashcardCollectionList.getData = async ({ params, helper }) => {
 
 FlashcardCollectionList.useData = (params) => {
   const qb = trpc.questionBank;
-  const { questionBank } = params;
+  const questionBank = getRequiredParam(params, "questionBank");
   return qb.getFlashcardsCollections.useSuspenseQuery({ questionBank })[0];
 };

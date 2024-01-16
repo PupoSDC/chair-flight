@@ -1,4 +1,3 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
 import { getRandomId } from "@chair-flight/core/app";
 import { AppHead } from "@chair-flight/react/components";
 import { FlashcardTest, LayoutModule } from "@chair-flight/react/containers";
@@ -31,19 +30,16 @@ const Page: NextPage<PageProps> = ({ questionBank, collectionId, seed }) => (
 
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ helper, params }) => {
-    const questionBank = params?.questionBank;
-    const collectionId = params?.seed;
-    const seed = params?.seed ?? "start";
-    if (!questionBank) throw new MissingPathParameter("questionBank");
-    if (!collectionId) throw new MissingPathParameter("collectionId");
-    if (!seed) throw new MissingPathParameter("seed");
+    const questionBank = params.questionBank;
+    const collectionId = params?.collectionId;
+    const seed = params?.seed;
 
     if (seed === "start") {
       const randomId = getRandomId();
       return {
         redirect: {
           permanent: false,
-          destination: `/modules/prep/flashcards/${collectionId}/${randomId}`,
+          destination: `/modules/${questionBank}/flashcards/${collectionId}/${randomId}`,
         },
       };
     }
@@ -53,13 +49,7 @@ export const getServerSideProps = ssrHandler<PageProps, PageParams>(
       FlashcardTest.getData({ helper, params }),
     ]);
 
-    return {
-      props: {
-        seed,
-        collectionId,
-        questionBank,
-      },
-    };
+    return { props: params };
   },
 );
 

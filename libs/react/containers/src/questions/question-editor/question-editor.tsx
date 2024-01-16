@@ -4,7 +4,7 @@ import { Box, Grid } from "@mui/joy";
 import { questionEditSchema } from "@chair-flight/core/schemas";
 import { trpc } from "@chair-flight/trpc/client";
 import { RestoreFormHistory } from "../../hooks/use-form-history";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import { EditQuestionBody } from "./components/edit-question-body";
 import { EditQuestionHeader } from "./components/edit-question-header";
 import { EditVariantModal } from "./components/edit-variant-modal";
@@ -75,15 +75,20 @@ export const QuestionEditor = container<Props, Params, Data>((props) => {
 QuestionEditor.displayName = "QuestionEditor";
 
 QuestionEditor.getData = async ({ helper, params }) => {
-  const qb = helper.questionBank;
-  const { questionBank, questionId } = params;
-  return await qb.getQuestionFromGithub.fetch({ questionBank, questionId });
+  const questionBank = getRequiredParam(params, "questionBank");
+  const questionId = getRequiredParam(params, "questionId");
+
+  return await helper.questionBank.getQuestionFromGithub.fetch({
+    questionBank,
+    questionId,
+  });
 };
 
 QuestionEditor.useData = (params) => {
-  const qb = trpc.questionBank;
-  const { questionBank, questionId } = params;
-  return qb.getQuestionFromGithub.useSuspenseQuery({
+  const questionBank = getRequiredParam(params, "questionBank");
+  const questionId = getRequiredParam(params, "questionId");
+
+  return trpc.questionBank.getQuestionFromGithub.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];

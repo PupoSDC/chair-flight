@@ -1,3 +1,4 @@
+import { MissingPathParameter } from "@chair-flight/base/errors";
 import { ContainerWrapper } from "@chair-flight/react/components";
 import type { ContainerWrapperProps } from "@chair-flight/react/components";
 import type { TrpcHelper } from "@chair-flight/trpc/server";
@@ -55,4 +56,16 @@ export const container = <
   Container.getData = undefined as unknown as (typeof Container)["getData"];
 
   return Container;
+};
+
+export const getRequiredParam = <
+  T extends Record<string, unknown>,
+  K extends keyof T,
+>(
+  params: T,
+  key: K,
+): T[K] => {
+  const value = params[key];
+  if (!value) throw new MissingPathParameter(key as string);
+  return value;
 };
