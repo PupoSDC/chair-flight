@@ -6,7 +6,9 @@ import { afterAll, afterEach, beforeAll } from "vitest";
 import * as stories from "./question-editor.stories";
 
 const { BasePage } = composeStories(stories);
-const server = setupServer(...(stories.default.parameters?.["msw"] ?? []));
+
+const handlers = stories.default.parameters?.["msw"].handlers ?? [];
+const server = setupServer(...handlers);
 
 describe("QuestionEditor", () => {
   beforeAll(() => server.listen({ onUnhandledRequest: "error" }));

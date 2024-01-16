@@ -82,6 +82,8 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
   },
 );
 
+LearningObjectiveOverview.displayName = "LearningObjectiveOverview";
+
 LearningObjectiveOverview.getData = async ({ params, helper }) => {
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");

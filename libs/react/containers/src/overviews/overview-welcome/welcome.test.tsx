@@ -1,23 +1,21 @@
-import { composeStory } from "@storybook/react";
+import { composeStories } from "@storybook/react";
 import { render, screen, waitFor } from "@testing-library/react";
 import { setupServer } from "msw/node";
 import { wrapper } from "../../__tests__/wrapper";
-import { Playground, default as Meta } from "./welcome.stories";
+import * as stories from "./welcome.stories";
 
-const Welcome = composeStory(Playground, Meta);
-const server = setupServer(...(Meta.parameters?.["msw"].handlers ?? []));
+const { Playground } = composeStories(stories);
+
+const handlers = stories.default.parameters?.["msw"].handlers ?? [];
+const server = setupServer(...handlers);
 
 describe("welcome", () => {
-  beforeAll(() => {
-    server.listen();
-  });
-
-  afterAll(() => {
-    server.close();
-  });
+  beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
 
   it("renders with server data", async () => {
-    render(<Welcome />, { wrapper });
+    render(<Playground />, { wrapper });
     const tagline = /Built by students for students/;
     await waitFor(() => expect(screen.getByText(tagline)).toBeInTheDocument());
   });

@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@mui/joy";
+import { ThemeProvider } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import type { FunctionComponent, ReactNode } from "react";
 
