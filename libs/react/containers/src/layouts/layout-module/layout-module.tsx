@@ -175,11 +175,11 @@ export const LayoutModule = container<Props, Params, Data>(
             ))}
             {breadcrumbs && <Typography>{breadcrumbs?.at(-1)}</Typography>}
           </Breadcrumbs>
-          <BackButton sx={{ ml: 2, display: { md: "medium" } }} />
+          <BackButton sx={{ ml: 2, display: ["flex", "none"] }} />
           <GithubButton sx={{ ml: "auto" }} />
           <ThemeButton />
           <HamburgerButton
-            sx={{ display: { md: "medium" } }}
+            sx={{ display: ["flex", "none"] }}
             onClick={openSidebar}
           />
         </Stack>
