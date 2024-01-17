@@ -54,5 +54,8 @@ jobs:
       - name: Run Typescript
         run: pnpm typecheck
 
+      - name: Run Compilation step
+        run: pnpm compile
+
       - name: Run Tests
         run: pnpm test

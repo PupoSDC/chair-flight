@@ -57,6 +57,8 @@ export const OverviewModule = container<Props, Params, Data>(
   },
 );
 
+OverviewModule.displayName = "OverviewModule";
+
 OverviewModule.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
   return await helper.questionBank.getConfig.fetch({ questionBank });
