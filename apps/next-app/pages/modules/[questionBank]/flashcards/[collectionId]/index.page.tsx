@@ -1,11 +1,10 @@
 import * as fs from "node:fs/promises";
-import { getTrpcHelper } from "libs/trpc/server/src/next/trpc-helper";
 import { AppHead } from "@chair-flight/react/components";
 import { FlashcardList, LayoutModule } from "@chair-flight/react/containers";
-import { staticHandler } from "@chair-flight/trpc/server";
+import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
-import type { GetStaticPaths, NextPage } from "next";
+import type { NextPage } from "next";
 
 type PageProps = {
   questionBank: QuestionBankName;
@@ -41,23 +40,26 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
   fs,
 );
 
-export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const helper = await getTrpcHelper();
-  const qb = helper.questionBank;
-  const banks: QuestionBankName[] = ["prep"];
-  const paths = await Promise.all(
-    banks.map(async (questionBank) => {
-      const params = { questionBank };
-      const data = await qb.getFlashcardsCollections.fetch(params);
-      return data.collections.map(({ id: collectionId }) => ({
-        params: {
-          questionBank,
-          collectionId,
-        },
-      }));
-    }),
-  ).then((c) => c.flat());
-  return { fallback: false, paths };
-};
+export const getStaticPaths = staticPathsHandler<PageParams>(
+  async ({ helper }) => {
+    const qb = helper.questionBank;
+    const banks: QuestionBankName[] = ["prep"];
+    const paths = await Promise.all(
+      banks.map(async (questionBank) => {
+        const params = { questionBank };
+        const data = await qb.getFlashcardsCollections.fetch(params);
+        return data.collections.map(({ id: collectionId }) => ({
+          params: {
+            questionBank,
+            collectionId,
+          },
+        }));
+      }),
+    ).then((c) => c.flat());
+
+    return { fallback: false, paths };
+  },
+  fs,
+);
 
 export default Page;

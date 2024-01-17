@@ -2,6 +2,9 @@ import { questionBanks } from "@chair-flight/core/question-bank";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {
+  GetStaticPaths,
+  GetStaticPathsContext,
+  GetStaticPathsResult,
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
@@ -48,5 +51,26 @@ export const staticHandler = <
     }
 
     return response;
+  };
+};
+
+export const staticPathsHandler = <
+  Params extends ParsedUrlQuery = ParsedUrlQuery,
+>(
+  handler: ({
+    context,
+    helper,
+  }: {
+    context: GetStaticPathsContext;
+    helper: TrpcHelper;
+  }) => Promise<GetStaticPathsResult<Params>>,
+  fs: FS,
+): GetStaticPaths<Params> => {
+  return async (context) => {
+    await Promise.all(
+      Object.values(questionBanks).map((qb) => qb.preloadForStaticRender(fs)),
+    );
+    const helper = await getTrpcHelper();
+    return await handler({ context, helper });
   };
 };

@@ -83,7 +83,6 @@ export class QuestionBank implements IQuestionBank {
       const bankPath = `/content/content-question-bank-${this.getName()}`;
       const baseApiPath = `${urlPath}${bankPath}`;
       const apiPath = `${baseApiPath}/${resource}.json`;
-      console.log("apiPath", apiPath);
       const response = await fetch(apiPath);
       const json = (await response.json()) as NameToType[T][];
       type ArrayType = (typeof this.resourceArrays)[typeof resource];
