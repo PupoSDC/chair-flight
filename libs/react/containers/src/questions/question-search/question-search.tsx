@@ -2,32 +2,31 @@ import { useState } from "react";
 import { Box, useTheme } from "@mui/joy";
 import { CtaSearch, Ups, useMediaQuery } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { QuestionPreviewList } from "../question-preview-list/question-preview-list";
+import { container, getRequiredParam } from "../../wraper/container";
+import { QuestionPreviewList } from "./question-preview-list";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { BoxProps } from "@mui/joy";
-import type { FC } from "react";
 
-export type QuestionSearchProps = BoxProps & {
+const useSearchQuestions = trpc.questionBank.searchQuestions.useInfiniteQuery;
+
+type Props = {
   questionBank: QuestionBankName;
 };
 
-const useSearchQuestions = trpc.questionBank.searchQuestions.useInfiniteQuery;
-const useNumberOfQuestions = trpc.questionBank.getNumberOfQuestions.useQuery;
+type Params = {
+  questionBank: QuestionBankName;
+};
 
-export const QuestionSearch: FC<QuestionSearchProps> = ({
-  questionBank,
-  ...otherProps
-}) => {
+type Data = {
+  numberOfQuestions: number;
+};
+
+export const QuestionSearch = container<Props, Params, Data>((props) => {
+  const { questionBank, sx, component } = props;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [search, setSearch] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
-
-  const {
-    data: numberOfQuestionsData,
-    isLoading: numberOfQuestionsLoading,
-    isError: numberOfQuestionsError,
-  } = useNumberOfQuestions({ questionBank });
+  const { numberOfQuestions } = QuestionSearch.useData({ questionBank });
 
   const {
     data: searchQuestionsData,
@@ -58,7 +57,7 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
     !hasResults &&
     !!search.length;
 
-  const hasError = searchQuestionsError || numberOfQuestionsError;
+  const hasError = searchQuestionsError;
 
   const results = (searchQuestionsData?.pages ?? [])
     .flatMap((p) => p.items)
@@ -67,7 +66,7 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
   const numberOfResults = (() => {
     if (hasResults) return searchQuestionsData?.pages[0].totalResults;
     if (hasNoResults) return 0;
-    return numberOfQuestionsData?.count;
+    return numberOfQuestions;
   })();
 
   const onScroll = (e: React.UIEvent<HTMLUListElement, UIEvent>) => {
@@ -79,12 +78,12 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
 
   return (
     <Box
-      {...otherProps}
+      component={component}
       sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        ...otherProps.sx,
+        ...sx,
       }}
     >
       <Box
@@ -99,9 +98,7 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
       >
         <CtaSearch
           value={search}
-          loading={
-            (hasSearched && searchQuestionsLoading) || numberOfQuestionsLoading
-          }
+          loading={hasSearched && searchQuestionsLoading}
           onChange={(value) => {
             setSearch(value);
             setHasSearched(true);
@@ -122,4 +119,26 @@ export const QuestionSearch: FC<QuestionSearchProps> = ({
       {hasNoResults && <Ups message="No questions found" />}
     </Box>
   );
+});
+
+QuestionSearch.displayName = "QuestionSearch";
+
+QuestionSearch.getData = async ({ helper, params }) => {
+  const questionBank = getRequiredParam(params, "questionBank");
+
+  const data = await helper.questionBank.getNumberOfQuestions.fetch({
+    questionBank,
+  });
+
+  return { numberOfQuestions: data.count };
+};
+
+QuestionSearch.useData = (params) => {
+  const questionBank = getRequiredParam(params, "questionBank");
+
+  const [data] = trpc.questionBank.getNumberOfQuestions.useSuspenseQuery({
+    questionBank,
+  });
+
+  return { numberOfQuestions: data.count };
 };

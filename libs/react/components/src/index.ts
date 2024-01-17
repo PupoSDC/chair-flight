@@ -1,7 +1,13 @@
+// include types for images
+import "@chair-flight/base/types";
+
 export * from "./app-buttons";
+export * from "./app-head";
 export * from "./app-logo";
 export * from "./blog-post-chip";
-export * from "./cool-sliding-thing";
+export * from "./container-wrapper";
+export * from "./background-sliding-images";
+export * from "./background-faded-image";
 export * from "./count-up";
 export * from "./cta-search";
 export * from "./flashcard";

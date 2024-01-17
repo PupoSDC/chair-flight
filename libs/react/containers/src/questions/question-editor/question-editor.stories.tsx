@@ -28,6 +28,12 @@ export const VariantSimpleEditor: Story = {
         },
       },
     },
+    docs: {
+      story: {
+        inline: false,
+        iframeHeight: 500,
+      },
+    },
   },
 };
 
@@ -42,6 +48,12 @@ export const VariantOneTwoEditor: Story = {
         },
       },
     },
+    docs: {
+      story: {
+        inline: false,
+        iframeHeight: 500,
+      },
+    },
   },
 };
 
@@ -49,27 +61,28 @@ const meta: Meta<typeof QuestionEditor> = {
   title: "Containers/Questions/QuestionEditor",
   component: QuestionEditor,
   tags: ["autodocs"],
+  args: {
+    questionBank: "atpl",
+    questionId: "WEC930Kb",
+  },
+  argTypes: {
+    questionBank: { control: false },
+    questionId: { control: false },
+  },
   parameters: {
-    docs: {
-      story: {
-        inline: false,
-        iframeHeight: 500,
-      },
+    layout: "fullscreen",
+    msw: {
+      handlers: [
+        trpcMsw.questionBank.getQuestionFromGithub.query(() => ({
+          questionTemplate: mockQuestion,
+        })),
+        trpcMsw.questionBank.searchLearningObjectives.query(() => ({
+          items: [],
+          totalResults: 0,
+          nextCursor: -1,
+        })),
+      ],
     },
-    msw: [
-      trpcMsw.questionBank.getQuestionFromGithub.query((req, res, ctx) => {
-        return res(
-          ctx.status(200),
-          ctx.data({ questionTemplate: mockQuestion }),
-        );
-      }),
-      trpcMsw.questionBank.searchLearningObjectives.query((req, res, ctx) => {
-        return res(
-          ctx.status(200),
-          ctx.data({ items: [], totalResults: 0, nextCursor: -1 }),
-        );
-      }),
-    ],
   },
 };
 

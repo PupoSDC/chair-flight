@@ -31,7 +31,7 @@ With over 300 thoughtfully curated questions, this question bank is designed to
 challenge and enhance your understanding of the 737's systems, procedures, and
 aircraft limitations.
 
-You can create a [new test here](/modules/737/tests/create).
+You can create a [new test here](/modules/b737/tests/create).
 
 export const InLocoTestMakeer = () => {
   const router = useRouter();
@@ -46,7 +46,7 @@ return (
         sx={{ height: "100%" }}
         questionBank={"737"}
         onSuccessfulTestCreation={(test) => {
-          router.push(`/modules/737/tests/${test.id}/${test.mode}`);
+          router.push(`/modules/b737/tests/${test.id}/${test.mode}`);
         }}
       />
     </Suspense>

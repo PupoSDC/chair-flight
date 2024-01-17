@@ -3,7 +3,7 @@ import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/core/app";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
 import type { questionEditSchema } from "@chair-flight/core/schemas";
 import type { z } from "zod";
 
@@ -40,7 +40,9 @@ export const createNewQuestionPr = async (
   });
 
   const assumedString = getContentResponse.data as unknown as string;
-  const assumedArray = JSON.parse(assumedString) as QuestionTemplate[];
+  const assumedArray = JSON.parse(
+    assumedString,
+  ) as QuestionBankQuestionTemplate[];
 
   const newQuestions = assumedArray.map((q) =>
     q.id === question.id ? question : q,

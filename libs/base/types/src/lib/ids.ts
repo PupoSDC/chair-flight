@@ -6,3 +6,5 @@ export type QuestionId = string;
 export type ContentId = string;
 export type LearningObjectiveId = string;
 export type CourseId = string;
+export type MediaId = string;
+export type FlashcardId = string;

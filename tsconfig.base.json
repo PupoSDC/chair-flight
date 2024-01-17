@@ -30,14 +30,11 @@
       "@chair-flight/base/env": ["libs/base/env/src/index.ts"],
       "@chair-flight/base/errors": ["libs/base/errors/src/index.ts"],
       "@chair-flight/base/types": ["libs/base/types/src/index.ts"],
-      "@chair-flight/content/question-bank-737": ["libs/content/question-bank-737/src/index.ts"],
-      "@chair-flight/content/question-bank-a320": ["libs/content/question-bank-a320/src/index.ts"],
-      "@chair-flight/content/question-bank-atpl": ["libs/content/question-bank-atpl/src/index.ts"],
-      "@chair-flight/content/interview-flashcards": ["libs/content/interview-flashcards/src/index.ts"],
       "@chair-flight/core/analytics": ["libs/core/analytics/src/index.ts"],
       "@chair-flight/core/app": ["libs/core/app/src/index.ts"],
-      "@chair-flight/core/schemas": ["libs/core/schemas/src/index.ts"],
       "@chair-flight/core/github": ["libs/core/github/src/index.ts"],
+      "@chair-flight/core/question-bank": ["libs/core/question-bank/src/index.ts"],
+      "@chair-flight/core/schemas": ["libs/core/schemas/src/index.ts"],
       "@chair-flight/react/analytics": ["libs/react/analytics/src/index.ts"],
       "@chair-flight/react/components": ["libs/react/components/src/index.ts"],
       "@chair-flight/react/containers": ["libs/react/containers/src/index.ts"],
@@ -45,7 +42,6 @@
       "@chair-flight/trpc/client": ["libs/trpc/client/src/index.ts"],
       "@chair-flight/trpc/mock": ["libs/trpc/mock/src/index.ts"],
       "@chair-flight/trpc/server": ["libs/trpc/server/src/index.ts"]
-    }
+    },
   },
-  "exclude": ["node_modules", "tmp"]
 }

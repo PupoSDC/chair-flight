@@ -15,7 +15,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/react/containers/tsconfig.lib.json --noEmit"]
+        "commands": ["tsc -p libs/react/containers/tsconfig.json"]
       }
     },
     "test": {
@@ -24,7 +24,7 @@
       "options": {
         "passWithNoTests": false,
         "reportsDirectory": "../../../coverage/libs/react/containers",
-        "config": "{projectRoot}/vitest.config.ts"
+        "config": "{workspaceRoot}/vitest.config.mts"
       }
     }
   }

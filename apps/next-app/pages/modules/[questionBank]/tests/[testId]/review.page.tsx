@@ -1,44 +1,37 @@
-import { ErrorBoundary } from "react-error-boundary";
-import { NoSsr } from "@mui/base";
-import { Skeleton } from "@mui/joy";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModuleBank,
-  TestReview,
-} from "@chair-flight/react/containers";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, TestReview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import { ErrorBoundaryFallback } from "./study.page";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
-type ReviewPageProps = {
+type Props = {
   testId: string;
   questionBank: QuestionBankName;
 };
 
-type ReviewPageParams = {
+type Params = {
   testId: string;
   questionBank: QuestionBankName;
 };
 
-export const ReviewPage: NextPage<ReviewPageProps> = ({
-  testId,
-  questionBank,
-}) => {
+const Page: NextPage<Props> = ({ testId, questionBank }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Tests", `/modules/${questionBank}/tests`],
+    testId,
+  ] as Breadcrumbs;
+
   return (
-    <LayoutModuleBank questionBank={questionBank} noPadding>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} noPadding>
       <AppHead />
-      <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
-        <NoSsr fallback={<Skeleton height={"500px"} />}>
-          <TestReview testId={testId} />
-        </NoSsr>
-      </ErrorBoundary>
-    </LayoutModuleBank>
+      <TestReview testId={testId} noSsr />
+    </LayoutModule>
   );
 };
 
-export const getServerSideProps = ssrHandler<ReviewPageProps, ReviewPageParams>(
+export const getServerSideProps = ssrHandler<Props, Params>(
   async ({ context }) => {
     const testId = context.params?.testId;
     const questionBank = context.params?.questionBank;
@@ -48,4 +41,4 @@ export const getServerSideProps = ssrHandler<ReviewPageProps, ReviewPageParams>(
   },
 );
 
-export default ReviewPage;
+export default Page;

@@ -20,7 +20,6 @@ const handleError = <T>(
   return undefined;
 };
 
-/** Can be used for both `getServerSideProps`, and `getStaticProps */
 export const ssrHandler = <
   Props extends Record<string, unknown>,
   Params extends ParsedUrlQuery = ParsedUrlQuery,
@@ -49,11 +48,8 @@ export const ssrHandler = <
       const castResponse = response as { props?: Record<string, unknown> };
 
       if (castResponse.props) {
-        castResponse.props["trpcState"] = JSON.parse(
-          JSON.stringify(helper.dehydrate()),
-        );
+        castResponse.props["trpcState"] = helper.dehydrate();
       }
-
       return response;
     } catch (error) {
       const resolution = handleError<Props>(error);

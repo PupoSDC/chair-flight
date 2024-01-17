@@ -2,17 +2,14 @@ import { MDXProvider } from "@mdx-js/react";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Link, Divider, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { BlogPostChip } from "@chair-flight/react/components";
 import {
   AppHead,
-  LayoutBackground,
-  LayoutPublic,
-} from "@chair-flight/react/containers";
+  BackgroundFadedImage,
+  BlogPostChip,
+} from "@chair-flight/react/components";
+import { LayoutPublic } from "@chair-flight/react/containers";
 import type { BlogPostTag } from "@chair-flight/react/components";
 import type { FunctionComponent, PropsWithChildren } from "react";
-
-const bgSrc = "/images/background-article.png";
-const bgAlt = "cool cockpit";
 
 export type BlogPageMeta = {
   title: string;
@@ -34,7 +31,7 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
   children,
 }) => {
   return (
-    <LayoutPublic background={<LayoutBackground src={bgSrc} alt={bgAlt} />}>
+    <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead
         title={meta.title}
         linkTitle={meta.linkTitle}

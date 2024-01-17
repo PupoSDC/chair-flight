@@ -1,49 +1,49 @@
-import { NoSsr } from "@mui/base";
-import {
-  AppHead,
-  LayoutModuleBank,
-  UserSettings,
-} from "@chair-flight/react/containers";
-import { preloadContentForStaticRender } from "@chair-flight/trpc/server";
+import * as fs from "node:fs/promises";
+import { MissingPathParameter } from "@chair-flight/base/errors";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, UserSettings } from "@chair-flight/react/containers";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { GetStaticPaths, NextPage } from "next";
 
-type SettingsPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type SettingsPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const SettingsPage: NextPage<SettingsPageProps> = ({ questionBank }) => (
-  <LayoutModuleBank questionBank={questionBank} fixedHeight>
-    <AppHead />
-    <NoSsr>
+const Page: NextPage<PageProps> = ({ questionBank }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    "Settings",
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
+      <AppHead />
       <UserSettings />
-    </NoSsr>
-  </LayoutModuleBank>
+    </LayoutModule>
+  );
+};
+
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    const questionBank = params.questionBank;
+    if (!questionBank) throw new MissingPathParameter("questionBank");
+    await LayoutModule.getData({ helper, params });
+    await UserSettings.getData({ helper, params });
+    return { props: params };
+  },
+  fs,
 );
 
-export const getStaticProps: GetStaticProps<
-  SettingsPageProps,
-  SettingsPageParams
-> = async ({ params }) => {
-  if (!params) throw new Error("Params must be defined. Check File name!");
-  await preloadContentForStaticRender(await import("fs/promises"));
-  const { questionBank } = params;
-
-  return {
-    props: {
-      questionBank,
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths<SettingsPageParams> = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl", "prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default SettingsPage;
+export default Page;

@@ -1,2 +1,3 @@
 export { theme } from "./theme";
-export { StopResizeAnimation } from "./stop-resize-animation";
+export { ThemeProvider } from "./theme-provider";
+export { ThemeOverrideColorScheme } from "./theme-override-color-scheme";

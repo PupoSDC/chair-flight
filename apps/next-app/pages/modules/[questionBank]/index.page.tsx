@@ -1,66 +1,48 @@
-import { Divider, Link, Typography } from "@mui/joy";
+import * as fs from "node:fs/promises";
+import { AppHead } from "@chair-flight/react/components";
 import {
-  AppHead,
-  LayoutModuleBank,
-  ModulesOverview,
+  LayoutModule,
+  OverviewModule,
+  OverviewModules,
 } from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { GetStaticPaths, NextPage } from "next";
 
-type QuestionBankIndexPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type QuestionBankIndexPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const QuestionBankIndexPage: NextPage<QuestionBankIndexPageProps> = ({
-  questionBank,
-}) => (
-  <LayoutModuleBank questionBank={questionBank}>
-    <AppHead />
-    <Typography level="h2">Question Bank</Typography>
-    <Divider />
-    <ModulesOverview module={questionBank} sx={{ my: 2 }} />
-    <Typography level="h2">Tests</Typography>
-    <Divider sx={{ mb: 2 }} />
-    <Link href={`/modules/${questionBank}/tests/create`}>Create New Test</Link>
-  </LayoutModuleBank>
+const Page: NextPage<PageProps> = ({ questionBank }) => {
+  const crumbs = [questionBank.toUpperCase()] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <OverviewModules questionBank={questionBank} sx={{ mb: 2 }} />
+    </LayoutModule>
+  );
+};
+
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    await OverviewModules.getData({ helper, params });
+    await LayoutModule.getData({ helper, params });
+    await OverviewModule.getData({ helper, params });
+    return { props: params };
+  },
+  fs,
 );
 
-export const getStaticProps: GetStaticProps<
-  QuestionBankIndexPageProps,
-  QuestionBankIndexPageParams
-> = async ({ params }) => {
-  if (!params) throw new Error("Params must be defined. Check File name!");
-  await preloadContentForStaticRender(await import("fs/promises"));
-  const helper = await getTrpcHelper();
-
-  await Promise.all([
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "737" }),
-  ]);
-
-  return {
-    props: {
-      questionBank: params.questionBank,
-      trpcState: helper.dehydrate(),
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths<
-  QuestionBankIndexPageParams
-> = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl", "prep"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default QuestionBankIndexPage;
+export default Page;

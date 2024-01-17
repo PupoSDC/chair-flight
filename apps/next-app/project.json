@@ -29,14 +29,6 @@
         "dev": false
       }
     },
-    "test": {
-      "executor": "@nx/vite:test",
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/next-app",
-        "config": "{projectRoot}/vitest.config.ts"
-      }
-    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -47,10 +39,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "tsc -p apps/next-app/tsconfig.app.json --noEmit",
-          "tsc -p apps/next-app/tsconfig.spec.json --noEmit"
-        ]
+        "commands": ["tsc -p apps/next-app/tsconfig.json"]
       }
     }
   },

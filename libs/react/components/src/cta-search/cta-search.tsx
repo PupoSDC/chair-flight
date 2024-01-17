@@ -15,6 +15,7 @@ export type CtaSearchProps = {
   onChange: (value: string) => void;
   loading?: boolean;
   numberOfResults?: number;
+  disableLabel?: boolean;
 } & Omit<
   InputProps,
   | "value"
@@ -32,7 +33,10 @@ export type CtaSearchProps = {
  * a fake loading spinner as soon as the user starts typing.
  */
 export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
-  ({ value, onChange, loading, sx, numberOfResults, ...props }, ref) => {
+  (
+    { value, onChange, loading, sx, numberOfResults, disableLabel, ...props },
+    ref,
+  ) => {
     const inputRef = useRef<HTMLDivElement>(null);
     const mergedRef = mergeRefs([ref, inputRef]);
     const [search, setSearch] = useState<string>(value);
@@ -91,15 +95,17 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
             isLoading ? <CircularProgress size="sm" /> : <SearchIcon />
           }
         />
-        <FormLabel sx={{ ml: "auto", pr: 1 }}>
-          {!isLoading ? (
-            <Typography level="body-xs">
-              Number of Results: {numberOfResults}
-            </Typography>
-          ) : (
-            <Typography level="body-xs">Loading results...</Typography>
-          )}
-        </FormLabel>
+        {!disableLabel && (
+          <FormLabel sx={{ ml: "auto", pr: 1 }}>
+            {!isLoading ? (
+              <Typography level="body-xs">
+                Number of Results: {numberOfResults}
+              </Typography>
+            ) : (
+              <Typography level="body-xs">Loading results...</Typography>
+            )}
+          </FormLabel>
+        )}
       </FormControl>
     );
   },

@@ -1,4 +1,4 @@
-import { UnimplementedEndpointError } from "@chair-flight/base/errors";
+import { UnimplementedError } from "@chair-flight/base/errors";
 import { getRandomId } from "../random/random";
 import type {
   QuestionVariant,
@@ -37,6 +37,6 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
         secondIncorrectStatements: [""],
       };
     default:
-      throw new UnimplementedEndpointError("Variant is not implemented yet");
+      throw new UnimplementedError("Variant is not implemented yet");
   }
 };

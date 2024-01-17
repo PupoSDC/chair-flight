@@ -8,7 +8,7 @@ import {
 } from "../random/random";
 import type {
   QuestionBankName,
-  QuestionTemplate,
+  QuestionBankQuestionTemplate,
   Test,
 } from "@chair-flight/base/types";
 
@@ -55,7 +55,7 @@ export const createTest = async ({
   questions: allQuestions,
 }: {
   config: NewTestConfiguration;
-  questions: QuestionTemplate[];
+  questions: QuestionBankQuestionTemplate[];
 }): Promise<Test> => {
   const numberOfQuestions = config.numberOfQuestions ?? 40;
   const subject = config.subject;

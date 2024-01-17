@@ -1,68 +1,56 @@
+import * as fs from "node:fs/promises";
 import { useRouter } from "next/router";
-import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModuleBank,
-  TestMaker,
-} from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { GetStaticPaths, NextPage } from "next";
 
-type TestsCreatePageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type TestsCreatePageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const TestsCreatePage: NextPage<TestsCreatePageProps> = ({ questionBank }) => {
+const Page: NextPage<PageProps> = ({ questionBank }) => {
   const router = useRouter();
 
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Tests", `/modules/${questionBank}/tests`],
+    "Create",
+  ] as Breadcrumbs;
+
   return (
-    <LayoutModuleBank questionBank={questionBank} fixedHeight>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
       <AppHead />
       <TestMaker
-        component="section"
         questionBank={questionBank}
         sx={{ height: "100%" }}
-        onSuccessfulTestCreation={(test) =>
-          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
-        }
+        onSuccessfulTestCreation={(test) => {
+          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`);
+        }}
       />
-    </LayoutModuleBank>
+    </LayoutModule>
   );
 };
 
-export const getStaticProps: GetStaticProps<
-  TestsCreatePageProps,
-  TestsCreatePageParams
-> = async ({ params }) => {
-  const questionBank = params?.questionBank;
-  if (!questionBank) throw new MissingPathParameter("questionBank");
-  await preloadContentForStaticRender(await import("fs/promises"));
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    await LayoutModule.getData({ helper, params });
+    await TestMaker.getData({ helper, params });
+    return { props: params };
+  },
+  fs,
+);
 
-  const helper = await getTrpcHelper();
-  await helper.questionBank.getAllSubjects.fetch({ questionBank });
-
-  return {
-    props: {
-      questionBank,
-      trpcState: helper.dehydrate(),
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths<
-  TestsCreatePageParams
-> = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default TestsCreatePage;
+export default Page;

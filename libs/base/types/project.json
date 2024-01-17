@@ -14,7 +14,7 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/base/types/tsconfig.json --noEmit"]
+        "commands": ["tsc -p libs/base/types/tsconfig.json"]
       }
     }
   },

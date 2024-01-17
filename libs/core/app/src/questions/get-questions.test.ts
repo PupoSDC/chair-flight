@@ -1,9 +1,9 @@
 import { getQuestion } from "./get-question";
-import type { QuestionTemplate } from "@chair-flight/base/types";
+import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
 
 describe("getQuestions", () => {
   it("generates a one two question idempotently", () => {
-    const questionTemplate: QuestionTemplate = {
+    const questionTemplate: QuestionBankQuestionTemplate = {
       srcLocation: "...",
       id: "QYFPA3CY4E",
       explanation: "Potato.",

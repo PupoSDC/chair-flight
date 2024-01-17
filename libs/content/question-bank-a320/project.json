@@ -2,41 +2,9 @@
   "name": "content-question-bank-a320",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/content/question-bank-a320/src",
   "targets": {
     "compile": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "mkdir -p apps/next-app/public/content/question-bank-a320",
-          "rm -rf apps/next-app/public/content/question-bank-a320/*",
-          "tsx --tsconfig ./libs/content/question-bank-a320/tsconfig.json ./libs/content/question-bank-a320/migrate"
-        ],
-        "parallel": false
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/content/question-bank-a320/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "tsc -p libs/content/question-bank-a320/tsconfig.json --noEmit"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "options": {
-        "passWithNoTests": false,
-        "reportsDirectory": "../../coverage/libs/content/question-bank-a320",
-        "config": "{projectRoot}/vitest.config.ts"
-      }
+      "executor": "@chair-flight/core/question-bank:compile"
     }
   },
   "tags": []

@@ -9,7 +9,9 @@ import {
   styled,
 } from "@mui/joy";
 import { ThemeButton } from "@chair-flight/react/components";
-import { useUserPreferences } from "../../hooks/use-user-preferences";
+import { container } from "../../wraper/container";
+import { useUserPreferences } from "../hooks/use-user-preferences";
+import type { FunctionComponent } from "react";
 
 const StyledFormControl = styled(FormControl)`
   display: flex;
@@ -24,7 +26,9 @@ const StyledFormControl = styled(FormControl)`
   }
 `;
 
-export const UserSettings = () => {
+const UserSettingsFallback: FunctionComponent = () => null;
+
+export const UserSettings = container(({ sx, component = "section" }) => {
   const {
     examModeAutoSkip,
     studyModeAutoSkip,
@@ -34,10 +38,12 @@ export const UserSettings = () => {
 
   return (
     <Stack
+      component={component}
       sx={{
         m: "auto",
         maxWidth: (t) => t.breakpoints.values.md,
         width: "100%",
+        ...sx,
       }}
     >
       <Typography level="h3">Theme Configuration</Typography>
@@ -69,4 +75,9 @@ export const UserSettings = () => {
       </StyledFormControl>
     </Stack>
   );
-};
+});
+
+UserSettings.displayName = "UserSettings";
+UserSettings.getData = async () => ({});
+UserSettings.useData = () => ({});
+UserSettings.LoadingFallback = UserSettingsFallback;

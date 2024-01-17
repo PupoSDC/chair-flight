@@ -1,0 +1,28 @@
+{
+  "name": "core-question-bank",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/core/question-bank/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/question-bank/**/*.ts"]
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/core/question-bank/tsconfig.json"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "content-question-bank-b737",
+    "content-question-bank-a320",
+    "content-question-bank-atpl",
+    "content-question-bank-prep"
+  ]
+}

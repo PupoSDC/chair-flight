@@ -1,5 +1,5 @@
 import type {
-  QuestionTemplate,
+  QuestionBankQuestionTemplate,
   QuestionVariant,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
@@ -57,7 +57,7 @@ export const getVariantPreview = (variant: QuestionVariant) => {
 };
 
 export const getQuestionPreview = (
-  question: QuestionTemplate,
+  question: QuestionBankQuestionTemplate,
   variantId: string,
 ) => {
   const variant = question.variants[variantId];

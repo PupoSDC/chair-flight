@@ -5,10 +5,10 @@ import {
   getRandomShuffler,
 } from "../random/random";
 import type {
-  Question,
-  QuestionMultipleChoice,
-  QuestionTemplate,
-  QuestionType,
+  TestQuestion,
+  TestQuestionMultipleChoice,
+  QuestionBankQuestionTemplate,
+  TestQuestionType,
   QuestionVariantCalculation,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
@@ -20,10 +20,10 @@ const getQuestionMultipleChoiceFromSimple = ({
   variant,
   randomSeed,
 }: {
-  template: QuestionTemplate;
+  template: QuestionBankQuestionTemplate;
   variant: QuestionVariantSimple;
   randomSeed: string;
-}): QuestionMultipleChoice => {
+}): TestQuestionMultipleChoice => {
   const shuffler = getRandomShuffler(randomSeed);
   const options = shuffler(variant.options);
   const correctOption = options.find((option) => option.correct);
@@ -66,10 +66,10 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
   variant,
   randomSeed,
 }: {
-  template: QuestionTemplate;
+  template: QuestionBankQuestionTemplate;
   variant: QuestionVariantTrueOrFalse;
   randomSeed: string;
-}): QuestionMultipleChoice => {
+}): TestQuestionMultipleChoice => {
   const options = [
     {
       id: "true",
@@ -106,10 +106,10 @@ const getQuestionMultipleChoiceFromOneTwo = ({
   variant,
   randomSeed,
 }: {
-  template: QuestionTemplate;
+  template: QuestionBankQuestionTemplate;
   variant: QuestionVariantOneTwo;
   randomSeed: string;
-}): QuestionMultipleChoice => {
+}): TestQuestionMultipleChoice => {
   const shuffle = getRandomShuffler(randomSeed);
   const getRandomId = getRandomIdGenerator(randomSeed);
   const {
@@ -189,10 +189,10 @@ const getQuestionMultipleChoiceFromCalculation = ({
   variant,
   randomSeed,
 }: {
-  template: QuestionTemplate;
+  template: QuestionBankQuestionTemplate;
   variant: QuestionVariantCalculation;
   randomSeed: string;
-}): QuestionMultipleChoice => {
+}): TestQuestionMultipleChoice => {
   return {
     questionId: getRandomId(),
     templateId: template.id,
@@ -210,13 +210,13 @@ const getQuestionMultipleChoiceFromCalculation = ({
 };
 
 export const getQuestion = (
-  template: QuestionTemplate,
+  template: QuestionBankQuestionTemplate,
   options: {
     variantId?: string;
     seed?: string;
-    type?: QuestionType;
+    type?: TestQuestionType;
   },
-): Question => {
+): TestQuestion => {
   const { variantId, seed } = options;
   const randomSeed = seed ?? getRandomId();
   const shuffler = getRandomShuffler(randomSeed);

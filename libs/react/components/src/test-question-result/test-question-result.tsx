@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { default as CrossIcon } from "@mui/icons-material/Close";
-import { Box, Sheet, Typography } from "@mui/joy";
-import { MarkdownClient } from "../markdown-client";
+import { Box, Sheet, Stack, Typography } from "@mui/joy";
+import { MarkdownClient, MarkdownClientCompressed } from "../markdown-client";
 import type { SheetProps } from "@mui/joy";
 
 export type TestQuestionResultProps = {
@@ -50,28 +50,34 @@ export const TestQuestionResult = forwardRef<
         <Typography level="body-sm" fontWeight={900}>
           {`${questionTemplateId} (${questionVariantId})`}
         </Typography>
-        <Typography level="body-sm">
+        <Box sx={{ fontSize: "sm" }}>
           <MarkdownClient>{question ?? ""}</MarkdownClient>
-        </Typography>
-        <Box sx={{ display: "flex", pt: 1 }}>
+        </Box>
+        <Stack direction="row" sx={{ pt: 1, gap: 1, alignItems: "center" }}>
           <Box sx={{ height: 18, width: 18, bgcolor: "success.solidBg" }}>
             {correct && (
               <CheckIcon fontSize={"lg"} sx={{ color: "success.solidColor" }} />
             )}
           </Box>
-          <Typography level="body-sm" sx={{ ml: 1 }}>
-            {correctOption}
-          </Typography>
-        </Box>
+          <Box sx={{ fontSize: "sm" }}>
+            <MarkdownClientCompressed>
+              {correctOption ?? ""}
+            </MarkdownClientCompressed>
+          </Box>
+        </Stack>
         {!correct && (
-          <Box sx={{ display: "flex" }}>
+          <Stack direction="row" sx={{ gap: 1, alignItems: "center" }}>
             <Box sx={{ height: 18, width: 18, bgcolor: "danger.solidBg" }}>
               <CrossIcon fontSize={"lg"} sx={{ color: "danger.solidColor" }} />
             </Box>
-            <Typography level="body-sm" sx={{ ml: 1 }}>
-              {selectedOption ?? "No option selected"}
-            </Typography>
-          </Box>
+            <Box sx={{ fontSize: "sm" }}>
+              {selectedOption ? (
+                <MarkdownClientCompressed children={selectedOption} />
+              ) : (
+                <Typography children="No option selected" />
+              )}
+            </Box>
+          </Stack>
         )}
       </Sheet>
     );

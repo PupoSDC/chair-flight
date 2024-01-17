@@ -34,6 +34,7 @@ export const useAnalytics = () => {
 
   return {
     page: () => {
+      if (!analytics) return;
       analytics.then((a) => a.page());
     },
 
@@ -41,6 +42,7 @@ export const useAnalytics = () => {
       name: T,
       payload: TrackEventPayload<T> = {},
     ) => {
+      if (!analytics) return;
       analytics.then((a) => a.track(name, payload));
     },
   };

@@ -1,57 +1,46 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
-import {
-  AppHead,
-  LayoutModuleBank,
-  QuestionSearch,
-} from "@chair-flight/react/containers";
-import {
-  getTrpcHelper,
-  preloadContentForStaticRender,
-} from "@chair-flight/trpc/server";
+import * as fs from "node:fs/promises";
+import { AppHead } from "@chair-flight/react/components";
+import { LayoutModule, QuestionSearch } from "@chair-flight/react/containers";
+import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { GetStaticPaths, NextPage } from "next";
 
-type QuestionsPageProps = {
+type PageProps = {
   questionBank: QuestionBankName;
 };
 
-type QuestionsPageParams = {
+type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const QuestionsPage: NextPage<QuestionsPageProps> = ({ questionBank }) => (
-  <LayoutModuleBank questionBank={questionBank}>
-    <AppHead />
-    <QuestionSearch component="section" questionBank={questionBank} />
-  </LayoutModuleBank>
+const Page: NextPage<PageProps> = ({ questionBank }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    "Questions",
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <QuestionSearch component="section" questionBank={questionBank} />
+    </LayoutModule>
+  );
+};
+
+export const getStaticProps = staticHandler<PageProps, PageParams>(
+  async ({ params, helper }) => {
+    await LayoutModule.getData({ helper, params });
+    await QuestionSearch.getData({ helper, params });
+    return { props: params };
+  },
+  fs,
 );
 
-export const getStaticProps: GetStaticProps<
-  QuestionsPageProps,
-  QuestionsPageParams
-> = async ({ params }) => {
-  const questionBank = params?.questionBank;
-  if (!questionBank) throw new MissingPathParameter("questionId");
-  await preloadContentForStaticRender(await import("fs/promises"));
-
-  const helper = await getTrpcHelper();
-
-  await Promise.all([
-    helper.questionBank.getNumberOfQuestions.prefetch({ questionBank }),
-  ]);
-
-  return {
-    props: {
-      questionBank,
-      trpcState: helper.dehydrate(),
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths<QuestionsPageParams> = async () => {
-  const banks: QuestionBankName[] = ["737", "a320", "atpl"];
+export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
+  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };
 
-export default QuestionsPage;
+export default Page;

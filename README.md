@@ -59,26 +59,26 @@ can and will be introduced in patch releases.
 
 ### Libs
 
-| Name                         | Desc                                                        |
-| ---------------------------- | ----------------------------------------------------------- |
-| base-env                     | Utility to safely access env variables                      |
-| base-errors                  | Errors that can be handled in the front or in the backend   |
-| base-types                   | Base Business types used across the app                     |
-| content-interview-flashcards | Content bank for the interview prep module                  |
-| content-question-bank-737    | Content bank for the 737 TR module                          |
-| content-question-bank-a320   | Content bank for the A320 TR module                         |
-| content-question-bank-atpl   | Content bank for the ATPL theory module                     |
-| core-analytics               | Analytics provider (currently a custom solution)            |
-| core-app                     | Business logic blocks sharable between React SPA/SSR and RN |
-| core-github                  | Github related functionalities                              |
-| core-schemas                 | Zod Schemas shared across our application (from base-types) |
-| react-analytics              | React hooks to interact with our analytics provider         |
-| react-components             | Shared react (DOM) components                               |
-| react-containers             | Next.js specific components                                 |
-| react-games                  | Shared react (three.js) components                          |
-| trpc-client                  | trpc next js specific client                                |
-| trpc-mock                    | trpc mock server, for storybook and RTL tests               |
-| trpc-server                  | main trpc server. All our backend logic starts here         |
+| Name                       | Desc                                                        |
+| -------------------------- | ----------------------------------------------------------- |
+| base-env                   | Utility to safely access env variables                      |
+| base-errors                | Errors that can be handled in the front or in the backend   |
+| base-types                 | Base Business types used across the app                     |
+| content-question-bank-prep | Content bank for the interview prep module                  |
+| content-question-bank-b737 | Content bank for the 737 TR module                          |
+| content-question-bank-a320 | Content bank for the A320 TR module                         |
+| content-question-bank-atpl | Content bank for the ATPL theory module                     |
+| core-analytics             | Analytics provider (currently a custom solution)            |
+| core-app                   | Business logic blocks sharable between React SPA/SSR and RN |
+| core-github                | Github related functionalities                              |
+| core-schemas               | Zod Schemas shared across our application (from base-types) |
+| react-analytics            | React hooks to interact with our analytics provider         |
+| react-components           | Shared react (DOM) components                               |
+| react-containers           | Next.js specific components                                 |
+| react-games                | Shared react (three.js) components                          |
+| trpc-client                | trpc next js specific client                                |
+| trpc-mock                  | trpc mock server, for storybook and RTL tests               |
+| trpc-server                | main trpc server. All our backend logic starts here         |
 
 ### .env
 

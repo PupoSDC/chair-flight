@@ -1,3 +1,3 @@
 import { z } from "zod";
 
-export const questionBankNameSchema = z.enum(["737", "a320", "atpl"]);
+export const questionBankNameSchema = z.enum(["b737", "a320", "atpl", "prep"]);

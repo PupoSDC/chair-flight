@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { mockTest } from "@chair-flight/trpc/mock";
-import { useTestProgress } from "../use-test-progress";
+import { useTestProgress } from "../hooks/use-test-progress";
 import { TestStudy } from "./test-study";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -16,9 +16,10 @@ const meta: Meta<typeof TestStudy> = {
     testId: mockTest.id,
   },
   argTypes: {
-    testId: {
-      // disable control
-    },
+    testId: { disable: true },
+  },
+  parameters: {
+    layout: "fullscreen",
   },
   decorators: [
     (Story) => {

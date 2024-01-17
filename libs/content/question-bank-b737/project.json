@@ -1,0 +1,11 @@
+{
+  "name": "content-question-bank-b737",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "compile": {
+      "executor": "@chair-flight/core/question-bank:compile"
+    }
+  },
+  "tags": []
+}

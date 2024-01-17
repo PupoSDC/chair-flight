@@ -12,18 +12,15 @@ import { default as fs } from "fs/promises";
 import { DateTime } from "luxon";
 import { default as path } from "path";
 import { default as dedent } from "ts-dedent";
-import { BlogPostChip } from "@chair-flight/react/components";
 import {
   AppHead,
-  LayoutBackground,
-  LayoutPublic,
-} from "@chair-flight/react/containers";
+  BackgroundFadedImage,
+  BlogPostChip,
+} from "@chair-flight/react/components";
+import { LayoutPublic } from "@chair-flight/react/containers";
 import type { BlogPageMeta } from "./_blog-page.layout";
 import type { GetStaticProps } from "next";
 import type { FunctionComponent } from "react";
-
-const bgSrc = "/images/background-article.png";
-const bgAlt = "cool cockpit";
 
 export type ArticlesIndexPageProps = {
   blogPostsMeta: BlogPageMeta[];
@@ -33,7 +30,7 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
   blogPostsMeta,
 }) => {
   return (
-    <LayoutPublic background={<LayoutBackground src={bgSrc} alt={bgAlt} />}>
+    <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead linkDescription={dedent``} />
       <Typography level="h2" sx={{ pt: 4 }}>
         Posts

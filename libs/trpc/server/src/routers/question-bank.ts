@@ -1,9 +1,6 @@
 import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
 import { UnimplementedError } from "@chair-flight/base/errors";
-import { QuestionBank737 } from "@chair-flight/content/question-bank-737";
-import { QuestionBankA320 } from "@chair-flight/content/question-bank-a320";
-import { QuestionBankAtpl } from "@chair-flight/content/question-bank-atpl";
 import {
   createTest,
   getQuestionPreview,
@@ -13,23 +10,17 @@ import {
   createNewQuestionPr,
   getQuestionFromGit,
 } from "@chair-flight/core/github";
+import { questionBanks } from "@chair-flight/core/question-bank";
 import {
-  questionBankNameSchema,
+  questionBankNameSchema as questionBank,
   questionEditSchema,
 } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
 import type {
-  LearningObjectiveWithHref,
-  QuestionBank,
+  QuestionBankLearningObjective,
   QuestionBankName,
 } from "@chair-flight/base/types";
 import type { MatchInfo } from "minisearch";
-
-const keyToQuestionBank: Record<QuestionBankName, QuestionBank> = {
-  "737": new QuestionBank737(),
-  a320: new QuestionBankA320(),
-  atpl: new QuestionBankAtpl(),
-};
 
 const questionSearchFields = [
   "id",
@@ -40,7 +31,7 @@ const questionSearchFields = [
 ];
 
 const questionSearchIndexes: Record<QuestionBankName, MiniSearch> = {
-  "737": new MiniSearch({
+  b737: new MiniSearch({
     fields: questionSearchFields,
     storeFields: questionSearchFields,
   }),
@@ -49,6 +40,10 @@ const questionSearchIndexes: Record<QuestionBankName, MiniSearch> = {
     storeFields: questionSearchFields,
   }),
   atpl: new MiniSearch({
+    fields: questionSearchFields,
+    storeFields: questionSearchFields,
+  }),
+  prep: new MiniSearch({
     fields: questionSearchFields,
     storeFields: questionSearchFields,
   }),
@@ -61,10 +56,6 @@ const learningObjectiveSearchIndexes: Record<"atpl", MiniSearch> = {
     fields: learningObjectiveSearchFields,
     storeFields: learningObjectiveSearchFields,
   }),
-};
-
-const getQuestionBank = (input: { questionBank: QuestionBankName }) => {
-  return keyToQuestionBank[input.questionBank];
 };
 
 // Marks that a request is already indexing a Minisearch to avoid saturating
@@ -89,42 +80,39 @@ export type QuestionPreview = {
 };
 
 export const questionBankRouter = router({
-  getAllSubjects: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-      }),
-    )
+  getConfig: publicProcedure
+    .input(z.object({ questionBank }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const subjects = await questionBank.getAllSubjects();
+      const qb = questionBanks[input.questionBank];
+      return {
+        hasFlashcards: await qb.has("flashcards"),
+        hasQuestions: await qb.has("questions"),
+        hasLearningObjectives: await qb.has("learningObjectives"),
+        hasMedia: await qb.has("media"),
+      };
+    }),
+  getAllSubjects: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const subjects = await qb.getAll("subjects");
       return { subjects };
     }),
   getQuestion: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        questionId: z.string(),
-      }),
-    )
+    .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const [questionTemplate, learningObjectives] = await Promise.all([
-        questionBank.getQuestionTemplate(input),
-        questionBank.getSomeLearningObjectives(input),
-      ]);
+      const id = input.questionId;
+      const qb = questionBanks[input.questionBank];
+      const questionTemplate = await qb.getOne("questions", id);
+      const loIds = questionTemplate.learningObjectives;
+      const learningObjectives = await qb.getSome("learningObjectives", loIds);
       return { questionTemplate, learningObjectives };
     }),
   getQuestionFromGithub: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        questionId: z.string(),
-      }),
-    )
+    .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const question = await questionBank.getQuestionTemplate(input);
+      const qb = questionBanks[input.questionBank];
+      const question = await qb.getOne("questions", input.questionId);
       const questionTemplate = await getQuestionFromGit({
         questionId: question.id,
         srcLocation: question.srcLocation,
@@ -132,44 +120,66 @@ export const questionBankRouter = router({
       return { questionTemplate };
     }),
   getLearningObjective: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        learningObjectiveId: z.string(),
-      }),
-    )
+    .input(z.object({ questionBank, learningObjectiveId: z.string() }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const learningObjective = await questionBank.getLearningObjective(input);
+      const loId = input.learningObjectiveId;
+      const qb = questionBanks[input.questionBank];
+      const learningObjective = await qb.getOne("learningObjectives", loId);
       return { learningObjective };
     }),
-  getNumberOfQuestions: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-      }),
-    )
+  getFlashcardsCollections: publicProcedure
+    .input(z.object({ questionBank }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const allQuestions = await questionBank.getAllQuestionTemplates();
+      const qb = questionBanks[input.questionBank];
+      const rawCollections = await qb.getAll("flashcards");
+      const collections = rawCollections.map((collection) => ({
+        id: collection.id,
+        title: collection.title,
+        numberOfFlashcards: collection.flashcards.length,
+      }));
+      return { collections };
+    }),
+  getFlashcardsCollection: publicProcedure
+    .input(z.object({ questionBank, collectionId: z.string() }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const id = input.collectionId;
+      const flashcardCollection = await qb.getOne("flashcards", id);
+      return { flashcardCollection };
+    }),
+  getNumberOfQuestions: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const allQuestions = await qb.getAll("questions");
       return { count: allQuestions.length };
     }),
   getNumberOfLearningObjectives: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-      }),
-    )
+    .input(z.object({ questionBank }))
     .query(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const allLearningObjectives =
-        await questionBank.getAllLearningObjectives();
+      const qb = questionBanks[input.questionBank];
+      const allLearningObjectives = await qb.getAll("learningObjectives");
       return { count: allLearningObjectives.length };
+    }),
+  getNumberOfAnnexes: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const allAnnexes = await qb.getAll("media");
+      return { count: allAnnexes.length };
+    }),
+  getNumberOfFlashcards: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const allFlashcards = await qb.getAll("flashcards");
+      const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
+      return { count };
     }),
   searchQuestions: publicProcedure
     .input(
       z.object({
-        questionBank: questionBankNameSchema,
+        questionBank,
         q: z.string().optional(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
@@ -178,10 +188,10 @@ export const questionBankRouter = router({
     .query(async ({ input }) => {
       if (initializationWork) await initializationWork;
       const questionBankName = input.questionBank;
-      const questionBank = getQuestionBank(input);
+      const qb = questionBanks[input.questionBank];
       const searchIndex = questionSearchIndexes[input.questionBank];
-      const questions = await questionBank.getAllQuestionTemplates();
-      const questionMap = await questionBank.getAllQuestionTemplates();
+      const questions = await qb.getAll("questions");
+      const questionMap = await qb.getAll("questions");
       const { q, limit, cursor = 0 } = input;
 
       if (searchIndex.documentCount === 0) {
@@ -238,7 +248,7 @@ export const questionBankRouter = router({
   searchLearningObjectives: publicProcedure
     .input(
       z.object({
-        questionBank: questionBankNameSchema,
+        questionBank,
         q: z.string().optional(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
@@ -246,9 +256,10 @@ export const questionBankRouter = router({
     )
     .query(async ({ input }) => {
       if (input.questionBank !== "atpl") throw new UnimplementedError("");
-      const questionBank = getQuestionBank(input);
+      const qb = questionBanks[input.questionBank];
       const searchIndex = learningObjectiveSearchIndexes[input.questionBank];
-      const los = await questionBank.getAllLearningObjectives();
+      const los = await qb.getAll("learningObjectives");
+
       const { q, limit, cursor = 0 } = input;
 
       if (searchIndex.documentCount === 0) {
@@ -264,7 +275,7 @@ export const questionBankRouter = router({
 
       const MATCH_LO_ID = /^[0-9]{3}(.[0-9]{2}){0,3}$/;
 
-      let results: SearchResponseItem<LearningObjectiveWithHref>[] = [];
+      let results: SearchResponseItem<QuestionBankLearningObjective>[] = [];
       if (!q) {
         results = los.map((result) => ({
           result,
@@ -282,8 +293,14 @@ export const questionBankRouter = router({
             terms: [],
           }));
       } else {
-        results = searchIndex.search(q, { fuzzy: 0.2 }).map((result) => ({
-          result: result as unknown as LearningObjectiveWithHref,
+        const search = searchIndex.search(q, { fuzzy: 0.2 });
+        const los = await qb.getSome(
+          "learningObjectives",
+          search.map((d) => d.id),
+        );
+
+        results = search.map((result, key) => ({
+          result: los[key],
           score: result.score,
           match: result.match,
           terms: result.terms,
@@ -299,15 +316,10 @@ export const questionBankRouter = router({
       };
     }),
   createTest: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        config: newTestConfigurationSchema,
-      }),
-    )
+    .input(z.object({ questionBank, config: newTestConfigurationSchema }))
     .mutation(async ({ input }) => {
-      const questionBank = getQuestionBank(input);
-      const questions = await questionBank.getAllQuestionTemplates();
+      const qb = questionBanks[input.questionBank];
+      const questions = await qb.getAll("questions");
       const test = await createTest({ ...input, questions });
       return { test };
     }),
