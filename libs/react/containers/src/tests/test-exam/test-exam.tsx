@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { default as AccessAlarmsOutlinedIcon } from "@mui/icons-material/AccessAlarmsOutlined";
 import { default as AppsOutlinedIcon } from "@mui/icons-material/AppsOutlined";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
@@ -40,15 +39,15 @@ type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
 type Props = {
   testId: string;
+  onTestFinished?: () => void;
 };
 
 export const TestExam = container<Props>(
-  ({ testId, sx, component = "section" }) => {
+  ({ testId, sx, onTestFinished, component = "section" }) => {
     useTestHotkeys({ testId });
     useTestProgressTime({ testId });
 
     const theme = useTheme();
-    const router = useRouter();
     const test = useTestProgress((state) => state.tests[testId]);
     const goToQuestion = useTestProgress((s) => s.goToTestQuestion);
     const goToPreviousQuestion = useTestProgress((s) => s.goToPreviousQuestion);
@@ -222,7 +221,7 @@ export const TestExam = container<Props>(
               children="Finish"
               onClick={() => {
                 finishTest({ testId: test.id });
-                router.push(`../${test.id}/review`);
+                onTestFinished?.();
               }}
             />
           </Box>
@@ -243,7 +242,7 @@ export const TestExam = container<Props>(
               color="danger"
               onClick={() => {
                 finishTest({ testId: test.id });
-                router.push(`../${test.id}/review`);
+                onTestFinished?.();
               }}
             />
           </ModalDialog>

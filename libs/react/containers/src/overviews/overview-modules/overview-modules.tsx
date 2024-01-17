@@ -79,6 +79,7 @@ export const OverviewModules = container<Props, Params, Data>(
           return (
             <Grid xs={12} sm={6} lg={3} key={mod.id}>
               <Card
+                replace
                 component={NextLink}
                 role="button"
                 href={`/modules/${mod.id}`}

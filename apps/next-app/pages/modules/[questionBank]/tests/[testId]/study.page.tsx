@@ -1,5 +1,9 @@
+import { useRouter } from "next/router";
 import { MissingPathParameter } from "@chair-flight/base/errors";
-import { AppHead } from "@chair-flight/react/components";
+import {
+  AppHead,
+  ThemeOverrideColorScheme,
+} from "@chair-flight/react/components";
 import { LayoutModule, TestStudy } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -15,12 +19,26 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-export const Page: NextPage<Props> = ({ testId, questionBank }) => (
-  <LayoutModule questionBank={questionBank} noPadding fixedHeight>
-    <AppHead />
-    <TestStudy testId={testId} />
-  </LayoutModule>
-);
+export const Page: NextPage<Props> = ({ testId, questionBank }) => {
+  const router = useRouter();
+
+  return (
+    <>
+      <AppHead />
+      <ThemeOverrideColorScheme questionBank={questionBank} />
+      <TestStudy
+        noSsr
+        testId={testId}
+        onTestFinished={() => {
+          router.push(`/modules/${questionBank}/tests/${testId}/review`);
+        }}
+        onTestDismissed={() => {
+          router.push(`/modules/${questionBank}/tests`);
+        }}
+      />
+    </>
+  );
+};
 
 export const getServerSideProps = ssrHandler<Props, Params>(
   async ({ helper, params }) => {

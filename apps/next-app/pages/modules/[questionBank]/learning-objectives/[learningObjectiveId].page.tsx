@@ -5,6 +5,7 @@ import {
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type PageParams = {
@@ -17,12 +18,27 @@ type PageProps = {
   learningObjectiveId: string;
 };
 
-export const Page: NextPage<PageProps> = (props) => (
-  <LayoutModule {...props}>
-    <AppHead />
-    <LearningObjectiveOverview sx={{ p: 2 }} {...props} />
-  </LayoutModule>
-);
+export const Page: NextPage<PageProps> = ({
+  questionBank,
+  learningObjectiveId,
+}) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Learning Objectives", `/modules/${questionBank}/learning-objectives`],
+    learningObjectiveId,
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <LearningObjectiveOverview
+        sx={{ p: 2 }}
+        questionBank={questionBank}
+        learningObjectiveId={learningObjectiveId}
+      />
+    </LayoutModule>
+  );
+};
 
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ helper, params }) => {

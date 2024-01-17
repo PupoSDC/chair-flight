@@ -1,5 +1,5 @@
-import type { MatchInfo } from "minisearch";
 import type { QuestionBankLearningObjective } from "@chair-flight/base/types";
+import type { MatchInfo } from "minisearch";
 
 export const mockLearningObjectiveSearchItems = [
   {

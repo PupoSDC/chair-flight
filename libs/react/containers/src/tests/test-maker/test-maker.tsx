@@ -30,7 +30,6 @@ import type {
 } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
-import type { BoxProps } from "@mui/joy";
 
 const resolver = zodResolver(newTestConfigurationSchema);
 
@@ -45,9 +44,10 @@ const testMakerPersistence = {
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-prep"),
 };
 
-type Props = Pick<BoxProps, "sx" | "component"> & {
+type Props = {
   onSuccessfulTestCreation: (test: Test) => void;
   questionBank: QuestionBankName;
+  component?: "form";
 };
 
 type Params = {
@@ -59,7 +59,7 @@ type Data = {
 };
 
 export const TestMaker = container<Props, Params, Data>(
-  ({ questionBank, onSuccessfulTestCreation, sx, component = "form" }) => {
+  ({ questionBank, onSuccessfulTestCreation, sx }) => {
     const params: Params = { questionBank };
     const persistenceKey = `cf-test-maker-${questionBank}` as const;
     const useTestMakerPersistence = testMakerPersistence[persistenceKey];
@@ -165,7 +165,7 @@ export const TestMaker = container<Props, Params, Data>(
 
     return (
       <Box
-        component={component as "form"}
+        component={"form"}
         onSubmit={onSubmit}
         onBlur={() => setPersistedData(form.getValues())}
         sx={{

@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
   AppHead,
   ThemeOverrideColorScheme,
@@ -17,13 +18,23 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-export const Page: NextPage<Props> = ({ testId, questionBank }) => (
-  <>
-    <AppHead />
-    <ThemeOverrideColorScheme questionBank={questionBank} />
-    <TestExam testId={testId} noSsr />
-  </>
-);
+export const Page: NextPage<Props> = ({ testId, questionBank }) => {
+  const router = useRouter();
+
+  return (
+    <>
+      <AppHead />
+      <ThemeOverrideColorScheme questionBank={questionBank} />
+      <TestExam
+        noSsr
+        testId={testId}
+        onTestFinished={() => {
+          router.push(`/modules/${questionBank}/tests/${testId}/review`);
+        }}
+      />
+    </>
+  );
+};
 
 export const getServerSideProps = ssrHandler<Props, Params>(
   async ({ helper, params }) => {

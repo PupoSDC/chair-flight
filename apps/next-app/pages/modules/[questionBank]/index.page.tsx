@@ -1,9 +1,13 @@
 import * as fs from "node:fs/promises";
-import { Divider, Link, Typography } from "@mui/joy";
 import { AppHead } from "@chair-flight/react/components";
-import { LayoutModule, OverviewModules } from "@chair-flight/react/containers";
+import {
+  LayoutModule,
+  OverviewModule,
+  OverviewModules,
+} from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
@@ -14,22 +18,22 @@ type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const Page: NextPage<PageProps> = ({ questionBank }) => (
-  <LayoutModule questionBank={questionBank}>
-    <AppHead />
-    <Typography level="h2">Question Bank</Typography>
-    <Divider />
-    <OverviewModules questionBank={questionBank} sx={{ my: 2 }} />
-    <Typography level="h2">Tests</Typography>
-    <Divider sx={{ mb: 2 }} />
-    <Link href={`/modules/${questionBank}/tests/create`}>Create New Test</Link>
-  </LayoutModule>
-);
+const Page: NextPage<PageProps> = ({ questionBank }) => {
+  const crumbs = [questionBank.toUpperCase()] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <OverviewModules questionBank={questionBank} sx={{ mb: 2 }} />
+    </LayoutModule>
+  );
+};
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
     await OverviewModules.getData({ helper, params });
     await LayoutModule.getData({ helper, params });
+    await OverviewModule.getData({ helper, params });
     return { props: params };
   },
   fs,

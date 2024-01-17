@@ -3,6 +3,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestReview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type Props = {
@@ -15,11 +16,17 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-const ReviewPage: NextPage<Props> = ({ testId, questionBank }) => {
+const Page: NextPage<Props> = ({ testId, questionBank }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Tests", `/modules/${questionBank}/tests`],
+    testId,
+  ] as Breadcrumbs;
+
   return (
-    <LayoutModule questionBank={questionBank} noPadding>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} noPadding>
       <AppHead />
-      <TestReview testId={testId} />
+      <TestReview testId={testId} noSsr />
     </LayoutModule>
   );
 };
@@ -34,4 +41,4 @@ export const getServerSideProps = ssrHandler<Props, Params>(
   },
 );
 
-export default ReviewPage;
+export default Page;

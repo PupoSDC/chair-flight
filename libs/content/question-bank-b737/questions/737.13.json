@@ -418,7 +418,7 @@
   },
   {
     "id": "hrap",
-    "explanation": "",
+    "explanation": "**STBY RUD** - activates standby hydraulic system pump and opens standby rudder\nshutoff valve to pressurize standby rudder power control unit.\n\n- **OFF** - closes flight control shutoff valve isolating ailerons, elevators and rudder\nfrom associated hydraulic system pressure.\n- **ON** (guarded position) - normal operating position.",
     "learningObjectives": ["737.13"],
     "variants": {
       "in83r": {
@@ -426,6 +426,15 @@
         "type": "true-or-false",
         "question": "Moving the STBY RUD switch to ON activates the standby pump and opens the standby rudder shutoff valve to pressurise the standby power control unit.",
         "answer": false,
+        "explanation": "Switching to **OFF** triggers the changes described!",
+        "annexes": [],
+        "externalIds": []
+      },
+      "in83q": {
+        "id": "in83q",
+        "type": "true-or-false",
+        "question": "Moving the STBY RUD switch to OFF activates the standby pump and opens the standby rudder shutoff valve to pressurise the standby power control unit.",
+        "answer": true,
         "explanation": "",
         "annexes": [],
         "externalIds": []

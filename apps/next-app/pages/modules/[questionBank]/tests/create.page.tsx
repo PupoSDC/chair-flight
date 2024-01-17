@@ -4,6 +4,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
@@ -17,16 +18,21 @@ type PageParams = {
 const Page: NextPage<PageProps> = ({ questionBank }) => {
   const router = useRouter();
 
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Tests", `/modules/${questionBank}/tests`],
+    "Create",
+  ] as Breadcrumbs;
+
   return (
-    <LayoutModule questionBank={questionBank} fixedHeight>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
       <AppHead />
       <TestMaker
-        component="section"
         questionBank={questionBank}
         sx={{ height: "100%" }}
-        onSuccessfulTestCreation={(test) =>
-          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
-        }
+        onSuccessfulTestCreation={(test) => {
+          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`);
+        }}
       />
     </LayoutModule>
   );

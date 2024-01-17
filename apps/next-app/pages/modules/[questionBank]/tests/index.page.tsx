@@ -3,6 +3,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestsOverview } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
@@ -13,16 +14,23 @@ type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const Page: NextPage<PageProps> = ({ questionBank }) => (
-  <LayoutModule questionBank={questionBank}>
-    <AppHead />
-    <TestsOverview
-      component={"section"}
-      sx={{ mx: "auto", maxWidth: "lg", width: "100%" }}
-      questionBank={questionBank}
-    />
-  </LayoutModule>
-);
+const Page: NextPage<PageProps> = ({ questionBank }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    "Tests",
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <TestsOverview
+        component={"section"}
+        sx={{ mx: "auto", maxWidth: "lg", width: "100%" }}
+        questionBank={questionBank}
+      />
+    </LayoutModule>
+  );
+};
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {

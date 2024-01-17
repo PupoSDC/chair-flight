@@ -4,6 +4,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, QuestionOverview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type PageParams = {
@@ -14,8 +15,8 @@ type PageParams = {
 };
 
 type PageProps = {
-  seed?: string;
-  variantId?: string;
+  seed: string;
+  variantId: string | null;
   questionBank: QuestionBankName;
   questionId: string;
 };
@@ -29,7 +30,7 @@ const Page: NextPage<PageProps> = ({
   const router = useRouter();
   const query = router.query as PageParams;
   const seed = query.seed ?? initialSeed;
-  const variantId = query.variantId ?? initialVariantId;
+  const variantId = query.variantId ?? initialVariantId ?? undefined;
 
   const updateVariantAndSeed = (query: { variantId: string; seed: string }) => {
     router.push({ pathname: router.pathname, query }, undefined, {
@@ -37,13 +38,19 @@ const Page: NextPage<PageProps> = ({
     });
   };
 
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Questions", `/modules/${questionBank}/questions`],
+    questionId,
+  ] as Breadcrumbs;
+
   // const linkDescription = getQuestionPreview(
   //   questionTemplate,
   //   initialVariantId,
   // );
 
   return (
-    <LayoutModule questionBank={questionBank} noPadding>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} noPadding>
       <AppHead linkTitle={`Chair Flight: ${variantId}`} linkDescription={""} />
       <QuestionOverview
         questionBank={questionBank}
@@ -59,7 +66,7 @@ const Page: NextPage<PageProps> = ({
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ params, helper, context }) => {
     const seed = (context.query?.["seed"] ?? getRandomId()) as string;
-    const variantId = context.query?.["variantId"] as string | undefined;
+    const variantId = (context.query?.["variantId"] as string) ?? null;
     const allParams = { ...params, seed, variantId };
 
     await Promise.all([

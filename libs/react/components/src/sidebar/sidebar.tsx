@@ -38,7 +38,7 @@ const VAR_SIDEBAR_WIDTH = "--joy-sidebar-width";
 const VAR_SIDEBAR_REMAINING_WIDTH = "--joy-sidebar-remaining-width";
 const SIDEBAR_EXPANDED_WIDTH = 210;
 const SIDEBAR_COLLAPSED_WIDTH = 42;
-const SIDEBAR_MOBILE_COLLAPSED_WIDTH = 24;
+const SIDEBAR_MOBILE_COLLAPSED_WIDTH = 0;
 
 const useSidebarStore = create<{
   isMobileOpen: boolean;
@@ -120,10 +120,10 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             },
 
             [`& .${listItemButtonClasses.root}`]: {
-              p: { xs: 0.125, sm: 1 },
+              p: 1,
               borderRight: 0,
               borderBottom: 0,
-              borderLeftWidth: { xs: 0, sm: 4 },
+              borderLeftWidth: 4,
               borderLeftColor: "transparent",
 
               "&:first-of-type": {
@@ -187,7 +187,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
             bottom: 0,
             left: 0,
             right: 0,
-            backgroundColor: "var(--joy-palette-background-backdrop)",
+            backgroundColor: "background.backdrop",
             backdropFilter: "blur(8px)",
             zIndex: (t) => t.zIndex.modal - 1,
             opacity: 1,

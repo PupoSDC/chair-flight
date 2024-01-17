@@ -3,6 +3,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { FlashcardTest, LayoutModule } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type PageProps = {
@@ -17,16 +18,24 @@ type PageParams = {
   seed: string;
 };
 
-const Page: NextPage<PageProps> = ({ questionBank, collectionId, seed }) => (
-  <LayoutModule questionBank={questionBank} fixedHeight>
-    <AppHead />
-    <FlashcardTest
-      questionBank={questionBank}
-      collectionId={collectionId}
-      seed={seed}
-    />
-  </LayoutModule>
-);
+const Page: NextPage<PageProps> = ({ questionBank, collectionId, seed }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Flashcards", `/modules/${questionBank}/flashcards`],
+    collectionId,
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
+      <AppHead />
+      <FlashcardTest
+        questionBank={questionBank}
+        collectionId={collectionId}
+        seed={seed}
+      />
+    </LayoutModule>
+  );
+};
 
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ helper, params }) => {

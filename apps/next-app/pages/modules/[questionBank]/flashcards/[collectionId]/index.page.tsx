@@ -4,6 +4,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { FlashcardList, LayoutModule } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
@@ -16,12 +17,20 @@ type PageParams = {
   collectionId: string;
 };
 
-const FlashcardsThemePage: NextPage<PageProps> = (props) => (
-  <LayoutModule noPadding {...props}>
-    <AppHead />
-    <FlashcardList {...props} />
-  </LayoutModule>
-);
+const Page: NextPage<PageProps> = ({ questionBank, collectionId }) => {
+  const crumbs = [
+    [questionBank.toUpperCase(), `/modules/${questionBank}`],
+    ["Flashcards", `/modules/${questionBank}/flashcards`],
+    collectionId,
+  ] as Breadcrumbs;
+
+  return (
+    <LayoutModule noPadding questionBank={questionBank} breadcrumbs={crumbs}>
+      <AppHead />
+      <FlashcardList questionBank={questionBank} collectionId={collectionId} />
+    </LayoutModule>
+  );
+};
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
@@ -51,4 +60,4 @@ export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
   return { fallback: false, paths };
 };
 
-export default FlashcardsThemePage;
+export default Page;

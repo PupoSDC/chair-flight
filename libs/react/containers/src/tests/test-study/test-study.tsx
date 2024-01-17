@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { default as AccessAlarmsOutlinedIcon } from "@mui/icons-material/AccessAlarmsOutlined";
 import { default as AppsOutlinedIcon } from "@mui/icons-material/AppsOutlined";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
@@ -48,16 +47,24 @@ type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
 type Props = {
   testId: string;
+  onTestDismissed?: () => void;
+  onTestFinished?: () => void;
   onMenuClicked?: () => void;
 };
 
 export const TestStudy = container<Props>(
-  ({ testId, onMenuClicked, component = "section", sx }) => {
+  ({
+    testId,
+    onTestDismissed,
+    onTestFinished,
+    onMenuClicked,
+    component = "section",
+    sx,
+  }) => {
     useTestHotkeys({ testId });
     useTestProgressTime({ testId });
 
     const theme = useTheme();
-    const router = useRouter();
     const test = useTestProgress((state) => state.tests[testId]);
     const goToQuestion = useTestProgress((s) => s.goToTestQuestion);
     const goToPreviousQuestion = useTestProgress((s) => s.goToPreviousQuestion);
@@ -266,7 +273,7 @@ export const TestStudy = container<Props>(
               children="Finish"
               onClick={() => {
                 finishTest({ testId: test.id });
-                router.push(`../${test.id}/review`);
+                onTestDismissed?.();
               }}
             />
           </Box>
@@ -311,9 +318,7 @@ export const TestStudy = container<Props>(
               variant="outlined"
               children="Exit without finishing"
               color="warning"
-              onClick={() => {
-                router.push(`../`);
-              }}
+              onClick={() => onTestDismissed?.()}
             />
             <Button
               fullWidth
@@ -321,7 +326,7 @@ export const TestStudy = container<Props>(
               color="danger"
               onClick={() => {
                 finishTest({ testId: test.id });
-                router.push(`../${test.id}/review`);
+                onTestFinished?.();
               }}
             />
           </ModalDialog>
