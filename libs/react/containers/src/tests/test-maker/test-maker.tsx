@@ -286,7 +286,7 @@ export const TestMaker = container<Props, Params, Data>(
             type="submit"
             fullWidth
             disabled={!form.formState.isValid}
-            loading={createTest.isLoading}
+            loading={createTest.isPending}
           >
             Start!
           </Button>

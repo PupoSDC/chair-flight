@@ -49,7 +49,7 @@ export const QuestionSearch = container<Props, Params, Data>((props) => {
   const hasResults =
     !searchQuestionsLoading &&
     !searchQuestionsError &&
-    searchQuestionsData?.pages[0].totalResults > 0;
+    (searchQuestionsData?.pages[0].totalResults ?? 0) > 0;
 
   const hasNoResults =
     !searchQuestionsLoading &&

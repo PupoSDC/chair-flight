@@ -16,7 +16,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
     <StrictMode>
       <AnalyticsProvider>
-        <ReactQueryDevtools position="bottom-right" />
+        <ReactQueryDevtools position="bottom" />
         <Head>
           <title>Welcome to chair-flight!</title>
         </Head>
