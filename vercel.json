@@ -4,11 +4,7 @@
   "rewrites": [],
   "crons": [
     {
-      "path": "/api/trpc/questionBankAtpl.searchQuestions?input=%7B\"json\"%3A%7B\"q\"%3A\"p\"%2C\"limit\"%3A12%2C\"cursor\"%3A0%7D%7D",
-      "schedule": "*/2 * * * *"
-    },
-    {
-      "path": "/api/trpc/questionBank737.searchQuestions?input=%7B\"json\"%3A%7B\"q\"%3A\"p\"%2C\"limit\"%3A12%2C\"cursor\"%3A0%7D%7D",
+      "path": "/api/trpc/questionBankQuestionSearch.initialize",
       "schedule": "*/2 * * * *"
     },
     {
@@ -16,11 +12,11 @@
       "schedule": "*/10 * * * *"
     },
     {
-      "path": "/modules/atpl/tests/create",
+      "path": "/modules/type/tests/create",
       "schedule": "*/10 * * * *"
     },
     {
-      "path": "/modules/b737/tests/create",
+      "path": "/modules/atpl/tests/create",
       "schedule": "*/10 * * * *"
     }
   ]

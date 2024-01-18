@@ -13,6 +13,11 @@ export const MarkdownClientCompressed = styled(MarkdownClient)`
   p {
     margin: 0;
   }
+
+  ul {
+    margin: 0;
+    padding-left: 16px;
+  }
 `;
 
 export type MarkdownClientCompressedProps = MarkdownClientProps;

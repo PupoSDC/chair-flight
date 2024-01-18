@@ -1,11 +1,7 @@
 import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
 import { UnimplementedError } from "@chair-flight/base/errors";
-import {
-  createTest,
-  getQuestionPreview,
-  newTestConfigurationSchema,
-} from "@chair-flight/core/app";
+import { createTest, newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
   createNewQuestionPr,
   getQuestionFromGit,
@@ -16,38 +12,8 @@ import {
   questionEditSchema,
 } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import type {
-  QuestionBankLearningObjective,
-  QuestionBankName,
-} from "@chair-flight/base/types";
+import type { QuestionBankLearningObjective } from "@chair-flight/base/types";
 import type { MatchInfo } from "minisearch";
-
-const questionSearchFields = [
-  "id",
-  "questionId",
-  "learningObjectives",
-  "text",
-  "externalIds",
-];
-
-const questionSearchIndexes: Record<QuestionBankName, MiniSearch> = {
-  b737: new MiniSearch({
-    fields: questionSearchFields,
-    storeFields: questionSearchFields,
-  }),
-  a320: new MiniSearch({
-    fields: questionSearchFields,
-    storeFields: questionSearchFields,
-  }),
-  atpl: new MiniSearch({
-    fields: questionSearchFields,
-    storeFields: questionSearchFields,
-  }),
-  prep: new MiniSearch({
-    fields: questionSearchFields,
-    storeFields: questionSearchFields,
-  }),
-};
 
 const learningObjectiveSearchFields = ["id", "text"];
 
@@ -175,75 +141,6 @@ export const questionBankRouter = router({
       const allFlashcards = await qb.getAll("flashcards");
       const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
       return { count };
-    }),
-  searchQuestions: publicProcedure
-    .input(
-      z.object({
-        questionBank,
-        q: z.string().optional(),
-        limit: z.number().min(1).max(50),
-        cursor: z.number().default(0),
-      }),
-    )
-    .query(async ({ input }) => {
-      if (initializationWork) await initializationWork;
-      const questionBankName = input.questionBank;
-      const qb = questionBanks[input.questionBank];
-      const searchIndex = questionSearchIndexes[input.questionBank];
-      const questions = await qb.getAll("questions");
-      const questionMap = await qb.getAll("questions");
-      const { q, limit, cursor = 0 } = input;
-
-      if (searchIndex.documentCount === 0) {
-        initializationWork = (async () => {
-          const processedData = questions.flatMap((question) =>
-            Object.values(question.variants).map((variant) => ({
-              id: variant.id,
-              questionId: question.id,
-              learningObjectives: question.learningObjectives.join(", "),
-              externalIds: variant.externalIds.join(", "),
-              text: getQuestionPreview(question, variant.id),
-            })),
-          );
-          await searchIndex.addAllAsync(processedData);
-        })();
-        await initializationWork;
-      }
-
-      const results = q ? searchIndex.search(q, { fuzzy: 0.2 }) : [];
-      const seenQuestions: Record<string, number> = {};
-      const processedResults = results.reduce<
-        SearchResponseItem<QuestionPreview>[]
-      >((sum, result) => {
-        const questionId = result["questionId"];
-        const variantId = result["id"];
-        if (seenQuestions[questionId]) return sum;
-        seenQuestions[questionId] = 1;
-        const variants = questionMap[questionId]?.variants;
-        sum.push({
-          result: {
-            questionId: result["questionId"],
-            variantId: result["id"],
-            text: result["text"],
-            numberOfVariants: variants ? Object.values(variants).length : 1,
-            learningObjectives: result["learningObjectives"].split(", "),
-            externalIds: result["externalIds"].split(", "),
-            href: `/modules/${questionBankName}/questions/${questionId}?variantId=${variantId}`,
-          },
-          score: result.score,
-          match: result.match,
-          terms: result.terms,
-        });
-        return sum;
-      }, []);
-
-      const items = processedResults.slice(cursor, cursor + limit);
-
-      return {
-        items,
-        totalResults: processedResults.length,
-        nextCursor: cursor + items.length,
-      };
     }),
   searchLearningObjectives: publicProcedure
     .input(

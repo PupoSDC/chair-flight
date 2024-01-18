@@ -1,15 +1,20 @@
 import * as fs from "node:fs/promises";
 import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
 import { questionBanks } from "./index";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 describe("QuestionBank", async () => {
   await Promise.all(
-    (["b737", "a320", "atpl", "prep"] as const).map((qb) =>
+    (["type", "atpl", "prep"] as const).map((qb) =>
       questionBanks[qb].preloadForStaticRender(fs),
     ),
   );
 
-  const modulesWithQuestions = ["b737", "a320", "atpl"] as const;
+  const modulesWithQuestions = [
+    "type",
+    "prep",
+    "atpl",
+  ] satisfies QuestionBankName[];
   const allQuestions = await Promise.all(
     modulesWithQuestions
       .map((b) => questionBanks[b])
@@ -19,20 +24,12 @@ describe("QuestionBank", async () => {
   const questionIds = allQuestions.map(([id]) => id);
   const variantIds = allQuestions.flatMap(([, q]) => Object.keys(q.variants));
 
-  test("QuestionBankB737 has correct config", async () => {
-    expect(questionBanks["b737"].getName()).toBe("b737");
-    expect(await questionBanks["b737"].has("questions")).toBe(true);
-    expect(await questionBanks["b737"].has("learningObjectives")).toBe(false);
-    expect(await questionBanks["b737"].has("media")).toBe(false);
-    expect(await questionBanks["b737"].has("flashcards")).toBe(false);
-  });
-
-  test("QuestionBankA320 has correct config", async () => {
-    expect(questionBanks["a320"].getName()).toBe("a320");
-    expect(await questionBanks["a320"].has("questions")).toBe(true);
-    expect(await questionBanks["a320"].has("learningObjectives")).toBe(false);
-    expect(await questionBanks["a320"].has("media")).toBe(false);
-    expect(await questionBanks["a320"].has("flashcards")).toBe(false);
+  test("QuestionBankType has correct config", async () => {
+    expect(questionBanks["type"].getName()).toBe("type");
+    expect(await questionBanks["type"].has("questions")).toBe(true);
+    expect(await questionBanks["type"].has("learningObjectives")).toBe(false);
+    expect(await questionBanks["type"].has("media")).toBe(false);
+    expect(await questionBanks["type"].has("flashcards")).toBe(false);
   });
 
   test("QuestionBankAtpl has correct config", async () => {

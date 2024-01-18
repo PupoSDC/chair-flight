@@ -21,9 +21,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
   ] as Breadcrumbs;
 
   return (
-    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+    <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
-      <QuestionSearch component="section" questionBank={questionBank} />
+      <QuestionSearch questionBank={questionBank} />
     </LayoutModule>
   );
 };
@@ -38,7 +38,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 );
 
 export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
+  const banks: QuestionBankName[] = ["type", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };

@@ -15,8 +15,6 @@ import { container } from "../../wraper/container";
 import { RightContainer } from "./welcome-right-container";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
-type Theme = "b737" | "atpl" | "prep";
-
 type Props = {
   headerHeight?: number;
   questionBank?: QuestionBankName;
@@ -26,8 +24,7 @@ type Props = {
 type Data = {
   numberOfFlashcards: number;
   numberOfAtplQuestions: number;
-  numberOfB737Questions: number;
-  numberOfA320Questions: number;
+  numberOfTypeQuestions: number;
 };
 
 type Params = Record<string, never>;
@@ -41,16 +38,12 @@ export const OverviewWelcome = container<Props, Params, Data>(
     component = "section",
   }) => {
     const rightSideContainer = useRef<HTMLDivElement>(null);
-    const {
-      numberOfFlashcards,
-      numberOfAtplQuestions,
-      numberOfB737Questions,
-      numberOfA320Questions,
-    } = OverviewWelcome.useData({});
+    const { numberOfFlashcards, numberOfAtplQuestions, numberOfTypeQuestions } =
+      OverviewWelcome.useData({});
 
     const mediaLongScreen = "@media (min-height: 560px) and (min-width: 440px)";
 
-    const goToTheme = (theme: Theme) => {
+    const goToTheme = (theme: QuestionBankName) => {
       onQuestionBankChanged(theme);
       const top = rightSideContainer.current?.offsetTop ?? 0;
       setTimeout(
@@ -190,15 +183,15 @@ export const OverviewWelcome = container<Props, Params, Data>(
               sx={{ mb: { xs: 1, md: 2 } }}
               color={"rose"}
               title={"Type Rating"}
-              active={["737", "a320"].includes(questionBank ?? "")}
+              active={["type"].includes(questionBank ?? "")}
               description={[
                 `Prepare or review your theory knowledge for a type rating `,
-                `on the Boeing 737 with ${numberOfB737Questions} questions, `,
-                `or the Airbus A320 with ${numberOfA320Questions} questions.`,
+                `on the Boeing 737 or the Airbus A320 with `,
+                `${numberOfTypeQuestions} questions.`,
               ].join("")}
               icon={<FlightTakeoffIcon />}
-              onClick={() => goToTheme("b737")}
-              showMoreHref="/modules/737"
+              onClick={() => goToTheme("type")}
+              showMoreHref="/modules/type"
             />
           </Box>
           <Link
@@ -347,7 +340,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
                   />
                 </RightContainer>
               )}
-              {questionBank === "b737" && (
+              {questionBank === "type" && (
                 <RightContainer container xs={6}>
                   <Typography
                     level="h3"
@@ -362,40 +355,22 @@ export const OverviewWelcome = container<Props, Params, Data>(
                     and Boeing 737
                   </Typography>
                   <Grid container spacing={2} sx={{ pt: 2 }}>
-                    <Grid xs={12} sm={6}>
+                    <Grid xs={12}>
                       <Button
                         fullWidth
                         size="lg"
                         component={Link}
-                        children={"Explore 737 Questions"}
-                        href="/modules/b737/questions"
+                        children={"Explore Type Rating Questions"}
+                        href="/modules/type/questions"
                       />
                     </Grid>
-                    <Grid xs={12} sm={6}>
+                    <Grid xs={12}>
                       <Button
                         fullWidth
                         size="lg"
                         component={Link}
-                        children={"Create 737 Test"}
-                        href="/modules/b737/tests/create"
-                      />
-                    </Grid>
-                    <Grid xs={12} sm={6}>
-                      <Button
-                        fullWidth
-                        size="lg"
-                        component={Link}
-                        children={"Explore A320 Questions"}
-                        href="/modules/a320/questions"
-                      />
-                    </Grid>
-                    <Grid xs={12} sm={6}>
-                      <Button
-                        fullWidth
-                        size="lg"
-                        component={Link}
-                        children={"Create A320 Test"}
-                        href="/modules/a320/tests/create"
+                        children={"Create Type Rating Test"}
+                        href="/modules/type/tests/create"
                       />
                     </Grid>
                   </Grid>
@@ -415,20 +390,17 @@ OverviewWelcome.getData = async ({ helper }) => {
   const [
     { count: numberOfFlashcards },
     { count: numberOfAtplQuestions },
-    { count: numberOfB737Questions },
-    { count: numberOfA320Questions },
+    { count: numberOfTypeQuestions },
   ] = await Promise.all([
     helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "type" }),
   ]);
 
   return {
     numberOfFlashcards,
     numberOfAtplQuestions,
-    numberOfB737Questions,
-    numberOfA320Questions,
+    numberOfTypeQuestions,
   };
 };
 
@@ -437,18 +409,15 @@ OverviewWelcome.useData = () => {
   const [
     [{ count: numberOfFlashcards }],
     [{ count: numberOfAtplQuestions }],
-    [{ count: numberOfB737Questions }],
-    [{ count: numberOfA320Questions }],
+    [{ count: numberOfTypeQuestions }],
   ] = [
     qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
     qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "type" }),
   ];
   return {
     numberOfFlashcards,
     numberOfAtplQuestions,
-    numberOfB737Questions,
-    numberOfA320Questions,
+    numberOfTypeQuestions,
   };
 };

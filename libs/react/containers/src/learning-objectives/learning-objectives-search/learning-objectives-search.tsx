@@ -54,8 +54,6 @@ const TdWithMarkdown = styled("td")`
 
 export const LearningObjectivesSearch = container<Props, Params, Data>(
   ({ component = "section", questionBank, sx }) => {
-    const params = { questionBank };
-    const initialData = LearningObjectivesSearch.useData(params);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const [search, setSearch] = useState("");
@@ -76,9 +74,6 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       .flatMap((p) => p.items)
       .map((d) => d.result);
 
-    const numberOfResults =
-      data?.pages[0].totalResults ?? initialData.numberOfLearningObjectives;
-
     const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
       const target = e.target as HTMLDivElement;
       const { scrollHeight, scrollTop, clientHeight } = target;
@@ -92,7 +87,6 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           value={search}
           loading={isLoading}
           onChange={(value) => setSearch(value)}
-          numberOfResults={numberOfResults}
           sx={{ my: 1, mx: "auto" }}
           placeholder="search Learning Objectives..."
         />

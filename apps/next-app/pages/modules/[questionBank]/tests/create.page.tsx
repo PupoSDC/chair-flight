@@ -48,7 +48,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 );
 
 export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const banks: QuestionBankName[] = ["b737", "a320", "atpl"];
+  const banks: QuestionBankName[] = ["type", "atpl"];
   const paths = banks.map((questionBank) => ({ params: { questionBank } }));
   return { fallback: false, paths };
 };

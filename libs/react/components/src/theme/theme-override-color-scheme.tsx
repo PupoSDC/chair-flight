@@ -32,9 +32,7 @@ export const ThemeOverrideColorScheme: FC<ThemeOverrideColorSchemeProps> = ({
     styles={(t) => {
       const palette = t.colorSchemes.light.palette;
       switch (questionBank) {
-        case "b737":
-          return getGlobalColorScheme(palette.primaryRose);
-        case "a320":
+        case "type":
           return getGlobalColorScheme(palette.primaryRose);
         case "prep":
           return getGlobalColorScheme(palette.primaryTeal);

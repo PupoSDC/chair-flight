@@ -36,10 +36,8 @@ const resolver = zodResolver(newTestConfigurationSchema);
 const testMakerPersistence = {
   "cf-test-maker-atpl":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-atpl"),
-  "cf-test-maker-b737":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-b737"),
-  "cf-test-maker-a320":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-a320"),
+  "cf-test-maker-type":
+    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-type"),
   "cf-test-maker-prep":
     createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-prep"),
 };
