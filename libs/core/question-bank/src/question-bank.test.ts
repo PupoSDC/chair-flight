@@ -10,7 +10,11 @@ describe("QuestionBank", async () => {
     ),
   );
 
-  const modulesWithQuestions = ["type", "a320", "atpl"] as QuestionBankName[];
+  const modulesWithQuestions = [
+    "type",
+    "prep",
+    "atpl",
+  ] satisfies QuestionBankName[];
   const allQuestions = await Promise.all(
     modulesWithQuestions
       .map((b) => questionBanks[b])
