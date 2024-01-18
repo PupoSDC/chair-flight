@@ -15,6 +15,7 @@ export * from "./flashcard-tinder";
 export * from "./hook-form";
 export * from "./hooks/use-media-query";
 export * from "./hooks/use-window-resize";
+export * from "./hooks/use-disclose";
 export * from "./module-selection-button";
 export * from "./image-viewer/image-viewer";
 export * from "./input-slider";

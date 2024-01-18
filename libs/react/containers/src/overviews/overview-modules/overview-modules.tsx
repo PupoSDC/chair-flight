@@ -5,7 +5,6 @@ import { default as CheckIcon } from "@mui/icons-material/CheckOutlined";
 import { Box, Card, CardContent, CardCover, Grid, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper/container";
-import { default as previewA320 } from "./images/a320.png";
 import { default as previewAtpl } from "./images/atpl.png";
 import { default as previewB737 } from "./images/b737.png";
 import { default as previewPrep } from "./images/prep.png";
@@ -27,44 +26,32 @@ type Params = {
 type Data = {
   numberOfFlashcards: number;
   numberOfAtplQuestions: number;
-  numberOfB737Questions: number;
-  numberOfA320Questions: number;
+  numberOfTypeQuestions: number;
 };
 
 export const OverviewModules = container<Props, Params, Data>(
   ({ questionBank, sx, component = "section" }) => {
     const params = { questionBank };
-    const {
-      numberOfFlashcards,
-      numberOfAtplQuestions,
-      numberOfB737Questions,
-      numberOfA320Questions,
-    } = OverviewModules.useData(params);
+    const { numberOfFlashcards, numberOfAtplQuestions, numberOfTypeQuestions } =
+      OverviewModules.useData(params);
 
     const modules = [
       {
-        id: "atpl" as QuestionBankName,
+        id: "atpl" satisfies QuestionBankName,
         name: "EASA ATPL Theory",
         imgSrc: previewAtpl,
         imgAlt: "A cessna looking cute in the skies",
         tagLine: `${numberOfAtplQuestions} Questions`,
       },
       {
-        id: "a320" as QuestionBankName,
-        name: "A320 Type Rating Questions",
-        imgSrc: previewA320,
-        imgAlt: "A320 Looking super cool doing Airbus stuff",
-        tagLine: `${numberOfA320Questions} Questions`,
-      },
-      {
-        id: "b737" as QuestionBankName,
+        id: "type" satisfies QuestionBankName,
         name: "737 Type Rating Questions",
         imgSrc: previewB737,
         imgAlt: "737 dragging itself through the skies like an old lady",
-        tagLine: `${numberOfB737Questions} Questions`,
+        tagLine: `${numberOfTypeQuestions} Questions`,
       },
       {
-        id: "prep" as QuestionBankName,
+        id: "prep" satisfies QuestionBankName,
         name: "Interview Preparation",
         imgSrc: previewPrep,
         imgAlt: "F16, almost no one using this website will ever fly.",
@@ -165,20 +152,17 @@ OverviewModules.getData = async ({ helper }) => {
   const [
     { count: numberOfFlashcards },
     { count: numberOfAtplQuestions },
-    { count: numberOfB737Questions },
-    { count: numberOfA320Questions },
+    { count: numberOfTypeQuestions },
   ] = await Promise.all([
     helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
     helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "b737" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "a320" }),
+    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "type" }),
   ]);
 
   return {
     numberOfFlashcards,
     numberOfAtplQuestions,
-    numberOfB737Questions,
-    numberOfA320Questions,
+    numberOfTypeQuestions,
   };
 };
 
@@ -187,18 +171,15 @@ OverviewModules.useData = () => {
   const [
     [{ count: numberOfFlashcards }],
     [{ count: numberOfAtplQuestions }],
-    [{ count: numberOfB737Questions }],
-    [{ count: numberOfA320Questions }],
+    [{ count: numberOfTypeQuestions }],
   ] = [
     qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
     qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "b737" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "a320" }),
+    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "type" }),
   ];
   return {
     numberOfFlashcards,
     numberOfAtplQuestions,
-    numberOfB737Questions,
-    numberOfA320Questions,
+    numberOfTypeQuestions,
   };
 };

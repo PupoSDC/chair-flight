@@ -19,7 +19,7 @@ const meta: Meta<typeof OverviewWelcome> = {
   argTypes: {
     questionBank: {
       control: "select",
-      options: ["atpl", "a320", "b737", "prep"] as QuestionBankName[],
+      options: ["atpl", "type", "prep"] satisfies QuestionBankName[],
     },
   },
   parameters: {

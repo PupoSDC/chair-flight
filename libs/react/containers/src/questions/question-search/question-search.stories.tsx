@@ -1,4 +1,8 @@
-import { mockQuestionSearchItems, trpcMsw } from "@chair-flight/trpc/mock";
+import {
+  mockQuestionSearchItems,
+  mockSubjects,
+  trpcMsw,
+} from "@chair-flight/trpc/mock";
 import { QuestionSearch } from "./question-search";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -10,25 +14,28 @@ const meta: Meta<typeof QuestionSearch> = {
   title: "Containers/Questions/QuestionSearch",
   component: QuestionSearch,
   tags: ["autodocs"],
+  args: {
+    questionBank: "atpl",
+  },
+  argTypes: {
+    questionBank: { control: false },
+  },
   parameters: {
     docs: {
       story: {
-        inline: false,
-        iframeHeight: 700,
+        height: "300px",
       },
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getNumberOfQuestions.query(() => ({ count: 123 })),
-        trpcMsw.questionBank.searchQuestions.query(() => {
-          const items = mockQuestionSearchItems;
-
-          return {
-            items,
-            nextCursor: 20,
-            totalResults: items.length,
-          };
-        }),
+        trpcMsw.questionBank.getAllSubjects.query(() => ({
+          subjects: mockSubjects,
+        })),
+        trpcMsw.questionBankQuestionSearch.searchQuestions.query(() => ({
+          items: mockQuestionSearchItems,
+          nextCursor: 20,
+          totalResults: mockQuestionSearchItems.length,
+        })),
       ],
     },
   },

@@ -1,1 +1,1 @@
-export type QuestionBankName = "b737" | "atpl" | "a320" | "prep";
+export type QuestionBankName = "type" | "atpl" | "prep";
