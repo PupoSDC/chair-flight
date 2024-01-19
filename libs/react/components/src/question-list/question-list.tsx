@@ -22,7 +22,7 @@ export type QuestionListProps = {
   loading?: boolean;
   error?: boolean;
   forceMode?: "mobile" | "desktop";
-  questions: Array<{
+  questions?: Array<{
     id: string;
     questionId: string;
     variantId: string;
@@ -39,7 +39,14 @@ export type QuestionListProps = {
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
   (
-    { loading, error, questions, forceMode, onFetchNextPage, ...sheetProps },
+    {
+      loading,
+      error,
+      questions = [],
+      forceMode,
+      onFetchNextPage,
+      ...sheetProps
+    },
     ref,
   ) => {
     const isFetchingMore = useRef(false);

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { getQuestionPreview } from "@chair-flight/core/app";
 import {
   createNewQuestionPr,
   getQuestionFromGit,
@@ -39,13 +40,7 @@ export const questionBankRouter = router({
       const learningObjectives = await qb.getSome("learningObjectives", loIds);
       return { questionTemplate, learningObjectives };
     }),
-  getQuestions: publicProcedure
-    .input(z.object({ questionBank, questionIds: z.string().array() }))
-    .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const questions = await qb.getSome("questions", input.questionIds);
-      return { questions };
-    }),
+
   getQuestionFromGithub: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {
@@ -64,6 +59,32 @@ export const questionBankRouter = router({
       const qb = questionBanks[input.questionBank];
       const learningObjective = await qb.getOne("learningObjectives", loId);
       return { learningObjective };
+    }),
+  getLearningObjectiveQuestions: publicProcedure
+    .input(z.object({ questionBank, learningObjectiveId: z.string() }))
+    .query(async ({ input }) => {
+      const loId = input.learningObjectiveId;
+      const qb = questionBanks[input.questionBank];
+      const learningObjective = await qb.getOne("learningObjectives", loId);
+      const questionIds = learningObjective.questions;
+      const ogQuestions = await qb.getSome("questions", questionIds);
+      const questions = ogQuestions.map((q) => {
+        const v = Object.values(q.variants)[0];
+
+        return {
+          id: v.id,
+          questionId: q.id,
+          variantId: v.id,
+          href: `/modules/${questionBank}/questions/${q.id}?variantId=${v.id}`,
+          text: getQuestionPreview(q, v.id),
+          learningObjectives: q.learningObjectives.map((name) => ({
+            name,
+            href: `/modules/${questionBank}/learning-objectives/${name}`,
+          })),
+          externalIds: v.externalIds,
+        };
+      });
+      return { questions };
     }),
   getFlashcardsCollections: publicProcedure
     .input(z.object({ questionBank }))
