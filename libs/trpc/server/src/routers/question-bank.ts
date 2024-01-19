@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { createTest, newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
   createNewQuestionPr,
   getQuestionFromGit,
@@ -115,14 +114,6 @@ export const questionBankRouter = router({
       const allFlashcards = await qb.getAll("flashcards");
       const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
       return { count };
-    }),
-  createTest: publicProcedure
-    .input(z.object({ questionBank, config: newTestConfigurationSchema }))
-    .mutation(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const questions = await qb.getAll("questions");
-      const test = await createTest({ ...input, questions });
-      return { test };
     }),
   updateQuestion: publicProcedure
     .input(questionEditSchema)

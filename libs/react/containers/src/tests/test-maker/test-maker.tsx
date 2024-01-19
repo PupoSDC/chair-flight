@@ -62,7 +62,7 @@ export const TestMaker = container<Props, Params, Data>(
     const persistenceKey = `cf-test-maker-${questionBank}` as const;
     const useTestMakerPersistence = testMakerPersistence[persistenceKey];
 
-    const useCreateTest = trpc.questionBank.createTest.useMutation;
+    const useCreateTest = trpc.tests.createTest.useMutation;
     const addTest = useTestProgress((s) => s.addTest);
 
     const { getPersistedData, setPersistedData } = useTestMakerPersistence();

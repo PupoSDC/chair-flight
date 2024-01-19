@@ -1,4 +1,4 @@
-import { mockSubjects, trpcMsw } from "@chair-flight/trpc/mock";
+import { mockSubjects, mockTest, trpcMsw } from "@chair-flight/trpc/mock";
 import { TestMaker } from "./test-maker";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -23,6 +23,9 @@ const meta: Meta<typeof TestMaker> = {
       handlers: [
         trpcMsw.questionBank.getAllSubjects.query(() => ({
           subjects: mockSubjects,
+        })),
+        trpcMsw.tests.createTest.mutation(() => ({
+          test: mockTest,
         })),
       ],
     },
