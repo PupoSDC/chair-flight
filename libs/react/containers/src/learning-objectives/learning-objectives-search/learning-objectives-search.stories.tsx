@@ -1,5 +1,6 @@
 import {
   mockLearningObjectiveSearchItems,
+  mockSubjects,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
 import { LearningObjectivesSearch } from "./learning-objectives-search";
@@ -22,10 +23,10 @@ const meta: Meta<typeof LearningObjectivesSearch> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getNumberOfLearningObjectives.query(() => ({
-          count: 123,
+        trpcMsw.questionBank.getAllSubjects.query(() => ({
+          subjects: mockSubjects,
         })),
-        trpcMsw.questionBank.searchLearningObjectives.query(() => {
+        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(() => {
           const items = mockLearningObjectiveSearchItems;
 
           return {

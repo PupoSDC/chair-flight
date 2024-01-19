@@ -1,6 +1,4 @@
-import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
-import { UnimplementedError } from "@chair-flight/base/errors";
 import { createTest, newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
   createNewQuestionPr,
@@ -12,38 +10,6 @@ import {
   questionEditSchema,
 } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import type { QuestionBankLearningObjective } from "@chair-flight/base/types";
-import type { MatchInfo } from "minisearch";
-
-const learningObjectiveSearchFields = ["id", "text"];
-
-const learningObjectiveSearchIndexes: Record<"atpl", MiniSearch> = {
-  atpl: new MiniSearch({
-    fields: learningObjectiveSearchFields,
-    storeFields: learningObjectiveSearchFields,
-  }),
-};
-
-// Marks that a request is already indexing a Minisearch to avoid saturating
-// the server.
-let initializationWork: Promise<void> | undefined;
-
-export type SearchResponseItem<T> = {
-  result: T;
-  score: number;
-  match: MatchInfo;
-  terms: string[];
-};
-
-export type QuestionPreview = {
-  questionId: string;
-  variantId: string;
-  text: string;
-  numberOfVariants: number;
-  learningObjectives: string[];
-  externalIds: string[];
-  href: string;
-};
 
 export const questionBankRouter = router({
   getConfig: publicProcedure
@@ -141,76 +107,6 @@ export const questionBankRouter = router({
       const allFlashcards = await qb.getAll("flashcards");
       const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
       return { count };
-    }),
-  searchLearningObjectives: publicProcedure
-    .input(
-      z.object({
-        questionBank,
-        q: z.string().optional(),
-        limit: z.number().min(1).max(50),
-        cursor: z.number().default(0),
-      }),
-    )
-    .query(async ({ input }) => {
-      if (input.questionBank !== "atpl") throw new UnimplementedError("");
-      const qb = questionBanks[input.questionBank];
-      const searchIndex = learningObjectiveSearchIndexes[input.questionBank];
-      const los = await qb.getAll("learningObjectives");
-
-      const { q, limit, cursor = 0 } = input;
-
-      if (searchIndex.documentCount === 0) {
-        initializationWork = (async () => {
-          const processedData = los.map(({ questions, ...lo }) => ({
-            ...lo,
-            courses: lo.courses.join(", "),
-          }));
-          await searchIndex.addAllAsync(processedData);
-        })();
-        await initializationWork;
-      }
-
-      const MATCH_LO_ID = /^[0-9]{3}(.[0-9]{2}){0,3}$/;
-
-      let results: SearchResponseItem<QuestionBankLearningObjective>[] = [];
-      if (!q) {
-        results = los.map((result) => ({
-          result,
-          score: 1,
-          match: {},
-          terms: [],
-        }));
-      } else if (MATCH_LO_ID.test(q)) {
-        results = los
-          .filter((doc) => doc.id.startsWith(q))
-          .map((result) => ({
-            result,
-            score: 1,
-            match: {},
-            terms: [],
-          }));
-      } else {
-        const search = searchIndex.search(q, { fuzzy: 0.2 });
-        const los = await qb.getSome(
-          "learningObjectives",
-          search.map((d) => d.id),
-        );
-
-        results = search.map((result, key) => ({
-          result: los[key],
-          score: result.score,
-          match: result.match,
-          terms: result.terms,
-        }));
-      }
-
-      const items = results.slice(cursor, cursor + limit);
-
-      return {
-        items,
-        totalResults: results.length,
-        nextCursor: cursor + items.length,
-      };
     }),
   createTest: publicProcedure
     .input(z.object({ questionBank, config: newTestConfigurationSchema }))

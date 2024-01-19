@@ -164,7 +164,6 @@ export const LayoutModule = container<Props, Params, Data>(
             width: Sidebar.css.remainingWidth,
             transition: Sidebar.css.widthTransition,
             right: 0,
-            boxShadow: (t) => t.shadow.md,
           }}
         >
           <Breadcrumbs separator="›" sx={{ ml: 2, display: ["none", "flex"] }}>

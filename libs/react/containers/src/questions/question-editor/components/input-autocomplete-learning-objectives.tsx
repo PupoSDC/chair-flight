@@ -17,17 +17,20 @@ export const InputAutocompleteLearningObjectives = forwardRef<
   const [search, setSearch] = useState("");
 
   const { data, isLoading } =
-    trpc.questionBank.searchLearningObjectives.useQuery({
+    trpc.questionBankLoSearch.searchLearningObjectives.useQuery({
       q: search,
       limit: 10,
       cursor: 0,
       questionBank: "atpl",
+      subject: null,
+      course: null,
+      searchField: null,
     });
 
   const optionsMap = (data?.items ?? []).reduce<
     Record<string, QuestionBankLearningObjective>
   >((acc, result) => {
-    acc[result.result.id] = result.result;
+    acc[result.id] = result;
     return acc;
   }, {});
 
@@ -44,7 +47,7 @@ export const InputAutocompleteLearningObjectives = forwardRef<
       onInputChange={(_, newInputValue) => setSearch(newInputValue)}
       filterOptions={(options) => options}
       placeholder="Learning Objectives"
-      options={data?.items.map((result) => result.result.id) ?? []}
+      options={data?.items.map((result) => result.id) ?? []}
       sx={{
         "& input": {
           minWidth: "100%",

@@ -76,7 +76,7 @@ const meta: Meta<typeof QuestionEditor> = {
         trpcMsw.questionBank.getQuestionFromGithub.query(() => ({
           questionTemplate: mockQuestion,
         })),
-        trpcMsw.questionBank.searchLearningObjectives.query(() => ({
+        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(() => ({
           items: [],
           totalResults: 0,
           nextCursor: -1,
