@@ -1,4 +1,4 @@
-import { CourseName, QuestionBankName } from "@chair-flight/base/types";
+import type { CourseName, QuestionBankName } from "@chair-flight/base/types";
 
 export const mockLearningObjectiveSearchItems = [
   {
