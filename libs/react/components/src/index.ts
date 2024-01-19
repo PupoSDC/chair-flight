@@ -23,6 +23,7 @@ export * from "./markdown-client";
 export * from "./nested-checkbox-select";
 export * from "./question-multiple-choice";
 export * from "./question-variant-preview";
+export * from "./question-list";
 export * from "./sidebar";
 export * from "./test-preview";
 export * from "./question-navigation";

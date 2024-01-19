@@ -1,21 +1,10 @@
-import { Fragment, useState } from "react";
-import { NoSsr } from "@mui/base";
+import { useState } from "react";
 import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
 import {
-  Box,
   Select,
-  Sheet,
   Stack,
-  useTheme,
   Option,
-  Table,
-  Link,
   Typography,
-  CircularProgress,
-  List,
-  ListItemContent,
-  ListItem,
-  ListDivider,
   IconButton,
   Modal,
   ModalDialog,
@@ -27,10 +16,8 @@ import {
 } from "@mui/joy";
 import {
   CtaSearch,
-  MarkdownClientCompressed,
-  Ups,
+  QuestionList,
   useDisclose,
-  useMediaQuery,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -58,18 +45,11 @@ type SearchField = "questionId" | "learningObjectives" | "text" | "externalIds";
 
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const [search, setSearch] = useState("");
     const [searchField, setSearchField] = useState<SearchField | null>(null);
     const [subject, setSubject] = useState<string | null>(null);
     const { subjects } = QuestionSearch.useData({ questionBank });
-
-    const {
-      isOpen: isFilterModalOpen,
-      open: openFilterModal,
-      close: closeFilterModal,
-    } = useDisclose();
+    const filterModal = useDisclose();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       {
@@ -86,18 +66,6 @@ export const QuestionSearch = container<Props, Params, Data>(
     );
 
     const numberOfFilters = Number(!!searchField) + Number(!!subject);
-    const hasError = isError;
-    const hasQueryResults = !!data?.pages[0].totalResults;
-    const hasResults = !isLoading && !hasError && hasQueryResults;
-    const hasNoResults = !isLoading && !hasError && !hasResults;
-    const results = (data?.pages ?? []).flatMap((p) => p.items);
-
-    const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
-      const target = e.target as HTMLUListElement;
-      const { scrollHeight, scrollTop, clientHeight } = target;
-      const distance = scrollHeight - scrollTop - clientHeight;
-      if (distance < 500 && !isLoading) fetchNextPage();
-    };
 
     const filters = (
       <>
@@ -153,7 +121,7 @@ export const QuestionSearch = container<Props, Params, Data>(
             size="sm"
             variant="outlined"
             color="neutral"
-            onClick={openFilterModal}
+            onClick={filterModal.open}
             sx={{ display: { md: "none" } }}
           >
             <Badge badgeContent={numberOfFilters} size="sm">
@@ -162,126 +130,15 @@ export const QuestionSearch = container<Props, Params, Data>(
           </IconButton>
         </Stack>
 
-        <Sheet sx={{ flex: 1, overflowY: "scroll", position: "relative" }}>
-          <Box sx={{ height: "100%", overflow: "auto" }} onScroll={onScroll}>
-            <NoSsr>
-              {isLoading && (
-                <CircularProgress
-                  variant="solid"
-                  size="lg"
-                  sx={{
-                    position: "absolute",
-                    transform: "translate(-50%, -50%)",
-                    top: "50%",
-                    left: "50%",
-                  }}
-                />
-              )}
-              {hasNoResults && <Ups message="No questions found" />}
-              {hasError && (
-                <Ups message="Error fetching questions" color="danger" />
-              )}
-              {hasResults && !isMobile && (
-                <Table stickyHeader>
-                  <thead>
-                    <tr>
-                      <th style={{ width: "8em" }}>ID</th>
-                      <th>Question</th>
-                      <th style={{ width: "12em" }}>Learning Objectives</th>
-                      <th style={{ width: "12em" }}>External IDs</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {results.map((result) => (
-                      <tr key={result.questionId}>
-                        <td>
-                          <Link href={result.href} sx={{ display: "block" }}>
-                            <Typography>{result.questionId}</Typography>
-                            <br />
-                            <Typography level="body-xs">
-                              {result.variantId}
-                            </Typography>
-                          </Link>
-                        </td>
-                        <td>
-                          <MarkdownClientCompressed>
-                            {result.text}
-                          </MarkdownClientCompressed>
-                        </td>
-                        <td>
-                          {result.learningObjectives.map(({ name, href }) => (
-                            <Link
-                              key={name}
-                              href={href}
-                              children={name}
-                              sx={{ display: "block" }}
-                            />
-                          ))}
-                        </td>
-                        <td>
-                          {result.externalIds.map((id) => (
-                            <Typography level="body-xs" key={id}>
-                              {id}
-                            </Typography>
-                          ))}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              )}
-              {hasResults && isMobile && (
-                <List>
-                  {results.map((result) => (
-                    <Fragment key={result.id}>
-                      <ListItem>
-                        <ListItemContent>
-                          <Link href={result.href} sx={{ pr: 1 }}>
-                            {result.questionId}
-                          </Link>
-                          <Typography
-                            level="body-xs"
-                            sx={{ display: "inline" }}
-                          >
-                            {result.variantId}
-                          </Typography>
+        <QuestionList
+          loading={isLoading}
+          error={isError}
+          questions={(data?.pages ?? []).flatMap((p) => p.items)}
+          onFetchNextPage={fetchNextPage}
+          sx={{ flex: 1, overflow: "hidden" }}
+        />
 
-                          {searchField === "externalIds" ? (
-                            <Typography level="body-xs">
-                              {result.externalIds.join(", ")}
-                            </Typography>
-                          ) : (
-                            <Typography level="body-xs">
-                              {result.learningObjectives
-                                .map((lo) => lo.name)
-                                .join(", ")}
-                            </Typography>
-                          )}
-                          <Box
-                            sx={{
-                              mt: 2,
-                              fontSize: "12px",
-                              height: "10em",
-                              overflow: "hidden",
-                              maskImage:
-                                "linear-gradient(to bottom, black 50%, transparent 100%)",
-                            }}
-                          >
-                            <MarkdownClientCompressed>
-                              {result.text}
-                            </MarkdownClientCompressed>
-                          </Box>
-                        </ListItemContent>
-                      </ListItem>
-                      <ListDivider inset={"gutter"} />
-                    </Fragment>
-                  ))}
-                </List>
-              )}
-            </NoSsr>
-          </Box>
-        </Sheet>
-        <Modal open={isFilterModalOpen} onClose={closeFilterModal}>
+        <Modal open={filterModal.isOpen} onClose={filterModal.close}>
           <ModalDialog aria-labelledby="filter-modal" layout="fullscreen">
             <ModalClose />
             <Typography id="filter-modal" level="h2">
@@ -291,7 +148,7 @@ export const QuestionSearch = container<Props, Params, Data>(
 
             {filters}
 
-            <Button color="primary" onClick={closeFilterModal}>
+            <Button color="primary" onClick={filterModal.close}>
               Submit
             </Button>
           </ModalDialog>
