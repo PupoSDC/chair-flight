@@ -198,6 +198,7 @@ export const readAllLearningObjectivesFromFs = async ({
     learningObjectives.forEach((lo2) => {
       if (lo2.id.startsWith(lo.id)) {
         lo.courses = [...new Set([...lo.courses, ...lo2.courses])];
+        lo.questions = [...new Set([...lo.questions, ...lo2.questions])];
       }
     });
   });

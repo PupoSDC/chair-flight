@@ -65,7 +65,6 @@ export const questionBankRouter = router({
       const learningObjective = await qb.getOne("learningObjectives", loId);
       return { learningObjective };
     }),
-
   getFlashcardsCollections: publicProcedure
     .input(z.object({ questionBank }))
     .query(async ({ input }) => {
