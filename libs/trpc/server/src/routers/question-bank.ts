@@ -40,6 +40,13 @@ export const questionBankRouter = router({
       const learningObjectives = await qb.getSome("learningObjectives", loIds);
       return { questionTemplate, learningObjectives };
     }),
+  getQuestions: publicProcedure
+    .input(z.object({ questionBank, questionIds: z.string().array() }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const questions = await qb.getSome("questions", input.questionIds);
+      return { questions };
+    }),
   getQuestionFromGithub: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {
@@ -59,6 +66,7 @@ export const questionBankRouter = router({
       const learningObjective = await qb.getOne("learningObjectives", loId);
       return { learningObjective };
     }),
+
   getFlashcardsCollections: publicProcedure
     .input(z.object({ questionBank }))
     .query(async ({ input }) => {
