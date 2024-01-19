@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import { NoSsr } from "@mui/base";
 import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
 import {
   Box,
@@ -59,23 +60,18 @@ export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-    const params = { questionBank };
     const [search, setSearch] = useState("");
     const [searchField, setSearchField] = useState<SearchField | null>(null);
     const [subject, setSubject] = useState<string | null>(null);
-    const { subjects } = QuestionSearch.useData(params);
+    const { subjects } = QuestionSearch.useData({ questionBank });
+
     const {
       isOpen: isFilterModalOpen,
       open: openFilterModal,
       close: closeFilterModal,
     } = useDisclose();
 
-    const {
-      data: searchQuestionsData,
-      isLoading: searchQuestionsLoading,
-      isError: searchQuestionsError,
-      fetchNextPage,
-    } = useSearchQuestions(
+    const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       {
         q: search,
         searchField,
@@ -90,24 +86,17 @@ export const QuestionSearch = container<Props, Params, Data>(
     );
 
     const numberOfFilters = Number(!!searchField) + Number(!!subject);
-
-    const hasResults =
-      !searchQuestionsLoading &&
-      !searchQuestionsError &&
-      searchQuestionsData?.pages[0].totalResults > 0;
-
-    const hasNoResults =
-      !searchQuestionsLoading && !searchQuestionsError && !hasResults;
-
-    const hasError = searchQuestionsError;
-
-    const results = (searchQuestionsData?.pages ?? []).flatMap((p) => p.items);
+    const hasError = isError;
+    const hasQueryResults = !!data?.pages[0].totalResults;
+    const hasResults = !isLoading && !hasError && hasQueryResults;
+    const hasNoResults = !isLoading && !hasError && !hasResults;
+    const results = (data?.pages ?? []).flatMap((p) => p.items);
 
     const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
       const target = e.target as HTMLUListElement;
       const { scrollHeight, scrollTop, clientHeight } = target;
       const distance = scrollHeight - scrollTop - clientHeight;
-      if (distance < 500 && !searchQuestionsLoading) fetchNextPage();
+      if (distance < 500 && !isLoading) fetchNextPage();
     };
 
     const filters = (
@@ -152,7 +141,7 @@ export const QuestionSearch = container<Props, Params, Data>(
           <CtaSearch
             size="sm"
             value={search}
-            loading={searchQuestionsLoading}
+            loading={isLoading}
             onChange={(value) => setSearch(value)}
             sx={{ flex: 1 }}
             placeholder="search Questions..."
@@ -173,119 +162,123 @@ export const QuestionSearch = container<Props, Params, Data>(
           </IconButton>
         </Stack>
 
-        <Sheet sx={{ flex: 1, overflowY: "scroll" }}>
-          <Box
-            sx={{ height: "100%", overflow: "auto", position: "relative" }}
-            onScroll={onScroll}
-          >
-            {searchQuestionsLoading && (
-              <CircularProgress
-                variant="solid"
-                size="lg"
-                sx={{
-                  position: "absolute",
-                  transform: "translate(-50%, -50%)",
-                  top: "50%",
-                  left: "50%",
-                }}
-              />
-            )}
-            {hasNoResults && <Ups message="No questions found" />}
-            {hasError && (
-              <Ups message="Error fetching questions" color="danger" />
-            )}
-            {hasResults && !isMobile && (
-              <Table stickyHeader>
-                <thead>
-                  <tr>
-                    <th style={{ width: "8em" }}>ID</th>
-                    <th>Question</th>
-                    <th style={{ width: "12em" }}>Learning Objectives</th>
-                    <th style={{ width: "12em" }}>External IDs</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {results.map((result) => (
-                    <tr key={result.questionId}>
-                      <td>
-                        <Link href={result.href} sx={{ display: "block" }}>
-                          <Typography>{result.questionId}</Typography>
-                          <br />
-                          <Typography level="body-xs">
-                            {result.variantId}
-                          </Typography>
-                        </Link>
-                      </td>
-                      <td>
-                        <MarkdownClientCompressed>
-                          {result.text}
-                        </MarkdownClientCompressed>
-                      </td>
-                      <td>
-                        {result.learningObjectives.map(({ name, href }) => (
-                          <Link
-                            key={name}
-                            href={href}
-                            children={name}
-                            sx={{ display: "block" }}
-                          />
-                        ))}
-                      </td>
-                      <td>
-                        {result.externalIds.map((id) => (
-                          <Typography level="body-xs" key={id}>
-                            {id}
-                          </Typography>
-                        ))}
-                      </td>
+        <Sheet sx={{ flex: 1, overflowY: "scroll", position: "relative" }}>
+          <Box sx={{ height: "100%", overflow: "auto" }} onScroll={onScroll}>
+            <NoSsr>
+              {isLoading && (
+                <CircularProgress
+                  variant="solid"
+                  size="lg"
+                  sx={{
+                    position: "absolute",
+                    transform: "translate(-50%, -50%)",
+                    top: "50%",
+                    left: "50%",
+                  }}
+                />
+              )}
+              {hasNoResults && <Ups message="No questions found" />}
+              {hasError && (
+                <Ups message="Error fetching questions" color="danger" />
+              )}
+              {hasResults && !isMobile && (
+                <Table stickyHeader>
+                  <thead>
+                    <tr>
+                      <th style={{ width: "8em" }}>ID</th>
+                      <th>Question</th>
+                      <th style={{ width: "12em" }}>Learning Objectives</th>
+                      <th style={{ width: "12em" }}>External IDs</th>
                     </tr>
-                  ))}
-                </tbody>
-              </Table>
-            )}
-            {hasResults && isMobile && (
-              <List>
-                {results.map((result) => (
-                  <Fragment key={result.id}>
-                    <ListItem>
-                      <ListItemContent>
-                        <Link href={result.href} sx={{ pr: 1 }}>
-                          {result.questionId}
-                        </Link>
-                        <Typography level="body-xs" sx={{ display: "inline" }}>
-                          {result.variantId}
-                        </Typography>
-
-                        {searchField === "externalIds" ? (
-                          <Typography level="body-xs">
-                            {result.externalIds.join(", ")}
-                          </Typography>
-                        ) : (
-                          <Typography level="body-xs">
-                            {result.learningObjectives.join(", ")}
-                          </Typography>
-                        )}
-                        <Box
-                          sx={{
-                            mt: 2,
-                            fontSize: "12px",
-                            height: "10em",
-                            overflow: "hidden",
-                            maskImage:
-                              "linear-gradient(to bottom, black 50%, transparent 100%)",
-                          }}
-                        >
+                  </thead>
+                  <tbody>
+                    {results.map((result) => (
+                      <tr key={result.questionId}>
+                        <td>
+                          <Link href={result.href} sx={{ display: "block" }}>
+                            <Typography>{result.questionId}</Typography>
+                            <br />
+                            <Typography level="body-xs">
+                              {result.variantId}
+                            </Typography>
+                          </Link>
+                        </td>
+                        <td>
                           <MarkdownClientCompressed>
                             {result.text}
                           </MarkdownClientCompressed>
-                        </Box>
-                      </ListItemContent>
-                    </ListItem>
-                    <ListDivider inset={"gutter"} />
-                  </Fragment>
-                ))}
-              </List>
-            )}
+                        </td>
+                        <td>
+                          {result.learningObjectives.map(({ name, href }) => (
+                            <Link
+                              key={name}
+                              href={href}
+                              children={name}
+                              sx={{ display: "block" }}
+                            />
+                          ))}
+                        </td>
+                        <td>
+                          {result.externalIds.map((id) => (
+                            <Typography level="body-xs" key={id}>
+                              {id}
+                            </Typography>
+                          ))}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              )}
+              {hasResults && isMobile && (
+                <List>
+                  {results.map((result) => (
+                    <Fragment key={result.id}>
+                      <ListItem>
+                        <ListItemContent>
+                          <Link href={result.href} sx={{ pr: 1 }}>
+                            {result.questionId}
+                          </Link>
+                          <Typography
+                            level="body-xs"
+                            sx={{ display: "inline" }}
+                          >
+                            {result.variantId}
+                          </Typography>
+
+                          {searchField === "externalIds" ? (
+                            <Typography level="body-xs">
+                              {result.externalIds.join(", ")}
+                            </Typography>
+                          ) : (
+                            <Typography level="body-xs">
+                              {result.learningObjectives
+                                .map((lo) => lo.name)
+                                .join(", ")}
+                            </Typography>
+                          )}
+                          <Box
+                            sx={{
+                              mt: 2,
+                              fontSize: "12px",
+                              height: "10em",
+                              overflow: "hidden",
+                              maskImage:
+                                "linear-gradient(to bottom, black 50%, transparent 100%)",
+                            }}
+                          >
+                            <MarkdownClientCompressed>
+                              {result.text}
+                            </MarkdownClientCompressed>
+                          </Box>
+                        </ListItemContent>
+                      </ListItem>
+                      <ListDivider inset={"gutter"} />
+                    </Fragment>
+                  ))}
+                </List>
+              )}
+            </NoSsr>
           </Box>
         </Sheet>
         <Modal open={isFilterModalOpen} onClose={closeFilterModal}>
