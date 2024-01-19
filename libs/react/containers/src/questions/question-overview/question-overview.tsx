@@ -194,9 +194,9 @@ export const QuestionOverview = container<Props, Params, Data>(
             Edit
           </Tab>
         </TabList>
-        <TabPanel value={"question"} sx={{ maxWidth: "md" }}>
+        <TabPanel value={"question"}>
           <QuestionMultipleChoice
-            sx={{ p: 0 }}
+            sx={{ p: 0, maxWidth: "md", margin: "auto" }}
             question={question.question}
             correctOptionId={question.correctOptionId}
             selectedOptionId={selectedOption}
