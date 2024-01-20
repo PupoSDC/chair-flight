@@ -1,26 +1,15 @@
 import { useState } from "react";
-import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
-import {
-  Select,
-  Stack,
-  Option,
-  Typography,
-  IconButton,
-  Modal,
-  ModalDialog,
-  ModalClose,
-  Divider,
-  Button,
-  selectClasses,
-  Badge,
-} from "@mui/joy";
+import { FormProvider } from "react-hook-form";
+import { Select, Stack, Option, selectClasses } from "@mui/joy";
 import {
   CtaSearch,
+  HookFormSelect,
   QuestionList,
-  useDisclose,
+  SearchFilters,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
+import { useSearchConfig } from "./question-search-config-schema";
 import type {
   QuestionBankName,
   QuestionBankSubject,
@@ -41,22 +30,18 @@ type Data = {
   subjects: QuestionBankSubject[];
 };
 
-type SearchField = "questionId" | "learningObjectives" | "text" | "externalIds";
-
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const [searchField, setSearchField] = useState<SearchField | null>(null);
-    const [subject, setSubject] = useState<string | null>(null);
+    const [{ searchField, subject }, form] = useSearchConfig(questionBank);
     const { subjects } = QuestionSearch.useData({ questionBank });
-    const filterModal = useDisclose();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       {
         q: search,
-        searchField,
         questionBank,
-        subject,
+        searchField: searchField === "all" ? null : searchField,
+        subject: subject === "all" ? null : subject,
         limit: 24,
       },
       {
@@ -65,32 +50,8 @@ export const QuestionSearch = container<Props, Params, Data>(
       },
     );
 
-    const numberOfFilters = Number(!!searchField) + Number(!!subject);
-
-    const filters = (
-      <>
-        <Select
-          size="sm"
-          value={searchField}
-          onChange={(_, v) => setSearchField(v)}
-        >
-          <Option value={null}>All Fields</Option>
-          <Option value={"text"}>Question</Option>
-          <Option value={"questionId"}>Id</Option>
-          <Option value={"learningObjectives"}>Learning Objectives</Option>
-          <Option value={"externalIds"}>External Ids</Option>
-        </Select>
-
-        <Select size="sm" value={subject} onChange={(_, v) => setSubject(v)}>
-          <Option value={null}>All Subjects</Option>
-          {subjects.map(({ id, shortName }) => (
-            <Option value={id} key={id}>
-              {shortName}
-            </Option>
-          ))}
-        </Select>
-      </>
-    );
+    const numberOfFilters =
+      Number(searchField !== "all") + Number(subject !== "all");
 
     return (
       <Stack component={component} height="100%" sx={sx}>
@@ -100,7 +61,6 @@ export const QuestionSearch = container<Props, Params, Data>(
             mb: { xs: 1, sm: 2 },
             gap: 1,
             [`& .${selectClasses.root}`]: {
-              display: { xs: "none", md: "flex" },
               width: "13em",
             },
           }}
@@ -114,19 +74,38 @@ export const QuestionSearch = container<Props, Params, Data>(
             placeholder="search Questions..."
           />
 
-          {filters}
-
-          <IconButton
-            size="sm"
-            variant="outlined"
-            color="neutral"
-            onClick={filterModal.open}
-            sx={{ display: { md: "none" } }}
-          >
-            <Badge badgeContent={numberOfFilters} size="sm">
-              <FilterIcon />
-            </Badge>
-          </IconButton>
+          <FormProvider {...form}>
+            <SearchFilters
+              activeFilters={numberOfFilters}
+              fallback={
+                <>
+                  <Select size="sm" />
+                  <Select size="sm" />
+                </>
+              }
+              filters={
+                <>
+                  <HookFormSelect size="sm" {...form.register("searchField")}>
+                    <Option value={"all"}>All Fields</Option>
+                    <Option value={"text"}>Question</Option>
+                    <Option value={"questionId"}>Id</Option>
+                    <Option value={"learningObjectives"}>
+                      Learning Objectives
+                    </Option>
+                    <Option value={"externalIds"}>External Ids</Option>
+                  </HookFormSelect>
+                  <HookFormSelect size="sm" {...form.register("subject")}>
+                    <Option value={null}>All Subjects</Option>
+                    {subjects.map(({ id, shortName }) => (
+                      <Option value={id} key={id}>
+                        {shortName}
+                      </Option>
+                    ))}
+                  </HookFormSelect>
+                </>
+              }
+            />
+          </FormProvider>
         </Stack>
 
         <QuestionList
@@ -136,22 +115,6 @@ export const QuestionSearch = container<Props, Params, Data>(
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
         />
-
-        <Modal open={filterModal.isOpen} onClose={filterModal.close}>
-          <ModalDialog aria-labelledby="filter-modal" layout="fullscreen">
-            <ModalClose />
-            <Typography id="filter-modal" level="h2">
-              Filters
-            </Typography>
-            <Divider sx={{ my: 2 }} />
-
-            {filters}
-
-            <Button color="primary" onClick={filterModal.close}>
-              Submit
-            </Button>
-          </ModalDialog>
-        </Modal>
       </Stack>
     );
   },
