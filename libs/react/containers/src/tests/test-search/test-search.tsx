@@ -1,3 +1,4 @@
+import { FormProvider } from "react-hook-form";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import { default as PlayIcon } from "@mui/icons-material/PlayArrowOutlined";
 import { default as EyeIcon } from "@mui/icons-material/VisibilityOutlined";
@@ -8,14 +9,22 @@ import {
   IconButton,
   Link,
   ListItemContent,
+  Select,
+  Option,
   Stack,
   Tooltip,
   Typography,
+  selectClasses,
 } from "@mui/joy";
 import { processTest } from "@chair-flight/core/app";
-import { SearchList } from "@chair-flight/react/components";
+import {
+  HookFormSelect,
+  SearchFilters,
+  SearchList,
+} from "@chair-flight/react/components";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
+import { useSearchConfig } from "./test-search-config-schema";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
 type Props = {
@@ -24,18 +33,62 @@ type Props = {
 
 export const TestSearch = container<Props>(
   ({ questionBank, sx, component = "section" }) => {
+    const [{ mode, status }, form] = useSearchConfig(questionBank);
+
     const tests = useTestProgress((s) => s.tests);
     const deleteTest = useTestProgress((s) => s.deleteTest);
+
     const testsAsList = Object.values(tests)
       .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)
-      .filter((test) => test.questionBank === questionBank)
+      .filter((test) => {
+        if (test.questionBank !== questionBank) return false;
+        if (status !== "all" && status !== test.status) return false;
+        if (mode !== "all" && mode !== test.mode) return false;
+        return true;
+      })
       .map((test) => ({ ...test, ...processTest(test) }));
+
+    const numberOfFilters = Number(mode !== "all") + Number(status !== "all");
 
     return (
       <Stack component={component} sx={sx}>
-        <Stack sx={{ pb: { xs: 1, md: 2 } }}>
+        <Stack
+          direction={"row"}
+          sx={{
+            gap: 1,
+            justifyContent: "flex-end",
+            mb: { xs: 1, sm: 2 },
+            [`& .${selectClasses.root}`]: {
+              width: "13em",
+            },
+          }}
+        >
+          <SearchFilters
+            activeFilters={numberOfFilters}
+            filters={
+              <FormProvider {...form}>
+                <HookFormSelect size="sm" {...form.register("mode")}>
+                  <Option value={"all"}>All Modes</Option>
+                  <Option value={"study"}>Study</Option>
+                  <Option value={"exam"}>Exam</Option>
+                </HookFormSelect>
+                <HookFormSelect size="sm" {...form.register("status")}>
+                  <Option value={"all"}>All States</Option>
+                  <Option value={"started"}>Started</Option>
+                  <Option value={"finished"}>Finished</Option>
+                </HookFormSelect>
+              </FormProvider>
+            }
+            fallback={
+              <>
+                <Select size="sm" />
+                <Select size="sm" />
+              </>
+            }
+          />
+
           <Button
-            sx={{ ml: "auto" }}
+            size="sm"
             component={Link}
             href={`/modules/${questionBank}/tests/create`}
           >
@@ -51,8 +104,10 @@ export const TestSearch = container<Props>(
             <thead>
               <tr>
                 <th style={{ width: "4em" }}>Score</th>
+                <th style={{ width: "4em" }}>Type</th>
+                <th style={{ width: "5em" }}>State</th>
                 <th>Title</th>
-                <th style={{ width: "12em" }}>Type</th>
+
                 <th style={{ textAlign: "center", width: "8em" }}>
                   No. Questions
                 </th>
@@ -93,9 +148,16 @@ export const TestSearch = container<Props>(
                 component="td"
                 sx={{ color: `${test.color}.500`, fontWeight: 700 }}
               >
-                {test.title}
+                {test.mode}
               </Box>
-              <td>{test.mode}</td>
+              <Box
+                component="td"
+                sx={{ color: `${test.color}.500`, fontWeight: 700 }}
+              >
+                {test.status}
+              </Box>
+              <Box component="td">{test.title}</Box>
+
               <Box component="td" sx={{ textAlign: "center" }}>
                 {test.questions.length}
               </Box>

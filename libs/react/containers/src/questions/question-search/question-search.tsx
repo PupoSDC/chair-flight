@@ -74,38 +74,36 @@ export const QuestionSearch = container<Props, Params, Data>(
             placeholder="search Questions..."
           />
 
-          <FormProvider {...form}>
-            <SearchFilters
-              activeFilters={numberOfFilters}
-              fallback={
-                <>
-                  <Select size="sm" />
-                  <Select size="sm" />
-                </>
-              }
-              filters={
-                <>
-                  <HookFormSelect size="sm" {...form.register("searchField")}>
-                    <Option value={"all"}>All Fields</Option>
-                    <Option value={"text"}>Question</Option>
-                    <Option value={"questionId"}>Id</Option>
-                    <Option value={"learningObjectives"}>
-                      Learning Objectives
+          <SearchFilters
+            activeFilters={numberOfFilters}
+            fallback={
+              <>
+                <Select size="sm" />
+                <Select size="sm" />
+              </>
+            }
+            filters={
+              <FormProvider {...form}>
+                <HookFormSelect size="sm" {...form.register("searchField")}>
+                  <Option value={"all"}>All Fields</Option>
+                  <Option value={"text"}>Question</Option>
+                  <Option value={"questionId"}>Id</Option>
+                  <Option value={"learningObjectives"}>
+                    Learning Objectives
+                  </Option>
+                  <Option value={"externalIds"}>External Ids</Option>
+                </HookFormSelect>
+                <HookFormSelect size="sm" {...form.register("subject")}>
+                  <Option value={"all"}>All Subjects</Option>
+                  {subjects.map(({ id, shortName }) => (
+                    <Option value={id} key={id}>
+                      {shortName}
                     </Option>
-                    <Option value={"externalIds"}>External Ids</Option>
-                  </HookFormSelect>
-                  <HookFormSelect size="sm" {...form.register("subject")}>
-                    <Option value={"all"}>All Subjects</Option>
-                    {subjects.map(({ id, shortName }) => (
-                      <Option value={id} key={id}>
-                        {shortName}
-                      </Option>
-                    ))}
-                  </HookFormSelect>
-                </>
-              }
-            />
-          </FormProvider>
+                  ))}
+                </HookFormSelect>
+              </FormProvider>
+            }
+          />
         </Stack>
 
         <QuestionList
