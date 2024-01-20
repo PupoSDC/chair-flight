@@ -3,7 +3,7 @@ import { default as SearchIcon } from "@mui/icons-material/Search";
 import { CircularProgress, Input } from "@mui/joy";
 import type { InputProps } from "@mui/joy";
 
-export type CtaSearchProps = {
+export type SearchQueryProps = {
   value: string;
   onChange: (value: string) => void;
   loading?: boolean;
@@ -16,7 +16,7 @@ export type CtaSearchProps = {
  * It uses a debounce to avoid sending too many requests to the API, and displays
  * a fake loading spinner as soon as the user starts typing.
  */
-export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
+export const SearchQuery = forwardRef<HTMLInputElement, SearchQueryProps>(
   (
     {
       value,
@@ -79,4 +79,4 @@ export const CtaSearch = forwardRef<HTMLInputElement, CtaSearchProps>(
   },
 );
 
-CtaSearch.displayName = "CtaSearch";
+SearchQuery.displayName = "SearchQuery";

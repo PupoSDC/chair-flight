@@ -26,7 +26,7 @@ export type SearchFiltersProps = {
  * Opinionated component to display search filters. Includes a `NoSsr`boundary
  * to make it safe to render when filter information is persisted client side.
  *
- * provided `fallback`should closely mirror `filters`.
+ * Provided `fallback`should closely mirror `filters`.
  */
 export const SearchFilters: FC<SearchFiltersProps> = ({
   filters: filters,

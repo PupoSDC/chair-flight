@@ -21,7 +21,7 @@ import {
 } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
 import {
-  CtaSearch,
+  SearchQuery,
   HookFormSelect,
   MarkdownClientCompressed,
   SearchFilters,
@@ -105,7 +105,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
             [`& .${selectClasses.root}`]: { width: "13em" },
           }}
         >
-          <CtaSearch
+          <SearchQuery
             size="sm"
             value={search}
             loading={isLoading}

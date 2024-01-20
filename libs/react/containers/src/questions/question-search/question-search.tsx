@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FormProvider } from "react-hook-form";
 import { Select, Stack, Option, selectClasses } from "@mui/joy";
 import {
-  CtaSearch,
+  SearchQuery,
   HookFormSelect,
   QuestionList,
   SearchFilters,
@@ -65,7 +65,7 @@ export const QuestionSearch = container<Props, Params, Data>(
             },
           }}
         >
-          <CtaSearch
+          <SearchQuery
             size="sm"
             value={search}
             loading={isLoading}
