@@ -68,7 +68,12 @@ export const LayoutModule = container<Props, Params, Data>(
     const isSettings = router.asPath.includes("settings");
     const isLearningObjectives = router.asPath.includes("learning-objectives");
     const isFlashcards = router.asPath.includes("flashcards");
-    const isHome = !isQuestions && !isTests && !isSettings && !isFlashcards;
+    const isHome =
+      !isQuestions &&
+      !isTests &&
+      !isSettings &&
+      !isFlashcards &&
+      !isLearningObjectives;
 
     return (
       <>
@@ -183,7 +188,7 @@ export const LayoutModule = container<Props, Params, Data>(
           />
         </Stack>
         <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />
-        <Box
+        <Stack
           component={"main"}
           children={children}
           sx={{

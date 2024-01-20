@@ -13,6 +13,7 @@ export * from "./layouts/layout-module";
 export * from "./layouts/layout-public";
 export * from "./learning-objectives/learning-objectives-search";
 export * from "./learning-objectives/learning-objective-overview";
+export * from "./learning-objectives/learning-objective-questions";
 export * from "./overviews/overview-welcome";
 export * from "./overviews/overview-modules";
 export * from "./overviews/overview-module";

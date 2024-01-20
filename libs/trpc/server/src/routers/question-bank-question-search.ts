@@ -162,4 +162,40 @@ export const questionBankQuestionSearchRouter = router({
         nextCursor: cursor + finalItems.length,
       };
     }),
+  getQuestionsFromLearningObjective: publicProcedure
+    .input(
+      z.object({
+        questionBank,
+        learningObjectiveId: z.string(),
+        limit: z.number().min(1).max(50),
+        cursor: z.number().default(0),
+      }),
+    )
+    .query(async ({ input }) => {
+      const { questionBank, learningObjectiveId, limit, cursor } = input;
+      await populateSearchIndex(questionBank);
+      const qb = questionBanks[input.questionBank];
+      const learningObjective = await qb.getOne(
+        "learningObjectives",
+        learningObjectiveId,
+      );
+      const ogQuestions = await qb.getSome(
+        "questions",
+        learningObjective.questions,
+      );
+      const processedResults: SearchResult[] = ogQuestions
+        .map((q) => {
+          const v = Object.values(q.variants)[0];
+          return RESULTS.get(v.id);
+        })
+        .filter(Boolean);
+
+      const finalItems = processedResults.slice(cursor, cursor + limit);
+
+      return {
+        items: finalItems,
+        totalResults: processedResults.length,
+        nextCursor: cursor + finalItems.length,
+      };
+    }),
 });

@@ -1,7 +1,7 @@
 import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
-  LearningObjectiveOverview,
+  LearningObjectiveQuestions,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -22,19 +22,21 @@ export const Page: NextPage<PageProps> = ({
   questionBank,
   learningObjectiveId,
 }) => {
+  const loLink = `/modules/${questionBank}/learning-objectives`;
   const crumbs = [
     [questionBank.toUpperCase(), `/modules/${questionBank}`],
-    ["Learning Objectives", `/modules/${questionBank}/learning-objectives`],
-    learningObjectiveId,
+    ["Learning Objectives", `${loLink}`],
+    [learningObjectiveId, `${loLink}/${learningObjectiveId}`],
+    "Questions",
   ] as Breadcrumbs;
 
   return (
-    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+    <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
-      <LearningObjectiveOverview
-        sx={{ p: 2 }}
+      <LearningObjectiveQuestions
         questionBank={questionBank}
         learningObjectiveId={learningObjectiveId}
+        sx={{ flex: 1, overflowY: "scroll" }}
       />
     </LayoutModule>
   );
@@ -44,7 +46,7 @@ export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ helper, params }) => {
     await Promise.all([
       LayoutModule.getData({ params, helper }),
-      LearningObjectiveOverview.getData({ params, helper }),
+      LearningObjectiveQuestions.getData({ params, helper }),
     ]);
     return { props: params };
   },
