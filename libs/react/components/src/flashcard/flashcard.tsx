@@ -39,7 +39,6 @@ export const Flashcard = forwardRef<HTMLDivElement, FlashcardProps>(
           variant="outlined"
           sx={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
         >
-          {" "}
           <Box
             sx={{
               flex: 1,

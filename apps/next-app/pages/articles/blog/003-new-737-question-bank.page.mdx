@@ -1,8 +1,3 @@
-import { Suspense } from "react";
-import { useRouter } from "next/router";
-import { NoSsr } from "@mui/base";
-import { Sheet, Skeleton } from "@mui/joy";
-import { TestMaker, useTestProgress } from "@chair-flight/react/containers";
 import { BlogPageLayout } from "./_blog-page.layout";
 
 export const meta = {
@@ -31,30 +26,12 @@ With over 300 thoughtfully curated questions, this question bank is designed to
 challenge and enhance your understanding of the 737's systems, procedures, and
 aircraft limitations.
 
-You can create a [new test here](/modules/type/tests/create).
 
-export const InLocoTestMakeer = () => {
-  const router = useRouter();
-  const fallback = <Skeleton sx={{ height: 400, position: "initial" }} />
+<br />
 
-  return (
-    <Sheet sx={{ p: 1, my: 2, height: 600 }}>
-      <NoSsr fallback={fallback}>
-        <Suspense fallback={fallback}>
-          <TestMaker
-            sx={{ height: "100%" }}
-            questionBank={"737"}
-            onSuccessfulTestCreation={(test) => {
-              router.push(`/modules/type/tests/${test.id}/${test.mode}`);
-            }}
-          />
-        </Suspense>
-      </NoSsr>
-    </Sheet>
-  ); 
-}
+You can get started here: [B737 Question Bank](/modules/type)
 
-<InLocoTestMakeer />
+<br />
 
 **See you in the skies!**
 
