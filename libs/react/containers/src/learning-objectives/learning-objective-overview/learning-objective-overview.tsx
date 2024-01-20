@@ -32,7 +32,7 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
 
     return (
       <Sheet component={component} sx={sx}>
-        <Grid container>
+        <Grid container sx={{ m: 2 }}>
           <Grid xs={12} md={6}>
             <Typography>{learningObjective.id}</Typography>
             <MarkdownClient>{learningObjective.text}</MarkdownClient>
@@ -41,7 +41,7 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
               <MarkdownClient>{learningObjective.source}</MarkdownClient>
             </Box>
           </Grid>
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={6} sx={{ overflowX: "scroll" }}>
             <Table
               sx={{
                 width: "auto",

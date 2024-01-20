@@ -22,9 +22,13 @@ const meta: Meta<typeof LearningObjectiveQuestions> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.questionBank.getLearningObjectiveQuestions.query(() => ({
-          questions: mockQuestionSearchItems,
-        })),
+        trpcMsw.questionBankQuestionSearch.getQuestionsFromLearningObjective.query(
+          () => ({
+            items: mockQuestionSearchItems,
+            nextCursor: 20,
+            totalResults: mockQuestionSearchItems.length,
+          }),
+        ),
       ],
     },
   },
