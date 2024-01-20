@@ -17,6 +17,7 @@
     "typecheck": "nx run-many --target=typecheck",
     "infra": "docker-compose up -d",
     "prettier": "prettier . --write",
+    "prettier:check": "prettier . --check",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install"
   },
