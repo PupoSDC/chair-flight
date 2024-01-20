@@ -21,13 +21,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
   ] as Breadcrumbs;
 
   return (
-    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
+    <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
-      <TestsOverview
-        component={"section"}
-        sx={{ mx: "auto", maxWidth: "lg", width: "100%" }}
-        questionBank={questionBank}
-      />
+      <TestsOverview questionBank={questionBank} sx={{ height: "100%" }} />
     </LayoutModule>
   );
 };
@@ -35,6 +31,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
     await LayoutModule.getData({ helper, params });
+    await TestsOverview.getData({ helper, params });
     return { props: params };
   },
   fs,

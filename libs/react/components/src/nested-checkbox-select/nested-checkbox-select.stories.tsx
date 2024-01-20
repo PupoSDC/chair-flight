@@ -17,11 +17,10 @@ export const Playground: Story = {
         items={items}
         onChange={(...val) => {
           args.onChange?.(...val);
-          setItems(
-            (oldItems) =>
-              oldItems?.map((oldItem) => {
-                return oldItem.id === val[0].id ? val[0] : oldItem;
-              }),
+          setItems((oldItems) =>
+            oldItems?.map((oldItem) => {
+              return oldItem.id === val[0].id ? val[0] : oldItem;
+            }),
           );
         }}
       />

@@ -54,7 +54,7 @@ export const QuestionSearch = container<Props, Params, Data>(
       Number(searchField !== "all") + Number(subject !== "all");
 
     return (
-      <Stack component={component} height="100%" sx={sx}>
+      <Stack component={component} sx={sx}>
         <Stack
           direction="row"
           sx={{
@@ -111,7 +111,7 @@ export const QuestionSearch = container<Props, Params, Data>(
         <QuestionList
           loading={isLoading}
           error={isError}
-          questions={(data?.pages ?? []).flatMap((p) => p.items)}
+          items={(data?.pages ?? []).flatMap((p) => p.items)}
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
         />

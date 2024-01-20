@@ -1,13 +1,8 @@
 import { forwardRef } from "react";
-import {
-  Box,
-  Link,
-  ListItemContent,
-  Typography,
-} from "@mui/joy";
+import { Box, Link, ListItemContent, Typography } from "@mui/joy";
 import { MarkdownClientCompressed } from "../markdown-client";
-
-import { SearchList, SearchListProps } from "../search-list";
+import { SearchList } from "../search-list";
+import type { SearchListProps } from "../search-list";
 
 export type QuestionListItem = {
   id: string;
@@ -20,22 +15,22 @@ export type QuestionListItem = {
     href: string;
   }>;
   externalIds: string[];
-}
+};
 
 export type QuestionListProps = Omit<
   SearchListProps<QuestionListItem>,
-  "renderThs" | "renderTableRow" | "renderListItemContent" | "errorMessage" | "noDataMessage"
->;
+  | "items"
+  | "renderThead"
+  | "renderTableRow"
+  | "renderListItemContent"
+  | "errorMessage"
+  | "noDataMessage"
+> & {
+  items?: SearchListProps<QuestionListItem>["items"];
+};
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
-  (
-    {
-      items = [],
-      ...otherProps
-    },
-    ref,
-  ) => {
-
+  ({ items = [], ...otherProps }, ref) => {
     return (
       <SearchList
         {...otherProps}
@@ -59,15 +54,11 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
               <Link href={result.href} sx={{ display: "block" }}>
                 <Typography>{result.questionId}</Typography>
                 <br />
-                <Typography level="body-xs">
-                  {result.variantId}
-                </Typography>
+                <Typography level="body-xs">{result.variantId}</Typography>
               </Link>
             </td>
             <td>
-              <MarkdownClientCompressed>
-                {result.text}
-              </MarkdownClientCompressed>
+              <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
             </td>
             <td>
               {result.learningObjectives.map(({ name, href }) => (
@@ -97,9 +88,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
               {result.variantId}
             </Typography>
             <Typography level="body-xs">
-              {result.learningObjectives
-                .map((lo) => lo.name)
-                .join(", ")}
+              {result.learningObjectives.map((lo) => lo.name).join(", ")}
             </Typography>
             <Box
               sx={{
@@ -111,12 +100,13 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
                   "linear-gradient(to bottom, black 50%, transparent 100%)",
               }}
             >
-              <MarkdownClientCompressed>
-                {result.text}
-              </MarkdownClientCompressed>
+              <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
             </Box>
           </ListItemContent>
         )}
       />
     );
-  });
+  },
+);
+
+QuestionList.displayName = "QuestionList";

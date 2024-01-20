@@ -23,7 +23,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
   return (
     <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
-      <QuestionSearch questionBank={questionBank} />
+      <QuestionSearch questionBank={questionBank} sx={{ height: "100%" }} />
     </LayoutModule>
   );
 };
