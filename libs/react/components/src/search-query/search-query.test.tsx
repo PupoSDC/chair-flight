@@ -1,11 +1,11 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { default as userEvent } from "@testing-library/user-event";
-import { CtaSearch } from "./cta-search";
+import { SearchQuery } from "./search-query";
 
-describe("CtaSearch", () => {
+describe("SearchQuery", () => {
   it("debounces fast typing", async () => {
     const onChange = vi.fn();
-    render(<CtaSearch onChange={onChange} value={""} />);
+    render(<SearchQuery onChange={onChange} value={""} />);
     const input = screen.getByRole("search");
     await userEvent.type(input, "123", { delay: 50 });
 
@@ -16,7 +16,7 @@ describe("CtaSearch", () => {
 
   it("does not debounce slow typing", async () => {
     const onChange = vi.fn();
-    render(<CtaSearch onChange={onChange} value={""} />);
+    render(<SearchQuery onChange={onChange} value={""} />);
     const input = screen.getByRole("search");
     await userEvent.type(input, "123", { delay: 300 });
 

@@ -1,11 +1,9 @@
 import { Fragment, useState } from "react";
+import { FormProvider } from "react-hook-form";
 import { NoSsr } from "@mui/base";
 import { default as CheckIcon } from "@mui/icons-material/Check";
-import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
 import {
-  Badge,
   Box,
-  IconButton,
   Link,
   List,
   ListDivider,
@@ -20,22 +18,19 @@ import {
   selectClasses,
   useTheme,
   CircularProgress,
-  Modal,
-  ModalDialog,
-  ModalClose,
-  Divider,
-  Button,
 } from "@mui/joy";
 import { CourseNames } from "@chair-flight/core/app";
 import {
-  CtaSearch,
+  SearchQuery,
+  HookFormSelect,
   MarkdownClientCompressed,
+  SearchFilters,
   Ups,
-  useDisclose,
   useMediaQuery,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
+import { useSearchConfig } from "./learning-objective-search-config-schema";
 import type {
   CourseName,
   QuestionBankName,
@@ -57,32 +52,24 @@ type Data = {
   subjects: QuestionBankSubject[];
 };
 
-type SearchField = "text" | "id";
-
 export const LearningObjectivesSearch = container<Props, Params, Data>(
   ({ component = "section", questionBank, sx }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
     const [search, setSearch] = useState("");
-    const [searchField, setSearchField] = useState<SearchField | null>(null);
-    const [courseName, setCourseName] = useState<CourseName | null>(null);
-    const [subject, setSubject] = useState<string | null>(null);
+    const [searchConfig, form] = useSearchConfig(questionBank);
     const { subjects } = LearningObjectivesSearch.useData({ questionBank });
 
-    const {
-      isOpen: isFilterModalOpen,
-      open: openFilterModal,
-      close: closeFilterModal,
-    } = useDisclose();
+    const { searchField, course, subject } = searchConfig;
 
     const { data, isLoading, isError, fetchNextPage } = useSearchLos(
       {
         q: search,
         limit: 20,
         questionBank: questionBank,
-        subject,
-        searchField,
-        course: courseName,
+        subject: subject === "all" ? null : subject,
+        searchField: searchField === "all" ? null : searchField,
+        course: course === "all" ? null : course,
       },
       {
         getNextPageParam: (lastPage) => lastPage.nextCursor,
@@ -90,7 +77,11 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       },
     );
 
-    const numberOfFilters = Number(!!searchField) + Number(!!subject);
+    const numberOfFilters =
+      Number(searchField !== "all") +
+      Number(subject !== "all") +
+      Number(course !== "all");
+
     const hasError = isError;
     const hasQueryResults = !!data?.pages[0].totalResults;
     const hasResults = !isLoading && !hasError && hasQueryResults;
@@ -104,57 +95,17 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       if (distance < 200 && !isLoading) fetchNextPage();
     };
 
-    const filters = (
-      <>
-        <Select
-          size="sm"
-          value={searchField}
-          onChange={(_, v) => setSearchField(v)}
-        >
-          <Option value={null}>All Fields</Option>
-          <Option value={"text"}>Text</Option>
-          <Option value={"id"}>Id</Option>
-        </Select>
-
-        <Select
-          size="sm"
-          value={courseName}
-          onChange={(_, v) => setCourseName(v)}
-        >
-          <Option value={null}>All Courses</Option>
-          {Object.entries(CourseNames).map(([id, name]) => (
-            <Option value={id} key={id}>
-              {name}
-            </Option>
-          ))}
-        </Select>
-
-        <Select size="sm" value={subject} onChange={(_, v) => setSubject(v)}>
-          <Option value={null}>All Subjects</Option>
-          {subjects.map(({ id, shortName }) => (
-            <Option value={id} key={id}>
-              {id} - {shortName}
-            </Option>
-          ))}
-        </Select>
-      </>
-    );
-
     return (
       <Stack component={component} height="100%" sx={sx}>
         <Stack
           direction="row"
           sx={{
-            mb: { xs: 1, md: 2 },
             gap: 1,
-
-            [`& .${selectClasses.root}`]: {
-              display: { xs: "none", md: "flex" },
-              width: "13em",
-            },
+            mb: { xs: 1, md: 2 },
+            [`& .${selectClasses.root}`]: { width: "13em" },
           }}
         >
-          <CtaSearch
+          <SearchQuery
             size="sm"
             value={search}
             loading={isLoading}
@@ -162,20 +113,44 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
             sx={{ flex: 1 }}
             placeholder="search Learning Objectives..."
           />
-
-          {filters}
-
-          <IconButton
-            size="sm"
-            variant="outlined"
-            color="neutral"
-            onClick={openFilterModal}
-            sx={{ display: { md: "none" } }}
-          >
-            <Badge badgeContent={numberOfFilters} size="sm">
-              <FilterIcon />
-            </Badge>
-          </IconButton>
+          <FormProvider {...form}>
+            <SearchFilters
+              activeFilters={numberOfFilters}
+              mobileBreakpoint="lg"
+              fallback={
+                <>
+                  <Select size="sm" />
+                  <Select size="sm" />
+                  <Select size="sm" />
+                </>
+              }
+              filters={
+                <>
+                  <HookFormSelect size="sm" {...form.register("searchField")}>
+                    <Option value={"all"}>All Fields</Option>
+                    <Option value={"text"}>Text</Option>
+                    <Option value={"id"}>Id</Option>
+                  </HookFormSelect>
+                  <HookFormSelect size="sm" {...form.register("course")}>
+                    <Option value={"all"}>All Courses</Option>
+                    {Object.entries(CourseNames).map(([id, name]) => (
+                      <Option value={id} key={id}>
+                        {name}
+                      </Option>
+                    ))}
+                  </HookFormSelect>
+                  <HookFormSelect size="sm" {...form.register("subject")}>
+                    <Option value={"all"}>All Subjects</Option>
+                    {subjects.map(({ id, shortName }) => (
+                      <Option value={id} key={id}>
+                        {id} - {shortName}
+                      </Option>
+                    ))}
+                  </HookFormSelect>
+                </>
+              }
+            />
+          </FormProvider>
         </Stack>
 
         <Sheet sx={{ flex: 1, p: { xs: 0, md: 2 }, overflowY: "scroll" }}>
@@ -293,21 +268,6 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
             </NoSsr>
           </Box>
         </Sheet>
-        <Modal open={isFilterModalOpen} onClose={closeFilterModal}>
-          <ModalDialog aria-labelledby="filter-modal" layout="fullscreen">
-            <ModalClose />
-            <Typography id="filter-modal" level="h2">
-              Filters
-            </Typography>
-            <Divider sx={{ my: 2 }} />
-
-            {filters}
-
-            <Button color="primary" onClick={closeFilterModal}>
-              Submit
-            </Button>
-          </ModalDialog>
-        </Modal>
       </Stack>
     );
   },

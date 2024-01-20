@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Divider, Grid, Typography } from "@mui/joy";
-import { CtaSearch } from "@chair-flight/react/components";
+import { SearchQuery } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { LayoutModule } from "../../layouts/layout-module";
 import { container, getRequiredParam } from "../../wraper";
@@ -45,7 +45,7 @@ export const OverviewModule = container<Props, Params, Data>(
           <Grid xs={12} md={6}>
             <Typography level="h2">Search Questions</Typography>
             <Divider sx={{ mb: 2 }} />
-            <CtaSearch
+            <SearchQuery
               disableLabel
               value={searchQuestion}
               onChange={(v) => setQuestionSearch(v)}
