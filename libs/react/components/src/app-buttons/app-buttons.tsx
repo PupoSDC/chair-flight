@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
@@ -72,15 +71,8 @@ export const ThemeButton: FunctionComponent<IconButtonProps> = (props) => {
 };
 
 export const BackButton: FunctionComponent<IconButtonProps> = (props) => {
-  const { back } = useRouter();
-
-  const onClick: IconButtonProps["onClick"] = (e) => {
-    props.onClick?.(e);
-    back();
-  };
-
   return (
-    <StyledButton {...props} onClick={onClick}>
+    <StyledButton {...props}>
       <ChevronLeftIcon />
     </StyledButton>
   );

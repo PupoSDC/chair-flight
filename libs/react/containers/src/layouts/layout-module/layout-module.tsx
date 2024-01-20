@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { NoSsr } from "@mui/base";
 import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
@@ -13,16 +14,17 @@ import {
   Stack,
   Typography,
   listItemContentClasses,
+  useTheme,
 } from "@mui/joy";
 import {
   AppLogo,
-  BackButton,
   GithubButton,
   HamburgerButton,
   Sidebar,
   SidebarListItem,
   ThemeButton,
   ThemeOverrideColorScheme,
+  useMediaQuery,
   useSidebar,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
@@ -62,6 +64,8 @@ export const LayoutModule = container<Props, Params, Data>(
     const { openSidebar } = useSidebar();
     const router = useRouter();
     const config = LayoutModule.useData({ questionBank });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     const isQuestions = router.asPath.includes("questions");
     const isTests = router.asPath.includes("tests");
@@ -75,6 +79,10 @@ export const LayoutModule = container<Props, Params, Data>(
       !isFlashcards &&
       !isLearningObjectives;
 
+    const secondToLastBreadcrumb = breadcrumbs?.at(-2);
+    const lastBreadcrumb = breadcrumbs?.at(-1);
+
+    console.log(secondToLastBreadcrumb);
     return (
       <>
         <ThemeOverrideColorScheme questionBank={questionBank} />
@@ -171,15 +179,21 @@ export const LayoutModule = container<Props, Params, Data>(
             right: 0,
           }}
         >
-          <Breadcrumbs separator="›" sx={{ ml: 2, display: ["none", "flex"] }}>
-            {breadcrumbs?.slice(0, -1).map(([name, url]) => (
-              <Link key={url} color="neutral" href={url}>
-                {name}
-              </Link>
-            ))}
-            {breadcrumbs && <Typography>{breadcrumbs?.at(-1)}</Typography>}
-          </Breadcrumbs>
-          <BackButton sx={{ ml: 2, display: ["flex", "none"] }} />
+          <NoSsr>
+            <Breadcrumbs separator="›" sx={{ ml: 2 }}>
+              {isMobile && secondToLastBreadcrumb && (
+                <Link href={secondToLastBreadcrumb[1]}>•••</Link>
+              )}
+              {!isMobile &&
+                breadcrumbs?.slice(0, -1).map(([name, url]) => (
+                  <Link key={url} color="neutral" href={url}>
+                    {name}
+                  </Link>
+                ))}
+              {lastBreadcrumb && <Typography>{lastBreadcrumb}</Typography>}
+            </Breadcrumbs>
+          </NoSsr>
+
           <GithubButton sx={{ ml: "auto" }} />
           <ThemeButton />
           <HamburgerButton

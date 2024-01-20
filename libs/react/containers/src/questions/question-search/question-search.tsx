@@ -97,9 +97,8 @@ export const QuestionSearch = container<Props, Params, Data>(
         <Stack
           direction="row"
           sx={{
-            mb: 2,
+            mb: { xs: 1, sm: 2 },
             gap: 1,
-
             [`& .${selectClasses.root}`]: {
               display: { xs: "none", md: "flex" },
               width: "13em",
