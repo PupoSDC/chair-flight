@@ -95,7 +95,7 @@ export const QuestionSearch = container<Props, Params, Data>(
                     <Option value={"externalIds"}>External Ids</Option>
                   </HookFormSelect>
                   <HookFormSelect size="sm" {...form.register("subject")}>
-                    <Option value={null}>All Subjects</Option>
+                    <Option value={"all"}>All Subjects</Option>
                     {subjects.map(({ id, shortName }) => (
                       <Option value={id} key={id}>
                         {shortName}

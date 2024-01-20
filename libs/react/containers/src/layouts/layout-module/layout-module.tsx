@@ -82,7 +82,6 @@ export const LayoutModule = container<Props, Params, Data>(
     const secondToLastBreadcrumb = breadcrumbs?.at(-2);
     const lastBreadcrumb = breadcrumbs?.at(-1);
 
-    console.log(secondToLastBreadcrumb);
     return (
       <>
         <ThemeOverrideColorScheme questionBank={questionBank} />

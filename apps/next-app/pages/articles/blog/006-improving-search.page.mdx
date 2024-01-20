@@ -1,0 +1,57 @@
+import { Link } from "@mui/joy";
+import { QuestionSearch } from "@chair-flight/react/containers";
+import { BlogPageLayout } from "./_blog-page.layout";
+
+export const meta = {
+  title: "Improving Search",
+  linkTitle: "Improving Search",
+  file: "006-improving-search",
+  description: [
+    "Finding questions on the Chair Flight Database has now become both faster and ",
+    "easier! We have added the ability to filter by subjects, learning objectives, as",
+    "well as the ability to specify what exactly you are searching for.",
+  ].join(""),
+  tags: ["Feature"],
+  author: "PupoSDC",
+  isoDate: "2024-01-20T20:00:00.000Z",
+};
+
+# Improving Search
+
+Finding questions on the Chair Flight Database has now become both faster and
+easier! We have added the ability to filter by subjects, learning objectives, as
+well as the ability to specify what exactly you are searching for.
+
+Since Demos are worth 1000 pictures, have a go at the new question search forsti
+the ATPL module right here:
+
+<br />{" "}
+
+<QuestionSearch
+  noSsr
+  questionBank="atpl"
+  forceMode="mobile"
+  sx={{ height: 500 }}
+/>
+
+<br />
+
+<Link href="/modules/atpl/questions" display="block">
+  Search ATPL Questions
+</Link>
+
+<Link href="/modules/atpl/learning-objectives" display="block">
+  Search ATPL Learning Objectives
+</Link>
+
+<Link href="/modules/type/questions" display="block">
+  Search Type Rating Questions
+</Link>
+
+<br />
+
+**See you in the skies!**
+
+export default ({ children }) => (
+  <BlogPageLayout meta={meta}>{children}</BlogPageLayout>
+);
