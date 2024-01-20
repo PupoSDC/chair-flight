@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { NoSsr } from "@mui/base";
-import { Box, Divider, Grid, Link, Stack, Typography } from "@mui/joy";
+import { Box, Divider, Grid, Link, Sheet, Stack, Typography } from "@mui/joy";
 import { TestPreview, Ups } from "@chair-flight/react/components";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
@@ -18,27 +18,9 @@ export const TestsOverview = container<Props>(
       .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)
       .filter((test) => test.questionBank === questionBank);
 
-    const entries = [
-      {
-        title: "In Progress tests",
-        items: testsAsList.filter((test) => test.status !== "finished"),
-        noItemsMessage: (
-          <Typography>
-            No tests in progress. You can{" "}
-            <Link href={createTestHref}>Create a New Test</Link>!
-          </Typography>
-        ),
-        topRightCorner: <Link href={createTestHref}>Create New Test</Link>,
-      },
-      {
-        title: "Completed tests",
-        items: testsAsList.filter((test) => test.status === "finished"),
-        noItemsMessage: "No tests completed so far",
-      },
-    ];
 
     return (
-      <Box sx={sx} component={component}>
+      <Sheet sx={sx} component={component}>
         {entries.map(({ title, items, noItemsMessage, topRightCorner }) => (
           <Fragment key={title}>
             <Stack

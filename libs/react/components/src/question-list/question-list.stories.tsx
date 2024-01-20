@@ -13,7 +13,7 @@ const meta: Meta<typeof QuestionList> = {
     loading: false,
     error: false,
     forceMode: undefined,
-    questions: [
+    items: [
       {
         id: "gdjhd",
         questionId: "26mpt",
