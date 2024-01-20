@@ -35,7 +35,7 @@ export const LearningObjectiveQuestions = container<Props>(
       <QuestionList
         loading={isLoading}
         error={isError}
-        questions={(data?.pages ?? []).flatMap((p) => p.items)}
+        items={(data?.pages ?? []).flatMap((p) => p.items)}
         component={component}
         onFetchNextPage={fetchNextPage}
         sx={sx}

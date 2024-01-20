@@ -18,6 +18,7 @@ type TestProgress = {
   goToPreviousQuestion: (args: { testId: string }) => void;
   tickTestTimer: (args: { testId: string; timeSpentInMs: number }) => void;
   finishTest: (args: { testId: string }) => void;
+  deleteTest: (args: { testId: string }) => void;
 };
 
 export const useTestProgress = create<TestProgress>()(
@@ -145,6 +146,12 @@ export const useTestProgress = create<TestProgress>()(
             status: "finished",
           };
           set({ tests: { ...get().tests, [testId]: newTest } });
+        },
+        deleteTest: ({ testId }) => {
+          const newTests = { ...get().tests };
+          delete newTests[testId];
+
+          set({ tests: { ...newTests } });
         },
       }),
       { name: "cf-test-progress" },
