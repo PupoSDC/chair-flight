@@ -68,7 +68,7 @@ export const QuestionVariantPreview = forwardRef<
           alignItems: "center",
         }}
       >
-        <Typography level="h5">{`${id}`}</Typography>{" "}
+        <Typography level="h5">{`${id}`}</Typography>
         {variantId && <Typography level="body-sm">{`${variantId}`}</Typography>}
         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
           {topRightCorner}
