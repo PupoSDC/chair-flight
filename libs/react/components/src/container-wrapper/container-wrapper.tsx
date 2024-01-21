@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { NoSsr } from "@mui/base";
 import { Skeleton } from "@mui/joy";
-import type { SxProps } from "@mui/joy/styles/types";
 import { Ups } from "../ups";
+import type { SxProps } from "@mui/joy/styles/types";
 import type { ComponentType, FunctionComponent, ReactNode } from "react";
 import type { FallbackProps } from "react-error-boundary";
 
@@ -12,7 +12,7 @@ export type LoadingFallbackProps = { sx?: SxProps };
 
 export type ContainerWrapperProps = {
   /**
-   * Forward to error fallback and ...
+   * Forwarded to error fallback and error fallback.
    */
   sx?: SxProps;
 
