@@ -8,3 +8,4 @@ export type LearningObjectiveId = string;
 export type CourseId = string;
 export type MediaId = string;
 export type FlashcardId = string;
+export type SubjectId = string;

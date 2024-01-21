@@ -2,6 +2,7 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import {
   getPaths,
+  readAllCoursesFromFs,
   readAllFlashcardsFromFs,
   readAllLearningObjectivesFromFs,
   readAllMediaFromFs,
@@ -9,63 +10,47 @@ import {
   readAllSubjectsFromFs,
 } from "../common/parse-question-bank";
 import type { ExecutorContext } from "@nx/devkit";
+import { connectQuestionBank } from "../common/connect-question-bank";
 
-type ExecutorOptions = {
-  skipQuestions?: boolean;
-  skipMedia?: boolean;
-  skipSubjects?: boolean;
-  skipLearningObjectives?: boolean;
-  skipFlashcards?: boolean;
-};
+type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (
-  options: ExecutorOptions,
+  _: ExecutorOptions,
   context: ExecutorContext,
 ) => {
   const {
     projectName,
     questionsFolder,
     flashCardsFolder,
-    mediaPath,
+    mediaFolder,
     mediaJson,
+    losJson,
+    coursesJson,
     subjectsJson,
-    losXlsx,
     outputDir,
     outputQuestionsJson,
     outputMediaDir,
     outputMediaJson,
     outputSubjectsJson,
+    outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
   } = getPaths({ context });
 
-  const questions = await readAllQuestionsFromFs({
-    questionsPath: questionsFolder,
-    projectName,
-    ...options,
-  });
+  const questions = await readAllQuestionsFromFs({ questionsFolder, projectName });
+  const learningObjectives = await readAllLearningObjectivesFromFs({ losJson });
+  const courses = await readAllCoursesFromFs({ coursesJson });
+  const subjects = await readAllSubjectsFromFs({ subjectsJson });
+  const media = await readAllMediaFromFs({ mediaJson });
+  const flashcards = await readAllFlashcardsFromFs({ flashCardsFolder });
 
-  const learningObjectives = await readAllLearningObjectivesFromFs({
-    questions: questions,
-    loPath: losXlsx,
-    ...options,
-  });
-
-  const subjects = await readAllSubjectsFromFs({
-    learningObjectives,
-    subjectsPath: subjectsJson,
-    ...options,
-  });
-
-  const media = await readAllMediaFromFs({
+  connectQuestionBank({
     questions,
-    mediaPath: mediaJson,
-    ...options,
-  });
-
-  const flashcards = await readAllFlashcardsFromFs({
-    flashCardsPath: flashCardsFolder,
-    ...options,
+    learningObjectives,
+    courses,
+    subjects,
+    media,
+    flashcards,
   });
 
   await fs
@@ -88,6 +73,10 @@ const runExecutor = async (
       JSON.stringify(subjects),
     ),
     fs.writeFile(
+      path.join(process.cwd(), outputCoursesJson),
+      JSON.stringify(courses),
+    ),
+    fs.writeFile(
       path.join(process.cwd(), outputMediaJson),
       JSON.stringify(media),
     ),
@@ -95,13 +84,11 @@ const runExecutor = async (
       path.join(process.cwd(), outputFlashcardsJson),
       JSON.stringify(flashcards),
     ),
-    options.skipMedia
-      ? Promise.resolve()
-      : fs.cp(
-          path.join(process.cwd(), mediaPath),
-          path.join(process.cwd(), outputMediaDir),
-          { recursive: true },
-        ),
+    fs.cp(
+      path.join(process.cwd(), mediaFolder),
+      path.join(process.cwd(), outputMediaDir),
+      { recursive: true },
+    ),
   ]);
 
   return {
