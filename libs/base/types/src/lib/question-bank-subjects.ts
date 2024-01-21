@@ -1,9 +1,14 @@
-import type { CourseId, LearningObjectiveId, QuestionTemplateId, SubjectId } from "./ids";
+import type {
+  CourseId,
+  LearningObjectiveId,
+  QuestionTemplateId,
+  SubjectId,
+} from "./ids";
 
 export type QuestionBankCourse = {
   id: CourseId;
   text: string;
-}
+};
 
 export type QuestionBankSubject = {
   id: SubjectId;
@@ -27,7 +32,7 @@ export type QuestionBankLearningObjective = {
   nestedLearningObjectives: LearningObjectiveId[];
   questions: QuestionTemplateId[];
   nestedQuestions: QuestionTemplateId[];
-}
+};
 
 export type QuestionBankCourseJson = QuestionBankCourse;
 
@@ -38,5 +43,5 @@ export type QuestionBankSubjectJson = Omit<
 
 export type QuestionBankLearningObjectiveJson = Omit<
   QuestionBankLearningObjective,
-  "questions"  | "nestedQuestions" | "nestedLearningObjectives"
->
+  "questions" | "nestedQuestions" | "nestedLearningObjectives"
+>;

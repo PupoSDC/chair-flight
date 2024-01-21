@@ -1,5 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { connectQuestionBank } from "../common/connect-question-bank";
 import {
   getPaths,
   readAllCoursesFromFs,
@@ -10,14 +11,10 @@ import {
   readAllSubjectsFromFs,
 } from "../common/parse-question-bank";
 import type { ExecutorContext } from "@nx/devkit";
-import { connectQuestionBank } from "../common/connect-question-bank";
 
 type ExecutorOptions = Record<string, never>;
 
-const runExecutor = async (
-  _: ExecutorOptions,
-  context: ExecutorContext,
-) => {
+const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const {
     projectName,
     questionsFolder,
@@ -37,7 +34,10 @@ const runExecutor = async (
     outputFlashcardsJson,
   } = getPaths({ context });
 
-  const questions = await readAllQuestionsFromFs({ questionsFolder, projectName });
+  const questions = await readAllQuestionsFromFs({
+    questionsFolder,
+    projectName,
+  });
   const learningObjectives = await readAllLearningObjectivesFromFs({ losJson });
   const courses = await readAllCoursesFromFs({ coursesJson });
   const subjects = await readAllSubjectsFromFs({ subjectsJson });

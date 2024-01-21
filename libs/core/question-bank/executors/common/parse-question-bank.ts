@@ -131,7 +131,6 @@ export const readAllQuestionsFromFs = async ({
   return questions;
 };
 
-
 export const readAllLearningObjectivesFromFs = async ({
   losJson,
 }: {
@@ -168,7 +167,7 @@ export const readAllCoursesFromFs = async ({
   coursesJson,
 }: {
   coursesJson: string;
-}) : Promise<QuestionBankCourse[]> => {
+}): Promise<QuestionBankCourse[]> => {
   const fileBuffer = await fs.readFile(coursesJson, "utf-8");
   const courses = JSON.parse(fileBuffer) as QuestionBankCourseJson[];
   return courses;
