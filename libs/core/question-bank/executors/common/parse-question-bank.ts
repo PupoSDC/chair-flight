@@ -1,35 +1,20 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import * as XLSX from "xlsx";
 import type {
   QuestionBankQuestionTemplate,
   QuestionBankQuestionTemplateJson,
   QuestionBankLearningObjective,
   QuestionBankMediaJson,
-  CourseName,
-  LearningObjectiveId,
   QuestionBankMedia,
   QuestionBankSubjectJson,
-  QuestionBankSubject,
   QuestionBankFlashcardContent,
   QuestionBankFlashcardCollection,
   QuestionBankLearningObjectiveJson,
   QuestionBankCourseJson,
   QuestionBankCourse,
+  QuestionBankSubject,
 } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
-
-const intentionallyLeftBlankPattern = /Intentionally left blank/i;
-
-const courseNames: Record<string, CourseName> = {
-  "ATPL(A)": "ATPL_A",
-  "CPL(A)": "CPL_A",
-  "ATPL(H)/IR": "ATPL_H_IR",
-  "ATPL(H)/VFR": "ATPL_H_VFR",
-  "CPL(H)": "CPL_H",
-  IR: "IR",
-  "CBIR(A)": "CBIR_A",
-};
 
 const exists = async (f: string) => {
   try {
@@ -151,15 +136,13 @@ export const readAllSubjectsFromFs = async ({
   subjectsJson,
 }: {
   subjectsJson: string;
-}) => {
+}): Promise<QuestionBankSubject[]> => {
   const fileBuffer = await fs.readFile(subjectsJson, "utf-8");
   const subjects = JSON.parse(fileBuffer) as QuestionBankSubjectJson[];
 
   return subjects.map((s) => ({
     ...s,
-    questions: [],
-    nestedLearningObjectives: [],
-    nestedQuestions: [],
+    numberOfQuestions: 0,
   }));
 };
 

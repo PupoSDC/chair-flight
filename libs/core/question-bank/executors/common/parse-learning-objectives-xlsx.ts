@@ -1,5 +1,5 @@
 import * as XLSX from "xlsx";
-import {
+import type {
   LearningObjectiveId,
   QuestionBankLearningObjectiveJson,
 } from "@chair-flight/base/types";
@@ -73,7 +73,7 @@ export const parseLearningObjectivesXlsx = async ({
   );
 
   // link learning objectives to one another:
-  learningObjectives.forEach((lo, _, arr) => {
+  learningObjectives.forEach((lo) => {
     const parentId = lo.id.split(".").slice(0, -1).join(".");
     const parent = learningObjectivesMap[parentId];
     if (parent) parent.learningObjectives.push(lo.id);

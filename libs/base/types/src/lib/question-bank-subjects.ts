@@ -17,10 +17,8 @@ export type QuestionBankSubject = {
   shortName: string;
   numberOfExamQuestions: number;
   numberOfExamMinutes: number;
+  numberOfQuestions: number;
   learningObjectives: LearningObjectiveId[];
-  nestedLearningObjectives: LearningObjectiveId[];
-  questions: QuestionTemplateId[];
-  nestedQuestions: QuestionTemplateId[];
 };
 
 export type QuestionBankLearningObjective = {
@@ -38,7 +36,7 @@ export type QuestionBankCourseJson = QuestionBankCourse;
 
 export type QuestionBankSubjectJson = Omit<
   QuestionBankSubject,
-  "questions" | "nestedQuestions" | "nestedLearningObjectives"
+  "numberOfQuestions"
 >;
 
 export type QuestionBankLearningObjectiveJson = Omit<
