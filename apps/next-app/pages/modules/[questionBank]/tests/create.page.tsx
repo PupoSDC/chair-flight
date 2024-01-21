@@ -31,9 +31,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
         noSsr
         questionBank={questionBank}
         sx={{ height: "100%", overflow: "hidden" }}
-        onSuccessfulTestCreation={(test) => {
-          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`);
-        }}
+        onSuccessfulTestCreation={async (test) =>
+          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
+        }
       />
     </LayoutModule>
   );

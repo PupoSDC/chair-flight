@@ -56,6 +56,8 @@ export const connectQuestionBank = ({
       learningObjectivesMap[lo].questions = [
         ...new Set([...learningObjectivesMap[lo].questions, q.id]),
       ];
+      learningObjectivesMap[lo].nestedQuestions =
+        learningObjectivesMap[lo].questions;
     });
   });
 
@@ -66,17 +68,16 @@ export const connectQuestionBank = ({
 
     parent.courses = [...new Set([...parent.courses, ...lo.courses])];
     parent.nestedQuestions = [
-      ...new Set([
-        ...parent.nestedQuestions,
-        ...lo.questions,
-        ...lo.nestedQuestions,
-      ]),
+      ...new Set([...parent.nestedQuestions, ...lo.nestedQuestions]),
     ];
-    parent.nestedLearningObjectives = [
-      ...parent.nestedQuestions,
-      ...lo.learningObjectives,
-      ...lo.nestedLearningObjectives,
-    ];
+  });
+
+  // Bubble up to subjects
+  subjects.forEach((s) => {
+    s.learningObjectives.forEach((loId) => {
+      const lo = learningObjectivesMap[loId];
+      s.numberOfQuestions += lo.nestedQuestions.length + lo.questions.length;
+    });
   });
 
   // Count all question in a Subject

@@ -11,7 +11,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 288,
         numberOfQuestions: 190,
       },
       {
@@ -22,7 +21,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 117,
         numberOfQuestions: 103,
       },
       {
@@ -33,7 +31,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 13,
         numberOfQuestions: 13,
       },
       {
@@ -44,7 +41,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9 Preamble",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 13,
       },
       {
@@ -55,7 +51,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 56,
         numberOfQuestions: 56,
       },
       {
@@ -67,7 +62,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
           "ICAO Doc 7300/9 Part 1, Articles 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17, 18, 19, 20, 37, 38, 39, 40",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 19,
       },
       {
@@ -79,7 +73,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
           "Convention on the High Seas (Geneva, 29 April 1958) Articles 1, 2;\r\nICAO Doc 7300/9 Part 1, Articles 1, 2",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 2,
       },
       {
@@ -90,7 +83,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9, Articles 5, 6, 7, 10, 12, 16",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 14,
       },
       {
@@ -101,7 +93,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9, Articles 29, 31, 32, 33, 35, 36",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 21,
       },
       {
@@ -112,7 +103,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 34,
         numberOfQuestions: 34,
       },
       {
@@ -123,7 +113,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9, Article 44",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 22,
       },
       {
@@ -134,7 +123,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9, Articles 48, 49, 50, 54, 56, 57",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 7,
       },
       {
@@ -145,7 +133,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7300/9, Articles 54, 90, 94, 95",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 5,
       },
       {
@@ -156,7 +143,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 44,
         numberOfQuestions: 38,
       },
       {
@@ -167,7 +153,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 5,
         numberOfQuestions: 5,
       },
       {
@@ -178,7 +163,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 7500",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 5,
       },
       {
@@ -189,7 +173,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 6,
         numberOfQuestions: 6,
       },
       {
@@ -200,7 +183,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "ICAO Doc 9626",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 6,
       },
       {
@@ -211,7 +193,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
         source: "",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 15,
         numberOfQuestions: 15,
       },
       {
@@ -223,7 +204,6 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
           "ICAO Doc 8364 — Convention on Offences and Certain Other Acts Committed on Board Aircraft, signed in Tokyo on 14 September 1963 ",
         questionBank: "atpl",
         subject: "010",
-        numberOfLearningObjectives: 0,
         numberOfQuestions: 15,
       },
     ],

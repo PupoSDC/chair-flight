@@ -26,7 +26,7 @@ export type NestedCheckboxItem = {
 const ChapterControlButton = styled(Button)<{ open: boolean }>`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding: ${({ theme }) => theme.spacing(1)};
+  padding: ${({ theme }) => theme.spacing(0.5)};
   border-bottom-right-radius: ${({ open, theme }) =>
     open ? 0 : theme.radius.sm};
   min-height: 36px;
@@ -45,7 +45,7 @@ const ChapterControlButton = styled(Button)<{ open: boolean }>`
   }
 
   ${({ theme }) => theme.breakpoints.up("sm")} {
-    padding: ${({ theme }) => theme.spacing(2)};
+    padding: ${({ theme }) => theme.spacing(1)};
   }
 `;
 
@@ -98,8 +98,12 @@ export const NestedCheckboxSelect = forwardRef<
                 id={parent.id}
                 label={
                   <Stack
-                    direction={{ xs: "column", sm: "row" }}
+                    direction={{
+                      xs: "column",
+                      sm: "row",
+                    }}
                     justifyContent={"space-between"}
+                    alignItems={{ sm: "center" }}
                   >
                     <Typography
                       level="body-md"

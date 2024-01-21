@@ -50,7 +50,7 @@ const testMakerPersistence = {
 };
 
 type Props = {
-  onSuccessfulTestCreation: (test: Test) => void;
+  onSuccessfulTestCreation: (test: Test) => Promise<unknown>;
   questionBank: QuestionBankName;
   component?: "form";
   noSsr: true;
@@ -137,7 +137,7 @@ export const TestMaker = container<Props>(
           config,
         });
         addTest({ test });
-        onSuccessfulTestCreation(test);
+        await onSuccessfulTestCreation(test);
       } catch (error) {
         console.error(error);
         toast.error("Something went wrong while creating the test. 😥");

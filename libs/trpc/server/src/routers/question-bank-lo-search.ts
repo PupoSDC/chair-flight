@@ -15,14 +15,10 @@ type SearchDocument = Record<SearchField, string>;
 
 type SearchResult = Omit<
   QuestionBankLearningObjective,
-  | "learningObjectives"
-  | "nestedLearningObjectives"
-  | "questions"
-  | "nestedQuestions"
+  "learningObjectives" | "questions" | "nestedQuestions"
 > & {
   subject: SubjectId;
   questionBank: QuestionBankName;
-  numberOfLearningObjectives: number;
   numberOfQuestions: number;
 };
 
@@ -66,8 +62,7 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
       source: lo.source,
       questionBank: bank,
       subject: lo.id.split(".")[0],
-      numberOfLearningObjectives: lo.nestedLearningObjectives.length,
-      numberOfQuestions: lo.nestedQuestions.length + lo.questions.length,
+      numberOfQuestions: lo.nestedQuestions.length,
     }));
 
     await SEARCH_INDEX.addAllAsync(searchItems);

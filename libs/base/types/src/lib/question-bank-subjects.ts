@@ -28,8 +28,8 @@ export type QuestionBankLearningObjective = {
   text: string;
   source: string;
   learningObjectives: LearningObjectiveId[];
-  nestedLearningObjectives: LearningObjectiveId[];
   questions: QuestionTemplateId[];
+  /** Includes Questions from this LO and from nested LOs */
   nestedQuestions: QuestionTemplateId[];
 };
 
@@ -42,5 +42,5 @@ export type QuestionBankSubjectJson = Omit<
 
 export type QuestionBankLearningObjectiveJson = Omit<
   QuestionBankLearningObjective,
-  "questions" | "nestedQuestions" | "nestedLearningObjectives"
+  "questions" | "nestedQuestions"
 >;

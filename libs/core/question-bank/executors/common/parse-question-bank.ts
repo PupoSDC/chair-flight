@@ -128,7 +128,6 @@ export const readAllLearningObjectivesFromFs = async ({
     ...lo,
     questions: [],
     nestedQuestions: [],
-    nestedLearningObjectives: [],
   }));
 };
 
