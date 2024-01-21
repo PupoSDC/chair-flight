@@ -27,28 +27,11 @@ export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> = z
     mode: z.enum(["study", "exam"]),
     questionBank: questionBankNameSchema,
     subject: z.string(),
-    learningObjectives: z.record(z.boolean()),
+    learningObjectiveIds: z.string().array().min(1),
     numberOfQuestions: z.number().min(1).max(200),
     seed: z.string().optional(),
     title: z.string().optional(),
-  })
-  .refine(
-    (config) => {
-      const subjectLos = Object.keys(config.learningObjectives).filter((lo) =>
-        lo.startsWith(config.subject),
-      );
-      if (!subjectLos.length) return true;
-
-      const atLeastOneSubjectLoIsSelected = Object.entries(
-        config.learningObjectives,
-      ).some(([lo, selected]) => selected && lo.startsWith(config.subject));
-      return atLeastOneSubjectLoIsSelected;
-    },
-    {
-      message: "At least one chapter, or section must be selected.",
-      path: ["learningObjectives"],
-    },
-  );
+  });
 
 export const createTest = async ({
   config,
@@ -65,13 +48,7 @@ export const createTest = async ({
   const shuffler = getRandomShuffler(seed);
   const getRandomRandomId = getRandomIdGenerator(seed);
 
-  const learningObjectives = Object.entries(config.learningObjectives).reduce<
-    string[]
-  >((acc, [lo, selected]) => {
-    const safeSubject = subject === "070" ? "071" : subject;
-    if (selected && lo.startsWith(safeSubject)) acc.push(lo);
-    return acc;
-  }, []);
+  const learningObjectives = config.learningObjectiveIds;
 
   const possibleQuestions = Object.values(allQuestions).filter((q) => {
     const hasLearningObjectives = q.learningObjectives.some((questionLo) => {

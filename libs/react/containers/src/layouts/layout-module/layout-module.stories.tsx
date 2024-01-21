@@ -25,6 +25,7 @@ const meta: Meta<typeof LayoutModule> = {
           hasQuestions: true,
           hasLearningObjectives: true,
           hasMedia: true,
+          hasCourses: true,
         })),
       ],
     },

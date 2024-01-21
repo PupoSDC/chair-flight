@@ -133,13 +133,7 @@ export const TestMaker = container<Props>(
       try {
         const { test } = await createTest.mutateAsync({
           questionBank,
-          config: {
-            ...config,
-            learningObjectives: {
-              ...config.learningObjectives,
-              [config.subject]: true,
-            },
-          },
+          config,
         });
         addTest({ test });
         onSuccessfulTestCreation(test);

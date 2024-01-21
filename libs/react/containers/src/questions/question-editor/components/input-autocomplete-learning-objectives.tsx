@@ -28,7 +28,7 @@ export const InputAutocompleteLearningObjectives = forwardRef<
     });
 
   const optionsMap = (data?.items ?? []).reduce<
-    Record<string, QuestionBankLearningObjective>
+    Record<string, { id: string, text: string }>
   >((acc, result) => {
     acc[result.id] = result;
     return acc;
