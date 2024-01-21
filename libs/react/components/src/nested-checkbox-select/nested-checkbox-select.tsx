@@ -1,27 +1,32 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useMemo, useState } from "react";
 import { ChevronRight } from "@mui/icons-material";
 import {
   Box,
   Button,
   Checkbox,
   Sheet,
+  Stack,
   Typography,
   checkboxClasses,
   styled,
 } from "@mui/joy";
-import type { BoxProps } from "@mui/joy";
+import type { StackProps } from "@mui/joy";
 
 export type NestedCheckboxItem = {
   id: string;
-  checked: boolean;
   label: string;
   subLabel: string;
-  children: Array<NestedCheckboxItem & { children: never[] }>;
+  children: Array<{
+    id: string;
+    label: string;
+    subLabel: string;
+  }>;
 };
 
 const ChapterControlButton = styled(Button)<{ open: boolean }>`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  padding: ${({ theme }) => theme.spacing(1)};
   border-bottom-right-radius: ${({ open, theme }) =>
     open ? 0 : theme.radius.sm};
   min-height: 36px;
@@ -38,33 +43,47 @@ const ChapterControlButton = styled(Button)<{ open: boolean }>`
   &:disabled > svg {
     visibility: hidden;
   }
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    padding: ${({ theme }) => theme.spacing(2)};
+  }
 `;
 
 export type NestedCheckboxSelectProps = {
   items?: NestedCheckboxItem[];
-  onChange?: (item: NestedCheckboxItem, value: boolean) => void;
-} & Pick<BoxProps, "sx" | "style" | "className">;
+  values?: string[];
+  onChange?: (values: string[]) => void;
+} & Pick<StackProps, "sx" | "style" | "className">;
 
 export const NestedCheckboxSelect = forwardRef<
   HTMLDivElement,
   NestedCheckboxSelectProps
->(({ items, onChange, ...props }, ref) => {
+>(({ items = [], values = [], onChange, ...props }, ref) => {
   const [openChapter, setOpenChapter] = useState<string>();
+
+  const valueMap = useMemo(
+    () =>
+      values.reduce(
+        (s, v) => {
+          s[v] = true;
+          return s;
+        },
+        {} as Record<string, boolean>,
+      ),
+    [values],
+  );
+
   return (
-    <Sheet
-      {...props}
-      ref={ref}
-      sx={{ ...props.sx, display: "flex", flexDirection: "column", p: 1 }}
-      role="group"
-    >
-      {items?.map((item) => {
-        const open = openChapter === item.id;
-        const indeterminate = ![0, item.children.length].includes(
-          item.children.reduce((s, r) => s + Number(r.checked), 0),
+    <Stack {...props} ref={ref} sx={props.sx} role="group">
+      {items?.map((parent) => {
+        const parentChecked = valueMap[parent.id] ?? false;
+        const open = openChapter === parent.id;
+        const indeterminate = parent.children.some(
+          (child, _, array) => !!valueMap[child.id] !== !!valueMap[array[0].id],
         );
 
         return (
-          <Sheet sx={{ my: 0.5 }} key={item.id}>
+          <Sheet sx={{ my: 0.5 }} key={parent.id}>
             <Box
               sx={{
                 display: "flex",
@@ -76,93 +95,135 @@ export const NestedCheckboxSelect = forwardRef<
             >
               <Checkbox
                 overlay
-                id={item.id}
-                label={item.label}
-                indeterminate={indeterminate}
-                checked={item.checked}
-                className={checkboxClasses.focusVisible}
-                onChange={() =>
-                  onChange?.(
-                    {
-                      ...item,
-                      checked: !item.checked,
-                      children: item.children.map((child) => ({
-                        ...child,
-                        checked: !item.checked,
-                      })),
-                    },
-                    !item.checked,
-                  )
+                id={parent.id}
+                label={
+                  <Stack
+                    direction={{ xs: "column", sm: "row" }}
+                    justifyContent={"space-between"}
+                  >
+                    <Typography
+                      level="body-md"
+                      sx={{
+                        fontWeight: 600,
+                        fontSize: { xs: "14px", sm: "initial" },
+                      }}
+                    >
+                      {parent.label}
+                    </Typography>
+                    <Typography level="body-xs">{parent.subLabel}</Typography>
+                  </Stack>
                 }
+                indeterminate={indeterminate}
+                checked={parentChecked}
+                className={checkboxClasses.focusVisible}
+                onChange={() => {
+                  const newValues = { ...valueMap };
+                  newValues[parent.id] = !parentChecked;
+                  parent.children.forEach((c) => {
+                    newValues[c.id] = false;
+                  });
+                  onChange?.(valuesMapToArray(newValues));
+                }}
                 sx={{
                   p: 1,
                   flex: 1,
-                  alignSelf: "center",
+                  display: "flex",
+                  alignItems: "center",
                   position: "relative",
-                  [checkboxClasses.focusVisible]: {
-                    borderRadius: "sm",
-                    color: "primary.solidColor",
-                  },
                 }}
               />
-              <Typography level="body-xs" sx={{ px: 2, alignSelf: "center" }}>
-                {item.subLabel}
-              </Typography>
+
               <ChapterControlButton
                 variant="plain"
                 children={<ChevronRight />}
                 open={open}
-                disabled={item.children.length === 0}
+                disabled={parent.children.length === 0}
                 onClick={() =>
                   setOpenChapter((old) =>
-                    old === item.id ? undefined : item.id,
+                    old === parent.id ? undefined : parent.id,
                   )
                 }
               />
             </Box>
             {open && (
               <Box sx={{ display: "flex", flexDirection: "column" }}>
-                {item.children.map((child) => (
-                  <Box
-                    key={child.id}
-                    sx={{
-                      position: "relative",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Checkbox
-                      overlay
+                {parent.children.map((child) => {
+                  const childChecked = valueMap[child.id] ?? parentChecked;
+
+                  return (
+                    <Box
                       key={child.id}
-                      id={child.id}
-                      label={child.label}
-                      checked={child.checked}
-                      sx={{ p: 1, flex: 1, pl: 4 }}
-                      onChange={() => {
-                        const children = item.children.map((c) => ({
-                          ...c,
-                          checked: c.id === child.id ? !c.checked : c.checked,
-                        }));
-                        const checked = children.every((c) => c.checked);
-                        onChange?.(
-                          { ...item, children, checked },
-                          !child.checked,
-                        );
+                      sx={{
+                        position: "relative",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
                       }}
-                    />
-                    <Typography level="body-sm" sx={{ pr: 2 }}>
-                      {child.subLabel}
-                    </Typography>
-                  </Box>
-                ))}
+                    >
+                      <Checkbox
+                        overlay
+                        key={child.id}
+                        id={child.id}
+                        label={
+                          <Stack
+                            direction={{ xs: "column", sm: "row" }}
+                            justifyContent={"space-between"}
+                          >
+                            <Typography
+                              level="body-md"
+                              sx={{
+                                fontWeight: 600,
+                                fontSize: { xs: "14px", sm: "initial" },
+                              }}
+                            >
+                              {child.label}
+                            </Typography>
+                            <Typography level="body-xs">
+                              {child.subLabel}
+                            </Typography>
+                          </Stack>
+                        }
+                        checked={childChecked}
+                        sx={{ p: 1, flex: 1, pl: 4 }}
+                        onChange={() => {
+                          const newValues = { ...valueMap };
+
+                          if (parentChecked) {
+                            newValues[parent.id] = false;
+                            parent.children.forEach((c) => {
+                              newValues[c.id] = true;
+                            });
+                          }
+
+                          newValues[child.id] = !childChecked;
+                          const allChecked = parent.children.every(
+                            (c) => !!newValues[c.id],
+                          );
+
+                          if (allChecked) {
+                            newValues[parent.id] = true;
+                            parent.children.forEach((c) => {
+                              newValues[c.id] = false;
+                            });
+                          }
+                          onChange?.(valuesMapToArray(newValues));
+                        }}
+                      />
+                    </Box>
+                  );
+                })}
               </Box>
             )}
           </Sheet>
         );
       })}
-    </Sheet>
+    </Stack>
   );
 });
 
 NestedCheckboxSelect.displayName = "NestedCheckboxSelect";
+
+const valuesMapToArray = (record: Record<string, boolean>) =>
+  Object.entries(record)
+    .filter(([, v]) => v)
+    .map(([k]) => k);

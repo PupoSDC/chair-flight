@@ -179,10 +179,9 @@ export const questionBankQuestionSearchRouter = router({
         "learningObjectives",
         learningObjectiveId,
       );
-      const ogQuestions = await qb.getSome(
-        "questions",
-        [...new Set([...questions, ...nestedQuestions])]
-      );
+      const ogQuestions = await qb.getSome("questions", [
+        ...new Set([...questions, ...nestedQuestions]),
+      ]);
       const processedResults: SearchResult[] = ogQuestions
         .map((q) => {
           const v = Object.values(q.variants)[0];

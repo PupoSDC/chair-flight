@@ -15,15 +15,16 @@ type SearchDocument = Record<SearchField, string>;
 
 type SearchResult = Omit<
   QuestionBankLearningObjective,
-  "learningObjectives" | "nestedLearningObjectives" | "questions" | "nestedQuestions"
+  | "learningObjectives"
+  | "nestedLearningObjectives"
+  | "questions"
+  | "nestedQuestions"
 > & {
   subject: SubjectId;
   questionBank: QuestionBankName;
   numberOfLearningObjectives: number;
   numberOfQuestions: number;
 };
-
-
 
 let initializationWork: Promise<void> | undefined;
 

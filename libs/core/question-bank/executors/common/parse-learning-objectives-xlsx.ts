@@ -43,7 +43,7 @@ export const parseLearningObjectivesXlsx = async ({
             ?.replaceAll(".00", "")
             ?.replaceAll(" 00", "")
             ?.trim() ?? "";
-        
+
         const rawParentId = id.split(".").slice(0, -1).join(".");
         const parentId = rawParentId === "071" ? "070" : rawParentId;
 

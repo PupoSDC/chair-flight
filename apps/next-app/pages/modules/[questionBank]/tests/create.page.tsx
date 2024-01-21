@@ -28,8 +28,9 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
     <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
       <AppHead />
       <TestMaker
+        noSsr
         questionBank={questionBank}
-        sx={{ height: "100%" }}
+        sx={{ height: "100%", overflow: "hidden" }}
         onSuccessfulTestCreation={(test) => {
           router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`);
         }}

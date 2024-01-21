@@ -1,4 +1,4 @@
-import type { CourseName, QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 export const mockLearningObjectiveSearchItems = [
   {
@@ -11,7 +11,7 @@ export const mockLearningObjectiveSearchItems = [
       "CPL_H",
       "IR",
       "CBIR_A",
-    ] satisfies CourseName[],
+    ],
     questions: [],
     text: "Air Law",
     contentId: "010",
@@ -22,13 +22,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q000YBA1ON",
       "Q4C6S9NWGH",
@@ -62,13 +56,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "The Convention on International Civil Aviation (Chicago) - Icao Doc 7300/9 - Convention on the High Seas (Geneva, 29 April 1958)",
     contentId: "010.01.01",
@@ -79,13 +67,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "The establishment of the Convention on International Civil Aviation, Chicago, 7 December 1944",
     contentId: "010.01.01.01",
@@ -96,13 +78,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.01.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q2CGFE1OCO",
       "Q3XNN22GER",
@@ -127,13 +103,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.02",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "Part I - Air navigation",
     contentId: "010.01.01.02",
@@ -144,13 +114,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.02.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q4DIWPPO56",
       "Q6UYEVTVQ4",
@@ -182,13 +146,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.02.02",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: ["QJGECH5KQ9", "QMDIQ6XSOF"],
     text: "General principles - Describe the application of the following terms in civil aviation:\n-  sovereignty;\n-  territory and high seas according to the Un Convention on the High Seas. ",
     contentId: "010.01.01.02.02",
@@ -200,13 +158,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.02.03",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q5BMMU05JE",
       "Q74ICEQ3V4",
@@ -232,13 +184,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.02.04",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q1CSODOI5C",
       "Q3ZP858O4I",
@@ -271,13 +217,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.03",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "Part Ii - The International Civil Aviation Organization (Icao)",
     contentId: "010.01.01.03",
@@ -288,13 +228,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.03.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q1XSGFH9NV",
       "Q26L3WKZ61",
@@ -328,13 +262,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.03.02",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q0JGOZVR7S",
       "QAX38WR259",
@@ -353,13 +281,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.01.03.03",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q7JS9FCTF3",
       "Q7STLP9XQK",
@@ -376,13 +298,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "Other conventions and agreements",
     contentId: "010.01.02",
@@ -393,13 +309,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "The International Air Services Transit Agreement (Icao Doc 7500)",
     contentId: "010.01.02.01",
@@ -410,13 +320,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02.01.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "Q8X757B2TY",
       "Q9YBKOO57T",
@@ -433,13 +337,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02.02",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "The International Air Transport Agreement (Icao Doc 9626)",
     contentId: "010.01.02.02",
@@ -450,13 +348,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02.02.01",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [
       "QA4HIXUKAZ",
       "QD6TE6EYLO",
@@ -474,13 +366,7 @@ export const mockLearningObjectiveSearchItems = [
   },
   {
     id: "010.01.02.03",
-    courses: [
-      "ATPL_A",
-      "CPL_A",
-      "ATPL_H_IR",
-      "ATPL_H_VFR",
-      "CPL_H",
-    ] satisfies CourseName[],
+    courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
     questions: [],
     text: "Suppression of Unlawful Acts Against the Safety of Civil Aviation - The Tokyo Convention of 1963",
     contentId: "010.01.02.03",

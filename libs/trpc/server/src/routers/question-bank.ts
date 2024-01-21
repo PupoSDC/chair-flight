@@ -40,7 +40,6 @@ export const questionBankRouter = router({
       const learningObjectives = await qb.getSome("learningObjectives", loIds);
       return { questionTemplate, learningObjectives };
     }),
-
   getQuestionFromGithub: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {

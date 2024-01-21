@@ -64,15 +64,14 @@ export const connectQuestionBank = ({
     const parent = learningObjectivesMap[lo.parentId];
     if (!parent) return;
 
-    parent.courses = [...new Set([
-      ...parent.courses,
-      ...lo.courses
-    ])];
-    parent.nestedQuestions = [...new Set([
-      ...parent.nestedQuestions,
-      ...lo.questions,
-      ...lo.nestedQuestions,
-    ])];
+    parent.courses = [...new Set([...parent.courses, ...lo.courses])];
+    parent.nestedQuestions = [
+      ...new Set([
+        ...parent.nestedQuestions,
+        ...lo.questions,
+        ...lo.nestedQuestions,
+      ]),
+    ];
     parent.nestedLearningObjectives = [
       ...parent.nestedQuestions,
       ...lo.learningObjectives,

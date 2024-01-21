@@ -1,7 +1,6 @@
 import { Fragment, useState } from "react";
 import { FormProvider } from "react-hook-form";
 import { NoSsr } from "@mui/base";
-import { default as CheckIcon } from "@mui/icons-material/Check";
 import {
   Box,
   Link,
@@ -18,6 +17,8 @@ import {
   selectClasses,
   useTheme,
   CircularProgress,
+  Chip,
+  Divider,
 } from "@mui/joy";
 import {
   SearchQuery,
@@ -31,6 +32,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { useSearchConfig } from "./learning-objective-search-config-schema";
 import type {
+  CourseId,
   QuestionBankCourse,
   QuestionBankName,
   QuestionBankSubject,
@@ -59,7 +61,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const [search, setSearch] = useState("");
     const [searchConfig, form] = useSearchConfig(questionBank);
     const { subjects, courses } = LearningObjectivesSearch.useData({
-      questionBank
+      questionBank,
     });
 
     const { searchField, course, subject } = searchConfig;
@@ -96,6 +98,11 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       const distance = scrollHeight - scrollTop - clientHeight;
       if (distance < 200 && !isLoading) fetchNextPage();
     };
+
+    const coursesMap = courses.reduce<Record<CourseId, string>>((sum, c) => {
+      sum[c.id] = c.text;
+      return sum;
+    }, {});
 
     return (
       <Stack component={component} height="100%" sx={sx}>
@@ -177,18 +184,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                     <tr>
                       <th style={{ width: "8em" }}>LO</th>
                       <th>Description</th>
-                      <th>Source</th>
-                      {courses.map((course) => (
-                        <th
-                          key={course.text}
-                          children={course.text}
-                          style={{
-                            fontSize: 10,
-                            width: 14 + course.text.length * 6.5,
-                          }}
-                        />
-                      ))}
-                      <th style={{ width: "7em", fontSize: 10 }}>Questions</th>
+                      <th style={{ width: "14em" }}>Source</th>
+                      <th style={{ width: "14em" }}>Courses</th>
+                      <th style={{ width: "7em" }}>Questions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -211,13 +209,19 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                             {result.source}
                           </MarkdownClientCompressed>
                         </Box>
-                        {courses.map((course) => (
-                          <td key={course.id}>
-                            {result.courses.includes(course.id) && (
-                              <CheckIcon />
-                            )}
-                          </td>
-                        ))}
+                        <td>
+                          {result.courses
+                            .filter((c) => {
+                              if (course === "all") return true;
+                              if (c === course) return true;
+                              return false;
+                            })
+                            .map((course) => (
+                              <Chip key={course} size="sm" sx={{ m: 0.5 }}>
+                                {coursesMap[course]}
+                              </Chip>
+                            ))}
+                        </td>
                         <Box
                           component={"td"}
                           children={result.numberOfQuestions}
@@ -244,13 +248,16 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                           </Link>
                           <Typography level="body-xs" sx={{ fontSize: 10 }}>
                             {result.courses
-                              .map((c) => c /** FIX THIS */)
+                              .map((c) => coursesMap[c])
                               .join(", ")}
+                          </Typography>
+                          <Typography level="body-xs" sx={{ fontSize: 10 }}>
+                            Number of Questions {result.numberOfQuestions}
                           </Typography>
                           <Box
                             sx={{
                               mt: 1,
-                              fontSize: "12px",
+                              fontSize: "sm",
                               height: "7em",
                               overflow: "hidden",
                               maskImage:
@@ -260,6 +267,24 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                             <MarkdownClientCompressed>
                               {result.text}
                             </MarkdownClientCompressed>
+                            {result.source && (
+                              <>
+                                <Divider sx={{ width: "50%", my: 0.5 }} />
+                                <Typography level="body-xs">
+                                  source:{" "}
+                                </Typography>
+                                <Box
+                                  sx={{
+                                    color: "text.tertiary",
+                                    fontSize: "xs",
+                                  }}
+                                >
+                                  <MarkdownClientCompressed>
+                                    {result.source}
+                                  </MarkdownClientCompressed>
+                                </Box>
+                              </>
+                            )}
                           </Box>
                         </ListItemContent>
                       </ListItem>
@@ -281,10 +306,7 @@ LearningObjectivesSearch.displayName = "LearningObjectivesSearch";
 LearningObjectivesSearch.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
 
-  const [
-    { subjects },
-    { courses }
-  ] = await Promise.all([
+  const [{ subjects }, { courses }] = await Promise.all([
     helper.questionBank.getAllSubjects.fetch({ questionBank }),
     helper.questionBank.getAllCourses.fetch({ questionBank }),
   ]);

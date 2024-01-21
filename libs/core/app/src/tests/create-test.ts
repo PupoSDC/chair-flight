@@ -17,7 +17,7 @@ export type NewTestConfiguration = {
   questionBank: QuestionBankName;
   subject: string;
   numberOfQuestions: number;
-  learningObjectives: Record<string, boolean>;
+  learningObjectiveIds: string[];
   seed?: string;
   title?: string;
 };

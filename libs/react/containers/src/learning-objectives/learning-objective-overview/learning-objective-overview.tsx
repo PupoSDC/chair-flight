@@ -27,44 +27,37 @@ type Data = {
 
 export const LearningObjectiveOverview = container<Props, Params, Data>(
   ({ questionBank, learningObjectiveId, component = "section", sx }) => {
-    const { learningObjective, courses } = LearningObjectiveOverview.useData({ 
-      questionBank, 
-      learningObjectiveId 
+    const { learningObjective, courses } = LearningObjectiveOverview.useData({
+      questionBank,
+      learningObjectiveId,
     });
 
     return (
       <Sheet component={component} sx={sx}>
-        <Grid container sx={{ m: 2 }}>
-          <Grid xs={12} md={6}>
-            <Typography level="h5">{learningObjective.id}</Typography>
-            <MarkdownClient>{learningObjective.text}</MarkdownClient>
-            {learningObjective.source && (
-              <>
-                <Typography level="body-sm">source: </Typography>
-                <Box sx={{ color: "text.tertiary", fontSize: "sm" }}>
-                  <MarkdownClient>{learningObjective.source}</MarkdownClient>
-                </Box>
-              </>
-            )}
+        <Grid container sx={{ m: { xs: 1, sm: 2 } }}>
+          <Grid xs={12}>
+            <Typography level="h4">{learningObjective.id}</Typography>
           </Grid>
-          <Grid xs={12} md={6} sx={{ overflowX: "scroll" }}>
-            <Table
-              sx={{
-                width: "auto",
-                marginLeft: { md: "auto" },
-              }}
-            >
+          <Grid xs={12}>
+            <MarkdownClient>{learningObjective.text}</MarkdownClient>
+          </Grid>
+          {learningObjective.source && (
+            <Grid xs={12} lg={6}>
+              <Typography level="h5">Source</Typography>
+              <Box sx={{ color: "text.tertiary", fontSize: "sm" }}>
+                <MarkdownClient>{learningObjective.source}</MarkdownClient>
+              </Box>
+            </Grid>
+          )}
+          <Grid xs={12} lg={6} sx={{ overflowX: "scroll" }}>
+            <Typography level="h5">Courses</Typography>
+            <Table sx={{ display: "block", overflowY: "auto" }}>
               <thead>
                 <tr>
                   {courses.map((course) => (
-                    <th
-                      key={course.id}
-                      children={course.text}
-                      style={{
-                        fontSize: 10,
-                        width: 14 + course.text.length * 6,
-                      }}
-                    />
+                    <th style={{ fontSize: 10 }} key={course.id}>
+                      {course.text}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -94,13 +87,10 @@ LearningObjectiveOverview.getData = async ({ params, helper }) => {
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
 
-  const [
-    { learningObjective },
-    { courses }
-  ] = await Promise.all([
+  const [{ learningObjective }, { courses }] = await Promise.all([
     qb.getLearningObjective.fetch({ questionBank, learningObjectiveId }),
-    qb.getAllCourses.fetch({ questionBank })
-  ])
+    qb.getAllCourses.fetch({ questionBank }),
+  ]);
   return { learningObjective, courses };
 };
 
@@ -109,11 +99,11 @@ LearningObjectiveOverview.useData = (params) => {
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
 
-  const [{ learningObjective }] =qb.getLearningObjective.useSuspenseQuery({
+  const [{ learningObjective }] = qb.getLearningObjective.useSuspenseQuery({
     questionBank,
     learningObjectiveId,
   });
-  const [{ courses }] =qb.getAllCourses.useSuspenseQuery({
+  const [{ courses }] = qb.getAllCourses.useSuspenseQuery({
     questionBank,
   });
 
