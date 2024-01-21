@@ -126,6 +126,7 @@ export const TestMaker = container<Props>(
     const allSelected = currentSubject?.learningObjectives.every((s) =>
       currentLearningObjectives.includes(s.id),
     );
+
     const someSelected = currentSubject?.learningObjectives.some((s) =>
       currentLearningObjectives.includes(s.id),
     );
@@ -165,12 +166,20 @@ export const TestMaker = container<Props>(
         sx={sx}
       >
         <FormProvider {...form}>
-          <HookFormSelect {...form.register("mode")} formLabel={"Mode"}>
+          <HookFormSelect
+            {...form.register("mode")}
+            formLabel={"Mode"}
+            disabled={form.formState.isSubmitting}
+          >
             <Option value="exam">Exam</Option>
             <Option value="study">Study</Option>
           </HookFormSelect>
 
-          <HookFormSelect {...form.register("subject")} formLabel={"Subject"}>
+          <HookFormSelect
+            {...form.register("subject")}
+            formLabel={"Subject"}
+            disabled={form.formState.isSubmitting}
+          >
             {subjects.map((item) => (
               <Option value={item.id} key={item.id}>
                 {`${item.id} - ${item.shortName}`}
@@ -257,7 +266,9 @@ export const TestMaker = container<Props>(
               name="numberOfQuestions"
               render={({ field: { onChange, value } }) => (
                 <SliderWithInput
-                  disabled={currentMode === "exam"}
+                  disabled={
+                    currentMode === "exam" || form.formState.isSubmitting
+                  }
                   min={1}
                   max={Math.min(200, currentSubject?.numberOfQuestions ?? 200)}
                   value={value}
@@ -273,7 +284,7 @@ export const TestMaker = container<Props>(
             type="submit"
             fullWidth
             disabled={!form.formState.isValid}
-            loading={createTest.isLoading}
+            loading={form.formState.isSubmitting}
           >
             Start!
           </Button>
@@ -314,8 +325,8 @@ TestMaker.displayName = "TestMaker";
 TestMaker.getData = async () => ({});
 TestMaker.useData = () => ({});
 
-TestMaker.LoadingFallback = () => (
-  <TestMakerContainer component={"form"}>
+TestMaker.LoadingFallback = ({ sx }) => (
+  <TestMakerContainer component={"form"} sx={sx}>
     <FormControl>
       <Skeleton variant="text" width={160} sx={{ mb: 0.75 }} />
       <Skeleton variant="rectangular" height={8 * 4.5} />

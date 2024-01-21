@@ -2,11 +2,20 @@ import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { NoSsr } from "@mui/base";
 import { Skeleton } from "@mui/joy";
+import type { SxProps } from "@mui/joy/styles/types";
 import { Ups } from "../ups";
 import type { ComponentType, FunctionComponent, ReactNode } from "react";
 import type { FallbackProps } from "react-error-boundary";
 
+export type ErrorFallbackProps = FallbackProps & { sx?: SxProps };
+export type LoadingFallbackProps = { sx?: SxProps };
+
 export type ContainerWrapperProps = {
+  /**
+   * Forward to error fallback and ...
+   */
+  sx?: SxProps;
+
   /**
    * Skips rendering on server.
    */
@@ -19,21 +28,24 @@ export type ContainerWrapperProps = {
   /**
    * Error Fallback component. Defers to `Ups` component
    */
-  ErrorFallbackComponent?: ComponentType<FallbackProps>;
+  ErrorFallbackComponent?: ComponentType<ErrorFallbackProps>;
   /**
    * Loading Fallback component. Defers to a big rectangle
    */
-  LoadingFallbackComponent?: ComponentType;
+  LoadingFallbackComponent?: ComponentType<LoadingFallbackProps>;
 
   children: ReactNode;
 };
 
-const DefaultLoadingComponent: FunctionComponent = () => (
-  <Skeleton variant="rectangular" height={300} />
-);
+const DefaultLoadingComponent: FunctionComponent<LoadingFallbackProps> = ({
+  sx,
+}) => <Skeleton variant="rectangular" height={300} sx={sx} />;
 
-const DefaultErrorComponent: FunctionComponent<FallbackProps> = () => (
+const DefaultErrorComponent: FunctionComponent<ErrorFallbackProps> = ({
+  sx,
+}) => (
   <Ups
+    sx={sx}
     color="danger"
     message="An Unexpected Error Has happened!"
     children="Please try refreshing the page"
@@ -46,6 +58,7 @@ const DefaultErrorComponent: FunctionComponent<FallbackProps> = () => (
  * part of the application capable of self handling errors and suspense events.
  */
 export const ContainerWrapper: FunctionComponent<ContainerWrapperProps> = ({
+  sx,
   noSsr,
   deferRendering,
   ErrorFallbackComponent = DefaultErrorComponent,
@@ -53,8 +66,12 @@ export const ContainerWrapper: FunctionComponent<ContainerWrapperProps> = ({
   children,
 }) => {
   const ssrChildren = (
-    <ErrorBoundary FallbackComponent={ErrorFallbackComponent}>
-      <Suspense fallback={<LoadingFallbackComponent />}>{children}</Suspense>
+    <ErrorBoundary
+      fallbackRender={(props) => <ErrorFallbackComponent {...props} sx={sx} />}
+    >
+      <Suspense fallback={<LoadingFallbackComponent sx={sx} />}>
+        {children}
+      </Suspense>
     </ErrorBoundary>
   );
 

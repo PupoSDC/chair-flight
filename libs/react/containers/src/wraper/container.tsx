@@ -41,6 +41,7 @@ export const container = <
     ...props
   }) => (
     <ContainerWrapper
+      sx={props.sx}
       noSsr={noSsr}
       deferRendering={deferRendering}
       ErrorFallbackComponent={Container.ErrorFallback}
