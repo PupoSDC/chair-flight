@@ -129,7 +129,7 @@ export const LayoutModule = container<Props, Params, Data>(
           )}
           {config.hasLearningObjectives && (
             <SidebarListItem
-              href={"/modules/atpl/learning-objectives"}
+              href={`/modules/${questionBank}/learning-objectives`}
               selected={isLearningObjectives}
               icon={LearningObjectivesIcon}
               title={"Learning Objectives"}
@@ -137,7 +137,7 @@ export const LayoutModule = container<Props, Params, Data>(
           )}
           {config.hasFlashcards && (
             <SidebarListItem
-              href={"/modules/prep/flashcards"}
+              href={`/modules/${questionBank}/flashcards`}
               selected={isFlashcards}
               icon={CardIcon}
               title={"Flash Cards"}

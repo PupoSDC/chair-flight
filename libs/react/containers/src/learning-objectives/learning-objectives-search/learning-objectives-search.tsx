@@ -19,7 +19,6 @@ import {
   useTheme,
   CircularProgress,
 } from "@mui/joy";
-import { CourseNames } from "@chair-flight/core/app";
 import {
   SearchQuery,
   HookFormSelect,
@@ -32,7 +31,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { useSearchConfig } from "./learning-objective-search-config-schema";
 import type {
-  CourseName,
+  QuestionBankCourse,
   QuestionBankName,
   QuestionBankSubject,
 } from "@chair-flight/base/types";
@@ -50,6 +49,7 @@ type Params = {
 
 type Data = {
   subjects: QuestionBankSubject[];
+  courses: QuestionBankCourse[];
 };
 
 export const LearningObjectivesSearch = container<Props, Params, Data>(
@@ -58,7 +58,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
     const [search, setSearch] = useState("");
     const [searchConfig, form] = useSearchConfig(questionBank);
-    const { subjects } = LearningObjectivesSearch.useData({ questionBank });
+    const { subjects, courses } = LearningObjectivesSearch.useData({
+      questionBank
+    });
 
     const { searchField, course, subject } = searchConfig;
 
@@ -133,9 +135,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                   </HookFormSelect>
                   <HookFormSelect size="sm" {...form.register("course")}>
                     <Option value={"all"}>All Courses</Option>
-                    {Object.entries(CourseNames).map(([id, name]) => (
+                    {courses.map(({ id, text }) => (
                       <Option value={id} key={id}>
-                        {name}
+                        {text}
                       </Option>
                     ))}
                   </HookFormSelect>
@@ -175,13 +177,14 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                     <tr>
                       <th style={{ width: "8em" }}>LO</th>
                       <th>Description</th>
-                      {Object.values(CourseNames).map((courseName) => (
+                      <th>Source</th>
+                      {courses.map((course) => (
                         <th
-                          key={courseName}
-                          children={courseName}
+                          key={course.text}
+                          children={course.text}
                           style={{
                             fontSize: 10,
-                            width: 14 + courseName.length * 6.5,
+                            width: 14 + course.text.length * 6.5,
                           }}
                         />
                       ))}
@@ -195,29 +198,29 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                           <Link
                             href={`/modules/atpl/learning-objectives/${result.id}`}
                           >
-                            <Typography>{result.contentId}</Typography>
+                            <Typography>{result.id}</Typography>
                           </Link>
                         </td>
                         <td>
                           <MarkdownClientCompressed>
                             {result.text}
                           </MarkdownClientCompressed>
-                          <Box sx={{ fontSize: "xs" }}>
-                            <MarkdownClientCompressed>
-                              {result.source}
-                            </MarkdownClientCompressed>
-                          </Box>
                         </td>
-                        {Object.keys(CourseNames).map((courseName) => (
-                          <td key={courseName}>
-                            {result.courses.includes(
-                              courseName as CourseName,
-                            ) && <CheckIcon />}
+                        <Box component={"td"} fontSize={"xs"}>
+                          <MarkdownClientCompressed>
+                            {result.source}
+                          </MarkdownClientCompressed>
+                        </Box>
+                        {courses.map((course) => (
+                          <td key={course.id}>
+                            {result.courses.includes(course.id) && (
+                              <CheckIcon />
+                            )}
                           </td>
                         ))}
                         <Box
                           component={"td"}
-                          children={result.questions.length}
+                          children={result.numberOfQuestions}
                           sx={{
                             textAlign: "right",
                             pr: `2em !important`,
@@ -241,7 +244,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                           </Link>
                           <Typography level="body-xs" sx={{ fontSize: 10 }}>
                             {result.courses
-                              .map((c) => CourseNames[c])
+                              .map((c) => c /** FIX THIS */)
                               .join(", ")}
                           </Typography>
                           <Box
@@ -278,23 +281,26 @@ LearningObjectivesSearch.displayName = "LearningObjectivesSearch";
 LearningObjectivesSearch.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
 
-  const [data] = await Promise.all([
+  const [
+    { subjects },
+    { courses }
+  ] = await Promise.all([
     helper.questionBank.getAllSubjects.fetch({ questionBank }),
+    helper.questionBank.getAllCourses.fetch({ questionBank }),
   ]);
 
-  return {
-    subjects: data.subjects,
-  };
+  return { subjects, courses };
 };
 
 LearningObjectivesSearch.useData = (params) => {
   const questionBank = getRequiredParam(params, "questionBank");
 
-  const [data] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
+  const [{ subjects }] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
+    questionBank,
+  });
+  const [{ courses }] = trpc.questionBank.getAllCourses.useSuspenseQuery({
     questionBank,
   });
 
-  return {
-    subjects: data.subjects,
-  };
+  return { subjects, courses };
 };

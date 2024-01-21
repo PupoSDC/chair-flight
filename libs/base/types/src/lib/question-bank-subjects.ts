@@ -23,6 +23,7 @@ export type QuestionBankSubject = {
 
 export type QuestionBankLearningObjective = {
   id: LearningObjectiveId;
+  parentId: LearningObjectiveId | CourseId;
   courses: CourseId[];
   text: string;
   source: string;

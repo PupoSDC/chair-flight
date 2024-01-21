@@ -175,13 +175,13 @@ export const questionBankQuestionSearchRouter = router({
       const { questionBank, learningObjectiveId, limit, cursor } = input;
       await populateSearchIndex(questionBank);
       const qb = questionBanks[input.questionBank];
-      const learningObjective = await qb.getOne(
+      const { questions, nestedQuestions } = await qb.getOne(
         "learningObjectives",
         learningObjectiveId,
       );
       const ogQuestions = await qb.getSome(
         "questions",
-        learningObjective.questions,
+        [...new Set([...questions, ...nestedQuestions])]
       );
       const processedResults: SearchResult[] = ogQuestions
         .map((q) => {

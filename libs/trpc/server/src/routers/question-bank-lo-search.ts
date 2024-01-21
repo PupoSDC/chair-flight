@@ -6,16 +6,24 @@ import { publicProcedure, router } from "../config/trpc";
 import type {
   QuestionBankLearningObjective,
   QuestionBankName,
+  SubjectId,
 } from "@chair-flight/base/types";
 
 type SearchField = "id" | "text";
 
 type SearchDocument = Record<SearchField, string>;
 
-type SearchResult = QuestionBankLearningObjective & {
-  subject: string;
+type SearchResult = Omit<
+  QuestionBankLearningObjective,
+  "learningObjectives" | "nestedLearningObjectives" | "questions" | "nestedQuestions"
+> & {
+  subject: SubjectId;
   questionBank: QuestionBankName;
+  numberOfLearningObjectives: number;
+  numberOfQuestions: number;
 };
+
+
 
 let initializationWork: Promise<void> | undefined;
 
@@ -50,9 +58,15 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
     }));
 
     const resultItems: SearchResult[] = los.flatMap((lo) => ({
-      ...lo,
+      id: lo.id,
+      parentId: lo.parentId,
+      courses: lo.courses,
+      text: lo.text,
+      source: lo.source,
       questionBank: bank,
       subject: lo.id.split(".")[0],
+      numberOfLearningObjectives: lo.nestedLearningObjectives.length,
+      numberOfQuestions: lo.nestedQuestions.length + lo.questions.length,
     }));
 
     await SEARCH_INDEX.addAllAsync(searchItems);

@@ -41,10 +41,9 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 );
 
 export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  return {
-    paths: [{ params: { questionBank: "atpl" } }],
-    fallback: false,
-  };
+  const banks: QuestionBankName[] = ["type", "atpl"];
+  const paths = banks.map((questionBank) => ({ params: { questionBank } }));
+  return { fallback: false, paths };
 };
 
 export default Page;

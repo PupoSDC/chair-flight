@@ -18,6 +18,7 @@ export const questionBankRouter = router({
       return {
         hasFlashcards: await qb.has("flashcards"),
         hasQuestions: await qb.has("questions"),
+        hasCourses: await qb.has("courses"),
         hasLearningObjectives: await qb.has("learningObjectives"),
         hasMedia: await qb.has("media"),
       };
@@ -107,6 +108,13 @@ export const questionBankRouter = router({
       const allFlashcards = await qb.getAll("flashcards");
       const count = allFlashcards.reduce((s, e) => s + e.flashcards.length, 0);
       return { count };
+    }),
+  getAllCourses: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const courses = await qb.getAll("courses");
+      return { courses };
     }),
   updateQuestion: publicProcedure
     .input(questionEditSchema)

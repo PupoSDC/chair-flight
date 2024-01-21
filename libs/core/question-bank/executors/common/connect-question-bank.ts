@@ -52,26 +52,32 @@ export const connectQuestionBank = ({
   // Connect learning objectives to questions
   questions.forEach((q) => {
     q.learningObjectives.forEach((lo) => {
-      if (learningObjectivesMap[lo]) {
-        learningObjectivesMap[lo].questions = [
-          ...new Set([...learningObjectivesMap[lo].questions, q.id]),
-        ];
-      }
+      if (!learningObjectivesMap[lo]) return;
+      learningObjectivesMap[lo].questions = [
+        ...new Set([...learningObjectivesMap[lo].questions, q.id]),
+      ];
     });
   });
 
   // Bubble up learning Objectives
-  learningObjectives.reverse().forEach((lo) => {
-    lo.learningObjectives.forEach((lo2) => {
-      const p = learningObjectivesMap[lo2];
-      if (!p) return;
-      p.courses = [...new Set([...p.courses, ...lo.courses])];
-      p.nestedQuestions = [...new Set([...p.questions, ...lo.questions])];
-      p.nestedLearningObjectives = [
-        ...p.learningObjectives,
-        ...lo.learningObjectives,
-      ];
-    });
+  [...learningObjectives].reverse().forEach((lo) => {
+    const parent = learningObjectivesMap[lo.parentId];
+    if (!parent) return;
+
+    parent.courses = [...new Set([
+      ...parent.courses,
+      ...lo.courses
+    ])];
+    parent.nestedQuestions = [...new Set([
+      ...parent.nestedQuestions,
+      ...lo.questions,
+      ...lo.nestedQuestions,
+    ])];
+    parent.nestedLearningObjectives = [
+      ...parent.nestedQuestions,
+      ...lo.learningObjectives,
+      ...lo.nestedLearningObjectives,
+    ];
   });
 
   // Count all question in a Subject
