@@ -52,6 +52,7 @@ const resources: Resource[] = [
   "media",
   "flashcards",
   "subjects",
+  "courses",
 ];
 
 export class QuestionBank implements IQuestionBank {
