@@ -7,6 +7,7 @@ import type {
   QuestionBankName,
   QuestionBankFlashcardCollection,
   QuestionBankSubject,
+  QuestionBankCourse,
 } from "@chair-flight/base/types";
 
 type Resource =
@@ -14,6 +15,7 @@ type Resource =
   | "learningObjectives"
   | "media"
   | "flashcards"
+  | "courses"
   | "subjects";
 
 type NameToType = {
@@ -22,6 +24,7 @@ type NameToType = {
   media: QuestionBankMedia;
   flashcards: QuestionBankFlashcardCollection;
   subjects: QuestionBankSubject;
+  courses: QuestionBankCourse;
 };
 
 type ResourceArrays = {
@@ -49,6 +52,7 @@ const resources: Resource[] = [
   "media",
   "flashcards",
   "subjects",
+  "courses",
 ];
 
 export class QuestionBank implements IQuestionBank {

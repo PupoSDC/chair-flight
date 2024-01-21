@@ -1,7 +1,6 @@
 import { Fragment, useState } from "react";
 import { FormProvider } from "react-hook-form";
 import { NoSsr } from "@mui/base";
-import { default as CheckIcon } from "@mui/icons-material/Check";
 import {
   Box,
   Link,
@@ -18,8 +17,9 @@ import {
   selectClasses,
   useTheme,
   CircularProgress,
+  Chip,
+  Divider,
 } from "@mui/joy";
-import { CourseNames } from "@chair-flight/core/app";
 import {
   SearchQuery,
   HookFormSelect,
@@ -32,7 +32,8 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { useSearchConfig } from "./learning-objective-search-config-schema";
 import type {
-  CourseName,
+  CourseId,
+  QuestionBankCourse,
   QuestionBankName,
   QuestionBankSubject,
 } from "@chair-flight/base/types";
@@ -50,6 +51,7 @@ type Params = {
 
 type Data = {
   subjects: QuestionBankSubject[];
+  courses: QuestionBankCourse[];
 };
 
 export const LearningObjectivesSearch = container<Props, Params, Data>(
@@ -58,7 +60,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
     const [search, setSearch] = useState("");
     const [searchConfig, form] = useSearchConfig(questionBank);
-    const { subjects } = LearningObjectivesSearch.useData({ questionBank });
+    const { subjects, courses } = LearningObjectivesSearch.useData({
+      questionBank,
+    });
 
     const { searchField, course, subject } = searchConfig;
 
@@ -94,6 +98,11 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       const distance = scrollHeight - scrollTop - clientHeight;
       if (distance < 200 && !isLoading) fetchNextPage();
     };
+
+    const coursesMap = courses.reduce<Record<CourseId, string>>((sum, c) => {
+      sum[c.id] = c.text;
+      return sum;
+    }, {});
 
     return (
       <Stack component={component} height="100%" sx={sx}>
@@ -133,9 +142,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                   </HookFormSelect>
                   <HookFormSelect size="sm" {...form.register("course")}>
                     <Option value={"all"}>All Courses</Option>
-                    {Object.entries(CourseNames).map(([id, name]) => (
+                    {courses.map(({ id, text }) => (
                       <Option value={id} key={id}>
-                        {name}
+                        {text}
                       </Option>
                     ))}
                   </HookFormSelect>
@@ -175,17 +184,9 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                     <tr>
                       <th style={{ width: "8em" }}>LO</th>
                       <th>Description</th>
-                      {Object.values(CourseNames).map((courseName) => (
-                        <th
-                          key={courseName}
-                          children={courseName}
-                          style={{
-                            fontSize: 10,
-                            width: 14 + courseName.length * 6.5,
-                          }}
-                        />
-                      ))}
-                      <th style={{ width: "7em", fontSize: 10 }}>Questions</th>
+                      <th style={{ width: "14em" }}>Source</th>
+                      <th style={{ width: "14em" }}>Courses</th>
+                      <th style={{ width: "7em" }}>Questions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -195,29 +196,35 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                           <Link
                             href={`/modules/atpl/learning-objectives/${result.id}`}
                           >
-                            <Typography>{result.contentId}</Typography>
+                            <Typography>{result.id}</Typography>
                           </Link>
                         </td>
                         <td>
                           <MarkdownClientCompressed>
                             {result.text}
                           </MarkdownClientCompressed>
-                          <Box sx={{ fontSize: "xs" }}>
-                            <MarkdownClientCompressed>
-                              {result.source}
-                            </MarkdownClientCompressed>
-                          </Box>
                         </td>
-                        {Object.keys(CourseNames).map((courseName) => (
-                          <td key={courseName}>
-                            {result.courses.includes(
-                              courseName as CourseName,
-                            ) && <CheckIcon />}
-                          </td>
-                        ))}
+                        <Box component={"td"} fontSize={"xs"}>
+                          <MarkdownClientCompressed>
+                            {result.source}
+                          </MarkdownClientCompressed>
+                        </Box>
+                        <td>
+                          {result.courses
+                            .filter((c) => {
+                              if (course === "all") return true;
+                              if (c === course) return true;
+                              return false;
+                            })
+                            .map((course) => (
+                              <Chip key={course} size="sm" sx={{ m: 0.5 }}>
+                                {coursesMap[course]}
+                              </Chip>
+                            ))}
+                        </td>
                         <Box
                           component={"td"}
-                          children={result.questions.length}
+                          children={result.numberOfQuestions}
                           sx={{
                             textAlign: "right",
                             pr: `2em !important`,
@@ -241,13 +248,16 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                           </Link>
                           <Typography level="body-xs" sx={{ fontSize: 10 }}>
                             {result.courses
-                              .map((c) => CourseNames[c])
+                              .map((c) => coursesMap[c])
                               .join(", ")}
+                          </Typography>
+                          <Typography level="body-xs" sx={{ fontSize: 10 }}>
+                            Number of Questions {result.numberOfQuestions}
                           </Typography>
                           <Box
                             sx={{
                               mt: 1,
-                              fontSize: "12px",
+                              fontSize: "sm",
                               height: "7em",
                               overflow: "hidden",
                               maskImage:
@@ -257,6 +267,24 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                             <MarkdownClientCompressed>
                               {result.text}
                             </MarkdownClientCompressed>
+                            {result.source && (
+                              <>
+                                <Divider sx={{ width: "50%", my: 0.5 }} />
+                                <Typography level="body-xs">
+                                  source:{" "}
+                                </Typography>
+                                <Box
+                                  sx={{
+                                    color: "text.tertiary",
+                                    fontSize: "xs",
+                                  }}
+                                >
+                                  <MarkdownClientCompressed>
+                                    {result.source}
+                                  </MarkdownClientCompressed>
+                                </Box>
+                              </>
+                            )}
                           </Box>
                         </ListItemContent>
                       </ListItem>
@@ -278,23 +306,23 @@ LearningObjectivesSearch.displayName = "LearningObjectivesSearch";
 LearningObjectivesSearch.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
 
-  const [data] = await Promise.all([
+  const [{ subjects }, { courses }] = await Promise.all([
     helper.questionBank.getAllSubjects.fetch({ questionBank }),
+    helper.questionBank.getAllCourses.fetch({ questionBank }),
   ]);
 
-  return {
-    subjects: data.subjects,
-  };
+  return { subjects, courses };
 };
 
 LearningObjectivesSearch.useData = (params) => {
   const questionBank = getRequiredParam(params, "questionBank");
 
-  const [data] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
+  const [{ subjects }] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
+    questionBank,
+  });
+  const [{ courses }] = trpc.questionBank.getAllCourses.useSuspenseQuery({
     questionBank,
   });
 
-  return {
-    subjects: data.subjects,
-  };
+  return { subjects, courses };
 };

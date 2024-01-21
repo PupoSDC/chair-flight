@@ -4,6 +4,11 @@
       "implementation": "./executors/compile/executor",
       "schema": "./executors/compile/schema.json",
       "description": "Compile question Bank from content folder"
+    },
+    "parseLosXlsx": {
+      "implementation": "./executors/parse-los-xlsx/executor",
+      "schema": "./executors/parse-los-xlsx/schema.json",
+      "description": "Convert EASA LO documents to our JSON format"
     }
   }
 }

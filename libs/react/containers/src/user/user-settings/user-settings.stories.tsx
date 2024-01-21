@@ -24,6 +24,7 @@ const meta: Meta<typeof UserSettings> = {
           hasQuestions: true,
           hasLearningObjectives: true,
           hasMedia: true,
+          hasCourses: true,
         })),
       ],
     },

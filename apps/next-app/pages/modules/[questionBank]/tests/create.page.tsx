@@ -28,11 +28,12 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
     <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
       <AppHead />
       <TestMaker
+        noSsr
         questionBank={questionBank}
-        sx={{ height: "100%" }}
-        onSuccessfulTestCreation={(test) => {
-          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`);
-        }}
+        sx={{ height: "100%", overflow: "hidden" }}
+        onSuccessfulTestCreation={async (test) =>
+          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
+        }
       />
     </LayoutModule>
   );

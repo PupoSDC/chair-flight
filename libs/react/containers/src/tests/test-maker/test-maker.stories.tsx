@@ -1,4 +1,8 @@
-import { mockSubjects, mockTest, trpcMsw } from "@chair-flight/trpc/mock";
+import {
+  testsGetSubjectsMock,
+  testsCreateTestMock,
+  trpcMsw,
+} from "@chair-flight/trpc/mock";
 import { TestMaker } from "./test-maker";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -11,6 +15,7 @@ const meta: Meta<typeof TestMaker> = {
   component: TestMaker,
   tags: ["autodocs"],
   args: {
+    noSsr: true,
     questionBank: "atpl",
     sx: { p: 4 },
   },
@@ -21,12 +26,8 @@ const meta: Meta<typeof TestMaker> = {
     layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBank.getAllSubjects.query(() => ({
-          subjects: mockSubjects,
-        })),
-        trpcMsw.tests.createTest.mutation(() => ({
-          test: mockTest,
-        })),
+        trpcMsw.tests.getSubjects.query(() => testsGetSubjectsMock),
+        trpcMsw.tests.createTest.mutation(() => testsCreateTestMock),
       ],
     },
   },

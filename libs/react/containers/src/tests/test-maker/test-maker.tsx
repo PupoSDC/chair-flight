@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef } from "react";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { NoSsr } from "@mui/base";
 import {
   Box,
   FormControl,
@@ -10,24 +9,32 @@ import {
   Option,
   Checkbox,
   Button,
+  Stack,
+  Skeleton,
+  styled,
+  formControlClasses,
+  Input,
+  ModalClose,
+  ModalDialog,
+  Modal,
+  Typography,
+  useTheme,
+  Sheet,
 } from "@mui/joy";
 import { newTestConfigurationSchema } from "@chair-flight/core/app";
 import {
-  HookFormErrorMessage,
   HookFormSelect,
   NestedCheckboxSelect,
   SliderWithInput,
   toast,
+  useDisclose,
+  useMediaQuery,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
-import { container, getRequiredParam } from "../../wraper/container";
+import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import type {
-  QuestionBankName,
-  QuestionBankSubject,
-  Test,
-} from "@chair-flight/base/types";
+import type { QuestionBankName, Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
@@ -43,100 +50,94 @@ const testMakerPersistence = {
 };
 
 type Props = {
-  onSuccessfulTestCreation: (test: Test) => void;
+  onSuccessfulTestCreation: (test: Test) => Promise<unknown>;
   questionBank: QuestionBankName;
   component?: "form";
+  noSsr: true;
 };
 
-type Params = {
-  questionBank: QuestionBankName;
-};
+const TestMakerContainer = styled(Stack)`
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  max-width: ${({ theme }) => theme.breakpoints.values.md};
 
-type Data = {
-  subjects: QuestionBankSubject[];
-};
+  & .${formControlClasses.root}:not(:first-of-type) {
+    margin-top: ${({ theme }) => theme.spacing(1)};
+  }
+` as typeof Stack;
 
-export const TestMaker = container<Props, Params, Data>(
+export const TestMaker = container<Props>(
   ({ questionBank, onSuccessfulTestCreation, sx }) => {
-    const params: Params = { questionBank };
     const persistenceKey = `cf-test-maker-${questionBank}` as const;
     const useTestMakerPersistence = testMakerPersistence[persistenceKey];
-
     const useCreateTest = trpc.tests.createTest.useMutation;
+    const useSubjects = trpc.tests.getSubjects.useSuspenseQuery;
     const addTest = useTestProgress((s) => s.addTest);
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const learningObjectivesModal = useDisclose();
+    const createTest = useCreateTest();
+    const [{ subjects }] = useSubjects({ questionBank, course: "all" });
     const { getPersistedData, setPersistedData } = useTestMakerPersistence();
-    const { subjects } = TestMaker.useData(params);
 
-    const defaultValues = useMemo<NewTestConfiguration>(
-      () => ({
-        mode: "exam",
-        questionBank,
-        subject: subjects[0].id,
-        learningObjectives: subjects
-          .flatMap((s) => s.children ?? [])
-          .flatMap((c) => [c.id, ...(c.children?.map((c) => c.id) ?? [])])
-          .reduce((acc, curr) => ({ ...acc, [curr]: true }), {}),
-        numberOfQuestions: subjects[0].numberOfExamQuestions,
-      }),
-      [subjects, questionBank],
+    const defaultValues: NewTestConfiguration = {
+      mode: "exam",
+      questionBank,
+      subject: subjects[0].id,
+      learningObjectiveIds: subjects[0].learningObjectives.map((lo) => lo.id),
+      numberOfQuestions: subjects[0].numberOfExamQuestions,
+      ...getPersistedData(),
+    };
+
+    const form = useForm({ defaultValues, resolver });
+    const currentSubjectId = form.watch("subject");
+    const currentMode = form.watch("mode");
+    const currentLearningObjectives = form.watch("learningObjectiveIds");
+
+    const lastCurrentSubject = useRef(currentSubjectId);
+
+    const currentSubject = useMemo(
+      () => subjects.find((s) => s.id === currentSubjectId),
+      [currentSubjectId, subjects],
     );
 
-    const createTest = useCreateTest();
-    const form = useForm({ defaultValues, resolver });
-    const currentSubject = form.watch("subject");
-    const currentMode = form.watch("mode");
-    const currentLearningObjectives = form.watch("learningObjectives");
-    const lastCurrentSubject = useRef(currentSubject);
-    const hasMountedInitialValues = useRef(false);
-
-    const currentCheckboxItems = useMemo<
-      Required<NestedCheckboxSelectProps>["items"]
-    >(
+    const checkboxItems = useMemo<Required<NestedCheckboxSelectProps>["items"]>(
       () =>
-        subjects
-          .find((s) => s.id === currentSubject)
-          ?.children?.map((c) => {
-            const hasChildren = Boolean(c.children?.length);
-
-            const children =
-              c.children?.map((c) => ({
-                id: c.id,
-                checked: currentLearningObjectives[c.id] ?? false,
-                label: c.text,
-                subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-                children: [],
-              })) ?? [];
-
-            const checked = hasChildren
-              ? children.every((c) => c.checked)
-              : currentLearningObjectives[c.id] ?? false;
-
-            return {
+        currentSubject?.learningObjectives?.map((c) => {
+          const children =
+            c.learningObjectives?.map((c) => ({
               id: c.id,
-              checked,
               label: c.text,
               subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
-              children,
-            };
-          }) ?? [],
-      [subjects, currentSubject, currentLearningObjectives],
+              children: [],
+            })) ?? [];
+
+          return {
+            id: c.id,
+            label: c.text,
+            subLabel: `${c.id} - ${c.numberOfQuestions} questions`,
+            children,
+          };
+        }) ?? [],
+      [currentSubject],
+    );
+
+    const allSelected = currentSubject?.learningObjectives.every((s) =>
+      currentLearningObjectives.includes(s.id),
+    );
+    const someSelected = currentSubject?.learningObjectives.some((s) =>
+      currentLearningObjectives.includes(s.id),
     );
 
     const onSubmit = form.handleSubmit(async (config) => {
       try {
         const { test } = await createTest.mutateAsync({
           questionBank,
-          config: {
-            ...config,
-            learningObjectives: {
-              ...config.learningObjectives,
-              [config.subject]: true,
-            },
-          },
+          config,
         });
         addTest({ test });
-        onSuccessfulTestCreation(test);
+        await onSuccessfulTestCreation(test);
       } catch (error) {
         console.error(error);
         toast.error("Something went wrong while creating the test. 😥");
@@ -144,143 +145,131 @@ export const TestMaker = container<Props, Params, Data>(
     });
 
     useEffect(() => {
-      if (lastCurrentSubject.current === currentSubject) return;
-      lastCurrentSubject.current = currentSubject;
+      if (lastCurrentSubject.current === currentSubjectId) return;
+      lastCurrentSubject.current = currentSubjectId;
+      form.setValue(
+        "learningObjectiveIds",
+        currentSubject?.learningObjectives.map((f) => f.id) ?? [],
+      );
       form.setValue(
         "numberOfQuestions",
-        subjects.find((s) => s.id === currentSubject)?.numberOfExamQuestions ??
-          40,
+        currentSubject?.numberOfExamQuestions ?? 40,
       );
     });
 
-    useEffect(() => {
-      if (hasMountedInitialValues.current) return;
-      hasMountedInitialValues.current = true;
-      const persistedData = getPersistedData();
-      if (!persistedData) return;
-      form.reset({ ...defaultValues, ...persistedData });
-    });
-
     return (
-      <Box
+      <TestMakerContainer
         component={"form"}
         onSubmit={onSubmit}
         onBlur={() => setPersistedData(form.getValues())}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          height: "100%",
-          margin: "auto",
-          maxWidth: (t) => t.breakpoints.values.md,
-          ...sx,
-        }}
+        sx={sx}
       >
         <FormProvider {...form}>
-          <HookFormSelect
-            {...form.register("mode")}
-            sx={{ py: 1 }}
-            formLabel={"Mode"}
-          >
+          <HookFormSelect {...form.register("mode")} formLabel={"Mode"}>
             <Option value="exam">Exam</Option>
             <Option value="study">Study</Option>
           </HookFormSelect>
-          {subjects.length > 1 && (
-            <HookFormSelect
-              {...form.register("subject")}
-              sx={{ py: 1 }}
-              formLabel={"Subject"}
-            >
-              {subjects.map((item) => (
-                <Option value={item.id} key={item.id}>
-                  {`${item.id} - ${item.longName}`}
-                </Option>
-              ))}
-            </HookFormSelect>
-          )}
-          <Controller
-            control={form.control}
-            name="learningObjectives"
-            render={({ field: { onChange, value } }) => {
-              const allSelected = currentCheckboxItems.every((s) => s.checked);
-              const someSelected = currentCheckboxItems.some((s) => s.checked);
 
-              return (
-                <Box sx={{ py: 1, flex: 1, overflow: "hidden" }}>
-                  <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <FormLabel>Chapters</FormLabel>
-                    <Checkbox
-                      label={"select all"}
-                      size="sm"
-                      checked={allSelected}
-                      indeterminate={!allSelected && someSelected}
-                      onChange={() =>
+          <HookFormSelect {...form.register("subject")} formLabel={"Subject"}>
+            {subjects.map((item) => (
+              <Option value={item.id} key={item.id}>
+                {`${item.id} - ${item.shortName}`}
+              </Option>
+            ))}
+          </HookFormSelect>
+
+          <Box className={formControlClasses.root}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+              mb={0.75}
+            >
+              <FormLabel>Learning Objectives</FormLabel>
+              <Controller
+                control={form.control}
+                name="learningObjectiveIds"
+                render={({ field: { onChange } }) => (
+                  <Checkbox
+                    size="sm"
+                    label={"select all"}
+                    checked={allSelected}
+                    indeterminate={!allSelected && someSelected}
+                    sx={{ flexDirection: "row-reverse" }}
+                    onChange={() => {
+                      if (allSelected) {
+                        onChange([]);
+                      } else {
                         onChange(
-                          Object.keys(value)
-                            .filter((k) => k.startsWith(currentSubject))
-                            .reduce(
-                              (acc, curr) => {
-                                acc[curr] = !allSelected;
-                                return acc;
-                              },
-                              { ...value },
-                            ),
-                        )
+                          currentSubject?.learningObjectives.map((lo) => lo.id),
+                        );
                       }
-                      sx={{
-                        my: 0.5,
-                        mr: 1,
-                        display: "flex",
-                        flexDirection: "row-reverse",
-                        "& label": {
-                          px: 1,
-                        },
-                      }}
-                    />
-                  </Box>
-                  <NestedCheckboxSelect
-                    sx={{ overflow: "auto", height: "90%", my: 1, pr: 5 }}
-                    items={currentCheckboxItems}
-                    onChange={(chapter, newValue) =>
-                      onChange(
-                        Object.keys(value)
-                          .filter((k) => k.startsWith(chapter.id))
-                          .reduce(
-                            (acc, curr) => {
-                              acc[curr] = newValue;
-                              return acc;
-                            },
-                            { ...value },
-                          ),
-                      )
-                    }
+                    }}
                   />
-                </Box>
-              );
-            }}
-          />
-          <HookFormErrorMessage {...form.register("learningObjectives")} />
-          <Controller
-            control={form.control}
-            name="numberOfQuestions"
-            render={({ field: { onChange, value } }) => (
-              <FormControl sx={{ py: 1 }}>
-                <FormLabel>Number of Questions</FormLabel>
+                )}
+              />
+            </Stack>
+            {isMobile && (
+              <Input
+                readOnly
+                value={(() => {
+                  if (allSelected) return "All!";
+                  if (!currentLearningObjectives.length) return "None";
+                  return "Some";
+                })()}
+                onClick={learningObjectivesModal.open}
+              />
+            )}
+          </Box>
+
+          {!isMobile && (
+            <Sheet sx={{ p: 1, flex: 1, overflow: "auto" }}>
+              <Controller
+                control={form.control}
+                name="learningObjectiveIds"
+                render={({ field: { onChange, value } }) => (
+                  <NestedCheckboxSelect
+                    items={checkboxItems}
+                    values={value}
+                    onChange={onChange}
+                  />
+                )}
+              />
+            </Sheet>
+          )}
+
+          <Box className={formControlClasses.root}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+              mb={0.75}
+            >
+              <FormLabel>Number of Questions</FormLabel>
+              <Typography level="body-xs">
+                {currentMode === "study" && "max: 200, "}
+                {`total: ${currentSubject?.numberOfQuestions}`}
+              </Typography>
+            </Stack>
+
+            <Controller
+              control={form.control}
+              name="numberOfQuestions"
+              render={({ field: { onChange, value } }) => (
                 <SliderWithInput
                   disabled={currentMode === "exam"}
                   min={1}
-                  max={200}
+                  max={Math.min(200, currentSubject?.numberOfQuestions ?? 200)}
                   value={value}
                   onChange={(v) => onChange(v)}
                 />
-              </FormControl>
-            )}
-          />
+              )}
+            />
+          </Box>
+
           <Button
             size="lg"
-            sx={{ mt: 2 }}
+            sx={{ mt: { xs: "auto", sm: 2 } }}
             type="submit"
             fullWidth
             disabled={!form.formState.isValid}
@@ -288,23 +277,65 @@ export const TestMaker = container<Props, Params, Data>(
           >
             Start!
           </Button>
-          <NoSsr>
-            <DevTool control={form.control} />
-          </NoSsr>
+
+          <Modal
+            open={learningObjectivesModal.isOpen}
+            onClose={learningObjectivesModal.close}
+          >
+            <ModalDialog layout="fullscreen" sx={{ p: 1 }}>
+              <ModalClose />
+              <FormLabel>Learning Objectives</FormLabel>
+              <Controller
+                control={form.control}
+                name="learningObjectiveIds"
+                render={({ field: { onChange, value } }) => (
+                  <NestedCheckboxSelect
+                    sx={{ overflow: "auto", height: "90%", my: 1 }}
+                    items={checkboxItems}
+                    values={value}
+                    onChange={onChange}
+                  />
+                )}
+              />
+              <Button color="primary" onClick={learningObjectivesModal.close}>
+                Submit
+              </Button>
+            </ModalDialog>
+          </Modal>
+
+          <DevTool control={form.control} />
         </FormProvider>
-      </Box>
+      </TestMakerContainer>
     );
   },
 );
 
 TestMaker.displayName = "TestMaker";
+TestMaker.getData = async () => ({});
+TestMaker.useData = () => ({});
 
-TestMaker.getData = async ({ helper, params }) => {
-  const questionBank = getRequiredParam(params, "questionBank");
-  return await helper.questionBank.getAllSubjects.fetch({ questionBank });
-};
+TestMaker.LoadingFallback = () => (
+  <TestMakerContainer component={"form"}>
+    <FormControl>
+      <Skeleton variant="text" width={160} sx={{ mb: 0.75 }} />
+      <Skeleton variant="rectangular" height={8 * 4.5} />
+    </FormControl>
 
-TestMaker.useData = (params) => {
-  const questionBank = getRequiredParam(params, "questionBank");
-  return trpc.questionBank.getAllSubjects.useSuspenseQuery({ questionBank })[0];
-};
+    <FormControl>
+      <Skeleton variant="text" width={160} sx={{ mb: 0.75 }} />
+      <Skeleton variant="rectangular" height={8 * 4.5} />
+    </FormControl>
+
+    <FormControl>
+      <Skeleton variant="text" width={160} sx={{ mb: 0.75 }} />
+      <Skeleton variant="rectangular" height={8 * 4.5} />
+    </FormControl>
+
+    <FormControl>
+      <Skeleton variant="text" width={160} sx={{ mb: 0.75 }} />
+      <Skeleton variant="rectangular" height={8 * 5.5} />
+    </FormControl>
+
+    <Skeleton variant="rectangular" height={8 * 5.5} sx={{ mt: "auto" }} />
+  </TestMakerContainer>
+);

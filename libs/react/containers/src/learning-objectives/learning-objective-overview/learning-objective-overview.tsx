@@ -1,12 +1,11 @@
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Box, Grid, Sheet, Table, Typography } from "@mui/joy";
-import { CourseNames } from "@chair-flight/core/app";
 import { MarkdownClient } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper";
 import type {
-  CourseName,
   LearningObjectiveId,
+  QuestionBankCourse,
   QuestionBankLearningObjective,
   QuestionBankName,
 } from "@chair-flight/base/types";
@@ -23,53 +22,52 @@ type Params = {
 
 type Data = {
   learningObjective: QuestionBankLearningObjective;
+  courses: QuestionBankCourse[];
 };
 
 export const LearningObjectiveOverview = container<Props, Params, Data>(
   ({ questionBank, learningObjectiveId, component = "section", sx }) => {
-    const params = { questionBank, learningObjectiveId };
-    const { learningObjective } = LearningObjectiveOverview.useData(params);
+    const { learningObjective, courses } = LearningObjectiveOverview.useData({
+      questionBank,
+      learningObjectiveId,
+    });
 
     return (
       <Sheet component={component} sx={sx}>
-        <Grid container sx={{ m: 2 }}>
-          <Grid xs={12} md={6}>
-            <Typography>{learningObjective.id}</Typography>
-            <MarkdownClient>{learningObjective.text}</MarkdownClient>
-            <Typography level="body-sm">source: </Typography>
-            <Box sx={{ color: "text.tertiary", fontSize: "sm" }}>
-              <MarkdownClient>{learningObjective.source}</MarkdownClient>
-            </Box>
+        <Grid container sx={{ m: { xs: 1, sm: 2 } }}>
+          <Grid xs={12}>
+            <Typography level="h4">{learningObjective.id}</Typography>
           </Grid>
-          <Grid xs={12} md={6} sx={{ overflowX: "scroll" }}>
-            <Table
-              sx={{
-                width: "auto",
-                marginLeft: { md: "auto" },
-              }}
-            >
+          <Grid xs={12}>
+            <MarkdownClient>{learningObjective.text}</MarkdownClient>
+          </Grid>
+          {learningObjective.source && (
+            <Grid xs={12} lg={6}>
+              <Typography level="h5">Source</Typography>
+              <Box sx={{ color: "text.tertiary", fontSize: "sm" }}>
+                <MarkdownClient>{learningObjective.source}</MarkdownClient>
+              </Box>
+            </Grid>
+          )}
+          <Grid xs={12} lg={6} sx={{ overflowX: "scroll" }}>
+            <Typography level="h5">Courses</Typography>
+            <Table sx={{ display: "block", overflowY: "auto" }}>
               <thead>
                 <tr>
-                  {Object.values(CourseNames).map((courseName) => (
-                    <th
-                      className="course-name"
-                      key={courseName}
-                      children={courseName}
-                      style={{
-                        fontSize: 10,
-                        width: 14 + courseName.length * 6,
-                      }}
-                    />
+                  {courses.map((course) => (
+                    <th style={{ fontSize: 10 }} key={course.id}>
+                      {course.text}
+                    </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  {Object.keys(CourseNames).map((courseName) => (
-                    <td key={courseName} className="course-name">
-                      {learningObjective.courses.includes(
-                        courseName as CourseName,
-                      ) && <CheckIcon />}
+                  {courses.map((course) => (
+                    <td key={course.id}>
+                      {learningObjective.courses.includes(course.id) && (
+                        <CheckIcon />
+                      )}
                     </td>
                   ))}
                 </tr>
@@ -85,21 +83,29 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
 LearningObjectiveOverview.displayName = "LearningObjectiveOverview";
 
 LearningObjectiveOverview.getData = async ({ params, helper }) => {
+  const qb = helper.questionBank;
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
 
-  return await helper.questionBank.getLearningObjective.fetch({
-    questionBank,
-    learningObjectiveId,
-  });
+  const [{ learningObjective }, { courses }] = await Promise.all([
+    qb.getLearningObjective.fetch({ questionBank, learningObjectiveId }),
+    qb.getAllCourses.fetch({ questionBank }),
+  ]);
+  return { learningObjective, courses };
 };
 
 LearningObjectiveOverview.useData = (params) => {
+  const qb = trpc.questionBank;
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
 
-  return trpc.questionBank.getLearningObjective.useSuspenseQuery({
+  const [{ learningObjective }] = qb.getLearningObjective.useSuspenseQuery({
     questionBank,
     learningObjectiveId,
-  })[0];
+  });
+  const [{ courses }] = qb.getAllCourses.useSuspenseQuery({
+    questionBank,
+  });
+
+  return { learningObjective, courses };
 };

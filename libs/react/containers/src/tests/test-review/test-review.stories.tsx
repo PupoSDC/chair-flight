@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import { mockTest } from "@chair-flight/trpc/mock";
+import { testsCreateTestMock } from "@chair-flight/trpc/mock";
 import { useTestProgress } from "../hooks/use-test-progress";
 import { TestReview } from "./test-review";
 import type { Meta, StoryObj } from "@storybook/react";
+
+const mockTest = testsCreateTestMock.test;
 
 type Story = StoryObj<typeof TestReview>;
 

@@ -1,25 +1,46 @@
-import type { LearningObjectiveId } from "./ids";
+import type {
+  CourseId,
+  LearningObjectiveId,
+  QuestionTemplateId,
+  SubjectId,
+} from "./ids";
 
-export type LearningObjectiveSummary = {
-  id: LearningObjectiveId;
+export type QuestionBankCourse = {
+  id: CourseId;
   text: string;
-  numberOfQuestions: number;
-  numberOfLearningObjectives: number;
-  children?: LearningObjectiveSummary[];
 };
 
 export type QuestionBankSubject = {
-  id: string;
+  id: SubjectId;
+  courses: CourseId[];
   longName: string;
   shortName: string;
   numberOfExamQuestions: number;
   numberOfExamMinutes: number;
-  numberOfLearningObjectives: number;
   numberOfQuestions: number;
-  children?: LearningObjectiveSummary[];
+  learningObjectives: LearningObjectiveId[];
 };
+
+export type QuestionBankLearningObjective = {
+  id: LearningObjectiveId;
+  parentId: LearningObjectiveId | CourseId;
+  courses: CourseId[];
+  text: string;
+  source: string;
+  learningObjectives: LearningObjectiveId[];
+  questions: QuestionTemplateId[];
+  /** Includes Questions from this LO and from nested LOs */
+  nestedQuestions: QuestionTemplateId[];
+};
+
+export type QuestionBankCourseJson = QuestionBankCourse;
 
 export type QuestionBankSubjectJson = Omit<
   QuestionBankSubject,
-  "numberOfQuestions" | "numberOfLearningObjectives"
+  "numberOfQuestions"
+>;
+
+export type QuestionBankLearningObjectiveJson = Omit<
+  QuestionBankLearningObjective,
+  "questions" | "nestedQuestions"
 >;

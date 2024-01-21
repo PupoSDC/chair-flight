@@ -34,9 +34,7 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper/container";
 import type {
-  QuestionBankLearningObjective,
   QuestionBankName,
-  QuestionBankQuestionTemplate,
   QuestionTemplateId,
   QuestionVariantId,
 } from "@chair-flight/base/types";
@@ -44,6 +42,7 @@ import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
 } from "@chair-flight/react/components";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
@@ -62,10 +61,7 @@ type Params = {
   questionId: QuestionTemplateId;
 };
 
-type Data = {
-  questionTemplate: QuestionBankQuestionTemplate;
-  learningObjectives: QuestionBankLearningObjective[];
-};
+type Data = AppRouterOutput["questionBank"]["getQuestion"];
 
 const shuffle = getRandomShuffler("123");
 

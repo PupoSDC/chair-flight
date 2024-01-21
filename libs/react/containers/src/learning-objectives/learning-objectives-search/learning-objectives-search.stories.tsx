@@ -1,6 +1,6 @@
 import {
-  mockLearningObjectiveSearchItems,
-  mockSubjects,
+  questionBankLoSearchSearchLearningObjectivesMock,
+  questionBankGetAllSubjectsMock,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
 import { LearningObjectivesSearch } from "./learning-objectives-search";
@@ -23,18 +23,12 @@ const meta: Meta<typeof LearningObjectivesSearch> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getAllSubjects.query(() => ({
-          subjects: mockSubjects,
-        })),
-        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(() => {
-          const items = mockLearningObjectiveSearchItems;
-
-          return {
-            items,
-            nextCursor: 20,
-            totalResults: items.length,
-          };
-        }),
+        trpcMsw.questionBank.getAllSubjects.query(
+          () => questionBankGetAllSubjectsMock,
+        ),
+        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(
+          () => questionBankLoSearchSearchLearningObjectivesMock,
+        ),
       ],
     },
   },
