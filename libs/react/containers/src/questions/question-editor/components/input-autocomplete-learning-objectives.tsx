@@ -1,7 +1,6 @@
 import { forwardRef, useState } from "react";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
-import type { QuestionBankLearningObjective } from "@chair-flight/base/types";
 
 export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
@@ -28,7 +27,7 @@ export const InputAutocompleteLearningObjectives = forwardRef<
     });
 
   const optionsMap = (data?.items ?? []).reduce<
-    Record<string, { id: string, text: string }>
+    Record<string, { id: string; text: string }>
   >((acc, result) => {
     acc[result.id] = result;
     return acc;

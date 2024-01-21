@@ -22,8 +22,8 @@ export type NewTestConfiguration = {
   title?: string;
 };
 
-export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> = z
-  .object({
+export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> =
+  z.object({
     mode: z.enum(["study", "exam"]),
     questionBank: questionBankNameSchema,
     subject: z.string(),

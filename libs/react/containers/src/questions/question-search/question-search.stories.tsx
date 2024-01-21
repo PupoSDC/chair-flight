@@ -1,6 +1,6 @@
 import {
-  mockQuestionSearchItems,
-  mockSubjects,
+  questionBankGetAllSubjectsMock,
+  questionBankQuestionSearchSearchQuestionsMock,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
 import { QuestionSearch } from "./question-search";
@@ -28,14 +28,12 @@ const meta: Meta<typeof QuestionSearch> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getAllSubjects.query(() => ({
-          subjects: mockSubjects,
-        })),
-        trpcMsw.questionBankQuestionSearch.searchQuestions.query(() => ({
-          items: mockQuestionSearchItems,
-          nextCursor: 20,
-          totalResults: mockQuestionSearchItems.length,
-        })),
+        trpcMsw.questionBank.getAllSubjects.query(
+          () => questionBankGetAllSubjectsMock,
+        ),
+        trpcMsw.questionBankQuestionSearch.searchQuestions.query(
+          () => questionBankQuestionSearchSearchQuestionsMock,
+        ),
       ],
     },
   },

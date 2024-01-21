@@ -5,6 +5,7 @@ import { questionBankQuestionSearchRouter } from "../routers/question-bank-quest
 import { statusRouter } from "../routers/status";
 import { testsRouter } from "../routers/tests";
 import { router } from "./trpc";
+import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 
 export const appRouter = router({
   analytics: analyticsRouter,
@@ -16,3 +17,5 @@ export const appRouter = router({
 });
 
 export type AppRouter = typeof appRouter;
+export type AppRouterInput = inferRouterInputs<AppRouter>;
+export type AppRouterOutput = inferRouterOutputs<AppRouter>;

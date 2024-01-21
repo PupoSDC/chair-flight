@@ -37,7 +37,11 @@ export const questionBankRouter = router({
       const qb = questionBanks[input.questionBank];
       const questionTemplate = await qb.getOne("questions", id);
       const loIds = questionTemplate.learningObjectives;
-      const learningObjectives = await qb.getSome("learningObjectives", loIds);
+      const rawLos = await qb.getSome("learningObjectives", loIds);
+      const learningObjectives = rawLos.map((lo) => ({
+        ...lo,
+        href: `modules/${questionBank}/learning-objectives/${lo.id}`,
+      }));
       return { questionTemplate, learningObjectives };
     }),
   getQuestionFromGithub: publicProcedure

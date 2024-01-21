@@ -81,12 +81,13 @@ export const TestMaker = container<Props>(
     const [{ subjects }] = useSubjects({ questionBank, course: "all" });
     const { getPersistedData, setPersistedData } = useTestMakerPersistence();
 
-    const defaultValues: NewTestConfiguration = getPersistedData() ?? {
+    const defaultValues: NewTestConfiguration = {
       mode: "exam",
       questionBank,
       subject: subjects[0].id,
       learningObjectiveIds: subjects[0].learningObjectives.map((lo) => lo.id),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
+      ...getPersistedData(),
     };
 
     const form = useForm({ defaultValues, resolver });

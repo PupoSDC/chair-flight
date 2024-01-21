@@ -10,6 +10,9 @@ const meta: Meta<typeof LayoutModule> = {
   title: "Containers/Layouts/LayoutModule",
   component: LayoutModule,
   tags: ["autodocs"],
+  args: {
+    questionBank: "atpl",
+  },
   parameters: {
     layout: "fullscreen",
     docs: {
