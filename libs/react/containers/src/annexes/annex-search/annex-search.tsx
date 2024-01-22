@@ -46,7 +46,7 @@ type Params = {
 };
 
 type Data = AppRouterOutput["questionBankAnnexSearch"]["getSearchConfigFilters"];
-type SearchResult =AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number];
+type SearchResult = AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number]
 
 const AnnexSearchItem: FunctionComponent<{
   mobile?: boolean;
@@ -160,6 +160,8 @@ export const AnnexSearch = container<Props, Params, Data>(
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
+    form.watch((data) => setData({ ...defaultFilter, ...data }));
+
     const numberOfFilters = Number(subject !== "all");
 
     return (
@@ -180,10 +182,9 @@ export const AnnexSearch = container<Props, Params, Data>(
             filters={
               <FormProvider {...form}>
                 <HookFormSelect size="sm" {...form.register("subject")}>
-                  <Option value={"all"}>All Subjects</Option>
-                  {subjects.map(({ id, shortName }) => (
+                  {subjects.map(({ id, text }) => (
                     <Option value={id} key={id}>
-                      {shortName}
+                      {text}
                     </Option>
                   ))}
                 </HookFormSelect>

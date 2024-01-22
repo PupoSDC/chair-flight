@@ -1,4 +1,4 @@
-import { FormProvider } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import { default as PlayIcon } from "@mui/icons-material/PlayArrowOutlined";
 import { default as EyeIcon } from "@mui/icons-material/VisibilityOutlined";
@@ -24,19 +24,37 @@ import {
 } from "@chair-flight/react/components";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import { useSearchConfig } from "./test-search-config-schema";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 
 type Props = {
   questionBank: QuestionBankName;
 };
 
+const filterSchema = z.object({
+  mode: z.enum(["all", "study", "exam"]).default("all"),
+  status: z.enum(["all", "created", "started", "finished"]).default("all"),
+});
+
+const defaultFilter = filterSchema.parse({});
+const resolver = zodResolver(filterSchema);
+
+const useSearchPersistence = {
+  atpl: createUsePersistenceHook("cf-test-search-atpl", defaultFilter),
+  type: createUsePersistenceHook("cf-test-search-type", defaultFilter),
+  prep: createUsePersistenceHook("cf-test-search-prep", defaultFilter),
+};
+
 export const TestSearch = container<Props>(
   ({ questionBank, sx, component = "section" }) => {
-    const [{ mode, status }, form] = useSearchConfig(questionBank);
-
+    const { getData, setData } = useSearchPersistence[questionBank]();
     const tests = useTestProgress((s) => s.tests);
     const deleteTest = useTestProgress((s) => s.deleteTest);
+    const form = useForm({ defaultValues: getData(), resolver });
+
+    const { mode, status } = form.watch();
 
     const testsAsList = Object.values(tests)
       .sort((a, b) => b.createdAtEpochMs - a.createdAtEpochMs)

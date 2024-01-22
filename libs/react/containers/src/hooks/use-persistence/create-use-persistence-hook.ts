@@ -13,7 +13,8 @@ export type PersistenceKey =
   | `cf-question-search-${QuestionBankName}`
   | `cf-test-search-${QuestionBankName}`
   | `cf-learning-objectives-search-${QuestionBankName}`
-  | `cf-test-maker-${QuestionBankName}`;
+  | `cf-test-maker-${QuestionBankName}`
+  | `cf-test-progress`;
 
 export const createUsePersistenceHook = <T>(
   name: PersistenceKey,

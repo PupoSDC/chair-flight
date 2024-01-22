@@ -37,20 +37,18 @@ import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName, Test } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
+import { useRouter } from "next/router";
 
 const resolver = zodResolver(newTestConfigurationSchema);
 
-const testMakerPersistence = {
-  "cf-test-maker-atpl":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-atpl"),
-  "cf-test-maker-type":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-type"),
-  "cf-test-maker-prep":
-    createUsePersistenceHook<NewTestConfiguration>("cf-test-maker-prep"),
+const defaultConfig = {} as Partial<NewTestConfiguration>;
+const useTestMakerPersistence = {
+  atpl: createUsePersistenceHook(`cf-test-maker-atpl`, defaultConfig, 1),
+  type: createUsePersistenceHook(`cf-test-maker-type`, defaultConfig, 1),
+  prep: createUsePersistenceHook(`cf-test-maker-prep`, defaultConfig, 1),
 };
 
 type Props = {
-  onSuccessfulTestCreation: (test: Test) => Promise<unknown>;
   questionBank: QuestionBankName;
   component?: "form";
   noSsr: true;
@@ -68,9 +66,8 @@ const TestMakerContainer = styled(Stack)`
 ` as typeof Stack;
 
 export const TestMaker = container<Props>(
-  ({ questionBank, onSuccessfulTestCreation, sx }) => {
-    const persistenceKey = `cf-test-maker-${questionBank}` as const;
-    const useTestMakerPersistence = testMakerPersistence[persistenceKey];
+  ({ questionBank, sx }) => {
+    const router = useRouter();
     const useCreateTest = trpc.tests.createTest.useMutation;
     const useSubjects = trpc.tests.getSubjects.useSuspenseQuery;
     const addTest = useTestProgress((s) => s.addTest);
@@ -79,7 +76,7 @@ export const TestMaker = container<Props>(
     const learningObjectivesModal = useDisclose();
     const createTest = useCreateTest();
     const [{ subjects }] = useSubjects({ questionBank, course: "all" });
-    const { getPersistedData, setPersistedData } = useTestMakerPersistence();
+    const { getData, setData } = useTestMakerPersistence[questionBank]();
 
     const defaultValues: NewTestConfiguration = {
       mode: "exam",
@@ -87,7 +84,7 @@ export const TestMaker = container<Props>(
       subject: subjects[0].id,
       learningObjectiveIds: subjects[0].learningObjectives.map((lo) => lo.id),
       numberOfQuestions: subjects[0].numberOfExamQuestions,
-      ...getPersistedData(),
+      ...getData(),
     };
 
     const form = useForm({ defaultValues, resolver });
@@ -138,7 +135,7 @@ export const TestMaker = container<Props>(
           config,
         });
         addTest({ test });
-        await onSuccessfulTestCreation(test);
+        await router.push(test.href);
       } catch (error) {
         console.error(error);
         toast.error("Something went wrong while creating the test. 😥");
