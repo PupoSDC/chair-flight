@@ -1,4 +1,4 @@
-import type { RouterInput } from "@chair-flight/trpc/client";
+import type { AppRouterInput } from "@chair-flight/trpc/client";
 
 export type EditQuestionFormValues =
-  RouterInput["questionBank"]["updateQuestion"];
+  AppRouterInput["questionBankQuestions"]["updateQuestion"];

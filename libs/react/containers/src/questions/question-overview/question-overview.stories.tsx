@@ -1,5 +1,5 @@
 import {
-  questionBankGetQuestionOverviewMock,
+  questionBankQuestionsGetQuestionOverviewMock,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
 import { QuestionOverview } from "./question-overview";
@@ -33,8 +33,8 @@ const meta: Meta<typeof QuestionOverview> = {
   },
   parameters: {
     msw: [
-      trpcMsw.questionBank.getQuestionOverview.query(
-        () => questionBankGetQuestionOverviewMock,
+      trpcMsw.questionBankQuestions.getQuestionOverview.query(
+        () => questionBankQuestionsGetQuestionOverviewMock,
       ),
     ],
   },

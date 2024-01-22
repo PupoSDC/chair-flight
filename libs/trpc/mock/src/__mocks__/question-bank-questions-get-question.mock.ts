@@ -1,6 +1,6 @@
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
-export const questionBankGetQuestionOverviewMock: AppRouterOutput["questionBank"]["getQuestionOverview"] =
+export const questionBankQuestionsGetQuestionOverviewMock: AppRouterOutput["questionBankQuestions"]["getQuestionOverview"] =
   {
     template: {
       id: "Q1YYGK54U6",

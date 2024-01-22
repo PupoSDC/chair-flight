@@ -77,7 +77,7 @@ const meta: Meta<typeof QuestionEditor> = {
     layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBank.getQuestionFromGithub.query(
+        trpcMsw.questionBankQuestions.getQuestionFromGithub.query(
           () => questionBankGetQuestionFromGithubMock,
         ),
         trpcMsw.questionBankLoSearch.searchLearningObjectives.query(

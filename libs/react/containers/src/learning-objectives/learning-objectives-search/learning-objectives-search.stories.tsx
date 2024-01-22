@@ -1,7 +1,7 @@
 import {
-  questionBankLoSearchSearchLearningObjectivesMock,
-  questionBankGetAllSubjectsMock,
   trpcMsw,
+  questionBankLoSearchSearchLearningObjectivesMock,
+  questionBankLoSearchGetSearchConfig,
 } from "@chair-flight/trpc/mock";
 import { LearningObjectivesSearch } from "./learning-objectives-search";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -14,17 +14,18 @@ const meta: Meta<typeof LearningObjectivesSearch> = {
   title: "Containers/LearningObjectives/LearningObjectivesSearch",
   component: LearningObjectivesSearch,
   tags: ["autodocs"],
+  args: {
+    questionBank: "atpl",
+    sx: { height: 500 },
+  },
+  argTypes: {
+    questionBank: { control: false },
+  },
   parameters: {
-    docs: {
-      story: {
-        inline: false,
-        iframeHeight: 700,
-      },
-    },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getAllSubjects.query(
-          () => questionBankGetAllSubjectsMock,
+        trpcMsw.questionBankLoSearch.getSearchConfigFilters.query(
+          () => questionBankLoSearchGetSearchConfig,
         ),
         trpcMsw.questionBankLoSearch.searchLearningObjectives.query(
           () => questionBankLoSearchSearchLearningObjectivesMock,

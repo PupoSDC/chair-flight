@@ -27,7 +27,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 import type { FunctionComponent } from "react";
 
 type Props = {

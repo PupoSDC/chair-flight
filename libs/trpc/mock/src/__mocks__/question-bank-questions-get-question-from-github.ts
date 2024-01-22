@@ -1,6 +1,6 @@
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
-export const questionBankGetQuestionFromGithubMock: AppRouterOutput["questionBank"]["getQuestionFromGithub"] =
+export const questionBankGetQuestionFromGithubMock: AppRouterOutput["questionBankQuestions"]["getQuestionFromGithub"] =
   {
     questionTemplate: {
       id: "Q000YBA1ON",

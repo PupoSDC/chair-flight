@@ -42,7 +42,7 @@ import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
 } from "@chair-flight/react/components";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
@@ -61,7 +61,7 @@ type Params = {
   questionId: QuestionTemplateId;
 };
 
-type Data = AppRouterOutput["questionBank"]["getQuestionOverview"];
+type Data = AppRouterOutput["questionBankQuestions"]["getQuestionOverview"];
 
 const shuffle = getRandomShuffler("123");
 
@@ -342,7 +342,7 @@ QuestionOverview.displayName = "QuestionOverview";
 
 QuestionOverview.getData = async ({ helper, params }) => {
   const { questionId, questionBank } = params;
-  return await helper.questionBank.getQuestionOverview.fetch({
+  return await helper.questionBankQuestions.getQuestionOverview.fetch({
     questionBank,
     questionId,
   });
@@ -350,7 +350,7 @@ QuestionOverview.getData = async ({ helper, params }) => {
 
 QuestionOverview.useData = (params) => {
   const { questionId, questionBank } = params;
-  return trpc.questionBank.getQuestionOverview.useSuspenseQuery({
+  return trpc.questionBankQuestions.getQuestionOverview.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];

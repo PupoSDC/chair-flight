@@ -1,5 +1,5 @@
 import {
-  questionBankGetAllSubjectsMock,
+  questionBankQuestionSearchGetSearchConfigFiltersMock,
   questionBankQuestionSearchSearchQuestionsMock,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
@@ -28,8 +28,8 @@ const meta: Meta<typeof QuestionSearch> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getAllSubjects.query(
-          () => questionBankGetAllSubjectsMock,
+        trpcMsw.questionBankQuestionSearch.getSearchConfigFilters.query(
+          () => questionBankQuestionSearchGetSearchConfigFiltersMock,
         ),
         trpcMsw.questionBankQuestionSearch.searchQuestions.query(
           () => questionBankQuestionSearchSearchQuestionsMock,

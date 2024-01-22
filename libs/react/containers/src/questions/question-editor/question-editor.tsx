@@ -11,11 +11,8 @@ import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
 import { ReviewPrModal } from "./components/review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
-import type {
-  QuestionBankName,
-  QuestionBankQuestionTemplate,
-  QuestionId,
-} from "@chair-flight/base/types";
+import type { QuestionBankName, QuestionId } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 const resolver = zodResolver(questionEditSchema);
 
@@ -29,9 +26,7 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = {
-  questionTemplate: QuestionBankQuestionTemplate;
-};
+type Data = AppRouterOutput["questionBankQuestions"]["getQuestionFromGithub"];
 
 export const QuestionEditor = container<Props, Params, Data>((props) => {
   const { questionBank, questionId, component, sx } = props;
@@ -78,7 +73,7 @@ QuestionEditor.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
 
-  return await helper.questionBank.getQuestionFromGithub.fetch({
+  return await helper.questionBankQuestions.getQuestionFromGithub.fetch({
     questionBank,
     questionId,
   });
@@ -88,7 +83,7 @@ QuestionEditor.useData = (params) => {
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
 
-  return trpc.questionBank.getQuestionFromGithub.useSuspenseQuery({
+  return trpc.questionBankQuestions.getQuestionFromGithub.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];
