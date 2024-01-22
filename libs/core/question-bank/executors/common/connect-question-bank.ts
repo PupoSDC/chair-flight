@@ -1,3 +1,4 @@
+import { makeMap } from "@chair-flight/base/utils";
 import type {
   LearningObjectiveId,
   QuestionBankCourse,
@@ -8,7 +9,7 @@ import type {
   QuestionBankSubject,
   SubjectId,
 } from "@chair-flight/base/types";
-import { makeMap } from "@chair-flight/base/utils";
+
 export const connectQuestionBank = ({
   questions,
   learningObjectives,

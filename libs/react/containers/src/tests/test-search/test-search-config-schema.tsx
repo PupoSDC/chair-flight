@@ -7,45 +7,25 @@ import type { QuestionBankName } from "@chair-flight/base/types";
 import type { UseFormReturn } from "react-hook-form";
 
 const searchConfigSchema = z.object({
-  mode: z.enum(["all", "study", "exam"]),
-  status: z.enum(["all", "created", "started", "finished"]),
+  mode: z.enum(["all", "study", "exam"]).default("all"),
+  status: z.enum(["all", "created", "started", "finished"]).default("all"),
 });
 
 type SearchConfig = z.infer<typeof searchConfigSchema>;
 
-const defaultSearchConfig: z.infer<typeof searchConfigSchema> = {
-  mode: "all",
-  status: "all",
-};
+const defaultSearchConfig = searchConfigSchema.parse({});
 
-const searchPersistence = {
-  "cf-test-search-atpl": createUsePersistenceHook<SearchConfig>(
-    "cf-test-search-atpl",
-  ),
-  "cf-test-search-type": createUsePersistenceHook<SearchConfig>(
-    "cf-test-search-type",
-  ),
-  "cf-test-search-prep": createUsePersistenceHook<SearchConfig>(
-    "cf-test-search-prep",
-  ),
+const useSearchPersistence = {
+  atpl: createUsePersistenceHook("cf-test-search-atpl", defaultSearchConfig),
+  type: createUsePersistenceHook("cf-test-search-type", defaultSearchConfig),
+  prep: createUsePersistenceHook("cf-test-search-prep", defaultSearchConfig),
 };
 
 const resolver = zodResolver(searchConfigSchema);
 
-export const useSearchConfig = (
-  questionBank: QuestionBankName,
-): [SearchConfig, UseFormReturn<SearchConfig>] => {
-  const key = `cf-test-search-${questionBank}` as const;
-  const useSearchPersistence = searchPersistence[key];
-  const { persistedData, setPersistedData } = useSearchPersistence();
-  const defaultValues = persistedData ?? defaultSearchConfig;
-  const form = useForm({ defaultValues, resolver });
-  const mode = form.watch("mode");
-  const status = form.watch("status");
-
-  useEffect(() => {
-    setPersistedData({ mode, status });
-  }, [mode, status, setPersistedData]);
-
-  return [{ mode, status }, form];
+export const useSearchConfig = (questionBank: QuestionBankName) => {
+  const { getData, setData } = useSearchPersistence[questionBank]();
+  const form = useForm({ defaultValues: getData(), resolver });
+  useEffect(() => () => setData(form.getValues()), []);
+  return form;
 };

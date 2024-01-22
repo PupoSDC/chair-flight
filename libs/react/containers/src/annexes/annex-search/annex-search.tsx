@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from "react";
-import { FormProvider } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { default as Image } from "next/image";
 import {
   Select,
@@ -17,7 +17,9 @@ import {
 import {
   HookFormSelect,
   SearchFilters,
+  SearchHeader,
   SearchList,
+  SearchQuery,
   useDisclose,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
@@ -27,6 +29,10 @@ import type {
   QuestionBankName,
   QuestionBankSubject,
 } from "@chair-flight/base/types";
+import { AppRouterOutput } from "@chair-flight/trpc/server";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 
 const useAnnexSearch =
   trpc.questionBankAnnexSearch.searchAnnexes.useInfiniteQuery;
@@ -39,20 +45,12 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = {
-  subjects: QuestionBankSubject[];
-};
+type Data = AppRouterOutput["questionBankAnnexSearch"]["getSearchConfigFilters"];
+type SearchResult =AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number];
 
 const AnnexSearchItem: FunctionComponent<{
   mobile?: boolean;
-  result: {
-    id: string;
-    href: string;
-    description: string;
-    subjects: string[];
-    questions: Array<{ href: string; id: string }>;
-    learningObjectives: Array<{ href: string; id: string }>;
-  };
+  result: SearchResult;
 }> = ({ result, mobile }) => {
   const imagePreviewModal = useDisclose();
   return (
@@ -132,46 +130,53 @@ const AnnexSearchItem: FunctionComponent<{
   );
 };
 
+const filterSchema = z.object({
+  subject: z.string().default("all"),
+});
+
+const defaultFilter = filterSchema.parse({});
+const resolver = zodResolver(filterSchema);
+const searchQuestions = trpc.questionBankAnnexSearch.searchAnnexes;
+const useSearchAnnexes = searchQuestions.useInfiniteQuery;
+
+const useSearchPersistence = {
+  atpl: createUsePersistenceHook("cf-annex-search-atpl", defaultFilter),
+  type: createUsePersistenceHook("cf-annex-search-type", defaultFilter),
+  prep: createUsePersistenceHook("cf-annex-search-prep", defaultFilter),
+};
+
 export const AnnexSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
-    const [{ subject }, form] = useSearchConfig(questionBank);
-    const { subjects } = AnnexSearch.useData({ questionBank });
+    const [search, setSearch] = useState("");
+    const { getData, setData } = useSearchPersistence[questionBank]();
+    const serverData = AnnexSearch.useData({ questionBank });
+    const form = useForm({ defaultValues: getData(), resolver });
 
-    const { data, isLoading, isError, fetchNextPage } = useAnnexSearch(
-      {
-        questionBank,
-        learningObjectives: null,
-        subject: subject === "all" ? null : subject,
-        limit: 24,
-      },
-      {
-        getNextPageParam: (lastPage) => lastPage.nextCursor,
-        initialCursor: 0,
-      },
+    const { subjects } = serverData;
+    const { subject } = form.watch();
+
+    const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
+      { q: search, questionBank, subject, limit: 24 },
+      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
     const numberOfFilters = Number(subject !== "all");
 
     return (
       <Stack component={component} sx={sx}>
-        <Stack
-          direction="row"
-          sx={{
-            mb: { xs: 1, sm: 2 },
-            gap: 1,
-            [`& .${selectClasses.root}`]: {
-              width: "13em",
-            },
-          }}
-        >
+        <SearchHeader>
+          <SearchQuery
+            size="sm"
+            value={search}
+            loading={isLoading}
+            onChange={(value) => setSearch(value)}
+            sx={{ flex: 1 }}
+            placeholder="search Annexes..."
+          />
+
           <SearchFilters
             activeFilters={numberOfFilters}
-            fallback={
-              <>
-                <Select size="sm" />
-                <Select size="sm" />
-              </>
-            }
+            fallback={<Select size="sm" />}
             filters={
               <FormProvider {...form}>
                 <HookFormSelect size="sm" {...form.register("subject")}>
@@ -185,7 +190,7 @@ export const AnnexSearch = container<Props, Params, Data>(
               </FormProvider>
             }
           />
-        </Stack>
+        </SearchHeader>
 
         <SearchList
           loading={isLoading}
@@ -219,25 +224,13 @@ export const AnnexSearch = container<Props, Params, Data>(
 AnnexSearch.displayName = "AnnexSearch";
 
 AnnexSearch.getData = async ({ helper, params }) => {
+  const router = helper.questionBankAnnexSearch; 
   const questionBank = getRequiredParam(params, "questionBank");
-
-  const [data] = await Promise.all([
-    helper.questionBank.getAllSubjects.fetch({ questionBank }),
-  ]);
-
-  return {
-    subjects: data.subjects,
-  };
+  return await router.getSearchConfigFilters.fetch({ questionBank });
 };
 
 AnnexSearch.useData = (params) => {
+  const router = trpc.questionBankAnnexSearch; 
   const questionBank = getRequiredParam(params, "questionBank");
-
-  const [data] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
-    questionBank,
-  });
-
-  return {
-    subjects: data.subjects,
-  };
+  return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
 };

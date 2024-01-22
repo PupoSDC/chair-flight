@@ -87,7 +87,7 @@ export type QuestionMultipleChoiceProps = {
   loading?: boolean;
   compact?: boolean;
   disabled?: boolean;
-   annexHrefs?: string[];
+  annexHrefs?: string[];
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
   component?: React.ElementType;
@@ -108,7 +108,7 @@ export const QuestionMultipleChoice = forwardRef<
       hideIrrelevant,
       options = [],
       disabled,
-       annexHrefs,
+      annexHrefs,
       onAnnexClicked,
       onOptionClicked,
       ...others

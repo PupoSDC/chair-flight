@@ -4,7 +4,8 @@ import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
 import type {
-  QuestionBankLearningObjective,
+  CourseId,
+  LearningObjectiveId,
   QuestionBankName,
   SubjectId,
 } from "@chair-flight/base/types";
@@ -13,10 +14,13 @@ type SearchField = "id" | "text";
 
 type SearchDocument = Record<SearchField, string>;
 
-type SearchResult = Omit<
-  QuestionBankLearningObjective,
-  "learningObjectives" | "questions" | "nestedQuestions"
-> & {
+type SearchResult = {
+  id: LearningObjectiveId;
+  href: string;
+  parentId: LearningObjectiveId | CourseId;
+  courses: CourseId[];
+  text: string;
+  source: string;
   subject: SubjectId;
   questionBank: QuestionBankName;
   numberOfQuestions: number;
@@ -25,16 +29,9 @@ type SearchResult = Omit<
 let initializationWork: Promise<void> | undefined;
 
 const RESULTS = new Map<string, SearchResult>();
-
-const SEARCH_INDEX_FIELDS = ["id", "text"] as const satisfies SearchField[];
-
-const SEARCH_STORE_FIELDS = ["id"] as const satisfies SearchField[];
-
-const SEARCHABLE_FIELDS = ["id", "text"] as const satisfies SearchField[];
-
 const SEARCH_INDEX = new MiniSearch<SearchDocument>({
-  fields: SEARCH_INDEX_FIELDS,
-  storeFields: SEARCH_STORE_FIELDS,
+  fields: ["id", "text"] satisfies SearchField[],
+  storeFields: ["id", "text"] satisfies SearchField[]
 });
 
 const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
@@ -56,6 +53,7 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
 
     const resultItems: SearchResult[] = los.flatMap((lo) => ({
       id: lo.id,
+      href: `/modules/${bank}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
       courses: lo.courses,
       text: lo.text,
@@ -73,14 +71,40 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
 };
 
 export const questionBankLoSearchRouter = router({
+  getSearchConfigFilters: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+
+      const rawSubjects = await qb.getAll("subjects");
+      const subjects = rawSubjects.map((s) => ({
+        id: s.id,
+        text: `${s.id} - ${s.shortName}` 
+      }))
+      subjects.unshift({ id: "all", text: "All Subjects" });
+
+      const rawCourses = await qb.getAll("courses");
+      const courses = rawCourses.map((c) => ({
+        id: c.id,
+        text: c.text,
+      }));
+
+      const searchFields: Array<{ id: SearchField | "all", text: string }> = [
+        { id: "all", text: "All Fields" },
+        { id: "id", text: "Learning Objective ID" },
+        { id: "text", text: "text" },
+      ]
+
+      return { subjects, courses, searchFields };
+    }),
   searchLearningObjectives: publicProcedure
     .input(
       z.object({
         questionBank,
         q: z.string(),
-        subject: z.string().nullable(),
-        course: z.string().nullable(),
-        searchField: z.enum(SEARCHABLE_FIELDS).nullable(),
+        subject: z.string(),
+        course: z.string(),
+        searchField: z.string(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
       }),
@@ -91,19 +115,18 @@ export const questionBankLoSearchRouter = router({
 
       await populateSearchIndex(questionBank);
 
-      const fields = searchField ? [searchField] : undefined;
-      const opts = { fuzzy: 0.2, fields };
+      const opts = { fuzzy: 0.2 };
 
-      const results = q
+      const results = (q && searchField !== "id") 
         ? SEARCH_INDEX.search(q, opts).map(({ id }) => RESULTS.get(id))
         : Array.from(RESULTS.values());
 
       const processedResults = results.filter((r): r is SearchResult => {
         if (!r) return false;
         if (r.questionBank !== questionBank) return false;
-        if (subject && !r.subject.includes(subject)) return false;
-        if (searchField && !`${r[searchField]}`.includes(q)) return false;
-        if (course && !r.courses.includes(course)) return false;
+        if (subject !== "all" && !r.subject.includes(subject)) return false;
+        if (course !== "all" && !r.courses.includes(course)) return false;
+        if (searchField === "id" && !r.id.startsWith(q)) return false;
         return true;
       });
 

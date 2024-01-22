@@ -4,7 +4,7 @@ import { getQuestionPreview } from "@chair-flight/core/app";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName, QuestionId, QuestionVariantId, SubjectId } from "@chair-flight/base/types";
 
 type SearchField =
   | "id"
@@ -20,9 +20,9 @@ type SearchDocument = Record<SearchField, string>;
 type SearchResult = {
   id: string;
   questionBank: QuestionBankName;
-  questionId: string;
-  variantId: string;
-  subjects: string[];
+  questionId: QuestionId;
+  variantId: QuestionVariantId;
+  subjects: SubjectId[];
   text: string;
   learningObjectives: Array<{
     name: string;
@@ -34,34 +34,21 @@ type SearchResult = {
 
 let initializationWork: Promise<void> | undefined;
 
-const EXACT_MATCH_SEPERATOR = ", ";
 const RESULTS = new Map<string, SearchResult>();
-
-const SEARCH_INDEX_FIELDS = [
-  "id",
-  "questionId",
-  "questionBank",
-  "subjects",
-  "learningObjectives",
-  "text",
-  "externalIds",
-] as const satisfies SearchField[];
-
-const SEARCH_STORE_FIELDS = [
-  "id",
-  "questionId",
-] as const satisfies SearchField[];
-
-const SEARCHABLE_FIELDS = [
-  "questionId",
-  "learningObjectives",
-  "text",
-  "externalIds",
-] as const satisfies SearchField[];
-
 const SEARCH_INDEX = new MiniSearch<SearchDocument>({
-  fields: SEARCH_INDEX_FIELDS,
-  storeFields: SEARCH_STORE_FIELDS,
+  fields: [
+    "id",
+    "questionId",
+    "questionBank",
+    "subjects",
+    "learningObjectives",
+    "text",
+    "externalIds",
+  ] satisfies SearchField[],
+  storeFields: [
+    "id",
+    "questionId",
+  ] satisfies SearchField[],
 });
 
 const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
@@ -78,15 +65,15 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
 
     const searchItems: SearchDocument[] = questions.flatMap((question) => {
       const subjects = question.learningObjectives.map((l) => l.split(".")[0]);
-      const los = question.learningObjectives.join(EXACT_MATCH_SEPERATOR);
+      const los = question.learningObjectives.join(", ");
       const uniqueSubjects = [...new Set(subjects)];
       return Object.values(question.variants).map((variant) => ({
         id: variant.id,
         questionId: question.id,
         questionBank: bank,
-        subjects: uniqueSubjects.join(EXACT_MATCH_SEPERATOR),
+        subjects: uniqueSubjects.join(", "),
         learningObjectives: los,
-        externalIds: variant.externalIds.join(EXACT_MATCH_SEPERATOR),
+        externalIds: variant.externalIds.join(", "),
         text: getQuestionPreview(question, variant.id),
       }));
     });
@@ -123,13 +110,35 @@ export const questionBankQuestionSearchRouter = router({
     for (const bank of banks) await populateSearchIndex(bank);
     return "ok";
   }),
+  getSearchConfigFilters: publicProcedure
+    .input(z.object({ questionBank }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+
+      const rawSubjects = await qb.getAll("subjects");
+      const subjects = rawSubjects.map((s) => ({ 
+        id: s.id, 
+        text: `${s.id} - ${s.shortName}` 
+      }))
+      subjects.unshift({ id: "all", text: "All Subjects" });
+
+      const searchFields : Array<{ id: SearchField | "all", text: string }> = [
+        { id: "all", text: "All Fields" },
+        { id: "questionId", text: "Question ID" },
+        { id: "learningObjectives", text: "Learning Objectives" },
+        { id: "text", text: "Text" },
+        { id: "externalIds", text: "External IDs" },
+      ]
+
+      return { subjects, searchFields };
+    }), 
   searchQuestions: publicProcedure
     .input(
       z.object({
         questionBank,
         q: z.string(),
-        subject: z.string().nullable(),
-        searchField: z.enum(SEARCHABLE_FIELDS).nullable(),
+        subject: z.string(),
+        searchField: z.string(),
         limit: z.number().min(1).max(50),
         cursor: z.number().default(0),
       }),
@@ -149,8 +158,7 @@ export const questionBankQuestionSearchRouter = router({
       const processedResults = results.filter((r): r is SearchResult => {
         if (!r) return false;
         if (r["questionBank"] !== questionBank) return false;
-        if (subject && !r.subjects.join(",").includes(subject)) return false;
-        if (searchField && !`${r[searchField]}`.includes(q)) return false;
+        if (subject !== "all" && !r.subjects.includes(subject)) return false;
         return true;
       });
 
