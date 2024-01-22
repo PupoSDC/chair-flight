@@ -27,7 +27,7 @@ const meta: Meta<typeof LayoutModule> = {
           hasFlashcards: true,
           hasQuestions: true,
           hasLearningObjectives: true,
-          hasMedia: true,
+          hasAnnexes: true,
           hasCourses: true,
         })),
       ],

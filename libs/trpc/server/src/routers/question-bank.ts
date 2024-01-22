@@ -20,7 +20,7 @@ export const questionBankRouter = router({
         hasQuestions: await qb.has("questions"),
         hasCourses: await qb.has("courses"),
         hasLearningObjectives: await qb.has("learningObjectives"),
-        hasMedia: await qb.has("media"),
+        hasAnnexes: await qb.has("annexes"),
       };
     }),
   getAllSubjects: publicProcedure
@@ -101,7 +101,7 @@ export const questionBankRouter = router({
     .input(z.object({ questionBank }))
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
-      const allAnnexes = await qb.getAll("media");
+      const allAnnexes = await qb.getAll("annexes");
       return { count: allAnnexes.length };
     }),
   getNumberOfFlashcards: publicProcedure

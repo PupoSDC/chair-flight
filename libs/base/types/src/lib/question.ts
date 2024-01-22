@@ -1,4 +1,4 @@
-import type { QuestionOptionId, QuestionVariantId } from "./ids";
+import type { AnnexId, QuestionOptionId, QuestionVariantId } from "./ids";
 
 export type QuestionVariantType =
   | "simple"
@@ -9,7 +9,7 @@ export type QuestionVariantType =
 export type QuestionVariantGeneric<T extends QuestionVariantType> = {
   type: T;
   id: QuestionVariantId;
-  annexes: string[];
+  annexes: AnnexId[];
   externalIds: string[];
 };
 

@@ -4,8 +4,8 @@ import type {
   QuestionBankQuestionTemplate,
   QuestionBankQuestionTemplateJson,
   QuestionBankLearningObjective,
-  QuestionBankMediaJson,
-  QuestionBankMedia,
+  QuestionBankAnnexesJson,
+  QuestionBankAnnexes,
   QuestionBankSubjectJson,
   QuestionBankFlashcardContent,
   QuestionBankFlashcardCollection,
@@ -32,8 +32,8 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const projectName = context.projectName ?? "";
   /** i.e.: `libs/content/question-bank-atpl` */
   const contentRoot = projects[projectName]?.root ?? "";
-  /** i.e.: `libs/content/question-bank-atpl/content/media` */
-  const mediaFolder = path.join(contentRoot, "media");
+  /** i.e.: `libs/content/question-bank-atpl/content/annexes` */
+  const annexesFolder = path.join(contentRoot, "annexes");
   /** i.e.: `apps/next-app */
   const outputProject = projects[nextProjectName]?.root ?? "";
   /** i.e.: `apps/next-app/public/content/question-bank-atpl` */
@@ -46,10 +46,10 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     questionsFolder: path.join(contentRoot, "questions"),
     /** i.e.: `libs/content/question-bank-atpl/content/flashcards` */
     flashCardsFolder: path.join(contentRoot, "flashcards"),
-    /** i.e.: `libs/content/question-bank-atpl/content/media` */
-    mediaFolder: path.join(contentRoot, "media"),
-    /** i.e.: `libs/content/question-bank-atpl/content/media/media.json` */
-    mediaJson: path.join(mediaFolder, "media.json"),
+    /** i.e.: `libs/content/question-bank-atpl/content/annexes` */
+    annexesFolder: path.join(contentRoot, "annexes"),
+    /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
+    annexesJson: path.join(annexesFolder, "annexes.json"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/courses.json` */
@@ -60,10 +60,10 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     outputDir: outputDir,
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/questions.json` */
     outputQuestionsJson: path.join(outputDir, "questions.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/media` */
-    outputMediaDir: path.join(outputDir, "media"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/media.json` */
-    outputMediaJson: path.join(outputDir, "media.json"),
+    /** i.e.: `apps/next-app/public/content/question-bank-atpl/annexes` */
+    outputAnnexesDir: path.join(outputDir, "annexes"),
+    /** i.e.: `apps/next-app/public/content/question-bank-atpl/annexes.json` */
+    outputAnnexesJson: path.join(outputDir, "annexes.json"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/subjects.json` */
     outputSubjectsJson: path.join(outputDir, "subjects.json"),
     /** i.e.: `apps/next-app/public/content/question-bank-atpl/courses.json` */
@@ -104,7 +104,7 @@ export const readAllQuestionsFromFs = async ({
       jsonDataWithSrcLocation.forEach((q) => {
         Object.keys(q.variants).forEach((id) => {
           q.variants[id].annexes = q.variants[id].annexes.map((a) =>
-            a.replace("/content/media", `/content/${projectName}/media`),
+            a.replace("/content/annexes", `/content/${projectName}/annexes`),
           );
         });
       });
@@ -156,13 +156,13 @@ export const readAllCoursesFromFs = async ({
 };
 
 export const readAllMediaFromFs = async ({
-  mediaJson,
+  annexesJson,
 }: {
-  mediaJson: string;
-}): Promise<QuestionBankMedia[]> => {
-  const file = await fs.readFile(mediaJson, "utf-8");
-  const json = JSON.parse(file) as QuestionBankMediaJson[];
-  const allMedia = json.map<QuestionBankMedia>((m) => ({
+  annexesJson: string;
+}): Promise<QuestionBankAnnexes[]> => {
+  const file = await fs.readFile(annexesJson, "utf-8");
+  const json = JSON.parse(file) as QuestionBankAnnexesJson[];
+  const allMedia = json.map<QuestionBankAnnexes>((m) => ({
     ...m,
     questions: [],
     variants: [],

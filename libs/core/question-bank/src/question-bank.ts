@@ -2,7 +2,7 @@ import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
 import type {
   QuestionBankQuestionTemplate,
-  QuestionBankMedia,
+  QuestionBankAnnexes,
   QuestionBankLearningObjective,
   QuestionBankName,
   QuestionBankFlashcardCollection,
@@ -13,7 +13,7 @@ import type {
 type Resource =
   | "questions"
   | "learningObjectives"
-  | "media"
+  | "annexes"
   | "flashcards"
   | "courses"
   | "subjects";
@@ -21,7 +21,7 @@ type Resource =
 type NameToType = {
   questions: QuestionBankQuestionTemplate;
   learningObjectives: QuestionBankLearningObjective;
-  media: QuestionBankMedia;
+  annexes: QuestionBankAnnexes;
   flashcards: QuestionBankFlashcardCollection;
   subjects: QuestionBankSubject;
   courses: QuestionBankCourse;
@@ -49,7 +49,7 @@ interface IQuestionBank {
 const resources: Resource[] = [
   "questions",
   "learningObjectives",
-  "media",
+  "annexes",
   "flashcards",
   "subjects",
   "courses",

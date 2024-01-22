@@ -1,19 +1,21 @@
 import type {
   LearningObjectiveId,
-  MediaId,
+  AnnexId,
   QuestionId,
   QuestionVariantId,
+  SubjectId,
 } from "./ids";
 
-export type QuestionBankMedia = {
-  id: MediaId;
+export type QuestionBankAnnexes = {
+  id: AnnexId;
   description: string;
   questions: QuestionId[];
+  subjects: SubjectId[]
   variants: QuestionVariantId[];
   learningObjectives: LearningObjectiveId[];
 };
 
-export type QuestionBankMediaJson = Pick<
-  QuestionBankMedia,
-  "id" | "description"
+export type QuestionBankAnnexesJson = Pick<
+  QuestionBankAnnexes,
+  "id" | "description" | "subjects"
 >;

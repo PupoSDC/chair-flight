@@ -17,13 +17,13 @@ export const Playground: Story = {
       options: ["image 1", "image 2", "image 3", "image 4"],
       mapping: {
         "image 1":
-          "http://localhost:4200/content/media/facd988e59bbec4bfd2c2ab4427a45ed.jpg",
+          "http://localhost:4200/content/annex/facd988e59bbec4bfd2c2ab4427a45ed.jpg",
         "image 2":
-          "http://localhost:4200/content/media/ede35b3c1eb70d78a1ed95c8d1410148.jpg",
+          "http://localhost:4200/content/annex/ede35b3c1eb70d78a1ed95c8d1410148.jpg",
         "image 3":
-          "http://localhost:4200/content/media/eb38917314ded07e0c84adfe1a2c84c1.jpg",
+          "http://localhost:4200/content/annex/eb38917314ded07e0c84adfe1a2c84c1.jpg",
         "image 4":
-          "http://localhost:4200/content/media/e994bfeb66acb1a4be2896b12a0c1568.jpg",
+          "http://localhost:4200/content/annex/e994bfeb66acb1a4be2896b12a0c1568.jpg",
       },
       control: {
         type: "select",
