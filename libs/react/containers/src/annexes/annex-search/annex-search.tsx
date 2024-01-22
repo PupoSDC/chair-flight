@@ -15,7 +15,6 @@ import {
   Typography,
 } from "@mui/joy";
 import {
-  SearchQuery,
   HookFormSelect,
   SearchFilters,
   SearchList,
@@ -49,6 +48,7 @@ const AnnexSearchItem: FunctionComponent<{
   result: {
     id: string;
     href: string;
+    description: string;
     subjects: string[];
     questions: Array<{ href: string; id: string }>;
     learningObjectives: Array<{ href: string; id: string }>;
@@ -92,6 +92,7 @@ const AnnexSearchItem: FunctionComponent<{
               {result.id}
             </Box>
           </Box>
+          <td>{result.description}</td>
           <td>{result.subjects.join(", ")}</td>
           <td>
             {result.learningObjectives.map(({ href, id }) => (
@@ -112,17 +113,15 @@ const AnnexSearchItem: FunctionComponent<{
       <Modal open={imagePreviewModal.isOpen} onClose={imagePreviewModal.close}>
         <ModalDialog>
           <ModalClose variant="solid" />
-          <Stack
-            sx={{
-              maxHeight: "100%",
-              minWidth: "80vh",
-            }}
-          >
+          <Stack>
             <img
               src={result.href}
               alt=""
               style={{
-                width: "100%",
+                objectFit: "contain",
+                maxWidth: "90vw",
+                maxHeight: "90vh",
+                width: "auto",
                 height: "auto",
               }}
             />
@@ -198,6 +197,7 @@ export const AnnexSearch = container<Props, Params, Data>(
             <thead>
               <tr>
                 <th style={{ width: 300 }}>Image</th>
+                <th style={{ width: 200 }}>Description</th>
                 <th style={{ width: 100 }}>Subjects</th>
                 <th style={{}}>Learning Objectives</th>
                 <th style={{}}>Questions</th>

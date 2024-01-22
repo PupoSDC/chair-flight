@@ -209,7 +209,7 @@ export const QuestionOverview = container<Props, Params, Data>(
               setSelectedOption(optionId);
               setSelectedStatus("show-result");
             }}
-            annexUrls={question.annexes.map(
+             annexHrefs={question.annexes.map(
               (a) => questionOverview.annexes[a].href,
             )}
             onAnnexClicked={(annex) => setCurrentAnnex(annex)}

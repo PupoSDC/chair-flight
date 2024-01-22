@@ -8,7 +8,7 @@ import type {
   QuestionBankSubject,
   SubjectId,
 } from "@chair-flight/base/types";
-
+import { makeMap } from "@chair-flight/base/utils";
 export const connectQuestionBank = ({
   questions,
   learningObjectives,
@@ -22,21 +22,8 @@ export const connectQuestionBank = ({
   annexes: QuestionBankAnnexes[];
   flashcards: QuestionBankFlashcardCollection[];
 }) => {
-  const learningObjectivesMap = learningObjectives.reduce(
-    (sum, lo) => {
-      sum[lo.id] = lo;
-      return sum;
-    },
-    {} as Record<LearningObjectiveId, QuestionBankLearningObjective>,
-  );
-
-  const subjectsMap = subjects.reduce(
-    (sum, lo) => {
-      sum[lo.id] = lo;
-      return sum;
-    },
-    {} as Record<SubjectId, QuestionBankSubject>,
-  );
+  const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
+  const subjectsMap = makeMap(subjects, (s) => s.id);
 
   const learningObjectiveToSubject = learningObjectives.reduce(
     (sum, lo) => {

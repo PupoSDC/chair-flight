@@ -87,7 +87,7 @@ export type QuestionMultipleChoiceProps = {
   loading?: boolean;
   compact?: boolean;
   disabled?: boolean;
-  annexUrls?: string[];
+   annexHrefs?: string[];
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
   component?: React.ElementType;
@@ -108,7 +108,7 @@ export const QuestionMultipleChoice = forwardRef<
       hideIrrelevant,
       options = [],
       disabled,
-      annexUrls,
+       annexHrefs,
       onAnnexClicked,
       onOptionClicked,
       ...others
@@ -127,15 +127,15 @@ export const QuestionMultipleChoice = forwardRef<
           <>
             <MarkdownClient>{question}</MarkdownClient>
             <Box>
-              {annexUrls?.map((annexUrl) => (
+              {annexHrefs?.map((annexHref) => (
                 <Button
-                  key={annexUrl}
+                  key={annexHref}
                   variant="outlined"
                   color="primary"
                   sx={{ mr: 1, mb: 1 }}
-                  onClick={() => onAnnexClicked?.(annexUrl)}
+                  onClick={() => onAnnexClicked?.(annexHref)}
                 >
-                  <Image src={annexUrl} alt="annex" width={40} height={40} />
+                  <Image src={annexHref} alt="annex" width={40} height={40} />
                 </Button>
               ))}
             </Box>
