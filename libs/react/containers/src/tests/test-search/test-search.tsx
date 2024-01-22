@@ -1,4 +1,5 @@
 import { FormProvider, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import { default as PlayIcon } from "@mui/icons-material/PlayArrowOutlined";
 import { default as EyeIcon } from "@mui/icons-material/VisibilityOutlined";
@@ -16,18 +17,17 @@ import {
   Typography,
   selectClasses,
 } from "@mui/joy";
+import { z } from "zod";
 import { processTest } from "@chair-flight/core/app";
 import {
   HookFormSelect,
   SearchFilters,
   SearchList,
 } from "@chair-flight/react/components";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { createUsePersistenceHook } from "../../hooks/use-persistence";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -65,6 +65,8 @@ export const TestSearch = container<Props>(
         return true;
       })
       .map((test) => ({ ...test, ...processTest(test) }));
+
+    form.watch((data) => setData({ ...defaultFilter, ...data }));
 
     const numberOfFilters = Number(mode !== "all") + Number(status !== "all");
 

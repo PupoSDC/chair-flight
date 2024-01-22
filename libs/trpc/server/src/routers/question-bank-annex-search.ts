@@ -1,11 +1,11 @@
+import MiniSearch from "minisearch";
 import { z } from "zod";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import { QuestionBankName, QuestionId } from "@chair-flight/base/types";
-import MiniSearch from "minisearch";
+import type { QuestionBankName, QuestionId } from "@chair-flight/base/types";
 
-type SearchField =  "id" | "description";
+type SearchField = "id" | "description";
 type SearchDocument = Record<SearchField, string>;
 
 type SearchResult = {
@@ -13,8 +13,8 @@ type SearchResult = {
   href: string;
   description: string;
   subjects: string[];
-  questions: Array<{ id: QuestionId, href: string }>;
-  learningObjectives:  Array<{ id: QuestionId, href: string }>;
+  questions: Array<{ id: QuestionId; href: string }>;
+  learningObjectives: Array<{ id: QuestionId; href: string }>;
 };
 
 let initializationWork: Promise<void> | undefined;
@@ -73,8 +73,8 @@ export const questionBankAnnexSearchRouter = router({
       const rawSubjects = await qb.getAll("subjects");
       const subjects = rawSubjects.map((s) => ({
         id: s.id,
-        text: `${s.id} - ${s.shortName}`
-      }))
+        text: `${s.id} - ${s.shortName}`,
+      }));
       subjects.unshift({ id: "all", text: "All Subjects" });
 
       return { subjects };
@@ -100,14 +100,14 @@ export const questionBankAnnexSearchRouter = router({
         ? SEARCH_INDEX.search(q, opts).map(({ id }) => RESULTS.get(id))
         : Array.from(RESULTS.values());
 
-      const processedResults = results.filter((r) : r is SearchResult => {
+      const processedResults = results.filter((r): r is SearchResult => {
         if (!r) return false;
         if (subject !== "all" && !r.subjects.includes(subject)) return false;
         return true;
       });
 
       const finalItems = processedResults.slice(cursor, cursor + limit);
-      
+
       return {
         items: finalItems,
         totalResults: processedResults.length,

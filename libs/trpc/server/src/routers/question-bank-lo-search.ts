@@ -31,7 +31,7 @@ let initializationWork: Promise<void> | undefined;
 const RESULTS = new Map<string, SearchResult>();
 const SEARCH_INDEX = new MiniSearch<SearchDocument>({
   fields: ["id", "text"] satisfies SearchField[],
-  storeFields: ["id", "text"] satisfies SearchField[]
+  storeFields: ["id", "text"] satisfies SearchField[],
 });
 
 const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
@@ -79,8 +79,8 @@ export const questionBankLoSearchRouter = router({
       const rawSubjects = await qb.getAll("subjects");
       const subjects = rawSubjects.map((s) => ({
         id: s.id,
-        text: `${s.id} - ${s.shortName}` 
-      }))
+        text: `${s.id} - ${s.shortName}`,
+      }));
       subjects.unshift({ id: "all", text: "All Subjects" });
 
       const rawCourses = await qb.getAll("courses");
@@ -89,11 +89,11 @@ export const questionBankLoSearchRouter = router({
         text: c.text,
       }));
 
-      const searchFields: Array<{ id: SearchField | "all", text: string }> = [
+      const searchFields: Array<{ id: SearchField | "all"; text: string }> = [
         { id: "all", text: "All Fields" },
         { id: "id", text: "Learning Objective ID" },
         { id: "text", text: "text" },
-      ]
+      ];
 
       return { subjects, courses, searchFields };
     }),
@@ -117,9 +117,10 @@ export const questionBankLoSearchRouter = router({
 
       const opts = { fuzzy: 0.2 };
 
-      const results = (q && searchField !== "id") 
-        ? SEARCH_INDEX.search(q, opts).map(({ id }) => RESULTS.get(id))
-        : Array.from(RESULTS.values());
+      const results =
+        q && searchField !== "id"
+          ? SEARCH_INDEX.search(q, opts).map(({ id }) => RESULTS.get(id))
+          : Array.from(RESULTS.values());
 
       const processedResults = results.filter((r): r is SearchResult => {
         if (!r) return false;

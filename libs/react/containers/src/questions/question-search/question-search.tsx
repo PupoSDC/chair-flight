@@ -14,7 +14,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -24,7 +24,8 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = AppRouterOutput["questionBankQuestionSearch"]["getSearchConfigFilters"];
+type Data =
+  AppRouterOutput["questionBankQuestionSearch"]["getSearchConfigFilters"];
 
 const filterSchema = z.object({
   subject: z.string().default("all"),
@@ -84,12 +85,12 @@ export const QuestionSearch = container<Props, Params, Data>(
               <FormProvider {...form}>
                 <HookFormSelect size="sm" {...form.register("searchField")}>
                   {searchFields.map((s) => (
-                     <Option value={s.id}>{s.text}</Option>
+                    <Option value={s.id}>{s.text}</Option>
                   ))}
                 </HookFormSelect>
                 <HookFormSelect size="sm" {...form.register("subject")}>
                   {subjects.map((s) => (
-                     <Option value={s.id}>{s.text}</Option>
+                    <Option value={s.id}>{s.text}</Option>
                   ))}
                 </HookFormSelect>
               </FormProvider>
@@ -112,13 +113,13 @@ export const QuestionSearch = container<Props, Params, Data>(
 QuestionSearch.displayName = "QuestionSearch";
 
 QuestionSearch.getData = async ({ helper, params }) => {
-  const router = helper.questionBankQuestionSearch; 
+  const router = helper.questionBankQuestionSearch;
   const questionBank = getRequiredParam(params, "questionBank");
   return await router.getSearchConfigFilters.fetch({ questionBank });
 };
 
 QuestionSearch.useData = (params) => {
-  const router = trpc.questionBankQuestionSearch; 
+  const router = trpc.questionBankQuestionSearch;
   const questionBank = getRequiredParam(params, "questionBank");
   return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
 };

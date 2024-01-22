@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Box,
   Link,
@@ -8,10 +9,11 @@ import {
   Option,
   Stack,
   Typography,
-
   Chip,
   Divider,
 } from "@mui/joy";
+import { z } from "zod";
+import { makeMap } from "@chair-flight/base/utils";
 import {
   SearchQuery,
   HookFormSelect,
@@ -21,15 +23,10 @@ import {
   SearchList,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "../../wraper/container";
-import type {
-  QuestionBankName,
-} from "@chair-flight/base/types";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
-import { AppRouterOutput } from "@chair-flight/trpc/server";
-import { makeMap } from "@chair-flight/base/utils";
+import { container, getRequiredParam } from "../../wraper/container";
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -147,8 +144,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           renderTableRow={(result) => (
             <tr key={result.id}>
               <td>
-                <Link href={result.href}
-                >
+                <Link href={result.href}>
                   <Typography>{result.id}</Typography>
                 </Link>
               </td>
@@ -187,15 +183,11 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           )}
           renderListItemContent={(result) => (
             <ListItemContent>
-              <Link
-                href={`/modules/atpl/learning-objectives/${result.id}`}
-              >
+              <Link href={`/modules/atpl/learning-objectives/${result.id}`}>
                 <Typography>{result.id}</Typography>
               </Link>
               <Typography level="body-xs" sx={{ fontSize: 10 }}>
-                {result.courses
-                  .map((c) => coursesMap[c])
-                  .join(", ")}
+                {result.courses.map((c) => coursesMap[c]).join(", ")}
               </Typography>
               <Typography level="body-xs" sx={{ fontSize: 10 }}>
                 Number of Questions {result.numberOfQuestions}
@@ -216,9 +208,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
                 {result.source && (
                   <>
                     <Divider sx={{ width: "50%", my: 0.5 }} />
-                    <Typography level="body-xs">
-                      source:{" "}
-                    </Typography>
+                    <Typography level="body-xs">source: </Typography>
                     <Box
                       sx={{
                         color: "text.tertiary",

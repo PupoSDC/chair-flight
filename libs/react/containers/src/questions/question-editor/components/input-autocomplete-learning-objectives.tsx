@@ -21,9 +21,9 @@ export const InputAutocompleteLearningObjectives = forwardRef<
       limit: 10,
       cursor: 0,
       questionBank: "atpl",
-      subject: null,
-      course: null,
-      searchField: null,
+      subject: "all",
+      course: "all",
+      searchField: "all",
     });
 
   const optionsMap = (data?.items ?? []).reduce<

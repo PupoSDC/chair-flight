@@ -1,11 +1,11 @@
-import { FunctionComponent, useState } from "react";
+import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { default as Image } from "next/image";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Select,
   Stack,
   Option,
-  selectClasses,
   Box,
   Modal,
   ModalDialog,
@@ -14,6 +14,7 @@ import {
   ListItemContent,
   Typography,
 } from "@mui/joy";
+import { z } from "zod";
 import {
   HookFormSelect,
   SearchFilters,
@@ -23,19 +24,11 @@ import {
   useDisclose,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "../../wraper/container";
-import { useSearchConfig } from "./annex-search-config-schema";
-import type {
-  QuestionBankName,
-  QuestionBankSubject,
-} from "@chair-flight/base/types";
-import { AppRouterOutput } from "@chair-flight/trpc/server";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
-
-const useAnnexSearch =
-  trpc.questionBankAnnexSearch.searchAnnexes.useInfiniteQuery;
+import { container, getRequiredParam } from "../../wraper/container";
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { FunctionComponent } from "react";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -45,8 +38,10 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = AppRouterOutput["questionBankAnnexSearch"]["getSearchConfigFilters"];
-type SearchResult = AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number]
+type Data =
+  AppRouterOutput["questionBankAnnexSearch"]["getSearchConfigFilters"];
+type SearchResult =
+  AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number];
 
 const AnnexSearchItem: FunctionComponent<{
   mobile?: boolean;
@@ -225,13 +220,13 @@ export const AnnexSearch = container<Props, Params, Data>(
 AnnexSearch.displayName = "AnnexSearch";
 
 AnnexSearch.getData = async ({ helper, params }) => {
-  const router = helper.questionBankAnnexSearch; 
+  const router = helper.questionBankAnnexSearch;
   const questionBank = getRequiredParam(params, "questionBank");
   return await router.getSearchConfigFilters.fetch({ questionBank });
 };
 
 AnnexSearch.useData = (params) => {
-  const router = trpc.questionBankAnnexSearch; 
+  const router = trpc.questionBankAnnexSearch;
   const questionBank = getRequiredParam(params, "questionBank");
   return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
 };

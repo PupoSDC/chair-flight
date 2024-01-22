@@ -26,9 +26,9 @@ export const Page: NextPage<PageProps, PageParams> = ({ questionBank }) => {
   return (
     <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
-      <LearningObjectivesSearch 
-        questionBank={questionBank} 
-        sx={{ height: "100%" }} 
+      <LearningObjectivesSearch
+        questionBank={questionBank}
+        sx={{ height: "100%" }}
       />
     </LayoutModule>
   );

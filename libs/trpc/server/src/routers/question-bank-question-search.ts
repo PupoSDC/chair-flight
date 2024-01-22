@@ -4,7 +4,12 @@ import { getQuestionPreview } from "@chair-flight/core/app";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import type { QuestionBankName, QuestionId, QuestionVariantId, SubjectId } from "@chair-flight/base/types";
+import type {
+  QuestionBankName,
+  QuestionId,
+  QuestionVariantId,
+  SubjectId,
+} from "@chair-flight/base/types";
 
 type SearchField =
   | "id"
@@ -45,10 +50,7 @@ const SEARCH_INDEX = new MiniSearch<SearchDocument>({
     "text",
     "externalIds",
   ] satisfies SearchField[],
-  storeFields: [
-    "id",
-    "questionId",
-  ] satisfies SearchField[],
+  storeFields: ["id", "questionId"] satisfies SearchField[],
 });
 
 const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
@@ -116,22 +118,22 @@ export const questionBankQuestionSearchRouter = router({
       const qb = questionBanks[input.questionBank];
 
       const rawSubjects = await qb.getAll("subjects");
-      const subjects = rawSubjects.map((s) => ({ 
-        id: s.id, 
-        text: `${s.id} - ${s.shortName}` 
-      }))
+      const subjects = rawSubjects.map((s) => ({
+        id: s.id,
+        text: `${s.id} - ${s.shortName}`,
+      }));
       subjects.unshift({ id: "all", text: "All Subjects" });
 
-      const searchFields : Array<{ id: SearchField | "all", text: string }> = [
+      const searchFields: Array<{ id: SearchField | "all"; text: string }> = [
         { id: "all", text: "All Fields" },
         { id: "questionId", text: "Question ID" },
         { id: "learningObjectives", text: "Learning Objectives" },
         { id: "text", text: "Text" },
         { id: "externalIds", text: "External IDs" },
-      ]
+      ];
 
       return { subjects, searchFields };
-    }), 
+    }),
   searchQuestions: publicProcedure
     .input(
       z.object({
