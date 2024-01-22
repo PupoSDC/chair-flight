@@ -30,47 +30,51 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const nextProjectName = "next-app";
   /** i.e.: `content-question-bank-atpl` */
   const projectName = context.projectName ?? "";
-  /** i.e.: `libs/content/question-bank-atpl` */
+  /** i.e.: `libs/content/content-question-bank-atpl` */
   const contentRoot = projects[projectName]?.root ?? "";
-  /** i.e.: `libs/content/question-bank-atpl/content/annexes` */
+  /** i.e.: `libs/content/content-question-bank-atpl/content/annexes` */
   const annexesFolder = path.join(contentRoot, "annexes");
   /** i.e.: `apps/next-app */
   const outputProject = projects[nextProjectName]?.root ?? "";
-  /** i.e.: `apps/next-app/public/content/question-bank-atpl` */
+  /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
   const outputDir = path.join(outputProject, "public", "content", projectName);
 
   return {
     /** i.e.: `content-question-bank-atpl` */
     projectName: projectName,
-    /** i.e.: `libs/content/question-bank-atpl` */
+    /** i.e.: `libs/content/content-question-bank-atpl` */
     questionsFolder: path.join(contentRoot, "questions"),
-    /** i.e.: `libs/content/question-bank-atpl/content/flashcards` */
+    /** i.e.: `libs/content/content-question-bank-atpl/content/flashcards` */
     flashCardsFolder: path.join(contentRoot, "flashcards"),
-    /** i.e.: `libs/content/question-bank-atpl/content/annexes` */
+    /** i.e.: `libs/content/content-question-bank-atpl/content/annexes` */
     annexesFolder: path.join(contentRoot, "annexes"),
+    /** i.e.: `libs/content/content-question-bank-atpl/content/annexes/images` */
+    annexesImagesFolder: path.join(contentRoot, "annexes", "images"),
     /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
     annexesJson: path.join(annexesFolder, "annexes.json"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
-    /** i.e.: `libs/content/question-bank-atpl/content/subjects/courses.json` */
+    /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/courses.json` */
     coursesJson: path.join(contentRoot, "subjects", "courses.json"),
-    /** i.e.: `libs/content/question-bank-atpl/content/subjects/learning-objectives.json` */
+    /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/learning-objectives.json` */
     losJson: path.join(contentRoot, "subjects", "learning-objectives.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
     outputDir: outputDir,
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/questions.json` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/questions.json` */
     outputQuestionsJson: path.join(outputDir, "questions.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/annexes` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes` */
     outputAnnexesDir: path.join(outputDir, "annexes"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/annexes.json` */
+    /** i.e.: `/content/content-question-bank-atpl/annexes` */
+    outputAnnexesRelativeDir: path.join("content", projectName, "annexes"),
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes.json` */
     outputAnnexesJson: path.join(outputDir, "annexes.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/subjects.json` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/subjects.json` */
     outputSubjectsJson: path.join(outputDir, "subjects.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/courses.json` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/courses.json` */
     outputCoursesJson: path.join(outputDir, "courses.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/learningObjectives.json` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/learningObjectives.json` */
     outputLosJson: path.join(outputDir, "learningObjectives.json"),
-    /** i.e.: `apps/next-app/public/content/question-bank-atpl/flashcards.json` */
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/flashcards.json` */
     outputFlashcardsJson: path.join(outputDir, "flashcards.json"),
   };
 };
@@ -155,15 +159,19 @@ export const readAllCoursesFromFs = async ({
   return courses;
 };
 
-export const readAllMediaFromFs = async ({
+export const readAllAnnexesFromFs = async ({
   annexesJson,
+  outputAnnexesRelativeDir,
 }: {
   annexesJson: string;
+  outputAnnexesRelativeDir: string;
 }): Promise<QuestionBankAnnexes[]> => {
   const file = await fs.readFile(annexesJson, "utf-8");
   const json = JSON.parse(file) as QuestionBankAnnexesJson[];
   const allMedia = json.map<QuestionBankAnnexes>((m) => ({
     ...m,
+    href: `/${outputAnnexesRelativeDir}/${m.id}.${m.format}`,
+    subjects: [],
     questions: [],
     variants: [],
     learningObjectives: [],

@@ -41,7 +41,7 @@ export const connectQuestionBank = ({
   const learningObjectiveToSubject = learningObjectives.reduce(
     (sum, lo) => {
       let parentId: string = lo.parentId;
-      while (true) {
+      while (parentId) {
         const subject = subjectsMap[parentId];
         const parentLo = learningObjectivesMap[parentId];
         if (subject) {
@@ -53,15 +53,14 @@ export const connectQuestionBank = ({
           continue;
         }
         throw new Error(
-          `Lo to Subject mapping entered an infinite loop. LO = ${lo.id}, parentId = ${parentId}`
+          `Lo to Subject mapping entered an infinite loop. LO = ${lo.id}, parentId = ${parentId}`,
         );
       }
-
 
       return sum;
     },
     {} as Record<LearningObjectiveId, SubjectId>,
-  )
+  );
 
   // Connect questions to annexes
   questions.forEach((q) => {
@@ -85,12 +84,14 @@ export const connectQuestionBank = ({
 
   // Connect subjects with annexes
   annexes.forEach((a) => {
-    a.subjects = [...new Set(
-      a.learningObjectives
-        .map((v) => learningObjectiveToSubject[v])
-        .filter(Boolean)
-    )];
-  })
+    a.subjects = [
+      ...new Set(
+        a.learningObjectives
+          .map((v) => learningObjectiveToSubject[v])
+          .filter(Boolean),
+      ),
+    ];
+  });
 
   // Connect learning objectives to questions
   questions.forEach((q) => {

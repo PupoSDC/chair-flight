@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { FormProvider } from "react-hook-form";
 import { default as Image } from "next/image";
-import { Select, Stack, Option, selectClasses, Box, Modal, ModalDialog, ModalClose, Link, ListItemContent, Typography } from "@mui/joy";
+import {
+  Select,
+  Stack,
+  Option,
+  selectClasses,
+  Box,
+  Modal,
+  ModalDialog,
+  ModalClose,
+  Link,
+  ListItemContent,
+  Typography,
+} from "@mui/joy";
 import {
   SearchQuery,
   HookFormSelect,
@@ -32,9 +44,97 @@ type Data = {
   subjects: QuestionBankSubject[];
 };
 
+const AnnexSearchItem: FunctionComponent<{
+  mobile?: boolean;
+  result: {
+    id: string;
+    href: string;
+    subjects: string[];
+    questions: Array<{ href: string; id: string }>;
+    learningObjectives: Array<{ href: string; id: string }>;
+  };
+}> = ({ result, mobile }) => {
+  const imagePreviewModal = useDisclose();
+  return (
+    <>
+      {mobile ? (
+        <ListItemContent sx={{ display: "flex" }}>
+          <Image
+            src={result.href}
+            alt=""
+            width={100}
+            height={100}
+            onClick={imagePreviewModal.open}
+          />
+          <Box sx={{ pl: 1 }}>
+            <Typography level="h5" sx={{ fontSize: 14 }}>
+              Questions
+            </Typography>
+            {result.questions.map(({ href, id }) => (
+              <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
+                {id}
+              </Link>
+            ))}
+          </Box>
+        </ListItemContent>
+      ) : (
+        <tr>
+          <Box component="td" sx={{ height: "200px !important" }}>
+            <Image
+              onClick={imagePreviewModal.open}
+              src={result.href}
+              alt=""
+              width={200}
+              height={200}
+              style={{ width: "auto", maxWidth: 270, height: "100%" }}
+            />
+            <Box component="b" sx={{ fontSize: 12 }}>
+              {result.id}
+            </Box>
+          </Box>
+          <td>{result.subjects.join(", ")}</td>
+          <td>
+            {result.learningObjectives.map(({ href, id }) => (
+              <Link href={href} key={id} sx={{ display: "block" }}>
+                {id}
+              </Link>
+            ))}
+          </td>
+          <td>
+            {result.questions.map(({ href, id }) => (
+              <Link href={href} key={id} sx={{ display: "block" }}>
+                {id}
+              </Link>
+            ))}
+          </td>
+        </tr>
+      )}
+      <Modal open={imagePreviewModal.isOpen} onClose={imagePreviewModal.close}>
+        <ModalDialog>
+          <ModalClose variant="solid" />
+          <Stack
+            sx={{
+              maxHeight: "100%",
+              minWidth: "80vh",
+            }}
+          >
+            <img
+              src={result.href}
+              alt=""
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </Stack>
+        </ModalDialog>
+      </Modal>
+    </>
+  );
+};
+
 export const AnnexSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
-    const [search, setSearch] = useState("");
     const [{ subject }, form] = useSearchConfig(questionBank);
     const { subjects } = AnnexSearch.useData({ questionBank });
 
@@ -65,15 +165,6 @@ export const AnnexSearch = container<Props, Params, Data>(
             },
           }}
         >
-          <SearchQuery
-            size="sm"
-            value={search}
-            loading={isLoading}
-            onChange={(value) => setSearch(value)}
-            sx={{ flex: 1 }}
-            placeholder="search Questions..."
-          />
-
           <SearchFilters
             activeFilters={numberOfFilters}
             fallback={
@@ -108,114 +199,17 @@ export const AnnexSearch = container<Props, Params, Data>(
               <tr>
                 <th style={{ width: 300 }}>Image</th>
                 <th style={{ width: 100 }}>Subjects</th>
-                <th style={{  }}>Learning Objectives</th>
-                <th style={{  }}>Questions</th>
+                <th style={{}}>Learning Objectives</th>
+                <th style={{}}>Questions</th>
               </tr>
             </thead>
           )}
-          renderTableRow={(result) => {
-            const imagePreviewModal = useDisclose();
-            return (
-              <tr key={result.id}>
-                <Box component="td" sx={{ height: "200px !important" }}>
-                  <Image
-                    onClick={imagePreviewModal.open}
-                    src={result.src}
-                    alt=""
-                    width={200}
-                    height={200}
-                    style={{ width: 'auto', maxWidth: 270, height: '100%' }}
-                  />
-                  <Box component="b" sx={{ fontSize: 12 }}>{result.id}</Box>
-                </Box>
-                <td>
-                  {result.subjects.join(", ")}
-                </td>
-                <td>
-                  {result.learningObjectives.map(({ href, id }) => (
-                    <Link href={href} key={id} sx={{ display: "block" }}>
-                      {id}
-                    </Link>
-                  ))}
-                </td>
-                <td>
-                  {result.questions.map(({ href, id }) => (
-                    <Link href={href} key={id} sx={{ display: "block" }}>
-                      {id}
-                    </Link>
-                  ))}
-                </td>
-                <Modal
-                  open={imagePreviewModal.isOpen}
-                  onClose={imagePreviewModal.close}
-                >
-                  <ModalDialog>
-                    <ModalClose variant="solid" />
-                    <Stack sx={{
-                      maxHeight: "100%",
-                      minWidth: "80vh",
-                    }}>
-                      <img
-                        src={result.src}
-                        alt=""
-                        style={{
-                          width: "100%",
-                          height: "auto"
-                        }}
-                      />
-                    </Stack>
-                  </ModalDialog>
-                </Modal>
-              </tr>
-            )
-          }}
-          renderListItemContent={(result) => {
-            const imagePreviewModal = useDisclose();
-
-            return (
-              <ListItemContent sx={{ display: "flex" }}>
-                <Image
-                  src={result.src}
-                  alt=""
-                  width={100}
-                  height={100}
-                  onClick={imagePreviewModal.open}
-                />
-                <Box sx={{ pl: 1 }}>
-                  <Typography level="h5" sx={{ fontSize: 14 }}>
-                    Questions
-                  </Typography>
-                  {result.questions.map(({ href, id }) => (
-                    <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1  }}>
-                      {id}
-                    </Link>
-                  ))}
-                </Box>
-
-                <Modal
-                  open={imagePreviewModal.isOpen}
-                  onClose={imagePreviewModal.close}
-                >
-                  <ModalDialog>
-                    <ModalClose variant="solid" />
-                    <Stack sx={{
-                      maxHeight: "100%",
-                      maxWidth: "100%",
-                    }}>
-                      <img
-                        src={result.src}
-                        alt=""
-                        style={{
-                          width: "100%",
-                          height: "auto"
-                        }}
-                      />
-                    </Stack>
-                  </ModalDialog>
-                </Modal>
-              </ListItemContent>
-            )
-          }}
+          renderTableRow={(result) => (
+            <AnnexSearchItem result={result} mobile={false} />
+          )}
+          renderListItemContent={(result) => (
+            <AnnexSearchItem result={result} mobile={true} />
+          )}
         />
       </Stack>
     );

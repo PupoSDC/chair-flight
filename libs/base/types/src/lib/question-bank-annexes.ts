@@ -8,14 +8,16 @@ import type {
 
 export type QuestionBankAnnexes = {
   id: AnnexId;
+  format: string;
+  href: string;
   description: string;
   questions: QuestionId[];
-  subjects: SubjectId[]
+  subjects: SubjectId[];
   variants: QuestionVariantId[];
   learningObjectives: LearningObjectiveId[];
 };
 
 export type QuestionBankAnnexesJson = Pick<
   QuestionBankAnnexes,
-  "id" | "description" | "subjects"
+  "id" | "description" | "format"
 >;

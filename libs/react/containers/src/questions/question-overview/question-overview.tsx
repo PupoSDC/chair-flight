@@ -61,7 +61,7 @@ type Params = {
   questionId: QuestionTemplateId;
 };
 
-type Data = AppRouterOutput["questionBank"]["getQuestion"];
+type Data = AppRouterOutput["questionBank"]["getQuestionOverview"];
 
 const shuffle = getRandomShuffler("123");
 
@@ -82,11 +82,14 @@ export const QuestionOverview = container<Props, Params, Data>(
     const [currentAnnex, setCurrentAnnex] = useState<string>();
     const [selectedStatus, setSelectedStatus] = useState<Status>("in-progress");
     const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
-    const questionData = QuestionOverview.useData({ questionBank, questionId });
+    const questionOverview = QuestionOverview.useData({
+      questionBank,
+      questionId,
+    });
 
-    const questionTemplate = questionData.questionTemplate;
-    const allVariantsMap = questionData.questionTemplate.variants;
-    const learningObjectives = questionData.learningObjectives;
+    const questionTemplate = questionOverview.template;
+    const allVariantsMap = questionOverview.template.variants;
+    const learningObjectives = questionOverview.learningObjectives;
     const allVariantsArray = Object.values(allVariantsMap);
     const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
     const externalReferences = variant.externalIds;
@@ -206,7 +209,9 @@ export const QuestionOverview = container<Props, Params, Data>(
               setSelectedOption(optionId);
               setSelectedStatus("show-result");
             }}
-            annexes={question.annexes}
+            annexUrls={question.annexes.map(
+              (a) => questionOverview.annexes[a].href,
+            )}
             onAnnexClicked={(annex) => setCurrentAnnex(annex)}
           />
           <ImageViewer
@@ -337,7 +342,7 @@ QuestionOverview.displayName = "QuestionOverview";
 
 QuestionOverview.getData = async ({ helper, params }) => {
   const { questionId, questionBank } = params;
-  return await helper.questionBank.getQuestion.fetch({
+  return await helper.questionBank.getQuestionOverview.fetch({
     questionBank,
     questionId,
   });
@@ -345,7 +350,7 @@ QuestionOverview.getData = async ({ helper, params }) => {
 
 QuestionOverview.useData = (params) => {
   const { questionId, questionBank } = params;
-  return trpc.questionBank.getQuestion.useSuspenseQuery({
+  return trpc.questionBank.getQuestionOverview.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];

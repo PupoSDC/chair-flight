@@ -9,6 +9,7 @@ import {
   questionEditSchema,
 } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
+import type { AnnexId } from "@chair-flight/base/types";
 
 export const questionBankRouter = router({
   getConfig: publicProcedure
@@ -30,19 +31,38 @@ export const questionBankRouter = router({
       const subjects = await qb.getAll("subjects");
       return { subjects };
     }),
-  getQuestion: publicProcedure
+  getQuestionOverview: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))
     .query(async ({ input }) => {
       const id = input.questionId;
       const qb = questionBanks[input.questionBank];
-      const questionTemplate = await qb.getOne("questions", id);
-      const loIds = questionTemplate.learningObjectives;
+      const template = await qb.getOne("questions", id);
+      const loIds = template.learningObjectives;
+      const annexIds = Object.values(template.variants).flatMap(
+        (v) => v.annexes,
+      );
+      const rawAnnexes = await qb.getSome("annexes", annexIds);
       const rawLos = await qb.getSome("learningObjectives", loIds);
+      const editLink = `/modules/${questionBank}/questions/${id}/edit`;
+
+      const annexes = rawAnnexes.reduce(
+        (sum, annex) => {
+          sum[annex.id] = {
+            id: annex.id,
+            href: annex.href,
+          };
+          return sum;
+        },
+        {} as Record<AnnexId, { id: string; href: string }>,
+      );
+
       const learningObjectives = rawLos.map((lo) => ({
-        ...lo,
-        href: `modules/${questionBank}/learning-objectives/${lo.id}`,
+        id: lo.id,
+        text: lo.text,
+        href: `/modules/${questionBank}/learning-objectives/${lo.id}`,
       }));
-      return { questionTemplate, learningObjectives };
+
+      return { template, annexes, learningObjectives, editLink };
     }),
   getQuestionFromGithub: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))

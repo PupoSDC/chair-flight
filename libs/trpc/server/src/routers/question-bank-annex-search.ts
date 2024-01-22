@@ -1,4 +1,3 @@
-
 import { z } from "zod";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
@@ -16,10 +15,10 @@ export const questionBankAnnexSearchRouter = router({
       }),
     )
     .query(async ({ input }) => {
-      const { questionBank, subject, learningObjectives, limit, cursor } = input;
+      const { questionBank, subject, learningObjectives, limit, cursor } =
+        input;
       const qb = questionBanks[questionBank];
       const annexes = await qb.getAll("annexes");
-      const folder = `/content/content-question-bank-${questionBank}/annexes`;
 
       const processedResults = annexes.filter((r) => {
         if (!r) return false;
@@ -37,16 +36,15 @@ export const questionBankAnnexSearchRouter = router({
         .slice(cursor, cursor + limit)
         .map((annex) => ({
           ...annex,
-          src: `${folder}/${annex.id}.jpg`,
           questions: annex.questions.map((id) => ({
             id,
-            href: `/modules/${questionBank}/questions/${id}`
+            href: `/modules/${questionBank}/questions/${id}`,
           })),
           learningObjectives: annex.learningObjectives.map((id) => ({
             id,
-            href: `/modules/${questionBank}/learning-objectives/${id}`
-          }))
-        }))
+            href: `/modules/${questionBank}/learning-objectives/${id}`,
+          })),
+        }));
 
       return {
         items: finalItems,

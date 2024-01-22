@@ -6,7 +6,7 @@ import {
   readAllCoursesFromFs,
   readAllFlashcardsFromFs,
   readAllLearningObjectivesFromFs,
-  readAllMediaFromFs,
+  readAllAnnexesFromFs,
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
 } from "../common/parse-question-bank";
@@ -19,7 +19,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     projectName,
     questionsFolder,
     flashCardsFolder,
-    annexesFolder,
+    annexesImagesFolder,
     annexesJson,
     losJson,
     coursesJson,
@@ -27,6 +27,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     outputDir,
     outputQuestionsJson,
     outputAnnexesDir,
+    outputAnnexesRelativeDir,
     outputAnnexesJson,
     outputSubjectsJson,
     outputCoursesJson,
@@ -41,8 +42,11 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const learningObjectives = await readAllLearningObjectivesFromFs({ losJson });
   const courses = await readAllCoursesFromFs({ coursesJson });
   const subjects = await readAllSubjectsFromFs({ subjectsJson });
-  const annexes = await readAllMediaFromFs({ annexesJson });
   const flashcards = await readAllFlashcardsFromFs({ flashCardsFolder });
+  const annexes = await readAllAnnexesFromFs({
+    annexesJson,
+    outputAnnexesRelativeDir,
+  });
 
   connectQuestionBank({
     questions,
@@ -85,7 +89,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       JSON.stringify(flashcards),
     ),
     fs.cp(
-      path.join(process.cwd(), annexesFolder),
+      path.join(process.cwd(), annexesImagesFolder),
       path.join(process.cwd(), outputAnnexesDir),
       { recursive: true },
     ),

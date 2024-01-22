@@ -3,7 +3,7 @@ import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, AnnexSearch } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
-import type { Breadcrumbs, } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
@@ -31,7 +31,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
     await LayoutModule.getData({ helper, params });
-    await AnnexSearch.getData({ helper, params })
+    await AnnexSearch.getData({ helper, params });
     return { props: params };
   },
   fs,

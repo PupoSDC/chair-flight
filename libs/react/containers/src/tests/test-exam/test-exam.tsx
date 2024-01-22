@@ -161,7 +161,7 @@ export const TestExam = container<Props>(
             optionId: opt.id,
             text: opt.text,
           }))}
-          annexes={question.annexes}
+          annexUrls={question.annexes}
           onAnnexClicked={(annex) => setCurrentAnnex(annex)}
         />
         <ImageViewer
