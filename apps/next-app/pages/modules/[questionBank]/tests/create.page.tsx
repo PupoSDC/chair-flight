@@ -30,7 +30,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
       <TestMaker
         noSsr
         questionBank={questionBank}
-        sx={{ height: "100%", overflow: "hidden" }}
+        sx={{ height: "100%", maxWidth: "md", mx: "auto" }}
         onSuccessfulTestCreation={async (test) =>
           router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
         }
