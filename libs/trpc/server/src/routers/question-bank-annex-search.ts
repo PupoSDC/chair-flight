@@ -37,7 +37,15 @@ export const questionBankAnnexSearchRouter = router({
         .slice(cursor, cursor + limit)
         .map((annex) => ({
           ...annex,
-          src: `${folder}/${annex.id}.jpg`
+          src: `${folder}/${annex.id}.jpg`,
+          questions: annex.questions.map((id) => ({
+            id,
+            href: `/modules/${questionBank}/questions/${id}`
+          })),
+          learningObjectives: annex.learningObjectives.map((id) => ({
+            id,
+            href: `/modules/${questionBank}/learning-objectives/${id}`
+          }))
         }))
 
       return {

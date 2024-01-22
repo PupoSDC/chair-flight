@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FormProvider } from "react-hook-form";
 import { default as Image } from "next/image";
-import { Select, Stack, Option, selectClasses, Box } from "@mui/joy";
+import { Select, Stack, Option, selectClasses, Box, Modal, ModalDialog, ModalClose, Link, ListItemContent, Typography } from "@mui/joy";
 import {
   SearchQuery,
   HookFormSelect,
   SearchFilters,
   SearchList,
+  useDisclose,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -104,36 +105,117 @@ export const AnnexSearch = container<Props, Params, Data>(
           sx={{ flex: 1, overflow: "hidden" }}
           renderThead={() => (
             <thead>
-            <tr>
-              <th style={{ width: 280 }}>Image</th>
-              <th>ID</th>
-       
-              <th style={{ width: "12em" }}>Subjects</th>
-              <th style={{ width: "12em" }}>Learning Objectives</th>
-
-            </tr>
-          </thead>
+              <tr>
+                <th style={{ width: 300 }}>Image</th>
+                <th style={{ width: 100 }}>Subjects</th>
+                <th style={{  }}>Learning Objectives</th>
+                <th style={{  }}>Questions</th>
+              </tr>
+            </thead>
           )}
-          renderTableRow={(result) => (
-            <tr key={result.id}>
-                            <Box component="td" sx={{ height: "200px !important" }}>
-                <Image 
-                  src={result.src} 
-                  alt="" 
-                  width={200} 
-                  height={200} 
-                  style={{ width: 'auto', maxWidth: 270, height: '100%' }}
+          renderTableRow={(result) => {
+            const imagePreviewModal = useDisclose();
+            return (
+              <tr key={result.id}>
+                <Box component="td" sx={{ height: "200px !important" }}>
+                  <Image
+                    onClick={imagePreviewModal.open}
+                    src={result.src}
+                    alt=""
+                    width={200}
+                    height={200}
+                    style={{ width: 'auto', maxWidth: 270, height: '100%' }}
+                  />
+                  <Box component="b" sx={{ fontSize: 12 }}>{result.id}</Box>
+                </Box>
+                <td>
+                  {result.subjects.join(", ")}
+                </td>
+                <td>
+                  {result.learningObjectives.map(({ href, id }) => (
+                    <Link href={href} key={id} sx={{ display: "block" }}>
+                      {id}
+                    </Link>
+                  ))}
+                </td>
+                <td>
+                  {result.questions.map(({ href, id }) => (
+                    <Link href={href} key={id} sx={{ display: "block" }}>
+                      {id}
+                    </Link>
+                  ))}
+                </td>
+                <Modal
+                  open={imagePreviewModal.isOpen}
+                  onClose={imagePreviewModal.close}
+                >
+                  <ModalDialog>
+                    <ModalClose variant="solid" />
+                    <Stack sx={{
+                      maxHeight: "100%",
+                      minWidth: "80vh",
+                    }}>
+                      <img
+                        src={result.src}
+                        alt=""
+                        style={{
+                          width: "100%",
+                          height: "auto"
+                        }}
+                      />
+                    </Stack>
+                  </ModalDialog>
+                </Modal>
+              </tr>
+            )
+          }}
+          renderListItemContent={(result) => {
+            const imagePreviewModal = useDisclose();
+
+            return (
+              <ListItemContent sx={{ display: "flex" }}>
+                <Image
+                  src={result.src}
+                  alt=""
+                  width={100}
+                  height={100}
+                  onClick={imagePreviewModal.open}
                 />
-              </Box>
-              <td>
-                {result.id}
-              </td>
+                <Box sx={{ pl: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: 14 }}>
+                    Questions
+                  </Typography>
+                  {result.questions.map(({ href, id }) => (
+                    <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1  }}>
+                      {id}
+                    </Link>
+                  ))}
+                </Box>
 
-              <td />
-              <td />
-            </tr>
-          )}
-          renderListItemContent={() => (<></>)}
+                <Modal
+                  open={imagePreviewModal.isOpen}
+                  onClose={imagePreviewModal.close}
+                >
+                  <ModalDialog>
+                    <ModalClose variant="solid" />
+                    <Stack sx={{
+                      maxHeight: "100%",
+                      maxWidth: "100%",
+                    }}>
+                      <img
+                        src={result.src}
+                        alt=""
+                        style={{
+                          width: "100%",
+                          height: "auto"
+                        }}
+                      />
+                    </Stack>
+                  </ModalDialog>
+                </Modal>
+              </ListItemContent>
+            )
+          }}
         />
       </Stack>
     );
