@@ -21,6 +21,7 @@ import {
   SearchHeader,
   SearchList,
   SearchQuery,
+  Ups,
   useDisclose,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
@@ -48,17 +49,38 @@ const AnnexSearchItem: FunctionComponent<{
   result: SearchResult;
 }> = ({ result, mobile }) => {
   const imagePreviewModal = useDisclose();
+  const [error, setError] = useState(false);
   return (
     <>
       {mobile ? (
         <ListItemContent sx={{ display: "flex" }}>
-          <Image
-            src={result.href}
-            alt=""
-            width={100}
-            height={100}
-            onClick={imagePreviewModal.open}
-          />
+          {error ? (
+            <Ups
+              sx={{
+                flex: "initial",
+                width: 100,
+                height: 100,
+                minHeight: 0,
+                "& svg": {
+                  width: 50,
+                  height: 50,
+                },
+                "& h3": {
+                  fontSize: "14px",
+                },
+              }}
+              message="Not Found"
+            />
+          ) : (
+            <Image
+              src={result.href}
+              alt=""
+              width={100}
+              height={100}
+              onClick={imagePreviewModal.open}
+              onError={() => setError(true)}
+            />
+          )}
           <Box sx={{ pl: 1 }}>
             <Typography level="h5" sx={{ fontSize: 14 }}>
               Questions
@@ -73,14 +95,34 @@ const AnnexSearchItem: FunctionComponent<{
       ) : (
         <tr>
           <Box component="td" sx={{ height: "200px !important" }}>
-            <Image
-              onClick={imagePreviewModal.open}
-              src={result.href}
-              alt=""
-              width={200}
-              height={200}
-              style={{ width: "auto", maxWidth: 270, height: "100%" }}
-            />
+            {error ? (
+              <Ups
+                sx={{
+                  flex: "initial",
+                  width: 200,
+                  height: 200,
+                  minHeight: 0,
+                  "& svg": {
+                    width: 100,
+                    height: 100,
+                  },
+                  "& h3": {
+                    fontSize: "18px",
+                  },
+                }}
+                message="Not Found"
+              />
+            ) : (
+              <Image
+                onClick={imagePreviewModal.open}
+                src={result.href}
+                alt=""
+                width={200}
+                height={200}
+                style={{ width: "auto", maxWidth: 270, height: "100%" }}
+                onError={() => setError(true)}
+              />
+            )}
             <Box component="b" sx={{ fontSize: 12 }}>
               {result.id}
             </Box>

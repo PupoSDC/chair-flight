@@ -49,11 +49,11 @@ const populateSearchIndex = async (bank: QuestionBankName): Promise<void> => {
       subjects: annex.subjects,
       questions: annex.questions.map((id) => ({
         id,
-        href: `/modules/${questionBank}/questions/${id}`,
+        href: `/modules/${bank}/questions/${id}`,
       })),
       learningObjectives: annex.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${questionBank}/learning-objectives/${id}`,
+        href: `/modules/${bank}/learning-objectives/${id}`,
       })),
     }));
 
