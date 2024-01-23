@@ -18,7 +18,7 @@ describe("SearchQuery", () => {
     const onChange = vi.fn();
     render(<SearchQuery onChange={onChange} value={""} />);
     const input = screen.getByRole("search");
-    await userEvent.type(input, "123", { delay: 300 });
+    await userEvent.type(input, "123", { delay: 400 });
 
     await waitFor(() => {
       expect(onChange).toHaveBeenCalledTimes(3);
