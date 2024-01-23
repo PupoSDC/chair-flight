@@ -15,6 +15,8 @@ import {
   Typography,
 } from "@mui/joy";
 import { z } from "zod";
+import type {
+  SearchListProps} from "@chair-flight/react/components";
 import {
   HookFormSelect,
   SearchFilters,
@@ -33,6 +35,7 @@ import type { FunctionComponent } from "react";
 
 type Props = {
   questionBank: QuestionBankName;
+  forceMode?: SearchListProps<{ id: string }>["forceMode"];
 };
 
 type Params = {
@@ -86,6 +89,14 @@ const AnnexSearchItem: FunctionComponent<{
               Questions
             </Typography>
             {result.questions.map(({ href, id }) => (
+              <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
+                {id}
+              </Link>
+            ))}
+            <Typography level="h5" sx={{ fontSize: 14 }}>
+              Learning OBjectives
+            </Typography>
+            {result.learningObjectives.map(({ href, id }) => (
               <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
                 {id}
               </Link>
@@ -183,7 +194,7 @@ const useSearchPersistence = {
 };
 
 export const AnnexSearch = container<Props, Params, Data>(
-  ({ sx, component = "section", questionBank }) => {
+  ({ sx, component = "section", questionBank, forceMode }) => {
     const [search, setSearch] = useState("");
     const { getData, setData } = useSearchPersistence[questionBank]();
     const serverData = AnnexSearch.useData({ questionBank });
@@ -231,6 +242,7 @@ export const AnnexSearch = container<Props, Params, Data>(
         </SearchHeader>
 
         <SearchList
+          forceMode={forceMode}
           loading={isLoading}
           error={isError}
           items={(data?.pages ?? []).flatMap((p) => p.items)}
