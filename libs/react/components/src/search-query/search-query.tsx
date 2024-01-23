@@ -39,7 +39,7 @@ export const SearchQuery = forwardRef<HTMLInputElement, SearchQueryProps>(
         if (search === value) return;
         const timer = setTimeout(() => {
           onChange(search);
-        }, 200);
+        }, 350);
         return () => {
           clearTimeout(timer);
         };

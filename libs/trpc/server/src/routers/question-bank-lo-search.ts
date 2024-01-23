@@ -88,6 +88,7 @@ export const questionBankLoSearchRouter = router({
         id: c.id,
         text: c.text,
       }));
+      courses.unshift({ id: "all", text: "All Courses" });
 
       const searchFields: Array<{ id: SearchField | "all"; text: string }> = [
         { id: "all", text: "All Fields" },
