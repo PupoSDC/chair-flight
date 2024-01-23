@@ -16,10 +16,12 @@ export type NewTestConfiguration = {
   mode: "study" | "exam";
   questionBank: QuestionBankName;
   subject: string;
+
   numberOfQuestions: number;
   learningObjectiveIds: string[];
   seed?: string;
   title?: string;
+  sortQuestionsByChapter?: boolean;
 };
 
 export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> =
@@ -31,6 +33,7 @@ export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> =
     numberOfQuestions: z.number().min(1).max(200),
     seed: z.string().optional(),
     title: z.string().optional(),
+    sortQuestionsByChapter: z.boolean().optional(),
   });
 
 export const createTest = async ({

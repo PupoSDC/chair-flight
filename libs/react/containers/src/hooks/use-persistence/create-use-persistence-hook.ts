@@ -3,9 +3,9 @@ import { devtools, persist } from "zustand/middleware";
 import type { QuestionBankName } from "@chair-flight/base/types";
 
 type PersistenceHook<T> = {
-  data: T | undefined;
+  data: T;
   setData: (data: T) => void;
-  getData: () => T | undefined;
+  getData: () => T;
 };
 
 export type PersistenceKey =
@@ -14,7 +14,8 @@ export type PersistenceKey =
   | `cf-test-search-${QuestionBankName}`
   | `cf-learning-objectives-search-${QuestionBankName}`
   | `cf-test-maker-${QuestionBankName}`
-  | `cf-test-progress`;
+  | `cf-test-progress`
+  | `cf-user-preferences`;
 
 export const createUsePersistenceHook = <T>(
   name: PersistenceKey,
@@ -36,6 +37,7 @@ export const createUsePersistenceHook = <T>(
   );
 
   return () => ({
+    data: useZustand((state) => ({ ...initialValue, ...state.data })),
     getData: useZustand((state) => state.getData),
     setData: useZustand((state) => state.setData),
   });

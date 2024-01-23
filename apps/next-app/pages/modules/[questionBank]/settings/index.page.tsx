@@ -22,7 +22,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
   ] as Breadcrumbs;
 
   return (
-    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} fixedHeight>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead />
       <UserSettings />
     </LayoutModule>
