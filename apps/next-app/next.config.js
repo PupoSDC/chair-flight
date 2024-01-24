@@ -1,19 +1,8 @@
+const enableAnalyze = rocess.env.ANALYZE === "true"
+
 const { withNx } = require("@nx/next/plugins/with-nx");
 const makeBundleAnalyzer = require("@next/bundle-analyzer");
-const makeMdxParser = require("@next/mdx");
-
-const withBundleAnalyzer = makeBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
-
-const withMdx = makeMdxParser({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    providerImportSource: "@mdx-js/react",
-  },
-});
+const withBundleAnalyzer = makeBundleAnalyzer({ enabled: enableAnalyze});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,7 +12,7 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
-  pageExtensions: ["page.tsx", "api.ts", "page.mdx"],
+  pageExtensions: ["page.tsx", "api.ts"],
   async rewrites() {
     const aboutUsRewrite = [
       {
