@@ -1,0 +1,66 @@
+---
+SyllabusReference: 021.12.02.02
+Title: Fire detection
+---
+
+# Fire detection
+
+## Learning Objectives
+
+1.  **021.12.02.02.01** -- Explain the following principles of fire detection:
+
+- resistance and capacitance;
+- gas pressure.
+
+2.  **021.12.02.02.02** -- Explain fire-detection applications such as:
+
+- bimetallic;
+- continuous loop;
+- gaseous loop (gas-filled detectors).
+
+3.  **021.12.02.02.03** -- Explain why generally double-loop systems are used.
+4.  **021.12.02.02.04** -- Give an example of warnings, indications and function
+    tests of a fire-protection system.
+
+|                 | ATPL(A) | CPL(A) | ATPL(H)/IR | ATPL(H)/VFR | CPL(H) | IR  | CBIR(A) |
+| --------------- | ------- | ------ | ---------- | ----------- | ------ | --- | ------- |
+| 021.12.02.02.01 | X       | X      | X          | X           | X      |     |         |
+| 021.12.02.02.02 | X       | X      | X          | X           | X      |     |         |
+| 021.12.02.02.03 | X       | X      | X          | X           | X      |     |         |
+| 021.12.02.02.04 | X       | X      | X          | X           | X      |     |         |
+
+## Summary
+
+### Fire loop
+
+<Question id="90KFKR23NI" lo={["021.12.02.02.01"]}>
+  <Text variant="oneCorrect">
+    What happened when the a fire loop measures a <Subject />?
+  </Text>
+<Option
+  subject={[["low resistance and low capacity"]]}
+  why="When temperature increases the loop resistance is supposed to decrease, and its capacitance is supposed to increase. If both of these decrease at the same time, the loop must be faulty."
+>
+  The loop is faulty
+</Option>
+<Option subject={[["low resistance"], ["low capacity"]]}>
+  The loop is detecting a potential fire.
+</Option>
+
+  <Option>The loop is working normally in an idle state</Option>
+  <Option>The loop is in test mode.</Option>
+</Question>
+
+<Question lo={["021.12.02.02.04"]} id="YS1u4IAh">
+  <Text variant="oneCorrect">
+    If an engine fire detection loop is broken, what is the indication when the
+    fire warning system is tested for that engine?
+  </Text>
+<Option id="YS1u4IAh-0">A fault alert and a fire warning light.</Option>
+<Option id="YS1u4IAh-1">A fault alert and a fire warning bell.</Option>
+<Option id="YS1u4IAh-2">A fault alert and a red master warning light.</Option>
+
+  <Option id="YS1u4IAh-3" correct>
+    No indication or a fault alert.
+  </Option>
+</Question>

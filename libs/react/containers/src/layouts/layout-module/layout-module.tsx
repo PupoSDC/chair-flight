@@ -129,6 +129,14 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Questions"}
             />
           )}
+          {data.hasQuestions && (
+            <SidebarListItem
+              href={`/modules/${questionBank}/docs`}
+              selected={isQuestions}
+              icon={QuestionsIcon}
+              title={"Docs"}
+            />
+          )}
           {data.hasLearningObjectives && (
             <SidebarListItem
               href={`/modules/${questionBank}/learning-objectives`}
