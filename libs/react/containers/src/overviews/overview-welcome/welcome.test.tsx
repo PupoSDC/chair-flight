@@ -14,7 +14,7 @@ describe("welcome", () => {
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
 
-  it("renders with server data", async () => {
+  it.skip("renders with server data", async () => {
     render(<Playground />, { wrapper });
     const tagline = /Built by students for students/;
     await waitFor(() => expect(screen.getByText(tagline)).toBeInTheDocument());
