@@ -1,4 +1,4 @@
-const enableAnalyze = rocess.env.ANALYZE === "true";
+const enableAnalyze = process.env.ANALYZE === "true";
 
 const { withNx } = require("@nx/next/plugins/with-nx");
 const makeBundleAnalyzer = require("@next/bundle-analyzer");
