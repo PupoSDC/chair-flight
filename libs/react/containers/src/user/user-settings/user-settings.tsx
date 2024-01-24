@@ -8,7 +8,6 @@ import {
   formLabelClasses,
   styled,
 } from "@mui/joy";
-import { ThemeButton } from "@chair-flight/react/components";
 import { container } from "../../wraper/container";
 import { useUserPreferences } from "../hooks/use-user-preferences";
 import type { FunctionComponent } from "react";
@@ -44,11 +43,6 @@ export const UserSettings = container(({ sx, component = "section" }) => {
     >
       <Typography level="h3">Theme Configuration</Typography>
       <Divider sx={{ mb: 1 }} />
-      <StyledFormControl>
-        <ThemeButton sx={{ fontSize: 16, minHeight: 16 }} />
-        <FormLabel>Toggle light/dark mode</FormLabel>
-      </StyledFormControl>
-
       <Typography level="h3" sx={{ mt: 1 }}>
         Exam/Tests Configuration
       </Typography>

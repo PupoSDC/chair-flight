@@ -32,10 +32,10 @@ import {
   MarkdownClient,
   QuestionMultipleChoice,
   QuestionNavigation,
-  ThemeButton,
   Ups,
   useMediaQuery,
 } from "@chair-flight/react/components";
+import { ThemeButton } from "../../layouts/components/app-buttons";
 import { container } from "../../wraper/container";
 import { TestError } from "../components/test-error";
 import { TestLoading } from "../components/test-loading";

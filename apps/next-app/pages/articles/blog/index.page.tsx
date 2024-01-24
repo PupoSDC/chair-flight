@@ -1,3 +1,4 @@
+import { useEffect, type FunctionComponent } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import {
   Card,
@@ -17,10 +18,9 @@ import {
   BackgroundFadedImage,
   BlogPostChip,
 } from "@chair-flight/react/components";
-import { LayoutPublic } from "@chair-flight/react/containers";
+import { LayoutPublic, useUserVoyage } from "@chair-flight/react/containers";
 import type { BlogPageMeta } from "./_blog-page.layout";
 import type { GetStaticProps } from "next";
-import type { FunctionComponent } from "react";
 
 export type ArticlesIndexPageProps = {
   blogPostsMeta: BlogPageMeta[];
@@ -29,6 +29,7 @@ export type ArticlesIndexPageProps = {
 export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
   blogPostsMeta,
 }) => {
+  useEffect(() => useUserVoyage.markBlogAsVisited, []);
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead linkDescription={dedent``} />

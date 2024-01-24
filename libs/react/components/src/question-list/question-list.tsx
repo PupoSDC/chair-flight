@@ -49,7 +49,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
           </thead>
         )}
         renderTableRow={(result) => (
-          <tr key={result.id}>
+          <tr>
             <td>
               <Link href={result.href} sx={{ display: "block" }}>
                 <Typography>{result.questionId}</Typography>

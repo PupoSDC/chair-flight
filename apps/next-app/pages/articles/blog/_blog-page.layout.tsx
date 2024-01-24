@@ -1,3 +1,8 @@
+import {
+  useEffect,
+  type FunctionComponent,
+  type PropsWithChildren,
+} from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Link, Divider, Typography } from "@mui/joy";
@@ -8,8 +13,8 @@ import {
   BlogPostChip,
 } from "@chair-flight/react/components";
 import { LayoutPublic } from "@chair-flight/react/containers";
+import { useUserVoyage } from "@chair-flight/react/containers";
 import type { BlogPostTag } from "@chair-flight/react/components";
-import type { FunctionComponent, PropsWithChildren } from "react";
 
 export type BlogPageMeta = {
   title: string;
@@ -30,6 +35,8 @@ export const BlogPageLayout: FunctionComponent<BlogPageLayoutProps> = ({
   meta,
   children,
 }) => {
+  useEffect(() => useUserVoyage.markBlogAsVisited, []);
+
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead

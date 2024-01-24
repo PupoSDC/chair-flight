@@ -15,7 +15,8 @@ export type PersistenceKey =
   | `cf-learning-objectives-search-${QuestionBankName}`
   | `cf-test-maker-${QuestionBankName}`
   | `cf-test-progress`
-  | `cf-user-preferences`;
+  | `cf-user-preferences`
+  | `cf-user-voyage`;
 
 export const createUsePersistenceHook = <T>(
   name: PersistenceKey,
@@ -28,8 +29,18 @@ export const createUsePersistenceHook = <T>(
         (set, get) => ({
           version,
           data: initialValue,
-          setData: (data: T) => set({ data }),
-          getData: () => ({ ...initialValue, ...get().data }),
+          setData: (data: T) =>
+            set({
+              data: {
+                ...initialValue,
+                ...get().data,
+                ...data,
+              },
+            }),
+          getData: () => ({
+            ...initialValue,
+            ...get().data,
+          }),
         }),
         { name, version },
       ),

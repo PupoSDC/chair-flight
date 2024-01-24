@@ -1,4 +1,5 @@
 import { analyticsRouter } from "../routers/analytics";
+import { blogRouter } from "../routers/blog";
 import { questionBankRouter } from "../routers/question-bank";
 import { questionBankAnnexSearchRouter } from "../routers/question-bank-annex-search";
 import { questionBankLoSearchRouter } from "../routers/question-bank-lo-search";
@@ -10,6 +11,7 @@ import { router } from "./trpc";
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 
 export const appRouter = router({
+  blog: blogRouter,
   analytics: analyticsRouter,
   status: statusRouter,
   questionBank: questionBankRouter,

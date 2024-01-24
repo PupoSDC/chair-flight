@@ -19,3 +19,4 @@ export * from "./tests/test-review";
 export * from "./tests/test-search";
 export * from "./tests/test-study";
 export * from "./user/user-settings";
+export * from "./user/hooks/use-user-voyage";
