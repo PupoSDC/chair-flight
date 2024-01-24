@@ -55,7 +55,7 @@ const nextConfig = {
   },
 };
 
-module.exports = [withMdx, withBundleAnalyzer, withNx].reduce(
+module.exports = [withBundleAnalyzer, withNx].reduce(
   (config, wrapper) => wrapper(config),
   nextConfig,
 );

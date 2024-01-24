@@ -1,3 +1,4 @@
+import { blog } from "@chair-flight/core/blog";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
@@ -11,6 +12,8 @@ import type {
   PreviewData,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
+
+const repositories = [...Object.values(questionBanks), blog];
 
 type FS = {
   readFile: (path: string, string: "utf-8") => Promise<string>;
@@ -32,9 +35,8 @@ export const staticHandler = <
   fs: FS,
 ): GetStaticProps<Props, Params, Preview> => {
   return async (context) => {
-    await Promise.all(
-      Object.values(questionBanks).map((qb) => qb.preloadForStaticRender(fs)),
-    );
+    await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));
+
     const helper = await getTrpcHelper();
 
     const handlerResponse = await handler({
@@ -67,9 +69,7 @@ export const staticPathsHandler = <
   fs: FS,
 ): GetStaticPaths<Params> => {
   return async (context) => {
-    await Promise.all(
-      Object.values(questionBanks).map((qb) => qb.preloadForStaticRender(fs)),
-    );
+    await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));
     const helper = await getTrpcHelper();
     return await handler({ context, helper });
   };
