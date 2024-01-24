@@ -5,6 +5,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
     items: [
       {
         id: "010.01",
+        href: "/modules/atpl/learning-objectives/010.01",
         parentId: "010",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "International Law:\n-  Conventions, Agreements And Organisations",
@@ -15,6 +16,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01",
+        href: "/modules/atpl/learning-objectives/010.01.01",
         parentId: "010.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "The Convention on International Civil Aviation (Chicago) - Icao Doc 7300/9 - Convention on the High Seas (Geneva, 29 April 1958)",
@@ -25,6 +27,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.01",
+        href: "/modules/atpl/learning-objectives/010.01.01.01",
         parentId: "010.01.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "The establishment of the Convention on International Civil Aviation, Chicago, 7 December 1944",
@@ -35,6 +38,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.01.01",
+        href: "/modules/atpl/learning-objectives/010.01.01.01.01",
         parentId: "010.01.01.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Explain the circumstances that led to the establishment of the Convention on International Civil Aviation, Chicago, 7 December 1944.",
@@ -45,6 +49,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.02",
+        href: "/modules/atpl/learning-objectives/010.01.01.02",
         parentId: "010.01.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Part I - Air navigation",
@@ -55,6 +60,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.02.01",
+        href: "/modules/atpl/learning-objectives/010.01.01.02.01",
         parentId: "010.01.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Recall the general contents of relevant parts of the following chapters:\n-  general principles and application of the Convention;\n-  flight over territory of Contracting States;\n-  nationality of aircraft;\n-  international standards and recommended practices (SARPs), especially notification of differences and validity of endorsed certificates and licences.",
@@ -66,6 +72,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.02.02",
+        href: "/modules/atpl/learning-objectives/010.01.01.02.02",
         parentId: "010.01.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "General principles - Describe the application of the following terms in civil aviation:\n-  sovereignty;\n-  territory and high seas according to the Un Convention on the High Seas. ",
@@ -77,6 +84,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.02.03",
+        href: "/modules/atpl/learning-objectives/010.01.01.02.03",
         parentId: "010.01.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Explain the following terms and how they apply to international air traffic:\n-  right of non-scheduled flight (including the two technical freedoms of the air);\n-  scheduled air services;\n-  cabotage;\n-  landing at customs airports;\n-  Rules of the Air;\n-  search of aircraft.",
@@ -87,6 +95,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.02.04",
+        href: "/modules/atpl/learning-objectives/010.01.01.02.04",
         parentId: "010.01.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Explain the duties of Contracting States in relation to:\n-  documents carried on board the aircraft:\n-  certificate of registration;\n-  certificates of airworthiness;\n-  licences of personnel;\n-  recognition of certificates and licences;\n-  cargo restrictions;\n-  photographic apparatus.",
@@ -97,6 +106,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.03",
+        href: "/modules/atpl/learning-objectives/010.01.01.03",
         parentId: "010.01.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Part Ii - The International Civil Aviation Organization (Icao)",
@@ -107,6 +117,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.03.01",
+        href: "/modules/atpl/learning-objectives/010.01.01.03.01",
         parentId: "010.01.01.03",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Describe the objectives of Icao.",
@@ -117,6 +128,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.03.02",
+        href: "/modules/atpl/learning-objectives/010.01.01.03.02",
         parentId: "010.01.01.03",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Recognise the organisation and duties of the Icao Assembly, Council and Air Navigation Commission (Anc).",
@@ -127,6 +139,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.01.03.03",
+        href: "/modules/atpl/learning-objectives/010.01.01.03.03",
         parentId: "010.01.01.03",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Describe the annexes to the Convention.",
@@ -137,6 +150,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02",
+        href: "/modules/atpl/learning-objectives/010.01.02",
         parentId: "010.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Other conventions and agreements",
@@ -147,6 +161,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.01",
+        href: "/modules/atpl/learning-objectives/010.01.02.01",
         parentId: "010.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "The International Air Services Transit Agreement (Icao Doc 7500)",
@@ -157,6 +172,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.01.01",
+        href: "/modules/atpl/learning-objectives/010.01.02.01.01",
         parentId: "010.01.02.01",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Explain the two technical freedoms of the air.",
@@ -167,6 +183,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.02",
+        href: "/modules/atpl/learning-objectives/010.01.02.02",
         parentId: "010.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "The International Air Transport Agreement (Icao Doc 9626)",
@@ -177,6 +194,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.02.01",
+        href: "/modules/atpl/learning-objectives/010.01.02.02.01",
         parentId: "010.01.02.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Explain the three commercial freedoms of the air.",
@@ -187,6 +205,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.03",
+        href: "/modules/atpl/learning-objectives/010.01.02.03",
         parentId: "010.01.02",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Suppression of Unlawful Acts Against the Safety of Civil Aviation - The Tokyo Convention of 1963",
@@ -197,6 +216,7 @@ export const questionBankLoSearchSearchLearningObjectivesMock: AppRouterOutput["
       },
       {
         id: "010.01.02.03.01",
+        href: "/modules/atpl/learning-objectives/010.01.02.03.01",
         parentId: "010.01.02.03",
         courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
         text: "Describe the measures and actions to be taken by the pilot-in-command (Pic) of an aircraft in order to suppress unlawful acts against the safety of the aircraft.",

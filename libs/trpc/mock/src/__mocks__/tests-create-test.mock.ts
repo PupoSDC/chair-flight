@@ -2,1005 +2,594 @@ import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 export const testsCreateTestMock: AppRouterOutput["tests"]["createTest"] = {
   test: {
-    id: "PlfjmvaR",
+    id: "NhD1zJoH",
     questionBank: "atpl",
-    title: "010 study",
-    status: "finished",
-    mode: "study",
-    currentQuestionIndex: 19,
-    timeSpentInMs: 199026,
+    title: "010 exam",
+    status: "created",
+    mode: "exam",
+    currentQuestionIndex: 0,
+    timeSpentInMs: 0,
     durationInMs: 2400000,
     questions: [
       {
-        questionId: "7Sb6wMCE",
-        templateId: "Q7KSH158SR",
-        variantId: "EQ8LhYcg",
-        seed: "3xiPxtXm",
+        questionId: "sckMrBAB",
+        templateId: "Q8AXUNQDBX",
+        variantId: "kkla4xXI",
+        seed: "8U1UHilC",
+        type: "multiple-choice",
+        question: "Why must the airline issue a ticket?",
+        annexes: [],
+        correctOptionId: "A6FCYE7AVH",
+        options: [
+          {
+            id: "AJ28YTB5XP",
+            text: "To document that a flight has been made.",
+            why: "",
+          },
+          {
+            id: "A0N2IBSLP4",
+            text: "Official identification documents of the pax.",
+            why: "",
+          },
+          {
+            id: "ALYWTIBGYC",
+            text: "To ensure that, if the passenger fails to attend the flight, he/she has the right to board another flight. ",
+            why: "",
+          },
+          {
+            id: "A6FCYE7AVH",
+            text: "To establish a contract.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "LGfwOfBA",
+        templateId: "Q9RR7AV8HO",
+        variantId: "yBd8kDSD",
+        seed: "EvjckWVC",
         type: "multiple-choice",
         question:
-          'If the crew on an arriving aircraft approaching a controlled aerodrome will report "field in sight", a clearance for "visual approach" may be given under certain conditions:',
+          "According to SERA, the appropriate course of action for a VFR flight, operated as a controlled flight within a CTR, if the weather deteriorates below VMC is:",
         annexes: [],
-        correctOptionId: "APCOYEC81S",
+        correctOptionId: "AKTR16UYDZ",
         options: [
           {
-            id: "APCOYEC81S",
-            text: "The air traffic controller will provide separation to other controlled traffic.",
-
+            id: "AAS2BK57R4",
+            text: "To continue in accordance with the current ATC flight plan.",
             why: "",
           },
           {
-            id: "A49QDRS5HZ",
-            text: "The meteorological visibility must not be less than 8 km.",
-
+            id: "A13WLHSQJI",
+            text: "To proceed in IMC, notifying ATC.",
             why: "",
           },
           {
-            id: "A6SA8WR64W",
-            text: "The approach must be passing the FAF.",
-
+            id: "AIXEW1CA93",
+            text: "To descend to the Minimum Sector Altitude.",
             why: "",
           },
           {
-            id: "AWPU1GV86R",
-            text: "Continued approach will be according to VFR.",
-
+            id: "AKTR16UYDZ",
+            text: "To request authorisation to operate as a special VFR flight.",
             why: "",
           },
         ],
         explanation: "",
-        selectedOptionId: "APCOYEC81S",
       },
       {
-        questionId: "x6hQbble",
-        templateId: "QTJY91K6H7",
-        variantId: "ixQgwBv4",
-        seed: "3xiPxtXm",
+        questionId: "PdfV3Fvy",
+        templateId: "Q7JS9FCTF3",
+        variantId: "VrOXl9Xr",
+        seed: "1RCaM8oH",
         type: "multiple-choice",
         question:
-          "Rescue and fire-fighting (emergency) services provision is categorized according to physical characteristics of the type of aeroplane using the aerodrome\nThis classification is based upon",
+          "Which of the following Annexes to the Chicago convention contains minimum specifications for a crew license to have international validity?",
         annexes: [],
-        correctOptionId: "AGJ5LLU7LA",
+        correctOptionId: "ATKPORZ6ZL",
         options: [
           {
-            id: "AGJ5LLU7LA",
-            text: "aeroplane overall length and fuselage width.",
-
+            id: "A08AYPQ1I7",
+            text: "Annex 2.",
             why: "",
           },
           {
-            id: "ADOBBDVHKO",
-            text: "Maximum Landing Mass and maximum number of passengers.",
-
+            id: "AR11NUYT55",
+            text: "Annex 4.",
             why: "",
           },
           {
-            id: "AWORDABZ5S",
-            text: "maximum number of passengers and crew.",
-
+            id: "ACEROINNC8",
+            text: "Annex 3.",
             why: "",
           },
           {
-            id: "AIW6YI5RHK",
-            text: "aeroplane length and Maximum Take-off Mass.",
-
+            id: "ATKPORZ6ZL",
+            text: "Annex 1.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "ZbflNDeu",
-        templateId: "QBVYY4C938",
-        variantId: "7c3DGfKz",
-        seed: "3xiPxtXm",
+        questionId: "CHoKZR2Q",
+        templateId: "QWSNNI6TBN",
+        variantId: "j8ziCBmy",
+        seed: "Ju1lfMi0",
+        type: "multiple-choice",
+        question: "Which colour shall be used on flags to mark objects?",
+        annexes: [],
+        correctOptionId: "ABUFTZP5WM",
+        options: [
+          {
+            id: "A323D68T31",
+            text: "Blue",
+            why: "",
+          },
+          {
+            id: "ARFR6TPKNQ",
+            text: "Yellow",
+            why: "",
+          },
+          {
+            id: "AZO3F4TYBM",
+            text: "White",
+            why: "",
+          },
+          {
+            id: "ABUFTZP5WM",
+            text: "Orange",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "fDZ30yY8",
+        templateId: "QX6ZNAXU83",
+        variantId: "K4rxhvxo",
+        seed: "2NF9Yl4f",
         type: "multiple-choice",
         question:
-          "A pattern 'B' runway-holding position marking at an intersection of a taxiway and a precision approach RWY shall be supplemented",
+          "According to EASA AIRCREW regulation, licence holders do not exercise the privileges of their licences, related ratings or authorizations at any time when they are aware of any decrease in their medical fitness which might render them unable to safely exercise those privileges. They shall without undue delay seek the advice of the AME when have been admitted to hospital or medical clinic for:",
         annexes: [],
-        correctOptionId: "ALQNV0DM4S",
+        correctOptionId: "A54Z4XHQD5",
         options: [
           {
-            id: "ALQNV0DM4S",
-            text: "with a category I, II or III holding position sign, as appropriate.",
-
+            id: "AXKLRPOK2M",
+            text: "more than 12 hours.",
             why: "",
           },
           {
-            id: "AZNWZ1NH5C",
-            text: "with a category II or III holding position sign, though for CAT I runways a sign is NOT mandatory.",
-
+            id: "ANHGII72P6",
+            text: "more than 12 days.",
             why: "",
           },
           {
-            id: "ABDIK41Z31",
-            text: "only with a runway designation sign.",
-
+            id: "AOXHLDSU5O",
+            text: "more than one week.",
             why: "",
           },
           {
-            id: "AEWHQ4GTFS",
-            text: "with a taxiway designation sign.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-        selectedOptionId: "ABDIK41Z31",
-      },
-      {
-        questionId: "PAT3w6lN",
-        templateId: "Q3VR13C3QH",
-        variantId: "g46ThRJm",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "An aircraft used for simulated instrument flying must have",
-        annexes: [],
-        correctOptionId: "A48UJH8O0C",
-        options: [
-          {
-            id: "A48UJH8O0C",
-            text: "a qualified safety pilot and fully functioning dual controls.",
-
-            why: "",
-          },
-          {
-            id: "AI5DBEWSF3",
-            text: "dual controls.",
-
-            why: "",
-          },
-          {
-            id: "AZAVI8J7QS",
-            text: "dual controls and a competent observer.",
-
-            why: "",
-          },
-          {
-            id: "ARN3I4R3E5",
-            text: "a competent observer in the front seat.",
-
+            id: "A54Z4XHQD5",
+            text: "any period.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "LnPAQFZ8",
-        templateId: "QS8HP8YTS6",
-        variantId: "GWDdpJrb",
-        seed: "3xiPxtXm",
+        questionId: "nZsC9rD5",
+        templateId: "QQRW17OHUO",
+        variantId: "tLjMouAM",
+        seed: "qOznsboW",
         type: "multiple-choice",
         question:
-          "Where should an airport display aircraft stand identification marking?",
+          "The applicant for a CPL(A) that has completed an integrated course of training will have the following hours:",
         annexes: [],
-        correctOptionId: "AB5W2BL7E8",
+        correctOptionId: "ANYX2R48L8",
         options: [
           {
-            id: "AB5W2BL7E8",
-            text: "On any paved parking and de-icing area.",
-
+            id: "A2NND3FN8F",
+            text: "200 hours flight time, of which 5 hours may be instrument ground time",
             why: "",
           },
           {
-            id: "A5ZCQXOAML",
-            text: "On any parking area and de-icing area.",
-
+            id: "AET70VECRE",
+            text: "200 hours flight time, of which 10 hours may be instrument ground time",
             why: "",
           },
           {
-            id: "A15GN6SBL6",
-            text: "On any paved parking area.",
-
+            id: "AE5P7L9YWE",
+            text: "150 hours flight time",
             why: "",
           },
           {
-            id: "A8DASMPM7Z",
-            text: "On any parking area.",
-
+            id: "ANYX2R48L8",
+            text: "150 hours flight time, of which 5 hours may be instrument ground time",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "b9bJ9OJZ",
-        templateId: "Q0MBACG3NT",
-        variantId: "Bcif8nEI",
-        seed: "3xiPxtXm",
+        questionId: "PByy2M7r",
+        templateId: "QXQXX8U31M",
+        variantId: "h4ca0I3o",
+        seed: "lSoA73v4",
+        type: "multiple-choice",
+        question: "The Rome Convention and later amendments deals with",
+        annexes: [],
+        correctOptionId: "ABV22KQ1TP",
+        options: [
+          {
+            id: "ABV22KQ1TP",
+            text: "Damage caused by foreign aircraft to third parties on the surface.",
+            why: "",
+          },
+          {
+            id: "AG75W0JMI0",
+            text: "Offenses and certain other acts committed on board aircraft.",
+            why: "",
+          },
+          {
+            id: "AX4QN6UNE3",
+            text: "Damage caused by any aircraft to third parties on the surface.",
+            why: "",
+          },
+          {
+            id: "AJQDSCFYEQ",
+            text: "Regulation of transportation of dangerous goods.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "Hpb4ZWrK",
+        templateId: "Q2KR0V61G1",
+        variantId: "mgoaeOpf",
+        seed: "arVQEOTj",
+        type: "multiple-choice",
+        question: 'The ICAO definition of an "International Airport" is:',
+        annexes: [],
+        correctOptionId: "A96R63W984",
+        options: [
+          {
+            id: "A7ZEB5EUBH",
+            text: "An airport of a defined passenger handling capacity that offers facilities to carriers and operators with registered offices outside of the contracting state.",
+            why: "",
+          },
+          {
+            id: "ABC4Q29IG9",
+            text: "An airport situated on or near the offical border of a contracting state, with the appropriate security and customer handling facilities to properly facilitate international air travel.",
+            why: "",
+          },
+          {
+            id: "A1AIJUSRXH",
+            text: "Any airport, within a contracting state that accepts international air traffic, whether equipped with formal customs facilities or not.",
+            why: "",
+          },
+          {
+            id: "A96R63W984",
+            text: "Any airport designated by the contracting state in whose territory it is situated as an airport of entry and departure for international air traffic, where the formalities incident to customs, immigration, public health, animal and plant quarantine and similar procedures are carried out.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "tywu1JQ6",
+        templateId: "QR5QCYBZ8M",
+        variantId: "OMOampfO",
+        seed: "oguxs4VW",
         type: "multiple-choice",
         question:
-          "A series of red flashes from aerodrome control directed towards an aircraft in flight means..",
+          "Which of the following ICAO documents contain International Standards and Recommended Practices (SARPS)?",
         annexes: [],
-        correctOptionId: "A0CAHDJCZ4",
+        correctOptionId: "AA6WZ596N0",
         options: [
           {
-            id: "A0CAHDJCZ4",
-            text: "aerodrome unsafe, do not land.",
-
+            id: "AVJGDTAD5R",
+            text: "ICAO Technical Manuals.",
             why: "",
           },
           {
-            id: "AB76VMHM6W",
-            text: "aerodrome temporarily closed, continue circling.",
-
+            id: "AA6WZ596N0",
+            text: "Annexes to the Convention on international civil aviation.",
             why: "",
           },
           {
-            id: "ARIOPOTJN9",
-            text: "continue circling and wait for further instruction.",
-
+            id: "AZIOI5BPDS",
+            text: "Regional Supplementary Procedures (SUPPS).",
             why: "",
           },
           {
-            id: "AKZXIA3TGD",
-            text: "give way to an aircraft in an emergency situation.",
-
+            id: "AY9986R6PJ",
+            text: "Procedures for Air Navigation Services (PANS).",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "Py9SQynm",
-        templateId: "QHKE1PY98Q",
-        variantId: "G6vyf2Fn",
-        seed: "3xiPxtXm",
+        questionId: "NdWECah3",
+        templateId: "QLFLRF3H59",
+        variantId: "eOgUx1do",
+        seed: "jgpUkgCD",
         type: "multiple-choice",
         question:
-          "Which sign can be written in the sand by survivors on an island to give people in an aircraft a NEGATIVE response?",
+          "According to the relevant medical requirements, a Class 2 Medical Certificate is valid for",
         annexes: [],
-        correctOptionId: "AKZ59W8L0E",
+        correctOptionId: "A7MTS5NDRU",
         options: [
           {
-            id: "AKZ59W8L0E",
-            text: "We have found some personnel.",
-
+            id: "AMYWU7S5UQ",
+            text: "24 months until age of 40 and 12 months thereafter.",
             why: "",
           },
           {
-            id: "ABRXZ8ZO3P",
-            text: "We are not able to continue and we will return to base.",
-
+            id: "AQ6XUJ0MWJ",
+            text: "24 months until age of 40, 12 months until age of 60, and 6 months thereafter.",
             why: "",
           },
           {
-            id: "A3RWBGEX99",
-            text: "Operation completed.",
-
+            id: "ARNLBHS9ME",
+            text: "60 months until age of 30,24 months until age of 40, and 12 months thereafter.",
             why: "",
           },
           {
-            id: "AEFOIPGSL4",
-            text: "We have found all personnel.",
-
+            id: "A7MTS5NDRU",
+            text: "60 months until age of 40, 24 months until age of 50, and 12 months thereafter.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "9p8HDnyY",
-        templateId: "QYM5APPB7M",
-        variantId: "qaqjbD3u",
-        seed: "3xiPxtXm",
+        questionId: "oRzzhNU6",
+        templateId: "Q84JNPGDA6",
+        variantId: "CRrnQNiS",
+        seed: "2i97mU7X",
         type: "multiple-choice",
         question:
-          "During take-off, the fire alarm sounded. After a rejected take-off, all passengers are evacuated. Nobody gets hurt, however, one wing is completely burnt. This is an example of a/an...",
+          "Facilitation  General Declaration  If the State requires crew member`s information to be included in the General Declaration, which information should be required?",
         annexes: [],
-        correctOptionId: "AOFJ083QXX",
+        correctOptionId: "AL4SNWGEZD",
         options: [
           {
-            id: "AOFJ083QXX",
-            text: "serious incident.",
-
+            id: "AIRXBU7FHC",
+            text: "The place of birth.",
             why: "",
           },
           {
-            id: "AB94OYDMCV",
-            text: "incident.",
-
+            id: "A0A7FC2U1F",
+            text: "The date of birth.",
             why: "",
           },
           {
-            id: "AF6BSNDMGU",
-            text: "serious accident.",
-
+            id: "AL4SNWGEZD",
+            text: "The crew name.",
             why: "",
           },
           {
-            id: "ANPBSFUCE4",
-            text: "accident.",
-
+            id: "A5NXA6T3KD",
+            text: "The licence number.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "H3GcpZKV",
-        templateId: "Q6WV1ILG1C",
-        variantId: "PHbRYytD",
-        seed: "3xiPxtXm",
+        questionId: "xAgAezOu",
+        templateId: "QLSVJ4SIR2",
+        variantId: "2WlQ5cSW",
+        seed: "EGRA8mvm",
         type: "multiple-choice",
         question:
-          "When a pilot raises his arms extended, palms facing outwards and moves his hands inwards to cross in front of the face, this means:",
+          "After a flight crew licence holder, engaged in multi-pilot commercial operations, reaches his/her 40th birthday, medical assessments are every",
         annexes: [],
-        correctOptionId: "AYX3LQUNBG",
+        correctOptionId: "ANRR7GWUT8",
         options: [
           {
-            id: "AYX3LQUNBG",
-            text: "insert chocks.",
-
+            id: "AGAWP8KCMV",
+            text: "3 months.",
             why: "",
           },
           {
-            id: "AHCEEAVYOE",
-            text: "remove chocks.",
-
-            why: "",
-          },
-          {
-            id: "AQM3684JWC",
-            text: "brakes engaged.",
-
-            why: "",
-          },
-          {
-            id: "AAKN5AZJ77",
-            text: "brakes released.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "RFyaP5M1",
-        templateId: "QTONICLX6C",
-        variantId: "eBVnyMQn",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "Alerting Service shall be provided:",
-        annexes: [],
-        correctOptionId: "AXBL017E2S",
-        options: [
-          {
-            id: "AXBL017E2S",
-            text: "for all controlled flights, to any aircraft known or believed to be subject of unlawful interference, and in so far as practicable to all aircraft having filed a flight plan or otherwise known to the ATS.",
-
-            why: "",
-          },
-          {
-            id: "AKQUY0UEN4",
-            text: "to any aircraft known or believed to be subject of unlawful interference, only.",
-
-            why: "",
-          },
-          {
-            id: "AR5RE4FCVC",
-            text: "in so far as practicable to all aircraft having filed a flight plan or otherwise known by the ATS.",
-
-            why: "",
-          },
-          {
-            id: "AV4PL5PPJ5",
-            text: "for all aircraft provided with Air Traffic Control Services, only.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "r7rttRfe",
-        templateId: "QAOUB4KU1C",
-        variantId: "4t5dcGXR",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: 'What is the meaning of abbreviation "MEHT"?',
-        annexes: [],
-        correctOptionId: "AJ3UXV7O57",
-        options: [
-          {
-            id: "AJ3UXV7O57",
-            text: "Minimum eye height over the threshold.",
-
-            why: "",
-          },
-          {
-            id: "AB3ASL4SLW",
-            text: "Mean height over the threshold.",
-
-            why: "",
-          },
-          {
-            id: "AII9S3S7DC",
-            text: "Maximum eye height over the threshold.",
-
-            why: "",
-          },
-          {
-            id: "AMYLTNFW4K",
-            text: "Minimum elevation height over the threshold.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "q81073VZ",
-        templateId: "Q5MBX0JGDS",
-        variantId: "mwepn1Ip",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "You are on the ground at an airfield with a 0-50,000ft altimeter in your aircraft. You move to a position of known elevation at the airfield and set local QNH. Your altimeter will read the elevation of that point plus the following:",
-        annexes: [],
-        correctOptionId: "A99OW29AYZ",
-        options: [
-          {
-            id: "A99OW29AYZ",
-            text: "The height of the altimeter from the ground with a +/-  80 ft tolerance",
-
-            why: "",
-          },
-          {
-            id: "AWNJBMF8TH",
-            text: "The height of the altimeter from the ground with a +/- 60 ft tolerance",
-
-            why: "",
-          },
-          {
-            id: "ALGOMQ3XPA",
-            text: "+/- 25 ft tolerence",
-
-            why: "",
-          },
-          {
-            id: "AVJMBKMHKL",
-            text: "+/- 80 ft tolerance",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "94GD4awu",
-        templateId: "QWWKPSG25L",
-        variantId: "6UMTn3N6",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "A pilot is approaching a traffic circuit of a controlled airport in VMC. The communication on the frequency used is lost. Choose correct statements and actions taken:\n1- If a red flashing light appears, do not land and divert.\n2- Try to establish another way of communication.\n3- If a green flashing light appears, return for approach.\n4- If a flashing white light appears give way to another aircraft and continue circling.\n5- If a steady red light appears, the airfield is closed.",
-        annexes: [],
-        correctOptionId: "A17LCFNVDS",
-        options: [
-          {
-            id: "A17LCFNVDS",
-            text: "1, 2, 3",
-
-            why: "",
-          },
-          {
-            id: "ACFQMGI6TA",
-            text: "1, 2, 3, 4, 5",
-
-            why: "",
-          },
-          {
-            id: "ASFAYEBM64",
-            text: "1, 2, 3,5",
-
-            why: "",
-          },
-          {
-            id: "A7XOL7QSSI",
-            text: "2, 3, 4, 5",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "TAQn78Cc",
-        templateId: "Q2HGA68VJO",
-        variantId: "KVBKZ3DA",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "A notice containing information concerning flight safety, air navigation, technical, administration or legislative matters and originated at the AIS of a state is called",
-        annexes: [],
-        correctOptionId: "AO37N3WP9X",
-        options: [
-          {
-            id: "AO37N3WP9X",
-            text: "Aeronautical Information Circular (AIC).",
-
-            why: "",
-          },
-          {
-            id: "A330CP0JS2",
-            text: "NOTAM.",
-
-            why: "",
-          },
-          {
-            id: "AL7LODX5PC",
-            text: "AIRAC.",
-
-            why: "",
-          },
-          {
-            id: "AUTKB0PXIJ",
-            text: "Aeronautical Information Publication (AIP).",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "0noNy9bt",
-        templateId: "QJGT0104FP",
-        variantId: "TfRNv4Lg",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "The standard color used for runway markings shall be:",
-        annexes: [],
-        correctOptionId: "AV81A3V0H6",
-        options: [
-          {
-            id: "AV81A3V0H6",
-            text: "white.",
-
-            why: "",
-          },
-          {
-            id: "A1TOF1E8U3",
-            text: "contrasting to the runway surface and acceptable to the authority.",
-
-            why: "",
-          },
-          {
-            id: "AEAPW0H184",
-            text: "yellow.",
-
-            why: "",
-          },
-          {
-            id: "ARJFUJ49J7",
-            text: "white or yellow.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "CAL7kHMb",
-        templateId: "QVQ391R41H",
-        variantId: "REoj1Pbs",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "When is it permissible to reset QNH whilst flying above the transition layer?",
-        annexes: [],
-        correctOptionId: "A3PHIZNF1V",
-        options: [
-          {
-            id: "A3PHIZNF1V",
-            text: "When cleared and maintaining a descent to an altitude and not flying level.",
-
-            why: "",
-          },
-          {
-            id: "A4BAH4Q7S7",
-            text: "QNH can only be set at the transition altitude in the descent.",
-
-            why: "",
-          },
-          {
-            id: "AARUFW82BW",
-            text: "This is the normal setting when flying above the trasition layer.",
-
-            why: "",
-          },
-          {
-            id: "A05XH3K4IO",
-            text: "QNH can only be set at the transition level in the descent.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "GCy9OTa0",
-        templateId: "Q56GSUFKFK",
-        variantId: "JdkSbzQL",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "A flight in controlled airspace is being subjected to unlawful interference, with a hostage situation.  According to SERA, the pilot shall attempt to notify ATC of...",
-        annexes: [],
-        correctOptionId: "AHFPMUV2BM",
-        options: [
-          {
-            id: "AHFPMUV2BM",
-            text: "any significant circumstances associated with the interference.",
-
-            why: "",
-          },
-          {
-            id: "A47BMZ1L8T",
-            text: "the type of aircraft being flown.",
-
-            why: "",
-          },
-          {
-            id: "A9LKQNZTZ6",
-            text: "the flight mumber, the flight time remaining, and any information about the type(s) of weapon being used.",
-
-            why: "",
-          },
-          {
-            id: "AGSGWQIOY6",
-            text: "the position of the aircraft and the time in UTC when the interference started.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "EqunJlFO",
-        templateId: "QIBYU3QHN2",
-        variantId: "JFHHQVNu",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "Who can change the limitations of class 1 medical certificate?",
-        annexes: [],
-        correctOptionId: "ADNC9F6EA5",
-        options: [
-          {
-            id: "ADNC9F6EA5",
-            text: "The licensing authority.",
-
-            why: "",
-          },
-          {
-            id: "AZG1K9IZM3",
-            text: "AME",
-
-            why: "",
-          },
-          {
-            id: "A73QPNP6II",
-            text: "AeMC",
-
-            why: "",
-          },
-          {
-            id: "AB6JXBTA8J",
-            text: "AME, together with AeMC",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-        selectedOptionId: "AZG1K9IZM3",
-      },
-      {
-        questionId: "3BbyGvpJ",
-        templateId: "QCVMHNYAKK",
-        variantId: "fvlbedSO",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question:
-          "One of the following statements about aircraft ground movement is correct",
-        annexes: [],
-        correctOptionId: "AMIEIYCF6X",
-        options: [
-          {
-            id: "AMIEIYCF6X",
-            text: "A taxiing aircraft has priority over a vehicle towing an aircraft.",
-
-            why: "",
-          },
-          {
-            id: "ASQSHAIA24",
-            text: "An aircraft overtaking another does so by passing on the right.",
-
-            why: "",
-          },
-          {
-            id: "AIJ40A2KZ1",
-            text: "Two airplanes approaching head-on will alter course to the left.",
-
-            why: "",
-          },
-          {
-            id: "AEP2YQIRZX",
-            text: "A vehicle towing an aircraft has priority over a taxiing aircraft.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-        selectedOptionId: "AMIEIYCF6X",
-      },
-      {
-        questionId: "QPq3o1kh",
-        templateId: "QIDZVBLLYH",
-        variantId: "kvuahId2",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "Low intensity obstacle lights on mobile objects shall be:",
-        annexes: [],
-        correctOptionId: "A6KPG9KVAO",
-        options: [
-          {
-            id: "A6KPG9KVAO",
-            text: "flashing-blue or flashing-yellow.",
-
-            why: "",
-          },
-          {
-            id: "A30UA2FJ84",
-            text: "fixed red or preferably orange.",
-
-            why: "",
-          },
-          {
-            id: "AGMRMJC79Q",
-            text: "flashing blue.",
-
-            why: "",
-          },
-          {
-            id: "ARIULLWL1T",
-            text: "fixed red or preferably blue.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "p7jH3ITq",
-        templateId: "QWPJ92Z14F",
-        variantId: "gIti0rHW",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "How long is a Mountain Rating valid for?",
-        annexes: [],
-        correctOptionId: "A990F77QFJ",
-        options: [
-          {
-            id: "A990F77QFJ",
-            text: "24 months.",
-
-            why: "",
-          },
-          {
-            id: "A8JKW0EHJP",
-            text: "36 months.",
-
-            why: "",
-          },
-          {
-            id: "AR0WN3YGUK",
+            id: "ANRR7GWUT8",
             text: "12 months.",
-
             why: "",
           },
           {
-            id: "A3RTV8VLAF",
+            id: "AE4JB6J3X4",
+            text: "9 months.",
+            why: "",
+          },
+          {
+            id: "AC2F0RHCQC",
             text: "6 months.",
-
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "FviVHt2N",
-        templateId: "QFP1F9NZS3",
-        variantId: "OZ91pZX3",
-        seed: "3xiPxtXm",
+        questionId: "guTuWByn",
+        templateId: "QQR8PF1JBO",
+        variantId: "FxcWAIPd",
+        seed: "wd6iONje",
         type: "multiple-choice",
         question:
-          "In order to indicate unlawful interference with the operation of the flight, the aircraft SSR transponder must be set to...",
+          "According to FCL requirements for the issue of the ATPL(A), of the required 1500 hours of total flight time, up to 100 hours may have been completed in a FS or FNPT, of which the time completed in an FNPT may be a maximum of",
         annexes: [],
-        correctOptionId: "ACS3S9AWYX",
+        correctOptionId: "A321VOCUF1",
         options: [
           {
-            id: "ACS3S9AWYX",
-            text: "7500",
-
+            id: "A321VOCUF1",
+            text: "25 hours.",
             why: "",
           },
           {
-            id: "AYNIK6KNE1",
-            text: "7700.",
-
+            id: "AHQH1T8TLW",
+            text: "20 hours.",
             why: "",
           },
           {
-            id: "AN8EO3GCCP",
-            text: "7000.",
-
+            id: "APA389HSMD",
+            text: "75 hours.",
             why: "",
           },
           {
-            id: "ABH3LWYXZZ",
-            text: "7600.",
-
+            id: "AP64A6TKEY",
+            text: "50 hours.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "3nKHsh0e",
-        templateId: "QWO9HLO9RU",
-        variantId: "dn6WjcSF",
-        seed: "3xiPxtXm",
+        questionId: "uUk0wXbM",
+        templateId: "QP1YA1301B",
+        variantId: "GY3jNBxM",
+        seed: "4bQBiIQo",
         type: "multiple-choice",
         question:
-          "A helicopter is flying in Class G airspace at less than 3000 ft.  What is the minimum flight visibility permitted if the aircraft is manoeuvered at a speed that will give adequate opportunity to observe other traffic or any obstacles in time to avoid a collision?",
+          "Holders of a pilot licence with privileges to fly aeroplanes or TMGs shall only tow sailplanes or banners when they...",
         annexes: [],
-        correctOptionId: "AAW34NVFDD",
+        correctOptionId: "A9LL8WRUQN",
         options: [
           {
-            id: "AAW34NVFDD",
-            text: "Less than 1500 m",
-
+            id: "A9LL8WRUQN",
+            text: "hold the appropriate sailplane towing or banner towing rating. ",
             why: "",
           },
           {
-            id: "A9F3XI9V8I",
-            text: "No less than 3500 m",
-
+            id: "A3MX8XDDST",
+            text: "have at least 30 hours of flight time as PIC on aeroplanes.",
             why: "",
           },
           {
-            id: "A42SOQ5V9K",
-            text: "Less than 2500 m",
-
+            id: "A6KOZIA1CT",
+            text: "have at least 100 hours of flight time and 200 take-offs and landings as PIC.",
             why: "",
           },
           {
-            id: "A09HK8IPSA",
-            text: "5 km",
-
+            id: "ADHYXMV5HK",
+            text: "hold an IR in the appropriate aircraft category. ",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "hNq1K1Wj",
-        templateId: "QT7CZ3SQ7Y",
-        variantId: "fDQZ9QEI",
-        seed: "3xiPxtXm",
+        questionId: "oxjfYPfv",
+        templateId: "QB8PVRTXN6",
+        variantId: "3oFw8ZI4",
+        seed: "efqu6qyU",
         type: "multiple-choice",
         question:
-          "Compared to a DME/DME RNAV approach, a VOR/DME RNAV approach",
+          "Contracting States shall provide search and rescue services within their territories",
         annexes: [],
-        correctOptionId: "AJ0GWUMR6I",
+        correctOptionId: "AOG2K9DN7Z",
         options: [
           {
-            id: "AJ0GWUMR6I",
-            text: "is based on a specific navaid reference facility that will be indicated.",
-
+            id: "AOG2K9DN7Z",
+            text: "on a 24-hour basis.",
             why: "",
           },
           {
-            id: "A0VH7F6JWS",
-            text: "can be flown without an approval from the State of the Operator.",
-
+            id: "ADDEFVR1D5",
+            text: "during the period established in the Regional Air Navigation Agreement.",
             why: "",
           },
           {
-            id: "AIIOGU38O7",
-            text: "is a precision approach, whereas the DME/DME is non-precision.",
-
+            id: "ASM2LBCLUW",
+            text: "during the day-light period.",
             why: "",
           },
           {
-            id: "ALC8ZTZ5HX",
-            text: "can be flown if the DME part is failed, provided that the VOR is serviceable.",
-
+            id: "AZGM33AQ4R",
+            text: "from 06:00 until 24:00 local time.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "zqvBPjvq",
-        templateId: "QL8TKREI2J",
-        variantId: "ahjJ9Psq",
-        seed: "3xiPxtXm",
+        questionId: "I6eSw77b",
+        templateId: "QYACTNDSU3",
+        variantId: "Ss8MH6ke",
+        seed: "wf7cXSsO",
         type: "multiple-choice",
         question:
-          "Secondary Surveillance Radar (SSR) is not available. For radar identification ATC may request the pilot to execute one or more heading changes of:",
+          "In accordance to PART-FCL, class ratings are established for Single Pilot Single Engine Aeroplanes not requiring a Type rating\nThese can include",
         annexes: [],
-        correctOptionId: "A2XXDM7YCW",
+        correctOptionId: "A6NIJQP9OX",
         options: [
           {
-            id: "A2XXDM7YCW",
-            text: "controlled traffic not separated from another controlled traffic with the prescribed separation minima.",
-
+            id: "A2A6YIKZXL",
+            text: "microlights having fixed wings and movable aerodynamic control surfaces acting in all three dimensions.",
             why: "",
           },
           {
-            id: "AKQBAYQ320",
-            text: "controlled IFR flights separated from uncontrolled flights within advisory airspace.",
-
+            id: "A9YGNOQZBD",
+            text: "any other type of aeroplane if considered necessary.",
             why: "",
           },
           {
-            id: "AP9XTOG694",
-            text: "uncontrolled IFR flights separated from uncontrolled VFR flights within advisory airspace.",
-
+            id: "A1G7ZQRA9H",
+            text: "all types of single-pilot, single-engine aeroplanes fitted with a turbojet engine.",
             why: "",
           },
           {
-            id: "AJ9OFTQDRO",
-            text: "controlled traffic separated from other controlled traffic with the prescribed separation minima.",
-
+            id: "A6NIJQP9OX",
+            text: "touring Motor Glider / TMG.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "mg3KqHVe",
-        templateId: "QH8BTKXPQ5",
-        variantId: "Tos905Y7",
-        seed: "3xiPxtXm",
+        questionId: "msY8GQEy",
+        templateId: "Q4DIWPPO56",
+        variantId: "pKqD25YY",
+        seed: "rOeFROFk",
         type: "multiple-choice",
-        question: 'The "Manoeuvring area" is:',
+        question:
+          "When letters are used for registration mark, a combination that can be used and which should not be confused with other signals, would be for example",
         annexes: [],
-        correctOptionId: "AYI3RSM643",
+        correctOptionId: "AXU278UGEW",
         options: [
           {
-            id: "AYI3RSM643",
-            text: "That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, excluding aprons.",
-
+            id: "AX2QPWSUCN",
+            text: "TTT",
             why: "",
           },
           {
-            id: "AMVV7DD6TK",
-            text: "That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, consisting of the movement area and the apron.",
-
+            id: "AXU278UGEW",
+            text: "VOR",
             why: "",
           },
           {
-            id: "AB5YB2SGYO",
-            text: "That part of the aerodrome designated for the manoeuvring of aircraft in front of the hangars only.",
-
+            id: "AKOYJET9E7",
+            text: "SOS",
             why: "",
           },
           {
-            id: "A8GA5JKYWA",
-            text: "That part of the aerodrome suitable for the safe and efficient manoeuvring of aircraft; to include aprons, taxiways and runways.",
-
+            id: "ABAJHF1TM5",
+            text: "QNH",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "fkUqeRuO",
+        questionId: "ujQXtCkN",
         templateId: "Q8YZSJXUQX",
         variantId: "XWasJKYf",
-        seed: "3xiPxtXm",
+        seed: "GhGSNj8G",
         type: "multiple-choice",
         question:
           "According to PART-FCL, successful completion of multi-crew co-operation (MCC) training shall be required to:",
@@ -1008,680 +597,911 @@ export const testsCreateTestMock: AppRouterOutput["tests"]["createTest"] = {
         correctOptionId: "AXEDK6N28H",
         options: [
           {
-            id: "AXEDK6N28H",
-            text: "obtain the first type rating on multi-pilot aeroplanes.",
-
+            id: "AKK70RPLMU",
+            text: "obtain a professional pilot licence.",
             why: "",
           },
           {
             id: "AYRRWLQXJ1",
             text: "revalidate any rating or licence.",
-
             why: "",
           },
           {
             id: "A2JW1DCGH4",
             text: "obtain the first class rating on multi-engine aeroplanes.",
-
             why: "",
           },
           {
-            id: "AKK70RPLMU",
-            text: "obtain a professional pilot licence.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-        selectedOptionId: "A2JW1DCGH4",
-      },
-      {
-        questionId: "PeyLv96l",
-        templateId: "QVWY95Q3GF",
-        variantId: "WLErkddK",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "What are the correct values for the navigational light?",
-        annexes: [],
-        correctOptionId: "AW3KKQUPVE",
-        options: [
-          {
-            id: "AW3KKQUPVE",
-            text: "110 degrees red light on the left wing, 140 degrees white light aft position, 110 degrees green light on the right wing.",
-
-            why: "",
-          },
-          {
-            id: "A37OE4HOK5",
-            text: "110 degrees red light on the left wing, 140 degrees white light aft position, 110 degrees amber light on right wing.",
-
-            why: "",
-          },
-          {
-            id: "AW6XAHUJXJ",
-            text: "110 degrees white light on the left wing, 140 degrees green light aft position, 110 degrees red light on right wing.",
-
-            why: "",
-          },
-          {
-            id: "ABRRO0QQFT",
-            text: "110 degrees red light on the left wing, 140 degrees white light forward position, 110 degrees green light on right wing.",
-
+            id: "AXEDK6N28H",
+            text: "obtain the first type rating on multi-pilot aeroplanes.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "h0TyvYSX",
-        templateId: "QAPMYGD5RD",
-        variantId: "f0Dl3lpA",
-        seed: "3xiPxtXm",
+        questionId: "TBT1sKDN",
+        templateId: "QM05F0X6HX",
+        variantId: "uFixxLAZ",
+        seed: "HHwb5QVZ",
         type: "multiple-choice",
         question:
-          "An aircraft is expected to land at 22:30 UTC. The airport has little traffic. When must ground lights be brought into operation?",
+          "The CPL applicant for an IR shall have 50 hours of cross-country flying and ___ hours in the adequate type of aircraft.",
         annexes: [],
-        correctOptionId: "A5KEQO87GK",
+        correctOptionId: "AUKEZZABOL",
         options: [
           {
-            id: "A5KEQO87GK",
-            text: "21:30 UTC",
-
+            id: "AUKEZZABOL",
+            text: "10",
             why: "",
           },
           {
-            id: "ARH0AL6PD4",
-            text: "21:00 - 23:00 UTC",
-
+            id: "AXYYMGWB3X",
+            text: "0",
             why: "",
           },
           {
-            id: "AE1DPK3D9J",
-            text: "20:00 - 23:30 UTC",
-
+            id: "AJQ742QECT",
+            text: "15",
             why: "",
           },
           {
-            id: "ALAXQN2SD3",
-            text: "20:30 UTC",
-
+            id: "AZJ2YPU9PV",
+            text: "20",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "wUhzoyhE",
-        templateId: "QJST67JZTX",
-        variantId: "QE39TRDC",
-        seed: "3xiPxtXm",
+        questionId: "RL12o4Rx",
+        templateId: "Q34KYJN05E",
+        variantId: "6Sus3PEU",
+        seed: "rsiu2zmA",
         type: "multiple-choice",
         question:
-          "Deviation from Flight Plan  Pilots of controlled flights are requested to inform the appropriate ATS whenever the average TAS at cruising level between reporting points varies or is expected to vary from the TAS given in the flight plan by",
+          "Unless being cleared otherwise, according to Annex 2, what is the correct cruising level of an aircraft flying IFR in non-RVSM airspace, on a true track of 010° and its magnetic track being 355°?",
         annexes: [],
-        correctOptionId: "AUT6AP7L4Z",
+        correctOptionId: "A2TXT1ZQFO",
         options: [
           {
-            id: "AUT6AP7L4Z",
-            text: "5 %",
-
+            id: "AYU46MS32M",
+            text: "FL320.",
             why: "",
           },
           {
-            id: "ACJHFSV7J1",
-            text: "3 %",
-
+            id: "AY2R9RDZR8",
+            text: "FL330.",
             why: "",
           },
           {
-            id: "APYQIUML4B",
-            text: "4 %",
-
+            id: "A2TXT1ZQFO",
+            text: "FL310.",
             why: "",
           },
           {
-            id: "AH3SVQ7J44",
-            text: "2 %",
-
+            id: "A2VPZBAUG0",
+            text: "FL340.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "cZekC61C",
-        templateId: "QLLWFP0E3Y",
-        variantId: "uAXYcSog",
-        seed: "3xiPxtXm",
+        questionId: "bKvH5vEj",
+        templateId: "QM32SQIMNP",
+        variantId: "uLD7MpMW",
+        seed: "ckP5z7Dd",
         type: "multiple-choice",
         question:
-          "According to ICAO Annex 11, why must the movement of all persons, vehicles and towed aircraft on the maneuvering area be controlled by the aerodrome control tower?",
+          "You just went to your first class 1 medical examination. From what date will it be valid? From the...",
         annexes: [],
-        correctOptionId: "ACXMGWR70J",
+        correctOptionId: "APCETJ2T8F",
         options: [
           {
-            id: "ACXMGWR70J",
-            text: "To avoid hazard to them, or to aircrafts landing, taxiing, or taking off.",
-
+            id: "AIQ3BE0VB5",
+            text: "date of issue.",
             why: "",
           },
           {
-            id: "AYJEWDOCPN",
-            text: "To provide safe vehicular access to aprons.",
-
+            id: "AFL53S49KQ",
+            text: "first day of the next month.",
             why: "",
           },
           {
-            id: "AYT9WK5G3Y",
-            text: "To avoid damage to aerodrome navigation aids.",
-
+            id: "ANKRELOEOD",
+            text: "last day of the present month.",
             why: "",
           },
           {
-            id: "AZXTFCHESL",
-            text: "To maintain an orderly flow of air and ground traffic on the movement area.",
-
+            id: "APCETJ2T8F",
+            text: "date of medical examination.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "7Fm56xFf",
-        templateId: "QQLJI8U13Z",
-        variantId: "QZuAEoPI",
-        seed: "3xiPxtXm",
-        type: "multiple-choice",
-        question: "The maximum recommended length of a runway Clearway is...",
-        annexes: [],
-        correctOptionId: "A3NODOIATK",
-        options: [
-          {
-            id: "A3NODOIATK",
-            text: "half of the Take-Off Run Available (TORA).",
-
-            why: "",
-          },
-          {
-            id: "AATZDB3GOC",
-            text: "100 m.",
-
-            why: "",
-          },
-          {
-            id: "A1Q88ADOB3",
-            text: "half of the Accelerate-Stop Distance Available (ASDA).",
-
-            why: "",
-          },
-          {
-            id: "AES4S57TQF",
-            text: "75 m.",
-
-            why: "",
-          },
-        ],
-        explanation: "",
-      },
-      {
-        questionId: "qsSsTkJY",
-        templateId: "QVDL1SCKNJ",
-        variantId: "rMW253dO",
-        seed: "3xiPxtXm",
+        questionId: "B5JhaoEO",
+        templateId: "Q7CL4HA2D5",
+        variantId: "hV45jyNC",
+        seed: "M0lamYWD",
         type: "multiple-choice",
         question:
-          "Where a final approach fix (FAF) is specified for a non-precision approach procedure, what is the Minimum Obstacle Clearance (MOC) fixed margin that is applied for all aircraft?",
+          "Except for a take-off or landing, an IFR flight has to be flown at a level which is not below the minimum flight altitude established by the State overflownIf no such minimum flight altitude has been established, what is the minimum altitude of an aircraft above the highest obstacle over high terrain, or in mountainous areas?",
         annexes: [],
-        correctOptionId: "A6WT5NYW2U",
+        correctOptionId: "A9738RAVZP",
         options: [
           {
-            id: "A6WT5NYW2U",
-            text: "75 m (246 ft).",
-
+            id: "A9738RAVZP",
+            text: "At least 2000 ft above the highest obstacle located within 8 km of the estimated position of the aircraft.",
             why: "",
           },
           {
-            id: "AIG0NH202U",
-            text: "100 m (316 ft).",
-
+            id: "A5NVX3ZA8U",
+            text: "At least 1000 ft above the highest obstacle located within 6 km of the estimated position of the aircraft.",
             why: "",
           },
           {
-            id: "ABW173I3SC",
-            text: "120 m (400 ft).",
-
+            id: "A601SBPVGU",
+            text: "At least 1000 ft above the highest obstacle located within 8 km of the estimated position of the aircraft.",
             why: "",
           },
           {
-            id: "ARRQR4V2RY",
-            text: "90 m (295 ft).",
-
+            id: "AAKC7VLA7V",
+            text: "At least 2000 ft above the highest obstacle located within 6 km of the estimated position of the aircraft.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "qtPX8kYL",
-        templateId: "QLIR83O062",
-        variantId: "uxCQsajb",
-        seed: "3xiPxtXm",
+        questionId: "JKNgxjDQ",
+        templateId: "QEFCJ5VZB6",
+        variantId: "ujrBX52u",
+        seed: "5oLPvJx6",
         type: "multiple-choice",
         question:
-          "The responsibility for the initiation of an accident investigation in a Contracting State is with the",
+          "According to the relevant FCL requirements, the applicant for an ATPL(A) shall have demonstrated the ability to perform as pilot-in-command, the procedures and manoeuvres of an aeroplane type certificated for...",
         annexes: [],
-        correctOptionId: "A1L38VP83S",
+        correctOptionId: "AP9F6BUH7B",
         options: [
           {
-            id: "A1L38VP83S",
-            text: "Authority of the State in which the accident occurred.",
-
+            id: "AG7TJYBI2V",
+            text: "operations by pilots under training.",
             why: "",
           },
           {
-            id: "A7YSQJWP2J",
-            text: "operators of the same type of aircraft.",
-
+            id: "AIFXOJ4IT8",
+            text: "the carriage of passengers at night.",
             why: "",
           },
           {
-            id: "ABIM905E9J",
-            text: "aircraft manufacturer.",
-
+            id: "AP9F6BUH7B",
+            text: "a minimum crew of two pilots under IFR.",
             why: "",
           },
           {
-            id: "ATJWFRH9PF",
-            text: "State of design and manufacturer.",
-
+            id: "AR9B4QEWDJ",
+            text: "a minimum crew of two pilots plus a flight engineer.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "oPLaaRMc",
-        templateId: "Q810YH4G3V",
-        variantId: "pJl9N2zw",
-        seed: "3xiPxtXm",
+        questionId: "OqDDuTVj",
+        templateId: "Q3ZP858O4I",
+        variantId: "l5Xt6xav",
+        seed: "CB8il8Vd",
         type: "multiple-choice",
         question:
-          "How many types of medical certificates and how many classes are available for pilots according to EASA AIRCREW regulation?",
+          "When letters are used for the registration mark, combinations shall not be used which might be confused with the",
         annexes: [],
-        correctOptionId: "AGODEH89NK",
+        correctOptionId: "AGIA59LTZU",
         options: [
           {
-            id: "AGODEH89NK",
-            text: "3 types, 2 classes",
-
+            id: "AFHV7QQI9Q",
+            text: "three letters combinations used in the international code of signals.",
             why: "",
           },
           {
-            id: "AN5IH9IP34",
-            text: "3 types, 1 class",
-
+            id: "ABHIJDVN01",
+            text: "letters used for an ICAO identification documents.",
             why: "",
           },
           {
-            id: "ADSKYROPNJ",
-            text: "4 types, no classes",
-
+            id: "AGIA59LTZU",
+            text: "five letter combinations used in the international code of signals.",
             why: "",
           },
           {
-            id: "ABPPDAL278",
-            text: "2 types, 2 classes",
-
+            id: "AC1NEPXZ2I",
+            text: "four letter combinations beginning with Q.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "qUg2PibO",
-        templateId: "Q99XQZWI17",
-        variantId: "NvaDV4Zf",
-        seed: "3xiPxtXm",
+        questionId: "LYgclEly",
+        templateId: "QOCCY5FUFU",
+        variantId: "sPLg632J",
+        seed: "u9wbpTWf",
         type: "multiple-choice",
         question:
-          "The authority of the pilot-in-command in case of offences and certain acts committed on board aircraft is established by the Convention of",
+          "Complete the following phrase:\nAn aircraft that is operated in the EU must hold _____ that is issued or rendered valid by the State of Registry.",
         annexes: [],
-        correctOptionId: "A15C3QBX3A",
+        correctOptionId: "A7SKBAVCY3",
         options: [
           {
-            id: "A15C3QBX3A",
-            text: "Tokyo.",
-
+            id: "AASY44I79C",
+            text: "A Journey Log.",
             why: "",
           },
           {
-            id: "AHC7R3JOWY",
-            text: "Paris.",
-
+            id: "AQUYJ36N3D",
+            text: "An Aircraft Technical Log.",
             why: "",
           },
           {
-            id: "AUUG3RGETI",
-            text: "Rome.",
-
+            id: "A99IZFP2RE",
+            text: "A Type Certificate.",
             why: "",
           },
           {
-            id: "AG8DZ6D0ZV",
-            text: "Chicago.",
-
+            id: "A7SKBAVCY3",
+            text: "A Certificate of Airworthiness.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "PBl7rng9",
-        templateId: "QAXU9K8OXW",
-        variantId: "PCFBUm06",
-        seed: "3xiPxtXm",
+        questionId: "lC3kA7Ml",
+        templateId: "QW3K8SPHXU",
+        variantId: "qKaQejrq",
+        seed: "mVELpnwL",
         type: "multiple-choice",
         question:
-          "According to ICAO Annex 14, elevated runway, stopway and taxiway lights shall be...",
+          "What is the minimum height allowed for a VFR flight above the ground or water, excluding take-off or landing and flights over congested areas of cities, towns or settlements, or over open-air assemblies of persons",
         annexes: [],
-        correctOptionId: "AAFFIG7X8I",
+        correctOptionId: "AOLVJ8DKJ7",
         options: [
           {
-            id: "AAFFIG7X8I",
-            text: "Frangible.",
-
+            id: "A3HXLDP5XI",
+            text: "600 feet",
             why: "",
           },
           {
-            id: "AZUSQUW2R9",
-            text: "Reinforced.",
-
+            id: "AOLVJ8DKJ7",
+            text: "500 feet",
             why: "",
           },
           {
-            id: "APKHCFB7EG",
-            text: "Extra rigid.",
-
+            id: "A8YXPOQSII",
+            text: "300 feet",
             why: "",
           },
           {
-            id: "AL2E75IZO4",
-            text: "Flexible.",
-
+            id: "A7MCSIXMFR",
+            text: "1000 feet",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "q635Gp01",
-        templateId: "Q3GQCM1SGZ",
-        variantId: "mkMDyNKk",
-        seed: "3xiPxtXm",
+        questionId: "qVdt8jUj",
+        templateId: "Q44AELDKE3",
+        variantId: "hFOU8G9t",
+        seed: "L6tNsVIA",
         type: "multiple-choice",
         question:
-          "What is the standard colour code for an ATC document when considering the aeronautical information circular (AIC)?",
+          "For an IFR flight in VMC in airspace Class D, submission of a flight plan is:",
         annexes: [],
-        correctOptionId: "AL7J24WGYY",
+        correctOptionId: "AHRYDHP7F4",
         options: [
           {
-            id: "AL7J24WGYY",
-            text: "yellow",
-
+            id: "AHRYDHP7F4",
+            text: "Mandatory.",
             why: "",
           },
           {
-            id: "ASUCB52ABB",
-            text: "mauve",
-
+            id: "AFMMXJUBMF",
+            text: "Optional.",
             why: "",
           },
           {
-            id: "AIRCQPVOLN",
-            text: "pink",
-
+            id: "ATLU807E9T",
+            text: "Recommended.",
             why: "",
           },
           {
-            id: "A34P3LG1JV",
-            text: "green",
-
+            id: "A27T3EX5WO",
+            text: "NOT required.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "0vilh9uS",
-        templateId: "Q8XLCFSSFD",
-        variantId: "Q0bHIHko",
-        seed: "3xiPxtXm",
+        questionId: "0Jewc4iE",
+        templateId: "QBBU2EXUQ0",
+        variantId: "vidUk6Mh",
+        seed: "Ju1K8jdk",
         type: "multiple-choice",
-        question: "The 'PAPI' shall consist of",
+        question: "The Air Navigation Commission consists of:",
         annexes: [],
-        correctOptionId: "ABX2D4QVNQ",
+        correctOptionId: "A4K558F0VJ",
         options: [
           {
-            id: "ABX2D4QVNQ",
-            text: "a wing bar of 4 sharp transition multi-lamp or paired units equally spaced.",
-
+            id: "A4K558F0VJ",
+            text: "ICAO's mission is to serve as the global forum of States for international civil aviation. ICAO develops policies and Standards, undertakes compliance audits, performs studies and analyses, provides assistance and builds aviation capacity through many other activities and the cooperation of its Member States and stakeholders.",
             why: "",
           },
           {
-            id: "AY6UWT0ISI",
-            text: "two wing bars of 6 sharp transition multi-lamp or paired units equally spaced.",
-
+            id: "AS657F9X9I",
+            text: "ICAO produces rules and regulations, and promotes the highest common standards of civil aviation safety and environmental protection in Europe and worldwide.",
             why: "",
           },
           {
-            id: "AUCGN9PLNK",
-            text: "a wing bar of 2 sharp transition multi-lamp equally spaced.",
-
+            id: "ABPOLMWNVI",
+            text: "ICAO's mission is to approve new international airlines and aircraft.",
             why: "",
           },
           {
-            id: "AAC5ZBQBS3",
-            text: "two wing bars of 4 sharp transition multi-lamp or paired units equally spaced.",
-
+            id: "AXYJBI6AQG",
+            text: "ICAO’s mission is to represent, lead and serve the airline industry. ICAO seeks to improve understanding of the industry among decision makers and increase awareness of the benefits that aviation brings to national and global economies. It fights for the interests of airlines across the globe, challenging unreasonable rules and charges, holding regulators and governments to account, and striving for sensible regulation.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "YPsRQRjg",
-        templateId: "QCTH9GY034",
-        variantId: "hj5RCB5a",
-        seed: "3xiPxtXm",
+        questionId: "LA7oDqT4",
+        templateId: "QO15MIHFPL",
+        variantId: "fqMN6xCL",
+        seed: "F2GyudK6",
         type: "multiple-choice",
         question:
-          "The ICAO Contracting States establish border controls for the entry and departure of persons Regarding the entry requirements for crew arriving on duty on an international flight,",
-        annexes: [],
-        correctOptionId: "AS8WUHE2K3",
+          "Refer to figure. \n What does the marshaling signal \"arms and wands fully extended above head, moving wands outward in a 'jabbing' motion” mean?",
+        annexes: [
+          "/content/content-question-bank-atpl/annexes/eb38917314ded07e0c84adfe1a2c84c1.jpg",
+        ],
+        correctOptionId: "A6BQRA8ECW",
         options: [
           {
-            id: "AS8WUHE2K3",
-            text: "States shall establish measures to expedite inspection of crew members and their baggage.",
-
+            id: "AQ5P8S5A7P",
+            text: "Stop.",
             why: "",
           },
           {
-            id: "APH0HY56KA",
-            text: "crew members are subject to the same entry requirements as passengers.",
-
+            id: "AA8LSSGMMG",
+            text: "Brakes Applied.",
             why: "",
           },
           {
-            id: "AI9ZH5QX1Z",
-            text: "States shall ensure that the Flight Crew Licence is accepted as a valid document of identity.",
-
+            id: "AKIAHPXK6M",
+            text: "Chocks inserted.",
             why: "",
           },
           {
-            id: "AYICY9JR80",
-            text: "crew must be in uniform in order to be allowed temporary entry into the Contracting State.",
-
+            id: "A6BQRA8ECW",
+            text: "Chocks removed.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "rThKyhyz",
-        templateId: "QI9NFTV9OR",
-        variantId: "IXDMHUKS",
-        seed: "3xiPxtXm",
+        questionId: "qOQNin8S",
+        templateId: "Q925WTSCXL",
+        variantId: "yVMebxwv",
+        seed: "W7wvJZRA",
         type: "multiple-choice",
-        question:
-          'According to ICAO Annex 2, which phrase would be used by an intercepting aircraft for the meaning "land at this aerodrome"?',
+        question: "The highest FL for VFR flights is normally",
         annexes: [],
-        correctOptionId: "AYATCKJ9C5",
+        correctOptionId: "AWG63VFZJY",
         options: [
           {
-            id: "AYATCKJ9C5",
-            text: "You land",
-
+            id: "AWG63VFZJY",
+            text: "FL200",
             why: "",
           },
           {
-            id: "AX82X25VQP",
-            text: "Descend",
-
+            id: "ADJRBIWDMH",
+            text: "FL290",
             why: "",
           },
           {
-            id: "AC4P8TX30Y",
-            text: "Descend for landing",
-
+            id: "A96EN3NEX9",
+            text: "FL190",
             why: "",
           },
           {
-            id: "ALYSFYKNZ4",
-            text: "Touch down",
-
+            id: "A8UZE3EPW8",
+            text: "FL150",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "vksf9tZ2",
-        templateId: "QT1S3NUDMT",
-        variantId: "UXNUUn7s",
-        seed: "3xiPxtXm",
+        questionId: "onc0Sr7r",
+        templateId: "Q23DZ3EP7H",
+        variantId: "zSw9kJgX",
+        seed: "NwoDlK5f",
         type: "multiple-choice",
         question:
-          "The correct EASA PART-FCL definition for multi-pilot aircraft with regards to aeroplanes is:",
+          "What should an applicant do after three years if his type rating had expired?",
         annexes: [],
-        correctOptionId: "AOPKM92QM6",
+        correctOptionId: "ANYIBJ54D9",
         options: [
           {
-            id: "AOPKM92QM6",
-            text: "Aeroplanes certificated for operation with a minimum crew of at least two pilots.",
-
+            id: "ANYIBJ54D9",
+            text: "Take a refresher training at an ATO, when necessary to reach the level of proficiency necessary to safely operate the relevant class or type of aircraft and pass a proficiency check.",
             why: "",
           },
           {
-            id: "AIUQH3U9A3",
-            text: "Commercially operated aeroplanes certificated for operation with a minimum crew of at least two pilots.",
-
+            id: "AYK29YN588",
+            text: "Take a refresher training at an ATO, when necessary to reach the level of proficiency necessary to safely operate the relevant class or type of aircraft, pass a proficiency check and pass a revalidation check.",
             why: "",
           },
           {
-            id: "A85ID17HFX",
-            text: "Aeroplanes certificated for operation with a crew of one or two pilots.",
-
+            id: "A6VSSWSBOM",
+            text: "Take a refresher training at an ATO, when necessary to reach the level of proficiency necessary to safely operate the relevant class or type of aircraft.",
             why: "",
           },
           {
-            id: "ADZU0C7Q61",
-            text: "Commercially operated aeroplanes certificated for operation with a crew of one or two pilots.",
-
+            id: "A3CRIZFBHJ",
+            text: "Take a refresher training at an ATO and pass a proficiency check.",
             why: "",
           },
         ],
         explanation: "",
       },
       {
-        questionId: "j1fnNSk6",
-        templateId: "QQ9D2V46ZB",
-        variantId: "DIP2rrjM",
-        seed: "3xiPxtXm",
+        questionId: "FUl3bbvl",
+        templateId: "Q9XBLSDHOP",
+        variantId: "SznFDWyS",
+        seed: "IwDaiImG",
         type: "multiple-choice",
         question:
-          "Which part of the AIP gives detailed information about refuelling facilities and the fuel grades available?",
+          "The ICAO annex which deals with entry and departure of cargo and other articles on international flights is",
         annexes: [],
-        correctOptionId: "A5VYTLE9XF",
+        correctOptionId: "AJR08C896C",
         options: [
           {
-            id: "A5VYTLE9XF",
-            text: "AD",
-
+            id: "AKNYTWA3UU",
+            text: "Annex 16.",
             why: "",
           },
           {
-            id: "A07DGMAH8M",
-            text: "ENR",
-
+            id: "ADK5RBSUSO",
+            text: "Annex 15.",
             why: "",
           },
           {
-            id: "A2AMUEIEG7",
-            text: "FAL",
-
+            id: "A3TN1L7JR5",
+            text: "Annex 8.",
             why: "",
           },
           {
-            id: "A30P7CNUNF",
-            text: "GEN",
-
+            id: "AJR08C896C",
+            text: "Annex 9.",
             why: "",
           },
         ],
         explanation: "",
-        selectedOptionId: "A07DGMAH8M",
       },
       {
-        questionId: "Uq344pRM",
-        templateId: "QBF4KFEU2L",
-        variantId: "27FTUqES",
-        seed: "3xiPxtXm",
+        questionId: "el3RmCSV",
+        templateId: "Q0T3LCLRXP",
+        variantId: "fL2xinAi",
+        seed: "zOZG2q2f",
         type: "multiple-choice",
-        question:
-          "Can the separation between two aircraft be further reduced than the minimum separation?",
+        question: "Where shall flight level zero be located?",
         annexes: [],
-        correctOptionId: "A9G3Q4DD2J",
+        correctOptionId: "APZP33BX12",
         options: [
           {
-            id: "A9G3Q4DD2J",
-            text: "Yes, in certain situations the minimum separation can be further reduced.",
-
+            id: "AQZICKC5XG",
+            text: "At the aerodrome elevation.",
             why: "",
           },
           {
-            id: "AS7DJREN0V",
-            text: "Yes, at the discretion of the pilot or ATC.",
-
+            id: "AQ9JBZ5AON",
+            text: "At mean sea level.",
             why: "",
           },
           {
-            id: "A24FYPYLA2",
-            text: "Yes, always by 10%.",
-
+            id: "A9K6GJB28W",
+            text: "At the atmospheric pressure level of 1023.2 hPa.",
             why: "",
           },
           {
-            id: "AN4OM2P9GO",
-            text: "No, under no circumstances.",
-
+            id: "APZP33BX12",
+            text: "At the atmospheric pressure level of 1013.2 hPa.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "GDjCWN1L",
+        templateId: "Q2CGFE1OCO",
+        variantId: "0OGUgcI5",
+        seed: "RhByqeSD",
+        type: "multiple-choice",
+        question:
+          "The Convention signed by the States, to ensure adequate compensation for persons who suffer damage caused on the surface by foreign aircraft, is the",
+        annexes: [],
+        correctOptionId: "AXGSK83QHW",
+        options: [
+          {
+            id: "AFUW9SMTW5",
+            text: "Paris Convention 1919.",
+            why: "",
+          },
+          {
+            id: "AXGSK83QHW",
+            text: "Rome Convention 1933/1952.",
+            why: "",
+          },
+          {
+            id: "A6VWLK9URJ",
+            text: "Tokyo Convention 1963.",
+            why: "",
+          },
+          {
+            id: "A7BYFAKK1C",
+            text: "Warsaw Convention 1929.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "dbYZpZHq",
+        templateId: "QPTJ6LMVIK",
+        variantId: "1KvT4KZD",
+        seed: "nYvtJgyD",
+        type: "multiple-choice",
+        question: "Describe the following: helicopter, glider &amp; airship:",
+        annexes: [],
+        correctOptionId: "AMWRPAJTCC",
+        options: [
+          {
+            id: "AGHBC8XXR6",
+            text: "Lighter than air aircraft",
+            why: "",
+          },
+          {
+            id: "A7WI122E19",
+            text: "Heavier than air aircraft",
+            why: "",
+          },
+          {
+            id: "AVG1XM7T5V",
+            text: "Power driven aircraft",
+            why: "",
+          },
+          {
+            id: "AMWRPAJTCC",
+            text: "Aircraft",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "EZ1gFR5h",
+        templateId: "QHV9KN651P",
+        variantId: "SybvahJr",
+        seed: "OmNf0Yej",
+        type: "multiple-choice",
+        question:
+          "You are flying IFR outside of controlled airspace. When you are taking up a flight level what would this be based on?",
+        annexes: [],
+        correctOptionId: "ANDEICZXEW",
+        options: [
+          {
+            id: "A8PRC4UDSC",
+            text: "true track",
+            why: "",
+          },
+          {
+            id: "ANDEICZXEW",
+            text: "magnetic track",
+            why: "",
+          },
+          {
+            id: "APIP76J641",
+            text: "compass heading",
+            why: "",
+          },
+          {
+            id: "A1N2CW35XH",
+            text: "compass track",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "8vDYZCv1",
+        templateId: "QUA16SNSGW",
+        variantId: "2R7FeSSH",
+        seed: "4oJifPBq",
+        type: "multiple-choice",
+        question: "The State conducting an accident investigation shall",
+        annexes: [],
+        correctOptionId: "AC16N7ST2H",
+        options: [
+          {
+            id: "ARHLNBN1KJ",
+            text: "hold a press conference immediately after the termination of the investigation.",
+            why: "",
+          },
+          {
+            id: "AGX0TSAAOC",
+            text: "none of the statements are correct.",
+            why: "",
+          },
+          {
+            id: "AC16N7ST2H",
+            text: "publish a final report according to ICAO Standards.",
+            why: "",
+          },
+          {
+            id: "A7NHPDJV5N",
+            text: "publish a final report as requested by the State of the Operator.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "O80pZBp7",
+        templateId: "QIZE5TMCD5",
+        variantId: "eYpIsVmF",
+        seed: "nZIn4xZh",
+        type: "multiple-choice",
+        question:
+          "During a flight in simulated instrument conditions, the following is required...",
+        annexes: [],
+        correctOptionId: "AMPJXLEEK4",
+        options: [
+          {
+            id: "AE01WJA5Y0",
+            text: "a full set of instruments at each control position and an instructor pilot.",
+            why: "",
+          },
+          {
+            id: "AAGQ1Q87LG",
+            text: "a full set of instruments at each control position and a competent observer.",
+            why: "",
+          },
+          {
+            id: "A3X65RMB6N",
+            text: "a dual set of controls and a competent observer.",
+            why: "",
+          },
+          {
+            id: "AMPJXLEEK4",
+            text: "a dual set of controls and a safety pilot.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "VN0gRyza",
+        templateId: "QDA4W8BNSM",
+        variantId: "ZSpQwmsB",
+        seed: "sCbUlp0B",
+        type: "multiple-choice",
+        question:
+          "An aircraft flying under IFR in controlled airspace and maintaining FL150 requests a descent A second aircraft maintaining FL140 on the same route also requests a descent and receives the clearance ??descend to FL70, report passing FL100 The aircraft at FL150 can expect to receive a clearance for descent to FL140 or below when the aircraft at FL140 has",
+        annexes: [],
+        correctOptionId: "A37FFR2W8A",
+        options: [
+          {
+            id: "A37FFR2W8A",
+            text: "left FL140.",
+            why: "",
+          },
+          {
+            id: "ATU9O949FP",
+            text: "descended through FL130.",
+            why: "",
+          },
+          {
+            id: "AEV28U0M8Z",
+            text: "reported that it has left FL100.",
+            why: "",
+          },
+          {
+            id: "AP0XPOUE7B",
+            text: "reached FL70.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "9IQvPx4a",
+        templateId: "Q1O7KCL779",
+        variantId: "zzRlKogN",
+        seed: "0sJOJhVc",
+        type: "multiple-choice",
+        question:
+          "An applicant for ATPL(A) shall have completed a minimum of 1 500 hours of flight time, consisting, among others, of at least...",
+        annexes: [],
+        correctOptionId: "AW3ND25K58",
+        options: [
+          {
+            id: "AU3B2042IY",
+            text: "100 hours of cross country, of which at least 75 h shall be PIC under supervision",
+            why: "",
+          },
+          {
+            id: "AL1TP28B1N",
+            text: "200 hours of cross country, of which at least 75 h shall be PIC under supervision",
+            why: "",
+          },
+          {
+            id: "AW3ND25K58",
+            text: "200 hours of cross country, of which at least 100 h shall be PIC under supervision",
+            why: "",
+          },
+          {
+            id: "A5G8CFZEZZ",
+            text: "250 hours of cross country, of which at least 100 h shall be PIC under supervision",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "NJkWxauL",
+        templateId: "QC6R97QNSZ",
+        variantId: "9D2BDJSM",
+        seed: "WwoLB1IW",
+        type: "multiple-choice",
+        question: "The primary area of an instrument approach segment is:",
+        annexes: [],
+        correctOptionId: "AO3JG8069U",
+        options: [
+          {
+            id: "A0R8QH729M",
+            text: "The first part of the segment.",
+            why: "",
+          },
+          {
+            id: "AMBDC7HF19",
+            text: "The most critical part of the segment where the minimum altitude should be kept to very carefully.",
+            why: "",
+          },
+          {
+            id: "AO3JG8069U",
+            text: "A defined area symmetrically disposed about the nominal flight track in which the Minimum Obstacle Clearance is provided.",
+            why: "",
+          },
+          {
+            id: "AIHA8C5MES",
+            text: "The outside part of the segment where the obstacle clearance increases from zero ft to the appropriate minimum.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "8PYuJAbj",
+        templateId: "QDZ9YEM1SH",
+        variantId: "Z5vo5JnV",
+        seed: "suOdedSK",
+        type: "multiple-choice",
+        question: "Regarding a hold, when does the outbound timing commence?",
+        annexes: [],
+        correctOptionId: "AE7DC8D1CV",
+        options: [
+          {
+            id: "AO38XMY1EI",
+            text: "Abeam the hold point",
+            why: "",
+          },
+          {
+            id: "A142FO20R1",
+            text: "Overhead the hold point",
+            why: "",
+          },
+          {
+            id: "ADKBP78302",
+            text: "Overhead or abeam the hold point whichever is earlier",
+            why: "",
+          },
+          {
+            id: "AE7DC8D1CV",
+            text: "Overhead or abeam the hold point whichever is later",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "6NWeOjPP",
+        templateId: "Q5BMMU05JE",
+        variantId: "5qFz0bUI",
+        seed: "Xw4O0En3",
+        type: "multiple-choice",
+        question:
+          "A scheduled flight from Singapore to Thailand has the right to fly over Malaysia WITHOUT landing, and to land in Malaysia for non-traffic purposes. These rights are granted by the _____ Freedoms of the Air:",
+        annexes: [],
+        correctOptionId: "A22F0ZQR2Y",
+        options: [
+          {
+            id: "AP7L8PJ12E",
+            text: "Third and Fourth.",
+            why: "",
+          },
+          {
+            id: "AWMI7625TV",
+            text: "Second and Third.",
+            why: "",
+          },
+          {
+            id: "A22F0ZQR2Y",
+            text: "First and Second.",
+            why: "",
+          },
+          {
+            id: "A1P3OWNRMR",
+            text: "First and Fifth.",
+            why: "",
+          },
+        ],
+        explanation: "",
+      },
+      {
+        questionId: "Ot0QvxjM",
+        templateId: "QCY069QBRW",
+        variantId: "LMxU1uhD",
+        seed: "UpuW5Qpz",
+        type: "multiple-choice",
+        question:
+          "If a missed approach is initiated prior to reaching the MAPt, what should the pilot do",
+        annexes: [],
+        correctOptionId: "AVTW8UK7I5",
+        options: [
+          {
+            id: "AXCE5E23XX",
+            text: "Maintain runway track and wait for ATC instructions.",
+            why: "",
+          },
+          {
+            id: "AVTW8UK7I5",
+            text: "Proceed to that point and then follow the procedure.",
+            why: "",
+          },
+          {
+            id: "A06AQ1INH0",
+            text: "Climb straight ahead until over the MAPt and request radar vectors.",
+            why: "",
+          },
+          {
+            id: "A6YH8XS3Q6",
+            text: "If above the MSA, turn to the IAF for the subsequent approach.",
             why: "",
           },
         ],
         explanation: "",
       },
     ],
-    createdAtEpochMs: 1690962614024,
-    startedAtEpochMs: 1690962614152,
+    createdAtEpochMs: 1705960510148,
+    startedAtEpochMs: null,
     finishedAtEpochMs: null,
+    href: "/modules/atpl/tests/NhD1zJoH/exam",
   },
 };

@@ -19,7 +19,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
 import type { FunctionComponent } from "react";
 
-const useUpdateQuestion = trpc.questionBank.updateQuestion.useMutation;
+const useUpdateQuestion = trpc.questionBankQuestions.updateQuestion.useMutation;
 
 export const ReviewPrModal: FunctionComponent = () => {
   const router = useRouter();

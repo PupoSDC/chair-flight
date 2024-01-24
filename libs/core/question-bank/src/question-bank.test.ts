@@ -29,7 +29,7 @@ describe("QuestionBank", async () => {
     expect(await questionBanks["type"].has("questions")).toBe(true);
     expect(await questionBanks["type"].has("courses")).toBe(true);
     expect(await questionBanks["type"].has("learningObjectives")).toBe(true);
-    expect(await questionBanks["type"].has("media")).toBe(false);
+    expect(await questionBanks["type"].has("annexes")).toBe(false);
     expect(await questionBanks["type"].has("flashcards")).toBe(false);
   });
 
@@ -38,7 +38,7 @@ describe("QuestionBank", async () => {
     expect(await questionBanks["atpl"].has("questions")).toBe(true);
     expect(await questionBanks["atpl"].has("courses")).toBe(true);
     expect(await questionBanks["atpl"].has("learningObjectives")).toBe(true);
-    expect(await questionBanks["atpl"].has("media")).toBe(true);
+    expect(await questionBanks["atpl"].has("annexes")).toBe(true);
     expect(await questionBanks["atpl"].has("flashcards")).toBe(false);
   });
 
@@ -47,7 +47,7 @@ describe("QuestionBank", async () => {
     expect(await questionBanks["prep"].has("questions")).toBe(false);
     expect(await questionBanks["prep"].has("courses")).toBe(false);
     expect(await questionBanks["prep"].has("learningObjectives")).toBe(false);
-    expect(await questionBanks["prep"].has("media")).toBe(false);
+    expect(await questionBanks["prep"].has("annexes")).toBe(false);
     expect(await questionBanks["prep"].has("flashcards")).toBe(true);
   });
 

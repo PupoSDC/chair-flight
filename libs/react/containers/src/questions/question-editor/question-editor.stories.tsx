@@ -1,5 +1,5 @@
 import {
-  questionBankGetQuestionMock,
+  questionBankGetQuestionFromGithubMock,
   questionBankLoSearchSearchLearningObjectivesMock,
   trpcMsw,
 } from "@chair-flight/trpc/mock";
@@ -77,8 +77,8 @@ const meta: Meta<typeof QuestionEditor> = {
     layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBank.getQuestionFromGithub.query(
-          () => questionBankGetQuestionMock,
+        trpcMsw.questionBankQuestions.getQuestionFromGithub.query(
+          () => questionBankGetQuestionFromGithubMock,
         ),
         trpcMsw.questionBankLoSearch.searchLearningObjectives.query(
           () => questionBankLoSearchSearchLearningObjectivesMock,

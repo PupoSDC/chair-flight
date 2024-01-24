@@ -1,5 +1,4 @@
 import * as fs from "node:fs/promises";
-import { useRouter } from "next/router";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
@@ -16,8 +15,6 @@ type PageParams = {
 };
 
 const Page: NextPage<PageProps> = ({ questionBank }) => {
-  const router = useRouter();
-
   const crumbs = [
     [questionBank.toUpperCase(), `/modules/${questionBank}`],
     ["Tests", `/modules/${questionBank}/tests`],
@@ -31,9 +28,6 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
         noSsr
         questionBank={questionBank}
         sx={{ height: "100%", maxWidth: "md", mx: "auto" }}
-        onSuccessfulTestCreation={async (test) =>
-          router.push(`/modules/${questionBank}/tests/${test.id}/${test.mode}`)
-        }
       />
     </LayoutModule>
   );

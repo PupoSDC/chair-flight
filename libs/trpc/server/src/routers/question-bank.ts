@@ -1,14 +1,9 @@
 import { z } from "zod";
-import {
-  createNewQuestionPr,
-  getQuestionFromGit,
-} from "@chair-flight/core/github";
 import { questionBanks } from "@chair-flight/core/question-bank";
-import {
-  questionBankNameSchema as questionBank,
-  questionEditSchema,
-} from "@chair-flight/core/schemas";
+import { questionBankNameSchema } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
+
+const questionBank = questionBankNameSchema;
 
 export const questionBankRouter = router({
   getConfig: publicProcedure
@@ -20,40 +15,8 @@ export const questionBankRouter = router({
         hasQuestions: await qb.has("questions"),
         hasCourses: await qb.has("courses"),
         hasLearningObjectives: await qb.has("learningObjectives"),
-        hasMedia: await qb.has("media"),
+        hasAnnexes: await qb.has("annexes"),
       };
-    }),
-  getAllSubjects: publicProcedure
-    .input(z.object({ questionBank }))
-    .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const subjects = await qb.getAll("subjects");
-      return { subjects };
-    }),
-  getQuestion: publicProcedure
-    .input(z.object({ questionBank, questionId: z.string() }))
-    .query(async ({ input }) => {
-      const id = input.questionId;
-      const qb = questionBanks[input.questionBank];
-      const questionTemplate = await qb.getOne("questions", id);
-      const loIds = questionTemplate.learningObjectives;
-      const rawLos = await qb.getSome("learningObjectives", loIds);
-      const learningObjectives = rawLos.map((lo) => ({
-        ...lo,
-        href: `modules/${questionBank}/learning-objectives/${lo.id}`,
-      }));
-      return { questionTemplate, learningObjectives };
-    }),
-  getQuestionFromGithub: publicProcedure
-    .input(z.object({ questionBank, questionId: z.string() }))
-    .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const question = await qb.getOne("questions", input.questionId);
-      const questionTemplate = await getQuestionFromGit({
-        questionId: question.id,
-        srcLocation: question.srcLocation,
-      });
-      return { questionTemplate };
     }),
   getLearningObjective: publicProcedure
     .input(z.object({ questionBank, learningObjectiveId: z.string() }))
@@ -101,7 +64,7 @@ export const questionBankRouter = router({
     .input(z.object({ questionBank }))
     .query(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
-      const allAnnexes = await qb.getAll("media");
+      const allAnnexes = await qb.getAll("annexes");
       return { count: allAnnexes.length };
     }),
   getNumberOfFlashcards: publicProcedure
@@ -118,10 +81,5 @@ export const questionBankRouter = router({
       const qb = questionBanks[input.questionBank];
       const courses = await qb.getAll("courses");
       return { courses };
-    }),
-  updateQuestion: publicProcedure
-    .input(questionEditSchema)
-    .mutation(async ({ input }) => {
-      return createNewQuestionPr(input);
     }),
 });

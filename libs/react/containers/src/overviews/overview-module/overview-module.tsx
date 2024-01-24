@@ -18,7 +18,7 @@ type Data = {
   hasFlashcards: boolean;
   hasQuestions: boolean;
   hasLearningObjectives: boolean;
-  hasMedia: boolean;
+  hasAnnexes: boolean;
 };
 
 export const OverviewModule = container<Props, Params, Data>(

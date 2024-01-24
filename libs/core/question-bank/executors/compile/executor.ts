@@ -6,7 +6,7 @@ import {
   readAllCoursesFromFs,
   readAllFlashcardsFromFs,
   readAllLearningObjectivesFromFs,
-  readAllMediaFromFs,
+  readAllAnnexesFromFs,
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
 } from "../common/parse-question-bank";
@@ -19,15 +19,16 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     projectName,
     questionsFolder,
     flashCardsFolder,
-    mediaFolder,
-    mediaJson,
+    annexesImagesFolder,
+    annexesJson,
     losJson,
     coursesJson,
     subjectsJson,
     outputDir,
     outputQuestionsJson,
-    outputMediaDir,
-    outputMediaJson,
+    outputAnnexesDir,
+    outputAnnexesRelativeDir,
+    outputAnnexesJson,
     outputSubjectsJson,
     outputCoursesJson,
     outputLosJson,
@@ -41,15 +42,18 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const learningObjectives = await readAllLearningObjectivesFromFs({ losJson });
   const courses = await readAllCoursesFromFs({ coursesJson });
   const subjects = await readAllSubjectsFromFs({ subjectsJson });
-  const media = await readAllMediaFromFs({ mediaJson });
   const flashcards = await readAllFlashcardsFromFs({ flashCardsFolder });
+  const annexes = await readAllAnnexesFromFs({
+    annexesJson,
+    outputAnnexesRelativeDir,
+  });
 
   connectQuestionBank({
     questions,
     learningObjectives,
     courses,
     subjects,
-    media,
+    annexes,
     flashcards,
   });
 
@@ -77,16 +81,16 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       JSON.stringify(courses),
     ),
     fs.writeFile(
-      path.join(process.cwd(), outputMediaJson),
-      JSON.stringify(media),
+      path.join(process.cwd(), outputAnnexesJson),
+      JSON.stringify(annexes),
     ),
     fs.writeFile(
       path.join(process.cwd(), outputFlashcardsJson),
       JSON.stringify(flashcards),
     ),
     fs.cp(
-      path.join(process.cwd(), mediaFolder),
-      path.join(process.cwd(), outputMediaDir),
+      path.join(process.cwd(), annexesImagesFolder),
+      path.join(process.cwd(), outputAnnexesDir),
       { recursive: true },
     ),
   ]);

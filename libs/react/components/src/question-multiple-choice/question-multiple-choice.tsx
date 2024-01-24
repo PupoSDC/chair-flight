@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
 import { MarkdownClient } from "../markdown-client";
 import { getOptionColor } from "../utils/get-question-status-color";
@@ -86,7 +87,7 @@ export type QuestionMultipleChoiceProps = {
   loading?: boolean;
   compact?: boolean;
   disabled?: boolean;
-  annexes?: string[];
+  annexHrefs?: string[];
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
   component?: React.ElementType;
@@ -107,7 +108,7 @@ export const QuestionMultipleChoice = forwardRef<
       hideIrrelevant,
       options = [],
       disabled,
-      annexes,
+      annexHrefs,
       onAnnexClicked,
       onOptionClicked,
       ...others
@@ -126,15 +127,15 @@ export const QuestionMultipleChoice = forwardRef<
           <>
             <MarkdownClient>{question}</MarkdownClient>
             <Box>
-              {annexes?.map((annexUrl) => (
+              {annexHrefs?.map((annexHref) => (
                 <Button
-                  key={annexUrl}
+                  key={annexHref}
                   variant="outlined"
                   color="primary"
                   sx={{ mr: 1, mb: 1 }}
-                  onClick={() => onAnnexClicked?.(annexUrl)}
+                  onClick={() => onAnnexClicked?.(annexHref)}
                 >
-                  <img src={annexUrl} alt="annex" width={40} height={40} />
+                  <Image src={annexHref} alt="annex" width={40} height={40} />
                 </Button>
               ))}
             </Box>

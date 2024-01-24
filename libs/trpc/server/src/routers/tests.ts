@@ -1,12 +1,9 @@
 import { z } from "zod";
+import { makeMap } from "@chair-flight/base/utils";
 import { createTest, newTestConfigurationSchema } from "@chair-flight/core/app";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import type {
-  LearningObjectiveId,
-  QuestionBankLearningObjective,
-} from "@chair-flight/base/types";
 
 export const testsRouter = router({
   getSubjects: publicProcedure
@@ -22,13 +19,7 @@ export const testsRouter = router({
       const allCourses = course === "all";
       const rawSubjects = await qb.getAll("subjects");
       const learningObjectives = await qb.getAll("learningObjectives");
-      const learningObjectivesMap = learningObjectives.reduce(
-        (sum, lo) => {
-          sum[lo.id] = lo;
-          return sum;
-        },
-        {} as Record<LearningObjectiveId, QuestionBankLearningObjective>,
-      );
+      const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
 
       const subjects = rawSubjects.map((s) => ({
         ...s,
@@ -76,7 +67,19 @@ export const testsRouter = router({
     .mutation(async ({ input }) => {
       const qb = questionBanks[input.questionBank];
       const questions = await qb.getAll("questions");
-      const test = await createTest({ ...input, questions });
+      const rawTest = await createTest({ ...input, questions });
+      const annexIds = rawTest.questions.flatMap((q) => q.annexes);
+      const annexes = await qb.getSome("annexes", annexIds);
+      const annexesMap = makeMap(annexes, (a) => a.id);
+      const test = {
+        ...rawTest,
+        href: `/modules/${input.questionBank}/tests/${rawTest.id}/${input.config.mode}`,
+        questions: rawTest.questions.map((q) => ({
+          ...q,
+          annexes: q.annexes.map((a) => annexesMap[a].href),
+        })),
+      };
+
       return { test };
     }),
 });

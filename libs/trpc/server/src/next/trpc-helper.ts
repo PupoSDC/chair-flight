@@ -10,4 +10,5 @@ export const getTrpcHelper = async () =>
     ctx: await createContext(),
   });
 
+/** Server side helper only  */
 export type TrpcHelper = Awaited<ReturnType<typeof getTrpcHelper>>;

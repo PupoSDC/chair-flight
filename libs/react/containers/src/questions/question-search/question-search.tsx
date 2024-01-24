@@ -1,22 +1,20 @@
 import { useState } from "react";
-import { FormProvider } from "react-hook-form";
-import { Select, Stack, Option, selectClasses } from "@mui/joy";
+import { FormProvider, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Select, Stack, Option } from "@mui/joy";
+import { z } from "zod";
 import {
   SearchQuery,
   HookFormSelect,
   QuestionList,
   SearchFilters,
+  SearchHeader,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
-import { useSearchConfig } from "./question-search-config-schema";
-import type {
-  QuestionBankName,
-  QuestionBankSubject,
-} from "@chair-flight/base/types";
-
-const useSearchQuestions =
-  trpc.questionBankQuestionSearch.searchQuestions.useInfiniteQuery;
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -26,45 +24,48 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = {
-  subjects: QuestionBankSubject[];
+type Data =
+  AppRouterOutput["questionBankQuestionSearch"]["getSearchConfigFilters"];
+
+const filterSchema = z.object({
+  subject: z.string().default("all"),
+  searchField: z.string().default("all"),
+});
+
+const defaultFilter = filterSchema.parse({});
+const resolver = zodResolver(filterSchema);
+const searchQuestions = trpc.questionBankQuestionSearch.searchQuestions;
+const useSearchQuestions = searchQuestions.useInfiniteQuery;
+
+const useSearchPersistence = {
+  atpl: createUsePersistenceHook("cf-question-search-atpl", defaultFilter),
+  type: createUsePersistenceHook("cf-question-search-type", defaultFilter),
+  prep: createUsePersistenceHook("cf-question-search-prep", defaultFilter),
 };
 
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const [{ searchField, subject }, form] = useSearchConfig(questionBank);
-    const { subjects } = QuestionSearch.useData({ questionBank });
+    const { getData, setData } = useSearchPersistence[questionBank]();
+    const serverData = QuestionSearch.useData({ questionBank });
+    const form = useForm({ defaultValues: getData(), resolver });
+
+    const { searchFields, subjects } = serverData;
+    const { searchField, subject } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
-      {
-        q: search,
-        questionBank,
-        searchField: searchField === "all" ? null : searchField,
-        subject: subject === "all" ? null : subject,
-        limit: 24,
-      },
-      {
-        getNextPageParam: (lastPage) => lastPage.nextCursor,
-        initialCursor: 0,
-      },
+      { q: search, questionBank, searchField, subject, limit: 24 },
+      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
+
+    form.watch((data) => setData({ ...defaultFilter, ...data }));
 
     const numberOfFilters =
       Number(searchField !== "all") + Number(subject !== "all");
 
     return (
       <Stack component={component} sx={sx}>
-        <Stack
-          direction="row"
-          sx={{
-            mb: { xs: 1, sm: 2 },
-            gap: 1,
-            [`& .${selectClasses.root}`]: {
-              width: "13em",
-            },
-          }}
-        >
+        <SearchHeader>
           <SearchQuery
             size="sm"
             value={search}
@@ -76,35 +77,26 @@ export const QuestionSearch = container<Props, Params, Data>(
 
           <SearchFilters
             activeFilters={numberOfFilters}
-            fallback={
-              <>
-                <Select size="sm" />
-                <Select size="sm" />
-              </>
-            }
+            fallback={[
+              <Select size="sm" key={1} />,
+              <Select size="sm" key={2} />,
+            ]}
             filters={
               <FormProvider {...form}>
                 <HookFormSelect size="sm" {...form.register("searchField")}>
-                  <Option value={"all"}>All Fields</Option>
-                  <Option value={"text"}>Question</Option>
-                  <Option value={"questionId"}>Id</Option>
-                  <Option value={"learningObjectives"}>
-                    Learning Objectives
-                  </Option>
-                  <Option value={"externalIds"}>External Ids</Option>
+                  {searchFields.map((s) => (
+                    <Option value={s.id}>{s.text}</Option>
+                  ))}
                 </HookFormSelect>
                 <HookFormSelect size="sm" {...form.register("subject")}>
-                  <Option value={"all"}>All Subjects</Option>
-                  {subjects.map(({ id, shortName }) => (
-                    <Option value={id} key={id}>
-                      {shortName}
-                    </Option>
+                  {subjects.map((s) => (
+                    <Option value={s.id}>{s.text}</Option>
                   ))}
                 </HookFormSelect>
               </FormProvider>
             }
           />
-        </Stack>
+        </SearchHeader>
 
         <QuestionList
           loading={isLoading}
@@ -121,25 +113,13 @@ export const QuestionSearch = container<Props, Params, Data>(
 QuestionSearch.displayName = "QuestionSearch";
 
 QuestionSearch.getData = async ({ helper, params }) => {
+  const router = helper.questionBankQuestionSearch;
   const questionBank = getRequiredParam(params, "questionBank");
-
-  const [data] = await Promise.all([
-    helper.questionBank.getAllSubjects.fetch({ questionBank }),
-  ]);
-
-  return {
-    subjects: data.subjects,
-  };
+  return await router.getSearchConfigFilters.fetch({ questionBank });
 };
 
 QuestionSearch.useData = (params) => {
+  const router = trpc.questionBankQuestionSearch;
   const questionBank = getRequiredParam(params, "questionBank");
-
-  const [data] = trpc.questionBank.getAllSubjects.useSuspenseQuery({
-    questionBank,
-  });
-
-  return {
-    subjects: data.subjects,
-  };
+  return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
 };

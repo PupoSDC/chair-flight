@@ -23,7 +23,7 @@ const meta: Meta<typeof UserSettings> = {
           hasFlashcards: true,
           hasQuestions: true,
           hasLearningObjectives: true,
-          hasMedia: true,
+          hasAnnexes: true,
           hasCourses: true,
         })),
       ],

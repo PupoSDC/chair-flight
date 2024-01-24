@@ -54,7 +54,11 @@ const getQuestionMultipleChoiceFromSimple = ({
     question: variant.question,
     annexes: variant.annexes,
     correctOptionId: correctOption.id,
-    options: shuffler([correctOption, ...wrongOptions]),
+    options: shuffler([correctOption, ...wrongOptions]).map((opt) => ({
+      id: opt.id,
+      text: opt.text,
+      why: opt.why,
+    })),
     explanation: [variant.explanation, template.explanation]
       .filter(Boolean)
       .join("\n\n---\n\n"),

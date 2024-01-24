@@ -15,21 +15,9 @@ import "@fontsource/public-sans";
 window.React = React;
 
 const api = initialize({
-  onUnhandledRequest: ({ method, url }) => {
+  onUnhandledRequest: ({ method, url }, print) => {
     if (url.includes("/trpc")) {
-      console.log(api.listHandlers());
-      console.error(
-        [
-          `Unhandled ${method} request to ${url}.`,
-          "",
-          "This exception has been only logged in the console, however, it's strongly ",
-          "recommended to resolve this error as you don't want unmocked data in ",
-          "Storybook stories.",
-          "",
-          "If you wish to mock an error response, please refer to this guide: ",
-          "https://mswjs.io/docs/recipes/mocking-error-responses",
-        ].join(""),
-      );
+      print.error();
     }
   },
 });

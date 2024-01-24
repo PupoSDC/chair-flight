@@ -1,40 +1,61 @@
+import { makeMap } from "@chair-flight/base/utils";
 import type {
   LearningObjectiveId,
   QuestionBankCourse,
   QuestionBankFlashcardCollection,
   QuestionBankLearningObjective,
-  QuestionBankMedia,
+  QuestionBankAnnexes,
   QuestionBankQuestionTemplate,
   QuestionBankSubject,
+  SubjectId,
 } from "@chair-flight/base/types";
 
 export const connectQuestionBank = ({
   questions,
   learningObjectives,
   subjects,
-  media,
+  annexes,
 }: {
   questions: QuestionBankQuestionTemplate[];
   learningObjectives: QuestionBankLearningObjective[];
   courses: QuestionBankCourse[];
   subjects: QuestionBankSubject[];
-  media: QuestionBankMedia[];
+  annexes: QuestionBankAnnexes[];
   flashcards: QuestionBankFlashcardCollection[];
 }) => {
-  const learningObjectivesMap = learningObjectives.reduce(
+  const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
+  const subjectsMap = makeMap(subjects, (s) => s.id);
+
+  const learningObjectiveToSubject = learningObjectives.reduce(
     (sum, lo) => {
-      sum[lo.id] = lo;
+      let parentId: string = lo.parentId;
+      while (parentId) {
+        const subject = subjectsMap[parentId];
+        const parentLo = learningObjectivesMap[parentId];
+        if (subject) {
+          sum[lo.id] = subject.id;
+          break;
+        }
+        if (parentLo) {
+          parentId = parentLo.parentId;
+          continue;
+        }
+        throw new Error(
+          `Lo to Subject mapping entered an infinite loop. LO = ${lo.id}, parentId = ${parentId}`,
+        );
+      }
+
       return sum;
     },
-    {} as Record<LearningObjectiveId, QuestionBankLearningObjective>,
+    {} as Record<LearningObjectiveId, SubjectId>,
   );
 
-  // Connect questions to media
+  // Connect questions to annexes
   questions.forEach((q) => {
     Object.values(q.variants).forEach((v) => {
       v.annexes.forEach((a) => {
         const annex = a.split("/").pop()?.split(".")[0] ?? "";
-        const thisMedia = media.find((m) => m.id === annex);
+        const thisMedia = annexes.find((m) => m.id === annex);
         if (thisMedia) {
           thisMedia.questions = [...new Set([...thisMedia.questions, q.id])];
           thisMedia.variants = [...new Set([...thisMedia.variants, v.id])];
@@ -47,6 +68,17 @@ export const connectQuestionBank = ({
         }
       });
     });
+  });
+
+  // Connect subjects with annexes
+  annexes.forEach((a) => {
+    a.subjects = [
+      ...new Set(
+        a.learningObjectives
+          .map((v) => learningObjectiveToSubject[v])
+          .filter(Boolean),
+      ),
+    ];
   });
 
   // Connect learning objectives to questions
