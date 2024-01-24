@@ -1,19 +1,8 @@
+const enableAnalyze = process.env.ANALYZE === "true";
+
 const { withNx } = require("@nx/next/plugins/with-nx");
 const makeBundleAnalyzer = require("@next/bundle-analyzer");
-const makeMdxParser = require("@next/mdx");
-
-const withBundleAnalyzer = makeBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
-
-const withMdx = makeMdxParser({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    providerImportSource: "@mdx-js/react",
-  },
-});
+const withBundleAnalyzer = makeBundleAnalyzer({ enabled: enableAnalyze });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,9 +12,16 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
-  pageExtensions: ["page.tsx", "api.ts", "page.mdx"],
+  pageExtensions: ["page.tsx", "api.ts"],
   async rewrites() {
-    return [
+    const aboutUsRewrite = [
+      {
+        source: "/articles/about-us",
+        destination: "/blog/000-about-us",
+      },
+    ];
+
+    const storybookRewrites = [
       "assets",
       "sb-addons",
       "sb-common-assets",
@@ -40,6 +36,8 @@ const nextConfig = {
       source: `/${source}/:path*`,
       destination: `/storybook/${source}/:path*`,
     }));
+
+    return [...storybookRewrites, ...aboutUsRewrite];
   },
   async redirects() {
     return [
@@ -49,25 +47,15 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/questions",
-        destination: "/modules/atpl/questions",
-        permanent: true,
-      },
-      {
-        source: "/tests/:path*'",
-        destination: "/modules/atpl/tests/:path*",
-        permanent: true,
-      },
-      {
-        source: "/learning-objectives",
-        destination: "/modules/atpl/learning-objectives",
+        source: "/articles/blog/:path*",
+        destination: "/blog/:path*",
         permanent: true,
       },
     ];
   },
 };
 
-module.exports = [withMdx, withBundleAnalyzer, withNx].reduce(
+module.exports = [withBundleAnalyzer, withNx].reduce(
   (config, wrapper) => wrapper(config),
   nextConfig,
 );

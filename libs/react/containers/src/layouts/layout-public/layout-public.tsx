@@ -1,11 +1,11 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
-import { useAnalytics } from "@chair-flight/react/analytics";
+import { AppLogo } from "@chair-flight/react/components";
+import { container } from "../../wraper/container";
 import {
-  AppLogo,
+  AppButtonsContainer,
   GithubButton,
   ThemeButton,
-} from "@chair-flight/react/components";
-import { container } from "../../wraper/container";
+} from "../components/app-buttons";
 import { usePageTransition } from "../hooks/use-page-transition";
 import type { ReactElement } from "react";
 
@@ -23,7 +23,6 @@ type Props = {
 
 export const LayoutPublic = container<Props>(
   ({ children, fixedHeight, background, noPadding }) => {
-    const { track } = useAnalytics();
     const { isTransitioning } = usePageTransition();
 
     return (
@@ -83,9 +82,10 @@ export const LayoutPublic = container<Props>(
               Blog
             </Link>
           </Box>
-          <Box sx={{ flexGrow: 1 }} />
-          <GithubButton />
-          <ThemeButton onClick={() => track("themeButton.switch")} />
+          <AppButtonsContainer>
+            <GithubButton />
+            <ThemeButton />
+          </AppButtonsContainer>
         </Stack>
         <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />
         {background}

@@ -1,17 +1,11 @@
-import { default as Link } from "next/link";
-import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
-import { Button } from "@mui/joy";
-import { ArticlePageLayout } from "./_article-page.layout";
-
-export const meta = {
-  name: "About Us",
-  linkName: "About Chair Flight",
-  description:
-    "Our goal is to build an **Open Source**, **Free** and **Community driven** aviation question bank built by students for students.",
-};
-
-# About Chair flight
-
+---
+  title: About Us
+  author: PupoSDC
+  date: '2023-07-01'
+  tag: Content
+  description: 
+    Our goal is to build an Open Source, Free and Community driven 
+    aviation question bank built by students for students.
 ---
 
 Our goal is to build an **Open Source**, **Free** and **Community driven**
@@ -55,17 +49,3 @@ migrate
 
 In the future we hope to provide you with all the tools you could possible want
 to help us make this project even better
-
----
-
-<Button
-  endDecorator={<OpenInNewIcon />}
-  component={Link}
-  href="/"
-  children={"Start Exploring"}
-  sx={{ mx: "auto", mb: 2 }}
-/>
-
-export default ({ children }) => (
-  <ArticlePageLayout meta={meta}>{children}</ArticlePageLayout>
-);

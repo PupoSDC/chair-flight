@@ -1,26 +1,13 @@
-import { useState } from "react";
-import { NoSsr } from "@mui/base";
-import { Sheet } from "@mui/joy";
-import { default as dedent } from "ts-dedent";
-import { QuestionMultipleChoice } from "@chair-flight/react/components";
-import { QuestionOverview } from "@chair-flight/react/containers";
-import { BlogPageLayout } from "./_blog-page.layout";
-
-export const meta = {
-  title: "Welcome to Chair Flight Blog!",
-  linkTitle: "Welcome to Chair Flight Blog!",
-  file: "001-welcome-to-chair-flight-blog",
-  description: [
-    "This blog will be used to share technical improvements, new features, and ",
-    "other updates about Chair Flight. There will also be articles oriented to ",
-    "make your journey as a flight student as smooth as possible.",
-  ].join(""),
-  tags: ["Technical"],
-  author: "PupoSDC",
-  isoDate: "2023-07-23T20:26:01.746Z",
-};
-
-# Welcome To Chair Flight Blog!
+---
+  title: Welcome to Chair Flight Blog!
+  author: PupoSDC
+  date: '2023-07-23'
+  tag: Technical
+  description: 
+    This blog will be used to share technical improvements, new features, and
+    other updates about Chair Flight. There will also be articles oriented to,
+    make your journey as a flight student as smooth as possible.
+---
 
 This blog will be used to share technical improvements, new features, and
 other updates about Chair Flight. There will also be articles oriented to make
@@ -56,33 +43,10 @@ best environment for people to contribute with their own questions.
 Our primary focus was on rethinking what a question is. Consider the following
 classical question:
 
-<Sheet sx={{ p: 2 }}>
-  {(() => {
-    const [selectedAnswer, setSelectedAnswer] = useState(null)
-    return (
-      <QuestionMultipleChoice 
-        question={dedent`
-          Considering subsonic incompressible airflow through a Venturi, which statement is correct?
-
-          - The dynamic pressure in the throat is lower than in the undisturbed airflow.
-          - The total pressure in the throat is lower than in the undisturbed airflow.
-        `}
-        correctOptionId={"4"}
-        options={[
-          { optionId: "1", text: "One is Correct, Two is Incorrect" },
-          { optionId: "2", text: "One is Correct, Two is Correct" },
-          { optionId: "3", text: "One is Incorrect, Two is correct" },
-          { optionId: "4", text: "One is Incorret, Two is Iconrrect" },
-        ]}
-        status={selectedAnswer ? "show-result" : "in-progress"}
-        selectedOptionId={selectedAnswer}
-        onOptionClicked={setSelectedAnswer}
-      />
-    )
-
-})()}
-
-</Sheet>
+> Considering subsonic incompressible airflow through a Venturi, which statement is correct?
+>
+> - The dynamic pressure in the throat is lower than in the undisturbed airflow.
+> - The total pressure in the throat is lower than in the undisturbed airflow.
 
 This question is pretty common to this day in ATPL Principles of Flight exams.
 However, it is a pretty dull question, that after you see once or twice, you will
@@ -95,10 +59,13 @@ incorrect. For this simple question, it's possible to write 18 variations!
 That's 16 times more seeing this question than you really need to see it. In
 Chair Flight, these question variants are combined into a single question:
 
+```tsx eval
 <QuestionOverview
+  noSsr
   questionId={"QYFPA3CY4E"}
-  questionBank="Atpl"
+  questionBank="atpl"
   sx={{
+    position: "relative",
     maxHeight: "620px",
     bgcolor: "background.surface",
     overflow: "auto",
@@ -107,6 +74,7 @@ Chair Flight, these question variants are combined into a single question:
     my: 2,
   }}
 />
+```
 
 Feel free to spend some time playing around. You will notice all these possible
 combinations of this one question8are collapsed into one. There is one shared
@@ -127,9 +95,3 @@ create questions and variants in a more intuitive way.
 
 In the next few weeks we will be working on these features and publishing updates
 in this blog as we go.
-
-**See you in the skies!**
-
-export default ({ children }) => (
-  <BlogPageLayout meta={meta}>{children}</BlogPageLayout>
-);

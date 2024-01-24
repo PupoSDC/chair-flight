@@ -27,14 +27,11 @@
     "@fontsource/public-sans": "^5.0.16",
     "@hookform/devtools": "^4.3.1",
     "@hookform/resolvers": "^3.3.4",
-    "@mdx-js/loader": "^3.0.0",
-    "@mdx-js/react": "^3.0.0",
     "@mui/base": "5.0.0-beta.32",
     "@mui/icons-material": "^5.15.5",
     "@mui/joy": "5.0.0-beta.23",
     "@mui/material": "npm:@mui/joy@5.0.0-beta.23",
     "@napi-rs/image": "^1.7.0",
-    "@next/mdx": "^14.1.0",
     "@prisma/client": "^5.8.1",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
@@ -50,6 +47,7 @@
     "luxon": "^3.4.4",
     "minisearch": "^6.3.0",
     "next": "^14.1.0",
+    "next-mdx-remote": "^4.4.1",
     "octokit": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -141,7 +139,8 @@
     "vitest": "^1.2.1",
     "vitest-mock-extended": "^1.3.1",
     "webpack": "^5.89.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "yaml": "^2.3.4"
   },
   "overrides": {
     "@mui/material": "npm:@mui/joy@5.0.0-beta.15"

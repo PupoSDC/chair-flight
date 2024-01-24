@@ -196,7 +196,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
           </Box>
           <Link
             sx={{ justifyContent: "center", width: "100%" }}
-            href="/articles/about-us"
+            href="/blog/000-about-us"
             children="About This Project"
             endDecorator={<ChevronRightIcon />}
           />

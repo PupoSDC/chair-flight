@@ -3,5 +3,5 @@ export {
   HamburgerButton,
   ThemeButton,
   AppButtonsContainer,
-  BackButton,
+  NotificationButton,
 } from "./app-buttons";

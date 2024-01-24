@@ -1,30 +1,14 @@
-import { Suspense } from "react";
-import { useRouter } from "next/router";
-import { NoSsr } from "@mui/base";
-import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicket";
-import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
-import { default as StyleIcon } from "@mui/icons-material/Style";
-import { Stack, Link } from "@mui/joy";
-import { ModuleSelectionButton } from "@chair-flight/react/components";
-import { TestMaker, useTestProgress } from "@chair-flight/react/containers";
-import { BlogPageLayout } from "./_blog-page.layout";
-
-export const meta = {
-  title: "We refactored our Web App!",
-  linkTitle: "We refactored our Web App!",
-  file: "004-webapp-redesign",
-  description: [
-    "In order to keep our focus we decided to restructure our application in three ",
-    "different segments. The main ovjective with this refactor is to allow students",
-    "on each of the 3 stages of their aeronautical careers a customized experience ",
-    "without being distracted by contents that are not geared towards them. ",
-  ].join(""),
-  tags: ["Feature"],
-  author: "PupoSDC",
-  isoDate: "2023-11-17T20:00:00.000Z",
-};
-
-# We refactored our webapp!
+---
+  title: We refactored our Web App!
+  author: PupoSDC
+  date: '2023-11-17'
+  tag: Technical
+  description: >
+    In order to keep our focus we decided to restructure our application in three
+    different segments. The main ovjective with this refactor is to allow students
+    on each of the 3 stages of their aeronautical careers a customized experience
+    without being distracted by contents that are not geared towards them.
+---
 
 In order to keep our focus we decided to restructure our application in three
 different segments. The main ovjective with this refactor is to allow students
@@ -35,10 +19,11 @@ without being distracted by contents that are not geared towards them.
 
 **Enjoy your new home pages:**
 
+```tsx eval
 <Stack>
   <ModuleSelectionButton
     fullWidth
-    component={Link}
+    component={"a"}
     sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
     color={"blue"}
     title={"ATPL theory"}
@@ -51,7 +36,7 @@ without being distracted by contents that are not geared towards them.
   />
   <ModuleSelectionButton
     fullWidth
-    component={Link}
+    component={"a"}
     sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
     color={"teal"}
     title={"Interview Prep"}
@@ -64,7 +49,7 @@ without being distracted by contents that are not geared towards them.
   />
   <ModuleSelectionButton
     fullWidth
-    component={Link}
+    component={"a"}
     sx={{ my: { xs: 1, md: 2 }, maxWidth: 560, mx: "auto" }}
     color={"rose"}
     title={"737 Type rating"}
@@ -76,9 +61,4 @@ without being distracted by contents that are not geared towards them.
     href="/modules/737"
   />
 </Stack>
-
-**See you in the skies!**
-
-export default ({ children }) => (
-  <BlogPageLayout meta={meta}>{children}</BlogPageLayout>
-);
+```

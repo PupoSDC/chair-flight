@@ -19,19 +19,23 @@ import {
 } from "@mui/joy";
 import {
   AppLogo,
-  GithubButton,
-  HamburgerButton,
   Sidebar,
   SidebarListItem,
-  ThemeButton,
   ThemeOverrideColorScheme,
   useMediaQuery,
-  useSidebar,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
+import {
+  AppButtonsContainer,
+  GithubButton,
+  HamburgerButton,
+  NotificationButton,
+  ThemeButton,
+} from "../components/app-buttons";
 import { usePageTransition } from "../hooks/use-page-transition";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 const HEADER_HEIGHT = 48;
 
@@ -52,19 +56,14 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = {
-  hasFlashcards: boolean;
-  hasQuestions: boolean;
-  hasLearningObjectives: boolean;
-  hasAnnexes: boolean;
-};
+type Data = AppRouterOutput["questionBank"]["getConfig"] &
+  AppRouterOutput["blog"]["getDateOfLastPost"];
 
 export const LayoutModule = container<Props, Params, Data>(
   ({ children, fixedHeight, noPadding, questionBank, breadcrumbs }) => {
     const { isTransitioning } = usePageTransition();
-    const { openSidebar } = useSidebar();
     const router = useRouter();
-    const config = LayoutModule.useData({ questionBank });
+    const data = LayoutModule.useData({ questionBank });
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -114,7 +113,7 @@ export const LayoutModule = container<Props, Params, Data>(
             icon={HomeIcon}
             title={"Home"}
           />
-          {config.hasQuestions && (
+          {data.hasQuestions && (
             <SidebarListItem
               href={`/modules/${questionBank}/tests`}
               selected={isTests}
@@ -122,7 +121,7 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Tests"}
             />
           )}
-          {config.hasQuestions && (
+          {data.hasQuestions && (
             <SidebarListItem
               href={`/modules/${questionBank}/questions`}
               selected={isQuestions}
@@ -130,7 +129,7 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Questions"}
             />
           )}
-          {config.hasLearningObjectives && (
+          {data.hasLearningObjectives && (
             <SidebarListItem
               href={`/modules/${questionBank}/learning-objectives`}
               selected={isLearningObjectives}
@@ -138,7 +137,7 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Learning Objectives"}
             />
           )}
-          {config.hasAnnexes && (
+          {data.hasAnnexes && (
             <SidebarListItem
               href={`/modules/${questionBank}/annexes`}
               selected={isAnnexes}
@@ -146,7 +145,7 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Annexes"}
             />
           )}
-          {config.hasFlashcards && (
+          {data.hasFlashcards && (
             <SidebarListItem
               href={`/modules/${questionBank}/flashcards`}
               selected={isFlashcards}
@@ -203,13 +202,12 @@ export const LayoutModule = container<Props, Params, Data>(
               {lastBreadcrumb && <Typography>{lastBreadcrumb}</Typography>}
             </Breadcrumbs>
           </NoSsr>
-
-          <GithubButton sx={{ ml: "auto" }} />
-          <ThemeButton />
-          <HamburgerButton
-            sx={{ display: ["flex", "none"] }}
-            onClick={openSidebar}
-          />
+          <AppButtonsContainer>
+            <NotificationButton />
+            <GithubButton />
+            <ThemeButton />
+            <HamburgerButton />
+          </AppButtonsContainer>
         </Stack>
         <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />
         <Stack
@@ -245,11 +243,18 @@ LayoutModule.displayName = "LayoutModule";
 
 LayoutModule.getData = async ({ helper, params }) => {
   const questionBank = getRequiredParam(params, "questionBank");
-  return await helper.questionBank.getConfig.fetch({ questionBank });
+  const [configData, lastPostData] = await Promise.all([
+    helper.questionBank.getConfig.fetch({ questionBank }),
+    helper.blog.getDateOfLastPost.fetch(),
+  ]);
+  return { ...configData, ...lastPostData };
 };
 
 LayoutModule.useData = (params) => {
   const qb = trpc.questionBank;
+  const blog = trpc.blog;
   const questionBank = getRequiredParam(params, "questionBank");
-  return qb.getConfig.useSuspenseQuery({ questionBank })[0];
+  const configData = qb.getConfig.useSuspenseQuery({ questionBank })[0];
+  const lastPostData = blog.getDateOfLastPost.useSuspenseQuery()[0];
+  return { ...configData, ...lastPostData };
 };

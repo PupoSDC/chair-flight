@@ -7,8 +7,22 @@ export type MarkdownClientDemoProps = {
   initialMarkdown?: string;
 };
 
+const demoText = `# Markdown Playground
+
+**Welcome** to the *Markdown Playground* where you can explore the power of markdown in just _six lines_!
+
+1. Create **bold** and *italic* text effortlessly.
+2. Use [links](https://www.example.com) to navigate to your favorite websites.
+3. Showcase code snippets using inline \`code\` or code blocks:
+
+\`\`\`python
+  def greet(name):
+    return f"Hello, {name}!"
+\`\`\`
+`;
+
 export const MarkdownClientDemo: FunctionComponent<MarkdownClientDemoProps> = ({
-  initialMarkdown,
+  initialMarkdown = demoText,
 }) => {
   const [markdown, setMarkdown] = useState(initialMarkdown ?? "");
 
