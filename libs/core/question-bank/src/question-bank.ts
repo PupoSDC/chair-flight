@@ -121,11 +121,7 @@ export class QuestionBank implements IQuestionBank {
     return data;
   }
 
-  async preloadForStaticRender({
-    readFile,
-  }: {
-    readFile: (path: string, string: "utf-8") => Promise<string>;
-  }) {
+  async preloadForStaticRender({ readFile }: { readFile: ReadFile }) {
     await Promise.all(
       resources.map(async (resource) => {
         const cwd = process.cwd();

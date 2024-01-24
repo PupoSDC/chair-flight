@@ -64,11 +64,13 @@ can and will be introduced in patch releases.
 | base-env                   | Utility to safely access env variables                      |
 | base-errors                | Errors that can be handled in the front or in the backend   |
 | base-types                 | Base Business types used across the app                     |
+| content-blog               | Blog posts                                                  |
 | content-question-bank-prep | Content bank for the interview prep module                  |
 | content-question-bank-type | Content bank for the Type Rating module                     |
 | content-question-bank-atpl | Content bank for the ATPL theory module                     |
 | core-analytics             | Analytics provider (currently a custom solution)            |
 | core-app                   | Business logic blocks sharable between React SPA/SSR and RN |
+| core-blog                  | Blog posts compiler and core functions                      |
 | core-github                | Github related functionalities                              |
 | core-schemas               | Zod Schemas shared across our application (from base-types) |
 | react-analytics            | React hooks to interact with our analytics provider         |

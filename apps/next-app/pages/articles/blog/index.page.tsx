@@ -1,3 +1,4 @@
+import * as fs from "node:fs/promises";
 import { useEffect, type FunctionComponent } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import {
@@ -9,9 +10,7 @@ import {
   Button,
   Box,
 } from "@mui/joy";
-import { default as fs } from "fs/promises";
 import { DateTime } from "luxon";
-import { default as path } from "path";
 import { default as dedent } from "ts-dedent";
 import {
   AppHead,
@@ -19,16 +18,14 @@ import {
   BlogPostChip,
 } from "@chair-flight/react/components";
 import { LayoutPublic, useUserVoyage } from "@chair-flight/react/containers";
-import type { BlogPageMeta } from "./_blog-page.layout";
-import type { GetStaticProps } from "next";
+import { staticHandler } from "@chair-flight/trpc/server";
+import type { BlogMeta } from "@chair-flight/core/blog";
 
-export type ArticlesIndexPageProps = {
-  blogPostsMeta: BlogPageMeta[];
+export type PageProps = {
+  meta: BlogMeta[];
 };
 
-export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
-  blogPostsMeta,
-}) => {
+const Page: FunctionComponent<PageProps> = ({ meta }) => {
   useEffect(() => useUserVoyage.markBlogAsVisited, []);
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
@@ -36,31 +33,29 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
       <Typography level="h2" sx={{ pt: 4 }}>
         Posts
       </Typography>
-      {blogPostsMeta.map((meta) => (
-        <Card sx={{ mt: 2 }} key={meta.file}>
+      {meta.map((post) => (
+        <Card sx={{ mt: 2 }} key={post.filename}>
           <CardContent>
             <Box sx={{ mb: 2 }}>
-              {meta.tags.map((tag) => (
-                <BlogPostChip key={tag} tag={tag} size="sm" />
-              ))}
+              <BlogPostChip key={post.tag} tag={post.tag} size="sm" />
             </Box>
             <Typography level="h3" color="primary">
-              {meta.title}
+              {post.title}
             </Typography>
-            <Typography level="body-sm">{meta.description}</Typography>
+            <Typography level="body-sm">{post.description}</Typography>
           </CardContent>
           <CardActions>
             <Box>
-              <Typography level="body-sm">{meta.author}</Typography>
+              <Typography level="body-sm">{post.author}</Typography>
               <Typography level="body-xs">
-                {DateTime.fromISO(meta.isoDate).toFormat("dd LLL yyyy")}
+                {DateTime.fromISO(post.date).toFormat("dd LLL yyyy")}
               </Typography>
             </Box>
             <Button
               color="primary"
               variant="plain"
               component={Link}
-              href={`/articles/blog/${meta.file}`}
+              href={`/articles/blog/${post.filename}`}
               children="Read&nbsp;More"
               endDecorator={<KeyboardArrowRightIcon />}
               sx={{ flex: 0, ml: "auto" }}
@@ -73,20 +68,9 @@ export const ArticlesIndexPage: FunctionComponent<ArticlesIndexPageProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<
-  ArticlesIndexPageProps
-> = async () => {
-  const folderPath = path.join(process.cwd(), "pages/articles/blog");
-  const files = (await fs.readdir(folderPath)).filter((file) =>
-    file.endsWith(".mdx"),
-  );
-  const content = await Promise.all(files.map((f) => import(`./${f}`)));
-  const blogPostsMeta = content.map<BlogPageMeta>((c) => c.meta).reverse();
-  return {
-    props: {
-      blogPostsMeta,
-    },
-  };
-};
+export const getStaticProps = staticHandler<PageProps>(async ({ helper }) => {
+  const props = await helper.blog.getBlogPostsMeta.fetch();
+  return { props };
+}, fs);
 
-export default ArticlesIndexPage;
+export default Page;
