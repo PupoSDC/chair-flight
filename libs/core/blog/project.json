@@ -1,0 +1,23 @@
+{
+  "name": "core-blog",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/core/blog/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/blog/**/*.ts"]
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/core/blog/tsconfig.json"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["content-blog"]
+}

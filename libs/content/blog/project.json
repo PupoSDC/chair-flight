@@ -1,0 +1,11 @@
+{
+  "name": "content-blog",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "compile": {
+      "executor": "@chair-flight/core/blog:compile"
+    }
+  },
+  "tags": []
+}

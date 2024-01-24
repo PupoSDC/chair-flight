@@ -25,7 +25,14 @@ const nextConfig = {
   },
   pageExtensions: ["page.tsx", "api.ts", "page.mdx"],
   async rewrites() {
-    return [
+    const aboutUsRewrite = [
+      {
+        source: "/articles/about-us",
+        destination: "/blog/000-about-us",
+      },
+    ];
+
+    const storybookRewrites = [
       "assets",
       "sb-addons",
       "sb-common-assets",
@@ -40,6 +47,8 @@ const nextConfig = {
       source: `/${source}/:path*`,
       destination: `/storybook/${source}/:path*`,
     }));
+
+    return [...storybookRewrites, ...aboutUsRewrite];
   },
   async redirects() {
     return [
@@ -49,18 +58,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/questions",
-        destination: "/modules/atpl/questions",
-        permanent: true,
-      },
-      {
-        source: "/tests/:path*'",
-        destination: "/modules/atpl/tests/:path*",
-        permanent: true,
-      },
-      {
-        source: "/learning-objectives",
-        destination: "/modules/atpl/learning-objectives",
+        source: "/articles/blog/:path*",
+        destination: "/blog/:path*",
         permanent: true,
       },
     ];
