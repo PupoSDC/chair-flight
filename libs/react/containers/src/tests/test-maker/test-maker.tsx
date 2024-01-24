@@ -22,7 +22,10 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import { getNumberOfAvailableQuestions, newTestConfigurationSchema } from "@chair-flight/core/app";
+import {
+  getNumberOfAvailableQuestions,
+  newTestConfigurationSchema,
+} from "@chair-flight/core/app";
 import {
   HookFormSelect,
   NestedCheckboxSelect,
@@ -127,10 +130,10 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
     currentLearningObjectives.includes(s.id),
   );
 
-  const availableQuestions = currentSubject 
-    ?  getNumberOfAvailableQuestions(currentSubject, currentLearningObjectives) 
+  const availableQuestions = currentSubject
+    ? getNumberOfAvailableQuestions(currentSubject, currentLearningObjectives)
     : 0;
-  
+
   const maxQuestions = Math.min(200, availableQuestions);
 
   const onSubmit = form.handleSubmit(async (config) => {
