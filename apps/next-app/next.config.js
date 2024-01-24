@@ -1,8 +1,8 @@
-const enableAnalyze = rocess.env.ANALYZE === "true"
+const enableAnalyze = rocess.env.ANALYZE === "true";
 
 const { withNx } = require("@nx/next/plugins/with-nx");
 const makeBundleAnalyzer = require("@next/bundle-analyzer");
-const withBundleAnalyzer = makeBundleAnalyzer({ enabled: enableAnalyze});
+const withBundleAnalyzer = makeBundleAnalyzer({ enabled: enableAnalyze });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

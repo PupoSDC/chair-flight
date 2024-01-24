@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { load } from "js-yaml";
+import { parse } from "yaml";
 import { blogMetaSchema } from "../../src";
 import type { BlogMeta } from "../../src";
 import type { ExecutorContext } from "@nx/devkit";
@@ -11,10 +11,9 @@ const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  //const { serialize } = await import('next-mdx-remote/serialize');
-
   const projects = context.workspace?.projects ?? {};
   const nextProjectName = "next-app";
+
   /** i.e.: `content-blog` */
   const projectName = context.projectName ?? "";
   /** i.e.: `libs/content/blog` */
@@ -32,12 +31,11 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const parsedPosts: BlogMeta[] = [];
 
   for (const post of posts) {
-    load();
     /** i.e.: `libs/content/blog/posts/001-post/page.md` */
     const postPage = path.join(blogPostsFolder, post, "page.md");
     const source = (await fs.readFile(postPage)).toString();
     const match = MATTER_REGEX.exec(source);
-    const matter = match ? load(match[1]) : {};
+    const matter = match ? parse(match[1]) : {};
     matter.filename = post;
     const meta = blogMetaSchema.parse(matter);
     parsedPosts.push(meta);
