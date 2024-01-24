@@ -10,43 +10,16 @@ import type { FunctionComponent } from "react";
 
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight";
 
-const StyledButton = styled(IconButton)`
-  border: none;
-  margin: 0;
-  flex: 0;
-  padding: 0;
-  font-size: 20px;
-  min-width: 30px;
-
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    min-width: 36px;
-    font-size: 24px;
-  }
-
-  & > svg {
-    color: ${({ theme }) => theme.vars.palette.neutral.plainColor};
-    font-size: inherit;
-  }
-
-  &:hover {
-    background-color: transparent;
-
-    & > svg {
-      color: ${({ theme }) => theme.vars.palette.primary.plainColor};
-    }
-  }
-` as typeof IconButton;
-
 export const GithubButton: FunctionComponent<IconButtonProps> = (props) => (
-  <StyledButton component={Link} target="_blank" href={GITHUB_URL} {...props}>
+  <IconButton component={Link} target="_blank" href={GITHUB_URL} {...props}>
     <GithubIcon />
-  </StyledButton>
+  </IconButton>
 );
 
 export const HamburgerButton: FunctionComponent<IconButtonProps> = (props) => (
-  <StyledButton {...props}>
+  <IconButton {...props}>
     <HamburgerIcon />
-  </StyledButton>
+  </IconButton>
 );
 
 export const ThemeButton: FunctionComponent<IconButtonProps> = (props) => {
@@ -58,7 +31,7 @@ export const ThemeButton: FunctionComponent<IconButtonProps> = (props) => {
   useEffect(() => setIsMounted(true), []);
 
   return (
-    <StyledButton
+    <IconButton
       {...props}
       onClick={(...args) => {
         toggleTheme();
@@ -66,15 +39,15 @@ export const ThemeButton: FunctionComponent<IconButtonProps> = (props) => {
       }}
     >
       {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
-    </StyledButton>
+    </IconButton>
   );
 };
 
 export const BackButton: FunctionComponent<IconButtonProps> = (props) => {
   return (
-    <StyledButton {...props}>
+    <IconButton {...props}>
       <ChevronLeftIcon />
-    </StyledButton>
+    </IconButton>
   );
 };
 

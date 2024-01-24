@@ -22,7 +22,10 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import { newTestConfigurationSchema } from "@chair-flight/core/app";
+import {
+  getNumberOfAvailableQuestions,
+  newTestConfigurationSchema,
+} from "@chair-flight/core/app";
 import {
   HookFormSelect,
   NestedCheckboxSelect,
@@ -126,6 +129,12 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
   const someSelected = currentSubject?.learningObjectives.some((s) =>
     currentLearningObjectives.includes(s.id),
   );
+
+  const availableQuestions = currentSubject
+    ? getNumberOfAvailableQuestions(currentSubject, currentLearningObjectives)
+    : 0;
+
+  const maxQuestions = Math.min(200, availableQuestions);
 
   const onSubmit = form.handleSubmit(async (config) => {
     try {
@@ -252,8 +261,8 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
           >
             <FormLabel>Number of Questions</FormLabel>
             <Typography level="body-xs">
-              {currentMode === "study" && "max: 200, "}
-              {`total: ${currentSubject?.numberOfQuestions}`}
+              {currentMode === "study" && `max: ${maxQuestions}, `}
+              {`total: ${availableQuestions}`}
             </Typography>
           </Stack>
 
@@ -264,7 +273,7 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
               <SliderWithInput
                 disabled={currentMode === "exam" || form.formState.isSubmitting}
                 min={1}
-                max={Math.min(200, currentSubject?.numberOfQuestions ?? 200)}
+                max={maxQuestions}
                 value={value}
                 onChange={(v) => onChange(v)}
               />

@@ -29,12 +29,8 @@ const StyledFormControl = styled(FormControl)`
 const UserSettingsFallback: FunctionComponent = () => null;
 
 export const UserSettings = container(({ sx, component = "section" }) => {
-  const {
-    examModeAutoSkip,
-    studyModeAutoSkip,
-    setExamModeAutoSkip,
-    setStudyModeAutoSkip,
-  } = useUserPreferences();
+  const [preferences, setUserPreference] = useUserPreferences();
+  const { examModeAutoSkip, studyModeAutoSkip } = preferences;
 
   return (
     <Stack
@@ -60,14 +56,24 @@ export const UserSettings = container(({ sx, component = "section" }) => {
       <StyledFormControl>
         <Switch
           checked={examModeAutoSkip}
-          onChange={() => setExamModeAutoSkip(!examModeAutoSkip)}
+          onChange={() =>
+            setUserPreference({
+              examModeAutoSkip: !examModeAutoSkip,
+            })
+          }
         />
-        <FormLabel>Skip to Next Question after answering (Exam Mode)</FormLabel>
+        <FormLabel>
+          Skip to Next Question after answering correctly (Exam Mode)
+        </FormLabel>
       </StyledFormControl>
       <StyledFormControl>
         <Switch
           checked={studyModeAutoSkip}
-          onChange={() => setStudyModeAutoSkip(!studyModeAutoSkip)}
+          onChange={() =>
+            setUserPreference({
+              studyModeAutoSkip: !studyModeAutoSkip,
+            })
+          }
         />
         <FormLabel>
           Skip to Next Question after answering correctly (Study Mode)

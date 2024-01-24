@@ -32,6 +32,7 @@ import {
   MarkdownClient,
   QuestionMultipleChoice,
   QuestionNavigation,
+  ThemeButton,
   Ups,
   useMediaQuery,
 } from "@chair-flight/react/components";
@@ -180,6 +181,7 @@ export const TestStudy = container<Props>(
               onClick={() => setIsFinishTestOpen(true)}
             />
           </Tooltip>
+          <ThemeButton />
           <Divider orientation="vertical" sx={{ mx: { xs: 0.5, sm: 2 } }} />
           <Tooltip title="Next Question" variant="soft">
             <IconButton

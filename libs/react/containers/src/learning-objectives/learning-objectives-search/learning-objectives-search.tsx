@@ -104,17 +104,23 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
               <FormProvider {...form}>
                 <HookFormSelect size="sm" {...form.register("searchField")}>
                   {searchFields.map((s) => (
-                    <Option value={s.id}>{s.text}</Option>
+                    <Option key={s.id} value={s.id}>
+                      {s.text}
+                    </Option>
                   ))}
                 </HookFormSelect>
                 <HookFormSelect size="sm" {...form.register("course")}>
                   {courses.map((s) => (
-                    <Option value={s.id}>{s.text}</Option>
+                    <Option key={s.id} value={s.id}>
+                      {s.text}
+                    </Option>
                   ))}
                 </HookFormSelect>
                 <HookFormSelect size="sm" {...form.register("subject")}>
                   {subjects.map((s) => (
-                    <Option value={s.id}>{s.text}</Option>
+                    <Option key={s.id} value={s.id}>
+                      {s.text}
+                    </Option>
                   ))}
                 </HookFormSelect>
               </FormProvider>

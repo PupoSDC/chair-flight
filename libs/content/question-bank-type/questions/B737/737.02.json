@@ -83,7 +83,7 @@
   },
   {
     "id": "h3ia",
-    "explanation": "",
+    "explanation": "### TRIP RESET Switch\n\n- resets BLEED TRIP OFF, PACK or ZONE TEMP lights\n\n- related engine bleed air valve opens, or related pack valve opens, or related trim air modulating valve opens",
     "learningObjectives": ["B737.02"],
     "variants": {
       "hmkql": {
@@ -450,7 +450,7 @@
   },
   {
     "id": "np5w1",
-    "explanation": "",
+    "explanation": "Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.",
     "learningObjectives": ["B737.02"],
     "variants": {
       "f4zwnj": {
@@ -458,6 +458,58 @@
         "type": "true-or-false",
         "question": "Bleed air is taken from stage 4 and stage 10 of the high pressure compressor.",
         "answer": false,
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "f4zwng": {
+        "id": "f4zwng",
+        "type": "true-or-false",
+        "question": "Bleed air is taken from stage 5 and stage 9 of the high pressure compressor.",
+        "answer": false,
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "f4zWnb": {
+        "id": "f4zWnb",
+        "type": "true-or-false",
+        "question": "Bleed air is taken from stage 5 from the low pressure compressor and stage 9 of the high pressure compressor.",
+        "answer": false,
+        "explanation": "",
+        "annexes": [],
+        "externalIds": []
+      },
+      "i8bbqh": {
+        "id": "i8bbqh",
+        "type": "simple",
+        "question": "Which statement is correct:",
+        "options": [
+          {
+            "id": "4ha3ff",
+            "text": "Bleed air is constantly provided from stage 5 and stage 9 of the compressor.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "bc8lm",
+            "text": "Bleed air is only supplied from the 9th stage when the valve modulates open if bleed air requirement is greater than the 5th stage alone can supply.",
+            "correct": true,
+            "why": ""
+          },
+          {
+            "id": "m6ni5i",
+            "text": "Bleed air is only supplied from the 5th stage when the valve modulates open if bleed air requirement is greater than the 9th stage alone can supply.",
+            "correct": false,
+            "why": ""
+          },
+          {
+            "id": "mljcp",
+            "text": "----",
+            "correct": false,
+            "why": ""
+          }
+        ],
         "explanation": "",
         "annexes": [],
         "externalIds": []
@@ -536,47 +588,6 @@
           {
             "id": "fqmvu",
             "text": "Illuminates whenever pressure in APU rises above a pre-set value.",
-            "correct": false,
-            "why": ""
-          }
-        ],
-        "explanation": "",
-        "annexes": [],
-        "externalIds": []
-      }
-    }
-  },
-  {
-    "id": "412mv",
-    "explanation": "",
-    "learningObjectives": ["B737.02"],
-    "variants": {
-      "i8bbqh": {
-        "id": "i8bbqh",
-        "type": "simple",
-        "question": "Which statement is correct:",
-        "options": [
-          {
-            "id": "4ha3ff",
-            "text": "Bleed air is constantly provided from stage 5 and stage 9 of the compressor.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "bc8lm",
-            "text": "Bleed air is only supplied from the 9th stage when the valve modulates open if bleed air requirement is greater than the 5th stage alone can supply.",
-            "correct": true,
-            "why": ""
-          },
-          {
-            "id": "m6ni5i",
-            "text": "Bleed air is only supplied from the 5th stage when the valve modulates open if bleed air requirement is greater than the 9th stage alone can supply.",
-            "correct": false,
-            "why": ""
-          },
-          {
-            "id": "mljcp",
-            "text": "----",
             "correct": false,
             "why": ""
           }

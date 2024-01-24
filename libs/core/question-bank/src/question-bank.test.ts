@@ -23,6 +23,9 @@ describe("QuestionBank", async () => {
 
   const questionIds = allQuestions.map(([id]) => id);
   const variantIds = allQuestions.flatMap(([, q]) => Object.keys(q.variants));
+  const variantIds2 = allQuestions.flatMap(([, q]) =>
+    Object.values(q.variants).map((v) => v.id),
+  );
 
   test("QuestionBankType has correct config", async () => {
     expect(questionBanks["type"].getName()).toBe("type");
@@ -57,6 +60,12 @@ describe("QuestionBank", async () => {
 
   test("Variants have no duplicate ids", () => {
     expect(variantIds).toHaveLength(new Set(variantIds).size);
+  });
+
+  test("Variant Ids match the ids on the variant map", () => {
+    variantIds.forEach((vId, i) =>
+      expect.soft(vId).toStrictEqual(variantIds2[i]),
+    );
   });
 
   test("Questions are valid", () => {
