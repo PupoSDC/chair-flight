@@ -36,9 +36,13 @@ export const createUsePersistenceHook = <T>(
     ),
   );
 
-  return () => ({
+  const usePersistenceHook = () => ({
     data: useZustand((state) => ({ ...initialValue, ...state.data })),
     getData: useZustand((state) => state.getData),
     setData: useZustand((state) => state.setData),
   });
+
+  usePersistenceHook.state = useZustand;
+
+  return usePersistenceHook;
 };

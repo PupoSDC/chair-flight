@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
-import { useUserPreferences } from "../../../user/hooks/use-user-preferences";
+import { userPreferences } from "../../../user/hooks/use-user-preferences";
 import type { Test } from "@chair-flight/base/types";
 
 type TestProgress = {
@@ -60,8 +60,8 @@ export const useTestProgress = create<TestProgress>()(
 
           let currentQuestionIndex = test.currentQuestionIndex;
           const isCorrect = question.correctOptionId === optionId;
-          const { examModeAutoSkip = false, studyModeAutoSkip = false } =
-            useUserPreferences.getState();
+          const { examModeAutoSkip, studyModeAutoSkip } =
+            userPreferences.getState().data;
 
           switch (test.mode) {
             case "exam": {
