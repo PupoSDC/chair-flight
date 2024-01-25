@@ -52,6 +52,8 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     annexesImagesFolder: path.join(contentRoot, "annexes", "images"),
     /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
     annexesJson: path.join(annexesFolder, "annexes.json"),
+    /** i.e.: `libs/content/question-bank-atpl/content/docs` */
+    docsFolder:  path.join(contentRoot, "docs"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
     /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/courses.json` */
