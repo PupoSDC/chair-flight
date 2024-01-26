@@ -4,12 +4,6 @@ parentId: "061.05"
 title: Sunrise and sunset
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"061.05.03"} />
-```
-
-## Summary
-
 ### Daylight change rate
 
 The hours of daylight varies during the year in a sinusoidal fashion. As such,
@@ -25,41 +19,41 @@ inclination of the curve is the highest.
   <Text variant="oneCorrect">
     Which of the following statements is correct?
   </Text>
-<Option key="1" subject={[[]]}>
-  The rate of change of the duration of daylight is greatest during the
-  equinoxes because the rate of change of the duration of daylight is directly
-  proportional to the declination of the sun.
-</Option>
-<Option key="2" subject={[[]]}>
-  The rate of change of the duration of daylight is shortest during the
-  solstices because the rate of change of the duration of daylight is directly
-  proportional to the declination of the sun.
-</Option>
-<Option key="1">
-  The rate of change of the duration of daylight is shortest during the
-  equinoxes because the rate of change of the duration of daylight is directly
-  proportional to the declination of the sun.
-</Option>
-<Option key="2">
-  The rate of change of the duration of daylight is greatest during the
-  solstices because the rate of change of the duration of daylight is directly
-  proportional to the declination of the sun.
-</Option>
-<Option key="1">
-  The rate of change of the duration of daylight is greatest during the
-  equinoxes because the rate of change of the duration of daylight is inversely
-  proportional to the declination of the sun.
-</Option>
-<Option key="2">
-  The rate of change of the duration of daylight is shortest during the
-  solstices because the rate of change of the duration of daylight is inversely
-  proportional to the declination of the sun.
-</Option>
-<Option key="1">
-  The rate of change of the duration of daylight is shortest during the
-  equinoxes because the rate of change of the duration of daylight is inversely
-  proportional to the declination of the sun.
-</Option>
+  <Option key="1" subject={[[]]}>
+    The rate of change of the duration of daylight is greatest during the
+    equinoxes because the rate of change of the duration of daylight is directly
+    proportional to the declination of the sun.
+  </Option>
+  <Option key="2" subject={[[]]}>
+    The rate of change of the duration of daylight is shortest during the
+    solstices because the rate of change of the duration of daylight is directly
+    proportional to the declination of the sun.
+  </Option>
+  <Option key="1">
+    The rate of change of the duration of daylight is shortest during the
+    equinoxes because the rate of change of the duration of daylight is directly
+    proportional to the declination of the sun.
+  </Option>
+  <Option key="2">
+    The rate of change of the duration of daylight is greatest during the
+    solstices because the rate of change of the duration of daylight is directly
+    proportional to the declination of the sun.
+  </Option>
+  <Option key="1">
+    The rate of change of the duration of daylight is greatest during the
+    equinoxes because the rate of change of the duration of daylight is
+    inversely proportional to the declination of the sun.
+  </Option>
+  <Option key="2">
+    The rate of change of the duration of daylight is shortest during the
+    solstices because the rate of change of the duration of daylight is
+    inversely proportional to the declination of the sun.
+  </Option>
+  <Option key="1">
+    The rate of change of the duration of daylight is shortest during the
+    equinoxes because the rate of change of the duration of daylight is
+    inversely proportional to the declination of the sun.
+  </Option>
 
   <Option key="2">
     The rate of change of the duration of daylight is greatest during the

@@ -4,19 +4,15 @@ parentId: "062.06.01"
 title: Operation
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.06.01.02"} />
-```
-
-## Summary
-
 <Question
-  id="O2OVH2WDJY"
-  lo={["062.06.01.02.10", "062.06.01.02.06", "062.06.01.02.04"]}
->
-  <Text variant="oneCorrect">
+id="O2OVH2WDJY"
+lo={["062.06.01.02.10", "062.06.01.02.06", "062.06.01.02.04"]}
+
+>   <Text variant="oneCorrect">
+
     Which of the following statements concerning NAVSTAR GPS transmission
     frequencies is correct?
+
   </Text>
   <Text variant="multipleCorrect" select={5}>
     Which of the following statements concerning NAVSTAR GPS transmission

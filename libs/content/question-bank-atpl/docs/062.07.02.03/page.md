@@ -4,12 +4,6 @@ parentId: "062.07.02"
 title: Designation of RNP and RNAV specifications
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.07.02.03"} />
-```
-
-## Summary
-
 ### RNAV and RNP specifications
 
 The specifications are ordered here from the most demanding to the least

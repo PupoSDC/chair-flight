@@ -3,9 +3,3 @@ learningObjectiveId: "050.02.03.01"
 parentId: "050.02.03"
 title: General circulation around the globe
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"050.02.03.01"} />
-```
-
-## Summary

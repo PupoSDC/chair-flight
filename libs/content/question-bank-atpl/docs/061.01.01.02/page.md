@@ -4,12 +4,6 @@ parentId: "061.01.01"
 title: Earth rotation
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"061.01.01.02"} />
-```
-
-## Summary
-
 The Artic circle is at 66 degrees 33 minutes North. Higher than this latitude
 during the Winter months the Sun will not be seen and a state of continuous
 night or twilight exists.
@@ -22,21 +16,19 @@ North and 23 degrees 27 minutes South
 ```tsx
 <Question id="UNMI90HZB6" lo={["061.01.01.02.01"]}>
   <Text variant="oneCorrect">
-    The angle between the plane of the ecliptic and the plane of equator is approximately...
+    The angle between the plane of the ecliptic and the plane of equator is
+    approximately...
   </Text>
-<Option>27.5º</Option>
-<Option>25.3º</Option>
-<Option>66.5º</Option>
-<Option correct>23.5º</Option>
+  <Option>27.5º</Option>
+  <Option>25.3º</Option>
+  <Option>66.5º</Option>
+  <Option correct>23.5º</Option>
 
   <Explanation>
-    The ecliptic is the annual path of the apparent Sun around the celestial sphere.
-
-    The Earth's vertical axis is tilted by 23 degrees 27 minutes from the vertical.
-
-    A line drawn from the Sun will differ from the plane of the Earth's equator by
-    23 degrees 27 minutes.
-
+    The ecliptic is the annual path of the apparent Sun around the celestial
+    sphere. The Earth's vertical axis is tilted by 23 degrees 27 minutes from
+    the vertical. A line drawn from the Sun will differ from the plane of the
+    Earth's equator by 23 degrees 27 minutes.
   </Explanation>
 </Question>
 ```
@@ -46,30 +38,30 @@ North and 23 degrees 27 minutes South
   <Text variant="oneCorrect">
     Which is the highest latitude listed below at which the sun will <Subject />?
   </Text>
-<Option>68º</Option>
-<Option>72º</Option>
-<Option>62º</Option>
-<Option>32º</Option>
-<Option>21º</Option>
-<Option
-  why="The Artic / Polar circle is at 66 degrees 33 minutes North / South."
-  definition="rise above the horizon and set every day"
->
-  66º
-</Option>
-<Option
-  why="The Artic / Polar circle is at 66 degrees 33 minutes North / South."
-  definition="rise above the horizon and set every day"
->
-  66.5º
-</Option>
+  <Option>68º</Option>
+  <Option>72º</Option>
+  <Option>62º</Option>
+  <Option>32º</Option>
+  <Option>21º</Option>
+  <Option
+    why="The Artic / Polar circle is at 66 degrees 33 minutes North / South."
+    definition="rise above the horizon and set every day"
+  >
+    66º
+  </Option>
+  <Option
+    why="The Artic / Polar circle is at 66 degrees 33 minutes North / South."
+    definition="rise above the horizon and set every day"
+  >
+    66.5º
+  </Option>
 
   <Option
     why="The tropic of Cancer / Capricorn is at 23 degrees 25 minutes North / South"
     subject={[
-    [
-      "reach an altitude of 90º above the horizon at some time during the year",
-    ],
+      [
+        "reach an altitude of 90º above the horizon at some time during the year",
+      ],
     ]}
   >
     23º

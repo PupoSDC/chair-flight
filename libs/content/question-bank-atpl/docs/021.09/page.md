@@ -1,6 +1,5 @@
 ---
 learningObjectiveId: "021.09"
-parentId: "021"
 title: ELECTRICS
 ---
 

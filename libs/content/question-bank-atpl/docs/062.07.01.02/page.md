@@ -4,12 +4,6 @@ parentId: "062.07.01"
 title: PBN components
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.07.01.02"} />
-```
-
-## Summary
-
 There are 3 components of PBN as described in ICAO PB Manual 9613:
 
 ### Navigation Specification

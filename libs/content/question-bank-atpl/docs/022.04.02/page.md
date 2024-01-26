@@ -4,12 +4,6 @@ parentId: "022.04"
 title: Rate-of-turn indicator - Turn coordinator - Balance (slip) indicator
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.04.02"} />
-```
-
-## Summary
-
 ```tsx
 <Question id="HQ139AP31D" lo={[""]}>
   <Text variant="multipleCorrect" select={3}>

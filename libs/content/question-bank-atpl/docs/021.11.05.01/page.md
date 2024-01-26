@@ -4,12 +4,6 @@ parentId: "021.11.05"
 title: Thrust, performance aspects, and limitations
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.05.01"} />
-```
-
-## Summary
-
 ### Thrust and SFC variations with altitude and TAS
 
 For thrust, remember the following formula:
@@ -62,12 +56,14 @@ looking curve for SFC are not considered here. \*\*SFC is minimum with zero
 speed and increases to infinity as TAS increases.
 
 <Question
-  id="I9V962NGD7"
-  lo={["021.11.05.01.01", "021.11.05.01.02"]}
-  contentRef="### Thrust and SFC variations with altitude and TAS"
->
-  <Text variant="oneCorrect">
+id="I9V962NGD7"
+lo={["021.11.05.01.01", "021.11.05.01.02"]}
+contentRef="### Thrust and SFC variations with altitude and TAS"
+
+>   <Text variant="oneCorrect">
+
     What statement about a Jet Engine performance is correct?
+
   </Text>
   <Text variant="oneTwo">
     What statement about a Jet Engine performance are correct?

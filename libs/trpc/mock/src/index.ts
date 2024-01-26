@@ -12,6 +12,8 @@ export const trpcMsw = createTRPCMsw<AppRouter>({
 export * from "./__mocks__/flashcards.mock";
 export * from "./__mocks__/question-bank-annex-search-get-search-config-filters.mock";
 export * from "./__mocks__/question-bank-annex-search-search-annexes.mock";
+export * from "./__mocks__/question-bank-doc-search-get-search-config-filters.mock";
+export * from "./__mocks__/question-bank-doc-search-search-docs.mock";
 export * from "./__mocks__/question-bank-lo-search-get-search-config.mock";
 export * from "./__mocks__/question-bank-lo-search-get-learning-objective-tree.mock";
 export * from "./__mocks__/question-bank-lo-search-search-learning-objectives.mock";

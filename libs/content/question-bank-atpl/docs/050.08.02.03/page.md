@@ -5,9 +5,3 @@ title:
   Intertropical Convergence Zone (ITCZ), weather in the ITCZ, general seasonal
   movement
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"050.08.02.03"} />
-```
-
-## Summary

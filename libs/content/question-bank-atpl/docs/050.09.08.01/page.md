@@ -3,9 +3,3 @@ learningObjectiveId: "050.09.08.01"
 parentId: "050.09.08"
 title: Influence of terrain on clouds and precipitation, frontal passage
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"050.09.08.01"} />
-```
-
-## Summary

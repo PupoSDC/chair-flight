@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "081.06"
-parentId: "081"
 title: LIMITATIONS
 ---

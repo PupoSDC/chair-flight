@@ -3,9 +3,3 @@ learningObjectiveId: "040.02.03.02"
 parentId: "040.02.03"
 title: Body rhythm and sleep
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"040.02.03.02"} />
-```
-
-## Summary

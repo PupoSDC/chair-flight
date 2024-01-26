@@ -4,10 +4,4 @@ parentId: "022.05.02"
 title: Alignment process, incorrect data entry, and control panels
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.05.02.01"} />
-```
-
-## Summary
-
 > Attitude Error is EXPONENTIAL, Position error is LINEAR.

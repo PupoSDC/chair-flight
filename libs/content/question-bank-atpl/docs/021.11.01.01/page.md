@@ -4,12 +4,6 @@ parentId: "021.11.01"
 title: Basic generation of thrust and the thrust formula
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.01.01"} />
-```
-
-## Summary
-
 ### Thrust Formula
 
 $$

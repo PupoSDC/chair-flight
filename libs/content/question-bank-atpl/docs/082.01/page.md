@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "082.01"
-parentId: "082"
 title: SUBSONIC AERODYNAMICS
 ---

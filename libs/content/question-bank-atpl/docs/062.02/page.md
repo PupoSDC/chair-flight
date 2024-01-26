@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "062.02"
-parentId: "062"
 title: RADIO AIDS
 ---

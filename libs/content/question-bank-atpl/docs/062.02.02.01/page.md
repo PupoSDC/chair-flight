@@ -4,12 +4,6 @@ parentId: "062.02.02"
 title: Principles
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.02.02.01"} />
-```
-
-## Summary
-
 ### BFO - Beat Frequency Oscilator
 
 ```tsx

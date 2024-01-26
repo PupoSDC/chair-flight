@@ -1,14 +1,7 @@
 ---
 learningObjectiveId: "021.08"
-parentId: "021"
 title: Fuel System
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.08"} />
-```
-
-## Summary
 
 ### Piston engine
 

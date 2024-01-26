@@ -4,69 +4,56 @@ parentId: "022.02.01"
 title: "Pitot/static system: design and errors"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.02.01.02"} />
-```
-
-## Summary
-
 ```tsx
 <Question id="LO9IT60XU9" lo={["022.02.01.02.02"]}>
   <Text variant="oneCorrect">
     If the <Subject /> the instrument will:
   </Text>
-<Option>gradually indicate zero</Option>
-<Option>
-  indicate a height equivalent to the setting on the millibar subscale
-</Option>
-<Option
-  subject={[
-    [
-      "static source to an airspeed indicator (ASI) becomes blocked during a climb",
-    ],
-  ]}
->
-  under-read
-</Option>
-<Option
-  subject={[
-    [
-      "static source to an airspeed indicator (ASI) becomes blocked during a descent",
-    ],
-  ]}
->
-  over-read
-</Option>
-<Option
-  subject={[
-    ["static source of an altimeter becomes blocked during a descent"],
-    ["static source of an altimeter becomes blocked during a climb"],
-  ]}
->
-  continue to display the reading at which the blockage occurred
-</Option>
+  <Option>gradually indicate zero</Option>
+  <Option>
+    indicate a height equivalent to the setting on the millibar subscale
+  </Option>
+  <Option
+    subject={[
+      [
+        "static source to an airspeed indicator (ASI) becomes blocked during a climb",
+      ],
+    ]}
+  >
+    under-read
+  </Option>
+  <Option
+    subject={[
+      [
+        "static source to an airspeed indicator (ASI) becomes blocked during a descent",
+      ],
+    ]}
+  >
+    over-read
+  </Option>
+  <Option
+    subject={[
+      ["static source of an altimeter becomes blocked during a descent"],
+      ["static source of an altimeter becomes blocked during a climb"],
+    ]}
+  >
+    continue to display the reading at which the blockage occurred
+  </Option>
 
   <Explanation>
-    The altimeter's only input source is static pressure.
-    If this becomes blocked, the instrument will simply 'freeze',
-    indicating the altitude at which the blockage occurred.
-
-    The Airspeed indicator has 2 inputs: The pitot tube and the static port.
-    Velocity is computed from the difference between the total pressure and the
-    static pressure. The higher the difference, the higher the speed.
-
-    When the static port becomes blocked, the base value for this comparison
-    stagnates.
-
-    In case of a climb, the outside air pressure will be decreasing, while our
-    instrument will be measuring a value that is higher than the real value. The
-    total pressure pressure will also be decreasing, meaning that our instrument
-    will begin to under read the velocity.
-
-    The opposite is true during a descent where the static port will be
+    The altimeter's only input source is static pressure. If this becomes
+    blocked, the instrument will simply 'freeze', indicating the altitude at
+    which the blockage occurred. The Airspeed indicator has 2 inputs: The pitot
+    tube and the static port. Velocity is computed from the difference between
+    the total pressure and the static pressure. The higher the difference, the
+    higher the speed. When the static port becomes blocked, the base value for
+    this comparison stagnates. In case of a climb, the outside air pressure will
+    be decreasing, while our instrument will be measuring a value that is higher
+    than the real value. The total pressure pressure will also be decreasing,
+    meaning that our instrument will begin to under read the velocity. The
+    opposite is true during a descent where the static port will be
     under-reading the static pressure, but the dynamic pressure will keep
     increasing, leading to an over-read of the velocity.
-
   </Explanation>
 </Question>
 ```

@@ -4,12 +4,6 @@ parentId: "062.07.03"
 title: Specific RNAV and RNP system functions
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.07.03.03"} />
-```
-
-## Summary
-
 ```tsx
 <Question id="4PWM2V802Y" id="quZa9eGbMY" variant="definition" lo={['062.07.03.03.06']}>
   <Text variant="oneCorrect">PBN path terminator "<Subject />" means...</Text>

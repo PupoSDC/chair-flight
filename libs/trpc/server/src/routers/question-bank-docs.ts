@@ -1,53 +1,69 @@
+import { serialize } from "next-mdx-remote/serialize";
 import { z } from "zod";
 import { questionBanks } from "@chair-flight/core/question-bank";
-import {
-    questionBankNameSchema as questionBank,
-} from "@chair-flight/core/schemas";
+import { questionBankNameSchema as questionBank } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../config/trpc";
-import { serialize } from "next-mdx-remote/serialize";
-import type {  QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 const MATCH_CODE_BLOCKS = /```tsx eval((?:.|\n)*?)```/g;
 
 type Path = {
-    params: {
-        questionBank: QuestionBankName,
-        docId: string
-    }
+  params: {
+    questionBank: QuestionBankName;
+    docId: string;
+  };
 };
 
 export const questionBankDocsRouter = router({
-    getAllDocPaths: publicProcedure
-        .query(async () => {
-            const bankNames : QuestionBankName[] = ["atpl"]; 
-            const paths : Path[] = [];
-            for (const questionBank of bankNames) {
-                const qb = questionBanks[questionBank];
-                const docs = await qb.getAll("docs");
-                paths.push(...docs.map(doc => ({ 
-                    params: {
-                        docId: doc.id, 
-                        questionBank 
-                    }
-                })));
+  getAllDocPaths: publicProcedure.query(async () => {
+    const bankNames: QuestionBankName[] = ["atpl"];
+    const paths: Path[] = [];
+    for (const questionBank of bankNames) {
+      const qb = questionBanks[questionBank];
+      const docs = await qb.getAll("docs");
+      paths.push(
+        ...docs.map((doc) => ({
+          params: {
+            docId: doc.id,
+            questionBank,
+          },
+        })),
+      );
+    }
+    return { paths };
+  }),
+  getDoc: publicProcedure
+    .input(z.object({ questionBank, docId: z.string() }))
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const rawDoc = await qb.getOne("docs", input.docId);
+      const children = await qb.getSome("docs", rawDoc.children);
+      const parent = rawDoc.parentId
+        ? await qb.getOne("docs", rawDoc.parentId)
+        : undefined;
+
+      const content = rawDoc.content;
+      const sourceString = content.replaceAll(MATCH_CODE_BLOCKS, "$1");
+      const mdxSource = await serialize(sourceString);
+      const doc = {
+        title: `[${rawDoc.learningObjectiveId}] ${rawDoc.title}`,
+        description: "....",
+        mdxSource,
+        isEmpty: rawDoc.empty,
+        learningObjective: rawDoc.learningObjectiveId,
+        href: `/modules/${input.questionBank}/docs/${rawDoc.id}`,
+        parent: parent
+          ? {
+              href: `/modules/${input.questionBank}/docs/${parent.id}`,
+              title: `[${parent.learningObjectiveId}] ${parent.title}`,
             }
-            return { paths }
-        }),
-    getDoc: publicProcedure
-        .input(z.object({ questionBank, docId: z.string() }))
-        .query(async ({ input }) => {
-            const qb = questionBanks[input.questionBank];
-            const rawDoc = await qb.getOne("docs", input.docId);
-            const content =rawDoc.content;
-            const sourceString = content.replaceAll(MATCH_CODE_BLOCKS, "$1");
-            const mdxSource = await serialize(sourceString);
-            const doc = {
-                title: rawDoc.title,
-                description: "....",
-                mdxSource,
-                learningObjective: rawDoc.learningObjectiveId,
-                href: `/modules/${questionBank}/docs/${rawDoc.id}`,
-            }    
-            return { doc };
-        })
+          : null,
+        children: children.map((child) => ({
+          href: `/modules/${input.questionBank}/docs/${child.id}`,
+          title: `[${child.learningObjectiveId}] ${child.title}`,
+          isEmpty: child.empty,
+        })),
+      };
+      return { doc };
+    }),
 });

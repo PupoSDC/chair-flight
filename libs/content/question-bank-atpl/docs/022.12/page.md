@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "022.12"
-parentId: "022"
 title: ALERTING SYSTEMS, PROXIMITY SYSTEMS
 ---

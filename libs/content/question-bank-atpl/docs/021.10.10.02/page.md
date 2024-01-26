@@ -4,12 +4,6 @@ parentId: "021.10.10"
 title: Engine handling
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.10.10.02"} />
-```
-
-## Summary
-
 ### FADEC
 
 Controls:
@@ -22,10 +16,10 @@ Controls:
     What engine controls are available on the flight deck for a FADEC-controlled
     engine
   </Text>
-<Option correct>
-  A FADEC computer, an engine mode selector, engine master selectors, and power
-  levers providing digital inputs.
-</Option>
+  <Option correct>
+    A FADEC computer, an engine mode selector, engine master selectors, and
+    power levers providing digital inputs.
+  </Option>
 
   <Option>A FADEC computer</Option>
   <Option>A FADEC computer and a an autothrust system</Option>

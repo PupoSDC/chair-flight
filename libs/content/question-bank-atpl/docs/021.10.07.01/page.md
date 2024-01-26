@@ -4,12 +4,6 @@ parentId: "021.10.07"
 title: Design, operation
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.10.07.01"} />
-```
-
-## Summary
-
 ### Magneto-ignition system
 
 Aircraft piston engines are typically installed with an independent system to

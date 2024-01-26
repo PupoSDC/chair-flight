@@ -2,12 +2,12 @@ import { useRouter } from "next/router";
 import { NoSsr } from "@mui/base";
 import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
+import { default as DocsIcon } from "@mui/icons-material/LibraryBooksOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
 import { default as AnnexesIcon } from "@mui/icons-material/PanoramaOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
-import { default as DocsIcon} from '@mui/icons-material/LibraryBooksOutlined';
 import {
   Box,
   Breadcrumbs,

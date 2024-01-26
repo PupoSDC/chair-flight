@@ -4,8 +4,6 @@ parentId: "061.04"
 title: Projections
 ---
 
-## Summary
-
 |                   | Lambert                                            | Mercator                                            | Polar Stereographic         |
 | ----------------- | -------------------------------------------------- | --------------------------------------------------- | --------------------------- |
 |                   | ![Lambert Projection](images/061.04.02.02-01.jpeg) | ![Mercator Projection](images/061.04.02.03-01.jpeg) |                             |
@@ -18,12 +16,14 @@ title: Projections
 | Chart Convergence | No convergence!                                    |                                                     | Constnat across chart       |
 
 <Question
-  id="LXLE10O96T"
-  lo={["061.04.02.04.01", "061.04.02.03.01", "061.04.02.02.01"]}
-  contentRef="## Summary"
->
-  <Text variant="oneCorrect">
+id="LXLE10O96T"
+lo={["061.04.02.04.01", "061.04.02.03.01", "061.04.02.02.01"]}
+contentRef="## Summary"
+
+>   <Text variant="oneCorrect">
+
     Which of the following correctly describes a <Subject /> chart?
+
   </Text>
   <Option key="1" subject={[["Mercator"]]}>
     A cylindrical projection with the plane tangential to the equator
@@ -49,12 +49,14 @@ title: Projections
 ```
 
 <Question
-  id="3NQ0YN10CN"
-  lo={["061.04.02.04.01", "061.04.02.03.01", "061.04.02.02.01"]}
-  contentRef="## Summary"
->
-  <Text variant="oneCorrect">
+id="3NQ0YN10CN"
+lo={["061.04.02.04.01", "061.04.02.03.01", "061.04.02.02.01"]}
+contentRef="## Summary"
+
+>   <Text variant="oneCorrect">
+
     <Subject /> are...
+
   </Text>
   <Option subject={[["Parallels of latitude on a Direct Mercator Chart"]]}>
     Parallel straight lines unequally spaced

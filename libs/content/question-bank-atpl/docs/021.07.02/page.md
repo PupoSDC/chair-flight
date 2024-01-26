@@ -4,12 +4,6 @@ parentId: "021.07"
 title: Ice warning systems
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.07.02"} />
-```
-
-## Summary
-
 ### Ice detection systems
 
 #### Pressure differencial system
@@ -81,28 +75,32 @@ recommend turning the pitot heat on when outside air temperature is less than
 detector signals are an advisory back up indicator.
 
 ```tsx
-<Question id="OZJGNF8HJY" lo="021.07.02.01.01" contentRef="#pressure-differential-system">
+<Question
+  id="OZJGNF8HJY"
+  lo="021.07.02.01.01"
+  contentRef="#pressure-differential-system"
+>
   <Text variant="oneCorrect">
     Which Of these Statements is true regarding differential pressure ice
     accretion detector?
   </Text>
-<Text variant="multipleCorrect" select={5}>
-  Which Of these Statements are true regarding differential pressure ice
-  accretion detector?
-</Text>
-<Text variant="oneTwo">
-  Which Of these Statements are true regarding differential pressure ice
-  accretion detector?
-</Text>
-<Option>Large holes freeze first</Option>
-<Option correct>Small holes freeze first</Option>
-<Option correct>Small holes melt first</Option>
-<Option>Small holes are heated first</Option>
-<Option>Small and big holes are heated at the same time</Option>
-<Option correct>
-  An alarm light is activated in the cockpit when a pressure difference is
-  measured between small and big apertures
-</Option>
+  <Text variant="multipleCorrect" select={5}>
+    Which Of these Statements are true regarding differential pressure ice
+    accretion detector?
+  </Text>
+  <Text variant="oneTwo">
+    Which Of these Statements are true regarding differential pressure ice
+    accretion detector?
+  </Text>
+  <Option>Large holes freeze first</Option>
+  <Option correct>Small holes freeze first</Option>
+  <Option correct>Small holes melt first</Option>
+  <Option>Small holes are heated first</Option>
+  <Option>Small and big holes are heated at the same time</Option>
+  <Option correct>
+    An alarm light is activated in the cockpit when a pressure difference is
+    measured between small and big apertures
+  </Option>
 
   <Option>large holes melt first</Option>
   <Option>The torque of a rotating serrated shat is measured</Option>
@@ -111,27 +109,31 @@ detector signals are an advisory back up indicator.
 ```
 
 ```tsx
-<Question id="K7R2PLJJ2X" lo="021.07.02.01.02" contentRef="### Ice detection systems">
+<Question
+  id="K7R2PLJJ2X"
+  lo="021.07.02.01.02"
+  contentRef="### Ice detection systems"
+>
   <Text variant="oneCorrect">
     How does the <Subject /> ice detection system operate?
   </Text>
-<Option subject={[["advisory"]]}>
-  The flight crew activates the ice protection system based on Flight manual
-  recommendations, such as outside air temperature, and moisture. The ice
-  detector signals serve as a backup indicator
-</Option>
-<Option subject={[["primary manual"]]}>
-  The flight crew activates the ice protection system based on the ice detector
-  signals
-</Option>
-<Option subject={[["primary automatic"]]}>
-  The ice protection system is activated automatically based on the ice detector
-  signal. A manual override is available to the cabin crew.
-</Option>
-<Option>
-  The ice protection system is activated automatically based on the ice detector
-  signal. A manual override is not possible
-</Option>
+  <Option subject={[["advisory"]]}>
+    The flight crew activates the ice protection system based on Flight manual
+    recommendations, such as outside air temperature, and moisture. The ice
+    detector signals serve as a backup indicator
+  </Option>
+  <Option subject={[["primary manual"]]}>
+    The flight crew activates the ice protection system based on the ice
+    detector signals
+  </Option>
+  <Option subject={[["primary automatic"]]}>
+    The ice protection system is activated automatically based on the ice
+    detector signal. A manual override is available to the cabin crew.
+  </Option>
+  <Option>
+    The ice protection system is activated automatically based on the ice
+    detector signal. A manual override is not possible
+  </Option>
 
   <Option subject={[["primary manual"]]}>
     All ice detection systems are used to alert the cockpit crew, and ice

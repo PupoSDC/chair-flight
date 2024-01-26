@@ -1,16 +1,9 @@
 ---
 learningObjectiveId: "021.03.02.02"
 parentId: "021.03.02"
-title:
-  "System components: design, operation, degraded modes of operation,
+title: "System components: design, operation, degraded modes of operation,
   indications and warnings"
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.03.02.02"} />
-```
-
-## Summary
 
 ### Components
 

@@ -3,9 +3,3 @@ learningObjectiveId: "081.01.04.02"
 parentId: "081.01.04"
 title: Streamline pattern
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"081.01.04.02"} />
-```
-
-## Summary

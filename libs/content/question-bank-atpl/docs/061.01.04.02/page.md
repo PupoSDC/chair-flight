@@ -4,12 +4,6 @@ parentId: "061.01.04"
 title: Units
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"061.01.04.02"} />
-```
-
-## Summary
-
 There are three ways of doing this. All of them are equally valid, and we
 recommend you mastering the 3 of them. Practice makes perfect. Make sure to try
 all of these approaches to answer questions until you can use either of them in

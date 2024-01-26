@@ -4,12 +4,6 @@ parentId: "062.06.01"
 title: Errors and factors affecting accuracy
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.06.01.03"} />
-```
-
-## Summary
-
 ### Ionospheric propagation delay
 
 ### Dilution of precision
@@ -55,64 +49,64 @@ signal and split bounced signals based on their incoming direction.
     Which of the following is a source error that affects the accuracy and
     reliability of GPS systems
   </Text>
-<Text variant="oneTwo">
-  Which of the following are a source error that affects the accuracy and
-  reliability of GPS systems
-</Text>
-<Text variant="multipleCorrect" select={5}>
-  Which of the following are a source error that affects the accuracy and
-  reliability of GPS systems
-</Text>
-<Text variant="oneCorrect">
-  One of the more significant errors that reduces the accuracy of the GNSS
-  signal-in-space is ...
-</Text>
-<Option correct why="Satellite atomic clocks drift leading to errors">
-  Satellite clock
-</Option>
-<Option
-  correct
-  why="Satellite orbits change slightly due to gravitational effects and solar winds leading to errors"
->
-  Satellite Ephemeris
-</Option>
-<Option correct why="Describes the source of errors of Satellite Ephemeris">
-  Solar winds and gravitation of the sun, moon, and planets
-</Option>
-<Option correct why="A tight clustering causes dilution of precision errors">
-  Tight Clustering of satellites
-</Option>
-<Option correct why="Causes ionospheric propagation delay">
-  Atmospheric Propagation
-</Option>
-<Option correct why="Describes multipath effects">
-  Reflection of satellite signals from terrain
-</Option>
-<Option correct>
-  dilution of precision caused by the relative positions of the navigation
-  satellites.
-</Option>
-<Option why="The existence of a Satellite - ground lag is the working principle of GPS, not a source of error">
-  Satellite ground time lag
-</Option>
-<Option why="Satellite signals do not interfere with each other." key={1}>
-  Satellite mutual interference
-</Option>
-<Option why="" key={1}>
-  interference from other space vehicles operating in the same frequency band.
-</Option>
-<Option why="There is no such thing as frequency drift. Only clock drift">
-  Frequency Drift
-</Option>
-<Option why="No such thing as lunar winds exist">
-  Lunar winds and gravitation of the sun, moon, and planets
-</Option>
-<Option why="These do not cause satellite errors directly.">
-  Earth and Lunar precession
-</Option>
-<Option why="These do not cause satellite errors directly.">
-  Solar and Lunar precession
-</Option>
+  <Text variant="oneTwo">
+    Which of the following are a source error that affects the accuracy and
+    reliability of GPS systems
+  </Text>
+  <Text variant="multipleCorrect" select={5}>
+    Which of the following are a source error that affects the accuracy and
+    reliability of GPS systems
+  </Text>
+  <Text variant="oneCorrect">
+    One of the more significant errors that reduces the accuracy of the GNSS
+    signal-in-space is ...
+  </Text>
+  <Option correct why="Satellite atomic clocks drift leading to errors">
+    Satellite clock
+  </Option>
+  <Option
+    correct
+    why="Satellite orbits change slightly due to gravitational effects and solar winds leading to errors"
+  >
+    Satellite Ephemeris
+  </Option>
+  <Option correct why="Describes the source of errors of Satellite Ephemeris">
+    Solar winds and gravitation of the sun, moon, and planets
+  </Option>
+  <Option correct why="A tight clustering causes dilution of precision errors">
+    Tight Clustering of satellites
+  </Option>
+  <Option correct why="Causes ionospheric propagation delay">
+    Atmospheric Propagation
+  </Option>
+  <Option correct why="Describes multipath effects">
+    Reflection of satellite signals from terrain
+  </Option>
+  <Option correct>
+    dilution of precision caused by the relative positions of the navigation
+    satellites.
+  </Option>
+  <Option why="The existence of a Satellite - ground lag is the working principle of GPS, not a source of error">
+    Satellite ground time lag
+  </Option>
+  <Option why="Satellite signals do not interfere with each other." key={1}>
+    Satellite mutual interference
+  </Option>
+  <Option why="" key={1}>
+    interference from other space vehicles operating in the same frequency band.
+  </Option>
+  <Option why="There is no such thing as frequency drift. Only clock drift">
+    Frequency Drift
+  </Option>
+  <Option why="No such thing as lunar winds exist">
+    Lunar winds and gravitation of the sun, moon, and planets
+  </Option>
+  <Option why="These do not cause satellite errors directly.">
+    Earth and Lunar precession
+  </Option>
+  <Option why="These do not cause satellite errors directly.">
+    Solar and Lunar precession
+  </Option>
 
   <Option why="GNSS is affected by ionospheric errors, not tropospheric.">
     tropospheric propagation delay caused by pollution in lower atmospheric

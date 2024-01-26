@@ -4,12 +4,6 @@ parentId: "062.07.04"
 title: Performance-based navigation (PBN) principles
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.07.04.01"} />
-```
-
-## Summary
-
 ### PBN errors
 
 - **Path Definition Error (PDE)**: Corresponds to an error between the RNAV path
@@ -30,17 +24,19 @@ title: Performance-based navigation (PBN) principles
 - **Total System Error (TSE)**: Is the sum of the 3 errors described above.
 
 <Question
-  id="C6QGC3RVJS"
-  lo={[
-  "062.07.04.01.01",
-  "062.07.04.01.02",
-  "062.07.04.01.03",
-  "062.07.04.01.04",
-  ]}
-  contentRef="### PBN errors"
->
-  <Text variant="oneCorrect">
+id="C6QGC3RVJS"
+lo={[
+"062.07.04.01.01",
+"062.07.04.01.02",
+"062.07.04.01.03",
+"062.07.04.01.04",
+]}
+contentRef="### PBN errors"
+
+>   <Text variant="oneCorrect">
+
     Which of these errors constitutes a${subject}?
+
   </Text>
 <Option subject={[["Path Definition Error"], ["PDE"]]}>
   An error during PBN operations rising from the RNAV system and its inability

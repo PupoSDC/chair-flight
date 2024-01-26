@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "090.06"
-parentId: "090"
 title: VHF PROPAGATION AND ALLOCATION OF FREQUENCIES
 ---

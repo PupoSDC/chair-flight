@@ -1,5 +1,5 @@
 ---
 learningObjectiveId: "010.13"
-parentId: "010"
+
 title: AIRCRAFT ACCIDENT AND INCIDENT INVESTIGATION
 ---

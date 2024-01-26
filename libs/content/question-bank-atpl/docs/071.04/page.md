@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "071.04"
-parentId: "070"
 title: SPECIALISED OPERATIONS
 ---

@@ -2,6 +2,7 @@ import { analyticsRouter } from "../routers/analytics";
 import { blogRouter } from "../routers/blog";
 import { questionBankRouter } from "../routers/question-bank";
 import { questionBankAnnexSearchRouter } from "../routers/question-bank-annex-search";
+import { questionBankDocSearchRouter } from "../routers/question-bank-doc-search";
 import { questionBankDocsRouter } from "../routers/question-bank-docs";
 import { questionBankLoSearchRouter } from "../routers/question-bank-lo-search";
 import { questionBankQuestionSearchRouter } from "../routers/question-bank-question-search";
@@ -17,6 +18,7 @@ export const appRouter = router({
   status: statusRouter,
   questionBank: questionBankRouter,
   questionBankDocs: questionBankDocsRouter,
+  questionBankDocSearch: questionBankDocSearchRouter,
   questionBankQuestions: questionBankQuestionsRouter,
   questionBankQuestionSearch: questionBankQuestionSearchRouter,
   questionBankLoSearch: questionBankLoSearchRouter,

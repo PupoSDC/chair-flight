@@ -4,12 +4,6 @@ parentId: "022.13.03"
 title: Design, operation
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.13.03.01"} />
-```
-
-## Summary
-
 ```tsx
 <Question id="SGI32JKAC6" lo={[""]}>
   <Text variant="oneCorrect">

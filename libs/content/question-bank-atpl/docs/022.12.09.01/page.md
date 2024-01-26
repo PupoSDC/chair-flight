@@ -4,12 +4,6 @@ parentId: "022.12.09"
 title: "GPWSs: design, operation, indications"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.12.09.01"} />
-```
-
-## Summary
-
 ### GPWS modes of operation
 
 `Send The Drunk To Go Buy Wine`

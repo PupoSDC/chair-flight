@@ -4,12 +4,6 @@ parentId: "062.01.01"
 title: Frequency bands, sidebands, single sideband
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.01.01.03"} />
-```
-
-## Summary
-
 ### Bands of Frequencies
 
 | Full Name                | Abbreviation | Range          |

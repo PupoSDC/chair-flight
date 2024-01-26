@@ -1,5 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { parse } from "yaml";
+import { QuestionBankDocSchema } from "../../src/question-bank-docs-meta-schema";
 import type {
   QuestionBankQuestionTemplate,
   QuestionBankQuestionTemplateJson,
@@ -16,8 +18,6 @@ import type {
   QuestionBankDoc,
 } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
-import { parse } from "yaml";
-import { QuestionBankDocSchema } from "../../src/question-bank-docs-meta-schema";
 
 const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
@@ -59,7 +59,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
     annexesJson: path.join(annexesFolder, "annexes.json"),
     /** i.e.: `libs/content/question-bank-atpl/content/docs` */
-    docsFolder:  path.join(contentRoot, "docs"),
+    docsFolder: path.join(contentRoot, "docs"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
     /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/courses.json` */
@@ -220,8 +220,8 @@ export const readAllFlashcardsFromFs = async ({
 
 export const readAllDocsFromFs = async ({
   docsFolder,
-} : {
-  docsFolder: string,
+}: {
+  docsFolder: string;
 }) => {
   const posts = await fs.readdir(docsFolder);
   const parsedPosts: QuestionBankDoc[] = [];
@@ -240,9 +240,11 @@ export const readAllDocsFromFs = async ({
     data.empty = !content.length;
     data.fileName = post;
     data.content = content;
+    data.subjectId = "";
+    data.children = [];
     const meta = QuestionBankDocSchema.parse(data);
     parsedPosts.push(meta);
   }
 
   return parsedPosts;
-}
+};

@@ -4,12 +4,6 @@ parentId: "021.11.04"
 title: General
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.04.01"} />
-```
-
-## Summary
-
 ### Engine Ratings
 
 Take off

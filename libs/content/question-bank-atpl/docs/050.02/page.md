@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "050.02"
-parentId: "050"
 title: WIND
 ---

@@ -1,6 +1,5 @@
 ---
 learningObjectiveId: "034.03"
-parentId: "034"
 title:
   "PERFORMANCE CLASS 2 General remark: The Learning Objectives for Performance
   Class 2 are principally identical with those for Performance Class 1. (See 034

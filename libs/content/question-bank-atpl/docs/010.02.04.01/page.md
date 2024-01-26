@@ -1,13 +1,6 @@
 ---
 learningObjectiveId: "010.02.04.01"
 parentId: "010.02.04"
-title:
-  Nationality marks, common marks and registration marks - assignment and
+title: Nationality marks, common marks and registration marks - assignment and
   location
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"010.02.04.01"} />
-```
-
-## Summary

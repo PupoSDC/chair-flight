@@ -16,7 +16,8 @@ export const questionBankRouter = router({
         hasCourses: await qb.has("courses"),
         hasLearningObjectives: await qb.has("learningObjectives"),
         hasAnnexes: await qb.has("annexes"),
-        hasDocs: await qb.has("docs")
+        // TODO disabled while WIP
+        hasDocs: false, // await qb.has("docs"),
       };
     }),
   getLearningObjective: publicProcedure

@@ -1,16 +1,9 @@
 ---
 learningObjectiveId: "021.04.01.02"
 parentId: "021.04.01"
-title:
-  System components, design, operation, indications and warnings,
+title: System components, design, operation, indications and warnings,
   on-ground/in-flight protections, emergency extension systems
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.04.01.02"} />
-```
-
-## Summary
 
 ### Landing Gear Components
 

@@ -13,6 +13,7 @@ export type PersistenceKey =
   | `cf-question-search-${QuestionBankName}`
   | `cf-test-search-${QuestionBankName}`
   | `cf-learning-objectives-search-${QuestionBankName}`
+  | `cf-docs-search-${QuestionBankName}`
   | `cf-test-maker-${QuestionBankName}`
   | `cf-test-progress`
   | `cf-user-preferences`

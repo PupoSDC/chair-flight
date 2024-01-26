@@ -3,9 +3,3 @@ learningObjectiveId: "050.08.03.04"
 parentId: "050.08.03"
 title: Cold-air drop
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"050.08.03.04"} />
-```
-
-## Summary

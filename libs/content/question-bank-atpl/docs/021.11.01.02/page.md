@@ -4,12 +4,6 @@ parentId: "021.11.01"
 title: Design, types and components of turbine engines
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.01.02"} />
-```
-
-## Summary
-
 ### Ideal turbine cycle
 
 The ideal turbine cycle is known as Brayton cycle. All ideal cycles consist of 4
@@ -52,90 +46,82 @@ constant volume).
     which statement is correct for a gas turbine engine with a constant speed
     propeller and free power turbine when the <Subject />?
   </Text>
-<Option subject={[["Power setting is increased"]]}>
-  The gas generator speed increases
-</Option>
-<Option subject={[["Power setting is increased"]]}>The EGT increases</Option>
-<Option subject={[["Power setting is increased"]]}>
-  The HP spool speed increases
-</Option>
-<Option subject={[["Power setting is decreased"]]}>
-  The gas generator speed decreases
-</Option>
-<Option subject={[["Power setting is decreased"]]}>The EGT decreases</Option>
-<Option subject={[["Power setting is decreased"]]}>
-  The HP spool speed decreases
-</Option>
-<Option subject={[["Propeller RPM setting is decreased"]]}>
-  The Free Power turbine speed decreases
-</Option>
-<Option subject={[["Propeller RPM setting is increased"]]}>
-  The Free Power turbine speed increases
-</Option>
-<Option
-  subject={[
-    ["Propeller RPM setting is decreased"],
-    ["Propeller RPM setting is increased"],
-  ]}
->
-  The gas generator speed remains constant
-</Option>
-<Option
-  subject={[
-    ["Propeller RPM setting is decreased"],
-    ["Propeller RPM setting is increased"],
-  ]}
->
-  The EGT remains constant
-</Option>
-<Option
-  subject={[
-    ["Propeller RPM setting is decreased"],
-    ["Propeller RPM setting is increased"],
-  ]}
->
-  The HP spool speed remains constant
-</Option>
-<Option
-  subject={[["Power setting is increased"], ["Power setting is decreased"]]}
->
-  The Free Power turbine speed remains constant
-</Option>
-<Option
-  subject={[
-    ["Power setting is decreased"],
-    ["Propeller RPM setting is increased"],
-  ]}
->
-  The propeller blade angle decreases
-</Option>
-<Option
-  subject={[
-    ["Power setting is increased"],
-    ["Propeller RPM setting is decreased"],
-  ]}
->
-  The propeller blade angle increases
-</Option>
+  <Option subject={[["Power setting is increased"]]}>
+    The gas generator speed increases
+  </Option>
+  <Option subject={[["Power setting is increased"]]}>The EGT increases</Option>
+  <Option subject={[["Power setting is increased"]]}>
+    The HP spool speed increases
+  </Option>
+  <Option subject={[["Power setting is decreased"]]}>
+    The gas generator speed decreases
+  </Option>
+  <Option subject={[["Power setting is decreased"]]}>The EGT decreases</Option>
+  <Option subject={[["Power setting is decreased"]]}>
+    The HP spool speed decreases
+  </Option>
+  <Option subject={[["Propeller RPM setting is decreased"]]}>
+    The Free Power turbine speed decreases
+  </Option>
+  <Option subject={[["Propeller RPM setting is increased"]]}>
+    The Free Power turbine speed increases
+  </Option>
+  <Option
+    subject={[
+      ["Propeller RPM setting is decreased"],
+      ["Propeller RPM setting is increased"],
+    ]}
+  >
+    The gas generator speed remains constant
+  </Option>
+  <Option
+    subject={[
+      ["Propeller RPM setting is decreased"],
+      ["Propeller RPM setting is increased"],
+    ]}
+  >
+    The EGT remains constant
+  </Option>
+  <Option
+    subject={[
+      ["Propeller RPM setting is decreased"],
+      ["Propeller RPM setting is increased"],
+    ]}
+  >
+    The HP spool speed remains constant
+  </Option>
+  <Option
+    subject={[["Power setting is increased"], ["Power setting is decreased"]]}
+  >
+    The Free Power turbine speed remains constant
+  </Option>
+  <Option
+    subject={[
+      ["Power setting is decreased"],
+      ["Propeller RPM setting is increased"],
+    ]}
+  >
+    The propeller blade angle decreases
+  </Option>
+  <Option
+    subject={[
+      ["Power setting is increased"],
+      ["Propeller RPM setting is decreased"],
+    ]}
+  >
+    The propeller blade angle increases
+  </Option>
 
   <Explanation>
-    ### Power related parameters
-
-    *   EGT, Gas generator speed, HP spool speed are all related to the current power level of the engine.
-    *   If power increases, all these values increase. If power decreases, all these values decrease.
-    *   Changing RPM has no effect in these parameters.
-
-    ### RPM related parameters
-
-    *   Free power turbine speed is directly coupled with propeller speed.
-    *   Changing power has no effect in the free power turbine speed.
-    *   Increasing RPM directly increases Free power turbine speed.
-
-    ### "Shared" parameters
-
-    *   Increasing power at constant RPM increases blade angle.
-    *   Increasing RPM at constant power decreases blade angle.
-
+    ### Power related parameters * EGT, Gas generator speed, HP spool speed are
+    all related to the current power level of the engine. * If power increases,
+    all these values increase. If power decreases, all these values decrease. *
+    Changing RPM has no effect in these parameters. ### RPM related parameters *
+    Free power turbine speed is directly coupled with propeller speed. *
+    Changing power has no effect in the free power turbine speed. * Increasing
+    RPM directly increases Free power turbine speed. ### "Shared" parameters *
+    Increasing power at constant RPM increases blade angle. * Increasing RPM at
+    constant power decreases blade angle.
   </Explanation>
 </Question>
 ```
@@ -145,9 +131,9 @@ constant volume).
   <Text variant="oneCorrect">
     How can Specific fuel consumption for a turbo-shaft engine be expressed?
   </Text>
-<Option id="VUBWszQa-1" correct>
-  kg per Hour per unit of shaft power.
-</Option>
+  <Option id="VUBWszQa-1" correct>
+    kg per Hour per unit of shaft power.
+  </Option>
 
   <Option id="VUBWszQa-0"> Kg per Hour per NM.</Option>
   <Option id="VUBWszQa-2">Kg per unit of shaft power.</Option>

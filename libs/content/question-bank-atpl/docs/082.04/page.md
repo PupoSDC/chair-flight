@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "082.04"
-parentId: "082"
 title: MAIN-ROTOR AERODYNAMICS
 ---

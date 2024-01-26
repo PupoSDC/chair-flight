@@ -4,10 +4,4 @@ parentId: "062.01.01"
 title: Pulse characteristics
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.01.01.04"} />
-```
-
-## Summary
-
 Pulse Power: power measured over the period of the pulse width

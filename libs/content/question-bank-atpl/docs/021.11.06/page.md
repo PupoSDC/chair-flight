@@ -22,8 +22,6 @@ title: Auxiliary power unit (APU)
 | 021.11.06.01.04 | X       |        | X          | X           |        |     |         |
 | 021.11.06.01.05 | X       |        | X          | X           |        |     |         |
 
-## Summary
-
 Auxiliary Power Units (APU)s are small gas turbines usually located at the back
 of the aircraft that drive an electrical generator to power aircraft systems.
 They are typically used on the ground before the main engines are turned on.
@@ -63,16 +61,17 @@ Remember: `High Temperature and Low Pressure => BAD!`.
     An APU is designed to provide power for ground operations, but it can also
     supply:
   </Text>
-<Option why="The APU cannot supply thrust">
-  Air conditioning and thrust in the event of engine failure
-</Option>
-<Option>
-  Either air conditioning or electrical services, but not both at the same time
-</Option>
-<Option why="the APU never provides hydraulic power directly.">
-  Air conditioning and electrical services on the ground, and electrical and
-  hydraulic back up services in the air.
-</Option>
+  <Option why="The APU cannot supply thrust">
+    Air conditioning and thrust in the event of engine failure
+  </Option>
+  <Option>
+    Either air conditioning or electrical services, but not both at the same
+    time
+  </Option>
+  <Option why="the APU never provides hydraulic power directly.">
+    Air conditioning and electrical services on the ground, and electrical and
+    hydraulic back up services in the air.
+  </Option>
 
   <Option correct>Air conditioning and electrical services</Option>
 </Question>
@@ -83,9 +82,9 @@ Remember: `High Temperature and Low Pressure => BAD!`.
   <Text variant="oneCorrect">
     Which Parameter is indicated during APU Start
   </Text>
-<Text variant="oneCorrect">
-  Which indication should be monitored when operating an APU
-</Text>
+  <Text variant="oneCorrect">
+    Which indication should be monitored when operating an APU
+  </Text>
 
   <Option correct>Fault status</Option>
   <Option>Oil Temperature</Option>
@@ -115,17 +114,17 @@ Remember: `High Temperature and Low Pressure => BAD!`.
 ```tsx
 <Question id="JG9GDLCXB7" lo="021.11.06.01.01">
   <Text variant="oneCorrect">The APU has its own AC generator which</Text>
-<Option correct>
-  supplies the aircraft with three phase, 115 v, 400 Hz AC
-</Option>
-<Option>is excited by the generator control unit</Option>
-<Option why="The APU already operates at a constant speed, so there is no need for a CSD">
-  is driven by a constant speed drive
-</Option>
-<Option why="it is usually not possible to run the APU in parallel with the main generator">
-  has the same characteristics of the main generator so they can be ran in
-  parallel
-</Option>
+  <Option correct>
+    supplies the aircraft with three phase, 115 v, 400 Hz AC
+  </Option>
+  <Option>is excited by the generator control unit</Option>
+  <Option why="The APU already operates at a constant speed, so there is no need for a CSD">
+    is driven by a constant speed drive
+  </Option>
+  <Option why="it is usually not possible to run the APU in parallel with the main generator">
+    has the same characteristics of the main generator so they can be ran in
+    parallel
+  </Option>
 
   <Option correct>
     can not be coupled in parallel with the main generators
@@ -138,36 +137,44 @@ Remember: `High Temperature and Low Pressure => BAD!`.
   <Text variant="multipleCorrect" select={6}>
     What would cause an APU to automatically shut down?
   </Text>
-<Option why="High oil pressure is prevented by pressure relief valves.">
-  High oil pressure
-</Option>
-<Option
-  correct
-  why="Most likely indicates a leak in the oil system, which will lead to damage, or even fire. Remember: High oil Temperature, and Low oil Pressure = Bad"
->
-  Low oil pressure
-</Option>
-<Option
-  correct
-  why="Remember: High oil Temperature, and Low oil Pressure = Bad"
->
-  High oil Temperature
-</Option>
-<Option
-  correct
-  why="Low oil temperature is usually not cause for concern. Remember: High oil Temperature, and Low oil Pressure = Bad"
->
-  Low oil Temperature
-</Option>
-<Option correct why="Indicates over heating, which can lead to damage, or fire">
-  High EGT
-</Option>
-<Option why="Overspeed can cause fatal damage to the APU">Low APU speed</Option>
-<Option correct why="Overspeed can cause fatal damage to the APU">
-  Overspeed
-</Option>
+  <Option why="High oil pressure is prevented by pressure relief valves.">
+    High oil pressure
+  </Option>
+  <Option
+    correct
+    why="Most likely indicates a leak in the oil system, which will lead to damage, or even fire. Remember: High oil Temperature, and Low oil Pressure = Bad"
+  >
+    Low oil pressure
+  </Option>
+  <Option
+    correct
+    why="Remember: High oil Temperature, and Low oil Pressure = Bad"
+  >
+    High oil Temperature
+  </Option>
+  <Option
+    correct
+    why="Low oil temperature is usually not cause for concern. Remember: High oil Temperature, and Low oil Pressure = Bad"
+  >
+    Low oil Temperature
+  </Option>
+  <Option
+    correct
+    why="Indicates over heating, which can lead to damage, or fire"
+  >
+    High EGT
+  </Option>
+  <Option why="Overspeed can cause fatal damage to the APU">
+    Low APU speed
+  </Option>
+  <Option correct why="Overspeed can cause fatal damage to the APU">
+    Overspeed
+  </Option>
 
-  <Option correct why="In general having your aircraft on fire is considered a bad idea">
+  <Option
+    correct
+    why="In general having your aircraft on fire is considered a bad idea"
+  >
     APU fire
   </Option>
 </Question>

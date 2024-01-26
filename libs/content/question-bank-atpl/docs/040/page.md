@@ -1,4 +1,0 @@
----
-learningObjectiveId: "040"
-title: HPL
----

@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "022.02"
-parentId: "022"
 title: MEASUREMENT OF AIR-DATA PARAMETERS
 ---

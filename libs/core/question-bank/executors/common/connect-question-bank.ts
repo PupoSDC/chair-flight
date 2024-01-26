@@ -8,6 +8,7 @@ import type {
   QuestionBankQuestionTemplate,
   QuestionBankSubject,
   SubjectId,
+  QuestionBankDoc,
 } from "@chair-flight/base/types";
 
 export const connectQuestionBank = ({
@@ -15,6 +16,7 @@ export const connectQuestionBank = ({
   learningObjectives,
   subjects,
   annexes,
+  docs,
 }: {
   questions: QuestionBankQuestionTemplate[];
   learningObjectives: QuestionBankLearningObjective[];
@@ -22,9 +24,11 @@ export const connectQuestionBank = ({
   subjects: QuestionBankSubject[];
   annexes: QuestionBankAnnexes[];
   flashcards: QuestionBankFlashcardCollection[];
+  docs: QuestionBankDoc[];
 }) => {
   const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
   const subjectsMap = makeMap(subjects, (s) => s.id);
+  const docsMap = makeMap(docs, (d) => d.id);
 
   const learningObjectiveToSubject = learningObjectives.reduce(
     (sum, lo) => {
@@ -118,5 +122,16 @@ export const connectQuestionBank = ({
       (s, lo) => s + learningObjectivesMap[lo]?.nestedQuestions?.length ?? 0,
       0,
     );
+  });
+
+  // Connect docs
+  [...docs].reverse().forEach((d) => {
+    if (!d.parentId) return;
+    docsMap[d.parentId].children.push(d.id);
+  });
+
+  // Connect docs to Subjects
+  docs.forEach((doc) => {
+    doc.subjectId = learningObjectiveToSubject[doc.learningObjectiveId];
   });
 };

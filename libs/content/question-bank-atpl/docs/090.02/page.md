@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "090.02"
-parentId: "090"
 title: GENERAL OPERATING PROCEDURES
 ---

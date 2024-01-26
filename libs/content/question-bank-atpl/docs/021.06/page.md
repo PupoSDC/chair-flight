@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "021.06"
-parentId: "021"
 title: PNEUMATICS — PRESSURISATION AND AIR-CONDITIONING SYSTEMS
 ---

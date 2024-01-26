@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "033.03"
-parentId: "033"
 title: FUEL PLANNING — OPERATIONAL REQUIREMENTS
 ---

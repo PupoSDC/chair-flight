@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "082.06"
-parentId: "082"
 title: TAIL ROTORS
 ---

@@ -3,9 +3,3 @@ learningObjectiveId: "034.01.01.02"
 parentId: "034.01.01"
 title: Operational regulations
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"034.01.01.02"} />
-```
-
-## Summary

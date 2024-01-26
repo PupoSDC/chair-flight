@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "021.02"
-parentId: "021"
 title: AIRFRAME
 ---

@@ -6,32 +6,26 @@ title:
   bus switching during normal and failure operation, indications and warnings"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.09.04.04"} />
-```
-
-## Summary
-
 ```tsx
 <Question id="8JI7TJL7FH" lo={["021.09.04.04.01"]} oldQuestion>
   <Text variant="multipleCorrect" select={4}>
     In regards to the Generator Control Unit, it can be said that...
   </Text>
-<Option correct>
-  Modern GCUs are provided with a permanent indication to record failures.
-</Option>
-<Option
-  correct
-  why="Dog Clutch release === disconnecting the CSD. This operation can only be performed manually by the pilot."
->
-  All the commands originating form the Control panel are applied via the GCU
-  except the dog clutch release.
-</Option>
-<Option>The GCU controls the AC generator voltage.</Option>
-<Option>
-  The APU provied the excitation of the AC generator as soon as the APU starts
-  up.
-</Option>
+  <Option correct>
+    Modern GCUs are provided with a permanent indication to record failures.
+  </Option>
+  <Option
+    correct
+    why="Dog Clutch release === disconnecting the CSD. This operation can only be performed manually by the pilot."
+  >
+    All the commands originating form the Control panel are applied via the GCU
+    except the dog clutch release.
+  </Option>
+  <Option>The GCU controls the AC generator voltage.</Option>
+  <Option>
+    The APU provied the excitation of the AC generator as soon as the APU starts
+    up.
+  </Option>
 
   <Explanation>
     A **Generator Control Unit** monitors the generator output parameters. If a

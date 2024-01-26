@@ -4,12 +4,6 @@ parentId: "062.02.04"
 title: Coverage and range
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"062.02.04.03"} />
-```
-
-## Summary
-
 PPPS = Pulse pairs per second.
 
 Interrogation rates vary from 150 to 5 PPPS. With 150 PPS being used for
@@ -33,21 +27,21 @@ replies. these are not necessarily
     Why can DME stations only send distance information to approximately 100
     aircraft at a time?
   </Text>
-<Option
-  correct
-  why="This is the hard limit that causes the limit of approximately 100 aircraft"
->
-  A DME ground station is only able to process 2700 PPPS
-</Option>
-<Option why="Not necessarily true, the DME may be able to monitor more or less than 100 aircraft.">
-  A DME station can only monitor 100 aircraft at a time.
-</Option>
-<Option why="The correct value for PPPs is 2700">
-  A DME ground station is only able to process 100 PPPS
-</Option>
-<Option why="The correct value for PPPs is 2700">
-  A DME ground station is only able to process 1200 PPPS
-</Option>
+  <Option
+    correct
+    why="This is the hard limit that causes the limit of approximately 100 aircraft"
+  >
+    A DME ground station is only able to process 2700 PPPS
+  </Option>
+  <Option why="Not necessarily true, the DME may be able to monitor more or less than 100 aircraft.">
+    A DME station can only monitor 100 aircraft at a time.
+  </Option>
+  <Option why="The correct value for PPPs is 2700">
+    A DME ground station is only able to process 100 PPPS
+  </Option>
+  <Option why="The correct value for PPPs is 2700">
+    A DME ground station is only able to process 1200 PPPS
+  </Option>
 
   <Option why="The correct value for PPPs is 2700">
     A DME ground station is only able to process 2000 PPPS

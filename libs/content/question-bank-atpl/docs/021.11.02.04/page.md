@@ -4,12 +4,6 @@ parentId: "021.11.02"
 title: Turbine
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.02.04"} />
-```
-
-## Summary
-
 ### Impulse and Reaction turbines
 
 The idea behind a turbine is to extract energy from the incoming flow to convert

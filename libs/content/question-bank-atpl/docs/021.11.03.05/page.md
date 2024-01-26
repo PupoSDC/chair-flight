@@ -4,12 +4,6 @@ parentId: "021.11.03"
 title: Engine ignition
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.03.05"} />
-```
-
-## Summary
-
 ```tsx
 <Question lo={["021.11.03.05.04"]} id="4rxZOsWO">
   <Text variant="multipleCorrect" select="3">

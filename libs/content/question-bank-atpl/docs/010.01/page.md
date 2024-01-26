@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "010.01"
-parentId: "010"
 title: "INTERNATIONAL LAW: CONVENTIONS, AGREEMENTS AND ORGANISATIONS"
 ---

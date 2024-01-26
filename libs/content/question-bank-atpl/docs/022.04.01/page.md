@@ -4,12 +4,6 @@ parentId: "022.04"
 title: "Gyroscope: basic principles"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.04.01"} />
-```
-
-## Summary
-
 ### Definitions
 
 - **Rigidity**:

@@ -4,12 +4,6 @@ parentId: "061.01.01"
 title: Form
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"061.01.01.01"} />
-```
-
-## Summary
-
 ### Earth's circumference
 
 You have to remember 2 values: **40 000 km** and **21 600 NM**.
@@ -29,16 +23,20 @@ $$
 $$
 
 ```tsx
-<Question id="W2UOXRL0RG" lo={["061.01.01.01.03"]} contentRef="### Earth's circumference">
+<Question
+  id="W2UOXRL0RG"
+  lo={["061.01.01.01.03"]}
+  contentRef="### Earth's circumference"
+>
   <Text variant="oneCorrect">
     What is, approximately. the circumference of the earth?
   </Text>
-<Option correct why="1 NM = 1 min arc. 60 * 360 = 21 600 = 40 000km">
-  40 000 km
-</Option>
-<Option correct why="1 NM = 1 min arc. 60 * 360 = 21 600">
-  21 600 NM
-</Option>
+  <Option correct why="1 NM = 1 min arc. 60 * 360 = 21 600 = 40 000km">
+    40 000 km
+  </Option>
+  <Option correct why="1 NM = 1 min arc. 60 * 360 = 21 600">
+    21 600 NM
+  </Option>
 
   <Option>40 000 NM</Option>
   <Option>21 600 km</Option>

@@ -4,12 +4,6 @@ parentId: "021.01.01"
 title: Design concepts
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.01.01.01"} />
-```
-
-## Summary
-
 ### Safe life
 
 In safe-life design, products are intended to be removed from service at a

@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "022.05"
-parentId: "022"
 title: INERTIAL NAVIGATION
 ---

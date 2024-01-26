@@ -4,12 +4,6 @@ parentId: "021.01"
 title: Maintenance
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.01.05"} />
-```
-
-## Summary
-
 ### Hard / Fixed time maintenance
 
 A component is replaced or overhauled after a set number of hours, cycles or

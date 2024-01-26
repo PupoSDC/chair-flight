@@ -4,12 +4,6 @@ parentId: "021.05"
 title: "Aeroplane: fly-by-wire (FBW) control systems"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.05.04"} />
-```
-
-## Summary
-
 - **PFC**: Primary Flight Computer. Receives Pilot commands, checks them for
   viability and errors, and converts them into the final digital signal to be
   sent to the **ACE**.

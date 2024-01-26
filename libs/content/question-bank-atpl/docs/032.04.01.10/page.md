@@ -5,9 +5,3 @@ title:
   Performance-limited take-off mass (PLTOM) and regulated take-off mass (RTOM)
   tables
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"032.04.01.10"} />
-```
-
-## Summary

@@ -4,12 +4,6 @@ parentId: "022.06"
 title: Autoland
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"022.06.05"} />
-```
-
-## Summary
-
 Try not to associate the number of autopilots with Fail Operational vs Fail
 Passive redundancy.
 

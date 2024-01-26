@@ -4,12 +4,6 @@ parentId: "021.11.04"
 title: Starting malfunctions
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.04.02"} />
-```
-
-## Summary
-
 ### Tailpipe fire (torching)
 
 An ignition of fuel that has previously puddled in the the turbine casing or
@@ -50,23 +44,23 @@ combustion chamber potentially leading to a hot start.
   <Text variant="oneCorrect">
     Name the possible cause and indications of a <Subject />.
   </Text>
-<Option subject={[["tailpipe fire"]]}>
-  Fuel that has puddled in the turbine casing or exhaust during start-up may
-  ignite. It can cause a well visible jet flame from the reward side of the
-  engine
-</Option>
-<Option subject={[["hot start"]]}>
-  The engine is started too early before enough air flow exists around the
-  combustion chamber, resulting in a rapid increase of EGT beyond limits.
-</Option>
-<Option why="Describes a tailpipe fire, however, EGT will increase, not remain constant.">
-  Fuel that has puddled in the turbine casing or exhaust during start-up may
-  ignite. EGT will remain constant.
-</Option>
-<Option why="Describes a tailpipe fire, however, an engine fire alarm is not usually triggered.">
-  Fuel that has puddled in the turbine casing or exhaust during start-up may
-  ignite. An engine fire warning will trigger in the cockpit.
-</Option>
+  <Option subject={[["tailpipe fire"]]}>
+    Fuel that has puddled in the turbine casing or exhaust during start-up may
+    ignite. It can cause a well visible jet flame from the reward side of the
+    engine
+  </Option>
+  <Option subject={[["hot start"]]}>
+    The engine is started too early before enough air flow exists around the
+    combustion chamber, resulting in a rapid increase of EGT beyond limits.
+  </Option>
+  <Option why="Describes a tailpipe fire, however, EGT will increase, not remain constant.">
+    Fuel that has puddled in the turbine casing or exhaust during start-up may
+    ignite. EGT will remain constant.
+  </Option>
+  <Option why="Describes a tailpipe fire, however, an engine fire alarm is not usually triggered.">
+    Fuel that has puddled in the turbine casing or exhaust during start-up may
+    ignite. An engine fire warning will trigger in the cockpit.
+  </Option>
 
   <Option why="describe a hot start, except that in a hot start the engine does not flame out.">
     The engine is started too early before enough air flow exists around the

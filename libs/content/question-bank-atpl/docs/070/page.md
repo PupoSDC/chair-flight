@@ -1,4 +1,0 @@
----
-learningObjectiveId: "070"
-title: Operational Procedures
----

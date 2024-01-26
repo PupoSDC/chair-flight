@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "061.03"
-parentId: "061"
 title: GREAT CIRCLES AND RHUMB LINES
 ---

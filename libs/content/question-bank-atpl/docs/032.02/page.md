@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "032.02"
-parentId: "032"
 title: CS-23/APPLICABLE OPERATIONAL REQUIREMENTS PERFORMANCE CLASS B - THEORY
 ---

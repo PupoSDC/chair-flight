@@ -4,12 +4,6 @@ parentId: "021.03"
 title: "Hydromechanics: basic principles"
 ---
 
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.03.01"} />
-```
-
-## Summary
-
 ### Pressure
 
 ```js

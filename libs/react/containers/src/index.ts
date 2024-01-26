@@ -1,5 +1,6 @@
 export * from "./annexes/annex-search";
-export * from "./blog/blog-content";
+export * from "./docs/doc-content";
+export * from "./docs/doc-search";
 export * from "./flashcards/flashcard-collection-list";
 export * from "./flashcards/flashcard-list";
 export * from "./flashcards/flashcard-test";

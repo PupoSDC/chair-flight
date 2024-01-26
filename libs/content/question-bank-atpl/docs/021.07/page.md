@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "021.07"
-parentId: "021"
 title: Anti-icing and de-icing systems
 ---

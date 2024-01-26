@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "090.01"
-parentId: "090"
 title: CONCEPTS
 ---

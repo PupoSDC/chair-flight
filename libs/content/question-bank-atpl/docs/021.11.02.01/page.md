@@ -3,9 +3,3 @@ learningObjectiveId: "021.11.02.01"
 parentId: "021.11.02"
 title: "Aeroplane: air intake"
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"021.11.02.01"} />
-```
-
-## Summary

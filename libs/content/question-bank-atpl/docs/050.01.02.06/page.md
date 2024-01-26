@@ -5,9 +5,3 @@ title:
   Temperature near the Earth"s surface, insolation, surface effects, effect of
   clouds, effect of wind
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"050.01.02.06"} />
-```
-
-## Summary

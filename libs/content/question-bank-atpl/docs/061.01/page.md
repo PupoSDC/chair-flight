@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "061.01"
-parentId: "061"
 title: BASICS OF NAVIGATION
 ---

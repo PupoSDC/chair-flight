@@ -1,5 +1,4 @@
 ---
 learningObjectiveId: "050.05"
-parentId: "050"
 title: PRECIPITATION
 ---

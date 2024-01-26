@@ -3,9 +3,3 @@ learningObjectiveId: "034.03.02.01"
 parentId: "034.03.02"
 title: Take-off requirements
 ---
-
-```tsx eval
-<LearningObjectives learningObjectiveId={"034.03.02.01"} />
-```
-
-## Summary

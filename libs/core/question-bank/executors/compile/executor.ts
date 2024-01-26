@@ -36,7 +36,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
-    outputDocsJson
+    outputDocsJson,
   } = getPaths({ context });
 
   const questions = await readAllQuestionsFromFs({
@@ -53,7 +53,6 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     outputAnnexesRelativeDir,
   });
 
-  
   connectQuestionBank({
     questions,
     learningObjectives,
@@ -61,6 +60,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     subjects,
     annexes,
     flashcards,
+    docs,
   });
 
   await fs
