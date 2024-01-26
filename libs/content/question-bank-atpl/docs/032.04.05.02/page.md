@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "032.04.05.02"
+parentId: "032.04.05"
+title: Energy management in the descent
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"032.04.05.02"} />
+```
+
+## Summary

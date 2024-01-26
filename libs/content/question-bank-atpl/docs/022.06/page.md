@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "022.06"
+parentId: "022"
+title: "AEROPLANE: AUTOMATIC FLIGHT CONTROL SYSTEMS"
+---

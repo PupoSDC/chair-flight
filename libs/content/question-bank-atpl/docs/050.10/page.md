@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "050.10"
+parentId: "050"
+title: METEOROLOGICAL INFORMATION
+---

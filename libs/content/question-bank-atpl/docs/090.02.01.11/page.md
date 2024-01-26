@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "090.02.01.11"
+parentId: "090.02.01"
+title: Radar procedural phraseology
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"090.02.01.11"} />
+```
+
+## Summary

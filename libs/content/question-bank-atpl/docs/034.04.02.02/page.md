@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "034.04.02.02"
+parentId: "034.04.02"
+title: Use of helicopter flight data
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"034.04.02.02"} />
+```
+
+## Summary

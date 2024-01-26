@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "050.03"
+parentId: "050"
+title: THERMODYNAMICS
+---

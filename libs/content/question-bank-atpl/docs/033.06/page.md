@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "033.06"
+parentId: "033"
+title: FLIGHT MONITORING AND IN-FLIGHT REPLANNING
+---

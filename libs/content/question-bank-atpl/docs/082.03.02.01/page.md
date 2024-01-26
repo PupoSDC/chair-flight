@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "082.03.02.01"
+parentId: "082.03.02"
+title: Helicopter configurations
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"082.03.02.01"} />
+```
+
+## Summary

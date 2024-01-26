@@ -13,8 +13,14 @@ import type {
   QuestionBankCourseJson,
   QuestionBankCourse,
   QuestionBankSubject,
+  QuestionBankDoc,
 } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
+import { parse } from "yaml";
+import { QuestionBankDocSchema } from "../../src/question-bank-docs-meta-schema";
+
+const MATTER_REGEX =
+  /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
 
 const exists = async (f: string) => {
   try {
@@ -70,6 +76,10 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     outputAnnexesRelativeDir: path.join("content", projectName, "annexes"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes.json` */
     outputAnnexesJson: path.join(outputDir, "annexes.json"),
+    /** i.e.: `/content/content-question-bank-atpl/docs` */
+    outputDocsDir: path.join(outputDir, "docs"),
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/docs.json` */
+    outputDocsJson: path.join(outputDir, "docs.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/subjects.json` */
     outputSubjectsJson: path.join(outputDir, "subjects.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/courses.json` */
@@ -207,3 +217,32 @@ export const readAllFlashcardsFromFs = async ({
   }
   return flashcards;
 };
+
+export const readAllDocsFromFs = async ({
+  docsFolder,
+} : {
+  docsFolder: string,
+}) => {
+  const posts = await fs.readdir(docsFolder);
+  const parsedPosts: QuestionBankDoc[] = [];
+
+  for (const post of posts) {
+    const postFolder = path.join(docsFolder, post);
+    if (!(await fs.stat(postFolder)).isDirectory()) continue;
+    /** i.e.: `libs/content/blog/posts/001-post/page.md` */
+    const postPage = path.join(docsFolder, post, "page.md");
+    const source = (await fs.readFile(postPage)).toString();
+    const match = MATTER_REGEX.exec(source);
+    if (!match) throw new Error(`Missing frontMatter for ${post}`);
+    const data = parse(match[1]);
+    const content = source.split("\n---").slice(1).join().trim();
+    data.id = post;
+    data.empty = !content.length;
+    data.fileName = post;
+    data.content = content;
+    const meta = QuestionBankDocSchema.parse(data);
+    parsedPosts.push(meta);
+  }
+
+  return parsedPosts;
+}

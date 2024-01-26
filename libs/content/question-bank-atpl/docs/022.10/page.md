@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "022.10"
+parentId: "022"
+title: COMMUNICATION SYSTEMS
+---

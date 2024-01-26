@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "032.04.01.09"
+parentId: "032.04.01"
+title: Obstacle-limited take-off
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"032.04.01.09"} />
+```
+
+## Summary

@@ -1,0 +1,6 @@
+---
+learningObjectiveId: "022.11"
+parentId: "022"
+title:
+  FLIGHT MANAGEMENT SYSTEM (FMS) / FLIGHT MANAGEMENT AND GUIDANCE SYSTEM (FMGS)
+---

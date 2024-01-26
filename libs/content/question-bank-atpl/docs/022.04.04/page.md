@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "022.04.04"
+parentId: "022.04"
+title: Directional gyroscope
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"022.04.04"} />
+```
+
+## Summary

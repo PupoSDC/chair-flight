@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "022.13"
+parentId: "022"
+title: INTEGRATED INSTRUMENTS - ELECTRONIC DISPLAYS
+---

@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "034.04"
+parentId: "034"
+title: PERFORMANCE CLASS 1 - HELICOPTERS CERTIFIED ACCORDING TO CS-29 ONLY
+---

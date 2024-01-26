@@ -14,7 +14,7 @@ import type { AnnexId } from "@chair-flight/base/types";
 export const questionBankQuestionsRouter = router({
   getQuestionOverview: publicProcedure
     .input(z.object({ questionBank, questionId: z.string() }))
-    .query(async ({ input }) => {
+    .query(async ({ input }) => { 
       const id = input.questionId;
       const qb = questionBanks[input.questionBank];
       const template = await qb.getOne("questions", id);

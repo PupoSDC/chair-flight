@@ -7,6 +7,7 @@ import { default as AnnexesIcon } from "@mui/icons-material/PanoramaOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
+import { default as DocsIcon} from '@mui/icons-material/LibraryBooksOutlined';
 import {
   Box,
   Breadcrumbs,
@@ -73,11 +74,13 @@ export const LayoutModule = container<Props, Params, Data>(
     const isLearningObjectives = router.asPath.includes("learning-objectives");
     const isFlashcards = router.asPath.includes("flashcards");
     const isAnnexes = router.asPath.includes("annexes");
+    const isDocs = router.asPath.includes("docs");
     const isHome =
       !isQuestions &&
       !isTests &&
       !isSettings &&
       !isFlashcards &&
+      !isDocs &&
       !isLearningObjectives &&
       !isAnnexes;
 
@@ -129,11 +132,11 @@ export const LayoutModule = container<Props, Params, Data>(
               title={"Questions"}
             />
           )}
-          {data.hasQuestions && (
+          {data.hasDocs && (
             <SidebarListItem
               href={`/modules/${questionBank}/docs`}
-              selected={isQuestions}
-              icon={QuestionsIcon}
+              selected={isDocs}
+              icon={DocsIcon}
               title={"Docs"}
             />
           )}

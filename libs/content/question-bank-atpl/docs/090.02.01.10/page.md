@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "090.02.01.10"
+parentId: "090.02.01"
+title: Read-back and acknowledgement requirements
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"090.02.01.10"} />
+```
+
+## Summary

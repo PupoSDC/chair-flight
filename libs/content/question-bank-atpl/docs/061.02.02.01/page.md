@@ -1,0 +1,15 @@
+---
+learningObjectiveId: "061.02.02.01"
+parentId: "061.02.02"
+title: Use of visual observations and application to in-flight navigation
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"061.02.02.01"} />
+```
+
+## Summary
+
+### Map reading
+
+### Visual checkpoint

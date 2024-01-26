@@ -1,0 +1,5 @@
+---
+learningObjectiveId: "021.17"
+parentId: "021"
+title: "HELICOPTER: BLADES"
+---

@@ -1,0 +1,11 @@
+---
+learningObjectiveId: "090.02.01.12"
+parentId: "090.02.01"
+title: Level changes and reports
+---
+
+```tsx eval
+<LearningObjectives learningObjectiveId={"090.02.01.12"} />
+```
+
+## Summary
