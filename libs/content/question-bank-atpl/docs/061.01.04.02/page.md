@@ -4,12 +4,14 @@ parentId: "061.01.04"
 title: Units
 ---
 
+## Converting Units
+
 There are three ways of doing this. All of them are equally valid, and we
 recommend you mastering the 3 of them. Practice makes perfect. Make sure to try
 all of these approaches to answer questions until you can use either of them in
 an almost automated way.
 
-#### Precise conversions.
+### Precise conversions.
 
 - 1 NM = 1.852 km
 - 1 SM = 1.609 km
@@ -26,7 +28,7 @@ are usually good enough for you to exclude wrong answers immediatly simply
 because they are not even close to the correct answer. Knowing these is also
 great if you find yourself in the cockpit and need to do some rough estimations.
 
-#### NM <=> km
+#### NM to km
 
 > Multiply by 2 and reduce 10%
 
@@ -41,12 +43,12 @@ km is about 4NM (precise answer: 3.78).
 As an even rougher estimation, remember that **1 NM is slightly less than 2
 km**.
 
-### ft to meter
+#### ft to meter
 
 > 3 is 1, 6 is 2, 10 is 3
 
 - **3000 ft = 1000m**, This is the basic idea. you simplify that 1m = 3ft
-- **6000 ft = 2000m**, you keep the simplication: 1m = 3ft
+- **6000 ft = 2000m**, you keep the simplification: 1m = 3ft
 - **10000 ft = 3000m**, Instead of increasing 1000m at 90000ft you "wait" for
   10.000ft.
 
@@ -67,3 +69,5 @@ are a bit more convoluted.
   10.000 ft, and the last 1000m is only "3000ft"
 
 ### Flight Computer
+
+...To be completed

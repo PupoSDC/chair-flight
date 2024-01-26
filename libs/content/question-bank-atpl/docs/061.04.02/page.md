@@ -10,11 +10,12 @@ title: Projections
 | Projection type   | Conical                                            | Cylindrical                                         | Polar Stereographic         |
 | Graticule         | Rectangular                                        | -                                                   |                             |
 | Meridians         | Vertical straight lines                            | Polar Radial straight lines                         | Polar Radial straight lines |
-| Parallels         | Horizontal straight lines                          | Polar Concentric arcs                               | Pollar concentric circles   |
-| Great Circles     | ![img]()                                           |                                                     |                             |
-| Rhumb Lines       | Straight Lines                                     | Concave to the GC line <br> Convex to the equator   |                             |
-| Chart Convergence | No convergence!                                    |                                                     | Constnat across chart       |
+| Parallels         | Horizontal straight lines                          | Polar Concentric arcs                               | Polar concentric circles    |
+| Great Circles     | ![img](ping)                                       |                                                     |                             |
+| Rhumb Lines       | Straight Lines                                     | Concave to the GC line <br /> Convex to the equator |                             |
+| Chart Convergence | No convergence!                                    |                                                     | Constant across chart       |
 
+```jsx
 <Question
 id="LXLE10O96T"
 lo={["061.04.02.04.01", "061.04.02.03.01", "061.04.02.02.01"]}
@@ -46,7 +47,7 @@ contentRef="## Summary"
     A conical projection that "cust the earth" at a single standard parallel.
   </Option>
 </Question>
-```
+
 
 <Question
 id="3NQ0YN10CN"
