@@ -1,26 +1,15 @@
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Box,
-  Link,
-  ListItemContent,
-  Select,
-  Option,
-  Stack,
-  Typography,
-  Chip,
-  Divider,
-} from "@mui/joy";
+import { Select, Option, Stack } from "@mui/joy";
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import {
   SearchQuery,
   HookFormSelect,
-  MarkdownClientCompressed,
   SearchFilters,
   SearchHeader,
-  SearchList,
+  LearningObjectiveList,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
@@ -78,8 +67,6 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       Number(subject !== "all") +
       Number(course !== "all");
 
-    const coursesMap = makeMap(courses, (c) => c.id);
-
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader>
@@ -128,106 +115,18 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           />
         </SearchHeader>
 
-        <SearchList
+        <LearningObjectiveList
           loading={isLoading}
           error={isError}
+          currentCourse={course}
+          courseMap={makeMap(
+            courses,
+            (c) => c.id,
+            (t) => t.text,
+          )}
           items={(data?.pages ?? []).flatMap((p) => p.items)}
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
-          renderThead={() => (
-            <thead>
-              <tr>
-                <th style={{ width: "8em" }}>LO</th>
-                <th>Description</th>
-                <th style={{ width: "14em" }}>Source</th>
-                <th style={{ width: "14em" }}>Courses</th>
-                <th style={{ width: "7em" }}>Questions</th>
-              </tr>
-            </thead>
-          )}
-          renderTableRow={(result) => (
-            <tr key={result.id}>
-              <td>
-                <Link href={result.href}>
-                  <Typography>{result.id}</Typography>
-                </Link>
-              </td>
-              <td>
-                <MarkdownClientCompressed>
-                  {result.text}
-                </MarkdownClientCompressed>
-              </td>
-              <Box component={"td"} fontSize={"xs"}>
-                <MarkdownClientCompressed>
-                  {result.source}
-                </MarkdownClientCompressed>
-              </Box>
-              <td>
-                {result.courses
-                  .filter((c) => {
-                    if (course === "all") return true;
-                    if (c === course) return true;
-                    return false;
-                  })
-                  .map((course) => (
-                    <Chip key={course} size="sm" sx={{ m: 0.5 }}>
-                      {coursesMap[course].text}
-                    </Chip>
-                  ))}
-              </td>
-              <Box
-                component={"td"}
-                children={result.numberOfQuestions}
-                sx={{
-                  textAlign: "right",
-                  pr: `2em !important`,
-                }}
-              />
-            </tr>
-          )}
-          renderListItemContent={(result) => (
-            <ListItemContent>
-              <Link href={`/modules/atpl/learning-objectives/${result.id}`}>
-                <Typography>{result.id}</Typography>
-              </Link>
-              <Typography level="body-xs" sx={{ fontSize: 10 }}>
-                {result.courses.map((c) => coursesMap[c]).join(", ")}
-              </Typography>
-              <Typography level="body-xs" sx={{ fontSize: 10 }}>
-                Number of Questions {result.numberOfQuestions}
-              </Typography>
-              <Box
-                sx={{
-                  mt: 1,
-                  fontSize: "sm",
-                  height: "7em",
-                  overflow: "hidden",
-                  maskImage:
-                    "linear-gradient(to bottom, black 50%, transparent 100%)",
-                }}
-              >
-                <MarkdownClientCompressed>
-                  {result.text}
-                </MarkdownClientCompressed>
-                {result.source && (
-                  <>
-                    <Divider sx={{ width: "50%", my: 0.5 }} />
-                    <Typography level="body-xs">source: </Typography>
-                    <Box
-                      sx={{
-                        color: "text.tertiary",
-                        fontSize: "xs",
-                      }}
-                    >
-                      <MarkdownClientCompressed>
-                        {result.source}
-                      </MarkdownClientCompressed>
-                    </Box>
-                  </>
-                )}
-              </Box>
-            </ListItemContent>
-          )}
         />
       </Stack>
     );
