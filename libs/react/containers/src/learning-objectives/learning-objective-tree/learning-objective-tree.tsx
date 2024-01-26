@@ -1,16 +1,13 @@
+import { makeMap } from "@chair-flight/base/utils";
+import { LearningObjectiveList } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
+import { container, getRequiredParam } from "../../wraper";
 import type {
   LearningObjectiveId,
   QuestionBankName,
 } from "@chair-flight/base/types";
-import { makeMap } from "@chair-flight/base/utils";
-import type {
-  LearningObjectiveListProps} from "@chair-flight/react/components";
-import {
-  LearningObjectiveList
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
+import type { LearningObjectiveListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
-import { container, getRequiredParam } from "../../wraper";
 
 type Props = {
   forceMode?: LearningObjectiveListProps["forceMode"];
