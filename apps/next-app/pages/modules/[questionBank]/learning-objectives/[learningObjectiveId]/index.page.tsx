@@ -1,9 +1,11 @@
-import { Link, Sheet } from "@mui/joy";
+import { default as LinkIcon } from "@mui/icons-material/ChevronRightOutlined";
+import { Divider, Link, Sheet, Stack, Typography } from "@mui/joy";
 import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   LearningObjectiveOverview,
   LearningObjectiveQuestions,
+  LearningObjectiveTree,
 } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -20,11 +22,16 @@ type PageProps = {
   learningObjectiveId: string;
 };
 
+const BIG_SCREEN =
+  "@media screen and (min-height: 520px) and (min-width: 600px)";
+
 export const Page: NextPage<PageProps> = ({
   questionBank,
   learningObjectiveId,
 }) => {
   const loLink = `/modules/${questionBank}/learning-objectives`;
+  const treeLink = `${loLink}/${learningObjectiveId}/tree`;
+  const questionsLink = `${loLink}/${learningObjectiveId}/questions`;
   const crumbs = [
     [questionBank.toUpperCase(), `/modules/${questionBank}`],
     ["Learning Objectives", loLink],
@@ -39,31 +46,48 @@ export const Page: NextPage<PageProps> = ({
         questionBank={questionBank}
         learningObjectiveId={learningObjectiveId}
       />
-      <LearningObjectiveQuestions
-        questionBank={questionBank}
-        learningObjectiveId={learningObjectiveId}
+      <Stack
+        direction="row"
         sx={{
           flex: 1,
-          overflowY: "scroll",
+          overflow: "hidden",
           display: "none",
-
-          "@media screen and (min-height: 520px) and (min-width: 600px)": {
-            display: "block",
-          },
-        }}
-      />
-      <Sheet
-        sx={{
-          p: 2,
-
-          "@media screen and (min-height: 520px) and (min-width: 600px)": {
-            display: "none",
-          },
+          [BIG_SCREEN]: { display: "flex" },
         }}
       >
-        <Link href={`${loLink}/${learningObjectiveId}/questions`}>
-          Questions
-        </Link>
+        <Stack sx={{ width: "50%", mr: 1, height: "100%" }}>
+          <Link href={treeLink}>
+            <Typography level="h3" sx={{ verticalAlign: "middle" }}>
+              Related Learning Objectives
+              <LinkIcon sx={{ verticalAlign: "middle" }} color="primary" />
+            </Typography>
+          </Link>
+          <LearningObjectiveTree
+            forceMode="mobile"
+            questionBank={questionBank}
+            learningObjectiveId={learningObjectiveId}
+            sx={{ overflowY: "scroll", flex: 1 }}
+          />
+        </Stack>
+        <Stack sx={{ width: "50%", ml: 1, height: "100%" }}>
+          <Link href={questionsLink}>
+            <Typography level="h3" sx={{ verticalAlign: "middle" }}>
+              Questions
+              <LinkIcon sx={{ verticalAlign: "middle" }} color="primary" />
+            </Typography>
+          </Link>
+          <LearningObjectiveQuestions
+            forceMode="mobile"
+            questionBank={questionBank}
+            learningObjectiveId={learningObjectiveId}
+            sx={{ overflowY: "scroll", flex: 1 }}
+          />
+        </Stack>
+      </Stack>
+      <Sheet sx={{ [BIG_SCREEN]: { display: "none" }, p: 1 }}>
+        <Link href={treeLink}>Related Learning Objectives</Link>
+        <Divider sx={{ my: 1 }} />
+        <Link href={questionsLink}>Questions</Link>
       </Sheet>
     </LayoutModule>
   );
@@ -74,6 +98,7 @@ export const getServerSideProps = ssrHandler<PageProps, PageParams>(
     await Promise.all([
       LayoutModule.getData({ params, helper }),
       LearningObjectiveOverview.getData({ params, helper }),
+      LearningObjectiveTree.getData({ params, helper }),
       LearningObjectiveQuestions.getData({ params, helper }),
     ]);
     return { props: params };

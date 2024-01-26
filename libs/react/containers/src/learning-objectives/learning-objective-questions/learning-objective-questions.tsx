@@ -18,7 +18,13 @@ const useSearchQuestions =
     .useInfiniteQuery;
 
 export const LearningObjectiveQuestions = container<Props>(
-  ({ questionBank, learningObjectiveId, sx, component = "section" }) => {
+  ({
+    forceMode,
+    questionBank,
+    learningObjectiveId,
+    sx,
+    component = "section",
+  }) => {
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       {
         questionBank,
@@ -33,6 +39,7 @@ export const LearningObjectiveQuestions = container<Props>(
 
     return (
       <QuestionList
+        forceMode={forceMode}
         loading={isLoading}
         error={isError}
         items={(data?.pages ?? []).flatMap((p) => p.items)}

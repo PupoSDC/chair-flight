@@ -4,6 +4,7 @@ export * from "./flashcards/flashcard-list";
 export * from "./flashcards/flashcard-test";
 export * from "./layouts/layout-module";
 export * from "./layouts/layout-public";
+export * from "./learning-objectives/learning-objective-tree";
 export * from "./learning-objectives/learning-objective-overview";
 export * from "./learning-objectives/learning-objective-questions";
 export * from "./learning-objectives/learning-objectives-search";

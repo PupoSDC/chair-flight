@@ -140,4 +140,45 @@ export const questionBankLoSearchRouter = router({
         nextCursor: cursor + finalItems.length,
       };
     }),
+  getLearningObjectiveTree: publicProcedure
+    .input(
+      z.object({
+        questionBank,
+        learningObjectiveId: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      await populateSearchIndex(input.questionBank);
+
+      const qb = questionBanks[input.questionBank];
+      const mainLoId = input.learningObjectiveId;
+      const mainLo = await qb.getOne("learningObjectives", mainLoId);
+
+      const tree = [mainLo.id];
+
+      // Populate up the tree
+      for (let i = tree.length - 1; i < tree.length; i++) {
+        try {
+          const lo = await qb.getOne("learningObjectives", tree[i]);
+          tree.push(lo.parentId);
+        } catch (e) {
+          break;
+        }
+      }
+
+      tree.reverse();
+
+      // Populate down the tree
+      for (let i = tree.length - 1; i < tree.length; i++) {
+        const lo = await qb.getOne("learningObjectives", tree[i]);
+        tree.push(...lo.learningObjectives);
+      }
+
+      const items = tree
+        .sort()
+        .map((t) => RESULTS.get(t))
+        .filter(Boolean);
+
+      return { items };
+    }),
 });
