@@ -1,9 +1,12 @@
 import { Box, Divider, Link, Typography } from "@mui/joy";
-import type { MDXRemoteProps } from "next-mdx-remote";
+import type { MDXProvider } from "@mdx-js/react";
+import type { ComponentProps } from "react";
 
-export const markdownComponents: MDXRemoteProps["components"] = {
+export type MdxComponents = ComponentProps<typeof MDXProvider>["components"];
+
+export const markdownComponents: MdxComponents = {
   h1: () => {
-    throw new Error("No H1 components in blog posts!");
+    throw new Error("No H1 components in markdown content!");
   },
   h2: ({ children }) => (
     <Typography
@@ -37,7 +40,6 @@ export const markdownComponents: MDXRemoteProps["components"] = {
       children={children}
     />
   ),
-  hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
   p: ({ children }) => (
     <Typography
       sx={{ mt: "0.5em" }}
@@ -46,6 +48,7 @@ export const markdownComponents: MDXRemoteProps["components"] = {
       children={children}
     />
   ),
+  hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
   a: ({ children, href }) => <Link href={href}>{children}</Link>,
   ul: ({ children }) => (
     <Box component="ul" sx={{ pl: 3 }}>

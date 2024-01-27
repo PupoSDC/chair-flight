@@ -1,24 +1,20 @@
 import * as fs from "node:fs/promises";
-import path from "node:path";
 import { useEffect } from "react";
-import { MDXRemote } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
 import { default as AirplaneTicketIcon } from "@mui/icons-material/AirplaneTicket";
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { default as StyleIcon } from "@mui/icons-material/Style";
-import { Box, Link, Divider, Typography, GlobalStyles, Stack } from "@mui/joy";
+import { Box, Link, Divider, Typography, Stack } from "@mui/joy";
 import { getRequiredParam } from "libs/react/containers/src/wraper";
 import { DateTime } from "luxon";
-import { z } from "zod";
 import {
   AppHead,
   BackgroundFadedImage,
   BlogPostChip,
+  Markdown,
   MarkdownClientDemo,
   ModuleSelectionButton,
-  markdownComponents,
 } from "@chair-flight/react/components";
 import {
   AnnexSearch,
@@ -28,45 +24,22 @@ import {
 } from "@chair-flight/react/containers";
 import { useUserVoyage } from "@chair-flight/react/containers";
 import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
-import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
-const metaSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  author: z.string(),
-  date: z.string(),
-  imageUrl: z.string().optional(),
-  tag: z.enum(["Technical", "Feature", "Content"]),
-});
+type PageProps = AppRouterOutput["blog"]["getBlogPost"]["post"];
+type PageParams = { postId: string };
 
-type PageProps = {
-  meta: z.infer<typeof metaSchema>;
-  mdxSource: MDXRemoteSerializeResult;
-};
-
-type PageParams = {
-  articleName: string;
-};
-
-export const Page: NextPage<PageProps> = ({ mdxSource, meta }) => {
+export const Page: NextPage<PageProps> = (props) => {
   useEffect(() => useUserVoyage.markBlogAsVisited, []);
 
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
-      <GlobalStyles
-        styles={{
-          main: {
-            "h1, h2, h3, h4, h5": { marginTop: "1em" },
-          },
-        }}
-      />
       <AppHead
-        title={meta.title}
-        linkTitle={meta.title}
-        linkDescription={meta.description}
+        title={props.title}
+        linkTitle={props.title}
+        linkDescription={props.description}
       />
-
       <Link
         sx={{ flex: 0, mr: "auto", pb: 2 }}
         color="primary"
@@ -77,32 +50,31 @@ export const Page: NextPage<PageProps> = ({ mdxSource, meta }) => {
       />
       <Typography
         level="body-sm"
-        children={DateTime.fromISO(meta.date).toFormat("dd LLL yyyy")}
+        children={DateTime.fromISO(props.date).toFormat("dd LLL yyyy")}
       />
       <Typography
         level="h2"
         component="h1"
         sx={{ fontWeight: "bold" }}
-        children={meta.title}
+        children={props.title}
       />
       <Divider sx={{ width: "100%", mb: 1 }} />
       <Box sx={{ mb: 4 }}>
         <BlogPostChip
-          tag={meta.tag}
+          tag={props.tag}
           variant="soft"
           slotProps={{
             action: {
               component: Link,
-              href: `/articles/blog?tag=${meta.tag}`,
+              href: props.tagHref,
             },
           }}
         />
       </Box>
 
-      <MDXRemote
-        {...mdxSource}
+      <Markdown
+        document={props.mdxContent}
         components={{
-          ...markdownComponents,
           Stack,
           Link,
           AnnexSearch,
@@ -127,27 +99,12 @@ export const Page: NextPage<PageProps> = ({ mdxSource, meta }) => {
   );
 };
 
-const MATCH_CODE_BLOCKS = /```tsx eval((?:.|\n)*?)```/g;
-const RELATIVE_PATH_TO_BLOG = "./public/content/content-blog/";
-
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
-    const articleName = getRequiredParam(params, "articleName");
+    const postId = getRequiredParam(params, "postId");
+    const { post } = await helper.blog.getBlogPost.fetch({ postId });
     await LayoutPublic.getData({ helper, params });
-
-    const file = path.join(
-      process.cwd(),
-      RELATIVE_PATH_TO_BLOG,
-      articleName,
-      "page.md",
-    );
-
-    const source = await fs.readFile(file);
-    const sourceString = source.toString().replaceAll(MATCH_CODE_BLOCKS, "$1");
-    const opts = { parseFrontmatter: true };
-    const mdxSource = await serialize(sourceString, opts);
-    const meta = metaSchema.parse(mdxSource.frontmatter);
-    return { props: { mdxSource, meta } };
+    return { props: post };
   },
   fs,
 );
@@ -155,9 +112,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 export const getStaticPaths = staticPathsHandler<PageParams>(
   async ({ helper }) => {
     const { meta } = await helper.blog.getBlogPostsMeta.fetch();
-    const paths = meta.map((meta) => ({
-      params: { articleName: meta.filename },
-    }));
+    const paths = meta.map((meta) => ({ params: { postId: meta.filename } }));
     return { fallback: false, paths };
   },
   fs,

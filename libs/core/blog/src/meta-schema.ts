@@ -1,13 +1,13 @@
 import { z } from "zod";
+import type { BlogPost } from "@chair-flight/base/types";
 
-export const blogMetaSchema = z.object({
+export const blogPostSchema: z.ZodSchema<BlogPost> = z.object({
   title: z.string(),
   filename: z.string(),
   description: z.string(),
   author: z.string(),
   date: z.string(),
-  imageUrl: z.string().optional(),
+  imageUrl: z.string().nullable(),
+  content: z.string(),
   tag: z.enum(["Technical", "Feature", "Content"]),
 });
-
-export type BlogMeta = z.infer<typeof blogMetaSchema>;

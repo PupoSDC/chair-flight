@@ -19,11 +19,9 @@ import {
 } from "@chair-flight/react/components";
 import { LayoutPublic, useUserVoyage } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
-import type { BlogMeta } from "@chair-flight/core/blog";
+import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
-export type PageProps = {
-  meta: BlogMeta[];
-};
+export type PageProps = AppRouterOutput["blog"]["getBlogPostsMeta"];
 
 const Page: FunctionComponent<PageProps> = ({ meta }) => {
   useEffect(() => useUserVoyage.markBlogAsVisited, []);
