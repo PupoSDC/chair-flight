@@ -78,7 +78,10 @@ export const ContainerWrapper: FunctionComponent<ContainerWrapperProps> = ({
   if (!noSsr && !deferRendering) return ssrChildren;
 
   return (
-    <NoSsr defer={deferRendering} fallback={<LoadingFallbackComponent />}>
+    <NoSsr
+      defer={deferRendering}
+      fallback={<LoadingFallbackComponent sx={sx} />}
+    >
       {ssrChildren}
     </NoSsr>
   );

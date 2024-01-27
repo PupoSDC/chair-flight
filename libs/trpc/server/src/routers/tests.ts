@@ -32,8 +32,7 @@ export const testsRouter = router({
             return {
               id: lo.id,
               text: lo.text,
-              numberOfQuestions:
-                lo.nestedQuestions.length + lo.questions.length,
+              numberOfQuestions: lo.nestedQuestions.length,
               learningObjectives: lo.learningObjectives
                 .map((loId2) => {
                   const lo2 = learningObjectivesMap[loId2];
@@ -44,8 +43,7 @@ export const testsRouter = router({
                   return {
                     id: lo2.id,
                     text: lo2.text,
-                    numberOfQuestions:
-                      lo2.nestedQuestions.length + lo2.questions.length,
+                    numberOfQuestions: lo2.nestedQuestions.length,
                   };
                 })
                 .filter(Boolean),
