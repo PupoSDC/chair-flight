@@ -1,5 +1,5 @@
 import * as fs from "node:fs/promises";
-import { useEffect, type FunctionComponent } from "react";
+import { type FunctionComponent } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import {
   Card,
@@ -17,14 +17,13 @@ import {
   BackgroundFadedImage,
   BlogPostChip,
 } from "@chair-flight/react/components";
-import { LayoutPublic, useUserVoyage } from "@chair-flight/react/containers";
+import { LayoutPublic } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 export type PageProps = AppRouterOutput["blog"]["getBlogPostsMeta"];
 
 const Page: FunctionComponent<PageProps> = ({ meta }) => {
-  useEffect(() => useUserVoyage.markBlogAsVisited, []);
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead linkDescription={dedent``} />
