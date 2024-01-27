@@ -15,6 +15,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { AnnexSearch } from "../../annexes/annex-search";
+import { BugReportButton } from "../../layouts/components/app-buttons/app-buttons";
 import { QuestionOverview } from "../../questions/question-overview";
 import { QuestionSearch } from "../../questions/question-search";
 import { useUserVoyage } from "../../user/hooks/use-user-voyage";
@@ -77,6 +78,7 @@ export const BlogPost: Container<Props, Params, Data> = container<
       <Markdown
         document={post.mdxContent}
         components={{
+          Box,
           Stack,
           Link,
           AnnexSearch,
@@ -88,6 +90,7 @@ export const BlogPost: Container<Props, Params, Data> = container<
           FlightTakeoffIcon,
           StyleIcon,
           QuestionSearch,
+          BugReportButton,
         }}
       />
 
