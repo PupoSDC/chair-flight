@@ -1,8 +1,8 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
-import { blogMetaSchema } from "../../src";
-import type { BlogMeta } from "../../src";
+import { blogPostSchema } from "../../src";
+import type { BlogPost } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
 
 type ExecutorOptions = Record<string, never>;
@@ -28,16 +28,20 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const outputBlogMeta = path.join(outputDir, "meta.json");
 
   const posts = await fs.readdir(blogPostsFolder);
-  const parsedPosts: BlogMeta[] = [];
+  const parsedPosts: BlogPost[] = [];
 
   for (const post of posts) {
     /** i.e.: `libs/content/blog/posts/001-post/page.md` */
     const postPage = path.join(blogPostsFolder, post, "page.md");
     const source = (await fs.readFile(postPage)).toString();
     const match = MATTER_REGEX.exec(source);
-    const matter = match ? parse(match[1]) : {};
-    matter.filename = post;
-    const meta = blogMetaSchema.parse(matter);
+    if (!match) throw new Error(`Missing frontMatter for ${post}`);
+    const data = parse(match[1]);
+    const content = source.split("\n---").slice(1).join().trim();
+    data.filename = post;
+    data.content = content;
+    data.imageUrl ??= null;
+    const meta = blogPostSchema.parse(data);
     parsedPosts.push(meta);
   }
 

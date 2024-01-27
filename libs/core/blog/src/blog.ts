@@ -1,26 +1,35 @@
 import { getUrlPathOnServer } from "@chair-flight/base/env";
-import type { BlogMeta } from "./meta-schema";
+import { NotFoundError } from "@chair-flight/base/errors";
+import type { BlogPost } from "@chair-flight/base/types";
 
 type ReadFile = (path: string, string: "utf-8") => Promise<string>;
 
 interface IBlog {
-  getAllPostsMeta: () => Promise<BlogMeta[]>;
+  getAllPosts: () => Promise<BlogPost[]>;
+  getPost: (postId: string) => Promise<BlogPost>;
   preloadForStaticRender: (args: { readFile: ReadFile }) => Promise<void>;
 }
 
 export class Blog implements IBlog {
-  private postMeta: BlogMeta[] | undefined = undefined;
+  private postMeta: BlogPost[] | undefined = undefined;
 
-  async getAllPostsMeta() {
+  async getAllPosts() {
     if (!this.postMeta) {
       const urlPath = getUrlPathOnServer();
       const blogPath = `/content/content-blog`;
       const baseApiPath = `${urlPath}${blogPath}`;
       const apiPath = `${baseApiPath}/meta.json`;
       const response = await fetch(apiPath);
-      this.postMeta = (await response.json()) as BlogMeta[];
+      this.postMeta = (await response.json()) as BlogPost[];
     }
     return this.postMeta;
+  }
+
+  async getPost(docId: string) {
+    const allPosts = await this.getAllPosts();
+    const post = allPosts.find((p) => p.filename === docId);
+    if (!post) throw new NotFoundError();
+    return post;
   }
 
   async preloadForStaticRender({ readFile }: { readFile: ReadFile }) {
@@ -32,7 +41,7 @@ export class Blog implements IBlog {
       `/public/content/content-blog/meta.json`,
     ].join("");
     const file = JSON.parse(await readFile(path, "utf-8"));
-    this.postMeta = file as BlogMeta[];
+    this.postMeta = file as BlogPost[];
   }
 }
 
