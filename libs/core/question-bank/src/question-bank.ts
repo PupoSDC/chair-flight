@@ -8,6 +8,7 @@ import type {
   QuestionBankFlashcardCollection,
   QuestionBankSubject,
   QuestionBankCourse,
+  QuestionBankDoc,
 } from "@chair-flight/base/types";
 
 type Resource =
@@ -16,7 +17,8 @@ type Resource =
   | "annexes"
   | "flashcards"
   | "courses"
-  | "subjects";
+  | "subjects"
+  | "docs";
 
 type NameToType = {
   questions: QuestionBankQuestionTemplate;
@@ -25,6 +27,7 @@ type NameToType = {
   flashcards: QuestionBankFlashcardCollection;
   subjects: QuestionBankSubject;
   courses: QuestionBankCourse;
+  docs: QuestionBankDoc;
 };
 
 type ResourceArrays = {
@@ -53,6 +56,7 @@ const resources: Resource[] = [
   "flashcards",
   "subjects",
   "courses",
+  "docs",
 ];
 
 export class QuestionBank implements IQuestionBank {

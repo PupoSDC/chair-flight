@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { NoSsr } from "@mui/base";
 import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
+import { default as DocsIcon } from "@mui/icons-material/LibraryBooksOutlined";
 import { default as LearningObjectivesIcon } from "@mui/icons-material/ListOutlined";
 import { default as AnnexesIcon } from "@mui/icons-material/PanoramaOutlined";
 import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
@@ -73,11 +74,13 @@ export const LayoutModule = container<Props, Params, Data>(
     const isLearningObjectives = router.asPath.includes("learning-objectives");
     const isFlashcards = router.asPath.includes("flashcards");
     const isAnnexes = router.asPath.includes("annexes");
+    const isDocs = router.asPath.includes("docs");
     const isHome =
       !isQuestions &&
       !isTests &&
       !isSettings &&
       !isFlashcards &&
+      !isDocs &&
       !isLearningObjectives &&
       !isAnnexes;
 
@@ -127,6 +130,14 @@ export const LayoutModule = container<Props, Params, Data>(
               selected={isQuestions}
               icon={QuestionsIcon}
               title={"Questions"}
+            />
+          )}
+          {data.hasDocs && (
+            <SidebarListItem
+              href={`/modules/${questionBank}/docs`}
+              selected={isDocs}
+              icon={DocsIcon}
+              title={"Docs"}
             />
           )}
           {data.hasLearningObjectives && (

@@ -9,3 +9,4 @@ export type CourseId = string;
 export type AnnexId = string;
 export type FlashcardId = string;
 export type SubjectId = string;
+export type DocId = string;

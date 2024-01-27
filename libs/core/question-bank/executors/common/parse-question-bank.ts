@@ -1,5 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { parse } from "yaml";
+import { QuestionBankDocSchema } from "../../src/question-bank-docs-meta-schema";
 import type {
   QuestionBankQuestionTemplate,
   QuestionBankQuestionTemplateJson,
@@ -13,8 +15,12 @@ import type {
   QuestionBankCourseJson,
   QuestionBankCourse,
   QuestionBankSubject,
+  QuestionBankDoc,
 } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
+
+const MATTER_REGEX =
+  /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
 
 const exists = async (f: string) => {
   try {
@@ -52,6 +58,8 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     annexesImagesFolder: path.join(contentRoot, "annexes", "images"),
     /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
     annexesJson: path.join(annexesFolder, "annexes.json"),
+    /** i.e.: `libs/content/question-bank-atpl/content/docs` */
+    docsFolder: path.join(contentRoot, "docs"),
     /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
     subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
     /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/courses.json` */
@@ -68,6 +76,10 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     outputAnnexesRelativeDir: path.join("content", projectName, "annexes"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes.json` */
     outputAnnexesJson: path.join(outputDir, "annexes.json"),
+    /** i.e.: `/content/content-question-bank-atpl/docs` */
+    outputDocsDir: path.join(outputDir, "docs"),
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/docs.json` */
+    outputDocsJson: path.join(outputDir, "docs.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/subjects.json` */
     outputSubjectsJson: path.join(outputDir, "subjects.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/courses.json` */
@@ -204,4 +216,35 @@ export const readAllFlashcardsFromFs = async ({
     });
   }
   return flashcards;
+};
+
+export const readAllDocsFromFs = async ({
+  docsFolder,
+}: {
+  docsFolder: string;
+}) => {
+  const posts = await fs.readdir(docsFolder);
+  const parsedPosts: QuestionBankDoc[] = [];
+
+  for (const post of posts) {
+    const postFolder = path.join(docsFolder, post);
+    if (!(await fs.stat(postFolder)).isDirectory()) continue;
+    /** i.e.: `libs/content/blog/posts/001-post/page.md` */
+    const postPage = path.join(docsFolder, post, "page.md");
+    const source = (await fs.readFile(postPage)).toString();
+    const match = MATTER_REGEX.exec(source);
+    if (!match) throw new Error(`Missing frontMatter for ${post}`);
+    const data = parse(match[1]);
+    const content = source.split("\n---").slice(1).join().trim();
+    data.id = post;
+    data.empty = !content.length;
+    data.fileName = post;
+    data.content = content;
+    data.subjectId = "";
+    data.children = [];
+    const meta = QuestionBankDocSchema.parse(data);
+    parsedPosts.push(meta);
+  }
+
+  return parsedPosts;
 };

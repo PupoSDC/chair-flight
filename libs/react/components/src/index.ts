@@ -18,6 +18,7 @@ export * from "./image-viewer/image-viewer";
 export * from "./input-slider";
 export * from "./learning-objectives-list";
 export * from "./markdown-client";
+export * from "./markdown-components";
 export * from "./module-selection-button";
 export * from "./nested-checkbox-select";
 export * from "./question-list";

@@ -9,6 +9,7 @@ import {
   readAllAnnexesFromFs,
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
+  readAllDocsFromFs,
 } from "../common/parse-question-bank";
 import type { ExecutorContext } from "@nx/devkit";
 
@@ -21,18 +22,21 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     flashCardsFolder,
     annexesImagesFolder,
     annexesJson,
+    docsFolder,
     losJson,
     coursesJson,
     subjectsJson,
     outputDir,
     outputQuestionsJson,
     outputAnnexesDir,
+    outputDocsDir,
     outputAnnexesRelativeDir,
     outputAnnexesJson,
     outputSubjectsJson,
     outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
+    outputDocsJson,
   } = getPaths({ context });
 
   const questions = await readAllQuestionsFromFs({
@@ -43,6 +47,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const courses = await readAllCoursesFromFs({ coursesJson });
   const subjects = await readAllSubjectsFromFs({ subjectsJson });
   const flashcards = await readAllFlashcardsFromFs({ flashCardsFolder });
+  const docs = await readAllDocsFromFs({ docsFolder });
   const annexes = await readAllAnnexesFromFs({
     annexesJson,
     outputAnnexesRelativeDir,
@@ -55,6 +60,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     subjects,
     annexes,
     flashcards,
+    docs,
   });
 
   await fs
@@ -88,9 +94,18 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       path.join(process.cwd(), outputFlashcardsJson),
       JSON.stringify(flashcards),
     ),
+    fs.writeFile(
+      path.join(process.cwd(), outputDocsJson),
+      JSON.stringify(docs),
+    ),
     fs.cp(
       path.join(process.cwd(), annexesImagesFolder),
       path.join(process.cwd(), outputAnnexesDir),
+      { recursive: true },
+    ),
+    fs.cp(
+      path.join(process.cwd(), docsFolder),
+      path.join(process.cwd(), outputDocsDir),
       { recursive: true },
     ),
   ]);

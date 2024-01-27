@@ -3,7 +3,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "files": ["../../../node_modules/@nx/next/typings/image.d.ts"],
   "compilerOptions": {
-    "lib": ["dom"],
+    "lib": ["dom", "ESNext"],
     "types": ["vitest/globals", "@testing-library/jest-dom"],
   },
 }
