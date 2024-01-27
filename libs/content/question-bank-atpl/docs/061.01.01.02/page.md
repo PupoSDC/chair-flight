@@ -36,7 +36,7 @@ North and 23 degrees 27 minutes South
 ```tsx
 <Question id="UNMI90HZB7" lo={["061.01.01.02.02"]}>
   <Text variant="oneCorrect">
-    Which is the highest latitude listed below at which the sun will <Subject />?
+    Which is the highest latitude listed below at which the sun will (Subject)?
   </Text>
   <Option>68º</Option>
   <Option>72º</Option>
