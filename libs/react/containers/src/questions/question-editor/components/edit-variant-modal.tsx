@@ -43,9 +43,9 @@ export const EditVariantModal: FunctionComponent = () => {
   const validate = async () => {
     const isValid = await form.trigger(`question.variants.${variantId}`);
     if (isValid) {
-      toast.success("Validation successful! 🎉");
+      toast({ content: "Validation successful! 🎉", color: "success" });
     } else {
-      toast.error("Validation failed! 😢");
+      toast({ content: "Validation failed! 😢", color: "danger" });
     }
   };
 

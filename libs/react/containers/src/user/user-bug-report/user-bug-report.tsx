@@ -1,7 +1,7 @@
-import type { FunctionComponent} from "react";
 import { useCallback, useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { default as GitHub } from "@mui/icons-material/GitHub";
 import {
   Box,
   Button,
@@ -21,6 +21,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper";
+import type { FunctionComponent } from "react";
 
 /** TODO Centralize this */
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight/issues";
@@ -64,7 +65,7 @@ const BugReportForm: FunctionComponent = () => {
 
   const form = useForm({ resolver, defaultValues });
 
-  const onSubmit = form.handleSubmit((formData) => {
+  const onSubmit = form.handleSubmit(async (formData) => {
     const debugData = Object.entries(debugDataCallbacks).reduce(
       (sum, [key, cb]) => {
         if (!cb) return sum;
@@ -77,27 +78,36 @@ const BugReportForm: FunctionComponent = () => {
     const href = window.location.href;
     const vars = { ...formData, href, debugData };
 
-    toast.promise(createIssue.mutateAsync(vars), {
-      loading: "Submitting...",
-      error: "Failed to Submit 😔",
-      success: (response) => {
-        return (
-          <Box>
-            <Typography
-              level="h5"
-              component="h4"
-              children={"Issue has been Reported! 🎉🎉"}
-            />
-            <br />
-            <Link
-              href={response.url}
-              target="_blank"
-              children={"You can follow up on github!"}
-            />
-          </Box>
-        );
-      },
-    });
+    toast({ content: "Submitting..." });
+
+    await createIssue
+      .mutateAsync(vars)
+      .then((response) =>
+        toast({
+          content: (
+            <Box>
+              <Typography
+                level="h5"
+                component="h4"
+                children={"Issue has been Reported! 🎉🎉"}
+              />
+              <br />
+              <Link
+                href={response.url}
+                target="_blank"
+                children={"You can follow up on github!"}
+              />
+            </Box>
+          ),
+          color: "success",
+        }),
+      )
+      .catch(() =>
+        toast({
+          content: "Failed to Submit 😔",
+          color: "danger",
+        }),
+      );
   });
 
   return (
@@ -133,6 +143,7 @@ const BugReportForm: FunctionComponent = () => {
           type="submit"
           color="success"
           loading={createIssue.isLoading}
+          endDecorator={<GitHub />}
         >
           Create Issue on Github
         </Button>

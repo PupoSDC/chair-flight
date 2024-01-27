@@ -147,7 +147,10 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
       await router.push(test.href);
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong while creating the test. 😥");
+      toast({
+        content: "Something went wrong while creating the test. 😥",
+        color: "danger",
+      });
     }
   });
 
