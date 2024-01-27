@@ -30,10 +30,10 @@ export const EditQuestionHeader = () => {
   const validate = async () => {
     const isValid = await form.trigger("question");
     if (isValid) {
-      toast.success("Validation successful! 🎉");
+      toast({ content: "Validation successful! 🎉", color: "success" });
       setIsValidated(true);
     } else {
-      toast.error("Validation failed! 😢");
+      toast({ content: "Validation failed! 😢", color: "danger" });
       setIsValidated(false);
     }
     return isValid;
@@ -46,7 +46,7 @@ export const EditQuestionHeader = () => {
       const query = { ...router.query, modal: "review" };
       router.replace({ query }, undefined, { shallow: true });
     } else {
-      toast.error("Validation failed! 😢");
+      toast({ content: "Validation failed! 😢", color: "danger" });
     }
   };
 

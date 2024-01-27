@@ -105,22 +105,25 @@ export const RestoreFormHistory = ({ id }: { id: string }) => {
     if (hasMounted.current) return;
     hasMounted.current = true;
     if (isUndoAvailable && lastState) {
-      setTimeout(() => {
-        toast.message(
-          "We found a work in progress version of this form. would you like to restore it?",
-          {
-            duration: 10000,
+      setTimeout(
+        () =>
+          toast({
+            content: [
+              "We found a work in progress version of this form. would you like ",
+              "to restore it?",
+            ].join(),
+            timeout: 10000,
             action: {
-              label: "restore",
+              text: "restore",
               onClick: () => reset(lastState),
             },
             onAutoClose: () => {
               clearHistory(id);
               save();
             },
-          },
-        );
-      }, 1000);
+          }),
+        1000,
+      );
     } else {
       save();
     }

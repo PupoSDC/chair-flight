@@ -2,12 +2,12 @@ import { memo, useCallback, useRef } from "react";
 import Draggable from "react-draggable";
 import { get, useFormContext } from "react-hook-form";
 import { useRouter } from "next/router";
-import { Box, Button, FormLabel, styled } from "@mui/joy";
-import { toast } from "sonner";
+import { Box, Button, FormLabel, Stack, Typography, styled } from "@mui/joy";
 import { getVariantPreview } from "@chair-flight/core/app";
 import {
   HookFormErrorMessage,
   QuestionVariantPreview,
+  toast,
 } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
@@ -129,9 +129,17 @@ export const EditVariants: FunctionComponent = () => {
       delete newAllVariants[fromId];
       save();
       setValue(`question.variants`, newAllVariants);
-      toast.success(`${fromId} merged into ${toId}`, {
-        duration: 8000,
-        action: { label: "Revert", onClick: undo },
+      toast({
+        content: (
+          <Stack>
+            <Typography level="h5">{`${fromId} merged into ${toId}`}</Typography>
+            <Button onClick={undo} sx={{ mt: 2 }}>
+              Reverse
+            </Button>
+          </Stack>
+        ),
+        timeout: 8000,
+        color: "success",
       });
     },
     [undo, save, setValue, getValues],
@@ -143,9 +151,16 @@ export const EditVariants: FunctionComponent = () => {
         getValues("question.variants");
       save();
       setValue(`question.variants`, remainingValues);
-      toast.success(`${variantId} deleted`, {
-        duration: 8000,
-        action: { label: "Revert", onClick: undo },
+      toast({
+        content: (
+          <Stack>
+            <Typography level="h5">{`${variantId} deleted`}</Typography>
+            <Button onClick={undo} sx={{ mt: 2 }}>
+              Reverse
+            </Button>
+          </Stack>
+        ),
+        timeout: 8000,
       });
     },
     [undo, save, setValue, getValues],

@@ -11,7 +11,6 @@ export const Playground: Story = {
   },
   render: function Render(args) {
     const [values, setValues] = useState<string[]>([]);
-    console.log(values);
     return (
       <NestedCheckboxSelect
         {...args}

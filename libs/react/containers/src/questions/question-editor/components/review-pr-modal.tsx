@@ -34,28 +34,37 @@ export const ReviewPrModal: FunctionComponent = () => {
 
   const onSubmit = form.handleSubmit(async (variables) => {
     const questionId = variables.question.id;
-    toast.promise(updateQuestion.mutateAsync(variables), {
-      loading: "Submitting...",
-      error: "Failed to Submit 😔",
-      success: (response) => {
+    toast({ content: "submitting..." });
+    await updateQuestion
+      .mutateAsync(variables)
+      .then((response) =>
+        toast({
+          content: (
+            <Box>
+              <Typography
+                level="h5"
+                component="h4"
+                children={"Pull request is Submitted! 🎉🎉"}
+              />
+              <br />
+              <Link
+                href={response.url}
+                target="_blank"
+                children={"You can follow up on github!"}
+              />
+            </Box>
+          ),
+        }),
+      )
+      .then(() => {
         setTimeout(() => router.push(`../${questionId}`), 3000);
-        return (
-          <Box>
-            <Typography
-              level="h5"
-              component="h4"
-              children={"Pull request is Submitted! 🎉🎉"}
-            />
-            <br />
-            <Link
-              href={response.url}
-              target="_blank"
-              children={"You can follow up on github!"}
-            />
-          </Box>
-        );
-      },
-    });
+      })
+      .catch(() =>
+        toast({
+          content: "Failed to Submit 😔",
+          color: "danger",
+        }),
+      );
   });
 
   return (

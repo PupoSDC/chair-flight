@@ -1,11 +1,13 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
 import { AppLogo } from "@chair-flight/react/components";
+import { UserBugReport } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import {
   AppButtonsContainer,
   GithubButton,
   ThemeButton,
 } from "../components/app-buttons";
+import { BugReportButton } from "../components/app-buttons/app-buttons";
 import { usePageTransition } from "../hooks/use-page-transition";
 import type { ReactElement } from "react";
 
@@ -83,6 +85,7 @@ export const LayoutPublic = container<Props>(
             </Link>
           </Box>
           <AppButtonsContainer>
+            <BugReportButton />
             <GithubButton />
             <ThemeButton />
           </AppButtonsContainer>
@@ -111,11 +114,15 @@ export const LayoutPublic = container<Props>(
             zIndex: 1000,
           }}
         />
+        <UserBugReport />
       </>
     );
   },
 );
 
 LayoutPublic.displayName = "LayoutPublic";
-LayoutPublic.getData = async () => ({});
 LayoutPublic.useData = () => ({});
+LayoutPublic.getData = async (...args) => {
+  await UserBugReport.getData(...args);
+  return {};
+};

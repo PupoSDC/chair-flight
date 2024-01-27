@@ -3,7 +3,6 @@ import type { Test } from "@chair-flight/base/types";
 
 const getClockTime = (milliseconds: number) => {
   const duration = Duration.fromMillis(milliseconds);
-  console.log(milliseconds, duration);
   return duration.toFormat("hh:mm");
 };
 

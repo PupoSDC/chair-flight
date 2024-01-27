@@ -36,6 +36,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
+import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -146,7 +147,10 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
       await router.push(test.href);
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong while creating the test. 😥");
+      toast({
+        content: "Something went wrong while creating the test. 😥",
+        color: "danger",
+      });
     }
   });
 
@@ -162,6 +166,8 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
       currentSubject?.numberOfExamQuestions ?? 40,
     );
   });
+
+  useBugReportDebugData("test-maker", form.getValues);
 
   return (
     <TestMakerContainer

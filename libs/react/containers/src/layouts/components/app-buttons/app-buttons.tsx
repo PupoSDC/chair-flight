@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { keyframes } from "@emotion/react";
+import { default as BugReportIcon } from "@mui/icons-material/BugReport";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
@@ -18,6 +19,7 @@ import { useAnalytics } from "@chair-flight/react/analytics";
 import { useSidebar } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { useUserVoyage } from "../../../user/hooks/use-user-voyage";
+import { useBugReportDisclose } from "../../../user/user-bug-report";
 import { noSsr } from "../../../wraper/noSsr";
 import type { FunctionComponent } from "react";
 
@@ -106,6 +108,22 @@ export const NotificationButton: FunctionComponent = noSsr(
       </IconButton>
     </Tooltip>
   ),
+);
+
+export const BugReportButton: FunctionComponent = noSsr(
+  () => {
+    const bugReport = useBugReportDisclose();
+    if (!bugReport.isAvailable) return null;
+
+    return (
+      <Tooltip title="Submit a bug report">
+        <IconButton onClick={bugReport.open}>
+          <BugReportIcon />
+        </IconButton>
+      </Tooltip>
+    );
+  },
+  () => null,
 );
 
 export const AppButtonsContainer = styled(Stack)`

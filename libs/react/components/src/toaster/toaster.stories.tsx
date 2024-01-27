@@ -1,78 +1,69 @@
-import { Box, Button, Link, Typography } from "@mui/joy";
+import { Box, Button, Stack } from "@mui/joy";
 import { Toaster, toast } from "./toaster";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof Toaster>;
 
 export const Playground: Story = {
-  args: {
-    sx: { width: "100%", height: "2em", my: 1 },
-  },
-  argTypes: {},
   render: (args) => (
-    <>
+    <Box sx={{ height: 400 }}>
       <Toaster {...args} />
-      <Box>
+      <Stack spacing={2} direction={{ xs: "column", md: "row" }}>
         <Button
-          onClick={() => toast("Normal Toast")}
+          onClick={() => toast({ content: "Normal Toast" })}
           children="Normal toast"
           color="primary"
-          sx={{ mx: 1 }}
+          sx={{ m: 1 }}
         />
         <Button
-          onClick={() => toast.error("Error Toast")}
+          onClick={() => toast({ content: "Error Toast", color: "danger" })}
           children="Error toast"
           color="danger"
-          sx={{ mx: 1 }}
+          sx={{ m: 1 }}
         />
         <Button
-          onClick={() => toast.warn("Warning Toast")}
+          onClick={() => toast({ content: "Warning Toast", color: "warning" })}
           children="Error toast"
           color="warning"
-          sx={{ mx: 1 }}
+          sx={{ m: 1 }}
         />
         <Button
-          onClick={() => toast.success("Success Toast")}
+          onClick={() => toast({ content: "Success Toast", color: "success" })}
           children="Success toast"
           color="success"
-          sx={{ mx: 1 }}
+          sx={{ m: 1 }}
         />
         <Button
           onClick={() =>
-            toast.promise(
-              () => new Promise<string>((r) => setTimeout(r, 2000)),
-              {
-                loading: "loading",
-                success: "Success!",
-                error: "failed",
+            toast({
+              content: "Something went well. Congrats!",
+              action: {
+                text: "Click me to fire another toast!",
+                onClick: () =>
+                  toast({
+                    content: "this was triggered by the action!",
+                  }),
               },
-            )
+            })
           }
-          children="Loading toast"
-          color="neutral"
-          sx={{ mx: 1 }}
+          children="With action"
+          sx={{ m: 1 }}
         />
         <Button
           onClick={() =>
-            toast.promise(
-              () => new Promise<string>((r) => setTimeout(r, 2000)),
-              {
-                loading: "loading",
-                error: "failed",
-                success: () => (
-                  <Typography>
-                    Success! <Link href="#">Click here</Link>
-                  </Typography>
-                ),
-              },
-            )
+            toast({
+              content: "Something went well. Congrats!",
+              onAutoClose: () =>
+                toast({
+                  content: "this was triggered by the action!",
+                }),
+            })
           }
-          children="success with link toast"
-          color="success"
-          sx={{ mx: 1 }}
+          children="With autoclose callback"
+          sx={{ m: 1 }}
         />
-      </Box>
-    </>
+      </Stack>
+    </Box>
   ),
 };
 

@@ -27,6 +27,8 @@ import {
   QuestionNavigation,
   useMediaQuery,
 } from "@chair-flight/react/components";
+import { BugReportButton } from "../../layouts/components/app-buttons/app-buttons";
+import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { TestError } from "../components/test-error";
 import { TestLoading } from "../components/test-loading";
@@ -67,6 +69,9 @@ export const TestExam = container<Props>(
     const status = test.mode === "exam" ? "in-progress" : "both";
     const currentQuestion = test.currentQuestionIndex + 1;
     const totalQuestions = test.questions.length;
+
+    useBugReportDebugData("test-exam-current-question", () => question);
+    useBugReportDebugData("test-exam-test", () => test);
 
     return (
       <Stack sx={sx} component={component}>
@@ -116,6 +121,7 @@ export const TestExam = container<Props>(
             {DateTime.fromMillis(timeLeft).toFormat("hh:mm:ss")}
           </Typography>
           <Divider orientation="vertical" sx={{ mx: { xs: 0.5, sm: 2 } }} />
+          <BugReportButton />
           <Tooltip title="Question Navigation" variant="soft">
             <IconButton
               children={<AppsOutlinedIcon />}
