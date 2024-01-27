@@ -4,22 +4,17 @@
   date: '2024-01-27'
   tag: Feature
   description: >
-    In order to make it easier for you to report issues with Chair Flight we have 
-    added a new button on the top Right Corner to all our pages where you can 
-    quickly report any issues you find. 
-
-    This feature comes straight out of a user suggestion: We are always listening
-    to your feedback
-
-    Help us make Chair Flight better!
+    In order to make it easier for you to report issues with Chair Flight, we 
+    have added a new button in the top right corner to all our pages. With this 
+    button, you can quickly report any issues you find.
 ---
 
-In order to make it easier for you to report issues with Chair Flight we have
-added a new button on the top Right Corner to all our pages where you can
-quickly report any issues you find.
+In order to make it easier for you to report issues with Chair Flight, we
+have added a new button in the top right corner to all our pages. With this
+button, you can quickly report any issues you find.
 
-This feature comes straight out of a user suggestion: We are always listening
-to your feedback
+This feature is a result of a user suggestion, and we are always listening to
+your feedback.
 
 Help us make Chair Flight better!
 
