@@ -36,6 +36,8 @@ import {
   useMediaQuery,
 } from "@chair-flight/react/components";
 import { ThemeButton } from "../../layouts/components/app-buttons";
+import { BugReportButton } from "../../layouts/components/app-buttons/app-buttons";
+import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { TestError } from "../components/test-error";
 import { TestLoading } from "../components/test-loading";
@@ -85,6 +87,9 @@ export const TestStudy = container<Props>(
     const status = test.mode === "exam" ? "in-progress" : "both";
     const currentQuestion = test.currentQuestionIndex + 1;
     const totalQuestions = test.questions.length;
+
+    useBugReportDebugData("test-study-current-question", () => question);
+    useBugReportDebugData("test-study-test", () => test);
 
     return (
       <Stack sx={sx} component={component}>
@@ -163,6 +168,7 @@ export const TestStudy = container<Props>(
               />
             </Tooltip>
           )}
+          <BugReportButton />
           <Tooltip title="Explanation & Meta" variant="soft">
             <IconButton
               children={<FormatListBulletedOutlinedIcon />}

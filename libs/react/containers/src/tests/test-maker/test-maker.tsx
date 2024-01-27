@@ -36,6 +36,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
+import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName } from "@chair-flight/base/types";
@@ -162,6 +163,8 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
       currentSubject?.numberOfExamQuestions ?? 40,
     );
   });
+
+  useBugReportDebugData("test-maker", form.getValues);
 
   return (
     <TestMakerContainer

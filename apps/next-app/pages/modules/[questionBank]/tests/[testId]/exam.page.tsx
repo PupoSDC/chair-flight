@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { UserBugReport } from "libs/react/containers/src/user/user-bug-report";
 import {
   AppHead,
   ThemeOverrideColorScheme,
@@ -32,6 +33,7 @@ export const Page: NextPage<Props> = ({ testId, questionBank }) => {
           router.push(`/modules/${questionBank}/tests/${testId}/review`);
         }}
       />
+      <UserBugReport />
     </>
   );
 };
@@ -39,6 +41,7 @@ export const Page: NextPage<Props> = ({ testId, questionBank }) => {
 export const getServerSideProps = ssrHandler<Props, Params>(
   async ({ helper, params }) => {
     await TestExam.getData({ helper, params });
+    await UserBugReport.getData({ helper, params });
     return { props: params };
   },
 );

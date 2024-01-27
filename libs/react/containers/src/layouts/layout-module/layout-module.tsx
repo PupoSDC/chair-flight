@@ -26,6 +26,7 @@ import {
   useMediaQuery,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { UserBugReport } from "../../user/user-bug-report";
 import { container, getRequiredParam } from "../../wraper/container";
 import {
   AppButtonsContainer,
@@ -34,6 +35,7 @@ import {
   NotificationButton,
   ThemeButton,
 } from "../components/app-buttons";
+import { BugReportButton } from "../components/app-buttons/app-buttons";
 import { usePageTransition } from "../hooks/use-page-transition";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
@@ -182,7 +184,6 @@ export const LayoutModule = container<Props, Params, Data>(
           sx={{
             flexDirection: "row",
             color: "text.primary",
-
             position: "fixed",
             alignItems: "center",
             justifyContent: "space-between",
@@ -214,6 +215,7 @@ export const LayoutModule = container<Props, Params, Data>(
             </Breadcrumbs>
           </NoSsr>
           <AppButtonsContainer>
+            <BugReportButton />
             <NotificationButton />
             <GithubButton />
             <ThemeButton />
@@ -234,6 +236,7 @@ export const LayoutModule = container<Props, Params, Data>(
               : {}),
           }}
         />
+        <UserBugReport />
         <LinearProgress
           sx={{
             "--LinearProgress-radius": 0,
@@ -257,6 +260,7 @@ LayoutModule.getData = async ({ helper, params }) => {
   const [configData, lastPostData] = await Promise.all([
     helper.questionBank.getConfig.fetch({ questionBank }),
     helper.blog.getDateOfLastPost.fetch(),
+    UserBugReport.getData({ helper, params }),
   ]);
   return { ...configData, ...lastPostData };
 };
