@@ -14,6 +14,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper/container";
 import { RightContainer } from "./welcome-right-container";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   headerHeight?: number;
@@ -21,11 +22,7 @@ type Props = {
   onQuestionBankChanged: (questionBank: QuestionBankName) => void;
 };
 
-type Data = {
-  numberOfFlashcards: number;
-  numberOfAtplQuestions: number;
-  numberOfTypeQuestions: number;
-};
+type Data = AppRouterOutput["containers"]["overviews"]["getOverviewWelcome"];
 
 type Params = Record<string, never>;
 
@@ -387,37 +384,11 @@ export const OverviewWelcome = container<Props, Params, Data>(
 OverviewWelcome.displayName = "OverviewWelcome";
 
 OverviewWelcome.getData = async ({ helper }) => {
-  const [
-    { count: numberOfFlashcards },
-    { count: numberOfAtplQuestions },
-    { count: numberOfTypeQuestions },
-  ] = await Promise.all([
-    helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "type" }),
-  ]);
-
-  return {
-    numberOfFlashcards,
-    numberOfAtplQuestions,
-    numberOfTypeQuestions,
-  };
+  const router = helper.containers.overviews;
+  return await router.getOverviewWelcome.fetch({});
 };
 
 OverviewWelcome.useData = () => {
-  const qb = trpc.questionBank;
-  const [
-    [{ count: numberOfFlashcards }],
-    [{ count: numberOfAtplQuestions }],
-    [{ count: numberOfTypeQuestions }],
-  ] = [
-    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "type" }),
-  ];
-  return {
-    numberOfFlashcards,
-    numberOfAtplQuestions,
-    numberOfTypeQuestions,
-  };
+  const router = trpc.containers.overviews;
+  return router.getOverviewWelcome.useSuspenseQuery({})[0];
 };

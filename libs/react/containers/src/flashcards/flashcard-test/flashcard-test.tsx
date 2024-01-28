@@ -1,13 +1,10 @@
 import { Button, Card, Link, Typography } from "@mui/joy";
-import { getRandomShuffler } from "@chair-flight/core/app";
 import { FlashcardTinder } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { FlashcardWithOwnControl } from "../components/fashcard-with-own-control";
-import type {
-  QuestionBankFlashcardContent,
-  QuestionBankName,
-} from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -21,14 +18,12 @@ type Params = {
   seed: string;
 };
 
-type Data = {
-  flashcards: QuestionBankFlashcardContent[];
-};
+type Data = AppRouterOutput["containers"]["flashcards"]["getFlashcardTest"];
 
 export const FlashcardTest = container<Props, Params, Data>(
   ({ questionBank, collectionId, seed, sx, component = "section" }) => {
     const params = { questionBank, collectionId, seed };
-    const { flashcards } = FlashcardTest.useData(params);
+    const { flashcards, href, flashcardsHref } = FlashcardTest.useData(params);
 
     return (
       <FlashcardTinder component={component} sx={sx}>
@@ -51,13 +46,13 @@ export const FlashcardTest = container<Props, Params, Data>(
                 component={Link}
                 variant="plain"
                 sx={{ mb: 2 }}
-                href={`/modules/${questionBank}/flashcards/${collectionId}/${seed}`}
+                href={href}
                 target="_blank"
                 children={"Share Link"}
               />
               <Button
                 component={Link}
-                href={"/modules/prep/flashcards"}
+                href={flashcardsHref}
                 children="Finish"
               />
             </Card>,
@@ -70,34 +65,25 @@ export const FlashcardTest = container<Props, Params, Data>(
 FlashcardTest.displayName = "FlashcardTest";
 
 FlashcardTest.getData = async ({ helper, params }) => {
+  const router = helper.containers.flashcards;
   const questionBank = getRequiredParam(params, "questionBank");
   const collectionId = getRequiredParam(params, "collectionId");
   const seed = getRequiredParam(params, "seed");
-  const shuffle = getRandomShuffler(seed);
-
-  const data = await helper.questionBank.getFlashcardsCollection.fetch({
+  return await router.getFlashcardTest.fetch({
     questionBank,
     collectionId,
+    seed,
   });
-
-  const rawFlashcards = data.flashcardCollection.flashcards;
-  const flashcards = shuffle(rawFlashcards).slice(0, 10);
-  return { flashcards };
 };
 
 FlashcardTest.useData = (params) => {
-  const qb = trpc.questionBank;
+  const router = trpc.containers.flashcards;
   const questionBank = getRequiredParam(params, "questionBank");
   const collectionId = getRequiredParam(params, "collectionId");
   const seed = getRequiredParam(params, "seed");
-  const shuffle = getRandomShuffler(seed);
-
-  const data = qb.getFlashcardsCollection.useSuspenseQuery({
+  return router.getFlashcardTest.useSuspenseQuery({
     questionBank,
     collectionId,
+    seed,
   })[0];
-
-  const rawFlashcards = data.flashcardCollection.flashcards;
-  const flashcards = shuffle(rawFlashcards).slice(0, 10);
-  return { flashcards };
 };

@@ -42,21 +42,9 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 
 export const getStaticPaths = staticPathsHandler<PageParams>(
   async ({ helper }) => {
-    const qb = helper.questionBank;
-    const banks: QuestionBankName[] = ["prep"];
-    const paths = await Promise.all(
-      banks.map(async (questionBank) => {
-        const params = { questionBank };
-        const data = await qb.getFlashcardsCollections.fetch(params);
-        return data.collections.map(({ id: collectionId }) => ({
-          params: {
-            questionBank,
-            collectionId,
-          },
-        }));
-      }),
-    ).then((c) => c.flat());
-
+    const modules = helper.pageGeneration.modules;
+    const getPaths = modules.getFlashcardsGenerationPaths;
+    const { paths } = await getPaths.fetch();
     return { fallback: false, paths };
   },
   fs,

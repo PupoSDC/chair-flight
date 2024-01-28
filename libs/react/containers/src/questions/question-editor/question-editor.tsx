@@ -26,7 +26,7 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = AppRouterOutput["questionBankQuestions"]["getQuestionFromGithub"];
+type Data = AppRouterOutput["containers"]["questions"]["getQuestionEditor"];
 
 export const QuestionEditor = container<Props, Params, Data>((props) => {
   const { questionBank, questionId, component, sx } = props;
@@ -70,20 +70,20 @@ export const QuestionEditor = container<Props, Params, Data>((props) => {
 QuestionEditor.displayName = "QuestionEditor";
 
 QuestionEditor.getData = async ({ helper, params }) => {
+  const router = helper.containers.questions;
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
-
-  return await helper.questionBankQuestions.getQuestionFromGithub.fetch({
+  return await router.getQuestionEditor.fetch({
     questionBank,
     questionId,
   });
 };
 
 QuestionEditor.useData = (params) => {
+  const router = trpc.containers.questions;
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
-
-  return trpc.questionBankQuestions.getQuestionFromGithub.useSuspenseQuery({
+  return router.getQuestionEditor.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];

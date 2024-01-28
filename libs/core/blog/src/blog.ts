@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
 import type { BlogPost } from "@chair-flight/base/types";
@@ -5,13 +6,23 @@ import type { BlogPost } from "@chair-flight/base/types";
 type ReadFile = (path: string, string: "utf-8") => Promise<string>;
 
 interface IBlog {
+  getDateOfLastPost: () => Promise<string>;
   getAllPosts: () => Promise<BlogPost[]>;
   getPost: (postId: string) => Promise<BlogPost>;
   preloadForStaticRender: (args: { readFile: ReadFile }) => Promise<void>;
 }
 
+const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
+
 export class Blog implements IBlog {
   private postMeta: BlogPost[] | undefined = undefined;
+
+  async getDateOfLastPost() {
+    const allPosts = await this.getAllPosts();
+    const date = allPosts.at(0)?.date ?? A_LONG_TIME_AGO;
+    const lastPostDate = DateTime.fromISO(date).toISO() ?? A_LONG_TIME_AGO;
+    return lastPostDate;
+  }
 
   async getAllPosts() {
     if (!this.postMeta) {

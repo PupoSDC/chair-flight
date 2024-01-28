@@ -149,37 +149,11 @@ export const OverviewModules = container<Props, Params, Data>(
 OverviewModules.displayName = "OverviewModules";
 
 OverviewModules.getData = async ({ helper }) => {
-  const [
-    { count: numberOfFlashcards },
-    { count: numberOfAtplQuestions },
-    { count: numberOfTypeQuestions },
-  ] = await Promise.all([
-    helper.questionBank.getNumberOfFlashcards.fetch({ questionBank: "prep" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "atpl" }),
-    helper.questionBank.getNumberOfQuestions.fetch({ questionBank: "type" }),
-  ]);
-
-  return {
-    numberOfFlashcards,
-    numberOfAtplQuestions,
-    numberOfTypeQuestions,
-  };
+  const router = helper.containers.overviews;
+  return await router.getOverviewModules.fetch({});
 };
 
 OverviewModules.useData = () => {
-  const qb = trpc.questionBank;
-  const [
-    [{ count: numberOfFlashcards }],
-    [{ count: numberOfAtplQuestions }],
-    [{ count: numberOfTypeQuestions }],
-  ] = [
-    qb.getNumberOfFlashcards.useSuspenseQuery({ questionBank: "prep" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "atpl" }),
-    qb.getNumberOfQuestions.useSuspenseQuery({ questionBank: "type" }),
-  ];
-  return {
-    numberOfFlashcards,
-    numberOfAtplQuestions,
-    numberOfTypeQuestions,
-  };
+  const router = trpc.containers.overviews;
+  return router.getOverviewModules.useSuspenseQuery({})[0];
 };

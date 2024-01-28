@@ -1,5 +1,6 @@
 export * from "./annexes/annex-search";
 export * from "./blog/blog-post";
+export * from "./blog/blog-index";
 export * from "./docs/doc-content";
 export * from "./docs/doc-search";
 export * from "./flashcards/flashcard-collection-list";
@@ -11,7 +12,6 @@ export * from "./learning-objectives/learning-objective-tree";
 export * from "./learning-objectives/learning-objective-overview";
 export * from "./learning-objectives/learning-objective-questions";
 export * from "./learning-objectives/learning-objectives-search";
-export * from "./overviews/overview-module";
 export * from "./overviews/overview-modules";
 export * from "./overviews/overview-welcome";
 export * from "./questions/question-editor";

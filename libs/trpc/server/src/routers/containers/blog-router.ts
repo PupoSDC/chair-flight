@@ -1,18 +1,9 @@
-import { DateTime } from "luxon";
 import { z } from "zod";
 import { blog } from "@chair-flight/core/blog";
-import { compileMdx } from "../common/compile-mdx";
-import { publicProcedure, router } from "../config/trpc";
+import { compileMdx } from "../../common/compile-mdx";
+import { publicProcedure, router } from "../../config/trpc";
 
-const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
-
-export const blogRouter = router({
-  getDateOfLastPost: publicProcedure.query(async () => {
-    const meta = await blog.getAllPosts();
-    const date = meta.at(0)?.date ?? A_LONG_TIME_AGO;
-    const lastPostDate = DateTime.fromISO(date).toISO() ?? A_LONG_TIME_AGO;
-    return { lastPostDate };
-  }),
+export const blogContainersRouter = router({
   getBlogPost: publicProcedure
     .input(z.object({ postId: z.string() }))
     .query(async ({ input }) => {
@@ -30,7 +21,7 @@ export const blogRouter = router({
 
       return { post };
     }),
-  getBlogPostsMeta: publicProcedure.query(async () => {
+  getBlogIndex: publicProcedure.input(z.object({})).query(async () => {
     const allPosts = await blog.getAllPosts();
     const meta = allPosts.map(({ content, ...meta }) => meta);
     return { meta };

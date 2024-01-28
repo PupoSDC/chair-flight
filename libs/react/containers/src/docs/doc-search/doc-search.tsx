@@ -8,12 +8,10 @@ import {
   Stack,
   Option,
   ListItemContent,
-  Typography,
   Link,
   Tooltip,
 } from "@mui/joy";
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
 import {
   SearchQuery,
   HookFormSelect,
@@ -27,15 +25,9 @@ import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
-type Props = {
-  questionBank: QuestionBankName;
-};
-
-type Params = {
-  questionBank: QuestionBankName;
-};
-
-type Data = AppRouterOutput["questionBankDocSearch"]["getSearchConfigFilters"];
+type Props = { questionBank: QuestionBankName };
+type Params = Props;
+type Data = AppRouterOutput["containers"]["docs"]["getDocSearch"];
 
 const filterSchema = z.object({
   subject: z.string().default("all"),
@@ -44,7 +36,7 @@ const filterSchema = z.object({
 
 const defaultFilter = filterSchema.parse({});
 const resolver = zodResolver(filterSchema);
-const searchDocs = trpc.questionBankDocSearch.searchDocs;
+const searchDocs = trpc.common.search.searchDocs;
 const useSearchQuestions = searchDocs.useInfiniteQuery;
 
 const useSearchPersistence = {
@@ -60,14 +52,9 @@ export const DocSearch = container<Props, Params, Data>(
     const serverData = DocSearch.useData({ questionBank });
     const form = useForm({ defaultValues: getData(), resolver });
 
-    const { searchFields, subjects } = serverData;
+    const { subjectMap, filters } = serverData;
+    const { searchFields, subjects } = filters;
     const { searchField, subject } = form.watch();
-
-    const subjectMap = makeMap(
-      subjects,
-      (s) => s.id,
-      (s) => s.text,
-    );
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       { q: search, questionBank, searchField, subject, limit: 24 },
@@ -137,7 +124,11 @@ export const DocSearch = container<Props, Params, Data>(
           renderTableRow={(result) => (
             <tr>
               <td>{subjectMap[result.subject]}</td>
-              <td>{result.learningObjectiveId}</td>
+              <td>
+                <Link href={result.learningObjective.href}>
+                  {result.learningObjective.id}
+                </Link>
+              </td>
               <td>
                 <Link href={result.href}>{result.title}</Link>
               </td>
@@ -165,9 +156,9 @@ export const DocSearch = container<Props, Params, Data>(
             >
               <Stack>
                 <Link href={result.href}>{result.title}</Link>
-                <Typography level="body-sm">
-                  {result.learningObjectiveId}
-                </Typography>
+                <Link level="body-sm" color="neutral" href={result.href}>
+                  {result.learningObjective.id}
+                </Link>
               </Stack>
               {result.empty ? (
                 <HourglassEmptyIcon size="md" />
@@ -185,13 +176,13 @@ export const DocSearch = container<Props, Params, Data>(
 DocSearch.displayName = "DocSearch";
 
 DocSearch.getData = async ({ helper, params }) => {
-  const router = helper.questionBankDocSearch;
+  const router = helper.containers.docs;
   const questionBank = getRequiredParam(params, "questionBank");
-  return await router.getSearchConfigFilters.fetch({ questionBank });
+  return await router.getDocSearch.fetch({ questionBank });
 };
 
 DocSearch.useData = (params) => {
-  const router = trpc.questionBankDocSearch;
+  const router = trpc.containers.docs;
   const questionBank = getRequiredParam(params, "questionBank");
-  return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
+  return router.getDocSearch.useSuspenseQuery({ questionBank })[0];
 };

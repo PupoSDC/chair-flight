@@ -1,10 +1,10 @@
 import * as fs from "node:fs/promises";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, AnnexSearch } from "@chair-flight/react/containers";
-import { staticHandler } from "@chair-flight/trpc/server";
+import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
-import type { GetStaticPaths, NextPage } from "next";
+import type { NextPage } from "next";
 
 type PageProps = {
   questionBank: QuestionBankName;
@@ -37,10 +37,13 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
   fs,
 );
 
-export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const banks: QuestionBankName[] = ["type", "atpl"];
-  const paths = banks.map((questionBank) => ({ params: { questionBank } }));
-  return { fallback: false, paths };
-};
+export const getStaticPaths = staticPathsHandler<PageParams>(
+  async ({ helper }) => {
+    const getPaths = helper.pageGeneration.modules.getIndexGenerationPaths;
+    const paths = await getPaths.fetch({ resource: "annexes" });
+    return { fallback: false, paths };
+  },
+  fs,
+);
 
 export default Page;

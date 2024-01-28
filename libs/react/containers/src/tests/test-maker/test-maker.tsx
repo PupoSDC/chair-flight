@@ -71,8 +71,8 @@ const TestMakerContainer = styled(Stack)`
 
 export const TestMaker = container<Props>(({ questionBank, sx }) => {
   const router = useRouter();
-  const useCreateTest = trpc.tests.createTest.useMutation;
-  const useSubjects = trpc.tests.getSubjects.useSuspenseQuery;
+  const useCreateTest = trpc.common.tests.createTest.useMutation;
+  const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
   const addTest = useTestProgress((s) => s.addTest);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));

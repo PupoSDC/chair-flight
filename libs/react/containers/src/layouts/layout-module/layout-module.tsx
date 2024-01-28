@@ -32,7 +32,6 @@ import {
   AppButtonsContainer,
   GithubButton,
   HamburgerButton,
-  NotificationButton,
   ThemeButton,
 } from "../components/app-buttons";
 import { BugReportButton } from "../components/app-buttons/app-buttons";
@@ -59,8 +58,7 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = AppRouterOutput["questionBank"]["getConfig"] &
-  AppRouterOutput["blog"]["getDateOfLastPost"];
+type Data = AppRouterOutput["containers"]["layouts"]["getLayoutModule"];
 
 export const LayoutModule = container<Props, Params, Data>(
   ({ children, fixedHeight, noPadding, questionBank, breadcrumbs }) => {
@@ -69,6 +67,7 @@ export const LayoutModule = container<Props, Params, Data>(
     const data = LayoutModule.useData({ questionBank });
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const { routes } = data;
 
     const isQuestions = router.asPath.includes("questions");
     const isTests = router.asPath.includes("tests");
@@ -112,63 +111,61 @@ export const LayoutModule = container<Props, Params, Data>(
               },
             }}
           />
-          <SidebarListItem
-            href={`/modules/${questionBank}`}
-            selected={isHome}
-            icon={HomeIcon}
-            title={"Home"}
-          />
-          {data.hasQuestions && (
+          {routes.home.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/tests`}
+              href={routes.home.href}
+              selected={isHome}
+              icon={HomeIcon}
+              title={"Home"}
+            />
+          )}
+          {routes.tests.isVisible && (
+            <SidebarListItem
+              href={routes.tests.href}
               selected={isTests}
               icon={TestIcon}
               title={"Tests"}
             />
           )}
-          {data.hasQuestions && (
+          {routes.questions.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/questions`}
+              href={routes.questions.href}
               selected={isQuestions}
               icon={QuestionsIcon}
               title={"Questions"}
             />
           )}
-          {data.hasDocs && (
+          {routes.docs.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/docs`}
+              href={routes.docs.href}
               selected={isDocs}
               icon={DocsIcon}
               title={"Docs"}
             />
           )}
-          {data.hasLearningObjectives && (
+          {routes.learningObjectives.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/learning-objectives`}
+              href={routes.learningObjectives.href}
               selected={isLearningObjectives}
               icon={LearningObjectivesIcon}
               title={"Learning Objectives"}
             />
           )}
-          {data.hasAnnexes && (
+          {routes.annexes.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/annexes`}
+              href={routes.annexes.href}
               selected={isAnnexes}
               icon={AnnexesIcon}
               title={"Annexes"}
             />
           )}
-          {data.hasFlashcards && (
+          {routes.flashcards.isVisible && (
             <SidebarListItem
-              href={`/modules/${questionBank}/flashcards`}
+              href={routes.flashcards.href}
               selected={isFlashcards}
               icon={CardIcon}
               title={"Flash Cards"}
-              sx={{
-                "& svg": {
-                  transform: "rotate(180deg)",
-                },
-              }}
+              sx={{ "& svg": { transform: "rotate(180deg)" } }}
             />
           )}
           <SidebarListItem
@@ -216,7 +213,7 @@ export const LayoutModule = container<Props, Params, Data>(
           </NoSsr>
           <AppButtonsContainer>
             <BugReportButton />
-            <NotificationButton />
+
             <GithubButton />
             <ThemeButton />
             <HamburgerButton />
@@ -256,20 +253,13 @@ export const LayoutModule = container<Props, Params, Data>(
 LayoutModule.displayName = "LayoutModule";
 
 LayoutModule.getData = async ({ helper, params }) => {
+  const router = helper.containers.layouts;
   const questionBank = getRequiredParam(params, "questionBank");
-  const [configData, lastPostData] = await Promise.all([
-    helper.questionBank.getConfig.fetch({ questionBank }),
-    helper.blog.getDateOfLastPost.fetch(),
-    UserBugReport.getData({ helper, params }),
-  ]);
-  return { ...configData, ...lastPostData };
+  return await router.getLayoutModule.fetch({ questionBank });
 };
 
 LayoutModule.useData = (params) => {
-  const qb = trpc.questionBank;
-  const blog = trpc.blog;
+  const router = trpc.containers.layouts;
   const questionBank = getRequiredParam(params, "questionBank");
-  const configData = qb.getConfig.useSuspenseQuery({ questionBank })[0];
-  const lastPostData = blog.getDateOfLastPost.useSuspenseQuery()[0];
-  return { ...configData, ...lastPostData };
+  return router.getLayoutModule.useSuspenseQuery({ questionBank })[0];
 };

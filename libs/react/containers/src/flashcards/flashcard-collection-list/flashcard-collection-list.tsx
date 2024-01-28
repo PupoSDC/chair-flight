@@ -12,6 +12,7 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -21,13 +22,8 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = {
-  collections: Array<{
-    id: string;
-    title: string;
-    numberOfFlashcards: number;
-  }>;
-};
+type Data =
+  AppRouterOutput["containers"]["flashcards"]["getFlashcardCollectionList"];
 
 export const FlashcardCollectionList = container<Props, Params, Data>(
   ({ questionBank, sx, component = "section" }) => {
@@ -101,15 +97,16 @@ export const FlashcardCollectionList = container<Props, Params, Data>(
 
 FlashcardCollectionList.displayName = "FlashcardCollectionList";
 
-FlashcardCollectionList.getData = async ({ params, helper }) => {
+FlashcardCollectionList.getData = async ({ helper, params }) => {
+  const router = helper.containers.flashcards;
   const questionBank = getRequiredParam(params, "questionBank");
-  return await helper.questionBank.getFlashcardsCollections.fetch({
-    questionBank,
-  });
+  return await router.getFlashcardCollectionList.fetch({ questionBank });
 };
 
 FlashcardCollectionList.useData = (params) => {
-  const qb = trpc.questionBank;
+  const router = trpc.containers.flashcards;
   const questionBank = getRequiredParam(params, "questionBank");
-  return qb.getFlashcardsCollections.useSuspenseQuery({ questionBank })[0];
+  return router.getFlashcardCollectionList.useSuspenseQuery({
+    questionBank,
+  })[0];
 };

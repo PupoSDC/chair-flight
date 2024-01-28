@@ -1,5 +1,6 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
 import { AppLogo } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
 import { UserBugReport } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import {
@@ -121,8 +122,13 @@ export const LayoutPublic = container<Props>(
 );
 
 LayoutPublic.displayName = "LayoutPublic";
-LayoutPublic.useData = () => ({});
-LayoutPublic.getData = async (...args) => {
-  await UserBugReport.getData(...args);
-  return {};
+
+LayoutPublic.getData = async ({ helper }) => {
+  const router = helper.containers.layouts;
+  return await router.getLayoutPublic.fetch({});
+};
+
+LayoutPublic.useData = () => {
+  const router = trpc.containers.layouts;
+  return router.getLayoutPublic.useSuspenseQuery({})[0];
 };
