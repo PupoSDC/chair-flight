@@ -1,6 +1,8 @@
 import { forwardRef, useState } from "react";
+import { useRouter } from "next/router";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
 import { trpc } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
@@ -14,13 +16,14 @@ export const InputAutocompleteLearningObjectives = forwardRef<
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(({ value, onChange, onBlur }, ref) => {
   const [search, setSearch] = useState("");
+  const { questionBank } = useRouter().query;
 
   const { data, isLoading } =
     trpc.common.search.searchLearningObjectives.useQuery({
       q: search,
       limit: 10,
       cursor: 0,
-      questionBank: "atpl",
+      questionBank: questionBank as QuestionBankName,
       subject: "all",
       course: "all",
       searchField: "all",
