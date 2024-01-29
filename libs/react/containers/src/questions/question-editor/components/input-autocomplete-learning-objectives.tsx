@@ -1,8 +1,8 @@
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/router";
 import { Autocomplete, AutocompleteOption, Typography } from "@mui/joy";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import { trpc } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@chair-flight/base/types";
 
 export type InputAutocompleteLearningObjectivesProps = {
   value: string[];
