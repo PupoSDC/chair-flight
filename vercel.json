@@ -4,11 +4,19 @@
   "rewrites": [],
   "crons": [
     {
-      "path": "/api/trpc/questionBankQuestionSearch.initialize",
+      "path": "/api/trpc/common.search.initialize",
       "schedule": "*/2 * * * *"
     },
     {
       "path": "/",
+      "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/modules/type/questions",
+      "schedule": "*/10 * * * *"
+    },
+    {
+      "path": " /modules/type/questions/59o75g",
       "schedule": "*/10 * * * *"
     },
     {
