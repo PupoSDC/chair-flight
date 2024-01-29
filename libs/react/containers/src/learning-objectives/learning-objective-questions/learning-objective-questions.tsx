@@ -1,11 +1,12 @@
 import { QuestionList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper";
+import { container, getRequiredParam } from "../../wraper";
 import type {
   LearningObjectiveId,
   QuestionBankName,
 } from "@chair-flight/base/types";
 import type { QuestionListProps } from "@chair-flight/react/components";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -13,11 +14,15 @@ type Props = {
   forceMode?: QuestionListProps["forceMode"];
 };
 
-const useSearchQuestions =
-  trpc.questionBankQuestionSearch.getQuestionsFromLearningObjective
-    .useInfiniteQuery;
+type Params = {
+  questionBank: QuestionBankName;
+  learningObjectiveId: LearningObjectiveId;
+};
 
-export const LearningObjectiveQuestions = container<Props>(
+type Data =
+  AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectiveQuestions"];
+
+export const LearningObjectiveQuestions = container<Props, Params, Data>(
   ({
     forceMode,
     questionBank,
@@ -25,26 +30,16 @@ export const LearningObjectiveQuestions = container<Props>(
     sx,
     component = "section",
   }) => {
-    const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
-      {
-        questionBank,
-        learningObjectiveId,
-        limit: 20,
-      },
-      {
-        getNextPageParam: (lastPage) => lastPage.nextCursor,
-        initialCursor: 0,
-      },
-    );
+    const serverData = LearningObjectiveQuestions.useData({
+      questionBank,
+      learningObjectiveId,
+    });
 
     return (
       <QuestionList
         forceMode={forceMode}
-        loading={isLoading}
-        error={isError}
-        items={(data?.pages ?? []).flatMap((p) => p.items)}
+        items={serverData.results}
         component={component}
-        onFetchNextPage={fetchNextPage}
         sx={sx}
       />
     );
@@ -52,7 +47,25 @@ export const LearningObjectiveQuestions = container<Props>(
 );
 
 LearningObjectiveQuestions.displayName = "LearningObjectiveQuestions";
-LearningObjectiveQuestions.getData = async () => ({});
-LearningObjectiveQuestions.useData = () => ({});
 LearningObjectiveQuestions.LoadingFallback = () => <QuestionList loading />;
 LearningObjectiveQuestions.ErrorFallback = () => <QuestionList error />;
+
+LearningObjectiveQuestions.getData = async ({ helper, params }) => {
+  const router = helper.containers.learningObjectives;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
+  return await router.getLearningObjectiveQuestions.fetch({
+    questionBank,
+    learningObjectiveId,
+  });
+};
+
+LearningObjectiveQuestions.useData = (params) => {
+  const router = trpc.containers.learningObjectives;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
+  return router.getLearningObjectiveQuestions.useSuspenseQuery({
+    questionBank,
+    learningObjectiveId,
+  })[0];
+};

@@ -1,5 +1,6 @@
-import { mockFlashcards, trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { FlashcardList } from "./flashcard-list";
+import { mockData } from "./flashcard-list.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof FlashcardList>;
@@ -25,13 +26,7 @@ const meta: Meta<typeof FlashcardList> = {
     layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBank.getFlashcardsCollection.query(() => ({
-          flashcardCollection: {
-            id: "123",
-            title: "Flashcard Collection",
-            flashcards: mockFlashcards,
-          },
-        })),
+        trpcMsw.containers.flashcards.getFlashcardList.query(() => mockData),
       ],
     },
   },

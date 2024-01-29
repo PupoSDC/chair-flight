@@ -1,4 +1,7 @@
-export { questionBankNameSchema } from "./question-bank-schema";
+export {
+  questionBankNameSchema,
+  questionBankResourceSchema,
+} from "./question-bank-schema";
 export { questionEditSchema } from "./question-edit-schema";
 export {
   questionBankQuestionSchema,

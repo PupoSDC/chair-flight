@@ -1,5 +1,6 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { OverviewModules } from "./overview-modules";
+import { mockData } from "./overview-modules.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof OverviewModules>;
@@ -13,8 +14,7 @@ const meta: Meta<typeof OverviewModules> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.questionBank.getNumberOfFlashcards.query(() => ({ count: 77 })),
-        trpcMsw.questionBank.getNumberOfQuestions.query(() => ({ count: 123 })),
+        trpcMsw.containers.overviews.getOverviewModules.query(() => mockData),
       ],
     },
   },

@@ -7,7 +7,6 @@ import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
 import {
-  AppHead,
   BlogPostChip,
   Markdown,
   MarkdownClientDemo,
@@ -25,7 +24,7 @@ import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = { postId: string };
 type Params = Props;
-type Data = AppRouterOutput["blog"]["getBlogPost"];
+type Data = AppRouterOutput["containers"]["blog"]["getBlogPost"];
 
 export const BlogPost: Container<Props, Params, Data> = container<
   Props,
@@ -38,11 +37,6 @@ export const BlogPost: Container<Props, Params, Data> = container<
 
   return (
     <>
-      <AppHead
-        title={post.title}
-        linkTitle={post.title}
-        linkDescription={post.description}
-      />
       <Link
         sx={{ flex: 0, mr: "auto", pb: 2 }}
         color="primary"
@@ -107,11 +101,13 @@ export const BlogPost: Container<Props, Params, Data> = container<
 BlogPost.displayName = "BlogPost";
 
 BlogPost.getData = async ({ helper, params }) => {
+  const router = helper.containers.blog;
   const postId = getRequiredParam(params, "postId");
-  return await helper.blog.getBlogPost.fetch({ postId });
+  return await router.getBlogPost.fetch({ postId });
 };
 
 BlogPost.useData = (params) => {
+  const router = trpc.containers.blog;
   const postId = getRequiredParam(params, "postId");
-  return trpc.blog.getBlogPost.useSuspenseQuery({ postId })[0];
+  return router.getBlogPost.useSuspenseQuery({ postId })[0];
 };

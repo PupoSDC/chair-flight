@@ -1,8 +1,6 @@
-import {
-  questionBankQuestionsGetQuestionOverviewMock,
-  trpcMsw,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { QuestionOverview } from "./question-overview";
+import { mockData } from "./question-overview.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof QuestionOverview>;
@@ -33,9 +31,7 @@ const meta: Meta<typeof QuestionOverview> = {
   },
   parameters: {
     msw: [
-      trpcMsw.questionBankQuestions.getQuestionOverview.query(
-        () => questionBankQuestionsGetQuestionOverviewMock,
-      ),
+      trpcMsw.containers.questions.getQuestionOverview.query(() => mockData),
     ],
   },
 };

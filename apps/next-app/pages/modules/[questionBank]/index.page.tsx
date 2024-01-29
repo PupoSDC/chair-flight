@@ -1,10 +1,6 @@
 import * as fs from "node:fs/promises";
 import { AppHead } from "@chair-flight/react/components";
-import {
-  LayoutModule,
-  OverviewModule,
-  OverviewModules,
-} from "@chair-flight/react/containers";
+import { LayoutModule, OverviewModules } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
@@ -33,7 +29,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
     await OverviewModules.getData({ helper, params });
     await LayoutModule.getData({ helper, params });
-    await OverviewModule.getData({ helper, params });
+
     return { props: params };
   },
   fs,

@@ -49,7 +49,7 @@ const useBugReportStore = create<{
 }));
 
 const BugReportForm: FunctionComponent = () => {
-  const createIssue = trpc.github.createIssue.useMutation();
+  const createIssue = trpc.common.github.createIssue.useMutation();
   const debugDataCallbacks = useBugReportStore((b) => b.debugDataCallbacks);
   const bugReportSchema = z.object({
     title: z.string().min(5).max(50),

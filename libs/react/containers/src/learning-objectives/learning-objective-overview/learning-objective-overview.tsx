@@ -5,10 +5,9 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper";
 import type {
   LearningObjectiveId,
-  QuestionBankCourse,
-  QuestionBankLearningObjective,
   QuestionBankName,
 } from "@chair-flight/base/types";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -20,10 +19,8 @@ type Params = {
   learningObjectiveId: LearningObjectiveId;
 };
 
-type Data = {
-  learningObjective: QuestionBankLearningObjective;
-  courses: QuestionBankCourse[];
-};
+type Data =
+  AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectiveOverview"];
 
 export const LearningObjectiveOverview = container<Props, Params, Data>(
   ({ questionBank, learningObjectiveId, component = "section", sx }) => {
@@ -82,30 +79,22 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
 
 LearningObjectiveOverview.displayName = "LearningObjectiveOverview";
 
-LearningObjectiveOverview.getData = async ({ params, helper }) => {
-  const qb = helper.questionBank;
+LearningObjectiveOverview.getData = async ({ helper, params }) => {
+  const router = helper.containers.learningObjectives;
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
-
-  const [{ learningObjective }, { courses }] = await Promise.all([
-    qb.getLearningObjective.fetch({ questionBank, learningObjectiveId }),
-    qb.getAllCourses.fetch({ questionBank }),
-  ]);
-  return { learningObjective, courses };
-};
-
-LearningObjectiveOverview.useData = (params) => {
-  const qb = trpc.questionBank;
-  const questionBank = getRequiredParam(params, "questionBank");
-  const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
-
-  const [{ learningObjective }] = qb.getLearningObjective.useSuspenseQuery({
+  return await router.getLearningObjectiveOverview.fetch({
     questionBank,
     learningObjectiveId,
   });
-  const [{ courses }] = qb.getAllCourses.useSuspenseQuery({
-    questionBank,
-  });
+};
 
-  return { learningObjective, courses };
+LearningObjectiveOverview.useData = (params) => {
+  const router = trpc.containers.learningObjectives;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
+  return router.getLearningObjectiveOverview.useSuspenseQuery({
+    questionBank,
+    learningObjectiveId,
+  })[0];
 };

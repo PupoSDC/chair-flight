@@ -25,7 +25,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
   ] as Breadcrumbs;
 
   return (
-    <LayoutModule noPadding questionBank={questionBank} breadcrumbs={crumbs}>
+    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
       <AppHead
         title="Chair Flight - Flash Cards"
         linkTitle="Chair Flight - Flash Cards"
@@ -39,7 +39,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
           "are close enough.",
         ].join(" ")}
       />
-      <Box component="section" maxWidth="lg" margin="auto" p={2}>
+      <Box component="section" maxWidth="lg" margin="auto">
         <Typography level="h1">Flash Cards</Typography>
         <Typography>
           Practice for open-ended interview questions.
@@ -55,8 +55,8 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
         <Typography level="h3" sx={{ mt: 3, color: "primary.500" }}>
           Have fun!
         </Typography>
+        <FlashcardCollectionList sx={{ mt: 2 }} questionBank={questionBank} />
       </Box>
-      <FlashcardCollectionList questionBank={questionBank} />
     </LayoutModule>
   );
 };

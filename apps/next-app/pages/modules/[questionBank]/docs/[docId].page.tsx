@@ -20,24 +20,15 @@ import {
   LearningObjectiveQuestions,
   LearningObjectiveTree,
 } from "@chair-flight/react/containers";
+import { trpc } from "@chair-flight/trpc/client";
 import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
-import type {
-  LearningObjectiveId,
-  QuestionBankName,
-} from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 type PageProps = {
   docId: string;
   questionBank: QuestionBankName;
-  learningObjectiveId: LearningObjectiveId;
-  title: string;
-  description: string;
-  parent: null | {
-    title: string;
-    href: string;
-  };
 };
 
 type PageParams = {
@@ -45,14 +36,10 @@ type PageParams = {
   questionBank: QuestionBankName;
 };
 
-export const Page: NextPage<PageProps> = ({
-  docId,
-  questionBank,
-  learningObjectiveId,
-  title,
-  description,
-  parent,
-}) => {
+const useDoc = trpc.containers.docs.getDoc.useSuspenseQuery;
+
+export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
+  const [{ doc }] = useDoc({ docId, questionBank });
   const theme = useTheme();
   const loDrawer = useDisclose(false);
   const questionDrawer = useDisclose(false);
@@ -65,7 +52,11 @@ export const Page: NextPage<PageProps> = ({
 
   return (
     <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
-      <AppHead title={title} linkTitle={title} linkDescription={description} />
+      <AppHead
+        title={doc.title}
+        linkTitle={doc.title}
+        linkDescription={doc.description}
+      />
       <Stack
         sx={{
           width: "100%",
@@ -73,12 +64,14 @@ export const Page: NextPage<PageProps> = ({
           margin: "auto",
         }}
       >
-        {parent && <Link href={parent.href} children={parent.title} />}
+        {doc.parent && (
+          <Link href={doc.parent.href} children={doc.parent.title} />
+        )}
         <Typography
           level="h3"
           component="h1"
           sx={{ fontWeight: "bold" }}
-          children={title}
+          children={doc.title}
         />
 
         <Divider sx={{ width: "100%", mb: 1 }} />
@@ -112,7 +105,7 @@ export const Page: NextPage<PageProps> = ({
           </Typography>
           <LearningObjectiveTree
             questionBank={questionBank}
-            learningObjectiveId={learningObjectiveId}
+            learningObjectiveId={doc.learningObjective}
             forceMode="mobile"
             sx={{
               flex: 1,
@@ -134,7 +127,7 @@ export const Page: NextPage<PageProps> = ({
           </Typography>
           <LearningObjectiveQuestions
             questionBank={questionBank}
-            learningObjectiveId={learningObjectiveId}
+            learningObjectiveId={doc.learningObjective}
             forceMode="mobile"
             sx={{
               flex: 1,
@@ -149,28 +142,22 @@ export const Page: NextPage<PageProps> = ({
 };
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
-  async ({ params, helper }) => {
-    const { doc } = await helper.questionBankDocs.getDoc.fetch(params);
-    const props = {
-      ...params,
-      learningObjectiveId: doc.learningObjective,
-      title: doc.title,
-      description: doc.description,
-      parent: doc.parent,
-    };
-
+  async ({ params: rawParams, helper }) => {
+    const data = await helper.containers.docs.getDoc.fetch(rawParams);
+    const learningObjectiveId = data.doc.learningObjective;
+    const params = { ...rawParams, learningObjectiveId };
     await LayoutModule.getData({ helper, params });
     await DocContent.getData({ helper, params });
-    await LearningObjectiveTree.getData({ helper, params: props });
-    return { props };
+    await LearningObjectiveTree.getData({ helper, params });
+    return { props: params };
   },
   fs,
 );
 
 export const getStaticPaths = staticPathsHandler<PageParams>(
   async ({ helper }) => {
-    const qbDocs = helper.questionBankDocs;
-    const { paths } = await qbDocs.getAllDocPaths.fetch();
+    const pageGeneration = helper.pageGeneration.modules;
+    const { paths } = await pageGeneration.getDocGenerationPaths.fetch();
     return { fallback: false, paths };
   },
   fs,

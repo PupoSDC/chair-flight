@@ -1,9 +1,6 @@
-import {
-  trpcMsw,
-  questionBankLoSearchSearchLearningObjectivesMock,
-  questionBankLoSearchGetSearchConfig,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LearningObjectivesSearch } from "./learning-objectives-search";
+import { mockData, mockSearchData } from "./learning-objectives-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LearningObjectivesSearch>;
@@ -24,11 +21,11 @@ const meta: Meta<typeof LearningObjectivesSearch> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.questionBankLoSearch.getSearchConfigFilters.query(
-          () => questionBankLoSearchGetSearchConfig,
+        trpcMsw.containers.learningObjectives.getLearningObjectivesSearch.query(
+          () => mockData,
         ),
-        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(
-          () => questionBankLoSearchSearchLearningObjectivesMock,
+        trpcMsw.common.search.searchLearningObjectives.query(
+          () => mockSearchData,
         ),
       ],
     },

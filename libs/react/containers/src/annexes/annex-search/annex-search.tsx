@@ -41,10 +41,9 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data =
-  AppRouterOutput["questionBankAnnexSearch"]["getSearchConfigFilters"];
-type SearchResult =
-  AppRouterOutput["questionBankAnnexSearch"]["searchAnnexes"]["items"][number];
+type Data = AppRouterOutput["containers"]["annexes"]["getAnnexSearch"];
+type SearchRouter = AppRouterOutput["common"]["search"];
+type SearchResult = SearchRouter["searchAnnexes"]["items"][number];
 
 const AnnexSearchItem: FunctionComponent<{
   mobile?: boolean;
@@ -183,7 +182,7 @@ const filterSchema = z.object({
 
 const defaultFilter = filterSchema.parse({});
 const resolver = zodResolver(filterSchema);
-const searchQuestions = trpc.questionBankAnnexSearch.searchAnnexes;
+const searchQuestions = trpc.common.search.searchAnnexes;
 const useSearchAnnexes = searchQuestions.useInfiniteQuery;
 
 const useSearchPersistence = {
@@ -198,8 +197,7 @@ export const AnnexSearch = container<Props, Params, Data>(
     const { getData, setData } = useSearchPersistence[questionBank]();
     const serverData = AnnexSearch.useData({ questionBank });
     const form = useForm({ defaultValues: getData(), resolver });
-
-    const { subjects } = serverData;
+    const { subjects } = serverData.filters;
     const { subject } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
@@ -273,13 +271,13 @@ export const AnnexSearch = container<Props, Params, Data>(
 AnnexSearch.displayName = "AnnexSearch";
 
 AnnexSearch.getData = async ({ helper, params }) => {
-  const router = helper.questionBankAnnexSearch;
+  const router = helper.containers.annexes;
   const questionBank = getRequiredParam(params, "questionBank");
-  return await router.getSearchConfigFilters.fetch({ questionBank });
+  return await router.getAnnexSearch.fetch({ questionBank });
 };
 
 AnnexSearch.useData = (params) => {
-  const router = trpc.questionBankAnnexSearch;
+  const router = trpc.containers.annexes;
   const questionBank = getRequiredParam(params, "questionBank");
-  return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
+  return router.getAnnexSearch.useSuspenseQuery({ questionBank })[0];
 };

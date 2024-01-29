@@ -1,8 +1,6 @@
-import {
-  questionBankQuestionSearchGetQuestionsFromLearningObjectivesMock,
-  trpcMsw,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LearningObjectiveQuestions } from "./learning-objective-questions";
+import { mockData } from "./learning-objective-questions.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LearningObjectiveQuestions>;
@@ -25,9 +23,8 @@ const meta: Meta<typeof LearningObjectiveQuestions> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.questionBankQuestionSearch.getQuestionsFromLearningObjective.query(
-          () =>
-            questionBankQuestionSearchGetQuestionsFromLearningObjectivesMock,
+        trpcMsw.containers.learningObjectives.getLearningObjectiveQuestions.query(
+          () => mockData,
         ),
       ],
     },

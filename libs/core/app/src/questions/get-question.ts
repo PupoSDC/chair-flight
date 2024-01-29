@@ -78,13 +78,11 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
     {
       id: "true",
       text: "True",
-      correct: variant.answer,
       why: "",
     },
     {
       id: "false",
       text: "False",
-      correct: !variant.answer,
       why: "",
     },
   ];

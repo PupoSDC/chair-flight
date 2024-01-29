@@ -1,8 +1,3 @@
-import {
-  testsGetSubjectsMock,
-  testsCreateTestMock,
-  trpcMsw,
-} from "@chair-flight/trpc/mock";
 import { TestMaker } from "./test-maker";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -25,10 +20,7 @@ const meta: Meta<typeof TestMaker> = {
   parameters: {
     layout: "fullscreen",
     msw: {
-      handlers: [
-        trpcMsw.tests.getSubjects.query(() => testsGetSubjectsMock),
-        trpcMsw.tests.createTest.mutation(() => testsCreateTestMock),
-      ],
+      handlers: [],
     },
   },
 };

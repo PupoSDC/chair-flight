@@ -32,7 +32,7 @@ import {
   Ups,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { container } from "../../wraper/container";
+import { container, getRequiredParam } from "../../wraper/container";
 import type {
   QuestionBankName,
   QuestionTemplateId,
@@ -61,7 +61,7 @@ type Params = {
   questionId: QuestionTemplateId;
 };
 
-type Data = AppRouterOutput["questionBankQuestions"]["getQuestionOverview"];
+type Data = AppRouterOutput["containers"]["questions"]["getQuestionOverview"];
 
 const shuffle = getRandomShuffler("123");
 
@@ -341,16 +341,20 @@ export const QuestionOverview = container<Props, Params, Data>(
 QuestionOverview.displayName = "QuestionOverview";
 
 QuestionOverview.getData = async ({ helper, params }) => {
-  const { questionId, questionBank } = params;
-  return await helper.questionBankQuestions.getQuestionOverview.fetch({
+  const router = helper.containers.questions;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const questionId = getRequiredParam(params, "questionId");
+  return await router.getQuestionOverview.fetch({
     questionBank,
     questionId,
   });
 };
 
 QuestionOverview.useData = (params) => {
-  const { questionId, questionBank } = params;
-  return trpc.questionBankQuestions.getQuestionOverview.useSuspenseQuery({
+  const router = trpc.containers.questions;
+  const questionBank = getRequiredParam(params, "questionBank");
+  const questionId = getRequiredParam(params, "questionId");
+  return router.getQuestionOverview.useSuspenseQuery({
     questionBank,
     questionId,
   })[0];

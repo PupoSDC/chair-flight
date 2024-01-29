@@ -1,9 +1,6 @@
-import {
-  trpcMsw,
-  questionBankAnnexSearchGetSearchConfigMock,
-  questionBankAnnexSearchSearchAnnexesMock,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { AnnexSearch } from "./annex-search";
+import { mockData, mockSearchData } from "./annex-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof AnnexSearch>;
@@ -22,15 +19,10 @@ const meta: Meta<typeof AnnexSearch> = {
     questionBank: { control: false },
   },
   parameters: {
-    layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBankAnnexSearch.getSearchConfigFilters.query(
-          () => questionBankAnnexSearchGetSearchConfigMock,
-        ),
-        trpcMsw.questionBankAnnexSearch.searchAnnexes.query(
-          () => questionBankAnnexSearchSearchAnnexesMock,
-        ),
+        trpcMsw.containers.annexes.getAnnexSearch.query(() => mockData),
+        trpcMsw.common.search.searchAnnexes.query(() => mockSearchData),
       ],
     },
   },

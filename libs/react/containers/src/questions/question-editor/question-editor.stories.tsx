@@ -1,9 +1,6 @@
-import {
-  questionBankGetQuestionFromGithubMock,
-  questionBankLoSearchSearchLearningObjectivesMock,
-  trpcMsw,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { QuestionEditor } from "./question-editor";
+import { mockData, mockSearchData } from "./question-editor.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof QuestionEditor>;
@@ -77,11 +74,9 @@ const meta: Meta<typeof QuestionEditor> = {
     layout: "fullscreen",
     msw: {
       handlers: [
-        trpcMsw.questionBankQuestions.getQuestionFromGithub.query(
-          () => questionBankGetQuestionFromGithubMock,
-        ),
-        trpcMsw.questionBankLoSearch.searchLearningObjectives.query(
-          () => questionBankLoSearchSearchLearningObjectivesMock,
+        trpcMsw.containers.questions.getQuestionEditor.query(() => mockData),
+        trpcMsw.common.search.searchLearningObjectives.query(
+          () => mockSearchData,
         ),
       ],
     },

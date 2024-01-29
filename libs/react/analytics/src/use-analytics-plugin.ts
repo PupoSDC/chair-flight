@@ -27,8 +27,8 @@ type OriginalTrackEventProps = {
 
 export const useAnalyticsPlugin = (): AnalyticsPlugin => {
   const router = useRouter();
-  const createPageEvent = trpc.analytics.createPageEvent.useMutation();
-  const trackEvent = trpc.analytics.trackEvent.useMutation();
+  const createPageEvent = trpc.common.analytics.createPageEvent.useMutation();
+  const trackEvent = trpc.common.analytics.trackEvent.useMutation();
 
   return {
     name: "chair-flight-analytics-plugin",

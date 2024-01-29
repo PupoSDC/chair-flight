@@ -82,7 +82,8 @@ export const ThemeButton: FunctionComponent = noSsr(
 
 export const NotificationButton: FunctionComponent = noSsr(
   () => {
-    const [{ lastPostDate }] = trpc.blog.getDateOfLastPost.useSuspenseQuery();
+    const getDateOfLastPost = trpc.common.blog.getDateOfLastPost;
+    const [{ lastPostDate }] = getDateOfLastPost.useSuspenseQuery();
     const [userVoyage] = useUserVoyage();
 
     const hasNewPosts =
