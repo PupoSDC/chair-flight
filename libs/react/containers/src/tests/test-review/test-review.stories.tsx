@@ -1,10 +1,5 @@
-import { useEffect } from "react";
-import { testsCreateTestMock } from "@chair-flight/trpc/mock";
-import { useTestProgress } from "../hooks/use-test-progress";
 import { TestReview } from "./test-review";
 import type { Meta, StoryObj } from "@storybook/react";
-
-const mockTest = testsCreateTestMock.test;
 
 type Story = StoryObj<typeof TestReview>;
 
@@ -14,15 +9,12 @@ const meta: Meta<typeof TestReview> = {
   title: "Containers/Test/TestReview",
   component: TestReview,
   tags: ["autodocs"],
-  args: {
-    testId: mockTest.id,
-  },
   argTypes: {
     testId: { disable: true },
   },
   parameters: {
     layout: "fullscreen",
-  },
+  } /**
   decorators: [
     (Story) => {
       const testId = mockTest.id;
@@ -31,7 +23,7 @@ const meta: Meta<typeof TestReview> = {
       useEffect(() => addTest({ test: mockTest }), [addTest]);
       return test ? <Story /> : <>Loading...</>;
     },
-  ],
+  ], */,
 };
 
 export default meta;

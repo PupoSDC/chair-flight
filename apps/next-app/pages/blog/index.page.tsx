@@ -13,9 +13,9 @@ const Page: NextPage = () => {
   );
 };
 
-export const getStaticProps = staticHandler(async ({ helper, params }) => {
-  await BlogIndex.getData({ params, helper });
-  return { props: params };
+export const getStaticProps = staticHandler(async ({ helper }) => {
+  await BlogIndex.getData({ params: {}, helper });
+  return { props: {} };
 }, fs);
 
 export default Page;

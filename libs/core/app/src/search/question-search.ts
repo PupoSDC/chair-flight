@@ -117,10 +117,10 @@ export const populateQuestionsSearchIndex = async ({
         subjects: uniqueSubjects,
         learningObjectives: q.learningObjectives.map((name) => ({
           name,
-          href: `/modules/${bank}/learning-objectives/${name}`,
+          href: `/modules/${bank.getName()}/learning-objectives/${name}`,
         })),
         externalIds: v.externalIds,
-        href: `/modules/${bank}/questions/${q.id}?variantId=${v.id}`,
+        href: `/modules/${bank.getName()}/questions/${q.id}?variantId=${v.id}`,
       }));
     });
 

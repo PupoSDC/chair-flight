@@ -1,4 +1,3 @@
-import { makeMap } from "@chair-flight/base/utils";
 import { LearningObjectiveList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper";
@@ -21,23 +20,17 @@ type Params = {
 };
 
 type Data =
-  AppRouterOutput["questionBankLoSearch"]["getLearningObjectiveTree"] &
-    AppRouterOutput["questionBankLoSearch"]["getSearchConfigFilters"];
+  AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectiveTree"];
 
 export const LearningObjectiveTree = container<Props, Params, Data>(
   ({ sx, forceMode, component = "section", ...params }) => {
-    const { items, courses } = LearningObjectiveTree.useData(params);
+    const { items } = LearningObjectiveTree.useData(params);
     return (
       <LearningObjectiveList
         forceMode={forceMode}
         component={component}
         sx={sx}
         items={items}
-        courseMap={makeMap(
-          courses,
-          (c) => c.id,
-          (t) => t.text,
-        )}
       />
     );
   },
@@ -46,29 +39,21 @@ export const LearningObjectiveTree = container<Props, Params, Data>(
 LearningObjectiveTree.displayName = "LearningObjectiveTree";
 
 LearningObjectiveTree.getData = async ({ helper, params }) => {
-  const router = helper.questionBankLoSearch;
+  const router = helper.containers.learningObjectives;
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
-  const [data1, data2] = await Promise.all([
-    router.getLearningObjectiveTree.fetch({
-      questionBank,
-      learningObjectiveId,
-    }),
-    router.getSearchConfigFilters.fetch({ questionBank }),
-  ]);
-  return { ...data1, ...data2 };
+  return await router.getLearningObjectiveTree.fetch({
+    questionBank,
+    learningObjectiveId,
+  });
 };
 
 LearningObjectiveTree.useData = (params) => {
-  const router = trpc.questionBankLoSearch;
+  const router = trpc.containers.learningObjectives;
   const questionBank = getRequiredParam(params, "questionBank");
   const learningObjectiveId = getRequiredParam(params, "learningObjectiveId");
-  const data1 = router.getLearningObjectiveTree.useSuspenseQuery({
+  return router.getLearningObjectiveTree.useSuspenseQuery({
     questionBank,
     learningObjectiveId,
   })[0];
-  const data2 = router.getSearchConfigFilters.useSuspenseQuery({
-    questionBank,
-  })[0];
-  return { ...data1, ...data2 };
 };

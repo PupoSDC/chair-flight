@@ -1,5 +1,6 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { OverviewWelcome } from "./welcome";
+import { mockData } from "./welcome.mock";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -31,8 +32,7 @@ const meta: Meta<typeof OverviewWelcome> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getNumberOfFlashcards.query(() => ({ count: 77 })),
-        trpcMsw.questionBank.getNumberOfQuestions.query(() => ({ count: 123 })),
+        trpcMsw.containers.overviews.getOverviewWelcome.query(() => mockData),
       ],
     },
   },

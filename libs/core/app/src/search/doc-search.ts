@@ -85,10 +85,10 @@ export const populateDocsSearchIndex = async ({
       title: doc.title,
       empty: doc.empty,
       subject: doc.subjectId,
-      href: `/modules/${bank}/docs/${doc.id}`,
+      href: `/modules/${bank.getName()}/docs/${doc.id}`,
       learningObjective: {
         id: doc.learningObjectiveId,
-        href: `/modules/${bank}/learning-objectives/${doc.learningObjectiveId}`,
+        href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
       },
     }));
 

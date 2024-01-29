@@ -23,14 +23,7 @@ export const FlashcardList = container<Props, Params, Data>(
     const { flashcards } = FlashcardList.useData(params);
 
     return (
-      <Grid
-        container
-        spacing={2}
-        maxWidth="lg"
-        margin="auto"
-        sx={sx}
-        component={component}
-      >
+      <Grid container spacing={2} sx={sx} component={component}>
         {flashcards.map((fc) => (
           <Grid key={fc.id} xs={12} sm={6} md={4} lg={3} sx={{ height: 400 }}>
             <FlashcardWithOwnControl {...fc} />

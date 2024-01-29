@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
 import {
   getLearningObjectivesSearchFilters,
   populateLearningObjectivesSearchIndex,
@@ -70,51 +69,39 @@ export const learningObjectivesContainersRouter = router({
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
 
-      const [items, courseMap] = await Promise.all([
-        (async () => {
-          await populateLearningObjectivesSearchIndex({
-            bank,
-            searchIndex: learningObjectiveSearchIndex,
-            searchResults: learningObjectiveSearchResults,
-          });
+      await populateLearningObjectivesSearchIndex({
+        bank,
+        searchIndex: learningObjectiveSearchIndex,
+        searchResults: learningObjectiveSearchResults,
+      });
 
-          const mainLo = await bank.getOne("learningObjectives", loId);
-          const tree = [mainLo.id];
+      const mainLo = await bank.getOne("learningObjectives", loId);
+      const tree = [mainLo.id];
 
-          // Populate up the tree
-          for (let i = tree.length - 1; i < tree.length; i++) {
-            try {
-              const lo = await bank.getOne("learningObjectives", tree[i]);
-              tree.push(lo.parentId);
-            } catch (e) {
-              break;
-            }
-          }
+      // Populate up the tree
+      for (let i = tree.length - 1; i < tree.length; i++) {
+        try {
+          const lo = await bank.getOne("learningObjectives", tree[i]);
+          tree.push(lo.parentId);
+        } catch (e) {
+          break;
+        }
+      }
 
-          tree.reverse();
+      tree.reverse();
 
-          // Populate down the tree
-          for (let i = tree.length - 1; i < tree.length; i++) {
-            const lo = await bank.getOne("learningObjectives", tree[i]);
-            tree.push(...lo.learningObjectives);
-          }
+      // Populate down the tree
+      for (let i = tree.length - 1; i < tree.length; i++) {
+        const lo = await bank.getOne("learningObjectives", tree[i]);
+        tree.push(...lo.learningObjectives);
+      }
 
-          return tree
-            .sort()
-            .map((t) => learningObjectiveSearchResults.get(t))
-            .filter(Boolean);
-        })(),
-        (async () => {
-          const courses = await bank.getAll("courses");
-          return makeMap(
-            courses,
-            (c) => c.id,
-            (t) => t.text,
-          );
-        })(),
-      ]);
+      const items = tree
+        .sort()
+        .map((t) => learningObjectiveSearchResults.get(t))
+        .filter(Boolean);
 
-      return { items, courseMap };
+      return { items };
     }),
 
   getLearningObjectivesSearch: publicProcedure

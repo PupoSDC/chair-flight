@@ -31,4 +31,53 @@ export const testsRouter = router({
 
       return { test };
     }),
+
+  getSubjects: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        course: z.union([z.literal("all"), z.string()]).default("all"),
+      }),
+    )
+    .query(async ({ input }) => {
+      const qb = questionBanks[input.questionBank];
+      const course = input.course;
+      const allCourses = course === "all";
+      const rawSubjects = await qb.getAll("subjects");
+      const learningObjectives = await qb.getAll("learningObjectives");
+      const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
+
+      const subjects = rawSubjects.map((s) => ({
+        ...s,
+        learningObjectives: s.learningObjectives
+          .map((loId) => {
+            const lo = learningObjectivesMap[loId];
+            if (!lo) return undefined;
+            if (!allCourses && !lo.courses.includes(course)) return undefined;
+
+            return {
+              id: lo.id,
+              text: lo.text,
+              numberOfQuestions: lo.nestedQuestions.length,
+              learningObjectives: lo.learningObjectives
+                .map((loId2) => {
+                  const lo2 = learningObjectivesMap[loId2];
+                  if (!lo2) return undefined;
+                  if (!allCourses && !lo2.courses.includes(course))
+                    return undefined;
+
+                  return {
+                    id: lo2.id,
+                    text: lo2.text,
+                    numberOfQuestions: lo2.nestedQuestions.length,
+                  };
+                })
+                .filter(Boolean),
+            };
+          })
+          .filter(Boolean),
+      }));
+
+      return { subjects };
+    }),
 });

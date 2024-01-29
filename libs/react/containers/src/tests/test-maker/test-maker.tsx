@@ -43,6 +43,8 @@ import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
+const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
+
 const resolver = zodResolver(newTestConfigurationSchema);
 
 const defaultConfig = {} as Partial<NewTestConfiguration>;
@@ -72,7 +74,6 @@ const TestMakerContainer = styled(Stack)`
 export const TestMaker = container<Props>(({ questionBank, sx }) => {
   const router = useRouter();
   const useCreateTest = trpc.common.tests.createTest.useMutation;
-  const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
   const addTest = useTestProgress((s) => s.addTest);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -330,6 +331,7 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
 });
 
 TestMaker.displayName = "TestMaker";
+
 TestMaker.getData = async () => ({});
 TestMaker.useData = () => ({});
 

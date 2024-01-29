@@ -45,7 +45,7 @@ const useSearchPersistence = {
 };
 
 export const QuestionSearch = container<Props, Params, Data>(
-  ({ sx, component = "section", questionBank }) => {
+  ({ sx, forceMode, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
     const { getData, setData } = useSearchPersistence[questionBank]();
     const serverData = QuestionSearch.useData({ questionBank });
@@ -106,6 +106,7 @@ export const QuestionSearch = container<Props, Params, Data>(
         <QuestionList
           loading={isLoading}
           error={isError}
+          forceMode={forceMode}
           items={(data?.pages ?? []).flatMap((p) => p.items)}
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}

@@ -1,4 +1,6 @@
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LayoutPublic } from "./layout-public";
+import { mockData } from "./layout-public.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LayoutPublic>;
@@ -13,9 +15,13 @@ const meta: Meta<typeof LayoutPublic> = {
     layout: "fullscreen",
     docs: {
       story: {
-        inline: false,
-        iframeHeight: 500,
+        height: 200,
       },
+    },
+    msw: {
+      handlers: [
+        trpcMsw.containers.layouts.getLayoutPublic.query(() => mockData),
+      ],
     },
   },
 };

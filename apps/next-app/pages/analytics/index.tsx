@@ -12,7 +12,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 
-const useVisitsPerDay = trpc.analytics.visitsPerDay.useSuspenseQuery;
+const useVisitsPerDay = trpc.common.analytics.visitsPerDay.useSuspenseQuery;
 
 const AnalyticsPage: NextPage = () => {
   const [{ views, paths }] = useVisitsPerDay();
@@ -31,7 +31,7 @@ const AnalyticsPage: NextPage = () => {
 };
 
 export const getStaticProps = staticHandler(async ({ helper }) => {
-  await helper.analytics.visitsPerDay.prefetch();
+  await helper.common.analytics.visitsPerDay.prefetch();
   return { props: {}, revalidate: 60 * 15 };
 }, fs);
 

@@ -24,7 +24,7 @@ export const layoutsContainersRouter = router({
           isVisible: await bank.has("questions"),
         },
         learningObjectives: {
-          href: `/modules/${questionBank}/learningObjectives`,
+          href: `/modules/${questionBank}/learning-objectives`,
           isVisible: await bank.has("learningObjectives"),
         },
         annexes: {
@@ -37,7 +37,7 @@ export const layoutsContainersRouter = router({
         },
         docs: {
           href: `/modules/${questionBank}/docs`,
-          isVisible: await bank.has("docs"),
+          isVisible: false, //await bank.has("docs"),
         },
         flashcards: {
           href: `/modules/${questionBank}/flashcards`,

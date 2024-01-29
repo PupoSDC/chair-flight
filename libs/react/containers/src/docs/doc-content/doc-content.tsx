@@ -8,7 +8,7 @@ import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = { questionBank: QuestionBankName; docId: string };
 type Params = Props;
-type Data = AppRouterOutput["containers"]["docs"]["getDocContent"];
+type Data = AppRouterOutput["containers"]["docs"]["getDoc"];
 
 export const DocContent: Container<Props, Params, Data> = container<
   Props,
@@ -51,12 +51,12 @@ DocContent.getData = async ({ helper, params }) => {
   const router = helper.containers.docs;
   const questionBank = getRequiredParam(params, "questionBank");
   const docId = getRequiredParam(params, "docId");
-  return await router.getDocContent.fetch({ questionBank, docId });
+  return await router.getDoc.fetch({ questionBank, docId });
 };
 
 DocContent.useData = (params) => {
   const router = trpc.containers.docs;
   const questionBank = getRequiredParam(params, "questionBank");
   const docId = getRequiredParam(params, "docId");
-  return router.getDocContent.useSuspenseQuery({ questionBank, docId })[0];
+  return router.getDoc.useSuspenseQuery({ questionBank, docId })[0];
 };

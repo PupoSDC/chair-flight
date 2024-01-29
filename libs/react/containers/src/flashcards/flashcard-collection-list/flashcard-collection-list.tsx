@@ -31,14 +31,7 @@ export const FlashcardCollectionList = container<Props, Params, Data>(
     const { collections } = FlashcardCollectionList.useData(params);
 
     return (
-      <Grid
-        container
-        spacing={2}
-        maxWidth="lg"
-        margin="auto"
-        component={component}
-        sx={sx}
-      >
+      <Grid container spacing={2} component={component} sx={sx}>
         {collections.map((fc) => (
           <Grid xs={12} sm={6} md={4} lg={3} key={fc.id}>
             <Card sx={{ height: { xs: 160, sm: 250 } }}>

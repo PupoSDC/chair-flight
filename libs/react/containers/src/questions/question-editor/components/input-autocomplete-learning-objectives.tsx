@@ -16,7 +16,7 @@ export const InputAutocompleteLearningObjectives = forwardRef<
   const [search, setSearch] = useState("");
 
   const { data, isLoading } =
-    trpc.questionBankLoSearch.searchLearningObjectives.useQuery({
+    trpc.common.search.searchLearningObjectives.useQuery({
       q: search,
       limit: 10,
       cursor: 0,

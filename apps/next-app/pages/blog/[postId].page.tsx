@@ -8,9 +8,9 @@ import type { NextPage } from "next";
 type PageParams = { postId: string };
 type PageProps = PageParams;
 
-export const Page: NextPage<PageProps> = (props) => {
+export const Page: NextPage<PageProps> = ({ postId }) => {
   const postMeta = trpc.pageGeneration.blog.getBlogPostMeta;
-  const [{ meta }] = postMeta.useSuspenseQuery(props);
+  const [{ meta }] = postMeta.useSuspenseQuery({ postId });
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead
@@ -18,14 +18,15 @@ export const Page: NextPage<PageProps> = (props) => {
         linkTitle={meta.title}
         linkDescription={meta.description}
       />
-      <BlogPost {...props} />
+      <BlogPost postId={postId} />
     </LayoutPublic>
   );
 };
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params, helper }) => {
-    await helper.pageGeneration.blog.getBlogPostMeta.fetch(params);
+    const postId = params.postId;
+    await helper.pageGeneration.blog.getBlogPostMeta.fetch({ postId });
     await BlogPost.getData({ helper, params });
     await LayoutPublic.getData({ helper, params });
     return { props: params };

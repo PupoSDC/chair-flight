@@ -64,12 +64,14 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           margin: "auto",
         }}
       >
-        {parent && <Link href={parent.href} children={parent.title} />}
+        {doc.parent && (
+          <Link href={doc.parent.href} children={doc.parent.title} />
+        )}
         <Typography
           level="h3"
           component="h1"
           sx={{ fontWeight: "bold" }}
-          children={title}
+          children={doc.title}
         />
 
         <Divider sx={{ width: "100%", mb: 1 }} />
@@ -103,7 +105,7 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           </Typography>
           <LearningObjectiveTree
             questionBank={questionBank}
-            learningObjectiveId={learningObjectiveId}
+            learningObjectiveId={doc.learningObjective}
             forceMode="mobile"
             sx={{
               flex: 1,
@@ -125,7 +127,7 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           </Typography>
           <LearningObjectiveQuestions
             questionBank={questionBank}
-            learningObjectiveId={learningObjectiveId}
+            learningObjectiveId={doc.learningObjective}
             forceMode="mobile"
             sx={{
               flex: 1,
@@ -140,8 +142,10 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
 };
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
-  async ({ params, helper }) => {
-    await helper.containers.docs.getDoc.fetch(params);
+  async ({ params: rawParams, helper }) => {
+    const data = await helper.containers.docs.getDoc.fetch(rawParams);
+    const learningObjectiveId = data.doc.learningObjective;
+    const params = { ...rawParams, learningObjectiveId };
     await LayoutModule.getData({ helper, params });
     await DocContent.getData({ helper, params });
     await LearningObjectiveTree.getData({ helper, params });
@@ -153,7 +157,7 @@ export const getStaticProps = staticHandler<PageProps, PageParams>(
 export const getStaticPaths = staticPathsHandler<PageParams>(
   async ({ helper }) => {
     const pageGeneration = helper.pageGeneration.modules;
-    const { paths } = await pageGeneration.getDocGenerationPaths.fetch({});
+    const { paths } = await pageGeneration.getDocGenerationPaths.fetch();
     return { fallback: false, paths };
   },
   fs,

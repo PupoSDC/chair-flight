@@ -97,7 +97,7 @@ export const populateLearningObjectivesSearchIndex = async ({
 
     const resultItems: LearningObjectiveSearchResult[] = los.flatMap((lo) => ({
       id: lo.id,
-      href: `/modules/${bank}/learning-objectives/${lo.id}`,
+      href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
       courses: lo.courses.map((c) => coursesMap[c]),
       text: lo.text,

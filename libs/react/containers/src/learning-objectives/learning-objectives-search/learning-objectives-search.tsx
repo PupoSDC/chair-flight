@@ -3,7 +3,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Select, Option, Stack } from "@mui/joy";
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
 import {
   SearchQuery,
   HookFormSelect,
@@ -25,7 +24,8 @@ type Params = {
   questionBank: QuestionBankName;
 };
 
-type Data = AppRouterOutput["questionBankLoSearch"]["getSearchConfigFilters"];
+type Data =
+  AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectivesSearch"];
 
 const filterSchema = z.object({
   subject: z.string().default("all"),
@@ -35,7 +35,7 @@ const filterSchema = z.object({
 
 const defaultFilter = filterSchema.parse({});
 const resolver = zodResolver(filterSchema);
-const searchLos = trpc.questionBankLoSearch.searchLearningObjectives;
+const searchLos = trpc.common.search.searchLearningObjectives;
 const useSearchLos = searchLos.useInfiniteQuery;
 const keyPrefix = "cf-learning-objectives-search" as const;
 
@@ -52,7 +52,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const serverData = LearningObjectivesSearch.useData({ questionBank });
     const form = useForm({ defaultValues: getData(), resolver });
 
-    const { searchFields, subjects, courses } = serverData;
+    const { searchFields, subjects, courses } = serverData.filters;
     const { searchField, subject, course } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchLos(
@@ -119,11 +119,6 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           loading={isLoading}
           error={isError}
           currentCourse={course}
-          courseMap={makeMap(
-            courses,
-            (c) => c.id,
-            (t) => t.text,
-          )}
           items={(data?.pages ?? []).flatMap((p) => p.items)}
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
@@ -136,13 +131,15 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
 LearningObjectivesSearch.displayName = "LearningObjectivesSearch";
 
 LearningObjectivesSearch.getData = async ({ helper, params }) => {
-  const router = helper.questionBankLoSearch;
+  const router = helper.containers.learningObjectives;
   const questionBank = getRequiredParam(params, "questionBank");
-  return await router.getSearchConfigFilters.fetch({ questionBank });
+  return await router.getLearningObjectivesSearch.fetch({ questionBank });
 };
 
 LearningObjectivesSearch.useData = (params) => {
-  const router = trpc.questionBankLoSearch;
+  const router = trpc.containers.learningObjectives;
   const questionBank = getRequiredParam(params, "questionBank");
-  return router.getSearchConfigFilters.useSuspenseQuery({ questionBank })[0];
+  return router.getLearningObjectivesSearch.useSuspenseQuery({
+    questionBank,
+  })[0];
 };

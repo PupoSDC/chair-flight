@@ -1,5 +1,6 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LayoutModule } from "./layout-module";
+import { mockData } from "./layout-module.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LayoutModule>;
@@ -23,14 +24,7 @@ const meta: Meta<typeof LayoutModule> = {
     },
     msw: {
       handlers: [
-        trpcMsw.questionBank.getConfig.query(() => ({
-          hasFlashcards: true,
-          hasQuestions: true,
-          hasLearningObjectives: true,
-          hasAnnexes: true,
-          hasCourses: true,
-          hasDocs: true,
-        })),
+        trpcMsw.containers.layouts.getLayoutModule.query(() => mockData),
       ],
     },
   },

@@ -1,9 +1,6 @@
-import {
-  questionBankLoSearchGetSearchConfig,
-  questionBankLoSearchSearchLearningObjectivesMock,
-  trpcMsw,
-} from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@chair-flight/trpc/mock";
 import { LearningObjectiveTree } from "./learning-objective-tree";
+import { mockData } from "./learning-objective-tree.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LearningObjectiveTree>;
@@ -26,11 +23,8 @@ const meta: Meta<typeof LearningObjectiveTree> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.questionBankLoSearch.getLearningObjectiveTree.query(
-          () => questionBankLoSearchSearchLearningObjectivesMock,
-        ),
-        trpcMsw.questionBankLoSearch.getSearchConfigFilters.query(
-          () => questionBankLoSearchGetSearchConfig,
+        trpcMsw.containers.learningObjectives.getLearningObjectiveTree.query(
+          () => mockData,
         ),
       ],
     },

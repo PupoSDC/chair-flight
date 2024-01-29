@@ -76,11 +76,11 @@ export const populateAnnexesSearchIndex = async ({
       questionBank: bank.getName(),
       questions: annex.questions.map((id) => ({
         id,
-        href: `/modules/${bank}/questions/${id}`,
+        href: `/modules/${bank.getName()}/questions/${id}`,
       })),
       learningObjectives: annex.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${bank}/learning-objectives/${id}`,
+        href: `/modules/${bank.getName()}/learning-objectives/${id}`,
       })),
     }));
 
