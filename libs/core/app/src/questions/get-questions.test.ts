@@ -2,7 +2,7 @@ import { getQuestion } from "./get-question";
 import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
 
 describe("getQuestions", () => {
-  it("generates a one two question idempotently", () => {
+  it("generates an idempotent one two question ", () => {
     const questionTemplate: QuestionBankQuestionTemplate = {
       srcLocation: "...",
       id: "QYFPA3CY4E",
@@ -60,4 +60,6 @@ describe("getQuestions", () => {
 
     expect(questionA).toEqual(questionB);
   });
+
+  
 });

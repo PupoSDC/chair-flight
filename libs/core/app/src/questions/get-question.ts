@@ -9,10 +9,13 @@ import type {
   TestQuestionMultipleChoice,
   QuestionBankQuestionTemplate,
   TestQuestionType,
-  QuestionVariantCalculation,
+ // QuestionVariantCalculation,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
+  QuestionVariantDefinition,
+  QuestionVariantMultipleCorrect,
+ // QuestionVariantMultipleCorrect,
 } from "@chair-flight/base/types";
 
 const getQuestionMultipleChoiceFromSimple = ({
@@ -22,6 +25,131 @@ const getQuestionMultipleChoiceFromSimple = ({
 }: {
   template: QuestionBankQuestionTemplate;
   variant: QuestionVariantSimple;
+  randomSeed: string;
+}): TestQuestionMultipleChoice => {
+  const shuffler = getRandomShuffler(randomSeed);
+  const options = shuffler(variant.options);
+  const correctOption = options.find((option) => option.correct);
+  const wrongOptions = options.filter((option) => !option.correct).slice(0, 3);
+
+  if (!correctOption) {
+    throw new BadQuestionError(template, {
+      message: "No correct option found",
+      variantId: variant.id,
+      options,
+    });
+  }
+
+  if (wrongOptions.length < 3) {
+    throw new BadQuestionError(template, {
+      message: "Not enough wrong options found",
+      variantId: variant.id,
+      options,
+    });
+  }
+
+  return {
+    questionId: getRandomId(),
+    templateId: template.id,
+    variantId: variant.id,
+    seed: randomSeed,
+    type: "multiple-choice",
+    question: variant.question,
+    annexes: variant.annexes,
+    correctOptionId: correctOption.id,
+    options: shuffler([correctOption, ...wrongOptions]).map((opt) => ({
+      id: opt.id,
+      text: opt.text,
+      why: opt.why,
+    })),
+    explanation: [variant.explanation, template.explanation]
+      .filter(Boolean)
+      .join("\n\n---\n\n"),
+  };
+};
+
+const getQuestionMultipleChoiceFromDefinition = ({
+  template,
+  variant,
+  randomSeed,
+}: {
+  template: QuestionBankQuestionTemplate;
+  variant: QuestionVariantDefinition;
+  randomSeed: string;
+}): TestQuestionMultipleChoice => {
+  const shuffler = getRandomShuffler(randomSeed);
+  const options = shuffler(variant.options);
+  const fakeOptions = shuffler(variant.fakeOptions);
+
+  const correctOption = {
+    id: options[0].id,
+    text: options[0].definition,
+    why: ``
+  };
+
+  const wrongOptions = [
+    ...options
+      .filter((option) => option.id !== correctOption.id)
+      .map((opt) => ({
+        id: opt.id,
+        text: opt.definition,
+        why: `Correct definition for "${opt.term}".`
+      })),
+    ...fakeOptions
+      .map((opt) => ({
+        id: opt.id,
+        text: opt.definition,
+        why: `This definition does not match any term in this question.`
+      })) 
+  ];
+
+  const autoExplanation = [
+    "| Term | Definition |",
+    "|------|------------|",
+    ...variant.options
+      .map(opt => `| ${opt.term} | ${opt.definition}`)
+      .join("\n")
+  ]
+
+  if (!correctOption) {
+    throw new BadQuestionError(template, {
+      message: "No correct option found",
+      variantId: variant.id,
+      options,
+    });
+  }
+
+  if (wrongOptions.length < 3) {
+    throw new BadQuestionError(template, {
+      message: "Not enough wrong options found",
+      variantId: variant.id,
+      options,
+    });
+  }
+
+  return {
+    questionId: getRandomId(),
+    templateId: template.id,
+    variantId: variant.id,
+    seed: randomSeed,
+    type: "multiple-choice",
+    question: variant.question,
+    annexes: variant.annexes,
+    correctOptionId: correctOption.id,
+    options: shuffler([correctOption, ...wrongOptions]),
+    explanation: [autoExplanation, template.explanation]
+      .filter(Boolean)
+      .join("\n\n---\n\n"),
+  };
+};
+
+const getQuestionMultipleChoiceFromMultipleCorrect = ({
+  template,
+  variant,
+  randomSeed,
+}: {
+  template: QuestionBankQuestionTemplate;
+  variant: QuestionVariantMultipleCorrect;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
   const shuffler = getRandomShuffler(randomSeed);
@@ -78,11 +206,13 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
     {
       id: "true",
       text: "True",
+      correct: variant.answer,
       why: "",
     },
     {
       id: "false",
       text: "False",
+      correct: !variant.answer,
       why: "",
     },
   ];
@@ -186,31 +316,6 @@ const getQuestionMultipleChoiceFromOneTwo = ({
   };
 };
 
-const getQuestionMultipleChoiceFromCalculation = ({
-  template,
-  variant,
-  randomSeed,
-}: {
-  template: QuestionBankQuestionTemplate;
-  variant: QuestionVariantCalculation;
-  randomSeed: string;
-}): TestQuestionMultipleChoice => {
-  return {
-    questionId: getRandomId(),
-    templateId: template.id,
-    variantId: variant.id,
-    seed: randomSeed,
-    type: "multiple-choice",
-    question: "",
-    options: [],
-    annexes: [],
-    correctOptionId: "",
-    explanation: [variant.explanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
-  };
-};
-
 export const getQuestion = (
   template: QuestionBankQuestionTemplate,
   options: {
@@ -247,11 +352,17 @@ export const getQuestion = (
         variant,
         randomSeed,
       });
-    case "calculation":
-      return getQuestionMultipleChoiceFromCalculation({
+    case "definition":
+      return getQuestionMultipleChoiceFromDefinition({
         template: template,
         variant,
         randomSeed,
       });
+    case "multiple-correct": 
+     return getQuestionMultipleChoiceFromMultipleCorrect({
+      template: template,
+      variant,
+      randomSeed,
+     });
   }
 };

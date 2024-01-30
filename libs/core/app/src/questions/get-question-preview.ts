@@ -1,6 +1,8 @@
 import type {
   QuestionBankQuestionTemplate,
   QuestionVariant,
+  QuestionVariantDefinition,
+  QuestionVariantMultipleCorrect,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
@@ -17,7 +19,7 @@ const getQuestionVariantSimplePreview = (
   return `${variant.question}\n\n${options.join("\n")}`;
 };
 
-const getQuestionVariantTrueOrFalse = (
+const getQuestionVariantTrueOrFalsePreview = (
   variant: QuestionVariantTrueOrFalse,
 ): string => {
   const answer = variant.answer ? ":white_check_mark: True" : ":x: False";
@@ -43,6 +45,29 @@ const getQuestionVariantOneTwoPreview = (
   return `${variant.question}\n\n${correctOptions}\n${wrongOptions}`;
 };
 
+const getQuestionVariantDefinitionPreview = (
+  variant: QuestionVariantDefinition
+) : string => {
+  return [
+    variant.question,
+    "\n",
+    ...variant.options.map((opt) => `- ${opt.term} - ${opt.definition}`),
+  ].join("\n")
+}
+
+const getQuestionMultipleCorrectPreview = (
+  variant: QuestionVariantMultipleCorrect
+) : string => {
+  return [
+    variant.question,
+    "\n",
+    ...variant.options.map((opt) => {
+      const prefix = opt.correct ?  ":white_check_mark:" : ":x:";
+      return `- ${prefix} ${opt.text}`
+    })
+  ].join("\n");
+}
+
 export const getVariantPreview = (variant: QuestionVariant) => {
   switch (variant.type) {
     case "simple":
@@ -50,9 +75,11 @@ export const getVariantPreview = (variant: QuestionVariant) => {
     case "one-two":
       return getQuestionVariantOneTwoPreview(variant);
     case "true-or-false":
-      return getQuestionVariantTrueOrFalse(variant);
-    case "calculation":
-      return "Calculation questions are not supported yet";
+      return getQuestionVariantTrueOrFalsePreview(variant);
+    case "definition":
+      return getQuestionVariantDefinitionPreview(variant);
+    case "multiple-correct":
+      return getQuestionMultipleCorrectPreview(variant);
   }
 };
 

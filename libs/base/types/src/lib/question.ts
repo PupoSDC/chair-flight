@@ -2,9 +2,10 @@ import type { AnnexId, QuestionOptionId, QuestionVariantId } from "./ids";
 
 export type QuestionVariantType =
   | "simple"
+  | "definition"
+  | "true-or-false" 
   | "one-two"
-  | "calculation"
-  | "true-or-false";
+  | "multiple-correct"
 
 export type QuestionVariantGeneric<T extends QuestionVariantType> = {
   type: T;
@@ -24,6 +25,19 @@ export type QuestionVariantSimple = QuestionVariantGeneric<"simple"> & {
   explanation: string;
 };
 
+export type QuestionVariantDefinition = QuestionVariantGeneric<"definition"> & {
+  question: string;
+  options: Array<{
+    id: QuestionOptionId; 
+    term: string, 
+    definition: string
+  }>;
+  fakeOptions:  Array<{
+    id: QuestionOptionId; 
+    definition: string, 
+  }>;
+}
+
 export type QuestionVariantTrueOrFalse =
   QuestionVariantGeneric<"true-or-false"> & {
     question: string;
@@ -40,22 +54,20 @@ export type QuestionVariantOneTwo = QuestionVariantGeneric<"one-two"> & {
   explanation: string;
 };
 
-export type QuestionVariantCalculation =
-  QuestionVariantGeneric<"calculation"> & {
-    question: string;
-    explanation: string;
-    correct: {
-      function: string;
-      why: string;
-    };
-    functionIncorrect: Array<{
-      function: string;
-      why: string;
-    }>;
-  };
+export type QuestionVariantMultipleCorrect = QuestionVariantGeneric<"multiple-correct"> & {
+  question: string;
+  options: Array<{
+    text: string;
+    correct: boolean;
+    why: string;
+  }>;
+}
 
 export type QuestionVariant =
-  | QuestionVariantOneTwo
   | QuestionVariantSimple
+  | QuestionVariantDefinition
+  | QuestionVariantOneTwo
   | QuestionVariantTrueOrFalse
-  | QuestionVariantCalculation;
+  | QuestionVariantMultipleCorrect
+
+
