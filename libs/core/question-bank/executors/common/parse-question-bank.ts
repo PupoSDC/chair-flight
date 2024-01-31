@@ -1,13 +1,13 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
-import { QuestionBankDocSchema } from "../../src/question-bank-docs-meta-schema";
+import { QuestionBankDocSchema } from "../../src/schemas/question-bank-docs-meta-schema";
 import type {
-  QuestionBankQuestionTemplate,
+  QuestionTemplate,
   QuestionBankQuestionTemplateJson,
   QuestionBankLearningObjective,
-  QuestionBankAnnexesJson,
-  QuestionBankAnnexes,
+  AnnexJson,
+  Annex,
   QuestionBankSubjectJson,
   QuestionBankFlashcardContent,
   QuestionBankFlashcardCollection,
@@ -15,7 +15,7 @@ import type {
   QuestionBankCourseJson,
   QuestionBankCourse,
   QuestionBankSubject,
-  QuestionBankDoc,
+  Doc,
 } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
 
@@ -97,9 +97,9 @@ export const readAllQuestionsFromFs = async ({
 }: {
   questionsFolder: string;
   projectName: string;
-}): Promise<QuestionBankQuestionTemplate[]> => {
+}): Promise<QuestionTemplate[]> => {
   const files = await fs.readdir(questionsFolder);
-  const questions: QuestionBankQuestionTemplate[] = [];
+  const questions: QuestionTemplate[] = [];
   for (const file of files) {
     const filePath = path.join(questionsFolder, file);
 
@@ -177,10 +177,10 @@ export const readAllAnnexesFromFs = async ({
 }: {
   annexesJson: string;
   outputAnnexesRelativeDir: string;
-}): Promise<QuestionBankAnnexes[]> => {
+}): Promise<Annex[]> => {
   const file = await fs.readFile(annexesJson, "utf-8");
-  const json = JSON.parse(file) as QuestionBankAnnexesJson[];
-  const allMedia = json.map<QuestionBankAnnexes>((m) => ({
+  const json = JSON.parse(file) as AnnexJson[];
+  const allMedia = json.map<Annex>((m) => ({
     ...m,
     href: `/${outputAnnexesRelativeDir}/${m.id}.${m.format}`,
     subjects: [],
@@ -224,7 +224,7 @@ export const readAllDocsFromFs = async ({
   docsFolder: string;
 }) => {
   const posts = await fs.readdir(docsFolder);
-  const parsedPosts: QuestionBankDoc[] = [];
+  const parsedPosts: Doc[] = [];
 
   for (const post of posts) {
     const postFolder = path.join(docsFolder, post);

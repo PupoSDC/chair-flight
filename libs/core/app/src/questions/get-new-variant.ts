@@ -37,14 +37,14 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
         firstIncorrectStatements: [""],
         secondIncorrectStatements: [""],
       };
-    case "true-or-false": 
+    case "true-or-false":
       return {
         ...common,
         type: "true-or-false",
         question: "",
         answer: true,
-        explanation: "string"
-      }
+        explanation: "string",
+      };
     case "definition":
       return {
         ...common,
@@ -56,18 +56,17 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
           term: "",
           definition: "",
         })),
-
-      }
+      };
     case "multiple-correct":
       return {
         ...common,
-        options:  [1, 2, 3, 4].map((i) => ({
+        options: [1, 2, 3, 4].map((i) => ({
           text: "",
           correct: i === 1,
           why: "",
         })),
         type: "multiple-correct",
         question: "",
-      } 
+      };
   }
 };

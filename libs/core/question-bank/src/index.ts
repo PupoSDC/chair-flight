@@ -1,7 +1,7 @@
-import { QuestionBank } from "./question-bank";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import { QuestionBank } from "./providers/question-bank";
+import type { BankName } from "./types/bank";
 
-export const questionBanks: Record<QuestionBankName, QuestionBank> = {
+export const questionBanks: Record<BankName, QuestionBank> = {
   type: new QuestionBank("type"),
   atpl: new QuestionBank("atpl"),
   prep: new QuestionBank("prep"),

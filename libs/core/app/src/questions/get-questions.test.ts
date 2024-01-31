@@ -60,6 +60,4 @@ describe("getQuestions", () => {
 
     expect(questionA).toEqual(questionB);
   });
-
-  
 });

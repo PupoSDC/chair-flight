@@ -8,14 +8,12 @@ import type {
   TestQuestion,
   TestQuestionMultipleChoice,
   QuestionBankQuestionTemplate,
-  TestQuestionType,
- // QuestionVariantCalculation,
+  TestQuestionType, // QuestionVariantCalculation,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
   QuestionVariantDefinition,
-  QuestionVariantMultipleCorrect,
- // QuestionVariantMultipleCorrect,
+  QuestionVariantMultipleCorrect, // QuestionVariantMultipleCorrect,
 } from "@chair-flight/base/types";
 
 const getQuestionMultipleChoiceFromSimple = ({
@@ -84,7 +82,7 @@ const getQuestionMultipleChoiceFromDefinition = ({
   const correctOption = {
     id: options[0].id,
     text: options[0].definition,
-    why: ``
+    why: ``,
   };
 
   const wrongOptions = [
@@ -93,23 +91,22 @@ const getQuestionMultipleChoiceFromDefinition = ({
       .map((opt) => ({
         id: opt.id,
         text: opt.definition,
-        why: `Correct definition for "${opt.term}".`
+        why: `Correct definition for "${opt.term}".`,
       })),
-    ...fakeOptions
-      .map((opt) => ({
-        id: opt.id,
-        text: opt.definition,
-        why: `This definition does not match any term in this question.`
-      })) 
+    ...fakeOptions.map((opt) => ({
+      id: opt.id,
+      text: opt.definition,
+      why: `This definition does not match any term in this question.`,
+    })),
   ];
 
   const autoExplanation = [
     "| Term | Definition |",
     "|------|------------|",
     ...variant.options
-      .map(opt => `| ${opt.term} | ${opt.definition}`)
-      .join("\n")
-  ]
+      .map((opt) => `| ${opt.term} | ${opt.definition}`)
+      .join("\n"),
+  ];
 
   if (!correctOption) {
     throw new BadQuestionError(template, {
@@ -358,11 +355,11 @@ export const getQuestion = (
         variant,
         randomSeed,
       });
-    case "multiple-correct": 
-     return getQuestionMultipleChoiceFromMultipleCorrect({
-      template: template,
-      variant,
-      randomSeed,
-     });
+    case "multiple-correct":
+      return getQuestionMultipleChoiceFromMultipleCorrect({
+        template: template,
+        variant,
+        randomSeed,
+      });
   }
 };

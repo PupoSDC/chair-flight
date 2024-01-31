@@ -1,6 +1,6 @@
+import { z } from "zod";
 import { QuestionVariantOneTwo } from "@chair-flight/base/types";
 import { IsEqual, assertType } from "@chair-flight/base/utils";
-import { z } from "zod";
 
 export const questionOneTwoSchema = z.object({
   type: z.literal("one-two"),
@@ -14,7 +14,6 @@ export const questionOneTwoSchema = z.object({
   externalIds: z.string().array(),
   explanation: z.string(),
 });
-
 
 type SchemaType = z.infer<typeof questionOneTwoSchema>;
 assertType<IsEqual<SchemaType, QuestionVariantOneTwo>>();

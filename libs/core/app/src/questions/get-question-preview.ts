@@ -46,27 +46,27 @@ const getQuestionVariantOneTwoPreview = (
 };
 
 const getQuestionVariantDefinitionPreview = (
-  variant: QuestionVariantDefinition
-) : string => {
+  variant: QuestionVariantDefinition,
+): string => {
   return [
     variant.question,
     "\n",
     ...variant.options.map((opt) => `- ${opt.term} - ${opt.definition}`),
-  ].join("\n")
-}
+  ].join("\n");
+};
 
 const getQuestionMultipleCorrectPreview = (
-  variant: QuestionVariantMultipleCorrect
-) : string => {
+  variant: QuestionVariantMultipleCorrect,
+): string => {
   return [
     variant.question,
     "\n",
     ...variant.options.map((opt) => {
-      const prefix = opt.correct ?  ":white_check_mark:" : ":x:";
-      return `- ${prefix} ${opt.text}`
-    })
+      const prefix = opt.correct ? ":white_check_mark:" : ":x:";
+      return `- ${prefix} ${opt.text}`;
+    }),
   ].join("\n");
-}
+};
 
 export const getVariantPreview = (variant: QuestionVariant) => {
   switch (variant.type) {

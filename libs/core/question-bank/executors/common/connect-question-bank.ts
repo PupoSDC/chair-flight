@@ -4,11 +4,11 @@ import type {
   QuestionBankCourse,
   QuestionBankFlashcardCollection,
   QuestionBankLearningObjective,
-  QuestionBankAnnexes,
-  QuestionBankQuestionTemplate,
+  Annex,
+  QuestionTemplate,
   QuestionBankSubject,
   SubjectId,
-  QuestionBankDoc,
+  Doc,
 } from "@chair-flight/base/types";
 
 export const connectQuestionBank = ({
@@ -18,13 +18,13 @@ export const connectQuestionBank = ({
   annexes,
   docs,
 }: {
-  questions: QuestionBankQuestionTemplate[];
+  questions: QuestionTemplate[];
   learningObjectives: QuestionBankLearningObjective[];
   courses: QuestionBankCourse[];
   subjects: QuestionBankSubject[];
-  annexes: QuestionBankAnnexes[];
+  annexes: Annex[];
   flashcards: QuestionBankFlashcardCollection[];
-  docs: QuestionBankDoc[];
+  docs: Doc[];
 }) => {
   const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
   const subjectsMap = makeMap(subjects, (s) => s.id);
