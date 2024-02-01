@@ -72,6 +72,27 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
   return questions;
 };
 
+export const readAllAnnexesFromFs = async (contentFolder: string) => {
+  const files = await getAllFiles(contentFolder, "annexes.json");
+  const annexes : Annex[] = [];
+
+  for (const annexPath of files) {
+    const json = await fs.readFile(annexPath, "utf-8");
+    const jsonData = JSON.parse(json) as Annex[];
+    const annexData = jsonData.map((a) => ({
+      ...a,
+      doc: "",
+      questions: [],
+      subjects: [],
+      learningObjectives: [],
+    }));
+
+    annexes.push(...annexData);
+  }
+
+  return annexes;
+};
+
 export const readAllLosFromFs = async (losJson: string) => {
   const fileBuffer = await fs.readFile(losJson, "utf-8");
   const los = JSON.parse(fileBuffer) as LearningObjective[];
@@ -87,18 +108,6 @@ export const readAllSubjectsFromFs = async (subjectsJson: string) => {
 export const readAllCoursesFromFs = async (coursesJson: string) => {
   const fileBuffer = await fs.readFile(coursesJson, "utf-8");
   return JSON.parse(fileBuffer) as Course[];
-};
-
-export const readAllAnnexesFromFs = async (annexesJson: string) => {
-  const fileBuffer = await fs.readFile(annexesJson, "utf-8");
-  const annexes = JSON.parse(fileBuffer) as Annex[];
-  return annexes.map((s) => ({
-    ...s,
-    doc: "",
-    questions: [],
-    subjects: [],
-    learningObjectives: [],
-  }));
 };
 
 export const readAllFlashcardsFromFs = async (

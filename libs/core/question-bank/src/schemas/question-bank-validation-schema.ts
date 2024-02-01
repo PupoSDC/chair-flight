@@ -114,7 +114,7 @@ export const questionBankValidation = z
         });
       }
 
-      if (!subjectIds[d.subject]) {
+      if (!subjectIds[d.subject] && d.subject !== "root") {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
           message: `Subject ${d.subject} does not exist`,

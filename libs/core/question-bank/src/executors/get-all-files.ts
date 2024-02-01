@@ -18,7 +18,7 @@ export const getAllFiles = async (relativePath: string, targetFileName: string) 
         stack.push(newPath);
       }
 
-      if (file === targetFileName) {
+      if (file.endsWith(targetFileName)) {
         result.push(newPath);
       }
     }

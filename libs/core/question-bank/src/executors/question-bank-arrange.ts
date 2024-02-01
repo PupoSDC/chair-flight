@@ -26,9 +26,11 @@ export const arrangeQuestions = ({
 export const arrangeAnnexes = ({
     annexes,
     docs,
+    annexRoot,
 } : {
     annexes: Annex[],
     docs: Doc[],
+    annexRoot: string,
 }) => {
     const docsMap = makeMap(docs, doc => doc.id);
 
@@ -40,7 +42,7 @@ export const arrangeAnnexes = ({
         }
 
         if (annex.doc  === "root") {
-            const fileName = "/annexes.json";
+            const fileName = annexRoot;
             sum[fileName] ??= [];
             sum[fileName].push(cleanAnnex);
         } else {

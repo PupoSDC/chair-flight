@@ -1,1 +1,507 @@
-[]
+[
+  {
+    "id": "GBSX2z9F",
+    "relatedQuestions": [],
+    "externalIds": [
+      "AVEXAM-48287",
+      "ATPLQ-214322"
+    ],
+    "annexes": [
+      "499a8e5c64a6b4d525b21b574f1c2098"
+    ],
+    "learningObjectives": [
+      "021.09.04.01.10"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 021-35.\nWhen GEN 1 has failed, DC BUS 1...",
+      "options": [
+        {
+          "id": "AOAOC7XOS2",
+          "text": "can be fed via GEN 2, GB 2, BTB 2, BTB 1, TB1, and TRU1.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AGF73MZTTF",
+          "text": "can be fed via ESS TRU.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARNQ8SH8BU",
+          "text": "can be fed via the ESS DC BUS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADJ1CMZAHQ",
+          "text": "cannot be fed anymore.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "eUjlEwUW",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-213851",
+      "AVEXAM-2433"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.02"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure. \n In flight, the AC ESS BUS can be fed by the EMER GEN, when: (NB: all contactors not mentioned are assumed to remain open)",
+      "options": [
+        {
+          "id": "AY2PK7O2FG",
+          "text": "C4.1 is closed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AF9KAID61Z",
+          "text": "C4.1 and C5.2 are closed, via the DC ESS BUS and the static inverter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A6ZUSFIRZ5",
+          "text": "C4.1 and C5.2 are closed, via the DC BAT BUS and the static inverter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXTXXLKMNB",
+          "text": "C4.1 is closed, via the static inverter.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "tJhINll3",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-219331"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.10"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to the bus bar loads when the associated generator fails?",
+      "options": [
+        {
+          "id": "AS3OLT1YOL",
+          "text": "The bus bar is isolated and the loads are fed by another generator.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A5RSJ330AM",
+          "text": "The bus bar has its own self-powering generator for the rest of the flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AFNZUDBA58",
+          "text": "The bus bar automatically disconnects from the system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ABCK3N56A6",
+          "text": "The bus bar and associated loads are isolated.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "HFWmnawv",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-105318",
+      "AVEXAM-21846"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.03"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft electrical circuit which uses the aircraft structure as a return path to earth, may be defined as a",
+      "options": [
+        {
+          "id": "ATE1D6T2BF",
+          "text": "single pole circuit.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AZNZZ0EX8F",
+          "text": "double pole circuit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQXGUBLD4M",
+          "text": "semi-negative system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AE8QL93PJ9",
+          "text": "complete negative system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "NphzYSS9",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-219601",
+      "BGS-210417",
+      "ATPLGS-127476",
+      "AVEXAM-52860"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.01"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A bus bar is:",
+      "options": [
+        {
+          "id": "A0R7EWJR4I",
+          "text": "a distribution means for electrical power.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AN8N3DULOW",
+          "text": "a device permitting operation of two or more switches together.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AKEHB1G5RR",
+          "text": "the stator of a moving coil instrument.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "APRGJSSA8B",
+          "text": "a device which may only be used in DC circuits.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "a7dqx7tZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "AVEXAM-27001",
+      "ATPLGS-105343"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.01"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Because of the connection in parallel of electrical equipment on an AC busbar, isolation of individual equipments:",
+      "options": [
+        {
+          "id": "A09NS4C5W1",
+          "text": "decreases the busbar current consumption.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AS585SA71F",
+          "text": "decreases the busbar voltage.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ALMRT6R5SJ",
+          "text": "increases the busbar current consumption.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHB800K4Q0",
+          "text": "increases the busbar voltage.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "kqPCMrc6",
+    "relatedQuestions": [],
+    "externalIds": [
+      "AVEXAM-81175",
+      "ATPLGS-105335"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.07"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Load shedding means:",
+      "options": [
+        {
+          "id": "AQ26V2GBD3",
+          "text": "temporary or permanent switching off of certain electric users to avoid overload of electric generators.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUNPRPZMHO",
+          "text": "a procedure used in control systems to reduce the stick forces.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ASDXJ5T0JN",
+          "text": "reduction of airloads on the flaps by means of the flap load relief valve.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADZN1H511K",
+          "text": "to leave behind extra cargo if the centre of gravity moves outside limits.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "bA6aWTnZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-105332",
+      "ATPLQ-211328"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.02"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The so called HOT BUSSES or DIRECT BUSSES are",
+      "options": [
+        {
+          "id": "AJHTQLPYSY",
+          "text": "directly connected to the battery.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AA9K3JIY5C",
+          "text": "providing an alternate current (AC).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AU7ST8688O",
+          "text": "kept in operating conditions by an electrical resistance in the case of energy failure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVQX13QF10",
+          "text": "automatically connected to the battery if generators have failed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "wHxKLoTK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "AVEXAM-52487"
+    ],
+    "annexes": [
+      "e25e681b76b4b209f78d5d527e0ab4eb"
+    ],
+    "learningObjectives": [
+      "021.09.04.01.02"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 021-34.\nWhat is located in the box between DC ESS BUS and AC ESS BUS (marked with red number \"1\")?",
+      "options": [
+        {
+          "id": "AJPVVETJZ3",
+          "text": "Static Inverter",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AE6F1NZ0C0",
+          "text": "Diode",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARIIK0TDWF",
+          "text": "Generator",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ACE3NSQ8IK",
+          "text": "External Power",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  },
+  {
+    "id": "lhcS3LBD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "BGS-211911",
+      "ATPLQ-215389",
+      "ATPLGS-119640"
+    ],
+    "annexes": [],
+    "learningObjectives": [
+      "021.09.04.01.03"
+    ],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Electrical bonding of an aircraft is used to",
+      "options": [
+        {
+          "id": "A55NYEWTOW",
+          "text": "equalise the electrical potential of the different aircraft parts.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A6BM3ODL7Q",
+          "text": "ensure the electrical potential of the aircraft structure remains at 0 volts.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AM9R1V09RW",
+          "text": "eliminate the need for grounding the aircraft during refuelling.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A6JKZ27MEA",
+          "text": "prevent the aircraft being struck by lightning.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "docId": "",
+    "subject": "",
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.09/021.09.04/021.09.04.01/questions.json",
+    "doc": "021.09.04.01",
+    "subjects": [
+      "021"
+    ]
+  }
+]
