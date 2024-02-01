@@ -65,19 +65,13 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
 
   await Promise.all(
     Object.entries(annexFiles).map(([fileName, annexes]) =>
-      fs.writeFile(
-        path.join(contentFolder, fileName),
-        JSON.stringify(annexes, null, 2),
-      ),
+      fs.writeFile(fileName, JSON.stringify(annexes, null, 2)),
     ),
   );
 
   await Promise.all(
     Object.entries(questionFiles).map(([fileName, questions]) =>
-      fs.writeFile(
-        path.join(contentFolder, fileName),
-        JSON.stringify(questions, null, 2),
-      ),
+      fs.writeFile(fileName, JSON.stringify(questions, null, 2)),
     ),
   );
 
