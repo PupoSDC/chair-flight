@@ -60,10 +60,26 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const annexFiles =  arrangeAnnexes({ annexes, docs });
   const questionFiles = arrangeQuestions({ questionTemplates, docs });
 
-  console.log(
-    oldAnnexes,
-    oldQuestions,
-  )
+  await Promise.all(oldAnnexes.map((file) => fs.rm(file)));
+  await Promise.all(oldQuestions.map((file) => fs.rm(file)));
+
+  await Promise.all(
+    Object.entries(annexFiles).map(([fileName, annexes]) =>
+      fs.writeFile(
+        path.join(contentFolder, fileName),
+        JSON.stringify(annexes, null, 2),
+      ),
+    ),
+  );
+
+  await Promise.all(
+    Object.entries(questionFiles).map(([fileName, questions]) =>
+      fs.writeFile(
+        path.join(contentFolder, fileName),
+        JSON.stringify(questions, null, 2),
+      ),
+    ),
+  );
 
   return {
     success: true,
