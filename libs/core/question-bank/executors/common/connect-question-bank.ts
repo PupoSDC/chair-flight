@@ -1,29 +1,20 @@
 import { makeMap } from "@chair-flight/base/utils";
-import type {
-  LearningObjectiveId,
-  QuestionBankCourse,
-  QuestionBankFlashcardCollection,
-  QuestionBankLearningObjective,
-  Annex,
-  QuestionTemplate,
-  QuestionBankSubject,
-  SubjectId,
-  Doc,
-} from "@chair-flight/base/types";
+import { Annex, Course, Doc, LearningObjective, LearningObjectiveId, QuestionTemplate, Subject, SubjectId } from "../../src/types";
+import { DocId } from "@chair-flight/base/types";
 
 export const connectQuestionBank = ({
-  questions,
+  questionTemplates,
   learningObjectives,
   subjects,
+  courses,
   annexes,
   docs,
 }: {
-  questions: QuestionTemplate[];
-  learningObjectives: QuestionBankLearningObjective[];
-  courses: QuestionBankCourse[];
-  subjects: QuestionBankSubject[];
+  questionTemplates: QuestionTemplate[];
+  learningObjectives: LearningObjective[];
+  courses: Course[]
+  subjects: Subject[];
   annexes: Annex[];
-  flashcards: QuestionBankFlashcardCollection[];
   docs: Doc[];
 }) => {
   const learningObjectivesMap = makeMap(learningObjectives, (lo) => lo.id);
@@ -54,84 +45,121 @@ export const connectQuestionBank = ({
     {} as Record<LearningObjectiveId, SubjectId>,
   );
 
-  // Connect questions to annexes
-  questions.forEach((q) => {
-    Object.values(q.variants).forEach((v) => {
-      v.annexes.forEach((a) => {
-        const annex = a.split("/").pop()?.split(".")[0] ?? "";
-        const thisMedia = annexes.find((m) => m.id === annex);
-        if (thisMedia) {
-          thisMedia.questions = [...new Set([...thisMedia.questions, q.id])];
-          thisMedia.variants = [...new Set([...thisMedia.variants, v.id])];
-          thisMedia.learningObjectives = [
-            ...new Set([
-              ...thisMedia.learningObjectives,
-              ...q.learningObjectives,
-            ]),
-          ];
+  const learningObjectivesToDoc = learningObjectives.reduce(
+    (sum, lo) => {
+      let parentId: string = lo.id;
+      while (parentId) {
+        const doc = docsMap[parentId];
+        const parentLo = learningObjectivesMap[parentId];
+        if (doc) {
+          sum[lo.id] = doc.id;
+          break;
         }
-      });
+        if (parentLo) {
+          parentId = parentLo.parentId;
+          continue;
+        }
+        throw new Error(
+          `Lo to Doc mapping entered an infinite loop. LO = ${lo.id}, parentId = ${parentId}`,
+        );
+      }
+
+      return sum;
+    },
+    {} as Record<LearningObjectiveId, DocId>,
+  );
+
+  questionTemplates.forEach((q) => {
+
+    // Connect Annexes to Questions, Los, and Subjects
+    q.annexes.forEach((a) => {
+      const annex = a.split("/").pop()?.split(".")[0] ?? "";
+      const thisAnnex = annexes.find((m) => m.id === annex) as Annex;
+      if (thisAnnex) {
+        thisAnnex.questions ??= [];
+        thisAnnex.questions = [
+          ...new Set([...thisAnnex.questions, q.id])
+        ];
+
+        thisAnnex.learningObjectives ??= [];
+        thisAnnex.learningObjectives = [
+          ...new Set([
+            ...thisAnnex.learningObjectives,
+            ...q.learningObjectives,
+          ]),
+        ];
+
+        thisAnnex.subjects ??= [];
+        thisAnnex.subjects = [
+          ...new Set(
+            thisAnnex.learningObjectives
+              .map((v) => learningObjectiveToSubject[v])
+              .filter(Boolean),
+          ),
+        ];
+      }
     });
-  });
 
-  // Connect subjects with annexes
-  annexes.forEach((a) => {
-    a.subjects = [
-      ...new Set(
-        a.learningObjectives
-          .map((v) => learningObjectiveToSubject[v])
-          .filter(Boolean),
-      ),
-    ];
-  });
-
-  // Connect learning objectives to questions
-  questions.forEach((q) => {
+    // Connect learning objective to question
     q.learningObjectives.forEach((lo) => {
       if (!learningObjectivesMap[lo]) return;
-      learningObjectivesMap[lo].questions = [
-        ...new Set([...learningObjectivesMap[lo].questions, q.id]),
-      ];
-      learningObjectivesMap[lo].nestedQuestions =
-        learningObjectivesMap[lo].questions;
+      const thisLo = learningObjectivesMap[lo];
+      thisLo.questions ??= [];
+      thisLo.questions = [...new Set([...thisLo.questions, q.id]),];
+      thisLo.nestedQuestions = thisLo.questions;
     });
+
+    // Connect question to subject
+    q.subjects = [...new Set([
+      ...q.learningObjectives.map((lo) => learningObjectiveToSubject[lo])
+    ])];
+
+    q.docId = learningObjectivesToDoc[q.learningObjectives[0]] ?? "";
+
+    // Connect question to doc
+    if (q.docId) {
+      const doc = docsMap[q.docId];
+      doc.questions ??= [];
+      doc.questions = [...new Set([...doc.questions, q.id])];
+    }
   });
 
-  // Bubble up learning Objectives
+  // Bubble up learning Objectives questions and courses
   [...learningObjectives].reverse().forEach((lo) => {
-    const parent = learningObjectivesMap[lo.parentId];
-    if (!parent) return;
-
-    parent.courses = [...new Set([...parent.courses, ...lo.courses])];
-    parent.nestedQuestions = [
-      ...new Set([...parent.nestedQuestions, ...lo.nestedQuestions]),
-    ];
-  });
-
-  // Bubble up to subjects
-  subjects.forEach((s) => {
-    s.learningObjectives.forEach((loId) => {
-      const lo = learningObjectivesMap[loId];
-      s.numberOfQuestions += lo.nestedQuestions.length + lo.questions.length;
-    });
-  });
-
-  // Count all question in a Subject
-  subjects.forEach((s) => {
-    s.numberOfQuestions = s.learningObjectives.reduce(
-      (s, lo) => s + learningObjectivesMap[lo]?.nestedQuestions?.length ?? 0,
-      0,
-    );
-  });
+    const thisLo = lo;
+    const loParent = learningObjectivesMap[lo.parentId];
+    const subjectParent = subjectsMap[lo.parentId];
+    if (loParent) {
+      loParent.courses = [
+        ...new Set([...loParent.courses, ...lo.courses])
+      ];
+      loParent.nestedQuestions = [
+        ...new Set([...loParent.nestedQuestions, ...thisLo.nestedQuestions]),
+      ];
+      return;
+    }
+    if (subjectParent) {
+      subjectParent.courses = [
+        ...new Set([...subjectParent.courses, ...lo.courses])
+      ];
+      subjectParent.learningObjectives = [
+        ...new Set([...subjectParent.learningObjectives, thisLo.id])
+      ];
+      subjectParent.numberOfQuestions += thisLo.nestedQuestions?.length ?? 0;
+      return;
+    }
+  });    
 
   // Connect docs
   [...docs].reverse().forEach((d) => {
-    if (!d.parentId) return;
-    docsMap[d.parentId].children.push(d.id);
+    if (!d.parent) return;
+    docsMap[d.parent].children.push(d.id);
   });
 
   // Connect docs to Subjects
   docs.forEach((doc) => {
-    doc.subjectId = learningObjectiveToSubject[doc.learningObjectiveId];
+    doc.subject = (doc.id.split(".").length === 1) 
+      ? doc.id 
+      : learningObjectiveToSubject[doc.id];
   });
 };

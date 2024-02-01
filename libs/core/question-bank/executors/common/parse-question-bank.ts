@@ -1,22 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
-import { QuestionBankDocSchema } from "../../src/schemas/question-bank-docs-meta-schema";
-import type {
-  QuestionTemplate,
-  QuestionBankQuestionTemplateJson,
-  QuestionBankLearningObjective,
-  AnnexJson,
-  Annex,
-  QuestionBankSubjectJson,
-  QuestionBankFlashcardContent,
-  QuestionBankFlashcardCollection,
-  QuestionBankLearningObjectiveJson,
-  QuestionBankCourseJson,
-  QuestionBankCourse,
-  QuestionBankSubject,
-  Doc,
-} from "@chair-flight/base/types";
+import { Annex, Course, Doc, FlashcardCollection, FlashcardContent, LearningObjective, QuestionTemplate, Subject } from "../../src/types";
 import type { ExecutorContext } from "@nx/devkit";
 
 const MATTER_REGEX =
@@ -31,180 +16,111 @@ const exists = async (f: string) => {
   }
 };
 
-export const getPaths = ({ context }: { context: ExecutorContext }) => {
-  const projects = context.workspace?.projects ?? {};
-  const nextProjectName = "next-app";
-  /** i.e.: `content-question-bank-atpl` */
-  const projectName = context.projectName ?? "";
-  /** i.e.: `libs/content/content-question-bank-atpl` */
-  const contentRoot = projects[projectName]?.root ?? "";
-  /** i.e.: `libs/content/content-question-bank-atpl/content/annexes` */
-  const annexesFolder = path.join(contentRoot, "annexes");
-  /** i.e.: `apps/next-app */
-  const outputProject = projects[nextProjectName]?.root ?? "";
-  /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
-  const outputDir = path.join(outputProject, "public", "content", projectName);
+const getAllFiles = async (relativePath: string, targetFileName: string) => {
+  const result: string[] = [];
+  const stack: string[] = [relativePath];
 
-  return {
-    /** i.e.: `content-question-bank-atpl` */
-    projectName: projectName,
-    /** i.e.: `libs/content/content-question-bank-atpl` */
-    questionsFolder: path.join(contentRoot, "questions"),
-    /** i.e.: `libs/content/content-question-bank-atpl/content/flashcards` */
-    flashCardsFolder: path.join(contentRoot, "flashcards"),
-    /** i.e.: `libs/content/content-question-bank-atpl/content/annexes` */
-    annexesFolder: path.join(contentRoot, "annexes"),
-    /** i.e.: `libs/content/content-question-bank-atpl/content/annexes/images` */
-    annexesImagesFolder: path.join(contentRoot, "annexes", "images"),
-    /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
-    annexesJson: path.join(annexesFolder, "annexes.json"),
-    /** i.e.: `libs/content/question-bank-atpl/content/docs` */
-    docsFolder: path.join(contentRoot, "docs"),
-    /** i.e.: `libs/content/question-bank-atpl/content/subjects/subjects.json` */
-    subjectsJson: path.join(contentRoot, "subjects", "subjects.json"),
-    /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/courses.json` */
-    coursesJson: path.join(contentRoot, "subjects", "courses.json"),
-    /** i.e.: `libs/content/content-question-bank-atpl/content/subjects/learning-objectives.json` */
-    losJson: path.join(contentRoot, "subjects", "learning-objectives.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
-    outputDir: outputDir,
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/questions.json` */
-    outputQuestionsJson: path.join(outputDir, "questions.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes` */
-    outputAnnexesDir: path.join(outputDir, "annexes"),
-    /** i.e.: `/content/content-question-bank-atpl/annexes` */
-    outputAnnexesRelativeDir: path.join("content", projectName, "annexes"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes.json` */
-    outputAnnexesJson: path.join(outputDir, "annexes.json"),
-    /** i.e.: `/content/content-question-bank-atpl/docs` */
-    outputDocsDir: path.join(outputDir, "docs"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/docs.json` */
-    outputDocsJson: path.join(outputDir, "docs.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/subjects.json` */
-    outputSubjectsJson: path.join(outputDir, "subjects.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/courses.json` */
-    outputCoursesJson: path.join(outputDir, "courses.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/learningObjectives.json` */
-    outputLosJson: path.join(outputDir, "learningObjectives.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/flashcards.json` */
-    outputFlashcardsJson: path.join(outputDir, "flashcards.json"),
-  };
+  while (stack.length > 0) {
+    const currentPath = stack.pop();
+    if (!currentPath) continue;
+
+    const files = await fs.readdir(currentPath);
+
+    for (let file of files) {
+      const newPath = path.join(currentPath, file);
+
+      if ((await fs.stat(newPath)).isDirectory()) {
+        stack.push(newPath);
+      }
+
+      if (file === targetFileName) {
+        result.push(newPath);
+      }
+    }
+  }
+
+  return result;
 };
 
-export const readAllQuestionsFromFs = async ({
-  questionsFolder,
-  projectName,
-}: {
-  questionsFolder: string;
-  projectName: string;
-}): Promise<QuestionTemplate[]> => {
-  const files = await fs.readdir(questionsFolder);
+export const readAllDocsFromFs = async (contentFolder: string) => {
+  const posts = await getAllFiles(contentFolder, "page.md");
+  const parsedPosts: Doc[] = [];
+
+  for (const post of posts) {
+    const source = (await fs.readFile(post)).toString();
+    const match = MATTER_REGEX.exec(source);
+    if (!match) throw new Error(`Missing frontMatter for ${post}`);
+    const data = parse(match[1]);
+    const content = source.split("\n---").slice(1).join().trim();
+    parsedPosts.push({
+      id: data.id,
+      parent: data.id,
+      title: data.id,
+      subject: "",
+      learningObjectives: [],
+      questions: [],
+      children: [],
+      fileName: post,
+      content: content,
+      empty: !content,
+    });
+  }
+
+  return parsedPosts;
+};
+
+export const readAllQuestionsFromFs = async (contentFolder: string) => {
+  const files = await getAllFiles(contentFolder, "questions.json");
   const questions: QuestionTemplate[] = [];
-  for (const file of files) {
-    const filePath = path.join(questionsFolder, file);
 
-    if ((await fs.stat(filePath)).isDirectory()) {
-      questions.push(
-        ...(await readAllQuestionsFromFs({
-          questionsFolder: filePath,
-          projectName,
-        })),
-      );
-    } else if (path.extname(filePath) === ".json") {
-      const json = await fs.readFile(filePath, "utf-8");
-      const jsonData = JSON.parse(json) as QuestionBankQuestionTemplateJson[];
-      const jsonDataWithSrcLocation = jsonData.map((q) => ({
-        ...q,
-        srcLocation: filePath.replace(process.cwd(), ""),
-      }));
-      jsonDataWithSrcLocation.forEach((q) => {
-        Object.keys(q.variants).forEach((id) => {
-          q.variants[id].annexes = q.variants[id].annexes.map((a) =>
-            a.replace("/content/annexes", `/content/${projectName}/annexes`),
-          );
-        });
-      });
+  for (const filePath of files) {
+    const json = await fs.readFile(filePath, "utf-8");
+    const jsonData = JSON.parse(json) as QuestionTemplate[];
+    const jsonDataWithSrcLocation = jsonData.map((q) => ({
+      ...q,
+      docId: "",
+      subject: "",
+      srcLocation: filePath.replace(process.cwd(), ""),
+    }));
 
-      questions.push(...jsonDataWithSrcLocation);
-    }
+    questions.push(...jsonDataWithSrcLocation);
   }
 
   return questions;
 };
 
-export const readAllLearningObjectivesFromFs = async ({
-  losJson,
-}: {
-  losJson: string;
-}): Promise<QuestionBankLearningObjective[]> => {
+export const readAllLosFromFs = async (losJson: string) => {
   const fileBuffer = await fs.readFile(losJson, "utf-8");
-  const los = JSON.parse(fileBuffer) as QuestionBankLearningObjectiveJson[];
-
-  return los.map((lo) => ({
-    ...lo,
-    questions: [],
-    nestedQuestions: [],
-  }));
+  const los = JSON.parse(fileBuffer) as LearningObjective[];
+  return los.map((s) => ({ ...s, questions: [], nestedQuestions: [] }));
 };
 
-export const readAllSubjectsFromFs = async ({
-  subjectsJson,
-}: {
-  subjectsJson: string;
-}): Promise<QuestionBankSubject[]> => {
+export const readAllSubjectsFromFs = async (subjectsJson: string) => {
   const fileBuffer = await fs.readFile(subjectsJson, "utf-8");
-  const subjects = JSON.parse(fileBuffer) as QuestionBankSubjectJson[];
-
-  return subjects.map((s) => ({
-    ...s,
-    numberOfQuestions: 0,
-  }));
+  const subjects = JSON.parse(fileBuffer) as Subject[];
+  return subjects.map((s) => ({ ...s, numberOfQuestions: 0 }));
 };
 
-export const readAllCoursesFromFs = async ({
-  coursesJson,
-}: {
-  coursesJson: string;
-}): Promise<QuestionBankCourse[]> => {
+export const readAllCoursesFromFs = async (coursesJson: string) => {
   const fileBuffer = await fs.readFile(coursesJson, "utf-8");
-  const courses = JSON.parse(fileBuffer) as QuestionBankCourseJson[];
-  return courses;
+  return JSON.parse(fileBuffer) as Course[];
 };
 
-export const readAllAnnexesFromFs = async ({
-  annexesJson,
-  outputAnnexesRelativeDir,
-}: {
-  annexesJson: string;
-  outputAnnexesRelativeDir: string;
-}): Promise<Annex[]> => {
-  const file = await fs.readFile(annexesJson, "utf-8");
-  const json = JSON.parse(file) as AnnexJson[];
-  const allMedia = json.map<Annex>((m) => ({
-    ...m,
-    href: `/${outputAnnexesRelativeDir}/${m.id}.${m.format}`,
-    subjects: [],
-    questions: [],
-    variants: [],
-    learningObjectives: [],
-  }));
-
-  return allMedia;
+export const readAllAnnexesFromFs = async (annexesJson: string) => {
+  const fileBuffer = await fs.readFile(annexesJson, "utf-8");
+  const annexes = JSON.parse(fileBuffer) as Annex[];
+  return annexes.map((s) => ({ ...s, questions: [], subjects: [], learningObjectives: [] }));
 };
 
-export const readAllFlashcardsFromFs = async ({
-  flashCardsFolder,
-}: {
-  flashCardsFolder: string;
-}): Promise<QuestionBankFlashcardCollection[]> => {
+export const readAllFlashcardsFromFs = async (flashCardsFolder: string): Promise<FlashcardCollection[]> => {
   if (!exists(flashCardsFolder)) return [];
   const files = await fs.readdir(flashCardsFolder);
   const flashcardFiles = files.filter((f) => f.endsWith(".json"));
-  const flashcards: QuestionBankFlashcardCollection[] = [];
+  const flashcards: FlashcardCollection[] = [];
   for (const file of flashcardFiles) {
     const filePath = path.join(flashCardsFolder, file);
     const jsonString = await fs.readFile(filePath, "utf-8");
-    const jsonData = JSON.parse(jsonString) as QuestionBankFlashcardContent[];
+    const jsonData = JSON.parse(jsonString) as FlashcardContent[];
     flashcards.push({
       id: file.replace(".json", ""),
       flashcards: jsonData,
@@ -216,35 +132,4 @@ export const readAllFlashcardsFromFs = async ({
     });
   }
   return flashcards;
-};
-
-export const readAllDocsFromFs = async ({
-  docsFolder,
-}: {
-  docsFolder: string;
-}) => {
-  const posts = await fs.readdir(docsFolder);
-  const parsedPosts: Doc[] = [];
-
-  for (const post of posts) {
-    const postFolder = path.join(docsFolder, post);
-    if (!(await fs.stat(postFolder)).isDirectory()) continue;
-    /** i.e.: `libs/content/blog/posts/001-post/page.md` */
-    const postPage = path.join(docsFolder, post, "page.md");
-    const source = (await fs.readFile(postPage)).toString();
-    const match = MATTER_REGEX.exec(source);
-    if (!match) throw new Error(`Missing frontMatter for ${post}`);
-    const data = parse(match[1]);
-    const content = source.split("\n---").slice(1).join().trim();
-    data.id = post;
-    data.empty = !content.length;
-    data.fileName = post;
-    data.content = content;
-    data.subjectId = "";
-    data.children = [];
-    const meta = QuestionBankDocSchema.parse(data);
-    parsedPosts.push(meta);
-  }
-
-  return parsedPosts;
 };

@@ -1,5 +1,0 @@
----
-learningObjectiveId: "010.13"
-
-title: AIRCRAFT ACCIDENT AND INCIDENT INVESTIGATION
----

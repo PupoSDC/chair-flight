@@ -2,77 +2,80 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { connectQuestionBank } from "../common/connect-question-bank";
 import {
-  getPaths,
   readAllCoursesFromFs,
-  readAllFlashcardsFromFs,
-  readAllLearningObjectivesFromFs,
+  readAllLosFromFs,
   readAllAnnexesFromFs,
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
   readAllDocsFromFs,
+  readAllFlashcardsFromFs,
 } from "../common/parse-question-bank";
+import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
 import type { ExecutorContext } from "@nx/devkit";
+import { getPaths } from "../common/get-paths";
 
 type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const {
-    projectName,
-    questionsFolder,
-    flashCardsFolder,
-    annexesImagesFolder,
-    annexesJson,
-    docsFolder,
-    losJson,
-    coursesJson,
+  const { 
+    // Inputs
+    flashcardsFolder,
+    contentFolder,
     subjectsJson,
+    coursesJson,
+    losJson,
+    annexesJson,
+
+    // Outputs
     outputDir,
     outputQuestionsJson,
     outputAnnexesDir,
-    outputDocsDir,
-    outputAnnexesRelativeDir,
     outputAnnexesJson,
+    outputDocsDir,
+    outputDocsJson,
     outputSubjectsJson,
     outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
-    outputDocsJson,
-  } = getPaths({ context });
+   } = getPaths({ context });
 
-  const questions = await readAllQuestionsFromFs({
-    questionsFolder,
-    projectName,
-  });
-  const learningObjectives = await readAllLearningObjectivesFromFs({ losJson });
-  const courses = await readAllCoursesFromFs({ coursesJson });
-  const subjects = await readAllSubjectsFromFs({ subjectsJson });
-  const flashcards = await readAllFlashcardsFromFs({ flashCardsFolder });
-  const docs = await readAllDocsFromFs({ docsFolder });
-  const annexes = await readAllAnnexesFromFs({
-    annexesJson,
-    outputAnnexesRelativeDir,
-  });
+  const questionTemplates = await readAllQuestionsFromFs(contentFolder);
+  const docs = await readAllDocsFromFs(contentFolder);
+  const annexes = await readAllAnnexesFromFs(annexesJson);
+  const learningObjectives = await readAllLosFromFs(losJson);
+  const courses = await readAllCoursesFromFs(coursesJson);
+  const subjects = await readAllSubjectsFromFs(subjectsJson);
+  const flashcards = await readAllFlashcardsFromFs(flashcardsFolder);
 
   connectQuestionBank({
-    questions,
+    questionTemplates,
+    docs,
+    annexes,
     learningObjectives,
     courses,
     subjects,
-    annexes,
-    flashcards,
+  });
+  
+  questionBankValidation.parse({
+    questionTemplates,
     docs,
+    annexes,
+    learningObjectives,
+    subjects,
+    courses,
   });
 
   await fs
     .rm(path.join(process.cwd(), outputDir), { recursive: true })
     .catch(() => {});
 
-  await fs.mkdir(path.join(process.cwd(), outputDir), { recursive: true });
+  await fs
+    .mkdir(path.join(process.cwd(), outputDir), { recursive: true })
 
   await Promise.all([
     fs.writeFile(
       path.join(process.cwd(), outputQuestionsJson),
-      JSON.stringify(questions),
+      JSON.stringify(questionTemplates),
     ),
     fs.writeFile(
       path.join(process.cwd(), outputLosJson),
@@ -98,16 +101,16 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       path.join(process.cwd(), outputDocsJson),
       JSON.stringify(docs),
     ),
-    fs.cp(
-      path.join(process.cwd(), annexesImagesFolder),
-      path.join(process.cwd(), outputAnnexesDir),
-      { recursive: true },
-    ),
-    fs.cp(
-      path.join(process.cwd(), docsFolder),
-      path.join(process.cwd(), outputDocsDir),
-      { recursive: true },
-    ),
+    //fs.cp(
+    //  path.join(process.cwd(), annexesImagesFolder),
+    //  path.join(process.cwd(), outputAnnexesDir),
+    //  { recursive: true },
+    //),
+    //fs.cp(
+    //  path.join(process.cwd(), docsFolder),
+    //  path.join(process.cwd(), outputDocsDir),
+    //  { recursive: true },
+    //),
   ]);
 
   return {
