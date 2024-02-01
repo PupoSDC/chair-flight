@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 import { get, useFormContext } from "react-hook-form";
 import { useRouter } from "next/router";
 import { Box, Button, FormLabel, Stack, Typography, styled } from "@mui/joy";
-import { getVariantPreview } from "@chair-flight/core/app";
+import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import {
   HookFormErrorMessage,
   QuestionVariantPreview,
@@ -73,7 +73,7 @@ const EditVariant = memo<DraggableVariantProps>(
           <QuestionVariantPreview
             id={variant.id}
             error={error}
-            text={getVariantPreview(variant)}
+            text={getQuestionPreview(variant)}
             learningObjectives={[]}
             externalIds={variant.externalIds}
             topRightCorner={

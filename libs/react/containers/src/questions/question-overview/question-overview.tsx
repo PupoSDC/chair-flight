@@ -19,12 +19,7 @@ import {
   tabClasses,
   tabListClasses,
 } from "@mui/joy";
-import {
-  getQuestion,
-  getQuestionPreview,
-  getRandomId,
-  getRandomShuffler,
-} from "@chair-flight/core/app";
+
 import {
   ImageViewer,
   MarkdownClient,
@@ -36,13 +31,13 @@ import { container, getRequiredParam } from "../../wraper/container";
 import type {
   QuestionBankName,
   QuestionTemplateId,
-  QuestionVariantId,
 } from "@chair-flight/core/question-bank";
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
 } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
@@ -51,7 +46,6 @@ type TabName = "question" | "explanation" | "meta" | "variants";
 type Props = {
   questionBank: QuestionBankName;
   questionId: QuestionTemplateId;
-  variantId?: QuestionVariantId;
   seed?: string;
   onQuestionChanged?: (args: { variantId: string; seed: string }) => void;
 };
@@ -70,7 +64,6 @@ export const QuestionOverview = container<Props, Params, Data>(
     questionId,
     questionBank,
     seed: initialSeed,
-    variantId: initialVariantId,
     onQuestionChanged,
     sx,
     component = "section",

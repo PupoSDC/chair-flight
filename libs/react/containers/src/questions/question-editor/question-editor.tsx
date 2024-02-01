@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Grid } from "@mui/joy";
-import { questionEditSchema } from "@chair-flight/core/schemas";
+
 import { trpc } from "@chair-flight/trpc/client";
 import { RestoreFormHistory } from "../../hooks/use-form-history";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -17,7 +17,7 @@ import type {
 } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
-const resolver = zodResolver(questionEditSchema);
+// const resolver = zodResolver(questionEditSchema);
 
 type Props = {
   questionId: QuestionId;

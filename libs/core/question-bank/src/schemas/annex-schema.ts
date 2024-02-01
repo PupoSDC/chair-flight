@@ -5,6 +5,7 @@ import type { IsEqual } from "@chair-flight/base/utils";
 
 export const annexSchema = z.object({
   id: z.string(),
+  href: z.string(),
   doc: z.string(),
   format: z.enum(["jpg"]),
   description: z.string(),

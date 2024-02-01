@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, FormControl, FormLabel, Select, Option, Button } from "@mui/joy";
-import { getNewVariant } from "@chair-flight/core/app";
+import { getNewVariant } from "@chair-flight/core/question-bank";
 import { HookFormTextArea } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";

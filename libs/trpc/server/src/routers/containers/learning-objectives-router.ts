@@ -1,6 +1,7 @@
 import { z } from "zod";
 import {
   getLearningObjectivesSearchFilters,
+  loSearchResults,
   populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
   questionSearchResults,
@@ -83,7 +84,7 @@ export const learningObjectivesContainersRouter = router({
 
       const items = tree
         .sort()
-        .map((t) => learningObjectiveSearchResults.get(t))
+        .map((t) => loSearchResults.get(t))
         .filter(Boolean);
 
       return { items };

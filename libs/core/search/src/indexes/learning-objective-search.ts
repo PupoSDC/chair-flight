@@ -32,12 +32,12 @@ type SearchField = keyof SearchDocument;
 
 let INITIALIZATION_WORK: Promise<void> | undefined;
 
-const SEARCH_RESULTS = new Map<string, SearchResult>();
-
 const SEARCH_INDEX = new MiniSearch<SearchDocument>({
   fields: ["id", "text"] as SearchField[],
   storeFields: ["id"] as SearchField[],
 });
+
+export const loSearchResults = new Map<string, SearchResult>();
 
 export const searchLearningObjectivesParams = z.object({
   questionBank: questionBankNameSchema,
@@ -112,7 +112,7 @@ export const populateLearningObjectivesSearchIndex = async (
     }));
 
     await SEARCH_INDEX.addAllAsync(searchItems);
-    resultItems.forEach((r) => SEARCH_RESULTS.set(r.id, r));
+    resultItems.forEach((r) => loSearchResults.set(r.id, r));
   })();
 
   await INITIALIZATION_WORK;
@@ -121,25 +121,25 @@ export const populateLearningObjectivesSearchIndex = async (
 export const searchLearningObjectives = async (
   ps: z.infer<typeof searchLearningObjectivesParams>,
 ) => {
+  const NATCH_LO_SEARCH = /^\d*\./gm
+  const isImplicitLoSearch = NATCH_LO_SEARCH.test(ps.q);
+  const isLoSearch = ps.searchField === "id" || isImplicitLoSearch;
+
   const opts: SearchOptions = {
     fuzzy: 0.2,
     fields: ps.searchField === "all" ? undefined : [ps.searchField],
   };
 
-  const idSearchFields = ["id"];
-  const results =
-    ps.q && idSearchFields.includes(ps.searchField)
-      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
-      : Array.from(SEARCH_RESULTS.values());
+  const results = (ps.q && !isLoSearch)
+    ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => loSearchResults.get(id))
+    : Array.from(loSearchResults.values());
 
   const processedResults = results.filter((r): r is SearchResult => {
-    return !(
-      !r ||
-      r.questionBank !== ps.questionBank ||
-      (ps.subject !== "all" && !r.subject.includes(ps.subject)) ||
-      (ps.course !== "all" && !r.courses.find((c) => c.id === ps.course)) ||
-      (ps.searchField === "id" && !r.id.startsWith(ps.q))
-    );
+    if (!r) return false;
+    if (ps.subject !== "all" && r.subject !== ps.subject) return false;
+    if (ps.course !== "all" && !r.courses.find((c) => c.id === ps.course)) return false;
+    if (isLoSearch && !r.id.includes(ps.q)) return false;
+    return true;
   });
 
   const finalItems = processedResults.slice(ps.cursor, ps.cursor + ps.limit);

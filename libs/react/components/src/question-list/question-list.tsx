@@ -6,28 +6,23 @@ import type { SearchListProps } from "../search-list";
 
 export type QuestionListItem = {
   id: string;
-  questionId: string;
-  variantId: string;
   href: string;
   text: string;
+  externalIds: string[];
   learningObjectives: Array<{
-    name: string;
+    id: string;
     href: string;
   }>;
-  externalIds: string[];
 };
 
 export type QuestionListProps = Omit<
   SearchListProps<QuestionListItem>,
-  | "items"
   | "renderThead"
   | "renderTableRow"
   | "renderListItemContent"
   | "errorMessage"
   | "noDataMessage"
-> & {
-  items?: SearchListProps<QuestionListItem>["items"];
-};
+> 
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
   ({ items = [], ...otherProps }, ref) => {
@@ -52,20 +47,18 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
           <tr>
             <td>
               <Link href={result.href} sx={{ display: "block" }}>
-                <Typography>{result.questionId}</Typography>
-                <br />
-                <Typography level="body-xs">{result.variantId}</Typography>
+                <Typography>{result.id}</Typography>
               </Link>
             </td>
             <td>
               <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
             </td>
             <td>
-              {result.learningObjectives.map(({ name, href }) => (
+              {result.learningObjectives.map(({ id, href }) => (
                 <Link
-                  key={name}
+                  key={id}
                   href={href}
-                  children={name}
+                  children={id}
                   sx={{ display: "block" }}
                 />
               ))}
@@ -82,13 +75,13 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
         renderListItemContent={(result) => (
           <ListItemContent>
             <Link href={result.href} sx={{ pr: 1 }}>
-              {result.questionId}
+              {result.id}
             </Link>
             <Typography level="body-xs" sx={{ display: "inline" }}>
-              {result.variantId}
+              {result.id}
             </Typography>
             <Typography level="body-xs">
-              {result.learningObjectives.map((lo) => lo.name).join(", ")}
+              {result.learningObjectives.map((lo) => lo.id).join(", ")}
             </Typography>
             <Box
               sx={{

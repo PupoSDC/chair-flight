@@ -45,6 +45,7 @@ export const searchRouter = router({
     .input(searchQuestionsParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
+      await populateQuestionsSearchIndex(bank);
       return  await searchQuestions(input);
     }),
   searchDocs: publicProcedure

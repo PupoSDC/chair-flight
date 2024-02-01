@@ -77,6 +77,7 @@ export type FlashcardCollection = {
 
 export type Annex = {
   id: AnnexId;
+  href: string;
   doc: DocId;
   format: AnnexFormat;
   description: string;

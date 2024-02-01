@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getRandomId } from "@chair-flight/core/app";
+import { getRandomId } from "@chair-flight/base/utils";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, QuestionOverview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";

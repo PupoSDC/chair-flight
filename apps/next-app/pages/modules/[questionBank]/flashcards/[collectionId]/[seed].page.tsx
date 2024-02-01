@@ -1,4 +1,4 @@
-import { getRandomId } from "@chair-flight/core/app";
+import { getRandomId } from "@chair-flight/base/utils";
 import { AppHead } from "@chair-flight/react/components";
 import { FlashcardTest, LayoutModule } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";

@@ -1,4 +1,5 @@
 export * from "./providers/question-bank";
+export * from "./questions/get-new-variant";
 export * from "./questions/get-question-preview";
 export * from "./schemas/question-template-schema";
 export * from "./schemas/question-bank-enums-schema";

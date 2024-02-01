@@ -23,9 +23,8 @@ import {
   Sheet,
 } from "@mui/joy";
 import {
-  getNumberOfAvailableQuestions,
-  newTestConfigurationSchema,
-} from "@chair-flight/core/app";
+ newTestConfigurationSchema,
+} from "@chair-flight/core/question-bank";
 import {
   HookFormSelect,
   NestedCheckboxSelect,

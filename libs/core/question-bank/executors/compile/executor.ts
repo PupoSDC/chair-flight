@@ -20,6 +20,7 @@ type ExecutorOptions = Record<string, never>;
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const {
     // Inputs
+    projectName,
     flashcardsFolder,
     contentFolder,
     subjectsJson,
@@ -40,7 +41,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
   const docs = await readAllDocsFromFs(contentFolder);
-  const annexes = await readAllAnnexesFromFs(contentFolder);
+  const annexes = await readAllAnnexesFromFs(contentFolder, projectName);
   const learningObjectives = await readAllLosFromFs(losJson);
   const courses = await readAllCoursesFromFs(coursesJson);
   const subjects = await readAllSubjectsFromFs(subjectsJson);

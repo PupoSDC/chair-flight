@@ -27,5 +27,5 @@ export const getAllFiles = async (
     }
   }
 
-  return result;
+  return result.sort();
 };

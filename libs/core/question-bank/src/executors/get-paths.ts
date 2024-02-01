@@ -20,6 +20,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const outputDir = path.join(outputProject, "public", "content", projectName);
 
   return {
+    projectName,
     annexesFolder,
     contentFolder,
     flashcardsFolder,

@@ -72,7 +72,10 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
   return questions;
 };
 
-export const readAllAnnexesFromFs = async (contentFolder: string) => {
+export const readAllAnnexesFromFs = async (
+  contentFolder: string,
+  projectName: string
+) => {
   const files = await getAllFiles(contentFolder, "annexes.json");
   const annexes: Annex[] = [];
 
@@ -81,6 +84,7 @@ export const readAllAnnexesFromFs = async (contentFolder: string) => {
     const jsonData = JSON.parse(json || "[]") as Annex[];
     const annexData = jsonData.map((a) => ({
       ...a,
+      href: `/content/${projectName}/media/${a.href}.${a.format}`,
       doc: "",
       questions: [],
       subjects: [],

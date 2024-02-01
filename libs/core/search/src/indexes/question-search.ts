@@ -48,6 +48,10 @@ const SEARCH_INDEX = new MiniSearch<SearchDocument>({
     "text",
   ] satisfies SearchField[],
   storeFields: ["id"] satisfies SearchField[],
+  tokenize: (s, fieldName) => {
+    if (fieldName === "learningObjectives") return s.split(", ");
+    return MiniSearch.getDefault("tokenize")(s, fieldName);
+  }
 });
 
 export const questionSearchResults = new Map<string, SearchResult>();
@@ -128,26 +132,26 @@ export const populateQuestionsSearchIndex = async (
 export const searchQuestions = async (
   ps: z.infer<typeof searchQuestionsParams>,
 ) => {
+  const idSearchFields = ["id", "learningObjectives"];
+
   const opts: SearchOptions = {
-    fuzzy: 0.2,
-    fields: ps.searchField === "all" ? undefined : [ps.searchField],
+    fuzzy: idSearchFields.includes(ps.searchField) ? false : 0.2,
+    prefix: idSearchFields.includes(ps.searchField),
+    fields: (ps.searchField === "all") ?  undefined : [ps.searchField],
+    tokenize: (s) => {
+      if (ps.searchField === "learningObjectives") return s.split(", ");
+      return MiniSearch.getDefault("tokenize")(s);
+    }
   };
 
-  const idSearchFields = ["id", "learningObjectives"];
-  const results =
-    ps.q && idSearchFields.includes(ps.searchField)
-      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => questionSearchResults.get(id))
-      : Array.from(questionSearchResults.values());
+  const results = ps.q
+    ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => questionSearchResults.get(id))
+    : Array.from(questionSearchResults.values());
 
   const processedResults = results.filter((r): r is SearchResult => {
-    return !(
-      !r ||
-      r.questionBank !== ps.questionBank ||
-      (ps.subject !== "all" && !r.subjects.includes(ps.subject)) ||
-      (ps.searchField === "id" && !r.id.startsWith(ps.q)) ||
-      (ps.searchField === "learningObjectives" &&
-        !r.learningObjectives.some((lo) => lo.id.startsWith(ps.q)))
-    );
+    if (!r) return false;
+    if (ps.subject !== "all" && r.subjects.includes(ps.subject)) return false;
+    return true;
   });
 
   const finalItems = processedResults.slice(ps.cursor, ps.cursor + ps.limit);
