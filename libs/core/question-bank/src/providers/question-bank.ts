@@ -1,9 +1,9 @@
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import { Annex } from "../types/annex";
-import { FlashcardCollection } from "../types/flashcard";
-import { LearningObjective } from "../types/learning-objective";
-import { QuestionTemplate } from "../types/question-templates";
+import type { Annex } from "../types/annex";
+import type { FlashcardCollection } from "../types/flashcard";
+import type { LearningObjective } from "../types/learning-objective";
+import type { QuestionTemplate } from "../types/question-templates";
 
 type NameToType = {
   questions: QuestionTemplate;

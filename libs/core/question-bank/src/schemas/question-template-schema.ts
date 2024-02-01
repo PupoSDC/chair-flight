@@ -1,6 +1,7 @@
 import { z } from "zod";
-import { assertType, IsEqual } from "@chair-flight/base/utils";
-import {
+import type { IsEqual } from "@chair-flight/base/utils";
+import { assertType } from "@chair-flight/base/utils";
+import type {
   QuestionTemplate,
   QuestionVariantDefinition,
   QuestionVariantMultipleCorrect,
@@ -124,7 +125,7 @@ assertType<IsEqual<IVariantMultiple, QuestionVariantMultipleCorrect>>();
 export const questionTemplateSchema = z.object({
   id: z.string(),
   doc: z.string(),
-  relatedQuestions: z.array(z.string().min(6)),
+  relatedQuestions: z.array(z.string()),
   externalIds: z.string().array(),
   subjects: z.array(z.string()).min(1),
   annexes: z.string().array(),

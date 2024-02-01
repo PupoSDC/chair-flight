@@ -1,6 +1,7 @@
 import { z } from "zod";
-import { assertType, IsEqual } from "@chair-flight/base/utils";
-import { Annex } from "../types";
+import type { IsEqual } from "@chair-flight/base/utils";
+import { assertType } from "@chair-flight/base/utils";
+import type { Annex } from "../types";
 
 export const annexSchema = z.object({
   id: z.string(),

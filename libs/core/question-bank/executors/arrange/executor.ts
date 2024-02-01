@@ -1,8 +1,13 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
-import { connectQuestionBank } from "../../src/executors/question-bank-connect";
+import { makeMap } from "@chair-flight/base/utils";
+import { getAllFiles } from "../../src/executors/get-all-files";
 import { getPaths } from "../../src/executors/get-paths";
+import {
+  arrangeAnnexes,
+  arrangeQuestions,
+} from "../../src/executors/question-bank-arrange";
+import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {
   readAllCoursesFromFs,
   readAllLosFromFs,
@@ -12,10 +17,8 @@ import {
   readAllDocsFromFs,
   readAllFlashcardsFromFs,
 } from "../../src/executors/question-bank-read";
+import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
 import type { ExecutorContext } from "@nx/devkit";
-import { arrangeAnnexes, arrangeQuestions } from "../../src/executors/question-bank-arrange";
-import { getAllFiles } from "../../src/executors/get-all-files";
-import { makeMap } from "@chair-flight/base/utils";
 
 type ExecutorOptions = Record<string, never>;
 
@@ -37,7 +40,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const subjects = await readAllSubjectsFromFs(subjectsJson);
 
   const mediaMap = makeMap(
-    [...await getAllFiles(contentFolder, ".jpg")],
+    [...(await getAllFiles(contentFolder, ".jpg"))],
     (p) => p.split("/").pop()?.split(".")[0] ?? "",
     (p) => p,
   );
@@ -60,8 +63,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     courses,
   });
 
-
-  const annexFiles =  arrangeAnnexes({ annexes, docs });
+  const annexFiles = arrangeAnnexes({ annexes, docs });
   const questionFiles = arrangeQuestions({ questionTemplates, docs });
 
   await Promise.all(
@@ -76,16 +78,20 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     ),
   );
 
-
-  await Promise.all(Object
-    .values(annexFiles)
-    .flatMap(({ annexes, fileName }) => annexes.map((annex) => {
+  await Promise.all(
+    Object.values(annexFiles).flatMap(({ annexes, fileName }) =>
+      annexes.map((annex) => {
         const origin = mediaMap[annex.id];
         const folderName = fileName.replaceAll("annexes.json", "annexes");
-        const destination = path.join(folderName, `${annex.id}.${annex.format}`);
+        const destination = path.join(
+          folderName,
+          `${annex.id}.${annex.format}`,
+        );
         if (!mediaMap[annex.id]) return Promise.resolve(undefined);
         return fs.rename(origin, destination);
-    })));
+      }),
+    ),
+  );
 
   return {
     success: true,

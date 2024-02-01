@@ -5,6 +5,9 @@
   "targets": {
     "compile": {
       "executor": "@chair-flight/core/question-bank:compile"
+    },
+    "arrange": {
+      "executor": "@chair-flight/core/question-bank:arrange"
     }
   },
   "tags": []

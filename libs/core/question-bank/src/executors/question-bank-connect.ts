@@ -1,6 +1,6 @@
-import { DocId } from "@chair-flight/base/types";
+import type { DocId } from "@chair-flight/base/types";
 import { makeMap } from "@chair-flight/base/utils";
-import {
+import type {
   Annex,
   Course,
   Doc,
@@ -109,23 +109,22 @@ export const connectQuestionBank = ({
         if (!thisAnnex.doc) {
           thisAnnex.doc = q.doc;
         } else {
-          const partsA = thisAnnex.doc.split('.');
-          const partsB = q.doc.split('.');
+          const partsA = thisAnnex.doc.split(".");
+          const partsB = q.doc.split(".");
 
-          let commonAncestor = '';
+          let commonAncestor = "";
 
           for (let i = 0; i < Math.min(partsA.length, partsB.length); i++) {
             if (partsA[i] !== partsB[i]) break;
-            commonAncestor += (i > 0 ? '.' : '') + partsA[i];
+            commonAncestor += (i > 0 ? "." : "") + partsA[i];
           }
 
-          if (commonAncestor === '') {
+          if (commonAncestor === "") {
             thisAnnex.doc = "root";
           } else {
             thisAnnex.doc = commonAncestor;
           }
         }
-
       }
     });
 

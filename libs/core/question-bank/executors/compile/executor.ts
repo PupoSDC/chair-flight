@@ -1,8 +1,9 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
-import { connectQuestionBank } from "../../src/executors/question-bank-connect";
+import { output, type ExecutorContext } from "@nx/devkit";
+import { getAllFiles } from "../../src/executors/get-all-files";
 import { getPaths } from "../../src/executors/get-paths";
+import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {
   readAllCoursesFromFs,
   readAllLosFromFs,
@@ -12,8 +13,7 @@ import {
   readAllDocsFromFs,
   readAllFlashcardsFromFs,
 } from "../../src/executors/question-bank-read";
-import { output, type ExecutorContext } from "@nx/devkit";
-import { getAllFiles } from "../../src/executors/get-all-files";
+import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
 
 type ExecutorOptions = Record<string, never>;
 
@@ -45,9 +45,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const courses = await readAllCoursesFromFs(coursesJson);
   const subjects = await readAllSubjectsFromFs(subjectsJson);
   const flashcards = await readAllFlashcardsFromFs(flashcardsFolder);
-  const allMedia = [
-    ...await getAllFiles(contentFolder, ".jpg"),
-  ]
+  const allMedia = [...(await getAllFiles(contentFolder, ".jpg"))];
 
   connectQuestionBank({
     questionTemplates,
@@ -67,15 +65,11 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     courses,
   });
 
-  await fs.rm(
-    path.join(process.cwd(), outputDir), 
-    { recursive: true }
-  ).catch(() => {});
-  
-  await fs.mkdir(path.join(
-    process.cwd(), outputMediaDir), 
-    { recursive: true }
-  );
+  await fs
+    .rm(path.join(process.cwd(), outputDir), { recursive: true })
+    .catch(() => {});
+
+  await fs.mkdir(path.join(process.cwd(), outputMediaDir), { recursive: true });
 
   await Promise.all([
     fs.writeFile(

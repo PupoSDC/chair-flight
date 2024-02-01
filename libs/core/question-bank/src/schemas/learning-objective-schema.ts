@@ -1,6 +1,7 @@
 import { z } from "zod";
-import { assertType, IsEqual } from "@chair-flight/base/utils";
-import { LearningObjective } from "../types";
+import type { IsEqual } from "@chair-flight/base/utils";
+import { assertType } from "@chair-flight/base/utils";
+import type { LearningObjective } from "../types";
 
 export const LearningObjectiveSchema = z.object({
   id: z.string(),

@@ -1,7 +1,10 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 
-export const getAllFiles = async (relativePath: string, targetFileName: string) => {
+export const getAllFiles = async (
+  relativePath: string,
+  targetFileName: string,
+) => {
   const result: string[] = [];
   const stack: string[] = [relativePath];
 
@@ -11,7 +14,7 @@ export const getAllFiles = async (relativePath: string, targetFileName: string) 
 
     const files = await fs.readdir(currentPath);
 
-    for (let file of files) {
+    for (const file of files) {
       const newPath = path.join(currentPath, file);
 
       if ((await fs.stat(newPath)).isDirectory()) {

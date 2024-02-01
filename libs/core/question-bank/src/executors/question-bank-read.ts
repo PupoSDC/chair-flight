@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
-import {
+import type {
   Annex,
   Course,
   Doc,
@@ -74,7 +74,7 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
 
 export const readAllAnnexesFromFs = async (contentFolder: string) => {
   const files = await getAllFiles(contentFolder, "annexes.json");
-  const annexes : Annex[] = [];
+  const annexes: Annex[] = [];
 
   for (const annexPath of files) {
     const json = await fs.readFile(annexPath, "utf-8");
@@ -114,7 +114,7 @@ export const readAllFlashcardsFromFs = async (
   flashCardsFolder: string,
 ): Promise<FlashcardCollection[]> => {
   if (!exists(flashCardsFolder)) return [];
-  const files = await fs.readdir(flashCardsFolder);
+  const files = await fs.readdir(flashCardsFolder).catch(() => []);
   const flashcardFiles = files.filter((f) => f.endsWith(".json"));
   const flashcards: FlashcardCollection[] = [];
   for (const file of flashcardFiles) {
