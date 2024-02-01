@@ -1,6 +1,5 @@
-import { s } from "vitest/dist/reporters-rzC174PQ";
 import { makeMap } from "@chair-flight/base/utils";
-import type { Annex, Doc, QuestionTemplate } from "../types";
+import type { Annex, Doc, QuestionTemplate } from "../types/question-bank-types";
 
 export const arrangeQuestions = ({
   questionTemplates,

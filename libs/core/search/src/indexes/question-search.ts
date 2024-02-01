@@ -1,13 +1,12 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { getQuestionPreview } from "../questions/get-question-preview";
-import type {
-  QuestionBankName,
-  QuestionId,
-  QuestionVariantId,
-  SubjectId,
-} from "@chair-flight/base/types";
-import type { QuestionBank } from "@chair-flight/core/question-bank";
+import {
+  questionBankNameSchema,
+  type QuestionBank,
+  type QuestionBankName,
+  type QuestionId,
+  type QuestionVariantId,
+  type SubjectId,
+} from "@chair-flight/core/question-bank";
 import type { default as MiniSearch, SearchOptions } from "minisearch";
 
 export type QuestionSearchField =

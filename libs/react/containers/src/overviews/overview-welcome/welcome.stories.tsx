@@ -1,7 +1,7 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
 import { OverviewWelcome } from "./welcome";
 import { mockData } from "./welcome.mock";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof OverviewWelcome>;

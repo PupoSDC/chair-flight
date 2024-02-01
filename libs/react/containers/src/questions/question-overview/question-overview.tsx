@@ -37,7 +37,7 @@ import type {
   QuestionBankName,
   QuestionTemplateId,
   QuestionVariantId,
-} from "@chair-flight/base/types";
+} from "@chair-flight/core/question-bank";
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,

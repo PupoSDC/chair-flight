@@ -1,13 +1,13 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import type {
-  CourseId,
-  LearningObjectiveId,
-  QuestionBankName,
-  SubjectId,
-} from "@chair-flight/base/types";
-import type { QuestionBank } from "@chair-flight/core/question-bank";
+import {
+  questionBankNameSchema,
+  type LearningObjectiveId,
+  type QuestionBank,
+  type QuestionBankName,
+  type SubjectId,
+} from "@chair-flight/core/question-bank";
+import type { CourseId } from "@chair-flight/core/question-bank";
 import type { default as MiniSearch, SearchOptions } from "minisearch";
 
 export type LearningObjectiveSearchField = "id" | "text";

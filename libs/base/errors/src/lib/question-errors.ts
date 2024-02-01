@@ -1,11 +1,10 @@
 import { DataError } from "./generic-errors";
-import type { QuestionTemplate } from "@chair-flight/base/types";
 
 export class BadQuestionError extends DataError {
-  question: QuestionTemplate;
+  question: { id: string };
   configurationParams: Record<string, unknown>;
   constructor(
-    question: QuestionTemplate,
+    question: { id: string },
     configurationParams: Record<string, unknown>,
   ) {
     super(

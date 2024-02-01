@@ -1,6 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
+import { getAllFiles } from "./get-all-files";
 import type {
   Annex,
   Course,
@@ -10,8 +11,7 @@ import type {
   LearningObjective,
   QuestionTemplate,
   Subject,
-} from "../types";
-import { getAllFiles } from "./get-all-files";
+} from "../types/question-bank-types";
 
 const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;

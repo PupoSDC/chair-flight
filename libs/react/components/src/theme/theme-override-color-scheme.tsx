@@ -1,5 +1,5 @@
 import { GlobalStyles } from "@mui/material";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";
 

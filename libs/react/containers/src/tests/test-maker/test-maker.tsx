@@ -39,8 +39,8 @@ import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import type { QuestionBankName } from "@chair-flight/base/types";
 import type { NewTestConfiguration } from "@chair-flight/core/app";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
 const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;

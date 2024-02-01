@@ -1,9 +1,6 @@
-import { UnimplementedError } from "@chair-flight/base/errors";
-import { getRandomId } from "../random/random";
-import type {
-  QuestionVariant,
-  QuestionVariantType,
-} from "@chair-flight/base/types";
+import { QuestionVariant, QuestionVariantType } from "../types/question-bank-types";
+import { getRandomId } from "@chair-flight/base/utils";
+
 
 export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
   const common = {

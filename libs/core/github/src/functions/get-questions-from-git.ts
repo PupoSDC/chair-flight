@@ -2,7 +2,7 @@ import { z } from "zod";
 import { NotFoundError } from "@chair-flight/base/errors";
 import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
+import type { QuestionTemplate } from "@chair-flight/core/question-bank";
 
 export const getQuestionsFromGit = async ({
   srcLocation,
@@ -10,7 +10,7 @@ export const getQuestionsFromGit = async ({
 }: {
   srcLocation: string;
   baseBranch?: string;
-}): Promise<QuestionBankQuestionTemplate[]> => {
+}): Promise<QuestionTemplate[]> => {
   const { octokit, originOwner, originRepo, upstreamOwner } = getOctokit();
   const normalizedSrcLocation = srcLocation
     .replace(/\\/g, "/")
@@ -41,9 +41,7 @@ export const getQuestionsFromGit = async ({
   });
 
   const assumedString = getContentResponse.data as unknown as string;
-  const assumedArray = JSON.parse(
-    assumedString,
-  ) as QuestionBankQuestionTemplate[];
+  const assumedArray = JSON.parse(assumedString) as QuestionTemplate[];
   const arrayWithSrc = assumedArray.map((q) => ({
     ...q,
     srcLocation: normalizedSrcLocation,
@@ -59,7 +57,7 @@ export const getQuestionFromGit = async ({
   srcLocation: string;
   questionId: string;
   baseBranch?: string;
-}): Promise<QuestionBankQuestionTemplate> => {
+}): Promise<QuestionTemplate> => {
   const questionsFromGit = await getQuestionsFromGit({
     srcLocation,
     baseBranch,

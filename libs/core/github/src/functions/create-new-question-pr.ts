@@ -1,11 +1,26 @@
 import * as babelPlugin from "prettier/plugins/babel";
 import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
-import { getRandomId } from "@chair-flight/core/app";
+import { z } from "zod";
+import { getRandomId } from "@chair-flight/base/utils";
+import type {
+  QuestionTemplate} from "@chair-flight/core/question-bank";
+import {
+  questionBankNameSchema,
+  questionTemplateSchema,
+} from "@chair-flight/core/question-bank";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
-import type { questionEditSchema } from "@chair-flight/core/schemas";
-import type { z } from "zod";
+
+export const questionEditSchema = z.object({
+  question: questionTemplateSchema,
+  questionBank: questionBankNameSchema,
+  requestData: z.object({
+    authorName: z.string().min(3).optional().or(z.literal("")),
+    email: z.string().email().optional().or(z.literal("")),
+    title: z.string().min(5),
+    description: z.string(),
+  }),
+});
 
 export const createNewQuestionPr = async (
   schema: z.infer<typeof questionEditSchema>,
@@ -40,9 +55,7 @@ export const createNewQuestionPr = async (
   });
 
   const assumedString = getContentResponse.data as unknown as string;
-  const assumedArray = JSON.parse(
-    assumedString,
-  ) as QuestionBankQuestionTemplate[];
+  const assumedArray = JSON.parse(assumedString) as QuestionTemplate[];
 
   const newQuestions = assumedArray.map((q) =>
     q.id === question.id ? question : q,

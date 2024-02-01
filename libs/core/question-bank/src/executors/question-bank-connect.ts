@@ -1,21 +1,20 @@
-import type { DocId } from "@chair-flight/base/types";
 import { makeMap } from "@chair-flight/base/utils";
 import type {
   Annex,
   Course,
   Doc,
+  DocId,
   LearningObjective,
   LearningObjectiveId,
   QuestionTemplate,
   Subject,
   SubjectId,
-} from "../types";
+} from "../types/question-bank-types";
 
 export const connectQuestionBank = ({
   questionTemplates,
   learningObjectives,
   subjects,
-  courses,
   annexes,
   docs,
 }: {

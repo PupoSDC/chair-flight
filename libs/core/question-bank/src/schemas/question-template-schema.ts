@@ -1,5 +1,4 @@
 import { z } from "zod";
-import type { IsEqual } from "@chair-flight/base/utils";
 import { assertType } from "@chair-flight/base/utils";
 import type {
   QuestionTemplate,
@@ -9,6 +8,7 @@ import type {
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
 } from "../types";
+import type { IsEqual } from "@chair-flight/base/utils";
 
 export const questionVariantSimpleSchema = z.object({
   type: z.literal("simple"),

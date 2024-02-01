@@ -6,7 +6,10 @@ import {
   getPageVisits,
 } from "@chair-flight/core/analytics";
 import { publicProcedure, router } from "../../config/trpc";
-import type { PageEvent, SimplifiedTrackEvent } from "@chair-flight/base/types";
+import type {
+  PageEvent,
+  SimplifiedTrackEvent,
+} from "@chair-flight/core/question-bank";
 
 const PageEventSchema: z.ZodSchema<PageEvent> = z.object({
   anonymousId: z.string(),

@@ -1,23 +1,22 @@
 {
-  "name": "core-schemas",
+  "name": "core-search",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/schemas/src",
+  "sourceRoot": "libs/core/search/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/schemas/**/*.ts"]
+        "lintFilePatterns": ["libs/core/search/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/schemas/tsconfig.json"]
+        "commands": ["tsc -p libs/core/search/tsconfig.json"]
       }
     }
   },
-  "tags": [],
-  "implicitDependencies": []
+  "tags": []
 }

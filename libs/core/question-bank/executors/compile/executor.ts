@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { output, type ExecutorContext } from "@nx/devkit";
+import { type ExecutorContext } from "@nx/devkit";
 import { getAllFiles } from "../../src/executors/get-all-files";
 import { getPaths } from "../../src/executors/get-paths";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";

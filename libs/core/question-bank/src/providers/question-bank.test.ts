@@ -1,7 +1,6 @@
 import * as fs from "node:fs/promises";
-import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
 import { questionBanks } from "../index";
-import type { BankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "../types/question-bank-types";
 
 describe("QuestionBank", async () => {
   await Promise.all(
@@ -10,7 +9,11 @@ describe("QuestionBank", async () => {
     ),
   );
 
-  const modulesWithQuestions = ["type", "prep", "atpl"] satisfies BankName[];
+  const modulesWithQuestions = [
+    "type",
+    "prep",
+    "atpl",
+  ] satisfies QuestionBankName[];
   const allQuestions = await Promise.all(
     modulesWithQuestions
       .map((b) => questionBanks[b])

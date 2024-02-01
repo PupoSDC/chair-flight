@@ -4,7 +4,7 @@ import { default as remarkGemoji } from "remark-gemoji";
 import { default as remarkGfm } from "remark-gfm";
 import { default as remarkMath } from "remark-math";
 import { default as remarkSupersub } from "remark-supersub";
-import type { MdxDocument } from "@chair-flight/base/types";
+import type { MdxDocument } from "@chair-flight/core/question-bank";
 
 /**
  * Our MDX is actually Markdown files since thesse provide

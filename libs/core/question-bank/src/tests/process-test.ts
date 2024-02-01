@@ -1,5 +1,5 @@
 import { DateTime, Duration } from "luxon";
-import type { Test } from "@chair-flight/base/types";
+import type { Test } from "@chair-flight/core/question-bank";
 
 const getClockTime = (milliseconds: number) => {
   const duration = Duration.fromMillis(milliseconds);

@@ -1,12 +1,11 @@
 import type {
-  QuestionBankQuestionTemplate,
-  QuestionVariant,
+  QuestionTemplate,
   QuestionVariantDefinition,
   QuestionVariantMultipleCorrect,
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
-} from "@chair-flight/base/types";
+} from "../types/question-bank-types"
 
 const getQuestionVariantSimplePreview = (
   variant: QuestionVariantSimple,
@@ -68,26 +67,17 @@ const getQuestionMultipleCorrectPreview = (
   ].join("\n");
 };
 
-export const getVariantPreview = (variant: QuestionVariant) => {
-  switch (variant.type) {
+const getQuestionPreview = (question: QuestionTemplate) => {
+  switch (question.variant.type) {
     case "simple":
-      return getQuestionVariantSimplePreview(variant);
+      return getQuestionVariantSimplePreview(question.variant);
     case "one-two":
-      return getQuestionVariantOneTwoPreview(variant);
+      return getQuestionVariantOneTwoPreview(question.variant);
     case "true-or-false":
-      return getQuestionVariantTrueOrFalsePreview(variant);
+      return getQuestionVariantTrueOrFalsePreview(question.variant);
     case "definition":
-      return getQuestionVariantDefinitionPreview(variant);
+      return getQuestionVariantDefinitionPreview(question.variant);
     case "multiple-correct":
-      return getQuestionMultipleCorrectPreview(variant);
+      return getQuestionMultipleCorrectPreview(question.variant);
   }
-};
-
-export const getQuestionPreview = (
-  question: QuestionBankQuestionTemplate,
-  variantId: string,
-) => {
-  const variant = question.variants[variantId];
-  if (!variant) throw new Error("Variant not found");
-  return getVariantPreview(variant);
 };

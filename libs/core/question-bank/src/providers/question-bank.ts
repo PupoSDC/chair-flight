@@ -1,40 +1,16 @@
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { Annex } from "../types/annex";
-import type { FlashcardCollection } from "../types/flashcard";
-import type { LearningObjective } from "../types/learning-objective";
-import type { QuestionTemplate } from "../types/question-templates";
+import type {
+  QuestionBank as IQuestionBank,
+  QuestionBankName,
+  QuestionBankNameToType,
+  QuestionBankResource,
+  QuestionBankResourceArrays,
+  QuestionBankResourceMaps,
+} from "../types/question-bank-types";
+import type { MiniFs } from "@chair-flight/base/types";
 
-type NameToType = {
-  questions: QuestionTemplate;
-  learningObjectives: LearningObjective;
-  annexes: Annex;
-  flashcards: FlashcardCollection;
-  subjects: QuestionBankSubject;
-  courses: QuestionBankCourse;
-  docs: Doc;
-};
-
-type ResourceArrays = {
-  [K in Resource]: NameToType[K][] | undefined;
-};
-
-type ResourceMaps = {
-  [K in Resource]: Record<string, NameToType[K]> | undefined;
-};
-
-type ReadFile = (path: string, string: "utf-8") => Promise<string>;
-
-interface IQuestionBank {
-  getName: () => BankName;
-  has: (r: Resource) => Promise<boolean>;
-  getAll: <T extends Resource>(r: T) => Promise<NameToType[T][]>;
-  getSome: <T extends Resource>(r: T, id: string[]) => Promise<NameToType[T][]>;
-  getOne: <T extends Resource>(r: T, id: string) => Promise<NameToType[T]>;
-  preloadForStaticRender: (args: { readFile: ReadFile }) => Promise<void>;
-}
-
-const resources: Resource[] = [
+const resources: QuestionBankResource[] = [
   "questions",
   "learningObjectives",
   "annexes",
@@ -44,20 +20,23 @@ const resources: Resource[] = [
   "docs",
 ];
 
-export class QuestionBank implements IQuestionBank {
-  private questionBankName: BankName;
+class QuestionBank implements IQuestionBank {
+  private questionBankName: QuestionBankName;
 
-  private resourceArrays: ResourceArrays = resources.reduce((s, r) => {
+  private resourceArrays: QuestionBankResourceArrays = resources.reduce(
+    (s, r) => {
+      s[r] = undefined;
+      return s;
+    },
+    {} as QuestionBankResourceArrays,
+  );
+
+  private resourceMaps: QuestionBankResourceMaps = resources.reduce((s, r) => {
     s[r] = undefined;
     return s;
-  }, {} as ResourceArrays);
+  }, {} as QuestionBankResourceMaps);
 
-  private resourceMaps: ResourceMaps = resources.reduce((s, r) => {
-    s[r] = undefined;
-    return s;
-  }, {} as ResourceMaps);
-
-  constructor(questionBankName: BankName) {
+  constructor(questionBankName: QuestionBankName) {
     this.questionBankName = questionBankName;
   }
 
@@ -65,44 +44,50 @@ export class QuestionBank implements IQuestionBank {
     return this.questionBankName;
   }
 
-  async has(resource: Resource) {
+  async has(resource: QuestionBankResource) {
     const all = await this.getAll(resource);
     return all.length > 0;
   }
 
-  async getAll<T extends Resource>(resource: T) {
+  async getAll<T extends QuestionBankResource>(resource: T) {
     if (!this.resourceArrays[resource]) {
       const urlPath = getUrlPathOnServer();
       const bankPath = `/content/content-question-bank-${this.getName()}`;
       const baseApiPath = `${urlPath}${bankPath}`;
       const apiPath = `${baseApiPath}/${resource}.json`;
       const response = await fetch(apiPath);
-      const json = (await response.json()) as NameToType[T][];
+      const json = (await response.json()) as QuestionBankNameToType[T][];
       type ArrayType = (typeof this.resourceArrays)[typeof resource];
       this.resourceArrays[resource] = json as ArrayType;
     }
-    const all = this.resourceArrays[resource] as NameToType[T][];
+    const all = this.resourceArrays[resource] as QuestionBankNameToType[T][];
     return all;
   }
 
-  async getSome<T extends Resource>(resource: T, ids: string[]) {
+  async getSome<T extends QuestionBankResource>(resource: T, ids: string[]) {
     if (!ids.length) {
       return [];
     }
     if (!this.resourceMaps[resource]) {
       const all = await this.getAll(resource);
-      const map = all.reduce<Record<string, NameToType[T]>>((s, q) => {
-        s[q.id] = q;
-        return s;
-      }, {});
+      const map = all.reduce<Record<string, QuestionBankNameToType[T]>>(
+        (s, q) => {
+          s[q.id] = q;
+          return s;
+        },
+        {},
+      );
       type MapType = (typeof this.resourceMaps)[typeof resource];
       this.resourceMaps[resource] = map as MapType;
     }
-    const map = this.resourceMaps[resource] as Record<string, NameToType[T]>;
+    const map = this.resourceMaps[resource] as Record<
+      string,
+      QuestionBankNameToType[T]
+    >;
     return ids.map((id) => map[id]).filter(Boolean);
   }
 
-  async getOne<T extends Resource>(resource: T, id: string) {
+  async getOne<T extends QuestionBankResource>(resource: T, id: string) {
     const data = (await this.getSome(resource, [id]))[0];
     if (!data) {
       throw new NotFoundError(`QuestionBank has no ${resource} with id ${id}`);
@@ -110,7 +95,7 @@ export class QuestionBank implements IQuestionBank {
     return data;
   }
 
-  async preloadForStaticRender({ readFile }: { readFile: ReadFile }) {
+  async preloadForStaticRender({ readFile }: MiniFs) {
     await Promise.all(
       resources.map(async (resource) => {
         const cwd = process.cwd();
@@ -128,3 +113,9 @@ export class QuestionBank implements IQuestionBank {
     );
   }
 }
+
+export const questionBanks: Record<QuestionBankName, QuestionBank> = {
+  type: new QuestionBank("type"),
+  atpl: new QuestionBank("atpl"),
+  prep: new QuestionBank("prep"),
+};

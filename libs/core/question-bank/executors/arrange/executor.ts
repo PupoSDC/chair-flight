@@ -15,7 +15,6 @@ import {
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
   readAllDocsFromFs,
-  readAllFlashcardsFromFs,
 } from "../../src/executors/question-bank-read";
 import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
 import type { ExecutorContext } from "@nx/devkit";
@@ -23,14 +22,9 @@ import type { ExecutorContext } from "@nx/devkit";
 type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const {
-    flashcardsFolder,
-    contentFolder,
-    subjectsJson,
-    coursesJson,
-    losJson,
-    annexesJson: annexRoot,
-  } = getPaths({ context });
+  const { contentFolder, subjectsJson, coursesJson, losJson } = getPaths({
+    context,
+  });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
   const docs = await readAllDocsFromFs(contentFolder);

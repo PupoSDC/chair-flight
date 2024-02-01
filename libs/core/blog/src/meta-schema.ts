@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { BlogPost } from "@chair-flight/base/types";
+import type { BlogPost } from "@chair-flight/core/question-bank";
 
 export const blogPostSchema: z.ZodSchema<BlogPost> = z.object({
   title: z.string(),

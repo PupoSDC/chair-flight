@@ -1,16 +1,16 @@
 import { z } from "zod";
 import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { getQuestion } from "../questions/get-question";
 import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
 } from "../random/random";
+import { getQuestion } from "./get-question";
 import type {
   QuestionBankName,
   QuestionBankQuestionTemplate,
   Test,
-} from "@chair-flight/base/types";
+} from "@chair-flight/core/question-bank";
 
 export type NewTestConfiguration = {
   mode: "study" | "exam";

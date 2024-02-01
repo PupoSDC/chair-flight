@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { BlogPost } from "@chair-flight/base/types";
+import type { BlogPost } from "@chair-flight/core/question-bank";
 
 type ReadFile = (path: string, string: "utf-8") => Promise<string>;
 

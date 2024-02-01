@@ -2,7 +2,7 @@ import { MissingPathParameter } from "@chair-flight/base/errors";
 import { AppHead } from "@chair-flight/react/components";
 import { LayoutModule, TestReview } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 

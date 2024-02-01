@@ -1,12 +1,12 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import type {
-  DocId,
-  QuestionBankName,
-  SubjectId,
-  LearningObjectiveId,
-} from "@chair-flight/base/types";
-import type { QuestionBank } from "@chair-flight/core/question-bank";
+import {
+  questionBankNameSchema,
+  type DocId,
+  type LearningObjectiveId,
+  type QuestionBank,
+  type QuestionBankName,
+  type SubjectId,
+} from "@chair-flight/core/question-bank";
 import type { default as MiniSearch, SearchOptions } from "minisearch";
 
 export type DocSearchField = "id" | "learningObjectiveId" | "content" | "title";
