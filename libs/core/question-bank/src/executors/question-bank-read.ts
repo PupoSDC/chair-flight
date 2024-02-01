@@ -77,7 +77,6 @@ export const readAllAnnexesFromFs = async (contentFolder: string) => {
   const annexes : Annex[] = [];
 
   for (const annexPath of files) {
-    console.log(annexPath)
     const json = await fs.readFile(annexPath, "utf-8");
     const jsonData = JSON.parse(json || "[]") as Annex[];
     const annexData = jsonData.map((a) => ({

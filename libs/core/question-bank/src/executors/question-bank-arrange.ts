@@ -10,49 +10,67 @@ export const arrangeQuestions = ({
     questionTemplates: QuestionTemplate[],
     docs: Doc[],
 }) => {
-    const docsMap = makeMap(docs, doc => doc.id);
-    
-    const questionFiles = questionTemplates.reduce((sum, qt) => {
-        const file = docsMap[qt.doc];
-        const fileName = file.fileName.replace("page.md", "questions.json");
-        sum[fileName] ??= [];
-        sum[fileName].push(qt);
+    const questionMap = makeMap(
+        docs, 
+        doc => doc.id, 
+        doc => ({
+            fileName: doc.fileName.replace("page.md", "questions.json"),
+            questions: [] as QuestionTemplate[],
+        })
+    );
+
+    return questionTemplates.reduce((sum, question) => {
+        if (!sum[question.doc]) {
+            throw new Error(`Question ${question.id} has no doc`);
+        }
+
+        const cleanQuestion = {
+            "id": question.id,
+            "relatedQuestions": question.relatedQuestions,
+            "externalIds": question.externalIds,
+            "annexes": question.annexes,
+            "learningObjectives": question.learningObjectives,
+            "explanation": question.explanation,
+            "variant": question.variant,
+            "doc": question.doc,
+            "subjects": question.subjects,
+            "srcLocation": sum[question.doc].fileName,
+        }
+        sum[question.doc].questions.push(cleanQuestion);
         return sum;
-    }, {} as Record<string, QuestionTemplate[]> ); 
+    }, questionMap);
     
-    return questionFiles;
 }
 
 export const arrangeAnnexes = ({
     annexes,
     docs,
-    annexRoot,
 } : {
     annexes: Annex[],
     docs: Doc[],
-    annexRoot: string,
 }) => {
-    const docsMap = makeMap(docs, doc => doc.id);
+    const annexMap = makeMap(
+        docs, 
+        doc => doc.id, 
+        doc => ({
+            fileName: doc.fileName.replace("page.md", "annexes.json"),
+            annexes: [] as Pick<Annex, "id" | "description" | "format">[],
+        })
+    );
 
-    const annexFiles = annexes.reduce((sum, annex) => {
+    return annexes.reduce((sum, annex) => {
+        if (!sum[annex.doc]) {
+            throw new Error(`Annex ${annex.id} has no doc`);
+        } 
+
         const cleanAnnex = {
             id: annex.id,
             description: annex.description,
             format: annex.format,
         }
-
-        if (annex.doc  === "root") {
-            const fileName = annexRoot;
-            sum[fileName] ??= [];
-            sum[fileName].push(cleanAnnex);
-        } else {
-            const file = docsMap[annex.doc];
-            const fileName = file.fileName.replace("page.md", "annexes.json");
-            sum[fileName] ??= [];
-            sum[fileName].push(cleanAnnex);
-        }
+        
+        sum[annex.doc].annexes.push(cleanAnnex);
         return sum;
-    }, {} as Record<string, Pick<Annex, "id" | "description" | "format">[]>);
+    }, annexMap);
 
-    return annexFiles;
 }

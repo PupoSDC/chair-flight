@@ -61,8 +61,11 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   });
 
 
-  const annexFiles =  arrangeAnnexes({ annexes, docs, annexRoot });
+  const annexFiles =  arrangeAnnexes({ annexes, docs });
   const questionFiles = arrangeQuestions({ questionTemplates, docs });
+
+  console.log(Object.entries(annexFiles).map(([k, v]) => k));
+
 
   await Promise.all(
     Object.entries(annexFiles).map(([fileName, annexes]) =>
@@ -75,7 +78,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       fs.writeFile(fileName, JSON.stringify(questions, null, 2)),
     ),
   );
-
+  /** 
   await Promise.all(Object
     .entries(annexFiles)
     .flatMap(([sourceName, annexes]) => annexes.map((annex) => {
@@ -85,7 +88,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
         if (!mediaMap[annex.id]) return Promise.resolve(undefined);
         return fs.rename(origin, destination);
     })));
-  
+  */
   return {
     success: true,
   };
