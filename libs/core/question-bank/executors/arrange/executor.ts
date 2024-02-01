@@ -64,31 +64,29 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const annexFiles =  arrangeAnnexes({ annexes, docs });
   const questionFiles = arrangeQuestions({ questionTemplates, docs });
 
-  console.log(Object.entries(annexFiles).map(([k, v]) => k));
-
-
   await Promise.all(
-    Object.entries(annexFiles).map(([fileName, annexes]) =>
+    Object.values(annexFiles).map(({ fileName, annexes }) =>
       fs.writeFile(fileName, JSON.stringify(annexes, null, 2)),
     ),
   );
 
   await Promise.all(
-    Object.entries(questionFiles).map(([fileName, questions]) =>
+    Object.values(questionFiles).map(({ fileName, questions }) =>
       fs.writeFile(fileName, JSON.stringify(questions, null, 2)),
     ),
   );
-  /** 
+
+
   await Promise.all(Object
-    .entries(annexFiles)
-    .flatMap(([sourceName, annexes]) => annexes.map((annex) => {
+    .values(annexFiles)
+    .flatMap(({ annexes, fileName }) => annexes.map((annex) => {
         const origin = mediaMap[annex.id];
-        const folderName = sourceName.replaceAll("annexes.json", "annexes");
+        const folderName = fileName.replaceAll("annexes.json", "annexes");
         const destination = path.join(folderName, `${annex.id}.${annex.format}`);
         if (!mediaMap[annex.id]) return Promise.resolve(undefined);
         return fs.rename(origin, destination);
     })));
-  */
+
   return {
     success: true,
   };

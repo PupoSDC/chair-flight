@@ -12,7 +12,8 @@ import {
   readAllDocsFromFs,
   readAllFlashcardsFromFs,
 } from "../../src/executors/question-bank-read";
-import type { ExecutorContext } from "@nx/devkit";
+import { output, type ExecutorContext } from "@nx/devkit";
+import { getAllFiles } from "../../src/executors/get-all-files";
 
 type ExecutorOptions = Record<string, never>;
 
@@ -24,28 +25,29 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     subjectsJson,
     coursesJson,
     losJson,
-    annexesJson,
 
     // Outputs
     outputDir,
     outputQuestionsJson,
-    outputAnnexesDir,
     outputAnnexesJson,
-    outputDocsDir,
     outputDocsJson,
     outputSubjectsJson,
     outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
+    outputMediaDir,
   } = getPaths({ context });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
   const docs = await readAllDocsFromFs(contentFolder);
-  const annexes = await readAllAnnexesFromFs(annexesJson);
+  const annexes = await readAllAnnexesFromFs(contentFolder);
   const learningObjectives = await readAllLosFromFs(losJson);
   const courses = await readAllCoursesFromFs(coursesJson);
   const subjects = await readAllSubjectsFromFs(subjectsJson);
   const flashcards = await readAllFlashcardsFromFs(flashcardsFolder);
+  const allMedia = [
+    ...await getAllFiles(contentFolder, ".jpg"),
+  ]
 
   connectQuestionBank({
     questionTemplates,
@@ -65,11 +67,15 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     courses,
   });
 
-  await fs
-    .rm(path.join(process.cwd(), outputDir), { recursive: true })
-    .catch(() => {});
-
-  await fs.mkdir(path.join(process.cwd(), outputDir), { recursive: true });
+  await fs.rm(
+    path.join(process.cwd(), outputDir), 
+    { recursive: true }
+  ).catch(() => {});
+  
+  await fs.mkdir(path.join(
+    process.cwd(), outputMediaDir), 
+    { recursive: true }
+  );
 
   await Promise.all([
     fs.writeFile(
@@ -100,16 +106,13 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
       path.join(process.cwd(), outputDocsJson),
       JSON.stringify(docs),
     ),
-    //fs.cp(
-    //  path.join(process.cwd(), annexesImagesFolder),
-    //  path.join(process.cwd(), outputAnnexesDir),
-    //  { recursive: true },
-    //),
-    //fs.cp(
-    //  path.join(process.cwd(), docsFolder),
-    //  path.join(process.cwd(), outputDocsDir),
-    //  { recursive: true },
-    //),
+    ...allMedia.map(async (media) => {
+      const mediaFile = await fs.readFile(media);
+      await fs.writeFile(
+        path.join(process.cwd(), outputMediaDir, path.basename(media)),
+        mediaFile,
+      );
+    }),
   ]);
 
   return {

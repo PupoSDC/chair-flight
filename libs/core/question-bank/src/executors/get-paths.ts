@@ -30,20 +30,12 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     coursesJson: path.join(contentFolder, "courses.json"),
     /** i.e.: `libs/content/content-question-bank-atpl/content/learning-objectives.json` */
     losJson: path.join(contentFolder, "learning-objectives.json"),
-    /** i.e.: `libs/content/question-bank-atpl/content/annexes/annexes.json` */
-    annexesJson: path.join(annexesFolder, "annexes.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
     outputDir: outputDir,
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/questions.json` */
     outputQuestionsJson: path.join(outputDir, "questions.json"),
-    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes` */
-    outputAnnexesDir: path.join(outputDir, "annexes"),
-    /** i.e.: `/content/content-question-bank-atpl/annexes` */
-    outputAnnexesRelativeDir: path.join("content", projectName, "annexes"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/annexes.json` */
     outputAnnexesJson: path.join(outputDir, "annexes.json"),
-    /** i.e.: `/content/content-question-bank-atpl/docs` */
-    outputDocsDir: path.join(outputDir, "docs"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/docs.json` */
     outputDocsJson: path.join(outputDir, "docs.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/subjects.json` */
@@ -54,5 +46,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     outputLosJson: path.join(outputDir, "learningObjectives.json"),
     /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/flashcards.json` */
     outputFlashcardsJson: path.join(outputDir, "flashcards.json"),
+    /** i.e.: `apps/next-app/public/content/content-question-bank-atpl/media` */
+    outputMediaDir: path.join(outputDir, "media"),
   };
 };
