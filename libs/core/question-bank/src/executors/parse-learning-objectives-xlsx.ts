@@ -1,5 +1,8 @@
 import * as XLSX from "xlsx";
-import type { LearningObjective, LearningObjectiveId } from "../types/question-bank-types";
+import type {
+  LearningObjective,
+  LearningObjectiveId,
+} from "../types/question-bank-types";
 
 type QuestionBankLearningObjectiveJson = Omit<
   LearningObjective,

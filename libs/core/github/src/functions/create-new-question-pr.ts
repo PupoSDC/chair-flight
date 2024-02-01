@@ -3,15 +3,14 @@ import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { z } from "zod";
 import { getRandomId } from "@chair-flight/base/utils";
-import type {
-  QuestionTemplate} from "@chair-flight/core/question-bank";
 import {
   questionBankNameSchema,
   questionTemplateSchema,
 } from "@chair-flight/core/question-bank";
 import { getOctokit } from "../config/oktokit";
+import type { QuestionTemplate } from "@chair-flight/core/question-bank";
 
-export const questionEditSchema = z.object({
+export const newQuestionPrSchema = z.object({
   question: questionTemplateSchema,
   questionBank: questionBankNameSchema,
   requestData: z.object({
@@ -23,7 +22,7 @@ export const questionEditSchema = z.object({
 });
 
 export const createNewQuestionPr = async (
-  schema: z.infer<typeof questionEditSchema>,
+  schema: z.infer<typeof newQuestionPrSchema>,
 ) => {
   const {
     question: { srcLocation, ...question },

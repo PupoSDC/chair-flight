@@ -1,3 +1,4 @@
+import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import {
@@ -8,28 +9,35 @@ import {
   type SubjectId,
 } from "@chair-flight/core/question-bank";
 import type { CourseId } from "@chair-flight/core/question-bank";
-import type { default as MiniSearch, SearchOptions } from "minisearch";
+import type { SearchOptions } from "minisearch";
 
-export type LearningObjectiveSearchField = "id" | "text";
+type SearchDocument = {
+  id: LearningObjectiveId;
+  text: string;
+};
 
-export type learningObjectiveSearchDocument = Record<
-  LearningObjectiveSearchField,
-  string
->;
-
-export type LearningObjectiveSearchResult = {
+type SearchResult = {
   id: LearningObjectiveId;
   href: string;
   parentId: LearningObjectiveId | CourseId;
   courses: Array<{ id: CourseId; text: string }>;
   text: string;
   source: string;
-  subject: SubjectId;
   questionBank: QuestionBankName;
+  subject: SubjectId;
   numberOfQuestions: number;
 };
 
-let initializationWork: Promise<void> | undefined;
+type SearchField = keyof SearchDocument;
+
+let INITIALIZATION_WORK: Promise<void> | undefined;
+
+const SEARCH_RESULTS = new Map<string, SearchResult>();
+
+const SEARCH_INDEX = new MiniSearch<SearchDocument>({
+  fields: ["id", "text"] as SearchField[],
+  storeFields: ["id"] as SearchField[],
+});
 
 export const searchLearningObjectivesParams = z.object({
   questionBank: questionBankNameSchema,
@@ -41,15 +49,17 @@ export const searchLearningObjectivesParams = z.object({
   cursor: z.number().default(0),
 });
 
-export const getLearningObjectivesSearchFilters = async (qb: QuestionBank) => {
-  const rawSubjects = await qb.getAll("subjects");
+export const getLearningObjectivesSearchFilters = async (
+  bank: QuestionBank,
+) => {
+  const rawSubjects = await bank.getAll("subjects");
   const subjects = rawSubjects.map((s) => ({
     id: s.id,
     text: `${s.id} - ${s.shortName}`,
   }));
   subjects.unshift({ id: "all", text: "All Subjects" });
 
-  const rawCourses = await qb.getAll("courses");
+  const rawCourses = await bank.getAll("courses");
   const courses = rawCourses.map((c) => ({
     id: c.id,
     text: c.text,
@@ -57,7 +67,7 @@ export const getLearningObjectivesSearchFilters = async (qb: QuestionBank) => {
   courses.unshift({ id: "all", text: "All Courses" });
 
   const searchFields: Array<{
-    id: LearningObjectiveSearchField | "all";
+    id: SearchField | "all";
     text: string;
   }> = [
     { id: "all", text: "All Fields" },
@@ -68,34 +78,28 @@ export const getLearningObjectivesSearchFilters = async (qb: QuestionBank) => {
   return { subjects, courses, searchFields };
 };
 
-export const populateLearningObjectivesSearchIndex = async ({
-  bank,
-  searchIndex,
-  searchResults,
-}: {
-  bank: QuestionBank;
-  searchIndex: MiniSearch<learningObjectiveSearchDocument>;
-  searchResults: Map<string, LearningObjectiveSearchResult>;
-}): Promise<void> => {
-  if (initializationWork) await initializationWork;
+export const populateLearningObjectivesSearchIndex = async (
+  bank: QuestionBank,
+): Promise<void> => {
+  if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
-  initializationWork = (async () => {
+  INITIALIZATION_WORK = (async () => {
     const allCourses = await bank.getAll("courses");
-    const los = await bank.getAll("learningObjectives");
+    const allLos = await bank.getAll("learningObjectives");
     const hasLos = await bank.has("learningObjectives");
-    const firstId = los.at(0)?.id;
+    const firstId = allLos.at(0)?.id;
 
     if (!hasLos) return;
-    if (searchIndex.has(firstId)) return;
+    if (SEARCH_INDEX.has(firstId)) return;
 
     const coursesMap = makeMap(allCourses, (c) => c.id);
 
-    const searchItems: learningObjectiveSearchDocument[] = los.map((lo) => ({
+    const searchItems: SearchDocument[] = allLos.map((lo) => ({
       id: lo.id,
       text: lo.text,
     }));
 
-    const resultItems: LearningObjectiveSearchResult[] = los.flatMap((lo) => ({
+    const resultItems: SearchResult[] = allLos.flatMap((lo) => ({
       id: lo.id,
       href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
@@ -107,43 +111,36 @@ export const populateLearningObjectivesSearchIndex = async ({
       numberOfQuestions: lo.nestedQuestions.length,
     }));
 
-    await searchIndex.addAllAsync(searchItems);
-    resultItems.forEach((r) => searchResults.set(r.id, r));
+    await SEARCH_INDEX.addAllAsync(searchItems);
+    resultItems.forEach((r) => SEARCH_RESULTS.set(r.id, r));
   })();
 
-  await initializationWork;
+  await INITIALIZATION_WORK;
 };
 
-export const searchLearningObjectives = async ({
-  params: ps,
-  searchIndex,
-  searchResults,
-}: {
-  params: z.infer<typeof searchLearningObjectivesParams>;
-  searchIndex: MiniSearch<learningObjectiveSearchDocument>;
-  searchResults: Map<string, LearningObjectiveSearchResult>;
-}) => {
+export const searchLearningObjectives = async (
+  ps: z.infer<typeof searchLearningObjectivesParams>,
+) => {
   const opts: SearchOptions = {
     fuzzy: 0.2,
     fields: ps.searchField === "all" ? undefined : [ps.searchField],
   };
 
+  const idSearchFields = ["id"];
   const results =
-    ps.q && ps.searchField !== "id"
-      ? searchIndex.search(ps.q, opts).map(({ id }) => searchResults.get(id))
-      : Array.from(searchResults.values());
+    ps.q && idSearchFields.includes(ps.searchField)
+      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
+      : Array.from(SEARCH_RESULTS.values());
 
-  const processedResults = results.filter(
-    (r): r is LearningObjectiveSearchResult => {
-      return !(
-        !r ||
-        r.questionBank !== ps.questionBank ||
-        (ps.subject !== "all" && !r.subject.includes(ps.subject)) ||
-        (ps.course !== "all" && !r.courses.find((c) => c.id === ps.course)) ||
-        (ps.searchField === "id" && !r.id.startsWith(ps.q))
-      );
-    },
-  );
+  const processedResults = results.filter((r): r is SearchResult => {
+    return !(
+      !r ||
+      r.questionBank !== ps.questionBank ||
+      (ps.subject !== "all" && !r.subject.includes(ps.subject)) ||
+      (ps.course !== "all" && !r.courses.find((c) => c.id === ps.course)) ||
+      (ps.searchField === "id" && !r.id.startsWith(ps.q))
+    );
+  });
 
   const finalItems = processedResults.slice(ps.cursor, ps.cursor + ps.limit);
 

@@ -1,16 +1,8 @@
 import { DateTime } from "luxon";
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { BlogPost } from "@chair-flight/core/question-bank";
-
-type ReadFile = (path: string, string: "utf-8") => Promise<string>;
-
-interface IBlog {
-  getDateOfLastPost: () => Promise<string>;
-  getAllPosts: () => Promise<BlogPost[]>;
-  getPost: (postId: string) => Promise<BlogPost>;
-  preloadForStaticRender: (args: { readFile: ReadFile }) => Promise<void>;
-}
+import type { Blog as IBlog, BlogPost } from "./types";
+import type { MiniFs } from "@chair-flight/base/types";
 
 const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
 
@@ -43,7 +35,7 @@ export class Blog implements IBlog {
     return post;
   }
 
-  async preloadForStaticRender({ readFile }: { readFile: ReadFile }) {
+  async preloadForStaticRender({ readFile }: MiniFs) {
     const cwd = process.cwd();
     const appPath = "/apps/next-app";
     const path = [

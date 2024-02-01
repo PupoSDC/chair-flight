@@ -1,16 +1,32 @@
-import { BadQuestionError } from "@chair-flight/base/errors";
+import {
+  BadQuestionError,
+  UnimplementedError,
+} from "@chair-flight/base/errors";
 import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "../random/random";
+} from "@chair-flight/base/utils";
+import type {
+  QuestionTemplate,
+  QuestionVariantDefinition,
+  QuestionVariantMultipleCorrect,
+  QuestionVariantOneTwo,
+  QuestionVariantSimple,
+  QuestionVariantTrueOrFalse,
+} from "../types/question-bank-types";
+import type {
+  TestQuestion,
+  TestQuestionMultipleChoice,
+  TestQuestionType,
+} from "../types/test-types";
 
-const getQuestionMultipleChoiceFromSimple = ({
+const createQuestionMultipleChoiceFromSimple = ({
   template,
   variant,
   randomSeed,
 }: {
-  template: QuestionBankQuestionTemplate;
+  template: QuestionTemplate;
   variant: QuestionVariantSimple;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
@@ -22,45 +38,38 @@ const getQuestionMultipleChoiceFromSimple = ({
   if (!correctOption) {
     throw new BadQuestionError(template, {
       message: "No correct option found",
-      variantId: variant.id,
-      options,
     });
   }
 
   if (wrongOptions.length < 3) {
     throw new BadQuestionError(template, {
       message: "Not enough wrong options found",
-      variantId: variant.id,
-      options,
     });
   }
 
   return {
     questionId: getRandomId(),
     templateId: template.id,
-    variantId: variant.id,
     seed: randomSeed,
     type: "multiple-choice",
     question: variant.question,
-    annexes: variant.annexes,
+    annexes: template.annexes,
     correctOptionId: correctOption.id,
     options: shuffler([correctOption, ...wrongOptions]).map((opt) => ({
       id: opt.id,
       text: opt.text,
       why: opt.why,
     })),
-    explanation: [variant.explanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
+    explanation: template.explanation,
   };
 };
 
-const getQuestionMultipleChoiceFromDefinition = ({
+const createQuestionMultipleChoiceFromDefinition = ({
   template,
   variant,
   randomSeed,
 }: {
-  template: QuestionBankQuestionTemplate;
+  template: QuestionTemplate;
   variant: QuestionVariantDefinition;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
@@ -100,27 +109,22 @@ const getQuestionMultipleChoiceFromDefinition = ({
   if (!correctOption) {
     throw new BadQuestionError(template, {
       message: "No correct option found",
-      variantId: variant.id,
-      options,
     });
   }
 
   if (wrongOptions.length < 3) {
     throw new BadQuestionError(template, {
       message: "Not enough wrong options found",
-      variantId: variant.id,
-      options,
     });
   }
 
   return {
     questionId: getRandomId(),
     templateId: template.id,
-    variantId: variant.id,
     seed: randomSeed,
     type: "multiple-choice",
     question: variant.question,
-    annexes: variant.annexes,
+    annexes: template.annexes,
     correctOptionId: correctOption.id,
     options: shuffler([correctOption, ...wrongOptions]),
     explanation: [autoExplanation, template.explanation]
@@ -129,62 +133,20 @@ const getQuestionMultipleChoiceFromDefinition = ({
   };
 };
 
-const getQuestionMultipleChoiceFromMultipleCorrect = ({
-  template,
-  variant,
-  randomSeed,
-}: {
-  template: QuestionBankQuestionTemplate;
+const createQuestionMultipleChoiceFromMultipleCorrect = ({}: {
+  template: QuestionTemplate;
   variant: QuestionVariantMultipleCorrect;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
-  const shuffler = getRandomShuffler(randomSeed);
-  const options = shuffler(variant.options);
-  const correctOption = options.find((option) => option.correct);
-  const wrongOptions = options.filter((option) => !option.correct).slice(0, 3);
-
-  if (!correctOption) {
-    throw new BadQuestionError(template, {
-      message: "No correct option found",
-      variantId: variant.id,
-      options,
-    });
-  }
-
-  if (wrongOptions.length < 3) {
-    throw new BadQuestionError(template, {
-      message: "Not enough wrong options found",
-      variantId: variant.id,
-      options,
-    });
-  }
-
-  return {
-    questionId: getRandomId(),
-    templateId: template.id,
-    variantId: variant.id,
-    seed: randomSeed,
-    type: "multiple-choice",
-    question: variant.question,
-    annexes: variant.annexes,
-    correctOptionId: correctOption.id,
-    options: shuffler([correctOption, ...wrongOptions]).map((opt) => ({
-      id: opt.id,
-      text: opt.text,
-      why: opt.why,
-    })),
-    explanation: [variant.explanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
-  };
+  throw new UnimplementedError();
 };
 
-const getQuestionMultipleChoiceFromTrueOrFalse = ({
+const createQuestionMultipleChoiceFromTrueOrFalse = ({
   template,
   variant,
   randomSeed,
 }: {
-  template: QuestionBankQuestionTemplate;
+  template: QuestionTemplate;
   variant: QuestionVariantTrueOrFalse;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
@@ -206,25 +168,22 @@ const getQuestionMultipleChoiceFromTrueOrFalse = ({
   return {
     questionId: getRandomId(),
     templateId: template.id,
-    variantId: variant.id,
     seed: randomSeed,
     type: "multiple-choice",
     question: variant.question,
-    annexes: variant.annexes,
+    annexes: template.annexes,
     correctOptionId: variant.answer ? "true" : "false",
     options: options,
-    explanation: [variant.explanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
+    explanation: template.explanation,
   };
 };
 
-const getQuestionMultipleChoiceFromOneTwo = ({
+const createQuestionMultipleChoiceFromOneTwo = ({
   template,
   variant,
   randomSeed,
 }: {
-  template: QuestionBankQuestionTemplate;
+  template: QuestionTemplate;
   variant: QuestionVariantOneTwo;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
@@ -289,65 +248,55 @@ const getQuestionMultipleChoiceFromOneTwo = ({
   return {
     questionId: getRandomId(),
     templateId: template.id,
-    variantId: variant.id,
     seed: randomSeed,
     type: "multiple-choice",
     question: questionText,
     annexes: [],
     correctOptionId: options.find((option) => option.correct)?.id ?? "",
     options,
-    explanation: [variant.explanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
+    explanation: template.explanation,
   };
 };
 
-export const getQuestion = (
-  template: QuestionBankQuestionTemplate,
+export const createTestQuestion = (
+  template: QuestionTemplate,
   options: {
-    variantId?: string;
     seed?: string;
     type?: TestQuestionType;
   },
 ): TestQuestion => {
-  const { variantId, seed } = options;
+  const { seed } = options;
   const randomSeed = seed ?? getRandomId();
-  const shuffler = getRandomShuffler(randomSeed);
-  const variant = variantId
-    ? template.variants[variantId]
-    : template.variants[shuffler(Object.keys(template.variants))[0]];
 
-  if (!variant) throw new BadQuestionError(template, options);
-
-  switch (variant.type) {
+  switch (template.variant.type) {
     case "simple":
-      return getQuestionMultipleChoiceFromSimple({
+      return createQuestionMultipleChoiceFromSimple({
         template: template,
-        variant,
+        variant: template.variant,
         randomSeed,
       });
     case "true-or-false":
-      return getQuestionMultipleChoiceFromTrueOrFalse({
+      return createQuestionMultipleChoiceFromTrueOrFalse({
         template: template,
-        variant,
+        variant: template.variant,
         randomSeed,
       });
     case "one-two":
-      return getQuestionMultipleChoiceFromOneTwo({
+      return createQuestionMultipleChoiceFromOneTwo({
         template: template,
-        variant,
+        variant: template.variant,
         randomSeed,
       });
     case "definition":
-      return getQuestionMultipleChoiceFromDefinition({
+      return createQuestionMultipleChoiceFromDefinition({
         template: template,
-        variant,
+        variant: template.variant,
         randomSeed,
       });
     case "multiple-correct":
-      return getQuestionMultipleChoiceFromMultipleCorrect({
+      return createQuestionMultipleChoiceFromMultipleCorrect({
         template: template,
-        variant,
+        variant: template.variant,
         randomSeed,
       });
   }

@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { createTest, newTestConfigurationSchema } from "@chair-flight/core/app";
+import { createTest, newTestConfigurationSchema } from "@chair-flight/core/question-bank";
 import { questionBanks } from "@chair-flight/core/question-bank";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const testsRouter = router({
@@ -25,7 +25,12 @@ export const testsRouter = router({
         href: `/modules/${input.questionBank}/tests/${rawTest.id}/${input.config.mode}`,
         questions: rawTest.questions.map((q) => ({
           ...q,
-          annexes: q.annexes.map((a) => annexesMap[a].href),
+          annexes: q.annexes
+            .map((a) => annexesMap[a])
+            .map((a) => ({
+              id: a,
+              href: `/content/content-question-bank-${input.questionBank}/media/${a.id}.${a.format}`,
+            })),
         })),
       };
 

@@ -1,7 +1,6 @@
 import { z } from "zod";
-import { getAnnexesSearchFilters } from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/core/question-bank";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { getAnnexesSearchFilters } from "@chair-flight/core/search";
+import { questionBanks, questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const annexesContainersRouter = router({

@@ -1,8 +1,10 @@
 import { z } from "zod";
 import { NotFoundError } from "@chair-flight/base/errors";
-import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
+import {
+  questionTemplateSchema,
+  type QuestionTemplate,
+} from "@chair-flight/core/question-bank";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionTemplate } from "@chair-flight/core/question-bank";
 
 export const getQuestionsFromGit = async ({
   srcLocation,
@@ -46,7 +48,7 @@ export const getQuestionsFromGit = async ({
     ...q,
     srcLocation: normalizedSrcLocation,
   }));
-  return z.array(questionBankQuestionSchema).parse(arrayWithSrc);
+  return z.array(questionTemplateSchema).parse(arrayWithSrc);
 };
 
 export const getQuestionFromGit = async ({

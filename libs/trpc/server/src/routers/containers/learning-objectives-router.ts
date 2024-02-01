@@ -3,15 +3,10 @@ import {
   getLearningObjectivesSearchFilters,
   populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
-} from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/core/question-bank";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import {
-  learningObjectiveSearchIndex,
-  learningObjectiveSearchResults,
-  questionSearchIndex,
   questionSearchResults,
-} from "../../common/search-indexes";
+} from "@chair-flight/core/search";
+import { questionBanks } from "@chair-flight/core/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const learningObjectivesContainersRouter = router({
@@ -40,20 +35,15 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      await populateQuestionsSearchIndex({
-        bank,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
+      await populateQuestionsSearchIndex(bank);
 
-      const resultIds = await bank
+      const results = await bank
         .getOne("learningObjectives", loId)
         .then((lo) => bank.getSome("questions", lo.nestedQuestions))
-        .then((qs) => qs.map((q) => Object.keys(q.variants)[0]));
-
-      const results = resultIds
-        .map((id) => questionSearchResults.get(id))
-        .filter(Boolean);
+        .then((qs) => qs
+          .map((q) => questionSearchResults.get(q.id))
+          .filter(Boolean)
+        );
 
       return { results };
     }),
@@ -68,12 +58,7 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-
-      await populateLearningObjectivesSearchIndex({
-        bank,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
+      await populateLearningObjectivesSearchIndex(bank);
 
       const mainLo = await bank.getOne("learningObjectives", loId);
       const tree = [mainLo.id];

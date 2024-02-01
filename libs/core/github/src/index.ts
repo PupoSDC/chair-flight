@@ -1,6 +1,3 @@
-export { createNewIssue, newIssueSchema } from "./functions/create-new-issue";
-export { createNewQuestionPr } from "./functions/create-new-question-pr";
-export {
-  getQuestionsFromGit,
-  getQuestionFromGit,
-} from "./functions/get-questions-from-git";
+export * from "./functions/create-new-issue";
+export * from "./functions/create-new-question-pr";
+export * from "./functions/get-questions-from-git";

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { questionBanks } from "@chair-flight/core/question-bank";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const layoutsContainersRouter = router({

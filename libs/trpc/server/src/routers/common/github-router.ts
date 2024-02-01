@@ -1,9 +1,9 @@
 import {
   createNewIssue,
   createNewQuestionPr,
+  newQuestionPrSchema,
   newIssueSchema,
 } from "@chair-flight/core/github";
-import { questionEditSchema } from "@chair-flight/core/schemas";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const githubRouter = router({
@@ -11,6 +11,6 @@ export const githubRouter = router({
     .input(newIssueSchema)
     .mutation(({ input }) => createNewIssue(input)),
   updateQuestion: publicProcedure
-    .input(questionEditSchema)
+    .input(newQuestionPrSchema)
     .mutation(async ({ input }) => createNewQuestionPr(input)),
 });

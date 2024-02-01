@@ -1,6 +1,8 @@
-import { QuestionVariant, QuestionVariantType } from "../types/question-bank-types";
 import { getRandomId } from "@chair-flight/base/utils";
-
+import type {
+  QuestionVariant,
+  QuestionVariantType,
+} from "../types/question-bank-types";
 
 export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
   const common = {
@@ -40,7 +42,6 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
         type: "true-or-false",
         question: "",
         answer: true,
-        explanation: "string",
       };
     case "definition":
       return {
@@ -48,7 +49,7 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
         type: "definition",
         question: "${term}...",
         fakeOptions: [],
-        options: [1, 2, 3, 4].map((i) => ({
+        options: [1, 2, 3, 4].map(() => ({
           id: getRandomId(),
           term: "",
           definition: "",

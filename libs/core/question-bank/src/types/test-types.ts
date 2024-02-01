@@ -1,5 +1,9 @@
-import { MdxDocument } from "@chair-flight/base/types";
-import { QuestionOptionId, QuestionTemplateId } from "./question-bank-types";
+import type {
+  AnnexId,
+  QuestionBankName,
+  QuestionOptionId,
+  QuestionTemplateId,
+} from "./question-bank-types";
 
 export type TestId = string;
 export type QuestionId = string;
@@ -15,15 +19,12 @@ export type TestQuestionMultipleChoice = {
   correctOptionId: QuestionOptionId;
   seed: string;
   type: TestQuestionType;
-  question: MdxDocument;
-  explanation: MdxDocument;
-  annexes: Array<{
-    id: string;
-    href: string;
-  }>;
+  question: string;
+  explanation: string;
+  annexes: AnnexId[];
   options: Array<{
     id: QuestionOptionId;
-    text: MdxDocument;
+    text: string;
     why: string;
   }>;
 };
@@ -34,7 +35,7 @@ export type Test = {
   id: string;
   title: string;
   mode: TestMode;
-  questionBank: "atpl" | "type";
+  questionBank: QuestionBankName;
   status: TestStatus;
   createdAtEpochMs: number;
   startedAtEpochMs: number | null;

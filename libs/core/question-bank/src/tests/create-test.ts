@@ -1,47 +1,31 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
 import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "../random/random";
-import { getQuestion } from "./get-question";
-import type {
-  QuestionBankName,
-  QuestionBankQuestionTemplate,
-  Test,
-} from "@chair-flight/core/question-bank";
+} from "@chair-flight/base/utils";
+import { questionBankNameSchema } from "../schemas/question-bank-enums-schema";
+import { createTestQuestion } from "./create-test-question";
+import type { QuestionTemplate } from "../types/question-bank-types";
+import type { Test } from "../types/test-types";
 
-export type NewTestConfiguration = {
-  mode: "study" | "exam";
-  questionBank: QuestionBankName;
-  subject: string;
-
-  numberOfQuestions: number;
-  learningObjectiveIds: string[];
-  seed?: string;
-  title?: string;
-  sortQuestionsByChapter?: boolean;
-};
-
-export const newTestConfigurationSchema: z.ZodType<NewTestConfiguration> =
-  z.object({
-    mode: z.enum(["study", "exam"]),
-    questionBank: questionBankNameSchema,
-    subject: z.string(),
-    learningObjectiveIds: z.string().array().min(1),
-    numberOfQuestions: z.number().min(1).max(200),
-    seed: z.string().optional(),
-    title: z.string().optional(),
-    sortQuestionsByChapter: z.boolean().optional(),
-  });
+export const newTestConfigurationSchema = z.object({
+  mode: z.enum(["study", "exam"]),
+  questionBank: questionBankNameSchema,
+  subject: z.string(),
+  learningObjectiveIds: z.string().array().min(1),
+  numberOfQuestions: z.number().min(1).max(200),
+  seed: z.string().optional(),
+  title: z.string().optional(),
+  sortQuestionsByChapter: z.boolean().optional(),
+});
 
 export const createTest = async ({
   config,
   questions: allQuestions,
 }: {
-  config: NewTestConfiguration;
-  questions: QuestionBankQuestionTemplate[];
+  config: z.infer<typeof newTestConfigurationSchema>;
+  questions: QuestionTemplate[];
 }): Promise<Test> => {
   const numberOfQuestions = config.numberOfQuestions ?? 40;
   const subject = config.subject;
@@ -65,7 +49,7 @@ export const createTest = async ({
 
   const questions = shuffler(possibleQuestions)
     .slice(0, numberOfQuestions)
-    .map((q) => getQuestion(q, { seed: getRandomRandomId() }));
+    .map((q) => createTestQuestion(q, { seed: getRandomRandomId() }));
 
   return {
     id: getRandomId(),

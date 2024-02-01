@@ -3,3 +3,4 @@ export {
   getPageVisits,
   generateDailyCounts,
 } from "./functions/page-visits-analytics";
+export * from "./types";

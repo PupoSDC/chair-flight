@@ -1,3 +1,4 @@
+import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
 import {
   questionBankNameSchema,
@@ -7,25 +8,43 @@ import {
   type QuestionBankName,
   type SubjectId,
 } from "@chair-flight/core/question-bank";
-import type { default as MiniSearch, SearchOptions } from "minisearch";
+import type { SearchOptions } from "minisearch";
 
-export type DocSearchField = "id" | "learningObjectiveId" | "content" | "title";
-export type DocSearchDocument = Record<DocSearchField, string>;
+type SearchDocument = {
+  id: DocId;
+  learningObjective: string;
+  content: string;
+  title: string;
+};
 
-export type DocSearchResult = {
+type SearchResult = {
   id: DocId;
   questionBank: QuestionBankName;
   title: string;
   subject: SubjectId;
   empty: boolean;
   href: string;
-  learningObjective: {
+  learningObjectives: Array<{
     id: LearningObjectiveId;
     href: string;
-  };
+  }>;
 };
 
-let initializationWork: Promise<void> | undefined;
+type SearchField = keyof SearchDocument;
+
+let INITIALIZATION_WORK: Promise<void> | undefined;
+
+const SEARCH_RESULTS = new Map<string, SearchResult>();
+
+const SEARCH_INDEX = new MiniSearch<SearchDocument>({
+  fields: [
+    "id",
+    "learningObjective",
+    "content",
+    "title",
+  ] satisfies SearchField[],
+  storeFields: ["id"] satisfies SearchField[],
+});
 
 export const searchDocsParams = z.object({
   questionBank: questionBankNameSchema,
@@ -53,75 +72,67 @@ export const getDocsSearchFilters = async (qb: QuestionBank) => {
   return { subjects, searchFields };
 };
 
-export const populateDocsSearchIndex = async ({
-  bank,
-  searchIndex,
-  searchResults,
-}: {
-  bank: QuestionBank;
-  searchIndex: MiniSearch<DocSearchDocument>;
-  searchResults: Map<string, DocSearchResult>;
-}): Promise<void> => {
-  if (initializationWork) await initializationWork;
+export const populateDocsSearchIndex = async (
+  bank: QuestionBank,
+): Promise<void> => {
+  if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
-  initializationWork = (async () => {
+  INITIALIZATION_WORK = (async () => {
     const docs = await bank.getAll("docs");
     const hasDocs = await bank.has("docs");
     const firstId = docs.at(0)?.id;
 
     if (!hasDocs) return;
-    if (searchIndex.has(firstId)) return;
+    if (SEARCH_INDEX.has(firstId)) return;
 
-    const searchItems: DocSearchDocument[] = docs.flatMap((doc) => ({
+    const searchItems: SearchDocument[] = docs.flatMap((doc) => ({
       id: doc.id,
-      learningObjectiveId: doc.learningObjectiveId,
+      learningObjective: doc.learningObjectives.join(", "),
       content: doc.content,
       title: doc.title,
     }));
 
-    const resultItems: DocSearchResult[] = docs.flatMap((doc) => ({
+    const resultItems: SearchResult[] = docs.flatMap((doc) => ({
       id: doc.id,
       questionBank: bank.getName(),
       title: doc.title,
+      subject: doc.subject,
       empty: doc.empty,
-      subject: doc.subjectId,
       href: `/modules/${bank.getName()}/docs/${doc.id}`,
-      learningObjective: {
-        id: doc.learningObjectiveId,
-        href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
-      },
+      learningObjectives: doc.learningObjectives.map((lo) => ({
+        id: lo,
+        href: `/modules/${bank.getName()}/learning-objectives/${lo}`,
+      })),
     }));
 
-    await searchIndex.addAllAsync(searchItems);
-    resultItems.forEach((r) => searchResults.set(r.id, r));
+    await SEARCH_INDEX.addAllAsync(searchItems);
+    resultItems.forEach((r) => SEARCH_RESULTS.set(r.id, r));
   })();
 
-  await initializationWork;
+  await INITIALIZATION_WORK;
 };
 
-export const searchDocs = async ({
-  params: ps,
-  searchIndex,
-  searchResults,
-}: {
-  params: z.infer<typeof searchDocsParams>;
-  searchIndex: MiniSearch<DocSearchDocument>;
-  searchResults: Map<string, DocSearchResult>;
-}) => {
+export const searchDocs = async (ps: z.infer<typeof searchDocsParams>) => {
   const opts: SearchOptions = {
     fuzzy: 0.2,
     fields: ps.searchField === "all" ? undefined : [ps.searchField],
   };
 
-  const results = ps.q
-    ? searchIndex.search(ps.q, opts).map(({ id }) => searchResults.get(id))
-    : Array.from(searchResults.values());
+  const idSearchFields = ["id", "learningObjectives"];
+  const results =
+    ps.q && idSearchFields.includes(ps.searchField)
+      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
+      : Array.from(SEARCH_RESULTS.values());
 
-  const processedResults = results.filter((r): r is DocSearchResult => {
-    if (!r) return false;
-    if (r.questionBank !== ps.questionBank) return false;
-    if (ps.subject !== "all" && r.subject !== ps.subject) return false;
-    return true;
+  const processedResults = results.filter((r): r is SearchResult => {
+    return !(
+      !r ||
+      r.questionBank !== ps.questionBank ||
+      (ps.subject !== "all" && r.subject !== ps.subject) ||
+      (ps.searchField === "id" && !r.id.startsWith(ps.q)) ||
+      (ps.searchField === "learningObjectives" &&
+        !r.learningObjectives.some((lo) => lo.id.startsWith(ps.q)))
+    );
   });
 
   const finalItems = processedResults.slice(ps.cursor, ps.cursor + ps.limit);

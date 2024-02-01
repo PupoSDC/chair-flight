@@ -1,41 +1,56 @@
+import { default as MiniSearch } from "minisearch";
 import { z } from "zod";
 import {
   questionBankNameSchema,
-  type QuestionBank,
-  type QuestionBankName,
-  type QuestionId,
-  type QuestionVariantId,
-  type SubjectId,
+  getQuestionPreview,
 } from "@chair-flight/core/question-bank";
-import type { default as MiniSearch, SearchOptions } from "minisearch";
+import type {
+  QuestionBank,
+  QuestionBankName,
+  QuestionId,
+  SubjectId,
+} from "@chair-flight/core/question-bank";
+import type { SearchOptions } from "minisearch";
 
-export type QuestionSearchField =
-  | "id"
-  | "questionId"
-  | "questionBank"
-  | "subjects"
-  | "learningObjectives"
-  | "externalIds"
-  | "text";
-
-export type QuestionSearchDocument = Record<QuestionSearchField, string>;
-
-export type QuestionSearchResult = {
-  id: string;
-  questionBank: QuestionBankName;
-  questionId: QuestionId;
-  variantId: QuestionVariantId;
-  subjects: SubjectId[];
+type SearchDocument = {
+  id: QuestionId;
+  subjects: string;
+  learningObjectives: string;
+  externalIds: string;
+  explanation: string;
   text: string;
-  learningObjectives: Array<{
-    name: string;
-    href: string;
-  }>;
-  externalIds: string[];
-  href: string;
 };
 
-let initializationWork: Promise<void> | undefined;
+type SearchResult = {
+  id: string;
+  questionBank: QuestionBankName;
+  subjects: SubjectId[];
+  text: string;
+  externalIds: string[];
+  href: string;
+  learningObjectives: Array<{
+    id: string;
+    href: string;
+  }>;
+};
+
+type SearchField = keyof SearchDocument;
+
+let INITIALIZATION_WORK: Promise<void> | undefined;
+
+const SEARCH_INDEX = new MiniSearch<SearchDocument>({
+  fields: [
+    "id",
+    "subjects",
+    "learningObjectives",
+    "externalIds",
+    "explanation",
+    "text",
+  ] satisfies SearchField[],
+  storeFields: ["id"] satisfies SearchField[],
+});
+
+export const questionSearchResults = new Map<string, SearchResult>();
 
 export const searchQuestionsParams = z.object({
   questionBank: questionBankNameSchema,
@@ -46,18 +61,20 @@ export const searchQuestionsParams = z.object({
   cursor: z.number().default(0),
 });
 
-export const getQuestionsSearchFilters = async (qb: QuestionBank) => {
-  const rawSubjects = await qb.getAll("subjects");
+export const getQuestionsSearchFilters = async (bank: QuestionBank) => {
+  const rawSubjects = await bank.getAll("subjects");
   const subjects = rawSubjects.map((s) => ({
     id: s.id,
     text: `${s.id} - ${s.shortName}`,
   }));
   subjects.unshift({ id: "all", text: "All Subjects" });
 
-  const searchFields: Array<{ id: QuestionSearchField | "all"; text: string }> =
-    [
+  const searchFields: Array<{
+    id: SearchField | "all";
+    text: string;
+  }> = [
       { id: "all", text: "All Fields" },
-      { id: "questionId", text: "Question ID" },
+      { id: "id", text: "Question ID" },
       { id: "learningObjectives", text: "Learning Objectives" },
       { id: "text", text: "Text" },
       { id: "externalIds", text: "External IDs" },
@@ -66,93 +83,71 @@ export const getQuestionsSearchFilters = async (qb: QuestionBank) => {
   return { subjects, searchFields };
 };
 
-export const populateQuestionsSearchIndex = async ({
-  bank,
-  searchIndex,
-  searchResults,
-}: {
-  bank: QuestionBank;
-  searchIndex: MiniSearch<QuestionSearchDocument>;
-  searchResults: Map<string, QuestionSearchResult>;
-}): Promise<void> => {
-  if (initializationWork) await initializationWork;
+export const populateQuestionsSearchIndex = async (
+  bank: QuestionBank,
+): Promise<void> => {
+  if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
-  initializationWork = (async () => {
-    const questions = await bank.getAll("questions");
+  INITIALIZATION_WORK = (async () => {
     const hasQuestions = await bank.has("questions");
-    const firstId = Object.values(questions.at(0)?.variants ?? []).at(0)?.id;
+    const questions = await bank.getAll("questions");
+    const firstId = questions.at(0)?.id;
 
     if (!hasQuestions) return;
-    if (searchIndex.has(firstId)) return;
+    if (SEARCH_INDEX.has(firstId)) return;
 
-    const searchItems: QuestionSearchDocument[] = questions.flatMap(
-      (question) => {
-        const subjects = question.learningObjectives.map(
-          (l) => l.split(".")[0],
-        );
-        const los = question.learningObjectives.join(", ");
-        const uniqueSubjects = [...new Set(subjects)];
-        return Object.values(question.variants).map((variant) => ({
-          id: variant.id,
-          questionId: question.id,
-          questionBank: bank.getName(),
-          subjects: uniqueSubjects.join(", "),
-          learningObjectives: los,
-          externalIds: variant.externalIds.join(", "),
-          text: getQuestionPreview(question, variant.id),
-        }));
-      },
-    );
+    const searchItems: SearchDocument[] = questions.map((q) => ({
+      id: q.id,
+      subjects: q.subjects.join(", "),
+      learningObjectives: q.learningObjectives.join(", "),
+      externalIds: q.externalIds.join(", "),
+      explanation: q.explanation,
+      text: getQuestionPreview(q),
+    }));
 
-    const resultItems: QuestionSearchResult[] = questions.flatMap((q) => {
-      const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
-      const uniqueSubjects = [...new Set(subjects)];
-      return Object.values(q.variants).map((v) => ({
-        questionBank: bank.getName(),
-        id: v.id,
-        questionId: q.id,
-        variantId: v.id,
-        text: getQuestionPreview(q, v.id),
-        subjects: uniqueSubjects,
-        learningObjectives: q.learningObjectives.map((name) => ({
-          name,
-          href: `/modules/${bank.getName()}/learning-objectives/${name}`,
-        })),
-        externalIds: v.externalIds,
-        href: `/modules/${bank.getName()}/questions/${q.id}?variantId=${v.id}`,
-      }));
-    });
+    const resultItems: SearchResult[] = questions.map((q) => ({
+      id: q.id,
+      questionBank: bank.getName(),
+      subjects: q.subjects,
+      text: getQuestionPreview(q),
+      externalIds: q.externalIds,
+      href: `/question-banks/${bank.getName()}/questions/${q.id}`,
+      learningObjectives: q.learningObjectives.map((lo) => ({
+        id: lo,
+        href: `/question-banks/${bank.getName()}/learning-objectives/${lo}`,
+      })),
+    }));
 
-    await searchIndex.addAllAsync(searchItems);
-    resultItems.forEach((r) => searchResults.set(r.id, r));
+    await SEARCH_INDEX.addAllAsync(searchItems);
+    resultItems.forEach((r) => questionSearchResults.set(r.id, r));
   })();
 
-  await initializationWork;
+  await INITIALIZATION_WORK;
 };
 
-export const searchQuestions = async ({
-  params: ps,
-  searchIndex,
-  searchResults,
-}: {
-  params: z.infer<typeof searchQuestionsParams>;
-  searchIndex: MiniSearch<QuestionSearchDocument>;
-  searchResults: Map<string, QuestionSearchResult>;
-}) => {
+export const searchQuestions = async (
+  ps: z.infer<typeof searchQuestionsParams>,
+) => {
   const opts: SearchOptions = {
     fuzzy: 0.2,
     fields: ps.searchField === "all" ? undefined : [ps.searchField],
   };
 
-  const results = ps.q
-    ? searchIndex.search(ps.q, opts).map(({ id }) => searchResults.get(id))
-    : Array.from(searchResults.values());
+  const idSearchFields = ["id", "learningObjectives"];
+  const results =
+    ps.q && idSearchFields.includes(ps.searchField)
+      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => questionSearchResults.get(id))
+      : Array.from(questionSearchResults.values());
 
-  const processedResults = results.filter((r): r is QuestionSearchResult => {
-    if (!r) return false;
-    if (r.questionBank !== ps.questionBank) return false;
-    if (ps.subject !== "all" && !r.subjects.includes(ps.subject)) return false;
-    return true;
+  const processedResults = results.filter((r): r is SearchResult => {
+    return !(
+      !r ||
+      r.questionBank !== ps.questionBank ||
+      (ps.subject !== "all" && !r.subjects.includes(ps.subject)) ||
+      (ps.searchField === "id" && !r.id.startsWith(ps.q)) ||
+      (ps.searchField === "learningObjectives" &&
+        !r.learningObjectives.some((lo) => lo.id.startsWith(ps.q)))
+    );
   });
 
   const finalItems = processedResults.slice(ps.cursor, ps.cursor + ps.limit);

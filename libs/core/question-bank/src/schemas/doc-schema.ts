@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { assertType } from "@chair-flight/base/utils";
-import type { Doc } from "../types";
+import type { Doc } from "../types/question-bank-types";
 import type { IsEqual } from "@chair-flight/base/utils";
 
 export const docSchema = z.object({

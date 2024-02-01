@@ -1,9 +1,6 @@
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { prisma } from "../config/postgres-connection";
-import type {
-  PageEvent,
-  SimplifiedTrackEvent,
-} from "@chair-flight/core/question-bank";
+import type { PageEvent, SimplifiedTrackEvent } from "../types";
 import type { Prisma } from "@prisma/client";
 
 const environment = getEnvVariableOrThrow("NODE_ENV");

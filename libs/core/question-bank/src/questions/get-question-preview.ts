@@ -5,7 +5,7 @@ import type {
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
-} from "../types/question-bank-types"
+} from "../types/question-bank-types";
 
 const getQuestionVariantSimplePreview = (
   variant: QuestionVariantSimple,
@@ -67,7 +67,7 @@ const getQuestionMultipleCorrectPreview = (
   ].join("\n");
 };
 
-const getQuestionPreview = (question: QuestionTemplate) => {
+export const getQuestionPreview = (question: QuestionTemplate) => {
   switch (question.variant.type) {
     case "simple":
       return getQuestionVariantSimplePreview(question.variant);

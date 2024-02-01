@@ -9,7 +9,7 @@ import { publicProcedure, router } from "../../config/trpc";
 import type {
   PageEvent,
   SimplifiedTrackEvent,
-} from "@chair-flight/core/question-bank";
+} from "@chair-flight/core/analytics";
 
 const PageEventSchema: z.ZodSchema<PageEvent> = z.object({
   anonymousId: z.string(),

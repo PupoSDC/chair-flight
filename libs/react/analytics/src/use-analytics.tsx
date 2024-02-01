@@ -3,7 +3,7 @@ import { useAnalyticsPlugin } from "./use-analytics-plugin";
 import type {
   TrackEventName,
   TrackEventPayload,
-} from "@chair-flight/core/question-bank";
+} from "@chair-flight/core/analytics";
 import type { AnalyticsInstance } from "analytics";
 import type { FunctionComponent, PropsWithChildren } from "react";
 

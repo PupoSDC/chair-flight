@@ -7,7 +7,7 @@ import type {
   QuestionVariantOneTwo,
   QuestionVariantSimple,
   QuestionVariantTrueOrFalse,
-} from "../types";
+} from "../types/question-bank-types";
 import type { IsEqual } from "@chair-flight/base/utils";
 
 export const questionVariantSimpleSchema = z.object({

@@ -1,49 +1,28 @@
-import {
-  searchLearningObjectivesParams,
-  populateLearningObjectivesSearchIndex,
-  searchLearningObjectives,
-  searchAnnexesParams,
-  populateAnnexesSearchIndex,
-  searchAnnexes,
-  searchDocsParams,
-  searchDocs,
-  populateDocsSearchIndex,
-  searchQuestionsParams,
-  searchQuestions,
-  populateQuestionsSearchIndex,
-} from "@chair-flight/core/app";
 import { questionBanks } from "@chair-flight/core/question-bank";
-import {
-  annexSearchIndex,
-  annexSearchResults,
-  learningObjectiveSearchResults,
-  learningObjectiveSearchIndex,
-  docSearchResults,
-  docSearchIndex,
-  questionSearchResults,
-  questionSearchIndex,
-} from "../../common/search-indexes";
 import { publicProcedure, router } from "../../config/trpc";
+import {
+  populateAnnexesSearchIndex,
+  populateLearningObjectivesSearchIndex,
+  populateDocsSearchIndex,
+  populateQuestionsSearchIndex,
+  searchLearningObjectivesParams,
+  searchAnnexesParams,
+  searchLearningObjectives,
+  searchAnnexes,
+  searchDocs,
+  searchQuestionsParams,
+  searchDocsParams,
+  searchQuestions,
+} from "@chair-flight/core/search";
 
 export const searchRouter = router({
   initialize: publicProcedure.query(async () => {
     for (const bank of Object.values(questionBanks)) {
       await Promise.all([
-        populateLearningObjectivesSearchIndex({
-          bank,
-          searchIndex: learningObjectiveSearchIndex,
-          searchResults: learningObjectiveSearchResults,
-        }),
-        populateAnnexesSearchIndex({
-          bank,
-          searchIndex: annexSearchIndex,
-          searchResults: annexSearchResults,
-        }),
-        populateLearningObjectivesSearchIndex({
-          bank,
-          searchIndex: learningObjectiveSearchIndex,
-          searchResults: learningObjectiveSearchResults,
-        }),
+        populateLearningObjectivesSearchIndex(bank),
+        populateAnnexesSearchIndex(bank),
+        populateQuestionsSearchIndex(bank),
+        populateDocsSearchIndex(bank),
       ]);
     }
     return "ok";
@@ -52,72 +31,27 @@ export const searchRouter = router({
     .input(searchLearningObjectivesParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateLearningObjectivesSearchIndex({
-        bank,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
-
-      const result = await searchLearningObjectives({
-        params: input,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
-
-      return result;
+      await populateLearningObjectivesSearchIndex(bank);
+      return await searchLearningObjectives(input);
     }),
   searchAnnexes: publicProcedure
     .input(searchAnnexesParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateAnnexesSearchIndex({
-        bank,
-        searchIndex: annexSearchIndex,
-        searchResults: annexSearchResults,
-      });
-
-      const result = await searchAnnexes({
-        params: input,
-        searchIndex: annexSearchIndex,
-        searchResults: annexSearchResults,
-      });
-
-      return result;
+      await populateAnnexesSearchIndex(bank);
+      return await searchAnnexes(input);
     }),
   searchQuestions: publicProcedure
     .input(searchQuestionsParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateQuestionsSearchIndex({
-        bank,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
-
-      const result = await searchQuestions({
-        params: input,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
-
-      return result;
+      return  await searchQuestions(input);
     }),
   searchDocs: publicProcedure
     .input(searchDocsParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateDocsSearchIndex({
-        bank,
-        searchIndex: docSearchIndex,
-        searchResults: docSearchResults,
-      });
-
-      const result = await searchDocs({
-        params: input,
-        searchIndex: docSearchIndex,
-        searchResults: docSearchResults,
-      });
-
-      return result;
+      await populateDocsSearchIndex(bank);
+      return await searchDocs(input);
     }),
 });

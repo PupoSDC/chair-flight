@@ -1,5 +1,9 @@
 import { makeMap } from "@chair-flight/base/utils";
-import type { Annex, Doc, QuestionTemplate } from "../types/question-bank-types";
+import type {
+  Annex,
+  Doc,
+  QuestionTemplate,
+} from "../types/question-bank-types";
 
 export const arrangeQuestions = ({
   questionTemplates,
