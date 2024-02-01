@@ -21,7 +21,6 @@ type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   const {
-    // Inputs
     flashcardsFolder,
     contentFolder,
     subjectsJson,
@@ -79,18 +78,14 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
 
   await Promise.all(Object
     .entries(annexFiles)
-    .flatMap(([fileName, annexes]) => {
-      return annexes.map((annex) => ({
-        origin: mediaMap[annex.id],
-        destination: path.join(
-          fileName.replaceAll("annexes.json", "annexes"),
-          annex.id + "." + annex.format
-        )
-      })
-    })
-  );
+    .flatMap(([sourceName, annexes]) => annexes.map((annex) => {
+        const origin = mediaMap[annex.id];
+        const folderName = sourceName.replaceAll("annexes.json", "annexes");
+        const destination = path.join(folderName, `${annex.id}.${annex.format}`);
+        if (!mediaMap[annex.id]) return Promise.resolve(undefined);
+        return fs.rename(origin, destination);
+    })));
   
-
   return {
     success: true,
   };
