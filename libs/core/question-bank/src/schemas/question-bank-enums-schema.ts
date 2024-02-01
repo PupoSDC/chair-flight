@@ -1,5 +1,5 @@
-import { assertType, IsEqual } from "@chair-flight/base/utils";
 import { z } from "zod";
+import { assertType, IsEqual } from "@chair-flight/base/utils";
 import { QuestionBankName, QuestionBankResource } from "../types";
 
 export const questionBankNameSchema = z.enum(["type", "atpl", "prep"]);

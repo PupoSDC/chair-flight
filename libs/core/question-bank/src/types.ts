@@ -69,6 +69,7 @@ export type FlashcardCollection = {
 
 export type Annex = {
   id: AnnexId;
+  doc: DocId;
   format: AnnexFormat;
   description: string;
   questions: QuestionId[];
@@ -128,7 +129,7 @@ export type QuestionVariantMultipleCorrect = {
 
 export type QuestionTemplate = {
   id: QuestionTemplateId;
-  docId: DocId;
+  doc: DocId;
   relatedQuestions: QuestionTemplateId[];
   externalIds: ExternalQuestionId[];
   subjects: SubjectId[];
@@ -137,11 +138,11 @@ export type QuestionTemplate = {
   explanation: string;
   srcLocation: string;
   variant:
-  | QuestionVariantSimple
-  | QuestionVariantDefinition
-  | QuestionVariantTrueOrFalse
-  | QuestionVariantOneTwo
-  | QuestionVariantMultipleCorrect;
+    | QuestionVariantSimple
+    | QuestionVariantDefinition
+    | QuestionVariantTrueOrFalse
+    | QuestionVariantOneTwo
+    | QuestionVariantMultipleCorrect;
 };
 
 export type Doc = {

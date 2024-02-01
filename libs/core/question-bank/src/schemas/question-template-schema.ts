@@ -45,7 +45,7 @@ export const questionVariantSimpleSchema = z.object({
     }),
 });
 
-type IVariantSimple = z.infer<typeof questionVariantSimpleSchema>
+type IVariantSimple = z.infer<typeof questionVariantSimpleSchema>;
 assertType<IsEqual<IVariantSimple, QuestionVariantSimple>>();
 
 export const questionVariantDefinitionSchema = z
@@ -81,7 +81,6 @@ export const questionVariantDefinitionSchema = z
     }
   });
 
-
 type IVariantDefinition = z.infer<typeof questionVariantDefinitionSchema>;
 assertType<IsEqual<IVariantDefinition, QuestionVariantDefinition>>();
 
@@ -103,7 +102,6 @@ export const questionVariantOneTwoSchema = z.object({
   secondIncorrectStatements: z.array(z.string().min(3)).min(1),
 });
 
-
 type IVariantOneTwo = z.infer<typeof questionVariantOneTwoSchema>;
 assertType<IsEqual<IVariantOneTwo, QuestionVariantOneTwo>>();
 
@@ -120,13 +118,12 @@ export const questionVariantMultipleCorrectSchema = z.object({
     .min(4),
 });
 
-
 type IVariantMultiple = z.infer<typeof questionVariantMultipleCorrectSchema>;
 assertType<IsEqual<IVariantMultiple, QuestionVariantMultipleCorrect>>();
 
 export const questionTemplateSchema = z.object({
   id: z.string(),
-  docId: z.string(),
+  doc: z.string(),
   relatedQuestions: z.array(z.string().min(6)),
   externalIds: z.string().array(),
   subjects: z.array(z.string()).min(1),

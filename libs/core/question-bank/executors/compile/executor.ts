@@ -1,6 +1,8 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { connectQuestionBank } from "../common/connect-question-bank";
+import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
+import { connectQuestionBank } from "../../src/executors/question-bank-connect";
+import { getPaths } from "../../src/executors/get-paths";
 import {
   readAllCoursesFromFs,
   readAllLosFromFs,
@@ -9,15 +11,13 @@ import {
   readAllSubjectsFromFs,
   readAllDocsFromFs,
   readAllFlashcardsFromFs,
-} from "../common/parse-question-bank";
-import { questionBankValidation } from "../../src/schemas/question-bank-validation-schema";
+} from "../../src/executors/question-bank-read";
 import type { ExecutorContext } from "@nx/devkit";
-import { getPaths } from "../common/get-paths";
 
 type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const { 
+  const {
     // Inputs
     flashcardsFolder,
     contentFolder,
@@ -37,7 +37,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     outputCoursesJson,
     outputLosJson,
     outputFlashcardsJson,
-   } = getPaths({ context });
+  } = getPaths({ context });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
   const docs = await readAllDocsFromFs(contentFolder);
@@ -55,7 +55,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     courses,
     subjects,
   });
-  
+
   questionBankValidation.parse({
     questionTemplates,
     docs,
@@ -69,8 +69,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     .rm(path.join(process.cwd(), outputDir), { recursive: true })
     .catch(() => {});
 
-  await fs
-    .mkdir(path.join(process.cwd(), outputDir), { recursive: true })
+  await fs.mkdir(path.join(process.cwd(), outputDir), { recursive: true });
 
   await Promise.all([
     fs.writeFile(
