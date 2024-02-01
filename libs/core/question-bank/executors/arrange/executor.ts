@@ -14,6 +14,7 @@ import {
 } from "../../src/executors/question-bank-read";
 import type { ExecutorContext } from "@nx/devkit";
 import { arrangeAnnexes, arrangeQuestions } from "../../src/executors/question-bank-arrange";
+import { getAllFiles } from "../../src/executors/get-all-files";
 
 type ExecutorOptions = Record<string, never>;
 
@@ -26,18 +27,6 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     coursesJson,
     losJson,
     annexesJson,
-
-    // Outputs
-    outputDir,
-    outputQuestionsJson,
-    outputAnnexesDir,
-    outputAnnexesJson,
-    outputDocsDir,
-    outputDocsJson,
-    outputSubjectsJson,
-    outputCoursesJson,
-    outputLosJson,
-    outputFlashcardsJson,
   } = getPaths({ context });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
@@ -65,10 +54,16 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     courses,
   });
 
+  const oldQuestions = await getAllFiles(contentFolder, "questions.json");
+  const oldAnnexes = await getAllFiles(contentFolder, "annexes.json");
+
   const annexFiles =  arrangeAnnexes({ annexes, docs });
   const questionFiles = arrangeQuestions({ questionTemplates, docs });
 
-  console.log(annexFiles);
+  console.log(
+    oldAnnexes,
+    oldQuestions,
+  )
 
   return {
     success: true,

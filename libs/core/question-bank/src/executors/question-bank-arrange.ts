@@ -14,7 +14,7 @@ export const arrangeQuestions = ({
     
     const questionFiles = questionTemplates.reduce((sum, qt) => {
         const file = docsMap[qt.doc];
-        const fileName = file.fileName.replace("page.md", "question.json");
+        const fileName = file.fileName.replace("page.md", "questions.json");
         sum[fileName] ??= [];
         sum[fileName].push(qt);
         return sum;
@@ -40,12 +40,12 @@ export const arrangeAnnexes = ({
         }
 
         if (annex.doc  === "root") {
-            const fileName = "/annex.json";
+            const fileName = "/annexes.json";
             sum[fileName] ??= [];
             sum[fileName].push(cleanAnnex);
         } else {
             const file = docsMap[annex.doc];
-            const fileName = file.fileName.replace("page.md", "annex.json");
+            const fileName = file.fileName.replace("page.md", "annexes.json");
             sum[fileName] ??= [];
             sum[fileName].push(cleanAnnex);
         }
