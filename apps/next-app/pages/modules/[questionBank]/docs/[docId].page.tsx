@@ -14,10 +14,7 @@ import {
   useDisclose,
   useMediaQuery,
 } from "@chair-flight/react/components";
-import {
-  DocContent,
-  LayoutModule,
-} from "@chair-flight/react/containers";
+import { DocContent, LayoutModule } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
