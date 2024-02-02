@@ -299,7 +299,7 @@ export const TestStudy = container<Props>(
               variant="outlined"
               target="_blank"
               startDecorator={<OpenInNewIcon />}
-              href={`../../questions/${question.templateId}?variant=${question.variantId}`}
+              href={`../../questions/${question.templateId}`}
               children="Explore Question"
             />
             <Divider sx={{ my: 2 }}>Explanation</Divider>

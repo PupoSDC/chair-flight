@@ -21,12 +21,15 @@ export type QuestionListItem = {
 
 export type QuestionListProps = Omit<
   SearchListProps<QuestionListItem>,
+  | "items"
   | "renderThead"
   | "renderTableRow"
   | "renderListItemContent"
   | "errorMessage"
   | "noDataMessage"
->;
+> & {
+  items?: QuestionListItem[];
+};
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
   ({ items = [], ...otherProps }, ref) => {

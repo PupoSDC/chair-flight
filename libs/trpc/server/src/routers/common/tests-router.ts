@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import {
+  Test,
   createTest,
   newTestConfigurationSchema,
 } from "@chair-flight/core/question-bank";
@@ -16,7 +17,7 @@ export const testsRouter = router({
         config: newTestConfigurationSchema,
       }),
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input }) : Promise<{ test: Test }> => {
       const qb = questionBanks[input.questionBank];
       const questions = await qb.getAll("questions");
       const rawTest = await createTest({ ...input, questions });

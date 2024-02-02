@@ -48,7 +48,7 @@ const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
 
 const resolver = zodResolver(newTestConfigurationSchema);
 
-const defaultConfig = {} as NewTestConfiguration;
+const defaultConfig = {} as Partial<NewTestConfiguration>;
 
 const useTestMakerPersistence = {
   atpl: createUsePersistenceHook(`cf-test-maker-atpl`, defaultConfig, 1),

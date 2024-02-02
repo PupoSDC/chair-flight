@@ -125,9 +125,11 @@ export const DocSearch = container<Props, Params, Data>(
             <tr>
               <td>{subjectMap[result.subject]}</td>
               <td>
-                <Link href={result.learningObjective.href}>
-                  {result.learningObjective.id}
-                </Link>
+                {result.learningObjectives.map((lo) => (
+                  <Link href={lo.href}>
+                    {lo.id}
+                  </Link>
+                ))}
               </td>
               <td>
                 <Link href={result.href}>{result.title}</Link>
