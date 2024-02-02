@@ -142,7 +142,11 @@ export const searchQuestions = async ({
 }) => {
   const opts: SearchOptions = {
     fuzzy: 0.2,
-    fields: ps.searchField ? [ps.searchField] : undefined,
+    fields: ps.searchField
+      ? ps.searchField === "all"
+        ? undefined
+        : [ps.searchField]
+      : undefined,
   };
 
   const results = ps.q
