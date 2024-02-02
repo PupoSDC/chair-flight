@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { getDocsSearchFilters } from "@chair-flight/core/search";
+import { compileMdx } from "@chair-flight/core/mdx";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { compileMdx } from "@chair-flight/core/mdx";
+import { getDocsSearchFilters } from "@chair-flight/core/search";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const docsContainersRouter = router({

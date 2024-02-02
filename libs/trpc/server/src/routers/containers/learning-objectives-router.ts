@@ -1,13 +1,11 @@
 import { z } from "zod";
-import {
-  getLearningObjectivesSearchFilters,
-  loSearchResults,
-  populateLearningObjectivesSearchIndex,
-  populateQuestionsSearchIndex,
-  questionSearchResults,
-} from "@chair-flight/core/search";
 import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import {
+  getLearningObjectivesSearchFilters,
+  getLearningObjectivesSearchResults,
+  getQuestionSearchResults,
+} from "@chair-flight/core/search";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const learningObjectivesContainersRouter = router({
@@ -36,14 +34,15 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      await populateQuestionsSearchIndex(bank);
 
       const results = await bank
         .getOne("learningObjectives", loId)
         .then((lo) => bank.getSome("questions", lo.nestedQuestions))
-        .then((qs) => qs
-          .map((q) => questionSearchResults.get(q.id))
-          .filter(Boolean)
+        .then((qs) =>
+          getQuestionSearchResults(
+            bank,
+            qs.map((q) => q.id),
+          ),
         );
 
       return { results };
@@ -59,8 +58,6 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      await populateLearningObjectivesSearchIndex(bank);
-
       const mainLo = await bank.getOne("learningObjectives", loId);
       const tree = [mainLo.id];
 
@@ -82,10 +79,7 @@ export const learningObjectivesContainersRouter = router({
         tree.push(...lo.learningObjectives);
       }
 
-      const items = tree
-        .sort()
-        .map((t) => loSearchResults.get(t))
-        .filter(Boolean);
+      const items = await getLearningObjectivesSearchResults(bank, tree.sort());
 
       return { items };
     }),

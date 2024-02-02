@@ -22,7 +22,7 @@ export type QuestionListProps = Omit<
   | "renderListItemContent"
   | "errorMessage"
   | "noDataMessage"
-> 
+>;
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
   ({ items = [], ...otherProps }, ref) => {

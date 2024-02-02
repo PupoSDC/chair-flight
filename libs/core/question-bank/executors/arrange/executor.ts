@@ -22,9 +22,10 @@ import type { ExecutorContext } from "@nx/devkit";
 type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const { contentFolder, subjectsJson, coursesJson, losJson, projectName } = getPaths({
-    context,
-  });
+  const { contentFolder, subjectsJson, coursesJson, losJson, projectName } =
+    getPaths({
+      context,
+    });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
   const docs = await readAllDocsFromFs(contentFolder);

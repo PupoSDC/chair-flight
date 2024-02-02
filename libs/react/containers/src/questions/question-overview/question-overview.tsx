@@ -19,10 +19,12 @@ import {
   tabClasses,
   tabListClasses,
 } from "@mui/joy";
-
+import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
 import {
   ImageViewer,
+  LearningObjectiveList,
   MarkdownClient,
+  QuestionList,
   QuestionMultipleChoice,
   Ups,
 } from "@chair-flight/react/components";
@@ -37,7 +39,6 @@ import type {
   QuestionMultipleChoiceStatus as Status,
 } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
-import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 
@@ -47,17 +48,16 @@ type Props = {
   questionBank: QuestionBankName;
   questionId: QuestionTemplateId;
   seed?: string;
-  onQuestionChanged?: (args: { variantId: string; seed: string }) => void;
+  onQuestionChanged?: (args: { seed: string }) => void;
 };
 
 type Params = {
   questionBank: QuestionBankName;
   questionId: QuestionTemplateId;
+  seed: string;
 };
 
 type Data = AppRouterOutput["containers"]["questions"]["getQuestionOverview"];
-
-const shuffle = getRandomShuffler("123");
 
 export const QuestionOverview = container<Props, Params, Data>(
   ({
@@ -70,49 +70,31 @@ export const QuestionOverview = container<Props, Params, Data>(
   }) => {
     const [tab, setTab] = useState<TabName>("question");
     const [seed, setSeed] = useState<string>(initialSeed ?? getRandomId());
-    const [variantId, setVariantId] = useState(initialVariantId);
     const [selectedOption, setSelectedOption] = useState<string>();
     const [currentAnnex, setCurrentAnnex] = useState<string>();
     const [selectedStatus, setSelectedStatus] = useState<Status>("in-progress");
     const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
-    const questionOverview = QuestionOverview.useData({
-      questionBank,
-      questionId,
-    });
+    const { question, annexes, relatedQuestions, learningObjectives, externalIds, editLink } =
+      QuestionOverview.useData({
+        questionBank,
+        questionId,
+        seed,
+      });
 
-    const questionTemplate = questionOverview.template;
-    const allVariantsMap = questionOverview.template.variants;
-    const learningObjectives = questionOverview.learningObjectives;
-    const allVariantsArray = Object.values(allVariantsMap);
-    const variant = allVariantsMap[variantId ?? ""] ?? allVariantsArray[0];
-    const externalReferences = variant.externalIds;
-    const showMeta = !!learningObjectives.length;
-    const showExplanation = !!questionTemplate.explanation;
+    const showExplanation = !!question.explanation;
     const dividerWidth = "sm" as const;
 
-    const question = useMemo(
-      () => getQuestion(questionTemplate, { variantId, seed }),
-      [variantId, questionTemplate, seed],
-    );
-
-    const randomizedOptions = useMemo(
-      () => getRandomShuffler(seed ?? "")(question.options),
-      [question, seed],
-    );
-
-    const navigateToVariant = (variantId: string, seed: string) => {
+    const navigateToNewSeed = (seed: string) => {
       setSelectedOption(undefined);
-      setVariantId(variantId);
       setTab("question");
       setSelectedStatus("in-progress");
       setSeed(seed);
-      onQuestionChanged?.({ seed, variantId });
+      onQuestionChanged?.({ seed });
     };
 
     useEffect(() => {
       if (initialSeed) setSeed(initialSeed);
-      if (initialVariantId) setVariantId(initialVariantId);
-    }, [initialSeed, initialVariantId]);
+    }, [initialSeed]);
 
     return (
       <Tabs
@@ -120,6 +102,7 @@ export const QuestionOverview = container<Props, Params, Data>(
         value={tab}
         onChange={(_, v) => setTab(v as TabName)}
         sx={{
+          position: "relative",
           backgroundColor: "initial",
 
           [`& .${tabClasses.root}`]: {
@@ -174,15 +157,8 @@ export const QuestionOverview = container<Props, Params, Data>(
           <Tab indicatorInset value={"explanation"}>
             Explanation
           </Tab>
-          {showMeta && <Tab value={"meta"}>Meta</Tab>}
-          <Tab indicatorInset value={"variants"}>
-            Variants
-          </Tab>
-          <Tab
-            href={`/modules/${questionBank}/questions/${questionId}/edit`}
-            component={Link}
-            value="edit"
-          >
+          <Tab value={"meta"}>Meta</Tab>
+          <Tab href={editLink} component={Link} value="edit">
             Edit
           </Tab>
         </TabList>
@@ -194,18 +170,15 @@ export const QuestionOverview = container<Props, Params, Data>(
             selectedOptionId={selectedOption}
             status={selectedStatus}
             disabled={selectedStatus === "show-result"}
-            options={randomizedOptions.map((option) => ({
-              optionId: option.id,
-              text: option.text,
-            }))}
+            options={question.options}
+            annexes={annexes}
             onOptionClicked={(optionId) => {
               setSelectedOption(optionId);
               setSelectedStatus("show-result");
             }}
-            annexHrefs={question.annexes.map(
-              (a) => questionOverview.annexes[a].href,
-            )}
-            onAnnexClicked={(annex) => setCurrentAnnex(annex)}
+            onAnnexClicked={(annex) => {
+              setCurrentAnnex(annex);
+            }}
           />
           <ImageViewer
             open={currentAnnex !== undefined}
@@ -236,27 +209,21 @@ export const QuestionOverview = container<Props, Params, Data>(
           />
           <Button
             children={<RefreshIcon />}
+            onClick={() => navigateToNewSeed(getRandomId())}
             sx={{
               width: (theme) => theme.spacing(5),
               height: (theme) => theme.spacing(5),
               borderRadius: "50%",
-              position: "fixed",
+              position: "absolute",
               bottom: (theme) => theme.spacing(2),
               right: (theme) => theme.spacing(2),
             }}
-            onClick={() =>
-              navigateToVariant(shuffle(allVariantsArray)[0].id, getRandomId())
-            }
           />
           <Divider />
         </TabPanel>
         <TabPanel value={"explanation"} sx={{ maxWidth: "lg" }}>
           {showExplanation ? (
-            <MarkdownClient>
-              {[variant.explanation, questionTemplate.explanation]
-                .filter((v) => !!v)
-                .join("\n\n---\n\n")}
-            </MarkdownClient>
+            <MarkdownClient>{question.explanation}</MarkdownClient>
           ) : (
             <Ups message="No explanation to this question is available" />
           )}
@@ -266,31 +233,16 @@ export const QuestionOverview = container<Props, Params, Data>(
           <Typography level="h4" sx={{ mt: 2 }}>
             Learning Objectives
           </Typography>
-          <Divider />
-          <Table aria-label="Learning Objectives">
-            <thead>
-              <tr>
-                <th style={{ width: "8em" }}>id</th>
-                <th>text</th>
-              </tr>
-            </thead>
-            <tbody>
-              {learningObjectives.map((lo) => (
-                <tr key={lo.id}>
-                  <td>
-                    <Link href={lo.href} children={lo.id} />
-                  </td>
-                  <td>
-                    <MarkdownClient children={lo.text} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
+          <LearningObjectiveList items={learningObjectives} />
+          <Typography level="h4" sx={{ mt: 2 }}>
+            Related Questions
+          </Typography>
+          <QuestionList items={relatedQuestions} />
+
           <Typography level="h4">External References</Typography>
           <Divider />
           <List aria-label="basic-list">
-            {externalReferences
+            {externalIds
               .sort((a, b) => a.localeCompare(b))
               .map((ref) => (
                 <ListItem key={ref}>
@@ -304,20 +256,6 @@ export const QuestionOverview = container<Props, Params, Data>(
           <Divider />
         </TabPanel>
         <TabPanel value={"variants"} sx={{ maxWidth: "lg" }}>
-          {allVariantsArray.map(({ id }) => {
-            const preview = getQuestionPreview(questionTemplate, id);
-            return (
-              <Fragment key={id}>
-                <MarkdownClient children={preview} />
-                <Button
-                  sx={{ mb: 2, mx: "auto" }}
-                  children="Generate This Variant"
-                  variant="outlined"
-                  onClick={() => navigateToVariant(id, getRandomId())}
-                />
-              </Fragment>
-            );
-          })}
           <Divider />
         </TabPanel>
         <TabPanel value={"edit"} sx={{ maxWidth: "lg" }}>
@@ -337,9 +275,11 @@ QuestionOverview.getData = async ({ helper, params }) => {
   const router = helper.containers.questions;
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
+  const seed = getRequiredParam(params, "seed");
   return await router.getQuestionOverview.fetch({
     questionBank,
     questionId,
+    seed,
   });
 };
 
@@ -347,8 +287,10 @@ QuestionOverview.useData = (params) => {
   const router = trpc.containers.questions;
   const questionBank = getRequiredParam(params, "questionBank");
   const questionId = getRequiredParam(params, "questionId");
+  const seed = getRequiredParam(params, "seed");
   return router.getQuestionOverview.useSuspenseQuery({
     questionBank,
     questionId,
+    seed,
   })[0];
 };

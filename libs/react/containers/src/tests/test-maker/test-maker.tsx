@@ -22,9 +22,7 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import {
- newTestConfigurationSchema,
-} from "@chair-flight/core/question-bank";
+import { newTestConfigurationSchema } from "@chair-flight/core/question-bank";
 import {
   HookFormSelect,
   NestedCheckboxSelect,

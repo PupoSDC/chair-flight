@@ -51,45 +51,12 @@ const SEARCH_INDEX = new MiniSearch<SearchDocument>({
   tokenize: (s, fieldName) => {
     if (fieldName === "learningObjectives") return s.split(", ");
     return MiniSearch.getDefault("tokenize")(s, fieldName);
-  }
+  },
 });
 
-export const questionSearchResults = new Map<string, SearchResult>();
+const SEARCH_RESULTS = new Map<string, SearchResult>();
 
-export const searchQuestionsParams = z.object({
-  questionBank: questionBankNameSchema,
-  q: z.string(),
-  subject: z.string(),
-  searchField: z.string(),
-  limit: z.number().min(1).max(50),
-  cursor: z.number().default(0),
-});
-
-export const getQuestionsSearchFilters = async (bank: QuestionBank) => {
-  const rawSubjects = await bank.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
-
-  const searchFields: Array<{
-    id: SearchField | "all";
-    text: string;
-  }> = [
-      { id: "all", text: "All Fields" },
-      { id: "id", text: "Question ID" },
-      { id: "learningObjectives", text: "Learning Objectives" },
-      { id: "text", text: "Text" },
-      { id: "externalIds", text: "External IDs" },
-    ];
-
-  return { subjects, searchFields };
-};
-
-export const populateQuestionsSearchIndex = async (
-  bank: QuestionBank,
-): Promise<void> => {
+const populateSearchIndex = async (bank: QuestionBank): Promise<void> => {
   if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
   INITIALIZATION_WORK = (async () => {
@@ -115,38 +82,72 @@ export const populateQuestionsSearchIndex = async (
       subjects: q.subjects,
       text: getQuestionPreview(q),
       externalIds: q.externalIds,
-      href: `/question-banks/${bank.getName()}/questions/${q.id}`,
+      href: `/modules/${bank.getName()}/questions/${q.id}`,
       learningObjectives: q.learningObjectives.map((lo) => ({
         id: lo,
-        href: `/question-banks/${bank.getName()}/learning-objectives/${lo}`,
+        href: `/modules/${bank.getName()}/learning-objectives/${lo}`,
       })),
     }));
 
     await SEARCH_INDEX.addAllAsync(searchItems);
-    resultItems.forEach((r) => questionSearchResults.set(r.id, r));
+    resultItems.forEach((r) => SEARCH_RESULTS.set(r.id, r));
   })();
 
   await INITIALIZATION_WORK;
 };
 
+export const searchQuestionsParams = z.object({
+  questionBank: questionBankNameSchema,
+  q: z.string(),
+  subject: z.string(),
+  searchField: z.string(),
+  limit: z.number().min(1).max(50),
+  cursor: z.number().default(0),
+});
+
+export const getQuestionsSearchFilters = async (bank: QuestionBank) => {
+  const rawSubjects = await bank.getAll("subjects");
+  const subjects = rawSubjects.map((s) => ({
+    id: s.id,
+    text: `${s.id} - ${s.shortName}`,
+  }));
+  subjects.unshift({ id: "all", text: "All Subjects" });
+
+  const searchFields: Array<{
+    id: SearchField | "all";
+    text: string;
+  }> = [
+    { id: "all", text: "All Fields" },
+    { id: "id", text: "Question ID" },
+    { id: "learningObjectives", text: "Learning Objectives" },
+    { id: "text", text: "Text" },
+    { id: "externalIds", text: "External IDs" },
+  ];
+
+  return { subjects, searchFields };
+};
+
 export const searchQuestions = async (
+  bank: QuestionBank,
   ps: z.infer<typeof searchQuestionsParams>,
 ) => {
+  await populateSearchIndex(bank);
+
   const idSearchFields = ["id", "learningObjectives"];
 
   const opts: SearchOptions = {
     fuzzy: idSearchFields.includes(ps.searchField) ? false : 0.2,
     prefix: idSearchFields.includes(ps.searchField),
-    fields: (ps.searchField === "all") ?  undefined : [ps.searchField],
+    fields: ps.searchField === "all" ? undefined : [ps.searchField],
     tokenize: (s) => {
       if (ps.searchField === "learningObjectives") return s.split(", ");
       return MiniSearch.getDefault("tokenize")(s);
-    }
+    },
   };
 
   const results = ps.q
-    ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => questionSearchResults.get(id))
-    : Array.from(questionSearchResults.values());
+    ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
+    : Array.from(SEARCH_RESULTS.values());
 
   const processedResults = results.filter((r): r is SearchResult => {
     if (!r) return false;
@@ -161,4 +162,12 @@ export const searchQuestions = async (
     totalResults: processedResults.length,
     nextCursor: ps.cursor + finalItems.length,
   };
+};
+
+export const getQuestionSearchResults = async (
+  bank: QuestionBank,
+  ids: string[],
+) => {
+  await populateSearchIndex(bank);
+  return ids.map((id) => SEARCH_RESULTS.get(id)).filter(Boolean);
 };

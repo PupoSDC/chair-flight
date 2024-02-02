@@ -46,35 +46,7 @@ const SEARCH_INDEX = new MiniSearch<SearchDocument>({
   storeFields: ["id"] satisfies SearchField[],
 });
 
-export const searchDocsParams = z.object({
-  questionBank: questionBankNameSchema,
-  q: z.string(),
-  subject: z.string(),
-  searchField: z.string(),
-  limit: z.number().min(1).max(50),
-  cursor: z.number().default(0),
-});
-
-export const getDocsSearchFilters = async (qb: QuestionBank) => {
-  const rawSubjects = await qb.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
-
-  const searchFields = [
-    { id: "all", text: "All Fields" },
-    { id: "learningObjectiveId", text: "Learning Objective" },
-    { id: "content", text: "Content" },
-    { id: "title", text: "Title" },
-  ];
-  return { subjects, searchFields };
-};
-
-export const populateDocsSearchIndex = async (
-  bank: QuestionBank,
-): Promise<void> => {
+const populateSearchIndex = async (bank: QuestionBank): Promise<void> => {
   if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
   INITIALIZATION_WORK = (async () => {
@@ -112,7 +84,38 @@ export const populateDocsSearchIndex = async (
   await INITIALIZATION_WORK;
 };
 
-export const searchDocs = async (ps: z.infer<typeof searchDocsParams>) => {
+export const searchDocsParams = z.object({
+  questionBank: questionBankNameSchema,
+  q: z.string(),
+  subject: z.string(),
+  searchField: z.string(),
+  limit: z.number().min(1).max(50),
+  cursor: z.number().default(0),
+});
+
+export const getDocsSearchFilters = async (qb: QuestionBank) => {
+  const rawSubjects = await qb.getAll("subjects");
+  const subjects = rawSubjects.map((s) => ({
+    id: s.id,
+    text: `${s.id} - ${s.shortName}`,
+  }));
+  subjects.unshift({ id: "all", text: "All Subjects" });
+
+  const searchFields = [
+    { id: "all", text: "All Fields" },
+    { id: "learningObjectiveId", text: "Learning Objective" },
+    { id: "content", text: "Content" },
+    { id: "title", text: "Title" },
+  ];
+  return { subjects, searchFields };
+};
+
+export const searchDocs = async (
+  bank: QuestionBank,
+  ps: z.infer<typeof searchDocsParams>,
+) => {
+  await populateSearchIndex(bank);
+
   const opts: SearchOptions = {
     fuzzy: 0.2,
     fields: ps.searchField === "all" ? undefined : [ps.searchField],
@@ -142,4 +145,12 @@ export const searchDocs = async (ps: z.infer<typeof searchDocsParams>) => {
     totalResults: processedResults.length,
     nextCursor: ps.cursor + finalItems.length,
   };
+};
+
+export const getDocSearchResults = async (
+  bank: QuestionBank,
+  ids: string[],
+) => {
+  await populateSearchIndex(bank);
+  return ids.map((id) => SEARCH_RESULTS.get(id)).filter(Boolean);
 };

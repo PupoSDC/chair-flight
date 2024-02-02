@@ -57,10 +57,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01",
-        learningObjectives: [{
-          id: "022.01",
-          href: "/modules/[object Object]/learning-objectives/022.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01",
+            href: "/modules/[object Object]/learning-objectives/022.01",
+          },
+        ],
       },
       {
         id: "022.01.01",
@@ -69,10 +71,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: false,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.01",
-        learningObjectives: [{
-          id: "022.01.01",
-          href: "/modules/[object Object]/learning-objectives/022.01.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.01",
+            href: "/modules/[object Object]/learning-objectives/022.01.01",
+          },
+        ],
       },
       {
         id: "022.01.02",
@@ -81,10 +85,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.02",
-        learningObjectives: [{
-          id: "022.01.02",
-          href: "/modules/[object Object]/learning-objectives/022.01.02",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.02",
+            href: "/modules/[object Object]/learning-objectives/022.01.02",
+          },
+        ],
       },
       {
         id: "022.01.03",
@@ -93,10 +99,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: false,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.03",
-        learningObjectives: [{
-          id: "022.01.03",
-          href: "/modules/[object Object]/learning-objectives/022.01.03",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.03",
+            href: "/modules/[object Object]/learning-objectives/022.01.03",
+          },
+        ],
       },
       {
         id: "022.01.04",
@@ -105,10 +113,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.04",
-        learningObjectives: [{
-          id: "022.01.04",
-          href: "/modules/[object Object]/learning-objectives/022.01.04",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.04",
+            href: "/modules/[object Object]/learning-objectives/022.01.04",
+          },
+        ],
       },
       {
         id: "022.01.05",
@@ -117,10 +127,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.05",
-        learningObjectives: [{
-          id: "022.01.05",
-          href: "/modules/[object Object]/learning-objectives/022.01.05",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.05",
+            href: "/modules/[object Object]/learning-objectives/022.01.05",
+          },
+        ],
       },
       {
         id: "022.01.06",
@@ -129,10 +141,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.06",
-        learningObjectives: [{
-          id: "022.01.06",
-          href: "/modules/[object Object]/learning-objectives/022.01.06",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.06",
+            href: "/modules/[object Object]/learning-objectives/022.01.06",
+          },
+        ],
       },
       {
         id: "022.01.07",
@@ -141,10 +155,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: false,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.07",
-        learningObjectives: [{
-          id: "022.01.07",
-          href: "/modules/[object Object]/learning-objectives/022.01.07",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.07",
+            href: "/modules/[object Object]/learning-objectives/022.01.07",
+          },
+        ],
       },
       {
         id: "022.01.08",
@@ -153,10 +169,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: false,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.08",
-        learningObjectives: [{
-          id: "022.01.08",
-          href: "/modules/[object Object]/learning-objectives/022.01.08",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.08",
+            href: "/modules/[object Object]/learning-objectives/022.01.08",
+          },
+        ],
       },
       {
         id: "022.01.09",
@@ -165,10 +183,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.09",
-        learningObjectives: [{
-          id: "022.01.09",
-          href: "/modules/[object Object]/learning-objectives/022.01.09",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.09",
+            href: "/modules/[object Object]/learning-objectives/022.01.09",
+          },
+        ],
       },
       {
         id: "022.01.10",
@@ -177,10 +197,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.01.10",
-        learningObjectives: [{
-          id: "022.01.10",
-          href: "/modules/[object Object]/learning-objectives/022.01.10",
-        }],
+        learningObjectives: [
+          {
+            id: "022.01.10",
+            href: "/modules/[object Object]/learning-objectives/022.01.10",
+          },
+        ],
       },
       {
         id: "022.02",
@@ -189,10 +211,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02",
-        learningObjectives: [{
-          id: "022.02",
-          href: "/modules/[object Object]/learning-objectives/022.02",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02",
+            href: "/modules/[object Object]/learning-objectives/022.02",
+          },
+        ],
       },
       {
         id: "022.02.01",
@@ -201,10 +225,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.01",
-        learningObjectives: [{
-          id: "022.02.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.01",
+          },
+        ],
       },
       {
         id: "022.02.01.01",
@@ -213,10 +239,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.01.01",
-        learningObjectives: [{
-          id: "022.02.01.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.01.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.01.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.01.01",
+          },
+        ],
       },
       {
         id: "022.02.01.02",
@@ -225,10 +253,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: false,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.01.02",
-        learningObjectives: [{
-          id: "022.02.01.02",
-          href: "/modules/[object Object]/learning-objectives/022.02.01.02",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.01.02",
+            href: "/modules/[object Object]/learning-objectives/022.02.01.02",
+          },
+        ],
       },
       {
         id: "022.02.02",
@@ -237,10 +267,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.02",
-        learningObjectives: [{
-          id: "022.02.02",
-          href: "/modules/[object Object]/learning-objectives/022.02.02",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.02",
+            href: "/modules/[object Object]/learning-objectives/022.02.02",
+          },
+        ],
       },
       {
         id: "022.02.02.01",
@@ -249,10 +281,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.02.01",
-        learningObjectives: [{
-          id: "022.02.02.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.02.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.02.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.02.01",
+          },
+        ],
       },
       {
         id: "022.02.02.02",
@@ -261,10 +295,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.02.02",
-        learningObjectives: [{
-          id: "022.02.02.02",
-          href: "/modules/[object Object]/learning-objectives/022.02.02.02",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.02.02",
+            href: "/modules/[object Object]/learning-objectives/022.02.02.02",
+          },
+        ],
       },
       {
         id: "022.02.03",
@@ -273,10 +309,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.03",
-        learningObjectives: [{
-          id: "022.02.03",
-          href: "/modules/[object Object]/learning-objectives/022.02.03",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.03",
+            href: "/modules/[object Object]/learning-objectives/022.02.03",
+          },
+        ],
       },
       {
         id: "022.02.03.01",
@@ -286,10 +324,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.03.01",
-        learningObjectives: [{
-          id: "022.02.03.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.03.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.03.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.03.01",
+          },
+        ],
       },
       {
         id: "022.02.04",
@@ -298,10 +338,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.04",
-        learningObjectives: [{
-          id: "022.02.04",
-          href: "/modules/[object Object]/learning-objectives/022.02.04",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.04",
+            href: "/modules/[object Object]/learning-objectives/022.02.04",
+          },
+        ],
       },
       {
         id: "022.02.04.01",
@@ -311,10 +353,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.04.01",
-        learningObjectives: [{
-          id: "022.02.04.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.04.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.04.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.04.01",
+          },
+        ],
       },
       {
         id: "022.02.05",
@@ -323,10 +367,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.05",
-        learningObjectives: [{
-          id: "022.02.05",
-          href: "/modules/[object Object]/learning-objectives/022.02.05",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.05",
+            href: "/modules/[object Object]/learning-objectives/022.02.05",
+          },
+        ],
       },
       {
         id: "022.02.05.01",
@@ -335,10 +381,12 @@ export const mockSearchData: AppRouterOutput["common"]["search"]["searchDocs"] =
         empty: true,
         subject: "022",
         href: "/modules/[object Object]/docs/022.02.05.01",
-        learningObjectives: [{
-          id: "022.02.05.01",
-          href: "/modules/[object Object]/learning-objectives/022.02.05.01",
-        }],
+        learningObjectives: [
+          {
+            id: "022.02.05.01",
+            href: "/modules/[object Object]/learning-objectives/022.02.05.01",
+          },
+        ],
       },
     ],
     totalResults: 143,

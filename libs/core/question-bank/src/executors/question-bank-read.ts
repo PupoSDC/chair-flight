@@ -74,7 +74,7 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
 
 export const readAllAnnexesFromFs = async (
   contentFolder: string,
-  projectName: string
+  projectName: string,
 ) => {
   const files = await getAllFiles(contentFolder, "annexes.json");
   const annexes: Annex[] = [];

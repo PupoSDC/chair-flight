@@ -1,10 +1,9 @@
 import { GlobalStyles } from "@mui/material";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";
 
 export type ThemeOverrideColorSchemeProps = {
-  questionBank?: QuestionBankName;
+  questionBank?: "type" | "prep" | "atpl";
 };
 
 const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({

@@ -37,28 +37,7 @@ const SEARCH_INDEX = new MiniSearch<SearchDocument>({
   storeFields: ["id"] satisfies SearchField[],
 });
 
-export const searchAnnexesParams = z.object({
-  questionBank: questionBankNameSchema,
-  q: z.string(),
-  subject: z.string(),
-  limit: z.number().min(1).max(50),
-  cursor: z.number().default(0),
-});
-
-export const getAnnexesSearchFilters = async (qb: QuestionBank) => {
-  const rawSubjects = await qb.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
-
-  return { subjects };
-};
-
-export const populateAnnexesSearchIndex = async (
-  bank: QuestionBank,
-): Promise<void> => {
+const populateSearchIndex = async (bank: QuestionBank): Promise<void> => {
   if (INITIALIZATION_WORK) await INITIALIZATION_WORK;
 
   INITIALIZATION_WORK = (async () => {
@@ -98,18 +77,38 @@ export const populateAnnexesSearchIndex = async (
   await INITIALIZATION_WORK;
 };
 
+export const searchAnnexesParams = z.object({
+  questionBank: questionBankNameSchema,
+  q: z.string(),
+  subject: z.string(),
+  limit: z.number().min(1).max(50),
+  cursor: z.number().default(0),
+});
+
+export const getAnnexesSearchFilters = async (qb: QuestionBank) => {
+  const rawSubjects = await qb.getAll("subjects");
+  const subjects = rawSubjects.map((s) => ({
+    id: s.id,
+    text: `${s.id} - ${s.shortName}`,
+  }));
+  subjects.unshift({ id: "all", text: "All Subjects" });
+
+  return { subjects };
+};
+
 export const searchAnnexes = async (
+  bank: QuestionBank,
   ps: z.infer<typeof searchAnnexesParams>,
 ) => {
+  await populateSearchIndex(bank);
+
   const opts: SearchOptions = {
     fuzzy: 0.2,
   };
 
-  const idSearchFields = ["id"];
-  const results =
-    ps.q 
-      ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
-      : Array.from(SEARCH_RESULTS.values());
+  const results = ps.q
+    ? SEARCH_INDEX.search(ps.q, opts).map(({ id }) => SEARCH_RESULTS.get(id))
+    : Array.from(SEARCH_RESULTS.values());
 
   const processedResults = results.filter((r): r is SearchResult => {
     return !(
@@ -126,4 +125,12 @@ export const searchAnnexes = async (
     totalResults: processedResults.length,
     nextCursor: ps.cursor + finalItems.length,
   };
+};
+
+export const getAnnexSearchResults = async (
+  bank: QuestionBank,
+  ids: string[],
+) => {
+  await populateSearchIndex(bank);
+  return ids.map((id) => SEARCH_RESULTS.get(id)).filter(Boolean);
 };

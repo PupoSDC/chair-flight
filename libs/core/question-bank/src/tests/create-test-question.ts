@@ -133,7 +133,7 @@ const createQuestionMultipleChoiceFromDefinition = ({
   };
 };
 
-const createQuestionMultipleChoiceFromMultipleCorrect = ({}: {
+const createQuestionMultipleChoiceFromMultipleCorrect = (_: {
   template: QuestionTemplate;
   variant: QuestionVariantMultipleCorrect;
   randomSeed: string;

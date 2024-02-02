@@ -1,8 +1,15 @@
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
-import { getQuestionsSearchFilters } from "@chair-flight/core/search";
 import { getQuestionFromGit } from "@chair-flight/core/github";
-import { questionBanks, questionBankNameSchema} from "@chair-flight/core/question-bank";
+import {
+  questionBanks,
+  questionBankNameSchema,
+  createTestQuestion,
+} from "@chair-flight/core/question-bank";
+import {
+  getLearningObjectivesSearchResults,
+  getQuestionSearchResults,
+  getQuestionsSearchFilters,
+} from "@chair-flight/core/search";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
@@ -27,35 +34,43 @@ export const questionsContainersRouter = router({
       z.object({
         questionBank: questionBankNameSchema,
         questionId: z.string(),
+        seed: z.string(),
       }),
     )
     .query(async ({ input }) => {
       const id = input.questionId;
       const questionBank = input.questionBank;
-      const qb = questionBanks[input.questionBank];
-      const template = await qb.getOne("questions", id);
+      const bank = questionBanks[input.questionBank];
+      const template = await bank.getOne("questions", id);
       const loIds = template.learningObjectives;
-      const annexIds = template.annexes;
-      const rawAnnexes = await qb.getSome("annexes", annexIds);
-      const rawLos = await qb.getSome("learningObjectives", loIds);
+      const rawAnnexes = await bank.getSome("annexes", template.annexes);
       const editLink = `/modules/${questionBank}/questions/${id}/edit`;
 
-      const annexes = makeMap(
-        rawAnnexes,
-        (a) => a.id,
-        (a) => ({
-          id: a.id,
-          href: a.href,
-        }),
-      );
+      const question = createTestQuestion(template, { seed: input.seed });
 
-      const learningObjectives = rawLos.map((lo) => ({
-        id: lo.id,
-        text: lo.text,
-        href: `/modules/${questionBank}/learning-objectives/${lo.id}`,
+      const annexes = rawAnnexes.map((a) => ({
+        id: a.id,
+        href: a.href,
       }));
 
-      return { template, annexes, learningObjectives, editLink };
+      const learningObjectives = await getLearningObjectivesSearchResults(
+        bank,
+        loIds,
+      );
+
+      const relatedQuestions = await getQuestionSearchResults(
+        bank,
+        template.relatedQuestions,
+      )
+
+      return {
+        question,
+        annexes,
+        learningObjectives,
+        relatedQuestions,
+        externalIds: template.externalIds,
+        editLink,
+      };
     }),
   getQuestionSearch: publicProcedure
     .input(

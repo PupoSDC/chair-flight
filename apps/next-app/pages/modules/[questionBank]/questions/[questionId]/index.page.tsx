@@ -15,24 +15,21 @@ type PageParams = {
 };
 
 type PageProps = {
-  seed: string;
-  variantId: string | null;
   questionBank: QuestionBankName;
   questionId: string;
+  seed: string;
 };
 
 const Page: NextPage<PageProps> = ({
-  seed: initialSeed,
-  variantId: initialVariantId,
   questionBank,
   questionId,
+  seed: initialSeed,
 }) => {
   const router = useRouter();
   const query = router.query as PageParams;
   const seed = query.seed ?? initialSeed;
-  const variantId = query.variantId ?? initialVariantId ?? undefined;
 
-  const updateVariantAndSeed = (query: { variantId: string; seed: string }) => {
+  const updateSeed = (query: { seed: string }) => {
     router.push({ pathname: router.pathname, query }, undefined, {
       shallow: true,
     });
@@ -51,13 +48,15 @@ const Page: NextPage<PageProps> = ({
 
   return (
     <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} noPadding>
-      <AppHead linkTitle={`Chair Flight: ${variantId}`} linkDescription={""} />
+      <AppHead
+        linkTitle={`Chair Flight [${questionId}]`}
+        linkDescription={""}
+      />
       <QuestionOverview
         questionBank={questionBank}
         questionId={questionId}
-        variantId={variantId}
         seed={seed}
-        onQuestionChanged={updateVariantAndSeed}
+        onQuestionChanged={updateSeed}
       />
     </LayoutModule>
   );
@@ -66,8 +65,7 @@ const Page: NextPage<PageProps> = ({
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ params, helper, context }) => {
     const seed = (context.query?.["seed"] ?? getRandomId()) as string;
-    const variantId = (context.query?.["variantId"] as string) ?? null;
-    const allParams = { ...params, seed, variantId };
+    const allParams = { ...params, seed };
 
     await Promise.all([
       LayoutModule.getData({ params: allParams, helper }),
