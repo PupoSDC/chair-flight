@@ -36,7 +36,7 @@ import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import type { NewTestConfiguration } from "@chair-flight/core/app";
+import { getNumberOfAvailableQuestions } from "./get-number-of-available-questions";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 

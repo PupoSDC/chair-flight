@@ -95,6 +95,7 @@ export const TestStudy = container<Props>(
       <Stack sx={sx} component={component}>
         <Stack
           sx={{
+            position: "fixed",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: { xs: "space-around", sm: "center" },
@@ -197,6 +198,7 @@ export const TestStudy = container<Props>(
             />
           </Tooltip>
         </Stack>
+        <Box height={(t) => t.spacing(6)} />
         <QuestionMultipleChoice
           sx={{
             maxWidth: "md",
@@ -217,11 +219,8 @@ export const TestStudy = container<Props>(
               questionId: question.questionId,
             })
           }
-          options={question.options.map((opt) => ({
-            optionId: opt.id,
-            text: opt.text,
-          }))}
-          annexHrefs={question.annexes}
+          options={question.options}
+          annexesHref={question.annexes}
           onAnnexClicked={(annex) => setCurrentAnnex(annex)}
         />
         <ImageViewer

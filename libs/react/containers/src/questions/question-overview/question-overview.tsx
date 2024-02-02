@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { tabPanelClasses } from "@mui/base";
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNew";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
@@ -12,14 +12,13 @@ import {
   Tab,
   TabList,
   TabPanel,
-  Table,
   Tabs,
   Typography,
   dividerClasses,
   tabClasses,
   tabListClasses,
 } from "@mui/joy";
-import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
+import { getRandomId } from "@chair-flight/base/utils";
 import {
   ImageViewer,
   LearningObjectiveList,
@@ -74,12 +73,18 @@ export const QuestionOverview = container<Props, Params, Data>(
     const [currentAnnex, setCurrentAnnex] = useState<string>();
     const [selectedStatus, setSelectedStatus] = useState<Status>("in-progress");
     const [annexDrawings, setAnnexDrawings] = useState<DrawingPointsMap>({});
-    const { question, annexes, relatedQuestions, learningObjectives, externalIds, editLink } =
-      QuestionOverview.useData({
-        questionBank,
-        questionId,
-        seed,
-      });
+    const {
+      question,
+      annexes,
+      relatedQuestions,
+      learningObjectives,
+      externalIds,
+      editLink,
+    } = QuestionOverview.useData({
+      questionBank,
+      questionId,
+      seed,
+    });
 
     const showExplanation = !!question.explanation;
     const dividerWidth = "sm" as const;

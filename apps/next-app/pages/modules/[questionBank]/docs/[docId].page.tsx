@@ -105,7 +105,7 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           </Typography>
           <LearningObjectiveTree
             questionBank={questionBank}
-            learningObjectiveId={doc.uestion - banks / learningObjective}
+            learningObjectiveId={doc.question - banks / learningObjective}
             forceMode="mobile"
             sx={{
               flex: 1,

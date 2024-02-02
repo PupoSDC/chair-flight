@@ -39,12 +39,10 @@ export const questionsContainersRouter = router({
     )
     .query(async ({ input }) => {
       const id = input.questionId;
-      const questionBank = input.questionBank;
-      const bank = questionBanks[input.questionBank];
+      const bankName = input.questionBank;
+      const bank = questionBanks[bankName];
       const template = await bank.getOne("questions", id);
-      const loIds = template.learningObjectives;
       const rawAnnexes = await bank.getSome("annexes", template.annexes);
-      const editLink = `/modules/${questionBank}/questions/${id}/edit`;
 
       const question = createTestQuestion(template, { seed: input.seed });
 
@@ -55,13 +53,13 @@ export const questionsContainersRouter = router({
 
       const learningObjectives = await getLearningObjectivesSearchResults(
         bank,
-        loIds,
+        template.learningObjectives,
       );
 
       const relatedQuestions = await getQuestionSearchResults(
         bank,
         template.relatedQuestions,
-      )
+      );
 
       return {
         question,
@@ -69,7 +67,7 @@ export const questionsContainersRouter = router({
         learningObjectives,
         relatedQuestions,
         externalIds: template.externalIds,
-        editLink,
+        editLink: `/modules/${bankName}/questions/${id}/edit`,
       };
     }),
   getQuestionSearch: publicProcedure
