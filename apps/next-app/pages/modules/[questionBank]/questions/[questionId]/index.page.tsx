@@ -1,15 +1,24 @@
 import { useRouter } from "next/router";
+import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 import { getRandomId } from "@chair-flight/base/utils";
 import { AppHead } from "@chair-flight/react/components";
-import { LayoutModule, QuestionOverview } from "@chair-flight/react/containers";
+import {
+  LayoutModule,
+  QuestionExplanation,
+  QuestionMeta,
+  QuestionStandAlone,
+} from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
-type PageParams = {
+type QueryParams = {
   seed?: string;
-  variantId?: string;
+  tab?: string;
+};
+
+type PageParams = QueryParams & {
   questionBank: QuestionBankName;
   questionId: string;
 };
@@ -18,21 +27,26 @@ type PageProps = {
   questionBank: QuestionBankName;
   questionId: string;
   seed: string;
+  tab: string;
 };
 
 const Page: NextPage<PageProps> = ({
   questionBank,
   questionId,
+  tab: initialTab,
   seed: initialSeed,
 }) => {
   const router = useRouter();
   const query = router.query as PageParams;
   const seed = query.seed ?? initialSeed;
+  const tab = query.tab ?? initialTab;
 
-  const updateSeed = (query: { seed: string }) => {
-    router.push({ pathname: router.pathname, query }, undefined, {
-      shallow: true,
-    });
+  const updateQuery = (query: QueryParams) => {
+    router.push(
+      { ...router, query: { ...router.query, ...query } },
+      undefined,
+      { shallow: true },
+    );
   };
 
   const crumbs = [
@@ -47,17 +61,65 @@ const Page: NextPage<PageProps> = ({
   // );
 
   return (
-    <LayoutModule questionBank={questionBank} breadcrumbs={crumbs} noPadding>
+    <LayoutModule
+      questionBank={questionBank}
+      breadcrumbs={crumbs}
+      fixedHeight
+      noPadding
+    >
       <AppHead
         linkTitle={`Chair Flight [${questionId}]`}
         linkDescription={""}
       />
-      <QuestionOverview
-        questionBank={questionBank}
-        questionId={questionId}
-        seed={seed}
-        onQuestionChanged={updateSeed}
-      />
+      <Tabs
+        value={tab}
+        onChange={(_, v) => updateQuery({ tab: v as string })}
+        sx={{ backgroundColor: "transparent", flex: 1 }}
+      >
+        <TabList
+          sx={{
+            position: "fixed",
+            bgcolor: "background.surface",
+            width: "100%",
+            height: (theme) => `calc(${theme.spacing(5)} + 2px)`,
+
+            [`& .${tabClasses.selected}`]: {
+              color: "primary.plainColor",
+            },
+          }}
+        >
+          <Tab value={"question"}>Question</Tab>
+          <Tab value={"explanation"}>Explanation</Tab>
+          <Tab value={"meta"}>Meta</Tab>
+        </TabList>
+        <Box sx={{ height: (theme) => `calc(${theme.spacing(5)} + 2px)` }} />
+        <TabPanel value={"question"}>
+          <QuestionStandAlone
+            noSsr
+            questionId={questionId}
+            questionBank={questionBank}
+            seed={seed}
+            onNavigateToNewSeed={updateQuery}
+            sx={{ maxWidth: "md", margin: "auto", width: "100%" }}
+          />
+        </TabPanel>
+        <TabPanel value={"explanation"}>
+          <QuestionExplanation
+            noSsr
+            questionId={questionId}
+            questionBank={questionBank}
+            sx={{ maxWidth: "md", margin: "auto", width: "100%" }}
+          />
+        </TabPanel>
+        <TabPanel value={"meta"}>
+          <QuestionMeta
+            noSsr
+            questionId={questionId}
+            questionBank={questionBank}
+            sx={{ maxWidth: "md", margin: "auto", width: "100%" }}
+          />
+        </TabPanel>
+      </Tabs>
     </LayoutModule>
   );
 };
@@ -65,11 +127,14 @@ const Page: NextPage<PageProps> = ({
 export const getServerSideProps = ssrHandler<PageProps, PageParams>(
   async ({ params, helper, context }) => {
     const seed = (context.query?.["seed"] ?? getRandomId()) as string;
-    const allParams = { ...params, seed };
+    const tab = (context.query?.["tab"] ?? "question") as string;
+    const allParams = { ...params, seed, tab };
 
     await Promise.all([
       LayoutModule.getData({ params: allParams, helper }),
-      QuestionOverview.getData({ params: allParams, helper }),
+      QuestionStandAlone.getData({ params: allParams, helper }),
+      QuestionExplanation.getData({ params: allParams, helper }),
+      QuestionMeta.getData({ params: allParams, helper }),
     ]);
 
     return { props: allParams };

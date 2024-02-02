@@ -15,8 +15,8 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { AnnexSearch } from "../../annexes/annex-search";
 import { BugReportButton } from "../../layouts/components/app-buttons/app-buttons";
-import { QuestionOverview } from "../../questions/question-overview";
 import { QuestionSearch } from "../../questions/question-search";
+import { QuestionPreview } from "../../questions/question-stand-alone";
 import { useUserVoyage } from "../../user/hooks/use-user-voyage";
 import { container, getRequiredParam } from "../../wraper";
 import type { Container } from "../../wraper/container";
@@ -76,8 +76,8 @@ export const BlogPost: Container<Props, Params, Data> = container<
           Stack,
           Link,
           AnnexSearch,
+          QuestionPreview,
           ModuleSelectionButton,
-          QuestionOverview,
           MarkdownClientDemo,
           AirplaneTicketIcon,
           ChevronRightIcon,

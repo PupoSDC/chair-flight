@@ -13,6 +13,10 @@ export type QuestionListItem = {
     id: string;
     href: string;
   }>;
+  relatedQuestions: Array<{
+    id: string;
+    href: string;
+  }>;
 };
 
 export type QuestionListProps = Omit<
@@ -39,6 +43,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
               <th style={{ width: "8em" }}>ID</th>
               <th>Question</th>
               <th style={{ width: "12em" }}>Learning Objectives</th>
+              <th style={{ width: "12em" }}>Related Questions</th>
               <th style={{ width: "12em" }}>External IDs</th>
             </tr>
           </thead>
@@ -54,7 +59,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
               <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
             </td>
             <td>
-              {result.learningObjectives.map(({ id, href }) => (
+              {result.learningObjectives.slice(0, 5).map(({ id, href }) => (
                 <Link
                   key={id}
                   href={href}
@@ -62,13 +67,38 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
                   sx={{ display: "block" }}
                 />
               ))}
+              {result.learningObjectives.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.learningObjectives.length - 5} more`}
+                </Typography>
+              )}
             </td>
             <td>
-              {result.externalIds.map((id) => (
+              {result.relatedQuestions.slice(0, 5).map(({ id, href }) => (
+                <Link
+                  key={id}
+                  href={href}
+                  children={id}
+                  sx={{ display: "block" }}
+                />
+              ))}
+              {result.relatedQuestions.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.relatedQuestions.length - 5} more`}
+                </Typography>
+              )}
+            </td>
+            <td>
+              {result.externalIds.slice(0, 5).map((id) => (
                 <Typography level="body-xs" key={id}>
                   {id}
                 </Typography>
               ))}
+              {result.externalIds.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.externalIds.length - 5} more`}
+                </Typography>
+              )}
             </td>
           </tr>
         )}

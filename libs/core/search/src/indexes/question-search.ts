@@ -32,6 +32,10 @@ type SearchResult = {
     id: string;
     href: string;
   }>;
+  relatedQuestions: Array<{
+    id: string;
+    href: string;
+  }>;
 };
 
 type SearchField = keyof SearchDocument;
@@ -86,6 +90,10 @@ const populateSearchIndex = async (bank: QuestionBank): Promise<void> => {
       learningObjectives: q.learningObjectives.map((lo) => ({
         id: lo,
         href: `/modules/${bank.getName()}/learning-objectives/${lo}`,
+      })),
+      relatedQuestions: q.relatedQuestions.map((id) => ({
+        id,
+        href: `/modules/${bank.getName()}/questions/${id}`,
       })),
     }));
 
@@ -151,7 +159,7 @@ export const searchQuestions = async (
 
   const processedResults = results.filter((r): r is SearchResult => {
     if (!r) return false;
-    if (ps.subject !== "all" && r.subjects.includes(ps.subject)) return false;
+    if (ps.subject !== "all" && !r.subjects.includes(ps.subject)) return false;
     return true;
   });
 

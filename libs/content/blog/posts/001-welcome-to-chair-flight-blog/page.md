@@ -60,7 +60,7 @@ That's 16 times more seeing this question than you really need to see it. In
 Chair Flight, these question variants are combined into a single question:
 
 ```tsx eval
-<QuestionOverview
+<QuestionPreview
   noSsr
   questionId={"QYFPA3CY4E"}
   questionBank="atpl"

@@ -133,11 +133,12 @@ const createQuestionMultipleChoiceFromDefinition = ({
   };
 };
 
-const createQuestionMultipleChoiceFromMultipleCorrect = (_: {
+const createQuestionMultipleChoiceFromMultipleCorrect = (args: {
   template: QuestionTemplate;
   variant: QuestionVariantMultipleCorrect;
   randomSeed: string;
 }): TestQuestionMultipleChoice => {
+  console.info(args);
   throw new UnimplementedError();
 };
 
@@ -154,13 +155,11 @@ const createQuestionMultipleChoiceFromTrueOrFalse = ({
     {
       id: "true",
       text: "True",
-      correct: variant.answer,
       why: "",
     },
     {
       id: "false",
       text: "False",
-      correct: !variant.answer,
       why: "",
     },
   ];
@@ -253,7 +252,11 @@ const createQuestionMultipleChoiceFromOneTwo = ({
     question: questionText,
     annexes: [],
     correctOptionId: options.find((option) => option.correct)?.id ?? "",
-    options,
+    options: options.map((opt) => ({
+      id: opt.id,
+      text: opt.text,
+      why: opt.why,
+    })),
     explanation: template.explanation,
   };
 };
