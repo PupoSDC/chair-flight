@@ -17,8 +17,6 @@ import {
 import {
   DocContent,
   LayoutModule,
-  LearningObjectiveQuestions,
-  LearningObjectiveTree,
 } from "@chair-flight/react/containers";
 import { trpc } from "@chair-flight/trpc/client";
 import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
@@ -103,16 +101,6 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
             Learning Objectives
           </Typography>
-          <LearningObjectiveTree
-            questionBank={questionBank}
-            learningObjectiveId={doc.question - banks / learningObjective}
-            forceMode="mobile"
-            sx={{
-              flex: 1,
-              border: "none",
-              overflowY: "scroll",
-            }}
-          />
         </Drawer>
 
         <Drawer
@@ -125,16 +113,6 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
             Questions
           </Typography>
-          <LearningObjectiveQuestions
-            questionBank={questionBank}
-            learningObjectiveId={doc.learningObjective}
-            forceMode="mobile"
-            sx={{
-              flex: 1,
-              border: "none",
-              overflowY: "scroll",
-            }}
-          />
         </Drawer>
       </Stack>
     </LayoutModule>
@@ -143,12 +121,9 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params: rawParams, helper }) => {
-    const data = await helper.containers.docs.getDoc.fetch(rawParams);
-    const learningObjectiveId = data.doc.learningObjective;
-    const params = { ...rawParams, learningObjectiveId };
+    const params = { ...rawParams };
     await LayoutModule.getData({ helper, params });
     await DocContent.getData({ helper, params });
-    await LearningObjectiveTree.getData({ helper, params });
     return { props: params };
   },
   fs,

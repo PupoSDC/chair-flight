@@ -20,11 +20,13 @@ export const newTestConfigurationSchema = z.object({
   sortQuestionsByChapter: z.boolean().optional(),
 });
 
+export type NewTestConfiguration = z.infer<typeof newTestConfigurationSchema>;
+
 export const createTest = async ({
   config,
   questions: allQuestions,
 }: {
-  config: z.infer<typeof newTestConfigurationSchema>;
+  config: NewTestConfiguration;
   questions: QuestionTemplate[];
 }): Promise<Test> => {
   const numberOfQuestions = config.numberOfQuestions ?? 40;

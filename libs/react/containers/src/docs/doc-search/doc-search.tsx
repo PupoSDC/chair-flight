@@ -157,7 +157,7 @@ export const DocSearch = container<Props, Params, Data>(
               <Stack>
                 <Link href={result.href}>{result.title}</Link>
                 <Link level="body-sm" color="neutral" href={result.href}>
-                  {result.learningObjective.id}
+                  {result.id}
                 </Link>
               </Stack>
               {result.empty ? (

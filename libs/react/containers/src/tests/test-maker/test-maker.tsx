@@ -37,14 +37,16 @@ import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import { getNumberOfAvailableQuestions } from "./get-number-of-available-questions";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { NewTestConfiguration, QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
+import { z } from "zod";
 
 const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
 
 const resolver = zodResolver(newTestConfigurationSchema);
 
-const defaultConfig = {} as Partial<NewTestConfiguration>;
+const defaultConfig = {} as NewTestConfiguration;
+
 const useTestMakerPersistence = {
   atpl: createUsePersistenceHook(`cf-test-maker-atpl`, defaultConfig, 1),
   type: createUsePersistenceHook(`cf-test-maker-type`, defaultConfig, 1),
