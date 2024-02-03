@@ -110,11 +110,7 @@ export const searchDocs = async ({
 }) => {
   const opts: SearchOptions = {
     fuzzy: 0.2,
-    fields: ps.searchField
-      ? ps.searchField === "all"
-        ? undefined
-        : [ps.searchField]
-      : undefined,
+    fields: ps.searchField === "all" ? undefined : [ps.searchField],
   };
 
   const results = ps.q
