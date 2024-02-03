@@ -61,8 +61,6 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
     const jsonData = JSON.parse(json) as QuestionTemplate[];
     const jsonDataWithSrcLocation = jsonData.map((q) => ({
       ...q,
-      docId: "",
-      subject: "",
       srcLocation: filePath.replace(process.cwd(), ""),
     }));
 
