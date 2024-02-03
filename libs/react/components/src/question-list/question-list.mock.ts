@@ -1,4 +1,4 @@
-import { QuestionListProps } from "./question-list";
+import type { QuestionListProps } from "./question-list";
 
 export const itemsMock: QuestionListProps["items"] = [
   {

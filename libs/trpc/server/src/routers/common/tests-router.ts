@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import {
-  Test,
   createTest,
   newTestConfigurationSchema,
 } from "@chair-flight/core/question-bank";
@@ -13,32 +12,23 @@ export const testsRouter = router({
   createTest: publicProcedure
     .input(
       z.object({
-        questionBank: questionBankNameSchema,
         config: newTestConfigurationSchema,
       }),
     )
-    .mutation(async ({ input }) : Promise<{ test: Test }> => {
-      const qb = questionBanks[input.questionBank];
-      const questions = await qb.getAll("questions");
-      const rawTest = await createTest({ ...input, questions });
-      const annexIds = rawTest.questions.flatMap((q) => q.annexes);
-      const annexes = await qb.getSome("annexes", annexIds);
-      const annexesMap = makeMap(annexes, (a) => a.id);
-      const test = {
-        ...rawTest,
-        href: `/modules/${input.questionBank}/tests/${rawTest.id}/${input.config.mode}`,
-        questions: rawTest.questions.map((q) => ({
-          ...q,
-          annexes: q.annexes
-            .map((a) => annexesMap[a])
-            .map((a) => ({
-              id: a,
-              href: `/content/content-question-bank-${input.questionBank}/media/${a.id}.${a.format}`,
-            })),
-        })),
-      };
-
-      return { test };
+    .mutation(async ({ input }) => {
+      const mode = input.config.mode;
+      const bankName = input.config.questionBank;
+      const bank = questionBanks[bankName];
+      const questions = await bank.getAll("questions");
+      const test = await createTest({ ...input, questions });
+      const href = `/modules/${bankName}/tests/${test.id}/${mode}`;
+      const annexIds = test.questions.flatMap((q) => q.annexes);
+      const annexes = makeMap(
+        await bank.getSome("annexes", annexIds),
+        (a) => a.id,
+        (a) => ({ id: a.id, href: a.href }),
+      );
+      return { test, href, annexes };
     }),
 
   getSubjects: publicProcedure

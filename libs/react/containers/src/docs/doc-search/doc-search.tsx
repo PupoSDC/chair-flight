@@ -126,9 +126,7 @@ export const DocSearch = container<Props, Params, Data>(
               <td>{subjectMap[result.subject]}</td>
               <td>
                 {result.learningObjectives.map((lo) => (
-                  <Link href={lo.href}>
-                    {lo.id}
-                  </Link>
+                  <Link href={lo.href}>{lo.id}</Link>
                 ))}
               </td>
               <td>

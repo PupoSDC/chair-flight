@@ -22,7 +22,6 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import { z } from "zod";
 import { newTestConfigurationSchema } from "@chair-flight/core/question-bank";
 import {
   HookFormSelect,
@@ -142,12 +141,9 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
 
   const onSubmit = form.handleSubmit(async (config) => {
     try {
-      const { test } = await createTest.mutateAsync({
-        questionBank,
-        config,
-      });
-      addTest({ test });
-      await router.push(test.href);
+      const data = await createTest.mutateAsync({ config });
+      addTest({ test: data.test });
+      await router.push(data.href);
     } catch (error) {
       console.error(error);
       toast({
