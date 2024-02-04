@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Box, FormLabel, IconButton, Sheet, Switch } from "@mui/joy";
-import { getRandomIdGenerator } from "@chair-flight/core/app";
+import { getRandomIdGenerator } from "@chair-flight/base/utils";
 import {
   HookFormErrorMessage,
   HookFormTextArea,

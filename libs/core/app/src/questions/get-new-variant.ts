@@ -1,5 +1,5 @@
 import { UnimplementedError } from "@chair-flight/base/errors";
-import { getRandomId } from "../random/random";
+import { getRandomId } from "@chair-flight/base/utils";
 import type {
   QuestionVariant,
   QuestionVariantType,

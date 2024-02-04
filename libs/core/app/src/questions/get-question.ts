@@ -3,7 +3,7 @@ import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "../random/random";
+} from "@chair-flight/base/utils";
 import type {
   TestQuestion,
   TestQuestionMultipleChoice,
