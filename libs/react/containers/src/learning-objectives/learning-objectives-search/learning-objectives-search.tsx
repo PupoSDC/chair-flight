@@ -53,7 +53,11 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const form = useForm({ defaultValues: getData(), resolver });
 
     const { searchFields, subjects, courses } = serverData.filters;
-    const { searchField, subject, course } = form.watch();
+    const {
+      searchField = "all",
+      subject = "all",
+      course = "all",
+    } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchLos(
       { q: search, questionBank, subject, searchField, course, limit: 20 },

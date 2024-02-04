@@ -21,7 +21,7 @@ export const getPageVisits = async () => {
       const name = DateTime.fromJSDate(timestamp).toFormat("yyyy-MM-dd");
       let existingDate = acc.find((item) => item["name"] === name);
       if (!existingDate) acc.push({ name });
-      existingDate ??= acc.at(-1)!;
+      existingDate ??= acc.at(-1) as Record<string, string | number>;
       existingDate[path] = count;
       return acc;
     },

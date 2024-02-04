@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Stack } from "@mui/joy";
+import { NOOP } from "@chair-flight/base/utils";
 import { ContainerWrapper } from "./container-wrapper";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -15,7 +16,7 @@ const ComponentToDemoWrapper = () => {
     throw new Error();
   }
   if (hasSuspended) {
-    throw new Promise(() => {});
+    throw new Promise(NOOP);
   }
 
   return (

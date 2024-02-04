@@ -54,7 +54,7 @@ export const DocSearch = container<Props, Params, Data>(
 
     const { subjectMap, filters } = serverData;
     const { searchFields, subjects } = filters;
-    const { searchField, subject } = form.watch();
+    const { searchField = "all", subject = "all" } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       { q: search, questionBank, searchField, subject, limit: 24 },

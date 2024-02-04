@@ -1,6 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
+import { NOOP } from "@chair-flight/base/utils";
 import { blogPostSchema } from "../../src";
 import type { BlogPost } from "@chair-flight/base/types";
 import type { ExecutorContext } from "@nx/devkit";
@@ -47,7 +48,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
 
   await fs
     .rm(path.join(process.cwd(), outputDir), { recursive: true })
-    .catch(() => {});
+    .catch(NOOP);
 
   await fs.cp(
     path.join(process.cwd(), blogPostsFolder),

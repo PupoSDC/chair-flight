@@ -1,4 +1,5 @@
 import { useRouter } from "next/dist/client/router";
+import { NOOP } from "@chair-flight/base/utils";
 import { trpc } from "@chair-flight/trpc/client";
 import type { AnalyticsPlugin } from "analytics";
 
@@ -34,8 +35,8 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
     name: "chair-flight-analytics-plugin",
     config: {},
     loaded: () => true,
-    initialize: () => {},
-    identify: () => {},
+    initialize: NOOP,
+    identify: NOOP,
     page: (props: OriginalPageViewProps) => {
       createPageEvent.mutate({
         path: router.pathname,

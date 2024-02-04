@@ -198,7 +198,7 @@ export const AnnexSearch = container<Props, Params, Data>(
     const serverData = AnnexSearch.useData({ questionBank });
     const form = useForm({ defaultValues: getData(), resolver });
     const { subjects } = serverData.filters;
-    const { subject } = form.watch();
+    const { subject = "all" } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
       { q: search, questionBank, subject, limit: 24 },

@@ -1,5 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { NOOP } from "@chair-flight/base/utils";
 import { connectQuestionBank } from "../common/connect-question-bank";
 import {
   getPaths,
@@ -65,7 +66,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
 
   await fs
     .rm(path.join(process.cwd(), outputDir), { recursive: true })
-    .catch(() => {});
+    .catch(NOOP);
 
   await fs.mkdir(path.join(process.cwd(), outputDir), { recursive: true });
 

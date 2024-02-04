@@ -52,7 +52,7 @@ export const QuestionSearch = container<Props, Params, Data>(
     const form = useForm({ defaultValues: getData(), resolver });
 
     const { searchFields, subjects } = serverData.filters;
-    const { searchField, subject } = form.watch();
+    const { searchField = "all", subject = "all" } = form.watch();
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       { q: search, questionBank, searchField, subject, limit: 24 },
