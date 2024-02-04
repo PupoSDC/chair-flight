@@ -19,7 +19,7 @@
     "prettier": "prettier . --write",
     "prettier:check": "prettier . --check",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
