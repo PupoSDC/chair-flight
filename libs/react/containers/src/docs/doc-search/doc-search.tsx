@@ -1,32 +1,23 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import {
-  Select,
-  Stack,
-  Option,
-  ListItemContent,
-  Link,
-  Tooltip,
-} from "@mui/joy";
+import { Stack, ListItemContent, Link, Tooltip } from "@mui/joy";
 import { z } from "zod";
-import {
-  SearchQuery,
-  HookFormSelect,
-  SearchFilters,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
+import { SearchHeader, SearchList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
 import type { QuestionBankName } from "@chair-flight/base/types";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
-type Props = { questionBank: QuestionBankName };
+type Props = {
+  questionBank: QuestionBankName;
+};
+
 type Params = Props;
+
 type Data = AppRouterOutput["containers"]["docs"]["getDocSearch"];
 
 const filterSchema = z.object({
@@ -48,63 +39,38 @@ const useSearchPersistence = {
 export const DocSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const { getData, setData } = useSearchPersistence[questionBank]();
+    const persistedData = useSearchPersistence[questionBank]();
     const serverData = DocSearch.useData({ questionBank });
-    const form = useForm({ defaultValues: getData(), resolver });
 
-    const { subjectMap, filters } = serverData;
-    const { searchFields, subjects } = filters;
-    const { searchField = "all", subject = "all" } = form.watch();
+    const form = useForm({
+      defaultValues: persistedData.getData(),
+      resolver,
+    });
+
+    const subject = form.watch("subject");
+    const searchField = form.watch("searchField");
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       { q: search, questionBank, searchField, subject, limit: 24 },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    form.watch((data) => setData({ ...defaultFilter, ...data }));
-
-    const numberOfFilters =
-      Number(searchField !== "all") + Number(subject !== "all");
+    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
 
     return (
       <Stack component={component} sx={sx}>
-        <SearchHeader>
-          <SearchQuery
-            size="sm"
-            value={search}
-            loading={isLoading}
-            onChange={(value) => setSearch(value)}
-            sx={{ flex: 1 }}
-            placeholder="search Docs..."
-          />
-
-          <SearchFilters
-            activeFilters={numberOfFilters}
-            fallback={[
-              <Select size="sm" key={1} />,
-              <Select size="sm" key={2} />,
-            ]}
-            filters={
-              <FormProvider {...form}>
-                <HookFormSelect size="sm" {...form.register("searchField")}>
-                  {searchFields.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-                <HookFormSelect size="sm" {...form.register("subject")}>
-                  {subjects.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-              </FormProvider>
-            }
-          />
-        </SearchHeader>
-
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Docs..."
+          filters={serverData.filters}
+          filterValues={form.watch()}
+          isLoading={isLoading}
+          isError={isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(name, value) =>
+            form.setValue(name as keyof typeof defaultFilter, value)
+          }
+        />
         <SearchList
           loading={isLoading}
           error={isError}
@@ -123,7 +89,7 @@ export const DocSearch = container<Props, Params, Data>(
           )}
           renderTableRow={(result) => (
             <tr>
-              <td>{subjectMap[result.subject]}</td>
+              <td>{serverData.subjectMap[result.subject]}</td>
               <td>
                 <Link href={result.learningObjective.href}>
                   {result.learningObjective.id}

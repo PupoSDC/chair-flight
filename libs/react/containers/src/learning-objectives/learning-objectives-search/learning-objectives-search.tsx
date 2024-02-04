@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Select, Option, Stack } from "@mui/joy";
+import { Stack } from "@mui/joy";
 import { z } from "zod";
 import {
-  SearchQuery,
-  HookFormSelect,
-  SearchFilters,
   SearchHeader,
   LearningObjectiveList,
 } from "@chair-flight/react/components";
@@ -48,77 +45,39 @@ const useSearchPersistence = {
 export const LearningObjectivesSearch = container<Props, Params, Data>(
   ({ component = "section", questionBank, sx }) => {
     const [search, setSearch] = useState("");
-    const { getData, setData } = useSearchPersistence[questionBank]();
+    const persistedData = useSearchPersistence[questionBank]();
     const serverData = LearningObjectivesSearch.useData({ questionBank });
-    const form = useForm({ defaultValues: getData(), resolver });
 
-    const { searchFields, subjects, courses } = serverData.filters;
-    const {
-      searchField = "all",
-      subject = "all",
-      course = "all",
-    } = form.watch();
+    const form = useForm({
+      defaultValues: persistedData.getData(),
+      resolver,
+    });
+
+    const searchField = form.watch("searchField");
+    const subject = form.watch("subject");
+    const course = form.watch("course");
 
     const { data, isLoading, isError, fetchNextPage } = useSearchLos(
       { q: search, questionBank, subject, searchField, course, limit: 20 },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    form.watch((data) => setData({ ...defaultFilter, ...data }));
-
-    const numberOfFilters =
-      Number(searchField !== "all") +
-      Number(subject !== "all") +
-      Number(course !== "all");
+    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
 
     return (
       <Stack component={component} sx={sx}>
-        <SearchHeader>
-          <SearchQuery
-            size="sm"
-            value={search}
-            loading={isLoading}
-            onChange={(value) => setSearch(value)}
-            sx={{ flex: 1 }}
-            placeholder="search Learning Objectives..."
-          />
-
-          <SearchFilters
-            activeFilters={numberOfFilters}
-            mobileBreakpoint="lg"
-            fallback={[
-              <Select size="sm" key={1} />,
-              <Select size="sm" key={2} />,
-              <Select size="sm" key={3} />,
-            ]}
-            filters={
-              <FormProvider {...form}>
-                <HookFormSelect size="sm" {...form.register("searchField")}>
-                  {searchFields.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-                <HookFormSelect size="sm" {...form.register("course")}>
-                  {courses.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-                <HookFormSelect size="sm" {...form.register("subject")}>
-                  {subjects.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-              </FormProvider>
-            }
-          />
-        </SearchHeader>
-
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Learning Objectives..."
+          filters={serverData.filters}
+          filterValues={form.watch()}
+          isLoading={isLoading}
+          isError={isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(name, value) =>
+            form.setValue(name as keyof typeof defaultFilter, value)
+          }
+        />
         <LearningObjectiveList
           loading={isLoading}
           error={isError}

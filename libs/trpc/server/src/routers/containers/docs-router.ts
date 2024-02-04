@@ -53,9 +53,9 @@ export const docsContainersRouter = router({
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       const filters = await getDocsSearchFilters(bank);
-      const subjects = filters.subjects;
+
       const subjectMap = makeMap(
-        subjects,
+        filters.subject,
         (s) => s.id,
         (s) => s.text,
       );

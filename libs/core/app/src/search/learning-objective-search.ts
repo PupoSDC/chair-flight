@@ -43,29 +43,32 @@ export const searchLearningObjectivesParams = z.object({
 
 export const getLearningObjectivesSearchFilters = async (qb: QuestionBank) => {
   const rawSubjects = await qb.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
-
   const rawCourses = await qb.getAll("courses");
-  const courses = rawCourses.map((c) => ({
-    id: c.id,
-    text: c.text,
-  }));
-  courses.unshift({ id: "all", text: "All Courses" });
 
-  const searchFields: Array<{
-    id: LearningObjectiveSearchField | "all";
-    text: string;
-  }> = [
-    { id: "all", text: "All Fields" },
-    { id: "id", text: "Learning Objective ID" },
-    { id: "text", text: "text" },
+  const subject = [
+    { id: "all", text: "All Subjects" },
+    ...rawSubjects.map((s) => ({
+      id: s.id,
+      text: `${s.id} - ${s.shortName}`,
+    })),
   ];
 
-  return { subjects, courses, searchFields };
+  const course = [
+    { id: "all", text: "All Courses" },
+    ...rawCourses.map((c) => ({
+      id: c.id,
+      text: c.text,
+    })),
+  ];
+
+  const searchField = [
+    { id: "all", text: "All Fields" },
+    { id: "learningObjectiveId", text: "Learning Objective" },
+    { id: "content", text: "Content" },
+    { id: "title", text: "Title" },
+  ];
+
+  return { subject, course, searchField };
 };
 
 export const populateLearningObjectivesSearchIndex = async ({
