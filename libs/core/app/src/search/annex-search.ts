@@ -7,7 +7,7 @@ import type {
   SubjectId,
   LearningObjectiveId,
 } from "@chair-flight/base/types";
-import type { QuestionBank } from "@chair-flight/core/question-bank";
+import type { QuestionBank } from "@chair-flight/providers/question-bank";
 import type { default as MiniSearch, SearchOptions } from "minisearch";
 
 export type AnnexSearchField = "id" | "description";

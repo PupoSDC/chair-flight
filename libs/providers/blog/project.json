@@ -1,20 +1,20 @@
 {
-  "name": "core-blog",
+  "name": "providers-blog",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/core/blog/src",
+  "sourceRoot": "libs/providers/blog/src",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/blog/**/*.ts"]
+        "lintFilePatterns": ["libs/providers/blog/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/blog/tsconfig.json"]
+        "commands": ["tsc -p libs/providers/blog/tsconfig.json"]
       }
     }
   },

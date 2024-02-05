@@ -1,5 +1,5 @@
-import { blog } from "@chair-flight/core/blog";
-import { questionBanks } from "@chair-flight/core/question-bank";
+import { blog } from "@chair-flight/providers/blog";
+import { questionBanks } from "@chair-flight/providers/question-bank";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {

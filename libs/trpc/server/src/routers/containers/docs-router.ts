@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import { getDocsSearchFilters } from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { questionBanks } from "@chair-flight/providers/question-bank";
 import { compileMdx } from "../../common/compile-mdx";
 import { publicProcedure, router } from "../../config/trpc";
 
