@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { questionBankResourceSchema } from "@chair-flight/core/question-bank";
-import { questionBanks } from "../../common/question-banks";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 

@@ -1,6 +1,4 @@
-import { MiniFs } from "@chair-flight/base/types";
-import { blog } from "@chair-flight/providers/blog";
-import { questionBanks } from "../common/question-banks";
+import { blog, questionBanks } from "../common/providers";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {

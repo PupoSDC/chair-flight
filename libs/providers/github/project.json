@@ -1,20 +1,20 @@
 {
-  "name": "core-github",
+  "name": "providers-github",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/github/src",
+  "sourceRoot": "libs/providers/github/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/github/**/*.ts"]
+        "lintFilePatterns": ["libs/providers/github/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/github/tsconfig.json"]
+        "commands": ["tsc -p libs/providers/github/tsconfig.json"]
       }
     }
   },

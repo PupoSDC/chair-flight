@@ -1,28 +1,11 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { getQuestionFromGit } from "@chair-flight/core/github";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { getQuestionsSearchFilters } from "@chair-flight/core/search";
-import { questionBanks } from "../../common/question-banks";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
-  getQuestionEditor: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        questionId: z.string(),
-      }),
-    )
-    .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const question = await qb.getOne("questions", input.questionId);
-      const questionTemplate = await getQuestionFromGit({
-        questionId: question.id,
-        srcLocation: question.srcLocation,
-      });
-      return { questionTemplate };
-    }),
   getQuestionOverview: publicProcedure
     .input(
       z.object({

@@ -1,8 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { PageEvent } from "./entities/page-event";
-import { TrackEvent } from "./entities/track-event";
 import { createPageEvent, createTrackEvent } from "./functions/create-events";
+import type { PageEvent } from "./entities/page-event";
+import type { TrackEvent } from "./entities/track-event";
 
 interface AnalyticsProvider {
   createPageEvent: (event: PageEvent) => Promise<void>;
@@ -22,9 +22,11 @@ export class Analytics implements AnalyticsProvider {
     });
   }
 
-  createPageEvent = async (event: PageEvent) =>
-    createPageEvent(this.prisma, event);
+  async createPageEvent(event: PageEvent) {
+    return createPageEvent(this.prisma, event);
+  }
 
-  createTrackEvent = async (event: TrackEvent) =>
-    createTrackEvent(this.prisma, event);
+  async createTrackEvent(event: TrackEvent) {
+    return createTrackEvent(this.prisma, event);
+  }
 }

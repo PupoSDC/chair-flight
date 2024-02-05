@@ -1,6 +1,6 @@
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { PageEvent } from "../entities/page-event";
-import { TrackEvent } from "../entities/track-event";
+import type { PageEvent } from "../entities/page-event";
+import type { TrackEvent } from "../entities/track-event";
 import type { Prisma, PrismaClient } from "@prisma/client";
 
 const environment = getEnvVariableOrThrow("NODE_ENV");

@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { blog } from "@chair-flight/providers/blog";
 import { compileMdx } from "../../common/compile-mdx";
+import { blog } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const blogContainersRouter = router({

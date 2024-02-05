@@ -5,7 +5,7 @@ import {
   populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
 } from "@chair-flight/core/search";
-import { questionBanks } from "../../common/question-banks";
+import { questionBanks } from "../../common/providers";
 import {
   learningObjectiveSearchIndex,
   learningObjectiveSearchResults,

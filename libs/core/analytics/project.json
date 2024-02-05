@@ -1,20 +1,20 @@
 {
-  "name": "core-github",
+  "name": "core-analytics",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/github/src",
+  "sourceRoot": "libs/core/analytics/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/github/**/*.ts"]
+        "lintFilePatterns": ["libs/core/analytics/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/github/tsconfig.json"]
+        "commands": ["tsc -p libs/core/analytics/tsconfig.json"]
       }
     }
   },

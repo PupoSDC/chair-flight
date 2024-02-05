@@ -1,6 +1,6 @@
-import { Octokit } from "octokit";
-import { NewIssue } from "@chair-flight/core/github";
 import { originOwner, originRepo } from "../common/env";
+import type { NewIssue } from "@chair-flight/core/github";
+import type { Octokit } from "octokit";
 
 export const createNewIssue = async (octokit: Octokit, newIssue: NewIssue) => {
   const { title, description, debugData, href } = newIssue;

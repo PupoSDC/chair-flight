@@ -5,7 +5,7 @@ import {
   newTestConfigurationSchema,
 } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { questionBanks } from "../../common/question-banks";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const testsRouter = router({

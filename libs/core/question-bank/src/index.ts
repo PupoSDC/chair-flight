@@ -3,7 +3,6 @@ export * from "./questions/get-question";
 export * from "./questions/get-question-preview";
 export * from "./schemas/question-bank-doc-schema";
 export * from "./schemas/question-bank-schema";
-export * from "./schemas/question-edit-schema";
 export * from "./schemas/question-bank-question-schema";
 export * from "./schemas/question-variant-one-two-schema";
 export * from "./schemas/question-variant-simple-schema";

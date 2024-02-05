@@ -1,16 +1,16 @@
-import { Octokit } from "octokit";
 import * as babelPlugin from "prettier/plugins/babel";
 import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/base/utils";
-import { QuestionEdit } from "@chair-flight/core/github";
 import {
   originOwner,
   originRepo,
   upstreamOwner,
   upstreamRepo,
 } from "../common/env";
+import type { QuestionEdit } from "@chair-flight/core/github";
 import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
+import type { Octokit } from "octokit";
 
 export const createNewQuestionPr = async (
   octokit: Octokit,
