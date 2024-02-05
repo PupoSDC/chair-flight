@@ -12,7 +12,7 @@
     Today we are releasing one essential piece of the puzzle to make that happen.
 ---
 
-**Note: 2023-02-05**: This feature has since been removed from Chair Flight, 
+**Note: 2023-02-05**: This feature has since been removed from Chair Flight,
 pending a complete redesign. Stay put for more updates in our blog!
 
 The key differential between our question bank and other solutions available is
