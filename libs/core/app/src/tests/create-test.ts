@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { getQuestion } from "../questions/get-question";
 import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "../random/random";
+} from "@chair-flight/base/utils";
+import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { getQuestion } from "../questions/get-question";
 import type {
   QuestionBankName,
   QuestionBankQuestionTemplate,

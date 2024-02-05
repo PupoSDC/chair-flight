@@ -19,12 +19,8 @@ import {
   tabClasses,
   tabListClasses,
 } from "@mui/joy";
-import {
-  getQuestion,
-  getQuestionPreview,
-  getRandomId,
-  getRandomShuffler,
-} from "@chair-flight/core/app";
+import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
+import { getQuestion, getQuestionPreview } from "@chair-flight/core/app";
 import {
   ImageViewer,
   MarkdownClient,
