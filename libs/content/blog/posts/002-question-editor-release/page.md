@@ -12,6 +12,9 @@
     Today we are releasing one essential piece of the puzzle to make that happen.
 ---
 
+**Note: 2023-02-05**: This feature has since been removed from Chair Flight,
+pending a complete redesign. Stay put for more updates in our blog!
+
 The key differential between our question bank and other solutions available is
 that our question bank is Free and Open source. The goal is to build a community
 of students and former students who wish to 'pay it forward' by helping us write
@@ -26,7 +29,7 @@ In case you don't know it yet, you can [search for questions](/modules/atpl/ques
 Our entire question bank is free and open for you to explore. But not all our
 questions are created equal. Some are better than others. Whenever you find a
 question that could be improved... now you can do it by pressing the
-[Edit](/modules/atpl/questions/QDL7KCZC7I/edit) button.
+[Edit](/modules/atpl/questions/QDL7KCZC7I) button.
 
 Our question editor is designed to be as intuitive as possible, but there are
 still a few things you should know about it.
@@ -36,12 +39,6 @@ still a few things you should know about it.
 Our question text is written in Markdown. Markdown is a simple markup language
 that allows you to write rich text in a simple way. If you are not familiar with
 Markdown, you can learn more about it [here](https://www.markdownguide.org/).
-
-You can also give it a go here:
-
-```tsx eval
-<MarkdownClientDemo />
-```
 
 ## Adding and editing variants
 

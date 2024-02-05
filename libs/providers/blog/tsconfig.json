@@ -2,6 +2,6 @@
   "extends": "../../../tsconfig.base.json",
   "include": ["src/**/*.ts", "executors/**/*.mts", "executors/**/*.ts"],
   "compilerOptions": {
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
-  }
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+  },
 }

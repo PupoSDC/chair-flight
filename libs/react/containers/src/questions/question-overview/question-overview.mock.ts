@@ -43,5 +43,4 @@ export const mockData: AppRouterOutput["containers"]["questions"]["getQuestionOv
         href: "/modules/atpl/learning-objectives/010.01",
       },
     ],
-    editLink: "/modules/atpl/questions/Q000YBA1ON/edit",
   };

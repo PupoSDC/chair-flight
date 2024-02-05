@@ -9,7 +9,6 @@ import { DateTime } from "luxon";
 import {
   BlogPostChip,
   Markdown,
-  MarkdownClientDemo,
   ModuleSelectionButton,
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
@@ -78,7 +77,6 @@ export const BlogPost: Container<Props, Params, Data> = container<
           AnnexSearch,
           ModuleSelectionButton,
           QuestionOverview,
-          MarkdownClientDemo,
           AirplaneTicketIcon,
           ChevronRightIcon,
           FlightTakeoffIcon,
