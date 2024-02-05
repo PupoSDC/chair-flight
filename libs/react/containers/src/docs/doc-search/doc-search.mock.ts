@@ -20,7 +20,7 @@ export const mockData: AppRouterOutput["containers"]["docs"]["getDocSearch"] = {
     "090": "090 - Coms",
   },
   filters: {
-    subjects: [
+    subject: [
       { id: "all", text: "All Subjects" },
       { id: "010", text: "010 - ALaw" },
       { id: "021", text: "021 - AGK" },
@@ -38,7 +38,7 @@ export const mockData: AppRouterOutput["containers"]["docs"]["getDocSearch"] = {
       { id: "082", text: "082 - POF(H)" },
       { id: "090", text: "090 - Coms" },
     ],
-    searchFields: [
+    searchField: [
       { id: "all", text: "All Fields" },
       { id: "learningObjectiveId", text: "Learning Objective" },
       { id: "content", text: "Content" },

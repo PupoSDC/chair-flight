@@ -49,22 +49,24 @@ export const searchQuestionsParams = z.object({
 
 export const getQuestionsSearchFilters = async (qb: QuestionBank) => {
   const rawSubjects = await qb.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
 
-  const searchFields: Array<{ id: QuestionSearchField | "all"; text: string }> =
-    [
-      { id: "all", text: "All Fields" },
-      { id: "questionId", text: "Question ID" },
-      { id: "learningObjectives", text: "Learning Objectives" },
-      { id: "text", text: "Text" },
-      { id: "externalIds", text: "External IDs" },
-    ];
+  const subject = [
+    { id: "all", text: "All Subjects" },
+    ...rawSubjects.map((s) => ({
+      id: s.id,
+      text: `${s.id} - ${s.shortName}`,
+    })),
+  ];
 
-  return { subjects, searchFields };
+  const searchField = [
+    { id: "all", text: "All Fields" },
+    { id: "questionId", text: "Question ID" },
+    { id: "learningObjectives", text: "Learning Objectives" },
+    { id: "text", text: "Text" },
+    { id: "externalIds", text: "External IDs" },
+  ];
+
+  return { subject, searchField };
 };
 
 export const populateQuestionsSearchIndex = async ({

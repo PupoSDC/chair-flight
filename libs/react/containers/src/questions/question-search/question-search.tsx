@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Select, Stack, Option } from "@mui/joy";
+import { Stack } from "@mui/joy";
 import { z } from "zod";
-import {
-  SearchQuery,
-  HookFormSelect,
-  QuestionList,
-  SearchFilters,
-  SearchHeader,
-} from "@chair-flight/react/components";
+import { QuestionList, SearchHeader } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -47,62 +41,38 @@ const useSearchPersistence = {
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, forceMode, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const { getData, setData } = useSearchPersistence[questionBank]();
+    const persistedData = useSearchPersistence[questionBank]();
     const serverData = QuestionSearch.useData({ questionBank });
-    const form = useForm({ defaultValues: getData(), resolver });
 
-    const { searchFields, subjects } = serverData.filters;
-    const { searchField = "all", subject = "all" } = form.watch();
+    const form = useForm({
+      defaultValues: persistedData.getData(),
+      resolver,
+    });
+
+    const subject = form.watch("subject");
+    const searchField = form.watch("searchField");
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
       { q: search, questionBank, searchField, subject, limit: 24 },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    form.watch((data) => setData({ ...defaultFilter, ...data }));
-
-    const numberOfFilters =
-      Number(searchField !== "all") + Number(subject !== "all");
+    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
 
     return (
       <Stack component={component} sx={sx}>
-        <SearchHeader>
-          <SearchQuery
-            size="sm"
-            value={search}
-            loading={isLoading}
-            onChange={(value) => setSearch(value)}
-            sx={{ flex: 1 }}
-            placeholder="search Questions..."
-          />
-
-          <SearchFilters
-            activeFilters={numberOfFilters}
-            fallback={[
-              <Select size="sm" key={1} />,
-              <Select size="sm" key={2} />,
-            ]}
-            filters={
-              <FormProvider {...form}>
-                <HookFormSelect size="sm" {...form.register("searchField")}>
-                  {searchFields.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-                <HookFormSelect size="sm" {...form.register("subject")}>
-                  {subjects.map((s) => (
-                    <Option key={s.id} value={s.id}>
-                      {s.text}
-                    </Option>
-                  ))}
-                </HookFormSelect>
-              </FormProvider>
-            }
-          />
-        </SearchHeader>
-
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Questions..."
+          filters={serverData.filters}
+          filterValues={form.watch()}
+          isLoading={isLoading}
+          isError={isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(name, value) =>
+            form.setValue(name as keyof typeof defaultFilter, value)
+          }
+        />
         <QuestionList
           loading={isLoading}
           error={isError}

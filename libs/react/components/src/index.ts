@@ -26,6 +26,7 @@ export * from "./question-multiple-choice";
 export * from "./question-navigation";
 export * from "./question-variant-preview";
 export * from "./search-filters";
+export * from "./search-header";
 export * from "./search-query";
 export * from "./search-list";
 export * from "./sidebar";

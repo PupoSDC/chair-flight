@@ -3,7 +3,7 @@ import type { AppRouterOutput } from "@chair-flight/trpc/server";
 export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectivesSearch"] =
   {
     filters: {
-      subjects: [
+      subject: [
         { id: "all", text: "All Subjects" },
         { id: "010", text: "010 - ALaw" },
         { id: "021", text: "021 - AGK" },
@@ -21,7 +21,7 @@ export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getL
         { id: "082", text: "082 - POF(H)" },
         { id: "090", text: "090 - Coms" },
       ],
-      courses: [
+      course: [
         { id: "all", text: "All Courses" },
         { id: "ATPL_A", text: "ATPL(A)" },
         { id: "CPL_A", text: "CPL(A)" },
@@ -31,7 +31,7 @@ export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getL
         { id: "IR", text: "IR" },
         { id: "CBIR_A", text: "CBIR(A)" },
       ],
-      searchFields: [
+      searchField: [
         { id: "all", text: "All Fields" },
         { id: "id", text: "Learning Objective ID" },
         { id: "text", text: "text" },

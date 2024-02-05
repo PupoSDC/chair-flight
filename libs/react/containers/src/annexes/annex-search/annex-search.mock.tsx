@@ -3,7 +3,7 @@ import type { AppRouterOutput } from "@chair-flight/trpc/client";
 export const mockData: AppRouterOutput["containers"]["annexes"]["getAnnexSearch"] =
   {
     filters: {
-      subjects: [
+      subject: [
         { id: "all", text: "All Subjects" },
         { id: "010", text: "010 - ALaw" },
         { id: "021", text: "021 - AGK" },

@@ -35,13 +35,16 @@ export const searchAnnexesParams = z.object({
 
 export const getAnnexesSearchFilters = async (qb: QuestionBank) => {
   const rawSubjects = await qb.getAll("subjects");
-  const subjects = rawSubjects.map((s) => ({
-    id: s.id,
-    text: `${s.id} - ${s.shortName}`,
-  }));
-  subjects.unshift({ id: "all", text: "All Subjects" });
 
-  return { subjects };
+  const subject = [
+    { id: "all", text: "All Subjects" },
+    ...rawSubjects.map((s) => ({
+      id: s.id,
+      text: `${s.id} - ${s.shortName}`,
+    })),
+  ];
+
+  return { subject };
 };
 
 export const populateAnnexesSearchIndex = async ({
