@@ -4,7 +4,7 @@ import { questionBankQuestionSchema } from "@chair-flight/core/question-bank";
 import { getOctokit } from "../config/oktokit";
 import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
 
-export const getQuestionsFromGit = async ({
+const getQuestionsFromGit = async ({
   srcLocation,
   baseBranch = "main",
 }: {

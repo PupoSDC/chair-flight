@@ -1,6 +1,5 @@
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { MiniFs } from "@chair-flight/base/types";
 import type {
   QuestionBankName,
   QuestionBankResource,

@@ -1,7 +1,10 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "files": ["../../../node_modules/@nx/next/typings/image.d.ts"],
+  "files": [
+    "../../../node_modules/@nx/next/typings/image.d.ts",
+    "../../../types.d.ts"
+  ],
   "compilerOptions": {
     "lib": ["dom", "ESNext"],
     "types": ["vitest/globals", "@testing-library/jest-dom"]

@@ -1,3 +1,4 @@
+import { MiniFs } from "@chair-flight/base/types";
 import { blog } from "@chair-flight/providers/blog";
 import { questionBanks } from "../common/question-banks";
 import { getTrpcHelper } from "./trpc-helper";
@@ -12,7 +13,6 @@ import type {
   PreviewData,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
-import { MiniFs } from "@chair-flight/base/types";
 
 const repositories = [...Object.values(questionBanks), blog];
 

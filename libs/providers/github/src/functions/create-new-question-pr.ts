@@ -1,22 +1,26 @@
+import { Octokit } from "octokit";
 import * as babelPlugin from "prettier/plugins/babel";
 import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/base/utils";
-import { getOctokit } from "../config/oktokit";
+import { QuestionEdit } from "@chair-flight/core/github";
+import {
+  originOwner,
+  originRepo,
+  upstreamOwner,
+  upstreamRepo,
+} from "../common/env";
 import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
-import type { questionEditSchema } from "@chair-flight/core/question-bank";
-import type { z } from "zod";
 
 export const createNewQuestionPr = async (
-  schema: z.infer<typeof questionEditSchema>,
+  octokit: Octokit,
+  schema: QuestionEdit,
 ) => {
   const {
     question: { srcLocation, ...question },
     requestData,
   } = schema;
   const prId = getRandomId();
-  const { octokit, originOwner, originRepo, upstreamOwner, upstreamRepo } =
-    getOctokit();
   const baseBranch = "main";
   const newBranch = `feat-question-${question.id}-${prId}`;
   const normalizedSrcLocation = srcLocation

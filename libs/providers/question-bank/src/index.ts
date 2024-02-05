@@ -1,1 +1,1 @@
-export { QuestionBank } from "./providers/question-bank-provider";
+export { QuestionBank } from "./provider/question-bank-provider";

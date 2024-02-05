@@ -1,7 +1,9 @@
 import { DateTime } from "luxon";
 import { getUrlPathOnServer } from "@chair-flight/base/env";
 import { NotFoundError } from "@chair-flight/base/errors";
-import type { MiniFs } from "@chair-flight/base/types";
+import { BlogPost } from "./entities/blog-post";
+
+const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
 
 interface BlogProvider {
   getDateOfLastPost: () => Promise<string>;
@@ -9,8 +11,6 @@ interface BlogProvider {
   getPost: (postId: string) => Promise<BlogPost>;
   preloadForStaticRender: (fs: MiniFs) => Promise<void>;
 }
-
-const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
 
 export class Blog implements BlogProvider {
   private postMeta: BlogPost[] | undefined = undefined;
@@ -53,5 +53,3 @@ export class Blog implements BlogProvider {
     this.postMeta = file as BlogPost[];
   }
 }
-
-export const blog = new Blog();

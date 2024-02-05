@@ -7,7 +7,6 @@ import type {
   QuestionBankLearningObjective,
   QuestionBankSubject,
 } from "./question-bank-subjects";
-import type { MiniFs } from "@chair-flight/base/types";
 
 export type QuestionBankName = "type" | "atpl" | "prep";
 

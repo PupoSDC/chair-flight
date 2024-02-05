@@ -1,11 +1,14 @@
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { prisma } from "../config/postgres-connection";
-import type { PageEvent, SimplifiedTrackEvent } from "@chair-flight/base/types";
-import type { Prisma } from "@prisma/client";
+import { PageEvent } from "../entities/page-event";
+import { TrackEvent } from "../entities/track-event";
+import type { Prisma, PrismaClient } from "@prisma/client";
 
 const environment = getEnvVariableOrThrow("NODE_ENV");
 
-export const createPageEvent = async (event: PageEvent) => {
+export const createPageEvent = async (
+  prisma: PrismaClient,
+  event: PageEvent,
+) => {
   await prisma.pageEvent.create({
     data: {
       environment,
@@ -21,7 +24,10 @@ export const createPageEvent = async (event: PageEvent) => {
   });
 };
 
-export const createTrackEvent = async (event: SimplifiedTrackEvent) => {
+export const createTrackEvent = async (
+  prisma: PrismaClient,
+  event: TrackEvent,
+) => {
   await prisma.trackEvent.create({
     data: {
       environment,
