@@ -2,7 +2,7 @@ import * as fs from "node:fs/promises";
 import { AppHead } from "@chair-flight/react/components";
 import { DocSearch, LayoutModule } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
 

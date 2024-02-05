@@ -8,7 +8,7 @@ import { container } from "../../wraper/container";
 import { default as previewAtpl } from "./images/atpl.png";
 import { default as previewB737 } from "./images/b737.png";
 import { default as previewPrep } from "./images/prep.png";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 
 const zoomIn = keyframes`
   0% { transform: scale(1); }

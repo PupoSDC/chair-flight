@@ -1,2 +1,2 @@
-export { createNewIssue, newIssueSchema } from "./functions/create-new-issue";
-export { createNewQuestionPr } from "./functions/create-new-question-pr";
+export * from "./entities/new-issue";
+export * from "./entities/question-edit";

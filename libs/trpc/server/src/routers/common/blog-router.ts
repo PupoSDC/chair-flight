@@ -1,4 +1,4 @@
-import { blog } from "@chair-flight/providers/blog";
+import { blog } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const blogRouter = router({

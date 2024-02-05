@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { getQuestionsSearchFilters } from "@chair-flight/core/app";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { getQuestionsSearchFilters } from "@chair-flight/core/search";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
@@ -24,6 +24,7 @@ export const questionsContainersRouter = router({
       );
       const rawAnnexes = await qb.getSome("annexes", annexIds);
       const rawLos = await qb.getSome("learningObjectives", loIds);
+      const editLink = `/modules/${questionBank}/questions/${id}/edit`;
 
       const annexes = makeMap(
         rawAnnexes,
@@ -40,7 +41,7 @@ export const questionsContainersRouter = router({
         href: `/modules/${questionBank}/learning-objectives/${lo.id}`,
       }));
 
-      return { template, annexes, learningObjectives };
+      return { template, annexes, learningObjectives, editLink };
     }),
   getQuestionSearch: publicProcedure
     .input(

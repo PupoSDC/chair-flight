@@ -8,7 +8,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
 import { AnnexSearchItem } from "./annex-search-item";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
