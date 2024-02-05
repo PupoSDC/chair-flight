@@ -5,64 +5,52 @@ import {
   questionSearchParams,
 } from "@chair-flight/core/search";
 import {
-  AnnexSearch,
-  DocSearch,
-  LearningObjectiveSearch,
-  QuestionSearch,
-} from "@chair-flight/providers/search";
-import { questionBanks } from "../../common/providers";
+  annexSearch,
+  docSearch,
+  learningObjectiveSearch,
+  questionBanks,
+  questionSearch,
+} from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
+
+const initialize = async () => {
+  for (const bank of Object.values(questionBanks)) {
+    await Promise.all([
+      learningObjectiveSearch.initialize(bank),
+      annexSearch.initialize(bank),
+      questionSearch.initialize(bank),
+      docSearch.initialize(bank),
+    ]);
+  }
+};
 
 export const searchRouter = router({
   initialize: publicProcedure.query(async () => {
-    // TODO MAKE THIS WOOOORK
-    /**for (const bank of Object.values(questionBanks)) {
-      await Promise.all([
-        populateLearningObjectivesSearchIndex({
-          bank,
-          searchIndex: learningObjectiveSearchIndex,
-          searchResults: learningObjectiveSearchResults,
-        }),
-        populateAnnexesSearchIndex({
-          bank,
-          searchIndex: annexSearchIndex,
-          searchResults: annexSearchResults,
-        }),
-        populateLearningObjectivesSearchIndex({
-          bank,
-          searchIndex: learningObjectiveSearchIndex,
-          searchResults: learningObjectiveSearchResults,
-        }),
-      ]);
-    }*/
+    await initialize();
     return "ok";
   }),
   searchLearningObjectives: publicProcedure
     .input(learningObjectivesSearchParams)
     .query(async ({ input }) => {
-      const bank = questionBanks[input.questionBank];
-      const index = new LearningObjectiveSearch(bank);
-      return await index.search(input);
+      await initialize();
+      return await learningObjectiveSearch.search(input);
     }),
   searchAnnexes: publicProcedure
     .input(annexSearchParams)
     .query(async ({ input }) => {
-      const bank = questionBanks[input.questionBank];
-      const index = new AnnexSearch(bank);
-      return await index.search(input);
+      await initialize();
+      return await annexSearch.search(input);
     }),
   searchQuestions: publicProcedure
     .input(questionSearchParams)
     .query(async ({ input }) => {
-      const bank = questionBanks[input.questionBank];
-      const index = new QuestionSearch(bank);
-      return await index.search(input);
+      await initialize();
+      return await questionSearch.search(input);
     }),
   searchDocs: publicProcedure
     .input(docSearchParams)
     .query(async ({ input }) => {
-      const bank = questionBanks[input.questionBank];
-      const index = new DocSearch(bank);
-      return await index.search(input);
+      await initialize();
+      return await docSearch.search(input);
     }),
 });

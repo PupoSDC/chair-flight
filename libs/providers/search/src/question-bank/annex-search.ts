@@ -1,5 +1,5 @@
 import { default as MiniSearch } from "minisearch";
-import type { SearchProvider } from "../types/search-provider";
+import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
 import type {
   AnnexSearchResult,
   AnnexSearchParams,
@@ -13,7 +13,11 @@ type AnnexSearchDocument = Record<AnnexSearchField, string>;
 
 export class AnnexSearch
   implements
-    SearchProvider<AnnexSearchResult, AnnexSearchParams, AnnexSearchFilters>
+    QuestionBankSearchProvider<
+      AnnexSearchResult,
+      AnnexSearchParams,
+      AnnexSearchFilters
+    >
 {
   private static initializationWork: Promise<void> | undefined;
   private static searchResults = new Map<string, AnnexSearchResult>();
@@ -23,49 +27,6 @@ export class AnnexSearch
     fields: ["id", "description"] satisfies AnnexSearchField[],
     storeFields: ["id"] satisfies AnnexSearchField[],
   });
-
-  private bank: QuestionBank;
-
-  constructor(bank: QuestionBank) {
-    this.bank = bank;
-
-    (async () => {
-      if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
-
-      AnnexSearch.initializationWork = (async () => {
-        const annexes = await bank.getAll("annexes");
-        const hasAnnexes = await bank.has("annexes");
-        const firstId = annexes.at(0)?.id;
-
-        if (!hasAnnexes) return;
-        if (AnnexSearch.searchIndex.has(firstId)) return;
-
-        const searchItems: AnnexSearchDocument[] = annexes.map((annex) => ({
-          id: annex.id,
-          description: annex.description,
-        }));
-
-        const resultItems: AnnexSearchResult[] = annexes.map((annex) => ({
-          id: annex.id,
-          href: annex.href,
-          description: annex.description,
-          subjects: annex.subjects,
-          questionBank: bank.getName(),
-          questions: annex.questions.map((id) => ({
-            id,
-            href: `/modules/${bank.getName()}/questions/${id}`,
-          })),
-          learningObjectives: annex.learningObjectives.map((id) => ({
-            id,
-            href: `/modules/${bank.getName()}/learning-objectives/${id}`,
-          })),
-        }));
-
-        await AnnexSearch.searchIndex.addAllAsync(searchItems);
-        resultItems.forEach((r) => AnnexSearch.searchResults.set(r.id, r));
-      })();
-    })();
-  }
 
   async search(params: AnnexSearchParams) {
     if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
@@ -122,13 +83,15 @@ export class AnnexSearch
   async retrieve(ids: string[]) {
     if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
 
-    return ids
+    const items = ids
       .map((id) => AnnexSearch.searchResults.get(id))
       .filter((r): r is AnnexSearchResult => !!r);
+
+    return { items };
   }
 
-  async getFilters() {
-    const rawSubjects = await this.bank.getAll("subjects");
+  async getFilters(bank: QuestionBank) {
+    const rawSubjects = await bank.getAll("subjects");
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -144,6 +107,45 @@ export class AnnexSearch
       { id: "description", text: "Description" },
     ];
 
-    return { subject, searchField };
+    return {
+      filters: { subject, searchField },
+    };
+  }
+
+  async initialize(bank: QuestionBank) {
+    if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
+
+    AnnexSearch.initializationWork = (async () => {
+      const annexes = await bank.getAll("annexes");
+      const hasAnnexes = await bank.has("annexes");
+      const firstId = annexes.at(0)?.id;
+
+      if (!hasAnnexes) return;
+      if (AnnexSearch.searchIndex.has(firstId)) return;
+
+      const searchItems: AnnexSearchDocument[] = annexes.map((annex) => ({
+        id: annex.id,
+        description: annex.description,
+      }));
+
+      const resultItems: AnnexSearchResult[] = annexes.map((annex) => ({
+        id: annex.id,
+        href: annex.href,
+        description: annex.description,
+        subjects: annex.subjects,
+        questionBank: bank.getName(),
+        questions: annex.questions.map((id) => ({
+          id,
+          href: `/modules/${bank.getName()}/questions/${id}`,
+        })),
+        learningObjectives: annex.learningObjectives.map((id) => ({
+          id,
+          href: `/modules/${bank.getName()}/learning-objectives/${id}`,
+        })),
+      }));
+
+      await AnnexSearch.searchIndex.addAllAsync(searchItems);
+      resultItems.forEach((r) => AnnexSearch.searchResults.set(r.id, r));
+    })();
   }
 }

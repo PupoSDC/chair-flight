@@ -1,6 +1,6 @@
 import MiniSearch from "minisearch";
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
-import type { SearchProvider } from "../types/search-provider";
+import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
 import type {
   QuestionSearchFilters,
   QuestionSearchParams,
@@ -22,7 +22,7 @@ export type QuestionSearchDocument = Record<QuestionSearchField, string>;
 
 export class QuestionSearch
   implements
-    SearchProvider<
+    QuestionBankSearchProvider<
       QuestionSearchResult,
       QuestionSearchParams,
       QuestionSearchFilters
@@ -48,67 +48,6 @@ export class QuestionSearch
     ],
     storeFields: ["id"],
   });
-
-  private bank: QuestionBank;
-
-  constructor(bank: QuestionBank) {
-    this.bank = bank;
-
-    (async () => {
-      if (QuestionSearch.initializationWork)
-        await QuestionSearch.initializationWork;
-
-      QuestionSearch.initializationWork = (async () => {
-        const questions = await bank.getAll("questions");
-        const hasQuestions = await bank.has("questions");
-        const firstId = questions.at(0)?.id;
-
-        if (!hasQuestions) return;
-        if (QuestionSearch.searchIndex.has(firstId)) return;
-
-        const searchItems: QuestionSearchDocument[] = questions.flatMap(
-          (question) => {
-            const subjects = question.learningObjectives.map(
-              (l) => l.split(".")[0],
-            );
-            const los = question.learningObjectives.join(", ");
-            const uniqueSubjects = [...new Set(subjects)];
-            return Object.values(question.variants).map((variant) => ({
-              id: variant.id,
-              questionId: question.id,
-              questionBank: bank.getName(),
-              subjects: uniqueSubjects.join(", "),
-              learningObjectives: los,
-              externalIds: variant.externalIds.join(", "),
-              text: getQuestionPreview(question, variant.id),
-            }));
-          },
-        );
-
-        const resultItems: QuestionSearchResult[] = questions.flatMap((q) => {
-          const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
-          const uniqueSubjects = [...new Set(subjects)];
-          return Object.values(q.variants).map((v) => ({
-            questionBank: bank.getName(),
-            id: v.id,
-            questionId: q.id,
-            variantId: v.id,
-            text: getQuestionPreview(q, v.id),
-            subjects: uniqueSubjects,
-            learningObjectives: q.learningObjectives.map((name) => ({
-              name,
-              href: `/modules/${bank.getName()}/learning-objectives/${name}`,
-            })),
-            externalIds: v.externalIds,
-            href: `/modules/${bank.getName()}/questions/${q.id}?variantId=${v.id}`,
-          }));
-        });
-
-        await QuestionSearch.searchIndex.addAllAsync(searchItems);
-        resultItems.forEach((r) => QuestionSearch.searchResults.set(r.id, r));
-      })();
-    })();
-  }
 
   async search(params: QuestionSearchParams) {
     if (QuestionSearch.initializationWork)
@@ -174,13 +113,15 @@ export class QuestionSearch
     if (QuestionSearch.initializationWork)
       await QuestionSearch.initializationWork;
 
-    return ids
+    const items = ids
       .map((id) => QuestionSearch.searchResults.get(id))
       .filter((r): r is QuestionSearchResult => !!r);
+
+    return { items };
   }
 
-  async getFilters() {
-    const rawSubjects = await this.bank.getAll("subjects");
+  async getFilters(bank: QuestionBank) {
+    const rawSubjects = await bank.getAll("subjects");
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -198,6 +139,63 @@ export class QuestionSearch
       { id: "externalIds", text: "External IDs" },
     ];
 
-    return { subject, searchField };
+    return {
+      filters: { subject, searchField },
+    };
+  }
+
+  async initialize(bank: QuestionBank) {
+    if (QuestionSearch.initializationWork)
+      await QuestionSearch.initializationWork;
+
+    QuestionSearch.initializationWork = (async () => {
+      const questions = await bank.getAll("questions");
+      const hasQuestions = await bank.has("questions");
+      const firstId = questions.at(0)?.id;
+
+      if (!hasQuestions) return;
+      if (QuestionSearch.searchIndex.has(firstId)) return;
+
+      const searchItems: QuestionSearchDocument[] = questions.flatMap(
+        (question) => {
+          const subjects = question.learningObjectives.map(
+            (l) => l.split(".")[0],
+          );
+          const los = question.learningObjectives.join(", ");
+          const uniqueSubjects = [...new Set(subjects)];
+          return Object.values(question.variants).map((variant) => ({
+            id: variant.id,
+            questionId: question.id,
+            questionBank: bank.getName(),
+            subjects: uniqueSubjects.join(", "),
+            learningObjectives: los,
+            externalIds: variant.externalIds.join(", "),
+            text: getQuestionPreview(question, variant.id),
+          }));
+        },
+      );
+
+      const resultItems: QuestionSearchResult[] = questions.flatMap((q) => {
+        const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
+        const uniqueSubjects = [...new Set(subjects)];
+        return Object.values(q.variants).map((v) => ({
+          questionBank: bank.getName(),
+          id: v.id,
+          questionId: q.id,
+          variantId: v.id,
+          text: getQuestionPreview(q, v.id),
+          subjects: uniqueSubjects,
+          learningObjectives: q.learningObjectives.map((name) => ({
+            name,
+            href: `/modules/${bank.getName()}/learning-objectives/${name}`,
+          })),
+          externalIds: v.externalIds,
+          href: `/modules/${bank.getName()}/questions/${q.id}?variantId=${v.id}`,
+        }));
+      });
+
+      await QuestionSearch.searchIndex.addAllAsync(searchItems);
+      resultItems.forEach((r) => QuestionSearch.searchResults.set(r.id, r));
+    })();
   }
 }

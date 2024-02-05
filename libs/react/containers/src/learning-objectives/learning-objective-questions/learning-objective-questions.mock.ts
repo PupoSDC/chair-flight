@@ -2,7 +2,7 @@ import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getLearningObjectiveQuestions"] =
   {
-    results: [
+    items: [
       {
         questionBank: "atpl",
         id: "InuEp2iq",

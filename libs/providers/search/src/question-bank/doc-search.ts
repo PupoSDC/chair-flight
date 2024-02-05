@@ -1,5 +1,5 @@
 import { default as MiniSearch } from "minisearch";
-import type { SearchProvider } from "../types/search-provider";
+import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
 import type {
   DocSearchFilters,
   DocSearchParams,
@@ -12,7 +12,12 @@ export type DocSearchField = "id" | "learningObjectiveId" | "content" | "title";
 export type DocSearchDocument = Record<DocSearchField, string>;
 
 export class DocSearch
-  implements SearchProvider<DocSearchResult, DocSearchParams, DocSearchFilters>
+  implements
+    QuestionBankSearchProvider<
+      DocSearchResult,
+      DocSearchParams,
+      DocSearchFilters
+    >
 {
   private static initializationWork: Promise<void> | undefined;
   private static searchResults: Map<string, DocSearchResult> = new Map();
@@ -30,48 +35,6 @@ export class DocSearch
     ] satisfies DocSearchField[],
     storeFields: ["id"] satisfies DocSearchField[],
   });
-
-  private bank: QuestionBank;
-
-  constructor(bank: QuestionBank) {
-    this.bank = bank;
-
-    (async () => {
-      if (DocSearch.initializationWork) await DocSearch.initializationWork;
-
-      DocSearch.initializationWork = (async () => {
-        const docs = await bank.getAll("docs");
-        const hasDocs = await bank.has("docs");
-        const firstId = docs.at(0)?.id;
-
-        if (!hasDocs) return;
-        if (DocSearch.searchIndex.has(firstId)) return;
-
-        const searchItems: DocSearchDocument[] = docs.flatMap((doc) => ({
-          id: doc.id,
-          learningObjectiveId: doc.learningObjectiveId,
-          content: doc.content,
-          title: doc.title,
-        }));
-
-        const resultItems: DocSearchResult[] = docs.flatMap((doc) => ({
-          id: doc.id,
-          questionBank: bank.getName(),
-          title: doc.title,
-          empty: doc.empty,
-          subject: doc.subjectId,
-          href: `/modules/${bank.getName()}/docs/${doc.id}`,
-          learningObjective: {
-            id: doc.learningObjectiveId,
-            href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
-          },
-        }));
-
-        await DocSearch.searchIndex.addAllAsync(searchItems);
-        resultItems.forEach((r) => DocSearch.searchResults.set(r.id, r));
-      })();
-    })();
-  }
 
   async search(params: DocSearchParams) {
     if (DocSearch.initializationWork) await DocSearch.initializationWork;
@@ -128,13 +91,15 @@ export class DocSearch
   async retrieve(ids: string[]) {
     if (DocSearch.initializationWork) await DocSearch.initializationWork;
 
-    return ids
+    const items = ids
       .map((id) => DocSearch.searchResults.get(id))
       .filter((r): r is DocSearchResult => !!r);
+
+    return { items };
   }
 
-  async getFilters() {
-    const rawSubjects = await this.bank.getAll("subjects");
+  async getFilters(bank: QuestionBank) {
+    const rawSubjects = await bank.getAll("subjects");
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -151,6 +116,44 @@ export class DocSearch
       { id: "title", text: "Title" },
     ];
 
-    return { subject, searchField };
+    return {
+      filters: { subject, searchField },
+    };
+  }
+
+  async initialize(bank: QuestionBank) {
+    if (DocSearch.initializationWork) await DocSearch.initializationWork;
+
+    DocSearch.initializationWork = (async () => {
+      const docs = await bank.getAll("docs");
+      const hasDocs = await bank.has("docs");
+      const firstId = docs.at(0)?.id;
+
+      if (!hasDocs) return;
+      if (DocSearch.searchIndex.has(firstId)) return;
+
+      const searchItems: DocSearchDocument[] = docs.flatMap((doc) => ({
+        id: doc.id,
+        learningObjectiveId: doc.learningObjectiveId,
+        content: doc.content,
+        title: doc.title,
+      }));
+
+      const resultItems: DocSearchResult[] = docs.flatMap((doc) => ({
+        id: doc.id,
+        questionBank: bank.getName(),
+        title: doc.title,
+        empty: doc.empty,
+        subject: doc.subjectId,
+        href: `/modules/${bank.getName()}/docs/${doc.id}`,
+        learningObjective: {
+          id: doc.learningObjectiveId,
+          href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
+        },
+      }));
+
+      await DocSearch.searchIndex.addAllAsync(searchItems);
+      resultItems.forEach((r) => DocSearch.searchResults.set(r.id, r));
+    })();
   }
 }

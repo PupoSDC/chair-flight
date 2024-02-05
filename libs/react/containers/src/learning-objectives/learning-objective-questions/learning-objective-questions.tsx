@@ -38,7 +38,7 @@ export const LearningObjectiveQuestions = container<Props, Params, Data>(
     return (
       <QuestionList
         forceMode={forceMode}
-        items={serverData.results}
+        items={serverData.items}
         component={component}
         sx={sx}
       />

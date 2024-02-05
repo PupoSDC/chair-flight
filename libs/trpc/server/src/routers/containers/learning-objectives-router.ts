@@ -1,10 +1,10 @@
 import { z } from "zod";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import {
-  LearningObjectiveSearch,
-  QuestionSearch,
-} from "@chair-flight/providers/search";
-import { questionBanks } from "../../common/providers";
+  learningObjectiveSearch,
+  questionBanks,
+  questionSearch,
+} from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const learningObjectivesContainersRouter = router({
@@ -33,16 +33,14 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      const questionSearch = new QuestionSearch(bank);
 
       const resultIds = await bank
         .getOne("learningObjectives", loId)
         .then((lo) => bank.getSome("questions", lo.nestedQuestions))
         .then((qs) => qs.map((q) => Object.keys(q.variants)[0]));
 
-      const results = await questionSearch.retrieve(resultIds);
-
-      return { results };
+      await questionSearch.initialize(bank);
+      return await questionSearch.retrieve(resultIds);
     }),
 
   getLearningObjectiveTree: publicProcedure
@@ -55,7 +53,6 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      const loSearch = new LearningObjectiveSearch(bank);
       const mainLo = await bank.getOne("learningObjectives", loId);
       const tree = [mainLo.id];
 
@@ -77,9 +74,8 @@ export const learningObjectivesContainersRouter = router({
         tree.push(...lo.learningObjectives);
       }
 
-      const items = await loSearch.retrieve(tree.sort());
-
-      return { items };
+      await learningObjectiveSearch.initialize(bank);
+      return await learningObjectiveSearch.retrieve(tree.sort());
     }),
 
   getLearningObjectivesSearch: publicProcedure
@@ -90,9 +86,6 @@ export const learningObjectivesContainersRouter = router({
     )
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      const questionBank = input.questionBank;
-      const loSearch = new LearningObjectiveSearch(bank);
-      const filters = await loSearch.getFilters();
-      return { filters, questionBank };
+      return await learningObjectiveSearch.getFilters(bank);
     }),
 });

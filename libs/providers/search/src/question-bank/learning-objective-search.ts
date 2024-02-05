@@ -1,6 +1,6 @@
 import { default as MiniSearch } from "minisearch";
 import { makeMap } from "@chair-flight/base/utils";
-import type { SearchProvider } from "../types/search-provider";
+import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
 import type {
   LearningObjectiveSearchFilters,
   LearningObjectiveSearchParams,
@@ -14,7 +14,7 @@ type LoSearchDocument = Record<LoSearchField, string>;
 
 export class LearningObjectiveSearch
   implements
-    SearchProvider<
+    QuestionBankSearchProvider<
       LearningObjectiveSearchResult,
       LearningObjectiveSearchParams,
       LearningObjectiveSearchFilters
@@ -31,54 +31,6 @@ export class LearningObjectiveSearch
     fields: ["id", "text"] as LoSearchField[],
     storeFields: ["id"] as LoSearchField[],
   });
-
-  private bank: QuestionBank;
-
-  constructor(bank: QuestionBank) {
-    this.bank = bank;
-
-    (async () => {
-      if (LearningObjectiveSearch.initializationWork)
-        await LearningObjectiveSearch.initializationWork;
-
-      LearningObjectiveSearch.initializationWork = (async () => {
-        const allCourses = await bank.getAll("courses");
-        const learningObjectives = await bank.getAll("learningObjectives");
-        const hasLearningObjectives = await bank.has("learningObjectives");
-        const firstId = learningObjectives.at(0)?.id;
-
-        if (!hasLearningObjectives) return;
-        if (LearningObjectiveSearch.searchIndex.has(firstId)) return;
-
-        const coursesMap = makeMap(allCourses, (c) => c.id);
-
-        const searchItems: LoSearchDocument[] = learningObjectives.map(
-          (lo) => ({
-            id: lo.id,
-            text: lo.text,
-          }),
-        );
-
-        const resultItems: LearningObjectiveSearchResult[] =
-          learningObjectives.map((lo) => ({
-            id: lo.id,
-            href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
-            parentId: lo.parentId,
-            courses: lo.courses.map((c) => coursesMap[c]),
-            text: lo.text,
-            source: lo.source,
-            questionBank: bank.getName(),
-            subject: lo.id.split(".")[0],
-            numberOfQuestions: lo.nestedQuestions.length,
-          }));
-
-        await LearningObjectiveSearch.searchIndex.addAllAsync(searchItems);
-        resultItems.forEach((item) =>
-          LearningObjectiveSearch.searchResults.set(item.id, item),
-        );
-      })();
-    })();
-  }
 
   async search(params: LearningObjectiveSearchParams) {
     if (LearningObjectiveSearch.initializationWork)
@@ -145,14 +97,16 @@ export class LearningObjectiveSearch
     if (LearningObjectiveSearch.initializationWork)
       await LearningObjectiveSearch.initializationWork;
 
-    return ids
+    const items = ids
       .map((id) => LearningObjectiveSearch.searchResults.get(id))
       .filter((r): r is LearningObjectiveSearchResult => !!r);
+
+    return { items };
   }
 
-  async getFilters() {
-    const rawSubjects = await this.bank.getAll("subjects");
-    const rawCourses = await this.bank.getAll("courses");
+  async getFilters(bank: QuestionBank) {
+    const rawSubjects = await bank.getAll("subjects");
+    const rawCourses = await bank.getAll("courses");
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -177,6 +131,48 @@ export class LearningObjectiveSearch
       { id: "title", text: "Title" },
     ];
 
-    return { subject, course, searchField };
+    return {
+      filters: { subject, course, searchField },
+    };
+  }
+
+  async initialize(bank: QuestionBank) {
+    if (LearningObjectiveSearch.initializationWork)
+      await LearningObjectiveSearch.initializationWork;
+
+    LearningObjectiveSearch.initializationWork = (async () => {
+      const allCourses = await bank.getAll("courses");
+      const learningObjectives = await bank.getAll("learningObjectives");
+      const hasLearningObjectives = await bank.has("learningObjectives");
+      const firstId = learningObjectives.at(0)?.id;
+
+      if (!hasLearningObjectives) return;
+      if (LearningObjectiveSearch.searchIndex.has(firstId)) return;
+
+      const coursesMap = makeMap(allCourses, (c) => c.id);
+
+      const searchItems: LoSearchDocument[] = learningObjectives.map((lo) => ({
+        id: lo.id,
+        text: lo.text,
+      }));
+
+      const resultItems: LearningObjectiveSearchResult[] =
+        learningObjectives.map((lo) => ({
+          id: lo.id,
+          href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
+          parentId: lo.parentId,
+          courses: lo.courses.map((c) => coursesMap[c]),
+          text: lo.text,
+          source: lo.source,
+          questionBank: bank.getName(),
+          subject: lo.id.split(".")[0],
+          numberOfQuestions: lo.nestedQuestions.length,
+        }));
+
+      await LearningObjectiveSearch.searchIndex.addAllAsync(searchItems);
+      resultItems.forEach((item) =>
+        LearningObjectiveSearch.searchResults.set(item.id, item),
+      );
+    })();
   }
 }
