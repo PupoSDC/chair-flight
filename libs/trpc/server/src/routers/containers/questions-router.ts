@@ -1,28 +1,11 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import { getQuestionsSearchFilters } from "@chair-flight/core/app";
-import { getQuestionFromGit } from "@chair-flight/core/github";
 import { questionBankNameSchema } from "@chair-flight/core/schemas";
 import { questionBanks } from "@chair-flight/providers/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
-  getQuestionEditor: publicProcedure
-    .input(
-      z.object({
-        questionBank: questionBankNameSchema,
-        questionId: z.string(),
-      }),
-    )
-    .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
-      const question = await qb.getOne("questions", input.questionId);
-      const questionTemplate = await getQuestionFromGit({
-        questionId: question.id,
-        srcLocation: question.srcLocation,
-      });
-      return { questionTemplate };
-    }),
   getQuestionOverview: publicProcedure
     .input(
       z.object({
@@ -41,7 +24,6 @@ export const questionsContainersRouter = router({
       );
       const rawAnnexes = await qb.getSome("annexes", annexIds);
       const rawLos = await qb.getSome("learningObjectives", loIds);
-      const editLink = `/modules/${questionBank}/questions/${id}/edit`;
 
       const annexes = makeMap(
         rawAnnexes,
@@ -58,7 +40,7 @@ export const questionsContainersRouter = router({
         href: `/modules/${questionBank}/learning-objectives/${lo.id}`,
       }));
 
-      return { template, annexes, learningObjectives, editLink };
+      return { template, annexes, learningObjectives };
     }),
   getQuestionSearch: publicProcedure
     .input(

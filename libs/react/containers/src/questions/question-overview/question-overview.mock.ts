@@ -42,6 +42,5 @@ export const mockData: AppRouterOutput["containers"]["questions"]["getQuestionOv
         text: "International Law:\n-  Conventions, Agreements And Organisations",
         href: "/modules/atpl/learning-objectives/010.01",
       },
-    ],
-    editLink: "/modules/atpl/questions/Q000YBA1ON/edit",
+    ]
   };
