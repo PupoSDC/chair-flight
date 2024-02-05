@@ -4,8 +4,8 @@ import {
   populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
 } from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/core/question-bank";
 import { questionBankNameSchema } from "@chair-flight/core/schemas";
+import { questionBanks } from "@chair-flight/providers/question-bank";
 import {
   learningObjectiveSearchIndex,
   learningObjectiveSearchResults,

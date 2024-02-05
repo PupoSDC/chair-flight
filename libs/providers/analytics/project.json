@@ -1,13 +1,13 @@
 {
-  "name": "core-analytics",
+  "name": "providers-analytics",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/analytics/src",
+  "sourceRoot": "libs/providers/analytics/src",
   "projectType": "library",
   "targets": {
     "generate": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics",
+        "cwd": "libs/providers/analytics",
         "command": "prisma generate"
       },
       "configurations": {
@@ -25,7 +25,7 @@
     "migrate": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics",
+        "cwd": "libs/providers/analytics",
         "command": "prisma migrate dev"
       },
       "configurations": {
@@ -43,7 +43,7 @@
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics",
+        "cwd": "libs/providers/analytics",
         "command": "prisma migrate deploy"
       },
       "configurations": {
@@ -61,7 +61,7 @@
     "studio": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "libs/core/analytics",
+        "cwd": "libs/providers/analytics",
         "command": "prisma studio"
       },
       "configurations": {
@@ -80,13 +80,13 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/analytics/**/*.ts"]
+        "lintFilePatterns": ["libs/providers/analytics/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/analytics/tsconfig.json"]
+        "commands": ["tsc -p libs/providers/analytics/tsconfig.json"]
       }
     }
   },

@@ -5,7 +5,7 @@ import type { BlogPost } from "@chair-flight/base/types";
 
 type ReadFile = (path: string, string: "utf-8") => Promise<string>;
 
-interface IBlog {
+interface BlogProvider {
   getDateOfLastPost: () => Promise<string>;
   getAllPosts: () => Promise<BlogPost[]>;
   getPost: (postId: string) => Promise<BlogPost>;
@@ -14,7 +14,7 @@ interface IBlog {
 
 const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";
 
-export class Blog implements IBlog {
+export class Blog implements BlogProvider {
   private postMeta: BlogPost[] | undefined = undefined;
 
   async getDateOfLastPost() {

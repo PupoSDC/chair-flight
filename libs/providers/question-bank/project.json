@@ -1,20 +1,20 @@
 {
-  "name": "core-question-bank",
+  "name": "providers-question-bank",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/core/question-bank/src",
+  "sourceRoot": "libs/providers/question-bank/src",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/core/question-bank/**/*.ts"]
+        "lintFilePatterns": ["libs/providers/question-bank/**/*.ts"]
       }
     },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p libs/core/question-bank/tsconfig.json"]
+        "commands": ["tsc -p libs/providers/question-bank/tsconfig.json"]
       }
     }
   },

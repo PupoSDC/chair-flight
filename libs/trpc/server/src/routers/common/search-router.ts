@@ -12,7 +12,7 @@ import {
   searchQuestions,
   populateQuestionsSearchIndex,
 } from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/core/question-bank";
+import { questionBanks } from "@chair-flight/providers/question-bank";
 import {
   annexSearchIndex,
   annexSearchResults,
