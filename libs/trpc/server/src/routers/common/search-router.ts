@@ -1,33 +1,22 @@
 import {
-  populateAnnexesSearchIndex,
-  populateDocsSearchIndex,
-  populateLearningObjectivesSearchIndex,
-  populateQuestionsSearchIndex,
-  searchAnnexes,
-  searchAnnexesParams,
-  searchDocs,
-  searchDocsParams,
-  searchLearningObjectives,
-  searchLearningObjectivesParams,
-  searchQuestions,
-  searchQuestionsParams,
+  annexSearchParams,
+  docSearchParams,
+  learningObjectivesSearchParams,
+  questionSearchParams,
 } from "@chair-flight/core/search";
-import { questionBanks } from "../../common/providers";
 import {
-  annexSearchIndex,
-  annexSearchResults,
-  learningObjectiveSearchResults,
-  learningObjectiveSearchIndex,
-  docSearchResults,
-  docSearchIndex,
-  questionSearchResults,
-  questionSearchIndex,
-} from "../../common/search-indexes";
+  AnnexSearch,
+  DocSearch,
+  LearningObjectiveSearch,
+  QuestionSearch,
+} from "@chair-flight/providers/search";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const searchRouter = router({
   initialize: publicProcedure.query(async () => {
-    for (const bank of Object.values(questionBanks)) {
+    // TODO MAKE THIS WOOOORK
+    /**for (const bank of Object.values(questionBanks)) {
       await Promise.all([
         populateLearningObjectivesSearchIndex({
           bank,
@@ -45,79 +34,35 @@ export const searchRouter = router({
           searchResults: learningObjectiveSearchResults,
         }),
       ]);
-    }
+    }*/
     return "ok";
   }),
   searchLearningObjectives: publicProcedure
-    .input(searchLearningObjectivesParams)
+    .input(learningObjectivesSearchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateLearningObjectivesSearchIndex({
-        bank,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
-
-      const result = await searchLearningObjectives({
-        params: input,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
-
-      return result;
+      const index = new LearningObjectiveSearch(bank);
+      return await index.search(input);
     }),
   searchAnnexes: publicProcedure
-    .input(searchAnnexesParams)
+    .input(annexSearchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateAnnexesSearchIndex({
-        bank,
-        searchIndex: annexSearchIndex,
-        searchResults: annexSearchResults,
-      });
-
-      const result = await searchAnnexes({
-        params: input,
-        searchIndex: annexSearchIndex,
-        searchResults: annexSearchResults,
-      });
-
-      return result;
+      const index = new AnnexSearch(bank);
+      return await index.search(input);
     }),
   searchQuestions: publicProcedure
-    .input(searchQuestionsParams)
+    .input(questionSearchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateQuestionsSearchIndex({
-        bank,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
-
-      const result = await searchQuestions({
-        params: input,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
-
-      return result;
+      const index = new QuestionSearch(bank);
+      return await index.search(input);
     }),
   searchDocs: publicProcedure
-    .input(searchDocsParams)
+    .input(docSearchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      await populateDocsSearchIndex({
-        bank,
-        searchIndex: docSearchIndex,
-        searchResults: docSearchResults,
-      });
-
-      const result = await searchDocs({
-        params: input,
-        searchIndex: docSearchIndex,
-        searchResults: docSearchResults,
-      });
-
-      return result;
+      const index = new DocSearch(bank);
+      return await index.search(input);
     }),
 });

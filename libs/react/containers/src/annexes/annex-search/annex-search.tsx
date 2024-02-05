@@ -49,10 +49,12 @@ export const AnnexSearch = container<Props, Params, Data>(
       resolver,
     });
 
-    const subject = form.watch("subject");
+    const filters = {
+      subject: form.watch("subject"),
+    };
 
     const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
-      { q: search, questionBank, subject, limit: 24 },
+      { q: search, limit: 24, questionBank, filters },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
