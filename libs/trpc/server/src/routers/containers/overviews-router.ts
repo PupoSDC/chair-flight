@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const overviewsContainersRouter = router({

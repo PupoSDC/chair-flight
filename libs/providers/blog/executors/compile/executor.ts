@@ -2,8 +2,7 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
 import { NOOP } from "@chair-flight/base/utils";
-import { blogPostSchema } from "../../src";
-import type { BlogPost } from "@chair-flight/base/types";
+import { blogPostSchema, type BlogPost } from "../../src/entities/blog-post";
 import type { ExecutorContext } from "@nx/devkit";
 
 type ExecutorOptions = Record<string, never>;

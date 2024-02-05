@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { NOOP } from "@chair-flight/base/utils";
-import { connectQuestionBank } from "../common/connect-question-bank";
+import { connectQuestionBank } from "../../src/executors/connect-question-bank";
 import {
   getPaths,
   readAllCoursesFromFs,
@@ -11,7 +11,7 @@ import {
   readAllQuestionsFromFs,
   readAllSubjectsFromFs,
   readAllDocsFromFs,
-} from "../common/parse-question-bank";
+} from "../../src/executors/parse-question-bank";
 import type { ExecutorContext } from "@nx/devkit";
 
 type ExecutorOptions = Record<string, never>;

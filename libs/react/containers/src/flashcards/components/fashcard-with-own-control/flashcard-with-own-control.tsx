@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Flashcard } from "@chair-flight/react/components";
-import type { QuestionBankFlashcardContent } from "@chair-flight/base/types";
+import type { QuestionBankFlashcardContent } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 
 export const FlashcardWithOwnControl: FunctionComponent<

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { getRandomShuffler } from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const flashcardsContainersRouter = router({

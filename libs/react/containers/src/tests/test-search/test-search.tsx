@@ -18,7 +18,7 @@ import {
   selectClasses,
 } from "@mui/joy";
 import { z } from "zod";
-import { processTest } from "@chair-flight/core/app";
+import { processTest } from "@chair-flight/core/question-bank";
 import {
   HookFormSelect,
   SearchFilters,
@@ -27,7 +27,7 @@ import {
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 
 type Props = {
   questionBank: QuestionBankName;

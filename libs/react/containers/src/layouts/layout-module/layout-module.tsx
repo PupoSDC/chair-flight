@@ -36,7 +36,7 @@ import {
 } from "../components/app-buttons";
 import { BugReportButton } from "../components/app-buttons/app-buttons";
 import { usePageTransition } from "../hooks/use-page-transition";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 const HEADER_HEIGHT = 48;

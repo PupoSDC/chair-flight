@@ -4,7 +4,7 @@ import { container, getRequiredParam } from "../../wraper";
 import type {
   LearningObjectiveId,
   QuestionBankName,
-} from "@chair-flight/base/types";
+} from "@chair-flight/core/question-bank";
 import type { QuestionListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 

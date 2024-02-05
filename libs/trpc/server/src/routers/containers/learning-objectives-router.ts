@@ -1,11 +1,11 @@
 import { z } from "zod";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import {
   getLearningObjectivesSearchFilters,
   populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
-} from "@chair-flight/core/app";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+} from "@chair-flight/core/search";
+import { questionBanks } from "../../common/providers";
 import {
   learningObjectiveSearchIndex,
   learningObjectiveSearchResults,

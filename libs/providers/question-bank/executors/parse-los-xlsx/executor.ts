@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { parseLearningObjectivesXlsx } from "../common/parse-learning-objectives-xlsx";
+import { parseLearningObjectivesXlsx } from "../../src/executors/parse-learning-objectives-xlsx";
 
 type ExecutorOptions = {
   xlsxPath: string;

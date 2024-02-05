@@ -1,18 +1,18 @@
 import {
-  searchLearningObjectivesParams,
-  populateLearningObjectivesSearchIndex,
-  searchLearningObjectives,
-  searchAnnexesParams,
   populateAnnexesSearchIndex,
-  searchAnnexes,
-  searchDocsParams,
-  searchDocs,
   populateDocsSearchIndex,
-  searchQuestionsParams,
-  searchQuestions,
+  populateLearningObjectivesSearchIndex,
   populateQuestionsSearchIndex,
-} from "@chair-flight/core/app";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+  searchAnnexes,
+  searchAnnexesParams,
+  searchDocs,
+  searchDocsParams,
+  searchLearningObjectives,
+  searchLearningObjectivesParams,
+  searchQuestions,
+  searchQuestionsParams,
+} from "@chair-flight/core/search";
+import { questionBanks } from "../../common/providers";
 import {
   annexSearchIndex,
   annexSearchResults,

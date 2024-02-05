@@ -6,7 +6,7 @@ import {
 } from "@chair-flight/react/components";
 import { TestExam } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NextPage } from "next";
 
 type Props = {
