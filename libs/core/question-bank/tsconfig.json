@@ -1,6 +1,10 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "include": ["src/**/*.ts", "executors/**/*.mts", "executors/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "executors/**/*.ts",
+    "../../react/containers/src/tests/test-maker/get-number-of-available-questions.ts"
+  ],
   "compilerOptions": {
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   }

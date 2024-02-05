@@ -1,5 +1,10 @@
 {
   "executors": {
+    "arrange": {
+      "implementation": "./executors/arrange/executor",
+      "schema": "./executors/arrange/schema.json",
+      "description": "Arrange question Bankr"
+    },
     "compile": {
       "implementation": "./executors/compile/executor",
       "schema": "./executors/compile/schema.json",

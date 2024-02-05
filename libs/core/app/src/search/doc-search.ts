@@ -6,10 +6,10 @@ import type {
   SubjectId,
   LearningObjectiveId,
 } from "@chair-flight/base/types";
-import type { QuestionBank } from "@chair-flight/core/question-bank";
+import type { IQuestionBank } from "@chair-flight/core/question-bank";
 import type { default as MiniSearch, SearchOptions } from "minisearch";
 
-export type DocSearchField = "id" | "learningObjectiveId" | "content" | "title";
+export type DocSearchField = "id" | "learningObjectives" | "content" | "title";
 export type DocSearchDocument = Record<DocSearchField, string>;
 
 export type DocSearchResult = {
@@ -19,10 +19,10 @@ export type DocSearchResult = {
   subject: SubjectId;
   empty: boolean;
   href: string;
-  learningObjective: {
+  learningObjectives: Array<{
     id: LearningObjectiveId;
     href: string;
-  };
+  }>;
 };
 
 let initializationWork: Promise<void> | undefined;
@@ -36,7 +36,7 @@ export const searchDocsParams = z.object({
   cursor: z.number().default(0),
 });
 
-export const getDocsSearchFilters = async (qb: QuestionBank) => {
+export const getDocsSearchFilters = async (qb: IQuestionBank) => {
   const rawSubjects = await qb.getAll("subjects");
 
   const subject = [
@@ -61,7 +61,7 @@ export const populateDocsSearchIndex = async ({
   searchIndex,
   searchResults,
 }: {
-  bank: QuestionBank;
+  bank: IQuestionBank;
   searchIndex: MiniSearch<DocSearchDocument>;
   searchResults: Map<string, DocSearchResult>;
 }): Promise<void> => {
@@ -77,7 +77,7 @@ export const populateDocsSearchIndex = async ({
 
     const searchItems: DocSearchDocument[] = docs.flatMap((doc) => ({
       id: doc.id,
-      learningObjectiveId: doc.learningObjectiveId,
+      learningObjectives: doc.learningObjectives.join(", "),
       content: doc.content,
       title: doc.title,
     }));
@@ -87,12 +87,12 @@ export const populateDocsSearchIndex = async ({
       questionBank: bank.getName(),
       title: doc.title,
       empty: doc.empty,
-      subject: doc.subjectId,
+      subject: doc.subject,
       href: `/modules/${bank.getName()}/docs/${doc.id}`,
-      learningObjective: {
-        id: doc.learningObjectiveId,
-        href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
-      },
+      learningObjectives: doc.learningObjectives.map((lo) => ({
+        id: lo,
+        href: `/modules/${bank.getName()}/learning-objectives/${lo}`,
+      })),
     }));
 
     await searchIndex.addAllAsync(searchItems);

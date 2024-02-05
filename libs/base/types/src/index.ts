@@ -12,3 +12,5 @@ export * from "./lib/question-bank-question-templates";
 export * from "./lib/question-bank-subjects";
 export * from "./lib/test";
 export * from "./lib/test-questions";
+export * from "./lib/mdx";
+export * from "./lib/fs";
