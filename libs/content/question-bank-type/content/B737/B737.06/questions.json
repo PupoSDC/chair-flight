@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "QQYRFGUS",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is NOT powered by the standby Power system?",
+      "options": [
+        {
+          "id": "exnilh",
+          "text": "AC Standby Bus",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ijy1i",
+          "text": "Battery Bus.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "sft6m",
+          "text": "Static Inverter",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "dsum8",
+          "text": "Transformer Rectifier 1.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QOHRKEQN",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the normal source of power for the Battery Bus?",
+      "options": [
+        {
+          "id": "eo7pw",
+          "text": "The hot battery bus",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "hmzhg",
+          "text": "the switched hot battery bus",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "g0m88",
+          "text": "The battery",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "rh172",
+          "text": "TR3",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QVWNZSFG",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The DC standby Bus is powered from the batteries through the static Inverter.  Select one:",
+      "answer": false
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QCWXEGYK",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the voltage of the DC Busses under normal circumstances?",
+      "options": [
+        {
+          "id": "sss3",
+          "text": "24v",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ntm2h",
+          "text": "115v",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "vebfa",
+          "text": "28v",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "pxrmh",
+          "text": "22-30v",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QAMDSXGS",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If all AC generated power fails, how long can the batteries (if fully charged) supply standby power?",
+      "options": [
+        {
+          "id": "4bsw3f",
+          "text": "Up to 60 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ebuee",
+          "text": "A minimum of 30 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "e0rhpi",
+          "text": "A minimum of 60 minutes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "8k6hk",
+          "text": "Up to 30 minutes.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QMJXQJDP",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If an IDG fails and the APU is not available to power the related Transfer Bus, what occur first if an electrical overload is sensed?",
+      "options": [
+        {
+          "id": "sm1ut",
+          "text": "Automatic load shedding of the galleys and main bus on Transfer Bus 1.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ymeob",
+          "text": "Automatic load shedding of the IFE Busses.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "cshfpj",
+          "text": "Automatic load shedding of the galleys and main bus on Transfer Bus 2",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "rw703",
+          "text": "Automatic load shedding of the galley and main busses on on both Transfer Busses.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QGSBYNHQ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "With the BUS TRANSFER switch in the AUTO position; how do the BTBs operate?",
+      "options": [
+        {
+          "id": "s6v5li",
+          "text": "BTBs automatically maintain power to DC Bus 1 and DC Bus 2 through the DC Cross Tie Relay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "p29o4",
+          "text": "BTBs isolate Transfer Bus 1 from Transfer Bus 2, if only 1 IDG is supplying power, DC Cross Tie Relay closes to connect DC Bus 1 to DC Bus 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "80ncpi",
+          "text": "BTBs automatically maintain power to AC Transfer busses from any operating generator or external power.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "4ac68",
+          "text": "BTBs isolate Transfer Bus 1 from Transfer Bus 2, if only 1 IDG is supplying power, DC Cross Tie Relay opens to isolate DC Bus 1 from DC Bus 2.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QDCIAHBA",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which bus(ses) will be automatically shed if the APU is the only source of electrical power in flight?",
+      "options": [
+        {
+          "id": "0wtyu",
+          "text": "Transfer bus 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "uspdm",
+          "text": "The galley busses",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "t16op",
+          "text": "The main busses",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "cwqme",
+          "text": "All galley and main busses",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QUCRFBNI",
+    "relatedQuestions": ["QQIQBGNV"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "In–flight, an amber TR UNIT light illuminates if TR1, or TR2 and TR3 has failed.\n\nOn the ground, any TR fault causes the light to illuminate\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The amber TR UNIT light illuminated while in-flight indicates if?",
+      "options": [
+        {
+          "id": "qkd9u",
+          "text": "TR1 and TR2 have failed, or TR3 has failed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "41jw4",
+          "text": "One TR has failed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "7gq6w",
+          "text": "TR1 has failed, or TR2 and TR3 have failed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "scgr5",
+          "text": "All three TRs have failed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QQIQBGNV",
+    "relatedQuestions": ["QUCRFBNI"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "In–flight, an amber TR UNIT light illuminates if TR1, or TR2 and TR3 has failed.\n\nOn the ground, any TR fault causes the light to illuminate\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The amber TR UNIT light illuminated while on the ground indicates if?",
+      "options": [
+        {
+          "id": "qkd9u",
+          "text": "TR1 and TR2 have failed, or TR3 has failed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "41jw4",
+          "text": "One TR has failed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "7gq6w",
+          "text": "TR1 has failed, or TR2 and TR3 have failed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "scgr5",
+          "text": "All three TRs have failed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QSBCINQU",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The Static Inverter, converts the Battery's 22-30V DC voltage range to a constant 24V.",
+      "answer": false
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QMKIKHKM",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Under what conditions are DC bus 1 and DC bus 2 isolated.",
+      "options": [
+        {
+          "id": "4q7rah",
+          "text": "Switching the Bus Transfer switch to OFF.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "npnll",
+          "text": "All the other answers are true.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "gua1w",
+          "text": "When the cross bus tie relay opens.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "29pvlh",
+          "text": "At glide slope capture during a a flight director or autopilot ILS apporach.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QJYKGMLS",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "When external ground power is connected to the aircraft through the External AC Receptacle, the GRD POWER AVAILABLE light does not illuminate unless the power supplied meets the quality requirements of 115v AC, 200 Hz, 3 phase.",
+      "answer": false
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QAQXSVSQ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "An illuminated amber ELEC light on the AC and DC Metering Panel indicates?",
+      "options": [
+        {
+          "id": "mv2cq",
+          "text": "A fault exists in the DC power system or the Standby power system",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "wfdtl",
+          "text": "A fault exists in the AC power system or the DC power system",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "lq5gn",
+          "text": "A fault exists in the AC power system and the DC power system",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "k30yq",
+          "text": "A fault exists in the DC power system and the Standby power system",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QGVCIRVH",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "With the STANDBY POWER switch (located on the Generator Drive and Standby Power Panel)  in the AUTO position, will the loss of a single DC Bus result in automatic switching from normal to alternate power?",
+      "options": [
+        {
+          "id": "3dbgu",
+          "text": "Only if power from DC Bus 2 is lost",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "j977c",
+          "text": "Only if power from from DC Bus 1 is lost and power from AC Transfer Bus 1 is also lost",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "wffaj",
+          "text": "Only if power from DC Bus 1 is lost",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "s0yd7",
+          "text": "No, for automatic switching to occur power must be lost from both DC Busses",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QAJWOGPZ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which electrical bus is always connected and powered whenever the aircraft battery is fitted?",
+      "options": [
+        {
+          "id": "a99fzk",
+          "text": "DC Standby bus - power to important systems that require to be in standby mode.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "klkcu",
+          "text": "Battery bus - power immediately available to important systems such as fire extinguishers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ngm38",
+          "text": "Hot Battery Bus - power immediately available to important systems such as fire extinguishers.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "6p1qt",
+          "text": "AC standby bus- powered through Transformer Rectifier to ensure no power interuption to GPS system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QHYJKUDC",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Why are the covers on the Drive DISCONNECT switches red?",
+      "options": [
+        {
+          "id": "nxgl7h",
+          "text": "For easy identification of an emergency operation in low light conditions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "nfm4y",
+          "text": "To identify switch action is irreversible in flight.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "3slso",
+          "text": "To identify an emergency operation control switch.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6g40r",
+          "text": "To identify a NNP memory item.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QXCWGXWC",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If the APU is powering Transfer Bus 1 and GEN 2 is powering Transfer Bus 2, what will occur when the Ground Power (GRD PWR) Switch is turned to ON?",
+      "options": [
+        {
+          "id": "pzx49",
+          "text": "Ground Power will power Transfer Bus 1 and GEN 2 will power Transfer Bus 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "2kx12g",
+          "text": "Ground Power will power both Transfer Busses and the SOURCE OFF lights will illuminate.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "dra9q",
+          "text": "Ground Power will power both Transfer Busses. The SOURCE OFF lights will remain extinguished.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "zif9e",
+          "text": "The APU will power Transfer Bus 1 and Ground Power will power Transfer Bus 2.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QBXYUQVM",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the normal source of power for the DC Standby bus?",
+      "options": [
+        {
+          "id": "4ya62j",
+          "text": "The battery",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6az5wg",
+          "text": "DC bus 1 and DC bus 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "xc0w1",
+          "text": "TR1, TR2 and TR3",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ke7dq",
+          "text": "TR2 and TR3",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QATXPUMV",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the purpose of the Ground Service switch on the forward attendant's panel?",
+      "options": [
+        {
+          "id": "huuyc",
+          "text": "Energises the No1 and No2 115V GND SERVICE BUS, to allow the galleys water heaters to be powered whilst the aircraft is connected to ground power.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "o2lbh",
+          "text": "Powers and sounds external horn through the AC ground services bus to attract attention of ground servicing personnel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "c5m7ng",
+          "text": "Provides ground power directly to the AC ground services bus for utility outlets, cabin lighting, and battery charger without powering all aircraft electrical busses.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "v3e1z",
+          "text": "Provides power to external services used by ground servicing personnel.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QMGKYEBU",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the normal AC power source for TR3?",
+      "options": [
+        {
+          "id": "1fjsb",
+          "text": "Main Bus 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "a11c9",
+          "text": "Transfer Bus 1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "jxbln",
+          "text": "Transfer Bus 2",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "6bkeh",
+          "text": "Main Bus 1",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QQJSQFWM",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "Generator Drive Disconnect (DISCONNECT) Switches (guarded)\n\nDisconnects IDG if electrical power is available and engine start lever is in IDLE. IDG cannot be reconnected in the air.\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the effect of selecting the Drive Disconnect switch to DISCONNECT?",
+      "options": [
+        {
+          "id": "z1lqn",
+          "text": "AC Standby Bus is immediately powered by Inverter from batteries.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "pqwc2",
+          "text": "No effects take place until STANBY POWER switch is also moved to BAT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "4500r",
+          "text": "DRIVE light illuminates, AC electrical power is lost on associated Transfer Bus, AC Standby Bus powered from opposite Transfer Bus.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "zu54u",
+          "text": "IDG is disconnected if running, and DRIVE light illuminates.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QURNFFTY",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the source of power for the AC Standby bus if all AC power is lost.",
+      "options": [
+        {
+          "id": "9n5bg",
+          "text": "The TRs",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "xlaao",
+          "text": "The Static Inverter",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "xzlbgf",
+          "text": "The DC Standby Bus",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "f5sxr",
+          "text": "The Battery Charger",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QQQJQFPW",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The main battery charger is powered by?",
+      "options": [
+        {
+          "id": "97vpe",
+          "text": "AC Ground Service Bus 1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "1a4qw",
+          "text": "Transfer Bus 1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "o7zrc",
+          "text": "AC Ground Service Bus 2",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "kpcr9",
+          "text": "Transfer Bus 2",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QKJZLUYN",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The 2 basic rules of the B737-800 electrical system are:  Only one AC power source can be connected at one time.  A second source connecting to a transfer bus will automatically disconnect the existing source.",
+      "answer": true
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QFWSFFQU",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What indications will you see on the electrical panel when selecting GRD PWR ON?",
+      "options": [
+        {
+          "id": "x1de6k",
+          "text": "GRD POWER light extinguished, SOURCE OFF lights illuminated, GEN OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU GEN OFF BUS light illuminated.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "zp2i9k",
+          "text": "GRD POWER AVAILABLE light extinguished, SOURCE OFF lights extinguished, GEN OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU GEN OFF BUS light illuminated.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "xa85d",
+          "text": "GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU GEN OFF BUS light illuminated.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "fu4ss",
+          "text": "GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU GEN OFF BUS light extinguished.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QRQODKWG",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "If operating on a single IDG and an overload is sensed, the electrical system will shed the galleys and main bus from Transfer Bus 1 and then Transfer Bus 2 before then shedding the IFE busses if an overload is still sensed.",
+      "answer": false
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QGLJEZUM",
+    "relatedQuestions": ["QXPHNLDH"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "TR UNIT Light Illuminated (amber)\n- on the ground:\n  - any TR has failed.\n- in flight:\n  - TR1 failed; or\n  - TR2 and TR3 failed.\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The TR UNIT light illuminated when on the ground indicates:",
+      "options": [
+        {
+          "id": "ras6j",
+          "text": "any two TRs have failed",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6qejm",
+          "text": "TR1 has failed or TR2 and TR3 have failed",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ccmwri",
+          "text": "any TR has failed",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "nkdhk",
+          "text": "All three TRs have failed",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QXPHNLDH",
+    "relatedQuestions": ["QGLJEZUM"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "TR UNIT Light Illuminated (amber)\n- on the ground:\n  - any TR has failed.\n- in flight:\n  - TR1 failed; or\n  - TR2 and TR3 failed.\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The TR UNIT light illuminated when on the air indicates:",
+      "options": [
+        {
+          "id": "ras6j",
+          "text": "any two TRs have failed",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6qejm",
+          "text": "TR1 has failed or TR2 and TR3 have failed",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ccmwri",
+          "text": "any TR has failed",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "nkdhk",
+          "text": "All three TRs have failed",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QGDDAHUK",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Under normal conditions, what powers DC Bus 1?",
+      "options": [
+        {
+          "id": "u1066",
+          "text": "TR2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "y86f1",
+          "text": "TR1 and TR2",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "zf5s9g",
+          "text": "TR1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6g38r",
+          "text": "TR2 and TR3",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QDSNSEQI",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which air conditioning system will not operate unless the CAB/UTIL switch is ON?",
+      "options": [
+        {
+          "id": "2dbp0l",
+          "text": "Left & right Recirculation fans",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "m5sy2",
+          "text": "Temperature controls",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "guyxa",
+          "text": "Air conditioning packs",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "y76m4f",
+          "text": "All 115V AC galley busses",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QQSJFODY",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "How is the auxiliary battery charger powered?",
+      "options": [
+        {
+          "id": "rhucz",
+          "text": "Through the AC Standby Bus",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "y8b",
+          "text": "Through the AC Ground Service Bus",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "0h4uo",
+          "text": "Through Ground Service Bus 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "0qvabk",
+          "text": "Through DC Bus 1",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QEADUXJT",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "With the STANDBY POWER switch (located on the Generator Drive and Standby Power Panel)  in the AUTO position, will the loss of a single AC Transfer Bus result in automatic switching from normal to alternate power?",
+      "options": [
+        {
+          "id": "aco2d",
+          "text": "Only if power from AC Transfer Bus 1 is lost and power from DC Bus 1 is also lost",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "4nuu9",
+          "text": "Only if power from AC Transfer Bus 2 is lost",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "3mi5d",
+          "text": "Only if power from AC Transfer Bus 1 is lost",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "nzjvb",
+          "text": "No, for automatic switching to occur power must be lost from both AC Transfer Busses",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QUTBGLZW",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "In the event of the loss of  all engine and APU IDGs, the Standby Power system will provide what electrical power?",
+      "options": [
+        {
+          "id": "weran",
+          "text": "115V AC and 22 to 30V DC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "pxrsf",
+          "text": "24V DC .",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "9ok3o",
+          "text": "22-30V DC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ib2cu",
+          "text": "115V AC and 24V DC",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QWQXRSFJ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If Ground power is powering both Transfer Busses, the APU is available, and is selected to power Transfer Bus 1, which statement is correct?",
+      "options": [
+        {
+          "id": "pyswdl",
+          "text": "Ground power will be automatically disconnected and the APU will power both Transfer Busses.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "acy77",
+          "text": "Ground power will be automatically disconnected and the APU will power Transfer Bus 1. Transfer Bus 2 is unpowered.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "7b876l",
+          "text": "The APU will power Transfer Bus 1 and Ground power will power Transfer Bus 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ra39w",
+          "text": "Ground power will continue to power the Transfer Busses until the APU is selected to power both Transfer Busses.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QYKHZKQW",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the normal source of power for the AC Standby Bus?",
+      "options": [
+        {
+          "id": "w3zsf",
+          "text": "AC Transfer Bus 1",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "w4xsa",
+          "text": "The Static Inverter",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "9wjrj",
+          "text": "Ground Service Bus 1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "qkmfv",
+          "text": "AC Transfer Bus 2",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QSEISAEL",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The SOURCE OFF light illuminates whenever an IDG has tripped offline due to overheating.",
+      "answer": false
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  },
+  {
+    "id": "QRAJNVIA",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.06"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Maintaining uninterrupted power on both AC Transfer Busses is primarily the function of:",
+      "options": [
+        {
+          "id": "83o0vl",
+          "text": "The IDGs",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "20w7e",
+          "text": "The Ground Service Busses",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "trchb",
+          "text": "The Bus Tie Breakers (BTBs)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "jwr9r",
+          "text": "The Transfer Busses",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.06",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.06/questions.json"
+  }
+]

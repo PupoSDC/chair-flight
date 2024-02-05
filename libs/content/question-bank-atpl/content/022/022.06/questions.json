@@ -1,0 +1,768 @@
+[
+  {
+    "id": "QJSPUSAC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-627227", "ATPLQ-222363", "BGS-222077"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a conventional aeroplane, what does the automatic pitch trim system do?",
+      "options": [
+        {
+          "id": "A9TKXPR8SI",
+          "text": "When force on the elevator control is detected, the system moves the trim to relieve the load.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ANGG3ZL01K",
+          "text": "It is a system used to compensate for incorrect pilot inputs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AT5D4T33QZ",
+          "text": "It is an autopilot mode to ensure the correct rotation rate is maintained during take-off.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ACOLHLVO06",
+          "text": "When force on the elevator control is detected, it directs the pilot to trim the elevator to relieve the load.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QAPQOIBJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-627226", "BGS-222076"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a fly-by-wire aeroplane, when is the automatic trim available?",
+      "options": [
+        {
+          "id": "ANU4F32LSX",
+          "text": "During manual flight and when the autopilot is engaged.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUB7LHDWVS",
+          "text": "In all control laws.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVE63BFK0D",
+          "text": "During manual flight only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A6Y5GQTDYY",
+          "text": "In all control laws, but only if the autopilot is engaged.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QSYMLAFP",
+    "relatedQuestions": ["QXGVWFIU"],
+    "externalIds": ["ATPLGS-106494"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.11"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The components of an autopilot system are the\n1) actuators.\n2) mode control panel.\n3) mode annunciator panel.\n4) computer.The combination that regroups all of the correct statements is",
+      "options": [
+        {
+          "id": "AQMQRCTKES",
+          "text": "1, 2, 3, 4",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AN5QTYGBN5",
+          "text": "1, 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A771M444VD",
+          "text": "1, 2, 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AU45H8YO6G",
+          "text": "1, 4",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QXGVWFIU",
+    "relatedQuestions": ["QSYMLAFP"],
+    "externalIds": [
+      "ATPLGS-106511",
+      "ATPLQ-224826",
+      "AVEXAM-30801",
+      "AVEXAM-91920",
+      "BGS-220465"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.11"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The components of an autopilot system are the\n1) actuators.\n2) mode control panel.\n3) EFIS control panel.\n4) mode annunciator panel.The combination that regroups all of the correct statements is",
+      "options": [
+        {
+          "id": "A0V6P5RE49",
+          "text": "1, 2, 4",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ARLFNKO0PX",
+          "text": "3, 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARDTZYJ6XU",
+          "text": "1, 2, 3, 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AV1CNLFIPS",
+          "text": "1, 2, 3",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QMBWDQXI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-129528", "BGS-221230"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What are the main inputs to the autopilot/autoflight?",
+      "options": [
+        {
+          "id": "APASVODT6Z",
+          "text": "Air Data Computer, Inertial Referencing System, Mode Control Panel",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A5DSPLPMVG",
+          "text": "Air Data Computer, GPWS, TCAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ASBWA86A4C",
+          "text": "Inertial Referencing System, Mode Control Panel, GPWS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ATF6EO0N4B",
+          "text": "Inertial Referencing System, Mode Control Panel, TCAS",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QLUBNKQS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221715", "ATPLQ-813950", "BGS-221591"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "081.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The pilot of a modern, large turbojet aeroplane sets the vertical speed mode of the autopilot to carry out a climb. What must he/she be particularly careful of?",
+      "options": [
+        {
+          "id": "A8CV11FNSG",
+          "text": "If the climb is prolonged, there is a risk that the airspeed may reduce towards the stall.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A7U3AWBV2R",
+          "text": "The engines may overspeed as the autothrottle attempts to maintain airspeed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AE726T8MRV",
+          "text": "The aeroplane may overspeed in an attempt to maintain the rate of climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A3QUTHD41S",
+          "text": "The autopilot may select a rate of climb outside the maximum permissible limit of the aeroplane.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022", "081"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QOCUXRSL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-129531", "BGS-221234"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does the autopilot roll-out mode control during an autoland?",
+      "options": [
+        {
+          "id": "ACAP04WHWD",
+          "text": "Maintains the localiser centreline by controlling rudder/nose wheel steering",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUSL7PJJJ7",
+          "text": "It applies full reverse thrust once on the ground",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADTF063Z53",
+          "text": "Carries out an automatic go-around if speed is excessive",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVYIMOLNKW",
+          "text": "Roll-out mode stays engaged until turning off the runway",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QDBCFGWI",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-120487",
+      "ATPLQ-226944",
+      "AVEXAM-41679",
+      "BGS-220448"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aeroplane is equipped with an autopilot and an auto-throttle. When the altitude hold mode (ALT HOLD) is active:",
+      "options": [
+        {
+          "id": "AQBN4HRUL9",
+          "text": "the IAS is maintained constant by the auto-throttle system.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AJO3WWDOG7",
+          "text": "the TAS is maintained constant by the auto-throttle system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AM5Z4SS6JC",
+          "text": "the IAS is maintained constant by the autopilot by means of elevator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHT8OHHXVP",
+          "text": "the TAS is maintained constant by the autopilot by means of elevator.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QGZRJYAY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227169", "ATPLQ-819724"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "081.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does a fully powered system require compared to a partially-powered system?",
+      "options": [
+        {
+          "id": "A79087QTTY",
+          "text": "Artificial feel system.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A1L7KNJ2VY",
+          "text": "Hydraulic servos.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A0IOY5U8PB",
+          "text": "Servo valve.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZ0AH9UTHA",
+          "text": "Servo-tab.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022", "081"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QMDCHCDZ",
+    "relatedQuestions": ["QOTBFBFG"],
+    "externalIds": ["AVEXAM-35520"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In order to know in which mode the autothrottles are engaged, the crew will check the:",
+      "options": [
+        {
+          "id": "AKMXDEPEW8",
+          "text": "PFD (Primary Flight Display).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AH38ZPG1IM",
+          "text": "TMD (Thrust Mode Display).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AWKYSFW7RS",
+          "text": "MCP (Mode Control Panel).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A31BQ1Y3C2",
+          "text": "SFD (Secondary Flight Display).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QOTBFBFG",
+    "relatedQuestions": ["QMDCHCDZ"],
+    "externalIds": ["BGS-992959"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In order to know in which mode the autothrottles are engaged, the crew will check the :",
+      "options": [
+        {
+          "id": "ADA9VY5LB9",
+          "text": "PFD (Primary Flight Display)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUHDSS39NA",
+          "text": "Throttle position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AH18QKA7ZT",
+          "text": "TCC (Thrust Control Computer).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQHQ24ECZW",
+          "text": "ND (Navigation Display).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QACCFING",
+    "relatedQuestions": ["QPBPOQBC", "QZZPKWZX"],
+    "externalIds": ["ATPLQ-222157", "BGS-620790"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.11"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which FMS guidance modes does the pilot have to engage in order to follow the horizontal path, vertical path, and speed profile?",
+      "options": [
+        {
+          "id": "AF00Q9XHAP",
+          "text": "LNAV (Lateral Navigation) and VNAV (Vertical Navigation).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A6NOPWD57R",
+          "text": "NAV (Longitudinal Navigation) and SPEED.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ALNTYQ7NSV",
+          "text": "HDG (Heading Navigation) and VS/FPA (Vertical Speed/Flight Path Angle).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AH07Z9F97J",
+          "text": "TRK (Track Navigation) and FLCH (Flight Level Change).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QPBPOQBC",
+    "relatedQuestions": ["QACCFING", "QZZPKWZX"],
+    "externalIds": ["ATPLQ-222157", "BGS-620790"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.11"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which FMS guidance modes does the pilot have to engage in order to follow the horizontal path, vertical path, and speed profile?",
+      "options": [
+        {
+          "id": "AS0XYYOPQI",
+          "text": "LNAV (Lateral Navigation) and VNAV (Vertical Navigation)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A90BGNJYU4",
+          "text": "NAV (Longitudinal Navigation) and SPEED.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AUCN1UJPH7",
+          "text": "HDG (Heading Navigation) and VS/FPA (Vertical Speed/Flight Path Angle).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AG3PBSUR7Y",
+          "text": "TRK (Track Navigation) and FLCH (Flight Level Change).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QZZPKWZX",
+    "relatedQuestions": ["QACCFING", "QPBPOQBC"],
+    "externalIds": ["AVEXAM-62035"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.11"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which FMS guidance modes does the pilot have to engage in order to follow the horizontal path, vertical path and speed profile?",
+      "options": [
+        {
+          "id": "ACAIUU5ZDM",
+          "text": "LNAV and VNAV",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A4NUNLZ4JG",
+          "text": "TRK and FLCH",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AUFXYBOQ0H",
+          "text": "HDG and VS/FPA",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AE76HK9MDR",
+          "text": "NAV and SPEED",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QUSNBSLA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221490", "BGS-220810"],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Autopilot engagement status can be checked on the:",
+      "options": [
+        {
+          "id": "A882XYBSL7",
+          "text": "PFD.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ALMYRRGHI6",
+          "text": "ECAM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AWG8F84HH3",
+          "text": "ND of the pilot in command.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A901DOJ69L",
+          "text": "ND.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QODQPAEW",
+    "relatedQuestions": ["QDPLJPQH", "QKUQEBXW"],
+    "externalIds": [
+      "ATPLGS-121125",
+      "ATPLQ-225024",
+      "AVEXAM-6887",
+      "BGS-220809",
+      "BGS-992961"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a modern aircraft, the flight director modes are displayed on the:",
+      "options": [
+        {
+          "id": "ARIQFK280F",
+          "text": "upper strip of the PFD -Primary Flight Display-.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AEN7A36FUI",
+          "text": "upper strip of the ND -Navigation Display-.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZ5CQZWGRJ",
+          "text": "upper strip of the ECAM -Electronic Centralised A/C Management-.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHGWDEQR36",
+          "text": "control panel of the flight director only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QKUQEBXW",
+    "relatedQuestions": ["QDPLJPQH", "QODQPAEW"],
+    "externalIds": [
+      "ATPLGS-121125",
+      "ATPLQ-225024",
+      "AVEXAM-6887",
+      "BGS-992961"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a modern aircraft, the flight director modes are displayed on the:",
+      "options": [
+        {
+          "id": "ATBCFMHTEY",
+          "text": "Upper strip of the PFD (Primary Flight Display).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AVXP7T3KP3",
+          "text": "Control panel of the flight director only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADU1C4JGQB",
+          "text": "Upper strip of the ECAM (Electronic Centralized A/C Management).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AB8VE6RLSL",
+          "text": "Upper strip of the ND (Navigation Display).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  },
+  {
+    "id": "QDPLJPQH",
+    "relatedQuestions": ["QKUQEBXW", "QODQPAEW"],
+    "externalIds": [
+      "ATPLGS-121125",
+      "ATPLQ-225024",
+      "AVEXAM-6887",
+      "BGS-220809",
+      "BGS-992961"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a modern aircraft, the flight director modes are displayed on the:",
+      "options": [
+        {
+          "id": "AK1O9NK44T",
+          "text": "upper strip of the PFD (Primary Flight Display).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AM7LZCN04S",
+          "text": "control panel of the flight director only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AY3JVV9RZP",
+          "text": "upper strip of the ECAM (Electronic Centralised A/C Management).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A2B7N8C7G0",
+          "text": "upper strip of the ND (Navigation Display).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.06",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.06/questions.json"
+  }
+]

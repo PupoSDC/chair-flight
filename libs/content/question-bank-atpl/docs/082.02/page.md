@@ -1,4 +1,0 @@
----
-learningObjectiveId: "082.02"
-title: TRANSONIC AERODYNAMICS and COMPRESSIBILITY EFFECTS
----

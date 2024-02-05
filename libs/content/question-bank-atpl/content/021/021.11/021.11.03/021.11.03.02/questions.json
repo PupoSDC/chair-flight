@@ -1,0 +1,422 @@
+[
+  {
+    "id": "QFAWYOLW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213834", "BGS-211839"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Due to a mechanical failure, the flaps are only extended in one of the wings. What will be the result?",
+      "options": [
+        {
+          "id": "ABN103LGKA",
+          "text": "The aircraft will roll to the side where the flaps are not extended and yaw in the direction of the wing with extended flaps",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ARN5JYAM7O",
+          "text": "The aircraft will roll and yaw to the side where the flaps are not extended.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AB94KH5J3F",
+          "text": "The aircraft will roll to the side where the flaps are extended and yaw in the same direction of the roll.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AKZR0NA8MR",
+          "text": "The aircraft will roll and yaw to the side where the flaps are extended.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QQOKCXPF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218731", "AVEXAM-9160"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is FADEC redundancy usually achieved on piston-engine aircraft?",
+      "options": [
+        {
+          "id": "AOPWGNNSK5",
+          "text": "Each engine is fitted with two FADEC computers.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ATF3JZJTM2",
+          "text": "A piston engine FADEC is much more performant than a gas turbine one because of the lower operating costs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AEWYVTMGLL",
+          "text": "Extra redundancy is achieved via a continuous operator monitoring system.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A4TOXDXDDL",
+          "text": "The FADEC architecture is equipped with a reinforced wiring system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QAYEVWMC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218504", "BGS-211901"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A FADEC of piston engine has two ___ to achieve redundancy.",
+      "options": [
+        {
+          "id": "AVPQF3XW0E",
+          "text": "power supplies and two separate but identical channels",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AWGM3QZR3D",
+          "text": "starter motors and generators",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A198XGQ98F",
+          "text": "injectors and spark plugs per cylinder",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AW1P3RASG8",
+          "text": "magnetos with impulse-coupling starters and dual sensors",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QVVGKZWX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215018", "AVEXAM-10366", "BGS-210772"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Throttle Lever Angle (TLA) information of a FADEC controlled gas turbine engine is provided:",
+      "options": [
+        {
+          "id": "AU93PPMCY6",
+          "text": "to the electronic engine control unit by a direct electrical wiring connection.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A5FLG9UQYI",
+          "text": "via cables and pulleys.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXFI0CPVOZ",
+          "text": "to a single dedicated channel of the FADEC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AY5B3V5M3P",
+          "text": "to the hydro mechanical main engine control.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QTPGDHUX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213609", "AVEXAM-3236"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A turbine engine with a dual channel FADEC has a single channel fault. Which of these actions should the crew take?",
+      "options": [
+        {
+          "id": "AQ2H0B5PP7",
+          "text": "Continue the flight, since the healthy channel automatically assumes full engine control.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AQUD3XP6ZY",
+          "text": "Set the power of the affected engine to IDLE, because engine indications are completely lost.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARZ8XM00ID",
+          "text": "Intervene and take manual control of the engine, due to the loss of the redundancy.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AS50BV1PGZ",
+          "text": "Avoid a high-power setting on the affected engine, due to single-channel limitations.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QKKYZNTU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-113058",
+      "ATPLQ-218699",
+      "AVEXAM-62495",
+      "BGS-210775"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a FADEC gas turbine engine during normal flight, the power for the FADEC's sensors comes from:",
+      "options": [
+        {
+          "id": "AHNK5SY1Y1",
+          "text": "the FADEC power source(s) on the engine.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AF9MSRZ7CN",
+          "text": "the aircraft generator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVS57HJ1H7",
+          "text": "the APU generator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZCPZ6K3OX",
+          "text": "the aircraft battery.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QPHNIYGU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-112955",
+      "ATPLQ-212934",
+      "AVEXAM-4232",
+      "BGS-210767"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The primary input signals for a hydro-mechanical gas turbine engine fuel control system include",
+      "options": [
+        {
+          "id": "A3V409UPAQ",
+          "text": "N2, compressor discharge pressure, compressor inlet temperature, fuel shut-off, thrust lever angle.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A2G25LWR3X",
+          "text": "N2, turbine inlet temperature, fuel shut-off, generator, thrust lever angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A89I1STRAT",
+          "text": "N1, N2, bypass ratio, fuel shut-off, thrust lever angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AP6NTEQ2YQ",
+          "text": "N2, bypass ratio, EPR, fuel shut-off, thrust lever angle.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QUNQBVBT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212600", "AVEXAM-97488"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does a FADEC consist of?",
+      "options": [
+        {
+          "id": "AMVPYP5U5Q",
+          "text": "A fuel control system and its accessories (sensors, wiring, sensors,... etc.).       ",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AMD357SJFB",
+          "text": "A fuel control system and gauges shown to the pilots.      ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A4Z9HOEQ4F",
+          "text": "All fuel control systems on board an aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARIQGBE38J",
+          "text": "A fuel control system only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QPZNWEEA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218345", "AVEXAM-63117", "BGS-210774"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The electronic engine control unit of a gas turbine engine FADEC uses data from:\n\n1. aircraft systems2. cockpit display units3. its own engine sensors4. electronic engine control units of the other engines(s)\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "AUBMY5OXU9",
+          "text": "1, 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AJQ1WM88QW",
+          "text": "2, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQURHOWZG4",
+          "text": "2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A7FGZJZWHC",
+          "text": "1, 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  },
+  {
+    "id": "QTNQMICB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218313", "AVEXAM-8224", "BGS-210858"],
+    "annexes": [],
+    "learningObjectives": ["021.11.03.02.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a multi-engine aircraft, a fire detection system includes...",
+      "options": [
+        {
+          "id": "A86J4PJULS",
+          "text": "a visual warning for each engine and an aural alert common to all engines.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A2CKDTW77I",
+          "text": "a visual warning common to all engines but a separate aural alert for each engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ATWLGC2UXM",
+          "text": "one visual warning and one aural alert common to all engines.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXJXC4LYGT",
+          "text": "both a visual warning and an aural alert unique to each engine.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "021.11.03.02",
+    "subjects": ["021"],
+    "srcLocation": "libs/content/question-bank-atpl/content/021/021.11/021.11.03/021.11.03.02/questions.json"
+  }
+]

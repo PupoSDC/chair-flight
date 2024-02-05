@@ -1,0 +1,704 @@
+[
+  {
+    "id": "QYJUTASL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-124778", "ATPLQ-227867"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which system is required in order for the FMS to control vertical navigation?",
+      "options": [
+        {
+          "id": "AR0DCBRBTC",
+          "text": "Auto-throttle",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ACV8FBAS0U",
+          "text": "Pitch Controller",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AUF3WWJ16A",
+          "text": "Electronic Flight Bag",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AD3ONUB6DX",
+          "text": "Flight Director",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QWCHKVMQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-101073", "ATPLQ-226082"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Where is information about the wind direction and velocity derived from?",
+      "options": [
+        {
+          "id": "AOU3EOAJIW",
+          "text": "Wind information is derived by the flight management computer (FMC) by heading, drift, true air speed and ground speed inputs.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUNSQ5FQLH",
+          "text": "Wind information is directly entered into the flight management computer (FMC) by pilots or dispatchers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AFINQST6ZN",
+          "text": "The pilots enter wind data manually, based on current available information.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A8FHUMCSVP",
+          "text": "Wind information is uploaded via data link from the nearest met office.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QYOOSUVB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-106633", "AVEXAM-82765"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Where is information about the fuel flow stored?",
+      "options": [
+        {
+          "id": "A57SUAKHAW",
+          "text": "Performance database.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AGA4LF1CP1",
+          "text": "Navigation database.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A798U3CANJ",
+          "text": "Air data database.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ANK49NJWS4",
+          "text": "Engine database.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QTKVXVII",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-129546", "BGS-221261"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "With regard to the aircraft onboard computer systems, what information is 'loadable'?",
+      "options": [
+        {
+          "id": "AYC608T262",
+          "text": "Performance and navigation databases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AJV85AG81X",
+          "text": "Performance database and hardware.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A0DGNJCOC7",
+          "text": "Navigation database and operating system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ATPXBAAL2E",
+          "text": "Navigation database and EGPWS information.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QMHPGZUH",
+    "relatedQuestions": ["QLHRXRDF"],
+    "externalIds": ["ATPLQ-224609", "BGS-621140"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a typical Navigation Display (ND) the current in-flight Wind Velocity (W/V) is displayed. Where is the W/V information derived from?",
+      "options": [
+        {
+          "id": "AGP69DGJL9",
+          "text": "It is determined by the FMC from inputs of heading, drift, True Airspeed (TAS) and ground speed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AVF9N62N9B",
+          "text": "It is entered into the FMC by either the pilots or dispatch/operations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXPXGH3YLI",
+          "text": "It is manually entered by the pilots, based on the latest information available.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AJN5PI9D5B",
+          "text": "It is uploaded by data link from the latest available meteorological forecasts.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QLHRXRDF",
+    "relatedQuestions": ["QMHPGZUH"],
+    "externalIds": ["ATPLQ-224609", "BGS-621140"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "022.13"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a typical Navigation Display (ND) the current in-flight Wind Velocity (W/V) is displayed. Where is the W/V information derived from?",
+      "options": [
+        {
+          "id": "A84P78T24B",
+          "text": "Wind information is calculated by the Flight Management Computer (FMC) from heading, drift, true air speed and ground speed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AR72I8XQ6H",
+          "text": "It is uploaded by data link from the latest available meteorological forecasts.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AODQKEW8YI",
+          "text": "It is manually entered by the pilots, based on the latest information available.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVG594G18C",
+          "text": "It is entered into the FMC by either the pilots or dispatch/operations.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QTUKFCKI",
+    "relatedQuestions": ["QBKKNAXR", "QCDTEMIG", "QGKDXTYX"],
+    "externalIds": ["ATPLGS-124675", "BGS-996480"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.02", "062.06", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement about RNP is correct?",
+      "options": [
+        {
+          "id": "ATHVAWDJ2B",
+          "text": "RNP requires a navigation performance accuracy both lateral and longitudinal for 95% of the flying time.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AHGQI4BMQ6",
+          "text": "RNP requires only a lateral navigation performance accuracy for 95% of the flying time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AKE4PRKVWR",
+          "text": "RNP requires a navigation performance accuracy lateral, longitudinal and vertical for 95% of the flying time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AFWJ6949KK",
+          "text": "RNP requires a navigation performance accuracy lateral, longitudinal, vertical and timing for 95% of the flying time.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QCDTEMIG",
+    "relatedQuestions": ["QBKKNAXR", "QGKDXTYX", "QTUKFCKI"],
+    "externalIds": ["BGS-621111"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.02", "062.06", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement about ADFs is correct?",
+      "options": [
+        {
+          "id": "AKPZQB6SSH",
+          "text": "ADFs can receive and take bearings on any broadcasting station transmitting within the frequency band 190 - 1750 kHz.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A7WSRRXUVX",
+          "text": "ADFs can receive any broadcasting station transmitting within the frequency band 190 - 1750 kHz but cannot take bearings on them.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A5F3CN02CM",
+          "text": "ADFs cannot receive broadcasting stations transmitting within the frequency band 190 - 1750 kHz because NDBs are either N0N/A1A or A2A modulated and not A3E modulated like broadcasting stations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQHV36NNPB",
+          "text": "ADFs cannot receive broadcasting stations transmitting within the frequency band 190 - 1750 kHz because NDBs are amplitude modulated and not frequency modulated like broadcasting stations.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QGKDXTYX",
+    "relatedQuestions": ["QBKKNAXR", "QCDTEMIG", "QTUKFCKI"],
+    "externalIds": ["ATPLGS-124655", "ATPLQ-625813"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.02", "062.06", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement about ADFs is correct?",
+      "options": [
+        {
+          "id": "A0WF1YX0TR",
+          "text": "ADFs can receive and take bearings on any broadcasting station transmitting within the frequency band 190 – 1750 kHz.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AVOQVH1LIR",
+          "text": "ADFs can receive any broadcasting station transmitting within the frequency band 190 – 1750 kHz but cannot take bearings on them.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ARSLX4JAR7",
+          "text": "ADFs cannot receive broadcasting stations transmitting within the frequency band 190 – 1750 kHz because NDBs are amplitude modulated and not frequency modulated like broadcasting stations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AP3Y1TQMUT",
+          "text": "ADFs cannot receive broadcasting stations transmitting within the frequency band 190 – 1750 kHz because NDBs are either N0N/A1A or A2A modulated and not A3E modulated like broadcasting stations.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QBKKNAXR",
+    "relatedQuestions": ["QCDTEMIG", "QGKDXTYX", "QTUKFCKI"],
+    "externalIds": ["BGS-621200"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.02", "062.06", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement about EGNOS is correct?",
+      "options": [
+        {
+          "id": "ALDPMMGA6P",
+          "text": "EGNOS consists of 3 geostationary satellites which broadcast GPS look-alike signals in order to improve accuracy.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ARSLUJAJMW",
+          "text": "EGNOS is a local area augmentation system operation in North America.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A1VO95NHHG",
+          "text": "EGNOS can improve accuracy to 0,1 dm horizontally and 0,03 dm vertically.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ASJVZBXP6X",
+          "text": "With EGNOS installed in an aircraft, the GNSS-receiver can use satellites from all Global Navigation Satellite Systems in order to get better accuracy.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QSDVEPZP",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLGS-124976",
+      "ATPLQ-228746",
+      "AVEXAM-15814",
+      "BGS-620777"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following uses Kalman filtering?",
+      "options": [
+        {
+          "id": "ALSAH3R2TU",
+          "text": "Navigation Computer",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AYOILG1SXG",
+          "text": "Electronic Flight Instrument System (EFIS)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A68ZQMZIMX",
+          "text": "DME receiver",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A65RS1XEC0",
+          "text": "VOR receiver",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QMYITMSR",
+    "relatedQuestions": ["QZWWGOOU"],
+    "externalIds": ["ATPLGS-621658"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which one of the following is an advantages of a multi-sensor system using inputs from a global navigation satellite system (GNSS) and an inertial reference system (IRS)?",
+      "options": [
+        {
+          "id": "AQ0AOX8413",
+          "text": "The GNSS can be used to update a drifting INS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOJ7GYJ5XU",
+          "text": "The average position calculated from data provided by both systems increases overall accuracy",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVDD0VGST5",
+          "text": "The only advantage of coupling both systems is double redundancy",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ANEV5638EF",
+          "text": "The activation of Selective Availability can be recognised by the INS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QZWWGOOU",
+    "relatedQuestions": ["QMYITMSR"],
+    "externalIds": ["AVEXAM-30778"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which one of the following is an advantages of a multi-sensor system using inputs from a global navigation satellite system (GNSS) and an inertial reference system (IRS)?",
+      "options": [
+        {
+          "id": "A5OB8VRZY6",
+          "text": "The GNSS can be used to update the FMS position from a drifting IRS.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUOXR9IWB8",
+          "text": "The activation of 'Selective Availability' can be recognised by the INS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A4LJ31HO7Q",
+          "text": "The FMS always uses average position calculated from the GNSS and the IRS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A9SVZ8SV7C",
+          "text": "The GNSS is never used as an input in a multi-sensor system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QRDTVHTD",
+    "relatedQuestions": ["QMCZXPIY"],
+    "externalIds": ["ATPLGS-124689"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following are typical inputs to a Flight Management System (FMS)?",
+      "options": [
+        {
+          "id": "A56PCJTEM0",
+          "text": "Air Data Computer (ADC) data.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AT2JVFVWNO",
+          "text": "Messages on the Command Display Unit (CDU).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AL9W4VCPIZ",
+          "text": "Autopilot command signals.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A101JRWEW7",
+          "text": "Flight Director indications.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QMCZXPIY",
+    "relatedQuestions": ["QRDTVHTD"],
+    "externalIds": ["ATPLQ-221114", "AVEXAM-45846", "BGS-996484"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following are typical inputs to a Flight Management System (FMS)?",
+      "options": [
+        {
+          "id": "AHS9O9YXQA",
+          "text": "Air Data Computer (ADC) data.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOZGBNNHCY",
+          "text": "Autopilot command signals",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A0S030TV91",
+          "text": "Flight Director (FD) indications.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A2FFRSQLV2",
+          "text": "Messages on the Command Display Unit (CDU)",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QSUQFWOW",
+    "relatedQuestions": ["QVWCKHCN"],
+    "externalIds": ["ATPLGS-124687"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is true about the navigational database of a FMS?",
+      "options": [
+        {
+          "id": "A7K2XQ1P5Y",
+          "text": "Crew created navigational data may be saved in additional space in the database.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ATDLTZ7B4B",
+          "text": "The navigational database is write-protected and it is not possible to otherwise save crew created navigational data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AH9ZMWWAKT",
+          "text": "Crew-inserted navigational data is deleted automatically after each flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AIJ1V2I9EI",
+          "text": "The crew can overwrite existing database-data in the navigational database.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  },
+  {
+    "id": "QVWCKHCN",
+    "relatedQuestions": ["QSUQFWOW"],
+    "externalIds": ["ATPLQ-223303", "BGS-620771"],
+    "annexes": [],
+    "learningObjectives": ["022.11", "062.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is true about the navigational database of a FMS?",
+      "options": [
+        {
+          "id": "ASE54R5I79",
+          "text": "The navigational database is read-only, but space exists for crew-created navigational data.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A6FLVTXCCE",
+          "text": "The crew can overwrite existing database-data in the navigational database.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AYE73RIR2V",
+          "text": "Crew-inserted navigational data is deleted automatically after each flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AYBIDST19Z",
+          "text": "The navigational database is write-protected and it is not possible to otherwise save crew created navigational data.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "022.11",
+    "subjects": ["022", "062"],
+    "srcLocation": "libs/content/question-bank-atpl/content/022/022.11/questions.json"
+  }
+]

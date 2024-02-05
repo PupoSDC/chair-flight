@@ -1,0 +1,248 @@
+[
+  {
+    "id": "QGLXTRMB",
+    "relatedQuestions": ["QBDMXGEH"],
+    "externalIds": ["AVEXAM-83481"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\n- Altitude: 7 000 ft\n- Temperature (OAT): -15 °C\n- Calibrated airspeed: 140 kt\n\nCalculate the true airspeed:",
+      "options": [
+        {
+          "id": "AHJ3HN3JQU",
+          "text": "151 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AFSIAN5FP6",
+          "text": "160 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A6HNREHYUH",
+          "text": "123 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AJ5R0AWUD4",
+          "text": "130 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  },
+  {
+    "id": "QBDMXGEH",
+    "relatedQuestions": ["QGLXTRMB"],
+    "externalIds": ["AVEXAM-29786"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\n\n- Cruise: FL370\n- Mach: 0.74\n- OAT: -47 °C\n\nThe TAS is:",
+      "options": [
+        {
+          "id": "AFG5XCGG8V",
+          "text": "434 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A474RE9QBV",
+          "text": "415 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A8KB1M79SL",
+          "text": "428 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQ0J0XJ2LC",
+          "text": "424 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  },
+  {
+    "id": "QDJMZIBZ",
+    "relatedQuestions": ["QTFVFPTZ"],
+    "externalIds": ["AVEXAM-47376"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\n\n- AD: Air distance\n- GD: Ground distance\n- TAS: True airspeed\n- GS: Ground speed\n\nWhich of the following is the correct formula to calculate ground distance (GD) gone?",
+      "options": [
+        {
+          "id": "AC9CJJ5WUE",
+          "text": "GD = (AD × GS) ÷ TAS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AEMSSI61YP",
+          "text": "GD = TAS ÷ (GS × AD)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHHC7GDMNK",
+          "text": "GD = AD × (GS -TAS) ÷ GS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AF0SMS3ZEU",
+          "text": "GD = (AD - TAS) ÷ TAS",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  },
+  {
+    "id": "QTFVFPTZ",
+    "relatedQuestions": ["QDJMZIBZ"],
+    "externalIds": ["AVEXAM-66622"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\n\n- AD  = Air Distance\n- GD  = Ground Distance\n- TAS  = True Airspeed\n- GS  = Groundspeed\n\nWhich of the following formulas is the correct one to calculate the Ground Distance (GD) flown?",
+      "options": [
+        {
+          "id": "AGB4A3W5V6",
+          "text": "GD = (AD × GS) / TAS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ANI5TTZ8UH",
+          "text": "GD = TAS / (GS × AD)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AOMINPZ4PK",
+          "text": "GD = (AD - TAS) / TAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A56G6WMTPC",
+          "text": "GD = AD × (GS -TAS) / GS",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  },
+  {
+    "id": "QCQEHWZY",
+    "relatedQuestions": ["QOIZRXTE"],
+    "externalIds": ["AVEXAM-24389"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n \n\n-  TAS: 140 kt\n  </tr>\n  <tr> True HDG: 302°\n  </tr>\n  <tr> W/V:  045° (T) / 45 kt\n\nCalculate the drift angle and GS:",
+      "options": [
+        {
+          "id": "AH525HUJJ8",
+          "text": "16°L - 156 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AWTD618ADK",
+          "text": "18°R - 146 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADHSUONOQA",
+          "text": "9°R - 143 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AULPOIA6B9",
+          "text": "9°L - 146 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  },
+  {
+    "id": "QOIZRXTE",
+    "relatedQuestions": ["QCQEHWZY"],
+    "externalIds": ["AVEXAM-98800"],
+    "annexes": [],
+    "learningObjectives": ["033.06", "061.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n \n\n-  TAS: 110 kt\n  </tr>\n  <tr> Track: 235° (T)\n  </tr>\n  <tr> W/V: 350° (T) / 23 kt\n\nCalculate the ground speed:",
+      "options": [
+        {
+          "id": "A1C9023SMF",
+          "text": "118 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AAULTHF803",
+          "text": "128 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AIT5W6HN70",
+          "text": "122 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AEL9N3N4BT",
+          "text": "125 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.06",
+    "subjects": ["033", "061"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.06/questions.json"
+  }
+]
