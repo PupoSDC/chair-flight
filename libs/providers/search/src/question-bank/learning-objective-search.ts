@@ -120,7 +120,7 @@ export class LearningObjectiveSearch
         }
 
         if (params.filters.course !== "all") {
-          if (result.courses.every((c) => c.id !== params.filters.subject)) {
+          if (result.courses.every((c) => c.id !== params.filters.course)) {
             return false;
           }
         }
@@ -142,6 +142,9 @@ export class LearningObjectiveSearch
   }
 
   async retrieve(ids: string[]) {
+    if (LearningObjectiveSearch.initializationWork)
+      await LearningObjectiveSearch.initializationWork;
+
     return ids
       .map((id) => LearningObjectiveSearch.searchResults.get(id))
       .filter((r): r is LearningObjectiveSearchResult => !!r);

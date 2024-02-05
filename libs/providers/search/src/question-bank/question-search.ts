@@ -171,6 +171,9 @@ export class QuestionSearch
   }
 
   async retrieve(ids: string[]) {
+    if (QuestionSearch.initializationWork)
+      await QuestionSearch.initializationWork;
+
     return ids
       .map((id) => QuestionSearch.searchResults.get(id))
       .filter((r): r is QuestionSearchResult => !!r);

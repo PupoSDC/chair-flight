@@ -126,6 +126,8 @@ export class DocSearch
   }
 
   async retrieve(ids: string[]) {
+    if (DocSearch.initializationWork) await DocSearch.initializationWork;
+
     return ids
       .map((id) => DocSearch.searchResults.get(id))
       .filter((r): r is DocSearchResult => !!r);

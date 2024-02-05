@@ -120,6 +120,8 @@ export class AnnexSearch
   }
 
   async retrieve(ids: string[]) {
+    if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
+
     return ids
       .map((id) => AnnexSearch.searchResults.get(id))
       .filter((r): r is AnnexSearchResult => !!r);
