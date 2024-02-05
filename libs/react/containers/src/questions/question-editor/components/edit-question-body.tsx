@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, FormControl, FormLabel, Select, Option, Button } from "@mui/joy";
-import { getNewVariant } from "@chair-flight/core/app";
+import { getNewVariant } from "@chair-flight/core/question-bank";
 import { HookFormTextArea } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import { InputAutocompleteLearningObjectives } from "./input-autocomplete-learning-objectives";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
-import type { QuestionVariantType } from "@chair-flight/base/types";
+import type { QuestionVariantType } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 
 export const EditQuestionBody: FunctionComponent = () => {

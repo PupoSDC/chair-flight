@@ -12,7 +12,7 @@ import type {
   LearningObjectiveSearchResult as LoSearchResult,
   learningObjectiveSearchDocument as LoSearchDocument,
   LearningObjectiveSearchField as LoSearchField,
-} from "@chair-flight/core/app";
+} from "@chair-flight/core/search";
 
 export const learningObjectiveSearchResults = new Map<string, LoSearchResult>();
 export const questionSearchResults = new Map<string, QuestionSearchResult>();

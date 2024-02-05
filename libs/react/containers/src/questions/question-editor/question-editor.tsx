@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Grid } from "@mui/joy";
-import { questionEditSchema } from "@chair-flight/core/schemas";
+import { questionEditSchema } from "@chair-flight/core/question-bank";
 import { trpc } from "@chair-flight/trpc/client";
 import { RestoreFormHistory } from "../../hooks/use-form-history";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -11,7 +11,10 @@ import { EditVariantModal } from "./components/edit-variant-modal";
 import { EditVariants } from "./components/edit-variants";
 import { ReviewPrModal } from "./components/review-pr-modal";
 import type { EditQuestionFormValues } from "./types/edit-question-form-values";
-import type { QuestionBankName, QuestionId } from "@chair-flight/base/types";
+import type {
+  QuestionBankName,
+  QuestionId,
+} from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 const resolver = zodResolver(questionEditSchema);

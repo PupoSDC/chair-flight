@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { questionBankResourceSchema } from "@chair-flight/core/schemas";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBankResourceSchema } from "@chair-flight/core/question-bank";
+import { questionBanks } from "../../common/question-banks";
 import { publicProcedure, router } from "../../config/trpc";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 
 export const modulesPagesRouter = router({
   getIndexGenerationPaths: publicProcedure

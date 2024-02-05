@@ -3,7 +3,7 @@ import {
   createNewQuestionPr,
   newIssueSchema,
 } from "@chair-flight/core/github";
-import { questionEditSchema } from "@chair-flight/core/schemas";
+import { questionEditSchema } from "@chair-flight/core/question-bank";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const githubRouter = router({

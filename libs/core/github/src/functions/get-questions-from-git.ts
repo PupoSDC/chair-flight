@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { NotFoundError } from "@chair-flight/base/errors";
-import { questionBankQuestionSchema } from "@chair-flight/core/schemas";
+import { questionBankQuestionSchema } from "@chair-flight/core/question-bank";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
+import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
 
 export const getQuestionsFromGit = async ({
   srcLocation,

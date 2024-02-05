@@ -7,7 +7,7 @@ import {
 } from "@chair-flight/react/components";
 import { LayoutPublic, OverviewWelcome } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/base/types";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NextPage } from "next";
 
 export const Page: NextPage = () => {

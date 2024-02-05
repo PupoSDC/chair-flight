@@ -1,6 +1,11 @@
 {
   "extends": "../../../tsconfig.base.json",
-  "include": ["src/**/*.ts", "executors/**/*.mts", "executors/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "executors/**/*.mts",
+    "executors/**/*.ts",
+    "../../core/question-bank/src/schemas/question-bank-doc-schema.ts"
+  ],
   "compilerOptions": {
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   }

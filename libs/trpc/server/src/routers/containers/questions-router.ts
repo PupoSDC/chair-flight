@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
-import { getQuestionsSearchFilters } from "@chair-flight/core/app";
 import { getQuestionFromGit } from "@chair-flight/core/github";
-import { questionBankNameSchema } from "@chair-flight/core/schemas";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { getQuestionsSearchFilters } from "@chair-flight/core/search";
+import { questionBanks } from "../../common/question-banks";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({

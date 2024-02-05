@@ -20,7 +20,10 @@ import {
   tabListClasses,
 } from "@mui/joy";
 import { getRandomId, getRandomShuffler } from "@chair-flight/base/utils";
-import { getQuestion, getQuestionPreview } from "@chair-flight/core/app";
+import {
+  getQuestion,
+  getQuestionPreview,
+} from "@chair-flight/core/question-bank";
 import {
   ImageViewer,
   MarkdownClient,
@@ -33,7 +36,7 @@ import type {
   QuestionBankName,
   QuestionTemplateId,
   QuestionVariantId,
-} from "@chair-flight/base/types";
+} from "@chair-flight/core/question-bank";
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,

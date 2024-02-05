@@ -1,5 +1,5 @@
 import { blog } from "@chair-flight/providers/blog";
-import { questionBanks } from "@chair-flight/providers/question-bank";
+import { questionBanks } from "../common/question-banks";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {
@@ -12,12 +12,9 @@ import type {
   PreviewData,
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
+import { MiniFs } from "@chair-flight/base/types";
 
 const repositories = [...Object.values(questionBanks), blog];
-
-type FS = {
-  readFile: (path: string, string: "utf-8") => Promise<string>;
-};
 
 export const staticHandler = <
   Props extends Record<string, unknown>,
@@ -32,7 +29,7 @@ export const staticHandler = <
     context: GetStaticPropsContext<Params, Preview>;
     helper: TrpcHelper;
   }) => Promise<GetStaticPropsResult<Props>>,
-  fs: FS,
+  fs: MiniFs,
 ): GetStaticProps<Props, Params, Preview> => {
   return async (context) => {
     await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));
@@ -66,7 +63,7 @@ export const staticPathsHandler = <
     context: GetStaticPathsContext;
     helper: TrpcHelper;
   }) => Promise<GetStaticPathsResult<Params>>,
-  fs: FS,
+  fs: MiniFs,
 ): GetStaticPaths<Params> => {
   return async (context) => {
     await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));

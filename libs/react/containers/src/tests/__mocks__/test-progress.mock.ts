@@ -1,4 +1,4 @@
-import type { Test } from "@chair-flight/base/types";
+import type { Test } from "@chair-flight/core/question-bank";
 
 export const testProgressMock: {
   tests: Record<string, Test>;

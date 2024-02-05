@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 import { get, useFormContext } from "react-hook-form";
 import { useRouter } from "next/router";
 import { Box, Button, FormLabel, Stack, Typography, styled } from "@mui/joy";
-import { getVariantPreview } from "@chair-flight/core/app";
+import { getVariantPreview } from "@chair-flight/core/question-bank";
 import {
   HookFormErrorMessage,
   QuestionVariantPreview,
@@ -11,7 +11,7 @@ import {
 } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";
 import type { EditQuestionFormValues } from "../types/edit-question-form-values";
-import type { QuestionVariant } from "@chair-flight/base/types";
+import type { QuestionVariant } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 
 const ListContainer = styled(Box)`

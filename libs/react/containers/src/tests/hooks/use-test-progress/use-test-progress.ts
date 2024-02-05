@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { userPreferences } from "../../../user/hooks/use-user-preferences";
-import type { Test } from "@chair-flight/base/types";
+import type { Test } from "@chair-flight/core/question-bank";
 
 type TestProgress = {
   tests: Record<string, Test>;

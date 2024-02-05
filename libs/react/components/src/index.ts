@@ -1,5 +1,5 @@
 // include types for images
-import "@chair-flight/base/types";
+import "@chair-flight/core/question-bank";
 
 export * from "./app-head";
 export * from "./app-logo";

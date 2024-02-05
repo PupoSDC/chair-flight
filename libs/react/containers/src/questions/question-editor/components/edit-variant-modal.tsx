@@ -8,7 +8,7 @@ import { default as RestartAltIcon } from "@mui/icons-material/RestartAlt";
 import { default as UndoIcon } from "@mui/icons-material/Undo";
 import { Badge, IconButton, Modal, Stack, Tooltip, Typography } from "@mui/joy";
 import { FormControl, FormLabel, ModalDialog, Grid } from "@mui/joy";
-import { getVariantPreview } from "@chair-flight/core/app";
+import { getVariantPreview } from "@chair-flight/core/question-bank";
 import { toast } from "@chair-flight/react/components";
 import { MarkdownClient } from "@chair-flight/react/components";
 import { useFormHistory } from "../../../hooks/use-form-history/use-form-history";

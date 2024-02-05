@@ -3,8 +3,8 @@ import * as estreePlugin from "prettier/plugins/estree";
 import { format } from "prettier/standalone";
 import { getRandomId } from "@chair-flight/base/utils";
 import { getOctokit } from "../config/oktokit";
-import type { QuestionBankQuestionTemplate } from "@chair-flight/base/types";
-import type { questionEditSchema } from "@chair-flight/core/schemas";
+import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
+import type { questionEditSchema } from "@chair-flight/core/question-bank";
 import type { z } from "zod";
 
 export const createNewQuestionPr = async (
