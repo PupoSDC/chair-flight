@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { Box } from "@mui/joy";
-import { VerticalDivider } from "./vertical-divider";
+import { VerticalDivider } from "../../components/vertical-divider";
 import type { QuestionEditorState } from "../hooks/use-question-editor";
 import type { FunctionComponent } from "react";
 

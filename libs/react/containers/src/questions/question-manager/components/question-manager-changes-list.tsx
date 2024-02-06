@@ -12,7 +12,7 @@ export const QuestionManagerChangesList: FunctionComponent<{
 }> = ({ questionBank }) => {
   const form = useFormContext<QuestionEditorState>();
 
-  const deletedQuestions =  form.watch("deletedQuestions");
+  const deletedQuestions = form.watch("deletedQuestions");
   const editedQuestions = form.watch("editedQuestions");
   const newQuestions = form.watch("newQuestions");
 

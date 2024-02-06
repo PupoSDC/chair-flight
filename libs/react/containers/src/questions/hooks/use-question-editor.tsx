@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { questionTemplateSchema } from "@chair-flight/core/question-bank";
-import { createUsePersistenceHook } from "../../../hooks/use-persistence";
+import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 
 const editorSchema = z.object({

@@ -1,15 +1,15 @@
-import { useForm, useFormContext } from "react-hook-form";
-import { Box, ListItemContent, Stack } from "@mui/joy";
-import { VerticalDivider } from "./vertical-divider";
-import type { QuestionEditorState } from "../hooks/use-question-editor";
 import { useState, type FunctionComponent } from "react";
+import { useForm, useFormContext } from "react-hook-form";
+import { default as Image } from "next/image";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Box, ListItemContent, Stack } from "@mui/joy";
+import { QuestionBankName } from "@chair-flight/core/question-bank";
+import { annexSearchFilters } from "@chair-flight/core/search";
 import { SearchHeader, SearchList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { annexSearchFilters } from "@chair-flight/core/search";
+import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditorData } from "../hooks/use-question-editor-data";
-import { QuestionBankName } from "@chair-flight/core/question-bank";
-import { default as Image } from "next/image";
+import type { QuestionEditorState } from "../hooks/use-question-editor";
 
 export type QuestionEditorTabAnnexesProps = {
   questionId: string;
@@ -31,14 +31,12 @@ export const QuestionEditorTabAnnexes: FunctionComponent<
     resolver: zodResolver(annexSearchFilters),
   });
 
-
   const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
     { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
     { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
   );
 
   type FilterKeys = keyof typeof serverData.filters.annexes;
-
 
   return (
     <>
@@ -51,7 +49,9 @@ export const QuestionEditorTabAnnexes: FunctionComponent<
           isLoading={isLoading}
           isError={isError}
           onSearchChange={setSearch}
-          onFilterValuesChange={(k, v) => filterForm.setValue(k as FilterKeys, v)}
+          onFilterValuesChange={(k, v) =>
+            filterForm.setValue(k as FilterKeys, v)
+          }
         />
         <SearchList
           forceMode={"mobile"}
@@ -64,12 +64,7 @@ export const QuestionEditorTabAnnexes: FunctionComponent<
           renderTableRow={() => null}
           renderListItemContent={(result) => (
             <ListItemContent>
-              <Image
-                src={result.href}
-                alt=""
-                width={100}
-                height={100}
-              />
+              <Image src={result.href} alt="" width={100} height={100} />
             </ListItemContent>
           )}
         />
@@ -87,15 +82,10 @@ export const QuestionEditorTabAnnexes: FunctionComponent<
           renderTableRow={() => null}
           renderListItemContent={(result) => (
             <ListItemContent>
-              <Image
-                src={result.href}
-                alt=""
-                width={100}
-                height={100}
-              />
+              <Image src={result.href} alt="" width={100} height={100} />
             </ListItemContent>
           )}
-        />   
+        />
       </Stack>
     </>
   );

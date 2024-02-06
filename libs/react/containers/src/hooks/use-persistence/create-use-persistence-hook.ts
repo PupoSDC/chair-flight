@@ -33,15 +33,15 @@ export const createUsePersistenceHook = <T>(
           data: initialValue,
           setData: (data: T) => {
             console.log("setData", data);
-            return  set({
+            return set({
               data: {
                 ...initialValue,
                 ...get().data,
-                ...data, 
+                ...data,
               },
             });
           },
-           
+
           getData: () => ({
             ...initialValue,
             ...get().data,

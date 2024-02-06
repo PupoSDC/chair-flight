@@ -12,7 +12,10 @@ import {
   Typography,
   tabClasses,
 } from "@mui/joy";
-import { QuestionBankName, getQuestionPreview } from "@chair-flight/core/question-bank";
+import {
+  QuestionBankName,
+  getQuestionPreview,
+} from "@chair-flight/core/question-bank";
 import { MarkdownClientCompressed } from "@chair-flight/react/components";
 import { QuestionStandAloneComponent } from "../../question-stand-alone/question-stand-alone";
 import { QuestionEditorTabAnnexes } from "./question-editor-tab-annexes";
@@ -103,13 +106,13 @@ export const QuestionEditorDialog = forwardRef<
         <TabPanel value={"relatedQs"}>
           <QuestionEditorTabRelatedQuestions questionId={questionId} />
         </TabPanel>
-        <TabPanel 
+        <TabPanel
           value={"annexes"}
           sx={{ p: 2, flex: 1, width: "100%", display: "flex", gap: 2 }}
         >
-          <QuestionEditorTabAnnexes 
+          <QuestionEditorTabAnnexes
             questionBank={questionBank}
-            questionId={questionId} 
+            questionId={questionId}
           />
         </TabPanel>
       </Tabs>

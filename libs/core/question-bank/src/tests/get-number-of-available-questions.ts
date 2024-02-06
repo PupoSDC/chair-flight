@@ -1,4 +1,4 @@
-import type { LearningObjectiveId } from '../entities/ids';
+import type { LearningObjectiveId } from "../entities/ids";
 
 export const getNumberOfAvailableQuestions = (
   subject: {

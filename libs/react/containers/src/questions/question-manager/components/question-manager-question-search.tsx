@@ -2,13 +2,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Stack } from "@mui/joy";
+import { questionSearchFilters } from "@chair-flight/core/search";
 import { SearchHeader, SearchList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { useQuestionEditorData } from "../hooks/use-question-editor-data";
 import { QuestionManagerQuestionSearchItem } from "./question-manager-question-search-item";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
-import { questionSearchFilters } from "@chair-flight/core/search";
 
 const searchQuestions = trpc.common.search.searchQuestions;
 const useSearchQuestions = searchQuestions.useInfiniteQuery;
