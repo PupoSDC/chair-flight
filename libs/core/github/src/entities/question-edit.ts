@@ -1,11 +1,8 @@
 import { z } from "zod";
-import {
-  questionBankQuestionSchema,
-  questionBankNameSchema,
-} from "@chair-flight/core/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 
 export const questionEditSchema = z.object({
-  question: questionBankQuestionSchema,
+  question: z.object({}),
   questionBank: questionBankNameSchema,
   requestData: z.object({
     authorName: z.string().min(3).optional().or(z.literal("")),

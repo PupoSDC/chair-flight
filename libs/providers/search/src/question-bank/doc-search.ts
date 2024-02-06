@@ -6,7 +6,7 @@ import type {
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
 
-type DocSearchField = "id" | "learningObjectiveId" | "content" | "title";
+type DocSearchField = "id" | "learningObjectives" | "content" | "title";
 type DocSearchDocument = Record<DocSearchField, string>;
 
 export class DocSearch extends QuestionBankSearchProvider<
@@ -17,8 +17,8 @@ export class DocSearch extends QuestionBankSearchProvider<
 > {
   constructor() {
     super({
-      searchFields: ["id", "learningObjectiveId", "content", "title"],
-      idSearchFields: ["id", "learningObjectiveId"],
+      searchFields: ["id", "learningObjectives", "content", "title"],
+      idSearchFields: ["id", "learningObjectives"],
     });
   }
 
@@ -35,7 +35,7 @@ export class DocSearch extends QuestionBankSearchProvider<
 
     const searchField = [
       { id: "all", text: "All Fields" },
-      { id: "learningObjectiveId", text: "Learning Objective" },
+      { id: "learningObjectives", text: "Learning Objective" },
       { id: "content", text: "Content" },
       { id: "title", text: "Title" },
     ];
@@ -52,12 +52,12 @@ export class DocSearch extends QuestionBankSearchProvider<
       questionBank: bank.getName(),
       title: doc.title,
       empty: doc.empty,
-      subject: doc.subjectId,
+      subject: doc.subject,
       href: `/modules/${bank.getName()}/docs/${doc.id}`,
-      learningObjective: {
-        id: doc.learningObjectiveId,
-        href: `/modules/${bank.getName()}/learning-objectives/${doc.learningObjectiveId}`,
-      },
+      learningObjectives: doc.learningObjectives.map((id) => ({
+        id,
+        href: `/modules/${bank.getName()}/learning-objectives/${id}`,
+      })),
     }));
   }
 
@@ -65,7 +65,7 @@ export class DocSearch extends QuestionBankSearchProvider<
     const docs = await bank.getAll("docs");
     return docs.map((doc) => ({
       id: doc.id,
-      learningObjectiveId: doc.learningObjectiveId,
+      learningObjectives: doc.learningObjectives.join(", "),
       content: doc.content,
       title: doc.title,
     }));

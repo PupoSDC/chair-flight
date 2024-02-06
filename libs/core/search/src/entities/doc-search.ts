@@ -15,10 +15,10 @@ export type DocSearchResult = {
   subject: SubjectId;
   empty: boolean;
   href: string;
-  learningObjective: {
+  learningObjectives: Array<{
     id: LearningObjectiveId;
     href: string;
-  };
+  }>;
 };
 
 export const docSearchFilters = z.object({

@@ -1,22 +1,18 @@
-import * as babelPlugin from "prettier/plugins/babel";
-import * as estreePlugin from "prettier/plugins/estree";
-import { format } from "prettier/standalone";
-import { getRandomId } from "@chair-flight/base/utils";
-import {
-  originOwner,
-  originRepo,
-  upstreamOwner,
-  upstreamRepo,
-} from "../common/env";
+import { originOwner, originRepo } from "../common/env";
 import type { QuestionEdit } from "@chair-flight/core/github";
-import type { QuestionBankQuestionTemplate } from "@chair-flight/core/question-bank";
 import type { Octokit } from "octokit";
 
 export const createNewQuestionPr = async (
   octokit: Octokit,
   schema: QuestionEdit,
 ) => {
-  const {
+  await octokit.rest.git.getRef({
+    owner: originOwner,
+    repo: originRepo,
+    ref: `heads/${schema.requestData.authorName}`,
+  });
+
+  /**  const {
     question: { srcLocation, ...question },
     requestData,
   } = schema;
@@ -27,11 +23,6 @@ export const createNewQuestionPr = async (
     .replace(/\\/g, "/")
     .replace(/^\//, "");
 
-  const baseBranchRef = await octokit.rest.git.getRef({
-    owner: originOwner,
-    repo: originRepo,
-    ref: `heads/${baseBranch}`,
-  });
 
   const getContentResponse = await octokit.rest.repos.getContent({
     owner: originOwner,
@@ -126,7 +117,7 @@ export const createNewQuestionPr = async (
       name: "Chair Flight Bot",
       email: "bot@chair-flight.com",
     },
-  });
+  }); */
 
-  return { url: response.data.html_url };
+  return { url: "" };
 };
