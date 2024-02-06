@@ -3,24 +3,20 @@ import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { searchParams } from "./search-params";
 import type {
   QuestionBankName,
-  QuestionId,
-  QuestionVariantId,
   SubjectId,
 } from "@chair-flight/core/question-bank";
 
 export type QuestionSearchResult = {
   id: string;
   questionBank: QuestionBankName;
-  questionId: QuestionId;
-  variantId: QuestionVariantId;
   subjects: SubjectId[];
   text: string;
+  href: string;
   learningObjectives: Array<{
     name: string;
     href: string;
   }>;
   externalIds: string[];
-  href: string;
 };
 
 export const questionSearchFilters = z.object({

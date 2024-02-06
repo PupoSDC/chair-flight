@@ -9,7 +9,6 @@ import type { QuestionBank } from "@chair-flight/providers/question-bank";
 
 export type QuestionSearchField =
   | "id"
-  | "questionId"
   | "questionBank"
   | "subjects"
   | "learningObjectives"
@@ -28,14 +27,13 @@ export class QuestionSearch extends QuestionBankSearchProvider<
     super({
       searchFields: [
         "id",
-        "questionId",
         "questionBank",
         "subjects",
         "learningObjectives",
         "externalIds",
         "text",
       ],
-      idSearchFields: ["id", "questionId", "learningObjectives", "externalIds"],
+      idSearchFields: ["id", "learningObjectives", "externalIds"],
     });
   }
 
@@ -65,23 +63,21 @@ export class QuestionSearch extends QuestionBankSearchProvider<
 
   protected override async getResultItems(bank: QuestionBank) {
     const questions = await bank.getAll("questions");
-    const resultItems: QuestionSearchResult[] = questions.flatMap((q) => {
+    const resultItems: QuestionSearchResult[] = questions.map((q) => {
       const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
       const uniqueSubjects = [...new Set(subjects)];
-      return Object.values(q.variants).map((v) => ({
+      return {
+        id: q.id,
         questionBank: bank.getName(),
-        id: v.id,
-        questionId: q.id,
-        variantId: v.id,
-        text: getQuestionPreview(q, v.id),
+        text: getQuestionPreview(q),
         subjects: uniqueSubjects,
         learningObjectives: q.learningObjectives.map((name) => ({
           name,
           href: `/modules/${bank.getName()}/learning-objectives/${name}`,
         })),
-        externalIds: v.externalIds,
-        href: `/modules/${bank.getName()}/questions/${q.id}?variantId=${v.id}`,
-      }));
+        externalIds: q.externalIds,
+        href: `/modules/${bank.getName()}/questions/${q.id}`,
+      };
     });
 
     return resultItems;
@@ -89,24 +85,19 @@ export class QuestionSearch extends QuestionBankSearchProvider<
 
   protected override async getSearchDocuments(bank: QuestionBank) {
     const questions = await bank.getAll("questions");
-    const searchItems: QuestionSearchDocument[] = questions.flatMap(
-      (question) => {
-        const subjects = question.learningObjectives.map(
-          (l) => l.split(".")[0],
-        );
-        const los = question.learningObjectives.join(", ");
-        const uniqueSubjects = [...new Set(subjects)];
-        return Object.values(question.variants).map((variant) => ({
-          id: variant.id,
-          questionId: question.id,
-          questionBank: bank.getName(),
-          subjects: uniqueSubjects.join(", "),
-          learningObjectives: los,
-          externalIds: variant.externalIds.join(", "),
-          text: getQuestionPreview(question, variant.id),
-        }));
-      },
-    );
+    const searchItems: QuestionSearchDocument[] = questions.map((q) => {
+      const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
+      const los = q.learningObjectives.join(", ");
+      const uniqueSubjects = [...new Set(subjects)];
+      return {
+        id: q.id,
+        questionBank: bank.getName(),
+        subjects: uniqueSubjects.join(", "),
+        text: getQuestionPreview(q),
+        learningObjectives: los,
+        externalIds: q.externalIds.join(", "),
+      };
+    });
 
     return searchItems;
   }
