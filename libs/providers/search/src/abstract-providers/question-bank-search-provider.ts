@@ -50,11 +50,17 @@ export abstract class QuestionBankSearchProvider<
     if (thisWork) return await thisWork;
 
     const newWork = (async () => {
-      const searchDocuments = await this.getSearchDocuments(bank);
-      const firstId = searchDocuments[0]?.id;
-      if (!firstId || this.searchIndex.has(firstId)) return;
-      await this.searchIndex.addAll(searchDocuments);
+      try {
+        const searchDocuments = await this.getSearchDocuments(bank);
+        const firstId = searchDocuments[0]?.id;
+        if (!firstId || this.searchIndex.has(firstId)) return;
+        await this.searchIndex.addAllAsync(searchDocuments);
+      } catch (e) {
+        console.error("Error indexing the question Bank", e);
+        this.initializeSearchIndex(bank);
+      }
     })();
+
     this.initializationWork.set(bank, newWork);
     await newWork;
   }

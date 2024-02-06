@@ -64,7 +64,7 @@ export const AnnexSearchItem: FunctionComponent<{
               </Link>
             ))}
             <Typography level="h5" sx={{ fontSize: 14 }}>
-              Learning OBjectives
+              Learning Objectives
             </Typography>
             {result.learningObjectives.map(({ href, id }) => (
               <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
