@@ -164,10 +164,10 @@ export const TestExam = container<Props>(
             })
           }
           options={question.options.map((opt) => ({
-            optionId: opt.id,
+            id: opt.id,
             text: opt.text,
           }))}
-          annexHrefs={question.annexes}
+          annexesHref={question.annexes}
           onAnnexClicked={(annex) => setCurrentAnnex(annex)}
         />
         <ImageViewer

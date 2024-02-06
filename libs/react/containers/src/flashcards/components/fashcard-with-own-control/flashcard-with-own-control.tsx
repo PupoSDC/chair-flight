@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Flashcard } from "@chair-flight/react/components";
-import type { QuestionBankFlashcardContent } from "@chair-flight/core/question-bank";
+import type { FlashcardContent } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 
-export const FlashcardWithOwnControl: FunctionComponent<
-  QuestionBankFlashcardContent
-> = (props) => {
+export const FlashcardWithOwnControl: FunctionComponent<FlashcardContent> = (
+  props,
+) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <Flashcard

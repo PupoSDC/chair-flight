@@ -18,5 +18,6 @@ export * from "./entities/test-types";
 export * from "./questions/get-new-variant";
 export * from "./questions/get-question-preview";
 export * from "./tests/create-test";
+export * from "./tests/get-number-of-available-questions";
 export * from "./tests/create-test-question";
 export * from "./tests/process-test";

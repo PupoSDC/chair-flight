@@ -17,7 +17,6 @@ export const testProgressMock: {
         {
           questionId: "gXkMCwJo",
           templateId: "48roz",
-          variantId: "opw5a",
           seed: "hHjzsdzu",
           type: "multiple-choice",
           question:
@@ -51,7 +50,6 @@ export const testProgressMock: {
         {
           questionId: "0mVouNJs",
           templateId: "l0sw2",
-          variantId: "sq2mv",
           seed: "JG1Qj6xH",
           type: "multiple-choice",
           question:
@@ -77,7 +75,6 @@ export const testProgressMock: {
         {
           questionId: "5Z5ykVSI",
           templateId: "wlmtb",
-          variantId: "4zsre",
           seed: "qH1HoPwh",
           type: "multiple-choice",
           question:
@@ -111,7 +108,6 @@ export const testProgressMock: {
         {
           questionId: "Op5ggLVw",
           templateId: "de4vt",
-          variantId: "xpgftf",
           seed: "xeYfzOE5",
           type: "multiple-choice",
           question:
@@ -145,7 +141,6 @@ export const testProgressMock: {
         {
           questionId: "LMbQdpSd",
           templateId: "hxiga",
-          variantId: "yx8apf",
           seed: "A0RWfeEw",
           type: "multiple-choice",
           question:
@@ -179,7 +174,6 @@ export const testProgressMock: {
         {
           questionId: "EfVO2eVo",
           templateId: "crlab",
-          variantId: "8m044",
           seed: "YlHvqz5K",
           type: "multiple-choice",
           question:
@@ -205,7 +199,6 @@ export const testProgressMock: {
         {
           questionId: "SyFR5KnK",
           templateId: "02rxd",
-          variantId: "dd8l",
           seed: "NgkYwuni",
           type: "multiple-choice",
           question:
@@ -239,7 +232,6 @@ export const testProgressMock: {
         {
           questionId: "n3yK9wrd",
           templateId: "gzp14",
-          variantId: "j0212j",
           seed: "9H9zYRzM",
           type: "multiple-choice",
           question:
@@ -273,7 +265,6 @@ export const testProgressMock: {
         {
           questionId: "yExSK91U",
           templateId: "65w58",
-          variantId: "x9bsi",
           seed: "Bs7aNYD9",
           type: "multiple-choice",
           question:
@@ -299,7 +290,6 @@ export const testProgressMock: {
         {
           questionId: "3ZUqaghv",
           templateId: "4znt2",
-          variantId: "nf2wlf",
           seed: "gwjNYeSq",
           type: "multiple-choice",
           question: "How can the Fire Warning Bell be silenced?",
@@ -332,7 +322,6 @@ export const testProgressMock: {
         {
           questionId: "14eQokIF",
           templateId: "u97g9",
-          variantId: "ox6ef",
           seed: "q6uD9Ead",
           type: "multiple-choice",
           question:
@@ -366,7 +355,6 @@ export const testProgressMock: {
         {
           questionId: "LDOhQKKv",
           templateId: "d4tte",
-          variantId: "vb8ls",
           seed: "ZjbMdcNY",
           type: "multiple-choice",
           question: "What will cause the STBY RUDDER ON light to illuminate?",
@@ -399,7 +387,6 @@ export const testProgressMock: {
         {
           questionId: "EPT0QE7P",
           templateId: "jipos",
-          variantId: "fmbkd",
           seed: "RcpXb2Ai",
           type: "multiple-choice",
           question:
@@ -433,7 +420,6 @@ export const testProgressMock: {
         {
           questionId: "rKpxIC1X",
           templateId: "l3ecl",
-          variantId: "o9eeu",
           seed: "lBdn22w2",
           type: "multiple-choice",
           question:
@@ -459,7 +445,6 @@ export const testProgressMock: {
         {
           questionId: "WwCS7wD0",
           templateId: "cuipf",
-          variantId: "9cautg",
           seed: "Fw8OyDuR",
           type: "multiple-choice",
           question:
@@ -493,7 +478,6 @@ export const testProgressMock: {
         {
           questionId: "pR6hs0Mo",
           templateId: "u4itx",
-          variantId: "b0x43h",
           seed: "RHecQQ7W",
           type: "multiple-choice",
           question:
@@ -527,7 +511,6 @@ export const testProgressMock: {
         {
           questionId: "9zU3VSDy",
           templateId: "lt4x1",
-          variantId: "b5tqqk",
           seed: "T3NIqJQp",
           type: "multiple-choice",
           question:
@@ -553,7 +536,6 @@ export const testProgressMock: {
         {
           questionId: "LLmlDhVJ",
           templateId: "ios1q",
-          variantId: "abfnk",
           seed: "9xT4Ziw2",
           type: "multiple-choice",
           question:
@@ -587,7 +569,6 @@ export const testProgressMock: {
         {
           questionId: "sRjqQ5yK",
           templateId: "3xk9e",
-          variantId: "ua5ptk",
           seed: "Y2NEAsZI",
           type: "multiple-choice",
           question:
@@ -621,7 +602,6 @@ export const testProgressMock: {
         {
           questionId: "spCbCO9k",
           templateId: "htx1n",
-          variantId: "9my84",
           seed: "TO1NlUaT",
           type: "multiple-choice",
           question:
@@ -655,7 +635,6 @@ export const testProgressMock: {
         {
           questionId: "mzvposAY",
           templateId: "9gdph",
-          variantId: "m1sd1f",
           seed: "fJyqYVrm",
           type: "multiple-choice",
           question:
@@ -682,7 +661,6 @@ export const testProgressMock: {
         {
           questionId: "5onSXuek",
           templateId: "0kr6kl",
-          variantId: "0n377l",
           seed: "KslX9eKO",
           type: "multiple-choice",
           question:
@@ -708,7 +686,6 @@ export const testProgressMock: {
         {
           questionId: "QHnqtVQy",
           templateId: "4p3hh",
-          variantId: "qzgymj",
           seed: "RqmzcMU7",
           type: "multiple-choice",
           question:
@@ -742,7 +719,6 @@ export const testProgressMock: {
         {
           questionId: "qmIV7IiN",
           templateId: "ocogh",
-          variantId: "um1xt",
           seed: "gMGtx4g8",
           type: "multiple-choice",
           question:
@@ -776,7 +752,6 @@ export const testProgressMock: {
         {
           questionId: "pZhVy1E7",
           templateId: "tyqsp",
-          variantId: "10ig9",
           seed: "cynGMG5l",
           type: "multiple-choice",
           question:
@@ -810,7 +785,6 @@ export const testProgressMock: {
         {
           questionId: "FlCAH5Dz",
           templateId: "aatbl",
-          variantId: "uwbq4",
           seed: "x9nahhB2",
           type: "multiple-choice",
           question:
@@ -844,7 +818,6 @@ export const testProgressMock: {
         {
           questionId: "sDE782Za",
           templateId: "aehpc",
-          variantId: "s6dz6",
           seed: "d6ieM5mL",
           type: "multiple-choice",
           question:
@@ -870,7 +843,6 @@ export const testProgressMock: {
         {
           questionId: "Y1ENlliH",
           templateId: "ke234",
-          variantId: "xfli3",
           seed: "1YqBxx0y",
           type: "multiple-choice",
           question:
@@ -896,7 +868,6 @@ export const testProgressMock: {
         {
           questionId: "kvWhMVNC",
           templateId: "cwwdo",
-          variantId: "9zplq",
           seed: "jjGhcnTa",
           type: "multiple-choice",
           question:
@@ -922,7 +893,6 @@ export const testProgressMock: {
         {
           questionId: "DSXfaNhe",
           templateId: "5upew",
-          variantId: "6ddec",
           seed: "ZopA8dnv",
           type: "multiple-choice",
           question:
@@ -956,7 +926,6 @@ export const testProgressMock: {
         {
           questionId: "qss5OqfG",
           templateId: "ugl9l",
-          variantId: "bi3qf",
           seed: "Qc9gdFCR",
           type: "multiple-choice",
           question: "Why do we check that FLARE mode is armed at 500 feet RA?",
@@ -989,7 +958,6 @@ export const testProgressMock: {
         {
           questionId: "Ri20uUbk",
           templateId: "hga0uj",
-          variantId: "dggv4",
           seed: "IaSjBZ70",
           type: "multiple-choice",
           question:
@@ -1023,7 +991,6 @@ export const testProgressMock: {
         {
           questionId: "YKgN7QBZ",
           templateId: "x42t3f",
-          variantId: "tkjgd",
           seed: "7fey1Cww",
           type: "multiple-choice",
           question:
@@ -1057,7 +1024,6 @@ export const testProgressMock: {
         {
           questionId: "smBi5Jr1",
           templateId: "v3mqb",
-          variantId: "kn7d9",
           seed: "kp0qlki4",
           type: "multiple-choice",
           question:
@@ -1091,7 +1057,6 @@ export const testProgressMock: {
         {
           questionId: "kGX231nd",
           templateId: "sm1a1",
-          variantId: "ckmye",
           seed: "WYXKgYiI",
           type: "multiple-choice",
           question:
@@ -1125,7 +1090,6 @@ export const testProgressMock: {
         {
           questionId: "MNxJ2ZOX",
           templateId: "pvpep",
-          variantId: "egak4",
           seed: "qh7RDV1w",
           type: "multiple-choice",
           question:
@@ -1151,7 +1115,6 @@ export const testProgressMock: {
         {
           questionId: "JhhLp18d",
           templateId: "mimbm",
-          variantId: "pgvwc",
           seed: "dHlJ6yzm",
           type: "multiple-choice",
           question: "What is the result if one pack fails in-flight?",
@@ -1184,7 +1147,6 @@ export const testProgressMock: {
         {
           questionId: "pZAOnZX7",
           templateId: "ti9yn",
-          variantId: "qle8m",
           seed: "y1GaMiSP",
           type: "multiple-choice",
           question:
@@ -1218,7 +1180,6 @@ export const testProgressMock: {
         {
           questionId: "ne81CUdG",
           templateId: "4twgn",
-          variantId: "ddn9z",
           seed: "FzocHZq8",
           type: "multiple-choice",
           question:
@@ -1252,7 +1213,6 @@ export const testProgressMock: {
         {
           questionId: "wm8XIQYa",
           templateId: "h65mkj",
-          variantId: "0l3gkg",
           seed: "QxWkVkOP",
           type: "multiple-choice",
           question: "How is fuel heated prior to reaching the engine?",
@@ -1300,7 +1260,6 @@ export const testProgressMock: {
         {
           questionId: "4gHBJjoU",
           templateId: "np98dg",
-          variantId: "zpn3s",
           seed: "mFuSZSVz",
           type: "multiple-choice",
           question:
@@ -1334,7 +1293,6 @@ export const testProgressMock: {
         {
           questionId: "a4tAgJIi",
           templateId: "d7qw6",
-          variantId: "527ux",
           seed: "HpBDzGO5",
           type: "multiple-choice",
           question:
@@ -1368,7 +1326,6 @@ export const testProgressMock: {
         {
           questionId: "HZNmiSyI",
           templateId: "8tjxg",
-          variantId: "brr2h",
           seed: "nIeztBVw",
           type: "multiple-choice",
           question:
@@ -1394,7 +1351,6 @@ export const testProgressMock: {
         {
           questionId: "7iOTt2b0",
           templateId: "qo3yz",
-          variantId: "obags",
           seed: "C0tsnjjt",
           type: "multiple-choice",
           question:
@@ -1428,7 +1384,6 @@ export const testProgressMock: {
         {
           questionId: "sTi1PFFl",
           templateId: "1wc1d",
-          variantId: "p0n3ij",
           seed: "okMunBq7",
           type: "multiple-choice",
           question:
@@ -1467,7 +1422,6 @@ export const testProgressMock: {
         {
           questionId: "b3W12DS8",
           templateId: "8w2u1",
-          variantId: "1ygmh",
           seed: "lMRpNugd",
           type: "multiple-choice",
           question:
@@ -1493,7 +1447,6 @@ export const testProgressMock: {
         {
           questionId: "cZ1s3sab",
           templateId: "kkksb",
-          variantId: "fg83b",
           seed: "oysh53fj",
           type: "multiple-choice",
           question:
@@ -1528,7 +1481,6 @@ export const testProgressMock: {
         {
           questionId: "ZzoJqh2P",
           templateId: "6dzq1k",
-          variantId: "k7n04i",
           seed: "vyEtHeMC",
           type: "multiple-choice",
           question:
@@ -1554,7 +1506,6 @@ export const testProgressMock: {
         {
           questionId: "EuXlhHD7",
           templateId: "5oxu3",
-          variantId: "yqw1u",
           seed: "7Z99UQ4k",
           type: "multiple-choice",
           question:
@@ -1588,7 +1539,6 @@ export const testProgressMock: {
         {
           questionId: "UTvDR4Im",
           templateId: "hporp",
-          variantId: "6t3y5",
           seed: "0625DaqT",
           type: "multiple-choice",
           question: "The A/T is controlled by FCC A only.",
@@ -1613,7 +1563,6 @@ export const testProgressMock: {
         {
           questionId: "T0OV4UQr",
           templateId: "1hjv6",
-          variantId: "o2oyk",
           seed: "yQH2im8K",
           type: "multiple-choice",
           question:
@@ -1647,7 +1596,6 @@ export const testProgressMock: {
         {
           questionId: "ktUbiHTk",
           templateId: "3xk9e",
-          variantId: "ua5ptk",
           seed: "FloT4PAt",
           type: "multiple-choice",
           question:
@@ -1681,7 +1629,6 @@ export const testProgressMock: {
         {
           questionId: "aKPmOIyT",
           templateId: "jp1sw",
-          variantId: "aa8qc",
           seed: "nNDvYWsz",
           type: "multiple-choice",
           question: "Where is the potable water contents indicator located?",
@@ -1714,7 +1661,6 @@ export const testProgressMock: {
         {
           questionId: "RxilgEto",
           templateId: "4d3j1",
-          variantId: "a36wg",
           seed: "ozleKN1G",
           type: "multiple-choice",
           question: "How many fuel measuring sticks are installed?",
@@ -1747,7 +1693,6 @@ export const testProgressMock: {
         {
           questionId: "sEzbuJL7",
           templateId: "i2hf",
-          variantId: "c0qw7",
           seed: "9Nga8ePh",
           type: "multiple-choice",
           question:
@@ -1781,7 +1726,6 @@ export const testProgressMock: {
         {
           questionId: "CiV1fdBw",
           templateId: "d9okg",
-          variantId: "cmhnj",
           seed: "SMtMse0N",
           type: "multiple-choice",
           question:
@@ -1816,7 +1760,6 @@ export const testProgressMock: {
         {
           questionId: "YMVFuNEe",
           templateId: "up3v9",
-          variantId: "f1n1e",
           seed: "6IpxUMpK",
           type: "multiple-choice",
           question:
@@ -1842,7 +1785,6 @@ export const testProgressMock: {
         {
           questionId: "BFG1OOF4",
           templateId: "2hmmt",
-          variantId: "iz4jv",
           seed: "Q7eX33jw",
           type: "multiple-choice",
           question: "What is the primary function of the recirculation fans?",
@@ -1875,7 +1817,6 @@ export const testProgressMock: {
         {
           questionId: "J3AnozMo",
           templateId: "9jghi",
-          variantId: "as0oz",
           seed: "B5A0fAsO",
           type: "multiple-choice",
           question: "The purpose of the landing gear transfer unit is to:",
@@ -1909,7 +1850,6 @@ export const testProgressMock: {
         {
           questionId: "e4a6OWID",
           templateId: "ndk37",
-          variantId: "h7o24",
           seed: "arUEVJ43",
           type: "multiple-choice",
           question: "What will cause the A/T to disengage?",
@@ -1957,7 +1897,6 @@ export const testProgressMock: {
         {
           questionId: "WcKocJ0R",
           templateId: "1yzxe",
-          variantId: "qk28k",
           seed: "5M1xhQ4U",
           type: "multiple-choice",
           question: "What is the B737-800 wingspan when fitted with Winglets?",
@@ -1991,7 +1930,6 @@ export const testProgressMock: {
         {
           questionId: "2mLn79lq",
           templateId: "tyqsp",
-          variantId: "10ig9",
           seed: "Fx5stVRq",
           type: "multiple-choice",
           question:
@@ -2026,7 +1964,6 @@ export const testProgressMock: {
         {
           questionId: "BC3pTXWW",
           templateId: "sikec",
-          variantId: "40n9qj",
           seed: "W6vAaG5O",
           type: "multiple-choice",
           question:
@@ -2053,7 +1990,6 @@ export const testProgressMock: {
         {
           questionId: "y9vyVlku",
           templateId: "zrgljl",
-          variantId: "f0qdd",
           seed: "WOv80DHc",
           type: "multiple-choice",
           question:
@@ -2088,7 +2024,6 @@ export const testProgressMock: {
         {
           questionId: "PHJq2fYz",
           templateId: "u67l4",
-          variantId: "ywi5j",
           seed: "rvTKF4f5",
           type: "multiple-choice",
           question:
@@ -2115,7 +2050,6 @@ export const testProgressMock: {
         {
           questionId: "SfJphtOb",
           templateId: "k6d9k",
-          variantId: "fpnkb",
           seed: "ud9kgE3e",
           type: "multiple-choice",
           question:
@@ -2150,7 +2084,6 @@ export const testProgressMock: {
         {
           questionId: "TY6fzsel",
           templateId: "eh228",
-          variantId: "86b5oj",
           seed: "mPOdlbIk",
           type: "multiple-choice",
           question:
@@ -2185,7 +2118,6 @@ export const testProgressMock: {
         {
           questionId: "EPge4XOI",
           templateId: "q1zqn",
-          variantId: "q973q",
           seed: "dmzqn3cb",
           type: "multiple-choice",
           question:
@@ -2220,7 +2152,6 @@ export const testProgressMock: {
         {
           questionId: "YEyxx1Qv",
           templateId: "sbbox",
-          variantId: "ocjr6",
           seed: "LW3XeX1m",
           type: "multiple-choice",
           question:
@@ -2247,7 +2178,6 @@ export const testProgressMock: {
         {
           questionId: "wMU8IXdh",
           templateId: "z3tbo",
-          variantId: "zbqez",
           seed: "L21pzcgh",
           type: "multiple-choice",
           question:
@@ -2282,7 +2212,6 @@ export const testProgressMock: {
         {
           questionId: "jIgpZslc",
           templateId: "afuw6",
-          variantId: "t48yd",
           seed: "UG5vjhIo",
           type: "multiple-choice",
           question: "Which bus powers the right igniter plug?",
@@ -2316,7 +2245,6 @@ export const testProgressMock: {
         {
           questionId: "5IXAWGxd",
           templateId: "xnuoj",
-          variantId: "r93g2",
           seed: "9pbklSxM",
           type: "multiple-choice",
           question:
@@ -2351,7 +2279,6 @@ export const testProgressMock: {
         {
           questionId: "vGVv9yRc",
           templateId: "5mccy",
-          variantId: "yrc3x",
           seed: "J3rV0UPw",
           type: "multiple-choice",
           question: "On landing, when do the ground spoilers extend?",
@@ -2385,7 +2312,6 @@ export const testProgressMock: {
         {
           questionId: "BrgGThAs",
           templateId: "cur39",
-          variantId: "vo3r9",
           seed: "XBb6WymW",
           type: "multiple-choice",
           question:
@@ -2412,7 +2338,6 @@ export const testProgressMock: {
         {
           questionId: "eG72Xly7",
           templateId: "a35lah",
-          variantId: "laobo",
           seed: "8RvpSdQj",
           type: "multiple-choice",
           question:
@@ -2447,7 +2372,6 @@ export const testProgressMock: {
         {
           questionId: "kMEV5ZwR",
           templateId: "hc0ll",
-          variantId: "x332s",
           seed: "cMzDsZx5",
           type: "multiple-choice",
           question:
@@ -2482,7 +2406,6 @@ export const testProgressMock: {
         {
           questionId: "hREBHC5V",
           templateId: "v3mqb",
-          variantId: "kn7d9",
           seed: "SODlEnRq",
           type: "multiple-choice",
           question:
@@ -2517,7 +2440,6 @@ export const testProgressMock: {
         {
           questionId: "GjLiBTaR",
           templateId: "zmlui",
-          variantId: "wth6c",
           seed: "SBgtcb1E",
           type: "multiple-choice",
           question:
@@ -2552,7 +2474,6 @@ export const testProgressMock: {
         {
           questionId: "UJPv3fGg",
           templateId: "8tjxg",
-          variantId: "brr2h",
           seed: "O4M3Wqvt",
           type: "multiple-choice",
           question:
@@ -2579,7 +2500,6 @@ export const testProgressMock: {
         {
           questionId: "DaRCGL0o",
           templateId: "mnd14",
-          variantId: "pqe21",
           seed: "3exLzZHf",
           type: "multiple-choice",
           question: "Where in the engine oil system is the oil filter located?",
