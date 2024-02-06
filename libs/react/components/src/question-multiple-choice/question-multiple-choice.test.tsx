@@ -10,10 +10,10 @@ describe("QuestionMultipleChoice", () => {
         selectedOptionId={"123"}
         status={"in-progress"}
         options={[
-          { optionId: "123", text: "John" },
-          { optionId: "456", text: "Jane" },
-          { optionId: "789", text: "Jack" },
-          { optionId: "102", text: "Jill" },
+          { id: "123", text: "John" },
+          { id: "456", text: "Jane" },
+          { id: "789", text: "Jack" },
+          { id: "102", text: "Jill" },
         ]}
       />,
     );

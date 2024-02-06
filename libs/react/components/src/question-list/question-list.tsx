@@ -6,15 +6,17 @@ import type { SearchListProps } from "../search-list";
 
 export type QuestionListItem = {
   id: string;
-  questionId: string;
-  variantId: string;
   href: string;
   text: string;
+  externalIds: string[];
   learningObjectives: Array<{
-    name: string;
+    id: string;
     href: string;
   }>;
-  externalIds: string[];
+  relatedQuestions: Array<{
+    id: string;
+    href: string;
+  }>;
 };
 
 export type QuestionListProps = Omit<
@@ -26,7 +28,7 @@ export type QuestionListProps = Omit<
   | "errorMessage"
   | "noDataMessage"
 > & {
-  items?: SearchListProps<QuestionListItem>["items"];
+  items?: QuestionListItem[];
 };
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
@@ -44,6 +46,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
               <th style={{ width: "8em" }}>ID</th>
               <th>Question</th>
               <th style={{ width: "12em" }}>Learning Objectives</th>
+              <th style={{ width: "12em" }}>Related Questions</th>
               <th style={{ width: "12em" }}>External IDs</th>
             </tr>
           </thead>
@@ -52,47 +55,67 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
           <tr>
             <td>
               <Link href={result.href} sx={{ display: "block" }}>
-                <Typography>{result.questionId}</Typography>
-                <br />
-                <Typography level="body-xs">{result.variantId}</Typography>
+                <Typography>{result.id}</Typography>
               </Link>
             </td>
             <td>
               <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
             </td>
             <td>
-              {result.learningObjectives.map(({ name, href }) => (
+              {result.learningObjectives.slice(0, 5).map(({ id, href }) => (
                 <Link
-                  key={name}
+                  key={id}
                   href={href}
-                  children={name}
+                  children={id}
                   sx={{ display: "block" }}
                 />
               ))}
+              {result.learningObjectives.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.learningObjectives.length - 5} more`}
+                </Typography>
+              )}
             </td>
             <td>
-              {result.externalIds.map((id) => (
+              {result.relatedQuestions.slice(0, 5).map(({ id, href }) => (
+                <Link
+                  key={id}
+                  href={href}
+                  children={id}
+                  sx={{ display: "block" }}
+                />
+              ))}
+              {result.relatedQuestions.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.relatedQuestions.length - 5} more`}
+                </Typography>
+              )}
+            </td>
+            <td>
+              {result.externalIds.slice(0, 5).map((id) => (
                 <Typography level="body-xs" key={id}>
                   {id}
                 </Typography>
               ))}
+              {result.externalIds.length > 5 && (
+                <Typography level="body-xs">
+                  {`+ ${result.externalIds.length - 5} more`}
+                </Typography>
+              )}
             </td>
           </tr>
         )}
         renderListItemContent={(result) => (
           <ListItemContent>
             <Link href={result.href} sx={{ pr: 1 }}>
-              {result.questionId}
+              {result.id}
             </Link>
-            <Typography level="body-xs" sx={{ display: "inline" }}>
-              {result.variantId}
-            </Typography>
             <Typography level="body-xs">
-              {result.learningObjectives.map((lo) => lo.name).join(", ")}
+              {result.learningObjectives.map((lo) => lo.id).join(", ")}
             </Typography>
             <Box
               sx={{
-                mt: 2,
+                mt: 1,
                 fontSize: "12px",
                 height: "10em",
                 overflow: "hidden",
