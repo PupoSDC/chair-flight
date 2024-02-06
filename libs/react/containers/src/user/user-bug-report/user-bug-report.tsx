@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { forwardRef, useCallback, useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as GitHub } from "@mui/icons-material/GitHub";
@@ -21,7 +21,6 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper";
-import type { FunctionComponent } from "react";
 
 /** TODO Centralize this */
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight/issues";
@@ -48,7 +47,7 @@ const useBugReportStore = create<{
   },
 }));
 
-const BugReportForm: FunctionComponent = () => {
+const BugReportForm = forwardRef<HTMLFormElement>((_, ref) => {
   const createIssue = trpc.common.github.createIssue.useMutation();
   const debugDataCallbacks = useBugReportStore((b) => b.debugDataCallbacks);
   const bugReportSchema = z.object({
@@ -113,6 +112,7 @@ const BugReportForm: FunctionComponent = () => {
   return (
     <FormProvider {...form}>
       <ModalDialog
+        ref={ref}
         component={"form"}
         onSubmit={onSubmit}
         sx={{ width: "calc(100% - 16px)", maxWidth: "md", overflow: "auto" }}
@@ -150,7 +150,7 @@ const BugReportForm: FunctionComponent = () => {
       </ModalDialog>
     </FormProvider>
   );
-};
+});
 
 export const UserBugReport = container(() => {
   const isOpen = useBugReportStore((b) => b.isOpen);

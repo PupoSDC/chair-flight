@@ -31,23 +31,26 @@ export type SearchHeaderProps = {
 };
 
 export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
-  ({
-    search,
-    searchPlaceholder = "Search...",
-    filters,
-    filterValues,
-    isLoading,
-    isError,
-    mobileBreakpoint = "md",
-    onSearchChange,
-    onFilterValuesChange,
-  }) => {
+  (
+    {
+      search,
+      searchPlaceholder = "Search...",
+      filters,
+      filterValues,
+      isLoading,
+      isError,
+      mobileBreakpoint = "md",
+      onSearchChange,
+      onFilterValuesChange,
+    },
+    ref,
+  ) => {
     const numberOfFilters = Object.values(filterValues).filter(
       (v) => v !== "all",
     ).length;
 
     return (
-      <SearchHeaderContainer>
+      <SearchHeaderContainer ref={ref}>
         <SearchQuery
           size="sm"
           value={search}
@@ -60,8 +63,8 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
         <SearchFilters
           activeFilters={numberOfFilters}
           mobileBreakpoint={mobileBreakpoint}
-          fallback={Object.keys(filters).map((key) => (
-            <Select size="sm" key={key} />
+          fallback={Object.keys(filters).map((name) => (
+            <Select key={name} size="sm" value={filterValues[name]} />
           ))}
           filters={Object.entries(filters).map(([name, options]) => (
             <Select
