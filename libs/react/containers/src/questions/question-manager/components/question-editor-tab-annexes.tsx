@@ -1,23 +1,102 @@
-import { useFormContext } from "react-hook-form";
-import { Box } from "@mui/joy";
+import { useForm, useFormContext } from "react-hook-form";
+import { Box, ListItemContent, Stack } from "@mui/joy";
 import { VerticalDivider } from "./vertical-divider";
 import type { QuestionEditorState } from "../hooks/use-question-editor";
-import type { FunctionComponent } from "react";
+import { useState, type FunctionComponent } from "react";
+import { SearchHeader, SearchList } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { annexSearchFilters } from "@chair-flight/core/search";
+import { useQuestionEditorData } from "../hooks/use-question-editor-data";
+import { QuestionBankName } from "@chair-flight/core/question-bank";
+import { default as Image } from "next/image";
 
 export type QuestionEditorTabAnnexesProps = {
   questionId: string;
+  questionBank: QuestionBankName;
 };
+const searchAnnexes = trpc.common.search.searchQuestions;
+const useSearchAnnexes = searchAnnexes.useInfiniteQuery;
 
 export const QuestionEditorTabAnnexes: FunctionComponent<
   QuestionEditorTabAnnexesProps
-> = ({ questionId }) => {
+> = ({ questionId, questionBank }) => {
   const form = useFormContext<QuestionEditorState>();
+
+  const serverData = useQuestionEditorData({ questionBank });
+  const [search, setSearch] = useState("");
+
+  const filterForm = useForm({
+    defaultValues: annexSearchFilters.parse({}),
+    resolver: zodResolver(annexSearchFilters),
+  });
+
+
+  const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
+    { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
+    { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
+  );
+
+  type FilterKeys = keyof typeof serverData.filters.annexes;
+
 
   return (
     <>
-      <Box sx={{ flex: 1 }}></Box>
+      <Stack sx={{ flex: 1 }}>
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Annexes..."
+          filters={serverData.filters.annexes}
+          filterValues={filterForm.watch()}
+          isLoading={isLoading}
+          isError={isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(k, v) => filterForm.setValue(k as FilterKeys, v)}
+        />
+        <SearchList
+          forceMode={"mobile"}
+          loading={isLoading}
+          error={isError}
+          items={(data?.pages ?? []).flatMap((p) => p.items)}
+          onFetchNextPage={fetchNextPage}
+          sx={{ flex: 1, overflow: "hidden" }}
+          renderThead={() => null}
+          renderTableRow={() => null}
+          renderListItemContent={(result) => (
+            <ListItemContent>
+              <Image
+                src={result.href}
+                alt=""
+                width={100}
+                height={100}
+              />
+            </ListItemContent>
+          )}
+        />
+      </Stack>
       <VerticalDivider />
-      <Box sx={{ flex: 1 }}></Box>
+      <Stack sx={{ flex: 1 }}>
+        <SearchList
+          forceMode={"mobile"}
+          loading={isLoading}
+          error={isError}
+          items={(data?.pages ?? []).flatMap((p) => p.items)}
+          onFetchNextPage={fetchNextPage}
+          sx={{ flex: 1, overflow: "hidden" }}
+          renderThead={() => null}
+          renderTableRow={() => null}
+          renderListItemContent={(result) => (
+            <ListItemContent>
+              <Image
+                src={result.href}
+                alt=""
+                width={100}
+                height={100}
+              />
+            </ListItemContent>
+          )}
+        />   
+      </Stack>
     </>
   );
 };

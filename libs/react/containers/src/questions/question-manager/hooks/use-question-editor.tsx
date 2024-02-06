@@ -4,6 +4,7 @@ import { z } from "zod";
 import { questionTemplateSchema } from "@chair-flight/core/question-bank";
 import { createUsePersistenceHook } from "../../../hooks/use-persistence";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { useEffect } from "react";
 
 const editorSchema = z.object({
   deletedQuestions: z.record(questionTemplateSchema.or(z.null())).default({}),
@@ -29,5 +30,13 @@ export const useQuestionEditor = ({
 }) => {
   const { getData, setData } = useQuestionEditorPersistence[questionBank]();
   const form = useForm({ resolver, defaultValues: getData() });
+
+  useEffect(() => {
+    const subscription = form.watch((value) => {
+      setData(value as QuestionEditorState);
+    });
+    return () => subscription.unsubscribe()
+  }, [form.watch])
+
   return { form };
 };

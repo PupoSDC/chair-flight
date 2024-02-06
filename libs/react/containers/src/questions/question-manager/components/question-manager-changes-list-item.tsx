@@ -92,7 +92,7 @@ export const QuestionManagerChangesListItem: FunctionComponent<
       </Box>
 
       <Modal open={isEditing} onClose={() => setIsEditing(false)}>
-        <QuestionEditorDialog questionId={result.id} />
+        <QuestionEditorDialog  questionId={result.id}  />
       </Modal>
     </ListItemContent>
   );
