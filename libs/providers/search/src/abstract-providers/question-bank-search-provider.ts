@@ -19,16 +19,14 @@ export abstract class QuestionBankSearchProvider<
   constructor({
     idSearchFields,
     searchFields,
-    storeFields,
   }: {
     idSearchFields: (keyof SearchDocument)[];
     searchFields: (keyof SearchDocument)[];
-    storeFields: (keyof SearchDocument)[];
   }) {
     this.idSearchFields = idSearchFields;
     this.searchIndex = new MiniSearch<SearchDocument>({
       fields: searchFields as string[],
-      storeFields: storeFields as string[],
+      storeFields: ["id"],
       tokenize: (text, fieldName) => {
         if (idSearchFields.includes(fieldName as keyof SearchDocument)) {
           return text.split(", ");
@@ -50,15 +48,10 @@ export abstract class QuestionBankSearchProvider<
     if (thisWork) return await thisWork;
 
     const newWork = (async () => {
-      try {
-        const searchDocuments = await this.getSearchDocuments(bank);
-        const firstId = searchDocuments[0]?.id;
-        if (!firstId || this.searchIndex.has(firstId)) return;
-        await this.searchIndex.addAllAsync(searchDocuments);
-      } catch (e) {
-        console.error("Error indexing the question Bank", e);
-        this.initializeSearchIndex(bank);
-      }
+      const searchDocuments = await this.getSearchDocuments(bank);
+      const firstId = searchDocuments[0]?.id;
+      if (!firstId || this.searchIndex.has(firstId)) return;
+      await this.searchIndex.addAllAsync(searchDocuments);
     })();
 
     this.initializationWork.set(bank, newWork);
@@ -84,14 +77,13 @@ export abstract class QuestionBankSearchProvider<
         await this.initializeSearchResults(bank);
 
         const searchField = params.filters.searchField;
-        const isFuzzy = this.idSearchFields.includes(
-          searchField as keyof SearchDocument,
-        );
+        const castSearchField = searchField as keyof SearchDocument;
+        const isPrefix = this.idSearchFields.includes(castSearchField);
 
         const opts: SearchOptions = {
-          fuzzy: isFuzzy ? false : 0.2,
-          prefix: !isFuzzy,
-          fields: searchField === "all" ? undefined : [searchField as string],
+          fuzzy: isPrefix ? false : 0.2,
+          prefix: isPrefix,
+          fields: searchField === "all" ? undefined : [searchField],
           tokenize: (text) => {
             if (
               this.idSearchFields.includes(searchField as keyof SearchDocument)
@@ -104,7 +96,8 @@ export abstract class QuestionBankSearchProvider<
 
         return this.searchIndex
           .search(params.q, opts)
-          .map(({ id }) => this.searchResults.get(id));
+          .map(({ id }) => this.searchResults.get(id))
+          .sort((a, b) => (isPrefix && a && b ? a.id.localeCompare(b.id) : 0));
       }
     })();
 

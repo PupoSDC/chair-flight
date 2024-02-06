@@ -17,9 +17,8 @@ export class AnnexSearch extends QuestionBankSearchProvider<
 > {
   constructor() {
     super({
+      searchFields: ["id", "description"],
       idSearchFields: ["id"],
-      searchFields: ["description"],
-      storeFields: ["id"],
     });
   }
 

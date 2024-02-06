@@ -21,9 +21,8 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
 > {
   constructor() {
     super({
-      idSearchFields: ["id"],
       searchFields: ["id", "text"],
-      storeFields: ["id"],
+      idSearchFields: ["id"],
     });
   }
 
@@ -49,9 +48,8 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
 
     const searchField = [
       { id: "all", text: "All Fields" },
-      { id: "learningObjectiveId", text: "Learning Objective" },
-      { id: "content", text: "Content" },
-      { id: "title", text: "Title" },
+      { id: "id", text: "Learning Objective" },
+      { id: "text", text: "Title" },
     ];
 
     return {

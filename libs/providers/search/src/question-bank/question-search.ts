@@ -26,7 +26,6 @@ export class QuestionSearch extends QuestionBankSearchProvider<
 > {
   constructor() {
     super({
-      idSearchFields: ["id", "questionId", "learningObjectives"],
       searchFields: [
         "id",
         "questionId",
@@ -36,7 +35,7 @@ export class QuestionSearch extends QuestionBankSearchProvider<
         "externalIds",
         "text",
       ],
-      storeFields: ["id"],
+      idSearchFields: ["id", "questionId", "learningObjectives", "externalIds"],
     });
   }
 

@@ -17,9 +17,8 @@ export class DocSearch extends QuestionBankSearchProvider<
 > {
   constructor() {
     super({
-      idSearchFields: ["id", "learningObjectiveId"],
       searchFields: ["id", "learningObjectiveId", "content", "title"],
-      storeFields: ["id"],
+      idSearchFields: ["id", "learningObjectiveId"],
     });
   }
 
