@@ -1,0 +1,638 @@
+[
+  {
+    "id": "QOLVPSCQ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "When operating on the Standby Pack Controls, what temperatures will the packs be producing?",
+      "options": [
+        {
+          "id": "uilmng",
+          "text": "An average temperature for the two cabin zones.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "n1jtg",
+          "text": "The trim air modulating valves close so no pack air is provided to the two cabin zones, only re-circulated air is provided.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "hyo1b",
+          "text": "Left pack produces 18 degrees C, right pack produces 22 degrees C.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "7uji9",
+          "text": "The flight deck required temperature will also be provided to the passenger cabin.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QIFNFXYG",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which systems use engine bleed air during operation?",
+      "options": [
+        {
+          "id": "69qqk",
+          "text": "Engine starting, air conditioning, cabin pressurisation, engine and wing anti-icing, hydraulic, water.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "f3qw9",
+          "text": "Engine and wing anti-icing, engine starting, cabin pressurisation, hydraulic reservoir pressurisation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "3zh04",
+          "text": "Engine and wing anti-icing, air conditioning, cabin pressurisation, hydraulic reservoir pressurisation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "i1xpdl",
+          "text": "Engine and wing anti-icing, engine starting, air conditioning, cabin pressurisation, hydraulic reservoir pressurisation.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QQOELHSQ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "### TRIP RESET Switch\n\n- resets BLEED TRIP OFF, PACK or ZONE TEMP lights\n\n- related engine bleed air valve opens, or related pack valve opens, or related trim air modulating valve opens\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT and BLEED TRIP OFF, it isolates the associated valve and extinguishes the alert.",
+      "answer": false
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QHNSYYDO",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If all zone and primary pack controls fail, how is cabin temperatures controlled?",
+      "options": [
+        {
+          "id": "5g3ai",
+          "text": "The last settings before the failure will be maintained until the packs are selected OFF.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "dzm6z",
+          "text": "The cabin temperatures cannot be controlled in this situation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "fnzrt",
+          "text": "The standby pack controls command the packs to produce the average temperature demand of the 2 passenger cabin zones.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "jxg9j",
+          "text": "A fixed cabin temperature will be produced in this situation - 24 degrees C from the left pack, and 18 degrees C from the right pack.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QMZOUWVG",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The APU is capable of supplying bleed air for two packs on the ground, or one pack in flight.",
+      "answer": true
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QZNIFJOV",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "If all Temperature Selectors are positioned OFF, the pack controls will cause the packs to produce which fixed temperatures?",
+      "options": [
+        {
+          "id": "w3htk",
+          "text": "Left Pack, 24 degrees Centigrade.  Right Pack, 18 degrees Centigrade.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "oqg73",
+          "text": "Left Pack, 20 degrees Centigrade.  Right Pack, 22 degrees Centigrade.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "vg19i",
+          "text": "Left Pack, 18 degrees Centigrade.  Right Pack, 24 degrees Centigrade.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "oam9t",
+          "text": "Left Pack, 22 degrees Centigrade.  Right Pack, 20 degrees Centigrade.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QCJDLWQG",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Engine bleed air pressure is controlled by means of the bleed air valve which acts as both a shutoff and pressure regulating valve.",
+      "answer": true
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QEVYNJMT",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the primary function of the recirculation fans?",
+      "options": [
+        {
+          "id": "67ux1",
+          "text": "To provide standby air conditioning if the packs fail.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "sep8e",
+          "text": "Reduce engine bleed air demand and load on the packs.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "1wdfz",
+          "text": "Recirculate cabin air to allow it to be filtered to remove contaminants as it passes through the recirculation fan HEPA filters.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "6jv2i",
+          "text": "Recirculate the air from the passenger cabin the provide heating for the forward cargo compartment",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QTYCWEMT",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Conditioned air from the left hand pack flows directly to the Flight Deck from the Mix Manifold.",
+      "answer": false
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QBIYKRTN",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "The packs produce the coolest temperature selected in any of the zones, with the other zones temperature controlled by adding hot trim air to produce the required temperature.",
+      "answer": true
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QREZLOSJ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "How many Trim Air Pressure Regulators are there in the Air Conditioning system?",
+      "options": [
+        {
+          "id": "dglis",
+          "text": "2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ze9l2k",
+          "text": "3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "knkbi",
+          "text": "1",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "uao22",
+          "text": "There are no Trim Air Pressure Regulators, only Trim Air Modulating valves.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QHZAJDAJ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "The differential pressure of the cabin is limited by a pressure relief system - which of the following statements is correct?",
+      "options": [
+        {
+          "id": "gzw1n",
+          "text": "There is a negative pressure relief valve, which limits the cabin pressure to 9.1 psi above ambient.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "pafa2",
+          "text": "There is an outflow valve which opens when cabin pressure reaches 9.1 psi above ambient.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "s1pkbh",
+          "text": "There are two negative pressure relief valves, which limit the cabin pressure to 9.1 psi above ambient.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "kb4ta",
+          "text": "There are two pressure relief valves which limit differential pressure to 9.1 psi.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QMCINKVN",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the result if all temperature zone selectors are positioned to OFF?",
+      "options": [
+        {
+          "id": "9a6tr",
+          "text": "The right pack will produce a fixed temperature of 75 degrees Fahrenheit, and the left pack will produce a fixed temperature of 65 degrees Fahrenheit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "wlxcl",
+          "text": "Left pack will produce 24 degrees centigrade and right pack will produce 18 degrees centigrade.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "9o5tj",
+          "text": "The packs will attempt to maintain an average temperature across all zones.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "rlnd2",
+          "text": "----",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QBMWZZSN",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Where are the wing-body overheat sensors located?",
+      "options": [
+        {
+          "id": "zqpbz",
+          "text": "Engine struts, wing leading edge slats, air conditioning bays, APU duct, keel beam.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "i8eybh",
+          "text": "Engine struts, wing inboard leading edges, air conditioning bays, APU bleed duct, keel beam.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "xzmgr",
+          "text": "Engine cowling lips, wing leading edge slats, air conditioning bays, APU compartment, keel beam.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "kzjbp",
+          "text": "Engine cowl lips, wing leading edge slats, air conditioning bays, electronic equipment bay, APU bleed duct.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QSKVUUWY",
+    "relatedQuestions": ["QUFTPXXQ", "QKMPYYJI", "QFNVBZKC"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Bleed air is taken from stage 4 and stage 10 of the high pressure compressor.",
+      "answer": false
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QUFTPXXQ",
+    "relatedQuestions": ["QSKVUUWY", "QKMPYYJI", "QFNVBZKC"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Bleed air is taken from stage 5 and stage 9 of the high pressure compressor.",
+      "answer": false
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QKMPYYJI",
+    "relatedQuestions": ["QSKVUUWY", "QUFTPXXQ", "QFNVBZKC"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Bleed air is taken from stage 5 from the low pressure compressor and stage 9 of the high pressure compressor.",
+      "answer": false
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QFNVBZKC",
+    "relatedQuestions": ["QSKVUUWY", "QUFTPXXQ", "QKMPYYJI"],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct:",
+      "options": [
+        {
+          "id": "4ha3ff",
+          "text": "Bleed air is constantly provided from stage 5 and stage 9 of the compressor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "bc8lm",
+          "text": "Bleed air is only supplied from the 9th stage when the valve modulates open if bleed air requirement is greater than the 5th stage alone can supply.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "m6ni5i",
+          "text": "Bleed air is only supplied from the 5th stage when the valve modulates open if bleed air requirement is greater than the 9th stage alone can supply.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "mljcp",
+          "text": "----",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QYYNKNMD",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the result if one pack fails in-flight?",
+      "options": [
+        {
+          "id": "i80jkf",
+          "text": "The remaining pack when selected to AUTO will be capable of maintaining pressurisation up to aircraft ceiling, only if all Zone Temperature Controllers are selected to OFF.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "w6gy2",
+          "text": "The remaining pack will not operate in HIGH flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "f2r0k",
+          "text": "The remaining pack is capable of maintaining pressurisation and acceptable cabin temperatures up to 41,000 feet.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "d9voal",
+          "text": "The remaining pack will be capable of maintaining pressurisation up to the aircraft maximum certified ceiling, and will attempt to produce an average temperature across all cabin zones.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QGPWTNAV",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "simple",
+      "question": "What is the function of the duel Bleed Light?",
+      "options": [
+        {
+          "id": "jb5ri",
+          "text": "Illuminates to warn of possible backpressure whenever both engines are providing bleed air, and engines are at different thrust settings.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "99ixh",
+          "text": "Illuminates whenever both APU and engines is running to warn of risk of backpressure to APU.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "cv916f",
+          "text": "Illuminates when engine running and APU bleed air valve, engine bleed air valve, and isolation valve are in a position to permit possible backpressure of the APU.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "fqmvu",
+          "text": "Illuminates whenever pressure in APU rises above a pre-set value.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  },
+  {
+    "id": "QJYKFMBZ",
+    "relatedQuestions": [],
+    "externalIds": [],
+    "annexes": [],
+    "learningObjectives": ["B737.02"],
+    "explanation": "\n\n---\n\n",
+    "variant": {
+      "type": "true-or-false",
+      "question": "Cabin pressurisation is controlled by the position of the Outflow Valve, but some air is also exhausted through the toilet and galley vents.",
+      "answer": true
+    },
+    "doc": "B737.02",
+    "subjects": ["B737"],
+    "srcLocation": "libs/content/question-bank-type/content/B737/B737.02/questions.json"
+  }
+]

@@ -3,15 +3,11 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {
-    "parseLosXlsx": {
-      "executor": "@chair-flight/providers/question-bank:parseLosXlsx",
-      "options": {
-        "xlsxPath": "{projectRoot}/subjects/learning-objectives.xlsx",
-        "outputJsonPath": "{projectRoot}/subjects/learning-objectives.json"
-      }
-    },
     "compile": {
-      "executor": "@chair-flight/providers/question-bank:compile"
+      "executor": "@chair-flight/core/question-bank:compile"
+    },
+    "arrange": {
+      "executor": "@chair-flight/core/question-bank:arrange"
     }
   },
   "tags": []

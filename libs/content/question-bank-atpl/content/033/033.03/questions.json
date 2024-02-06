@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "QVJAXVRU",
+    "relatedQuestions": ["QYCHMRII"],
+    "externalIds": ["ATPLGS-129275"],
+    "annexes": ["e04f8b22568da5acacb7e7ed7478528e"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aeroplane is performing a commercial air transport flight. Regular fuel checks performed approximately every 30 min as required by the operator. The flight follows the planned route and the flies at the mach number as planned. The fuel measurements are accurate within +/- 20 kg and the fuel flow  indicators show a constant 1340 kg/h per engine throughout.\n What is the reason for the creation of the position of PBD05 + 10 min?",
+      "options": [
+        {
+          "id": "A5G0OMJWW5",
+          "text": "The fuel flow appear to be gradually increasing and one way of verifying this is to create a waypoint based on time and use the last known fuel depletion rate to assess any trends.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A7JXY4IDD9",
+          "text": "The aeroplane has less fuel than required but the fuel flow is verified as correct enabling a reasonable conclusion that any discrepancy is due to the wind being different to planned",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AFAWOWVW1Z",
+          "text": "The fuel flow appear to be gradually reducing and in order to verify a revised fuel flow of 2850 kg/h the  new waypoint enables this and a revised landing fuel may be calculated",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A30YIRD30N",
+          "text": "The fuel flow is confirmed to be different from the plan and therefore the fuel flow indicators are showing incorrect and the thrust can be reduced to match the planned fuel flow.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QYCHMRII",
+    "relatedQuestions": ["QVJAXVRU"],
+    "externalIds": ["ATPLQ-339547"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.  \n  An aeroplane is performing a commercial air transport flight. Regular fuel checks performed approximately every 30 min as required by the operator. The flight follows the planned route and the flies at the mach number as planned. The fuel measurements are accurate within +/- 20 kg and the fuel flow indicators show a constant 1340 kg/h per engine throughout.What is the reason for the creation of the position of PBD05 + 10 min?",
+      "options": [
+        {
+          "id": "A6ND71LLU1",
+          "text": "The fuel flow appear to be gradually increasing and one way of verifying this is to create a waypoint based on time and use the last known fuel depletion rate to assess any trends.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A7FAJ3XMEV",
+          "text": "The fuel flow is confirmed to be different from the plan and therefore the fuel flow indicators are showing incorrect and the thrust can be reduced to match the planned fuel flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AMLWE2NKRE",
+          "text": "The fuel flow appear to be gradually reducing and in order to verify a revised fuel flow of 2850 kg/h the new waypoint enables this and a revised landing fuel may be calculated.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AOCGX1OQ6L",
+          "text": "The aeroplane has less fuel than required but the fuel flow is verified as correct enabling a reasonable conclusion that any discrepancy is due to the wind being different to planned.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QFXJJAGQ",
+    "relatedQuestions": ["QECYBLET"],
+    "externalIds": ["ATPLQ-333608"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure. \n A pilot on a VFR flight fills in the flight log for a short flight as seen in the image. The aircraft departed with slightly more fuel than the planned fuel, but within operational limits. The planned take-off and landing masses are shown on the log.The pilot assumes that the fuel flow to the Top of Descent (Tall Mast) will be the same as the average for the cruise so far and that the fuel used in the descent will be 28 kg, the same as the original plan. What is the pilot's estimate of the actual Landing Mass?",
+      "options": [
+        {
+          "id": "AXICOWZ3EK",
+          "text": "2696 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AZ8FPF67SJ",
+          "text": "2689 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADFG8SLN9T",
+          "text": "2672 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXVIKUADUD",
+          "text": "2626 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QECYBLET",
+    "relatedQuestions": ["QFXJJAGQ"],
+    "externalIds": ["BGS-331140"],
+    "annexes": ["06f7a06159320cabe0a703fd14b21b5a"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to the image.\nA pilot on a VFR flight fills in the flight log for a short flight as seen in the image. The flight departed with slightly more fuel than the planned fuel, but within operational limits. The planned take-off and landing masses are shown on the log.\nThe pilot assumes that the fuel flow to the Top of Descent (Tall Mast) will be the same as the average for the cruise so far, and that the fuel used in the descent will be 28 Kg, the same as the original plan. What is the pilot's estimate of the actual Landing Mass?",
+      "options": [
+        {
+          "id": "AYEIW2K6DD",
+          "text": "2696 Kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A2XA787MR2",
+          "text": "2626 Kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A4IM1TU1K5",
+          "text": "2689 Kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ALCFC8DH27",
+          "text": "2672 Kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QKEJDXYS",
+    "relatedQuestions": ["QOECGDWJ"],
+    "externalIds": ["ATPLGS-627128", "ATPLQ-338701", "BGS-330911"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "071.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A Commercial Air Transport operator has a fleet of turbine-engine aeroplanes. For this operator, an isolated aerodrome is one for which the alternate and final fuel reserve required to the nearest adequate destination alternate aerodrome is more than the fuel to fly for...",
+      "options": [
+        {
+          "id": "ACDFBWWOQF",
+          "text": "2 hours at normal cruise consumption above the destination aerodrome, including Final Reserve Fuel.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AKOUN8EWMU",
+          "text": "45 minutes plus 15 % of the flying time planned to be spent at cruising level or 2 hours, whichever is less.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AUI0EDSG1D",
+          "text": "2 hours at normal cruise consumption above the destination aerodrome, excluding Final Reserve Fuel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVCAHPS0QR",
+          "text": "45 minutes plus 15 % of the flying time planned to be spent at cruising level or 2 hours, whichever is more.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033", "070"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QOECGDWJ",
+    "relatedQuestions": ["QKEJDXYS"],
+    "externalIds": ["BGS-710034"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "071.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A Commercial Air Transport operator has a fleet of turbine-engine aeroplanes. For this operator, an isolated aerodrome is one for which the alternate and final fuel reserve required to the nearest adequate destination alternate aerodrome is more than the fuel to fly for....",
+      "options": [
+        {
+          "id": "A6228DB0GA",
+          "text": "2 hours at normal cruise consumption, including final reserve fuel.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUGC89ZXSA",
+          "text": "45 minutes plus 15 % of the flying time planned to be spent at cruising level or 2 hours, whichever is more.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHOD6DRO7R",
+          "text": "2 hours at normal cruise consumption, excluding final reserve fuel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A8IO2583PU",
+          "text": "45 minutes plus 15 % of the flying time planned to be spent at cruising level or 2 hours, whichever is less.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033", "070"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QCNGPHEN",
+    "relatedQuestions": ["QCVJBYKF", "QQYALOUR"],
+    "externalIds": [
+      "ATPLGS-625251",
+      "ATPLGS-625288",
+      "ATPLGS-625312",
+      "ATPLGS-625313"
+    ],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given: \n \nDistance from departure to destination: 180 NM \nTrue track: 310° \nW/V: 010/20 \nTAS: 115 kt\n \nWhat is the distance of the PET from the departure point?",
+      "options": [
+        {
+          "id": "ARASWE2C2M",
+          "text": "98 NM",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AV36OVM866",
+          "text": "90 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A1KDR90389",
+          "text": "92 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AXR2O5LD6C",
+          "text": "82 NM",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QCVJBYKF",
+    "relatedQuestions": ["QCNGPHEN", "QQYALOUR"],
+    "externalIds": ["ATPLGS-625312"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given: \n \nDistance from departure to destination: 220 NM \nTrue track: 175° \nW/V: 220/10 \nTAS: 135 kt \n \nWhat is the distance of the PET from the departure point?",
+      "options": [
+        {
+          "id": "AVKPJVGVNW",
+          "text": "116 NM",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUKH0QLK1M",
+          "text": "136 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ABHKXZJZAZ",
+          "text": "110 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZFSKOY8XJ",
+          "text": "103 NM",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QQYALOUR",
+    "relatedQuestions": ["QCNGPHEN", "QCVJBYKF"],
+    "externalIds": ["ATPLGS-625313"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given: \n \nDistance from departure to destination: 315 NM \nTrue track: 343° \nW/V: 015/15 \nTAS: 100 kt \n \nWhat is the distance of the PET from the departure point?",
+      "options": [
+        {
+          "id": "AYOS1FH0Z0",
+          "text": "176 NM",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AEFFJBSEFC",
+          "text": "167 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ANSY5ZIGWM",
+          "text": "148 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVV9DA5R8X",
+          "text": "139 NM",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QIMMIZMD",
+    "relatedQuestions": ["QHLURLZL"],
+    "externalIds": ["BGS-330311"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For flight planning purposes the landing mass at alternate is taken as:",
+      "options": [
+        {
+          "id": "AYFHCQSO80",
+          "text": "Zero Fuel Mass plus Final Reserve plus Contingency",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOKAJJ6VQJ",
+          "text": "Landing Mass at destination plus Alternate Fuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AP8Q3Y537D",
+          "text": "Zero Fuel Mass plus Final Reserve Fuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHT22VNF2T",
+          "text": "Zero Fuel Mass plus Final Reserve Fuel and Alternate\nFuel",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QHLURLZL",
+    "relatedQuestions": ["QIMMIZMD"],
+    "externalIds": ["BGS-991717"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For flight planning purposes the landing mass at alternate is taken as:",
+      "options": [
+        {
+          "id": "ALB7ZA8VA1",
+          "text": "Zero Fuel Mass plus Final Reserve Fuel and Contingency\nFuel",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AVTO0ALVSV",
+          "text": "Zero Fuel Mass plus Final Reserve Fuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A0I7D52FJ2",
+          "text": "Zero Fuel Mass plus Final Reserve Fuel and Alternate\nFuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A8G6OYRPIL",
+          "text": "Landing Mass at destination plus Alternate Fuel",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QGJTXUVH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-625299", "ATPLQ-331753"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During the pre flight preparation, which weather phenomenon reported at the destination will most probably lead to an update in the fuel log?",
+      "options": [
+        {
+          "id": "A1GZMZ4F0L",
+          "text": "Recent snow",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AS1SFDZJO4",
+          "text": "Recent rain showers",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AIPDWFRMBF",
+          "text": "Shallow fog",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A2JAN1D7BH",
+          "text": "Haze",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QXKWTYSX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-107877", "AVEXAM-23541"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements is relevant for forming route portions in integrated range flight planning?",
+      "options": [
+        {
+          "id": "A0LC636ZDA",
+          "text": "The distance from take-off up to the top of climb has to be known.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ACTTWU6VE4",
+          "text": "A small change of temperature (2 °C) can divide a segment.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AG1GLYLY77",
+          "text": "Each reporting point requires a new segment.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVREY3JOL3",
+          "text": "No segment shall be more than 30 minutes of flight time.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QGEOSYWC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLGS-113856", "ATPLQ-331597"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When can the commander of a Commercial Air Transport flight plan on using the Final Reserve Fuel?",
+      "options": [
+        {
+          "id": "AU6XJOC2W1",
+          "text": "This is prohibited as such fuel is for emergency use only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A0K8WWV87O",
+          "text": "For all VFR flights by day.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ABI53O1MVM",
+          "text": "When there are safe forced landing areas along the entire route to be flown.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AHJATT5DUY",
+          "text": "In case of an unexpected diversion.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QBRAPFVO",
+    "relatedQuestions": ["QOJCFCRN"],
+    "externalIds": ["ATPLQ-334442"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "  \n  Given the following information, what will be the remaining range and endurance from waypoint B when preserving Holding and Final Reserve Fuel of 1200 lb?",
+      "options": [
+        {
+          "id": "AR80EZOIQC",
+          "text": "533 NM, and 01:36 h.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AXJPJWQ7EO",
+          "text": "500 NM, and 01:40 h.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZZT8QIKMM",
+          "text": "900 NM, and 03:00 h.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ASSDAXN995",
+          "text": "964 NM, and 02:54 h.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QOJCFCRN",
+    "relatedQuestions": ["QBRAPFVO"],
+    "externalIds": ["ATPLGS-114045"],
+    "annexes": ["fc4bfcc66357eee668a46399f80728ac"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following information, what will be the remaining range and endurance from waypoint B when preserving Holding and Final Reserve Fuel of 1200 lb?",
+      "options": [
+        {
+          "id": "AFJS6492TX",
+          "text": "533 NM, and 01:36 h.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A7B94NWPIO",
+          "text": "900 NM, and 03:00 h.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AYJBGN424G",
+          "text": "964 NM, and 02:54 h.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AEPI97LMS1",
+          "text": "500 NM, and 01:40 h.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QCOWKHRJ",
+    "relatedQuestions": ["QCFRFKQO", "QEFFDUNH", "QXMYBGAO", "QZTOWNQM"],
+    "externalIds": ["AVEXAM-30274"],
+    "annexes": ["1d022ab6c97a912fb952ba82575753c9"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 033-80.\nWhat are the approximate diversion fuel required and time? Given:\n\n\n- Diversion distance: 650 NM\n- Diversion pressure altitude: 16 000 ft\n- Mass at point of diversion: 57 000 kg\n- Headwind component: 20 kt\n- Temperature: ISA +15°",
+      "options": [
+        {
+          "id": "A4OPGBK9X9",
+          "text": "4 800 kg; 2 hrs 03 min.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOMUUX3SDK",
+          "text": "6 200 kg; 2 hrs 10 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AKFURCC29W",
+          "text": "3 900 kg; 1 hr 45 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AWM7H7S3BX",
+          "text": "4 400 kg; 1 hr 35 min.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QEFFDUNH",
+    "relatedQuestions": ["QCFRFKQO", "QCOWKHRJ", "QXMYBGAO", "QZTOWNQM"],
+    "externalIds": ["AVEXAM-5404"],
+    "annexes": [
+      "1d022ab6c97a912fb952ba82575753c9",
+      "1d022ab6c97a912fb952ba82575753c9"
+    ],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 033-80.\nWhat is the maximum diversion distance and elapsed time to alternate? Given:\n\n\n- Diversion fuel available: 8 500 kg\n- Diversion cruise altitude: 10 000 ft\n- Mass at point of diversion: 62 500 kg\n- Headwind component: 50 kt\n- Temperature: ISA -5°",
+      "options": [
+        {
+          "id": "AVPDA8GFPR",
+          "text": "860 NM, 3 h 20 min.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ALYZU7RR2A",
+          "text": "1 000 NM, 3 h 40 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ASSS6X3ZYB",
+          "text": "1 130 NM, 3 h 30 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ACRHDPURDF",
+          "text": "760 NM, 4 h 30 min.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QXMYBGAO",
+    "relatedQuestions": ["QCFRFKQO", "QCOWKHRJ", "QEFFDUNH", "QZTOWNQM"],
+    "externalIds": ["AVEXAM-67716"],
+    "annexes": ["28cb3bb2b6c0c882d8d28aa0b25c3231"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 033-70.\nWhat is the fuel and time to alternate? Given:\n\n\n- Estimated dry operation mass: 35 500 kg\n- Estimated load: 14 500 kg\n- Final reserve fuel: 1 200 kg\n- Distance to alternate: 95 NM\n- Average true track: 219°\n- Headwind component: 10 kt",
+      "options": [
+        {
+          "id": "AD17LWUFEY",
+          "text": "1 100 kg; 25 min.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AHZ5FYQ59C",
+          "text": "800 kg; 40 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AB8NB1S7YB",
+          "text": "1 100 kg; 44 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AAWK87PS0T",
+          "text": "800 kg; 24 min.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QCFRFKQO",
+    "relatedQuestions": ["QCOWKHRJ", "QEFFDUNH", "QXMYBGAO", "QZTOWNQM"],
+    "externalIds": ["AVEXAM-6030"],
+    "annexes": [
+      "1d022ab6c97a912fb952ba82575753c9",
+      "1d022ab6c97a912fb952ba82575753c9"
+    ],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 033-80.\nWhat is the minimum pressure altitude at which the conditions listed below may be met? Given:\n\n\n- Diversion distance: 720 NM\n- Tailwind component: 25 kt\n- Mass at point of diversion: 55 000 kg\n- Temperature: ISA\n- Diversion fuel available: 4 250 kg",
+      "options": [
+        {
+          "id": "AKOYCXUQZE",
+          "text": "24 000 ft",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AU5VWRN6WA",
+          "text": "14 500 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A501WEFKDS",
+          "text": "26 000 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ABQRTM4Y5Q",
+          "text": "16 000 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QZTOWNQM",
+    "relatedQuestions": ["QCFRFKQO", "QCOWKHRJ", "QEFFDUNH", "QXMYBGAO"],
+    "externalIds": ["AVEXAM-3959"],
+    "annexes": ["1d022ab6c97a912fb952ba82575753c9"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure 033-80.\nWhat is the minimum pressure altitude at which the conditions below may be met? Given:\n\n\n- Distance to alternate: 950 NM\n- Headwind component: 20 kts\n- Mass at point of diversion: 50 000 kg\n- Diversion fuel available: 5 800 kg",
+      "options": [
+        {
+          "id": "AXQS4XRFEX",
+          "text": "26 000 ft",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AUOZ6M0UHT",
+          "text": "20 000 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AVTLEOXAD4",
+          "text": "18 000 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A1MQ8PGTD8",
+          "text": "22 000 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QCNQOPDF",
+    "relatedQuestions": ["QAQPYTKR"],
+    "externalIds": ["BGS-331174"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A Commercial Air Transport flight will need to land at an alternate aerodrome. The Commander must ensure that the remaining fuel upon landing at that aerodrome is NOT less than the....",
+      "options": [
+        {
+          "id": "AY0ORTNZ91",
+          "text": "final reserve fuel.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AWLJKZKP9K",
+          "text": "fuel required to fly for 15 minutes at holding speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ACFMXFZAGV",
+          "text": "fuel required for a go-around and subsequent visual landing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A1GYYLU33M",
+          "text": "fuel required to fly for 45 minutes at cruise speed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QAQPYTKR",
+    "relatedQuestions": ["QCNQOPDF"],
+    "externalIds": ["ATPLQ-332494"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A Commercial Air Transport flight will need to land at an alternate aerodrome. The Commander must ensure that the remaining fuel upon landing at that aerodrome is NOT less than the...",
+      "options": [
+        {
+          "id": "A4595D034Y",
+          "text": "final reserve fuel.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOL4G3R3Z4",
+          "text": "fuel required to fly for 15 minutes at holding speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AQESANDWHK",
+          "text": "fuel required for a go-around and subsequent visual landing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AG0H0JRB82",
+          "text": "fuel required to fly for 45 minutes at cruise speed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QBHQJTEW",
+    "relatedQuestions": ["QVQQRXKS"],
+    "externalIds": ["ATPLGS-625280", "ATPLQ-337268"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Commander of a Commercial Air Transport flight is required to carry out in flight fuel checks at regular intervals.  The fuel must be managed so that the expected usable fuel remaining on arrival at the destination aerodrome, which is planned with a destination alternate, is NOT less than the required",
+      "options": [
+        {
+          "id": "ACR8DPBFWI",
+          "text": "Alternate Fuel plus Final Reserve Fuel.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AA5BNVX0I8",
+          "text": "Final Reserve Fuel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A8NP9NG22Q",
+          "text": "Contingency Fuel plus Final Reserve Fuel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "APCIZR0UJJ",
+          "text": "Alternate Fuel plus Contingency Fuel plus Final Reserve Fuel.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QVQQRXKS",
+    "relatedQuestions": ["QBHQJTEW"],
+    "externalIds": ["BGS-331163"],
+    "annexes": [],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Commander of a Commercial Air Transport flight is required to carry out in-flight fuel checks at regular intervals. The fuel must be managed so that the expected usable fuel remaining on arrival at the destination aerodrome, which is planned with a destination alternate, is NOT less than the required....",
+      "options": [
+        {
+          "id": "ANZUV2GX1Z",
+          "text": "Alternate Fuel plus Final Reserve Fuel",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ADS1ULU75E",
+          "text": "Contingency Fuel plus Final Reserve Fuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AGG4HKDF4Q",
+          "text": "Final Reserve Fuel",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AUTPPG0OGG",
+          "text": "Alternate Fuel plus Contingency plus Final Reserve Fuel",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QDUICKPU",
+    "relatedQuestions": [
+      "QFTTBIFS",
+      "QKZNBCPC",
+      "QRSNOYCF",
+      "QTMFNSAH",
+      "QYFSRDOD"
+    ],
+    "externalIds": ["ATPLGS-108272"],
+    "annexes": ["367848b47810ad4654c272b8152e8ff7"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\n Actual Ground Speed (GS) on the leg BETA to GAMMA will be 100 kts\n If all other flight parameters remain unchanged, what fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AF3RPD2FAT",
+          "text": "2 600 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AVJ2PL7JGX",
+          "text": "2 770 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AZ1VRBVM5C",
+          "text": "2 820 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AF2M3W3NLP",
+          "text": "2 684 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QKZNBCPC",
+    "relatedQuestions": [
+      "QDUICKPU",
+      "QFTTBIFS",
+      "QRSNOYCF",
+      "QTMFNSAH",
+      "QYFSRDOD"
+    ],
+    "externalIds": ["ATPLGS-108293"],
+    "annexes": ["eab0d9fac871c41608760341984cc860"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\n Actual Ground Speed (GS) on the leg BETA to GAMMA will be 100 kts\n If all other flight parameters remain unchanged, what fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AY113KGKFG",
+          "text": "2 950 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A5MLFDTR32",
+          "text": "3 109 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A5C1E1J3VK",
+          "text": "3 390 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ALSXQFQRKD",
+          "text": "3 080 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QTMFNSAH",
+    "relatedQuestions": [
+      "QDUICKPU",
+      "QFTTBIFS",
+      "QKZNBCPC",
+      "QRSNOYCF",
+      "QYFSRDOD"
+    ],
+    "externalIds": ["ATPLGS-108271"],
+    "annexes": ["367848b47810ad4654c272b8152e8ff7"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\n Actual Ground Speed (GS) on the leg BETA to GAMMA will be 110 kts\n If all other flight parameters remain unchanged, what fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AJ41D01BUC",
+          "text": "2 625 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A0VB5XTC0E",
+          "text": "2 820 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AYS1L3R7V8",
+          "text": "2 900 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AO2UYT44AF",
+          "text": "2 723 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QFTTBIFS",
+    "relatedQuestions": [
+      "QDUICKPU",
+      "QKZNBCPC",
+      "QRSNOYCF",
+      "QTMFNSAH",
+      "QYFSRDOD"
+    ],
+    "externalIds": ["ATPLGS-108258"],
+    "annexes": ["fe738f454a4294759aa985fc1a9ca51f"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\n Actual Ground Speed (GS) on the leg BETA to GAMMA will be 110 kts\n If all other flight parameters remain unchanged, what fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AOXI1MQZ65",
+          "text": "2 000 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "A0TUKNJQC9",
+          "text": "2 062 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AFQP2PTQKH",
+          "text": "2 160 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A9QWIN7OD6",
+          "text": "2 310 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QRSNOYCF",
+    "relatedQuestions": [
+      "QDUICKPU",
+      "QFTTBIFS",
+      "QKZNBCPC",
+      "QTMFNSAH",
+      "QYFSRDOD"
+    ],
+    "externalIds": ["ATPLGS-108295"],
+    "annexes": ["7045d195896413b8a2f750049d334806"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\nActual Ground Speed (GS) on the leg BETA to GAMMA will be 115 kts If all other flight parameters remain unchanged, what fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AB6O6OSM09",
+          "text": "2 230 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AOXC344RBQ",
+          "text": "2 274 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AEVUEB8W89",
+          "text": "2 530 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AIF8JCJC49",
+          "text": "2 400 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QYFSRDOD",
+    "relatedQuestions": [
+      "QDUICKPU",
+      "QFTTBIFS",
+      "QKZNBCPC",
+      "QRSNOYCF",
+      "QTMFNSAH"
+    ],
+    "externalIds": ["ATPLGS-108261"],
+    "annexes": ["533e43d627257d3caa53cbf796d09ac2"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Planned and actual data as shown in the Flight Log excerpt\n Actual Ground Speed (GS) on the leg BETA to GAMMA will be 105 kts\n If all other flight parameters remain unchanged, \n\nwhat fuel remaining should be expected at waypoint GAMMA?",
+      "options": [
+        {
+          "id": "AP3X9SK5KG",
+          "text": "3 260 kg",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ATNKLJI71N",
+          "text": "3 430 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AL6TRYK0CM",
+          "text": "3 318 kg",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ADFPL9GVGF",
+          "text": "3 480 kg",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QUFJUATI",
+    "relatedQuestions": ["QABMEIHU"],
+    "externalIds": ["ATPLGS-107864"],
+    "annexes": ["3de7d7c6fff8d7cafcbcd061d8cdba71"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": " Using the Power Setting Table, for the single engine aeroplane, determine the cruise TAS and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions, given\n  OAT 13° C\n Pressure altitude 8 000 ft\n RPM 2 300",
+      "options": [
+        {
+          "id": "A7OTCBXXPL",
+          "text": "160 kts and 69.3 lbs/hr",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "APD6ZVY4LL",
+          "text": "159 kts and 71.7 lbs/hr",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AIYU9ATVV3",
+          "text": "158 kts and 74.4 lbs/hr",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AJVX5QJLRV",
+          "text": "160 kts and 71.1 lbs/hr",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  },
+  {
+    "id": "QABMEIHU",
+    "relatedQuestions": ["QUFJUATI"],
+    "externalIds": ["ATPLGS-107853"],
+    "annexes": ["3de7d7c6fff8d7cafcbcd061d8cdba71"],
+    "learningObjectives": ["033.03", "033.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Using the Power Setting Table, for the single engine aeroplane, determine the manifold pressure and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions, given\n  \n\nOAT\n13° C\n Pressure altitude\n8 000 ft\n RPM\n2 300",
+      "options": [
+        {
+          "id": "A2YPP6E9OT",
+          "text": "22.4 in.Hg and 69.3 lbs/hr",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "AYC8QH7IGR",
+          "text": "22.4 in.Hg and 73.8 lbs/hr",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "A6KPCA4I1Q",
+          "text": "22.4 in.Hg and 71.1 lbs/hr",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "AH5VHLZP0I",
+          "text": "23.0 in.Hg and 69.0 lbs/hr",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    },
+    "doc": "033.03",
+    "subjects": ["033"],
+    "srcLocation": "libs/content/question-bank-atpl/content/033/033.03/questions.json"
+  }
+]

@@ -1,10 +1,9 @@
-import type {
-  QuestionVariant,
-  QuestionVariantOneTwo,
-  QuestionVariantSimple,
-  QuestionVariantTrueOrFalse,
-} from "../types/question";
-import type { QuestionBankQuestionTemplate } from "../types/question-bank-question-templates";
+import type { QuestionTemplate } from "../entities/question-bank-question";
+import type { QuestionVariantDefinition } from "../entities/question-bank-question-definition";
+import type { QuestionVariantMultipleCorrect } from "../entities/question-bank-question-multiple-correct";
+import type { QuestionVariantOneTwo } from "../entities/question-bank-question-one-two";
+import type { QuestionVariantSimple } from "../entities/question-bank-question-simple";
+import type { QuestionVariantTrueOrFalse } from "../entities/question-bank-question-true-or-false";
 
 const getQuestionVariantSimplePreview = (
   variant: QuestionVariantSimple,
@@ -17,7 +16,7 @@ const getQuestionVariantSimplePreview = (
   return `${variant.question}\n\n${options.join("\n")}`;
 };
 
-const getQuestionVariantTrueOrFalse = (
+const getQuestionVariantTrueOrFalsePreview = (
   variant: QuestionVariantTrueOrFalse,
 ): string => {
   const answer = variant.answer ? ":white_check_mark: True" : ":x: False";
@@ -43,24 +42,40 @@ const getQuestionVariantOneTwoPreview = (
   return `${variant.question}\n\n${correctOptions}\n${wrongOptions}`;
 };
 
-export const getVariantPreview = (variant: QuestionVariant) => {
-  switch (variant.type) {
-    case "simple":
-      return getQuestionVariantSimplePreview(variant);
-    case "one-two":
-      return getQuestionVariantOneTwoPreview(variant);
-    case "true-or-false":
-      return getQuestionVariantTrueOrFalse(variant);
-    case "calculation":
-      return "Calculation questions are not supported yet";
-  }
+const getQuestionVariantDefinitionPreview = (
+  variant: QuestionVariantDefinition,
+): string => {
+  return [
+    variant.question,
+    "\n",
+    ...variant.options.map((opt) => `- ${opt.term} - ${opt.definition}`),
+  ].join("\n");
 };
 
-export const getQuestionPreview = (
-  question: QuestionBankQuestionTemplate,
-  variantId: string,
-) => {
-  const variant = question.variants[variantId];
-  if (!variant) throw new Error("Variant not found");
-  return getVariantPreview(variant);
+const getQuestionMultipleCorrectPreview = (
+  variant: QuestionVariantMultipleCorrect,
+): string => {
+  return [
+    variant.question,
+    "\n",
+    ...variant.options.map((opt) => {
+      const prefix = opt.correct ? ":white_check_mark:" : ":x:";
+      return `- ${prefix} ${opt.text}`;
+    }),
+  ].join("\n");
+};
+
+export const getQuestionPreview = (question: QuestionTemplate) => {
+  switch (question.variant.type) {
+    case "simple":
+      return getQuestionVariantSimplePreview(question.variant);
+    case "one-two":
+      return getQuestionVariantOneTwoPreview(question.variant);
+    case "true-or-false":
+      return getQuestionVariantTrueOrFalsePreview(question.variant);
+    case "definition":
+      return getQuestionVariantDefinitionPreview(question.variant);
+    case "multiple-correct":
+      return getQuestionMultipleCorrectPreview(question.variant);
+  }
 };

@@ -1,8 +1,13 @@
 import * as XLSX from "xlsx";
 import type {
+  LearningObjective,
   LearningObjectiveId,
-  QuestionBankLearningObjectiveJson,
 } from "@chair-flight/core/question-bank";
+
+type QuestionBankLearningObjectiveJson = Omit<
+  LearningObjective,
+  "questions" | "nestedQuestions"
+>;
 
 const courseNames: Record<string, string> = {
   "ATPL(A)": "ATPL_A",

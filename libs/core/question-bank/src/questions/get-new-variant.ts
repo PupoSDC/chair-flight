@@ -1,12 +1,13 @@
-import { UnimplementedError } from "@chair-flight/base/errors";
 import { getRandomId } from "@chair-flight/base/utils";
-import type { QuestionVariant, QuestionVariantType } from "../types/question";
+import type {
+  QuestionVariant,
+  QuestionVariantType,
+} from "../entities/question-bank-question";
 
 export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
   const common = {
     type,
     id: getRandomId(),
-    question: "",
     annexes: [] as string[],
     externalIds: [] as string[],
     explanation: "",
@@ -17,6 +18,7 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
       return {
         ...common,
         type: "simple",
+        question: "",
         options: [1, 2, 3, 4].map((i) => ({
           id: getRandomId(),
           text: "",
@@ -28,12 +30,41 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
       return {
         ...common,
         type: "one-two",
+        question: "",
         firstCorrectStatements: [""],
         secondCorrectStatements: [""],
         firstIncorrectStatements: [""],
         secondIncorrectStatements: [""],
       };
-    default:
-      throw new UnimplementedError("Variant is not implemented yet");
+    case "true-or-false":
+      return {
+        ...common,
+        type: "true-or-false",
+        question: "",
+        answer: true,
+      };
+    case "definition":
+      return {
+        ...common,
+        type: "definition",
+        question: "${term}...",
+        fakeOptions: [],
+        options: [1, 2, 3, 4].map(() => ({
+          id: getRandomId(),
+          term: "",
+          definition: "",
+        })),
+      };
+    case "multiple-correct":
+      return {
+        ...common,
+        options: [1, 2, 3, 4].map((i) => ({
+          text: "",
+          correct: i === 1,
+          why: "",
+        })),
+        type: "multiple-correct",
+        question: "",
+      };
   }
 };

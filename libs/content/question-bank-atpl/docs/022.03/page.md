@@ -1,4 +1,0 @@
----
-learningObjectiveId: "022.03"
-title: MAGNETISM - DIRECT-READING COMPASS AND FLUX VALVE
----
