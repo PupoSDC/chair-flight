@@ -71,9 +71,13 @@ export class QuestionSearch extends QuestionBankSearchProvider<
         questionBank: bank.getName(),
         text: getQuestionPreview(q),
         subjects: uniqueSubjects,
-        learningObjectives: q.learningObjectives.map((name) => ({
-          name,
-          href: `/modules/${bank.getName()}/learning-objectives/${name}`,
+        learningObjectives: q.learningObjectives.map((id) => ({
+          id,
+          href: `/modules/${bank.getName()}/learning-objectives/${id}`,
+        })),
+        relatedQuestions: q.relatedQuestions.map((id) => ({
+          id,
+          href: `/modules/${bank.getName()}/questions/${id}`,
         })),
         externalIds: q.externalIds,
         href: `/modules/${bank.getName()}/questions/${q.id}`,

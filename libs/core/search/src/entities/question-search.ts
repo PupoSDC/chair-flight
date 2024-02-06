@@ -13,7 +13,11 @@ export type QuestionSearchResult = {
   text: string;
   href: string;
   learningObjectives: Array<{
-    name: string;
+    id: string;
+    href: string;
+  }>;
+  relatedQuestions: Array<{
+    id: string;
     href: string;
   }>;
   externalIds: string[];

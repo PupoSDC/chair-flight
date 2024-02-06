@@ -79,7 +79,7 @@ export type QuestionMultipleChoiceStatus = "in-progress" | "show-result";
 
 export type QuestionMultipleChoiceProps = {
   question?: string;
-  options?: Array<{ optionId: string; text: string }>;
+  options?: Array<{ id: string; text: string }>;
   status?: QuestionMultipleChoiceStatus;
   correctOptionId?: string;
   selectedOptionId?: string;
@@ -87,7 +87,7 @@ export type QuestionMultipleChoiceProps = {
   loading?: boolean;
   compact?: boolean;
   disabled?: boolean;
-  annexHrefs?: string[];
+  annexesHref?: string[];
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
   component?: React.ElementType;
@@ -108,7 +108,7 @@ export const QuestionMultipleChoice = forwardRef<
       hideIrrelevant,
       options = [],
       disabled,
-      annexHrefs,
+      annexesHref,
       onAnnexClicked,
       onOptionClicked,
       ...others
@@ -127,15 +127,15 @@ export const QuestionMultipleChoice = forwardRef<
           <>
             <MarkdownClient>{question}</MarkdownClient>
             <Box>
-              {annexHrefs?.map((annexHref) => (
+              {annexesHref?.map((annex) => (
                 <Button
-                  key={annexHref}
+                  key={annex}
                   variant="outlined"
                   color="primary"
                   sx={{ mr: 1, mb: 1 }}
-                  onClick={() => onAnnexClicked?.(annexHref)}
+                  onClick={() => onAnnexClicked?.(annex)}
                 >
-                  <Image src={annexHref} alt="annex" width={40} height={40} />
+                  <Image src={annex} alt="annex" width={40} height={40} />
                 </Button>
               ))}
             </Box>
@@ -152,7 +152,7 @@ export const QuestionMultipleChoice = forwardRef<
             />
           ))}
         {!loading &&
-          options.map(({ optionId, text }, index) => {
+          options.map(({ id: optionId, text }, index) => {
             const isRelevantOption = [
               correctOptionId,
               selectedOptionId,

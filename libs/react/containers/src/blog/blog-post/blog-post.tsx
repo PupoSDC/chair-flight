@@ -14,7 +14,6 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { AnnexSearch } from "../../annexes/annex-search";
 import { BugReportButton } from "../../layouts/components/app-buttons/app-buttons";
-import { QuestionOverview } from "../../questions/question-overview";
 import { QuestionSearch } from "../../questions/question-search";
 import { useUserVoyage } from "../../user/hooks/use-user-voyage";
 import { container, getRequiredParam } from "../../wraper";
@@ -76,7 +75,6 @@ export const BlogPost: Container<Props, Params, Data> = container<
           Link,
           AnnexSearch,
           ModuleSelectionButton,
-          QuestionOverview,
           AirplaneTicketIcon,
           ChevronRightIcon,
           FlightTakeoffIcon,

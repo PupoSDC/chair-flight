@@ -1,11 +1,19 @@
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { questionBanks, questionSearch } from "../../common/providers";
+import {
+  createTestQuestion,
+  questionBankNameSchema,
+} from "@chair-flight/core/question-bank";
+import { compileMdx } from "../../common/compile-mdx";
+import {
+  annexSearch,
+  learningObjectiveSearch,
+  questionBanks,
+  questionSearch,
+} from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
-  getQuestionOverview: publicProcedure
+  getQuestionExplanation: publicProcedure
     .input(
       z.object({
         questionBank: questionBankNameSchema,
@@ -14,33 +22,40 @@ export const questionsContainersRouter = router({
     )
     .query(async ({ input }) => {
       const id = input.questionId;
-      const questionBank = input.questionBank;
-      const qb = questionBanks[input.questionBank];
-      const template = await qb.getOne("questions", id);
-      const loIds = template.learningObjectives;
-      const annexIds = Object.values(template.variants).flatMap(
-        (v) => v.annexes,
+      const bankName = input.questionBank;
+      const bank = questionBanks[bankName];
+      const template = await bank.getOne("questions", id);
+      const explanation = template.explanation
+        ? await compileMdx(template.explanation)
+        : null;
+      return { explanation };
+    }),
+  getQuestionMeta: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        questionId: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const id = input.questionId;
+      const bankName = input.questionBank;
+      const bank = questionBanks[bankName];
+      const template = await bank.getOne("questions", id);
+      const [annexes, learningObjectives, relatedQuestions] = await Promise.all(
+        [
+          annexSearch.retrieve(bank, template.annexes),
+          learningObjectiveSearch.retrieve(bank, template.learningObjectives),
+          questionSearch.retrieve(bank, template.relatedQuestions),
+        ],
       );
-      const rawAnnexes = await qb.getSome("annexes", annexIds);
-      const rawLos = await qb.getSome("learningObjectives", loIds);
-      const editLink = `/modules/${questionBank}/questions/${id}/edit`;
 
-      const annexes = makeMap(
-        rawAnnexes,
-        (a) => a.id,
-        (a) => ({
-          id: a.id,
-          href: a.href,
-        }),
-      );
-
-      const learningObjectives = rawLos.map((lo) => ({
-        id: lo.id,
-        text: lo.text,
-        href: `/modules/${questionBank}/learning-objectives/${lo.id}`,
+      const externalIds = template.externalIds.map((id) => ({
+        id: id,
+        href: null,
       }));
 
-      return { template, annexes, learningObjectives, editLink };
+      return { annexes, learningObjectives, relatedQuestions, externalIds };
     }),
   getQuestionSearch: publicProcedure
     .input(
@@ -51,5 +66,23 @@ export const questionsContainersRouter = router({
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       return await questionSearch.getFilters(bank);
+    }),
+  getQuestionStandAlone: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        questionId: z.string(),
+        seed: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const id = input.questionId;
+      const bankName = input.questionBank;
+      const bank = questionBanks[bankName];
+      const template = await bank.getOne("questions", id);
+      const rawAnnexes = await bank.getSome("annexes", template.annexes);
+      const question = createTestQuestion(template, { seed: input.seed });
+      const annexes = rawAnnexes.map((a) => ({ id: a.id, href: a.href }));
+      return { question, annexes };
     }),
 });
