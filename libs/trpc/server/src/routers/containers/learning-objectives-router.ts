@@ -39,8 +39,7 @@ export const learningObjectivesContainersRouter = router({
         .then((lo) => bank.getSome("questions", lo.nestedQuestions))
         .then((qs) => qs.map((q) => Object.keys(q.variants)[0]));
 
-      await questionSearch.initialize(bank);
-      return await questionSearch.retrieve(resultIds);
+      return await questionSearch.retrieve(bank, resultIds);
     }),
 
   getLearningObjectiveTree: publicProcedure
@@ -74,8 +73,7 @@ export const learningObjectivesContainersRouter = router({
         tree.push(...lo.learningObjectives);
       }
 
-      await learningObjectiveSearch.initialize(bank);
-      return await learningObjectiveSearch.retrieve(tree.sort());
+      return await learningObjectiveSearch.retrieve(bank, tree.sort());
     }),
 
   getLearningObjectivesSearch: publicProcedure

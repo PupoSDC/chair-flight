@@ -1,96 +1,29 @@
-import { default as MiniSearch } from "minisearch";
-import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
+import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
 import type {
   AnnexSearchResult,
   AnnexSearchParams,
   AnnexSearchFilters,
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
-import type { SearchOptions } from "minisearch";
 
 type AnnexSearchField = "id" | "description";
 type AnnexSearchDocument = Record<AnnexSearchField, string>;
 
-export class AnnexSearch
-  implements
-    QuestionBankSearchProvider<
-      AnnexSearchResult,
-      AnnexSearchParams,
-      AnnexSearchFilters
-    >
-{
-  private static initializationWork: Promise<void> | undefined;
-  private static searchResults = new Map<string, AnnexSearchResult>();
-  private static idSearchFields: AnnexSearchField[] = ["id"];
-
-  private static searchIndex = new MiniSearch({
-    fields: ["id", "description"] satisfies AnnexSearchField[],
-    storeFields: ["id"] satisfies AnnexSearchField[],
-  });
-
-  async search(params: AnnexSearchParams) {
-    if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
-
-    const isFuzzy = AnnexSearch.idSearchFields.includes(
-      params.filters.searchField,
-    );
-
-    const opts: SearchOptions = {
-      fuzzy: isFuzzy ? false : 0.2,
-      prefix: !isFuzzy,
-      fields:
-        params.filters.searchField === "all"
-          ? undefined
-          : [params.filters.searchField],
-    };
-
-    const results = params.q
-      ? AnnexSearch.searchIndex
-          .search(params.q, opts)
-          .map(({ id }) => AnnexSearch.searchResults.get(id))
-      : Array.from(AnnexSearch.searchResults.values());
-
-    const processedResults = results.filter(
-      (result): result is AnnexSearchResult => {
-        if (!result) {
-          return false;
-        }
-
-        if (result.questionBank !== params.questionBank) {
-          return false;
-        }
-
-        if (params.filters.subject !== "all") {
-          if (!result.subjects.includes(params.filters.subject)) return false;
-        }
-
-        return true;
-      },
-    );
-
-    const finalItems = processedResults.slice(
-      params.cursor,
-      params.cursor + params.limit,
-    );
-
-    return {
-      items: finalItems,
-      totalResults: processedResults.length,
-      nextCursor: params.cursor + finalItems.length,
-    };
+export class AnnexSearch extends QuestionBankSearchProvider<
+  AnnexSearchDocument,
+  AnnexSearchResult,
+  AnnexSearchFilters,
+  AnnexSearchParams
+> {
+  constructor() {
+    super({
+      idSearchFields: ["id"],
+      searchFields: ["description"],
+      storeFields: ["id"],
+    });
   }
 
-  async retrieve(ids: string[]) {
-    if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
-
-    const items = ids
-      .map((id) => AnnexSearch.searchResults.get(id))
-      .filter((r): r is AnnexSearchResult => !!r);
-
-    return { items };
-  }
-
-  async getFilters(bank: QuestionBank) {
+  public override async getFilters(bank: QuestionBank) {
     const rawSubjects = await bank.getAll("subjects");
 
     const subject = [
@@ -112,40 +45,48 @@ export class AnnexSearch
     };
   }
 
-  async initialize(bank: QuestionBank) {
-    if (AnnexSearch.initializationWork) await AnnexSearch.initializationWork;
+  protected override async getResultItems(bank: QuestionBank) {
+    const annexes = await bank.getAll("annexes");
+    return annexes.map((annex) => ({
+      id: annex.id,
+      href: annex.href,
+      description: annex.description,
+      subjects: annex.subjects,
+      questionBank: bank.getName(),
+      questions: annex.questions.map((id) => ({
+        id,
+        href: `/modules/${bank.getName()}/questions/${id}`,
+      })),
+      learningObjectives: annex.learningObjectives.map((id) => ({
+        id,
+        href: `/modules/${bank.getName()}/learning-objectives/${id}`,
+      })),
+    }));
+  }
 
-    AnnexSearch.initializationWork = (async () => {
-      const annexes = await bank.getAll("annexes");
-      const hasAnnexes = await bank.has("annexes");
-      const firstId = annexes.at(0)?.id;
+  protected override async getSearchDocuments(bank: QuestionBank) {
+    const annexes = await bank.getAll("annexes");
+    return annexes.map((annex) => ({
+      id: annex.id,
+      description: annex.description,
+    }));
+  }
 
-      if (!hasAnnexes) return;
-      if (AnnexSearch.searchIndex.has(firstId)) return;
+  protected override getSearchResultFilter(params: AnnexSearchParams) {
+    return (r: AnnexSearchResult | undefined): r is AnnexSearchResult => {
+      if (!r) {
+        return false;
+      }
 
-      const searchItems: AnnexSearchDocument[] = annexes.map((annex) => ({
-        id: annex.id,
-        description: annex.description,
-      }));
+      if (r.questionBank !== params.questionBank) {
+        return false;
+      }
 
-      const resultItems: AnnexSearchResult[] = annexes.map((annex) => ({
-        id: annex.id,
-        href: annex.href,
-        description: annex.description,
-        subjects: annex.subjects,
-        questionBank: bank.getName(),
-        questions: annex.questions.map((id) => ({
-          id,
-          href: `/modules/${bank.getName()}/questions/${id}`,
-        })),
-        learningObjectives: annex.learningObjectives.map((id) => ({
-          id,
-          href: `/modules/${bank.getName()}/learning-objectives/${id}`,
-        })),
-      }));
+      if (params.filters.subject !== "all") {
+        if (!r.subjects.includes(params.filters.subject)) return false;
+      }
 
-      await AnnexSearch.searchIndex.addAllAsync(searchItems);
-      resultItems.forEach((r) => AnnexSearch.searchResults.set(r.id, r));
-    })();
+      return true;
+    };
   }
 }

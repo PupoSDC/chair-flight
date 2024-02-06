@@ -1,110 +1,33 @@
-import { default as MiniSearch } from "minisearch";
 import { makeMap } from "@chair-flight/base/utils";
-import type { QuestionBankSearchProvider } from "../types/question-bank-search-provider";
+import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
 import type {
   LearningObjectiveSearchFilters,
   LearningObjectiveSearchParams,
   LearningObjectiveSearchResult,
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
-import type { SearchOptions } from "minisearch";
 
-type LoSearchField = "id" | "text";
-type LoSearchDocument = Record<LoSearchField, string>;
+type LearningObjectiveSearchField = "id" | "text";
+type LearningObjectiveSearchDocument = Record<
+  LearningObjectiveSearchField,
+  string
+>;
 
-export class LearningObjectiveSearch
-  implements
-    QuestionBankSearchProvider<
-      LearningObjectiveSearchResult,
-      LearningObjectiveSearchParams,
-      LearningObjectiveSearchFilters
-    >
-{
-  private static initializationWork: Promise<void> | undefined;
-  private static searchResults = new Map<
-    string,
-    LearningObjectiveSearchResult
-  >();
-  private static idSearchFields: LoSearchField[] = ["id"];
-
-  private static searchIndex = new MiniSearch({
-    fields: ["id", "text"] as LoSearchField[],
-    storeFields: ["id"] as LoSearchField[],
-  });
-
-  async search(params: LearningObjectiveSearchParams) {
-    if (LearningObjectiveSearch.initializationWork)
-      await LearningObjectiveSearch.initializationWork;
-
-    const isFuzzy = LearningObjectiveSearch.idSearchFields.includes(
-      params.filters.searchField,
-    );
-
-    const opts: SearchOptions = {
-      fuzzy: isFuzzy ? false : 0.2,
-      prefix: !isFuzzy,
-      fields:
-        params.filters.searchField === "all"
-          ? undefined
-          : [params.filters.searchField],
-    };
-
-    const results = params.q
-      ? LearningObjectiveSearch.searchIndex
-          .search(params.q, opts)
-          .map(({ id }) => LearningObjectiveSearch.searchResults.get(id))
-      : Array.from(LearningObjectiveSearch.searchResults.values());
-
-    const processedResults = results.filter(
-      (result): result is LearningObjectiveSearchResult => {
-        if (!result) {
-          return false;
-        }
-
-        if (result.questionBank !== params.questionBank) {
-          return false;
-        }
-
-        if (params.filters.subject !== "all") {
-          if (result.subject !== params.filters.subject) {
-            return false;
-          }
-        }
-
-        if (params.filters.course !== "all") {
-          if (result.courses.every((c) => c.id !== params.filters.course)) {
-            return false;
-          }
-        }
-
-        return true;
-      },
-    );
-
-    const finalItems = processedResults.slice(
-      params.cursor,
-      params.cursor + params.limit,
-    );
-
-    return {
-      items: finalItems,
-      totalResults: processedResults.length,
-      nextCursor: params.cursor + finalItems.length,
-    };
+export class LearningObjectiveSearch extends QuestionBankSearchProvider<
+  LearningObjectiveSearchDocument,
+  LearningObjectiveSearchResult,
+  LearningObjectiveSearchFilters,
+  LearningObjectiveSearchParams
+> {
+  constructor() {
+    super({
+      idSearchFields: ["id"],
+      searchFields: ["id", "text"],
+      storeFields: ["id"],
+    });
   }
 
-  async retrieve(ids: string[]) {
-    if (LearningObjectiveSearch.initializationWork)
-      await LearningObjectiveSearch.initializationWork;
-
-    const items = ids
-      .map((id) => LearningObjectiveSearch.searchResults.get(id))
-      .filter((r): r is LearningObjectiveSearchResult => !!r);
-
-    return { items };
-  }
-
-  async getFilters(bank: QuestionBank) {
+  public override async getFilters(bank: QuestionBank) {
     const rawSubjects = await bank.getAll("subjects");
     const rawCourses = await bank.getAll("courses");
 
@@ -136,43 +59,59 @@ export class LearningObjectiveSearch
     };
   }
 
-  async initialize(bank: QuestionBank) {
-    if (LearningObjectiveSearch.initializationWork)
-      await LearningObjectiveSearch.initializationWork;
+  protected override async getResultItems(bank: QuestionBank) {
+    const allCourses = await bank.getAll("courses");
+    const learningObjectives = await bank.getAll("learningObjectives");
+    const coursesMap = makeMap(allCourses, (c) => c.id);
 
-    LearningObjectiveSearch.initializationWork = (async () => {
-      const allCourses = await bank.getAll("courses");
-      const learningObjectives = await bank.getAll("learningObjectives");
-      const hasLearningObjectives = await bank.has("learningObjectives");
-      const firstId = learningObjectives.at(0)?.id;
+    return learningObjectives.map((lo) => ({
+      id: lo.id,
+      href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
+      parentId: lo.parentId,
+      courses: lo.courses.map((c) => coursesMap[c]),
+      text: lo.text,
+      source: lo.source,
+      questionBank: bank.getName(),
+      subject: lo.id.split(".")[0],
+      numberOfQuestions: lo.nestedQuestions.length,
+    }));
+  }
 
-      if (!hasLearningObjectives) return;
-      if (LearningObjectiveSearch.searchIndex.has(firstId)) return;
+  protected override async getSearchDocuments(bank: QuestionBank) {
+    const learningObjectives = await bank.getAll("learningObjectives");
+    return learningObjectives.map((lo) => ({
+      id: lo.id,
+      text: lo.text,
+    }));
+  }
 
-      const coursesMap = makeMap(allCourses, (c) => c.id);
+  protected override getSearchResultFilter(
+    params: LearningObjectiveSearchParams,
+  ) {
+    return (
+      r: LearningObjectiveSearchResult | undefined,
+    ): r is LearningObjectiveSearchResult => {
+      if (!r) {
+        return false;
+      }
 
-      const searchItems: LoSearchDocument[] = learningObjectives.map((lo) => ({
-        id: lo.id,
-        text: lo.text,
-      }));
+      if (r.questionBank !== params.questionBank) {
+        return false;
+      }
 
-      const resultItems: LearningObjectiveSearchResult[] =
-        learningObjectives.map((lo) => ({
-          id: lo.id,
-          href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
-          parentId: lo.parentId,
-          courses: lo.courses.map((c) => coursesMap[c]),
-          text: lo.text,
-          source: lo.source,
-          questionBank: bank.getName(),
-          subject: lo.id.split(".")[0],
-          numberOfQuestions: lo.nestedQuestions.length,
-        }));
+      if (params.filters.subject !== "all") {
+        if (r.subject !== params.filters.subject) {
+          return false;
+        }
+      }
 
-      await LearningObjectiveSearch.searchIndex.addAllAsync(searchItems);
-      resultItems.forEach((item) =>
-        LearningObjectiveSearch.searchResults.set(item.id, item),
-      );
-    })();
+      if (params.filters.course !== "all") {
+        if (r.courses.every((c) => c.id !== params.filters.course)) {
+          return false;
+        }
+      }
+
+      return true;
+    };
   }
 }

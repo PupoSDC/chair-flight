@@ -13,44 +13,40 @@ import {
 } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
-const initialize = async () => {
-  for (const bank of Object.values(questionBanks)) {
-    await Promise.all([
-      learningObjectiveSearch.initialize(bank),
-      annexSearch.initialize(bank),
-      questionSearch.initialize(bank),
-      docSearch.initialize(bank),
-    ]);
-  }
-};
-
 export const searchRouter = router({
   initialize: publicProcedure.query(async () => {
-    await initialize();
+    for (const bank of Object.values(questionBanks)) {
+      await Promise.all([
+        learningObjectiveSearch.initialize(bank),
+        annexSearch.initialize(bank),
+        questionSearch.initialize(bank),
+        docSearch.initialize(bank),
+      ]);
+    }
     return "ok";
   }),
   searchLearningObjectives: publicProcedure
     .input(learningObjectivesSearchParams)
     .query(async ({ input }) => {
-      await initialize();
-      return await learningObjectiveSearch.search(input);
+      const bank = questionBanks[input.questionBank];
+      return await learningObjectiveSearch.search(bank, input);
     }),
   searchAnnexes: publicProcedure
     .input(annexSearchParams)
     .query(async ({ input }) => {
-      await initialize();
-      return await annexSearch.search(input);
+      const bank = questionBanks[input.questionBank];
+      return await annexSearch.search(bank, input);
     }),
   searchQuestions: publicProcedure
     .input(questionSearchParams)
     .query(async ({ input }) => {
-      await initialize();
-      return await questionSearch.search(input);
+      const bank = questionBanks[input.questionBank];
+      return await questionSearch.search(bank, input);
     }),
   searchDocs: publicProcedure
     .input(docSearchParams)
     .query(async ({ input }) => {
-      await initialize();
-      return await docSearch.search(input);
+      const bank = questionBanks[input.questionBank];
+      return await docSearch.search(bank, input);
     }),
 });
