@@ -11,6 +11,7 @@ type PersistenceHook<T> = {
 export type PersistenceKey =
   | `cf-annex-search-${QuestionBankName}`
   | `cf-question-search-${QuestionBankName}`
+  | `cf-question-editor-${QuestionBankName}`
   | `cf-test-search-${QuestionBankName}`
   | `cf-learning-objectives-search-${QuestionBankName}`
   | `cf-docs-search-${QuestionBankName}`

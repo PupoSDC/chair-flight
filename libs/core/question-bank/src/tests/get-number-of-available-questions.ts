@@ -1,4 +1,4 @@
-import type { LearningObjectiveId } from "@chair-flight/core/question-bank";
+import type { LearningObjectiveId } from '../entities/ids';
 
 export const getNumberOfAvailableQuestions = (
   subject: {

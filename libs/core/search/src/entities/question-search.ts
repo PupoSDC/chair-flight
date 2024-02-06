@@ -24,8 +24,8 @@ export type QuestionSearchResult = {
 };
 
 export const questionSearchFilters = z.object({
-  subject: z.string(),
-  searchField: z.string(),
+  subject: z.string().default("all"),
+  searchField: z.string().default("all"),
 });
 
 export type QuestionSearchFilters = z.infer<typeof questionSearchFilters>;
