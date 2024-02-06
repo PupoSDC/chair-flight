@@ -1,17 +1,10 @@
 import { z } from "zod";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import {
-  getLearningObjectivesSearchFilters,
-  populateLearningObjectivesSearchIndex,
-  populateQuestionsSearchIndex,
-} from "@chair-flight/core/search";
-import { questionBanks } from "../../common/providers";
-import {
-  learningObjectiveSearchIndex,
-  learningObjectiveSearchResults,
-  questionSearchIndex,
-  questionSearchResults,
-} from "../../common/search-indexes";
+  learningObjectiveSearch,
+  questionBanks,
+  questionSearch,
+} from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const learningObjectivesContainersRouter = router({
@@ -40,22 +33,13 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-      await populateQuestionsSearchIndex({
-        bank,
-        searchIndex: questionSearchIndex,
-        searchResults: questionSearchResults,
-      });
 
       const resultIds = await bank
         .getOne("learningObjectives", loId)
         .then((lo) => bank.getSome("questions", lo.nestedQuestions))
         .then((qs) => qs.map((q) => Object.keys(q.variants)[0]));
 
-      const results = resultIds
-        .map((id) => questionSearchResults.get(id))
-        .filter(Boolean);
-
-      return { results };
+      return await questionSearch.retrieve(bank, resultIds);
     }),
 
   getLearningObjectiveTree: publicProcedure
@@ -68,13 +52,6 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
-
-      await populateLearningObjectivesSearchIndex({
-        bank,
-        searchIndex: learningObjectiveSearchIndex,
-        searchResults: learningObjectiveSearchResults,
-      });
-
       const mainLo = await bank.getOne("learningObjectives", loId);
       const tree = [mainLo.id];
 
@@ -96,12 +73,7 @@ export const learningObjectivesContainersRouter = router({
         tree.push(...lo.learningObjectives);
       }
 
-      const items = tree
-        .sort()
-        .map((t) => learningObjectiveSearchResults.get(t))
-        .filter(Boolean);
-
-      return { items };
+      return await learningObjectiveSearch.retrieve(bank, tree.sort());
     }),
 
   getLearningObjectivesSearch: publicProcedure
@@ -112,8 +84,6 @@ export const learningObjectivesContainersRouter = router({
     )
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      const questionBank = input.questionBank;
-      const filters = await getLearningObjectivesSearchFilters(bank);
-      return { filters, questionBank };
+      return await learningObjectiveSearch.getFilters(bank);
     }),
 });

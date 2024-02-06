@@ -37,7 +37,6 @@ export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getL
         { id: "text", text: "text" },
       ],
     },
-    questionBank: "atpl",
   };
 
 export const mockSearchData: AppRouterOutput["common"]["search"]["searchLearningObjectives"] =

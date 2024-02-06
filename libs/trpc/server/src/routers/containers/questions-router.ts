@@ -1,8 +1,7 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { getQuestionsSearchFilters } from "@chair-flight/core/search";
-import { questionBanks } from "../../common/providers";
+import { questionBanks, questionSearch } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const questionsContainersRouter = router({
@@ -51,7 +50,6 @@ export const questionsContainersRouter = router({
     )
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      const filters = await getQuestionsSearchFilters(bank);
-      return { filters };
+      return await questionSearch.getFilters(bank);
     }),
 });

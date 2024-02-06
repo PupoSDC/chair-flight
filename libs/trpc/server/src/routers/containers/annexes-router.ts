@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { getAnnexesSearchFilters } from "@chair-flight/core/search";
-import { questionBanks } from "../../common/providers";
+import { annexSearch, questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const annexesContainersRouter = router({
@@ -13,7 +12,6 @@ export const annexesContainersRouter = router({
     )
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      const filters = await getAnnexesSearchFilters(bank);
-      return { filters };
+      return await annexSearch.getFilters(bank);
     }),
 });

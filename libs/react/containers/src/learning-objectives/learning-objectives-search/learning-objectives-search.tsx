@@ -53,12 +53,14 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
       resolver,
     });
 
-    const searchField = form.watch("searchField");
-    const subject = form.watch("subject");
-    const course = form.watch("course");
+    const filters = {
+      searchField: form.watch("searchField"),
+      subject: form.watch("subject"),
+      course: form.watch("course"),
+    };
 
     const { data, isLoading, isError, fetchNextPage } = useSearchLos(
-      { q: search, questionBank, subject, searchField, course, limit: 20 },
+      { q: search, questionBank, limit: 20, filters },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
@@ -81,7 +83,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
         <LearningObjectiveList
           loading={isLoading}
           error={isError}
-          currentCourse={course}
+          currentCourse={filters.course}
           items={(data?.pages ?? []).flatMap((p) => p.items)}
           onFetchNextPage={fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}

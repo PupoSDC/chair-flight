@@ -24,13 +24,13 @@ type Data =
 
 export const LearningObjectiveTree = container<Props, Params, Data>(
   ({ sx, forceMode, component = "section", ...params }) => {
-    const { items } = LearningObjectiveTree.useData(params);
+    const results = LearningObjectiveTree.useData(params);
     return (
       <LearningObjectiveList
         forceMode={forceMode}
         component={component}
         sx={sx}
-        items={items}
+        items={results.items}
       />
     );
   },

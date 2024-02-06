@@ -21,6 +21,10 @@ export const mockData: AppRouterOutput["containers"]["annexes"]["getAnnexSearch"
         { id: "082", text: "082 - POF(H)" },
         { id: "090", text: "090 - Coms" },
       ],
+      searchField: [
+        { id: "all", text: "All Fields" },
+        { id: "description", text: "Description" },
+      ],
     },
   };
 

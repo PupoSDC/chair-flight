@@ -47,11 +47,13 @@ export const DocSearch = container<Props, Params, Data>(
       resolver,
     });
 
-    const subject = form.watch("subject");
-    const searchField = form.watch("searchField");
+    const filters = {
+      searchField: form.watch("searchField"),
+      subject: form.watch("subject"),
+    };
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
-      { q: search, questionBank, searchField, subject, limit: 24 },
+      { q: search, questionBank, limit: 24, filters },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
