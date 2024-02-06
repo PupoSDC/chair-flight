@@ -19,7 +19,7 @@ export type SearchFiltersProps = {
   filters: ReactNode;
   fallback: ReactNode;
   activeFilters: number;
-  mobileBreakpoint?: "sm" | "md" | "lg";
+  mobileBreakpoint?: "sm" | "md" | "lg" | "xl";
 };
 
 /**

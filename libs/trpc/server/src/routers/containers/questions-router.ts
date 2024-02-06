@@ -85,4 +85,33 @@ export const questionsContainersRouter = router({
       const annexes = rawAnnexes.map((a) => ({ id: a.id, href: a.href }));
       return { question, annexes };
     }),
+  getQuestionManager: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+      }),
+    )
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return {
+        filters: {
+          questions: (await questionSearch.getFilters(bank)).filters,
+          learningObjectives: (await learningObjectiveSearch.getFilters(bank))
+            .filters,
+          annexes: (await annexSearch.getFilters(bank)).filters,
+        },
+      };
+    }),
+
+  getQuestionEditorAnnexes: publicProcedure
+    .input(z.object({ questionBank: questionBankNameSchema }))
+    .query(({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return annexSearch.getFilters(bank);
+    }),
+
+  getQuestionEditorExplanation: publicProcedure.query(() => ({})),
+  getQuestionEditorLearningObjectives: publicProcedure.query(() => ({})),
+  getQuestionEditorRelatedQuestions: publicProcedure.query(() => ({})),
+  getQuestionEditorVariant: publicProcedure.query(() => ({})),
 });

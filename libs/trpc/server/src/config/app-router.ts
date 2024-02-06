@@ -1,6 +1,7 @@
 import { analyticsRouter } from "../routers/common/analytics-router";
 import { blogRouter } from "../routers/common/blog-router";
 import { githubRouter } from "../routers/common/github-router";
+import { questionsRouter } from "../routers/common/questions-router";
 import { searchRouter } from "../routers/common/search-router";
 import { statusRouter } from "../routers/common/status-router";
 import { testsRouter } from "../routers/common/tests-router";
@@ -24,6 +25,7 @@ export const appRouter = router({
     blog: blogRouter,
     github: githubRouter,
     tests: testsRouter,
+    questions: questionsRouter,
     search: searchRouter,
     analytics: analyticsRouter,
     status: statusRouter,

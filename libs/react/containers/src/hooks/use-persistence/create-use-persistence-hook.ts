@@ -11,6 +11,7 @@ type PersistenceHook<T> = {
 export type PersistenceKey =
   | `cf-annex-search-${QuestionBankName}`
   | `cf-question-search-${QuestionBankName}`
+  | `cf-question-editor-${QuestionBankName}`
   | `cf-test-search-${QuestionBankName}`
   | `cf-learning-objectives-search-${QuestionBankName}`
   | `cf-docs-search-${QuestionBankName}`
@@ -30,14 +31,17 @@ export const createUsePersistenceHook = <T>(
         (set, get) => ({
           version,
           data: initialValue,
-          setData: (data: T) =>
-            set({
+          setData: (data: T) => {
+            console.log("setData", data);
+            return set({
               data: {
                 ...initialValue,
                 ...get().data,
                 ...data,
               },
-            }),
+            });
+          },
+
           getData: () => ({
             ...initialValue,
             ...get().data,
