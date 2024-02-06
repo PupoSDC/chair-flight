@@ -43,11 +43,13 @@ type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorAnnexes = container<Props, Params, Data>(
   ({ questionId, questionBank }) => {
+    const field = `editedQuestions.${questionId}.learningObjectives` as const;
+
     const [search, setSearch] = useState("");
 
     const { form } = useQuestionEditor({ questionBank });
 
-    const los = form.watch(`editedQuestions.${questionId}.learningObjectives`);
+    const los = form.watch(field);
 
     const serverData = QuestionEditorAnnexes.useData({
       questionBank,
@@ -70,12 +72,10 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
     );
 
     const addAnnex = (id: string) => {
-      const field = `editedQuestions.${questionId}.learningObjectives` as const;
       form.setValue(field, [...(form.getValues(field) ?? []), id]);
     };
 
     const removeAnnex = (id: string) => {
-      const field = `editedQuestions.${questionId}.learningObjectives` as const;
       form.setValue(
         field,
         (form.getValues(field) ?? []).filter((i: string) => i !== id),

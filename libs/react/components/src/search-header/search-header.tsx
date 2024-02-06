@@ -25,7 +25,7 @@ export type SearchHeaderProps = {
   filterValues: Record<string, string>;
   isLoading: boolean;
   isError: boolean;
-  mobileBreakpoint?: SearchFiltersProps["mobileBreakpoint"];
+  mobileBreakpoint?: SearchFiltersProps["mobileBreakpoint"] | "force-mobile";
   onSearchChange: (value: string) => void;
   onFilterValuesChange: (name: string, value: string) => void;
 };

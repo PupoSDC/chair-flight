@@ -111,7 +111,20 @@ export const questionsContainersRouter = router({
     }),
 
   getQuestionEditorExplanation: publicProcedure.query(() => ({})),
-  getQuestionEditorLearningObjectives: publicProcedure.query(() => ({})),
-  getQuestionEditorRelatedQuestions: publicProcedure.query(() => ({})),
+
+  getQuestionEditorLearningObjectives: publicProcedure
+    .input(z.object({ questionBank: questionBankNameSchema }))
+    .query(({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return learningObjectiveSearch.getFilters(bank);
+    }),
+
+  getQuestionEditorRelatedQuestions: publicProcedure
+    .input(z.object({ questionBank: questionBankNameSchema }))
+    .query(({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return questionSearch.getFilters(bank);
+    }),
+
   getQuestionEditorVariant: publicProcedure.query(() => ({})),
 });
