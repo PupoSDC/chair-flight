@@ -11,6 +11,7 @@ import {
 import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
+  QuestionEditorAnnexes,
   QuestionEditorExplanation,
   QuestionEditorLearningObjectives,
   QuestionEditorRelatedQuestions,
@@ -81,12 +82,9 @@ const Page: NextPage<PageProps> = ({
         onChange={(_, v) => updateQuery({ tab: v as string })}
         sx={{
           backgroundColor: "transparent",
-          flex: 1,
-
-          [`& .${tabPanelClasses}`]: {
-            p: 2,
-            flex: 1,
-          },
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
         }}
       >
         <TabList
@@ -108,26 +106,37 @@ const Page: NextPage<PageProps> = ({
           <Tab value={"annexes"}>Annexes</Tab>
         </TabList>
         <Box sx={{ height: (theme) => `calc(${theme.spacing(5)} + 2px)` }} />
-        <TabPanel value={"question"}>
+        <TabPanel value={"question"} sx={{ flex: 1, overflow: "hidden" }}>
           <QuestionEditorVariant
+            noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"explanation"}>
+        <TabPanel value={"explanation"} sx={{ flex: 1, overflow: "hidden" }}>
           <QuestionEditorExplanation
+            noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"los"}>
+        <TabPanel value={"los"} sx={{ flex: 1, overflow: "hidden" }}>
           <QuestionEditorLearningObjectives
+            noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"relatedQs"}>
+        <TabPanel value={"relatedQs"} sx={{ flex: 1, overflow: "hidden" }}>
           <QuestionEditorRelatedQuestions
+            noSsr
+            questionBank={questionBank}
+            questionId={questionId}
+          />
+        </TabPanel>
+        <TabPanel value={"annexes"} sx={{ flex: 1, overflow: "hidden" }}>
+          <QuestionEditorAnnexes
+            noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
@@ -148,6 +157,7 @@ export const getServerSideProps = ssrHandler<PageProps, PageParams>(
       QuestionEditorExplanation.getData({ params: allParams, helper }),
       QuestionEditorLearningObjectives.getData({ params: allParams, helper }),
       QuestionEditorRelatedQuestions.getData({ params: allParams, helper }),
+      QuestionEditorAnnexes.getData({ params: allParams, helper }),
     ]);
 
     return { props: allParams };

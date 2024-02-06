@@ -4,9 +4,9 @@ import { NoSsr } from "@mui/base";
 import { Stack } from "@mui/joy";
 import { container, getRequiredParam } from "../../wraper/container";
 import { VerticalDivider } from "../components/vertical-divider";
+import { useQuestionEditor } from "../hooks/use-question-editor";
 import { QuestionManagerChangesList } from "./components/question-manager-changes-list";
 import { QuestionManagerQuestionSearch } from "./components/question-manager-question-search";
-import { useQuestionEditor } from "./hooks/use-question-editor";
 import { useQuestionEditorData } from "./hooks/use-question-editor-data";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
@@ -32,7 +32,7 @@ export const QuestionManager = container<Props, Params, Data>(
         <FormProvider {...questionEditor.form}>
           <QuestionManagerQuestionSearch questionBank={questionBank} />
           <VerticalDivider />
-          <QuestionManagerChangesList questionBank={questionBank} />
+          <QuestionManagerChangesList />
           <NoSsr>
             <DevTool control={questionEditor.form.control} />
           </NoSsr>

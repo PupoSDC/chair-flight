@@ -3,6 +3,7 @@ import {
   docSearchParams,
   learningObjectivesSearchParams,
   questionSearchParams,
+  retrieveParams,
 } from "@chair-flight/core/search";
 import {
   annexSearch,
@@ -48,5 +49,29 @@ export const searchRouter = router({
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       return await docSearch.search(bank, input);
+    }),
+  retrieveLearningObjective: publicProcedure
+    .input(retrieveParams)
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return await learningObjectiveSearch.retrieve(bank, input.ids);
+    }),
+  retrieveAnnexes: publicProcedure
+    .input(retrieveParams)
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return await annexSearch.retrieve(bank, input.ids);
+    }),
+  retrieveQuestions: publicProcedure
+    .input(retrieveParams)
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return await questionSearch.retrieve(bank, input.ids);
+    }),
+  retrieveDocs: publicProcedure
+    .input(retrieveParams)
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return await docSearch.retrieve(bank, input.ids);
     }),
 });

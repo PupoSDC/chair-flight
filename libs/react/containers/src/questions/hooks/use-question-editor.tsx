@@ -36,7 +36,7 @@ export const useQuestionEditor = ({
       setData(value as QuestionEditorState);
     });
     return () => subscription.unsubscribe();
-  }, [form.watch]);
+  }, [form, setData]);
 
   return { form };
 };

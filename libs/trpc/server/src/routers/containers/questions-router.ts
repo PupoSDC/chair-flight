@@ -103,7 +103,13 @@ export const questionsContainersRouter = router({
       };
     }),
 
-  getQuestionEditorAnnexes: publicProcedure.query(() => ({})),
+  getQuestionEditorAnnexes: publicProcedure
+    .input(z.object({ questionBank: questionBankNameSchema }))
+    .query(({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      return annexSearch.getFilters(bank);
+    }),
+
   getQuestionEditorExplanation: publicProcedure.query(() => ({})),
   getQuestionEditorLearningObjectives: publicProcedure.query(() => ({})),
   getQuestionEditorRelatedQuestions: publicProcedure.query(() => ({})),

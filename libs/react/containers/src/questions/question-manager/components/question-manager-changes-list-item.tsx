@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { default as EditIcon } from "@mui/icons-material/EditOutlined";
 import { default as UndoIcon } from "@mui/icons-material/UndoOutlined";
@@ -6,15 +5,14 @@ import {
   Box,
   Button,
   ListItemContent,
-  Modal,
   Stack,
   Tooltip,
   Typography,
 } from "@mui/joy";
+import { NOOP } from "@chair-flight/base/utils";
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import { MarkdownClientCompressed } from "@chair-flight/react/components";
-import { QuestionEditorDialog } from "./question-editor-dialog";
-import type { QuestionEditorState } from "../hooks/use-question-editor";
+import type { QuestionEditorState } from "../../hooks/use-question-editor";
 import type { QuestionTemplate } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 
@@ -22,8 +20,6 @@ export const QuestionManagerChangesListItem: FunctionComponent<
   QuestionTemplate
 > = (result) => {
   const form = useFormContext<QuestionEditorState>();
-  const [isEditing, setIsEditing] = useState(false);
-
   const isDeleted = !!useWatch({
     control: form.control,
     name: `deletedQuestions.${result.id}`,
@@ -37,10 +33,6 @@ export const QuestionManagerChangesListItem: FunctionComponent<
   const onQuestionUndo = async () => {
     form.setValue(`deletedQuestions.${result.id}`, null);
     form.setValue(`editedQuestions.${result.id}`, null);
-  };
-
-  const onQuestionEdit = async () => {
-    setIsEditing(true);
   };
 
   return (
@@ -67,7 +59,7 @@ export const QuestionManagerChangesListItem: FunctionComponent<
                 sx={{ px: 1 }}
                 size="sm"
                 variant="plain"
-                onClick={onQuestionEdit}
+                onClick={NOOP}
                 children={<EditIcon />}
               />
             </Tooltip>
@@ -90,10 +82,6 @@ export const QuestionManagerChangesListItem: FunctionComponent<
           {getQuestionPreview(result)}
         </MarkdownClientCompressed>
       </Box>
-
-      <Modal open={isEditing} onClose={() => setIsEditing(false)}>
-        <QuestionEditorDialog questionId={result.id} />
-      </Modal>
     </ListItemContent>
   );
 };

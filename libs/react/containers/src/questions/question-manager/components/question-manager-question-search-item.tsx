@@ -13,7 +13,7 @@ import {
 } from "@mui/joy";
 import { MarkdownClientCompressed } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import type { QuestionEditorState } from "../hooks/use-question-editor";
+import type { QuestionEditorState } from "../../hooks/use-question-editor";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 import type { FunctionComponent } from "react";
 

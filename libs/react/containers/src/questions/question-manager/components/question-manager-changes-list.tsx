@@ -1,15 +1,12 @@
-import { useFormContext, useWatch } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import { default as GitHubIcon } from "@mui/icons-material/GitHub";
 import { Button, Stack, Tooltip, Typography } from "@mui/joy";
-import { SearchHeader, SearchList } from "@chair-flight/react/components";
+import { SearchList } from "@chair-flight/react/components";
 import { QuestionManagerChangesListItem } from "./question-manager-changes-list-item";
-import type { QuestionEditorState } from "../hooks/use-question-editor";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionEditorState } from "../../hooks/use-question-editor";
 import type { FunctionComponent } from "react";
 
-export const QuestionManagerChangesList: FunctionComponent<{
-  questionBank: QuestionBankName;
-}> = ({ questionBank }) => {
+export const QuestionManagerChangesList: FunctionComponent = () => {
   const form = useFormContext<QuestionEditorState>();
 
   const deletedQuestions = form.watch("deletedQuestions");
