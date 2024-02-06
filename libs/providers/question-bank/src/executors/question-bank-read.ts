@@ -82,7 +82,7 @@ export const readAllAnnexesFromFs = async (
     const jsonData = JSON.parse(json || "[]") as Annex[];
     const annexData = jsonData.map((a) => ({
       ...a,
-      href: `/content/${projectName}/media/${a.href}.${a.format}`,
+      href: `/content/${projectName}/media/${a.id}.${a.format}`,
       doc: "",
       questions: [],
       subjects: [],

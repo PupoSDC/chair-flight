@@ -18,26 +18,26 @@ export const docsContainersRouter = router({
       const rawDoc = await bank.getOne("docs", input.docId);
       const children = await bank.getSome("docs", rawDoc.children);
       const docMdx = await compileMdx(rawDoc.content);
-      const parent = rawDoc.parentId
-        ? await bank.getOne("docs", rawDoc.parentId)
+      const parent = rawDoc.parent
+        ? await bank.getOne("docs", rawDoc.parent)
         : undefined;
 
       const doc = {
         docMdx,
-        title: `[${rawDoc.learningObjectiveId}] ${rawDoc.title}`,
+        title: `[${rawDoc.id}] ${rawDoc.title}`,
         description: "....",
         isEmpty: rawDoc.empty,
-        learningObjective: rawDoc.learningObjectiveId,
+        learningObjective: rawDoc.learningObjectives,
         href: `/modules/${input.questionBank}/docs/${rawDoc.id}`,
         parent: parent
           ? {
               href: `/modules/${input.questionBank}/docs/${parent.id}`,
-              title: `[${parent.learningObjectiveId}] ${parent.title}`,
+              title: `[${parent.learningObjectives}] ${parent.title}`,
             }
           : null,
         children: children.map((child) => ({
           href: `/modules/${input.questionBank}/docs/${child.id}`,
-          title: `[${child.learningObjectiveId}] ${child.title}`,
+          title: `[${child.learningObjectives}] ${child.title}`,
           isEmpty: child.empty,
         })),
       };

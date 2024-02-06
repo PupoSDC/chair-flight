@@ -34,12 +34,8 @@ export const learningObjectivesContainersRouter = router({
       const loId = input.learningObjectiveId;
       const bank = questionBanks[input.questionBank];
 
-      const resultIds = await bank
-        .getOne("learningObjectives", loId)
-        .then((lo) => bank.getSome("questions", lo.nestedQuestions))
-        .then((qs) => qs.map((q) => Object.keys(q.variants)[0]));
-
-      return await questionSearch.retrieve(bank, resultIds);
+      const lo = await bank.getOne("learningObjectives", loId);
+      return await questionSearch.retrieve(bank, lo.nestedQuestions);
     }),
 
   getLearningObjectiveTree: publicProcedure

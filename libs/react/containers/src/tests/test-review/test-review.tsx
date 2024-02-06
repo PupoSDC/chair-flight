@@ -91,7 +91,6 @@ export const TestReview = container<Props>(
             <TestQuestionResult
               key={question.questionId}
               questionTemplateId={question.templateId}
-              questionVariantId={question.variantId}
               sx={{ my: 1 }}
               title={`${i + 1}/${arr.length}`}
               question={question.question}

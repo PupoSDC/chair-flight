@@ -93,9 +93,11 @@ export const DocSearch = container<Props, Params, Data>(
             <tr>
               <td>{serverData.subjectMap[result.subject]}</td>
               <td>
-                <Link href={result.learningObjective.href}>
-                  {result.learningObjective.id}
-                </Link>
+                {result.learningObjectives.map((lo) => (
+                  <Link href={lo.href} key={lo.id}>
+                    {lo.id}
+                  </Link>
+                ))}
               </td>
               <td>
                 <Link href={result.href}>{result.title}</Link>
@@ -124,9 +126,6 @@ export const DocSearch = container<Props, Params, Data>(
             >
               <Stack>
                 <Link href={result.href}>{result.title}</Link>
-                <Link level="body-sm" color="neutral" href={result.href}>
-                  {result.learningObjective.id}
-                </Link>
               </Stack>
               {result.empty ? (
                 <HourglassEmptyIcon size="md" />

@@ -7,7 +7,6 @@ export const Playground: Story = {
   args: {
     correct: false,
     questionTemplateId: "123124",
-    questionVariantId: "abcbacabc",
     title: "Question 5",
     question: "what is the capital of France?",
     correctOption: "Paris",

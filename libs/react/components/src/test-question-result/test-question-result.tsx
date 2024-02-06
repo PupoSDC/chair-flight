@@ -10,7 +10,6 @@ export type TestQuestionResultProps = {
   correct?: boolean;
   question?: string;
   questionTemplateId?: string;
-  questionVariantId?: string;
   correctOption?: string;
   selectedOption?: string;
   learningObjectives?: string[];
@@ -28,7 +27,6 @@ export const TestQuestionResult = forwardRef<
       correctOption,
       selectedOption,
       questionTemplateId,
-      questionVariantId,
       learningObjectives,
       ...props
     },
@@ -48,7 +46,7 @@ export const TestQuestionResult = forwardRef<
         }}
       >
         <Typography level="body-sm" fontWeight={900}>
-          {`${questionTemplateId} (${questionVariantId})`}
+          {questionTemplateId}
         </Typography>
         <Box sx={{ fontSize: "sm" }}>
           <MarkdownClient>{question ?? ""}</MarkdownClient>

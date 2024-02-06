@@ -1,3 +1,4 @@
+import { z } from "zod";
 import type { Annex } from "./question-bank-annex";
 import type { Course } from "./question-bank-course";
 import type { Doc } from "./question-bank-doc";
@@ -18,6 +19,16 @@ export type QuestionBankNameToType = {
 };
 
 export type QuestionBankResource = keyof QuestionBankNameToType;
+
+export const questionBankResourceSchema = z.enum([
+  "questions",
+  "learningObjectives",
+  "annexes",
+  "flashcards",
+  "courses",
+  "subjects",
+  "docs",
+]);
 
 export type QuestionBankResourceArrays = {
   [K in QuestionBankResource]: QuestionBankNameToType[K][] | undefined;
