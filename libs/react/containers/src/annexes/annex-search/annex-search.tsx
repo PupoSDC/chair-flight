@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Stack } from "@mui/joy";
-import { z } from "zod";
-import { SearchHeader, SearchList } from "@chair-flight/react/components";
+import { Box, Link, ListItemContent, Stack, Typography } from "@mui/joy";
+import { annexSearchFilters } from "@chair-flight/core/search";
+import {
+  ImageWithModal,
+  SearchHeader,
+  SearchList,
+} from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
-import { AnnexSearchItem } from "./annex-search-item";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
@@ -23,12 +26,8 @@ type Params = {
 
 type Data = AppRouterOutput["containers"]["annexes"]["getAnnexSearch"];
 
-const filterSchema = z.object({
-  subject: z.string().default("all"),
-});
-
-const defaultFilter = filterSchema.parse({});
-const resolver = zodResolver(filterSchema);
+const defaultFilter = annexSearchFilters.parse({});
+const resolver = zodResolver(annexSearchFilters);
 const searchQuestions = trpc.common.search.searchAnnexes;
 const useSearchAnnexes = searchQuestions.useInfiniteQuery;
 
@@ -69,6 +68,7 @@ export const AnnexSearch = container<Props, Params, Data>(
           filterValues={form.watch()}
           isLoading={isLoading}
           isError={isError}
+          mobileBreakpoint="lg"
           onSearchChange={setSearch}
           onFilterValuesChange={(name, value) =>
             form.setValue(name as keyof typeof defaultFilter, value)
@@ -85,18 +85,77 @@ export const AnnexSearch = container<Props, Params, Data>(
             <thead>
               <tr>
                 <th style={{ width: 300 }}>Image</th>
-                <th style={{ width: 200 }}>Description</th>
+                <th>Description</th>
                 <th style={{ width: 100 }}>Subjects</th>
-                <th style={{}}>Learning Objectives</th>
-                <th style={{}}>Questions</th>
+                <th style={{ width: 200 }}>Learning Objectives</th>
+                <th style={{ width: 90 }}>Questions</th>
               </tr>
             </thead>
           )}
           renderTableRow={(result) => (
-            <AnnexSearchItem result={result} mobile={false} />
+            <tr>
+              <Box component="td" sx={{ height: "200px !important" }}>
+                <ImageWithModal
+                  href={result.href}
+                  alt=""
+                  width={250}
+                  height={200}
+                />
+                <Box component="b" sx={{ fontSize: 12 }}>
+                  {result.id}
+                </Box>
+              </Box>
+              <td>{result.description}</td>
+              <td>{result.subjects.join(", ")}</td>
+              <td>
+                {result.learningObjectives.map(({ href, id }) => (
+                  <Link href={href} key={id} sx={{ display: "block" }}>
+                    {id}
+                  </Link>
+                ))}
+              </td>
+              <td>
+                {result.questions.map(({ href, id }) => (
+                  <Link href={href} key={id} sx={{ display: "block" }}>
+                    {id}
+                  </Link>
+                ))}
+              </td>
+            </tr>
           )}
           renderListItemContent={(result) => (
-            <AnnexSearchItem result={result} mobile={true} />
+            <ListItemContent sx={{ display: "flex" }}>
+              <ImageWithModal
+                href={result.href}
+                alt=""
+                width={125}
+                height={100}
+              />
+              <Box sx={{ pl: 1 }}>
+                <Typography level="h5" sx={{ fontSize: "xs" }}>
+                  {result.id}
+                </Typography>
+                <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                  {result.description}
+                </Typography>
+                <Typography level="body-xs">
+                  <b>Questions</b>:&nbsp;
+                  {result.questions.map(({ href, id }) => (
+                    <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
+                      {id}
+                    </Link>
+                  ))}
+                </Typography>
+                <Typography level="body-xs">
+                  <b>Learning Objectives</b>:&nbsp;
+                  {result.learningObjectives.map(({ href, id }) => (
+                    <Link href={href} key={id} sx={{ fontSize: "xs", pr: 1 }}>
+                      {id}
+                    </Link>
+                  ))}
+                </Typography>
+              </Box>
+            </ListItemContent>
           )}
         />
       </Stack>

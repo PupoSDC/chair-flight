@@ -1,13 +1,5 @@
 import { useRouter } from "next/router";
-import {
-  Box,
-  Tab,
-  TabList,
-  TabPanel,
-  Tabs,
-  tabClasses,
-  tabPanelClasses,
-} from "@mui/joy";
+import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
@@ -60,11 +52,6 @@ const Page: NextPage<PageProps> = ({
     ["Editor", `/modules/${questionBank}/questions/editor`],
     questionId,
   ] as Breadcrumbs;
-
-  console.log({
-    tabClasses,
-    tabPanelClasses,
-  });
 
   return (
     <LayoutModule

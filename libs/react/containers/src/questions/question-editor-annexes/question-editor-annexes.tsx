@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { default as Image } from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
@@ -13,7 +12,11 @@ import {
   Typography,
 } from "@mui/joy";
 import { annexSearchFilters } from "@chair-flight/core/search";
-import { SearchHeader, SearchList } from "@chair-flight/react/components";
+import {
+  ImageWithModal,
+  SearchHeader,
+  SearchList,
+} from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper";
 import { VerticalDivider } from "../components/vertical-divider";
@@ -106,10 +109,19 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
               renderTableRow={() => null}
               renderListItemContent={(result) => (
                 <ListItemContent sx={{ display: "flex" }}>
-                  <Image src={result.href} alt="" width={100} height={100} />
-                  <Box sx={{ flex: 1, px: 2 }}>
-                    <Typography level={"h5"}>{result.id}</Typography>
-                    <Typography>{result.description}</Typography>
+                  <ImageWithModal
+                    href={result.href}
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
+                  <Box sx={{ flex: 1, px: 1 }}>
+                    <Typography level="h5" sx={{ fontSize: "xs" }}>
+                      {result.id}
+                    </Typography>
+                    <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                      {result.description}
+                    </Typography>
                   </Box>
                   <Box>
                     <Tooltip title="Add to Question">
@@ -140,10 +152,19 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
               renderTableRow={() => null}
               renderListItemContent={(result) => (
                 <ListItemContent sx={{ display: "flex" }}>
-                  <Image src={result.href} alt="" width={100} height={100} />
-                  <Box sx={{ flex: 1, px: 2 }}>
-                    <Typography level={"h5"}>{result.id}</Typography>
-                    <Typography>{result.description}</Typography>
+                  <ImageWithModal
+                    href={result.href}
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
+                  <Box sx={{ flex: 1, px: 1 }}>
+                    <Typography level="h5" sx={{ fontSize: "xs" }}>
+                      {result.id}
+                    </Typography>
+                    <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                      {result.description}
+                    </Typography>
                   </Box>
                   <Box>
                     <Tooltip title="Remove from Question">
