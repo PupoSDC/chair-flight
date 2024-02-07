@@ -15,6 +15,7 @@ export * from "./learning-objectives/learning-objectives-search";
 export * from "./overviews/overview-modules";
 export * from "./overviews/overview-welcome";
 export * from "./questions/question-explanation";
+export * from "./questions/question-editor-diff-tool";
 export * from "./questions/question-manager";
 export * from "./questions/question-meta";
 export * from "./questions/question-search";

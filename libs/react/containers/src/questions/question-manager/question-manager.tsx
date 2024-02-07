@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import { Box, Button, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
+import { Box, Button, Divider, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
 import { container, getRequiredParam } from "../../wraper/container";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
-import { getQuestionPreview, type QuestionBankName } from "@chair-flight/core/question-bank";
+import { getQuestionPreview, QuestionId, type QuestionBankName } from "@chair-flight/core/question-bank";
 import { LoadingButton, MarkdownClientCompressed, SearchHeader, SearchList, type SearchListProps } from "@chair-flight/react/components";
 import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
 import { questionSearchFilters } from "@chair-flight/core/search";
@@ -33,10 +33,17 @@ type FilterKeys = keyof Data["filters"];
 export const QuestionManager = container<Props, Params, Data>(
   ({ sx, component = "div", questionBank }) => {
     const [search, setSearch] = useState("");
-    const editor = useQuestionEditor({ questionBank });
+    const utils = trpc.useUtils();
     const serverData = QuestionManager.useData({ questionBank });
+    const addQuestionToEditor = useQuestionEditor((s) => s.addQuestion);
+    const removeQuestionFromEditor = useQuestionEditor((s) => s.removeQuestion);
+    const isQuestionInEditor = useQuestionEditor((s) => s.isQuestionInEditor);
 
-    const filterForm = useForm({
+    const currentIds = useQuestionEditor((s) => {
+      return Object.keys(s[questionBank].afterState).reverse();
+    });
+
+    const filterForm = useForm<Record<FilterKeys, string>>({
       defaultValues: filterFormDefaultValues,
       resolver: filterFormResolver,
     });
@@ -45,6 +52,19 @@ export const QuestionManager = container<Props, Params, Data>(
       { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
+
+    const retrieveQuestions = useRetrieveQuestions(
+      { questionBank, ids: currentIds },
+      { keepPreviousData: true },
+    );
+
+    const addQuestion = (id: QuestionId) => {
+      addQuestionToEditor(utils, questionBank, id);
+    }
+
+    const removeQuestion = (id: QuestionId) => {
+      removeQuestionFromEditor(utils, questionBank, id);
+    }
 
     return (
       <Stack direction="row" component={component} sx={sx}>
@@ -77,17 +97,7 @@ export const QuestionManager = container<Props, Params, Data>(
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  ...(editor.isDeleted(result.id) && {
-                    textDecoration: "line-through",
-                    background: `repeating-linear-gradient(
-                            45deg,
-                            rgba(0, 0, 0, 0),
-                            rgba(0, 0, 0, 0) 10px,
-                            rgba(196, 28, 28, 0.3) 10px,
-                            rgba(196, 28, 28, 0.3) 20px
-                          )`,
-                  }),
-                  ...(editor.isEdited(result.id) && {
+                  ...(isQuestionInEditor(questionBank, result.id) && {
                     background: `repeating-linear-gradient(
                             45deg,
                             rgba(0, 0, 0, 0),
@@ -107,18 +117,36 @@ export const QuestionManager = container<Props, Params, Data>(
                   <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
                     {result.text}
                   </MarkdownClientCompressed>
+                  <Divider sx={{ my: 1, mx: 2 }} />
+                  <Typography sx={{ fontSize: "xs" }}>
+                    <b>Related Questions</b><br />
+                    {result.relatedQuestions.map(q => q.id).join(", ") || "None"}
+                  </Typography>
+                  <Typography sx={{ fontSize: "xs" }}>
+                    <b>Learning Objectives</b><br />
+                    {result.learningObjectives.map(q => q.id).join(", ") || "None"}
+                  </Typography>
                 </Box>
                 <Stack gap={1} >
-                  {!editor.isTouched(result.id) && (
-                    <Tooltip title="Add Question">
-                      <LoadingButton
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        onClick={() => editor.addQuestion(result.id)}
-                        children={<AddInput />}
-                      />
-                    </Tooltip>
+                  {!isQuestionInEditor(questionBank, result.id) && (
+                    <Tooltip 
+                      title={(
+                        <>
+                          Add Question.
+                          <br />
+                          Note: All related questions will be added as well.
+                        </>
+                      )}
+                      children={(
+                        <LoadingButton
+                          sx={{ px: 1 }}
+                          size="sm"
+                          variant="plain"
+                          onClick={() => addQuestion(result.id)}
+                          children={<AddInput />}
+                        />
+                      )}
+                    />
                   )}
                 </Stack>
               </ListItemContent>
@@ -127,96 +155,50 @@ export const QuestionManager = container<Props, Params, Data>(
         </Stack>
         <VerticalDivider />
         <Stack height="100%" flex={1}>
-          <Stack direction={"row"} sx={{ mb: 2 }}>
-            <Typography level="h3">Changes</Typography>
-            <Tooltip title={"Create a pull Request"} variant="soft">
-              <Button
-                size="sm"
-                sx={{ ml: "auto" }}
-                color={"success"}
-                endDecorator={<GithubIcon />}
-                children={"Create a Pull Request"}
-              />
-            </Tooltip>
-          </Stack>
           <SearchList
             forceMode="mobile"
             sx={{ flex: 1, overflow: "hidden" }}
-            items={Object
-              .entries(editor.currentState)
-              .map(([id, value]) => ({ id, value }))
-            }
+            items={retrieveQuestions.data?.items ?? []}
             noDataMessage={"No changes so far!"}
             renderThead={() => null}
             renderTableRow={() => null}
             renderListItemContent={(result) => (
-              <ListItemContent
-                sx={{
-                  display: "flex",
-                  minHeight: 100,
-                  ...(editor.isDeleted(result.id) && {
-                    textDecoration: "line-through",
-                    background: `repeating-linear-gradient(
-                      45deg,
-                      rgba(0, 0, 0, 0),
-                      rgba(0, 0, 0, 0) 10px,
-                      rgba(196, 28, 28, 0.3) 10px,
-                      rgba(196, 28, 28, 0.3) 20px
-                    )`,
-                  }),
-                }}
-              >
+              <ListItemContent sx={{ display: "flex", minHeight: 100 }}>
                 <Box sx={{ flex: 1, pr: 1 }}>
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
-                  {result.value && (
-                    <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
-                      {result.value.relatedQuestions.join(", ")}
-                    </Typography>
-                 )}
-                  {result.value && (
-                    <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                      {getQuestionPreview(result.value)}
-                    </MarkdownClientCompressed>
-                  )}
+                  <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
+                    {result.relatedQuestions.map(q => q.id).join(", ")}
+                  </Typography>
+                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                    {result.text}
+                  </MarkdownClientCompressed>
                 </Box>
                 <Stack gap={1}>
-                  {editor.isEdited(result.id) && (
-                    <Tooltip title="Edit Question">
-                      <LoadingButton
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        color="success"
-                        children={<EditIcon />}
-                      />
-                    </Tooltip>
+                  {(
+                    <Tooltip 
+                      title={(
+                        <>
+                          Remove Question.
+                          <br />
+                          Note: All related questions will be removed as well.
+                        </>
+                      )}
+                      children={(
+                        <LoadingButton
+                          sx={{ px: 1 }}
+                          size="sm"
+                          variant="plain"
+                          color="danger"
+                          onClick={() => removeQuestion(result.id)}
+                          children={<AddInput sx={{
+                            transform: "rotate(180deg)"
+                          }} />}
+                        />
+                      )}
+                    />
                   )}
-                  {editor.isDeleted(result.id) ? (
-                    <Tooltip title="Recover Question">
-                      <LoadingButton
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        color="danger"
-                        onClick={() => editor.unDeleteQuestion(result.id)}
-                        children={<UndoIcon />}
-                      />
-                    </Tooltip>
-                  ) : (
-                    <Tooltip title="Delete Question">
-                      <LoadingButton
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        color="danger"
-                        onClick={() => editor.deleteQuestion(result.id)}
-                        children={<DeleteIcon />}
-                      />
-                    </Tooltip>
-                  )}
-
                 </Stack>
               </ListItemContent>
             )}

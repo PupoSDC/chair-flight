@@ -24,10 +24,17 @@ type Data =
 
 export const QuestionEditorExplanation = container<Props, Params, Data>(
   ({ questionId, questionBank, sx, component = "div" }) => {
-    const editor = useQuestionEditor({ questionBank });
-    const [thisExplanation, setThisExplanation] = useState("");
+    const explanation = useQuestionEditor((s) => {
+      return s[questionBank].afterState[questionId]?.explanation ?? "";
+    });
+
+    const setQuestionExplanation = useQuestionEditor((s) => {
+      return s.setQuestionExplanation;
+    });
+
+
+    const [thisExplanation, setThisExplanation] = useState(explanation);
     const [isPending, startTransition] = useTransition();
-    const explanation = editor.currentState[questionId]?.explanation;
 
     return (
       <Stack direction="row" height="100%" sx={sx} component={component}>
@@ -37,7 +44,11 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
           onChange={(e) => {
             const val = e.target.value;
             setThisExplanation(val);
-            startTransition(() => editor.setExplanation(questionId, val));
+            startTransition(() => setQuestionExplanation(
+              questionBank, 
+              questionId, 
+              val
+            ));
           }}
         />
         <VerticalDivider />

@@ -96,6 +96,8 @@ export const questionsContainersRouter = router({
       return await questionSearch.getFilters(bank);
     }),
 
+  getQuestionEditorDiffTool: publicProcedure.query(() => ({})),
+
   getQuestionEditorAnnexes: publicProcedure
     .input(z.object({ questionBank: questionBankNameSchema }))
     .query(({ input }) => {

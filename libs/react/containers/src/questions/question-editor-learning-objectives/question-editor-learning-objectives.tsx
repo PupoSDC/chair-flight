@@ -44,9 +44,14 @@ type FilterKeys = keyof Data["filters"];
 export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
-    const editor = useQuestionEditor({ questionBank });
-    const question = editor.getQuestionState(questionId);
-    const los = question?.learningObjectives ?? [];
+    
+    const los = useQuestionEditor((s) => {
+      return s[questionBank].afterState[questionId]?.learningObjectives ?? [];
+    });
+
+    const setLos = useQuestionEditor((s) => {
+      return s.setQuestionLearningObjectives
+    });
 
     const serverData = QuestionEditorLearningObjectives.useData({
       questionBank,
@@ -67,6 +72,14 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
       { ids: los ?? [], questionBank },
       { keepPreviousData: true },
     );
+
+    const addLo = (id: string) => {
+      setLos(questionBank, questionId, [...new Set([...los, id])]);
+    }
+
+    const removeLo = (id: string) => {
+      setLos(questionBank, questionId, los.filter((i) => i !== id));
+    }
 
     return (
       <Stack direction="row" component={component} sx={sx}>
@@ -109,7 +122,8 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                       sx={{ px: 1 }}
                       size="sm"
                       variant="plain"
-     
+                      disabled={los.includes(result.id)}
+                      onClick={() => addLo(result.id)}
                       children={<AddIcon />}
                     />
                   </Tooltip>
@@ -145,7 +159,7 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                       sx={{ px: 1 }}
                       size="sm"
                       variant="plain"
-
+                      onClick={() => removeLo(result.id)}
                       children={<DeleteIcon />}
                     />
                   </Tooltip>

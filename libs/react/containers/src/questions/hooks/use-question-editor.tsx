@@ -7,6 +7,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { immer } from 'zustand/middleware/immer'
+import { deepClone } from "@chair-flight/base/utils";
 
 const diffSchema = z.object({
   beforeState: z.record(questionTemplateSchema),
@@ -19,51 +20,50 @@ const editorSchema = z.object({
   prep: diffSchema,
 });
 
+type TrpcUtils = ReturnType<typeof trpc.useUtils>;
+
+
 export type QuestionEditorState = z.infer<typeof editorSchema>;
 
-export type QuestionEditorActions = {
-  addQuestions: (bank: QuestionBankName,templates: QuestionTemplate[]) => void;
-  deleteQuestion: (bank: QuestionBankName,id: QuestionId) => void;
-  unDeleteQuestion: (bank: QuestionBankName,id: QuestionId) => void;
 
-  revertQuestion: (
-    id: string,
-    bank: QuestionBankName,
+export type QuestionEditorActions = {
+  addQuestion: (
+    trpc: TrpcUtils,
+    bank: QuestionBankName, 
+    id: QuestionId
+  ) => Promise<void>;
+
+  removeQuestion: (
+    trpc: TrpcUtils,
+    bank: QuestionBankName, 
+    id: QuestionId
+  ) => Promise<void>;
+
+  isQuestionInEditor: (
+    bank: QuestionBankName, 
+    id: QuestionId
+  ) => boolean;
+  
+  markQuestionAsDeleted: (
+    bank: QuestionBankName, 
+    id: QuestionId
   ) => void;
-  addAnnex: (
-    id: string,
-    bank: QuestionBankName,
-    annexId: string
+
+  undoMarkQuestionAsDeleted: (
+    bank: QuestionBankName, 
+    id: QuestionId
   ) => void;
-  removeAnnex: (
-    id: string,
-    bank: QuestionBankName,
-    annexId: string
-  ) => void;
-  addRelatedQuestion: (
-    id: string,
-    bank: QuestionBankName,
-    questionId: string
-  ) => void;
-  removeRelatedQuestion: (
-    id: string,
-    bank: QuestionBankName,
-    questionId: string
-  ) => void;
-  setExplanation: (
-    id: string,
-    bank: QuestionBankName,
+
+  setQuestionExplanation: (
+    bank: QuestionBankName, 
+    id: QuestionId, 
     explanation: string
   ) => void;
-  addLearningObjective: (
-    id: string,
-    bank: QuestionBankName,
-    learningObjectives: string,
-  ) => void;
-  removeLearningObjective: (
-    id: string,
-    bank: QuestionBankName,
-    learningObjectives: string,
+
+  setQuestionLearningObjectives: (
+    bank: QuestionBankName, 
+    id: QuestionId, 
+    learningObjectives: string[]
   ) => void;
 };
 
@@ -72,7 +72,7 @@ export type QuestionEditor = QuestionEditorState & QuestionEditorActions;
 
 const persistenceKey: PersistenceKey = "cf-question-editor";
 
-const useZustand = create<
+export const useQuestionEditor = create<
   QuestionEditor
 >()(
   persist(
@@ -82,17 +82,56 @@ const useZustand = create<
           atpl: { beforeState: {}, afterState: {} },
           type: { beforeState: {}, afterState: {} },
           prep: { beforeState: {}, afterState: {} },
-          addQuestions: (
-            bank: QuestionBankName,
-            templates: QuestionTemplate[]
-          ) => set((state: QuestionEditorState) => {
-            templates.forEach((template) => {
-              const id = template.id;
-              state[bank].beforeState[id] = template;
-              state[bank].afterState[id] = template;
+          addQuestion: async (
+            trpc: TrpcUtils,
+            questionBank: QuestionBankName,
+            questionId: QuestionId
+          ) => {
+            const router = trpc.common.questions;
+            const {
+              question,
+              relatedQuestions,
+            } = await router.getQuestionTemplate.fetch({
+              questionBank,
+              questionId,
             });
-          }),
-          deleteQuestion: (
+            
+            set((state: QuestionEditorState) => {
+              [question, ...relatedQuestions].forEach((template) => {
+                const id = template.id;
+                state[questionBank].beforeState[id] = template;
+                state[questionBank].afterState[id] = template;
+              });
+            });
+          }, 
+          removeQuestion: async (
+            trpc: TrpcUtils,
+            questionBank: QuestionBankName,
+            questionId: QuestionId
+          ) => {
+            const router = trpc.common.questions;
+            const {
+              question,
+              relatedQuestions,
+            } = await router.getQuestionTemplate.fetch({
+              questionBank,
+              questionId,
+            });
+            set((state: QuestionEditorState) => {
+              [question, ...relatedQuestions].forEach((template) => {
+                const id = template.id;
+                delete state[questionBank].beforeState[id];
+                delete state[questionBank].afterState[id];
+              });
+            });
+          },
+          isQuestionInEditor: (
+            bank: QuestionBankName,
+            id: QuestionId
+          ) => {
+            return !!get()[bank].beforeState[id];
+          },
+          markQuestionAsDeleted: (
             bank: QuestionBankName,
             id: QuestionId,
           ) => set((state: QuestionEditorState) => {
@@ -108,11 +147,61 @@ const useZustand = create<
 
             state[bank].afterState[id] = null;
           }),
-          unDeleteQuestion: (
+          undoMarkQuestionAsDeleted: (
             bank: QuestionBankName,
             id: QuestionId,
           ) => set((state: QuestionEditorState) => {
-            state[bank].afterState[id] = state[bank].beforeState[id];
+            state[bank].afterState[id] = deepClone(state[bank].beforeState[id]);
+            [
+              id, 
+              ...state[bank].beforeState[id].relatedQuestions
+            ].forEach((id) => {
+              const before = state[bank].beforeState[id];
+              const after = state[bank].afterState[id];
+              if (!after) return;
+              after.relatedQuestions = before.relatedQuestions
+                .filter((i) => !!state[bank].afterState[i]);
+            });
+          }),
+          setQuestionExplanation: (
+            bank: QuestionBankName,
+            id: QuestionId,
+            explanation: string
+          ) => set((state: QuestionEditorState) => {
+            const question = state[bank].afterState[id];
+            if (!question) return;
+            question.explanation = explanation;
+          }),
+          setQuestionLearningObjectives: (
+            bank: QuestionBankName,
+            id: QuestionId,
+            learningObjectives: string[]
+          ) => set((state: QuestionEditorState) => {
+            const question = state[bank].afterState[id];
+            if (!question) return;
+            question.learningObjectives = learningObjectives;
+          }),
+          /**
+          removeQuestionFromEditor: (
+
+          ) => set((state: QuestionEditorState) => {
+            state[bank].beforeState[id] = null;
+            state[bank].afterState[id] = null;
+          }
+
+
+          deleteAllUnchanged: (
+            bank: QuestionBankName
+          ) => set((state: QuestionEditorState) => {
+            const ids = Object.keys(state[bank].beforeState);
+            ids.forEach((id) => {
+              const before = JSON.stringify(state[bank].beforeState[id]);
+              const after = JSON.stringify(state[bank].afterState[id]); 
+              if (before === after) {
+                delete state[bank].beforeState[id];
+                delete state[bank].afterState[id];
+              }
+            });
           }),
           revertQuestion: (
             id: string,
@@ -172,119 +261,10 @@ const useZustand = create<
             learningObjective: string
           ) => set((state: QuestionEditorState) => {
             state[bank].afterState[id].learningObjectives = state[bank].afterState[id].learningObjectives.filter((i) => i !== learningObjective);
-          }),
-        })
+          }),*/
+        }) 
       )
     ),
     { name: persistenceKey }
   )
 );
-
-export const useQuestionEditor = ({
-  questionBank,
-}: {
-  questionBank: QuestionBankName;
-}) => {
-  const utils = trpc.useUtils();
-  const zustand = useZustand();
-  const getQuestionTemplate = utils.common.questions.getQuestionTemplate.fetch;
-
-  const addQuestion = async (questionId: string) => {
-    const { question, relatedQuestions } = await getQuestionTemplate({
-      questionBank,
-      questionId,
-    });
-    zustand.addQuestions(questionBank, [question, ...relatedQuestions]);
-  };
-
-  const deleteQuestion = async (questionId: string) => {
-    zustand.deleteQuestion(questionBank, questionId);
-  };
-
-  const unDeleteQuestion = async (questionId: string) => {
-    zustand.unDeleteQuestion(questionBank, questionId);
-  }
-
-  const revertQuestion = async (questionId: string) => {
-    zustand.revertQuestion(questionId, questionBank);
-  };
-
-
-  const isDeleted = (questionId: string) => {
-    return zustand[questionBank].afterState[questionId] === null;
-  }
-
-  const isEdited = (questionId: string) => {
-    return !!zustand[questionBank].afterState[questionId];
-  }
-
-  const isTouched = (questionId: string) => {
-    return isEdited(questionId) || isDeleted(questionId);
-  }
-
-  const getQuestionState = (questionId: string) => {
-    return zustand[questionBank].afterState[questionId];
-  }
-
-  const addAnnex = (questionId: string, annexId: string) => {
-    zustand.addAnnex(questionId, questionBank, annexId);
-  }
-
-  const removeAnnex = (questionId: string, annexId: string) => {
-    zustand.removeAnnex(questionId, questionBank, annexId);
-  }
-
-  const hasAnnex = (questionId: string, annexId: string) => {
-    return zustand[questionBank].afterState[questionId].annexes.includes(annexId);
-  }
-
-  const addRelatedQuestion = (questionId: string, relatedQuestionId: string) => {
-    zustand.addRelatedQuestion(questionId, questionBank, relatedQuestionId);
-  }
-
-  const removeRelatedQuestion = (questionId: string, relatedQuestionId: string) => {
-    zustand.removeRelatedQuestion(questionId, questionBank, relatedQuestionId);
-  }
-
-  const hasRelatedQuestion = (questionId: string, relatedQuestionId: string) => {
-    return zustand[questionBank].afterState[questionId].relatedQuestions.includes(relatedQuestionId);
-  }
-
-  const setExplanation = (questionId: string, explanation: string) => {
-    zustand.setExplanation(questionId, questionBank, explanation);
-  }
-
-  const addLearningObjective = (questionId: string, loId: string) => {
-    zustand.addLearningObjective(questionId, questionBank, loId);
-  }
-
-  const removeLearningObjective = (questionId: string, loId: string) => {
-    zustand.removeLearningObjective(questionId, questionBank, loId);
-  }
-
-  const hasLearningObjective = (questionId: string, loId: string) => {
-    return zustand[questionBank].afterState[questionId].learningObjectives.includes(loId);
-  }
-
-  return {
-    currentState: zustand[questionBank].afterState,
-    isTouched,
-    isEdited,
-    isDeleted,
-    addQuestion,
-    deleteQuestion,
-    revertQuestion,
-    getQuestionState,
-    addAnnex,
-    removeAnnex,
-    hasAnnex,
-    addRelatedQuestion,
-    removeRelatedQuestion,
-    hasRelatedQuestion,
-    setExplanation,
-    addLearningObjective,
-    removeLearningObjective,
-    hasLearningObjective,
-    unDeleteQuestion,
-  };
-};
