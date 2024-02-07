@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
+import { default as EditIcon } from "@mui/icons-material/EditOutlined";
 import { default as AddInput } from "@mui/icons-material/InputOutlined";
+import { default as UnlinkIcon } from "@mui/icons-material/LinkOff";
+import { default as UndoIcon } from "@mui/icons-material/Undo";
 import {
-  Box,
+  Button,
   Divider,
+  Link,
   ListItemContent,
   Stack,
   Tooltip,
@@ -34,10 +39,157 @@ type Data = AppRouterOutput["containers"]["questions"]["getQuestionManager"];
 
 const search = trpc.common.search;
 const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
-const useRetrieveQuestions = search.retrieveQuestions.useQuery;
 const filterFormDefaultValues = questionSearchFilters.parse({});
 const filterFormResolver = zodResolver(questionSearchFilters);
 type FilterKeys = keyof Data["filters"];
+
+const ListItem = memo<{
+  questionId: QuestionId;
+  questionBank: QuestionBankName;
+}>(({ questionId, questionBank }) => {
+  const utils = trpc.useUtils();
+  const {
+    unlinkQuestion,
+    deleteQuestion,
+    removeQuestion,
+    resetQuestion,
+    getDiffStatus,
+  } = useQuestionEditor((s) => ({
+    unlinkQuestion: s.unlinkQuestion,
+    deleteQuestion: s.markQuestionAsDeleted,
+    removeQuestion: s.removeQuestion,
+    getDiffStatus: s.getDiffStatus,
+    resetQuestion: s.resetQuestion,
+  }));
+
+  const {
+    isEdited,
+    isDeleted,
+    current,
+    hasRelatedQs,
+    hasRelatedQsChanged,
+    hasLosChanged,
+    hasAnnexesChanged,
+  } = getDiffStatus({ questionBank, questionId });
+
+  return (
+    <ListItemContent
+      sx={{
+        flex: 1,
+        ...(isDeleted && {
+          textDecoration: "line-through",
+          background: `repeating-linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0) 10px,
+            rgba(196, 28, 28, 0.3) 10px,
+            rgba(196, 28, 28, 0.3) 20px
+          )`,
+        }),
+      }}
+    >
+      <Stack direction={"row"} gap={1} alignItems={"center"}>
+        <Typography level="h5" sx={{ fontSize: "sm", mr: "auto" }}>
+          {questionId}
+        </Typography>
+        {!isDeleted && hasRelatedQs && (
+          <Tooltip title="Unlink question from related questions">
+            <LoadingButton
+              sx={{ px: 1 }}
+              size="sm"
+              variant="plain"
+              children={<UnlinkIcon />}
+              onClick={() => unlinkQuestion({ questionBank, questionId })}
+            />
+          </Tooltip>
+        )}
+        {!isDeleted && (
+          <Tooltip title="Edit Question">
+            <Button
+              component={Link}
+              href={`/modules/${questionBank}/questions/editor/${questionId}`}
+              sx={{ px: 1 }}
+              size="sm"
+              variant="plain"
+              children={<EditIcon />}
+            />
+          </Tooltip>
+        )}
+        {!isDeleted && (
+          <Tooltip title="Delete Question">
+            <LoadingButton
+              sx={{ px: 1 }}
+              size="sm"
+              variant="plain"
+              onClick={() => deleteQuestion({ questionBank, questionId })}
+              children={<DeleteIcon />}
+            />
+          </Tooltip>
+        )}
+        {!isEdited && !isDeleted && (
+          <Tooltip title="Remove Question from editor">
+            <LoadingButton
+              sx={{ px: 1 }}
+              size="sm"
+              variant="plain"
+              color="danger"
+              children={<AddInput sx={{ transform: "rotate(180deg)" }} />}
+              onClick={() =>
+                removeQuestion({ trpc: utils, questionBank, questionId })
+              }
+            />
+          </Tooltip>
+        )}
+        {(isDeleted || isEdited) && (
+          <Tooltip title="Recover Question">
+            <LoadingButton
+              sx={{ px: 1 }}
+              size="sm"
+              variant="plain"
+              color="danger"
+              onClick={() => resetQuestion({ questionBank, questionId })}
+              children={<UndoIcon />}
+            />
+          </Tooltip>
+        )}
+      </Stack>
+      <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+        {current.preview}
+      </MarkdownClientCompressed>
+      <Typography
+        sx={{
+          mt: 1,
+          fontSize: "xs",
+          color: hasRelatedQsChanged ? "warning.plainColor" : undefined,
+        }}
+      >
+        <b>Related Questions</b>
+        <br />
+        {current.relatedQs}
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: "xs",
+          color: hasLosChanged ? "warning.plainColor" : undefined,
+        }}
+      >
+        <b>Learning Objectives</b>
+        <br />
+        {current.los}
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: "xs",
+          color: hasAnnexesChanged ? "warning.plainColor" : undefined,
+        }}
+      >
+        <b>Annexes</b>
+        <br />
+        {current.annexes}
+      </Typography>
+    </ListItemContent>
+  );
+});
 
 export const QuestionManager = container<Props, Params, Data>(
   ({ sx, component = "div", questionBank }) => {
@@ -45,10 +197,9 @@ export const QuestionManager = container<Props, Params, Data>(
     const utils = trpc.useUtils();
     const serverData = QuestionManager.useData({ questionBank });
     const addQuestionToEditor = useQuestionEditor((s) => s.addQuestion);
-    const removeQuestionFromEditor = useQuestionEditor((s) => s.removeQuestion);
     const isQuestionInEditor = useQuestionEditor((s) => s.isQuestionInEditor);
 
-    const currentIds = useQuestionEditor((s) => {
+    const items = useQuestionEditor((s) => {
       return Object.keys(s[questionBank].afterState).reverse();
     });
 
@@ -62,17 +213,8 @@ export const QuestionManager = container<Props, Params, Data>(
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    const retrieveQuestions = useRetrieveQuestions(
-      { questionBank, ids: currentIds },
-      { keepPreviousData: true },
-    );
-
-    const addQuestion = (id: QuestionId) => {
-      addQuestionToEditor(utils, questionBank, id);
-    };
-
-    const removeQuestion = (id: QuestionId) => {
-      removeQuestionFromEditor(utils, questionBank, id);
+    const addQuestion = (questionId: QuestionId) => {
+      addQuestionToEditor({ trpc: utils, questionBank, questionId });
     };
 
     return (
@@ -99,26 +241,40 @@ export const QuestionManager = container<Props, Params, Data>(
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
             renderTableRow={() => null}
-            renderListItemContent={(result) => (
-              <ListItemContent
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  ...(isQuestionInEditor(questionBank, result.id) && {
-                    background: `repeating-linear-gradient(
+            renderListItemContent={(result) => {
+              const questionId = result.id;
+              const isEdited = isQuestionInEditor({ questionBank, questionId });
+
+              return (
+                <ListItemContent
+                  sx={{
+                    ...(isEdited && {
+                      background: `repeating-linear-gradient(
                             45deg,
                             rgba(0, 0, 0, 0),
                             rgba(0, 0, 0, 0) 10px,
                             rgba(234, 154, 62, 0.3) 10px,
                             rgba(234, 154, 62, 0.3) 20px
                           )`,
-                  }),
-                }}
-              >
-                <Box sx={{ flex: 1, pr: 1 }}>
-                  <Typography level="h5" sx={{ fontSize: "sm" }}>
-                    {result.id}
-                  </Typography>
+                    }),
+                  }}
+                >
+                  <Stack direction={"row"} gap={1} alignItems={"center"}>
+                    <Typography level="h5" sx={{ fontSize: "sm", mr: "auto" }}>
+                      {result.id}
+                    </Typography>
+                    {!isEdited && (
+                      <Tooltip title={"Add Question, and related questions"}>
+                        <LoadingButton
+                          sx={{ px: 1 }}
+                          size="sm"
+                          variant="plain"
+                          onClick={() => addQuestion(result.id)}
+                          children={<AddInput />}
+                        />
+                      </Tooltip>
+                    )}
+                  </Stack>
                   <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
                     {result.relatedQuestions.map((q) => q.id).join(", ")}
                   </Typography>
@@ -138,31 +294,9 @@ export const QuestionManager = container<Props, Params, Data>(
                     {result.learningObjectives.map((q) => q.id).join(", ") ||
                       "None"}
                   </Typography>
-                </Box>
-                <Stack gap={1}>
-                  {!isQuestionInEditor(questionBank, result.id) && (
-                    <Tooltip
-                      title={
-                        <>
-                          Add Question.
-                          <br />
-                          Note: All related questions will be added as well.
-                        </>
-                      }
-                      children={
-                        <LoadingButton
-                          sx={{ px: 1 }}
-                          size="sm"
-                          variant="plain"
-                          onClick={() => addQuestion(result.id)}
-                          children={<AddInput />}
-                        />
-                      }
-                    />
-                  )}
-                </Stack>
-              </ListItemContent>
-            )}
+                </ListItemContent>
+              );
+            }}
           />
         </Stack>
         <VerticalDivider />
@@ -170,54 +304,11 @@ export const QuestionManager = container<Props, Params, Data>(
           <SearchList
             forceMode="mobile"
             sx={{ flex: 1, overflow: "hidden" }}
-            items={retrieveQuestions.data?.items ?? []}
+            items={items.map((id) => ({ id, questionBank, questionId: id }))}
             noDataMessage={"No changes so far!"}
             renderThead={() => null}
             renderTableRow={() => null}
-            renderListItemContent={(result) => (
-              <ListItemContent sx={{ display: "flex", minHeight: 100 }}>
-                <Box sx={{ flex: 1, pr: 1 }}>
-                  <Typography level="h5" sx={{ fontSize: "sm" }}>
-                    {result.id}
-                  </Typography>
-                  <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
-                    {result.relatedQuestions.map((q) => q.id).join(", ")}
-                  </Typography>
-                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                    {result.text}
-                  </MarkdownClientCompressed>
-                </Box>
-                <Stack gap={1}>
-                  {
-                    <Tooltip
-                      title={
-                        <>
-                          Remove Question.
-                          <br />
-                          Note: All related questions will be removed as well.
-                        </>
-                      }
-                      children={
-                        <LoadingButton
-                          sx={{ px: 1 }}
-                          size="sm"
-                          variant="plain"
-                          color="danger"
-                          onClick={() => removeQuestion(result.id)}
-                          children={
-                            <AddInput
-                              sx={{
-                                transform: "rotate(180deg)",
-                              }}
-                            />
-                          }
-                        />
-                      }
-                    />
-                  }
-                </Stack>
-              </ListItemContent>
-            )}
+            renderListItemContent={ListItem}
           />
         </Stack>
       </Stack>

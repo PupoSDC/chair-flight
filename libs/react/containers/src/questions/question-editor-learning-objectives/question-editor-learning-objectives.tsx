@@ -45,13 +45,10 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
 
-    const los = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId]?.learningObjectives ?? [];
-    });
-
-    const setLos = useQuestionEditor((s) => {
-      return s.setQuestionLearningObjectives;
-    });
+    const { los, setLos } = useQuestionEditor((s) => ({
+      los: s[questionBank].afterState[questionId]?.learningObjectives ?? [],
+      setLos: s.setQuestionLearningObjectives,
+    }));
 
     const serverData = QuestionEditorLearningObjectives.useData({
       questionBank,
@@ -74,15 +71,13 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
     );
 
     const addLo = (id: string) => {
-      setLos(questionBank, questionId, [...new Set([...los, id])]);
+      const learningObjectives = [...new Set([...los, id])];
+      setLos({ questionBank, questionId, learningObjectives });
     };
 
     const removeLo = (id: string) => {
-      setLos(
-        questionBank,
-        questionId,
-        los.filter((i) => i !== id),
-      );
+      const learningObjectives = los.filter((i) => i !== id);
+      setLos({ questionBank, questionId, learningObjectives });
     };
 
     return (

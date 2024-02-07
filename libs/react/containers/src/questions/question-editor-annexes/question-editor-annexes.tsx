@@ -45,13 +45,10 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
 
-    const annexes = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId]?.annexes ?? [];
-    });
-
-    const setAnnexes = useQuestionEditor((s) => {
-      return s.setQuestionAnnexes;
-    });
+    const { annexes, setAnnexes } = useQuestionEditor((s) => ({
+      annexes: s[questionBank].afterState[questionId]?.annexes ?? [],
+      setAnnexes: s.setQuestionAnnexes,
+    }));
 
     const serverData = QuestionEditorAnnexes.useData({
       questionBank,
@@ -74,15 +71,13 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
     );
 
     const addAnnex = (id: string) => {
-      setAnnexes(questionBank, questionId, [...new Set([...annexes, id])]);
+      const newAnnexes = [...new Set([...annexes, id])];
+      setAnnexes({ questionBank, questionId, annexes: newAnnexes });
     };
 
     const removeAnnex = (id: string) => {
-      setAnnexes(
-        questionBank,
-        questionId,
-        annexes.filter((lo) => lo !== id),
-      );
+      const newAnnexes = annexes.filter((a) => a !== id);
+      setAnnexes({ questionBank, questionId, annexes: newAnnexes });
     };
 
     return (

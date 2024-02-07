@@ -19,13 +19,10 @@ type Data =
 
 export const QuestionEditorExplanation = container<Props, Params, Data>(
   ({ questionId, questionBank, sx, component = "div" }) => {
-    const explanation = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId]?.explanation ?? "";
-    });
-
-    const setQuestionExplanation = useQuestionEditor((s) => {
-      return s.setQuestionExplanation;
-    });
+    const { explanation, setQuestionExplanation } = useQuestionEditor((s) => ({
+      explanation: s[questionBank].afterState[questionId]?.explanation ?? "",
+      setQuestionExplanation: s.setQuestionExplanation,
+    }));
 
     const [thisExplanation, setThisExplanation] = useState(explanation);
     const [isPending, startTransition] = useTransition();
@@ -36,10 +33,10 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
           value={thisExplanation}
           sx={{ height: "100%", flex: 1 }}
           onChange={(e) => {
-            const val = e.target.value;
-            setThisExplanation(val);
+            const explanation = e.target.value;
+            setThisExplanation(explanation);
             startTransition(() =>
-              setQuestionExplanation(questionBank, questionId, val),
+              setQuestionExplanation({ questionBank, questionId, explanation }),
             );
           }}
         />

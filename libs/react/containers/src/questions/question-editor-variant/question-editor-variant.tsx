@@ -57,17 +57,13 @@ export const QuestionEditorVariant = container<Props, Params, Data>(
     const [, startTransition] = useTransition();
     const hasValidationErrors = !!validationYaml;
 
-    const variant = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId]?.variant;
-    });
-
-    const template = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId];
-    });
-
-    const setQuestionVariant = useQuestionEditor((s) => {
-      return s.setQuestionVariant;
-    });
+    const { variant, template, setQuestionVariant } = useQuestionEditor(
+      (s) => ({
+        variant: s[questionBank].afterState[questionId]?.variant,
+        template: s[questionBank].afterState[questionId],
+        setQuestionVariant: s.setQuestionVariant,
+      }),
+    );
 
     const [variantYaml, setVariantYaml] = useState<string>(() =>
       YAML.stringify(variant, null, 2),
@@ -79,8 +75,9 @@ export const QuestionEditorVariant = container<Props, Params, Data>(
         try {
           const newVariantObj = YAML.parse(yamlInput);
           const variant = questionVariantSchema.parse(newVariantObj);
-          setQuestionVariant(questionBank, questionId, variant);
+          setQuestionVariant({ questionBank, questionId, variant });
           setValidationYAML("");
+          if (rhsMode === "validation") setRhsMode("preview");
         } catch (e) {
           setRhsMode("validation");
           if (e instanceof ZodError) {
@@ -95,7 +92,6 @@ export const QuestionEditorVariant = container<Props, Params, Data>(
     const resetVariant = (variant: QuestionVariantType) => {
       const newVariant = getNewVariant(variant);
       updateVariant(YAML.stringify(newVariant));
-      console.log(newVariant);
     };
 
     if (!template || !variant) return null;

@@ -28,13 +28,20 @@ type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorDiffTool"];
 
 const SearchListItem = memo<{
-  id: QuestionId;
-  bank: QuestionBankName;
-}>(({ id, bank }) => {
-  const initialState = useQuestionEditor((s) => s[bank].beforeState[id]);
-  const currentState = useQuestionEditor((s) => s[bank].afterState[id]);
-  const deleteQuestion = useQuestionEditor((s) => s.markQuestionAsDeleted);
-  const recoverQuestion = useQuestionEditor((s) => s.undoMarkQuestionAsDeleted);
+  questionId: QuestionId;
+  questionBank: QuestionBankName;
+}>(({ questionId, questionBank }) => {
+  const {
+    initialState,
+    currentState,
+    markQuestionAsDeleted,
+    undoMarkQuestionAsDeleted,
+  } = useQuestionEditor((s) => ({
+    initialState: s[questionBank].beforeState[questionId],
+    currentState: s[questionBank].afterState[questionId],
+    markQuestionAsDeleted: s.markQuestionAsDeleted,
+    undoMarkQuestionAsDeleted: s.undoMarkQuestionAsDeleted,
+  }));
 
   const initial = {
     preview: getQuestionPreview(initialState.variant),
@@ -67,7 +74,7 @@ const SearchListItem = memo<{
     <ListItemContent sx={{ display: "flex" }}>
       <Stack flex={1}>
         <Typography level="h5" sx={{ fontSize: "sm" }}>
-          {id}
+          {questionId}
         </Typography>
         <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
           {initial.preview}
@@ -98,17 +105,17 @@ const SearchListItem = memo<{
           ...(isDeleted && {
             textDecoration: "line-through",
             background: `repeating-linear-gradient(
-                    45deg,
-                    rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 0) 10px,
-                    rgba(196, 28, 28, 0.3) 10px,
-                    rgba(196, 28, 28, 0.3) 20px
-                  )`,
+              45deg,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0) 10px,
+              rgba(196, 28, 28, 0.3) 10px,
+              rgba(196, 28, 28, 0.3) 20px
+            )`,
           }),
         }}
       >
         <Typography level="h5" sx={{ fontSize: "sm" }}>
-          {id}
+          {questionId}
         </Typography>
         <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
           {current.preview}
@@ -168,7 +175,9 @@ const SearchListItem = memo<{
               size="sm"
               variant="plain"
               color="success"
-              onClick={() => recoverQuestion(bank, id)}
+              onClick={() =>
+                undoMarkQuestionAsDeleted({ questionBank, questionId })
+              }
               children={<UndoIcon />}
             />
           </Tooltip>
@@ -179,7 +188,9 @@ const SearchListItem = memo<{
               size="sm"
               variant="plain"
               color="danger"
-              onClick={() => deleteQuestion(bank, id)}
+              onClick={() =>
+                markQuestionAsDeleted({ questionBank, questionId })
+              }
               children={<DeleteIcon />}
             />
           </Tooltip>
@@ -200,7 +211,7 @@ export const QuestionEditorDiffTool = container<Props, Params, Data>(
         <SearchList
           forceMode="mobile"
           sx={{ flex: 1, overflow: "hidden" }}
-          items={items.map((id) => ({ id, bank: questionBank }))}
+          items={items.map((id) => ({ id, questionBank, questionId: id }))}
           noDataMessage={"No changes so far!"}
           renderThead={() => null}
           renderTableRow={() => null}
