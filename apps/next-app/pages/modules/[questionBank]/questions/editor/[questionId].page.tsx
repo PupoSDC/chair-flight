@@ -126,6 +126,7 @@ const Page: NextPage<PageProps> = ({
             noSsr
             questionBank={questionBank}
             questionId={questionId}
+            sx={{ height: "100%" }}
           />
         </TabPanel>
       </Tabs>

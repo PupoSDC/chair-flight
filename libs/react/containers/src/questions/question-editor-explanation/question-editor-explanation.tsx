@@ -1,5 +1,5 @@
 import { FormProvider } from "react-hook-form";
-import { Sheet, Stack, textareaClasses } from "@mui/joy";
+import { CircularProgress, Sheet, Stack, Textarea, textareaClasses } from "@mui/joy";
 import {
   HookFormTextArea,
   MarkdownClientCompressed,
@@ -10,6 +10,7 @@ import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import { useState, useTransition } from "react";
 
 type Props = {
   questionId: string;
@@ -22,31 +23,43 @@ type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorExplanation"];
 
 export const QuestionEditorExplanation = container<Props, Params, Data>(
-  ({ questionId, questionBank }) => {
-    const { form } = useQuestionEditor({ questionBank });
-    const explanation = form.watch(`editedQuestions.${questionId}.explanation`);
+  ({ questionId, questionBank, sx, component = "div" }) => {
+    const editor = useQuestionEditor({ questionBank });
+    const [thisExplanation, setThisExplanation] = useState("");
+    const [isPending, startTransition] = useTransition();
+    const explanation = editor.currentState[questionId]?.explanation;
 
     return (
-      <FormProvider {...form}>
-        <Stack direction="row" height="100%">
-          <HookFormTextArea
-            {...form.register(`editedQuestions.${questionId}.explanation`)}
-            sx={{
-              flex: 1,
-              height: "100%",
-              [`& .${textareaClasses.root}`]: { height: "100%" },
-            }}
-          />
-          <VerticalDivider />
-          <Sheet sx={{ flex: 1, p: 1 }}>
-            {explanation ? (
-              <MarkdownClientCompressed>{explanation}</MarkdownClientCompressed>
-            ) : (
-              <Ups message="No explanation provided" />
-            )}
-          </Sheet>
-        </Stack>
-      </FormProvider>
+      <Stack direction="row" height="100%" sx={sx} component={component}>
+        <Textarea
+          value={thisExplanation}
+          sx={{ height: "100%", flex: 1 }}
+          onChange={(e) => {
+            const val = e.target.value;
+            setThisExplanation(val);
+            startTransition(() => editor.setExplanation(questionId, val));
+          }}
+        />
+        <VerticalDivider />
+        <Sheet sx={{ flex: 1, p: 1, position: "relative" }}>
+          {explanation ? (
+            <MarkdownClientCompressed>{explanation}</MarkdownClientCompressed>
+          ) : (
+            <Ups message="No explanation provided" />
+          )}
+          {isPending && (
+            <CircularProgress 
+              size="lg" 
+              sx={{ 
+                position: "absolute", 
+                top: "50%", 
+                left: "50%", 
+                transform: "translate(-50%, -50%)"
+              }} 
+            />
+          )}
+        </Sheet>
+      </Stack>
     );
   },
 );

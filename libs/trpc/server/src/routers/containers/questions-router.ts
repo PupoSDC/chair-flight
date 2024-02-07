@@ -93,14 +93,7 @@ export const questionsContainersRouter = router({
     )
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
-      return {
-        filters: {
-          questions: (await questionSearch.getFilters(bank)).filters,
-          learningObjectives: (await learningObjectiveSearch.getFilters(bank))
-            .filters,
-          annexes: (await annexSearch.getFilters(bank)).filters,
-        },
-      };
+      return await questionSearch.getFilters(bank);
     }),
 
   getQuestionEditorAnnexes: publicProcedure

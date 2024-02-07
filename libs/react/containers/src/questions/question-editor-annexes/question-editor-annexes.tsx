@@ -42,14 +42,11 @@ const filterFormResolver = zodResolver(annexSearchFilters);
 type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorAnnexes = container<Props, Params, Data>(
-  ({ questionId, questionBank }) => {
-    const field = `editedQuestions.${questionId}.learningObjectives` as const;
-
+  ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
-
-    const { form } = useQuestionEditor({ questionBank });
-
-    const los = form.watch(field);
+    const editor = useQuestionEditor({ questionBank });
+    const question = editor.getQuestionState(questionId);
+    const annexes = question?.annexes ?? [];
 
     const serverData = QuestionEditorAnnexes.useData({
       questionBank,
@@ -67,122 +64,109 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
     );
 
     const retrieveAnnexes = useRetrieveAnnexes(
-      { ids: los ?? [], questionBank },
+      { ids: annexes ?? [], questionBank },
       { keepPreviousData: true },
     );
 
-    const addAnnex = (id: string) => {
-      form.setValue(field, [...(form.getValues(field) ?? []), id]);
-    };
-
-    const removeAnnex = (id: string) => {
-      form.setValue(
-        field,
-        (form.getValues(field) ?? []).filter((i: string) => i !== id),
-      );
-    };
-
     return (
-      <FormProvider {...form}>
-        <Stack direction="row" height="100%" width="100%">
-          <Stack height="100%" flex={1}>
-            <SearchHeader
-              search={search}
-              searchPlaceholder="Search Annexes..."
-              filters={serverData.filters}
-              filterValues={filterForm.watch()}
-              isLoading={searchAnnexes.isLoading}
-              isError={searchAnnexes.isError}
-              onSearchChange={setSearch}
-              onFilterValuesChange={(k, v) =>
-                filterForm.setValue(k as FilterKeys, v)
-              }
-            />
-            <SearchList
-              forceMode={"mobile"}
-              loading={searchAnnexes.isLoading}
-              error={searchAnnexes.isError}
-              items={(searchAnnexes.data?.pages ?? []).flatMap((p) => p.items)}
-              onFetchNextPage={searchAnnexes.fetchNextPage}
-              sx={{ flex: 1, overflow: "hidden" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <ImageWithModal
-                    href={result.href}
-                    alt=""
-                    width={100}
-                    height={100}
-                  />
-                  <Box sx={{ flex: 1, px: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "xs" }}>
-                      {result.id}
-                    </Typography>
-                    <Typography level="body-xs" sx={{ minHeight: "4em" }}>
-                      {result.description}
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Add to Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        disabled={los.includes(result.id)}
-                        onClick={() => addAnnex(result.id)}
-                        children={<AddIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
-          <VerticalDivider />
-          <Stack height="100%" flex={1}>
-            <SearchList
-              forceMode={"mobile"}
-              noDataMessage="No Annexes selected"
-              loading={retrieveAnnexes.isLoading}
-              error={retrieveAnnexes.isError}
-              items={retrieveAnnexes.data?.items ?? []}
-              sx={{ flex: 1, overflow: "hidden", width: "100%" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <ImageWithModal
-                    href={result.href}
-                    alt=""
-                    width={100}
-                    height={100}
-                  />
-                  <Box sx={{ flex: 1, px: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "xs" }}>
-                      {result.id}
-                    </Typography>
-                    <Typography level="body-xs" sx={{ minHeight: "4em" }}>
-                      {result.description}
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Remove from Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        onClick={() => removeAnnex(result.id)}
-                        children={<DeleteIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
+      <Stack direction="row" component={component} sx={sx}>
+        <Stack height="100%" flex={1}>
+          <SearchHeader
+            search={search}
+            searchPlaceholder="Search Annexes..."
+            filters={serverData.filters}
+            filterValues={filterForm.watch()}
+            isLoading={searchAnnexes.isLoading}
+            isError={searchAnnexes.isError}
+            onSearchChange={setSearch}
+            onFilterValuesChange={(k, v) =>
+              filterForm.setValue(k as FilterKeys, v)
+            }
+          />
+          <SearchList
+            forceMode={"mobile"}
+            loading={searchAnnexes.isLoading}
+            error={searchAnnexes.isError}
+            items={(searchAnnexes.data?.pages ?? []).flatMap((p) => p.items)}
+            onFetchNextPage={searchAnnexes.fetchNextPage}
+            sx={{ flex: 1, overflow: "hidden" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <ImageWithModal
+                  href={result.href}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+                <Box sx={{ flex: 1, px: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "xs" }}>
+                    {result.id}
+                  </Typography>
+                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                    {result.description}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Tooltip title="Add to Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      disabled={editor.hasAnnex(questionId, result.id)}
+                      onClick={() => editor.addAnnex(questionId, result.id)}
+                      children={<AddIcon />}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
         </Stack>
-      </FormProvider>
+        <VerticalDivider />
+        <Stack height="100%" flex={1}>
+          <SearchList
+            forceMode={"mobile"}
+            noDataMessage="No Annexes selected"
+            loading={retrieveAnnexes.isLoading}
+            error={retrieveAnnexes.isError}
+            items={retrieveAnnexes.data?.items ?? []}
+            sx={{ flex: 1, overflow: "hidden", width: "100%" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <ImageWithModal
+                  href={result.href}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+                <Box sx={{ flex: 1, px: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "xs" }}>
+                    {result.id}
+                  </Typography>
+                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                    {result.description}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Tooltip title="Remove from Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      onClick={() => editor.removeAnnex(questionId, result.id)}
+                      children={<DeleteIcon />}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
+        </Stack>
+      </Stack>
     );
   },
 );

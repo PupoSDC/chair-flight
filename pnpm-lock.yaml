@@ -49,7 +49,7 @@ dependencies:
     version: 5.9.1(prisma@5.9.1)
   '@react-three/drei':
     specifier: ^9.97.0
-    version: 9.97.0(@react-three/fiber@8.15.16)(@types/react@18.2.52)(@types/three@0.161.2)(react-dom@18.2.0)(react@18.2.0)(three@0.161.0)
+    version: 9.97.0(@react-three/fiber@8.15.16)(@types/react@18.2.52)(@types/three@0.161.2)(immer@10.0.3)(react-dom@18.2.0)(react@18.2.0)(three@0.161.0)
   '@react-three/fiber':
     specifier: ^8.15.16
     version: 8.15.16(react-dom@18.2.0)(react@18.2.0)(three@0.161.0)
@@ -77,6 +77,9 @@ dependencies:
   analytics:
     specifier: ^0.8.9
     version: 0.8.9(@types/dlv@1.1.4)
+  immer:
+    specifier: ^10.0.3
+    version: 10.0.3
   konva:
     specifier: ^9.3.2
     version: 9.3.2
@@ -163,7 +166,7 @@ dependencies:
     version: 3.22.4
   zustand:
     specifier: ^4.5.0
-    version: 4.5.0(@types/react@18.2.52)(react@18.2.0)
+    version: 4.5.0(@types/react@18.2.52)(immer@10.0.3)(react@18.2.0)
 
 devDependencies:
   '@next/bundle-analyzer':
@@ -5581,7 +5584,7 @@ packages:
     resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==}
     dev: false
 
-  /@react-three/drei@9.97.0(@react-three/fiber@8.15.16)(@types/react@18.2.52)(@types/three@0.161.2)(react-dom@18.2.0)(react@18.2.0)(three@0.161.0):
+  /@react-three/drei@9.97.0(@react-three/fiber@8.15.16)(@types/react@18.2.52)(@types/three@0.161.2)(immer@10.0.3)(react-dom@18.2.0)(react@18.2.0)(three@0.161.0):
     resolution: {integrity: sha512-D7qNQDbEoYHMlJU0tr/f/rCmw1TQmI+INEGGrfoAEA+sIvqLw9wLCra+1+t22lEPCpdpmVSMmdv6PynMcv5tCQ==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
@@ -5614,7 +5617,7 @@ packages:
       three-mesh-bvh: 0.7.1(three@0.161.0)
       three-stdlib: 2.29.4(three@0.161.0)
       troika-three-text: 0.47.2(three@0.161.0)
-      tunnel-rat: 0.1.2(@types/react@18.2.52)(react@18.2.0)
+      tunnel-rat: 0.1.2(@types/react@18.2.52)(immer@10.0.3)(react@18.2.0)
       utility-types: 3.11.0
       uuid: 9.0.1
       zustand: 3.7.2(react@18.2.0)
@@ -13107,6 +13110,10 @@ packages:
       queue: 6.0.2
     dev: true
 
+  /immer@10.0.3:
+    resolution: {integrity: sha512-pwupu3eWfouuaowscykeckFmVTpqbzW+rXFCX8rQLkZzM9ftBmU/++Ra+o+L27mz03zJTlyV4UUr+fdKNffo4A==}
+    dev: false
+
   /immutable@4.3.5:
     resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
     dev: true
@@ -19464,10 +19471,10 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /tunnel-rat@0.1.2(@types/react@18.2.52)(react@18.2.0):
+  /tunnel-rat@0.1.2(@types/react@18.2.52)(immer@10.0.3)(react@18.2.0):
     resolution: {integrity: sha512-lR5VHmkPhzdhrM092lI2nACsLO4QubF0/yoOhzX7c+wIpbN1GjHNzCc91QlpxBi+cnx8vVJ+Ur6vL5cEoQPFpQ==}
     dependencies:
-      zustand: 4.5.0(@types/react@18.2.52)(react@18.2.0)
+      zustand: 4.5.0(@types/react@18.2.52)(immer@10.0.3)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
       - immer
@@ -20864,7 +20871,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /zustand@4.5.0(@types/react@18.2.52)(react@18.2.0):
+  /zustand@4.5.0(@types/react@18.2.52)(immer@10.0.3)(react@18.2.0):
     resolution: {integrity: sha512-zlVFqS5TQ21nwijjhJlx4f9iGrXSL0o/+Dpy4txAP22miJ8Ti6c1Ol1RLNN98BMib83lmDH/2KmLwaNXpjrO1A==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -20880,6 +20887,7 @@ packages:
         optional: true
     dependencies:
       '@types/react': 18.2.52
+      immer: 10.0.3
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false

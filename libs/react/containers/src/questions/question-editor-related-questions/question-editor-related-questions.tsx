@@ -42,14 +42,11 @@ const filterFormResolver = zodResolver(questionSearchFilters);
 type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
-  ({ questionId, questionBank }) => {
-    const field = `editedQuestions.${questionId}.relatedQuestions` as const;
-
+  ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
-
-    const { form } = useQuestionEditor({ questionBank });
-
-    const questions = form.watch(field);
+    const editor = useQuestionEditor({ questionBank });
+    const question = editor.getQuestionState(questionId);
+    const questions = question?.relatedQuestions ?? [];
 
     const serverData = QuestionEditorRelatedQuestions.useData({
       questionBank,
@@ -71,108 +68,102 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
       { keepPreviousData: true },
     );
 
-    const addAnnex = (id: string) => {
-      form.setValue(field, [...(form.getValues(field) ?? []), id]);
-    };
-
-    const removeAnnex = (id: string) => {
-      form.setValue(
-        field,
-        (form.getValues(field) ?? []).filter((i: string) => i !== id),
-      );
-    };
-
     return (
-      <FormProvider {...form}>
-        <Stack direction="row" height="100%" width="100%">
-          <Stack height="100%" flex={1}>
-            <SearchHeader
-              search={search}
-              searchPlaceholder="Search Annexes..."
-              filters={serverData.filters}
-              filterValues={filterForm.watch()}
-              isLoading={searchQuestions.isLoading}
-              isError={searchQuestions.isError}
-              onSearchChange={setSearch}
-              onFilterValuesChange={(k, v) =>
-                filterForm.setValue(k as FilterKeys, v)
-              }
-            />
-            <SearchList
-              forceMode={"mobile"}
-              loading={searchQuestions.isLoading}
-              error={searchQuestions.isError}
-              items={(searchQuestions.data?.pages ?? []).flatMap(
-                (p) => p.items,
-              )}
-              onFetchNextPage={searchQuestions.fetchNextPage}
-              sx={{ flex: 1, overflow: "hidden" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <Box sx={{ flex: 1, pr: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "sm" }}>
-                      {result.id}
-                    </Typography>
-                    <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                      {result.text}
-                    </MarkdownClientCompressed>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Add to Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        disabled={questions.includes(result.id)}
-                        onClick={() => addAnnex(result.id)}
-                        children={<AddIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
-          <VerticalDivider />
-          <Stack height="100%" flex={1}>
-            <SearchList
-              forceMode={"mobile"}
-              noDataMessage="No Annexes selected"
-              loading={retrieveQuestions.isLoading}
-              error={retrieveQuestions.isError}
-              items={retrieveQuestions.data?.items ?? []}
-              sx={{ flex: 1, overflow: "hidden", width: "100%" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <Box sx={{ flex: 1, px: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "sm" }}>
-                      {result.id}
-                    </Typography>
-                    <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                      {result.text}
-                    </MarkdownClientCompressed>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Remove from Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        onClick={() => removeAnnex(result.id)}
-                        children={<DeleteIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
+      <Stack direction="row" component={component} sx={sx}>
+        <Stack height="100%" flex={1}>
+          <SearchHeader
+            search={search}
+            searchPlaceholder="Search Annexes..."
+            filters={serverData.filters}
+            filterValues={filterForm.watch()}
+            isLoading={searchQuestions.isLoading}
+            isError={searchQuestions.isError}
+            onSearchChange={setSearch}
+            onFilterValuesChange={(k, v) =>
+              filterForm.setValue(k as FilterKeys, v)
+            }
+          />
+          <SearchList
+            forceMode={"mobile"}
+            loading={searchQuestions.isLoading}
+            error={searchQuestions.isError}
+            items={(searchQuestions.data?.pages ?? []).flatMap(
+              (p) => p.items,
+            )}
+            onFetchNextPage={searchQuestions.fetchNextPage}
+            sx={{ flex: 1, overflow: "hidden" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <Box sx={{ flex: 1, pr: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "sm" }}>
+                    {result.id}
+                  </Typography>
+                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                    {result.text}
+                  </MarkdownClientCompressed>
+                </Box>
+                <Box>
+                  <Tooltip title="Add to Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      disabled={questions.includes(result.id)}
+                      children={<AddIcon />}
+                      onClick={() => editor.addRelatedQuestion(
+                        questionId,
+                        result.id
+                      )}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
         </Stack>
-      </FormProvider>
+        <VerticalDivider />
+        <Stack height="100%" flex={1}>
+          <SearchList
+            forceMode={"mobile"}
+            noDataMessage="No Annexes selected"
+            loading={retrieveQuestions.isLoading}
+            error={retrieveQuestions.isError}
+            items={retrieveQuestions.data?.items ?? []}
+            sx={{ flex: 1, overflow: "hidden", width: "100%" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <Box sx={{ flex: 1, px: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "sm" }}>
+                    {result.id}
+                  </Typography>
+                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                    {result.text}
+                  </MarkdownClientCompressed>
+                </Box>
+                <Box>
+                  <Tooltip title="Remove from Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      children={<DeleteIcon />}
+                      onClick={() => editor.removeRelatedQuestion(
+                        questionId,
+                        result.id
+                      )}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
+        </Stack>
+      </Stack>
+
     );
   },
 );
