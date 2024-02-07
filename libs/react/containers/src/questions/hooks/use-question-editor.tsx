@@ -247,7 +247,6 @@ export const useQuestionEditor = create<QuestionEditor>()(
           questionA: questionAid,
           questionB: questionBid,
         }) => {
-          const router = trpc.common.questions;
           const questionA = get()[questionBank].afterState[questionAid];
           const questionB = get()[questionBank].afterState[questionBid];
 

@@ -3,14 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
-import {
-  Box,
-  Button,
-  ListItemContent,
-  Stack,
-  Tooltip,
-  Typography,
-} from "@mui/joy";
+import { Button, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
 import { annexSearchFilters } from "@chair-flight/core/search";
 import {
   ImageWithModal,
@@ -81,20 +74,21 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
     };
 
     return (
-      <Stack direction="row" component={component} sx={sx}>
-        <Stack height="100%" flex={1}>
-          <SearchHeader
-            search={search}
-            searchPlaceholder="Search Annexes..."
-            filters={serverData.filters}
-            filterValues={filterForm.watch()}
-            isLoading={searchAnnexes.isLoading}
-            isError={searchAnnexes.isError}
-            onSearchChange={setSearch}
-            onFilterValuesChange={(k, v) =>
-              filterForm.setValue(k as FilterKeys, v)
-            }
-          />
+      <Stack component={component} sx={sx}>
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Annexes..."
+          mobileBreakpoint="force-mobile"
+          filters={serverData.filters}
+          filterValues={filterForm.watch()}
+          isLoading={searchAnnexes.isLoading}
+          isError={searchAnnexes.isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(k, v) =>
+            filterForm.setValue(k as FilterKeys, v)
+          }
+        />
+        <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList
             forceMode={"mobile"}
             loading={searchAnnexes.isLoading}
@@ -105,22 +99,16 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
             renderThead={() => null}
             renderTableRow={() => null}
             renderListItemContent={(result) => (
-              <ListItemContent sx={{ display: "flex" }}>
-                <ImageWithModal
-                  href={result.href}
-                  alt=""
-                  width={100}
-                  height={100}
-                />
-                <Box sx={{ flex: 1, px: 1 }}>
+              <ListItemContent>
+                <Stack
+                  direction={"row"}
+                  gap={1}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                >
                   <Typography level="h5" sx={{ fontSize: "xs" }}>
                     {result.id}
                   </Typography>
-                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
-                    {result.description}
-                  </Typography>
-                </Box>
-                <Box>
                   <Tooltip title="Add to Question">
                     <Button
                       sx={{ px: 1 }}
@@ -131,13 +119,22 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
                       children={<AddIcon />}
                     />
                   </Tooltip>
-                </Box>
+                </Stack>
+                <Stack direction={"row"} gap={1}>
+                  <ImageWithModal
+                    href={result.href}
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
+                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                    {result.description}
+                  </Typography>
+                </Stack>
               </ListItemContent>
             )}
           />
-        </Stack>
-        <VerticalDivider />
-        <Stack height="100%" flex={1}>
+          <VerticalDivider />
           <SearchList
             forceMode={"mobile"}
             noDataMessage="No Annexes selected"
@@ -148,22 +145,16 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
             renderThead={() => null}
             renderTableRow={() => null}
             renderListItemContent={(result) => (
-              <ListItemContent sx={{ display: "flex" }}>
-                <ImageWithModal
-                  href={result.href}
-                  alt=""
-                  width={100}
-                  height={100}
-                />
-                <Box sx={{ flex: 1, px: 1 }}>
+              <ListItemContent>
+                <Stack
+                  direction={"row"}
+                  gap={1}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                >
                   <Typography level="h5" sx={{ fontSize: "xs" }}>
                     {result.id}
                   </Typography>
-                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
-                    {result.description}
-                  </Typography>
-                </Box>
-                <Box>
                   <Tooltip title="Remove from Question">
                     <Button
                       sx={{ px: 1 }}
@@ -173,7 +164,18 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
                       children={<DeleteIcon />}
                     />
                   </Tooltip>
-                </Box>
+                </Stack>
+                <Stack direction={"row"} gap={1}>
+                  <ImageWithModal
+                    href={result.href}
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
+                  <Typography level="body-xs" sx={{ minHeight: "4em" }}>
+                    {result.description}
+                  </Typography>
+                </Stack>
               </ListItemContent>
             )}
           />

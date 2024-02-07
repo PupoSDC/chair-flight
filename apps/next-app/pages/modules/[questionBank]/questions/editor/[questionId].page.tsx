@@ -1,11 +1,20 @@
-import { useRouter } from "next/router";
-import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
+import { default as RightArrow } from "@mui/icons-material/ChevronRightOutlined";
+import {
+  Divider,
+  Tab,
+  TabList,
+  TabPanel,
+  Tabs,
+  tabClasses,
+  tabPanelClasses,
+} from "@mui/joy";
 import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   QuestionEditorAnnexes,
   QuestionEditorExplanation,
   QuestionEditorLearningObjectives,
+  QuestionEditorPreview,
   QuestionEditorRelatedQuestions,
   QuestionEditorVariant,
 } from "@chair-flight/react/containers";
@@ -14,11 +23,7 @@ import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
-type QueryParams = {
-  tab?: string;
-};
-
-type PageParams = QueryParams & {
+type PageParams = {
   questionBank: QuestionBankName;
   questionId: string;
 };
@@ -26,26 +31,9 @@ type PageParams = QueryParams & {
 type PageProps = {
   questionBank: QuestionBankName;
   questionId: string;
-  tab: string;
 };
 
-const Page: NextPage<PageProps> = ({
-  questionBank,
-  questionId,
-  tab: initialTab,
-}) => {
-  const router = useRouter();
-  const query = router.query as PageParams;
-  const tab = query.tab ?? initialTab;
-
-  const updateQuery = (query: QueryParams) => {
-    router.push(
-      { ...router, query: { ...router.query, ...query } },
-      undefined,
-      { shallow: true },
-    );
-  };
-
+const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
   const crumbs = [
     [questionBank.toUpperCase(), `/modules/${questionBank}`],
     ["Questions", `/modules/${questionBank}/questions`],
@@ -59,69 +47,55 @@ const Page: NextPage<PageProps> = ({
       breadcrumbs={crumbs}
       fixedHeight
       noPadding
+      sx={{ flexDirection: "row" }}
     >
       <AppHead
         linkTitle={`Chair Flight [${questionId}]`}
         linkDescription={""}
       />
+
       <Tabs
-        value={tab}
-        onChange={(_, v) => updateQuery({ tab: v as string })}
+        defaultValue={"question"}
         sx={{
-          backgroundColor: "transparent",
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
+          pl: 1,
+          flex: 1,
+          background: "transparent",
+
+          [`& .${tabPanelClasses.root}`]: {
+            flex: 1,
+            overflow: "hidden",
+            my: 1,
+            py: 0,
+          },
+
+          [`& .${tabClasses.selected}`]: {
+            color: "primary.plainColor",
+            background: "transparent",
+          },
         }}
       >
-        <TabList
-          sx={{
-            position: "fixed",
-            bgcolor: "background.surface",
-            width: "100%",
-            height: (theme) => `calc(${theme.spacing(5)} + 2px)`,
-
-            [`& .${tabClasses.selected}`]: {
-              color: "primary.plainColor",
-            },
-          }}
-        >
+        <TabList sx={{ justifyContent: "center" }}>
           <Tab value={"question"}>Question</Tab>
           <Tab value={"explanation"}>Explanation</Tab>
-          <Tab value={"los"}>Learning Objectives</Tab>
-          <Tab value={"relatedQs"}>Related Questions</Tab>
+          <Tab value={"los"}>LOs</Tab>
           <Tab value={"annexes"}>Annexes</Tab>
+          <Tab value={"relatedQs"}>Related</Tab>
         </TabList>
-        <Box sx={{ height: (theme) => `calc(${theme.spacing(5)} + 2px)` }} />
-        <TabPanel value={"question"} sx={{ flex: 1, overflow: "hidden" }}>
+        <TabPanel value={"question"} sx={{ px: 0 }}>
           <QuestionEditorVariant
             noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"explanation"} sx={{ flex: 1, overflow: "hidden" }}>
+        <TabPanel value={"explanation"} sx={{ px: 0 }}>
           <QuestionEditorExplanation
             noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"los"} sx={{ flex: 1, overflow: "hidden" }}>
-          <QuestionEditorLearningObjectives
-            noSsr
-            questionBank={questionBank}
-            questionId={questionId}
-          />
-        </TabPanel>
-        <TabPanel value={"relatedQs"} sx={{ flex: 1, overflow: "hidden" }}>
-          <QuestionEditorRelatedQuestions
-            noSsr
-            questionBank={questionBank}
-            questionId={questionId}
-          />
-        </TabPanel>
-        <TabPanel value={"annexes"} sx={{ flex: 1, overflow: "hidden" }}>
+        <TabPanel value={"annexes"} sx={{ px: 0 }}>
           <QuestionEditorAnnexes
             noSsr
             questionBank={questionBank}
@@ -129,7 +103,23 @@ const Page: NextPage<PageProps> = ({
             sx={{ height: "100%" }}
           />
         </TabPanel>
+        <TabPanel value={"los"} sx={{ flex: 1, overflow: "hidden" }}>
+          <QuestionEditorLearningObjectives
+            noSsr
+            questionBank={questionBank}
+            questionId={questionId}
+            sx={{ height: "100%" }}
+          />
+        </TabPanel>
       </Tabs>
+      <Divider orientation="vertical">
+        <RightArrow size="lg" />
+      </Divider>
+      <QuestionEditorPreview
+        questionBank={questionBank}
+        questionId={questionId}
+        sx={{ flex: 1, overflow: "hidden", height: "100%", pr: 1 }}
+      />
     </LayoutModule>
   );
 };

@@ -122,4 +122,5 @@ export const questionsContainersRouter = router({
     }),
 
   getQuestionEditorVariant: publicProcedure.query(() => ({})),
+  getQuestionEditorPreview: publicProcedure.query(() => ({})),
 });

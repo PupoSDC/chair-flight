@@ -61,7 +61,7 @@ type Params = {
 type Data = AppRouterOutput["containers"]["layouts"]["getLayoutModule"];
 
 export const LayoutModule = container<Props, Params, Data>(
-  ({ children, fixedHeight, noPadding, questionBank, breadcrumbs }) => {
+  ({ children, fixedHeight, noPadding, questionBank, breadcrumbs, sx }) => {
     const { isTransitioning } = usePageTransition();
     const router = useRouter();
     const data = LayoutModule.useData({ questionBank });
@@ -231,6 +231,7 @@ export const LayoutModule = container<Props, Params, Data>(
             ...(fixedHeight
               ? { height: `calc(100vh - ${HEADER_HEIGHT}px)` }
               : {}),
+            ...sx,
           }}
         />
         <UserBugReport />

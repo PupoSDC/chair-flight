@@ -81,21 +81,21 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
     };
 
     return (
-      <Stack direction="row" component={component} sx={sx}>
-        <Stack height="100%" flex={1}>
-          <SearchHeader
-            search={search}
-            searchPlaceholder="Search Annexes..."
-            mobileBreakpoint="force-mobile"
-            filters={serverData.filters}
-            filterValues={filterForm.watch()}
-            isLoading={searchLos.isLoading}
-            isError={searchLos.isError}
-            onSearchChange={setSearch}
-            onFilterValuesChange={(k, v) =>
-              filterForm.setValue(k as FilterKeys, v)
-            }
-          />
+      <Stack component={component} sx={sx}>
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Annexes..."
+          mobileBreakpoint="force-mobile"
+          filters={serverData.filters}
+          filterValues={filterForm.watch()}
+          isLoading={searchLos.isLoading}
+          isError={searchLos.isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(k, v) =>
+            filterForm.setValue(k as FilterKeys, v)
+          }
+        />
+        <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList
             forceMode={"mobile"}
             loading={searchLos.isLoading}
@@ -130,9 +130,8 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
               </ListItemContent>
             )}
           />
-        </Stack>
-        <VerticalDivider />
-        <Stack height="100%" flex={1}>
+          <VerticalDivider />
+
           <SearchList
             forceMode={"mobile"}
             noDataMessage="No Annexes selected"
