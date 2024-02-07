@@ -1,19 +1,28 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Box, Button, Divider, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { default as AddInput } from "@mui/icons-material/InputOutlined";
+import {
+  Box,
+  Divider,
+  ListItemContent,
+  Stack,
+  Tooltip,
+  Typography,
+} from "@mui/joy";
+import { type QuestionBankName } from "@chair-flight/core/question-bank";
+import { questionSearchFilters } from "@chair-flight/core/search";
+import {
+  LoadingButton,
+  MarkdownClientCompressed,
+  SearchHeader,
+  SearchList,
+} from "@chair-flight/react/components";
+import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
-import { getQuestionPreview, QuestionId, type QuestionBankName } from "@chair-flight/core/question-bank";
-import { LoadingButton, MarkdownClientCompressed, SearchHeader, SearchList, type SearchListProps } from "@chair-flight/react/components";
-import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
-import { questionSearchFilters } from "@chair-flight/core/search";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
-import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
-import { default as EditIcon } from "@mui/icons-material/EditOutlined";
-import { default as GithubIcon } from "@mui/icons-material/GitHub";
-import { default as UndoIcon } from '@mui/icons-material/Undo';
-import { default as AddInput } from '@mui/icons-material/InputOutlined';
+import type { QuestionId } from "@chair-flight/core/question-bank";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -60,11 +69,11 @@ export const QuestionManager = container<Props, Params, Data>(
 
     const addQuestion = (id: QuestionId) => {
       addQuestionToEditor(utils, questionBank, id);
-    }
+    };
 
     const removeQuestion = (id: QuestionId) => {
       removeQuestionFromEditor(utils, questionBank, id);
-    }
+    };
 
     return (
       <Stack direction="row" component={component} sx={sx}>
@@ -85,9 +94,7 @@ export const QuestionManager = container<Props, Params, Data>(
             forceMode={"mobile"}
             loading={searchQuestions.isLoading}
             error={searchQuestions.isError}
-            items={(searchQuestions.data?.pages ?? []).flatMap(
-              (p) => p.items,
-            )}
+            items={(searchQuestions.data?.pages ?? []).flatMap((p) => p.items)}
             onFetchNextPage={searchQuestions.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
@@ -106,38 +113,43 @@ export const QuestionManager = container<Props, Params, Data>(
                             rgba(234, 154, 62, 0.3) 20px
                           )`,
                   }),
-                }}>
+                }}
+              >
                 <Box sx={{ flex: 1, pr: 1 }}>
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
                   <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
-                    {result.relatedQuestions.map(q => q.id).join(", ")}
+                    {result.relatedQuestions.map((q) => q.id).join(", ")}
                   </Typography>
                   <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
                     {result.text}
                   </MarkdownClientCompressed>
                   <Divider sx={{ my: 1, mx: 2 }} />
                   <Typography sx={{ fontSize: "xs" }}>
-                    <b>Related Questions</b><br />
-                    {result.relatedQuestions.map(q => q.id).join(", ") || "None"}
+                    <b>Related Questions</b>
+                    <br />
+                    {result.relatedQuestions.map((q) => q.id).join(", ") ||
+                      "None"}
                   </Typography>
                   <Typography sx={{ fontSize: "xs" }}>
-                    <b>Learning Objectives</b><br />
-                    {result.learningObjectives.map(q => q.id).join(", ") || "None"}
+                    <b>Learning Objectives</b>
+                    <br />
+                    {result.learningObjectives.map((q) => q.id).join(", ") ||
+                      "None"}
                   </Typography>
                 </Box>
-                <Stack gap={1} >
+                <Stack gap={1}>
                   {!isQuestionInEditor(questionBank, result.id) && (
-                    <Tooltip 
-                      title={(
+                    <Tooltip
+                      title={
                         <>
                           Add Question.
                           <br />
                           Note: All related questions will be added as well.
                         </>
-                      )}
-                      children={(
+                      }
+                      children={
                         <LoadingButton
                           sx={{ px: 1 }}
                           size="sm"
@@ -145,7 +157,7 @@ export const QuestionManager = container<Props, Params, Data>(
                           onClick={() => addQuestion(result.id)}
                           children={<AddInput />}
                         />
-                      )}
+                      }
                     />
                   )}
                 </Stack>
@@ -169,36 +181,40 @@ export const QuestionManager = container<Props, Params, Data>(
                     {result.id}
                   </Typography>
                   <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
-                    {result.relatedQuestions.map(q => q.id).join(", ")}
+                    {result.relatedQuestions.map((q) => q.id).join(", ")}
                   </Typography>
                   <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
                     {result.text}
                   </MarkdownClientCompressed>
                 </Box>
                 <Stack gap={1}>
-                  {(
-                    <Tooltip 
-                      title={(
+                  {
+                    <Tooltip
+                      title={
                         <>
                           Remove Question.
                           <br />
                           Note: All related questions will be removed as well.
                         </>
-                      )}
-                      children={(
+                      }
+                      children={
                         <LoadingButton
                           sx={{ px: 1 }}
                           size="sm"
                           variant="plain"
                           color="danger"
                           onClick={() => removeQuestion(result.id)}
-                          children={<AddInput sx={{
-                            transform: "rotate(180deg)"
-                          }} />}
+                          children={
+                            <AddInput
+                              sx={{
+                                transform: "rotate(180deg)",
+                              }}
+                            />
+                          }
                         />
-                      )}
+                      }
                     />
-                  )}
+                  }
                 </Stack>
               </ListItemContent>
             )}
@@ -222,4 +238,3 @@ QuestionManager.useData = (params: Params) => {
   const questionBank = getRequiredParam(params, "questionBank");
   return router.getQuestionManager.useSuspenseQuery({ questionBank })[0];
 };
-

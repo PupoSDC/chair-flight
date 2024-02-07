@@ -5,18 +5,9 @@ import type {
 } from "../entities/question-bank-question";
 
 export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
-  const common = {
-    type,
-    id: getRandomId(),
-    annexes: [] as string[],
-    externalIds: [] as string[],
-    explanation: "",
-  };
-
   switch (type) {
     case "simple":
       return {
-        ...common,
         type: "simple",
         question: "",
         options: [1, 2, 3, 4].map((i) => ({
@@ -28,7 +19,6 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
       };
     case "one-two":
       return {
-        ...common,
         type: "one-two",
         question: "",
         firstCorrectStatements: [""],
@@ -38,14 +28,12 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
       };
     case "true-or-false":
       return {
-        ...common,
         type: "true-or-false",
         question: "",
         answer: true,
       };
     case "definition":
       return {
-        ...common,
         type: "definition",
         question: "${term}...",
         fakeOptions: [],
@@ -57,13 +45,12 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
       };
     case "multiple-correct":
       return {
-        ...common,
+        type: "multiple-correct",
         options: [1, 2, 3, 4].map((i) => ({
           text: "",
           correct: i === 1,
           why: "",
         })),
-        type: "multiple-correct",
         question: "",
       };
   }

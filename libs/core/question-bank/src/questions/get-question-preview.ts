@@ -1,4 +1,4 @@
-import type { QuestionTemplate } from "../entities/question-bank-question";
+import type { QuestionVariant } from "../entities/question-bank-question";
 import type { QuestionVariantDefinition } from "../entities/question-bank-question-definition";
 import type { QuestionVariantMultipleCorrect } from "../entities/question-bank-question-multiple-correct";
 import type { QuestionVariantOneTwo } from "../entities/question-bank-question-one-two";
@@ -65,17 +65,17 @@ const getQuestionMultipleCorrectPreview = (
   ].join("\n");
 };
 
-export const getQuestionPreview = (question: QuestionTemplate) => {
-  switch (question.variant.type) {
+export const getQuestionPreview = (variant: QuestionVariant) => {
+  switch (variant.type) {
     case "simple":
-      return getQuestionVariantSimplePreview(question.variant);
+      return getQuestionVariantSimplePreview(variant);
     case "one-two":
-      return getQuestionVariantOneTwoPreview(question.variant);
+      return getQuestionVariantOneTwoPreview(variant);
     case "true-or-false":
-      return getQuestionVariantTrueOrFalsePreview(question.variant);
+      return getQuestionVariantTrueOrFalsePreview(variant);
     case "definition":
-      return getQuestionVariantDefinitionPreview(question.variant);
+      return getQuestionVariantDefinitionPreview(variant);
     case "multiple-correct":
-      return getQuestionMultipleCorrectPreview(question.variant);
+      return getQuestionMultipleCorrectPreview(variant);
   }
 };

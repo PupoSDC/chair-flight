@@ -1,11 +1,15 @@
 import * as fs from "node:fs/promises";
+import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 import { AppHead } from "@chair-flight/react/components";
-import { LayoutModule, QuestionEditorDiffTool, QuestionManager } from "@chair-flight/react/containers";
+import {
+  LayoutModule,
+  QuestionEditorDiffTool,
+  QuestionManager,
+} from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { Breadcrumbs } from "@chair-flight/react/containers";
 import type { GetStaticPaths, NextPage } from "next";
-import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 
 type PageProps = {
   questionBank: QuestionBankName;
@@ -21,8 +25,6 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
     ["Questions", `/modules/${questionBank}/questions`],
     "Editor",
   ] as Breadcrumbs;
-
-  
 
   return (
     <LayoutModule
@@ -59,21 +61,20 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
         </TabList>
         <Box sx={{ height: (theme) => `calc(${theme.spacing(5)} + 2px)` }} />
         <TabPanel value={"Pick"} sx={{ flex: 1, overflow: "hidden" }}>
-          <QuestionManager 
+          <QuestionManager
             noSsr
-            questionBank={questionBank} 
-            sx={{ height: "100%" }} 
+            questionBank={questionBank}
+            sx={{ height: "100%" }}
           />
         </TabPanel>
         <TabPanel value={"Edit"} sx={{ flex: 1, overflow: "hidden" }}>
-          <QuestionEditorDiffTool 
+          <QuestionEditorDiffTool
             noSsr
-            questionBank={questionBank} 
-            sx={{ height: "100%" }} 
+            questionBank={questionBank}
+            sx={{ height: "100%" }}
           />
         </TabPanel>
       </Tabs>
-      
     </LayoutModule>
   );
 };

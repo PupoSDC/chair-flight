@@ -1,16 +1,11 @@
-import { FormProvider } from "react-hook-form";
-import { CircularProgress, Sheet, Stack, Textarea, textareaClasses } from "@mui/joy";
-import {
-  HookFormTextArea,
-  MarkdownClientCompressed,
-  Ups,
-} from "@chair-flight/react/components";
+import { useState, useTransition } from "react";
+import { CircularProgress, Sheet, Stack, Textarea } from "@mui/joy";
+import { MarkdownClientCompressed, Ups } from "@chair-flight/react/components";
 import { container } from "../../wraper";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
-import { useState, useTransition } from "react";
 
 type Props = {
   questionId: string;
@@ -32,7 +27,6 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
       return s.setQuestionExplanation;
     });
 
-
     const [thisExplanation, setThisExplanation] = useState(explanation);
     const [isPending, startTransition] = useTransition();
 
@@ -44,11 +38,9 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
           onChange={(e) => {
             const val = e.target.value;
             setThisExplanation(val);
-            startTransition(() => setQuestionExplanation(
-              questionBank, 
-              questionId, 
-              val
-            ));
+            startTransition(() =>
+              setQuestionExplanation(questionBank, questionId, val),
+            );
           }}
         />
         <VerticalDivider />
@@ -59,14 +51,14 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
             <Ups message="No explanation provided" />
           )}
           {isPending && (
-            <CircularProgress 
-              size="lg" 
-              sx={{ 
-                position: "absolute", 
-                top: "50%", 
-                left: "50%", 
-                transform: "translate(-50%, -50%)"
-              }} 
+            <CircularProgress
+              size="lg"
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
             />
           )}
         </Sheet>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
@@ -87,9 +87,7 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
             forceMode={"mobile"}
             loading={searchQuestions.isLoading}
             error={searchQuestions.isError}
-            items={(searchQuestions.data?.pages ?? []).flatMap(
-              (p) => p.items,
-            )}
+            items={(searchQuestions.data?.pages ?? []).flatMap((p) => p.items)}
             onFetchNextPage={searchQuestions.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
@@ -112,10 +110,9 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
                       variant="plain"
                       disabled={questions.includes(result.id)}
                       children={<AddIcon />}
-                      onClick={() => editor.addRelatedQuestion(
-                        questionId,
-                        result.id
-                      )}
+                      onClick={() =>
+                        editor.addRelatedQuestion(questionId, result.id)
+                      }
                     />
                   </Tooltip>
                 </Box>
@@ -151,10 +148,9 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
                       size="sm"
                       variant="plain"
                       children={<DeleteIcon />}
-                      onClick={() => editor.removeRelatedQuestion(
-                        questionId,
-                        result.id
-                      )}
+                      onClick={() =>
+                        editor.removeRelatedQuestion(questionId, result.id)
+                      }
                     />
                   </Tooltip>
                 </Box>
@@ -163,7 +159,6 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
           />
         </Stack>
       </Stack>
-
     );
   },
 );

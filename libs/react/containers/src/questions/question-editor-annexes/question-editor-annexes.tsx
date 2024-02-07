@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
@@ -44,9 +44,14 @@ type FilterKeys = keyof Data["filters"];
 export const QuestionEditorAnnexes = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
-    const editor = useQuestionEditor({ questionBank });
-    const question = editor.getQuestionState(questionId);
-    const annexes = question?.annexes ?? [];
+
+    const annexes = useQuestionEditor((s) => {
+      return s[questionBank].afterState[questionId]?.annexes ?? [];
+    });
+
+    const setAnnexes = useQuestionEditor((s) => {
+      return s.setQuestionAnnexes;
+    });
 
     const serverData = QuestionEditorAnnexes.useData({
       questionBank,
@@ -67,6 +72,18 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
       { ids: annexes ?? [], questionBank },
       { keepPreviousData: true },
     );
+
+    const addAnnex = (id: string) => {
+      setAnnexes(questionBank, questionId, [...new Set([...annexes, id])]);
+    };
+
+    const removeAnnex = (id: string) => {
+      setAnnexes(
+        questionBank,
+        questionId,
+        annexes.filter((lo) => lo !== id),
+      );
+    };
 
     return (
       <Stack direction="row" component={component} sx={sx}>
@@ -114,8 +131,8 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
                       sx={{ px: 1 }}
                       size="sm"
                       variant="plain"
-                      disabled={editor.hasAnnex(questionId, result.id)}
-                      onClick={() => editor.addAnnex(questionId, result.id)}
+                      disabled={annexes.includes(result.id)}
+                      onClick={() => addAnnex(result.id)}
                       children={<AddIcon />}
                     />
                   </Tooltip>
@@ -157,7 +174,7 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
                       sx={{ px: 1 }}
                       size="sm"
                       variant="plain"
-                      onClick={() => editor.removeAnnex(questionId, result.id)}
+                      onClick={() => removeAnnex(result.id)}
                       children={<DeleteIcon />}
                     />
                   </Tooltip>

@@ -42,6 +42,14 @@ export type QuestionTemplate = {
   variant: QuestionVariant;
 };
 
+export const questionVariantSchema = z.union([
+  questionVariantSimpleSchema,
+  questionVariantDefinitionSchema,
+  questionVariantTrueOrFalseSchema,
+  questionVariantMultipleCorrectSchema,
+  questionVariantOneTwoSchema,
+]);
+
 export const questionTemplateSchema = z.object({
   id: z.string(),
   doc: z.string(),
@@ -52,13 +60,7 @@ export const questionTemplateSchema = z.object({
   learningObjectives: z.array(z.string()).min(1),
   explanation: z.string(),
   srcLocation: z.string().min(6),
-  variant: z.union([
-    questionVariantSimpleSchema,
-    questionVariantDefinitionSchema,
-    questionVariantTrueOrFalseSchema,
-    questionVariantMultipleCorrectSchema,
-    questionVariantOneTwoSchema,
-  ]),
+  variant: questionVariantSchema,
 });
 
 type IQuestionTemplate = z.infer<typeof questionTemplateSchema>;

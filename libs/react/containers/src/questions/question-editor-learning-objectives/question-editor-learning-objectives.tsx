@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
@@ -44,13 +44,13 @@ type FilterKeys = keyof Data["filters"];
 export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
-    
+
     const los = useQuestionEditor((s) => {
       return s[questionBank].afterState[questionId]?.learningObjectives ?? [];
     });
 
     const setLos = useQuestionEditor((s) => {
-      return s.setQuestionLearningObjectives
+      return s.setQuestionLearningObjectives;
     });
 
     const serverData = QuestionEditorLearningObjectives.useData({
@@ -75,11 +75,15 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
 
     const addLo = (id: string) => {
       setLos(questionBank, questionId, [...new Set([...los, id])]);
-    }
+    };
 
     const removeLo = (id: string) => {
-      setLos(questionBank, questionId, los.filter((i) => i !== id));
-    }
+      setLos(
+        questionBank,
+        questionId,
+        los.filter((i) => i !== id),
+      );
+    };
 
     return (
       <Stack direction="row" component={component} sx={sx}>
