@@ -1,12 +1,7 @@
-import { FormProvider } from "react-hook-form";
-import { Sheet, Stack, textareaClasses } from "@mui/joy";
-import {
-  HookFormTextArea,
-  MarkdownClientCompressed,
-  Ups,
-} from "@chair-flight/react/components";
+import { useState, useTransition } from "react";
+import { default as Editor } from "@monaco-editor/react";
+import { useColorScheme } from "@mui/joy";
 import { container } from "../../wraper";
-import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
@@ -14,39 +9,50 @@ import type { AppRouterOutput } from "@chair-flight/trpc/server";
 type Props = {
   questionId: string;
   questionBank: QuestionBankName;
+  component?: "textarea";
 };
 
-type Params = Props;
+type Params = {
+  questionId: string;
+  questionBank: QuestionBankName;
+};
 
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorExplanation"];
 
 export const QuestionEditorExplanation = container<Props, Params, Data>(
   ({ questionId, questionBank }) => {
-    const { form } = useQuestionEditor({ questionBank });
-    const explanation = form.watch(`editedQuestions.${questionId}.explanation`);
+    const { mode } = useColorScheme();
+    const { explanation, setQuestionExplanation } = useQuestionEditor((s) => ({
+      explanation: s[questionBank].afterState[questionId]?.explanation ?? "",
+      setQuestionExplanation: s.setQuestionExplanation,
+    }));
+
+    const [thisExplanation, setThisExplanation] = useState(explanation);
+    const [, startTransition] = useTransition();
+
+    const updateExplanation = (mdInput: string | undefined = "") => {
+      setThisExplanation(mdInput);
+      startTransition(() =>
+        setQuestionExplanation({
+          questionBank,
+          questionId,
+          explanation: mdInput,
+        }),
+      );
+    };
 
     return (
-      <FormProvider {...form}>
-        <Stack direction="row" height="100%">
-          <HookFormTextArea
-            {...form.register(`editedQuestions.${questionId}.explanation`)}
-            sx={{
-              flex: 1,
-              height: "100%",
-              [`& .${textareaClasses.root}`]: { height: "100%" },
-            }}
-          />
-          <VerticalDivider />
-          <Sheet sx={{ flex: 1, p: 1 }}>
-            {explanation ? (
-              <MarkdownClientCompressed>{explanation}</MarkdownClientCompressed>
-            ) : (
-              <Ups message="No explanation provided" />
-            )}
-          </Sheet>
-        </Stack>
-      </FormProvider>
+      <Editor
+        className="vs-code-editor"
+        defaultLanguage="markdown"
+        value={thisExplanation}
+        onChange={updateExplanation}
+        theme={mode === "dark" ? "vs-dark" : "vs-light"}
+        options={{
+          wordWrap: "on",
+        }}
+      />
     );
   },
 );

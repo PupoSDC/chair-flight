@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
@@ -42,14 +42,13 @@ const filterFormResolver = zodResolver(learningObjectiveSearchFilters);
 type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
-  ({ questionId, questionBank }) => {
-    const field = `editedQuestions.${questionId}.learningObjectives` as const;
-
+  ({ sx, component = "div", questionId, questionBank }) => {
     const [search, setSearch] = useState("");
 
-    const { form } = useQuestionEditor({ questionBank });
-
-    const questions = form.watch(field);
+    const { los, setLos } = useQuestionEditor((s) => ({
+      los: s[questionBank].afterState[questionId]?.learningObjectives ?? [],
+      setLos: s.setQuestionLearningObjectives,
+    }));
 
     const serverData = QuestionEditorLearningObjectives.useData({
       questionBank,
@@ -67,111 +66,107 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
     );
 
     const retrieveLos = useRetrieveLos(
-      { ids: questions ?? [], questionBank },
+      { ids: los ?? [], questionBank },
       { keepPreviousData: true },
     );
 
-    const addAnnex = (id: string) => {
-      form.setValue(field, [...(form.getValues(field) ?? []), id]);
+    const addLo = (id: string) => {
+      const learningObjectives = [...new Set([...los, id])];
+      setLos({ questionBank, questionId, learningObjectives });
     };
 
-    const removeAnnex = (id: string) => {
-      form.setValue(
-        field,
-        (form.getValues(field) ?? []).filter((i: string) => i !== id),
-      );
+    const removeLo = (id: string) => {
+      const learningObjectives = los.filter((i) => i !== id);
+      setLos({ questionBank, questionId, learningObjectives });
     };
 
     return (
-      <FormProvider {...form}>
-        <Stack direction="row" height="100%" width="100%">
-          <Stack height="100%" flex={1}>
-            <SearchHeader
-              search={search}
-              searchPlaceholder="Search Annexes..."
-              mobileBreakpoint="force-mobile"
-              filters={serverData.filters}
-              filterValues={filterForm.watch()}
-              isLoading={searchLos.isLoading}
-              isError={searchLos.isError}
-              onSearchChange={setSearch}
-              onFilterValuesChange={(k, v) =>
-                filterForm.setValue(k as FilterKeys, v)
-              }
-            />
-            <SearchList
-              forceMode={"mobile"}
-              loading={searchLos.isLoading}
-              error={searchLos.isError}
-              items={(searchLos.data?.pages ?? []).flatMap((p) => p.items)}
-              onFetchNextPage={searchLos.fetchNextPage}
-              sx={{ flex: 1, overflow: "hidden" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <Box sx={{ flex: 1, pr: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "sm" }}>
-                      {result.id}
-                    </Typography>
-                    <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                      {result.text}
-                    </MarkdownClientCompressed>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Add to Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        disabled={questions.includes(result.id)}
-                        onClick={() => addAnnex(result.id)}
-                        children={<AddIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
+      <Stack component={component} sx={sx}>
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Annexes..."
+          mobileBreakpoint="force-mobile"
+          filters={serverData.filters}
+          filterValues={filterForm.watch()}
+          isLoading={searchLos.isLoading}
+          isError={searchLos.isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(k, v) =>
+            filterForm.setValue(k as FilterKeys, v)
+          }
+        />
+        <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
+          <SearchList
+            forceMode={"mobile"}
+            loading={searchLos.isLoading}
+            error={searchLos.isError}
+            items={(searchLos.data?.pages ?? []).flatMap((p) => p.items)}
+            onFetchNextPage={searchLos.fetchNextPage}
+            sx={{ flex: 1, overflow: "hidden" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <Box sx={{ flex: 1, pr: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "sm" }}>
+                    {result.id}
+                  </Typography>
+                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                    {result.text}
+                  </MarkdownClientCompressed>
+                </Box>
+                <Box>
+                  <Tooltip title="Add to Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      disabled={los.includes(result.id)}
+                      onClick={() => addLo(result.id)}
+                      children={<AddIcon />}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
           <VerticalDivider />
-          <Stack height="100%" flex={1}>
-            <SearchList
-              forceMode={"mobile"}
-              noDataMessage="No Annexes selected"
-              loading={retrieveLos.isLoading}
-              error={retrieveLos.isError}
-              items={retrieveLos.data?.items ?? []}
-              sx={{ flex: 1, overflow: "hidden", width: "100%" }}
-              renderThead={() => null}
-              renderTableRow={() => null}
-              renderListItemContent={(result) => (
-                <ListItemContent sx={{ display: "flex" }}>
-                  <Box sx={{ flex: 1, px: 1 }}>
-                    <Typography level="h5" sx={{ fontSize: "sm" }}>
-                      {result.id}
-                    </Typography>
-                    <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                      {result.text}
-                    </MarkdownClientCompressed>
-                  </Box>
-                  <Box>
-                    <Tooltip title="Remove from Question">
-                      <Button
-                        sx={{ px: 1 }}
-                        size="sm"
-                        variant="plain"
-                        onClick={() => removeAnnex(result.id)}
-                        children={<DeleteIcon />}
-                      />
-                    </Tooltip>
-                  </Box>
-                </ListItemContent>
-              )}
-            />
-          </Stack>
+
+          <SearchList
+            forceMode={"mobile"}
+            noDataMessage="No Annexes selected"
+            loading={retrieveLos.isLoading}
+            error={retrieveLos.isError}
+            items={retrieveLos.data?.items ?? []}
+            sx={{ flex: 1, overflow: "hidden", width: "100%" }}
+            renderThead={() => null}
+            renderTableRow={() => null}
+            renderListItemContent={(result) => (
+              <ListItemContent sx={{ display: "flex" }}>
+                <Box sx={{ flex: 1, px: 1 }}>
+                  <Typography level="h5" sx={{ fontSize: "sm" }}>
+                    {result.id}
+                  </Typography>
+                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                    {result.text}
+                  </MarkdownClientCompressed>
+                </Box>
+                <Box>
+                  <Tooltip title="Remove from Question">
+                    <Button
+                      sx={{ px: 1 }}
+                      size="sm"
+                      variant="plain"
+                      onClick={() => removeLo(result.id)}
+                      children={<DeleteIcon />}
+                    />
+                  </Tooltip>
+                </Box>
+              </ListItemContent>
+            )}
+          />
         </Stack>
-      </FormProvider>
+      </Stack>
     );
   },
 );

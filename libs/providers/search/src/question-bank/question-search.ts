@@ -69,7 +69,7 @@ export class QuestionSearch extends QuestionBankSearchProvider<
       return {
         id: q.id,
         questionBank: bank.getName(),
-        text: getQuestionPreview(q),
+        text: getQuestionPreview(q.variant),
         subjects: uniqueSubjects,
         learningObjectives: q.learningObjectives.map((id) => ({
           id,
@@ -97,7 +97,7 @@ export class QuestionSearch extends QuestionBankSearchProvider<
         id: q.id,
         questionBank: bank.getName(),
         subjects: uniqueSubjects.join(", "),
-        text: getQuestionPreview(q),
+        text: getQuestionPreview(q.variant),
         learningObjectives: los,
         externalIds: q.externalIds.join(", "),
       };
