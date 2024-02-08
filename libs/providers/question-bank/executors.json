@@ -5,6 +5,11 @@
       "schema": "./executors/compile/schema.json",
       "description": "Compile question Bank from content folder"
     },
+    "arrange": {
+      "implementation": "./executors/arrange/executor",
+      "schema": "./executors/compile/schema.json",
+      "description": "Reads and writes back the question bank to enforce homogenous format"
+    },
     "parseLosXlsx": {
       "implementation": "./executors/parse-los-xlsx/executor",
       "schema": "./executors/parse-los-xlsx/schema.json",

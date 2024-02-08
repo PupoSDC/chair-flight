@@ -1,11 +1,11 @@
 import { Octokit } from "octokit";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { createEditQuestionsPr } from "./functions/create-edit-questions-pr";
 import { createNewIssue } from "./functions/create-new-issue";
-import { createNewQuestionPr } from "./functions/create-new-question-pr";
-import type { NewIssue, QuestionEdit } from "@chair-flight/core/github";
+import type { NewIssue, EditQuestionsPr } from "@chair-flight/core/github";
 
 interface GithubProvider {
-  createNewQuestionPr(newQuestion: QuestionEdit): Promise<{ url: string }>;
+  createEditQuestionsPr(newPr: EditQuestionsPr): Promise<{ url: string }>;
   createNewIssue(newIssue: NewIssue): Promise<{ url: string }>;
 }
 
@@ -18,8 +18,8 @@ export class Github implements GithubProvider {
     });
   }
 
-  async createNewQuestionPr(newQuestion: QuestionEdit) {
-    return await createNewQuestionPr(Github.octokit, newQuestion);
+  async createEditQuestionsPr(newPr: EditQuestionsPr) {
+    return await createEditQuestionsPr(Github.octokit, newPr);
   }
 
   async createNewIssue(newIssue: NewIssue) {

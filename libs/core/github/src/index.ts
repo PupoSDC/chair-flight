@@ -1,2 +1,2 @@
 export * from "./entities/new-issue";
-export * from "./entities/question-edit";
+export * from "./entities/edit-questions";

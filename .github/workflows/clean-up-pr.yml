@@ -1,5 +1,12 @@
 name: Code Check
-on: push
+
+on:
+  pull_request:
+    branches:
+      - "feat-edit-questions-*"
+  pull_request_target:
+    branches:
+      - "feat-edit-questions-*"
 
 env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
@@ -44,20 +51,24 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Generate Prisma types
-        run: pnpm generate
+      - name: Arrange Question banks
+        run: pnpm arrange
 
       - name: Run Prettier
-        run: pnpm prettier:check
+        run: pnpm prettier
 
-      - name: Run Lint
-        run: pnpm lint
+      - name: Configure Git
+        run: |
+          git config --global user.email "bot@chair-flight.com"
+          git config --global user.name "chair-flight-bot"
 
-      - name: Run Typescript
-        run: pnpm typecheck
+      - name: Stage changes
+        run: git add .
 
-      - name: Run Compilation step
-        run: pnpm compile
+      - name: Commit changes
+        run: git commit -m "Your commit message"
 
-      - name: Run Tests
-        run: pnpm test
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
