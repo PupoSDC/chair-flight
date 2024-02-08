@@ -44,27 +44,29 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Check if paths contain 'libs/content/**.json'
-        id: check_paths
-        run: | 
-          diff_output=$(git show --name-only HEAD --pretty="" | grep 'libs/content/.*\.json')
-          echo "Diff output: $diff_output"
-          echo "changed=$diff_output" >> $GITHUB_ENV
+      - name: Detect changes to question bank content
+        id: changes
+        uses: dorny/paths-filter@v3
+        with: 
+          filters: |
+            content:
+              - 'libs/content/**/*.json'
 
       - name: Arrange Question banks
-        if: steps.check_paths.outputs.changed
+        if: steps.changes.outputs.content == 'true'
         run: pnpm arrange
 
       - name: Run Prettier
-        if: steps.check_paths.outputs.changed
+        if: steps.changes.outputs.content == 'true'
         run: pnpm prettier
 
       - name: Commit, push files, and exit job early
-        if: steps.check_paths.outputs.changed
+        if: steps.changes.outputs.content == 'true'
         run: |
           git config --global user.email "bot@chair-flight.com"
           git config --global user.name "chair-flight-bot"
           git commit -am 'style: arrange question banks'
+          git commit -am 'style: empty commit to prevent infinite loop' --allow-empty
           git push
           exit 78
 
