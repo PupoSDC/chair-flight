@@ -1,8 +1,20 @@
 import { forwardRef } from "react";
-import { Select, Stack, selectClasses, styled, Option } from "@mui/joy";
-import { SearchFilters } from "../search-filters";
+import { Select, Stack, selectClasses, styled, Option, IconButton } from "@mui/joy";
 import { SearchQuery } from "../search-query";
-import type { SearchFiltersProps } from "../search-filters/search-filters";
+import { NoSsr } from "@mui/base";
+import { useEffect, useState } from "react";
+import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
+import {
+  Badge,
+  Button,
+  Divider,
+  Modal,
+  ModalClose,
+  ModalDialog,
+
+  Typography,
+} from "@mui/joy";
+import { useDisclose } from "../hooks/use-disclose";
 
 const SearchHeaderContainer = styled(Stack)`
   gap: ${({ theme }) => theme.spacing(1)};
@@ -25,7 +37,7 @@ export type SearchHeaderProps = {
   filterValues: Record<string, string>;
   isLoading: boolean;
   isError: boolean;
-  mobileBreakpoint?: SearchFiltersProps["mobileBreakpoint"] | "force-mobile";
+  mobileBreakpoint?: "sm" | "md" | "lg" | "xl" | "force-mobile";
   onSearchChange: (value: string) => void;
   onFilterValuesChange: (name: string, value: string) => void;
 };
@@ -45,9 +57,37 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
     },
     ref,
   ) => {
-    const numberOfFilters = Object.values(filterValues).filter(
-      (v) => v !== "all",
-    ).length;
+    const filterModal = useDisclose();
+    const [activeFilters, setActiveFilters] = useState(0);
+
+    useEffect(() => {
+      const numberOfActiveFilters = Object.values(filterValues).filter(
+        (v) => v !== "all",
+      ).length;
+      setActiveFilters(numberOfActiveFilters)
+    }, [filterValues]);
+
+    const filterJsx = Object.entries(filters).map(([name, options]) => (
+      <Select
+        key={name}
+        size="sm"
+        value={filterValues[name]}
+        onChange={(_, value) => {
+          onFilterValuesChange(name, value ?? "all")
+          filterModal.close();
+        }}
+      >
+        {options.map((o) => (
+          <Option key={o.id} value={o.id}>
+            {o.text}
+          </Option>
+        ))}
+      </Select>
+    ))
+
+    const fallbackJsx = Object.keys(filters).map((name) => (
+      <Select key={name} size="sm" value={filterValues[name]} />
+    ));
 
     return (
       <SearchHeaderContainer ref={ref}>
@@ -60,29 +100,41 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
           sx={{ flex: 1 }}
           placeholder={searchPlaceholder}
         />
-        <SearchFilters
-          activeFilters={numberOfFilters}
-          mobileBreakpoint={mobileBreakpoint}
-          fallback={Object.keys(filters).map((name) => (
-            <Select key={name} size="sm" value={filterValues[name]} />
-          ))}
-          filters={Object.entries(filters).map(([name, options]) => (
-            <Select
-              key={name}
-              size="sm"
-              value={filterValues[name]}
-              onChange={(_, value) =>
-                onFilterValuesChange(name, value ?? "all")
-              }
-            >
-              {options.map((o) => (
-                <Option key={o.id} value={o.id}>
-                  {o.text}
-                </Option>
-              ))}
-            </Select>
-          ))}
-        />
+        <Stack
+          direction={"row"}
+          gap={1}
+          sx={{ display: { xs: "none", [mobileBreakpoint]: "flex" } }}
+        >
+          <NoSsr fallback={fallbackJsx}>
+            {filterJsx}
+          </NoSsr>
+        </Stack>
+        <IconButton
+          size="sm"
+          variant="outlined"
+          color="neutral"
+          onClick={filterModal.open}
+          sx={{ display: { [mobileBreakpoint]: "none" } }}
+        >
+          <Badge badgeContent={activeFilters} size="sm" sx={{ zIndex: 1000 }} anchorOrigin={{ horizontal: "left", vertical: "top" }}>
+            <FilterIcon />
+          </Badge>
+        </IconButton>
+        <Modal open={filterModal.isOpen} onClose={filterModal.close}>
+          <ModalDialog aria-labelledby="filter-modal" >
+            <ModalClose />
+            <Typography id="filter-modal" level="h2">
+              Filters
+            </Typography>
+            <Divider sx={{ my: 2 }} />
+            <Stack gap={2} onChange={filterModal.close}>
+              {filterJsx}
+            </Stack>
+            <Button color="primary" onClick={filterModal.close}>
+              Submit
+            </Button>
+          </ModalDialog>
+        </Modal>
       </SearchHeaderContainer>
     );
   },

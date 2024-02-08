@@ -64,8 +64,7 @@ const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
           [`& .${tabPanelClasses.root}`]: {
             flex: 1,
             overflow: "hidden",
-            my: 1,
-            py: 0,
+            py: 1,
           },
 
           [`& .${tabClasses.selected}`]: {
