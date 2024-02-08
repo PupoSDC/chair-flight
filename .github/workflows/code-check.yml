@@ -5,28 +5,20 @@ on:
     branches:
       - main
 
-env:
-  NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
-
 jobs:
-  Code-Check:
-    runs-on: ubuntu-latest
-
-    steps:
+  code-check:
+   runs-on: ubuntu-latest
+   steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
+        uses: actions/checkout@v3
 
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
         with:
           version: 8
           run_install: false
@@ -48,19 +40,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Generate Prisma types
-        run: pnpm generate
-
-      - name: Run Prettier
+      - name: Run Prettier Check
         run: pnpm prettier:check
 
-      - name: Run Lint
+      - name: Run Lint Check
         run: pnpm lint
 
-      - name: Run Typescript
+      - name: Run Typescript Check
         run: pnpm typecheck
 
-      - name: Run Compilation step
+      - name: Run Compilation step for tests
         run: pnpm compile
 
       - name: Run Tests
