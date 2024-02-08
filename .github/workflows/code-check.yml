@@ -9,10 +9,8 @@ env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
 
 jobs:
-  checkout_and_install:
+  code-check:
    runs-on: ubuntu-latest
-   outputs:
-     should_skip: ${{ steps.skip_check.outputs.should_skip }}
    steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,9 +24,8 @@ jobs:
         with:
           node-version: 20
 
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
         with:
           version: 8
           run_install: false
@@ -50,11 +47,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-  clean_up_pr: 
-    runs-on: ubuntu-latest
-    needs: checkout_and_install
-
-    steps:
       - name: Check if paths contain 'libs/content/**.json'
         id: check_paths
         run: echo "::set-output name=changed::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'libs/content/.*\.json')"
@@ -64,9 +56,10 @@ jobs:
         run: pnpm arrange
 
       - name: Run Prettier
+        if: steps.check_paths.outputs.changed
         run: pnpm prettier
 
-      - name: Commit and push files
+      - name: Commit, push files, and exit job early
         if: steps.check_paths.outputs.changed
         run: |
           git config --global user.email "bot@chair-flight.com"
@@ -74,24 +67,17 @@ jobs:
           git commit -am 'style: arrange question banks'
           git push
           exit 78
-        
-  code_check:
-    runs-on: ubuntu-latest
-    needs: clean_up_pr
-    steps:
-      - name: Generate Prisma types
-        run: pnpm generate
 
-      - name: Run Prettier
+      - name: Run Prettier Check
         run: pnpm prettier:check
 
-      - name: Run Lint
+      - name: Run Lint Check
         run: pnpm lint
 
-      - name: Run Typescript
+      - name: Run Typescript Check
         run: pnpm typecheck
 
-      - name: Run Compilation step
+      - name: Run Compilation step for tests
         run: pnpm compile
 
       - name: Run Tests
