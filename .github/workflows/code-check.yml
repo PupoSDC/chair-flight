@@ -1,14 +1,14 @@
 name: Code Check
 
-on: 
+on:
   pull_request:
     branches:
       - main
 
 jobs:
   code-check:
-   runs-on: ubuntu-latest
-   steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
 
