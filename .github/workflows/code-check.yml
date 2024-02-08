@@ -44,17 +44,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
- 
-
-      - run: diff_output=$(git diff --name-only HEAD HEAD^1)
-      - run: 'echo "Git diff output: $diff_output"'
-      - run: diff_output_filtered=$(echo "$diff_output" | grep 'libs/content/.*\.json')
-      - run: 'echo "Filtered diff output: $diff_output_filtered"'
-
       - name: Check if paths contain 'libs/content/**.json'
         id: check_paths
         run: | 
-          diff_output=$(git diff --name-only HEAD HEAD^1 | grep 'libs/content/.*\.json')
+          diff_output=$(git show --name-only HEAD --pretty="" | grep 'libs/content/.*\.json')
           echo "Diff output: $diff_output"
           echo "changed=$diff_output" >> $GITHUB_ENV
 
