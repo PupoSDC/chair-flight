@@ -81,14 +81,14 @@ const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
           <Tab value={"annexes"}>Annexes</Tab>
           <Tab value={"relatedQs"}>Related</Tab>
         </TabList>
-        <TabPanel value={"question"} sx={{ px: 0 }}>
+        <TabPanel value={"question"} sx={{ px: 0, borderRadius: 4 }}>
           <QuestionEditorVariant
             noSsr
             questionBank={questionBank}
             questionId={questionId}
           />
         </TabPanel>
-        <TabPanel value={"explanation"} sx={{ px: 0 }}>
+        <TabPanel value={"explanation"} sx={{ px: 0, borderRadius: 4 }}>
           <QuestionEditorExplanation
             noSsr
             questionBank={questionBank}
@@ -103,8 +103,16 @@ const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
             sx={{ height: "100%" }}
           />
         </TabPanel>
-        <TabPanel value={"los"} sx={{ flex: 1, overflow: "hidden" }}>
+        <TabPanel value={"los"} sx={{ px: 0 }}>
           <QuestionEditorLearningObjectives
+            noSsr
+            questionBank={questionBank}
+            questionId={questionId}
+            sx={{ height: "100%" }}
+          />
+        </TabPanel>
+        <TabPanel value={"relatedQs"} sx={{ px: 0 }}>
+          <QuestionEditorRelatedQuestions
             noSsr
             questionBank={questionBank}
             questionId={questionId}

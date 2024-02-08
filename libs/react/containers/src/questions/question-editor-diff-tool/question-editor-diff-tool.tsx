@@ -31,17 +31,12 @@ const SearchListItem = memo<{
   questionId: QuestionId;
   questionBank: QuestionBankName;
 }>(({ questionId, questionBank }) => {
-  const {
-    initialState,
-    currentState,
-    markQuestionAsDeleted,
-    undoMarkQuestionAsDeleted,
-  } = useQuestionEditor((s) => ({
-    initialState: s[questionBank].beforeState[questionId],
-    currentState: s[questionBank].afterState[questionId],
-    markQuestionAsDeleted: s.markQuestionAsDeleted,
-    undoMarkQuestionAsDeleted: s.undoMarkQuestionAsDeleted,
-  }));
+  const { initialState, currentState, markQuestionAsDeleted } =
+    useQuestionEditor((s) => ({
+      initialState: s[questionBank].beforeState[questionId],
+      currentState: s[questionBank].afterState[questionId],
+      markQuestionAsDeleted: s.markQuestionAsDeleted,
+    }));
 
   const initial = {
     preview: getQuestionPreview(initialState.variant),
@@ -175,9 +170,6 @@ const SearchListItem = memo<{
               size="sm"
               variant="plain"
               color="success"
-              onClick={() =>
-                undoMarkQuestionAsDeleted({ questionBank, questionId })
-              }
               children={<UndoIcon />}
             />
           </Tooltip>

@@ -1,5 +1,6 @@
 import { useState, useTransition } from "react";
 import { default as Editor } from "@monaco-editor/react";
+import { useColorScheme } from "@mui/joy";
 import YAML from "yaml";
 import {
   type QuestionBankName,
@@ -7,7 +8,6 @@ import {
 } from "@chair-flight/core/question-bank";
 import { container } from "../../wraper";
 import { useQuestionEditor } from "../hooks/use-question-editor";
-import type { QuestionVariantType } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {
@@ -22,6 +22,7 @@ type Data =
 
 export const QuestionEditorVariant = container<Props, Params, Data>(
   ({ questionId, questionBank }) => {
+    const { mode } = useColorScheme();
     const { variant, setQuestionVariant } = useQuestionEditor((s) => ({
       variant: s[questionBank].afterState[questionId]?.variant,
       setQuestionVariant: s.setQuestionVariant,
@@ -44,7 +45,10 @@ export const QuestionEditorVariant = container<Props, Params, Data>(
         defaultLanguage="yaml"
         value={text}
         onChange={updateVariant}
-        options={{ wordWrap: "on" }}
+        theme={mode === "dark" ? "vs-dark" : "vs-light"}
+        options={{
+          wordWrap: "on",
+        }}
       />
     );
   },

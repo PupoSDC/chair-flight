@@ -1,5 +1,6 @@
 import { useState, useTransition } from "react";
-import { Textarea } from "@mui/joy";
+import { default as Editor } from "@monaco-editor/react";
+import { useColorScheme } from "@mui/joy";
 import { container } from "../../wraper";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
@@ -20,7 +21,8 @@ type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorExplanation"];
 
 export const QuestionEditorExplanation = container<Props, Params, Data>(
-  ({ questionId, questionBank, sx }) => {
+  ({ questionId, questionBank }) => {
+    const { mode } = useColorScheme();
     const { explanation, setQuestionExplanation } = useQuestionEditor((s) => ({
       explanation: s[questionBank].afterState[questionId]?.explanation ?? "",
       setQuestionExplanation: s.setQuestionExplanation,
@@ -29,16 +31,26 @@ export const QuestionEditorExplanation = container<Props, Params, Data>(
     const [thisExplanation, setThisExplanation] = useState(explanation);
     const [, startTransition] = useTransition();
 
+    const updateExplanation = (mdInput: string | undefined = "") => {
+      setThisExplanation(mdInput);
+      startTransition(() =>
+        setQuestionExplanation({
+          questionBank,
+          questionId,
+          explanation: mdInput,
+        }),
+      );
+    };
+
     return (
-      <Textarea
+      <Editor
+        className="vs-code-editor"
+        defaultLanguage="markdown"
         value={thisExplanation}
-        sx={{ height: "100%", flex: 1, ...sx }}
-        onChange={(e) => {
-          const explanation = e.target.value;
-          setThisExplanation(explanation);
-          startTransition(() =>
-            setQuestionExplanation({ questionBank, questionId, explanation }),
-          );
+        onChange={updateExplanation}
+        theme={mode === "dark" ? "vs-dark" : "vs-light"}
+        options={{
+          wordWrap: "on",
         }}
       />
     );

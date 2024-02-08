@@ -263,7 +263,7 @@ export const useQuestionEditor = create<QuestionEditor>()(
             ...new Set([
               questionAid,
               questionBid,
-              ...(get()[questionBank].afterState[questionBid]
+              ...(get()[questionBank].afterState[questionAid]
                 ?.relatedQuestions ?? []),
               ...(get()[questionBank].afterState[questionBid]
                 ?.relatedQuestions ?? []),
@@ -275,6 +275,7 @@ export const useQuestionEditor = create<QuestionEditor>()(
               const question = state[questionBank].afterState[id];
               if (!question) return;
               question.relatedQuestions = questionIds.filter((i) => i !== id);
+              console.log(question.relatedQuestions);
             });
           });
         },

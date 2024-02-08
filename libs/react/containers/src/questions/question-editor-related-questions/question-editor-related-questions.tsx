@@ -2,17 +2,10 @@ import { memo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
-import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
+import { default as UnlinkIcon } from "@mui/icons-material/LinkOff";
+import { Box, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
+import { makeMap } from "@chair-flight/base/utils";
 import {
-  Box,
-  Button,
-  ListItemContent,
-  Stack,
-  Tooltip,
-  Typography,
-} from "@mui/joy";
-import {
-  getQuestionPreview,
   type QuestionBankName,
   type QuestionId,
 } from "@chair-flight/core/question-bank";
@@ -46,34 +39,21 @@ const filterFormResolver = zodResolver(questionSearchFilters);
 type FilterKeys = keyof Data["filters"];
 
 const SearchListItem = memo<{
-  id: QuestionId;
-  parentId: QuestionId;
-  bank: QuestionBankName;
-}>(({ parentId, id, bank }) => {
-  const utils = trpc.useUtils();
-  const currentState = useQuestionEditor((s) => s[bank].afterState[id]);
-
-  const { connectTwoQuestions, deleteQuestion } = useQuestionEditor((s) => ({
-    connectTwoQuestions: s.connectTwoQuestions,
-    deleteQuestion: s.markQuestionAsDeleted,
+  questionId: QuestionId;
+  questionBank: QuestionBankName;
+}>(({ questionBank, questionId }) => {
+  const { unlinkQuestion, getDiffStatus } = useQuestionEditor((s) => ({
+    unlinkQuestion: s.unlinkQuestion,
+    getDiffStatus: s.getDiffStatus,
   }));
 
-  const current = currentState
-    ? {
-        preview: getQuestionPreview(currentState.variant),
-        los: currentState.learningObjectives.join(", "),
-        annexes: currentState.annexes.join(", ") || "None",
-        relatedQs: currentState.relatedQuestions.join(", "),
-      }
-    : null;
-
-  if (!current) return null;
+  const { current } = getDiffStatus({ questionBank, questionId });
 
   return (
     <ListItemContent sx={{ display: "flex" }}>
       <Box sx={{ flex: 1, px: 1 }}>
         <Typography level="h5" sx={{ fontSize: "sm" }}>
-          {id}
+          {questionId}
         </Typography>
         <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
           {current.preview}
@@ -85,20 +65,8 @@ const SearchListItem = memo<{
             sx={{ px: 1 }}
             size="sm"
             variant="plain"
-            children={<DeleteIcon />}
-            onClick={() =>
-              connectTwoQuestions({ trpc: utils, bank, parentId, id })
-            }
-          />
-        </Tooltip>
-        <Tooltip title="Delete Question">
-          <LoadingButton
-            sx={{ px: 1 }}
-            size="sm"
-            variant="plain"
-            color="danger"
-            onClick={() => deleteQuestion(bank, id)}
-            children={<DeleteIcon />}
+            children={<UnlinkIcon />}
+            onClick={() => unlinkQuestion({ questionBank, questionId })}
           />
         </Tooltip>
       </Box>
@@ -108,11 +76,13 @@ const SearchListItem = memo<{
 
 export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
+    const utils = trpc.useUtils();
     const [search, setSearch] = useState("");
 
-    const relatedQs = useQuestionEditor((s) => {
-      return s[questionBank].afterState[questionId]?.learningObjectives ?? [];
-    });
+    const { connectTwoQuestions, relatedQs } = useQuestionEditor((s) => ({
+      connectTwoQuestions: s.connectTwoQuestions,
+      relatedQs: s[questionBank].afterState[questionId]?.relatedQuestions ?? [],
+    }));
 
     const serverData = QuestionEditorRelatedQuestions.useData({
       questionBank,
@@ -129,31 +99,34 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    const { connectTwoQuestions, deleteQuestion } = useQuestionEditor((s) => ({
-      connectTwoQuestions: s.connectTwoQuestions,
-      deleteQuestion: s.markQuestionAsDeleted,
-    }));
+    const connectedQuestions = makeMap(
+      [questionId, ...relatedQs],
+      (id) => id,
+      () => true,
+    );
 
     return (
-      <Stack direction="row" component={component} sx={sx}>
-        <Stack height="100%" flex={1}>
-          <SearchHeader
-            search={search}
-            searchPlaceholder="Search Annexes..."
-            filters={serverData.filters}
-            filterValues={filterForm.watch()}
-            isLoading={searchQuestions.isLoading}
-            isError={searchQuestions.isError}
-            onSearchChange={setSearch}
-            onFilterValuesChange={(k, v) =>
-              filterForm.setValue(k as FilterKeys, v)
-            }
-          />
+      <Stack component={component} sx={sx}>
+        <SearchHeader
+          search={search}
+          searchPlaceholder="Search Annexes..."
+          filters={serverData.filters}
+          filterValues={filterForm.watch()}
+          isLoading={searchQuestions.isLoading}
+          isError={searchQuestions.isError}
+          onSearchChange={setSearch}
+          onFilterValuesChange={(k, v) =>
+            filterForm.setValue(k as FilterKeys, v)
+          }
+        />
+        <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList
             forceMode={"mobile"}
             loading={searchQuestions.isLoading}
             error={searchQuestions.isError}
-            items={(searchQuestions.data?.pages ?? []).flatMap((p) => p.items)}
+            items={(searchQuestions.data?.pages ?? [])
+              .flatMap((p) => p.items)
+              .filter((q) => !connectedQuestions[q.id])}
             onFetchNextPage={searchQuestions.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
@@ -170,27 +143,35 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
                 </Box>
                 <Box>
                   <Tooltip title="Add to Question">
-                    <Button
+                    <LoadingButton
                       sx={{ px: 1 }}
                       size="sm"
                       variant="plain"
                       children={<AddIcon />}
+                      onClick={() =>
+                        connectTwoQuestions({
+                          trpc: utils,
+                          questionBank: questionBank,
+                          questionA: questionId,
+                          questionB: result.id,
+                        })
+                      }
                     />
                   </Tooltip>
                 </Box>
               </ListItemContent>
             )}
           />
-        </Stack>
-        <VerticalDivider />
-        <Stack height="100%" flex={1}>
+
+          <VerticalDivider />
+
           <SearchList
             forceMode={"mobile"}
             noDataMessage="No Related Questions"
             items={relatedQs.map((id) => ({
               id,
-              parentId: questionId,
-              bank: questionBank,
+              questionId: id,
+              questionBank,
             }))}
             sx={{ flex: 1, overflow: "hidden", width: "100%" }}
             renderThead={() => null}
