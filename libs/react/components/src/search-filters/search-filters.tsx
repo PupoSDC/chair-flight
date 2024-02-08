@@ -24,7 +24,7 @@ export type SearchFiltersProps = {
 
 /**
  * @deprecated Replaced by search header.
- * 
+ *
  * Opinionated component to display search filters. Includes a `NoSsr`boundary
  * to make it safe to render when filter information is persisted client side.
  *
@@ -62,7 +62,7 @@ export const SearchFilters: FC<SearchFiltersProps> = ({
         </Badge>
       </IconButton>
       <Modal open={filterModal.isOpen} onClose={filterModal.close}>
-        <ModalDialog aria-labelledby="filter-modal" >
+        <ModalDialog aria-labelledby="filter-modal">
           <ModalClose />
           <Typography id="filter-modal" level="h2">
             Filters

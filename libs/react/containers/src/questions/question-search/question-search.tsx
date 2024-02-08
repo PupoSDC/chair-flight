@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Stack } from "@mui/joy";
-import { z } from "zod";
 import { QuestionList, SearchHeader } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
-import { createUsePersistenceHook } from "../../hooks/use-persistence";
 import { container, getRequiredParam } from "../../wraper/container";
+import { useQuestionSearchConfig } from "../hooks/use-question-search-config";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
@@ -22,36 +19,20 @@ type Params = {
 
 type Data = AppRouterOutput["containers"]["questions"]["getQuestionSearch"];
 
-const filterSchema = z.object({
-  subject: z.string().default("all"),
-  searchField: z.string().default("all"),
-});
+type FilterKey = keyof Data["filters"];
 
-const defaultFilter = filterSchema.parse({});
-const resolver = zodResolver(filterSchema);
 const searchQuestions = trpc.common.search.searchQuestions;
 const useSearchQuestions = searchQuestions.useInfiniteQuery;
-
-const useSearchPersistence = {
-  atpl: createUsePersistenceHook("cf-question-search-atpl", defaultFilter),
-  type: createUsePersistenceHook("cf-question-search-type", defaultFilter),
-  prep: createUsePersistenceHook("cf-question-search-prep", defaultFilter),
-};
 
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, forceMode, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const persistedData = useSearchPersistence[questionBank]();
     const serverData = QuestionSearch.useData({ questionBank });
-
-    const form = useForm({
-      defaultValues: persistedData.getData(),
-      resolver,
-    });
+    const filterForm = useQuestionSearchConfig({ questionBank });
 
     const filters = {
-      searchField: form.watch("searchField"),
-      subject: form.watch("subject"),
+      searchField: filterForm.watch("searchField"),
+      subject: filterForm.watch("subject"),
     };
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
@@ -59,20 +40,18 @@ export const QuestionSearch = container<Props, Params, Data>(
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
-
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader
           search={search}
           searchPlaceholder="Search Questions..."
           filters={serverData.filters}
-          filterValues={form.watch()}
+          filterValues={filterForm.watch()}
           isLoading={isLoading}
           isError={isError}
           onSearchChange={setSearch}
           onFilterValuesChange={(name, value) =>
-            form.setValue(name as keyof typeof defaultFilter, value)
+            filterForm.setValue(name as FilterKey, value)
           }
         />
         <QuestionList

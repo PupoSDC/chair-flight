@@ -1,9 +1,15 @@
 import { forwardRef } from "react";
-import { Select, Stack, selectClasses, styled, Option, IconButton } from "@mui/joy";
-import { SearchQuery } from "../search-query";
-import { NoSsr } from "@mui/base";
 import { useEffect, useState } from "react";
+import { NoSsr } from "@mui/base";
 import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
+import {
+  Select,
+  Stack,
+  selectClasses,
+  styled,
+  Option,
+  IconButton,
+} from "@mui/joy";
 import {
   Badge,
   Button,
@@ -11,10 +17,10 @@ import {
   Modal,
   ModalClose,
   ModalDialog,
-
   Typography,
 } from "@mui/joy";
 import { useDisclose } from "../hooks/use-disclose";
+import { SearchQuery } from "../search-query";
 
 const SearchHeaderContainer = styled(Stack)`
   gap: ${({ theme }) => theme.spacing(1)};
@@ -64,7 +70,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
       const numberOfActiveFilters = Object.values(filterValues).filter(
         (v) => v !== "all",
       ).length;
-      setActiveFilters(numberOfActiveFilters)
+      setActiveFilters(numberOfActiveFilters);
     }, [filterValues]);
 
     const filterJsx = Object.entries(filters).map(([name, options]) => (
@@ -73,7 +79,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
         size="sm"
         value={filterValues[name]}
         onChange={(_, value) => {
-          onFilterValuesChange(name, value ?? "all")
+          onFilterValuesChange(name, value ?? "all");
           filterModal.close();
         }}
       >
@@ -83,7 +89,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
           </Option>
         ))}
       </Select>
-    ))
+    ));
 
     const fallbackJsx = Object.keys(filters).map((name) => (
       <Select key={name} size="sm" value={filterValues[name]} />
@@ -105,9 +111,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
           gap={1}
           sx={{ display: { xs: "none", [mobileBreakpoint]: "flex" } }}
         >
-          <NoSsr fallback={fallbackJsx}>
-            {filterJsx}
-          </NoSsr>
+          <NoSsr fallback={fallbackJsx}>{filterJsx}</NoSsr>
         </Stack>
         <IconButton
           size="sm"
@@ -116,12 +120,17 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
           onClick={filterModal.open}
           sx={{ display: { [mobileBreakpoint]: "none" } }}
         >
-          <Badge badgeContent={activeFilters} size="sm" sx={{ zIndex: 1000 }} anchorOrigin={{ horizontal: "left", vertical: "top" }}>
+          <Badge
+            badgeContent={activeFilters}
+            size="sm"
+            sx={{ zIndex: 1000 }}
+            anchorOrigin={{ horizontal: "left", vertical: "top" }}
+          >
             <FilterIcon />
           </Badge>
         </IconButton>
         <Modal open={filterModal.isOpen} onClose={filterModal.close}>
-          <ModalDialog aria-labelledby="filter-modal" >
+          <ModalDialog aria-labelledby="filter-modal">
             <ModalClose />
             <Typography id="filter-modal" level="h2">
               Filters

@@ -1,10 +1,9 @@
+import { shared } from "use-broadcast-ts";
 import { z } from "zod";
-import type { StateCreator} from "zustand";
 import { create } from "zustand";
-import { devtools, persist } from "zustand/middleware";
+import { persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 import { deepClone } from "@chair-flight/base/utils";
-import { shared } from 'use-broadcast-ts';
 import {
   getQuestionPreview,
   questionTemplateSchema,
@@ -126,7 +125,7 @@ type QuestionEditor = z.infer<typeof editorSchema> & {
   }) => QuestionId[];
 };
 
-const questionEditor : StateCreator<QuestionEditor> = (set, get) => ({
+const questionEditor = immer<QuestionEditor>((set, get) => ({
   atpl: { beforeState: {}, afterState: {} },
   type: { beforeState: {}, afterState: {} },
   prep: { beforeState: {}, afterState: {} },
@@ -191,9 +190,7 @@ const questionEditor : StateCreator<QuestionEditor> = (set, get) => ({
           state[questionBank].afterState[relatedQuestionId];
         if (!relatedQuestion) return;
         relatedQuestion.relatedQuestions =
-          relatedQuestion.relatedQuestions.filter(
-            (i) => i !== questionId,
-          );
+          relatedQuestion.relatedQuestions.filter((i) => i !== questionId);
       });
 
       state[questionBank].afterState[questionId] = null;
@@ -238,8 +235,9 @@ const questionEditor : StateCreator<QuestionEditor> = (set, get) => ({
       question.relatedQuestions.forEach((q) => {
         const thisQuestion = state[questionBank].afterState[q];
         if (!thisQuestion) return;
-        thisQuestion.relatedQuestions =
-          thisQuestion.relatedQuestions.filter((i) => i !== questionId);
+        thisQuestion.relatedQuestions = thisQuestion.relatedQuestions.filter(
+          (i) => i !== questionId,
+        );
       });
       question.relatedQuestions = [];
     });
@@ -266,10 +264,10 @@ const questionEditor : StateCreator<QuestionEditor> = (set, get) => ({
       ...new Set([
         questionAid,
         questionBid,
-        ...(get()[questionBank].afterState[questionAid]
-          ?.relatedQuestions ?? []),
-        ...(get()[questionBank].afterState[questionBid]
-          ?.relatedQuestions ?? []),
+        ...(get()[questionBank].afterState[questionAid]?.relatedQuestions ??
+          []),
+        ...(get()[questionBank].afterState[questionBid]?.relatedQuestions ??
+          []),
       ]),
     ];
 
@@ -332,13 +330,13 @@ const questionEditor : StateCreator<QuestionEditor> = (set, get) => ({
       return diff.isEdited || diff.isDeleted;
     });
   },
-});
+}));
 
 const persistOpts = { name: persistenceKey };
 const sharedOpts = { name: persistenceKey };
-const ssrSafeEditor = persist(immer(devtools(questionEditor)), persistOpts);
+const ssrSafeEditor = persist(immer(questionEditor), persistOpts);
 
-export const useQuestionEditor = typeof window === "undefined"
-  ? create<QuestionEditor>()(ssrSafeEditor)
-  : create<QuestionEditor>()(shared(ssrSafeEditor, sharedOpts));
-
+export const useQuestionEditor =
+  typeof window === "undefined"
+    ? create<QuestionEditor>()(ssrSafeEditor)
+    : create<QuestionEditor>()(shared(ssrSafeEditor, sharedOpts));

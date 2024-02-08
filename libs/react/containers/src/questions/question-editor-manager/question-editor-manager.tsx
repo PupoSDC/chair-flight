@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as AddInput } from "@mui/icons-material/InputOutlined";
 import {
@@ -13,7 +11,6 @@ import {
   Typography,
 } from "@mui/joy";
 import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import { questionSearchFilters } from "@chair-flight/core/search";
 import {
   LoadingButton,
   MarkdownClientCompressed,
@@ -24,6 +21,7 @@ import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
+import { useQuestionSearchConfig } from "../hooks/use-question-search-config";
 import { QuestionManagerEditorListItem } from "./question-editor-manager-list-item";
 import type { QuestionId } from "@chair-flight/core/question-bank";
 
@@ -36,17 +34,17 @@ type Params = Props;
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorManager"];
 
+type FilterKeys = keyof Data["filters"];
+
 const search = trpc.common.search;
 const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
-const filterFormDefaultValues = questionSearchFilters.parse({});
-const filterFormResolver = zodResolver(questionSearchFilters);
-type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorManager = container<Props, Params, Data>(
   ({ sx, component = "div", questionBank }) => {
     const [search, setSearch] = useState("");
     const utils = trpc.useUtils();
     const serverData = QuestionEditorManager.useData({ questionBank });
+    const filterForm = useQuestionSearchConfig({ questionBank });
 
     const { items, hasDiff, addQuestionToEditor, isQuestionInEditor } =
       useQuestionEditor((s) => ({
@@ -55,11 +53,6 @@ export const QuestionEditorManager = container<Props, Params, Data>(
         addQuestionToEditor: s.addQuestion,
         isQuestionInEditor: s.isQuestionInEditor,
       }));
-
-    const filterForm = useForm<Record<FilterKeys, string>>({
-      defaultValues: filterFormDefaultValues,
-      resolver: filterFormResolver,
-    });
 
     const searchQuestions = useSearchQuestions(
       { q: search, questionBank, filters: filterForm.watch(), limit: 24 },

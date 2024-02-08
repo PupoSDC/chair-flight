@@ -1,6 +1,4 @@
 import { memo, useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as UnlinkIcon } from "@mui/icons-material/LinkOff";
 import { Box, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
@@ -9,7 +7,6 @@ import {
   type QuestionBankName,
   type QuestionId,
 } from "@chair-flight/core/question-bank";
-import { questionSearchFilters } from "@chair-flight/core/search";
 import {
   LoadingButton,
   MarkdownClientCompressed,
@@ -20,6 +17,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
+import { useQuestionSearchConfig } from "../hooks/use-question-search-config";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {
@@ -27,16 +25,17 @@ type Props = {
   questionBank: QuestionBankName;
 };
 
-type Params = Props;
+type Params = {
+  questionBank: QuestionBankName;
+};
 
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorRelatedQuestions"];
 
+type FilterKeys = keyof Data["filters"];
+
 const search = trpc.common.search;
 const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
-const filterFormDefaultValues = questionSearchFilters.parse({});
-const filterFormResolver = zodResolver(questionSearchFilters);
-type FilterKeys = keyof Data["filters"];
 
 const SearchListItem = memo<{
   questionId: QuestionId;
@@ -78,21 +77,13 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const utils = trpc.useUtils();
     const [search, setSearch] = useState("");
+    const serverData = QuestionEditorRelatedQuestions.useData({ questionBank });
+    const filterForm = useQuestionSearchConfig({ questionBank });
 
     const { connectTwoQuestions, relatedQs } = useQuestionEditor((s) => ({
       connectTwoQuestions: s.connectTwoQuestions,
       relatedQs: s[questionBank].afterState[questionId]?.relatedQuestions ?? [],
     }));
-
-    const serverData = QuestionEditorRelatedQuestions.useData({
-      questionBank,
-      questionId,
-    });
-
-    const filterForm = useForm({
-      defaultValues: filterFormDefaultValues,
-      resolver: filterFormResolver,
-    });
 
     const searchQuestions = useSearchQuestions(
       { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
