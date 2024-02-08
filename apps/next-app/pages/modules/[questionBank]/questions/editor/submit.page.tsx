@@ -53,7 +53,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
 
           <Divider sx={{ my: 2 }} />
 
-          <QuestionEditorSubmitForm noSsr />
+          <QuestionEditorSubmitForm noSsr questionBank={questionBank} />
         </Box>
       </Stack>
       <Stack sx={{ flex: 1 }}>
