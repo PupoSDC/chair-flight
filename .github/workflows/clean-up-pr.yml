@@ -11,14 +11,14 @@ env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
 
 jobs:
-  Code-Check:
+  Clean-Up-Pr:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          persist-credentials: false 
           fetch-depth: 0
 
       - name: Install Node.js
@@ -56,19 +56,14 @@ jobs:
       - name: Run Prettier
         run: pnpm prettier
 
-      - name: Configure Git
+      - name: Commit files
         run: |
           git config --global user.email "bot@chair-flight.com"
           git config --global user.name "chair-flight-bot"
-
-      - name: Stage changes
-        run: git add .
-
-      - name: Commit changes
-        run: "git commit -m 'style: arrange question banks'"
+          git commit -am 'style: arrange question banks'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: ${{ github.ref }}
