@@ -3,7 +3,7 @@ name: Code Check
 on: 
   pull_request:
     branches:
-      - master
+      - main
 
 env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
