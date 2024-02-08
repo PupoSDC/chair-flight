@@ -116,6 +116,10 @@ type QuestionEditor = z.infer<typeof editorSchema> & {
       relatedQs: string;
     };
   };
+
+  getQuestionsWithADiff: (args: {
+    questionBank: QuestionBankName;
+  }) => QuestionId[];
 };
 
 const persistenceKey: PersistenceKey = "cf-question-editor";
@@ -322,6 +326,12 @@ export const useQuestionEditor = create<QuestionEditor>()(
             current,
             initial,
           };
+        },
+        getQuestionsWithADiff: ({ questionBank }) => {
+          return Object.keys(get()[questionBank].afterState).filter((id) => {
+            const diff = get().getDiffStatus({ questionBank, questionId: id });
+            return diff.isEdited || diff.isDeleted;
+          });
         },
       })),
     ),
