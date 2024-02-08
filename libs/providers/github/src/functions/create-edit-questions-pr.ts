@@ -17,7 +17,6 @@ export const createEditQuestionsPr = async (
   octokit: Octokit,
   state: EditQuestionsPr,
 ) => {
-  console.log("Start!");
   const prId = getRandomId();
   const baseBranch = "main";
   const newBranch = `feat-edit-questions-${state.questionBank}-${prId}`;

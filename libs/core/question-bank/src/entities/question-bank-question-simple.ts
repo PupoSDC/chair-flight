@@ -18,13 +18,14 @@ export const questionVariantSimpleSchema = z.object({
   type: z.literal("simple"),
   question: z.string().min(3),
   options: z
-    .object({
-      id: z.string(),
-      text: z.string().min(1),
-      correct: z.boolean(),
-      why: z.string(),
-    })
-    .array()
+    .array(
+      z.object({
+        id: z.string(),
+        text: z.string().min(1),
+        correct: z.boolean(),
+        why: z.string(),
+      }),
+    )
     .min(4)
     .superRefine((data, ctx) => {
       const correct = data.filter((d) => d.correct).length;

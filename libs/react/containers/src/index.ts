@@ -33,3 +33,4 @@ export * from "./tests/test-study";
 export * from "./user/user-settings";
 export * from "./questions/question-editor-preview";
 export * from "./questions/question-editor-submit-form";
+export * from "./questions/question-editor-code";

@@ -45,8 +45,6 @@ export const QuestionEditorPreview = container<Props, Params, Data>(
     }));
 
     if (!template || !variant) return null;
-
-    console.log(mode === "dark" ? "vs-dark" : "vs-light");
     return (
       <Tabs
         defaultValue={"Preview"}
