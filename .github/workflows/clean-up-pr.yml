@@ -1,12 +1,11 @@
 name: Clean up PR
 
-on:
+on: 
   pull_request:
     branches:
-      - "feat-edit-questions-*"
-  pull_request_target:
-    branches:
-      - "feat-edit-questions-*"
+      - master
+    paths:
+      - 'content/**.json'
 
 env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
