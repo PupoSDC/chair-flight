@@ -65,10 +65,10 @@ jobs:
         run: git add .
 
       - name: Commit changes
-        run: git commit -m "Your commit message"
+        run: "git commit -m 'style: arrange question banks'"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          ref: ${{ github.head_ref }}
+          branch: ${{ github.ref }}
