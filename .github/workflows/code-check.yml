@@ -61,7 +61,6 @@ jobs:
 
       - name: Commit, push files, and exit job early
         if: steps.check_paths.outputs.changed
-        uses: actions/checkout@v4
         run: |
           git config --global user.email "bot@chair-flight.com"
           git config --global user.name "chair-flight-bot"
