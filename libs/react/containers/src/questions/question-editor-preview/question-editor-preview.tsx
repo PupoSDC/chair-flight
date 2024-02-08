@@ -11,15 +11,13 @@ import {
 } from "@mui/joy";
 import YAML from "yaml";
 import { getRandomId } from "@chair-flight/base/utils";
-import {
-  createTestQuestion,
-  getQuestionPreview,
-  type QuestionBankName,
-} from "@chair-flight/core/question-bank";
+import { getQuestionPreview } from "@chair-flight/core/question-bank";
+import { createTestQuestion } from "@chair-flight/core/tests";
 import { MarkdownClient, Ups } from "@chair-flight/react/components";
 import { container } from "../../wraper";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import { QuestionStandAloneComponent } from "../question-stand-alone/question-stand-alone";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {

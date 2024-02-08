@@ -1,8 +1,6 @@
 import { z } from "zod";
-import {
-  createTestQuestion,
-  questionBankNameSchema,
-} from "@chair-flight/core/question-bank";
+import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { createTestQuestion } from "@chair-flight/core/tests";
 import { compileMdx } from "../../common/compile-mdx";
 import {
   annexSearch,

@@ -5,7 +5,7 @@ import type {
   AnnexId,
   LearningObjectiveId,
   QuestionBankName,
-  QuestionId,
+  QuestionTemplateId,
   SubjectId,
 } from "@chair-flight/core/question-bank";
 
@@ -15,7 +15,7 @@ export type AnnexSearchResult = {
   questionBank: QuestionBankName;
   description: string;
   subjects: SubjectId[];
-  questions: Array<{ id: QuestionId; href: string }>;
+  questions: Array<{ id: QuestionTemplateId; href: string }>;
   learningObjectives: Array<{ id: LearningObjectiveId; href: string }>;
 };
 

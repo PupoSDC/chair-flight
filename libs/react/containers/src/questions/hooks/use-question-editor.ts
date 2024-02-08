@@ -11,7 +11,7 @@ import {
 import type { PersistenceKey } from "../../hooks/use-persistence";
 import type {
   QuestionBankName,
-  QuestionId,
+  QuestionTemplateId,
   QuestionVariant,
 } from "@chair-flight/core/question-bank";
 import type { trpc } from "@chair-flight/trpc/client";
@@ -35,69 +35,69 @@ type QuestionEditor = z.infer<typeof editorSchema> & {
   addQuestion: (args: {
     trpc: TrpcUtils;
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => Promise<void>;
 
   removeQuestion: (args: {
     trpc: TrpcUtils;
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => Promise<void>;
 
   resetQuestion: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => void;
 
   isQuestionInEditor: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => boolean;
 
   markQuestionAsDeleted: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => void;
 
   setQuestionExplanation: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
     explanation: string;
   }) => void;
 
   setQuestionLearningObjectives: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
     learningObjectives: string[];
   }) => void;
 
   setQuestionVariant: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
     variant: QuestionVariant;
   }) => void;
 
   setQuestionAnnexes: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
     annexes: string[];
   }) => void;
 
   unlinkQuestion: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => void;
 
   connectTwoQuestions: (args: {
     trpc: TrpcUtils;
     questionBank: QuestionBankName;
-    questionA: QuestionId;
-    questionB: QuestionId;
+    questionA: QuestionTemplateId;
+    questionB: QuestionTemplateId;
   }) => Promise<void>;
 
   getDiffStatus: (args: {
     questionBank: QuestionBankName;
-    questionId: QuestionId;
+    questionId: QuestionTemplateId;
   }) => {
     hasPreviewChanged: boolean;
     hasLosChanged: boolean;
@@ -122,7 +122,7 @@ type QuestionEditor = z.infer<typeof editorSchema> & {
 
   getQuestionsWithADiff: (args: {
     questionBank: QuestionBankName;
-  }) => QuestionId[];
+  }) => QuestionTemplateId[];
 };
 
 const questionEditor = immer<QuestionEditor>((set, get) => ({
@@ -185,9 +185,9 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
     set((state: QuestionEditor) => {
       const question = state[questionBank].afterState[questionId];
       if (!question) return;
-      question.relatedQuestions.forEach((relatedQuestionId) => {
+      question.relatedQuestions.forEach((relatedQuestionTemplateId) => {
         const relatedQuestion =
-          state[questionBank].afterState[relatedQuestionId];
+          state[questionBank].afterState[relatedQuestionTemplateId];
         if (!relatedQuestion) return;
         relatedQuestion.relatedQuestions =
           relatedQuestion.relatedQuestions.filter((i) => i !== questionId);

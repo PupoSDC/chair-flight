@@ -19,10 +19,10 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { useQuestionEditor } from "../hooks/use-question-editor";
-import type { QuestionId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
 export const QuestionManagerEditorListItem = memo<{
-  questionId: QuestionId;
+  questionId: QuestionTemplateId;
   questionBank: QuestionBankName;
 }>(({ questionId, questionBank }) => {
   const utils = trpc.useUtils();

@@ -1,5 +1,5 @@
 import { DateTime, Duration } from "luxon";
-import type { Test } from "../entities/test-types";
+import type { Test } from "../entities/test";
 
 const getClockTime = (milliseconds: number) => {
   const duration = Duration.fromMillis(milliseconds);

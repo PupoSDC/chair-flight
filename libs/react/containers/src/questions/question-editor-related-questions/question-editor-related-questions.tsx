@@ -5,7 +5,7 @@ import { Box, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
 import { makeMap } from "@chair-flight/base/utils";
 import {
   type QuestionBankName,
-  type QuestionId,
+  type QuestionTemplateId,
 } from "@chair-flight/core/question-bank";
 import {
   LoadingButton,
@@ -38,7 +38,7 @@ const search = trpc.common.search;
 const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
 
 const SearchListItem = memo<{
-  questionId: QuestionId;
+  questionId: QuestionTemplateId;
   questionBank: QuestionBankName;
 }>(({ questionBank, questionId }) => {
   const { unlinkQuestion, getDiffStatus } = useQuestionEditor((s) => ({
