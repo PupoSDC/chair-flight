@@ -3,9 +3,9 @@ name: Clean up PR
 on: 
   pull_request:
     branches:
-      - master
+      - main
     paths:
-      - 'content/**.json'
+      - 'libs/content/**.json'
 
 env:
   NEXT_PUBLIC_BASE_URL: https://www.chair-flight.com/
