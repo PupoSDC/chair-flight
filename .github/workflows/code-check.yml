@@ -1,19 +1,19 @@
 name: Code Check
 
-on: 
+on:
   pull_request:
     branches:
       - main
 
 jobs:
   code-check:
-   runs-on: ubuntu-latest
-   steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 2 
+          fetch-depth: 2
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -46,7 +46,7 @@ jobs:
       - name: Detect changes to question bank content
         id: changes
         uses: dorny/paths-filter@v3
-        with: 
+        with:
           filters: |
             content:
               - 'libs/content/**/*.json'
