@@ -276,7 +276,6 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
         const question = state[questionBank].afterState[id];
         if (!question) return;
         question.relatedQuestions = questionIds.filter((i) => i !== id);
-        console.log(question.relatedQuestions);
       });
     });
   },

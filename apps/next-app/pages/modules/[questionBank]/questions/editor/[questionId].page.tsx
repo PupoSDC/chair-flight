@@ -12,6 +12,7 @@ import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   QuestionEditorAnnexes,
+  QuestionEditorCode,
   QuestionEditorExplanation,
   QuestionEditorLearningObjectives,
   QuestionEditorPreview,
@@ -79,12 +80,14 @@ const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
           <Tab value={"los"}>LOs</Tab>
           <Tab value={"annexes"}>Annexes</Tab>
           <Tab value={"relatedQs"}>Related</Tab>
+          <Tab value={"code"}>Code</Tab>
         </TabList>
         <TabPanel value={"question"} sx={{ px: 0, borderRadius: 4 }}>
           <QuestionEditorVariant
             noSsr
             questionBank={questionBank}
             questionId={questionId}
+            sx={{ height: "100%", overflow: "auto" }}
           />
         </TabPanel>
         <TabPanel value={"explanation"} sx={{ px: 0, borderRadius: 4 }}>
@@ -116,6 +119,13 @@ const Page: NextPage<PageProps> = ({ questionBank, questionId }) => {
             questionBank={questionBank}
             questionId={questionId}
             sx={{ height: "100%" }}
+          />
+        </TabPanel>
+        <TabPanel value={"code"} sx={{ px: 0, borderRadius: 4 }}>
+          <QuestionEditorCode
+            noSsr
+            questionBank={questionBank}
+            questionId={questionId}
           />
         </TabPanel>
       </Tabs>
