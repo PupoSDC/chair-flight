@@ -101,6 +101,7 @@ export const TestStudy = container<Props>(
             backgroundColor: "background.surface",
             borderBottom: "1px solid",
             borderColor: "divider",
+            position: "fixed",
             right: 0,
             width: "100%",
             boxSizing: "content-box",
@@ -197,6 +198,7 @@ export const TestStudy = container<Props>(
             />
           </Tooltip>
         </Stack>
+        <Box sx={{ height: (t) => t.spacing(6) }} />
         <QuestionMultipleChoice
           sx={{
             maxWidth: "md",

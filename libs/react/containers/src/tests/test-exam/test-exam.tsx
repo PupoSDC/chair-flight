@@ -86,6 +86,7 @@ export const TestExam = container<Props>(
             right: 0,
             width: "100%",
             boxSizing: "content-box",
+            position: "fixed",
             height: (t) => t.spacing(6),
 
             h4: {
@@ -143,6 +144,7 @@ export const TestExam = container<Props>(
             />
           </Tooltip>
         </Stack>
+        <Box sx={{ height: (t) => t.spacing(6) }} />
         <QuestionMultipleChoice
           sx={{
             maxWidth: "md",
