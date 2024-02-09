@@ -9,7 +9,7 @@ Built with
 [`Next`](https://nextjs.org/),
 [`Vitest`](https://vitest.dev/),
 [`Storybook`](https://storybook.js.org/),
-[`Prisma`](https://www.prisma.io/),
+[`Drizzle`](https://orm.drizzle.team/),
 [`Trpc`](https://trpc.io/),
 [`Zustand`](https://github.com/pmndrs/zustand),
 and [`MDX`](https://mdxjs.com/).
@@ -59,27 +59,31 @@ can and will be introduced in patch releases.
 
 ### Libs
 
-| Name                       | Desc                                                        |
-| -------------------------- | ----------------------------------------------------------- |
-| base-env                   | Utility to safely access env variables                      |
-| base-errors                | Errors that can be handled in the front or in the backend   |
-| base-types                 | Base Business types used across the app                     |
-| content-blog               | Blog posts                                                  |
-| content-question-bank-prep | Content bank for the interview prep module                  |
-| content-question-bank-type | Content bank for the Type Rating module                     |
-| content-question-bank-atpl | Content bank for the ATPL theory module                     |
-| core-analytics             | Analytics provider (currently a custom solution)            |
-| core-app                   | Business logic blocks sharable between React SPA/SSR and RN |
-| core-blog                  | Blog posts compiler and core functions                      |
-| core-github                | Github related functionalities                              |
-| core-schemas               | Zod Schemas shared across our application (from base-types) |
-| react-analytics            | React hooks to interact with our analytics provider         |
-| react-components           | Shared react (DOM) components                               |
-| react-containers           | Next.js specific components                                 |
-| react-games                | Shared react (three.js) components                          |
-| trpc-client                | trpc next js specific client                                |
-| trpc-mock                  | trpc mock server, for storybook and RTL tests               |
-| trpc-server                | main trpc server. All our backend logic starts here         |
+| Name                       | Desc                                                      |
+| -------------------------- | --------------------------------------------------------- |
+| base-env                   | Utility to safely access env variables                    |
+| base-errors                | Errors that can be handled in the front or in the backend |
+| base-utils                 | Common JS utilities                                       |
+| content-blog               | Blog posts                                                |
+| content-question-bank-prep | Content bank for the interview prep module                |
+| content-question-bank-type | Content bank for the Type Rating module                   |
+| content-question-bank-atpl | Content bank for the ATPL theory module                   |
+| core-github                | Github related functionalities                            |
+| core-question-bank         | Question Bank entities and functions                      |
+| core-search                | Search API entities                                       |
+| core-tests                 | Test related entities and functions                       |
+| providers-analytics        | Provides analytics postgres DB interactions               |
+| providers-blog             | Blog Pages compiler and server side provider              |
+| providers-github           | Github API provider using octokit                         |
+| providers-question-bank    | Question Bank compiler and server side provider           |
+| providers-search           | Minisearch powered search provider                        |
+| react-analytics            | React hooks to interact with our analytics provider       |
+| react-components           | Shared react (DOM) components                             |
+| react-containers           | Next.js specific components                               |
+| react-games                | Shared react (three.js) components                        |
+| trpc-client                | trpc next js specific client                              |
+| trpc-mock                  | trpc mock server, for storybook and RTL tests             |
+| trpc-server                | main trpc server. All our backend logic starts here       |
 
 ### .env
 
@@ -94,16 +98,16 @@ If you create the required services remotely, you can create other env files to
 point to those services. For example:
 
 ```sh
-cp .env.example .env.production
+cp .env.example .env.prod
 ```
 
 You can then run specific configurations using the nx `-c` flag:
 
 ```sh
-pnpm run dev -c production
-pnpm run build -c production
-pnpm run migrate -c production
-pnpm run generate -c production
+pnpm run dev -c prod
+pnpm run build -c prod
+pnpm run migrate -c prod
+pnpm run generate -c prod
 ```
 
 For more information on managing `.env` variables within an `nx` project you can

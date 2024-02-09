@@ -1,6 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Client } from "pg";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
-import { createPageEvent, createTrackEvent } from "./functions/create-events";
+import { analyticsSchema } from "../drizzle";
+import { getDailyUsers } from "./functions/get-daily-users";
+import type { AnalyticsDb } from "../drizzle";
 import type { PageEvent } from "./entities/page-event";
 import type { TrackEvent } from "./entities/track-event";
 
@@ -10,23 +13,25 @@ interface AnalyticsProvider {
 }
 
 export class Analytics implements AnalyticsProvider {
-  private prisma: PrismaClient;
+  private db: AnalyticsDb;
 
   constructor() {
-    this.prisma = new PrismaClient({
-      datasources: {
-        db: {
-          url: getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS_PRISMA_URL"),
-        },
-      },
-    });
+    const schema = analyticsSchema;
+    const pgProvider = getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS");
+    const client = new Client({ connectionString: pgProvider });
+    this.db = drizzle(client, { schema });
+    client.connect();
   }
 
   async createPageEvent(event: PageEvent) {
-    return createPageEvent(this.prisma, event);
+    await this.db.insert(analyticsSchema.pageEvent).values(event);
   }
 
   async createTrackEvent(event: TrackEvent) {
-    return createTrackEvent(this.prisma, event);
+    await this.db.insert(analyticsSchema.trackEvent).values(event);
+  }
+
+  async getDailyUsers() {
+    return getDailyUsers(this.db);
   }
 }

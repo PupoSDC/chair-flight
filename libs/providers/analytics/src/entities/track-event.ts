@@ -1,30 +1,13 @@
+import { type InferSelectModel } from "drizzle-orm";
 import { z } from "zod";
+import type { trackEvent } from "../../drizzle/schema";
 
-type TrackEventMap = {
-  "themeButton.switch": Record<string, never>;
-};
+export type TrackEvent = Pick<
+  InferSelectModel<typeof trackEvent>,
+  "anonymousId" | "eventName" | "properties" | "path" | "resolvedPath"
+>;
 
-type TrackEventBase<T extends keyof TrackEventMap> = {
-  eventName: T;
-  anonymousId: string;
-  timestamp: number;
-  path: string;
-  resolvedPath: string;
-  properties: TrackEventMap[T];
-};
-
-type SimplifiedTrackEvent = {
-  eventName: string;
-  anonymousId: string;
-  timestamp: number;
-  path: string;
-  resolvedPath: string;
-  properties: Record<string, unknown>;
-};
-
-export type TrackEvent = TrackEventBase<keyof TrackEventMap>;
-
-export const TrackEventSchema: z.ZodSchema<SimplifiedTrackEvent> = z.object({
+export const trackEventSchema: z.ZodSchema<TrackEvent> = z.strictObject({
   eventName: z.string(),
   anonymousId: z.string(),
   path: z.string(),
