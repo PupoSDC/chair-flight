@@ -24,6 +24,7 @@ import {
 } from "@mui/joy";
 import { getNumberOfAvailableQuestions } from "@chair-flight/core/question-bank";
 import { newTestConfigurationSchema } from "@chair-flight/core/tests";
+import { useTrackEvent } from "@chair-flight/react/analytics";
 import {
   HookFormSelect,
   NestedCheckboxSelect,
@@ -79,6 +80,7 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
   const createTest = useCreateTest();
   const [{ subjects }] = useSubjects({ questionBank, course: "all" });
   const { getData, setData } = useTestMakerPersistence[questionBank]();
+  const trackEvent = useTrackEvent();
 
   const defaultValues: NewTestConfiguration = {
     mode: "exam",
@@ -138,6 +140,11 @@ export const TestMaker = container<Props>(({ questionBank, sx }) => {
 
   const onSubmit = form.handleSubmit(async (config) => {
     try {
+      trackEvent("test.create", {
+        questionBank,
+        subject: config.subject,
+        mode: config.mode,
+      });
       const { test } = await createTest.mutateAsync({
         questionBank,
         config,

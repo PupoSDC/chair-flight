@@ -1,8 +1,26 @@
 import { useCallback, useContext, useRef } from "react";
 import { analyticsContext } from "../components/analytics-provider";
+import type { QuestionBankName } from "@chair-flight/core/question-bank";
 
 type TrackEventMap = {
   "themeButton.switch": Record<string, never>;
+  "questions.search": { questionBank: QuestionBankName; query: string };
+  "learningObjectives.search": {
+    questionBank: QuestionBankName;
+    query: string;
+  };
+  "annexes.search": { questionBank: QuestionBankName; query: string };
+  "test.create": {
+    questionBank: QuestionBankName;
+    subject: string;
+    mode: string;
+  };
+  "test.finish": {
+    questionBank: QuestionBankName;
+    subject: string;
+    mode: string;
+    score: number;
+  };
 };
 
 type TrackEventName = keyof TrackEventMap;
@@ -19,5 +37,5 @@ export const useTrackEvent = () => {
     [],
   );
 
-  return { trackEvent };
+  return trackEvent;
 };

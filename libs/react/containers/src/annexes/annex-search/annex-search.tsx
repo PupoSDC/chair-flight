@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Link, ListItemContent, Stack, Typography } from "@mui/joy";
 import { annexSearchFilters } from "@chair-flight/core/search";
+import { useTrackEvent } from "@chair-flight/react/analytics";
 import {
   ImageWithModal,
   SearchHeader,
@@ -42,6 +43,7 @@ export const AnnexSearch = container<Props, Params, Data>(
     const [search, setSearch] = useState("");
     const persistedData = useSearchPersistence[questionBank]();
     const serverData = AnnexSearch.useData({ questionBank });
+    const trackEvent = useTrackEvent();
 
     const form = useForm({
       defaultValues: persistedData.getData(),
@@ -69,7 +71,10 @@ export const AnnexSearch = container<Props, Params, Data>(
           isLoading={isLoading}
           isError={isError}
           mobileBreakpoint="lg"
-          onSearchChange={setSearch}
+          onSearchChange={(v) => {
+            trackEvent("annexes.search", { query: v, questionBank });
+            setSearch(v);
+          }}
           onFilterValuesChange={(name, value) =>
             form.setValue(name as keyof typeof defaultFilter, value)
           }

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Stack } from "@mui/joy";
 import { z } from "zod";
+import { useTrackEvent } from "@chair-flight/react/analytics";
 import {
   SearchHeader,
   LearningObjectiveList,
@@ -47,6 +48,7 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
     const [search, setSearch] = useState("");
     const persistedData = useSearchPersistence[questionBank]();
     const serverData = LearningObjectivesSearch.useData({ questionBank });
+    const trackEvent = useTrackEvent();
 
     const form = useForm({
       defaultValues: persistedData.getData(),
@@ -75,7 +77,10 @@ export const LearningObjectivesSearch = container<Props, Params, Data>(
           filterValues={form.watch()}
           isLoading={isLoading}
           isError={isError}
-          onSearchChange={setSearch}
+          onSearchChange={(v) => {
+            trackEvent("questions.search", { query: v, questionBank });
+            setSearch(v);
+          }}
           onFilterValuesChange={(name, value) =>
             form.setValue(name as keyof typeof defaultFilter, value)
           }
