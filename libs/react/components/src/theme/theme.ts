@@ -80,6 +80,16 @@ const lightBackground = {
   },
 };
 
+// @mui-x relies on some mui theme props that do not exist in joy themes.
+const muiThemeBackwardsCompatibility = {
+  shape: {
+    borderRadius: 8,
+  },
+  transitions: {
+    create: () => "ok",
+  },
+};
+
 export const theme = extendTheme({
   typography: {
     h1: {
@@ -145,4 +155,5 @@ export const theme = extendTheme({
       },
     },
   },
+  ...muiThemeBackwardsCompatibility,
 });
