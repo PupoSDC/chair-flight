@@ -15,7 +15,7 @@ import {
   Stack,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useAnalytics } from "@chair-flight/react/analytics";
+import { useTrackEvent } from "@chair-flight/react/analytics";
 import { useSidebar } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { useUserVoyage } from "../../../user/hooks/use-user-voyage";
@@ -53,11 +53,11 @@ export const ThemeButton: FunctionComponent = noSsr(
   () => {
     const [isMounted, setIsMounted] = useState(false);
     const { mode, setMode } = useColorScheme();
-    const { track } = useAnalytics();
+    const { trackEvent } = useTrackEvent();
     const showDarkModeButton = !isMounted || mode === "light";
 
     const toggleTheme = () => {
-      track("themeButton.switch");
+      trackEvent("themeButton.switch", {});
       setMode(mode === "dark" ? "light" : "dark");
     };
 

@@ -1,7 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import { NOOP } from "@chair-flight/base/utils";
 import { trpc } from "@chair-flight/trpc/client";
-import type { TrackEventName } from "@chair-flight/core/analytics";
 import type { AnalyticsPlugin } from "analytics";
 
 type OriginalPageViewProps = {
@@ -13,7 +12,6 @@ type OriginalPageViewProps = {
       url: string;
       height: number;
       width: number;
-      referrer: string;
     };
   };
 };
@@ -21,7 +19,7 @@ type OriginalPageViewProps = {
 type OriginalTrackEventProps = {
   payload: {
     type: "track";
-    event: TrackEventName;
+    event: string;
     anonymousId: string;
     properties: Record<string, unknown>;
   };
@@ -46,8 +44,6 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
         title: props.payload.properties.title,
         height: props.payload.properties.height,
         width: props.payload.properties.width,
-        referrer: props.payload.properties.referrer,
-        timestamp: Date.now(),
       });
     },
     track: (props: OriginalTrackEventProps) => {
@@ -57,7 +53,6 @@ export const useAnalyticsPlugin = (): AnalyticsPlugin => {
         path: router.pathname,
         resolvedPath: router.asPath,
         properties: props.payload.properties as Record<string, never>,
-        timestamp: Date.now(),
       });
     },
   };

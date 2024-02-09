@@ -13,6 +13,7 @@ const nextConfig = {
     emotion: true,
   },
   pageExtensions: ["page.tsx", "api.ts"],
+  transpilePackages: ["@mui/x-charts"],
   async rewrites() {
     const aboutUsRewrite = [
       {

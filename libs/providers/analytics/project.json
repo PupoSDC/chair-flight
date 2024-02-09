@@ -4,76 +4,28 @@
   "sourceRoot": "libs/providers/analytics/src",
   "projectType": "library",
   "targets": {
-    "generate": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "libs/providers/analytics",
-        "command": "prisma generate"
-      },
-      "configurations": {
-        "local": {
-          "command": "env-cmd -f ../../../.env.local prisma generate"
-        },
-        "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
-        },
-        "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
-        }
-      }
-    },
     "migrate": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "libs/providers/analytics",
-        "command": "prisma migrate dev"
+        "command": "drizzle-kit push:pg"
       },
       "configurations": {
-        "local": {
-          "command": "env-cmd -f ../../../.env.local prisma migrate dev"
-        },
-        "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma migrate dev"
-        },
-        "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma migrate dev"
-        }
-      }
-    },
-    "deploy": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "libs/providers/analytics",
-        "command": "prisma migrate deploy"
-      },
-      "configurations": {
-        "local": {
-          "command": "env-cmd -f ../../../.env.local prisma migrate deploy"
-        },
-        "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma migrate deploy"
-        },
-        "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma migrate deploy"
-        }
+        "prod": {},
+        "dev": {},
+        "local": {}
       }
     },
     "studio": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "libs/providers/analytics",
-        "command": "prisma studio"
+        "command": "drizzle-kit studio"
       },
       "configurations": {
-        "local": {
-          "command": "env-cmd -f ../../../.env.local prisma studio"
-        },
-        "dev": {
-          "command": "env-cmd -f ../../../.env.dev prisma studio"
-        },
-        "prod": {
-          "command": "env-cmd -f ../../../.env.prod prisma studio"
-        }
+        "prod": {},
+        "dev": {},
+        "local": {}
       }
     },
     "lint": {

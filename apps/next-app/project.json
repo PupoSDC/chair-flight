@@ -6,11 +6,16 @@
   "targets": {
     "dev": {
       "executor": "@nx/next:server",
-      "dependsOn": ["^deploy", "^compile", "^generate"],
+      "dependsOn": ["^compile", "^migrate"],
       "options": {
         "port": 4200,
         "buildTarget": "next-app:build",
         "dev": true
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "local": {}
       }
     },
     "build": {

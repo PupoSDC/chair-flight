@@ -1,26 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { useAnalytics } from "@chair-flight/react/analytics";
 
 export const usePageTransition = () => {
-  const hasMounted = useRef(false);
-  const router = useRouter();
-  const analytics = useAnalytics();
-  const oldRoute = useRef<string>(router.asPath);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const router = useRouter();
+  const oldRoute = useRef<string>(router.asPath);
   oldRoute.current = router.asPath;
-
-  useEffect(() => {
-    if (!hasMounted.current) analytics.page();
-    hasMounted.current = true;
-  });
-
-  useEffect(() => {
-    router.events.on("routeChangeComplete", analytics.page);
-    return () => {
-      router.events.off("routeChangeComplete", analytics.page);
-    };
-  }, [analytics.page, router.events]);
 
   useEffect(() => {
     const onStart = (e: string) => {
