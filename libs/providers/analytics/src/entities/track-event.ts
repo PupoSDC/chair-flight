@@ -12,6 +12,5 @@ export const trackEventSchema: z.ZodSchema<TrackEvent> = z.strictObject({
   anonymousId: z.string(),
   path: z.string(),
   resolvedPath: z.string(),
-  timestamp: z.number(),
   properties: z.object({}).passthrough(),
 });

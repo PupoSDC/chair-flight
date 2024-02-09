@@ -3,16 +3,12 @@ import { Client } from "pg";
 import { getEnvVariableOrThrow } from "@chair-flight/base/env";
 import { analyticsSchema } from "../drizzle";
 import { getDailyUsers } from "./functions/get-daily-users";
+import { getPagesUsed } from "./functions/get-pages-used";
 import type { AnalyticsDb } from "../drizzle";
 import type { PageEvent } from "./entities/page-event";
 import type { TrackEvent } from "./entities/track-event";
 
-interface AnalyticsProvider {
-  createPageEvent: (event: PageEvent) => Promise<void>;
-  createTrackEvent: (event: TrackEvent) => Promise<void>;
-}
-
-export class Analytics implements AnalyticsProvider {
+export class Analytics {
   private db: AnalyticsDb;
 
   constructor() {
@@ -33,5 +29,9 @@ export class Analytics implements AnalyticsProvider {
 
   async getDailyUsers() {
     return getDailyUsers(this.db);
+  }
+
+  async getPagesUsed() {
+    return getPagesUsed(this.db);
   }
 }

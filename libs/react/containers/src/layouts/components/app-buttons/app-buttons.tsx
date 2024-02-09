@@ -53,7 +53,7 @@ export const ThemeButton: FunctionComponent = noSsr(
   () => {
     const [isMounted, setIsMounted] = useState(false);
     const { mode, setMode } = useColorScheme();
-    const { trackEvent } = useTrackEvent();
+    const trackEvent = useTrackEvent();
     const showDarkModeButton = !isMounted || mode === "light";
 
     const toggleTheme = () => {

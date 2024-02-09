@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Stack } from "@mui/joy";
+import { useTrackEvent } from "@chair-flight/react/analytics";
 import { QuestionList, SearchHeader } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "../../wraper/container";
@@ -29,6 +30,7 @@ export const QuestionSearch = container<Props, Params, Data>(
     const [search, setSearch] = useState("");
     const serverData = QuestionSearch.useData({ questionBank });
     const filterForm = useQuestionSearchConfig({ questionBank });
+    const trackEvent = useTrackEvent();
 
     const filters = {
       searchField: filterForm.watch("searchField"),
@@ -49,7 +51,10 @@ export const QuestionSearch = container<Props, Params, Data>(
           filterValues={filterForm.watch()}
           isLoading={isLoading}
           isError={isError}
-          onSearchChange={setSearch}
+          onSearchChange={(v) => {
+            trackEvent("questions.search", { query: v, questionBank });
+            setSearch(v);
+          }}
           onFilterValuesChange={(name, value) =>
             filterForm.setValue(name as FilterKey, value)
           }

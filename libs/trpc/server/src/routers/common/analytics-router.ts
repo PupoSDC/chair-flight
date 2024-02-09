@@ -13,4 +13,5 @@ export const analyticsRouter = router({
     .input(trackEventSchema)
     .mutation(async ({ input }) => analytics.createTrackEvent(input)),
   getDailyUsers: publicProcedure.query(async () => analytics.getDailyUsers()),
+  getPagesUsed: publicProcedure.query(async () => analytics.getPagesUsed()),
 });
