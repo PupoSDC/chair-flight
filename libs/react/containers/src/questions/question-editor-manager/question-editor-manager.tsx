@@ -23,7 +23,7 @@ import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
 import { useQuestionSearchConfig } from "../hooks/use-question-search-config";
 import { QuestionManagerEditorListItem } from "./question-editor-manager-list-item";
-import type { QuestionId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
 type Props = {
   questionBank: QuestionBankName;
@@ -59,7 +59,7 @@ export const QuestionEditorManager = container<Props, Params, Data>(
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
 
-    const addQuestion = (questionId: QuestionId) => {
+    const addQuestion = (questionId: QuestionTemplateId) => {
       addQuestionToEditor({ trpc: utils, questionBank, questionId });
     };
 

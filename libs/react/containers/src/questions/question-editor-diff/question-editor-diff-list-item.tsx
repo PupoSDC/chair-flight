@@ -4,10 +4,10 @@ import { type QuestionBankName } from "@chair-flight/core/question-bank";
 import { MarkdownClientCompressed } from "@chair-flight/react/components";
 import { VerticalDivider } from "../components/vertical-divider";
 import { useQuestionEditor } from "../hooks/use-question-editor";
-import type { QuestionId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
 export const QuestionEditorDiffListItem = memo<{
-  questionId: QuestionId;
+  questionId: QuestionTemplateId;
   questionBank: QuestionBankName;
 }>(({ questionId, questionBank }) => {
   const {

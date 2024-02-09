@@ -7,17 +7,17 @@ import {
   getRandomIdGenerator,
   getRandomShuffler,
 } from "@chair-flight/base/utils";
-import type { QuestionTemplate } from "../entities/question-bank-question";
-import type { QuestionVariantDefinition } from "../entities/question-bank-question-definition";
-import type { QuestionVariantMultipleCorrect } from "../entities/question-bank-question-multiple-correct";
-import type { QuestionVariantOneTwo } from "../entities/question-bank-question-one-two";
-import type { QuestionVariantSimple } from "../entities/question-bank-question-simple";
-import type { QuestionVariantTrueOrFalse } from "../entities/question-bank-question-true-or-false";
 import type {
   TestQuestion,
   TestQuestionMultipleChoice,
   TestQuestionType,
-} from "../entities/test-types";
+} from "../entities/test-question";
+import type { QuestionTemplate } from "@chair-flight/core/question-bank";
+import type { QuestionVariantDefinition } from "@chair-flight/core/question-bank";
+import type { QuestionVariantMultipleCorrect } from "@chair-flight/core/question-bank";
+import type { QuestionVariantOneTwo } from "@chair-flight/core/question-bank";
+import type { QuestionVariantSimple } from "@chair-flight/core/question-bank";
+import type { QuestionVariantTrueOrFalse } from "@chair-flight/core/question-bank";
 
 const createQuestionMultipleChoiceFromSimple = ({
   template,

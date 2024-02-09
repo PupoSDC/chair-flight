@@ -22,10 +22,8 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import {
-  getNumberOfAvailableQuestions,
-  newTestConfigurationSchema,
-} from "@chair-flight/core/question-bank";
+import { getNumberOfAvailableQuestions } from "@chair-flight/core/question-bank";
+import { newTestConfigurationSchema } from "@chair-flight/core/tests";
 import {
   HookFormSelect,
   NestedCheckboxSelect,
@@ -40,7 +38,7 @@ import { useBugReportDebugData } from "../../user/user-bug-report";
 import { container } from "../../wraper/container";
 import { useTestProgress } from "../hooks/use-test-progress";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { NewTestConfiguration } from "@chair-flight/core/question-bank";
+import type { NewTestConfiguration } from "@chair-flight/core/tests";
 import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
 
 const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;

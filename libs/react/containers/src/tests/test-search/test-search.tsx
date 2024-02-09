@@ -18,7 +18,7 @@ import {
   selectClasses,
 } from "@mui/joy";
 import { z } from "zod";
-import { processTest } from "@chair-flight/core/question-bank";
+import { processTest } from "@chair-flight/core/tests";
 import {
   HookFormSelect,
   SearchFilters,
