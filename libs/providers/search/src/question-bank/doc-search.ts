@@ -63,12 +63,14 @@ export class DocSearch extends QuestionBankSearchProvider<
 
   protected override async getSearchDocuments(bank: QuestionBank) {
     const docs = await bank.getAll("docs");
-    return docs.map((doc) => ({
-      id: doc.id,
-      learningObjectives: doc.learningObjectives.join(", "),
-      content: doc.content,
-      title: doc.title,
-    }));
+    return docs
+      .filter((doc) => doc.id !== "root")
+      .map((doc) => ({
+        id: doc.id,
+        learningObjectives: doc.learningObjectives.join(", "),
+        content: doc.content,
+        title: doc.title,
+      }));
   }
 
   protected override getSearchResultFilter(params: DocSearchParams) {

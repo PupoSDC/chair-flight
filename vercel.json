@@ -5,19 +5,19 @@
   "crons": [
     {
       "path": "/api/trpc/common.search.initialize",
-      "schedule": "*/2 * * * *"
+      "schedule": "*/15 * * * *"
     },
     {
       "path": "/",
-      "schedule": "*/10 * * * *"
+      "schedule": "*/15 * * * *"
     },
     {
       "path": "/modules/type/questions",
-      "schedule": "*/10 * * * *"
+      "schedule": "*/15 * * * *"
     },
     {
-      "path": "/modules/type/questions/59o75g",
-      "schedule": "*/10 * * * *"
+      "path": "/modules/atpl/questions/QOLXVXTE",
+      "schedule": "*/15 * * * *"
     },
     {
       "path": "/modules/type/tests/create",
