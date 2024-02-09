@@ -13,9 +13,11 @@ import YAML from "yaml";
 import { getRandomId } from "@chair-flight/base/utils";
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import { createTestQuestion } from "@chair-flight/core/tests";
-import { MarkdownClient, Ups } from "@chair-flight/react/components";
+import { MarkdownClient, useDebounce } from "@chair-flight/react/components";
+import { trpc } from "@chair-flight/trpc/client";
 import { container } from "../../wraper";
 import { useQuestionEditor } from "../hooks/use-question-editor";
+import { QuestionExplanationComponent } from "../question-explanation/question-explanation";
 import { QuestionStandAloneComponent } from "../question-stand-alone/question-stand-alone";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
@@ -30,6 +32,8 @@ type Params = Props;
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorPreview"];
 
+const useRenderExplanation = trpc.common.markdown.getRenderedMarkdown.useQuery;
+
 export const QuestionEditorPreview = container<Props, Params, Data>(
   ({ questionId, questionBank, component = "div", sx }) => {
     const { mode } = useColorScheme();
@@ -41,6 +45,13 @@ export const QuestionEditorPreview = container<Props, Params, Data>(
       explanation: s[questionBank].afterState[questionId]?.explanation ?? "",
       setQuestionExplanation: s.setQuestionExplanation,
     }));
+
+    const debounceExplanation = useDebounce(explanation, 250);
+
+    const { data } = useRenderExplanation(
+      { markdown: debounceExplanation },
+      { keepPreviousData: true },
+    );
 
     if (!template || !variant) return null;
     return (
@@ -88,11 +99,9 @@ export const QuestionEditorPreview = container<Props, Params, Data>(
           />
         </TabPanel>
         <TabPanel value={"Explanation"} sx={{ px: 1 }}>
-          {explanation ? (
-            <MarkdownClient>{explanation}</MarkdownClient>
-          ) : (
-            <Ups message="No explanation provided" />
-          )}
+          <QuestionExplanationComponent
+            explanation={data?.markdownDocument ?? null}
+          />
         </TabPanel>
         <TabPanel value={"Json"} sx={{ px: 0 }}>
           <Editor
