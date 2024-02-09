@@ -299,16 +299,20 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
         }
       : initial;
 
+    const isDeleted = currentState === null;
     const hasRelatedQs = !!currentState?.relatedQuestions.length;
     const hasPreviewChanged = initial.preview !== current.preview;
     const hasLosChanged = initial.los !== current.los;
     const hasAnnexesChanged = initial.annexes !== current.annexes;
     const hasRelatedQsChanged = initial.relatedQs !== current.relatedQs;
-    const isDeleted = currentState === null;
+    const hasExplanationChanged =
+      initialState.explanation !== currentState?.explanation;
+
     const isEdited =
       hasPreviewChanged ||
       hasLosChanged ||
       hasAnnexesChanged ||
+      hasExplanationChanged ||
       hasRelatedQsChanged;
 
     return {
