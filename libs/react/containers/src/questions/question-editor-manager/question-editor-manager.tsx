@@ -68,7 +68,7 @@ export const QuestionEditorManager = container<Props, Params, Data>(
         <Stack height="100%" flex={1}>
           <SearchHeader
             search={search}
-            searchPlaceholder="Search Annexes..."
+            searchPlaceholder="Search Questions..."
             filters={serverData.filters}
             filterValues={filterForm.watch()}
             isLoading={searchQuestions.isLoading}
