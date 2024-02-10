@@ -50,7 +50,7 @@ can and will be introduced in patch releases.
 
 ### Apps
 
-\*Note: `dev` indicates the port the service is available when running `pnpm run:*`
+\*Note: `local` indicates the port the service is available when running `pnpm run:*`
 
 | Name     | Desc                                        | local |
 | -------- | ------------------------------------------- | ----- |
@@ -59,31 +59,36 @@ can and will be introduced in patch releases.
 
 ### Libs
 
-| Name                       | Desc                                                      |
-| -------------------------- | --------------------------------------------------------- |
-| base-env                   | Utility to safely access env variables                    |
-| base-errors                | Errors that can be handled in the front or in the backend |
-| base-utils                 | Common JS utilities                                       |
-| content-blog               | Blog posts                                                |
-| content-question-bank-prep | Content bank for the interview prep module                |
-| content-question-bank-type | Content bank for the Type Rating module                   |
-| content-question-bank-atpl | Content bank for the ATPL theory module                   |
-| core-github                | Github related functionalities                            |
-| core-question-bank         | Question Bank entities and functions                      |
-| core-search                | Search API entities                                       |
-| core-tests                 | Test related entities and functions                       |
-| providers-analytics        | Provides analytics postgres DB interactions               |
-| providers-blog             | Blog Pages compiler and server side provider              |
-| providers-github           | Github API provider using octokit                         |
-| providers-question-bank    | Question Bank compiler and server side provider           |
-| providers-search           | Minisearch powered search provider                        |
-| react-analytics            | React hooks to interact with our analytics provider       |
-| react-components           | Shared react (DOM) components                             |
-| react-containers           | Next.js specific components                               |
-| react-games                | Shared react (three.js) components                        |
-| trpc-client                | trpc next js specific client                              |
-| trpc-mock                  | trpc mock server, for storybook and RTL tests             |
-| trpc-server                | main trpc server. All our backend logic starts here       |
+| Name                       | Desc                                                        |
+| -------------------------- | ----------------------------------------------------------- |
+| base-env                   | Utility to safely access env variables                      |
+| base-errors                | Errors that can be handled in the front or in the backend   |
+| base-utils                 | Common JS utilities                                         |
+| content-blog               | Blog posts                                                  |
+| content-question-bank-prep | Content bank for the interview prep module                  |
+| content-question-bank-type | Content bank for the Type Rating module                     |
+| content-question-bank-atpl | Content bank for the ATPL theory module                     |
+| next-analytics             | Next Components related to analytics                        |
+| next-public                | Next Components displayed in public pages (blog, home, etc) |
+| next-question-bank         | Next Components to interact with the question banks         |
+| next-tests                 | Next Components used for test taking                        |
+| next-user                  | Next Components for user related activities                 |
+| core-github                | Github related functionalities                              |
+| core-question-bank         | Question Bank entities and functions                        |
+| core-search                | Search API entities                                         |
+| core-tests                 | Test related entities and functions                         |
+| providers-analytics        | Provides analytics postgres DB interactions                 |
+| providers-blog             | Blog Pages compiler and server side provider                |
+| providers-github           | Github API provider using octokit                           |
+| providers-question-bank    | Question Bank compiler and server side provider             |
+| providers-search           | Minisearch powered search provider                          |
+| react-components           | Shared react (DOM) components                               |
+| react-games                | Shared react (three.js) components                          |
+| react-markdown             | React Library to render markdown on the client and server   |
+| react-theme                | Joy ui custom theme                                         |
+| trpc-client                | trpc next js specific client                                |
+| trpc-mock                  | trpc mock server, for storybook and RTL tests               |
+| trpc-server                | main trpc server. All our backend logic starts here         |
 
 ### .env
 
