@@ -1,15 +1,15 @@
 import { default as LinkIcon } from "@mui/icons-material/ChevronRightOutlined";
 import { Divider, Link, Sheet, Stack, Typography } from "@mui/joy";
-import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   LearningObjectiveOverview,
   LearningObjectiveQuestions,
   LearningObjectiveTree,
-} from "@chair-flight/react/containers";
+} from "@chair-flight/next/question-bank";
+import { AppHead } from "@chair-flight/react/components";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { NextPage } from "next";
 
 type PageParams = {

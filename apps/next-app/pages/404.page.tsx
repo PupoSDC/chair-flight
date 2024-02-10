@@ -1,7 +1,7 @@
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNewOutlined";
 import { Link, Button, Stack } from "@mui/joy";
+import { LayoutPublic } from "@chair-flight/next/public";
 import { Ups, AppHead } from "@chair-flight/react/components";
-import { LayoutPublic } from "@chair-flight/react/containers";
 import type { NextPage } from "next";
 
 const PageNotFound: NextPage = () => {

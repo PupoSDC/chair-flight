@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
 import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 import { getRandomId } from "@chair-flight/base/utils";
-import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   QuestionExplanation,
   QuestionMeta,
   QuestionStandAlone,
-} from "@chair-flight/react/containers";
+} from "@chair-flight/next/question-bank";
+import { AppHead } from "@chair-flight/react/components";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { NextPage } from "next";
 
 type QueryParams = {

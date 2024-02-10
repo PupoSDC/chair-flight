@@ -1,11 +1,11 @@
 import * as fs from "node:fs/promises";
 import { useState } from "react";
+import { LayoutPublic, HeroWelcome } from "@chair-flight/next/public";
 import {
   AppHead,
   BackgroundSlidingImages,
-  ThemeOverrideColorScheme,
 } from "@chair-flight/react/components";
-import { LayoutPublic, OverviewWelcome } from "@chair-flight/react/containers";
+import { ThemeOverrideColorScheme } from "@chair-flight/react/theme";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { NextPage } from "next";
@@ -20,7 +20,7 @@ export const Page: NextPage = () => {
     >
       <ThemeOverrideColorScheme questionBank={questionBank} />
       <AppHead />
-      <OverviewWelcome
+      <HeroWelcome
         headerHeight={48}
         questionBank={questionBank}
         onQuestionBankChanged={setQuestionBank}
@@ -30,7 +30,7 @@ export const Page: NextPage = () => {
 };
 
 export const getStaticProps = staticHandler(async ({ helper }) => {
-  await OverviewWelcome.getData({ helper, params: {} });
+  await HeroWelcome.getData({ helper, params: {} });
   return { props: {} };
 }, fs);
 

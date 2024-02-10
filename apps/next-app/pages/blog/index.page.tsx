@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
+import { BlogIndex, LayoutPublic } from "@chair-flight/next/public";
 import { AppHead, BackgroundFadedImage } from "@chair-flight/react/components";
-import { BlogIndex, LayoutPublic } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { NextPage } from "next";
 

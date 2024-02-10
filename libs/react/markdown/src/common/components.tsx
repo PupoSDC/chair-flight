@@ -1,5 +1,5 @@
 import { Box, Divider, Link, Typography } from "@mui/joy";
-import "@chair-flight/react/components";
+import "@chair-flight/react/theme";
 import type { Components } from "react-markdown";
 
 export const markdownComponents: Partial<Components> = {

@@ -1,4 +1,5 @@
 import { Box, Divider, Link, Typography } from "@mui/joy";
+import "@chair-flight/react/theme";
 import type { MDXProvider } from "@mdx-js/react";
 import type { ComponentProps } from "react";
 
