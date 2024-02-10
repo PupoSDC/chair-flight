@@ -381,7 +381,7 @@ export const OverviewWelcome = container<Props, Params, Data>(
   },
 );
 
-OverviewWelcome.displayName = "OverviewWelcome";
+OverviewWelcome.displayName = "HeroWelcome";
 
 OverviewWelcome.getData = async ({ helper }) => {
   const router = helper.containers.overviews;
