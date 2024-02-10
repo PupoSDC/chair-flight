@@ -1,13 +1,13 @@
 import * as fs from "node:fs/promises";
 import { Typography, Box } from "@mui/joy";
-import { AppHead } from "@chair-flight/react/components";
 import {
   FlashcardCollectionList,
   LayoutModule,
-} from "@chair-flight/react/containers";
+} from "@chair-flight/next/question-bank";
+import { AppHead } from "@chair-flight/react/components";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageParams = {

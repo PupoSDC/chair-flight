@@ -1,0 +1,31 @@
+{
+  "name": "next-user",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next/user/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/next/user/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p libs/next/user/tsconfig.json"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [],
+      "options": {
+        "passWithNoTests": false,
+        "reportsDirectory": "../../../coverage/libs/next/user",
+        "config": "{workspaceRoot}/vitest.config.mts"
+      }
+    }
+  }
+}

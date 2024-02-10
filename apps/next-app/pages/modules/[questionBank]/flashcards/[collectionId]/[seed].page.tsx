@@ -1,9 +1,9 @@
 import { getRandomId } from "@chair-flight/base/utils";
+import { FlashcardTest, LayoutModule } from "@chair-flight/next/question-bank";
 import { AppHead } from "@chair-flight/react/components";
-import { FlashcardTest, LayoutModule } from "@chair-flight/react/containers";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { NextPage } from "next";
 
 type PageProps = {

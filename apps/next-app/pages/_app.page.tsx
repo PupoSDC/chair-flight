@@ -4,8 +4,9 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import {
   AnalyticsProvider,
   AnalyticsPageLogger,
-} from "@chair-flight/react/analytics";
-import { ThemeProvider, Toaster } from "@chair-flight/react/components";
+} from "@chair-flight/next/analytics";
+import { Toaster } from "@chair-flight/react/components";
+import { ThemeProvider } from "@chair-flight/react/theme";
 import { trpc } from "@chair-flight/trpc/client";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";

@@ -1,11 +1,11 @@
-import { AppHead } from "@chair-flight/react/components";
 import {
   LayoutModule,
   LearningObjectiveQuestions,
-} from "@chair-flight/react/containers";
+} from "@chair-flight/next/question-bank";
+import { AppHead } from "@chair-flight/react/components";
 import { ssrHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { NextPage } from "next";
 
 type PageParams = {

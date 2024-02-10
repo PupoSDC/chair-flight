@@ -4,7 +4,17 @@
   "sourceRoot": "apps/docs",
   "projectType": "application",
   "tags": [],
-  "implicitDependencies": ["react-components", "react-containers"],
+  "implicitDependencies": [
+    "react-components",
+    "react-games",
+    "react-markdown",
+    "react-theme",
+    "next-analytics",
+    "next-public",
+    "next-question-bank",
+    "next-tests",
+    "next-user"
+  ],
   "targets": {
     "dev": {
       "executor": "@nx/storybook:storybook",

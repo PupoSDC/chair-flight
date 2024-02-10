@@ -1,9 +1,10 @@
 import * as fs from "node:fs/promises";
+import { LayoutModule } from "@chair-flight/next/question-bank";
+import { TestMaker } from "@chair-flight/next/tests";
 import { AppHead } from "@chair-flight/react/components";
-import { LayoutModule, TestMaker } from "@chair-flight/react/containers";
 import { staticHandler } from "@chair-flight/trpc/server";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/react/containers";
+import type { Breadcrumbs } from "@chair-flight/next/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {
