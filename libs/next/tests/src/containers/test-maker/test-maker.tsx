@@ -22,9 +22,9 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import { useTrackEvent } from "libs/next/analytics/src";
 import { getNumberOfAvailableQuestions } from "@chair-flight/core/question-bank";
 import { newTestConfigurationSchema } from "@chair-flight/core/tests";
+import { useTrackEvent } from "@chair-flight/next/analytics";
 import { useBugReportDebugData } from "@chair-flight/next/user";
 import {
   HookFormSelect,

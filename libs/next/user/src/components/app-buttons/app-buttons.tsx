@@ -14,8 +14,8 @@ import {
   Tooltip,
   Stack,
 } from "@mui/joy";
-import { useTrackEvent } from "libs/next/analytics/src";
 import { DateTime } from "luxon";
+import { useTrackEvent } from "@chair-flight/next/analytics";
 import { useSidebar, noSsr } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { useBugReportDisclose } from "../../hooks/use-bug-report";
