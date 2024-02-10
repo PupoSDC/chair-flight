@@ -8,6 +8,7 @@ export * from "./count-up";
 export * from "./flashcard";
 export * from "./flashcard-tinder";
 export * from "./hook-form";
+export * from "./hooks/use-debounce";
 export * from "./hooks/use-disclose";
 export * from "./hooks/use-media-query";
 export * from "./hooks/use-window-resize";

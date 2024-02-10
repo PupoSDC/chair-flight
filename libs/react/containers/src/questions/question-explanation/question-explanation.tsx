@@ -24,7 +24,7 @@ type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionExplanation"];
 
 export const QuestionExplanationComponent: FunctionComponent<
-  CommonComponentProps & Props & Data
+  CommonComponentProps & Data
 > = ({ sx, component = "section", explanation }) => {
   return (
     <Stack component={component} sx={sx}>
