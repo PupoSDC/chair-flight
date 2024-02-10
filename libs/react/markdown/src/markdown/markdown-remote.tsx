@@ -1,6 +1,6 @@
-import type { FunctionComponent } from "react";
-import type { BoxProps } from "@mui/joy";
 import { Box } from "@mui/joy";
+import type { BoxProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 type CompiledMarkdown = { __html: string };
 

@@ -1,9 +1,9 @@
-import type { FunctionComponent } from "react";
 import { default as ReactMarkdown } from "react-markdown";
-import type { BoxProps } from "@mui/joy";
 import { Box } from "@mui/joy";
 import { plugins } from "../common/plugins";
 import { markdownComponents } from "./markdown-components";
+import type { BoxProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 export type MarkdownClientProps = {
   children: string;
