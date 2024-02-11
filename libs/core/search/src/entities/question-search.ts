@@ -1,6 +1,4 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { searchParams } from "./search-params";
 import type {
   QuestionBankName,
   SubjectId,
@@ -23,18 +21,15 @@ export type QuestionSearchResult = {
   externalIds: string[];
 };
 
+export type QuestionSearchField =
+  | "id"
+  | "learningObjective"
+  | "externalId"
+  | "text";
+
+export type QuestionFilterField = "subject";
+
 export const questionSearchFilters = z.object({
   subject: z.string().default("all"),
   searchField: z.string().default("all"),
 });
-
-export type QuestionSearchFilters = z.infer<typeof questionSearchFilters>;
-
-export const questionSearchParams = searchParams.and(
-  z.object({
-    questionBank: questionBankNameSchema,
-    filters: questionSearchFilters,
-  }),
-);
-
-export type QuestionSearchParams = z.infer<typeof questionSearchParams>;

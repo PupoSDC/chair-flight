@@ -1,17 +1,20 @@
 import { z } from "zod";
 import { assertType } from "@chair-flight/base/utils";
+import { questionBankNameSchema } from "./question-bank-name";
 import type {
   DocId,
   LearningObjectiveId,
   QuestionTemplateId,
   SubjectId,
 } from "./ids";
+import type { QuestionBankName } from "./question-bank-name";
 import type { IsEqual } from "@chair-flight/base/utils";
 
 export type Doc = {
   id: DocId;
   parent?: DocId;
   title: string;
+  questionBank: QuestionBankName;
 
   // Inferred data
   subject: SubjectId;
@@ -27,6 +30,7 @@ export const docSchema = z.object({
   id: z.string(),
   parentId: z.string().optional(),
   title: z.string(),
+  questionBank: questionBankNameSchema,
   subject: z.string(),
   learningObjectives: z.string().array(),
   questions: z.string().array(),

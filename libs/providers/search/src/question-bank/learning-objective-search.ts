@@ -1,34 +1,50 @@
 import { makeMap } from "@chair-flight/base/utils";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
+import type { LearningObjective } from "@chair-flight/core/question-bank";
 import type {
-  LearningObjectiveSearchFilters,
-  LearningObjectiveSearchParams,
+  LearningObjectiveFilterField,
+  LearningObjectiveSearchField,
   LearningObjectiveSearchResult,
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
 
-type LearningObjectiveSearchField = "id" | "text";
-type LearningObjectiveSearchDocument = Record<
-  LearningObjectiveSearchField,
-  string
->;
-
 export class LearningObjectiveSearch extends QuestionBankSearchProvider<
-  LearningObjectiveSearchDocument,
+  LearningObjective,
   LearningObjectiveSearchResult,
-  LearningObjectiveSearchFilters,
-  LearningObjectiveSearchParams
+  LearningObjectiveSearchField,
+  LearningObjectiveFilterField
 > {
+  private coursesMap: Record<string, { id: string; text: string }> = {};
+
   constructor() {
     super({
       searchFields: ["id", "text"],
       idSearchFields: ["id"],
+      filterFields: ["subject", "course"],
     });
+  }
+
+  protected override async initializeSearchMaps(bank: QuestionBank) {
+    await super.initializeSearchMaps(bank);
+    const allCourses = await bank.getAll("courses");
+    this.coursesMap = {
+      ...this.coursesMap,
+      ...makeMap(allCourses, (c) => c.id),
+    };
   }
 
   public override async getFilters(bank: QuestionBank) {
     const rawSubjects = await bank.getAll("subjects");
     const rawCourses = await bank.getAll("courses");
+
+    const searchField = [
+      { id: "all", text: "All Fields" },
+      { id: "id", text: "Learning Objective" },
+      { id: "text", text: "Title" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: LearningObjectiveSearchField; text: string }>,
+    ];
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -36,6 +52,9 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
         id: s.id,
         text: `${s.id} - ${s.shortName}`,
       })),
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: string; text: string }>,
     ];
 
     const course = [
@@ -44,12 +63,9 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
         id: c.id,
         text: c.text,
       })),
-    ];
-
-    const searchField = [
-      { id: "all", text: "All Fields" },
-      { id: "id", text: "Learning Objective" },
-      { id: "text", text: "Title" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: string; text: string }>,
     ];
 
     return {
@@ -57,59 +73,31 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
     };
   }
 
-  protected override async getResultItems(bank: QuestionBank) {
-    const allCourses = await bank.getAll("courses");
-    const learningObjectives = await bank.getAll("learningObjectives");
-    const coursesMap = makeMap(allCourses, (c) => c.id);
+  protected override async getSearchItems(bank: QuestionBank) {
+    return await bank.getAll("learningObjectives");
+  }
 
-    return learningObjectives.map((lo) => ({
+  protected override getSearchResult(lo: LearningObjective) {
+    return {
       id: lo.id,
-      href: `/modules/${bank.getName()}/learning-objectives/${lo.id}`,
+      href: `/modules/${lo.questionBank}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
-      courses: lo.courses.map((c) => coursesMap[c]),
+      courses: lo.courses.map((c) => this.coursesMap[c]),
       text: lo.text,
       source: lo.source,
-      questionBank: bank.getName(),
+      questionBank: lo.questionBank,
       subject: lo.id.split(".")[0],
       numberOfQuestions: lo.nestedQuestions.length,
-    }));
+    };
   }
 
-  protected override async getSearchDocuments(bank: QuestionBank) {
-    const learningObjectives = await bank.getAll("learningObjectives");
-    return learningObjectives.map((lo) => ({
+  protected override getSearchDocument(lo: LearningObjective) {
+    return {
       id: lo.id,
       text: lo.text,
-    }));
-  }
-
-  protected override getSearchResultFilter(
-    params: LearningObjectiveSearchParams,
-  ) {
-    return (
-      r: LearningObjectiveSearchResult | undefined,
-    ): r is LearningObjectiveSearchResult => {
-      if (!r) {
-        return false;
-      }
-
-      if (r.questionBank !== params.questionBank) {
-        return false;
-      }
-
-      if (params.filters.subject !== "all") {
-        if (r.subject !== params.filters.subject) {
-          return false;
-        }
-      }
-
-      if (params.filters.course !== "all") {
-        if (r.courses.every((c) => c.id !== params.filters.course)) {
-          return false;
-        }
-      }
-
-      return true;
+      subject: lo.id.split(".")[0],
+      course: lo.courses.join(","),
+      questionBank: lo.questionBank,
     };
   }
 }

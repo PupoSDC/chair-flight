@@ -1,34 +1,67 @@
 import { default as MiniSearch } from "minisearch";
-import type { SearchParams as ISearchParams } from "@chair-flight/core/search";
+import type { SearchParams } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
 import type { SearchOptions } from "minisearch";
 
-type Filter = Array<{ id: string; text: string }>;
+type MandatorySearchDocument = { id: string; questionBank: string };
+
+type ISearchDocument<
+  SearchField extends string,
+  FilterField extends string,
+> = Record<SearchField, string> &
+  Record<FilterField, string> &
+  MandatorySearchDocument;
+
+type IFilters<SearchField extends string, FilterField extends string> = Record<
+  "searchField",
+  [{ id: "all"; text: string }, ...Array<{ id: SearchField; text: string }>]
+> &
+  Record<
+    FilterField,
+    [{ id: "all"; text: string }, ...Array<{ id: string; text: string }>]
+  >;
 
 export abstract class QuestionBankSearchProvider<
-  SearchDocument extends { id: string; [k: string]: string },
+  OriginalItem extends { id: string },
   SearchResult extends { id: string },
-  SearchFilters extends { searchField: string },
-  SearchParams extends ISearchParams & { filters: SearchFilters },
+  SearchField extends string,
+  FilterField extends string,
+  SearchDocument extends ISearchDocument<
+    SearchField,
+    FilterField
+  > = ISearchDocument<SearchField, FilterField>,
+  Filters extends IFilters<SearchField, FilterField> = IFilters<
+    SearchField,
+    FilterField
+  >,
 > {
+  private originalItems = new Map<string, OriginalItem>();
   private searchIndex: MiniSearch<SearchDocument>;
+
+  private searchDocuments = new Map<string, SearchDocument>();
   private searchResults = new Map<string, SearchResult>();
   private initializationWork = new Map<QuestionBank, Promise<void>>();
-  private idSearchFields: (keyof SearchDocument)[];
+  private idSearchFields: SearchField[];
+  private searchFields: SearchField[];
+  private filterFields: FilterField[];
 
   constructor({
     idSearchFields,
     searchFields,
+    filterFields,
   }: {
-    idSearchFields: (keyof SearchDocument)[];
-    searchFields: (keyof SearchDocument)[];
+    idSearchFields: SearchField[];
+    searchFields: SearchField[];
+    filterFields: FilterField[];
   }) {
     this.idSearchFields = idSearchFields;
+    this.searchFields = searchFields;
+    this.filterFields = filterFields;
     this.searchIndex = new MiniSearch<SearchDocument>({
       fields: searchFields as string[],
       storeFields: ["id"],
       tokenize: (text, fieldName) => {
-        if (idSearchFields.includes(fieldName as keyof SearchDocument)) {
+        if (idSearchFields.includes(fieldName as SearchField)) {
           return text.split(", ");
         }
         return MiniSearch.getDefault("tokenize")(text);
@@ -36,19 +69,23 @@ export abstract class QuestionBankSearchProvider<
     });
   }
 
-  private async initializeSearchResults(bank: QuestionBank) {
-    const resultItems = await this.getResultItems(bank);
-    const firstId = resultItems[0]?.id;
-    if (!firstId || this.searchResults.get(firstId)) return;
-    resultItems.forEach((item) => this.searchResults.set(item.id, item));
+  protected async initializeSearchMaps(bank: QuestionBank) {
+    const items = await this.getSearchItems(bank);
+    const firstItemId = items[0]?.id;
+    if (!firstItemId || this.originalItems.has(firstItemId)) return;
+    items.forEach((item) => {
+      const searchDocument = this.getSearchDocument(item);
+      this.originalItems.set(item.id, item);
+      this.searchDocuments.set(item.id, searchDocument);
+    });
   }
 
-  private async initializeSearchIndex(bank: QuestionBank) {
+  protected async initializeSearchIndex(bank: QuestionBank) {
     const thisWork = this.initializationWork.get(bank);
     if (thisWork) return await thisWork;
 
     const newWork = (async () => {
-      const searchDocuments = await this.getSearchDocuments(bank);
+      const searchDocuments = Array.from(this.searchDocuments.values());
       const firstId = searchDocuments[0]?.id;
       if (!firstId || this.searchIndex.has(firstId)) return;
       await this.searchIndex.addAllAsync(searchDocuments);
@@ -56,6 +93,16 @@ export abstract class QuestionBankSearchProvider<
 
     this.initializationWork.set(bank, newWork);
     await newWork;
+  }
+
+  protected getOrInitializeSearchResult(id: string) {
+    const existingSearchResult = this.searchResults.get(id);
+    if (existingSearchResult) return existingSearchResult;
+    const originalItem = this.originalItems.get(id);
+    if (!originalItem) return;
+    const newSearchResult = this.getSearchResult(originalItem);
+    this.searchResults.set(id, newSearchResult);
+    return newSearchResult;
   }
 
   public async search(
@@ -66,46 +113,63 @@ export abstract class QuestionBankSearchProvider<
     totalResults: number;
     nextCursor: number;
   }> {
-    const results = await (async () => {
+    const searchDocuments = await (async () => {
       if (!params.q) {
-        // Kickstart the indexing processing but dont await it
+        await this.initializeSearchMaps(bank);
+        // Kickstart the indexing processing but don't await it
         void this.initializeSearchIndex(bank);
-        await this.initializeSearchResults(bank);
-        return Array.from(this.searchResults.values());
+        return Array.from(this.searchDocuments.values());
       } else {
+        await this.initializeSearchMaps(bank);
         await this.initializeSearchIndex(bank);
-        await this.initializeSearchResults(bank);
 
-        const searchField = params.filters.searchField;
-        const castSearchField = searchField as keyof SearchDocument;
+        const searchField = params.searchField;
+        const castSearchField = searchField as SearchField;
+        const isValidSearchField =
+          this.idSearchFields.includes(castSearchField);
         const isPrefix = this.idSearchFields.includes(castSearchField);
 
         const opts: SearchOptions = {
           fuzzy: isPrefix ? false : 0.2,
           prefix: isPrefix,
-          fields: searchField === "all" ? undefined : [searchField],
-          tokenize: (text) => {
-            if (
-              this.idSearchFields.includes(searchField as keyof SearchDocument)
-            ) {
-              return text.split(", ");
-            }
-            return MiniSearch.getDefault("tokenize")(text);
-          },
+          fields: isValidSearchField ? [searchField] : undefined,
+          tokenize: (text) =>
+            this.idSearchFields.includes(castSearchField)
+              ? text.split(", ")
+              : MiniSearch.getDefault("tokenize")(text),
         };
 
         return this.searchIndex
           .search(params.q, opts)
-          .map(({ id }) => this.searchResults.get(id))
-          .sort((a, b) => (isPrefix && a && b ? a.id.localeCompare(b.id) : 0));
+          .sort((a, b) => (isPrefix && a && b ? a.id.localeCompare(b.id) : 0))
+          .map((a) => this.searchDocuments.get(a.id));
       }
     })();
 
-    const processedResults = results.filter(this.getSearchResultFilter(params));
-    const finalItems = processedResults.slice(
-      params.cursor,
-      params.cursor + params.limit,
+    const filterEntries = Object.entries(params.filters);
+    const processedResults = searchDocuments.filter(
+      (result: SearchDocument | undefined): result is SearchDocument => {
+        if (!result) {
+          return false;
+        }
+        if (result.questionBank !== bank.getName()) {
+          return false;
+        }
+        for (const [key, value] of filterEntries) {
+          const castKey = key as FilterField;
+          if (!this.filterFields.includes(castKey)) continue;
+          if (!value) continue;
+          if (value === "all") continue;
+          if (!result[castKey].includes(value)) return false;
+        }
+        return true;
+      },
     );
+
+    const finalItems = processedResults
+      .slice(params.cursor, params.cursor + params.limit)
+      .map((r) => this.getOrInitializeSearchResult(r.id))
+      .filter(Boolean);
 
     return {
       items: finalItems,
@@ -120,31 +184,22 @@ export abstract class QuestionBankSearchProvider<
   ): Promise<{
     items: SearchResult[];
   }> {
-    await this.initializeSearchResults(bank);
-
-    const items = ids.map((id) => this.searchResults.get(id)).filter(Boolean);
-
+    await this.initializeSearchMaps(bank);
+    const items = ids.map(this.getOrInitializeSearchResult).filter(Boolean);
     return { items };
   }
 
   public async initialize(bank: QuestionBank) {
     await this.initializeSearchIndex(bank);
-    await this.initializeSearchResults(bank);
   }
 
-  public abstract getFilters(bank: QuestionBank): Promise<{
-    filters: Record<keyof SearchFilters, Filter>;
-  }>;
+  public abstract getFilters(bank: QuestionBank): Promise<{ filters: Filters }>;
 
-  protected abstract getResultItems(
+  protected abstract getSearchItems(
     bank: QuestionBank,
-  ): Promise<SearchResult[]>;
+  ): Promise<OriginalItem[]>;
 
-  protected abstract getSearchDocuments(
-    bank: QuestionBank,
-  ): Promise<SearchDocument[]>;
+  protected abstract getSearchResult(item: OriginalItem): SearchResult;
 
-  protected abstract getSearchResultFilter(
-    params: SearchParams,
-  ): (r: SearchResult | undefined) => r is SearchResult;
+  protected abstract getSearchDocument(item: OriginalItem): SearchDocument;
 }

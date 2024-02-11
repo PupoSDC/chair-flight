@@ -1,6 +1,7 @@
 ---
 id: "061.01.01.02"
 parent: "061.01.01"
+questionBank: "atpl"
 title: Earth rotation
 ---
 

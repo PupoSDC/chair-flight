@@ -1,6 +1,7 @@
 ---
 id: "062.07.02.01"
 parent: "062.07.02"
+questionBank: "atpl"
 title: Area navigation (RNAV) and required navigation performance (RNP)
 ---
 

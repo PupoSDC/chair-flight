@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@chair-flight/next/analytics";
 import { QuestionList, SearchHeader } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
-import { useQuestionSearchConfig } from "../../hooks/use-question-search-config";
+import { useQuestionSearch } from "../../hooks/use-question-search";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
@@ -22,49 +21,35 @@ type Data = AppRouterOutput["containers"]["questions"]["getQuestionSearch"];
 
 type FilterKey = keyof Data["filters"];
 
-const searchQuestions = trpc.common.search.searchQuestions;
-const useSearchQuestions = searchQuestions.useInfiniteQuery;
-
 export const QuestionSearch = container<Props, Params, Data>(
   ({ sx, forceMode, component = "section", questionBank }) => {
-    const [search, setSearch] = useState("");
-    const serverData = QuestionSearch.useData({ questionBank });
-    const filterForm = useQuestionSearchConfig({ questionBank });
     const trackEvent = useTrackEvent();
-
-    const filters = {
-      searchField: filterForm.watch("searchField"),
-      subject: filterForm.watch("subject"),
-    };
-
-    const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
-      { q: search, questionBank, limit: 24, filters },
-      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
-    );
+    const serverData = QuestionSearch.useData({ questionBank });
+    const search = useQuestionSearch({ questionBank });
 
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader
-          search={search}
+          search={search.searchQuery}
           searchPlaceholder="Search Questions..."
           filters={serverData.filters}
-          filterValues={filterForm.watch()}
-          isLoading={isLoading}
-          isError={isError}
+          filterValues={search.filterForm.watch()}
+          isLoading={search.isLoading}
+          isError={search.isError}
           onSearchChange={(v) => {
             trackEvent("questions.search", { query: v, questionBank });
-            setSearch(v);
+            search.setSearchQuery(v);
           }}
           onFilterValuesChange={(name, value) =>
-            filterForm.setValue(name as FilterKey, value)
+            search.filterForm.setValue(name as FilterKey, value)
           }
         />
         <QuestionList
-          loading={isLoading}
-          error={isError}
+          loading={search.isLoading}
+          error={search.isError}
           forceMode={forceMode}
-          items={(data?.pages ?? []).flatMap((p) => p.items)}
-          onFetchNextPage={fetchNextPage}
+          items={search.items}
+          onFetchNextPage={search.fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
         />
       </Stack>

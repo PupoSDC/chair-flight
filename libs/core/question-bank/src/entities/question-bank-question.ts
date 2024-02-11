@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { assertType } from "@chair-flight/base/utils";
+import { questionBankNameSchema } from "./question-bank-name";
 import { questionVariantDefinitionSchema } from "./question-bank-question-definition";
 import { questionVariantMultipleCorrectSchema } from "./question-bank-question-multiple-correct";
 import { questionVariantOneTwoSchema } from "./question-bank-question-one-two";
@@ -13,6 +14,7 @@ import type {
   QuestionTemplateId,
   SubjectId,
 } from "./ids";
+import type { QuestionBankName } from "./question-bank-name";
 import type { QuestionVariantDefinition } from "./question-bank-question-definition";
 import type { QuestionVariantMultipleCorrect } from "./question-bank-question-multiple-correct";
 import type { QuestionVariantOneTwo } from "./question-bank-question-one-two";
@@ -31,6 +33,7 @@ export type QuestionVariantType = QuestionVariant["type"];
 
 export type QuestionTemplate = {
   id: QuestionTemplateId;
+  questionBank: QuestionBankName;
   doc: DocId;
   relatedQuestions: QuestionTemplateId[];
   externalIds: ExternalQuestionId[];
@@ -52,6 +55,7 @@ export const questionVariantSchema = z.union([
 
 export const questionTemplateSchema = z.object({
   id: z.string(),
+  questionBank: questionBankNameSchema,
   doc: z.string(),
   relatedQuestions: z.array(z.string()),
   externalIds: z.string().array(),

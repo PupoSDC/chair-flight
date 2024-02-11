@@ -1,6 +1,7 @@
 ---
 id: "022.01.08"
 parent: "022.01"
+questionBank: "atpl"
 title: Synchroscope
 ---
 

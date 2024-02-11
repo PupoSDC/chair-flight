@@ -1,6 +1,4 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { searchParams } from "./search-params";
 import type {
   AnnexId,
   LearningObjectiveId,
@@ -19,18 +17,11 @@ export type AnnexSearchResult = {
   learningObjectives: Array<{ id: LearningObjectiveId; href: string }>;
 };
 
+export type AnnexSearchField = "id" | "description";
+export type AnnexFilterField = "subject";
+
 export const annexSearchFilters = z.object({
   subject: z.string().default("all"),
+  course: z.string().default("all"),
   searchField: z.string().default("all"),
 });
-
-export type AnnexSearchFilters = z.infer<typeof annexSearchFilters>;
-
-export const annexSearchParams = searchParams.and(
-  z.object({
-    questionBank: questionBankNameSchema,
-    filters: annexSearchFilters,
-  }),
-);
-
-export type AnnexSearchParams = z.infer<typeof annexSearchParams>;

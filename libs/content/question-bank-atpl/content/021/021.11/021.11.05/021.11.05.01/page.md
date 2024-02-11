@@ -1,6 +1,7 @@
 ---
 id: "021.11.05.01"
 parent: "021.11.05"
+questionBank: "atpl"
 title: Thrust, performance aspects, and limitations
 ---
 

@@ -1,29 +1,38 @@
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
+import type { Doc } from "@chair-flight/core/question-bank";
 import type {
-  DocSearchFilters,
-  DocSearchParams,
+  DocFilterField,
+  DocSearchField,
   DocSearchResult,
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
 
-type DocSearchField = "id" | "learningObjectives" | "content" | "title";
-type DocSearchDocument = Record<DocSearchField, string>;
-
 export class DocSearch extends QuestionBankSearchProvider<
-  DocSearchDocument,
+  Doc,
   DocSearchResult,
-  DocSearchFilters,
-  DocSearchParams
+  DocSearchField,
+  DocFilterField
 > {
   constructor() {
     super({
-      searchFields: ["id", "learningObjectives", "content", "title"],
-      idSearchFields: ["id", "learningObjectives"],
+      searchFields: ["id", "learningObjective", "content", "title"],
+      idSearchFields: ["id", "learningObjective"],
+      filterFields: ["subject"],
     });
   }
 
   public override async getFilters(bank: QuestionBank) {
     const rawSubjects = await bank.getAll("subjects");
+
+    const searchField = [
+      { id: "all", text: "All Fields" },
+      { id: "learningObjective", text: "Learning Objective" },
+      { id: "content", text: "Content" },
+      { id: "title", text: "Title" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: DocSearchField; text: string }>,
+    ];
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -31,13 +40,9 @@ export class DocSearch extends QuestionBankSearchProvider<
         id: s.id,
         text: `${s.id} - ${s.shortName}`,
       })),
-    ];
-
-    const searchField = [
-      { id: "all", text: "All Fields" },
-      { id: "learningObjectives", text: "Learning Objective" },
-      { id: "content", text: "Content" },
-      { id: "title", text: "Title" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: string; text: string }>,
     ];
 
     return {
@@ -45,49 +50,33 @@ export class DocSearch extends QuestionBankSearchProvider<
     };
   }
 
-  protected override async getResultItems(bank: QuestionBank) {
-    const docs = await bank.getAll("docs");
-    return docs.map((doc) => ({
+  protected override async getSearchItems(bank: QuestionBank) {
+    return await bank.getAll("docs");
+  }
+
+  protected override getSearchResult(doc: Doc) {
+    return {
       id: doc.id,
-      questionBank: bank.getName(),
+      questionBank: doc.questionBank,
       title: doc.title,
       empty: doc.empty,
       subject: doc.subject,
-      href: `/modules/${bank.getName()}/docs/${doc.id}`,
+      href: `/modules/${doc.questionBank}/docs/${doc.id}`,
       learningObjectives: doc.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${bank.getName()}/learning-objectives/${id}`,
+        href: `/modules/${doc.questionBank}/learning-objectives/${id}`,
       })),
-    }));
+    };
   }
 
-  protected override async getSearchDocuments(bank: QuestionBank) {
-    const docs = await bank.getAll("docs");
-    return docs
-      .filter((doc) => doc.id !== "root")
-      .map((doc) => ({
-        id: doc.id,
-        learningObjectives: doc.learningObjectives.join(", "),
-        content: doc.content,
-        title: doc.title,
-      }));
-  }
-
-  protected override getSearchResultFilter(params: DocSearchParams) {
-    return (r: DocSearchResult | undefined): r is DocSearchResult => {
-      if (!r) {
-        return false;
-      }
-
-      if (r.questionBank !== params.questionBank) {
-        return false;
-      }
-
-      if (params.filters.subject !== "all") {
-        if (r.subject !== params.filters.subject) return false;
-      }
-
-      return true;
+  protected override getSearchDocument(doc: Doc) {
+    return {
+      id: doc.id,
+      learningObjective: doc.learningObjectives.join(", "),
+      content: doc.content,
+      title: doc.title,
+      questionBank: doc.questionBank,
+      subject: doc.subject,
     };
   }
 }

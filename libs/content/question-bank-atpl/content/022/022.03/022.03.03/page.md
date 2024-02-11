@@ -1,6 +1,7 @@
 ---
 id: "022.03.03"
 parent: "022.03"
+questionBank: "atpl"
 title: Direct-reading magnetic compass
 ---
 

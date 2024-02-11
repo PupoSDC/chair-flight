@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as AddInput } from "@mui/icons-material/InputOutlined";
 import {
@@ -21,7 +20,7 @@ import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import { useQuestionSearchConfig } from "../../hooks/use-question-search-config";
+import { useQuestionSearch } from "../../hooks/use-question-search";
 import { QuestionManagerEditorListItem } from "./question-editor-manager-list-item";
 import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
@@ -36,15 +35,11 @@ type Data =
 
 type FilterKeys = keyof Data["filters"];
 
-const search = trpc.common.search;
-const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
-
 export const QuestionEditorManager = container<Props, Params, Data>(
   ({ sx, component = "div", questionBank }) => {
-    const [search, setSearch] = useState("");
     const utils = trpc.useUtils();
     const serverData = QuestionEditorManager.useData({ questionBank });
-    const filterForm = useQuestionSearchConfig({ questionBank });
+    const search = useQuestionSearch({ questionBank });
 
     const { items, hasDiff, addQuestionToEditor, isQuestionInEditor } =
       useQuestionEditor((s) => ({
@@ -54,11 +49,6 @@ export const QuestionEditorManager = container<Props, Params, Data>(
         isQuestionInEditor: s.isQuestionInEditor,
       }));
 
-    const searchQuestions = useSearchQuestions(
-      { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
-      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
-    );
-
     const addQuestion = (questionId: QuestionTemplateId) => {
       addQuestionToEditor({ trpc: utils, questionBank, questionId });
     };
@@ -67,23 +57,23 @@ export const QuestionEditorManager = container<Props, Params, Data>(
       <Stack direction="row" component={component} sx={sx}>
         <Stack height="100%" flex={1}>
           <SearchHeader
-            search={search}
+            search={search.searchQuery}
             searchPlaceholder="Search Questions..."
             filters={serverData.filters}
-            filterValues={filterForm.watch()}
-            isLoading={searchQuestions.isLoading}
-            isError={searchQuestions.isError}
-            onSearchChange={setSearch}
+            filterValues={search.filterForm.watch()}
+            isLoading={search.isLoading}
+            isError={search.isError}
+            onSearchChange={search.setSearchQuery}
             onFilterValuesChange={(k, v) =>
-              filterForm.setValue(k as FilterKeys, v)
+              search.filterForm.setValue(k as FilterKeys, v)
             }
           />
           <SearchList
             forceMode={"mobile"}
-            loading={searchQuestions.isLoading}
-            error={searchQuestions.isError}
-            items={(searchQuestions.data?.pages ?? []).flatMap((p) => p.items)}
-            onFetchNextPage={searchQuestions.fetchNextPage}
+            loading={search.isLoading}
+            error={search.isError}
+            items={search.items}
+            onFetchNextPage={search.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
             renderTableRow={() => null}

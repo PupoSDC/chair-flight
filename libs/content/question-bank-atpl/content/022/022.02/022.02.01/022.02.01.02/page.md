@@ -1,6 +1,7 @@
 ---
 id: "022.02.01.02"
 parent: "022.02.01"
+questionBank: "atpl"
 title: "Pitot/static system: design and errors"
 ---
 

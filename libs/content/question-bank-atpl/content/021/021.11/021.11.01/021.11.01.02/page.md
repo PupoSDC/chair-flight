@@ -1,6 +1,7 @@
 ---
 id: "021.11.01.02"
 parent: "021.11.01"
+questionBank: "atpl"
 title: Design, types and components of turbine engines
 ---
 

@@ -23,6 +23,7 @@ export const mockData: AppRouterOutput["containers"]["annexes"]["getAnnexSearch"
       ],
       searchField: [
         { id: "all", text: "All Fields" },
+        { id: "id", text: "ID" },
         { id: "description", text: "Description" },
       ],
     },

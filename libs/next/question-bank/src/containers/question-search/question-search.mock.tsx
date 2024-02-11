@@ -23,10 +23,10 @@ export const mockData: AppRouterOutput["containers"]["questions"]["getQuestionSe
       ],
       searchField: [
         { id: "all", text: "All Fields" },
-        { id: "questionId", text: "Question ID" },
-        { id: "learningObjectives", text: "Learning Objectives" },
+        { id: "id", text: "Question ID" },
+        { id: "learningObjective", text: "Learning Objectives" },
         { id: "text", text: "Text" },
-        { id: "externalIds", text: "External IDs" },
+        { id: "externalId", text: "External IDs" },
       ],
     },
   };

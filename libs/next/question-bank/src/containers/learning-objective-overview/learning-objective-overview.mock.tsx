@@ -5,6 +5,7 @@ export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getL
     learningObjective: {
       id: "010.01",
       parentId: "010",
+      questionBank: "atpl",
       courses: ["ATPL_A", "CPL_A", "ATPL_H_IR", "ATPL_H_VFR", "CPL_H"],
       questions: [
         "Q000YBA1ON",

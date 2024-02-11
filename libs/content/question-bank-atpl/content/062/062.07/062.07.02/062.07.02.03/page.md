@@ -1,6 +1,7 @@
 ---
 id: "062.07.02.03"
 parent: "062.07.02"
+questionBank: "atpl"
 title: Designation of RNP and RNAV specifications
 ---
 

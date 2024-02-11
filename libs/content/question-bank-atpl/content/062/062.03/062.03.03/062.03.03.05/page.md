@@ -1,6 +1,7 @@
 ---
 id: "062.03.03.05"
 parent: "062.03.03"
+questionBank: "atpl"
 title: Factors affecting range and accuracy
 ---
 

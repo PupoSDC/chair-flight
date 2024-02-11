@@ -1,6 +1,7 @@
 ---
 id: "021.09.04.04"
 parent: "021.09.04"
+questionBank: "atpl"
 title:
   "Electrical load management and monitoring systems: automatic generators and
   bus switching during normal and failure operation, indications and warnings"

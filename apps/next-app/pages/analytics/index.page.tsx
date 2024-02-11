@@ -15,7 +15,6 @@ const Page: NextPage = () => {
   const dailyUsers = dailyUsersQuery.data?.dailyUsers ?? [];
   const pagesUsed = pagesUsedQuery.data?.pagesUsed ?? [];
 
-  console.log(dailyUsers, pagesUsed);
   return (
     <LayoutPublic background={<BackgroundFadedImage img="article" />}>
       <AppHead />
