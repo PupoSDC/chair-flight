@@ -1,44 +1,40 @@
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
+import type { QuestionTemplate } from "@chair-flight/core/question-bank";
 import type {
-  QuestionSearchFilters,
-  QuestionSearchParams,
+  QuestionFilterField,
+  QuestionSearchField,
   QuestionSearchResult,
 } from "@chair-flight/core/search";
 import type { QuestionBank } from "@chair-flight/providers/question-bank";
 
-export type QuestionSearchField =
-  | "id"
-  | "questionBank"
-  | "subjects"
-  | "learningObjectives"
-  | "externalIds"
-  | "text";
-
-export type QuestionSearchDocument = Record<QuestionSearchField, string>;
-
 export class QuestionSearch extends QuestionBankSearchProvider<
-  QuestionSearchDocument,
+  QuestionTemplate,
   QuestionSearchResult,
-  QuestionSearchFilters,
-  QuestionSearchParams
+  QuestionSearchField,
+  QuestionFilterField
 > {
   constructor() {
     super({
-      searchFields: [
-        "id",
-        "questionBank",
-        "subjects",
-        "learningObjectives",
-        "externalIds",
-        "text",
-      ],
-      idSearchFields: ["id", "learningObjectives", "externalIds"],
+      searchFields: ["id", "learningObjective", "externalId", "text"],
+      idSearchFields: ["id", "learningObjective", "externalId"],
+      filterFields: ["subject"],
     });
   }
 
   public override async getFilters(bank: QuestionBank) {
     const rawSubjects = await bank.getAll("subjects");
+
+    const searchField = [
+      { id: "all", text: "All Fields" },
+      { id: "id", text: "Question ID" },
+      { id: "learningObjective", text: "Learning Objectives" },
+      { id: "text", text: "Text" },
+      { id: "externalId", text: "External IDs" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: QuestionSearchField; text: string }>,
+    ];
 
     const subject = [
       { id: "all", text: "All Subjects" },
@@ -46,14 +42,9 @@ export class QuestionSearch extends QuestionBankSearchProvider<
         id: s.id,
         text: `${s.id} - ${s.shortName}`,
       })),
-    ];
-
-    const searchField = [
-      { id: "all", text: "All Fields" },
-      { id: "questionId", text: "Question ID" },
-      { id: "learningObjectives", text: "Learning Objectives" },
-      { id: "text", text: "Text" },
-      { id: "externalIds", text: "External IDs" },
+    ] satisfies [
+      { id: "all"; text: string },
+      ...Array<{ id: string; text: string }>,
     ];
 
     return {
@@ -61,66 +52,37 @@ export class QuestionSearch extends QuestionBankSearchProvider<
     };
   }
 
-  protected override async getResultItems(bank: QuestionBank) {
-    const questions = await bank.getAll("questions");
-    const resultItems: QuestionSearchResult[] = questions.map((q) => {
-      const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
-      const uniqueSubjects = [...new Set(subjects)];
-      return {
-        id: q.id,
-        questionBank: bank.getName(),
-        text: getQuestionPreview(q.variant),
-        subjects: uniqueSubjects,
-        learningObjectives: q.learningObjectives.map((id) => ({
-          id,
-          href: `/modules/${bank.getName()}/learning-objectives/${id}`,
-        })),
-        relatedQuestions: q.relatedQuestions.map((id) => ({
-          id,
-          href: `/modules/${bank.getName()}/questions/${id}`,
-        })),
-        externalIds: q.externalIds,
-        href: `/modules/${bank.getName()}/questions/${q.id}`,
-      };
-    });
-
-    return resultItems;
+  protected override async getSearchItems(bank: QuestionBank) {
+    return await bank.getAll("questions");
   }
 
-  protected override async getSearchDocuments(bank: QuestionBank) {
-    const questions = await bank.getAll("questions");
-    const searchItems: QuestionSearchDocument[] = questions.map((q) => {
-      const subjects = q.learningObjectives.map((l) => l.split(".")[0]);
-      const los = q.learningObjectives.join(", ");
-      const uniqueSubjects = [...new Set(subjects)];
-      return {
-        id: q.id,
-        questionBank: bank.getName(),
-        subjects: uniqueSubjects.join(", "),
-        text: getQuestionPreview(q.variant),
-        learningObjectives: los,
-        externalIds: q.externalIds.join(", "),
-      };
-    });
-
-    return searchItems;
+  protected override getSearchResult(q: QuestionTemplate) {
+    return {
+      id: q.id,
+      questionBank: q.questionBank,
+      text: getQuestionPreview(q.variant),
+      subjects: q.learningObjectives.map((l) => l.split(".")[0]),
+      href: `/modules/${q.questionBank}/questions/${q.id}`,
+      externalIds: q.externalIds,
+      learningObjectives: q.learningObjectives.map((id) => ({
+        id,
+        href: `/modules/${q.questionBank}/learning-objectives/${id}`,
+      })),
+      relatedQuestions: q.relatedQuestions.map((id) => ({
+        id,
+        href: `/modules/${q.questionBank}/questions/${id}`,
+      })),
+    };
   }
 
-  protected override getSearchResultFilter(params: QuestionSearchParams) {
-    return (r: QuestionSearchResult | undefined): r is QuestionSearchResult => {
-      if (!r) {
-        return false;
-      }
-
-      if (r.questionBank !== params.questionBank) {
-        return false;
-      }
-
-      if (params.filters.subject !== "all") {
-        if (!r.subjects.includes(params.filters.subject)) return false;
-      }
-
-      return true;
+  protected override getSearchDocument(q: QuestionTemplate) {
+    return {
+      id: q.id,
+      questionBank: q.questionBank,
+      subject: q.learningObjectives.map((l) => l.split(".")[0]).join(", "),
+      text: getQuestionPreview(q.variant),
+      learningObjective: q.learningObjectives.join(", "),
+      externalId: q.externalIds.join(", "),
     };
   }
 }

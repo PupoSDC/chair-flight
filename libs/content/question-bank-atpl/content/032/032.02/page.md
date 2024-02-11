@@ -1,4 +1,5 @@
 ---
 id: "032.02"
+questionBank: "atpl"
 title: CS-23/APPLICABLE OPERATIONAL REQUIREMENTS PERFORMANCE CLASS B - THEORY
 ---

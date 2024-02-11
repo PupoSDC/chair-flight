@@ -55,6 +55,7 @@ export const parseLearningObjectivesXlsx = async ({
         return {
           id,
           parentId,
+          questionBank: "atpl",
           courses: Object.keys(courseNames)
             .filter((item) => row[item])
             .map((k) => courseNames[k]),

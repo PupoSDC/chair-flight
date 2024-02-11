@@ -1,6 +1,7 @@
 ---
 id: "021.12.02.02"
 parent: "021.12.02"
+questionBank: "atpl"
 title: Fire detection
 ---
 

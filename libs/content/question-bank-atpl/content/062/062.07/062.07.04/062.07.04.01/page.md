@@ -1,6 +1,7 @@
 ---
 id: "062.07.04.01"
 parent: "062.07.04"
+questionBank: "atpl"
 title: Performance-based navigation (PBN) principles
 ---
 

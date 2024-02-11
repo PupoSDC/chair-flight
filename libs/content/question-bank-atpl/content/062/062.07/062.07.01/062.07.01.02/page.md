@@ -1,6 +1,7 @@
 ---
 id: "062.07.01.02"
 parent: "062.07.01"
+questionBank: "atpl"
 title: PBN components
 ---
 

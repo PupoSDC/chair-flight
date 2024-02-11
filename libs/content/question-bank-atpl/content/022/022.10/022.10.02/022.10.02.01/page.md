@@ -1,6 +1,7 @@
 ---
 id: "022.10.02.01"
 parent: "022.10.02"
+questionBank: "atpl"
 title: Versions, applications, CPDLC messages, ADS contracts
 ---
 

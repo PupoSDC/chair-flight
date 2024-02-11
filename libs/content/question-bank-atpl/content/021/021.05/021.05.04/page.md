@@ -1,6 +1,7 @@
 ---
 id: "021.05.04"
 parent: "021.05"
+questionBank: "atpl"
 title: "Aeroplane: fly-by-wire (FBW) control systems"
 ---
 

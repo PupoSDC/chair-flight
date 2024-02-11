@@ -1,6 +1,7 @@
 ---
 id: "021.11.02.02"
 parent: "021.11.02"
+questionBank: "atpl"
 title: Compressor and diffuser
 ---
 

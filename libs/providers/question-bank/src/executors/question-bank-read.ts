@@ -37,6 +37,7 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     const content = source.split("\n---").slice(1).join().trim();
     parsedPosts.push({
       id: data.id,
+      questionBank: data.questionBank,
       parent: data.id,
       title: data.id,
       subject: "",
@@ -59,10 +60,21 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
   for (const filePath of files) {
     const json = await fs.readFile(filePath, "utf-8");
     const jsonData = JSON.parse(json) as QuestionTemplate[];
-    const jsonDataWithSrcLocation = jsonData.map((q) => ({
-      ...q,
-      srcLocation: filePath.replace(process.cwd(), ""),
-    }));
+    const jsonDataWithSrcLocation = jsonData.map(
+      (q): QuestionTemplate => ({
+        id: q.id,
+        questionBank: q.questionBank,
+        doc: q.doc,
+        relatedQuestions: q.relatedQuestions,
+        externalIds: q.externalIds,
+        subjects: q.subjects,
+        annexes: q.annexes,
+        learningObjectives: q.learningObjectives,
+        explanation: q.explanation,
+        variant: q.variant,
+        srcLocation: filePath.replace(process.cwd(), ""),
+      }),
+    );
 
     questions.push(...jsonDataWithSrcLocation);
   }
@@ -80,14 +92,19 @@ export const readAllAnnexesFromFs = async (
   for (const annexPath of files) {
     const json = await fs.readFile(annexPath, "utf-8");
     const jsonData = JSON.parse(json || "[]") as Annex[];
-    const annexData = jsonData.map((a) => ({
-      ...a,
-      href: `/content/${projectName}/media/${a.id}.${a.format}`,
-      doc: "",
-      questions: [],
-      subjects: [],
-      learningObjectives: [],
-    }));
+    const annexData = jsonData.map(
+      (a): Annex => ({
+        id: a.id,
+        format: a.format,
+        description: a.description,
+        questionBank: a.questionBank,
+        href: `/content/${projectName}/media/${a.id}.${a.format}`,
+        doc: "",
+        questions: [],
+        subjects: [],
+        learningObjectives: [],
+      }),
+    );
 
     annexes.push(...annexData);
   }

@@ -1,6 +1,7 @@
 ---
 id: "022.04.02"
 parent: "022.04"
+questionBank: "atpl"
 title: Rate-of-turn indicator - Turn coordinator - Balance (slip) indicator
 ---
 

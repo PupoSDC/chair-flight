@@ -1,6 +1,7 @@
 ---
 id: "061.05.01"
 parent: "061.05"
+questionBank: "atpl"
 title: Local Mean Time (LMT)
 ---
 

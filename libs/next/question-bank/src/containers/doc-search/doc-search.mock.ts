@@ -40,7 +40,7 @@ export const mockData: AppRouterOutput["containers"]["docs"]["getDocSearch"] = {
     ],
     searchField: [
       { id: "all", text: "All Fields" },
-      { id: "learningObjectiveId", text: "Learning Objective" },
+      { id: "learningObjective", text: "Learning Objective" },
       { id: "content", text: "Content" },
       { id: "title", text: "Title" },
     ],

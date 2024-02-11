@@ -1,6 +1,7 @@
 ---
 id: "022.12.09.01"
 parent: "022.12.09"
+questionBank: "atpl"
 title: "GPWSs: design, operation, indications"
 ---
 

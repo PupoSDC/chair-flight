@@ -28,6 +28,7 @@ export const arrangeQuestions = ({
 
     const cleanQuestion = {
       id: question.id,
+      questionBank: question.questionBank ?? "atpl",
       relatedQuestions: question.relatedQuestions.sort(),
       externalIds: question.externalIds.sort(),
       annexes: question.annexes,
@@ -66,6 +67,7 @@ export const arrangeAnnexes = ({
 
     const cleanAnnex = {
       id: annex.id,
+      questionBank: annex.questionBank ?? "atpl",
       description: annex.description,
       format: annex.format,
     };

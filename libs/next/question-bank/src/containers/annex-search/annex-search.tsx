@@ -1,17 +1,13 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Link, ListItemContent, Stack, Typography } from "@mui/joy";
-import { annexSearchFilters } from "@chair-flight/core/search";
 import { useTrackEvent } from "@chair-flight/next/analytics";
 import {
   ImageWithModal,
   SearchHeader,
   SearchList,
 } from "@chair-flight/react/components";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { useAnnexSearch } from "../../hooks/use-annex-search";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
@@ -27,64 +23,38 @@ type Params = {
 
 type Data = AppRouterOutput["containers"]["annexes"]["getAnnexSearch"];
 
-const defaultFilter = annexSearchFilters.parse({});
-const resolver = zodResolver(annexSearchFilters);
-const searchQuestions = trpc.common.search.searchAnnexes;
-const useSearchAnnexes = searchQuestions.useInfiniteQuery;
-
-const useSearchPersistence = {
-  atpl: createUsePersistenceHook("cf-annex-search-atpl", defaultFilter),
-  type: createUsePersistenceHook("cf-annex-search-type", defaultFilter),
-  prep: createUsePersistenceHook("cf-annex-search-prep", defaultFilter),
-};
+type FilterKey = keyof Data["filters"];
 
 export const AnnexSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank, forceMode }) => {
-    const [search, setSearch] = useState("");
-    const persistedData = useSearchPersistence[questionBank]();
-    const serverData = AnnexSearch.useData({ questionBank });
     const trackEvent = useTrackEvent();
-
-    const form = useForm({
-      defaultValues: persistedData.getData(),
-      resolver,
-    });
-
-    const filters = {
-      subject: form.watch("subject"),
-    };
-
-    const { data, isLoading, isError, fetchNextPage } = useSearchAnnexes(
-      { q: search, limit: 24, questionBank, filters },
-      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
-    );
-
-    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
+    const serverData = AnnexSearch.useData({ questionBank });
+    const search = useAnnexSearch({ questionBank });
 
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader
-          search={search}
+          search={search.searchQuery}
           searchPlaceholder="Search Annexes..."
           filters={serverData.filters}
-          filterValues={form.watch()}
-          isLoading={isLoading}
-          isError={isError}
+          filterValues={search.filterForm.watch()}
+          isLoading={search.isLoading}
+          isError={search.isError}
           mobileBreakpoint="lg"
           onSearchChange={(v) => {
             trackEvent("annexes.search", { query: v, questionBank });
-            setSearch(v);
+            search.setSearchQuery(v);
           }}
           onFilterValuesChange={(name, value) =>
-            form.setValue(name as keyof typeof defaultFilter, value)
+            search.filterForm.setValue(name as FilterKey, value)
           }
         />
         <SearchList
           forceMode={forceMode}
-          loading={isLoading}
-          error={isError}
-          items={(data?.pages ?? []).flatMap((p) => p.items)}
-          onFetchNextPage={fetchNextPage}
+          loading={search.isLoading}
+          error={search.isError}
+          items={search.items}
+          onFetchNextPage={search.fetchNextPage}
           sx={{ flex: 1, overflow: "hidden" }}
           renderThead={() => (
             <thead>

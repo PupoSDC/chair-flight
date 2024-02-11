@@ -1,6 +1,7 @@
 ---
 id: "022.04.01"
 parent: "022.04"
+questionBank: "atpl"
 title: "Gyroscope: basic principles"
 ---
 

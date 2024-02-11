@@ -1,6 +1,7 @@
 ---
 id: "022.06.03"
 parent: "022.06"
+questionBank: "atpl"
 title: "Flight director: design and operation"
 ---
 

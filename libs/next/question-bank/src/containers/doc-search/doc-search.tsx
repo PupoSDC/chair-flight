@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import ConstructionIcon from "@mui/icons-material/Construction";
-import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
+import { default as ConstructionIcon } from "@mui/icons-material/Construction";
+import { default as HourglassEmptyIcon } from "@mui/icons-material/HourglassEmpty";
 import { Stack, ListItemContent, Link, Tooltip } from "@mui/joy";
-import { z } from "zod";
 import { SearchHeader, SearchList } from "@chair-flight/react/components";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { useDocSearchConfig } from "../../hooks/use-doc-search-config";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
@@ -20,44 +17,24 @@ type Params = Props;
 
 type Data = AppRouterOutput["containers"]["docs"]["getDocSearch"];
 
-const filterSchema = z.object({
-  subject: z.string().default("all"),
-  searchField: z.string().default("all"),
-});
+type FilterKey = keyof Data["filters"];
 
-const defaultFilter = filterSchema.parse({});
-const resolver = zodResolver(filterSchema);
 const searchDocs = trpc.common.search.searchDocs;
 const useSearchQuestions = searchDocs.useInfiniteQuery;
-
-const useSearchPersistence = {
-  atpl: createUsePersistenceHook("cf-docs-search-atpl", defaultFilter),
-  type: createUsePersistenceHook("cf-docs-search-type", defaultFilter),
-  prep: createUsePersistenceHook("cf-docs-search-prep", defaultFilter),
-};
 
 export const DocSearch = container<Props, Params, Data>(
   ({ sx, component = "section", questionBank }) => {
     const [search, setSearch] = useState("");
-    const persistedData = useSearchPersistence[questionBank]();
     const serverData = DocSearch.useData({ questionBank });
-
-    const form = useForm({
-      defaultValues: persistedData.getData(),
-      resolver,
-    });
-
-    const filters = {
-      searchField: form.watch("searchField"),
-      subject: form.watch("subject"),
-    };
+    const filterForm = useDocSearchConfig({ questionBank });
+    const searchField = filterForm.watch("searchField");
+    const subject = filterForm.watch("subject");
+    const filters = { subject };
 
     const { data, isLoading, isError, fetchNextPage } = useSearchQuestions(
-      { q: search, questionBank, limit: 24, filters },
+      { q: search, questionBank, limit: 32, searchField, filters },
       { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
     );
-
-    form.watch((data) => persistedData.setData({ ...defaultFilter, ...data }));
 
     return (
       <Stack component={component} sx={sx}>
@@ -65,12 +42,12 @@ export const DocSearch = container<Props, Params, Data>(
           search={search}
           searchPlaceholder="Search Docs..."
           filters={serverData.filters}
-          filterValues={form.watch()}
+          filterValues={filterForm.watch()}
           isLoading={isLoading}
           isError={isError}
           onSearchChange={setSearch}
           onFilterValuesChange={(name, value) =>
-            form.setValue(name as keyof typeof defaultFilter, value)
+            filterForm.setValue(name as FilterKey, value)
           }
         />
         <SearchList

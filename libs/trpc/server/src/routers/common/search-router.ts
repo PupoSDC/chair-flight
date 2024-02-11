@@ -1,10 +1,4 @@
-import {
-  annexSearchParams,
-  docSearchParams,
-  learningObjectivesSearchParams,
-  questionSearchParams,
-  retrieveParams,
-} from "@chair-flight/core/search";
+import { searchParams, retrieveParams } from "@chair-flight/core/search";
 import {
   annexSearch,
   docSearch,
@@ -27,29 +21,27 @@ export const searchRouter = router({
     return "ok";
   }),
   searchLearningObjectives: publicProcedure
-    .input(learningObjectivesSearchParams)
+    .input(searchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       return await learningObjectiveSearch.search(bank, input);
     }),
   searchAnnexes: publicProcedure
-    .input(annexSearchParams)
+    .input(searchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       return await annexSearch.search(bank, input);
     }),
   searchQuestions: publicProcedure
-    .input(questionSearchParams)
+    .input(searchParams)
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       return await questionSearch.search(bank, input);
     }),
-  searchDocs: publicProcedure
-    .input(docSearchParams)
-    .query(async ({ input }) => {
-      const bank = questionBanks[input.questionBank];
-      return await docSearch.search(bank, input);
-    }),
+  searchDocs: publicProcedure.input(searchParams).query(async ({ input }) => {
+    const bank = questionBanks[input.questionBank];
+    return await docSearch.search(bank, input);
+  }),
   retrieveLearningObjective: publicProcedure
     .input(retrieveParams)
     .query(async ({ input }) => {

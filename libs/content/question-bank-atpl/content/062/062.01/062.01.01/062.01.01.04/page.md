@@ -1,6 +1,7 @@
 ---
 id: "062.01.01.04"
 parent: "062.01.01"
+questionBank: "atpl"
 title: Pulse characteristics
 ---
 

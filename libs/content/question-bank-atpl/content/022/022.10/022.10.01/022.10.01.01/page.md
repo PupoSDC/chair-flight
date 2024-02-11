@@ -1,6 +1,7 @@
 ---
 id: "022.10.01.01"
 parent: "022.10.01"
+questionBank: "atpl"
 title: Definitions and transmission modes
 ---
 

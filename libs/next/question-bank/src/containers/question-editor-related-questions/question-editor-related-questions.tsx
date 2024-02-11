@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo } from "react";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as UnlinkIcon } from "@mui/icons-material/LinkOff";
 import { Box, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
@@ -17,7 +17,7 @@ import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import { useQuestionSearchConfig } from "../../hooks/use-question-search-config";
+import { useQuestionSearch } from "../../hooks/use-question-search";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
 
 type Props = {
@@ -33,9 +33,6 @@ type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorRelatedQuestions"];
 
 type FilterKeys = keyof Data["filters"];
-
-const search = trpc.common.search;
-const useSearchQuestions = search.searchQuestions.useInfiniteQuery;
 
 const SearchListItem = memo<{
   questionId: QuestionTemplateId;
@@ -76,19 +73,13 @@ const SearchListItem = memo<{
 export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
     const utils = trpc.useUtils();
-    const [search, setSearch] = useState("");
     const serverData = QuestionEditorRelatedQuestions.useData({ questionBank });
-    const filterForm = useQuestionSearchConfig({ questionBank });
+    const search = useQuestionSearch({ questionBank });
 
     const { connectTwoQuestions, relatedQs } = useQuestionEditor((s) => ({
       connectTwoQuestions: s.connectTwoQuestions,
       relatedQs: s[questionBank].afterState[questionId]?.relatedQuestions ?? [],
     }));
-
-    const searchQuestions = useSearchQuestions(
-      { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
-      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
-    );
 
     const connectedQuestions = makeMap(
       [questionId, ...relatedQs],
@@ -99,26 +90,24 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader
-          search={search}
+          search={search.searchQuery}
           searchPlaceholder="Search Annexes..."
           filters={serverData.filters}
-          filterValues={filterForm.watch()}
-          isLoading={searchQuestions.isLoading}
-          isError={searchQuestions.isError}
-          onSearchChange={setSearch}
+          filterValues={search.filterForm.watch()}
+          isLoading={search.isLoading}
+          isError={search.isError}
+          onSearchChange={search.setSearchQuery}
           onFilterValuesChange={(k, v) =>
-            filterForm.setValue(k as FilterKeys, v)
+            search.filterForm.setValue(k as FilterKeys, v)
           }
         />
         <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList
             forceMode={"mobile"}
-            loading={searchQuestions.isLoading}
-            error={searchQuestions.isError}
-            items={(searchQuestions.data?.pages ?? [])
-              .flatMap((p) => p.items)
-              .filter((q) => !connectedQuestions[q.id])}
-            onFetchNextPage={searchQuestions.fetchNextPage}
+            loading={search.isLoading}
+            error={search.isError}
+            items={search.items.filter((q) => !connectedQuestions[q.id])}
+            onFetchNextPage={search.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
             renderTableRow={() => null}

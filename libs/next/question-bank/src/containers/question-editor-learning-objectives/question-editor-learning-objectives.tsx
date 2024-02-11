@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import {
@@ -11,7 +8,6 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import { learningObjectiveSearchFilters } from "@chair-flight/core/search";
 import {
   MarkdownClientCompressed,
   SearchHeader,
@@ -20,6 +16,7 @@ import {
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
+import { useAnnexSearch } from "../../hooks/use-annex-search";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
@@ -34,36 +31,26 @@ type Params = Props;
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorLearningObjectives"];
 
+type FilterKey = keyof Data["filters"];
+
 const search = trpc.common.search;
-const useSearchLos = search.searchLearningObjectives.useInfiniteQuery;
 const useRetrieveLos = search.retrieveLearningObjective.useQuery;
-const filterFormDefaultValues = learningObjectiveSearchFilters.parse({});
-const filterFormResolver = zodResolver(learningObjectiveSearchFilters);
-type FilterKeys = keyof Data["filters"];
 
 export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
   ({ sx, component = "div", questionId, questionBank }) => {
-    const [search, setSearch] = useState("");
+    const serverData = QuestionEditorLearningObjectives.useData({
+      questionBank,
+      questionId,
+    });
 
     const { los, setLos } = useQuestionEditor((s) => ({
       los: s[questionBank].afterState[questionId]?.learningObjectives ?? [],
       setLos: s.setQuestionLearningObjectives,
     }));
 
-    const serverData = QuestionEditorLearningObjectives.useData({
+    const search = useAnnexSearch({
       questionBank,
-      questionId,
     });
-
-    const filterForm = useForm({
-      defaultValues: filterFormDefaultValues,
-      resolver: filterFormResolver,
-    });
-
-    const searchLos = useSearchLos(
-      { q: search, questionBank, filters: filterForm.watch(), limit: 24 },
-      { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
-    );
 
     const retrieveLos = useRetrieveLos(
       { ids: los ?? [], questionBank },
@@ -83,25 +70,25 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
     return (
       <Stack component={component} sx={sx}>
         <SearchHeader
-          search={search}
+          search={search.searchQuery}
           searchPlaceholder="Search Annexes..."
           mobileBreakpoint="force-mobile"
           filters={serverData.filters}
-          filterValues={filterForm.watch()}
-          isLoading={searchLos.isLoading}
-          isError={searchLos.isError}
-          onSearchChange={setSearch}
+          filterValues={search.filterForm.watch()}
+          isLoading={search.isLoading}
+          isError={search.isError}
+          onSearchChange={search.setSearchQuery}
           onFilterValuesChange={(k, v) =>
-            filterForm.setValue(k as FilterKeys, v)
+            search.filterForm.setValue(k as FilterKey, v)
           }
         />
         <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList
             forceMode={"mobile"}
-            loading={searchLos.isLoading}
-            error={searchLos.isError}
-            items={(searchLos.data?.pages ?? []).flatMap((p) => p.items)}
-            onFetchNextPage={searchLos.fetchNextPage}
+            loading={search.isLoading}
+            error={search.isError}
+            items={search.items}
+            onFetchNextPage={search.fetchNextPage}
             sx={{ flex: 1, overflow: "hidden" }}
             renderThead={() => null}
             renderTableRow={() => null}
@@ -112,7 +99,7 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                     {result.id}
                   </Typography>
                   <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                    {result.text}
+                    {result.description}
                   </MarkdownClientCompressed>
                 </Box>
                 <Box>
