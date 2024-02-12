@@ -1,8 +1,11 @@
-import type { QuestionListProps } from "./question-list";
+import type { QuestionSearchResult } from "@chair-flight/core/search";
+import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
-export const itemsMock: QuestionListProps["items"] = [
+const items: QuestionSearchResult[] = [
   {
     id: "K7HuwYXz",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The short period oscillation should always be heavily damped.\n- :x: When the phugoid is slightly unstable, an aeroplane becomes uncontrollable.\n- :x: The phugoid should always be heavily damped.\n- :x: A slightly unstable short period oscillation is no problem for an aeroplane.",
     externalIds: ["BGS-810670", "BGS-812108", "AVEXAM-7288"],
     href: "/modules/atpl/questions/K7HuwYXz",
@@ -40,6 +43,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "ezh4CuEv",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: VR must not be less than 1.05 VMCA and not less than V1.\n- :x: VR must not be less than 1.05 VMCA and not less than 1.1 V1.\n- :x: VR must not be less than 1.1 VMCA and not less than V1.\n- :x: VR must not be less than VMCA and not less than 1.05 V1.",
     externalIds: [
       "BGS-320653",
@@ -82,6 +87,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "Ax7FFF3g",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Oxygen diffusion from the blood into the cells depends on the partial oxygen pressure gradient.\n- :x: The gradient of diffusion is higher at altitude than it is at sea level.\n- :x: Oxygen is mainly transported in plasma.\n- :x: Oxygen diffusion from the lungs into the blood is independent of the partial oxygen pressure.",
     externalIds: ["ATPLGS-626755"],
     href: "/modules/atpl/questions/Ax7FFF3g",
@@ -119,6 +126,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "SxFJ91nN",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: V~R~ must not be less than 1.05 V~MCA~ and not less than V~1~.\n- :x: V~R~ must not be less than 1.1 V~MCA ~and not less than V~1~.\n- :x: V~R~ must not be less than V~MCA~ and not less than 1.05 V~1~.\n- :x: V~R~ must not be less than 1.05 V~MCA~ and not less than 1.1 V~1~.",
     externalIds: [
       "ATPLQ-321025",
@@ -161,6 +170,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "uV7RVfAr",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Spoiler extension increases the stall speed, the minimum rate of descent and the minimum angle of descent.\n- :x: Flap extension reduces the maximum lift/drag ratio thus reducing the minimum rate of descent.\n- :x: Flap extension reduces the stall speed, which increases the maximum glide distance.\n- :x: Flap extension has no effect on the minimum rate of descent as this is only affected by TAS.",
     externalIds: ["BGS-811633", "BGS-810466", "AVEXAM-68132"],
     href: "/modules/atpl/questions/uV7RVfAr",
@@ -198,6 +209,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "2qQjMgG1",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: As the angle of attack increases, the stagnation point on the aerofoil's profile moves downwards on the profiles leading edge.\n- :x: The stagnation point is always situated on the chord line, the centre of pressure is not.\n- :x: The centre of pressure is the point on the aerofoil leading edge where the airflow splits up.\n- :x: The stagnation point is another name for centre of pressure.",
     externalIds: ["AVEXAM-54692"],
     href: "/modules/atpl/questions/2qQjMgG1",
@@ -235,6 +248,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "UrGzEwAj",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: A <strong>ridge</strong> is an elongated area of relatively high pressure, a <strong>trough</strong> is a elongated area of relatively low pressure and a <strong>col</strong> is a region between two highs and two lows.\n- :x: A <strong>ridge</strong> is an elongated area of relatively high pressure, a c<strong>ol </strong>is a elongated area of relatively low pressure and a <strong>trough</strong> is a region between two highs and two lows.\n- :x: A <strong>col </strong>is an elongated area of relatively high pressure, a <strong>trough</strong> is a elongated area of relatively low pressure and a <strong>ridge</strong> is a region between two highs and two lows.\n- :x: A <strong>trough</strong> is an elongated area of relatively high pressure, a <strong>ridge</strong> is a elongated area of relatively low pressure and a <strong>col</strong> is a region between two highs and two lows.",
     externalIds: ["BGS-995620"],
     href: "/modules/atpl/questions/UrGzEwAj",
@@ -272,6 +287,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "kA7q1I98",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The climb limited take-off mass depends on pressure altitude and outer air temperature.\n- :x: The performance limited take-off mass is the highest of: field length limited take-off mass climb limited take-off mass obstacle limited take-off mass.\n- :x: The climb limited take-off mass will increase if the headwind component increases.\n- :x: The climb limited take-off mass increases when a larger take-off flap setting is used.",
     externalIds: [
       "BGS-320656",
@@ -327,6 +344,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "IJKUxABS",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Fog can be supercooled and can also contain ice crystals.\n- :x: Mist and haze consist of water droplets.\n- :x: Fog and haze do not occur in the tropics.\n- :x: Mist and haze only differ by different values of visibility.",
     externalIds: ["AVEXAM-69003", "ATPLQ-505558"],
     href: "/modules/atpl/questions/IJKUxABS",
@@ -364,6 +383,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "fklnIxec",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The lower limit of a TMA shall be established at a height of at least 700 ft AGL.\n- :x: The upper limit of a CTR shall be established at a height of at least 3 000 ft AMSL.\n- :x: The lower limit of a CTA shall be established at a height of at least 1 500 ft AGL.\n- :x: The lower limit of an UIR may coincide with an IFR cruising level.",
     externalIds: ["AVEXAM-21315", "ATPLGS-621989"],
     href: "/modules/atpl/questions/fklnIxec",
@@ -401,6 +422,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "lapzBT5F",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Flap extension causes a reduction in stall speed and the maximum glide distance.\n- :x: Flap extension will increase (CL/CD)max thus causing a reduction in the minimum rate of descent.\n- :x: Flap extension has no influence on the minimum rate of descent, as only TAS has to be taken into account.\n- :x: Spoiler extension causes a reduction in stall speed and the minimum rate of descent, but increases the minimum descent angle.",
     externalIds: ["ATPLGS-625875", "BGS-810432"],
     href: "/modules/atpl/questions/lapzBT5F",
@@ -438,6 +461,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "BRYanzNr",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Dynamic stability is possible only when the aeroplane is statically stable about the relevant axis.\n- :x: A dynamically stable aeroplane would be almost impossible to fly manually.\n- :x: Dynamic stability about the lateral axis implies that after being displaced from its original equilibrium condition, the aeroplane will return to that condition without oscillation.\n- :x: Static stability means that the aeroplane is also dynamically stable about the relevant axis.",
     externalIds: ["ATPLQ-814951", "BGS-810648"],
     href: "/modules/atpl/questions/BRYanzNr",
@@ -475,6 +500,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "1sAtIFk2",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Problems in the personal relationships between crew members are likely to hamper the communication process.\n- :x: Inconsistent communication improves flight safety.\n- :x: Personal conflict that takes place prior to take-off should wait to be addressed until the end of the flight.\n- :x: There is no relation between inadequate communication and incidents or accidents.",
     externalIds: ["ATPLQ-402286", "AVEXAM-66724", "ATPLGS-626752"],
     href: "/modules/atpl/questions/1sAtIFk2",
@@ -512,6 +539,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "8oFqQuHL",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The Solar System consists of the Sun, planets and stars.\n- :x: The planets move around the Sun like all stars of the Solar System.\n- :x: The Earth is one of the planets which are all moving in elliptical orbit around the Sun.\n- :x: The Sun moves in an elliptical orbit around the Earth.",
     externalIds: ["AVEXAM-10586"],
     href: "/modules/atpl/questions/8oFqQuHL",
@@ -549,6 +578,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "BgHXCT7I",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The climb limited take-off mass depends on pressure altitude and outer air temperature.\n- :x: The climb limited take-off mass will increase if the headwind component increases.\n- :x: The performance limited take-off mass is the highest of field length limited take-off mass climb limited take-off mass obstacle limited take-off mass.\n- :x: The climb limited take-off mass increases when a larger take-off flap setting is used.",
     externalIds: [
       "ATPLQ-323595",
@@ -603,6 +634,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "Y5RD4ZDw",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: During a phugoid altitude varies significantly, but during a short period oscillation it remains approximately constant.\n- :x: During both a phugoid and a short period oscillation altitude remains approximately constant.\n- :x: During both a phugoid and a short period oscillation altitude varies significantly.\n- :x: During a phugoid altitude remains approximately constant, but during a short period oscillation it varies significantly.",
     externalIds: ["BGS-810669", "AVEXAM-17048"],
     href: "/modules/atpl/questions/Y5RD4ZDw",
@@ -640,6 +673,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "ZeQuarz6",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: The climb limited Take-off Mass depends on pressure altitude and outside air temperature.\n- :x: The climb limited Take-off Mass increases when a larger take-off flap setting is used.\n- :x: The performance limited Take-off Mass is the highest of:\ni) field length limited Take-off Mass;\nii) climb limited Take-off Mass;\niii) obstacle limited Take-off Mass.\n- :x: The climb limited Take-off Mass will increase if the headwind component increases.",
     externalIds: [
       "AVEXAM-80302",
@@ -685,6 +720,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "FkDh9o1x",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Obstacle limited takeoff mass\n- :x: Climb limited takeoff mass\n- :x: Tyre speed limited takeoff mass\n- :x: Field length limited takeoff mass",
     externalIds: [
       "AVEXAM-13194",
@@ -727,6 +764,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "gid9ddHM",
+    questionBank: "atpl",
+    subjects: ["010", "032", "040", "050", "061", "081"],
     text: "Which statement is correct?\n\n- :white_check_mark: Extension of flaps causes a reduction of the stall speed, the maximum glide distance also reduces.\n- :x: Extension of flaps has no influence on the minimum rate of descent, as only the TAS has to be taken into account.\n- :x: Extension of flaps will increase (CL/CD MAX), causing the minimum rate of descent to decrease.\n- :x: Spoiler extension decreases the stall speed and the minimum rate of descent, but increases the minimum descent angle.",
     externalIds: ["AVEXAM-41717"],
     href: "/modules/atpl/questions/gid9ddHM",
@@ -764,6 +803,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "qAHZS9GQ",
+    questionBank: "atpl",
+    subjects: ["010", "040", "050", "070", "081"],
     text: "Which of the following statements is true?\n\n- :white_check_mark: Mist is a reduction of visibility due to the presence of (liquid) water droplets in the air.\n- :x: Standing waves are always accompanied by severe turbulence.\n- :x: Airframe icing cannot occur in clear air.\n- :x: An isotach is a line joining all points of equal windshear.",
     externalIds: ["BGS-501393"],
     href: "/modules/atpl/questions/qAHZS9GQ",
@@ -797,6 +838,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "L4p38s2q",
+    questionBank: "atpl",
+    subjects: ["010", "040", "050", "070", "081"],
     text: "Which of the following statements is true?\n\n- :white_check_mark: Stressors accumulate thus increasing the likelihood to exhaustion.\n- :x: Stressors are independent from each other.\n- :x: Stress should always be avoided under any circumstances.\n- :x: People are capable of living without stress.",
     externalIds: ["AVEXAM-80839"],
     href: "/modules/atpl/questions/L4p38s2q",
@@ -830,6 +873,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "HDxA6ffA",
+    questionBank: "atpl",
+    subjects: ["010", "040", "050", "070", "081"],
     text: "Which of the following statements is true?\n\n- :white_check_mark: QNH can be equal to QFE.\n- :x: QNH is always equal to QFE.\n- :x: QNH is always higher than QFE.\n- :x: QNH is always lower than QFE.",
     externalIds: ["BGS-500978", "AVEXAM-34930"],
     href: "/modules/atpl/questions/HDxA6ffA",
@@ -863,6 +908,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "Ks1U1MM0",
+    questionBank: "atpl",
+    subjects: ["010", "040", "050", "070", "081"],
     text: "Which of the following statements is true?\n\n- :white_check_mark: Aircraft Basic Mass tends to increase slightly over\ntime\n- :x: Aircraft mass does not affect aircraft\nperformance\n- :x: Aircraft Basic Mass tends to decrease slightly over\ntime\n- :x: Aircraft Basic Mass  is always the same",
     externalIds: ["BGS-991461"],
     href: "/modules/atpl/questions/Ks1U1MM0",
@@ -896,6 +943,8 @@ export const itemsMock: QuestionListProps["items"] = [
   },
   {
     id: "KHg6zlxZ",
+    questionBank: "atpl",
+    subjects: ["010", "040", "050", "070", "081"],
     text: "Which of the following statements is true?\n\n- :white_check_mark: VRA must be less than or equal to VB\n- :x: VRA and VB are the same thing\n- :x: VRA must be greater than VB\n- :x: VRA must be less than VB",
     externalIds: ["BGS-991467"],
     href: "/modules/atpl/questions/KHg6zlxZ",
@@ -928,3 +977,15 @@ export const itemsMock: QuestionListProps["items"] = [
     ],
   },
 ];
+
+export const mockRetrieveQuestionsData: AppRouterOutput["common"]["search"]["retrieveQuestions"] =
+  {
+    items,
+  };
+
+export const mockSearchQuestionsData: AppRouterOutput["common"]["search"]["searchQuestions"] =
+  {
+    items,
+    totalResults: 697,
+    nextCursor: 20,
+  };

@@ -1,6 +1,7 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
+import { mockSearchQuestionsData } from "../../__mocks__/search-questions";
 import { QuestionSearch } from "./question-search";
-import { mockData, mockSearchData } from "./question-search.mock";
+import { mockData } from "./question-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof QuestionSearch>;
@@ -34,7 +35,9 @@ const meta: Meta<typeof QuestionSearch> = {
     msw: {
       handlers: [
         trpcMsw.containers.questions.getQuestionSearch.query(() => mockData),
-        trpcMsw.common.search.searchQuestions.query(() => mockSearchData),
+        trpcMsw.common.search.searchQuestions.query(
+          () => mockSearchQuestionsData,
+        ),
       ],
     },
   },

@@ -1,6 +1,6 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
+import { mockRetrieveLearningObjectivesData } from "../../__mocks__/search-learning-objectives";
 import { LearningObjectiveTree } from "./learning-objective-tree";
-import { mockData } from "./learning-objective-tree.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LearningObjectiveTree>;
@@ -24,7 +24,7 @@ const meta: Meta<typeof LearningObjectiveTree> = {
     msw: {
       handlers: [
         trpcMsw.containers.learningObjectives.getLearningObjectiveTree.query(
-          () => mockData,
+          () => mockRetrieveLearningObjectivesData,
         ),
       ],
     },

@@ -1,11 +1,15 @@
 import { Box, Divider, Link, Typography } from "@mui/joy";
-import "@chair-flight/react/theme";
 import type { Components } from "react-markdown";
 
 export const markdownComponents: Partial<Components> = {
-  h1: () => {
-    throw new Error("No H1 components in markdown content!");
-  },
+  h1: ({ children }) => (
+    <Typography
+      sx={{ mt: "1em" }}
+      level="h2"
+      component="h1"
+      children={children}
+    />
+  ),
   h2: ({ children }) => (
     <Typography
       sx={{ mt: "1em" }}
@@ -46,8 +50,8 @@ export const markdownComponents: Partial<Components> = {
       children={children}
     />
   ),
-  hr: () => <Divider sx={{ width: "100%", my: 2 }} />,
-  a: ({ children, href }) => <Link href={href}>{children}</Link>,
+  hr: () => <Divider orientation="horizontal" sx={{ width: "100%", my: 2 }} />,
+  a: ({ children, href }) => <Link href={href} children={children} />,
   ul: ({ children }) => (
     <Box component="ul" sx={{ pl: 3 }}>
       {children}

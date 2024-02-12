@@ -1,5 +1,5 @@
+import { mockRetrieveQuestionsData } from "../../__mocks__/search-questions";
 import { QuestionList } from "./question-list";
-import { itemsMock } from "./question-list.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof QuestionList>;
@@ -14,7 +14,7 @@ const meta: Meta<typeof QuestionList> = {
     loading: false,
     error: false,
     forceMode: undefined,
-    items: itemsMock,
+    items: mockRetrieveQuestionsData.items,
     sx: {
       height: "500px",
       overflow: "hidden",

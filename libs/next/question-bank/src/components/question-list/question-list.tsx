@@ -1,38 +1,23 @@
 import { forwardRef } from "react";
 import { Box, Link, ListItemContent, Typography } from "@mui/joy";
-import { MarkdownClientCompressed } from "../markdown-client";
-import { SearchList } from "../search-list";
-import type { SearchListProps } from "../search-list";
-
-export type QuestionListItem = {
-  id: string;
-  href: string;
-  text: string;
-  externalIds: string[];
-  learningObjectives: Array<{
-    id: string;
-    href: string;
-  }>;
-  relatedQuestions: Array<{
-    id: string;
-    href: string;
-  }>;
-};
+import {
+  MarkdownClientCompressed,
+  SearchList,
+} from "@chair-flight/react/components";
+import type { QuestionSearchResult } from "@chair-flight/core/search";
+import type { SearchListProps } from "@chair-flight/react/components";
 
 export type QuestionListProps = Omit<
-  SearchListProps<QuestionListItem>,
-  | "items"
+  SearchListProps<QuestionSearchResult>,
   | "renderThead"
   | "renderTableRow"
   | "renderListItemContent"
   | "errorMessage"
   | "noDataMessage"
-> & {
-  items?: QuestionListItem[];
-};
+>;
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
-  ({ items = [], ...otherProps }, ref) => {
+  ({ items, ...otherProps }, ref) => {
     return (
       <SearchList
         {...otherProps}

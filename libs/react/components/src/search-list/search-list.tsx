@@ -16,7 +16,7 @@ import type { SheetProps } from "@mui/joy";
 import type { ForwardedRef, FunctionComponent } from "react";
 
 export type SearchListProps<T extends { id: string }> = {
-  items: T[];
+  items?: T[];
   loading?: boolean;
   error?: boolean;
   errorMessage?: string;
@@ -48,7 +48,7 @@ const LoadingPlaceholder: FunctionComponent = () => (
 
 function SearchListInner<T extends { id: string }>(
   {
-    items,
+    items = [],
     loading,
     error,
     forceMode,

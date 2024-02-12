@@ -1,9 +1,9 @@
 import { Box, CircularProgress, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { TestQuestionResult } from "@chair-flight/react/components";
 import { container } from "@chair-flight/trpc/client";
 import { TestError } from "../../components/test-error";
 import { TestLoading } from "../../components/test-loading";
+import { TestQuestionResult } from "../../components/test-question-result";
 import { useTestProgress } from "../../hooks/use-test-progress";
 
 type Props = {
