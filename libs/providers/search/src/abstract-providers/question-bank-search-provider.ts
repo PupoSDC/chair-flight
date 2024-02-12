@@ -185,7 +185,9 @@ export abstract class QuestionBankSearchProvider<
     items: SearchResult[];
   }> {
     await this.initializeSearchMaps(bank);
-    const items = ids.map(this.getOrInitializeSearchResult).filter(Boolean);
+    const items = ids
+      .map((id) => this.getOrInitializeSearchResult(id))
+      .filter(Boolean);
     return { items };
   }
 
