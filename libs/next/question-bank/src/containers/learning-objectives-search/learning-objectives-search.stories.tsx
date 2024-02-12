@@ -1,6 +1,7 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
+import { mockSearchLearningObjectivesData } from "../../__mocks__/search-learning-objectives";
 import { LearningObjectivesSearch } from "./learning-objectives-search";
-import { mockData, mockSearchData } from "./learning-objectives-search.mock";
+import { mockData } from "./learning-objectives-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof LearningObjectivesSearch>;
@@ -25,7 +26,7 @@ const meta: Meta<typeof LearningObjectivesSearch> = {
           () => mockData,
         ),
         trpcMsw.common.search.searchLearningObjectives.query(
-          () => mockSearchData,
+          () => mockSearchLearningObjectivesData,
         ),
       ],
     },

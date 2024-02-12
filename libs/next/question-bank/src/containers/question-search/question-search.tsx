@@ -1,8 +1,9 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@chair-flight/next/analytics";
-import { QuestionList, SearchHeader } from "@chair-flight/react/components";
+import { SearchHeader } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { QuestionList } from "../../components/question-list";
 import { useQuestionSearch } from "../../hooks/use-question-search";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { SearchListProps } from "@chair-flight/react/components";

@@ -1,11 +1,11 @@
-import { QuestionList } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { QuestionList } from "../../components/question-list";
+import type { QuestionListProps } from "../../components/question-list";
 import type {
   LearningObjectiveId,
   QuestionBankName,
 } from "@chair-flight/core/question-bank";
-import type { QuestionListProps } from "@chair-flight/react/components";
 import type { AppRouterOutput } from "@chair-flight/trpc/client";
 
 type Props = {

@@ -1,12 +1,9 @@
 import { Grid, Link, Sheet, Stack, Typography } from "@mui/joy";
-import {
-  LearningObjectiveList,
-  QuestionList,
-  QuestionMultipleChoice,
-  Ups,
-} from "@chair-flight/react/components";
+import { QuestionMultipleChoice, Ups } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { LearningObjectiveList } from "../../components/learning-objectives-list";
+import { QuestionList } from "../../components/question-list";
 import type {
   QuestionBankName,
   QuestionTemplateId,

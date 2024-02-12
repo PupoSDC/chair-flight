@@ -7,25 +7,15 @@ import {
   ListItemContent,
   Typography,
 } from "@mui/joy";
-import { MarkdownClientCompressed } from "../markdown-client";
-import { SearchList } from "../search-list";
-import type { SearchListProps } from "../search-list";
-
-export type LearningObjectiveListItem = {
-  id: string;
-  text: string;
-  source: string;
-  href: string;
-  numberOfQuestions: number;
-  courses: Array<{
-    id: string;
-    text: string;
-  }>;
-};
+import {
+  MarkdownClientCompressed,
+  SearchList,
+} from "@chair-flight/react/components";
+import type { LearningObjectiveSearchResult } from "@chair-flight/core/search";
+import type { SearchListProps } from "@chair-flight/react/components";
 
 export type LearningObjectiveListProps = Omit<
-  SearchListProps<LearningObjectiveListItem>,
-  | "items"
+  SearchListProps<LearningObjectiveSearchResult>,
   | "renderThead"
   | "renderTableRow"
   | "renderListItemContent"
@@ -33,13 +23,12 @@ export type LearningObjectiveListProps = Omit<
   | "noDataMessage"
 > & {
   currentCourse?: string;
-  items?: SearchListProps<LearningObjectiveListItem>["items"];
 };
 
 export const LearningObjectiveList = forwardRef<
   HTMLDivElement,
   LearningObjectiveListProps
->(({ items = [], currentCourse = "all", ...otherProps }, ref) => {
+>(({ items, currentCourse = "all", ...otherProps }, ref) => {
   return (
     <SearchList
       {...otherProps}

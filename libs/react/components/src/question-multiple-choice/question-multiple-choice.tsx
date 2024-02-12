@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
 import { MarkdownClient } from "../markdown-client";
-import { getOptionColor } from "../utils/get-question-status-color";
+import { getOptionColor } from "./get-question-status-color";
 import type { BoxProps } from "@mui/joy";
 
 const QuestionMultipleChoiceBox = styled(Box)`
@@ -74,7 +74,8 @@ const QuestionMultipleChoiceOption = styled(Button)`
       font-size: 1.2em;
     }
   }
-`;
+` as typeof Button;
+
 export type QuestionMultipleChoiceStatus = "in-progress" | "show-result";
 
 export type QuestionMultipleChoiceProps = {

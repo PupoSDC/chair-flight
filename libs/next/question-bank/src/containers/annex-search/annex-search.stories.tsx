@@ -1,6 +1,7 @@
 import { trpcMsw } from "@chair-flight/trpc/mock";
+import { mockSearchAnnexesData } from "../../__mocks__/annex-search";
 import { AnnexSearch } from "./annex-search";
-import { mockData, mockSearchData } from "./annex-search.mock";
+import { mockData } from "./annex-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof AnnexSearch>;
@@ -21,8 +22,12 @@ const meta: Meta<typeof AnnexSearch> = {
   parameters: {
     msw: {
       handlers: [
-        trpcMsw.containers.annexes.getAnnexSearch.query(() => mockData),
-        trpcMsw.common.search.searchAnnexes.query(() => mockSearchData),
+        trpcMsw.containers.annexes.getAnnexSearch.query(() => {
+          return mockData;
+        }),
+        trpcMsw.common.search.searchAnnexes.query(() => {
+          return mockSearchAnnexesData;
+        }),
       ],
     },
   },
