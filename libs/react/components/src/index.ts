@@ -20,7 +20,6 @@ export * from "./image-viewer";
 export * from "./image-with-modal";
 export * from "./input-slider";
 export * from "./loading-button";
-export * from "./markdown";
 export * from "./markdown-client";
 export * from "./module-selection-button";
 export * from "./nested-checkbox-select";

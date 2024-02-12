@@ -64,7 +64,7 @@ const BugReportForm = forwardRef<HTMLFormElement>((_, ref) => {
           content: (
             <Box>
               <Typography
-                level="h5"
+                level="body-lg"
                 component="h4"
                 children={"Issue has been Reported! 🎉🎉"}
               />

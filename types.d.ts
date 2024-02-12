@@ -10,11 +10,4 @@ declare global {
   interface MiniFs {
     readFile: (path: string, string: "utf-8") => Promise<string>;
   }
-
-  /**
-   * A convenience type that represents MDX documents.
-   */
-  interface MdxDocument {
-    content: string;
-  }
 }

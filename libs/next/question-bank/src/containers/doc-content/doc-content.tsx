@@ -1,5 +1,5 @@
 import { Link, Typography } from "@mui/joy";
-import { Markdown } from "@chair-flight/react/components";
+import { Mdx } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
@@ -40,7 +40,7 @@ export const DocContent: Container<Props, Params, Data> = container<
           </ul>
         </>
       )}
-      {!doc.isEmpty && <Markdown document={doc.docMdx} />}
+      {!doc.isEmpty && <Mdx children={doc.docMdx} />}
     </>
   );
 });

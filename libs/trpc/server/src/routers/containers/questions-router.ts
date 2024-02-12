@@ -1,7 +1,7 @@
 import { z } from "zod";
+import { compileMarkdown } from "@chair-flight/core/markdown";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import { createTestQuestion } from "@chair-flight/core/tests";
-import { compileMdx } from "../../common/compile-mdx";
 import {
   annexSearch,
   learningObjectiveSearch,
@@ -24,7 +24,7 @@ export const questionsContainersRouter = router({
       const bank = questionBanks[bankName];
       const template = await bank.getOne("questions", id);
       const explanation = template.explanation
-        ? await compileMdx(template.explanation)
+        ? compileMarkdown(template.explanation)
         : null;
       return { explanation };
     }),

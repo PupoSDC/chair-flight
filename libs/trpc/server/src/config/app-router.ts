@@ -1,7 +1,6 @@
 import { analyticsRouter } from "../routers/common/analytics-router";
 import { blogRouter } from "../routers/common/blog-router";
 import { githubRouter } from "../routers/common/github-router";
-import { markdownRouter } from "../routers/common/markdown";
 import { questionsRouter } from "../routers/common/questions-router";
 import { searchRouter } from "../routers/common/search-router";
 import { statusRouter } from "../routers/common/status-router";
@@ -25,7 +24,6 @@ export const appRouter = router({
   common: router({
     blog: blogRouter,
     github: githubRouter,
-    markdown: markdownRouter,
     tests: testsRouter,
     questions: questionsRouter,
     search: searchRouter,

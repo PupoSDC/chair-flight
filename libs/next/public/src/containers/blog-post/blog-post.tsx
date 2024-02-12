@@ -10,9 +10,9 @@ import { AnnexSearch, QuestionSearch } from "@chair-flight/next/question-bank";
 import { BugReportButton, useUserVoyage } from "@chair-flight/next/user";
 import {
   BlogPostChip,
-  Markdown,
   ModuleSelectionButton,
 } from "@chair-flight/react/components";
+import { Mdx } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import type { Container } from "@chair-flight/trpc/client";
@@ -65,8 +65,8 @@ export const BlogPost: Container<Props, Params, Data> = container<
         />
       </Box>
 
-      <Markdown
-        document={post.mdxContent}
+      <Mdx
+        children={post.mdxContent}
         components={{
           Box,
           Stack,
