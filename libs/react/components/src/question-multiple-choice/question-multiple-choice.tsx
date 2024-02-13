@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
-import { MarkdownClient } from "../markdown-client";
 import { getOptionColor } from "./get-question-status-color";
 import type { BoxProps } from "@mui/joy";
+import type { ReactNode } from "react";
 
 const QuestionMultipleChoiceBox = styled(Box)`
   padding: ${({ theme }) => theme.spacing(0)};
@@ -79,7 +79,7 @@ const QuestionMultipleChoiceOption = styled(Button)`
 export type QuestionMultipleChoiceStatus = "in-progress" | "show-result";
 
 export type QuestionMultipleChoiceProps = {
-  question?: string;
+  question?: ReactNode;
   options?: Array<{ id: string; text: string }>;
   status?: QuestionMultipleChoiceStatus;
   correctOptionId?: string;
@@ -126,7 +126,7 @@ export const QuestionMultipleChoice = forwardRef<
           </>
         ) : (
           <>
-            <MarkdownClient>{question}</MarkdownClient>
+            {question}
             <Box>
               {annexesHref?.map((annex) => (
                 <Button

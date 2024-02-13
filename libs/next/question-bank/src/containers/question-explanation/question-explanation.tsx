@@ -1,5 +1,6 @@
 import { Stack } from "@mui/joy";
-import { Markdown, Ups } from "@chair-flight/react/components";
+import { Ups } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import type {
@@ -29,7 +30,7 @@ export const QuestionExplanationComponent: FunctionComponent<
   return (
     <Stack component={component} sx={sx}>
       {explanation ? (
-        <Markdown document={explanation} />
+        <Markdown children={explanation} />
       ) : (
         <Ups message="No explanation to this question is available" />
       )}

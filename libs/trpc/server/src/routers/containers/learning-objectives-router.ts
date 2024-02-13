@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { compileMarkdown } from "@chair-flight/core/markdown";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
 import {
   learningObjectiveSearch,
@@ -18,8 +19,13 @@ export const learningObjectivesContainersRouter = router({
     .query(async ({ input }) => {
       const loId = input.learningObjectiveId;
       const qb = questionBanks[input.questionBank];
-      const learningObjective = await qb.getOne("learningObjectives", loId);
+      const rawLo = await qb.getOne("learningObjectives", loId);
       const courses = await qb.getAll("courses");
+      const learningObjective = {
+        ...rawLo,
+        text: compileMarkdown(rawLo.text),
+        source: compileMarkdown(rawLo.source),
+      };
       return { learningObjective, courses };
     }),
 

@@ -9,12 +9,13 @@ import {
 } from "@chair-flight/core/question-bank";
 import {
   LoadingButton,
-  MarkdownClientCompressed,
   SearchHeader,
   SearchList,
 } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { useQuestionSearch } from "../../hooks/use-question-search";
@@ -51,9 +52,7 @@ const SearchListItem = memo<{
         <Typography level="h5" sx={{ fontSize: "sm" }}>
           {questionId}
         </Typography>
-        <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-          {current.preview}
-        </MarkdownClientCompressed>
+        <MarkdownFromServer compressed>{current.preview}</MarkdownFromServer>
       </Box>
       <Box>
         <Tooltip title="Disconnect Question">
@@ -117,9 +116,7 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
-                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                    {result.text}
-                  </MarkdownClientCompressed>
+                  <Markdown compressed>{result.text}</Markdown>
                 </Box>
                 <Box>
                   <Tooltip title="Add to Question">

@@ -13,11 +13,9 @@ import {
   Typography,
 } from "@mui/joy";
 import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import {
-  LoadingButton,
-  MarkdownClientCompressed,
-} from "@chair-flight/react/components";
+import { LoadingButton } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
@@ -132,40 +130,29 @@ export const QuestionManagerEditorListItem = memo<{
           </Tooltip>
         )}
       </Stack>
-      <MarkdownClientCompressed
-        sx={{
-          fontSize: "xs",
-          color: hasPreviewChanged ? "warning.plainColor" : undefined,
-        }}
+      <MarkdownFromServer
+        compressed
+        color={hasPreviewChanged ? "warning" : undefined}
       >
         {current.preview}
-      </MarkdownClientCompressed>
+      </MarkdownFromServer>
       <Typography
-        sx={{
-          mt: 1,
-          fontSize: "xs",
-          color: hasRelatedQsChanged ? "warning.plainColor" : undefined,
-        }}
+        sx={{ mt: 1 }}
+        color={hasRelatedQsChanged ? "warning" : undefined}
+        fontSize="xs"
       >
         <b>Related Questions</b>
         <br />
         {current.relatedQs}
       </Typography>
-      <Typography
-        sx={{
-          fontSize: "xs",
-          color: hasLosChanged ? "warning.plainColor" : undefined,
-        }}
-      >
+      <Typography color={hasLosChanged ? "warning" : undefined} fontSize="xs">
         <b>Learning Objectives</b>
         <br />
         {current.los}
       </Typography>
       <Typography
-        sx={{
-          fontSize: "xs",
-          color: hasAnnexesChanged ? "warning.plainColor" : undefined,
-        }}
+        color={hasAnnexesChanged ? "warning" : undefined}
+        fontSize="xs"
       >
         <b>Annexes</b>
         <br />

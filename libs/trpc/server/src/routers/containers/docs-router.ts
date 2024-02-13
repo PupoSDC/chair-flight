@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { makeMap } from "@chair-flight/base/utils";
+import { compileMdx } from "@chair-flight/core/markdown";
 import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import { compileMdx } from "../../common/compile-mdx";
 import { docSearch, questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

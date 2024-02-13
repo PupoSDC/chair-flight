@@ -27,11 +27,11 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
+import { MarkdownFromServer } from "@chair-flight/next/question-bank";
 import { BugReportButton, ThemeButton } from "@chair-flight/next/user";
 import { useBugReportDebugData } from "@chair-flight/next/user";
 import {
   ImageViewer,
-  MarkdownClient,
   QuestionMultipleChoice,
   QuestionNavigation,
   Ups,
@@ -206,7 +206,7 @@ export const TestStudy = container<Props>(
             flex: 1,
             p: { xs: 1, md: 2 },
           }}
-          question={question.question}
+          question={<MarkdownFromServer children={question.question} />}
           disabled={question.selectedOptionId !== undefined}
           status={question.selectedOptionId ? "show-result" : "in-progress"}
           selectedOptionId={question.selectedOptionId}
@@ -306,7 +306,7 @@ export const TestStudy = container<Props>(
             />
             <Divider sx={{ my: 2 }}>Explanation</Divider>
             {question.explanation ? (
-              <MarkdownClient children={question.explanation} />
+              <MarkdownFromServer children={question.explanation} />
             ) : (
               <Ups message="No explanation is available" />
             )}

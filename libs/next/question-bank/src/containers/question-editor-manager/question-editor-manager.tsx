@@ -12,10 +12,10 @@ import {
 import { type QuestionBankName } from "@chair-flight/core/question-bank";
 import {
   LoadingButton,
-  MarkdownClientCompressed,
   SearchHeader,
   SearchList,
 } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
@@ -114,9 +114,7 @@ export const QuestionEditorManager = container<Props, Params, Data>(
                   <Typography sx={{ fontSize: "xs", fontWeight: 500 }}>
                     {result.relatedQuestions.map((q) => q.id).join(", ")}
                   </Typography>
-                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-                    {result.text}
-                  </MarkdownClientCompressed>
+                  <Markdown compressed>{result.text}</Markdown>
                   <Divider sx={{ my: 1, mx: 2 }} />
                   <Typography sx={{ fontSize: "xs" }}>
                     <b>Related Questions</b>

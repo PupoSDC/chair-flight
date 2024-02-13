@@ -21,6 +21,7 @@ import {
 } from "@mui/joy";
 import { DateTime } from "luxon";
 import { NotFoundError } from "@chair-flight/base/errors";
+import { MarkdownFromServer } from "@chair-flight/next/question-bank";
 import { BugReportButton } from "@chair-flight/next/user";
 import { useBugReportDebugData } from "@chair-flight/next/user";
 import {
@@ -153,7 +154,7 @@ export const TestExam = container<Props>(
             flex: 1,
             p: { xs: 1, md: 2 },
           }}
-          question={question.question}
+          question={<MarkdownFromServer children={question.question} />}
           disabled={question.selectedOptionId !== undefined}
           status={question.selectedOptionId ? "show-result" : "in-progress"}
           selectedOptionId={question.selectedOptionId}

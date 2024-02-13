@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flashcard } from "@chair-flight/react/components";
+import { Flashcard } from "../flashcard";
 import type { FlashcardContent } from "@chair-flight/core/question-bank";
 import type { FunctionComponent } from "react";
 

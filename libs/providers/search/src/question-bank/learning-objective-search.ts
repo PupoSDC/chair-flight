@@ -1,4 +1,5 @@
 import { makeMap } from "@chair-flight/base/utils";
+import { compileMarkdown } from "@chair-flight/core/markdown";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
 import type { LearningObjective } from "@chair-flight/core/question-bank";
 import type {
@@ -83,8 +84,8 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
       href: `/modules/${lo.questionBank}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
       courses: lo.courses.map((c) => this.coursesMap[c]),
-      text: lo.text,
-      source: lo.source,
+      text: compileMarkdown(lo.text),
+      source: compileMarkdown(lo.source),
       questionBank: lo.questionBank,
       subject: lo.id.split(".")[0],
       numberOfQuestions: lo.nestedQuestions.length,

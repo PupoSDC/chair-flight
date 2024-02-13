@@ -1,3 +1,4 @@
+export { MarkdownFromServer } from "./components/markdown-from-server";
 export { AnnexSearch } from "./containers/annex-search";
 export { DocContent } from "./containers/doc-content";
 export { DocSearch } from "./containers/doc-search";

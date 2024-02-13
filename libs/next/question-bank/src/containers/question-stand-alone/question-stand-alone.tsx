@@ -8,6 +8,7 @@ import {
 } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import type {
   QuestionBankName,
   QuestionTemplateId,
@@ -55,7 +56,7 @@ export const QuestionStandAloneComponent: FunctionComponent<
     <Stack component={component} sx={{ display: "relative", ...sx }}>
       <QuestionMultipleChoice
         sx={{ width: "100%" }}
-        question={question.question}
+        question={<MarkdownFromServer children={question.question} />}
         correctOptionId={question.correctOptionId}
         selectedOptionId={selectedOption}
         status={selectedStatus}
