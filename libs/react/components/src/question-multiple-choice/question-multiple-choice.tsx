@@ -1,8 +1,9 @@
-import { ReactNode, forwardRef } from "react";
+import { forwardRef } from "react";
 import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
 import { getOptionColor } from "./get-question-status-color";
 import type { BoxProps } from "@mui/joy";
+import type { ReactNode } from "react";
 
 const QuestionMultipleChoiceBox = styled(Box)`
   padding: ${({ theme }) => theme.spacing(0)};
