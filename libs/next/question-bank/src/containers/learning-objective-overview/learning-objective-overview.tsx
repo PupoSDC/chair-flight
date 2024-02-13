@@ -1,6 +1,6 @@
 import { default as CheckIcon } from "@mui/icons-material/Check";
-import { Box, Grid, Sheet, Table, Typography } from "@mui/joy";
-import { MarkdownClient } from "@chair-flight/react/components";
+import { Grid, Sheet, Table, Typography } from "@mui/joy";
+import { Markdown } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
 import type {
@@ -36,18 +36,22 @@ export const LearningObjectiveOverview = container<Props, Params, Data>(
             <Typography level="h4">{learningObjective.id}</Typography>
           </Grid>
           <Grid xs={12}>
-            <MarkdownClient>{learningObjective.text}</MarkdownClient>
+            <Markdown>{learningObjective.text}</Markdown>
           </Grid>
           {learningObjective.source && (
             <Grid xs={12} lg={6}>
-              <Typography level="h5">Source</Typography>
-              <Box sx={{ color: "text.tertiary", fontSize: "sm" }}>
-                <MarkdownClient>{learningObjective.source}</MarkdownClient>
-              </Box>
+              <Typography level="h5" mt={2}>
+                Source
+              </Typography>
+              <Markdown sx={{ color: "text.tertiary", fontSize: "sm" }}>
+                {learningObjective.source}
+              </Markdown>
             </Grid>
           )}
           <Grid xs={12} lg={6} sx={{ overflowX: "scroll" }}>
-            <Typography level="h5">Courses</Typography>
+            <Typography level="h5" mt={2}>
+              Courses
+            </Typography>
             <Table sx={{ display: "block", overflowY: "auto" }}>
               <thead>
                 <tr>

@@ -8,7 +8,8 @@ import type { FunctionComponent } from "react";
 export type MarkdownProps = {
   children: MdDocument;
   compressed?: boolean;
-} & Omit<BoxProps, "children">;
+  color?: "primary" | "neutral" | "warning" | "success" | "danger";
+} & Omit<BoxProps, "children" | "color">;
 
 /**
  * Renders **markdown** on the client.
@@ -17,11 +18,18 @@ export const Markdown: FunctionComponent<MarkdownProps> = ({
   children,
   compressed,
   sx,
+  color,
   ...otherProps
 }) => (
   <Box
     {...otherProps}
     sx={{
+      ...(color && {
+        "&, & h1, & h2, & h3, & h4, & h5, & h6, & p": {
+          color: (t) => `rgb(${t.vars.palette[color].mainChannel})`,
+        },
+      }),
+
       ...(compressed && {
         "& h1, & h2, & h3, & h4, & h5, & h6": {
           margin: 0,

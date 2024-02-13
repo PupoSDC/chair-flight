@@ -13,7 +13,6 @@ import YAML from "yaml";
 import { getRandomId } from "@chair-flight/base/utils";
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import { createTestQuestion } from "@chair-flight/core/tests";
-import { MarkdownClient } from "@chair-flight/react/components";
 import { container } from "@chair-flight/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
@@ -76,7 +75,7 @@ export const QuestionEditorPreview = container<Props, Params, Data>(
           <Tab value={"Validation"}>Validation</Tab>
         </TabList>
         <TabPanel value={"Preview"} sx={{ px: 1 }}>
-          <MarkdownClient>{getQuestionPreview(variant)}</MarkdownClient>
+          <MarkdownFromServer>{getQuestionPreview(variant)}</MarkdownFromServer>
         </TabPanel>
         <TabPanel value={"Demo"} sx={{ px: 1 }}>
           <QuestionStandAloneComponent

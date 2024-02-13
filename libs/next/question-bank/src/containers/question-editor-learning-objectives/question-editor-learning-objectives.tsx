@@ -12,9 +12,8 @@ import { SearchHeader, SearchList } from "@chair-flight/react/components";
 import { Markdown } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
-import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
-import { useAnnexSearch } from "../../hooks/use-annex-search";
+import { useLearningObjectiveSearch } from "../../hooks/use-learning-objective-search";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import type { QuestionBankName } from "@chair-flight/core/question-bank";
 import type { AppRouterOutput } from "@chair-flight/trpc/server";
@@ -46,7 +45,7 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
       setLos: s.setQuestionLearningObjectives,
     }));
 
-    const search = useAnnexSearch({
+    const search = useLearningObjectiveSearch({
       questionBank,
     });
 
@@ -96,9 +95,9 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
-                  <MarkdownFromServer compressed sx={{ fontSize: "xs" }}>
-                    {result.description}
-                  </MarkdownFromServer>
+                  <Markdown compressed sx={{ "& > p": { fontSize: "sm" } }}>
+                    {result.text}
+                  </Markdown>
                 </Box>
                 <Box>
                   <Tooltip title="Add to Question">

@@ -132,35 +132,27 @@ export const QuestionManagerEditorListItem = memo<{
       </Stack>
       <MarkdownFromServer
         compressed
-        sx={{
-          color: hasPreviewChanged ? "warning.plainColor" : undefined,
-        }}
+        color={hasPreviewChanged ? "warning" : undefined}
       >
         {current.preview}
       </MarkdownFromServer>
       <Typography
-        sx={{
-          mt: 1,
-          color: hasRelatedQsChanged ? "warning.plainColor" : undefined,
-        }}
+        sx={{ mt: 1 }}
+        color={hasRelatedQsChanged ? "warning" : undefined}
+        fontSize="xs"
       >
         <b>Related Questions</b>
         <br />
         {current.relatedQs}
       </Typography>
-      <Typography
-        sx={{
-          color: hasLosChanged ? "warning.plainColor" : undefined,
-        }}
-      >
+      <Typography color={hasLosChanged ? "warning" : undefined} fontSize="xs">
         <b>Learning Objectives</b>
         <br />
         {current.los}
       </Typography>
       <Typography
-        sx={{
-          color: hasAnnexesChanged ? "warning.plainColor" : undefined,
-        }}
+        color={hasAnnexesChanged ? "warning" : undefined}
+        fontSize="xs"
       >
         <b>Annexes</b>
         <br />
