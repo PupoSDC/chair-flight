@@ -1,13 +1,13 @@
-import { getRandomId } from "@chair-flight/base/utils";
-import { questionTemplateSchema } from "@chair-flight/core/question-bank";
+import { getRandomId } from "@cf/base/utils";
+import { questionTemplateSchema } from "@cf/core/question-bank";
 import {
   originOwner,
   originRepo,
   upstreamOwner,
   upstreamRepo,
 } from "../common/env";
-import type { EditQuestionsPr } from "@chair-flight/core/github";
-import type { QuestionTemplate } from "@chair-flight/core/question-bank";
+import type { EditQuestionsPr } from "@cf/core/github";
+import type { QuestionTemplate } from "@cf/core/question-bank";
 import type { Octokit } from "octokit";
 
 const normalizePath = (src: string) =>
@@ -122,7 +122,7 @@ export const createEditQuestionsPr = async (
     repo: originRepo,
     author: {
       name: state.meta.authorName || "Chair Flight Bot",
-      email: state.meta.email || "bot@chair-flight.com",
+      email: state.meta.email || "bot@cf.com",
     },
     message: `${title}\n\n${body}`,
     tree: newTree.data.sha,
@@ -145,7 +145,7 @@ export const createEditQuestionsPr = async (
     body,
     author: {
       name: "Chair Flight Bot",
-      email: "bot@chair-flight.com",
+      email: "bot@cf.com",
     },
   });
 

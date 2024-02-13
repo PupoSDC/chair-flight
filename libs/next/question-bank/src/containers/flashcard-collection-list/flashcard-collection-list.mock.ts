@@ -1,4 +1,4 @@
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 export const mockData: AppRouterOutput["containers"]["flashcards"]["getFlashcardCollectionList"] =
   {

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { z } from "zod";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
+import { createUsePersistenceHook } from "@cf/react/components";
 
 const userVoyageSchema = z.object({
   lastBlogVisit: z.string().datetime().default("2020-01-01T00:00:00.000Z"),

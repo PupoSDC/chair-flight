@@ -25,19 +25,19 @@ import {
   ThemeButton,
   BugReportButton,
   UserBugReport,
-} from "@chair-flight/next/user";
+} from "@cf/next/user";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
   useMediaQuery,
-} from "@chair-flight/react/components";
-import { usePageTransition } from "@chair-flight/react/components";
-import { ThemeOverrideColorScheme } from "@chair-flight/react/theme";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+} from "@cf/react/components";
+import { usePageTransition } from "@cf/react/components";
+import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 const HEADER_HEIGHT = 48;
 

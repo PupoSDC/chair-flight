@@ -1,11 +1,11 @@
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { Annex } from "@chair-flight/core/question-bank";
+import type { Annex } from "@cf/core/question-bank";
 import type {
   AnnexSearchResult,
   AnnexFilterField,
   AnnexSearchField,
-} from "@chair-flight/core/search";
-import type { QuestionBank } from "@chair-flight/providers/question-bank";
+} from "@cf/core/search";
+import type { QuestionBank } from "@cf/providers/question-bank";
 
 export class AnnexSearch extends QuestionBankSearchProvider<
   Annex,

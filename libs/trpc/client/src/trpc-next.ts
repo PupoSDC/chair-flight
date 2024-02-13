@@ -1,8 +1,8 @@
 import { httpLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import { default as superJson } from "superjson";
-import { getEnvVariableOrDefault } from "@chair-flight/base/env";
-import type { AppRouter } from "@chair-flight/trpc/server";
+import { getEnvVariableOrDefault } from "@cf/base/env";
+import type { AppRouter } from "@cf/trpc/server";
 import type { QueryClientConfig } from "@tanstack/react-query";
 
 const getBaseUrl = (): string => {

@@ -1,11 +1,11 @@
 import { z } from "zod";
-import type { MdDocument } from "@chair-flight/core/markdown";
+import type { MdDocument } from "@cf/core/markdown";
 import type {
   CourseId,
   LearningObjectiveId,
   QuestionBankName,
   SubjectId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export type LearningObjectiveSearchResult = {
   id: LearningObjectiveId;

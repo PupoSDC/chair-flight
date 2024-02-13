@@ -3,12 +3,12 @@ import { default as NextLink } from "next/link";
 import { keyframes } from "@emotion/react";
 import { default as CheckIcon } from "@mui/icons-material/CheckOutlined";
 import { Box, Card, CardContent, CardCover, Grid, Typography } from "@mui/joy";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { default as previewAtpl } from "./images/atpl.png";
 import { default as previewB737 } from "./images/b737.png";
 import { default as previewPrep } from "./images/prep.png";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 const zoomIn = keyframes`
   0% { transform: scale(1); }

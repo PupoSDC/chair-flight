@@ -1,10 +1,10 @@
 import { Button, Card, Link, Typography } from "@mui/joy";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { FlashcardWithOwnControl } from "../../components/fashcard-with-own-control";
 import { FlashcardTinder } from "../../components/flashcard-tinder";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;

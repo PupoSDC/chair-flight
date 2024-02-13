@@ -5,11 +5,11 @@ import {
   AppButtonsContainer,
   GithubButton,
   ThemeButton,
-} from "@chair-flight/next/user";
-import { AppLogo } from "@chair-flight/react/components";
-import { usePageTransition } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/next/user";
+import { AppLogo } from "@cf/react/components";
+import { usePageTransition } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import type { ReactElement } from "react";
 
 const HEADER_HEIGHT = 48;

@@ -2,12 +2,12 @@ import { useState } from "react";
 import { default as ConstructionIcon } from "@mui/icons-material/Construction";
 import { default as HourglassEmptyIcon } from "@mui/icons-material/HourglassEmpty";
 import { Stack, ListItemContent, Link, Tooltip } from "@mui/joy";
-import { SearchHeader, SearchList } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { SearchHeader, SearchList } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { useDocSearchConfig } from "../../hooks/use-doc-search-config";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;

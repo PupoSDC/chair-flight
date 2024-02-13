@@ -1,5 +1,5 @@
 import type { TestQuestion } from "./test-question";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 export type TestMode = "exam" | "study";
 export type TestStatus = "created" | "started" | "finished";

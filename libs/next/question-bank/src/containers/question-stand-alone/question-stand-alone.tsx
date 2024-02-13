@@ -1,24 +1,21 @@
 import { useState } from "react";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
 import { Button, Stack } from "@mui/joy";
-import { getRandomId } from "@chair-flight/base/utils";
-import {
-  ImageViewer,
-  QuestionMultipleChoice,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { getRandomId } from "@cf/base/utils";
+import { ImageViewer, QuestionMultipleChoice } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import type {
   QuestionBankName,
   QuestionTemplateId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
-} from "@chair-flight/react/components";
-import type { CommonComponentProps } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+} from "@cf/react/components";
+import type { CommonComponentProps } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 import type { FunctionComponent } from "react";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;

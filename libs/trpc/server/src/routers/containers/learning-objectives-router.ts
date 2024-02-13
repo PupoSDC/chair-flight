@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { compileMarkdown } from "@chair-flight/core/markdown";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { compileMarkdown } from "@cf/core/markdown";
+import { questionBankNameSchema } from "@cf/core/question-bank";
 import {
   learningObjectiveSearch,
   questionBanks,

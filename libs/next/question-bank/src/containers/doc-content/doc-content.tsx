@@ -1,10 +1,10 @@
 import { Link, Typography } from "@mui/joy";
-import { Mdx } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Container } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import { Mdx } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { Container } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = { questionBank: QuestionBankName; docId: string };
 type Params = Props;

@@ -10,12 +10,12 @@ import {
   Typography,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useUserVoyage } from "@chair-flight/next/user";
-import { BlogPostChip } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
-import type { Container } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import { useUserVoyage } from "@cf/next/user";
+import { BlogPostChip } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
+import type { Container } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = Record<string, never>;
 type Params = Props;

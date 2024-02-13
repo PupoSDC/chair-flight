@@ -1,6 +1,6 @@
 import { default as ReactMarkdown } from "react-markdown";
 import { Box } from "@mui/joy";
-import { markdownPlugins, type MdDocument } from "@chair-flight/core/markdown";
+import { markdownPlugins, type MdDocument } from "@cf/core/markdown";
 import { markdownComponents } from "../../common/components";
 import type { BoxProps } from "@mui/joy";
 import type { FunctionComponent } from "react";

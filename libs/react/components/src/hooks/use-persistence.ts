@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 type PersistenceHook<T> = {
   data: T;

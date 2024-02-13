@@ -1,7 +1,4 @@
-import {
-  newIssueSchema,
-  editQuestionsPrSchema,
-} from "@chair-flight/core/github";
+import { newIssueSchema, editQuestionsPrSchema } from "@cf/core/github";
 import { github } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

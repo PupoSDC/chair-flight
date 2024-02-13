@@ -9,16 +9,12 @@ import {
   Typography,
   useTheme,
 } from "@mui/joy";
-import { DocContent, LayoutModule } from "@chair-flight/next/question-bank";
-import {
-  AppHead,
-  useDisclose,
-  useMediaQuery,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/next/question-bank";
+import { DocContent, LayoutModule } from "@cf/next/question-bank";
+import { AppHead, useDisclose, useMediaQuery } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { Breadcrumbs } from "@cf/next/question-bank";
 import type { NextPage } from "next";
 
 type PageProps = {

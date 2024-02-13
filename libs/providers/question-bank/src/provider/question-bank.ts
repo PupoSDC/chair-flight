@@ -1,5 +1,5 @@
-import { getUrlPathOnServer } from "@chair-flight/base/env";
-import { NotFoundError } from "@chair-flight/base/errors";
+import { getUrlPathOnServer } from "@cf/base/env";
+import { NotFoundError } from "@cf/base/errors";
 import type {
   QuestionBankProvider,
   QuestionBankName,
@@ -7,7 +7,7 @@ import type {
   QuestionBankResource,
   QuestionBankResourceArrays,
   QuestionBankResourceMaps,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 const resources: QuestionBankResource[] = [
   "questions",

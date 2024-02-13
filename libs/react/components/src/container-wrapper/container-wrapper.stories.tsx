@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Stack } from "@mui/joy";
-import { NOOP } from "@chair-flight/base/utils";
+import { NOOP } from "@cf/base/utils";
 import { ContainerWrapper } from "./container-wrapper";
 import type { Meta, StoryObj } from "@storybook/react";
 

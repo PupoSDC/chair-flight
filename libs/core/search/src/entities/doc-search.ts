@@ -4,7 +4,7 @@ import type {
   QuestionBankName,
   SubjectId,
   LearningObjectiveId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export type DocSearchResult = {
   id: DocId;

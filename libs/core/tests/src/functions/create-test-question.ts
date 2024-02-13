@@ -1,23 +1,20 @@
-import {
-  BadQuestionError,
-  UnimplementedError,
-} from "@chair-flight/base/errors";
+import { BadQuestionError, UnimplementedError } from "@cf/base/errors";
 import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "@chair-flight/base/utils";
+} from "@cf/base/utils";
 import type {
   TestQuestion,
   TestQuestionMultipleChoice,
   TestQuestionType,
 } from "../entities/test-question";
-import type { QuestionTemplate } from "@chair-flight/core/question-bank";
-import type { QuestionVariantDefinition } from "@chair-flight/core/question-bank";
-import type { QuestionVariantMultipleCorrect } from "@chair-flight/core/question-bank";
-import type { QuestionVariantOneTwo } from "@chair-flight/core/question-bank";
-import type { QuestionVariantSimple } from "@chair-flight/core/question-bank";
-import type { QuestionVariantTrueOrFalse } from "@chair-flight/core/question-bank";
+import type { QuestionTemplate } from "@cf/core/question-bank";
+import type { QuestionVariantDefinition } from "@cf/core/question-bank";
+import type { QuestionVariantMultipleCorrect } from "@cf/core/question-bank";
+import type { QuestionVariantOneTwo } from "@cf/core/question-bank";
+import type { QuestionVariantSimple } from "@cf/core/question-bank";
+import type { QuestionVariantTrueOrFalse } from "@cf/core/question-bank";
 
 const createQuestionMultipleChoiceFromSimple = ({
   template,

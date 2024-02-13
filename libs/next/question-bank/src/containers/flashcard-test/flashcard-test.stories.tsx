@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { FlashcardTest } from "./flashcard-test";
 import { mockData } from "./flashcard-test.mock";
 import type { Meta, StoryObj } from "@storybook/react";

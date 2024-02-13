@@ -1,5 +1,5 @@
-import type { QuestionSearchResult } from "@chair-flight/core/search";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionSearchResult } from "@cf/core/search";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 const items: QuestionSearchResult[] = [
   {

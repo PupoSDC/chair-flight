@@ -1,12 +1,12 @@
 import { Stack } from "@mui/joy";
-import { useTrackEvent } from "@chair-flight/next/analytics";
-import { SearchHeader } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { useTrackEvent } from "@cf/next/analytics";
+import { SearchHeader } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";
 import { useLearningObjectiveSearch } from "../../hooks/use-learning-objective-search";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;

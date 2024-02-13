@@ -1,7 +1,7 @@
 import { randomUUID } from "crypto";
 import { sql } from "drizzle-orm";
 import { pgTable, timestamp, text, integer, jsonb } from "drizzle-orm/pg-core";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { getEnvVariableOrThrow } from "@cf/base/env";
 
 const getEnv = () => getEnvVariableOrThrow("NODE_ENV");
 

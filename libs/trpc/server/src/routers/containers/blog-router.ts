@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { compileMdx } from "@chair-flight/core/markdown";
+import { compileMdx } from "@cf/core/markdown";
 import { blog } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

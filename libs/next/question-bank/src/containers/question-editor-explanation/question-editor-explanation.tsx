@@ -1,10 +1,10 @@
 import { useState, useTransition } from "react";
 import { default as Editor } from "@monaco-editor/react";
 import { useColorScheme } from "@mui/joy";
-import { container } from "@chair-flight/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

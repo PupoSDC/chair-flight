@@ -8,15 +8,15 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import { SearchHeader, SearchList } from "@chair-flight/react/components";
-import { Markdown } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { SearchHeader, SearchList } from "@cf/react/components";
+import { Markdown } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useLearningObjectiveSearch } from "../../hooks/use-learning-objective-search";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

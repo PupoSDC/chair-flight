@@ -1,13 +1,13 @@
-import { makeMap } from "@chair-flight/base/utils";
-import { compileMarkdown } from "@chair-flight/core/markdown";
+import { makeMap } from "@cf/base/utils";
+import { compileMarkdown } from "@cf/core/markdown";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { LearningObjective } from "@chair-flight/core/question-bank";
+import type { LearningObjective } from "@cf/core/question-bank";
 import type {
   LearningObjectiveFilterField,
   LearningObjectiveSearchField,
   LearningObjectiveSearchResult,
-} from "@chair-flight/core/search";
-import type { QuestionBank } from "@chair-flight/providers/question-bank";
+} from "@cf/core/search";
+import type { QuestionBank } from "@cf/providers/question-bank";
 
 export class LearningObjectiveSearch extends QuestionBankSearchProvider<
   LearningObjective,

@@ -4,10 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { default as CreateIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Divider, IconButton, Stack, Typography } from "@mui/joy";
-import { questionVariantOneTwoSchema } from "@chair-flight/core/question-bank";
-import { HookFormTextArea } from "@chair-flight/react/components";
-import { HookFormErrorMessage } from "@chair-flight/react/components";
-import type { QuestionVariantOneTwo } from "@chair-flight/core/question-bank";
+import { questionVariantOneTwoSchema } from "@cf/core/question-bank";
+import { HookFormTextArea } from "@cf/react/components";
+import { HookFormErrorMessage } from "@cf/react/components";
+import type { QuestionVariantOneTwo } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 
 const resolver = zodResolver(questionVariantOneTwoSchema);

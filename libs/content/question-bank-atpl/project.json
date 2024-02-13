@@ -4,10 +4,10 @@
   "projectType": "library",
   "targets": {
     "compile": {
-      "executor": "@chair-flight/providers/question-bank:compile"
+      "executor": "@cf/providers/question-bank:compile"
     },
     "arrange": {
-      "executor": "@chair-flight/providers/question-bank:arrange"
+      "executor": "@cf/providers/question-bank:arrange"
     }
   },
   "tags": []

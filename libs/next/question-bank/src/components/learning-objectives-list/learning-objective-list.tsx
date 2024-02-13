@@ -7,10 +7,10 @@ import {
   ListItemContent,
   Typography,
 } from "@mui/joy";
-import { SearchList } from "@chair-flight/react/components";
-import { Markdown } from "@chair-flight/react/markdown";
-import type { LearningObjectiveSearchResult } from "@chair-flight/core/search";
-import type { SearchListProps } from "@chair-flight/react/components";
+import { SearchList } from "@cf/react/components";
+import { Markdown } from "@cf/react/markdown";
+import type { LearningObjectiveSearchResult } from "@cf/core/search";
+import type { SearchListProps } from "@cf/react/components";
 
 export type LearningObjectiveListProps = Omit<
   SearchListProps<LearningObjectiveSearchResult>,

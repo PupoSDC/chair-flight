@@ -6,17 +6,14 @@ import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardAr
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { AnnexSearch, QuestionSearch } from "@chair-flight/next/question-bank";
-import { BugReportButton, useUserVoyage } from "@chair-flight/next/user";
-import {
-  BlogPostChip,
-  ModuleSelectionButton,
-} from "@chair-flight/react/components";
-import { Mdx } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
-import type { Container } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
+import { BugReportButton, useUserVoyage } from "@cf/next/user";
+import { BlogPostChip, ModuleSelectionButton } from "@cf/react/components";
+import { Mdx } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
+import type { Container } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = { postId: string };
 type Params = Props;

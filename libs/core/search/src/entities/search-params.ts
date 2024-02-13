@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { questionBankNameSchema } from "@cf/core/question-bank";
 
 export const searchParams = z.object({
   q: z.string(),

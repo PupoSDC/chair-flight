@@ -1,5 +1,5 @@
 import { Skeleton, Stack } from "@mui/joy";
-import { QuestionMultipleChoice } from "@chair-flight/react/components";
+import { QuestionMultipleChoice } from "@cf/react/components";
 import type { FunctionComponent } from "react";
 
 export const TestLoading: FunctionComponent = () => (

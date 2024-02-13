@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { docSearchFilters } from "@chair-flight/core/search";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { docSearchFilters } from "@cf/core/search";
+import { createUsePersistenceHook } from "@cf/react/components";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = docSearchFilters.parse({});
 const resolver = zodResolver(docSearchFilters);

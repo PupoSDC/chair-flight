@@ -3,18 +3,18 @@ import { z } from "zod";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
-import { deepClone } from "@chair-flight/base/utils";
+import { deepClone } from "@cf/base/utils";
 import {
   getQuestionPreview,
   questionTemplateSchema,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 import type {
   QuestionBankName,
   QuestionTemplateId,
   QuestionVariant,
-} from "@chair-flight/core/question-bank";
-import type { PersistenceKey } from "@chair-flight/react/components";
-import type { trpc } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import type { PersistenceKey } from "@cf/react/components";
+import type { trpc } from "@cf/trpc/client";
 
 const persistenceKey: PersistenceKey = "cf-question-editor";
 

@@ -13,9 +13,9 @@ import {
   type QuestionBankName,
   questionVariantSchema,
   getNewVariant,
-} from "@chair-flight/core/question-bank";
-import { useDisclose } from "@chair-flight/react/components";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import { useDisclose } from "@cf/react/components";
+import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { QuestionEditorVariantOneTwo } from "./question-editor-variant-one-two";
 import { QuestionEditorVariantSimple } from "./question-editor-variant-simple";
@@ -26,8 +26,8 @@ import type {
   QuestionVariantSimple,
   QuestionVariantOneTwo,
   QuestionVariantTrueOrFalse,
-} from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+} from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

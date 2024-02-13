@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { Divider, ListItemContent, Stack, Typography } from "@mui/joy";
-import { type QuestionBankName } from "@chair-flight/core/question-bank";
+import { type QuestionBankName } from "@cf/core/question-bank";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@cf/core/question-bank";
 
 export const QuestionEditorDiffListItem = memo<{
   questionId: QuestionTemplateId;

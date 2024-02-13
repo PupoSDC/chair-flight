@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { assertType } from "@chair-flight/base/utils";
+import { assertType } from "@cf/base/utils";
 import type { CourseId } from "./ids";
-import type { IsEqual } from "@chair-flight/base/utils";
+import type { IsEqual } from "@cf/base/utils";
 
 export type Course = {
   id: CourseId;

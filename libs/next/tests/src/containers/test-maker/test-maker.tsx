@@ -22,10 +22,10 @@ import {
   useTheme,
   Sheet,
 } from "@mui/joy";
-import { getNumberOfAvailableQuestions } from "@chair-flight/core/question-bank";
-import { newTestConfigurationSchema } from "@chair-flight/core/tests";
-import { useTrackEvent } from "@chair-flight/next/analytics";
-import { useBugReportDebugData } from "@chair-flight/next/user";
+import { getNumberOfAvailableQuestions } from "@cf/core/question-bank";
+import { newTestConfigurationSchema } from "@cf/core/tests";
+import { useTrackEvent } from "@cf/next/analytics";
+import { useBugReportDebugData } from "@cf/next/user";
 import {
   HookFormSelect,
   NestedCheckboxSelect,
@@ -33,14 +33,14 @@ import {
   toast,
   useDisclose,
   useMediaQuery,
-} from "@chair-flight/react/components";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/react/components";
+import { createUsePersistenceHook } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useTestProgress } from "../../hooks/use-test-progress";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { NewTestConfiguration } from "@chair-flight/core/tests";
-import type { NestedCheckboxSelectProps } from "@chair-flight/react/components";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { NewTestConfiguration } from "@cf/core/tests";
+import type { NestedCheckboxSelectProps } from "@cf/react/components";
 
 const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
 

@@ -15,9 +15,9 @@ import {
   Stack,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useTrackEvent } from "@chair-flight/next/analytics";
-import { useSidebar, noSsr } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
+import { useTrackEvent } from "@cf/next/analytics";
+import { useSidebar, noSsr } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
 import { useBugReportDisclose } from "../../hooks/use-bug-report";
 import { useUserVoyage } from "../../hooks/use-user-voyage";
 import type { FunctionComponent } from "react";

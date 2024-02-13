@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { mockRetrieveQuestionsData } from "../../__mocks__/search-questions";
 import { LearningObjectiveQuestions } from "./learning-objective-questions";
 import type { Meta, StoryObj } from "@storybook/react";

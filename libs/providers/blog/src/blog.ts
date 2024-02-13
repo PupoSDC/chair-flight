@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { getUrlPathOnServer } from "@chair-flight/base/env";
-import { NotFoundError } from "@chair-flight/base/errors";
+import { getUrlPathOnServer } from "@cf/base/env";
+import { NotFoundError } from "@cf/base/errors";
 import type { BlogPost } from "./entities/blog-post";
 
 const A_LONG_TIME_AGO = "2020-01-01T00:00:00.000";

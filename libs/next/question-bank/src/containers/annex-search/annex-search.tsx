@@ -1,16 +1,12 @@
 import { Box, Link, ListItemContent, Stack, Typography } from "@mui/joy";
-import { useTrackEvent } from "@chair-flight/next/analytics";
-import {
-  ImageWithModal,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { useTrackEvent } from "@cf/next/analytics";
+import { ImageWithModal, SearchHeader, SearchList } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { useAnnexSearch } from "../../hooks/use-annex-search";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { SearchListProps } from "@chair-flight/react/components";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { SearchListProps } from "@cf/react/components";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;

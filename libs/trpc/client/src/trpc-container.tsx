@@ -1,7 +1,7 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
-import { ContainerWrapper } from "@chair-flight/react/components";
-import type { ContainerWrapperProps } from "@chair-flight/react/components";
-import type { TrpcHelper } from "@chair-flight/trpc/server";
+import { MissingPathParameter } from "@cf/base/errors";
+import { ContainerWrapper } from "@cf/react/components";
+import type { ContainerWrapperProps } from "@cf/react/components";
+import type { TrpcHelper } from "@cf/trpc/server";
 import type { SxProps } from "@mui/joy/styles/types";
 import type { ElementType, FunctionComponent } from "react";
 

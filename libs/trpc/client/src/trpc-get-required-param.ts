@@ -1,4 +1,4 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
+import { MissingPathParameter } from "@cf/base/errors";
 
 export const getRequiredParam = <
   T extends Record<string, unknown>,

@@ -13,13 +13,9 @@ import {
   Typography,
 } from "@mui/joy";
 import { z } from "zod";
-import {
-  HookFormInput,
-  HookFormTextArea,
-  toast,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+import { HookFormInput, HookFormTextArea, toast } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useBugReportStore } from "../../hooks/use-bug-report";
 
 /** TODO Centralize this */

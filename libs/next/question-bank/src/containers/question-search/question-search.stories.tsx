@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { mockSearchQuestionsData } from "../../__mocks__/search-questions";
 import { QuestionSearch } from "./question-search";
 import { mockData } from "./question-search.mock";

@@ -1,13 +1,13 @@
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { Grid, Sheet, Table, Typography } from "@mui/joy";
-import { Markdown } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { Markdown } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import type {
   LearningObjectiveId,
   QuestionBankName,
-} from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   questionBank: QuestionBankName;

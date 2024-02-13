@@ -1,11 +1,11 @@
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { Doc } from "@chair-flight/core/question-bank";
+import type { Doc } from "@cf/core/question-bank";
 import type {
   DocFilterField,
   DocSearchField,
   DocSearchResult,
-} from "@chair-flight/core/search";
-import type { QuestionBank } from "@chair-flight/providers/question-bank";
+} from "@cf/core/search";
+import type { QuestionBank } from "@cf/providers/question-bank";
 
 export class DocSearch extends QuestionBankSearchProvider<
   Doc,

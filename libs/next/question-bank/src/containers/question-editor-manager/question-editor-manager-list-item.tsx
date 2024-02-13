@@ -12,12 +12,12 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import { LoadingButton } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
+import { type QuestionBankName } from "@cf/core/question-bank";
+import { LoadingButton } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@cf/core/question-bank";
 
 export const QuestionManagerEditorListItem = memo<{
   questionId: QuestionTemplateId;

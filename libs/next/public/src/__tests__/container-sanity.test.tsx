@@ -1,5 +1,5 @@
 import * as allExports from "../index";
-import type { Container } from "@chair-flight/trpc/client";
+import type { Container } from "@cf/trpc/client";
 
 describe("Container Sanity", () => {
   const containers = Object.entries(allExports).filter(

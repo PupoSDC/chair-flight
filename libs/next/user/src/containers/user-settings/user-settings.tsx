@@ -8,7 +8,7 @@ import {
   formLabelClasses,
   styled,
 } from "@mui/joy";
-import { container } from "@chair-flight/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useUserPreferences } from "../../hooks/use-user-preferences";
 import type { FunctionComponent } from "react";
 

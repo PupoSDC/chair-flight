@@ -1,8 +1,8 @@
 import { Octokit } from "octokit";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { getEnvVariableOrThrow } from "@cf/base/env";
 import { createEditQuestionsPr } from "./functions/create-edit-questions-pr";
 import { createNewIssue } from "./functions/create-new-issue";
-import type { NewIssue, EditQuestionsPr } from "@chair-flight/core/github";
+import type { NewIssue, EditQuestionsPr } from "@cf/core/github";
 
 interface GithubProvider {
   createEditQuestionsPr(newPr: EditQuestionsPr): Promise<{ url: string }>;

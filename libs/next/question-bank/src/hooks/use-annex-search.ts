@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { annexSearchFilters } from "@chair-flight/core/search";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { annexSearchFilters } from "@cf/core/search";
+import { createUsePersistenceHook } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = annexSearchFilters.parse({});
 const resolver = zodResolver(annexSearchFilters);

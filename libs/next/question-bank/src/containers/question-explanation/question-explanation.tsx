@@ -1,14 +1,14 @@
 import { Stack } from "@mui/joy";
-import { Ups } from "@chair-flight/react/components";
-import { Markdown } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { Ups } from "@cf/react/components";
+import { Markdown } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import type {
   QuestionBankName,
   QuestionTemplateId,
-} from "@chair-flight/core/question-bank";
-import type { CommonComponentProps } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import type { CommonComponentProps } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 import type { FunctionComponent } from "react";
 
 type Props = {

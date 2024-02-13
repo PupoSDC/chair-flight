@@ -2,15 +2,12 @@ import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { Button, Stack } from "@mui/joy";
-import { editQuestionsPrMetaSchema } from "@chair-flight/core/github";
-import {
-  HookFormInput,
-  HookFormTextArea,
-} from "@chair-flight/react/components";
-import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+import { editQuestionsPrMetaSchema } from "@cf/core/github";
+import { HookFormInput, HookFormTextArea } from "@cf/react/components";
+import { trpc, type AppRouterOutput } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 type Props = {
   component?: "form";

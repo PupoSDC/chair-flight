@@ -1,10 +1,7 @@
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
-import {
-  createTest,
-  newTestConfigurationSchema,
-} from "@chair-flight/core/tests";
+import { makeMap } from "@cf/base/utils";
+import { questionBankNameSchema } from "@cf/core/question-bank";
+import { createTest, newTestConfigurationSchema } from "@cf/core/tests";
 import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

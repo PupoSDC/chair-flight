@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { MissingPathParameter } from "@chair-flight/base/errors";
-import { TestStudy } from "@chair-flight/next/tests";
-import { UserBugReport } from "@chair-flight/next/user";
-import { AppHead } from "@chair-flight/react/components";
-import { ThemeOverrideColorScheme } from "@chair-flight/react/theme";
-import { ssrHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { MissingPathParameter } from "@cf/base/errors";
+import { TestStudy } from "@cf/next/tests";
+import { UserBugReport } from "@cf/next/user";
+import { AppHead } from "@cf/react/components";
+import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { ssrHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NextPage } from "next";
 
 type Props = {

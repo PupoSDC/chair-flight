@@ -1,4 +1,4 @@
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { getEnvVariableOrThrow } from "@cf/base/env";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const statusRouter = router({

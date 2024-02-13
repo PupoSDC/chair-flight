@@ -11,7 +11,7 @@ import type {
   LearningObjective,
   QuestionTemplate,
   Subject,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;

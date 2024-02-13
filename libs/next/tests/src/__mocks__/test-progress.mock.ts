@@ -1,4 +1,4 @@
-import type { Test } from "@chair-flight/core/tests";
+import type { Test } from "@cf/core/tests";
 
 export const testProgressMock: {
   tests: Record<string, Test>;

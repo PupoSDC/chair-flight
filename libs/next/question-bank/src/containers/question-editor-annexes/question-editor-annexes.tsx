@@ -1,18 +1,14 @@
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import { Button, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
-import {
-  ImageWithModal,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { ImageWithModal, SearchHeader, SearchList } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useAnnexSearch } from "../../hooks/use-annex-search";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

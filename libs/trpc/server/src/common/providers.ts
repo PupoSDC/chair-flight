@@ -1,14 +1,14 @@
-import { Analytics } from "@chair-flight/providers/analytics";
-import { Blog } from "@chair-flight/providers/blog";
-import { Github } from "@chair-flight/providers/github";
-import { QuestionBank } from "@chair-flight/providers/question-bank";
+import { Analytics } from "@cf/providers/analytics";
+import { Blog } from "@cf/providers/blog";
+import { Github } from "@cf/providers/github";
+import { QuestionBank } from "@cf/providers/question-bank";
 import {
   AnnexSearch,
   DocSearch,
   LearningObjectiveSearch,
   QuestionSearch,
-} from "@chair-flight/providers/search";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+} from "@cf/providers/search";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 export const questionBanks: Record<QuestionBankName, QuestionBank> = {
   type: new QuestionBank("type"),

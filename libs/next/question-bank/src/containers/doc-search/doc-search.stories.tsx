@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { DocSearch } from "./doc-search";
 import { mockData, mockSearchData } from "./doc-search.mock";
 import type { Meta, StoryObj } from "@storybook/react";

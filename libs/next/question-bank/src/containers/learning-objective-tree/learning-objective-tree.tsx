@@ -1,12 +1,12 @@
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";
 import type { LearningObjectiveListProps } from "../../components/learning-objectives-list";
 import type {
   LearningObjectiveId,
   QuestionBankName,
-} from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+} from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   forceMode?: LearningObjectiveListProps["forceMode"];

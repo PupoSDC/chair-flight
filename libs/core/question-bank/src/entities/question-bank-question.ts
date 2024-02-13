@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { assertType } from "@chair-flight/base/utils";
+import { assertType } from "@cf/base/utils";
 import { questionBankNameSchema } from "./question-bank-name";
 import { questionVariantDefinitionSchema } from "./question-bank-question-definition";
 import { questionVariantMultipleCorrectSchema } from "./question-bank-question-multiple-correct";
@@ -20,7 +20,7 @@ import type { QuestionVariantMultipleCorrect } from "./question-bank-question-mu
 import type { QuestionVariantOneTwo } from "./question-bank-question-one-two";
 import type { QuestionVariantSimple } from "./question-bank-question-simple";
 import type { QuestionVariantTrueOrFalse } from "./question-bank-question-true-or-false";
-import type { IsEqual } from "@chair-flight/base/utils";
+import type { IsEqual } from "@cf/base/utils";
 
 export type QuestionVariant =
   | QuestionVariantSimple

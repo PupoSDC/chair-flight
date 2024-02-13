@@ -10,15 +10,15 @@ import {
   useColorScheme,
 } from "@mui/joy";
 import YAML from "yaml";
-import { getRandomId } from "@chair-flight/base/utils";
-import { getQuestionPreview } from "@chair-flight/core/question-bank";
-import { createTestQuestion } from "@chair-flight/core/tests";
-import { container } from "@chair-flight/trpc/client";
+import { getRandomId } from "@cf/base/utils";
+import { getQuestionPreview } from "@cf/core/question-bank";
+import { createTestQuestion } from "@cf/core/tests";
+import { container } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { QuestionStandAloneComponent } from "../question-stand-alone/question-stand-alone";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

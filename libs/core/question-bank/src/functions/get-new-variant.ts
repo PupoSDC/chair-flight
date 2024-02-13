@@ -1,4 +1,4 @@
-import { getRandomId } from "@chair-flight/base/utils";
+import { getRandomId } from "@cf/base/utils";
 import type {
   QuestionVariant,
   QuestionVariantType,

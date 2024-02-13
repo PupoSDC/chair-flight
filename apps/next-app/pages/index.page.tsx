@@ -1,13 +1,10 @@
 import * as fs from "node:fs/promises";
 import { useState } from "react";
-import { LayoutPublic, HeroWelcome } from "@chair-flight/next/public";
-import {
-  AppHead,
-  BackgroundSlidingImages,
-} from "@chair-flight/react/components";
-import { ThemeOverrideColorScheme } from "@chair-flight/react/theme";
-import { staticHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { LayoutPublic, HeroWelcome } from "@cf/next/public";
+import { AppHead, BackgroundSlidingImages } from "@cf/react/components";
+import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { staticHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NextPage } from "next";
 
 export const Page: NextPage = () => {

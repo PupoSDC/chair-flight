@@ -3,7 +3,7 @@ import type {
   AnnexId,
   QuestionOptionId,
   QuestionTemplateId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export type TestQuestionType = "multiple-choice";
 

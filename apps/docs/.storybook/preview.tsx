@@ -6,8 +6,8 @@ import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
-import { ThemeProvider, theme } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
+import { ThemeProvider, theme } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
 import type { TypographyProps } from "@mui/joy";
 import "@fontsource/public-sans";
 

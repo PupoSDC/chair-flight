@@ -3,11 +3,11 @@ import {
   getRandomId,
   getRandomIdGenerator,
   getRandomShuffler,
-} from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+} from "@cf/base/utils";
+import { questionBankNameSchema } from "@cf/core/question-bank";
 import { createTestQuestion } from "./create-test-question";
 import type { Test } from "../entities/test";
-import type { QuestionTemplate } from "@chair-flight/core/question-bank";
+import type { QuestionTemplate } from "@cf/core/question-bank";
 
 export const newTestConfigurationSchema = z.object({
   mode: z.enum(["study", "exam"]),

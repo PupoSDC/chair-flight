@@ -1,7 +1,4 @@
-import {
-  getEnvVariableOrDefault,
-  getEnvVariableOrThrow,
-} from "@chair-flight/base/env";
+import { getEnvVariableOrDefault, getEnvVariableOrThrow } from "@cf/base/env";
 
 export const upstreamOwner = getEnvVariableOrThrow(
   "PROVIDER_GITHUB_PROJECT_UPSTREAM_OWNER",

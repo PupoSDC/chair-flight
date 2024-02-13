@@ -1,10 +1,10 @@
-import { MissingPathParameter } from "@chair-flight/base/errors";
-import { LayoutModule } from "@chair-flight/next/question-bank";
-import { TestReview } from "@chair-flight/next/tests";
-import { AppHead } from "@chair-flight/react/components";
-import { ssrHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/next/question-bank";
+import { MissingPathParameter } from "@cf/base/errors";
+import { LayoutModule } from "@cf/next/question-bank";
+import { TestReview } from "@cf/next/tests";
+import { AppHead } from "@cf/react/components";
+import { ssrHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { Breadcrumbs } from "@cf/next/question-bank";
 import type { NextPage } from "next";
 
 type Props = {

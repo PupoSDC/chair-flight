@@ -3,10 +3,10 @@ import { GlobalStyles, Sheet, Typography } from "@mui/joy";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { DateTime } from "luxon";
-import { BlogIndex, LayoutPublic } from "@chair-flight/next/public";
-import { AppHead, BackgroundFadedImage } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { staticHandler } from "@chair-flight/trpc/server";
+import { BlogIndex, LayoutPublic } from "@cf/next/public";
+import { AppHead, BackgroundFadedImage } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { staticHandler } from "@cf/trpc/server";
 import type { NextPage } from "next";
 
 const Page: NextPage = () => {

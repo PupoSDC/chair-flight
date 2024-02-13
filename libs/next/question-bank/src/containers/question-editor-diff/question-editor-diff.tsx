@@ -1,7 +1,7 @@
-import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import { SearchList } from "@chair-flight/react/components";
-import { type AppRouterOutput } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+import { type QuestionBankName } from "@cf/core/question-bank";
+import { SearchList } from "@cf/react/components";
+import { type AppRouterOutput } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { QuestionEditorDiffListItem } from "./question-editor-diff-list-item";
 

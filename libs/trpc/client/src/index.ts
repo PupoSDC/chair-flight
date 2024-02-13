@@ -5,7 +5,7 @@ export type {
   AppRouterInput,
   AppRouterOutput,
   TrpcHelper,
-} from "@chair-flight/trpc/server";
+} from "@cf/trpc/server";
 export type {
   Container,
   CommonComponentProps,

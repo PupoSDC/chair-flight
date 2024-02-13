@@ -1,10 +1,10 @@
 import * as fs from "node:fs/promises";
-import { LayoutModule } from "@chair-flight/next/question-bank";
-import { TestSearch } from "@chair-flight/next/tests";
-import { AppHead } from "@chair-flight/react/components";
-import { staticHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/next/question-bank";
+import { LayoutModule } from "@cf/next/question-bank";
+import { TestSearch } from "@cf/next/tests";
+import { AppHead } from "@cf/react/components";
+import { staticHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { Breadcrumbs } from "@cf/next/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {

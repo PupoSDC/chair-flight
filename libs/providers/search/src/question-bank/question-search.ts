@@ -1,13 +1,13 @@
-import { compileMarkdown } from "@chair-flight/core/markdown";
-import { getQuestionPreview } from "@chair-flight/core/question-bank";
+import { compileMarkdown } from "@cf/core/markdown";
+import { getQuestionPreview } from "@cf/core/question-bank";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { QuestionTemplate } from "@chair-flight/core/question-bank";
+import type { QuestionTemplate } from "@cf/core/question-bank";
 import type {
   QuestionFilterField,
   QuestionSearchField,
   QuestionSearchResult,
-} from "@chair-flight/core/search";
-import type { QuestionBank } from "@chair-flight/providers/question-bank";
+} from "@cf/core/search";
+import type { QuestionBank } from "@cf/providers/question-bank";
 
 export class QuestionSearch extends QuestionBankSearchProvider<
   QuestionTemplate,

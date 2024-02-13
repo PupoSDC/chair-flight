@@ -20,23 +20,23 @@ import {
   useTheme,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { NotFoundError } from "@chair-flight/base/errors";
-import { MarkdownFromServer } from "@chair-flight/next/question-bank";
-import { BugReportButton } from "@chair-flight/next/user";
-import { useBugReportDebugData } from "@chair-flight/next/user";
+import { NotFoundError } from "@cf/base/errors";
+import { MarkdownFromServer } from "@cf/next/question-bank";
+import { BugReportButton } from "@cf/next/user";
+import { useBugReportDebugData } from "@cf/next/user";
 import {
   ImageViewer,
   QuestionMultipleChoice,
   QuestionNavigation,
   useMediaQuery,
-} from "@chair-flight/react/components";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/react/components";
+import { container } from "@cf/trpc/client";
 import { TestError } from "../../components/test-error";
 import { TestLoading } from "../../components/test-loading";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import { useTestHotkeys } from "../../hooks/use-test-progress-hotkeys";
 import { useTestProgressTime } from "../../hooks/use-test-progress-time";
-import type { DrawingPoints } from "@chair-flight/react/components";
+import type { DrawingPoints } from "@cf/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 

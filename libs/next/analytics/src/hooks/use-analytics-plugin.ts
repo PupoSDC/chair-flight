@@ -1,6 +1,6 @@
 import { useRouter } from "next/dist/client/router";
-import { NOOP } from "@chair-flight/base/utils";
-import { trpc } from "@chair-flight/trpc/client";
+import { NOOP } from "@cf/base/utils";
+import { trpc } from "@cf/trpc/client";
 import type { AnalyticsPlugin } from "analytics";
 
 type OriginalPageViewProps = {

@@ -1,15 +1,15 @@
 import { Grid, Link, Sheet, Stack, Typography } from "@mui/joy";
-import { QuestionMultipleChoice, Ups } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { QuestionMultipleChoice, Ups } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";
 import { QuestionList } from "../../components/question-list";
 import type {
   QuestionBankName,
   QuestionTemplateId,
-} from "@chair-flight/core/question-bank";
-import type { CommonComponentProps } from "@chair-flight/trpc/client";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import type { CommonComponentProps } from "@cf/trpc/client";
+import type { AppRouterOutput } from "@cf/trpc/client";
 import type { FunctionComponent } from "react";
 
 type Props = {

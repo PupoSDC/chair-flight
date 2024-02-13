@@ -1,4 +1,4 @@
-import { MissingEnvVariableError } from "@chair-flight/base/errors";
+import { MissingEnvVariableError } from "@cf/base/errors";
 
 export const getEnvVariableOrThrow = (name: string): string => {
   if (process.env[name]) return process.env[name] as string;

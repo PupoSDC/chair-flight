@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
-import { getEnvVariableOrThrow } from "@chair-flight/base/env";
+import { getEnvVariableOrThrow } from "@cf/base/env";
 import { analyticsSchema } from "../drizzle";
 import { getDailyUsers } from "./functions/get-daily-users";
 import { getPagesUsed } from "./functions/get-pages-used";

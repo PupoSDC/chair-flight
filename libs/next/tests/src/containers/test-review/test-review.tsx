@@ -1,6 +1,6 @@
 import { Box, CircularProgress, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { container } from "@chair-flight/trpc/client";
+import { container } from "@cf/trpc/client";
 import { TestError } from "../../components/test-error";
 import { TestLoading } from "../../components/test-loading";
 import { TestQuestionResult } from "../../components/test-question-result";

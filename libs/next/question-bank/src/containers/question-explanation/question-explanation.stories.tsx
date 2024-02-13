@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { QuestionExplanation } from "./question-explanation";
 import { mockData } from "./question-explanation.mock";
 import type { Meta, StoryObj } from "@storybook/react";

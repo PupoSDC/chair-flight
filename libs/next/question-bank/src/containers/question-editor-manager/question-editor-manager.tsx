@@ -9,20 +9,16 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import {
-  LoadingButton,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
-import { Markdown } from "@chair-flight/react/markdown";
-import { trpc, type AppRouterOutput } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { type QuestionBankName } from "@cf/core/question-bank";
+import { LoadingButton, SearchHeader, SearchList } from "@cf/react/components";
+import { Markdown } from "@cf/react/markdown";
+import { trpc, type AppRouterOutput } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { useQuestionSearch } from "../../hooks/use-question-search";
 import { QuestionManagerEditorListItem } from "./question-editor-manager-list-item";
-import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
+import type { QuestionTemplateId } from "@cf/core/question-bank";
 
 type Props = {
   questionBank: QuestionBankName;

@@ -1,4 +1,4 @@
-import { makeMap } from "@chair-flight/base/utils";
+import { makeMap } from "@cf/base/utils";
 import type {
   Annex,
   Course,
@@ -9,7 +9,7 @@ import type {
   QuestionTemplate,
   Subject,
   SubjectId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export const connectQuestionBank = ({
   questionTemplates,

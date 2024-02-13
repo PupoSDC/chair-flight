@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getRandomShuffler } from "@chair-flight/base/utils";
-import { questionBankNameSchema } from "@chair-flight/core/question-bank";
+import { getRandomShuffler } from "@cf/base/utils";
+import { questionBankNameSchema } from "@cf/core/question-bank";
 import { questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

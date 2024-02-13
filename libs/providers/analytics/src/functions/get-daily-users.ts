@@ -1,7 +1,7 @@
 import { countDistinct, desc } from "drizzle-orm";
 import { sql } from "drizzle-orm";
 import { DateTime } from "luxon";
-import { makeMap } from "@chair-flight/base/utils";
+import { makeMap } from "@cf/base/utils";
 import { analyticsSchema } from "../../drizzle";
 import type { AnalyticsDb } from "../../drizzle";
 

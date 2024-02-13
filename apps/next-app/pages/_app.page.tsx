@@ -1,13 +1,10 @@
 import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import {
-  AnalyticsProvider,
-  AnalyticsPageLogger,
-} from "@chair-flight/next/analytics";
-import { Toaster } from "@chair-flight/react/components";
-import { ThemeProvider } from "@chair-flight/react/theme";
-import { trpc } from "@chair-flight/trpc/client";
+import { AnalyticsProvider, AnalyticsPageLogger } from "@cf/next/analytics";
+import { Toaster } from "@cf/react/components";
+import { ThemeProvider } from "@cf/react/theme";
+import { trpc } from "@cf/trpc/client";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";
 import "@fontsource/public-sans";

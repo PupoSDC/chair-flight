@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { Link, Typography } from "@mui/joy";
-import { NotFoundError } from "@chair-flight/base/errors";
-import { Ups } from "@chair-flight/react/components";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import { NotFoundError } from "@cf/base/errors";
+import { Ups } from "@cf/react/components";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 
 export const TestError: FunctionComponent<{ error: Error }> = ({ error }) => {

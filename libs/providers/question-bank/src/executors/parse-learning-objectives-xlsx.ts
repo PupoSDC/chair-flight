@@ -2,7 +2,7 @@ import * as XLSX from "xlsx";
 import type {
   LearningObjective,
   LearningObjectiveId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 type QuestionBankLearningObjectiveJson = Omit<
   LearningObjective,

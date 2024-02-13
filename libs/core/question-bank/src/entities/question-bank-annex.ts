@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { assertType } from "@chair-flight/base/utils";
+import { assertType } from "@cf/base/utils";
 import { questionBankNameSchema } from "./question-bank-name";
 import type {
   AnnexId,
@@ -9,7 +9,7 @@ import type {
   SubjectId,
 } from "./ids";
 import type { QuestionBankName } from "./question-bank-name";
-import type { IsEqual } from "@chair-flight/base/utils";
+import type { IsEqual } from "@cf/base/utils";
 
 export type AnnexFormat = "jpg";
 

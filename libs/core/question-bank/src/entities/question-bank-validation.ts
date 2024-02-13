@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { makeMap } from "@chair-flight/base/utils";
+import { makeMap } from "@cf/base/utils";
 import { annexSchema } from "./question-bank-annex";
 import { courseSchema } from "./question-bank-course";
 import { docSchema } from "./question-bank-doc";

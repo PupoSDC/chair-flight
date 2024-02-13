@@ -18,16 +18,16 @@ import {
   selectClasses,
 } from "@mui/joy";
 import { z } from "zod";
-import { processTest } from "@chair-flight/core/tests";
+import { processTest } from "@cf/core/tests";
 import {
   HookFormSelect,
   SearchFilters,
   SearchList,
-} from "@chair-flight/react/components";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/react/components";
+import { createUsePersistenceHook } from "@cf/react/components";
+import { container } from "@cf/trpc/client";
 import { useTestProgress } from "../../hooks/use-test-progress";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 type Props = {
   questionBank: QuestionBankName;

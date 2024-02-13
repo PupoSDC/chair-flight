@@ -1,4 +1,4 @@
-import { trpcMsw } from "@chair-flight/trpc/mock";
+import { trpcMsw } from "@cf/trpc/mock";
 import { LayoutPublic } from "./layout-public";
 import { mockData } from "./layout-public.mock";
 import type { Meta, StoryObj } from "@storybook/react";

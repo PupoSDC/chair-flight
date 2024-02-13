@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { z } from "zod";
-import { createUsePersistenceHook } from "@chair-flight/react/components";
+import { createUsePersistenceHook } from "@cf/react/components";
 
 const userPreferencesSchema = z.object({
   examModeAutoSkip: z.boolean().default(false),

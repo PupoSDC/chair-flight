@@ -5,10 +5,10 @@ import YAML from "yaml";
 import {
   type QuestionBankName,
   questionVariantSchema,
-} from "@chair-flight/core/question-bank";
-import { container } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

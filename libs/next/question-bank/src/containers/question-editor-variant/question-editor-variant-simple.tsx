@@ -5,11 +5,11 @@ import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Button, Divider, IconButton, Stack, Typography } from "@mui/joy";
 import { Box, Sheet, Switch } from "@mui/joy";
-import { getRandomId } from "@chair-flight/base/utils";
-import { questionVariantSimpleSchema } from "@chair-flight/core/question-bank";
-import { HookFormTextArea } from "@chair-flight/react/components";
-import { HookFormErrorMessage } from "@chair-flight/react/components";
-import type { QuestionVariantSimple } from "@chair-flight/core/question-bank";
+import { getRandomId } from "@cf/base/utils";
+import { questionVariantSimpleSchema } from "@cf/core/question-bank";
+import { HookFormTextArea } from "@cf/react/components";
+import { HookFormErrorMessage } from "@cf/react/components";
+import type { QuestionVariantSimple } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 import type { ZodError } from "zod";
 

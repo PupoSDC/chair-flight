@@ -1,7 +1,4 @@
-import {
-  pageEventSchema,
-  trackEventSchema,
-} from "@chair-flight/providers/analytics";
+import { pageEventSchema, trackEventSchema } from "@cf/providers/analytics";
 import { analytics } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 

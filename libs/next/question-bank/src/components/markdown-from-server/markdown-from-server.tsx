@@ -1,6 +1,6 @@
-import { compileMarkdown } from "@chair-flight/core/markdown";
-import { Markdown } from "@chair-flight/react/markdown";
-import type { MarkdownProps } from "@chair-flight/react/markdown";
+import { compileMarkdown } from "@cf/core/markdown";
+import { Markdown } from "@cf/react/markdown";
+import type { MarkdownProps } from "@cf/react/markdown";
 import type { FunctionComponent } from "react";
 
 export type MarkdownFromServerProps = Omit<MarkdownProps, "children"> & {

@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import * as mdx from "@mdx-js/react";
 import { Box } from "@mui/joy";
 import { markdownComponents } from "../../common/components";
-import type { MdxDocument } from "@chair-flight/core/markdown";
+import type { MdxDocument } from "@cf/core/markdown";
 import type { BoxProps } from "@mui/joy";
 import type { ComponentProps, FunctionComponent } from "react";
 

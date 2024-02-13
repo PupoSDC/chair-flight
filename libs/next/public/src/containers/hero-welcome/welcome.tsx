@@ -5,16 +5,12 @@ import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Button, Box, Divider, Grid, Link, Typography } from "@mui/joy";
-import {
-  CountUp,
-  ModuleSelectionButton,
-  Typical,
-} from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { container } from "@chair-flight/trpc/client";
+import { CountUp, ModuleSelectionButton, Typical } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { container } from "@cf/trpc/client";
 import { RightContainer } from "./welcome-right-container";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {
   headerHeight?: number;

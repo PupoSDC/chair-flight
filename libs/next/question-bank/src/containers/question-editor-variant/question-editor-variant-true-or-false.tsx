@@ -3,9 +3,9 @@ import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Divider, FormLabel } from "@mui/joy";
 import { Switch } from "@mui/joy";
-import { questionVariantTrueOrFalseSchema } from "@chair-flight/core/question-bank";
-import { HookFormTextArea } from "@chair-flight/react/components";
-import type { QuestionVariantTrueOrFalse } from "@chair-flight/core/question-bank";
+import { questionVariantTrueOrFalseSchema } from "@cf/core/question-bank";
+import { HookFormTextArea } from "@cf/react/components";
+import type { QuestionVariantTrueOrFalse } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 
 const resolver = zodResolver(questionVariantTrueOrFalseSchema);

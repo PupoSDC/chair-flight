@@ -1,6 +1,6 @@
 import { useCallback, useContext, useRef } from "react";
 import { analyticsContext } from "../components/analytics-provider";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 type TrackEventMap = {
   "themeButton.switch": Record<string, never>;

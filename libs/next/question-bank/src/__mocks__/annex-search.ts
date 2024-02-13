@@ -1,5 +1,5 @@
-import type { AnnexSearchResult } from "@chair-flight/core/search";
-import type { AppRouterOutput } from "@chair-flight/trpc/client";
+import type { AnnexSearchResult } from "@cf/core/search";
+import type { AppRouterOutput } from "@cf/trpc/client";
 
 const items: AnnexSearchResult[] = [
   {

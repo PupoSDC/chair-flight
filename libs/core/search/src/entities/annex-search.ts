@@ -5,7 +5,7 @@ import type {
   QuestionBankName,
   QuestionTemplateId,
   SubjectId,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export type AnnexSearchResult = {
   id: AnnexId;

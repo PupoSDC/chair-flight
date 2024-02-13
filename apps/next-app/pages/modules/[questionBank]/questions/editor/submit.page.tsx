@@ -5,11 +5,11 @@ import {
   QuestionEditorDiff,
   QuestionEditorManager,
   QuestionEditorSubmitForm,
-} from "@chair-flight/next/question-bank";
-import { AppHead } from "@chair-flight/react/components";
-import { staticHandler } from "@chair-flight/trpc/server";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
-import type { Breadcrumbs } from "@chair-flight/next/question-bank";
+} from "@cf/next/question-bank";
+import { AppHead } from "@cf/react/components";
+import { staticHandler } from "@cf/trpc/server";
+import type { QuestionBankName } from "@cf/core/question-bank";
+import type { Breadcrumbs } from "@cf/next/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {

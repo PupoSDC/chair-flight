@@ -1,8 +1,8 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { type ExecutorContext } from "@nx/devkit";
-import { NOOP } from "@chair-flight/base/utils";
-import { questionBankValidation } from "@chair-flight/core/question-bank";
+import { NOOP } from "@cf/base/utils";
+import { questionBankValidation } from "@cf/core/question-bank";
 import { getAllFiles } from "../../src/executors/get-all-files";
 import { getPaths } from "../../src/executors/get-paths";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";

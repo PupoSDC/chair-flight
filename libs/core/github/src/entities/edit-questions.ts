@@ -2,7 +2,7 @@ import { z } from "zod";
 import {
   questionBankNameSchema,
   questionTemplateSchema,
-} from "@chair-flight/core/question-bank";
+} from "@cf/core/question-bank";
 
 export const editQuestionsPrMetaSchema = z.object({
   authorName: z.string().min(3).optional().or(z.literal("")),

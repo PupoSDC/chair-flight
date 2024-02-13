@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
-import { questionTemplateSchema } from "@chair-flight/core/question-bank";
+import { questionTemplateSchema } from "@cf/core/question-bank";
 import { QuestionBank } from "./question-bank";
-import type { QuestionBankName } from "@chair-flight/core/question-bank";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 const questionBanks: Record<QuestionBankName, QuestionBank> = {
   type: new QuestionBank("type"),

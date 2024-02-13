@@ -1,4 +1,4 @@
-import { searchParams, retrieveParams } from "@chair-flight/core/search";
+import { searchParams, retrieveParams } from "@cf/core/search";
 import {
   annexSearch,
   docSearch,

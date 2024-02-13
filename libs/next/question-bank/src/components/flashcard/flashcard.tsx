@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { Box, Button, Card, Typography, styled } from "@mui/joy";
-import { Ups } from "@chair-flight/react/components";
+import { Ups } from "@cf/react/components";
 import { MarkdownFromServer } from "../markdown-from-server";
 import type { CardProps } from "@mui/joy";
 

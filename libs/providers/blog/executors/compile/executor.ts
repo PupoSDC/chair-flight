@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
-import { NOOP } from "@chair-flight/base/utils";
+import { NOOP } from "@cf/base/utils";
 import { blogPostSchema, type BlogPost } from "../../src/entities/blog-post";
 import type { ExecutorContext } from "@nx/devkit";
 

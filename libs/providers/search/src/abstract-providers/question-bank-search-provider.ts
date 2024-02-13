@@ -1,6 +1,6 @@
 import { default as MiniSearch } from "minisearch";
-import type { SearchParams } from "@chair-flight/core/search";
-import type { QuestionBank } from "@chair-flight/providers/question-bank";
+import type { SearchParams } from "@cf/core/search";
+import type { QuestionBank } from "@cf/providers/question-bank";
 import type { SearchOptions } from "minisearch";
 
 type MandatorySearchDocument = { id: string; questionBank: string };

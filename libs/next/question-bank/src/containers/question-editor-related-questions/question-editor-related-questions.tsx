@@ -2,24 +2,20 @@ import { memo } from "react";
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as UnlinkIcon } from "@mui/icons-material/LinkOff";
 import { Box, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
-import { makeMap } from "@chair-flight/base/utils";
+import { makeMap } from "@cf/base/utils";
 import {
   type QuestionBankName,
   type QuestionTemplateId,
-} from "@chair-flight/core/question-bank";
-import {
-  LoadingButton,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
-import { Markdown } from "@chair-flight/react/markdown";
-import { trpc } from "@chair-flight/trpc/client";
-import { container, getRequiredParam } from "@chair-flight/trpc/client";
+} from "@cf/core/question-bank";
+import { LoadingButton, SearchHeader, SearchList } from "@cf/react/components";
+import { Markdown } from "@cf/react/markdown";
+import { trpc } from "@cf/trpc/client";
+import { container, getRequiredParam } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { useQuestionSearch } from "../../hooks/use-question-search";
-import type { AppRouterOutput } from "@chair-flight/trpc/server";
+import type { AppRouterOutput } from "@cf/trpc/server";
 
 type Props = {
   questionId: string;

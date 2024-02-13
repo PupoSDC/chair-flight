@@ -1,8 +1,8 @@
 import * as fs from "node:fs/promises";
-import { BlogPost, LayoutPublic } from "@chair-flight/next/public";
-import { AppHead, BackgroundFadedImage } from "@chair-flight/react/components";
-import { trpc } from "@chair-flight/trpc/client";
-import { staticHandler, staticPathsHandler } from "@chair-flight/trpc/server";
+import { BlogPost, LayoutPublic } from "@cf/next/public";
+import { AppHead, BackgroundFadedImage } from "@cf/react/components";
+import { trpc } from "@cf/trpc/client";
+import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { NextPage } from "next";
 
 type PageParams = { postId: string };

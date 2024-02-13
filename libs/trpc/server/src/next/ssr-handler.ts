@@ -1,4 +1,4 @@
-import { NotFoundError } from "@chair-flight/base/errors";
+import { NotFoundError } from "@cf/base/errors";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {
