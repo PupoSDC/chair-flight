@@ -1,3 +1,4 @@
+import { compileMarkdown } from "@chair-flight/core/markdown";
 import { getQuestionPreview } from "@chair-flight/core/question-bank";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
 import type { QuestionTemplate } from "@chair-flight/core/question-bank";
@@ -60,7 +61,7 @@ export class QuestionSearch extends QuestionBankSearchProvider<
     return {
       id: q.id,
       questionBank: q.questionBank,
-      text: getQuestionPreview(q.variant),
+      text: compileMarkdown(getQuestionPreview(q.variant)),
       subjects: q.learningObjectives.map((l) => l.split(".")[0]),
       href: `/modules/${q.questionBank}/questions/${q.id}`,
       externalIds: q.externalIds,

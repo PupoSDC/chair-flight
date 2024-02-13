@@ -8,13 +8,11 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import {
-  MarkdownClientCompressed,
-  SearchHeader,
-  SearchList,
-} from "@chair-flight/react/components";
+import { SearchHeader, SearchList } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import { trpc } from "@chair-flight/trpc/client";
 import { container, getRequiredParam } from "@chair-flight/trpc/client";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useAnnexSearch } from "../../hooks/use-annex-search";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
@@ -98,9 +96,9 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
-                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                  <MarkdownFromServer compressed sx={{ fontSize: "xs" }}>
                     {result.description}
-                  </MarkdownClientCompressed>
+                  </MarkdownFromServer>
                 </Box>
                 <Box>
                   <Tooltip title="Add to Question">
@@ -134,9 +132,9 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
                   <Typography level="h5" sx={{ fontSize: "sm" }}>
                     {result.id}
                   </Typography>
-                  <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
+                  <Markdown compressed sx={{ fontSize: "xs" }}>
                     {result.text}
-                  </MarkdownClientCompressed>
+                  </Markdown>
                 </Box>
                 <Box>
                   <Tooltip title="Remove from Question">

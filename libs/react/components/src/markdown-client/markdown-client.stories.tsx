@@ -1,6 +1,5 @@
 import { dedent } from "ts-dedent";
 import { MarkdownClient } from "./markdown-client";
-import { MarkdownClientCompressed } from "./markdown-client-compressed";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof MarkdownClient>;
@@ -23,12 +22,6 @@ export const Playground: Story = {
       type: "string",
     },
   },
-};
-
-export const MarkdownClientCompressedStory: Story = {
-  ...Playground,
-  name: "MarkdownClientCompressed",
-  render: (props) => <MarkdownClientCompressed {...props} />,
 };
 
 const meta: Meta<typeof MarkdownClient> = {

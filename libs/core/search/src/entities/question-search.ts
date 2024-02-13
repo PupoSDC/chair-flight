@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { MdDocument } from "@chair-flight/core/markdown";
 import type {
   QuestionBankName,
   SubjectId,
@@ -8,7 +9,7 @@ export type QuestionSearchResult = {
   id: string;
   questionBank: QuestionBankName;
   subjects: SubjectId[];
-  text: string;
+  text: MdDocument;
   href: string;
   learningObjectives: Array<{
     id: string;

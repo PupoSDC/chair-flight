@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { Divider, ListItemContent, Stack, Typography } from "@mui/joy";
 import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import { MarkdownClientCompressed } from "@chair-flight/react/components";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { VerticalDivider } from "../../components/vertical-divider";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
@@ -26,9 +26,7 @@ export const QuestionEditorDiffListItem = memo<{
         <Typography level="h5" sx={{ fontSize: "sm" }}>
           {questionId}
         </Typography>
-        <MarkdownClientCompressed sx={{ fontSize: "xs" }}>
-          {initial.preview}
-        </MarkdownClientCompressed>
+        <MarkdownFromServer compressed>{initial.preview}</MarkdownFromServer>
         <Divider sx={{ my: 1, mx: 2 }} />
         <Typography sx={{ fontSize: "xs" }}>
           <b>Related Questions</b>
@@ -67,14 +65,15 @@ export const QuestionEditorDiffListItem = memo<{
         <Typography level="h5" sx={{ fontSize: "sm" }}>
           {questionId}
         </Typography>
-        <MarkdownClientCompressed
+        <MarkdownFromServer
+          compressed
           sx={{
             fontSize: "xs",
             color: hasPreviewChanged ? "warning.plainColor" : undefined,
           }}
         >
           {current.preview}
-        </MarkdownClientCompressed>
+        </MarkdownFromServer>
         <Divider sx={{ my: 1, mx: 2 }} />
         <Typography
           sx={{

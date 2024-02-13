@@ -7,10 +7,8 @@ import {
   ListItemContent,
   Typography,
 } from "@mui/joy";
-import {
-  MarkdownClientCompressed,
-  SearchList,
-} from "@chair-flight/react/components";
+import { SearchList } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import type { LearningObjectiveSearchResult } from "@chair-flight/core/search";
 import type { SearchListProps } from "@chair-flight/react/components";
 
@@ -54,12 +52,12 @@ export const LearningObjectiveList = forwardRef<
               <Typography>{result.id}</Typography>
             </Link>
           </td>
-          <td>
-            <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
-          </td>
-          <Box component={"td"} fontSize={"xs"}>
-            <MarkdownClientCompressed>{result.source}</MarkdownClientCompressed>
-          </Box>
+          <Markdown component={"td"} compressed>
+            {result.text}
+          </Markdown>
+          <Markdown component={"td"} compressed>
+            {result.source}
+          </Markdown>
           <td>
             {result.courses
               .filter((c) => {
@@ -104,21 +102,17 @@ export const LearningObjectiveList = forwardRef<
                 "linear-gradient(to bottom, black 50%, transparent 100%)",
             }}
           >
-            <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
+            <Markdown compressed>{result.text}</Markdown>
             {result.source && (
               <>
                 <Divider sx={{ width: "50%", my: 0.5 }} />
                 <Typography level="body-xs">source: </Typography>
-                <Box
-                  sx={{
-                    color: "text.tertiary",
-                    fontSize: "xs",
-                  }}
+                <Markdown
+                  compressed
+                  sx={{ color: "text.tertiary", fontSize: "xs" }}
                 >
-                  <MarkdownClientCompressed>
-                    {result.source}
-                  </MarkdownClientCompressed>
-                </Box>
+                  {result.source}
+                </Markdown>
               </>
             )}
           </Box>

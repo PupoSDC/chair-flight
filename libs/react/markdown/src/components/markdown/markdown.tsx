@@ -1,7 +1,7 @@
 import { default as ReactMarkdown } from "react-markdown";
 import { Box } from "@mui/joy";
+import { markdownPlugins, type MdDocument } from "@chair-flight/core/markdown";
 import { markdownComponents } from "../../common/components";
-import type { MdDocument } from "@chair-flight/core/markdown";
 import type { BoxProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
@@ -20,23 +20,34 @@ export const Markdown: FunctionComponent<MarkdownProps> = ({
   ...otherProps
 }) => (
   <Box
+    {...otherProps}
     sx={{
       ...(compressed && {
-        "& h1, & h2, & h3, & h4, & h5, & h6, & p": {
+        "& h1, & h2, & h3, & h4, & h5, & h6": {
           margin: 0,
+          fontSize: "md",
         },
+
+        "& p": {
+          fontSize: "sm",
+        },
+
         "& ul": {
           margin: 0,
           paddingLeft: "16px",
+        },
+
+        "& li": {
+          fontSize: "xs",
         },
       }),
       ...sx,
     }}
   >
     <ReactMarkdown
-      dangerouslySetInnerHTML={children}
+      {...markdownPlugins}
       components={markdownComponents}
-      {...otherProps}
+      children={children.mdContent}
     />
   </Box>
 );

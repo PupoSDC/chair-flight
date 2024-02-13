@@ -13,11 +13,9 @@ import {
   Typography,
 } from "@mui/joy";
 import { type QuestionBankName } from "@chair-flight/core/question-bank";
-import {
-  LoadingButton,
-  MarkdownClientCompressed,
-} from "@chair-flight/react/components";
+import { LoadingButton } from "@chair-flight/react/components";
 import { trpc } from "@chair-flight/trpc/client";
+import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import type { QuestionTemplateId } from "@chair-flight/core/question-bank";
 
@@ -132,18 +130,17 @@ export const QuestionManagerEditorListItem = memo<{
           </Tooltip>
         )}
       </Stack>
-      <MarkdownClientCompressed
+      <MarkdownFromServer
+        compressed
         sx={{
-          fontSize: "xs",
           color: hasPreviewChanged ? "warning.plainColor" : undefined,
         }}
       >
         {current.preview}
-      </MarkdownClientCompressed>
+      </MarkdownFromServer>
       <Typography
         sx={{
           mt: 1,
-          fontSize: "xs",
           color: hasRelatedQsChanged ? "warning.plainColor" : undefined,
         }}
       >
@@ -153,7 +150,6 @@ export const QuestionManagerEditorListItem = memo<{
       </Typography>
       <Typography
         sx={{
-          fontSize: "xs",
           color: hasLosChanged ? "warning.plainColor" : undefined,
         }}
       >
@@ -163,7 +159,6 @@ export const QuestionManagerEditorListItem = memo<{
       </Typography>
       <Typography
         sx={{
-          fontSize: "xs",
           color: hasAnnexesChanged ? "warning.plainColor" : undefined,
         }}
       >

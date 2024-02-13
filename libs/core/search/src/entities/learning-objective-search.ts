@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { MdDocument } from "@chair-flight/core/markdown";
 import type {
   CourseId,
   LearningObjectiveId,
@@ -12,8 +13,8 @@ export type LearningObjectiveSearchResult = {
   href: string;
   parentId: LearningObjectiveId | CourseId;
   courses: Array<{ id: CourseId; text: string }>;
-  text: string;
-  source: string;
+  text: MdDocument;
+  source: MdDocument;
   subject: SubjectId;
   numberOfQuestions: number;
 };

@@ -1,9 +1,7 @@
 import { forwardRef } from "react";
 import { Box, Link, ListItemContent, Typography } from "@mui/joy";
-import {
-  MarkdownClientCompressed,
-  SearchList,
-} from "@chair-flight/react/components";
+import { SearchList } from "@chair-flight/react/components";
+import { Markdown } from "@chair-flight/react/markdown";
 import type { QuestionSearchResult } from "@chair-flight/core/search";
 import type { SearchListProps } from "@chair-flight/react/components";
 
@@ -43,9 +41,9 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
                 <Typography>{result.id}</Typography>
               </Link>
             </td>
-            <td>
-              <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
-            </td>
+            <Markdown component="td" compressed>
+              {result.text}
+            </Markdown>
             <td>
               {result.learningObjectives.slice(0, 5).map(({ id, href }) => (
                 <Link
@@ -108,7 +106,7 @@ export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
                   "linear-gradient(to bottom, black 50%, transparent 100%)",
               }}
             >
-              <MarkdownClientCompressed>{result.text}</MarkdownClientCompressed>
+              <Markdown compressed>{result.text}</Markdown>
             </Box>
           </ListItemContent>
         )}

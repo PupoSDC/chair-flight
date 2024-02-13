@@ -2,10 +2,7 @@ import { forwardRef } from "react";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { default as CrossIcon } from "@mui/icons-material/Close";
 import { Box, Sheet, Stack, Typography } from "@mui/joy";
-import {
-  MarkdownClient,
-  MarkdownClientCompressed,
-} from "@chair-flight/react/components";
+import { MarkdownFromServer } from "@chair-flight/next/question-bank";
 import type { SheetProps } from "@mui/joy";
 
 export type TestQuestionResultProps = {
@@ -51,9 +48,9 @@ export const TestQuestionResult = forwardRef<
         <Typography level="body-sm" fontWeight={900}>
           {questionTemplateId}
         </Typography>
-        <Box sx={{ fontSize: "sm" }}>
-          <MarkdownClient>{question ?? ""}</MarkdownClient>
-        </Box>
+        <MarkdownFromServer compressed sx={{ fontSize: "sm" }}>
+          {question ?? ""}
+        </MarkdownFromServer>
         <Stack direction="row" sx={{ pt: 1, gap: 1, alignItems: "center" }}>
           <Box sx={{ height: 18, width: 18, bgcolor: "success.solidBg" }}>
             {correct && (
@@ -61,9 +58,9 @@ export const TestQuestionResult = forwardRef<
             )}
           </Box>
           <Box sx={{ fontSize: "sm" }}>
-            <MarkdownClientCompressed>
+            <MarkdownFromServer compressed>
               {correctOption ?? ""}
-            </MarkdownClientCompressed>
+            </MarkdownFromServer>
           </Box>
         </Stack>
         {!correct && (
@@ -71,13 +68,9 @@ export const TestQuestionResult = forwardRef<
             <Box sx={{ height: 18, width: 18, bgcolor: "danger.solidBg" }}>
               <CrossIcon fontSize={"lg"} sx={{ color: "danger.solidColor" }} />
             </Box>
-            <Box sx={{ fontSize: "sm" }}>
-              {selectedOption ? (
-                <MarkdownClientCompressed children={selectedOption} />
-              ) : (
-                <Typography children="No option selected" />
-              )}
-            </Box>
+            <MarkdownFromServer compressed sx={{ fontSize: "sm" }}>
+              {selectedOption ?? "No option selected"}
+            </MarkdownFromServer>
           </Stack>
         )}
       </Sheet>

@@ -1,5 +1,5 @@
 import { compile } from "@mdx-js/mdx";
-import { plugins } from "../common/plugins";
+import { markdownPlugins } from "../common/plugins";
 
 const MATCH_CODE_BLOCKS = /```tsx eval((?:.|\n)*?)```/g;
 
@@ -16,7 +16,7 @@ export const compileMdx = async (text: string): Promise<MdxDocument> => {
   const mdxContent = await compile(sourceString, {
     outputFormat: "function-body",
     providerImportSource: "@mdx-js/react",
-    ...plugins,
+    ...markdownPlugins,
   }).then(String);
 
   return { mdxContent };
