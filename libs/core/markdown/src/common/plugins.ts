@@ -1,9 +1,9 @@
-import type { PluggableList } from "@mdx-js/mdx/lib/core";
 import { default as rehypeKatex } from "rehype-katex";
 import { default as remarkGemoji } from "remark-gemoji";
 import { default as remarkGfm } from "remark-gfm";
 import { default as remarkMath } from "remark-math";
 import { default as remarkSupersub } from "remark-supersub";
+import type { PluggableList } from "@mdx-js/mdx/lib/core";
 
 export const markdownPlugins = {
   remarkPlugins: [
