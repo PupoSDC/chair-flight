@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Engine ignition
 ---
 
-```tsx
+```tsx ignore
 <Question lo={["021.11.03.05.04"]} id="4rxZOsWO">
   <Text variant="multipleCorrect" select="3">
     The use of igniters in a gas turbine engine is required...

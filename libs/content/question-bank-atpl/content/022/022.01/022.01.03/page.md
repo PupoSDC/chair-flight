@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Fuel gauge
 ---
 
-```tsx
+```tsx ignore
 <Question id="FR02C42MCH" lo={["022.01.03.01.01"]}>
   <Text variant="oneTwo">
     Which statement concerning <Subject /> measurement is correct?

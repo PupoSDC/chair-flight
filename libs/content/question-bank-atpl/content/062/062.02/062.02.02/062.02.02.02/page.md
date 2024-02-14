@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Presentation and interpretation
 ---
 
-```tsx
+```tsx ignore
 <Question id="ZXHFCH5M12" lo={["062.02.02.02.06"]}>
   <Text variant="oneCorrect">
     Which statement is correct for${subject} towards an NDB in an area with

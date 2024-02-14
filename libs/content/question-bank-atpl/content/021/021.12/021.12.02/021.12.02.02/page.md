@@ -7,7 +7,7 @@ title: Fire detection
 
 ### Fire loop
 
-```tsx
+```tsx ignore
 <Question id="90KFKR23NI" lo={["021.12.02.02.01"]}>
   <Text variant="oneCorrect">
     What happened when the a fire loop measures a <Subject />?
@@ -27,7 +27,7 @@ title: Fire detection
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question lo={["021.12.02.02.04"]} id="YS1u4IAh">
   <Text variant="oneCorrect">
     If an engine fire detection loop is broken, what is the indication when the

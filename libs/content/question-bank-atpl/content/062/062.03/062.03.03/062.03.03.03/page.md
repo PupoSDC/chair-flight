@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Coverage and range
 ---
 
-```tsx
+```tsx ignore
 <Question id="0DXAR55BF4" lo={["062.03.03.03.01"]}>
   <Text variant="oneCorrect">
     In which mode of operation does the aircraft weather radar use a ${subject}{" "}

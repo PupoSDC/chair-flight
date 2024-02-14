@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Principles
 ---
 
-```tsx
+```tsx ignore
 <Question
   id="IYAQMWOBSR"
   id="uWiU0STpv8"
@@ -40,7 +40,7 @@ title: Principles
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="IYAQMWOBSL" lo={["062.02.03.01.02", "062.02.03.01.03"]}>
   <Text variant="oneCorrect">A frequency of${subject} is typical for....</Text>
   <Option

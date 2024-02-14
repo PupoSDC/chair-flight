@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Principles
 ---
 
-```tsx
+```tsx ignore
 <Question id="AQEI7SEAHL" variant="definition" lo={["062.02.05.01.12"]}>
   <Text variant="oneCorrect" key="1">
     The ILS${subject} modulation frequency is...
@@ -52,7 +52,7 @@ title: Principles
 </Question>
 ```
 
-````tsx
+````tsx ignore
 <Question
   id="AQEI7SEAH2"
   id="VqTjeIMnmC"

@@ -18,7 +18,7 @@ pretty much all other systems in an aircraft that require power, such as:
 - Hydraulic Pumps
 - AC generator
 
-```tsx
+```tsx ignore
 <Question
   id="A3UTDEXDG5"
   lo={["021.11.03.04.01"]}

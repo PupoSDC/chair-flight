@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Application for navigation
 ---
 
-```tsx
+```tsx ignore
 <Question id="E8C4WFTCNN" lo={["062.03.03.06.03"]}>
   <Text variant="oneCorrect">AWR uses doppler shift to...</Text>
   <Option correct>

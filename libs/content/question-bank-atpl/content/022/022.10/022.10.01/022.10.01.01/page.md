@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Definitions and transmission modes
 ---
 
-```tsx
+```tsx ignore
 <Question id="LBOZLV4EBE" lo={["022.10.01.01.05"]}>
   <Text variant="oneCorrect">
     In a datalink system what is <Subject /> communication?

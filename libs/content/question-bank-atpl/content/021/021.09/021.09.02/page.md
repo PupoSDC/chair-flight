@@ -50,7 +50,7 @@ resulting in a fire or explosion.
 Thermal runaway can be prevented by monitoring battery temperature, and stopping
 to charge if the temperature gets too high.
 
-```tsx
+```tsx ignore
 <Question id="4J6ODTINMG" lo="021.09.02.01.03">
   <Text variant="oneCorrect">
     The voltage of a fully charged <Subject /> is approximately
@@ -63,7 +63,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="X70ITOG264" lo="021.09.02.01.03">
   <Text variant="oneCorrect">
     Why are the batteries used in modern aircraft of the nickel-cadmium type?
@@ -106,7 +106,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="QAKJC6KTEM" lo={["021.09.02.01.05", "021.09.02.01.06"]}>
   <Text variant="oneCorrect">
     The sentence that best describes <Subject /> is...
@@ -133,7 +133,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="P1D9JS6GDN" lo="021.09.02.01.09">
   <Text variant="oneCorrect">How should a laptop battery fire be handled</Text>
   <Option
@@ -156,7 +156,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="O3X8ODM0T6" lo="021.09.02.01.10">
   <Text variant="oneCorrect">
     What can be the cause of a significant increase in battery temperature?
@@ -171,7 +171,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="7Y7VCNN3IY" lo="021.09.02.01.10">
   <Text variant="oneCorrect">
     A lithium ion battery has to be considered most unsafe when...
@@ -195,7 +195,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="CTEQCESK2M" lo="021.09.02.01.10">
   <Text variant="oneCorrect">
     Large NiCd batteries in aircraft need to be closely monitored during
@@ -221,7 +221,7 @@ to charge if the temperature gets too high.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="MJAHQSG124" lo="021.09.02.01.10">
   <Text variant="oneTwo">Which of these statements are correct?</Text>
   <Option correct>

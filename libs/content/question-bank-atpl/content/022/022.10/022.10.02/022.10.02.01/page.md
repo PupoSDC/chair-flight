@@ -15,7 +15,7 @@ Controller Pilot Data Link Communication contains the stack of predefined
 messages and formats on the (M)CDU that allow the pilot to communicate with ATC.
 Clearances and messages are exchanged via the CPDLC standards and protocols
 
-```tsx
+```tsx ignore
 <Question id="CP3BX5VU6B" lo={["022.10.02.01.01"]}>
   <Text variant="oneCorrect">What is the FANS concept?</Text>
   <Text variant="oneCorrect">
@@ -53,7 +53,7 @@ Clearances and messages are exchanged via the CPDLC standards and protocols
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="NJDX3WKYYB" lo={["022.10.02.01.02"]}>
   <Text variant="oneCorrect">
     A <Subject /> system makes used of the...
@@ -71,7 +71,7 @@ Clearances and messages are exchanged via the CPDLC standards and protocols
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="NJDX3WKYYA" lo={["022.10.02.01.03"]}>
   <Text variant="oneCorrect">
     What is the purpose of <Subject /> system in a FANS application

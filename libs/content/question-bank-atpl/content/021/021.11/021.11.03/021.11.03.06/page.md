@@ -12,7 +12,7 @@ title: Engine starter
 3.  ignition
 4.  fuel
 
-```tsx
+```tsx ignore
 <Question
   id="MCD5JNGL7F"
   lo="021.11.03.06.04"

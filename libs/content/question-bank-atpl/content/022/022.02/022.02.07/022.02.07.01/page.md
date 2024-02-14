@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Operating principle, display, CAS, TAS and Mach number
 ---
 
-```tsx
+```tsx ignore
 <Question id="0U97BLJONX" lo={["022.02.07.01.01"]}>
   <Text variant="oneCorrect">
     What is the speed of sound at <Subject /> in a standard atmosphere?

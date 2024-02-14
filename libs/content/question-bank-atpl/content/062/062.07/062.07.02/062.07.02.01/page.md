@@ -8,7 +8,7 @@ title: Area navigation (RNAV) and required navigation performance (RNP)
 - RNP Operations **require** performance monitoring and alerting.
 - RNAV Operatios **do not** performance monitoring and alerting.
 
-```tsx
+```tsx ignore
 <Question id="MU4W2LPN6N" lo={["062.07.02.01.01"]} contentRef="## Summary">
   <Text variant="oneCorrect">What is the difference between RNAV and RNP?</Text>
   <Text variant="oneCorrect">

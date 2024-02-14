@@ -6,9 +6,11 @@ import { docSchema } from "./question-bank-doc";
 import { LearningObjectiveSchema } from "./question-bank-learning-objectives";
 import { questionTemplateSchema } from "./question-bank-question";
 import { subjectSchema } from "./question-bank-subject";
+import { questionBankNameSchema } from "./question-bank-name";
 
 export const questionBankValidation = z
   .object({
+    bankName: questionBankNameSchema,
     questionTemplates: z.array(questionTemplateSchema),
     docs: z.array(docSchema),
     annexes: z.array(annexSchema),
@@ -88,14 +90,13 @@ export const questionBankValidation = z
     });
 
     val.docs.forEach((d) => {
-      d.questions.forEach((q) => {
-        if (questionIds[q]) return;
+      if (!loIds[d.id] || d.id !== val.bankName) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: `Question ${q} does not exist`,
-          path: ["docs", d.id, "questions"],
-        });
-      });
+          message: `Doc ID ${d.id} does not match a Learning Objective`,
+          path: ["docs", d.id, "children"],
+        }); 
+      }
 
       d.children.forEach((c) => {
         if (docIds[c]) return;

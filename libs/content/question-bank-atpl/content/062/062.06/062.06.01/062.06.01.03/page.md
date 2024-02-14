@@ -44,7 +44,7 @@ Errors from small bounces are significantly harder, but can be minimized by
 using specialized antennas that better measure the "direction" of the incoming
 signal and split bounced signals based on their incoming direction.
 
-```tsx
+```tsx ignore
 <Question id="QJ03TX610J" lo={["062.06.01.03.01"]} contentRef="## Summary">
   <Text variant="oneCorrect">
     Which of the following is a source error that affects the accuracy and

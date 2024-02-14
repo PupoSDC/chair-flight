@@ -13,7 +13,7 @@ title: "Aeroplane: fly-by-wire (FBW) control systems"
 - **PCU**: Power Control Unit. Receives electric analogue and activates an
   Hydraulic actuator
 
-```tsx
+```tsx ignore
 <Question id="2NR7C78UF6" lo={["021.05.04.01.02"]}>
   <Text variant="oneCorrect">
     Which of these statements reflect an advantage of Fly-By-Wire systems?
@@ -39,7 +39,7 @@ title: "Aeroplane: fly-by-wire (FBW) control systems"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="GTCTUJJC7R" lo={["021.05.04.01.03"]}>
   <Text variant="oneCorrect">
     A Fly by Wire system is always irreversible because...
@@ -63,7 +63,7 @@ title: "Aeroplane: fly-by-wire (FBW) control systems"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="A3OEFMF4X6" lo={["021.05.04.01.04"]}>
   <Text variant="oneCorrect">
     In a Modern fly-by-wire system, what best describes "<Subject />" ?
@@ -105,7 +105,7 @@ title: "Aeroplane: fly-by-wire (FBW) control systems"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="XK4SSFPEZD" lo={["021.05.04.01.04"]}>
   <Text variant="oneCorrect">
     On a fly-by-wire system which mode of operation is the most <Subject />
@@ -120,7 +120,7 @@ title: "Aeroplane: fly-by-wire (FBW) control systems"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="9SHZGSOVWK" lo={["21.05.04.01.07"]}>
   <Text variant="oneCorrect">
     When operating an aircraft with a side stick, how can a captain take over

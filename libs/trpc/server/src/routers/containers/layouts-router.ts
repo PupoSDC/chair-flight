@@ -37,7 +37,7 @@ export const layoutsContainersRouter = router({
         },
         docs: {
           href: `/modules/${questionBank}/docs`,
-          isVisible: false, //await bank.has("docs"),
+          isVisible: await bank.has("docs"),
         },
         flashcards: {
           href: `/modules/${questionBank}/flashcards`,

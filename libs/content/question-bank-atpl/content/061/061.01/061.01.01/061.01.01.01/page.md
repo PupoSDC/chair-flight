@@ -23,7 +23,7 @@ $$
 21600 \times 1.852 = 40000 km
 $$
 
-```tsx
+```tsx ignore
 <Question
   id="W2UOXRL0RG"
   lo={["061.01.01.01.03"]}

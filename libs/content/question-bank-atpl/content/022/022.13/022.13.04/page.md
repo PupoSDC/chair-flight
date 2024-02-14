@@ -6,7 +6,7 @@ title: Engine parameters, crew warnings, aircraft systems, procedure and mission
   display systems
 ---
 
-```tsx
+```tsx ignore
 <Question
   id="60NCOD4NUE"
   id="aLNorRTmmn"

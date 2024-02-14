@@ -22,7 +22,7 @@ import type { ExecutorContext } from "@nx/devkit";
 type ExecutorOptions = Record<string, never>;
 
 const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const { contentFolder, subjectsJson, coursesJson, losJson, projectName } =
+  const { bankName, contentFolder, subjectsJson, coursesJson, losJson, projectName } =
     getPaths({
       context,
     });
@@ -50,6 +50,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   });
 
   questionBankValidation.parse({
+    bankName,
     questionTemplates,
     docs,
     annexes,

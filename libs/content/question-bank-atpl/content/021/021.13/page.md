@@ -1,10 +1,11 @@
 ---
 id: "021.13"
+parent: "021"
 questionBank: "atpl"
 title: OXYGEN SYSTEMS
 ---
 
-```tsx
+```tsx ignore
 <Question id="JL3STNNAWE" lo="021.13.01.01.04">
   <Text variant="oneCorrect">
     The type of aircraft oxygen system intended for use by <Subject /> passenger
@@ -18,7 +19,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JL3STNNAWD" lo="021.13.01.01.03">
   <Text variant="oneCorrect">
     What is the purpose of first-aid portable oxygen bottles?
@@ -38,7 +39,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JL3STNNAWF" lo="021.13.01.01.03">
   <Text variant="oneCorrect">A passenger oxygen mask is...</Text>
   <Option
@@ -62,7 +63,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JL3STNNAWG" lo="021.13.01.01.03">
   <Text variant="multipleCorrect" select={6}>
     Fixed oxygen systems in pressurised aeroplanes are used to provide oxygen...
@@ -83,7 +84,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JL3STNNAWH" lo={"021.13.01.01.03"}>
   <Text variant="oneCorrect">
     Which of these statements concerning oxygen on board of passenger transport
@@ -121,7 +122,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB48UMD" lo={"021.13.01.01.06"}>
   <Text variant="oneCorrect">
     An oxygen supply system must be kept free of oil or grease as...
@@ -158,7 +159,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB48UME" lo={["021.13.01.01.04"]}>
   <Text variant="multipleCorrect" select={4}>
     The opening of the doors giving access to the oxygen masks for the
@@ -178,7 +179,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB48UMC" lo={["021.13.01.01.xx"]}>
   <Text variant="oneCorrect">
     The replenishment of an oxygen bottle can only be done when...
@@ -196,7 +197,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB48UMP" lo={["021.13.01.01.xx"]}>
   <Text variant="oneCorrect">
     You can determine the amount of oxygen in a portable bottle by observing...
@@ -209,7 +210,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB48URE" lo={["021.13.01.01.03"]}>
   <Text variant="multipleCorrect" select={5}>
     The disadvantages of a <Subject /> oxygen source for the passenger cabin
@@ -231,7 +232,7 @@ title: OXYGEN SYSTEMS
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="Q2EHB38UME" lo={["021.13.01.01.01"]}>
   <Text variant="oneCorrect">
     What is one of the purposes of the oxygen regulator mechanism?

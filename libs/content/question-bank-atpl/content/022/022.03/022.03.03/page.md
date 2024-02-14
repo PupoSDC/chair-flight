@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Direct-reading magnetic compass
 ---
 
-```tsx
+```tsx ignore
 <Question id="S62T6YB1FB" lo={["022.03.03.01.04"]}>
   <Text variant="oneCorrect">
     Your aircraft is lined up Runway 25, which is aligned with a magnetic

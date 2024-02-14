@@ -41,7 +41,7 @@ constant volume).
 
 [Source](https://en.wikipedia.org/wiki/Free-turbine_turboshaft)
 
-```tsx
+```tsx ignore
 <Question id="EZZV2N5LJ0" lo="021.11.01.02.09">
   <Text variant="oneTwo">
     which statement is correct for a gas turbine engine with a constant speed
@@ -127,7 +127,7 @@ constant volume).
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question lo={["021.11.01.02.14"]} id="VUBWszQa">
   <Text variant="oneCorrect">
     How can Specific fuel consumption for a turbo-shaft engine be expressed?

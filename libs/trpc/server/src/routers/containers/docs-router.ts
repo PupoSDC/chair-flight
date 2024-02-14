@@ -27,17 +27,17 @@ export const docsContainersRouter = router({
         title: `[${rawDoc.id}] ${rawDoc.title}`,
         description: "....",
         isEmpty: rawDoc.empty,
-        learningObjective: rawDoc.learningObjectives,
+        learningObjective: rawDoc.id,
         href: `/modules/${input.questionBank}/docs/${rawDoc.id}`,
         parent: parent
           ? {
-              href: `/modules/${input.questionBank}/docs/${parent.id}`,
-              title: `[${parent.learningObjectives}] ${parent.title}`,
+              href: `/modules/${parent.questionBank}/docs/${parent.id}`,
+              title: `[${parent.id}] ${parent.title}`,
             }
           : null,
         children: children.map((child) => ({
           href: `/modules/${input.questionBank}/docs/${child.id}`,
-          title: `[${child.learningObjectives}] ${child.title}`,
+          title: `[${child.id}] ${child.title}`,
           isEmpty: child.empty,
         })),
       };

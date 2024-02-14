@@ -6,7 +6,7 @@ title: Head-up display (HUD), synthetic vision system (SVS) and enhanced visual
   system (EVS)
 ---
 
-```tsx
+```tsx ignore
 <Question id="DY070N3V0O" lo={["022.13.07.01.05", "022.13.07.01.06"]}>
   <Text variant="oneCorrect">
     What is the principle of operation of a <Subject />?

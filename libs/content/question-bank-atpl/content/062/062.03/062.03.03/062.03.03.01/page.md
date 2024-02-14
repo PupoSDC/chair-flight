@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Principles
 ---
 
-```tsx
+```tsx ignore
 <Question id="135TWL6JM9" lo={["062.03.03.01.01"]}>
   <Text variant="multipleCorrect" select={3}>
     What are considered the main tasks of the airborne weather radar?
@@ -27,7 +27,7 @@ title: Principles
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="135TWL6JM2" lo={["062.03.03.01.02"]}>
   <Text variant="oneCorrect">
     Airborne weather radar systems use a wavelength of approximately 3 cm in
@@ -44,7 +44,7 @@ title: Principles
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="135TWL6JM3" lo={["062.03.03.01.04"]}>
   <Text variant="oneCorrect">
     In the Mapping Mode of an Airborne Weather Radar which can utilise two
@@ -68,7 +68,7 @@ title: Principles
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="135TWL6JM4" lo={["062.03.03.01.04"]}>
   <Text variant="oneCorrect">
     When the airborne weather radar is operating in it's primary (WX) mode, to

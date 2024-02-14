@@ -9,7 +9,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/joy";
-import { DocContent, LayoutModule } from "@cf/next/question-bank";
+import { DocContent, LayoutModule, LearningObjectiveQuestions } from "@cf/next/question-bank";
 import { AppHead, useDisclose, useMediaQuery } from "@cf/react/components";
 import { trpc } from "@cf/trpc/client";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
@@ -106,6 +106,10 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
           <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
             Questions
           </Typography>
+          <LearningObjectiveQuestions 
+            questionBank={questionBank}
+            learningObjectiveId={docId} 
+          />
         </Drawer>
       </Stack>
     </LayoutModule>
@@ -115,10 +119,11 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
 export const getStaticProps = staticHandler<PageProps, PageParams>(
   async ({ params: rawParams, helper }) => {
     const data = await helper.containers.docs.getDoc.fetch(rawParams);
-    const learningObjective = data.doc.learningObjective;
-    const params = { ...rawParams, learningObjective };
+    const learningObjectiveId = data.doc.learningObjective;
+    const params = { ...rawParams, learningObjectiveId };
     await LayoutModule.getData({ helper, params });
     await DocContent.getData({ helper, params });
+    await LearningObjectiveQuestions.getData({ helper, params });
     return { props: params };
   },
   fs,

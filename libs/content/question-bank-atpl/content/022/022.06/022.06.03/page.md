@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: "Flight director: design and operation"
 ---
 
-```tsx
+```tsx ignore
 <Question id="V0I12D7BG7" lo={["022.06.03.01.06"]}>
   <Text variant="oneCorrect">The flight director computer continuously:</Text>
   <Option>compares the computed attitude with the EGPWS signals.</Option>

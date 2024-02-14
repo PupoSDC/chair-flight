@@ -15,7 +15,7 @@ inclination of the curve is the highest.
 
 ![Hours of daylight in Cologne, where EASA's HQ is located](images/061.05.03-01)
 
-```tsx
+```tsx ignore
 <Question id="WPIQP8L3HV" lo={["061.05.03.01.03"]}>
   <Text variant="oneCorrect">
     Which of the following statements is correct?

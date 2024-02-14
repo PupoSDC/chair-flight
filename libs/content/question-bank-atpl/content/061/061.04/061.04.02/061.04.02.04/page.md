@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Lambert
 ---
 
-```tsx
+```tsx ignore
 <Question id="QPDIII88HS" lo={["061.04.02.04.04"]}>
   <Text variant="oneCorrect">
     The angle between the true great-circle track and the true rhumb-line track

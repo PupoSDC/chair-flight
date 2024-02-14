@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Specific RNAV and RNP system functions
 ---
 
-```tsx
+```tsx ignore
 <Question id="4PWM2V802Y" id="quZa9eGbMY" variant="definition" lo={['062.07.03.03.06']}>
   <Text variant="oneCorrect">PBN path terminator "<Subject />" means...</Text>
   <Option id="quZa9eGbMY-1" subject={[["IF'"]]}>Initial Fix</Option>

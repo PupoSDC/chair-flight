@@ -56,7 +56,7 @@ check by pressure release valves.
 
 Remember: `High Temperature and Low Pressure => BAD!`.
 
-```tsx
+```tsx ignore
 <Question id="LFS7CP9SL2" lo="021.11.06.01.01">
   <Text variant="oneCorrect">
     An APU is designed to provide power for ground operations, but it can also
@@ -78,7 +78,7 @@ Remember: `High Temperature and Low Pressure => BAD!`.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JG9GDLCXB9" lo="021.11.06.01.04">
   <Text variant="oneCorrect">
     Which Parameter is indicated during APU Start
@@ -97,7 +97,7 @@ Remember: `High Temperature and Low Pressure => BAD!`.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JG9GDLCXB8" lo="021.11.06.01.01">
   <Text variant="multipleCorrect" select={6}>
     On the ground the APU can provide:
@@ -112,7 +112,7 @@ Remember: `High Temperature and Low Pressure => BAD!`.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JG9GDLCXB7" lo="021.11.06.01.01">
   <Text variant="oneCorrect">The APU has its own AC generator which</Text>
   <Option correct>
@@ -133,7 +133,7 @@ Remember: `High Temperature and Low Pressure => BAD!`.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="JG9GDLCXB6" lo="021.11.06.01.05">
   <Text variant="multipleCorrect" select={6}>
     What would cause an APU to automatically shut down?

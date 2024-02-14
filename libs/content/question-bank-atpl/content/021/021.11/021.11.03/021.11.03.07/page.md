@@ -25,7 +25,7 @@ such as:
 - The **reverser doors remain stowed** with the **reverser lever in the
   deployed** position.
 
-```tsx
+```tsx ignore
 <Question
   id="8KU9V11YTC"
   lo={["021.11.03.07.07"]}

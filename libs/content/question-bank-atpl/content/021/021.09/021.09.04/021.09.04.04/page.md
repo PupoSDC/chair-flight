@@ -7,7 +7,7 @@ title:
   bus switching during normal and failure operation, indications and warnings"
 ---
 
-```tsx
+```tsx ignore
 <Question id="8JI7TJL7FH" lo={["021.09.04.04.01"]} oldQuestion>
   <Text variant="multipleCorrect" select={4}>
     In regards to the Generator Control Unit, it can be said that...

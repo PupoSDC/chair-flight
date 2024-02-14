@@ -22,7 +22,7 @@ interrogators. Regardless, 100 is a good estimate of the capacity of a DME.
 If the DME is over capacity, the transponders with the highest power will get
 replies. these are not necessarily
 
-```tsx
+```tsx ignore
 <Question id="BFTIVCVIHG" lo={["062.02.04.03.01"]}>
   <Text variant="oneCorrect">
     Why can DME stations only send distance information to approximately 100

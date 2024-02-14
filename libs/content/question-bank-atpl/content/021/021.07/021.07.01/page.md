@@ -7,7 +7,7 @@ title: Types, operation, indications
 
 ... and warnings, operational limitations
 
-```tsx
+```tsx ignore
 <Question id="9O2VP4ZBFX" lo="021.07.01.01.02">
   <Text variant="multipleCorrect" select={4}>
     The elements that must be protected using an anti-icing in a turboprop
@@ -31,7 +31,7 @@ title: Types, operation, indications
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="V4OY3M6VPZ" lo="021.07.01.01.02">
   <Text variant="multipleCorrect" select={5}>
     The elements that must be protected against icing on a large transport

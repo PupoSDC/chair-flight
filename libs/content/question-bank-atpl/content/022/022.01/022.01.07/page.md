@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Engine torquemeter
 ---
 
-```tsx
+```tsx ignore
 <Question id="5PXSKOPIP3" lo={["022.01.07.01.05"]}>
   <Text variant="oneCorrect">
     What is measure by the sensors of an <Subject /> torquemeter on aeroplanes?

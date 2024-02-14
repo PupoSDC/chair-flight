@@ -7,7 +7,7 @@ title: Principles
 
 ### BFO - Beat Frequency Oscilator
 
-```tsx
+```tsx ignore
 <Question id="0C7C6GXD6A" lo={}>
   <Text variant="oneCorrect">
     Which of these statements regarding a BFO is correct?

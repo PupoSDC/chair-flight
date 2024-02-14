@@ -21,7 +21,7 @@ in turn will _choke_ the combustion chambers and lead to a flame-out.
 
 Compressor stall and surge are more common when the engine is at low RPMs
 
-```tsx
+```tsx ignore
 <Question id="YVGGRRTEBH" lo={["021.11.02.02.09", "021.11.02.04.09"]}>
   <Text variant="oneCorrect">
     Which of the following statements are true regarding the flow in a
@@ -91,7 +91,7 @@ Compressor stall and surge are more common when the engine is at low RPMs
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question
   id="K8DCDLL0FU"
   id="jmV92WWwuZ"

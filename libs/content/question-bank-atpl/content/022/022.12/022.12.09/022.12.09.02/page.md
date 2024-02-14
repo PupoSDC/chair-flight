@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: "Terrain-avoidance warning system (TAWS); other name: enhanced GPWS (EGPWS) "
 ---
 
-```tsx
+```tsx ignore
 <Question id="FOWLP95ZSA" lo={["022.12.09.02.04"]}>
   <Text variant="oneCorrect">
     What time is left for a pilot to respond to an EGPWS <Subject /> alert

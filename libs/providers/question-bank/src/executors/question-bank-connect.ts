@@ -181,11 +181,11 @@ export const connectQuestionBank = ({
     docsMap[d.parent].children.push(d.id);
   });
 
-  // Connect docs to Subjects
+  // Connect docs to Subjects and Learning Objectives
   docs.forEach((doc) => {
-    doc.subject =
-      doc.id.split(".").length === 1
-        ? doc.id
-        : learningObjectiveToSubject[doc.id];
+    const lo = learningObjectivesMap[doc.id];
+    if (!lo) return;
+    doc.learningObjective =  lo.id;
+    doc.subject = lo.subject;
   });
 };

@@ -60,7 +60,7 @@ export const DocSearch = container<Props, Params, Data>(
             <thead>
               <tr>
                 <th style={{ width: 140 }}>Subject</th>
-                <th style={{ width: 160 }}>Learning Objective</th>
+                <th style={{ width: 160 }}>ID</th>
                 <th>Title</th>
                 <th style={{ width: 100 }}>Status</th>
               </tr>
@@ -70,14 +70,14 @@ export const DocSearch = container<Props, Params, Data>(
             <tr>
               <td>{serverData.subjectMap[result.subject]}</td>
               <td>
-                {result.learningObjectives.map((lo) => (
-                  <Link href={lo.href} key={lo.id}>
-                    {lo.id}
-                  </Link>
-                ))}
+                <Link href={result.href} key={result.id}>
+                  {result.id}
+                </Link>
               </td>
               <td>
-                <Link href={result.href}>{result.title}</Link>
+                <Link href={result.href}>
+                  {result.title}
+                </Link>
               </td>
               <td>
                 {result.empty ? (

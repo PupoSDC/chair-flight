@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Principles
 ---
 
-```tsx
+```tsx ignore
 <Question id="M3B7UEDWXK" lo={["062.03.04.01.04"]}>
   <Text variant="oneCorrect">
     Which of the following constitutes an advantage of SSR when compared to a

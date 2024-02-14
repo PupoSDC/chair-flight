@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Modes and codes
 ---
 
-```tsx
+```tsx ignore
 <Question id="1IHIHNNVJX" lo={["062.03.04.02.03"]}>
   <Text variant="oneCorrect">
     Which of these statements is correct in regards to SSR?
@@ -57,7 +57,7 @@ title: Modes and codes
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="V8ABVTFN3O" lo={["062.03.04.02.05"]}>
   <Text variant="oneCorrect">
     What is the maximum number of usable SSR transponder codes in Mode A?
@@ -77,7 +77,7 @@ title: Modes and codes
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="V8ABVTFN3P" lo={["062.03.04.02.07"]}>
   <Text variant="oneCorrect">
     The operation of the transponder ident button...
@@ -108,7 +108,7 @@ title: Modes and codes
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="J1N8OBFLFH" lo={["062.03.04.02.13", "062.03.04.02.06"]}>
   <Text variant="oneCorrect">
     Mode${subject} transponders, the pressure altitude is reported in \_\_\_

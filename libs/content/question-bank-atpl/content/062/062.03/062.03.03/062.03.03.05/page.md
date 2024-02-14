@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Factors affecting range and accuracy
 ---
 
-```tsx
+```tsx ignore
 <Question id="2TEM6QSWUA" lo={["062.03.03.05.01", "062.01.02.03.02"]}>
   <Text variant="oneCorrect" subject={[["AWR shadowing"]]}>
     Regarding the AWR, what is shadowing?

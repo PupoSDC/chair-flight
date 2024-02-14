@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: General
 ---
 
-```tsx
+```tsx ignore
 <Question id="KI1C8HD8C3" lo={["022.06.01.01.04"]}>
   <Text variant="oneCorrect">
     The control law of a transport aeroplane autopilot control channel may be

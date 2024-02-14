@@ -2,6 +2,7 @@ import { compile } from "@mdx-js/mdx";
 import { markdownPlugins } from "../common/plugins";
 
 const MATCH_CODE_BLOCKS = /```tsx eval((?:.|\n)*?)```/g;
+const MATCH_IGNORE_BLOCKS = /```tsx ignore((?:.|\n)*?)```/g;
 
 /**
  * A convenience type that represents MDX documents.
@@ -11,7 +12,9 @@ export type MdxDocument = {
 };
 
 export const compileMdx = async (text: string): Promise<MdxDocument> => {
-  const sourceString = text.replaceAll(MATCH_CODE_BLOCKS, "$1");
+  const sourceString = text
+    .replaceAll(MATCH_CODE_BLOCKS, "$1")
+    .replaceAll(MATCH_IGNORE_BLOCKS, "");
 
   const mdxContent = await compile(sourceString, {
     outputFormat: "function-body",

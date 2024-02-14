@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: AC distribution
 ---
 
-```tsx
+```tsx ignore
 <Question lo={["021.09.04.03.04"]} id="DDhK1xqJ">
   <Text variant="oneCorrect">
     AC generators operated in parallel must have the same:

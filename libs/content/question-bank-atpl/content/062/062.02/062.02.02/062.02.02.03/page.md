@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Coverage and range
 ---
 
-```tsx
+```tsx ignore
 <Question id="5IFLX85M1W" lo={["062.02.05.04.05", "062.02.02.03.05"]}>
   <Text variant="oneCorrect">
     According to ICAO Doc 8168, in order to be considered established during $

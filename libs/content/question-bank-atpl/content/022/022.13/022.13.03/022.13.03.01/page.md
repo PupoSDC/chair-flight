@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Design, operation
 ---
 
-```tsx
+```tsx ignore
 <Question id="SGI32JKAC6" lo={[""]}>
   <Text variant="oneCorrect">
     Regarding the EFIS display, how is remote display brightness sensing

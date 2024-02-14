@@ -33,7 +33,7 @@ West, the LMT would be $$3\deg / 15\deg \times 60 = 12 minutes$$ ahead of time
 Local Mean time advances consitently with longitude at a rate of 15º per hour
 (**remember** 360º = 24 hours).
 
-```tsx
+```tsx ignore
 <Question
   id="3VBA5NI940"
   lo={["061.05.01.01.01"]}
@@ -64,7 +64,7 @@ Local Mean time advances consitently with longitude at a rate of 15º per hour
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question
   id="3VBA5NI943"
   id="nhdaHnfa12"

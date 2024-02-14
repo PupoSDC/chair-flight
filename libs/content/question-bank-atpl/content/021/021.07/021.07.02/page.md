@@ -75,7 +75,7 @@ recommend turning the pitot heat on when outside air temperature is less than
 5ºC, regardless if icing conditions are observed or not. In this system, the ice
 detector signals are an advisory back up indicator.
 
-```tsx
+```tsx ignore
 <Question
   id="OZJGNF8HJY"
   lo="021.07.02.01.01"
@@ -109,7 +109,7 @@ detector signals are an advisory back up indicator.
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question
   id="K7R2PLJJ2X"
   lo="021.07.02.01.02"

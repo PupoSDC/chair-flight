@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Errors, accuracy, limitations
 ---
 
-```tsx
+```tsx ignore
 <Question id="0I013SN17J" lo={["062.03.03.04.01"]}>
   <Text variant="oneCorrect">
     What AWR procedure do you have to take into account if you line up on the
@@ -30,7 +30,7 @@ title: Errors, accuracy, limitations
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="0GM2QLXPO5" lo={["062.03.03.04.01"]}>
   <Text variant="oneCorrect">
     why should AWR be used with extreme caution when on the ground?

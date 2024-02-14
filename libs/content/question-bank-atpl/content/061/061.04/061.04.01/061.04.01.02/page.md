@@ -15,7 +15,7 @@ Chart meridian convergence is the difference in inclination between two
 meridians on a chart or the change in true track (direction) of a **straight
 line** between two meridians on a chart.
 
-```tsx
+```tsx ignore
 <Question
   id="ES4GXW5SAZ"
   lo={["061.04.01.02.02"]}

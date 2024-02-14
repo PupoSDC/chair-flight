@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Navigation functional requirements
 ---
 
-```tsx
+```tsx ignore
 <Question id="IVM7G83KF6" lo={["62.07.02.02.01"]}>
   <Text variant="multipleCorrect" select={5}>
     Which of the following are some of the required navigation functionalities

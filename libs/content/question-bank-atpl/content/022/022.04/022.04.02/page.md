@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Rate-of-turn indicator - Turn coordinator - Balance (slip) indicator
 ---
 
-```tsx
+```tsx ignore
 <Question id="HQ139AP31D" lo={[""]}>
   <Text variant="multipleCorrect" select={3}>
     A rate gyro is used in a ...

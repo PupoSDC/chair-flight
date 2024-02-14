@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Cockpit voice recorder (CVR)
 ---
 
-```tsx
+```tsx ignore
 <Question
   id="GQCH63B2G4"
   lo={["022.14.01.01.01", "022.14.02.01.01", "022.14.03.03.01"]}
@@ -51,7 +51,7 @@ title: Cockpit voice recorder (CVR)
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="GQCH63B2G3" lo={["022.14.01.01.02", "022.14.02.01.02"]}>
   <Text variant="oneCorrect">
     Which of the following is a main component of a <Subject />?

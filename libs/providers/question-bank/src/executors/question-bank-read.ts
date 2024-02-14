@@ -38,15 +38,16 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     parsedPosts.push({
       id: data.id,
       questionBank: data.questionBank,
-      parent: data.id,
-      title: data.id,
-      subject: "",
-      learningObjectives: [],
-      questions: [],
-      children: [],
+      parent: data.parent,
+      title: data.title,
       fileName: post,
       content: content,
       empty: !content,
+
+      // need to be filed using connect algorithm!
+      children: [],
+      subject: undefined,
+      learningObjective: undefined,
     });
   }
 

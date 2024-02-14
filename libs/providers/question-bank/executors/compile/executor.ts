@@ -38,6 +38,9 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     outputLosJson,
     outputFlashcardsJson,
     outputMediaDir,
+
+    // meta
+    bankName
   } = getPaths({ context });
 
   const questionTemplates = await readAllQuestionsFromFs(contentFolder);
@@ -59,6 +62,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
   });
 
   questionBankValidation.parse({
+    bankName,
     questionTemplates,
     docs,
     annexes,

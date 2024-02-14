@@ -1,4 +1,4 @@
-import { Link, Typography } from "@mui/joy";
+import { Box, Divider, Link, Typography } from "@mui/joy";
 import { Mdx } from "@cf/react/markdown";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
@@ -21,23 +21,20 @@ export const DocContent: Container<Props, Params, Data> = container<
     <>
       {!!doc.children.length && (
         <>
-          <Typography level="h2" component="h2">
-            Children
-          </Typography>
-          <ul>
+          <Box component="ul" sx={{ pl: 2 }}>
             {doc.children.map((child) => (
               <li key={child.href}>
                 <Link
                   href={child.href}
                   color={child.isEmpty ? "neutral" : "primary"}
-                  sx={{ textDecoration: child.isEmpty ? "line-through" : "" }}
                 >
                   {child.title}
                   {child.isEmpty && ` (empty)`}
                 </Link>
               </li>
             ))}
-          </ul>
+          </Box>
+          <Divider />
         </>
       )}
       {!doc.isEmpty && <Mdx children={doc.docMdx} />}

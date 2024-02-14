@@ -7,7 +7,7 @@ title: Pressure gauge
 
 ### Bellows sensor
 
-```tsx
+```tsx ignore
 <Question id="HISBNGA4GS" lo={[""]}>
   <Text variant="oneCorrect">Parallax error is:</Text>
   <Option>due to temperature effect</Option>
@@ -25,7 +25,7 @@ title: Pressure gauge
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="T4J7NR53QD" lo={["022.01.01.01.05", "022.01.01.01.04"]}>
   <Text variant="oneCorrect">
     How is <Subject /> indicated in the cockpit

@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Required navigation performance approach (RNP APCH)
 ---
 
-```tsx
+```tsx ignore
 <Question id="IKKA1J0SXJ" lo={["062.07.05.05.08", "62.07.05.05.07"]}>
   <Text variant="oneCorrect">
     Which of the following is considered aPBN 3D approach?

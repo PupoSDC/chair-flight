@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Synchroscope
 ---
 
-```tsx
+```tsx ignore
 <Question id="HOD2FIWP2U" lo={["022.01.08.01.01"]}>
   <Text variant="oneCorrect">What is the purpose of a synchroscope?</Text>
   <Text variant="oneTwo">What is the purpose of a synchroscope?</Text>
@@ -26,7 +26,7 @@ title: Synchroscope
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="HOD2FIWP3U" lo={["022.01.08.01.01", "022.01.08.01.02"]}>
   <Text variant="oneCorrect">
     Which statement best describes the working principle of a Synchroscope?

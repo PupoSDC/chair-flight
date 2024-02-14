@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Engine lubrication
 ---
 
-```tsx
+```tsx ignore
 <Question id="2MNMRSP1SS" lo={["021.11.03.03.04"]}>
   <Text variant="oneCorrect">
     What is the function of labyrinth seals in a lubrication system of a gas

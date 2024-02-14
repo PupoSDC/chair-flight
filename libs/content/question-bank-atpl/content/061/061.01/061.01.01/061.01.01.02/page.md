@@ -14,7 +14,7 @@ subject's head.\
 This can occur only within the tropical band of latitude between 23 degrees 27 minutes
 North and 23 degrees 27 minutes South
 
-```tsx
+```tsx ignore
 <Question id="UNMI90HZB6" lo={["061.01.01.02.01"]}>
   <Text variant="oneCorrect">
     The angle between the plane of the ecliptic and the plane of equator is
@@ -34,7 +34,7 @@ North and 23 degrees 27 minutes South
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="UNMI90HZB7" lo={["061.01.01.02.02"]}>
   <Text variant="oneCorrect">
     Which is the highest latitude listed below at which the sun will (Subject)?
@@ -70,7 +70,7 @@ North and 23 degrees 27 minutes South
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="UNMI90HZB4" lo={["061.01.01.02.02"]}>
   <Text variant="oneCorrect">
     In which two months of the year is the difference between the transit of the
@@ -84,7 +84,7 @@ North and 23 degrees 27 minutes South
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="UNMI90HZB2" lo={["061.01.01.02.02"]}>
   <Text variant="oneCorrect">Seasons are due to the:</Text>
   <Option>Earth's elliptical orbit around the Sun</Option>

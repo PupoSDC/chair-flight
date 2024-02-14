@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Datums
 ---
 
-```tsx
+```tsx ignore
 <Question id="8YNMTX4H5F" lo={["061.01.03.01.01"]}>
   <Text variant="oneCorrect">
     The definition of <Subject /> is:

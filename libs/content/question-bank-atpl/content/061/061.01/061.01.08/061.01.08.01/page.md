@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Average airspeed
 ---
 
-```tsx
+```tsx ignore
 <Question
   id="BADN4IFFD7"
   id="AafsJkc"

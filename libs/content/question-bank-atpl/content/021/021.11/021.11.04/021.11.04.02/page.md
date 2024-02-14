@@ -40,7 +40,7 @@ combustion chamber potentially leading to a hot start.
 
 ### No FADEC indications
 
-```tsx
+```tsx ignore
 <Question id="4I52DMOX7R" lo="021.11.04.02.01">
   <Text variant="oneCorrect">
     Name the possible cause and indications of a <Subject />.

@@ -4,7 +4,6 @@ import { questionBankNameSchema } from "./question-bank-name";
 import type {
   DocId,
   LearningObjectiveId,
-  QuestionTemplateId,
   SubjectId,
 } from "./ids";
 import type { QuestionBankName } from "./question-bank-name";
@@ -17,9 +16,8 @@ export type Doc = {
   questionBank: QuestionBankName;
 
   // Inferred data
-  subject: SubjectId;
-  learningObjectives: LearningObjectiveId[];
-  questions: QuestionTemplateId[];
+  subject?: SubjectId;
+  learningObjective?: LearningObjectiveId;
   children: DocId[];
   fileName: string;
   content: string;
@@ -31,9 +29,8 @@ export const docSchema = z.object({
   parentId: z.string().optional(),
   title: z.string(),
   questionBank: questionBankNameSchema,
-  subject: z.string(),
-  learningObjectives: z.string().array(),
-  questions: z.string().array(),
+  learningObjective: z.string().optional(),
+  subject: z.string().optional(),
   children: z.string().array(),
   fileName: z.string(),
   content: z.string(),

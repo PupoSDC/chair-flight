@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Principles
 ---
 
-````tsx
+````tsx ignore
 <Question id="OA6QPAXLG0" id="0UZ8BqmDuM" lo={["062.02.04.01.04"]}>
   <Text variant="oneCorrect">
     You are about to pass overhead a DME station at FL300 with a true ground

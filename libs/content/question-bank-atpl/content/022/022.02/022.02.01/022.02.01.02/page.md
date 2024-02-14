@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: "Pitot/static system: design and errors"
 ---
 
-```tsx
+```tsx ignore
 <Question id="LO9IT60XU9" lo={["022.02.01.02.02"]}>
   <Text variant="oneCorrect">
     If the <Subject /> the instrument will:
@@ -59,7 +59,7 @@ title: "Pitot/static system: design and errors"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="5REZVKTC16" lo={[""]}>
   <Text variant="oneCorrect">
     The error in altimeter readings caused by the variation of the static
@@ -73,7 +73,7 @@ title: "Pitot/static system: design and errors"
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="T0PKBXH2IO" lo={[""]}>
   <Text variant="oneCorrect">
     When flying in <Subject />, the altimeter will:

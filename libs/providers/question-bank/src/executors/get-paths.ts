@@ -19,7 +19,11 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
   /** i.e.: `apps/next-app/public/content/content-question-bank-atpl` */
   const outputDir = path.join(outputProject, "public", "content", projectName);
 
+  console.log(projectName, projectName.split("-").pop());
+
   return {
+    // TODO make this more robust!
+    bankName: projectName.split("-").pop(),
     projectName,
     annexesFolder,
     contentFolder,

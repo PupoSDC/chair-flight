@@ -5,7 +5,7 @@ questionBank: "atpl"
 title: Pulse techniques
 ---
 
-```tsx
+```tsx ignore
 <Question id="G25C74KULS" lo={["062.03.01.01.01"]}>
   <Text variant="oneCorrect">
     Which of the following equipment operates using the${subject}?
@@ -54,7 +54,7 @@ title: Pulse techniques
 </Question>
 ```
 
-```tsx
+```tsx ignore
 <Question id="HNVH63KUL2" lo={["062.03.01.01.03"]}>
   <Text variant="oneCorrect">
     In a primary radar using the pulse technique${subject} determines...
