@@ -1,3 +1,4 @@
+import { compileQuestionBank } from "../../src/executors/question-bank-compile";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {
   readAllCoursesFromFs,
@@ -8,7 +9,6 @@ import {
   readAllDocsFromFs,
   readAllFlashcardsFromFs,
 } from "../../src/executors/question-bank-read";
-import { compileQuestionBank } from "../../src/executors/question-bank-compile";
 
 type ExecutorOptions = Record<string, never>;
 

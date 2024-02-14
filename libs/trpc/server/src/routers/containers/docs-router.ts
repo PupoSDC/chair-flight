@@ -16,10 +16,10 @@ export const docsContainersRouter = router({
     .query(async ({ input }) => {
       const bank = questionBanks[input.questionBank];
       const rawDoc = await bank.getOne("docs", input.docId);
-      const children = await bank.getSome("docs", rawDoc.children);
+      const children = await bank.getSome("docs", rawDoc.docs);
       const docMdx = await compileMdx(rawDoc.content);
-      const parent = rawDoc.parent
-        ? await bank.getOne("docs", rawDoc.parent)
+      const parent = rawDoc.parentId
+        ? await bank.getOne("docs", rawDoc.parentId)
         : undefined;
 
       const doc = {

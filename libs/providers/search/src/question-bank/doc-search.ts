@@ -76,7 +76,7 @@ export class DocSearch extends QuestionBankSearchProvider<
       content: doc.content,
       title: doc.title,
       questionBank: doc.questionBank,
-      subject: doc.subject,
+      subject: doc.subject ?? "",
     };
   }
 }

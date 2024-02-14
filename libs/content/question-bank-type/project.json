@@ -4,10 +4,20 @@
   "projectType": "library",
   "targets": {
     "compile": {
-      "executor": "@cf/providers/question-bank:compile"
+      "executor": "@cf/providers/question-bank:compile",
+      "options": {
+        "contentFolder": "libs/content/question-bank-type/content",
+        "flashcardsFolder": "libs/content/question-bank-type/flashcards",
+        "compileFolder": "apps/next-app/public/content/type",
+        "questionBank": "type"
+      }
     },
     "arrange": {
-      "executor": "@cf/providers/question-bank:arrange"
+      "executor": "@cf/providers/question-bank:arrange",
+      "options": {
+        "contentFolder": "libs/content/question-bank-type/content",
+        "questionBank": "type"
+      }
     }
   },
   "tags": []

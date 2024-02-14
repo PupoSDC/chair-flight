@@ -1,9 +1,5 @@
 import * as XLSX from "xlsx";
-import { LearningObjectiveJson } from "./json-types";
-import type {
-  LearningObjective,
-  LearningObjectiveId,
-} from "@cf/core/question-bank";
+import type { LearningObjectiveJson } from "./json-types";
 
 const courseNames: Record<string, string> = {
   "ATPL(A)": "ATPL_A",

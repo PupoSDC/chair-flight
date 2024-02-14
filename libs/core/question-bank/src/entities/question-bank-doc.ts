@@ -1,12 +1,7 @@
 import { z } from "zod";
 import { assertType } from "@cf/base/utils";
 import { questionBankNameSchema } from "./question-bank-name";
-import type {
-  DocId,
-  LearningObjectiveId,
-  QuestionTemplateId,
-  SubjectId,
-} from "./ids";
+import type { DocId, LearningObjectiveId, SubjectId } from "./ids";
 import type { QuestionBankName } from "./question-bank-name";
 import type { IsEqual } from "@cf/base/utils";
 

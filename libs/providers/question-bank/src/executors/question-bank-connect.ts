@@ -8,9 +8,8 @@ import {
   type QuestionBankName,
   type QuestionTemplate,
   type Subject,
-  type SubjectId,
 } from "@cf/core/question-bank";
-import {
+import type {
   AnnexJson,
   CourseJson,
   DocJson,
@@ -89,7 +88,6 @@ export const connectQuestionBank = ({
     numberOfQuestions: 0,
   }));
 
-  const questionsMap = makeMap(questionTemplates, (q) => q.id);
   const losMap = makeMap(learningObjectives, (lo) => lo.id);
   const docsMap = makeMap(docs, (d) => d.id);
   const subjectsMap = makeMap(subjects, (s) => s.id);

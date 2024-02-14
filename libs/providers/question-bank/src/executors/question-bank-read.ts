@@ -2,7 +2,7 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
 import { getAllFiles } from "./get-all-files";
-import {
+import type {
   AnnexJson,
   CourseJson,
   DocJson,
@@ -13,7 +13,6 @@ import {
 import type {
   FlashcardCollection,
   FlashcardContent,
-  Subject,
 } from "@cf/core/question-bank";
 
 const MATTER_REGEX =

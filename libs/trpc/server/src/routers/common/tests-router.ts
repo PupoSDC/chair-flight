@@ -49,7 +49,9 @@ export const testsRouter = router({
 
       const subjects = rawSubjects.map((s) => ({
         ...s,
-        learningObjectives: s.learningObjectives
+        learningObjectives: learningObjectivesMap[
+          s.learningObjective
+        ].learningObjectives
           .map((loId) => {
             const lo = learningObjectivesMap[loId];
             if (!lo) return undefined;

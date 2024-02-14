@@ -11,7 +11,7 @@ export type LearningObjectiveSearchResult = {
   id: LearningObjectiveId;
   questionBank: QuestionBankName;
   href: string;
-  parentId: LearningObjectiveId | CourseId;
+  parentId: LearningObjectiveId | undefined;
   courses: Array<{ id: CourseId; text: string }>;
   text: MdDocument;
   source: MdDocument;

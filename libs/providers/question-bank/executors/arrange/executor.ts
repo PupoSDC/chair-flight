@@ -1,6 +1,3 @@
-import {
-  QuestionBankName,
-} from "@cf/core/question-bank";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {
   readAllCoursesFromFs,
@@ -14,6 +11,7 @@ import {
   writeAnnexes,
   writeQuestionTemplates,
 } from "../../src/executors/question-bank-write";
+import type { QuestionBankName } from "@cf/core/question-bank";
 
 type ExecutorOptions = {
   contentFolder: string;

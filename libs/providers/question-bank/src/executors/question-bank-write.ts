@@ -1,10 +1,8 @@
 import * as fs from "node:fs/promises";
-import * as path from "node:path";
-import { Annex, QuestionTemplate } from "@cf/core/question-bank";
-import { QuestionBank } from "../provider/question-bank";
-import { getAllFiles } from "./get-all-files";
-import { AnnexJson, QuestionTemplateJson } from "./json-types";
 import { makeMap } from "@cf/base/utils";
+import { getAllFiles } from "./get-all-files";
+import type { AnnexJson, QuestionTemplateJson } from "./json-types";
+import type { Annex, QuestionTemplate } from "@cf/core/question-bank";
 
 export const writeQuestionTemplates = async (
   contentFolder: string,
@@ -50,14 +48,15 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
       const value: AnnexJson = {
         id: annex.id,
         description: annex.description,
-        format: annex.format, 
+        format: annex.format,
       };
       sum[key] ??= [];
       sum[key].push(value);
       return sum;
-    }, {}
-  )
- 
+    },
+    {},
+  );
+
   const allImages = await getAllFiles(contentFolder, ".jpg");
   for (const oldLocation of allImages) {
     const id = oldLocation.split("/").pop()?.split(".")[0] as string;
@@ -66,16 +65,16 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
     if (!annex) {
       await fs.rm(oldLocation);
       continue;
-    } 
+    }
 
     const fileName = `annexes/${id}.${annex.format}`;
     const newLocation = annex.srcLocation.replace("annexes.json", fileName);
-    
+
     if (newLocation === oldLocation) {
       continue;
     }
 
-    await fs.cp(oldLocation, newLocation)
+    await fs.cp(oldLocation, newLocation);
     await fs.rm(oldLocation);
   }
 
@@ -86,4 +85,4 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
       fs.writeFile(file, JSON.stringify(content, null, 2)),
     ),
   );
-}
+};
