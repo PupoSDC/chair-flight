@@ -2,13 +2,19 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { parse } from "yaml";
 import { getAllFiles } from "./get-all-files";
+import {
+  AnnexJson,
+  CourseJson,
+  DocJson,
+  LearningObjectiveJson,
+  QuestionTemplateJson,
+  SubjectJson,
+} from "./json-types";
 import type {
   FlashcardCollection,
   FlashcardContent,
-
   Subject,
 } from "@cf/core/question-bank";
-import { AnnexJson, CourseJson, DocJson, LearningObjectiveJson, QuestionTemplateJson, SubjectJson } from "./json-types";
 
 const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
@@ -32,7 +38,7 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     if (!match) throw new Error(`Missing frontMatter for ${fileName}`);
     const data = parse(match[1]);
     const content = source.split("\n---").slice(1).join().trim();
-    const doc : DocJson = {
+    const doc: DocJson = {
       id: data.id,
       parentId: data.id,
       title: data.id,
@@ -72,13 +78,13 @@ export const readAllAnnexesFromFs = async (contentFolder: string) => {
 };
 
 export const readAllLosFromFs = async (contentFolder: string) => {
-  const loFile =  path.join(contentFolder, "learning-objectives.json");
+  const loFile = path.join(contentFolder, "learning-objectives.json");
   const fileBuffer = await fs.readFile(loFile, "utf-8");
   const los = JSON.parse(fileBuffer) as LearningObjectiveJson[];
   return los.sort((a, b) => a.id.localeCompare(b.id));
 };
 
-export const readAllSubjectsFromFs = async  (contentFolder: string) => {
+export const readAllSubjectsFromFs = async (contentFolder: string) => {
   const subjectsJson = path.join(contentFolder, "subjects.json");
   const fileBuffer = await fs.readFile(subjectsJson, "utf-8");
   const subjects = JSON.parse(fileBuffer) as SubjectJson[];

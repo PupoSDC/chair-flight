@@ -1,7 +1,10 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { makeMap } from "@cf/base/utils";
-import { QuestionBankName, questionBankValidation } from "@cf/core/question-bank";
+import {
+  QuestionBankName,
+  questionBankValidation,
+} from "@cf/core/question-bank";
 import { getAllFiles } from "../../src/executors/get-all-files";
 import { getPaths } from "../../src/executors/get-paths";
 import {
@@ -17,25 +20,24 @@ import {
   readAllSubjectsFromFs,
   readAllDocsFromFs,
 } from "../../src/executors/question-bank-read";
+import {
+  writeAnnexes,
+  writeQuestionTemplates,
+} from "../../src/executors/question-bank-write";
 import type { ExecutorContext } from "@nx/devkit";
-import { writeAnnexes, writeQuestionTemplates } from "../../src/executors/question-bank-write";
 
 type ExecutorOptions = {
   contentFolder: string;
   questionBank: QuestionBankName;
-}
+};
 
 const runExecutor = async ({
   contentFolder,
-  questionBank
+  questionBank,
 }: ExecutorOptions) => {
-
-  const {
-    questionTemplates,
-    annexes,
-  } = connectQuestionBank({
+  const { questionTemplates, annexes } = connectQuestionBank({
     questionBank,
-    jsonQuestionTemplates:  await readAllQuestionsFromFs(contentFolder),
+    jsonQuestionTemplates: await readAllQuestionsFromFs(contentFolder),
     jsonLearningObjectives: await readAllLosFromFs(contentFolder),
     jsonCourses: await readAllCoursesFromFs(contentFolder),
     jsonSubjects: await readAllSubjectsFromFs(contentFolder),
@@ -46,11 +48,10 @@ const runExecutor = async ({
   await writeQuestionTemplates(contentFolder, questionTemplates);
   await writeAnnexes(contentFolder, annexes);
 
+  //  const annexFiles = arrangeAnnexes({ annexes, docs });
+  //  const questionFiles = arrangeQuestions({ questionTemplates, docs });
 
-//  const annexFiles = arrangeAnnexes({ annexes, docs });
-//  const questionFiles = arrangeQuestions({ questionTemplates, docs });
-
-// writeQuestionTemplates(contentFolder, questionTemplates);
+  // writeQuestionTemplates(contentFolder, questionTemplates);
 
   /** 
   const mediaMap = makeMap(

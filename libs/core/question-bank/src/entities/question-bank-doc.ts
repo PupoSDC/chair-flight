@@ -17,12 +17,11 @@ export type Doc = {
   title: string;
   questionBank: QuestionBankName;
 
-
   fileName: string;
   content: string;
   empty: boolean;
   /**
-   * Learning objectives covered by this doc specifically. 
+   * Learning objectives covered by this doc specifically.
    * For example "010" could be just "010", if all children have their own doc.
    * In other words, this is a 1 to 1 mapping.
    */

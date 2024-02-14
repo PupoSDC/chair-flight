@@ -10,7 +10,14 @@ import {
   type Subject,
   type SubjectId,
 } from "@cf/core/question-bank";
-import { AnnexJson, CourseJson, DocJson, LearningObjectiveJson, QuestionTemplateJson, SubjectJson } from "./json-types";
+import {
+  AnnexJson,
+  CourseJson,
+  DocJson,
+  LearningObjectiveJson,
+  QuestionTemplateJson,
+  SubjectJson,
+} from "./json-types";
 
 export const connectQuestionBank = ({
   jsonQuestionTemplates: jsonQuestions,
@@ -27,7 +34,7 @@ export const connectQuestionBank = ({
   jsonSubjects: SubjectJson[];
   jsonAnnexes: AnnexJson[];
   jsonDocs: DocJson[];
-  questionBank: QuestionBankName,
+  questionBank: QuestionBankName;
 }): {
   questionTemplates: QuestionTemplate[];
   learningObjectives: LearningObjective[];
@@ -45,7 +52,7 @@ export const connectQuestionBank = ({
     questions: [],
     learningObjectives: [],
     nestedQuestions: [],
-  }))
+  }));
 
   const questionTemplates = jsonQuestions.map<QuestionTemplate>((q) => ({
     ...q,
@@ -53,7 +60,7 @@ export const connectQuestionBank = ({
     doc: undefined as unknown as string,
     srcLocation: undefined as unknown as string,
     subjects: [],
-  }))
+  }));
 
   const annexes = jsonAnnexes.map<Annex>((a) => ({
     ...a,
@@ -80,7 +87,7 @@ export const connectQuestionBank = ({
     courses: [],
     nestedLearningObjectives: [],
     numberOfQuestions: 0,
-  }))
+  }));
 
   const questionsMap = makeMap(questionTemplates, (q) => q.id);
   const losMap = makeMap(learningObjectives, (lo) => lo.id);
@@ -96,9 +103,9 @@ export const connectQuestionBank = ({
     parent.learningObjectives.push(lo.id);
   });
 
-  // Link learning Objectives to Docs 
+  // Link learning Objectives to Docs
   learningObjectives.forEach((lo) => {
-    let docId: string | undefined = lo.id
+    let docId: string | undefined = lo.id;
     while (docId) {
       if (docsMap[docId]) {
         lo.doc = docId;
@@ -116,8 +123,8 @@ export const connectQuestionBank = ({
     q.learningObjectives.forEach((lo) => {
       if (!losMap[lo]) return;
       const thisLo = losMap[lo];
-      thisLo.questions = keepUnique([...thisLo.questions, q.id]),
-        thisLo.nestedQuestions = thisLo.questions;
+      (thisLo.questions = keepUnique([...thisLo.questions, q.id])),
+        (thisLo.nestedQuestions = thisLo.questions);
     });
   });
 
@@ -125,7 +132,7 @@ export const connectQuestionBank = ({
   questionTemplates.forEach((q) => {
     const docLo = q.learningObjectives.reduce(
       (res, cur) => (cur.length < res.length ? cur : res),
-      q.learningObjectives[0]
+      q.learningObjectives[0],
     );
     const docId = losMap[docLo].doc;
     const doc = docsMap[docId];
@@ -145,11 +152,11 @@ export const connectQuestionBank = ({
     });
   });
 
-  // Link annexes to docs 
+  // Link annexes to docs
   annexes.forEach((annex) => {
     const docLo = annex.learningObjectives.reduce(
       (res, cur) => (cur.length < res.length ? cur : res),
-      annex.learningObjectives[0]
+      annex.learningObjectives[0],
     );
     const docId = losMap[docLo].doc;
     const doc = docsMap[docId];
@@ -166,18 +173,18 @@ export const connectQuestionBank = ({
     parent.docs.push(doc.id);
   });
 
-  // Add Subject to questions 
-  questionTemplates.map(question => {
+  // Add Subject to questions
+  questionTemplates.map((question) => {
     question.subjects = keepUnique(
-      question.learningObjectives.map(lo => losMap[lo].subject)
+      question.learningObjectives.map((lo) => losMap[lo].subject),
     ).filter(Boolean);
   });
 
-  // Add Subject to annexes 
-  annexes.map(annex => {
+  // Add Subject to annexes
+  annexes.map((annex) => {
     annex.subjects = keepUnique(
-      annex.learningObjectives.map(lo => losMap[lo].subject)
-    ).filter(Boolean)
+      annex.learningObjectives.map((lo) => losMap[lo].subject),
+    ).filter(Boolean);
   });
 
   // bubble up questions inside learning objectives and subjects
@@ -185,13 +192,10 @@ export const connectQuestionBank = ({
     if (lo.parentId) {
       const thisLo = lo;
       const loParent = losMap[lo.parentId];
-      loParent.courses = keepUnique([
-        ...loParent.courses, 
-        ...lo.courses
-      ]);
-      loParent.nestedQuestions =  keepUnique([
-        ...loParent.nestedQuestions, 
-        ...thisLo.nestedQuestions
+      loParent.courses = keepUnique([...loParent.courses, ...lo.courses]);
+      loParent.nestedQuestions = keepUnique([
+        ...loParent.nestedQuestions,
+        ...thisLo.nestedQuestions,
       ]);
       return;
     }
@@ -223,5 +227,5 @@ export const connectQuestionBank = ({
     subjects,
     annexes,
     docs,
-  }
+  };
 };

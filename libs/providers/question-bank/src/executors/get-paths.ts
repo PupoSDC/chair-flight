@@ -1,6 +1,6 @@
 import * as path from "node:path";
-import type { ExecutorContext } from "@nx/devkit";
 import { QuestionBankName } from "@cf/core/question-bank";
+import type { ExecutorContext } from "@nx/devkit";
 
 export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const projects = context.workspace?.projects ?? {};

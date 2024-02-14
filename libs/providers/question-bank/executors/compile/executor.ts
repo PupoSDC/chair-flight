@@ -21,14 +21,14 @@ type ExecutorOptions = Record<string, never>;
 const runExecutor = async ({
   contentFolder,
   compileFolder,
-  questionBank
+  questionBank,
 }: ExecutorOptions) => {
   const flashcards = await readAllFlashcardsFromFs(flashcardsFolder);
   const allMedia = [...(await getAllFiles(contentFolder, ".jpg"))];
 
   const connectedQuestionBank = connectQuestionBank({
     questionBank,
-    jsonQuestionTemplates:  await readAllQuestionsFromFs(contentFolder),
+    jsonQuestionTemplates: await readAllQuestionsFromFs(contentFolder),
     jsonLearningObjectives: await readAllLosFromFs(losJson),
     jsonCourses: await readAllCoursesFromFs(coursesJson),
     jsonSubjects: await readAllSubjectsFromFs(subjectsJson),
@@ -36,11 +36,7 @@ const runExecutor = async ({
     jsonDocs: await readAllDocsFromFs(contentFolder),
   });
 
-  compileQuestionBank(
-    outputDir,
-    
-  );
-
+  compileQuestionBank(outputDir);
 
   return {
     success: true,
