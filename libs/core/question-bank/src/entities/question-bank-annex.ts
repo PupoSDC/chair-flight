@@ -16,6 +16,7 @@ export type AnnexFormat = "jpg";
 export type Annex = {
   id: AnnexId;
   href: string;
+  srcLocation: string;
   doc: DocId;
   questionBank: QuestionBankName;
   format: AnnexFormat;

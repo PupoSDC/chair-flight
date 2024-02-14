@@ -1,5 +1,6 @@
 import * as path from "node:path";
 import type { ExecutorContext } from "@nx/devkit";
+import { QuestionBankName } from "@cf/core/question-bank";
 
 export const getPaths = ({ context }: { context: ExecutorContext }) => {
   const projects = context.workspace?.projects ?? {};
@@ -24,6 +25,7 @@ export const getPaths = ({ context }: { context: ExecutorContext }) => {
     annexesFolder,
     contentFolder,
     flashcardsFolder,
+    questionBank: projectName.split("-").pop() as QuestionBankName,
 
     /** i.e.: `libs/content/question-bank-atpl/content/subjects.json` */
     subjectsJson: path.join(contentFolder, "subjects.json"),

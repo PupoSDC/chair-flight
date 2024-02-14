@@ -7,7 +7,18 @@
       "executor": "@cf/providers/question-bank:compile"
     },
     "arrange": {
-      "executor": "@cf/providers/question-bank:arrange"
+      "executor": "@cf/providers/question-bank:arrange",
+      "options": {
+        "contentFolder": "libs/content/question-bank-atpl/content",
+        "questionBank": "atpl"
+      }
+    },
+    "parseLosXlsx": {
+      "executor": "@cf/providers/question-bank:parseLosXlsx",
+      "options": {
+        "xlsxPath": "libs/content/question-bank-atpl/external/learning-objectives.xlsx",
+        "outputJsonPath": "libs/content/question-bank-atpl/content/learning-objectives.json"
+      }
     }
   },
   "tags": []

@@ -1,14 +1,16 @@
 import { z } from "zod";
 import { assertType } from "@cf/base/utils";
 import { questionBankNameSchema } from "./question-bank-name";
-import type { CourseId, LearningObjectiveId, QuestionTemplateId } from "./ids";
+import type { CourseId, DocId, LearningObjectiveId, QuestionTemplateId, SubjectId } from "./ids";
 import type { QuestionBankName } from "./question-bank-name";
 import type { IsEqual } from "@cf/base/utils";
 
 export type LearningObjective = {
   id: LearningObjectiveId;
   questionBank: QuestionBankName;
-  parentId: LearningObjectiveId | CourseId;
+  parentId?: LearningObjectiveId;
+  subject: SubjectId;
+  doc: DocId;
   courses: CourseId[];
   learningObjectives: LearningObjectiveId[];
 
@@ -23,7 +25,9 @@ export type LearningObjective = {
 export const LearningObjectiveSchema = z.object({
   id: z.string(),
   questionBank: questionBankNameSchema,
-  parentId: z.string(),
+  parentId: z.string().optional(),
+  doc: z.string(),
+  subject: z.string(),
   courses: z.array(z.string()),
   learningObjectives: z.array(z.string()),
   text: z.string(),

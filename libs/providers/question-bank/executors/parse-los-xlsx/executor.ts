@@ -9,10 +9,7 @@ type ExecutorOptions = {
 
 const runExecutor = async (options: ExecutorOptions) => {
   const { xlsxPath, outputJsonPath } = options;
-
-  const learningObjectives = await parseLearningObjectivesXlsx({
-    xlsxPath,
-  });
+  const learningObjectives = await parseLearningObjectivesXlsx({ xlsxPath });
 
   await fs.writeFile(
     path.join(process.cwd(), outputJsonPath),

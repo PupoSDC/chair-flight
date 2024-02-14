@@ -18,98 +18,29 @@ import {
 
 type ExecutorOptions = Record<string, never>;
 
-const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
-  const {
-    // Inputs
-    projectName,
-    flashcardsFolder,
-    contentFolder,
-    subjectsJson,
-    coursesJson,
-    losJson,
-
-    // Outputs
-    outputDir,
-    outputQuestionsJson,
-    outputAnnexesJson,
-    outputDocsJson,
-    outputSubjectsJson,
-    outputCoursesJson,
-    outputLosJson,
-    outputFlashcardsJson,
-    outputMediaDir,
-  } = getPaths({ context });
-
-  const questionTemplates = await readAllQuestionsFromFs(contentFolder);
-  const docs = await readAllDocsFromFs(contentFolder);
-  const annexes = await readAllAnnexesFromFs(contentFolder, projectName);
-  const learningObjectives = await readAllLosFromFs(losJson);
-  const courses = await readAllCoursesFromFs(coursesJson);
-  const subjects = await readAllSubjectsFromFs(subjectsJson);
+const runExecutor = async ({
+  contentFolder,
+  compileFolder,
+  questionBank
+}: ExecutorOptions) => {
   const flashcards = await readAllFlashcardsFromFs(flashcardsFolder);
   const allMedia = [...(await getAllFiles(contentFolder, ".jpg"))];
 
-  connectQuestionBank({
-    questionTemplates,
-    docs,
-    annexes,
-    learningObjectives,
-    courses,
-    subjects,
+  const connectedQuestionBank = connectQuestionBank({
+    questionBank,
+    jsonQuestionTemplates:  await readAllQuestionsFromFs(contentFolder),
+    jsonLearningObjectives: await readAllLosFromFs(losJson),
+    jsonCourses: await readAllCoursesFromFs(coursesJson),
+    jsonSubjects: await readAllSubjectsFromFs(subjectsJson),
+    jsonAnnexes: await readAllAnnexesFromFs(contentFolder, projectName),
+    jsonDocs: await readAllDocsFromFs(contentFolder),
   });
 
-  questionBankValidation.parse({
-    questionTemplates,
-    docs,
-    annexes,
-    learningObjectives,
-    subjects,
-    courses,
-  });
+  compileQuestionBank(
+    outputDir,
+    
+  );
 
-  await fs
-    .rm(path.join(process.cwd(), outputDir), { recursive: true })
-    .catch(NOOP);
-
-  await fs.mkdir(path.join(process.cwd(), outputMediaDir), { recursive: true });
-
-  await Promise.all([
-    fs.writeFile(
-      path.join(process.cwd(), outputQuestionsJson),
-      JSON.stringify(questionTemplates),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputLosJson),
-      JSON.stringify(learningObjectives),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputSubjectsJson),
-      JSON.stringify(subjects),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputCoursesJson),
-      JSON.stringify(courses),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputAnnexesJson),
-      JSON.stringify(annexes),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputFlashcardsJson),
-      JSON.stringify(flashcards),
-    ),
-    fs.writeFile(
-      path.join(process.cwd(), outputDocsJson),
-      JSON.stringify(docs),
-    ),
-    ...allMedia.map(async (media) => {
-      const mediaFile = await fs.readFile(media);
-      await fs.writeFile(
-        path.join(process.cwd(), outputMediaDir, path.basename(media)),
-        mediaFile,
-      );
-    }),
-  ]);
 
   return {
     success: true,
