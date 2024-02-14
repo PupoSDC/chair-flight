@@ -80,7 +80,7 @@ export type QuestionMultipleChoiceStatus = "in-progress" | "show-result";
 
 export type QuestionMultipleChoiceProps = {
   question?: ReactNode;
-  options?: Array<{ id: string; text: string }>;
+  options?: Array<{ id: string; text: ReactNode }>;
   status?: QuestionMultipleChoiceStatus;
   correctOptionId?: string;
   selectedOptionId?: string;

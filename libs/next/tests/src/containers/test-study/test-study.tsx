@@ -220,7 +220,7 @@ export const TestStudy = container<Props>(
           }
           options={question.options.map((opt) => ({
             id: opt.id,
-            text: opt.text,
+            text: <MarkdownFromServer children={opt.text} />,
           }))}
           annexesHref={question.annexes}
           onAnnexClicked={(annex) => setCurrentAnnex(annex)}
