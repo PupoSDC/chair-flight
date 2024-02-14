@@ -59,18 +59,24 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
   )
  
   const allImages = await getAllFiles(contentFolder, ".jpg");
-  for (const image of allImages) {
-    const id = image.split("/").pop()?.split(".")[0] as string;
+  for (const oldLocation of allImages) {
+    const id = oldLocation.split("/").pop()?.split(".")[0] as string;
     const annex = annexesMap[id];
+
     if (!annex) {
-      await fs.rm(image);
-    } else {
-      const newLocation = annex
-        .srcLocation
-        .replace("annexes.json", `annex/${id}.${annex.format}`);
-      await fs.cp(image, newLocation)
-      await fs.rm(image);
+      await fs.rm(oldLocation);
+      continue;
+    } 
+
+    const fileName = `annexes/${id}.${annex.format}`;
+    const newLocation = annex.srcLocation.replace("annexes.json", fileName);
+    
+    if (newLocation === oldLocation) {
+      continue;
     }
+
+    await fs.cp(oldLocation, newLocation)
+    await fs.rm(oldLocation);
   }
 
   const newFiles = Object.entries(newFilesMap);
