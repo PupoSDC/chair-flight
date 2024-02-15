@@ -28,7 +28,6 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@cf/base/errors";
-import type { QuestionBankName } from "@cf/core/question-bank";
 import { MarkdownFromServer } from "@cf/next/question-bank";
 import { BugReportButton, ThemeButton } from "@cf/next/user";
 import { useBugReportDebugData } from "@cf/next/user";
