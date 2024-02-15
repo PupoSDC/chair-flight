@@ -68,7 +68,9 @@ export const DocSearch = container<Props, Params, Data>(
           )}
           renderTableRow={(result) => (
             <tr>
-              <td>{serverData.subjectMap[result.subject]}</td>
+              <td>
+                {result.subject ? serverData.subjectMap[result.subject] : "---"}
+              </td>
               <td>
                 {result.learningObjectives.map((lo) => (
                   <Link href={lo.href} key={lo.id}>

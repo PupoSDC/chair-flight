@@ -1,29 +1,30 @@
 import { z } from "zod";
 import { assertType } from "@cf/base/utils";
 import { questionBankNameSchema } from "./question-bank-name";
-import type {
-  DocId,
-  LearningObjectiveId,
-  QuestionTemplateId,
-  SubjectId,
-} from "./ids";
+import type { DocId, LearningObjectiveId, SubjectId } from "./ids";
 import type { QuestionBankName } from "./question-bank-name";
 import type { IsEqual } from "@cf/base/utils";
 
 export type Doc = {
   id: DocId;
-  parent?: DocId;
+  parentId?: DocId;
+  subject?: SubjectId;
   title: string;
   questionBank: QuestionBankName;
 
-  // Inferred data
-  subject: SubjectId;
-  learningObjectives: LearningObjectiveId[];
-  questions: QuestionTemplateId[];
-  children: DocId[];
   fileName: string;
   content: string;
   empty: boolean;
+  /**
+   * Learning objectives covered by this doc specifically.
+   * For example "010" could be just "010", if all children have their own doc.
+   * In other words, this is a 1 to 1 mapping.
+   */
+  learningObjectives: LearningObjectiveId[];
+  /**
+   * Docs contained below this Doc directly.
+   */
+  docs: DocId[];
 };
 
 export const docSchema = z.object({
@@ -31,13 +32,12 @@ export const docSchema = z.object({
   parentId: z.string().optional(),
   title: z.string(),
   questionBank: questionBankNameSchema,
-  subject: z.string(),
-  learningObjectives: z.string().array(),
-  questions: z.string().array(),
-  children: z.string().array(),
+  subject: z.string().optional(),
   fileName: z.string(),
   content: z.string(),
   empty: z.boolean(),
+  learningObjectives: z.string().array(),
+  docs: z.string().array(),
 });
 
 type IDoc = z.infer<typeof docSchema>;

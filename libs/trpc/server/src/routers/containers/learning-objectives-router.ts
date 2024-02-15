@@ -61,7 +61,7 @@ export const learningObjectivesContainersRouter = router({
       for (let i = tree.length - 1; i < tree.length; i++) {
         try {
           const lo = await bank.getOne("learningObjectives", tree[i]);
-          tree.push(lo.parentId);
+          lo.parentId && tree.push(lo.parentId);
         } catch (e) {
           break;
         }

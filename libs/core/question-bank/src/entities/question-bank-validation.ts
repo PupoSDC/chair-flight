@@ -88,16 +88,7 @@ export const questionBankValidation = z
     });
 
     val.docs.forEach((d) => {
-      d.questions.forEach((q) => {
-        if (questionIds[q]) return;
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `Question ${q} does not exist`,
-          path: ["docs", d.id, "questions"],
-        });
-      });
-
-      d.children.forEach((c) => {
+      d.docs.forEach((c) => {
         if (docIds[c]) return;
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
@@ -114,7 +105,7 @@ export const questionBankValidation = z
         });
       }
 
-      if (!subjectIds[d.subject] && d.subject !== "root") {
+      if (d.subject && !subjectIds[d.subject]) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
           message: `Subject ${d.subject} does not exist`,
@@ -150,14 +141,6 @@ export const questionBankValidation = z
           path: ["annexes", a.id, "learningObjectives"],
         });
       });
-
-      if (!docIds[a.doc] && a.doc !== "root") {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `Doc ${a.doc} does not exist`,
-          path: ["annexes", a.id, "doc"],
-        });
-      }
     });
 
     val.learningObjectives.forEach((lo) => {

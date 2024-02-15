@@ -10,7 +10,7 @@ export type DocSearchResult = {
   id: DocId;
   questionBank: QuestionBankName;
   title: string;
-  subject: SubjectId;
+  subject?: SubjectId;
   empty: boolean;
   href: string;
   learningObjectives: Array<{

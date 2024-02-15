@@ -1,13 +1,5 @@
 import * as XLSX from "xlsx";
-import type {
-  LearningObjective,
-  LearningObjectiveId,
-} from "@cf/core/question-bank";
-
-type QuestionBankLearningObjectiveJson = Omit<
-  LearningObjective,
-  "questions" | "nestedQuestions"
->;
+import type { LearningObjectiveJson } from "./json-types";
 
 const courseNames: Record<string, string> = {
   "ATPL(A)": "ATPL_A",
@@ -25,17 +17,17 @@ export const parseLearningObjectivesXlsx = async ({
   xlsxPath,
 }: {
   xlsxPath: string;
-}): Promise<QuestionBankLearningObjectiveJson[]> => {
+}): Promise<LearningObjectiveJson[]> => {
   const workbook = XLSX.readFile(xlsxPath);
   const sheetNames = workbook.SheetNames;
   const learningObjectives = sheetNames
     .slice(2)
-    .flatMap<QuestionBankLearningObjectiveJson>((name) => {
+    .flatMap<LearningObjectiveJson>((name) => {
       const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[name]) as Record<
         string,
         string
       >[];
-      return sheet.map<QuestionBankLearningObjectiveJson>((row) => {
+      return sheet.map<LearningObjectiveJson>((row) => {
         const text = (row["2020 syllabus text"] ?? "")
           .replaceAll(":", ":\n- ")
           .replaceAll(";", ";\n- ")
@@ -51,17 +43,17 @@ export const parseLearningObjectivesXlsx = async ({
 
         const rawParentId = id.split(".").slice(0, -1).join(".");
         const parentId = rawParentId === "071" ? "070" : rawParentId;
+        const subjectUnsafe = id.split(".")[0];
+        const subject = subjectUnsafe === "071" ? "070" : subjectUnsafe;
 
         return {
           id,
+          subject,
           parentId,
-          questionBank: "atpl",
           courses: Object.keys(courseNames)
             .filter((item) => row[item])
             .map((k) => courseNames[k]),
-          questions: [],
           text,
-          learningObjectives: [],
           // some sources are just 0 (?)... ignore those!
           source: row["Source / Comment"] || "",
         };
@@ -70,24 +62,8 @@ export const parseLearningObjectivesXlsx = async ({
     .filter((lo) => {
       if (intentionallyLeftBlankPattern.test(lo.text)) return false;
       if (lo.id === "") return false;
-      if (lo.id.split(".").length === 1) return false;
       return true;
     });
-
-  const learningObjectivesMap = learningObjectives.reduce(
-    (sum, lo) => {
-      sum[lo.id] = lo;
-      return sum;
-    },
-    {} as Record<LearningObjectiveId, QuestionBankLearningObjectiveJson>,
-  );
-
-  // link learning objectives to one another:
-  learningObjectives.forEach((lo) => {
-    const parentId = lo.id.split(".").slice(0, -1).join(".");
-    const parent = learningObjectivesMap[parentId];
-    if (parent) parent.learningObjectives.push(lo.id);
-  });
 
   return learningObjectives;
 };

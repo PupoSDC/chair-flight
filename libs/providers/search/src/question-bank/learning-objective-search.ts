@@ -87,7 +87,7 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
       text: compileMarkdown(lo.text),
       source: compileMarkdown(lo.source),
       questionBank: lo.questionBank,
-      subject: lo.id.split(".")[0],
+      subject: lo.subject,
       numberOfQuestions: lo.nestedQuestions.length,
     };
   }
@@ -96,7 +96,7 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
     return {
       id: lo.id,
       text: lo.text,
-      subject: lo.id.split(".")[0],
+      subject: lo.subject,
       course: lo.courses.join(","),
       questionBank: lo.questionBank,
     };
