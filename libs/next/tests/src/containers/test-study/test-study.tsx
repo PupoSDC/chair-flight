@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { default as AccessAlarmsOutlinedIcon } from "@mui/icons-material/AccessAlarmsOutlined";
 import { default as AppsOutlinedIcon } from "@mui/icons-material/AppsOutlined";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
@@ -27,6 +28,7 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@cf/base/errors";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import { MarkdownFromServer } from "@cf/next/question-bank";
 import { BugReportButton, ThemeButton } from "@cf/next/user";
 import { useBugReportDebugData } from "@cf/next/user";
@@ -67,6 +69,7 @@ export const TestStudy = container<Props>(
     useTestProgressTime({ testId });
 
     const theme = useTheme();
+    const router = useRouter();
     const test = useTestProgress((state) => state.tests[testId]);
     const goToQuestion = useTestProgress((s) => s.goToTestQuestion);
     const goToPreviousQuestion = useTestProgress((s) => s.goToPreviousQuestion);
@@ -86,6 +89,8 @@ export const TestStudy = container<Props>(
     const status = test.mode === "exam" ? "in-progress" : "both";
     const currentQuestion = test.currentQuestionIndex + 1;
     const totalQuestions = test.questions.length;
+    // TODO this should not be done here.
+    const questionBank = router.query["questionBank"] as QuestionBankName;
 
     useBugReportDebugData("test-study-current-question", () => question);
     useBugReportDebugData("test-study-test", () => test);
@@ -301,7 +306,7 @@ export const TestStudy = container<Props>(
               variant="outlined"
               target="_blank"
               startDecorator={<OpenInNewIcon />}
-              href={`../../questions/${question.templateId}`}
+              href={`/modules/${questionBank}/questions/${question.templateId}`}
               children="Explore Question"
             />
             <Divider sx={{ my: 2 }}>Explanation</Divider>
