@@ -28,7 +28,6 @@ import {
 } from "@mui/joy";
 import { Duration } from "luxon";
 import { NotFoundError } from "@cf/base/errors";
-import type { QuestionBankName } from "@cf/core/question-bank";
 import { MarkdownFromServer } from "@cf/next/question-bank";
 import { BugReportButton, ThemeButton } from "@cf/next/user";
 import { useBugReportDebugData } from "@cf/next/user";
@@ -45,6 +44,7 @@ import { TestLoading } from "../../components/test-loading";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import { useTestHotkeys } from "../../hooks/use-test-progress-hotkeys";
 import { useTestProgressTime } from "../../hooks/use-test-progress-time";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import type { DrawingPoints } from "@cf/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
