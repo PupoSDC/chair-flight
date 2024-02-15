@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { default as AccessAlarmsOutlinedIcon } from "@mui/icons-material/AccessAlarmsOutlined";
 import { default as AppsOutlinedIcon } from "@mui/icons-material/AppsOutlined";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
@@ -43,6 +44,7 @@ import { TestLoading } from "../../components/test-loading";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import { useTestHotkeys } from "../../hooks/use-test-progress-hotkeys";
 import { useTestProgressTime } from "../../hooks/use-test-progress-time";
+import type { QuestionBankName } from "@cf/core/question-bank";
 import type { DrawingPoints } from "@cf/react/components";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
@@ -67,6 +69,7 @@ export const TestStudy = container<Props>(
     useTestProgressTime({ testId });
 
     const theme = useTheme();
+    const router = useRouter();
     const test = useTestProgress((state) => state.tests[testId]);
     const goToQuestion = useTestProgress((s) => s.goToTestQuestion);
     const goToPreviousQuestion = useTestProgress((s) => s.goToPreviousQuestion);
@@ -86,6 +89,8 @@ export const TestStudy = container<Props>(
     const status = test.mode === "exam" ? "in-progress" : "both";
     const currentQuestion = test.currentQuestionIndex + 1;
     const totalQuestions = test.questions.length;
+    // TODO this should not be done here.
+    const questionBank = router.query["questionBank"] as QuestionBankName;
 
     useBugReportDebugData("test-study-current-question", () => question);
     useBugReportDebugData("test-study-test", () => test);
@@ -301,7 +306,7 @@ export const TestStudy = container<Props>(
               variant="outlined"
               target="_blank"
               startDecorator={<OpenInNewIcon />}
-              href={`../../questions/${question.templateId}`}
+              href={`/modules/${questionBank}/questions/${question.templateId}`}
               children="Explore Question"
             />
             <Divider sx={{ my: 2 }}>Explanation</Divider>

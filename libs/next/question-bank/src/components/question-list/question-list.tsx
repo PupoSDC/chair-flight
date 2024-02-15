@@ -7,22 +7,26 @@ import type { SearchListProps } from "@cf/react/components";
 
 export type QuestionListProps = Omit<
   SearchListProps<QuestionSearchResult>,
-  | "renderThead"
-  | "renderTableRow"
-  | "renderListItemContent"
-  | "errorMessage"
-  | "noDataMessage"
+  "renderThead" | "renderTableRow" | "renderListItemContent"
 >;
 
 export const QuestionList = forwardRef<HTMLDivElement, QuestionListProps>(
-  ({ items, ...otherProps }, ref) => {
+  (
+    {
+      items,
+      errorMessage = "Error fetching questions",
+      noDataMessage = "No questions found",
+      ...otherProps
+    },
+    ref,
+  ) => {
     return (
       <SearchList
         {...otherProps}
         ref={ref}
         items={items}
-        errorMessage={"Error fetching questions"}
-        noDataMessage={"No questions found"}
+        errorMessage={errorMessage}
+        noDataMessage={noDataMessage}
         renderThead={() => (
           <thead>
             <tr>

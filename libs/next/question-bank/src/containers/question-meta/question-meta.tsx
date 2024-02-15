@@ -39,11 +39,17 @@ export const QuestionMetaComponent: FunctionComponent<
       <Typography level="h3" sx={{ mt: 2 }}>
         Learning Objectives
       </Typography>
-      <LearningObjectiveList items={learningObjectives.items} />
+      <LearningObjectiveList
+        items={learningObjectives.items}
+        noDataMessage="No connected Learning Objectives"
+      />
       <Typography level="h3" sx={{ mt: 2 }}>
         Related Questions
       </Typography>
-      <QuestionList items={relatedQuestions.items} />
+      <QuestionList
+        items={relatedQuestions.items}
+        noDataMessage="No related questions"
+      />
       <Typography level="h3" sx={{ mt: 2 }}>
         External References
       </Typography>
