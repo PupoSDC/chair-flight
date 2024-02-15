@@ -58,7 +58,10 @@ export const QuestionStandAloneComponent: FunctionComponent<
         selectedOptionId={selectedOption}
         status={selectedStatus}
         disabled={selectedStatus === "show-result"}
-        options={question.options}
+        options={question.options.map((opt) => ({
+          ...opt,
+          text: <MarkdownFromServer children={opt.text} />,
+        }))}
         annexesHref={annexes.map((annex) => annex.href)}
         onOptionClicked={(optionId) => {
           setSelectedOption(optionId);
