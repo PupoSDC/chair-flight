@@ -37,6 +37,7 @@ export const Markdown: FunctionComponent<MarkdownProps> = ({
         },
 
         "& p": {
+          margin: 0,
           fontSize: "sm",
         },
 

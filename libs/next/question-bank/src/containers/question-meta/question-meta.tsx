@@ -4,6 +4,7 @@ import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";
 import { QuestionList } from "../../components/question-list";
+import type { QuestionListProps } from "../../components/question-list";
 import type {
   QuestionBankName,
   QuestionTemplateId,
@@ -15,6 +16,7 @@ import type { FunctionComponent } from "react";
 type Props = {
   questionBank: QuestionBankName;
   questionId: QuestionTemplateId;
+  forceMode?: QuestionListProps["forceMode"];
   onNavigateToNewSeed?: (args: { seed: string }) => void;
 };
 
@@ -33,6 +35,7 @@ export const QuestionMetaComponent: FunctionComponent<
   learningObjectives,
   relatedQuestions,
   externalIds,
+  forceMode,
 }) => {
   return (
     <Stack component={component} sx={sx}>
@@ -42,6 +45,7 @@ export const QuestionMetaComponent: FunctionComponent<
       <LearningObjectiveList
         items={learningObjectives.items}
         noDataMessage="No connected Learning Objectives"
+        forceMode={forceMode}
       />
       <Typography level="h3" sx={{ mt: 2 }}>
         Related Questions
@@ -49,6 +53,7 @@ export const QuestionMetaComponent: FunctionComponent<
       <QuestionList
         items={relatedQuestions.items}
         noDataMessage="No related questions"
+        forceMode={forceMode}
       />
       <Typography level="h3" sx={{ mt: 2 }}>
         External References
