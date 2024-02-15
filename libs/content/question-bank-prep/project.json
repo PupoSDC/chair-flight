@@ -4,7 +4,13 @@
   "projectType": "library",
   "targets": {
     "compile": {
-      "executor": "@cf/providers/question-bank:compile"
+      "executor": "@cf/providers/question-bank:compile",
+      "options": {
+        "contentFolder": "libs/content/question-bank-prep/content",
+        "flashcardsFolder": "libs/content/question-bank-prep/flashcards",
+        "compileFolder": "apps/next-app/public/content/prep",
+        "questionBank": "prep"
+      }
     }
   },
   "tags": []

@@ -64,7 +64,7 @@ export const connectQuestionBank = ({
   const annexes = jsonAnnexes.map<Annex>((a) => ({
     ...a,
     questionBank: questionBank,
-    href: `/content/questionBank/media/${a.id}.${a.format}`,
+    href: `/content/${questionBank}/media/${a.id}.${a.format}`,
     srcLocation: undefined as unknown as string,
     doc: undefined as unknown as string,
     questions: [],

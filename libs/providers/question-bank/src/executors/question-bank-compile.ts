@@ -39,7 +39,7 @@ export const compileQuestionBank = async (args: {
       JSON.stringify(args.annexes),
     ),
     fs.writeFile(
-      path.join(args.compileFolder, "learning-objectives.json"),
+      path.join(args.compileFolder, "learningObjectives.json"),
       JSON.stringify(args.learningObjectives),
     ),
     fs.writeFile(

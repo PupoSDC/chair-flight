@@ -51,7 +51,7 @@ export class QuestionBank implements QuestionBankProvider {
   async getAll<T extends QuestionBankResource>(resource: T) {
     if (!this.resourceArrays[resource]) {
       const urlPath = getUrlPathOnServer();
-      const bankPath = `/content/content-question-bank-${this.getName()}`;
+      const bankPath = `/content/${this.getName()}`;
       const baseApiPath = `${urlPath}${bankPath}`;
       const apiPath = `${baseApiPath}/${resource}.json`;
       const response = await fetch(apiPath);
@@ -102,7 +102,7 @@ export class QuestionBank implements QuestionBankProvider {
         const path = [
           cwd,
           cwd.includes(appPath) ? "" : appPath,
-          `/public/content/content-question-bank-${this.getName()}`,
+          `/public/content/${this.getName()}`,
           `/${resource}.json`,
         ].join("");
         const file = JSON.parse(await readFile(path, "utf-8"));
