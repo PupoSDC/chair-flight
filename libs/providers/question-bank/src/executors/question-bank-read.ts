@@ -39,8 +39,8 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     const content = source.split("\n---").slice(1).join().trim();
     const doc: DocJson = {
       id: data.id,
-      parentId: data.id,
-      title: data.id,
+      parentId: data.parent,
+      title: data.title,
       fileName: fileName,
       content: content,
     };

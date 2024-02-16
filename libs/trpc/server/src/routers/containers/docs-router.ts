@@ -6,7 +6,7 @@ import { docSearch, questionBanks } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const docsContainersRouter = router({
-  getDoc: publicProcedure
+  getDocContent: publicProcedure
     .input(
       z.object({
         questionBank: questionBankNameSchema,
@@ -25,21 +25,24 @@ export const docsContainersRouter = router({
       const doc = {
         docMdx,
         title: `[${rawDoc.id}] ${rawDoc.title}`,
-        description: "....",
         isEmpty: rawDoc.empty,
-        learningObjective: rawDoc.learningObjectives,
-        href: `/modules/${input.questionBank}/docs/${rawDoc.id}`,
         parent: parent
           ? {
               href: `/modules/${input.questionBank}/docs/${parent.id}`,
-              title: `[${parent.learningObjectives}] ${parent.title}`,
+              title: `[${parent.id}] ${parent.title}`,
             }
           : null,
         children: children.map((child) => ({
           href: `/modules/${input.questionBank}/docs/${child.id}`,
-          title: `[${child.learningObjectives}] ${child.title}`,
+          title: `[${child.id}] ${child.title}`,
           isEmpty: child.empty,
         })),
+        links: {
+          search: `/modules/${input.questionBank}/docs`,
+          aboutUs: "/blog/000-about-us",
+          blog: "/blog",
+          github: "/",
+        },
       };
       return { doc };
     }),

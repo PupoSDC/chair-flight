@@ -59,9 +59,9 @@ export const DocSearch = container<Props, Params, Data>(
           renderThead={() => (
             <thead>
               <tr>
-                <th style={{ width: 140 }}>Subject</th>
-                <th style={{ width: 160 }}>Learning Objective</th>
+                <th style={{ width: 120 }}>Subject</th>
                 <th>Title</th>
+                <th style={{ width: 160 }}>Learning Objectives</th>
                 <th style={{ width: 100 }}>Status</th>
               </tr>
             </thead>
@@ -72,15 +72,18 @@ export const DocSearch = container<Props, Params, Data>(
                 {result.subject ? serverData.subjectMap[result.subject] : "---"}
               </td>
               <td>
+                <Link
+                  href={result.href}
+                >{`[${result.id}] ${result.title}`}</Link>
+              </td>
+              <td>
                 {result.learningObjectives.map((lo) => (
                   <Link href={lo.href} key={lo.id}>
                     {lo.id}
                   </Link>
                 ))}
               </td>
-              <td>
-                <Link href={result.href}>{result.title}</Link>
-              </td>
+
               <td>
                 {result.empty ? (
                   <Tooltip title="This document is just a placeholder. Help Chair Flight grow by contributing!">
