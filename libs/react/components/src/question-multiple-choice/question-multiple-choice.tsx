@@ -127,7 +127,7 @@ export const QuestionMultipleChoice = forwardRef<
         ) : (
           <>
             {question}
-            <Box>
+            <Box sx={{ mt: 2 }}>
               {annexesHref?.map((annex) => (
                 <Button
                   key={annex}
