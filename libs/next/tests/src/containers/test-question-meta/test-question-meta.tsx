@@ -42,5 +42,6 @@ export const TestQuestionMeta = container<Props>(({ testId, questionBank }) => {
   );
 });
 
+TestQuestionMeta.displayName = "TestQuestionMeta";
 TestQuestionMeta.useData = () => ({});
 TestQuestionMeta.getData = async () => ({});
