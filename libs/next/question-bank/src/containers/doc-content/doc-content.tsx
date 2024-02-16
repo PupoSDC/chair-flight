@@ -1,4 +1,5 @@
 import { Box, Chip, Divider, Link, Stack, Typography } from "@mui/joy";
+import { Ups } from "@cf/react/components";
 import { Mdx } from "@cf/react/markdown";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
@@ -78,14 +79,31 @@ export const DocContent: Container<Props, Params, Data> = container<
             ))}
           </Box>
         )}
-        {!doc.isEmpty && <Mdx children={doc.docMdx} />}
+        {!!doc.children.length && <Divider sx={{ my: 2 }} />}
+        {doc.isEmpty ? (
+          <Ups
+            message="This Doc has not been written yet."
+            children={
+              <>
+                <Typography level="body-lg">
+                  You can help chair flight grow by contributing to it!
+                </Typography>
+                <Link href={doc.links.github} level="body-sm">
+                  Edit this page on Github
+                </Link>
+              </>
+            }
+          />
+        ) : (
+          <Mdx children={doc.docMdx} />
+        )}
+        <Box sx={{ flex: 1 }} />
         <Divider sx={{ mt: 4, mb: 2 }} />
         <Typography level="body-sm">
-          Text is available under the Creative Commons Attribution-ShareAlike
-          License 4.0;
+          Text is available under the MIT License.
         </Typography>
-        <Stack direction={"row"} gap={2} mt={2} mb={8}>
-          <Link href={doc.links.github} level="body-sm">
+        <Stack direction={"row"} gap={2} mt={2} mb={4}>
+          <Link href={doc.links.github} level="body-sm" target="_blank">
             Edit this page on Github
           </Link>
           <Link href={doc.links.search} level="body-sm">

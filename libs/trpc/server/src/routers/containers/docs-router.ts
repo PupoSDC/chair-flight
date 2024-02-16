@@ -1,8 +1,14 @@
 import { z } from "zod";
-import { makeMap } from "@cf/base/utils";
+import { keepUnique, makeMap } from "@cf/base/utils";
 import { compileMdx } from "@cf/core/markdown";
 import { questionBankNameSchema } from "@cf/core/question-bank";
-import { docSearch, questionBanks } from "../../common/providers";
+import {
+  docSearch,
+  github,
+  learningObjectiveSearch,
+  questionBanks,
+  questionSearch,
+} from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const docsContainersRouter = router({
@@ -14,6 +20,7 @@ export const docsContainersRouter = router({
       }),
     )
     .query(async ({ input }) => {
+      const repoUrl = github.getRepositoryUrl();
       const bank = questionBanks[input.questionBank];
       const rawDoc = await bank.getOne("docs", input.docId);
       const children = await bank.getSome("docs", rawDoc.docs);
@@ -41,10 +48,38 @@ export const docsContainersRouter = router({
           search: `/modules/${input.questionBank}/docs`,
           aboutUs: "/blog/000-about-us",
           blog: "/blog",
-          github: "/",
+          github: `${repoUrl}/blob/main/${rawDoc.fileName}`,
         },
       };
       return { doc };
+    }),
+  getDocQuestions: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        docId: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      const rawDoc = await bank.getOne("docs", input.docId);
+      const loIds = rawDoc.learningObjectives;
+      const los = await bank.getSome("learningObjectives", loIds);
+      const questionIds = keepUnique(los.flatMap((lo) => lo.nestedQuestions));
+      return await questionSearch.retrieve(bank, questionIds);
+    }),
+  getDocLearningObjectives: publicProcedure
+    .input(
+      z.object({
+        questionBank: questionBankNameSchema,
+        docId: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const bank = questionBanks[input.questionBank];
+      const rawDoc = await bank.getOne("docs", input.docId);
+      const loIds = rawDoc.learningObjectives;
+      return await learningObjectiveSearch.retrieve(bank, loIds);
     }),
   getDocSearch: publicProcedure
     .input(

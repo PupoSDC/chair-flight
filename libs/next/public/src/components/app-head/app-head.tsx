@@ -1,28 +1,27 @@
 import { default as Head } from "next/head";
 import type { FunctionComponent } from "react";
 
-export const APP_NAME = "Chair Flight";
-
-export const APP_DESC = [
+const BASE_URL = "http://chair-flight.com";
+const DEFAULT_TITLE = "Chair Flight";
+const DEFAULT_IMAGE = "/images/social/default";
+const DEFAULT_DESC = [
   "Chair Flight is a community driven Aviation Question Bank built by students",
   "for students. Prepare yourself for your ATPL exams, Interviews, and type",
   "rating technical exams. For Free!",
 ].join(" ");
 
-export const BASE_URL = "http://chair-flight.com";
-
-export type AppHtmlHeadProps = {
+export type AppHeadProps = {
   title?: string;
   linkTitle?: string;
   linkDescription?: string;
   linkImage?: string;
 };
 
-export const AppHead: FunctionComponent<AppHtmlHeadProps> = ({
-  title = APP_NAME,
-  linkTitle = APP_NAME,
-  linkDescription = APP_DESC,
-  linkImage = `/images/background-article.png`,
+export const AppHead: FunctionComponent<AppHeadProps> = ({
+  title = DEFAULT_TITLE,
+  linkTitle = title,
+  linkDescription = DEFAULT_DESC,
+  linkImage = DEFAULT_IMAGE,
 }) => (
   <Head>
     <title>{title}</title>

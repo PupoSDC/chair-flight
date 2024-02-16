@@ -1,5 +1,6 @@
 import { analyticsRouter } from "../routers/common/analytics-router";
 import { blogRouter } from "../routers/common/blog-router";
+import { docsRouter } from "../routers/common/docs-router";
 import { githubRouter } from "../routers/common/github-router";
 import { questionsRouter } from "../routers/common/questions-router";
 import { searchRouter } from "../routers/common/search-router";
@@ -23,6 +24,7 @@ import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 export const appRouter = router({
   common: router({
     blog: blogRouter,
+    docs: docsRouter,
     github: githubRouter,
     tests: testsRouter,
     questions: questionsRouter,

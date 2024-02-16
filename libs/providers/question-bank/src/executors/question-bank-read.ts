@@ -40,6 +40,7 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     const doc: DocJson = {
       id: data.id,
       parentId: data.parent,
+      description: data.description,
       title: data.title,
       fileName: fileName,
       content: content,

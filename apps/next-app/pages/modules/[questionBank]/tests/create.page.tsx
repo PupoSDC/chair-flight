@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
+import { AppHead } from "@cf/next/public";
 import { LayoutModule } from "@cf/next/question-bank";
 import { TestMaker } from "@cf/next/tests";
-import { AppHead } from "@cf/react/components";
 import { staticHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";

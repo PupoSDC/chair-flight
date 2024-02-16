@@ -1,5 +1,6 @@
 ---
 id: "032.04"
+parent: "032"
 questionBank: "atpl"
 title: CS-25/APPLICABLE OPERATIONAL REQUIREMENTS PERFORMANCE CLASS A - THEORY
 ---

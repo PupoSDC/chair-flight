@@ -1,5 +1,5 @@
+import { AppHead } from "@cf/next/public";
 import { LayoutModule, LearningObjectiveTree } from "@cf/next/question-bank";
-import { AppHead } from "@cf/react/components";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";

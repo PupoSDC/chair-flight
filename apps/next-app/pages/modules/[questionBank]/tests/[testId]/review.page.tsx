@@ -1,7 +1,7 @@
 import { MissingPathParameter } from "@cf/base/errors";
+import { AppHead } from "@cf/next/public";
 import { LayoutModule } from "@cf/next/question-bank";
 import { TestReview } from "@cf/next/tests";
-import { AppHead } from "@cf/react/components";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";

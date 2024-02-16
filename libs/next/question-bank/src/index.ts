@@ -25,5 +25,7 @@ export { QuestionExplanation } from "./containers/question-explanation";
 export { QuestionMeta } from "./containers/question-meta";
 export { QuestionSearch } from "./containers/question-search";
 export { QuestionStandAlone } from "./containers/question-stand-alone";
+export { DocLearningObjectives } from "./containers/doc-learning-objectives";
+export { DocQuestions } from "./containers/doc-questions";
 
 export type { Breadcrumbs } from "./containers/layout-module";

@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import { Box, Tab, TabList, TabPanel, Tabs, tabClasses } from "@mui/joy";
 import { getRandomId } from "@cf/base/utils";
+import { AppHead } from "@cf/next/public";
 import {
   LayoutModule,
   QuestionExplanation,
   QuestionMeta,
   QuestionStandAlone,
 } from "@cf/next/question-bank";
-import { AppHead } from "@cf/react/components";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";
