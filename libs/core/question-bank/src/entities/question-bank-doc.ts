@@ -9,6 +9,7 @@ export type Doc = {
   id: DocId;
   parentId?: DocId;
   subject?: SubjectId;
+  description?: string;
   title: string;
   questionBank: QuestionBankName;
 
@@ -31,6 +32,7 @@ export const docSchema = z.object({
   id: z.string(),
   parentId: z.string().optional(),
   title: z.string(),
+  description: z.string().optional(),
   questionBank: questionBankNameSchema,
   subject: z.string().optional(),
   fileName: z.string(),

@@ -1,5 +1,6 @@
 import { Octokit } from "octokit";
 import { getEnvVariableOrThrow } from "@cf/base/env";
+import { originRepo, upstreamOwner } from "./common/env";
 import { createEditQuestionsPr } from "./functions/create-edit-questions-pr";
 import { createNewIssue } from "./functions/create-new-issue";
 import type { NewIssue, EditQuestionsPr } from "@cf/core/github";
@@ -16,6 +17,10 @@ export class Github implements GithubProvider {
     Github.octokit = new Octokit({
       auth: getEnvVariableOrThrow("PROVIDER_GITHUB_TOKEN"),
     });
+  }
+
+  getRepositoryUrl() {
+    return `https://github.com/${upstreamOwner}/${originRepo}`;
   }
 
   async createEditQuestionsPr(newPr: EditQuestionsPr) {

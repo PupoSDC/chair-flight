@@ -164,9 +164,9 @@ export const connectQuestionBank = ({
 
   // Link docs to one another
   docs.forEach((doc) => {
+    doc.subject = losMap[doc.id]?.subject ?? undefined;
     if (!doc.parentId) return;
     const parent = docsMap[doc.parentId];
-    doc.subject = losMap[doc.id]?.subject ?? undefined;
     if (!parent) throw new Error("Missing parent for doc " + doc.id);
     parent.docs.push(doc.id);
   });

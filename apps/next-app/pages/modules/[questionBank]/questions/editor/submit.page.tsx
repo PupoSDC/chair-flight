@@ -1,12 +1,12 @@
 import * as fs from "node:fs/promises";
 import { Box, Divider, Stack, Typography } from "@mui/joy";
+import { AppHead } from "@cf/next/public";
 import {
   LayoutModule,
   QuestionEditorDiff,
   QuestionEditorManager,
   QuestionEditorSubmitForm,
 } from "@cf/next/question-bank";
-import { AppHead } from "@cf/react/components";
 import { staticHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";

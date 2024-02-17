@@ -1,25 +1,25 @@
 import * as fs from "node:fs/promises";
+import { Drawer, ModalClose, Typography, useTheme } from "@mui/joy";
+import { AppHead } from "@cf/next/public";
 import {
-  Chip,
-  Divider,
-  Drawer,
-  Link,
-  ModalClose,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/joy";
-import { DocContent, LayoutModule } from "@cf/next/question-bank";
-import { AppHead, useDisclose, useMediaQuery } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
+  DocContent,
+  DocLearningObjectives,
+  DocQuestions,
+  LayoutModule,
+} from "@cf/next/question-bank";
+import { useDisclose, useMediaQuery } from "@cf/react/components";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
+import type { AppHeadProps } from "@cf/next/public";
 import type { Breadcrumbs } from "@cf/next/question-bank";
 import type { NextPage } from "next";
+
+const HEADER_HEIGHT = 48;
 
 type PageProps = {
   docId: string;
   questionBank: QuestionBankName;
+  meta: AppHeadProps;
 };
 
 type PageParams = {
@@ -27,14 +27,12 @@ type PageParams = {
   questionBank: QuestionBankName;
 };
 
-const useDoc = trpc.containers.docs.getDoc.useSuspenseQuery;
-
-export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
-  const [{ doc }] = useDoc({ docId, questionBank });
+export const Page: NextPage<PageProps> = ({ docId, questionBank, meta }) => {
   const theme = useTheme();
   const loDrawer = useDisclose(false);
   const questionDrawer = useDisclose(false);
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const crumbs = [
     [questionBank.toUpperCase(), `/modules/${questionBank}`],
     ["Docs", `/modules/${questionBank}/docs`],
@@ -43,83 +41,70 @@ export const Page: NextPage<PageProps> = ({ docId, questionBank }) => {
 
   return (
     <LayoutModule questionBank={questionBank} breadcrumbs={crumbs}>
-      <AppHead
-        title={doc.title}
-        linkTitle={doc.title}
-        linkDescription={doc.description}
-      />
-      <Stack
+      <AppHead {...meta} />
+      <DocContent
+        onLearningObjectivesOpen={loDrawer.open}
+        onQuestionsOpen={questionDrawer.open}
+        docId={docId}
+        questionBank={questionBank}
         sx={{
           width: "100%",
           maxWidth: "md",
           margin: "auto",
+          minHeight: `calc(100vh - ${HEADER_HEIGHT}px - 32px)`,
         }}
+      />
+
+      <Drawer
+        anchor="right"
+        size="lg"
+        open={loDrawer.isOpen}
+        onClose={loDrawer.close}
       >
-        {doc.parent && (
-          <Link href={doc.parent.href} children={doc.parent.title} />
-        )}
-        <Typography
-          level="h3"
-          component="h1"
-          sx={{ fontWeight: "bold" }}
-          children={doc.title}
+        {isMobile && <ModalClose />}
+        <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
+          Learning Objectives
+        </Typography>
+        <DocLearningObjectives
+          noSsr
+          docId={docId}
+          questionBank={questionBank}
+          sx={{ mx: 2 }}
         />
+      </Drawer>
 
-        <Divider sx={{ width: "100%", mb: 1 }} />
-
-        <Stack
-          spacing={1}
-          width={"100%"}
-          marginBottom={2}
-          direction={{ xs: "column", sm: "row" }}
-          alignItems={{ xs: "flex-start" }}
-        >
-          <Chip color="primary" onClick={loDrawer.open}>
-            Learning Objectives
-          </Chip>
-          <Chip color="primary" onClick={questionDrawer.open}>
-            Questions
-          </Chip>
-        </Stack>
-
-        <DocContent docId={docId} questionBank={questionBank} />
-
-        <Drawer
-          anchor="right"
-          size="md"
-          open={loDrawer.isOpen}
-          onClose={loDrawer.close}
-        >
-          {isMobile && <ModalClose />}
-          <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
-            Learning Objectives
-          </Typography>
-        </Drawer>
-
-        <Drawer
-          anchor="right"
-          size="md"
-          open={questionDrawer.isOpen}
-          onClose={questionDrawer.close}
-        >
-          {isMobile && <ModalClose />}
-          <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
-            Questions
-          </Typography>
-        </Drawer>
-      </Stack>
+      <Drawer
+        anchor="right"
+        size="lg"
+        open={questionDrawer.isOpen}
+        onClose={questionDrawer.close}
+      >
+        {isMobile && <ModalClose />}
+        <Typography level="h3" sx={{ m: 1, mt: 1.5 }}>
+          Questions
+        </Typography>
+        <DocQuestions
+          noSsr
+          docId={docId}
+          questionBank={questionBank}
+          sx={{ mx: 2 }}
+        />
+      </Drawer>
     </LayoutModule>
   );
 };
 
 export const getStaticProps = staticHandler<PageProps, PageParams>(
-  async ({ params: rawParams, helper }) => {
-    const data = await helper.containers.docs.getDoc.fetch(rawParams);
-    const learningObjective = data.doc.learningObjective;
-    const params = { ...rawParams, learningObjective };
+  async ({ params, helper }) => {
     await LayoutModule.getData({ helper, params });
     await DocContent.getData({ helper, params });
-    return { props: params };
+    const { doc } = await helper.common.docs.getDoc.fetch(params);
+    const meta: AppHeadProps = {
+      title: doc.title,
+      linkTitle: `Chair FLight: ${doc.title}`,
+    };
+
+    return { props: { ...params, meta } };
   },
   fs,
 );

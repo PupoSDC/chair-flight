@@ -1,5 +1,6 @@
 ---
 id: "021.09"
+parent: "021"
 questionBank: "atpl"
 title: ELECTRICS
 ---

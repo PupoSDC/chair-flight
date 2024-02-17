@@ -37,7 +37,7 @@ export type AnnexJson = Pick<Annex, "id" | "description" | "format">;
 
 export type DocJson = Pick<
   Doc,
-  "id" | "parentId" | "title" | "content" | "fileName"
+  "id" | "parentId" | "title" | "content" | "fileName" | "description"
 >;
 
 export type CourseJson = Course;

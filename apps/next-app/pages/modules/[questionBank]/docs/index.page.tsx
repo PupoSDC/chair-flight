@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
+import { AppHead } from "@cf/next/public";
 import { DocSearch, LayoutModule } from "@cf/next/question-bank";
-import { AppHead } from "@cf/react/components";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";
@@ -22,7 +22,7 @@ const Page: NextPage<PageProps> = ({ questionBank }) => {
 
   return (
     <LayoutModule fixedHeight questionBank={questionBank} breadcrumbs={crumbs}>
-      <AppHead />
+      <AppHead title="Doc Search" linkTitle="Chair Flight: Doc Search" />
       <DocSearch questionBank={questionBank} sx={{ height: "100%" }} />
     </LayoutModule>
   );

@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
+import { AppHead } from "@cf/next/public";
 import { FlashcardList, LayoutModule } from "@cf/next/question-bank";
-import { AppHead } from "@cf/react/components";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { Breadcrumbs } from "@cf/next/question-bank";

@@ -7,6 +7,7 @@ import {
   ModalClose,
   ModalDialog,
 } from "@mui/joy";
+import { AppHead } from "@cf/next/public";
 import {
   TestFinisher,
   TestHeader,
@@ -15,7 +16,7 @@ import {
   TestQuestionMeta,
 } from "@cf/next/tests";
 import { UserBugReport } from "@cf/next/user";
-import { AppHead, useDisclose } from "@cf/react/components";
+import { useDisclose } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
