@@ -168,8 +168,5 @@
       "<TS_TYPES>",
       "^@fontsource(/.*)?$"
     ]
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": "nx affected --target=lint --fix"
   }
 }

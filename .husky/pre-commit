@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-nx affected --target=lint --fix
-nx affected --target=check
-nx affected --target=format
+npx nx affected --target=lint --fix
+npx nx affected --target=check
+npx nx affected --target=format
