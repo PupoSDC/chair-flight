@@ -1,80 +1,36 @@
 [
   {
-    "id": "QQRKTRXK",
+    "id": "QNFJQIXF",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-107089",
-      "ATPLGS-114209",
-      "ATPLQ-318048",
-      "AVEXAM-10537",
-      "BGS-310241"
-    ],
-    "annexes": [],
+    "externalIds": ["ATPLQ-318061", "AVEXAM-58222"],
+    "annexes": ["ARFAXHJA0"],
     "learningObjectives": ["031.04.01.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Calculate the centre of gravity in % MAC (mean aerodynamic chord) with following data \n\nDistance datum  : centre of gravity 12.53 m \n\nDistance datum : leading edge of the MAC 9.63 m \n\nLength of MAC 8 m.",
+      "question": "Refer to figure.\n\nThe CG of an aeroplane is located at 23% MAC or 15.6 m. Determine the MAC length, assuming the location of the wing leading edge shown in the annex.",
       "options": [
         {
-          "id": "AS30CVJ2XG",
-          "text": "36.3 % MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9UZCB0DHW",
-          "text": "47.0 % MAC",
+          "id": "OEE112AFG",
+          "text": "9.75 m",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATKQE6V88J",
-          "text": "23.1 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOS7XDE30Z",
-          "text": "63.4 % MAC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGPMIZCQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-58222"],
-    "annexes": ["e519f11861971690e3fa5084a750e605"],
-    "learningObjectives": ["031.04.01.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 031-75.\nThe CG of an aeroplane is located at 23% MAC or 15.6 m. Assuming the location of the wing leading edge shown in the annex, what is the MAC length?",
-      "options": [
-        {
-          "id": "AIPM37KDB7",
-          "text": "6.96 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1EBCDHY7N",
+          "id": "OTNT8DH8K",
           "text": "3.68 m",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUS6NURKMB",
-          "text": "8.75 m",
-          "correct": false,
+          "id": "OCQYGERLY",
+          "text": "6.96 m",
+          "correct": true,
           "why": ""
         },
         {
-          "id": "AGJDK3V8YD",
-          "text": "9.75 m",
+          "id": "ODJ7UQMCI",
+          "text": "8.75 m",
           "correct": false,
           "why": ""
         }
@@ -90,28 +46,28 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "From the data given below, calculate the length of the MAC.\nLeading edge at wing root: STA 235\nTrailing edge at wing root: STA 250\nLeading edge at wing tip: STA 148\nTrailing edge at wing tip: STA 212\nLeading edge of MAC: STA 192\nTrailing edge of MAC: STA 224\n<i>(Note: Body stations are distances from the aircraft nose in 10^-1^ m)</i>",
+      "question": "Determine the length of the MAC, given:\n\nLeading edge at wing root: STA 235   \nTrailing edge at wing root: STA 250   \nLeading edge at wing tip: STA 148   \nTrailing edge at wing tip: STA 212   \nLeading edge of MAC: STA 192   \nTrailing edge of MAC: STA 224\n\n_Note: Body stations are distances from the aircraft nose in **10\\-1** m._",
       "options": [
         {
-          "id": "AUE19XG5HC",
-          "text": "320 cm",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3G8IGUOL9",
-          "text": "640 cm",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A67CS8GYRJ",
+          "id": "OFJDHAMRZ",
           "text": "150 cm",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4EIDHFZTB",
+          "id": "OBG8JACJ4",
+          "text": "320 cm",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEZECT0PU",
+          "text": "640 cm",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONQZ4JSCP",
           "text": "400 cm",
           "correct": false,
           "why": ""
@@ -120,123 +76,9 @@
     }
   },
   {
-    "id": "QKVEBWIG",
+    "id": "QRRLRMNT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-312624", "BGS-310487", "BGS-310539"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The CG position of an aeroplane is 12.40 m aft of the datum. Determine the CG position as % MAC, given:Leading edge of the wing root: 11.83 m aft of the datum \n Leading edge of MAC: 12.12 m aft of the datum \n Leading edge of the wing tip: 12.81 m aft of the datum \n Length of the wing root chord: 1.55 m \n Length of MAC: 1.34 m \n Length of the wing tip chord: 0.61 m",
-      "options": [
-        {
-          "id": "AQ7D35B14X",
-          "text": "20.90 % MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUSDSMZ6SV",
-          "text": "90.65 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG8L3WDYR4",
-          "text": "86.94 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMFU87QPFE",
-          "text": "36.77 % MAC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPZEKMTH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-319056"],
-    "annexes": ["966e6435f5d14cde27af8337ceab07c4"],
-    "learningObjectives": ["031.04.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.\n\nWhat is the length of the MAC of this aeroplane?",
-      "options": [
-        {
-          "id": "ANMNJKI7LP",
-          "text": "278.5 in",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY7KNJT0GX",
-          "text": "1 174.5 in",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS2DKUR6B4",
-          "text": "2 627.5 in",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANXOV98RQ0",
-          "text": "1 453.0 in",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXBJFZFO",
-    "relatedQuestions": ["QNGFRWNR", "QRRLRMNT"],
-    "externalIds": ["ATPLGS-126792", "ATPLQ-317989", "BGS-310469"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The length of the MAC is 114 inches, and the centre of gravity limits are 12 % to 38 % MAC\n If the centre of gravity position is 10 % MAC, how many inches is it out of limits?",
-      "options": [
-        {
-          "id": "AHWHK9SZAT",
-          "text": "2.28 inches",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8T1ZCFLOA",
-          "text": "11.40 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATMQH2U2A1",
-          "text": "25.08 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4PIWERI7J",
-          "text": "13.68 inches",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNGFRWNR",
-    "relatedQuestions": ["QRRLRMNT", "QXBJFZFO"],
-    "externalIds": ["ATPLGS-126792", "ATPLQ-317989", "BGS-310469"],
+    "externalIds": ["ATPLQ-317989", "ATPLGS-126792", "BGS-310469"],
     "annexes": [],
     "learningObjectives": ["031.04.01.03.03"],
     "explanation": "",
@@ -245,102 +87,26 @@
       "question": "The length of the MAC is 114 inches, and the centre of gravity limits are 12% to 38% MAC. If the centre of gravity position is 10% MAC, how many inches is it out of limits?",
       "options": [
         {
-          "id": "A59O4L2L5Y",
-          "text": "2.28 inches",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARN3SB3XSR",
-          "text": "25.08 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU27XLEMZT",
+          "id": "OR2ZTLSH9",
           "text": "13.68 inches",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIEJMJRP5A",
-          "text": "11.40 inches",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRRLRMNT",
-    "relatedQuestions": ["QNGFRWNR", "QXBJFZFO"],
-    "externalIds": ["ATPLGS-126792", "ATPLQ-317989", "BGS-310469"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The length of the MAC is 114 inches, and the centre of gravity limits are 12 % to 38 % MAC. If the centre of gravity position is 10 % MAC, how many inches is it out of limits?",
-      "options": [
-        {
-          "id": "A74Z4MBZFQ",
+          "id": "OTRTLMEWM",
           "text": "2.28 inches",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1FFL2Y3RJ",
+          "id": "OGK0BZNKR",
           "text": "11.40 inches",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1BG13OJVR",
-          "text": "13.68 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFRKS8V35D",
+          "id": "OY6XKPH1V",
           "text": "25.08 inches",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUAQLJEC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-12927"],
-    "annexes": ["89db94b7232eeb0317ee64d8b477956d"],
-    "learningObjectives": ["031.04.01.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 031-79.\nGiven the figure in the annex, state the length of the MAC...",
-      "options": [
-        {
-          "id": "A7VB2SP5EH",
-          "text": "4 metres",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALBU4MPQIE",
-          "text": "1.3 metres",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7YWCK2GDW",
-          "text": "18 metres",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQQ8XLDWPL",
-          "text": "14 metres",
           "correct": false,
           "why": ""
         }
@@ -351,40 +117,40 @@
     "id": "QQQWGELY",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-107089",
-      "ATPLGS-114209",
       "ATPLQ-318048",
-      "AVEXAM-10537",
-      "BGS-310241"
+      "BGS-310241",
+      "ATPLGS-114209",
+      "ATPLGS-107089",
+      "AVEXAM-10537"
     ],
     "annexes": [],
     "learningObjectives": ["031.04.01.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Calculate the centre of gravity in % MAC (mean aerodynamic chord) with following data:\n \nDistance datum – centre of gravity: 12.53 m\nDistance datum – leading edge of the MAC: 9.63 m\nLength of MAC: 8 m.",
+      "question": "Calculate the centre of gravity in % MAC (mean aerodynamic chord) with following data:\n\nDistance datum – centre of gravity: 12.53 m\n\nDistance datum – leading edge of the MAC: 9.63 m\n\nLength of MAC: 8 m.",
       "options": [
         {
-          "id": "A7KCL4U8M7",
-          "text": "36.3% MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOUDK3A3BH",
-          "text": "47.0% MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5XGLUN3S8",
+          "id": "ODW6KK8G2",
           "text": "23.1% MAC",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACQBX4GZN5",
+          "id": "OFLMKOFET",
+          "text": "36.3% MAC",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKF9MDRRA",
           "text": "63.4% MAC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODUBAK2CO",
+          "text": "47.0% MAC",
           "correct": false,
           "why": ""
         }
@@ -400,303 +166,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the correct formula to calculate the CG position as a percentage of the mean aerodynamic chord if the CG is at a distance L from the datum?\n\n\n- MAC: the length of the mean aerodynamic chord.\n- LEMAC: the distance of the mean aerodynamic chord leading edge from the datum.\n- TEMAC: the distance of the mean aerodynamic chord trailing edge from the datum.",
+      "question": "What is the correct formula to calculate the CG position as a percentage of the mean aerodynamic chord if the CG is at a distance L from the datum?\n\nMAC: the length of the mean aerodynamic chord.   \n LEMAC: the distance of the mean aerodynamic chord leading edge from the datum.   \n TEMAC: the distance of the mean aerodynamic chord trailing edge from the datum.",
       "options": [
         {
-          "id": "A1BGFL7D94",
-          "text": "((L - LEMAC)/MAC) x 100",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH06TIRLOD",
-          "text": "((L - MAC)/LEMAC) x 100",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW2HOH0Z9J",
+          "id": "O7DKEZ3OD",
           "text": "((TEMAC - MAC)/L) x 100",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A39VNCDOC2",
+          "id": "OAWK5G41Y",
+          "text": "((L - MAC)/LEMAC) x 100",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODZWQSOWG",
+          "text": "((L - LEMAC)/MAC) x 100",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O3X4QA10Z",
           "text": "((TEMAC - L)/MAC) x 100",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGWWRTSA",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-107064",
-      "ATPLGS-107091",
-      "ATPLGS-126750",
-      "ATPLQ-319461",
-      "AVEXAM-38752",
-      "AVEXAM-47593",
-      "BGS-310242"
-    ],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the CG position is 21% MAC, the MAC is 73 inches, and the CG datum is 26 inches aft of the leading edge of the MAC, what is the CG position relative to the datum?",
-      "options": [
-        {
-          "id": "AXJ27O8MHT",
-          "text": "10.67 inches fwd of datum.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASAP5N22O0",
-          "text": "41.33 inches fwd of datum.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATQN26HWNK",
-          "text": "10.67 inches aft of datum.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR26TFSJSE",
-          "text": "41.33 inches aft of datum.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIDVTSPX",
-    "relatedQuestions": ["QJAUHFWE", "QJCZCXMU"],
-    "externalIds": ["ATPLGS-126620", "ATPLQ-316536", "BGS-310725"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane has a MAC of 3.08 m and a Leading Edge MAC (LEMAC) of 14.72 m aft of datum\nIf the CG position of that aeroplane is located 16.13 m aft of datum, what is the CG position in % MAC?",
-      "options": [
-        {
-          "id": "AYTGTA2DRM",
-          "text": "45.78 % MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANCQIGBM4X",
-          "text": "41.44 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASWWGXVBG0",
-          "text": "32.16 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYWA9JJF48",
-          "text": "52.03 % MAC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCZCXMU",
-    "relatedQuestions": ["QIDVTSPX", "QJAUHFWE"],
-    "externalIds": ["ATPLGS-126620", "ATPLQ-316536", "BGS-310725"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane has a MAC of 3.08 m and a Leading Edge MAC (LEMAC) of 14.72 m aft of datum. If the CG position of that aeroplane is located 16.13 m aft of datum, what is the CG position in % MAC?",
-      "options": [
-        {
-          "id": "AQXI71DGXA",
-          "text": "45.78 % MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A29EGRORKW",
-          "text": "32.16 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7V9AUHTMQ",
-          "text": "41.44 % MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGKIEI2DS7",
-          "text": "52.03 % MAC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJAUHFWE",
-    "relatedQuestions": ["QIDVTSPX", "QJCZCXMU"],
-    "externalIds": ["ATPLGS-126620", "ATPLQ-316536", "BGS-310725"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane has a MAC of 3.08 m and a Leading Edge MAC (LEMAC) of 14.72 m aft of datum. If the CG position of that aeroplane is located 16.13 m aft of datum, what is the CG position in % MAC?",
-      "options": [
-        {
-          "id": "AKOQWNVRDI",
-          "text": "45.78% MAC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWEVRQJJ0H",
-          "text": "52.03% MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACVA580NVS",
-          "text": "41.44% MAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASSWDUGWVA",
-          "text": "32.16% MAC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXXOUIDN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-126697", "BGS-310624"],
-    "annexes": ["5d66d90f2f15300cccf53b826a6356f8"],
-    "learningObjectives": ["031.04.01.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to Annex, Centre of Gravity Limits % MAC. Assuming Maximum Structural Landing Mass (MSLM), what CG locations (in % MAC) have to be considered as the front and aft CG positions?",
-      "options": [
-        {
-          "id": "A3IIB40808",
-          "text": "7.3 % and 26.8 %",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZFH7E70K4",
-          "text": "7.9 % and 27.2 %",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6YWF1UW5T",
-          "text": "9.2 % and 26.0 %",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO25ZA6TYF",
-          "text": "4.0 % and 32.0 %",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRPZHWPG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-93198"],
-    "annexes": [],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n- Length of the MAC: 114 inches\n- Fwd CG limit: 12 % MAC\n- Aft CG limit: 38 % MAC\n\nCalculate the distance of a CG at 10 % MAC (outside of the limits) with reference to the forward limit:",
-      "options": [
-        {
-          "id": "A0VF6E42CU",
-          "text": "2.28 inches",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALK99GORWY",
-          "text": "8.77 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALOTAXASCQ",
-          "text": "10.53 inches",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUND0SM7HA",
-          "text": "25.08 inches",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNFJQIXF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-318061"],
-    "annexes": ["4291cb4daca8a265d35c0d2cac324fb0"],
-    "learningObjectives": ["031.04.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure. \n The CG of an aeroplane is located at 23% MAC or 15.6 m. Determine the MAC length, assuming the location of the wing leading edge shown in the annex.",
-      "options": [
-        {
-          "id": "AHPCINU3OZ",
-          "text": "6.96 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO4JPR5851",
-          "text": "9.75 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZWAWJ6OV2",
-          "text": "8.75 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD9RE7LJ6J",
-          "text": "3.68 m",
           "correct": false,
           "why": ""
         }
@@ -706,35 +198,40 @@
   {
     "id": "QRJISAGX",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-126619", "ATPLQ-314780", "BGS-310653"],
+    "externalIds": [
+      "ATPLQ-314780",
+      "AVEXAM-74118",
+      "BGS-310653",
+      "ATPLGS-126619"
+    ],
     "annexes": [],
     "learningObjectives": ["031.04.01.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the CG is located at 670 inches, what would be its position as a percentage of the MAC, given the following characteristics of an aircraft? \n\nLeading Edge MAC 627.1 inches\n Length of MAC 155.8 inches",
+      "question": "If the CG is located at 670 inches, what would be its position as a percentage of the MAC, given the following characteristics of an aircraft?\n\nLeading Edge MAC: 627.1 inches   \n Length of MAC: 155.8 inches",
       "options": [
         {
-          "id": "ALHMS0FSAI",
-          "text": "27.6 %",
+          "id": "OTEQLFMTF",
+          "text": "27.6%",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A59WKDHGGL",
-          "text": "93.6 %",
+          "id": "OMMV9IPUV",
+          "text": "82%",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AW74X2HGVD",
-          "text": "82 %",
+          "id": "O379WPLZE",
+          "text": "93.6%",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AHBIC53U8A",
-          "text": "23.2 %",
+          "id": "OUQRQGLTZ",
+          "text": "23.2%",
           "correct": false,
           "why": ""
         }
@@ -742,75 +239,80 @@
     }
   },
   {
-    "id": "QVOPGVUR",
+    "id": "QJAUHFWE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-107069", "AVEXAM-8769"],
+    "externalIds": [
+      "ATPLQ-316536",
+      "BGS-310725",
+      "ATPLGS-126620",
+      "AVEXAM-5485"
+    ],
     "annexes": [],
     "learningObjectives": ["031.04.01.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the CG as a percentage MAC of the fully loaded aircraft below?\n  BEM 12 000 kg\n Arm 3 m\n CG 25% MAC\n MAC 2 m\n Item Balance Arm \n\nFront seats 2.5 m\n Rear seats 3 m\n Fuel SG 0.74\n Fuel 410 litres\n Fuel arm 2.5 m\n Rear seats empty\n Pilot 80 kg\n Passenger 80 kg",
+      "question": "An aeroplane has a MAC of 3.08 m and a Leading Edge MAC (LEMAC) of 14.72 m aft of datum. If the CG position of that aeroplane is located 16.13 m aft of datum, what is the CG position in % MAC?",
       "options": [
         {
-          "id": "A1U9M9BYWO",
-          "text": "24%",
+          "id": "ONGDA4AZD",
+          "text": "32.16% MAC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOWBRWAUW",
+          "text": "41.44% MAC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXZV7UHT1",
+          "text": "52.03% MAC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEGXQDUL0",
+          "text": "45.78% MAC",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZZUMVEJQZ",
-          "text": "19%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A04HEA7BD8",
-          "text": "16%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AENXOP3ZYH",
-          "text": "21%",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QVTDJVWL",
+    "id": "QPZEKMTH",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627202"],
-    "annexes": ["70d40d539bd8a05b6591329575bfe87b"],
-    "learningObjectives": ["031.04.01.03.03"],
+    "externalIds": ["ATPLQ-319056"],
+    "annexes": ["A3Z1FOCUB"],
+    "learningObjectives": ["031.04.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to the diagram. \nGiven 13% MAC is located 32.25m aft of the reference datum, \ncalculate the length of the chord.",
+      "question": "Refer to figure.\n\nWhat is the length of the MAC of this aeroplane?",
       "options": [
         {
-          "id": "ATWOO2JWRZ",
-          "text": "7.3M",
+          "id": "OWOCNFVBG",
+          "text": "278.5 in",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AFARLY97O0",
-          "text": "3.03M",
+          "id": "ORBW6AFZV",
+          "text": "2 627.5 in",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADW4YQHMG9",
-          "text": "9.7M",
+          "id": "OICW3VWGC",
+          "text": "1 174.5 in",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIEI4ZCDH6",
-          "text": "2.95M",
+          "id": "OWDVRXIDI",
+          "text": "1 453.0 in",
           "correct": false,
           "why": ""
         }

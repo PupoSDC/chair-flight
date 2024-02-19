@@ -1,81 +1,37 @@
 [
   {
-    "id": "QETBNPLB",
-    "relatedQuestions": ["QCNNWHZA"],
-    "externalIds": [
-      "ATPLQ-814676",
-      "ATPLQ-815648",
-      "AVEXAM-89132",
-      "BGS-811022",
-      "BGS-811034"
-    ],
+    "id": "QMQSXQKC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817748", "AVEXAM-90984", "BGS-811000"],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During which of the following phases of flight is a fixed pitch propeller’s angle of attack highest?",
+      "question": "The difference between a propeller’s blade angle and its angle of attack is called:",
       "options": [
         {
-          "id": "ALK4812JDY",
-          "text": "Take-off run.",
+          "id": "OYEB5IYNR",
+          "text": "the effective pitch.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1TQM3NQC",
+          "text": "the propeller angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTMRGTNMA",
+          "text": "propeller slip.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZHGHQYO4",
+          "text": "the helix angle.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1YPR3MSAS",
-          "text": "Low-speed glide.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE1QAZD9XV",
-          "text": "High-speed glide.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARZDMRQZ0G",
-          "text": "Climb.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCNNWHZA",
-    "relatedQuestions": ["QETBNPLB"],
-    "externalIds": ["ATPLQ-814676", "BGS-811022"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During which of the following phases of flight is a fixed pitch propeller’s angle of attack lowest?",
-      "options": [
-        {
-          "id": "AUOSEZKDLJ",
-          "text": "High-speed glide.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALVB8LNZLZ",
-          "text": "Climb.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHOT0O3E06",
-          "text": "Take-off run.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLDOXNO80",
-          "text": "Low-speed glide.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -84,7 +40,7 @@
   {
     "id": "QFLZEKUI",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-812190"],
+    "externalIds": ["ATPLQ-812190", "AVEXAM-14681"],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.02"],
     "explanation": "",
@@ -93,26 +49,64 @@
       "question": "Fixed-pitch propellers are usually designed for maximum efficiency at:",
       "options": [
         {
-          "id": "A6UMVDXUYC",
+          "id": "OJJQCHSOQ",
+          "text": "idling",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OT4XSKJRS",
           "text": "cruising speed",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AK8MELTTGF",
+          "id": "OIPIVQHBD",
           "text": "take-off",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATNJ2DTFNU",
+          "id": "OQ0YWIXA8",
           "text": "full throttle",
           "correct": false,
           "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKUOJQQZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816606", "AVEXAM-15217"],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to the blade angle of attack and the thrust produced when the indicated airspeed (IAS) of a fixed-pitch propeller increases while in flight?",
+      "options": [
+        {
+          "id": "OHWPSCM9Y",
+          "text": "Increase, increase",
+          "correct": false,
+          "why": ""
         },
         {
-          "id": "ADE2TBRJ88",
-          "text": "idling",
+          "id": "OOULOOHQW",
+          "text": "Increase, decrease",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJRBDAVON",
+          "text": "Decrease, decrease",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OF6SWLABB",
+          "text": "Decrease, increase",
           "correct": false,
           "why": ""
         }
@@ -120,205 +114,136 @@
     }
   },
   {
-    "id": "QGVEDKWD",
+    "id": "QLBNEQZB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-818791", "AVEXAM-48977", "AVEXAM-63800"],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are the pilot flying an aircraft equipped with a constant speed propeller. While maintaining straight and level flight, the propeller angle of attack decreases. In these conditions, the propeller governor (1) \\_\\_\\_\\_\\_ the pitch and the RPM eventually (2) \\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "O6UDA1GSG",
+          "text": "(1) decreases; (2) increases",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJZ9WPEK",
+          "text": "(1) decreases; (2) remains the same",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ5BK2GAT",
+          "text": "(1) increases; (2) remains the same",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIVX9BA0L",
+          "text": "(1) increases; (2) increases",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSHSEIGS",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125990",
-      "ATPLQ-816812",
-      "AVEXAM-75172",
-      "BGS-811021"
+      "ATPLQ-817118",
+      "AVEXAM-78360",
+      "AVEXAM-48977",
+      "ATPLGS-126360",
+      "BGS-811015",
+      "ATPLGS-118395",
+      "AVEXAM-7316",
+      "AVEXAM-43070",
+      "AVEXAM-29482",
+      "ATPLGS-129465",
+      "ATPLGS-118394",
+      "AVEXAM-69288",
+      "AVEXAM-79673",
+      "BGS-811616",
+      "BGS-810275",
+      "AVEXAM-94873",
+      "AVEXAM-60116",
+      "ATPLGS-125769",
+      "ATPLGS-118397",
+      "AVEXAM-99274",
+      "BGS-812185",
+      "ATPLGS-118410",
+      "ATPLGS-126432",
+      "ATPLGS-126446",
+      "BGS-811306",
+      "AVEXAM-54992",
+      "AVEXAM-22545",
+      "ATPLGS-125716",
+      "ATPLGS-126420",
+      "AVEXAM-10482",
+      "BGS-812668",
+      "AVEXAM-47066",
+      "AVEXAM-5127",
+      "AVEXAM-47224",
+      "BGS-811268",
+      "BGS-811368",
+      "BGS-811031",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "ATPLGS-118399",
+      "ATPLGS-118396",
+      "AVEXAM-60537",
+      "BGS-811010",
+      "BGS-810566",
+      "ATPLGS-118075",
+      "BGS-810565",
+      "BGS-811012",
+      "BGS-811029",
+      "BGS-811011",
+      "BGS-811028",
+      "ATPLGS-625837",
+      "BGS-811014",
+      "ATPLGS-126146",
+      "AVEXAM-58472",
+      "AVEXAM-93241",
+      "BGS-811016",
+      "AVEXAM-92989",
+      "ATPLGS-118358",
+      "ATPLGS-125768",
+      "BGS-811617"
     ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
+    "learningObjectives": ["081.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For an aeroplane equipped with a two-position variable pitch propeller it is advisable to select a",
+      "question": "Assuming that the RPM remains constant throughout, the angle of attack of a fixed pitch propeller will:",
       "options": [
         {
-          "id": "A9IGQWFVG0",
-          "text": "fine pitch for take-off and climb.",
+          "id": "OPJ8PKQI4",
+          "text": "remain constant at a fixed value irrespective of any airspeed changes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTU2SVUJQ",
+          "text": "decrease with decreasing airspeed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORKMOGZDL",
+          "text": "increase with decreasing airspeed.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2HNETFQEZ",
-          "text": "fine pitch for cruise and coarse pitch for landing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1R291ULCK",
-          "text": "coarse pitch for take-off and climb.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6AGBB78H2",
-          "text": "fine pitch for cruise.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCGCGSHH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-1861", "BGS-811032"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Constant-speed propellers deliver better performance than fixed-pitch propellers because they:",
-      "options": [
-        {
-          "id": "A7FQPQ9J61",
-          "text": "operate at a relatively high propeller efficiency over a wider speed range than a fixed pitch propeller.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJBHFXBS3Q",
-          "text": "have a higher maximum propeller efficiency than a fixed-pitch propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1VKY7MB4K",
-          "text": "have more blade surface area than a fixed-pitch propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AULMSMN2JV",
-          "text": "produce a relatively higher thrust than a fixed-pitch propeller.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRRAQIMZ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-125988",
-      "ATPLQ-813299",
-      "AVEXAM-36145",
-      "BGS-810982"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For any propeller:",
-      "options": [
-        {
-          "id": "AEWYWKQ05D",
-          "text": "thrust is the component of the total aerodynamic force on the propeller parallel to the rotational axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVEZO0J6IM",
-          "text": "thrust is the component of the total aerodynamic force on the propeller in the plane of rotation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A79Z7KS3XV",
-          "text": "the total aerodynamic force on a blade element may be resolved into two components, torque and lift.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A12FBGV5FI",
-          "text": "the force contributing to propeller torque is perpendicular to the propeller plane of rotation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAARISUI",
-    "relatedQuestions": [],
-    "externalIds": [
-      "AVEXAM-13147",
-      "AVEXAM-33075",
-      "AVEXAM-48990",
-      "AVEXAM-49313",
-      "AVEXAM-86349"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement are correct or incorrect when comparing a fixed pitch propeller with a constant speed propeller?\n1) A constant speed propeller improves propeller efficiency over a range of cruise speeds.\n2) A coarse fixed pitch propeller is more efficient during take off.",
-      "options": [
-        {
-          "id": "A12L97ZZNJ",
-          "text": "1) is correct, 2) is incorrect",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUS4I96RP0",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMTIEQTUHN",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZE97KGYYQ",
-          "text": "1) is correct, 2) is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLJGCNER",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-811649", "AVEXAM-29482", "BGS-811012"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the RPM lever of a constant speed propeller is moved forward during a glide with idle power and whilst maintaining constant airspeed, the propeller pitch will:",
-      "options": [
-        {
-          "id": "A5GJEXMH4O",
-          "text": "decrease and the rate of descent will increase.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACCCGU7VHY",
-          "text": "increase and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6CFOJYCR9",
-          "text": "increase and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQLM0KXBFB",
-          "text": "decrease and the rate of descent will decrease.",
+          "id": "OBUTJMWGM",
+          "text": "remain constant at a fixed value only if the airspeed decreases.",
           "correct": false,
           "why": ""
         }
@@ -329,9 +254,10 @@
     "id": "QKVUWIHD",
     "relatedQuestions": ["QIGGQUWQ"],
     "externalIds": [
-      "ATPLGS-126468",
-      "ATPLQ-817135",
       "ATPLQ-818816",
+      "BGS-811009",
+      "ATPLGS-628109",
+      "ATPLGS-126468",
       "AVEXAM-66936",
       "AVEXAM-69428"
     ],
@@ -343,223 +269,70 @@
       "question": "For a fixed-pitch propeller, the blade angle of attack:",
       "options": [
         {
-          "id": "AJSP3QP8R6",
-          "text": "decreases during the take-off.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A837F0C208",
+          "id": "OXKM5252L",
           "text": "can never become negative.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2QSK27575",
-          "text": "is always positive during idling descent.",
-          "correct": false,
+          "id": "OWCZAYS1X",
+          "text": "decreases during the take-off.",
+          "correct": true,
           "why": ""
         },
         {
-          "id": "AFSMFQ1JLO",
+          "id": "ONCPF4ZRL",
           "text": "decreases when the aeroplane speed decreases (with constant engine RPM).",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIGGQUWQ",
-    "relatedQuestions": ["QKVUWIHD"],
-    "externalIds": ["ATPLQ-817135", "AVEXAM-66936"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a fixed-pitch propeller, the blade angle of attack:",
-      "options": [
-        {
-          "id": "A0P3BFGGOX",
-          "text": "can become negative during high-speed idle descent.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AOFS7NKIMQ",
-          "text": "is lower in ground run than in flight (with constant engine RPM).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK7RFY41N8",
+          "id": "OMQTD69BX",
           "text": "is always positive during idling descent.",
           "correct": false,
           "why": ""
-        },
-        {
-          "id": "AEMJMNN0MN",
-          "text": "decreases when the aeroplane speed decreases (with constant engine RPM).",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QGQBSIPQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125994"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct when comparing a fixed pitch propeller with a constant speed propeller? \n\n\n1) A constant speed propeller reduces fuel consumption over a range of cruise speeds\n \n2) A constant speed propeller improves take-off performance as compared with a coarse fixed pitch propeller.",
-      "options": [
-        {
-          "id": "AA6A2UQ6GW",
-          "text": "1) is correct, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7KHOQ0QGY",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV2WF68J89",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT9V03STOI",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKUOJQQZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-15217"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With a fixed pitch propeller increasing speed will ___ propeller angle of attack. Increasing power and therefore propeller RPM will ___ propeller angle of attack.",
-      "options": [
-        {
-          "id": "ABBA35PJH3",
-          "text": "decrease; increase",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWYAOL6XAH",
-          "text": "increase; increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9QVZ9V8S8",
-          "text": "increase; decrease",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7K9IPPDSC",
-          "text": "decrease; decrease",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRZUJRSJ",
-    "relatedQuestions": ["QSHSEIGS"],
+    "id": "QSMRPCXM",
+    "relatedQuestions": ["QHDULSUL"],
     "externalIds": [
-      "ATPLGS-126360",
-      "ATPLQ-817118",
-      "ATPLQ-817405",
-      "AVEXAM-69288",
-      "AVEXAM-78360",
-      "BGS-811016"
+      "ATPLQ-813548",
+      "AVEXAM-41129",
+      "ATPLGS-126469",
+      "AVEXAM-57331",
+      "BGS-811057"
     ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
+    "learningObjectives": ["081.07.01.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Assuming that the RPM remains constant throughout, the angle of attack of a fixed pitch propeller will:",
+      "question": "A windmilling propeller:",
       "options": [
         {
-          "id": "A293VSVWIS",
-          "text": "decrease with increasing airspeed.",
+          "id": "OSYMCX7PR",
+          "text": "has a greater blade angle than a feathered propeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZBEUBLBL",
+          "text": "produces drag instead of thrust.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7QO1TWV91",
-          "text": "remain constant at a fixed value only if the airspeed decreases.",
+          "id": "OJ3BBDBRA",
+          "text": "produces neither thrust nor drag.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWKGI2MXC4",
-          "text": "increase with increasing airspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKL655K6SH",
-          "text": "remain constant at a fixed value irrespective of any airspeed changes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSHSEIGS",
-    "relatedQuestions": ["QRZUJRSJ"],
-    "externalIds": ["ATPLQ-817118", "AVEXAM-78360"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Assuming that the RPM remains constant throughout, the angle of attack of a fixed pitch propeller will:",
-      "options": [
-        {
-          "id": "AM07SUXSON",
-          "text": "increase with decreasing airspeed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2EA6NW4DT",
-          "text": "remain constant at a fixed value irrespective of any airspeed changes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0MJPPEB7P",
-          "text": "decrease with decreasing airspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIWR1Z8WIV",
-          "text": "remain constant at a fixed value only if the airspeed decreases.",
+          "id": "OCZKFY414",
+          "text": "improves the glide performance of an aeroplane.",
           "correct": false,
           "why": ""
         }
@@ -568,13 +341,14 @@
   },
   {
     "id": "QKXPFBML",
-    "relatedQuestions": ["QLQIMZYT", "QMEDLVWU"],
+    "relatedQuestions": ["QLQIMZYT"],
     "externalIds": [
-      "ATPLGS-126405",
-      "ATPLQ-813088",
       "ATPLQ-817204",
+      "ATPLGS-126405",
+      "AVEXAM-92205",
+      "BGS-811033",
       "AVEXAM-22654",
-      "BGS-811033"
+      "ATPLGS-125728"
     ],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.04"],
@@ -584,1010 +358,26 @@
       "question": "The angle of attack of a fixed pitch propeller blade increases when:",
       "options": [
         {
-          "id": "ASGRTMHPA9",
+          "id": "ORQQEMTTA",
+          "text": "forward velocity increases and RPM decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGCGD1DJU",
           "text": "forward velocity decreases and RPM increases.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZVSJ8UXQ0",
-          "text": "forward velocity increases and RPM decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A29JZ5XGOA",
-          "text": "forward velocity and RPM increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIQD62EXUP",
-          "text": "forward velocity and RPM decrease.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMEDLVWU",
-    "relatedQuestions": ["QKXPFBML", "QLQIMZYT"],
-    "externalIds": ["AVEXAM-22654"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The angle of attack of a fixed pitch propeller blade increases when:",
-      "options": [
-        {
-          "id": "AI7VGV72HB",
-          "text": "forward velocity decreases and RPM increases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQG4SIBAHK",
-          "text": "forward velocity increases and RPM decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMKNKD7310",
-          "text": "velocity and RPM increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADQD07965W",
-          "text": "velocity and RPM decrease.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLQIMZYT",
-    "relatedQuestions": ["QKXPFBML", "QMEDLVWU"],
-    "externalIds": ["ATPLQ-813088"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The angle of attack of a fixed pitch propeller blade decreases when:",
-      "options": [
-        {
-          "id": "AJX8VM5467",
-          "text": "forward velocity increases and RPM decreases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8M27NJRYK",
-          "text": "forward velocity and RPM increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL1GN7U9HK",
+          "id": "ORKRSCTKF",
           "text": "forward velocity and RPM decrease.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AW1LJG0K3F",
-          "text": "forward velocity decreases and RPM increases.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXVUIFJO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-125650",
-      "ATPLQ-812621",
-      "AVEXAM-17461",
-      "BGS-811058"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When the blades of a propeller are in the feathered position:",
-      "options": [
-        {
-          "id": "AI338D68LA",
-          "text": "the drag of the propeller is then minimal.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEY5FP6MVU",
-          "text": "the propeller produces an optimal windmilling RPM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAZHXMFNX7",
-          "text": "the windmilling RPM is the maximum.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ1VSR5KCX",
-          "text": "the RPM is then just sufficient to lubricate the engine.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBRJJHZV",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-126056",
-      "ATPLGS-126057",
-      "ATPLGS-126058",
-      "ATPLQ-815939",
-      "BGS-811046"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct when comparing a fixed pitch propeller with a constant speed propeller? \n\nI A constant speed propeller reduces fuel consumption over a range of cruise speeds\n II A coarse fixed pitch propeller is more efficient during take-off.",
-      "options": [
-        {
-          "id": "A79J013HN2",
-          "text": "I is correct, II is incorrect",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APN5KBMRIN",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMUY1GFVS5",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY24DKXN7G",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLBNEQZB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-818791"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are the pilot flying an aircraft equipped with a constant speed propeller. While maintaining straight and level flight, the propeller angle of attack decreases. In these conditions, the propeller governor (1) _____ the pitch and the RPM eventually (2) _____.",
-      "options": [
-        {
-          "id": "A48FN49AXI",
-          "text": "(1) increases; (2) remains the same",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5KZSV8PJQ",
-          "text": "(1) increases; (2) increases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHGOX8G6LI",
-          "text": "(1) decreases; (2) increases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ4B5KBXMS",
-          "text": "(1) decreases; (2) remains the same",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMFTTJAQ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-126146",
-      "ATPLGS-126446",
-      "ATPLQ-812135",
-      "ATPLQ-813892",
-      "AVEXAM-13707",
-      "AVEXAM-43070",
-      "BGS-811015",
-      "BGS-811030"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a fixed-pitch propeller in flight at a given TAS, the blade angle of attack will",
-      "options": [
-        {
-          "id": "AQ37W8JVVE",
-          "text": "decrease if RPM decreases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOVQ38B0BB",
-          "text": "increase if RPM decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADWN3ZFKYP",
-          "text": "remain constant if RPM increases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE69Q14ZWW",
-          "text": "remain constant if RPM decreases.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZXZOISH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-126469"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A windmilling propeller",
-      "options": [
-        {
-          "id": "ACTVNXKPKQ",
-          "text": "degrades the glide performance of an aeroplane.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAPMS6XCDH",
-          "text": "produces more thrust than drag.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2F4P7FH0Y",
-          "text": "has a greater blade angle than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKWHQIGI8N",
-          "text": "produces neither thrust nor drag.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUGPGIZY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-815345", "ATPLQ-818247"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What happens to the blade pitch of a constant speed propeller on ground roll during takeoff?",
-      "options": [
-        {
-          "id": "AC5VWL8M3S",
-          "text": "Increases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5XL9M0ACD",
-          "text": "Same effect as the fixed pitch propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3H8BL532N",
-          "text": "Decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYZUZE7QOF",
-          "text": "Remains constant.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJEHCBWF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129480", "BGS-811293"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct when the chord length of a propellers blades is increased?",
-      "options": [
-        {
-          "id": "AUKU7MWJMR",
-          "text": "Power absorption increases and propeller efficiency decreases",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQVV35TLYJ",
-          "text": "Power absorption decreases and propeller efficiency decreases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGIW38LFUL",
-          "text": "Power absorption Increases and propeller efficiency increases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARMHAUZNTG",
-          "text": "Power absorption increases and propeller efficiency stays the same",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWRYFEMK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-26239"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A fixed pitch propeller is usually:",
-      "options": [
-        {
-          "id": "A1BTM6K4BB",
-          "text": "at too coarse an angle for take-off.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2J4I6YUBG",
-          "text": "at its optimum angle on take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9KQIS15DL",
-          "text": "at too fine an angle for take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUFE2HDKPY",
-          "text": "at too coarse an angle in the cruise.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCWOZXVP",
-    "relatedQuestions": ["QASGUSSM", "QCXWVAUC", "QJHUOQVX", "QKEEOHQL"],
-    "externalIds": [
-      "ATPLGS-126053",
-      "ATPLGS-126054",
-      "ATPLGS-126055",
-      "ATPLQ-814968",
-      "ATPLQ-817156",
-      "BGS-811023",
-      "BGS-811025",
-      "BGS-811026"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect? \n\nI A cruise propeller has a smaller geometric pitch compared with a climb propeller\n II A coarse pitch propeller is more efficient during take-off and in the climb, but is less efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "A5CL4ML2IJ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A89PULBTWN",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7KVP425JZ",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALM2JTYNLN",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCXWVAUC",
-    "relatedQuestions": ["QASGUSSM", "QCWOZXVP", "QJHUOQVX", "QKEEOHQL"],
-    "externalIds": ["ATPLGS-126055"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect? \n\nI A cruise propeller has a greater geometric pitch compared with a climb propeller.\n II A coarse pitch propeller is more efficient during take-off and in the climb, but is less efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "A3SFQ1BNG0",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA3Q4UDUBT",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI5K4UN3ZW",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAWRV7HCNH",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QASGUSSM",
-    "relatedQuestions": ["QCWOZXVP", "QCXWVAUC", "QJHUOQVX", "QKEEOHQL"],
-    "externalIds": ["ATPLGS-126054"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect? \n\nI A cruise propeller has a smaller geometric pitch compared with a climb propeller\n II A coarse pitch propeller is less efficient during take-off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AXHDLRU6WQ",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4XOOXWBDX",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A655QPX8U5",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1RIUGYY4F",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKEEOHQL",
-    "relatedQuestions": ["QASGUSSM", "QCWOZXVP", "QCXWVAUC", "QJHUOQVX"],
-    "externalIds": ["BGS-811023"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect?\n\n1. A cruise propeller has a greater geometric pitch when compared with a climb propeller.\n\n2. A coarse pitch propeller is less efficient during take-off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AZ8UO8GDSK",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AINI737SKO",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYSIL4VT95",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABYPVQBYIQ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJHUOQVX",
-    "relatedQuestions": ["QASGUSSM", "QCWOZXVP", "QCXWVAUC", "QKEEOHQL"],
-    "externalIds": ["BGS-811025"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect?\n\n1. A cruise propeller has a smaller geometric pitch compared with a climb propeller.\n\n2. A coarse pitch propeller is less efficient during take-off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AD9O6L8Z5H",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIZMPLFE5V",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYGYYGR17X",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ4ILNOFLA",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVVDUQNO",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-811009"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a fixed pitch cruise propeller, the blade angle of attack:",
-      "options": [
-        {
-          "id": "AH97X09574",
-          "text": "Can become negative during high-speed idle descent.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVTFRKEPA3",
-          "text": "Is always positive during idling descent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADDM1MZ2I4",
-          "text": "Is lower in ground run than in flight (with constant engine rpm).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALRB3IGCN8",
-          "text": "Decreases when the aeroplane speed decreases (with constant engine rpm).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMQSXQKC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-817748", "AVEXAM-90984", "BGS-811000"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The difference between a propeller's blade angle and its angle of attack is called:",
-      "options": [
-        {
-          "id": "AMV3I3EVL5",
-          "text": "the helix angle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW58FZSA2C",
-          "text": "the effective pitch.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANGYUMKBE2",
-          "text": "propeller slip.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL3YN2XV2I",
-          "text": "the propeller angle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFXXNNAA",
-    "relatedQuestions": ["QRWIERUN", "QWVFWSEB"],
-    "externalIds": [
-      "ATPLGS-126470",
-      "ATPLQ-813330",
-      "AVEXAM-44410",
-      "BGS-811061"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements concerning propellers is correct?",
-      "options": [
-        {
-          "id": "A99XJNXRBD",
-          "text": "The blade angle of a feathered propeller is approximately 90 degrees.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIHVTPBICF",
-          "text": "A windmilling propeller causes less drag than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEZBNY7FYU",
-          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APD8RY0HJQ",
-          "text": "An unfeathered propeller causes less drag than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRWIERUN",
-    "relatedQuestions": ["QFXXNNAA", "QWVFWSEB"],
-    "externalIds": ["ATPLQ-817660", "AVEXAM-45269", "BGS-811060"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements concerning propellers is correct?",
-      "options": [
-        {
-          "id": "AO5768AG0F",
-          "text": "A feathered propeller causes less drag than a windmilling propeller.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXH1HHJBXS",
-          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARJBFV8RJP",
-          "text": "A windmilling propeller causes less drag than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5SWFRUP74",
-          "text": "The blade angle of a feathered propeller is approximately 180 degrees.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWVFWSEB",
-    "relatedQuestions": ["QFXXNNAA", "QRWIERUN"],
-    "externalIds": ["ATPLQ-818357", "AVEXAM-96629", "BGS-811062"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements concerning propellers is correct?",
-      "options": [
-        {
-          "id": "AYL5G82BC5",
-          "text": "When compared with a non-feathered propeller, a feathered propeller improves the handling of a multi-engine aeroplane with one engine inoperative.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQV6ISHW17",
-          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP9870C3AN",
-          "text": "The blade angle of a feathered propeller is approximately 180 degrees.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT56WNN07O",
-          "text": "A windmilling propeller causes less drag than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMJXJGIE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-815154", "ATPLQ-817696", "BGS-811048", "BGS-811049"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct when comparing a fixed pitch propeller with a constant speed propeller?\n\n1. A fixed pitch propeller improves propeller efficiency over a range of cruise speeds.\n\n2. A coarse fixed pitch propeller is more efficient during take-off.",
-      "options": [
-        {
-          "id": "A1F4ADJ58B",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANYNCIS6F8",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APM4JIQKIB",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8NB8W4LL5",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEPLLMCV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-817592"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is fitted with a constant speed propeller. If the aeroplane speed increases while manifold pressure remains constant, the propeller pitch will ... (1) and the propeller torque will ... (2).\nWhat is needed to correctly complete this statement?\n ",
-      "options": [
-        {
-          "id": "ASTIKX8C6Q",
-          "text": "(1) increase, (2) remain constant.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5MFTBB5FM",
-          "text": "(1) decrease, (2) remain constant.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXWGNKVXK2",
-          "text": "(1) increase, (2) increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3FOWW854F",
-          "text": "(1) decrease, (2) decrease",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIHOXJMD",
-    "relatedQuestions": ["QCJNJSOG"],
-    "externalIds": ["AVEXAM-48977"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is fitted with a constant speed propeller. If the aeroplane speed decreases while manifold pressure remains constant, propeller pitch will ___ and propeller torque will ___.",
-      "options": [
-        {
-          "id": "AEQ38K9062",
-          "text": "decrease; remain constant",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO0I0P8N0D",
-          "text": "remain constant; decrease",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAD2E1QWMA",
-          "text": "increase; increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY8IYXHQEC",
-          "text": "decrease; increase",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCJNJSOG",
-    "relatedQuestions": ["QIHOXJMD"],
-    "externalIds": ["AVEXAM-99274"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is fitted with a constant speed propeller. If the aeroplane speed increases while manifold pressure remains constant, propeller pitch will ___ and propeller torque will ___.",
-      "options": [
-        {
-          "id": "AYPKJQY5HD",
-          "text": "increase; remain constant",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4VK98UMAL",
-          "text": "decrease; decrease",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9NBP3KSIY",
-          "text": "increase; increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIM16HTN5V",
-          "text": "decrease; remain constant",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSUVDOWW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-74271"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Does the pitch angle of a constant-speed propeller alter in medium horizontal turbulence?",
-      "options": [
-        {
-          "id": "ACJFL3XR7N",
-          "text": "Yes slightly.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU2YTIP6JU",
-          "text": "Yes strongly.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM5W1TWH5Y",
-          "text": "Yes, but only if the pitch is full-fine.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARBRGPETG4",
-          "text": "No.",
+          "id": "OOE137BFB",
+          "text": "forward velocity and RPM increase.",
           "correct": false,
           "why": ""
         }
@@ -1598,8 +388,8 @@
     "id": "QYVIMWAU",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125686",
       "ATPLQ-813932",
+      "ATPLGS-125686",
       "AVEXAM-22734",
       "BGS-811035"
     ],
@@ -1611,339 +401,110 @@
       "question": "Which of the following statements about a constant speed propeller is correct?",
       "options": [
         {
-          "id": "AFNFIJLQ7X",
-          "text": "The blade angle increases with increasing aeroplane speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHTFYZEJW1",
+          "id": "OLL6NM3RC",
           "text": "The propeller system keeps the aeroplane speed constant.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUPI95JF8W",
+          "id": "O3WS8AVIG",
           "text": "The RPM decreases with increasing aeroplane speed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0W9DQ4CBX",
+          "id": "OB311B5XI",
           "text": "The selected RPM is kept constant by the manifold pressure.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOXJIYZC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-742"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The greatest drag produced by the variable pitch propeller on a piston engine will occur when the propeller is:",
-      "options": [
+        },
         {
-          "id": "AXLLU9QE7U",
-          "text": "windmilling.",
+          "id": "OKFLNTE7V",
+          "text": "The blade angle increases with increasing aeroplane speed.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AUOEQMONGD",
-          "text": "stopped in fine pitch.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7XNC8T8U5",
-          "text": "used during a powered glide.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXJ6NFXZZE",
-          "text": "stopped in coarse pitch.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QPSYKFCZ",
+    "id": "QMFTTJAQ",
     "relatedQuestions": [],
-    "externalIds": ["BGS-994510"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With a fixed pitch propeller increasing speed will ....(1).... propeller alpha and increasing power and therefore propeller RPM will tend to ....(2)....:",
-      "options": [
-        {
-          "id": "ARE5RAGCX8",
-          "text": "(1) Decrease,       (2) increase",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKI1YMVMR3",
-          "text": "(1) Increase,        (2) increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHDH12PP8K",
-          "text": "(1) Increase,        (2) decrease",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI7TIMW6G9",
-          "text": "(1) Decrease,       (2) decrease",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRFOHDVM",
-    "relatedQuestions": ["QOGVAHMS"],
     "externalIds": [
-      "ATPLGS-125768",
-      "ATPLQ-812503",
-      "ATPLQ-816517",
-      "AVEXAM-54992",
-      "AVEXAM-94873",
-      "BGS-811010",
-      "BGS-811029"
+      "ATPLQ-817451",
+      "BGS-811015",
+      "AVEXAM-43070",
+      "AVEXAM-79673",
+      "BGS-811031",
+      "ATPLGS-126146"
     ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
+    "learningObjectives": ["081.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the propeller pitch of a windmilling propeller is increased during a glide at constant IAS the propeller drag in the direction of flight will:",
+      "question": "For a given RPM of a fixed pitch propeller, the blade angle of attack will:",
       "options": [
         {
-          "id": "A9ZLEZTK0T",
-          "text": "decrease and the rate of descent will decrease.",
+          "id": "OHIQW3TUP",
+          "text": "remain constant when the TAS increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OC0AOMDMJ",
+          "text": "decrease when the TAS decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OX3RLLPZ0",
+          "text": "remain constant when the TAS decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCAQEQSCG",
+          "text": "increase when the TAS decreases.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADUXXW4E25",
-          "text": "increase and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQFVODRR2A",
-          "text": "increase and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN243EBKA3",
-          "text": "decrease and the rate of descent will increase.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QOGVAHMS",
-    "relatedQuestions": ["QRFOHDVM"],
-    "externalIds": ["ATPLQ-816517", "AVEXAM-94873", "BGS-811029"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the propeller pitch of a windmilling propeller is decreased during a glide at constant IAS the propeller drag in the direction of flight will:",
-      "options": [
-        {
-          "id": "A2BS4O7J3R",
-          "text": "increase and the rate of descent will increase.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APBB3RJ4JL",
-          "text": "increase and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZVR33TKAQ",
-          "text": "decrease and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU9Q7NRSXR",
-          "text": "decrease and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCWSKLL",
+    "id": "QUGPGIZY",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-83180"],
+    "externalIds": ["ATPLQ-815345", "AVEXAM-7316"],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For a fixed-pitch propeller designed for cruise, the angle of attack of each blade, measured at the reference section:",
+      "question": "What happens to the blade pitch of a constant speed propeller on ground roll during takeoff?",
       "options": [
         {
-          "id": "AP53IJ40DB",
-          "text": "is optimum when the aircraft is in a stabilized cruising flight.",
+          "id": "OBEGF68WE",
+          "text": "Same effect as the fixed pitch propeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFCULAVKM",
+          "text": "Remains constant.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORZEQJW02",
+          "text": "Decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1ZILHRIF",
+          "text": "Increases.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AET1RFC58O",
-          "text": "decreases when the aircraft speed decreases (with identical engine RPM).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3YASIC924",
-          "text": "is lower in ground run than in flight (with identical engine RPM).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APSG8WZHAO",
-          "text": "is always positive during idling descent.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSMRPCXM",
-    "relatedQuestions": ["QHDULSUL"],
-    "externalIds": ["ATPLQ-813548", "AVEXAM-57331", "BGS-811057"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A windmilling propeller:",
-      "options": [
-        {
-          "id": "AW7QMX0P81",
-          "text": "produces drag instead of thrust.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMPP3YDI53",
-          "text": "improves the glide performance of an aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIR8DIYHG1",
-          "text": "has a greater blade angle than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A35C08B66C",
-          "text": "produces neither thrust nor drag.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHDULSUL",
-    "relatedQuestions": ["QSMRPCXM"],
-    "externalIds": ["ATPLQ-811574"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A windmilling propeller:",
-      "options": [
-        {
-          "id": "AMRAHTQAEO",
-          "text": "degrades the glide performance of an aeroplane.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2FSG8K54M",
-          "text": "has a greater blade angle than a feathered propeller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK90WD7YJE",
-          "text": "produces neither thrust nor drag.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARK93GNHHL",
-          "text": "produces more thrust than drag.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPWHHYEF",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991449"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With a fixed pitch propeller as TAS increases:",
-      "options": [
-        {
-          "id": "AAPTRMJTXR",
-          "text": "Blade angle is constant but angle of attack\ndecreases",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA4ZLOE1FZ",
-          "text": "Blade angle is constant but angle of attack\nincreases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6AEVZWBL3",
-          "text": "Blade angle decreases and angle of attack\ndecreases",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4DXQ11A4P",
-          "text": "Blade angle decreases but angle of attack is\nconstant",
-          "correct": false,
           "why": ""
         }
       ]
@@ -1953,79 +514,53 @@
     "id": "QOTQWNBK",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125646",
-      "ATPLQ-815194",
       "ATPLQ-818892",
+      "AVEXAM-29482",
+      "AVEXAM-15706",
+      "AVEXAM-94873",
       "AVEXAM-60116",
+      "ATPLGS-125769",
+      "AVEXAM-33798",
+      "AVEXAM-54992",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "BGS-811027",
+      "BGS-811010",
+      "BGS-811012",
+      "BGS-811013",
+      "BGS-811029",
       "BGS-811011",
-      "BGS-811028"
+      "BGS-811028",
+      "ATPLGS-125768"
     ],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During a glide with idle power and constant IAS, if the RPM lever of a constant speed propeller is pushed full forward from its normal cruise position, the propeller pitch will:",
+      "question": "During a glide with idle power and constant IAS, if the RPM lever of a constant speed propeller is pulled back from its normal cruise position, the propeller pitch will:",
       "options": [
         {
-          "id": "A9P7MKZBPJ",
-          "text": "decrease and the rate of descent will increase.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGE6FWWJ3W",
-          "text": "increase and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHZ3ETB3X5",
+          "id": "ODAED4P4Z",
           "text": "decrease and the rate of descent will decrease.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A30A0Q19VW",
+          "id": "OYKFK1SLD",
+          "text": "increase and the rate of descent will increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGOSJNGXY",
           "text": "increase and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFFISDUM",
-    "relatedQuestions": ["QAAWUDWD", "QLSOLLXO"],
-    "externalIds": ["ATPLGS-125973", "AVEXAM-25179", "AVEXAM-54355"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect? \n\n\n1) A cruise propeller has a greater geometric pitch when compared with a climb propeller\n \n2) A coarse pitch propeller is less efficient during take-off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AUL3DPUJFZ",
-          "text": "1) is correct, 2) is correct.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AEW0ZOSXS5",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB1IFXMPDY",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8Z25EDR6T",
-          "text": "1) is incorrect, 2) is incorrect.",
+          "id": "O5JBJQOWQ",
+          "text": "decrease and the rate of descent will increase.",
           "correct": false,
           "why": ""
         }
@@ -2033,151 +568,78 @@
     }
   },
   {
-    "id": "QLSOLLXO",
-    "relatedQuestions": ["QAAWUDWD", "QFFISDUM"],
-    "externalIds": ["AVEXAM-11851"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect?\n1) A cruise propeller has a smaller geometric pitch compared with a climb propeller.\n2) A coarse pitch propeller is less efficient during take-off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AU8QNUL6F8",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7CUIIGD8P",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7KP2NEPNF",
-          "text": "1) is correct, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIV46DKIK5",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAAWUDWD",
-    "relatedQuestions": ["QFFISDUM", "QLSOLLXO"],
-    "externalIds": ["AVEXAM-18436"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about propellers is correct or incorrect?\n1) A cruise propeller has a greater geometric pitch when compared with a climb propeller.\n2) A coarse pitch propeller is less efficient during take off and in the climb, but more efficient in the cruise, when compared with a fine pitch propeller.",
-      "options": [
-        {
-          "id": "AURIT13S9L",
-          "text": "1) is correct, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABOOPBYYKA",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYGV1SWUX9",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A60ASDNZMI",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVLHLVCC",
+    "id": "QCWOZXVP",
     "relatedQuestions": [],
-    "externalIds": ["BGS-811044"],
+    "externalIds": [
+      "ATPLQ-814968",
+      "ATPLGS-126049",
+      "BGS-811024",
+      "BGS-811088",
+      "BGS-811084",
+      "ATPLGS-126056",
+      "ATPLGS-126055",
+      "BGS-811023",
+      "BGS-811094",
+      "BGS-811045",
+      "BGS-811025",
+      "ATPLGS-126057",
+      "BGS-811087",
+      "ATPLGS-126070",
+      "ATPLGS-126058",
+      "ATPLGS-126069",
+      "BGS-811049",
+      "AVEXAM-54355",
+      "BGS-811026",
+      "ATPLGS-126053",
+      "AVEXAM-18436",
+      "AVEXAM-11851",
+      "AVEXAM-25179",
+      "ATPLGS-126050",
+      "ATPLGS-126071",
+      "ATPLGS-126067",
+      "ATPLGS-126054",
+      "ATPLGS-125973",
+      "BGS-811046",
+      "BGS-811082",
+      "BGS-811048",
+      "BGS-810994",
+      "BGS-811083",
+      "BGS-811047",
+      "BGS-811093",
+      "BGS-810993",
+      "BGS-811091",
+      "ATPLGS-126068",
+      "BGS-811092",
+      "BGS-811089"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.02"],
+    "learningObjectives": ["081.07.01.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which statement is correct when comparing a fixed pitch propeller with a constant speed propeller?\n\n1. A constant speed propeller reduces fuel consumption over a range of cruise speeds.\n\n2. A constant speed propeller improves take-off performance as compared with a coarse fixed pitch propeller.",
+      "question": "Which of these statements about propellers is correct or incorrect?\n\nI. A cruise propeller has a smaller geometric pitch compared with a climb propeller.   \nII. A coarse pitch propeller is more efficient during take-off and in the climb, but is less efficient in the cruise, when compared with a fine pitch propeller.",
       "options": [
         {
-          "id": "AOU9M51WX7",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2Q4ZWH7OZ",
+          "id": "OEDOHTH3W",
           "text": "I is incorrect, II is correct.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXFN0OZH2Y",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A11ZOXSU3K",
+          "id": "OFQWYDQES",
           "text": "I is correct, II is incorrect.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZVOLWSS",
-    "relatedQuestions": ["QXZVOVAS"],
-    "externalIds": ["AVEXAM-33798"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the propeller pitch, within its constant speed range and at constant power, during descent at constant IAS is increased, the aeroplane lift to drag ratio will:",
-      "options": [
+        },
         {
-          "id": "A7LFGV1XMB",
-          "text": "increase and the rate of descent will decrease.",
+          "id": "OV5GRK6CH",
+          "text": "I is incorrect, II is incorrect.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AGBDSUSEKG",
-          "text": "decrease and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYKJGAC94R",
-          "text": "decrease and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADVRIHGVUA",
-          "text": "increase and the rate of descent will increase.",
+          "id": "OYI3EYY9T",
+          "text": "I is correct, II is correct.",
           "correct": false,
           "why": ""
         }
@@ -2185,37 +647,43 @@
     }
   },
   {
-    "id": "QXZVOVAS",
-    "relatedQuestions": ["QZVOLWSS"],
-    "externalIds": ["AVEXAM-15706"],
+    "id": "QHDULSUL",
+    "relatedQuestions": ["QSMRPCXM"],
+    "externalIds": [
+      "ATPLQ-811574",
+      "AVEXAM-41129",
+      "ATPLGS-126469",
+      "AVEXAM-57331",
+      "BGS-811057"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
+    "learningObjectives": ["081.07.01.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the propeller pitch, within its constant speed range and at constant power, during descent at constant IAS is decreased, the aeroplane lift to drag ratio will:",
+      "question": "A windmilling propeller:",
       "options": [
         {
-          "id": "AFKPXV84ZS",
-          "text": "decrease and the rate of descent will increase.",
+          "id": "OBF0XZ1IN",
+          "text": "degrades the glide performance of an aeroplane.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AGHR5BAY08",
-          "text": "increase and the rate of descent will increase.",
+          "id": "OBF0QCCVX",
+          "text": "has a greater blade angle than a feathered propeller.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJI0HAPH2J",
-          "text": "decrease and the rate of descent will decrease.",
+          "id": "O3YYU7EBV",
+          "text": "produces neither thrust nor drag.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGCOGDXELC",
-          "text": "increase and the rate of descent will decrease.",
+          "id": "OSWMWTDKX",
+          "text": "produces more thrust than drag.",
           "correct": false,
           "why": ""
         }
@@ -2225,7 +693,7 @@
   {
     "id": "QWUXMMCR",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-819973"],
+    "externalIds": ["ATPLQ-819973", "AVEXAM-54910"],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.06"],
     "explanation": "",
@@ -2234,140 +702,69 @@
       "question": "While flying an aircraft fitted with a constant speed propeller, during a glide with idle power and whilst maintaining constant airspeed, pushing the propeller lever forward will...",
       "options": [
         {
-          "id": "A9KJA7JFT0",
+          "id": "OPMUQTCBJ",
           "text": "decrease pitch angle and increase RPM.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AFRQ0XU9TO",
-          "text": "increase pitch angle and increase RPM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGLDTI735N",
+          "id": "ORAKP5A7M",
           "text": "decrease pitch angle and decrease RPM.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AN6OS2CMS3",
+          "id": "OGFRY8TON",
           "text": "increase pitch angle and decrease RPM.",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "OHHKI0NNQ",
+          "text": "increase pitch angle and increase RPM.",
+          "correct": false,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QDNDEKXD",
+    "id": "QRRAQIMZ",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-2743"],
+    "externalIds": [
+      "ATPLQ-813299",
+      "ATPLGS-125988",
+      "AVEXAM-36145",
+      "BGS-810982"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.07.01.04.04"],
+    "learningObjectives": ["081.07.01.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A typical fixed pitch propeller (e.g. C-172) is designed to achieve its optimum angle of attack at:",
+      "question": "For any propeller:",
       "options": [
         {
-          "id": "ALF3ZEWI0D",
-          "text": "cruise speed.",
+          "id": "OL3XPSRGW",
+          "text": "the force contributing to propeller torque is perpendicular to the propeller plane of rotation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OANYXTWJQ",
+          "text": "thrust is the component of the total aerodynamic force on the propeller parallel to the rotational axis.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A3KKA0DNCZ",
-          "text": "maximum speed for high performance.",
+          "id": "OXYI7ND36",
+          "text": "the total aerodynamic force on a blade element may be resolved into two components, torque and lift.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJ9DI45R4D",
-          "text": "rest to case engine starting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6LHWKUJN0",
-          "text": "low forward speeds, such as during take-off.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGPKIXXL",
-    "relatedQuestions": ["QSSEDICP"],
-    "externalIds": ["BGS-811013"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If you decrease the propeller pitch during a glide with idle-power at constant IAS the lift to drag ratio will",
-      "options": [
-        {
-          "id": "A8IBKSLYUV",
-          "text": "Decrease and the rate of descent will increase.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARFXDJ5JEH",
-          "text": "Increase and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV9IVJ5AR8",
-          "text": "Decrease and the rate of descent will decrease.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A55KY62CSO",
-          "text": "Increase and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSSEDICP",
-    "relatedQuestions": ["QGPKIXXL"],
-    "externalIds": ["BGS-811027"],
-    "annexes": [],
-    "learningObjectives": ["081.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If you increase the propeller pitch during a glide with idle-power at constant IAS the lift to drag ratio will ",
-      "options": [
-        {
-          "id": "A81LZFY2SP",
-          "text": "Increase and the rate of descent will decrease.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A58RAXQGMT",
-          "text": "Decrease and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWC910ZDJ7",
-          "text": "Increase and the rate of descent will increase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6CX5W8XKZ",
-          "text": "Decrease and the rate of descent will decrease.",
+          "id": "ONX57YGCE",
+          "text": "thrust is the component of the total aerodynamic force on the propeller in the plane of rotation.",
           "correct": false,
           "why": ""
         }
@@ -2386,25 +783,25 @@
       "question": "On which part of the propeller is the most thrust generated?",
       "options": [
         {
-          "id": "A0GM92YHCQ",
-          "text": "3/4 measured from root.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO539CZ00A",
-          "text": "At the tip.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL9WMI1C6K",
+          "id": "OBOY6RI49",
           "text": "At the root.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALL65BENZY",
+          "id": "OXITQRWCP",
+          "text": "At the tip.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEVRER5HM",
+          "text": "3/4 measured from root.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPT2SQCJV",
           "text": "Thrust generation is uniform.",
           "correct": false,
           "why": ""
@@ -2413,37 +810,707 @@
     }
   },
   {
-    "id": "QQNTTFWO",
+    "id": "QGVEDKWD",
     "relatedQuestions": [],
-    "externalIds": ["BGS-210527"],
+    "externalIds": [
+      "ATPLQ-816812",
+      "AVEXAM-75172",
+      "ATPLGS-125990",
+      "BGS-811021"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For an aeroplane equipped with a two-position variable pitch propeller it is advisable to select a:",
+      "options": [
+        {
+          "id": "O4A13NUSM",
+          "text": "fine pitch for cruise.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSAODGBZA",
+          "text": "fine pitch for take-off and climb.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSHPTCF7L",
+          "text": "coarse pitch for take-off and climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYCWWOAVA",
+          "text": "fine pitch for cruise and coarse pitch for landing.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLJGCNER",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-811649",
+      "AVEXAM-29482",
+      "AVEXAM-15706",
+      "AVEXAM-94873",
+      "AVEXAM-60116",
+      "ATPLGS-125769",
+      "AVEXAM-33798",
+      "AVEXAM-54992",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "BGS-811027",
+      "BGS-811010",
+      "BGS-811012",
+      "BGS-811013",
+      "BGS-811029",
+      "BGS-811011",
+      "BGS-811028",
+      "ATPLGS-125768"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the RPM lever of a constant speed propeller is moved forward during a glide with idle power and whilst maintaining constant airspeed, the propeller pitch will:",
+      "options": [
+        {
+          "id": "OJG3TOORF",
+          "text": "increase and the rate of descent will increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQIJNYWNY",
+          "text": "decrease and the rate of descent will decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIVUC0HHX",
+          "text": "increase and the rate of descent will decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1F8ZVOCB",
+          "text": "decrease and the rate of descent will increase.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIGGQUWQ",
+    "relatedQuestions": ["QKVUWIHD"],
+    "externalIds": [
+      "ATPLQ-817135",
+      "BGS-811009",
+      "ATPLGS-628109",
+      "ATPLGS-126468",
+      "AVEXAM-66936",
+      "AVEXAM-69428"
+    ],
     "annexes": [],
     "learningObjectives": ["081.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During take-off, the angle of attack of the blades of a fixed pitch propeller, optimised for cruise condition is:",
+      "question": "For a fixed-pitch propeller, the blade angle of attack:",
       "options": [
         {
-          "id": "AG882QB5P2",
-          "text": "Relatively high.",
+          "id": "OEKLOWHIF",
+          "text": "is lower in ground run than in flight (with constant engine RPM).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLF3HBIQA",
+          "text": "decreases when the aeroplane speed decreases (with constant engine RPM).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODUVSWAYJ",
+          "text": "is always positive during idling descent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYLRANVHA",
+          "text": "can become negative during high-speed idle descent.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFXXNNAA",
+    "relatedQuestions": ["QRWIERUN", "QWVFWSEB"],
+    "externalIds": [
+      "ATPLQ-813330",
+      "AVEXAM-44410",
+      "ATPLGS-126470",
+      "BGS-811062",
+      "AVEXAM-45269",
+      "AVEXAM-96629",
+      "BGS-811061",
+      "BGS-811060",
+      "AVEXAM-46249",
+      "ATPLGS-125996",
+      "BGS-811059"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of these statements concerning propellers is correct?",
+      "options": [
+        {
+          "id": "OULTSVAXX",
+          "text": "An unfeathered propeller causes less drag than a feathered propeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTXDV8VYE",
+          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTADNODN",
+          "text": "A windmilling propeller causes less drag than a feathered propeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXTJYVCJS",
+          "text": "The blade angle of a feathered propeller is approximately 90 degrees.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNOGJZOSZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-818247", "AVEXAM-7316", "AVEXAM-66981"],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to the blade pitch of a fixed pitch propeller on ground roll during takeoff?",
+      "options": [
+        {
+          "id": "OYHHTS0OL",
+          "text": "Initially increases and then decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3FJ4CNLG",
+          "text": "Remains constant.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAPR8GYSAB",
-          "text": "Negative.",
+          "id": "OUSOMYEOS",
+          "text": "Increases.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AR6H9X7D61",
-          "text": "Zero.",
+          "id": "O0TXSZABD",
+          "text": "Decreases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKNACBUOU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-815194",
+      "AVEXAM-29482",
+      "AVEXAM-15706",
+      "AVEXAM-94873",
+      "AVEXAM-60116",
+      "ATPLGS-125769",
+      "AVEXAM-33798",
+      "AVEXAM-54992",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "BGS-811027",
+      "BGS-811010",
+      "BGS-811012",
+      "BGS-811013",
+      "BGS-811029",
+      "BGS-811011",
+      "BGS-811028",
+      "ATPLGS-125768"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During a glide with idle power and constant IAS, if the RPM lever of a constant speed propeller is pushed full forward from its normal cruise position, the propeller pitch will:",
+      "options": [
+        {
+          "id": "OG2ADM4B5",
+          "text": "decrease and the rate of descent will decrease.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUE03ZPHLW",
-          "text": "Relatively small.",
+          "id": "OKV5KFYB5",
+          "text": "increase and the rate of descent will increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMMOTTINR",
+          "text": "increase and the rate of descent will decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZQPZCQ9J",
+          "text": "decrease and the rate of descent will increase.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOGVAHMS",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-816517",
+      "AVEXAM-29482",
+      "AVEXAM-15706",
+      "AVEXAM-94873",
+      "AVEXAM-60116",
+      "ATPLGS-125769",
+      "AVEXAM-33798",
+      "AVEXAM-54992",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "BGS-811027",
+      "BGS-811010",
+      "BGS-811012",
+      "BGS-811013",
+      "BGS-811029",
+      "BGS-811011",
+      "BGS-811028",
+      "ATPLGS-125768"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the propeller pitch of a windmilling propeller is decreased during a glide at constant IAS the propeller drag in the direction of flight will:",
+      "options": [
+        {
+          "id": "ODXAYGFZR",
+          "text": "increase and the rate of descent will increase.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCSCII81T",
+          "text": "decrease and the rate of descent will decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3TEQBMAB",
+          "text": "decrease and the rate of descent will increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL20YVKMW",
+          "text": "increase and the rate of descent will decrease.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRWIERUN",
+    "relatedQuestions": ["QFXXNNAA", "QWVFWSEB"],
+    "externalIds": [
+      "ATPLQ-817660",
+      "AVEXAM-44410",
+      "ATPLGS-126470",
+      "BGS-811062",
+      "AVEXAM-45269",
+      "AVEXAM-96629",
+      "BGS-811061",
+      "BGS-811060",
+      "AVEXAM-46249",
+      "ATPLGS-125996",
+      "BGS-811059"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of these statements concerning propellers is correct?",
+      "options": [
+        {
+          "id": "OUOOBBJWE",
+          "text": "The blade angle of a feathered propeller is approximately 180 degrees.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4XVXHRL5",
+          "text": "A feathered propeller causes less drag than a windmilling propeller.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZEZFFZW9",
+          "text": "A windmilling propeller causes less drag than a feathered propeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK4G4QYIW",
+          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCNNWHZA",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-814676",
+      "BGS-811034",
+      "BGS-811022",
+      "AVEXAM-89132",
+      "AVEXAM-35371"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During which of the following phases of flight is a fixed pitch propeller’s angle of attack lowest?",
+      "options": [
+        {
+          "id": "OTRWDCEBS",
+          "text": "Take-off run.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOVABDHSR",
+          "text": "High-speed glide.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OH88FIFSV",
+          "text": "Low-speed glide.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK3JX80ID",
+          "text": "Climb.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWVFWSEB",
+    "relatedQuestions": ["QFXXNNAA", "QRWIERUN"],
+    "externalIds": [
+      "ATPLQ-818357",
+      "AVEXAM-44410",
+      "ATPLGS-126470",
+      "BGS-811330",
+      "BGS-811062",
+      "AVEXAM-45269",
+      "AVEXAM-96629",
+      "BGS-811061",
+      "BGS-811060",
+      "AVEXAM-46249",
+      "ATPLGS-125996",
+      "BGS-811059"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of these statements concerning propellers is correct?",
+      "options": [
+        {
+          "id": "OST4LVQ3C",
+          "text": "The blade angle of a feathered propeller is approximately 180 degrees.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOHTMQJAC",
+          "text": "The blade angle of a feathered propeller is approximately 0 degrees.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCXJX95Q1",
+          "text": "When compared with a non-feathered propeller, a feathered propeller improves the handling of a multi-engine aeroplane with one engine inoperative.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXYENOZWU",
+          "text": "A windmilling propeller causes less drag than a feathered propeller.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDDAEZ4DV",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-812135",
+      "BGS-811015",
+      "AVEXAM-43070",
+      "AVEXAM-79673",
+      "BGS-811031",
+      "ATPLGS-126146"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For a given RPM of a fixed pitch propeller, the blade angle of attack will:",
+      "options": [
+        {
+          "id": "OG68J5YWX",
+          "text": "remain constant when the TAS decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBFMRPRDA",
+          "text": "decrease when the TAS increases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVIG648PN",
+          "text": "increase when the TAS increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK1TYDD5R",
+          "text": "remain constant when the TAS increases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZGNRTEV4",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813892",
+      "BGS-811030",
+      "ATPLGS-126446",
+      "AVEXAM-13707",
+      "AVEXAM-22545",
+      "BGS-811014"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For a fixed-pitch propeller in flight at a given TAS, the blade angle of attack will:",
+      "options": [
+        {
+          "id": "OXEIXYKJP",
+          "text": "remain constant if RPM increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQLGNUKUY",
+          "text": "remain constant if RPM decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKQSKMOFX",
+          "text": "increase if RPM increases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OWMYSYH52",
+          "text": "decrease if RPM increases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLQIMZYT",
+    "relatedQuestions": ["QKXPFBML"],
+    "externalIds": [
+      "ATPLQ-813088",
+      "ATPLGS-126405",
+      "AVEXAM-92205",
+      "BGS-811033",
+      "AVEXAM-22654",
+      "ATPLGS-125728"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The angle of attack of a fixed pitch propeller blade decreases when:",
+      "options": [
+        {
+          "id": "OJABGAEAE",
+          "text": "forward velocity increases and RPM decreases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2RM42GEN",
+          "text": "forward velocity decreases and RPM increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMYINEMJP",
+          "text": "forward velocity and RPM decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZVQK9LUD",
+          "text": "forward velocity and RPM increase.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMJXJGIE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-815154",
+      "ATPLGS-126063",
+      "BGS-811024",
+      "BGS-811088",
+      "BGS-811084",
+      "ATPLGS-126056",
+      "ATPLGS-126064",
+      "ATPLGS-126055",
+      "BGS-811023",
+      "BGS-811094",
+      "BGS-811045",
+      "BGS-811025",
+      "ATPLGS-126057",
+      "BGS-811075",
+      "BGS-811087",
+      "ATPLGS-126070",
+      "ATPLGS-126058",
+      "ATPLGS-126069",
+      "BGS-811049",
+      "BGS-811074",
+      "BGS-811026",
+      "ATPLGS-126053",
+      "ATPLGS-126071",
+      "ATPLGS-126067",
+      "BGS-811072",
+      "ATPLGS-126054",
+      "AVEXAM-13147",
+      "BGS-811044",
+      "BGS-811046",
+      "BGS-811048",
+      "BGS-811083",
+      "BGS-811047",
+      "BGS-811073",
+      "BGS-811076",
+      "BGS-811091",
+      "ATPLGS-126068",
+      "BGS-811071",
+      "AVEXAM-48990",
+      "AVEXAM-49313",
+      "ATPLGS-125994",
+      "AVEXAM-86349",
+      "AVEXAM-33075"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.07.01.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct when comparing a fixed pitch propeller with a constant speed propeller?\n\nI. A fixed pitch propeller improves propeller efficiency over a range of cruise speeds.   \nII. A constant speed propeller improves take-off performance as compared with a coarse fixed pitch propeller.",
+      "options": [
+        {
+          "id": "O8VQXOASK",
+          "text": "I is incorrect, II is correct.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCIJPUOQH",
+          "text": "I is correct, II is correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6QM4P1TB",
+          "text": "I is correct, II is incorrect.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE5EWGRGJ",
+          "text": "I is incorrect, II is incorrect.",
           "correct": false,
           "why": ""
         }

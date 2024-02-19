@@ -1,198 +1,43 @@
 [
   {
-    "id": "QUGVONJL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-107067", "AVEXAM-40168"],
-    "annexes": [],
-    "learningObjectives": ["031.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The CG of a loaded aircraft is 23.65 ft aft of datum. The length of the Mean Aerodynamic Chord (MAC) is 8 ft and the distance of the leading edge of the MAC is 20 ft aft of the datum. What is the position of the CG expressed as a % MAC?",
-      "options": [
-        {
-          "id": "ALWT9JQIMK",
-          "text": "45.62%",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADM0W0RVUB",
-          "text": "8%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIYXS1ZSRF",
-          "text": "23.65%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4A0G4CGZN",
-          "text": "20%",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKDXJXLC",
+    "id": "QZKQUSMG",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-114053",
-      "ATPLGS-126694",
       "ATPLQ-318391",
-      "BGS-310664"
+      "BGS-310664",
+      "AVEXAM-51645",
+      "BGS-310661",
+      "ATPLGS-114053",
+      "ATPLGS-126694"
     ],
-    "annexes": ["1da5cd5fee1ad3c16252b48d2a3bcb5e"],
+    "annexes": ["AGPY5XMCW"],
     "learningObjectives": ["031.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to Annex -031-071-2016.Using the graph, and given the following parameters, what is the loaded Centre of Gravity (CG) of this aircraft?\n\nBEM: 1200 kgMoment: 3.00Front pax: 200 kgCargo on the floor: 50 kgFuel: 250 kg",
+      "question": "Refer to figure.  \nUsing the graph, and given the following parameters, what is the loaded Centre of Gravity (CG) of this aircraft?\n\nBEM: 1200 kg  \nMoment: 3.00  \nFront pax: 200 kg  \nCargo on the floor: 50 kg  \nFuel: 250 kg",
       "options": [
         {
-          "id": "A9DQP3T3HK",
+          "id": "O7YFMYMP5",
+          "text": "2.99 m",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVPJULSFA",
           "text": "2.97 m",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A4V2TTHU7K",
-          "text": "3.03 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APIEGZZ79X",
+          "id": "O3VF1YFWQ",
           "text": "3.00 m",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AF3FLEIBFE",
-          "text": "2.99 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZKQUSMG",
-    "relatedQuestions": ["QTTBGGBF"],
-    "externalIds": [
-      "ATPLGS-114053",
-      "ATPLQ-318391",
-      "AVEXAM-51645",
-      "BGS-310664"
-    ],
-    "annexes": ["0e0bb548ac5190c52fceef759e50cbdd"],
-    "learningObjectives": ["031.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 031-34.\nGiven:\n\n- BEM: 1 200 kg\n- BEM CG: 3.00\n- Pilot &amp; front pax: 200 kg\n- Cargo on pax floor: 50 kg\n- Fuel: 250 kg\n\nFind the loaded centre of gravity (CG) by using the attached graph:",
-      "options": [
-        {
-          "id": "A20W9OI5CC",
-          "text": "2.96 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYML7XPUT1",
-          "text": "2.99 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ9XYKXM1V",
-          "text": "3.00 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9G817LYOZ",
+          "id": "OEMSXGORP",
           "text": "3.03 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTTBGGBF",
-    "relatedQuestions": ["QZKQUSMG"],
-    "externalIds": ["ATPLQ-315663", "AVEXAM-96346"],
-    "annexes": ["0e0bb548ac5190c52fceef759e50cbdd"],
-    "learningObjectives": ["031.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 031-34.\nGiven:\n\n- BEM: 1 100 kg\n- BEM CG: 3.10 m\n- Pilot and\n   front passenger: 150 kg\n- Rear passenger: 200 kg\n- Fuel: 200 kg\n\nFind the loaded centre of gravity (CG) by using the attached graph:",
-      "options": [
-        {
-          "id": "A4M86PQ9H7",
-          "text": "2.98 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH6MAX0FBF",
-          "text": "3.01 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2CRJVOVO5",
-          "text": "2.94 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWP3LQ3DGB",
-          "text": "3.10 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVBSIMCC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-313622", "AVEXAM-25955", "BGS-310267"],
-    "annexes": ["97dcf670b8be33b749facff2fbd56e1e"],
-    "learningObjectives": ["031.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 031-70.\nUsing the data contained in the figure, calculate the CG position",
-      "options": [
-        {
-          "id": "AXB7V5ETLJ",
-          "text": "84.85 cm aft of the datum",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALXOWXO4T5",
-          "text": "93.37 cm aft of the datum",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKPX23WIXR",
-          "text": "8 926 cm aft of the datum",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV8ECX8B1Z",
-          "text": "93.66 cm aft of the datum",
           "correct": false,
           "why": ""
         }
@@ -202,35 +47,43 @@
   {
     "id": "QFFIGQXS",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-126694", "ATPLQ-315663", "BGS-310491"],
-    "annexes": ["a0c9f445bd52d6c2aeb773314a8c0947"],
+    "externalIds": [
+      "ATPLQ-315663",
+      "BGS-310664",
+      "BGS-310661",
+      "AVEXAM-96346",
+      "ATPLGS-114053",
+      "ATPLGS-126694",
+      "BGS-310491"
+    ],
+    "annexes": ["AWZERUGBU"],
     "learningObjectives": ["031.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to the annex.\nUsing the graph, and given the following parameters, what is the loaded Centre of Gravity of this aircraft?\nBEM: 1100 kg\nBEM arm: 3.10 m\nPilot and front pax: 150 kg\nRear pax: 200 kg\nFuel: 200 kg",
+      "question": "Refer to figure.\n\nUsing the graph, and given the following parameters, what is the loaded Centre of Gravity of this aircraft?\n\nBEM: 1100 kg   \n BEM CG: 3.10   \n Front pax: 150 kg   \n Rear pax: 200 kg   \n Fuel: 200 kg",
       "options": [
         {
-          "id": "ANS6TALJV4",
-          "text": "2.98 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZI9MTPHAX",
-          "text": "3.10 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APGZBBJS30",
+          "id": "OCSJ6Y883",
           "text": "3.01 m",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOUOHDLJ9K",
+          "id": "OUTHJ2OIJ",
+          "text": "2.98 m",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVEMJROBD",
           "text": "2.94 m",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OS3FJGVQM",
+          "text": "3.10 m",
           "correct": false,
           "why": ""
         }

@@ -1,117 +1,44 @@
 [
   {
-    "id": "QPSGVDRC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-816399"],
-    "annexes": [],
-    "learningObjectives": ["081.04.06.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inexperienced pilot inadvertently flies a light aircraft into a cloud, and due to lack of visual references allows the aircraft to enter a spiral dive. As the aircraft flies out of the cloud the pilot pulls hard on the control column to recover. The aircraft can still stall in this attitude due to the...",
-      "options": [
-        {
-          "id": "A7HIUF1AJB",
-          "text": "wing exceeding the critical angle of attack.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH8MT1XBJ2",
-          "text": "aircraft IAS being below the published stall speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATE9S6OGKK",
-          "text": "aircraft being above manoeuvre speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASXEZHXXVB",
-          "text": "wing exceeding best L/D angle of attack.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFODJDGW",
-    "relatedQuestions": [],
+    "id": "QOKWEKAX",
+    "relatedQuestions": ["QSOUBBRA"],
     "externalIds": [
-      "ATPLGS-125877",
-      "ATPLQ-815487",
-      "AVEXAM-84048",
-      "BGS-810782"
+      "ATPLQ-811988",
+      "ATPLGS-125682",
+      "AVEXAM-75490",
+      "AVEXAM-93918",
+      "BGS-810783",
+      "ATPLGS-126524",
+      "BGS-810780"
     ],
     "annexes": [],
-    "learningObjectives": ["081.04.06.02.03"],
+    "learningObjectives": ["081.04.06.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Sensitivity for spiral dive will occur when:",
+      "question": "An example of a combined lateral and directional aperiodic motion is a:",
       "options": [
         {
-          "id": "AAPJDSCPGI",
-          "text": "the static directional stability is positive and the static lateral stability is relatively weak.",
+          "id": "O9Z6JPFTH",
+          "text": "spiral dive.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AX1TIPYUQE",
-          "text": "the Dutch roll tendency is too strongly suppressed by the yaw damper.",
+          "id": "OSVRM4HTK",
+          "text": "phugoid.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0VCNFGMKP",
-          "text": "the static directional stability is negative and the static lateral stability is positive.",
+          "id": "OPG9BRQEQ",
+          "text": "Dutch roll.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1179Y39QI",
-          "text": "the static lateral and directional stability are both negative.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIZYEGXV",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991437"],
-    "annexes": [],
-    "learningObjectives": ["081.04.06.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Spiral instability is the dynamic interaction of lateral stability and directional stability. It occurs when:\n ",
-      "options": [
-        {
-          "id": "AEHOV0AQXF",
-          "text": "The aircraft has more directional stability than lateral stability",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN2BPXIECJ",
-          "text": "The aircraft has more lateral stability than directional stability",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA56FTK6V2",
-          "text": "The aircraft has more longitudinal stability than directional stability",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW7C84SD6O",
-          "text": "The aircraft has more lateral stability than longitudinal stability",
+          "id": "O0FKYE6J5",
+          "text": "short period oscillation.",
           "correct": false,
           "why": ""
         }
@@ -122,117 +49,85 @@
     "id": "QSOUBBRA",
     "relatedQuestions": ["QOKWEKAX"],
     "externalIds": [
-      "ATPLGS-125682",
-      "ATPLGS-126524",
       "ATPLQ-813272",
+      "ATPLGS-125682",
+      "AVEXAM-75490",
       "AVEXAM-93918",
-      "BGS-810780",
-      "BGS-810783"
+      "BGS-810783",
+      "ATPLGS-126524",
+      "BGS-810780"
     ],
     "annexes": [],
     "learningObjectives": ["081.04.06.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An example of a combined lateral and directional periodic motion is a",
+      "question": "An example of a combined lateral and directional periodic motion is a...",
       "options": [
         {
-          "id": "AH2A9MGFVI",
+          "id": "ORZ7AOBIR",
           "text": "Dutch roll.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ABN4ENR89B",
+          "id": "OG2ZI1IMW",
+          "text": "short period oscillation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXRLMNVWV",
           "text": "spiral dive.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3OWBYNHYZ",
+          "id": "OG1VMZZLS",
           "text": "phugoid.",
           "correct": false,
           "why": ""
-        },
-        {
-          "id": "ANS59BU32W",
-          "text": "short period oscillation.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QOKWEKAX",
-    "relatedQuestions": ["QSOUBBRA"],
-    "externalIds": ["ATPLGS-125682"],
-    "annexes": [],
-    "learningObjectives": ["081.04.06.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An example of a combined lateral and directional aperiodic motion is a",
-      "options": [
-        {
-          "id": "AIR6JQXU2M",
-          "text": "spiral dive.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMFG27A1AQ",
-          "text": "short period oscillation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARW4UO9VGL",
-          "text": "Dutch roll.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG2ESUB054",
-          "text": "phugoid",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMHHLMJA",
+    "id": "QFODJDGW",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-75490"],
+    "externalIds": [
+      "ATPLQ-815487",
+      "AVEXAM-84048",
+      "ATPLGS-125877",
+      "BGS-810782"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.04.06.02.01"],
+    "learningObjectives": ["081.04.06.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An example of a combined lateral and directional periodic motion within the transonic speed range is a:",
+      "question": "Sensitivity for spiral dive will occur when:",
       "options": [
         {
-          "id": "AEH7GC1SQJ",
-          "text": "Dutch roll.",
+          "id": "OZKK1E1SW",
+          "text": "the static directional stability is negative and the static lateral stability is positive.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCVQNSNXY",
+          "text": "the Dutch roll tendency is too strongly suppressed by the yaw damper.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCPMP97CR",
+          "text": "the static directional stability is positive and the static lateral stability is relatively weak.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AIQ7B3EHWE",
-          "text": "phugoid.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6D3XVA24J",
-          "text": "spiral dive.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK62FYLZJG",
-          "text": "short period oscillation.",
+          "id": "OF5BBIODK",
+          "text": "the static lateral and directional stability are both negative.",
           "correct": false,
           "why": ""
         }

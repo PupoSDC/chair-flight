@@ -1,36 +1,112 @@
 [
   {
+    "id": "QFWMYBFQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-334266", "BGS-331211"],
+    "annexes": [],
+    "learningObjectives": ["033.04.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following information, at what time will the PSR be reached?\n\nEndurance: 6 hours   \nLeg track: 270°   \nTAS: 200 kt   \nWind: 270°/20 kt   \nDeparture time: 14:00",
+      "options": [
+        {
+          "id": "OZIMJVAOC",
+          "text": "17:18",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSTOXRZWF",
+          "text": "16:47",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCRVGYHHY",
+          "text": "16:58",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYJYVV64F",
+          "text": "17:00",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
     "id": "QHNPLCGA",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-335600", "BGS-331141"],
+    "externalIds": ["ATPLQ-335600", "AVEXAM-9354", "BGS-331141"],
     "annexes": [],
     "learningObjectives": ["033.04.03.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The Point of Safe Return (PSR) is the last point along a planned route where it is possible to return to the departure aerodrome....",
+      "question": "The Point of Safe Return PSR is the last point along a planned route where it is possible to return to the departure aerodrome",
       "options": [
         {
-          "id": "ACR8JGNJDY",
-          "text": "with specific reserves intact.",
-          "correct": true,
+          "id": "O7OGPHUEM",
+          "text": "in still air conditions.",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AMBG29T99Y",
+          "id": "OL2PTLVPB",
           "text": "with minimum drag speed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALWUM7T6O9",
+          "id": "OSHC9LOMO",
           "text": "with no reserves intact.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9M8YSSBK6",
-          "text": "in still air conditions.",
+          "id": "OM8BNFILK",
+          "text": "with specific reserves intact.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJEVROHW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-338596", "AVEXAM-92616", "ATPLGS-629394"],
+    "annexes": [],
+    "learningObjectives": ["033.04.03.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which factor must be considered for the calculation of the Point of Safe Return (PSR)?",
+      "options": [
+        {
+          "id": "ONHXL40RL",
+          "text": "A second alternate aerodrome.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJFQ3HY2N",
+          "text": "The wind conditions.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTMN8SDBR",
+          "text": "An additional holding time of 30 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD0DIJ977",
+          "text": "The reduced contingency.",
           "correct": false,
           "why": ""
         }
@@ -40,7 +116,7 @@
   {
     "id": "QZQYTBLU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-334666"],
+    "externalIds": ["ATPLQ-334666", "ATPLGS-122982"],
     "annexes": [],
     "learningObjectives": ["033.04.03.02.01"],
     "explanation": "",
@@ -49,64 +125,26 @@
       "question": "What is the calculation basis for the Point of Safe Return (PSR)?",
       "options": [
         {
-          "id": "A5KSQQJ72J",
-          "text": "Safe endurance",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APIHSGMIB5",
+          "id": "OJLQAYJ24",
           "text": "ATC endurance",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AB24J12A8I",
+          "id": "OJI26DG5E",
           "text": "Maximum Range",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AH1GEQAH0Z",
-          "text": "Trip endurance",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJEVROHW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-92616"],
-    "annexes": [],
-    "learningObjectives": ["033.04.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For point of safe return (PSR) calculations, the following must be considered...",
-      "options": [
-        {
-          "id": "A5SPGV21V0",
-          "text": "The wind conditions",
+          "id": "OFR15AP1K",
+          "text": "Safe endurance",
           "correct": true,
           "why": ""
         },
         {
-          "id": "APACP3LTK7",
-          "text": "The reduced contingency.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6N90ZVLCH",
-          "text": "A second alternate aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUGCHFJNI3",
-          "text": "An additional holding time of 30 minutes.",
+          "id": "OIEAT3BNZ",
+          "text": "Trip endurance",
           "correct": false,
           "why": ""
         }
@@ -116,150 +154,36 @@
   {
     "id": "QKDEZHPY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-122977", "ATPLQ-339180"],
+    "externalIds": ["ATPLQ-339180"],
     "annexes": [],
     "learningObjectives": ["033.04.03.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which selection best describes the Point of Safe Return (PSR)? The furthest point along a planned route",
+      "question": "Which selection best describes the Point of Safe Return (PSR)? The furthest point along a planned route..",
       "options": [
         {
-          "id": "AYOL33V8NE",
-          "text": "to which an aircraft can fly and return to the departure point (or destination alternate) within its safe endurance",
+          "id": "OXENI4CD2",
+          "text": "to which an aircraft can fly to destination or back to the departure, or alternate in the same time with no reserves intact.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIMI9OMGY",
+          "text": "to which an aircraft can fly to destination or back to the departure, or alternate in the same time with reserves intact.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCPQD5XBN",
+          "text": "to which an aircraft can fly to destination or back to the departure, or alternate with no reserves intact.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSX8YO7ZU",
+          "text": "to which an aircraft can fly to destination or back to the departure, or alternate with reserves intact.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI1AQH2O2M",
-          "text": "from which an aircraft can fly to the destination or back to the departure point (or departure alternate) in the same time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIFMUX1DZJ",
-          "text": "from which an aircraft can fly to the destination or back to the departure point (or departure alternate) within the total fuel available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKUDWORNF1",
-          "text": "to which an aircraft can fly and return to the departure point (or destination alternate) within the total fuel available.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNPBHZYK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-43034"],
-    "annexes": [],
-    "learningObjectives": ["033.04.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Define 'PSR' (Point of Safe Return)...",
-      "options": [
-        {
-          "id": "A1G3GT5XQG",
-          "text": "The furthest point along the planned track that an aircraft can fly to and still return back to the departure airfield within its safe endurance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A88Q52DDKH",
-          "text": "The furthest point along the planned track that an aircraft can fly to and still return back to the departure airfield, or continue to the destination, in the same time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A850F4AUSX",
-          "text": "The furthest point along the planned track that an aircraft can fly to and still return back to the departure airfield within the total fuel available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY4MSZ4GYD",
-          "text": "The furthest point along the planned track that an aircraft can fly to and still return back to the departure airfield, or continue to the destination, within the total fuel available.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNMTTEDJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-5187"],
-    "annexes": [],
-    "learningObjectives": ["033.04.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Define the “point of safe return” (PSR).",
-      "options": [
-        {
-          "id": "AR7GNJUIBX",
-          "text": "The last point along the route from which an aircraft can legally fly back to its departure aerodrome; having passed the PSR, the aircraft is committed to continue to its destination or some alternate aerodrome.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP79VZPTUW",
-          "text": "The last point along a route from which the aircraft can return to its departure aerodrome in a shorter time than continue to its destination aerodrome or some alternate aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU9RADZQ14",
-          "text": "A point equidistant between departure and destination aerodrome from which diversion to an alternate aerodrome is assumed for planning purposes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOAXYUWDJJ",
-          "text": "The point along a route at which an aircraft crew has to decide to either continue to its planned destination aerodrome or some alternate aerodrome.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFWMYBFQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625326", "ATPLQ-334266"],
-    "annexes": [],
-    "learningObjectives": ["033.04.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, at what time will the PSR be reached?\n\nEndurance: 6 hoursLeg track: 270°TAS: 200 ktWind: 270°/20 ktDeparture time: 14:00\n ",
-      "options": [
-        {
-          "id": "AUP6T9AXQ5",
-          "text": "17:18",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1ZCFQQMFO",
-          "text": "17:00",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADOBIHNXEZ",
-          "text": "16:58",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A08AWB39ZY",
-          "text": "16:47",
-          "correct": false,
           "why": ""
         }
       ]

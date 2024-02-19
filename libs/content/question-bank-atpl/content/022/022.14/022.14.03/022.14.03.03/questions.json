@@ -1,155 +1,36 @@
 [
   {
-    "id": "QOCZNKZI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-581"],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the FD system is to...",
-      "options": [
-        {
-          "id": "AAA6KUKZFR",
-          "text": "help the pilot to fly manually by providing optimal guidance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQPZ6523GA",
-          "text": "frees a lot of resources.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGQ6RODY2G",
-          "text": "provides the flight crew with a guidance better than the manually calculated one, although it is very demanding to use.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA881EDZ2K",
-          "text": "help the flight crew to easily manage the FMS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPHGORON",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-221245",
-      "ATPLQ-224415",
-      "AVEXAM-10747",
-      "BGS-620495"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is true about the FMC databases:",
-      "options": [
-        {
-          "id": "A1O6DNC0BL",
-          "text": "The data includes SIDs, STARS and runway approaches.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANEYD80ENC",
-          "text": "the data can not be customized for the specific airline operations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM9KS1BR9C",
-          "text": "the navigation database contains the company’s cost index strategy.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUX26Z355V",
-          "text": "the performance database contains aeronautical information for the planned area of operations of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTHWSNPZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223071", "AVEXAM-28038", "BGS-620494"],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Concerning FMC databases:",
-      "options": [
-        {
-          "id": "AHGI8WSFX0",
-          "text": "the navigation database may be customized for the specific airline operations.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A14H2MHN8Y",
-          "text": "only the navigation database may be customized by the company's cost index strategy.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ9HII87CI",
-          "text": "company database and FMC databases can not be used at the same time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO5LU7V4BJ",
-          "text": "only the performance database may be customized by the company.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QOYCASWS",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224119", "BGS-221669"],
+    "externalIds": ["ATPLQ-224119", "BGS-221669", "AVEXAM-32310"],
     "annexes": [],
     "learningObjectives": ["022.14.03.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Data from the Aircraft Condition Monitoring System (ACMS) can be used...",
+      "question": "Acquired data from the Aircraft Condition Monitoring System (ACMS) may be used:",
       "options": [
         {
-          "id": "AZ2FONF49C",
-          "text": "as part of an FDM and safety programme.",
+          "id": "OFK9XLU3B",
+          "text": "By the EFB for performance calculations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAPDKPLWC",
+          "text": "In place of the FWS to generate alerts.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO6CDYE6P",
+          "text": "As part of an FDM and safety programme.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AP0CO8U21I",
-          "text": "in place of the FWS to generate alerts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY58QRL7JV",
-          "text": "for the EGPWS terrain display.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYST9JLIRR",
-          "text": "by the EFB for performance calculations.",
+          "id": "OCOARQCJK",
+          "text": "For the EGPWS terrain display.",
           "correct": false,
           "why": ""
         }
@@ -168,183 +49,64 @@
       "question": "By what means are messages from an Aeroplane Condition Monitoring System (ACMS) transmitted to the maintenance base?",
       "options": [
         {
-          "id": "A7ZJQ3ETC2",
+          "id": "OLNRZTTKK",
           "text": "Digital datalink, without crew notification.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0J985TDUH",
+          "id": "OWZHFEQII",
+          "text": "The Flight Data Recorder, when the aircraft is on the ground.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONRYCCS9Z",
           "text": "The commander, through VHF or HF voice communication.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7R8NRV2H3",
+          "id": "OW4KIVXCM",
           "text": "Conventional analogue radios, with crew notification.",
           "correct": false,
           "why": ""
-        },
-        {
-          "id": "ABDG8FTS64",
-          "text": "The Flight Data Recorder, when the aircraft is on the ground.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QLTYVTYR",
-    "relatedQuestions": ["QGBUKGOT"],
-    "externalIds": ["ATPLQ-225149", "AVEXAM-76753", "BGS-222273"],
+    "id": "QINALEIA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226866", "AVEXAM-5193", "BGS-221775"],
     "annexes": [],
-    "learningObjectives": ["022.14.03.03.02"],
+    "learningObjectives": ["022.14.03.03.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A Flight Data Recorder together with an ACMS (Aeroplane Condition Monitoring System) can be used for...",
+      "question": "The purpose of a Flight Data Monitoring (FDM) programme is to collect flight data...",
       "options": [
         {
-          "id": "A9W5APB9BY",
-          "text": "accident analysis and trouble-shooting.",
+          "id": "OUZZULG1B",
+          "text": "to measure all crew member's performance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYPVBVAD3",
+          "text": "anonymously, to improve safety.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0KDZE7UP0",
-          "text": "transmitting aircraft location data to ground stations during flight.",
+          "id": "O8JO4X97O",
+          "text": "individually, to measure each pilot's performance.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3XANEI3WA",
-          "text": "sending cockpit aural warnings to the operator maintenance base.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP1UJEXJQ8",
-          "text": "relaying pilot communications to ground stations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGBUKGOT",
-    "relatedQuestions": ["QLTYVTYR"],
-    "externalIds": ["ATPLQ-225149", "AVEXAM-76753", "BGS-222273"],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A Flight Data Recorder together with an ACMS (Aeroplane Condition Monitoring System) can be used for...",
-      "options": [
-        {
-          "id": "ALUO064YN2",
-          "text": "accident analysis and trouble-shooting.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8LRQ7WE6C",
-          "text": "relaying pilot communications to ground stations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6A306EV6G",
-          "text": "transmitting aircraft location data to ground stations during flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0TUY3S7OB",
-          "text": "sending cockpit aural warnings to the operator`s maintenance base.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQYEKMQA",
-    "relatedQuestions": ["QDPACEUR"],
-    "externalIds": ["ATPLQ-224070", "AVEXAM-30488", "BGS-221520"],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The airline you are working for has an FDM system in operation. What is true about the acquired information?",
-      "options": [
-        {
-          "id": "ALJBVX0950",
-          "text": "All of the other statements are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT29871H8A",
-          "text": "It will be used to find recurring adverse safety trends.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATVV5RCAVO",
-          "text": "It will be used to improve crew training.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP5B04IIM8",
-          "text": "The company can put you under investigation if you purposely and recklessly exceed stated parameters and limitations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDPACEUR",
-    "relatedQuestions": ["QQYEKMQA"],
-    "externalIds": [
-      "ATPLQ-224070",
-      "ATPLQ-227730",
-      "AVEXAM-30488",
-      "BGS-221520"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.14.03.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The airline you are working for has an FDM system in operation. What is true about the acquired information?",
-      "options": [
-        {
-          "id": "AB2RYCWTMZ",
-          "text": "All three statements are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS85ETGFN6",
-          "text": "It will be used to find reoccurring adverse safety trends.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APMW5KDV72",
-          "text": "The company can put you under investigation if you purposely and recklessly exceed stated parameters and limitations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALNWCRKUZM",
-          "text": "The information will be used to improve crew training.",
+          "id": "OXAOR22LY",
+          "text": "individually, for the safety evaluation of each pilot.",
           "correct": false,
           "why": ""
         }
@@ -355,10 +117,10 @@
     "id": "QPFDNMSK",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120913",
       "ATPLQ-227878",
-      "AVEXAM-72823",
-      "BGS-221270"
+      "BGS-221270",
+      "ATPLGS-120913",
+      "AVEXAM-72823"
     ],
     "annexes": [],
     "learningObjectives": ["022.14.03.03.02"],
@@ -368,64 +130,102 @@
       "question": "An Aeroplane Condition Monitoring System (ACMS) makes use of aircraft input data and also..",
       "options": [
         {
-          "id": "A2FFHKPVPL",
-          "text": "a data management unit, a recording unit, and outputs (e.g. a printer or ACARS).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A29ZS2FLLD",
+          "id": "OPSO5W3PQ",
           "text": "a headset jack, a data management unit, and outputs (e.g. a printer or ACARS).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AHVJAO9SYS",
+          "id": "ODCQHCH4E",
+          "text": "an area microphone, a recording unit, and an erase button.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKC5XWBVJ",
           "text": "an erase button, a data management unit, and a headset jack.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9H3ANJGAA",
-          "text": "an area microphone, a recording unit, and an erase button.",
-          "correct": false,
+          "id": "OFGM8RFIJ",
+          "text": "a data management unit, a recording unit, and outputs (e.g. a printer or ACARS).",
+          "correct": true,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QINALEIA",
+    "id": "QGBUKGOT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226866"],
+    "externalIds": ["ATPLQ-225149", "AVEXAM-76753", "BGS-222273"],
     "annexes": [],
-    "learningObjectives": ["022.14.03.03.06"],
+    "learningObjectives": ["022.14.03.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The purpose of a Flight Data Monitoring (FDM) programme is to collect flight data...",
+      "question": "A Flight Data Recorder together with an ACMS (Aeroplane Condition Monitoring System) can be used for..",
       "options": [
         {
-          "id": "ACDMXYV5DY",
-          "text": "anonymously, to improve safety.",
+          "id": "OLWFFO5EQ",
+          "text": "relaying pilot communications to ground stations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKPAZEZCU",
+          "text": "sending cockpit aural warnings to the operator\\`s maintenance base.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHAFPKXKU",
+          "text": "transmitting aircraft location data to ground stations during flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCXRRPJDY",
+          "text": "accident analysis and trouble-shooting.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDPACEUR",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227730", "AVEXAM-30488"],
+    "annexes": [],
+    "learningObjectives": ["022.14.03.03.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The airline you are working for has a FDM system in operation. What is true about the acquired information?\n\n1\\. If the pilot purposely and recklessly exceeds stated parameters and limitations, the company can put him/her under investigation.   \n 2\\. The data will be used to find reoccurring adverse safety trends.   \n 3\\. The information will be used to improve crew training.",
+      "options": [
+        {
+          "id": "O87Q2ERWO",
+          "text": "1 and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPJOLJQND",
+          "text": "1 and 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGXA174QF",
+          "text": "All of the above.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQ6RH8U6W0",
-          "text": "to measure all crew member's performance.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAUBV9S2FM",
-          "text": "individually, for the safety evaluation of each pilot.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE0A73EVDT",
-          "text": "individually, to measure each pilot's performance.",
+          "id": "OZKZ1BSQ1",
+          "text": "2 and 3.",
           "correct": false,
           "why": ""
         }

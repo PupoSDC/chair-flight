@@ -1,36 +1,36 @@
 [
   {
-    "id": "QUCWALBT",
+    "id": "QVIKJABH",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226118", "BGS-221638"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.03"],
+    "externalIds": ["ATPLQ-229658", "AVEXAM-30046"],
+    "annexes": ["A6SJ6M2ML"],
+    "learningObjectives": ["022.06.04.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to figure. \n In this image of a typical FMA why is \"VOR/LOC” in a smaller font of a different colour?",
+      "question": "Refer to figure.\n\nThe subsequent FMA modes until landing following those indicated in picture 1 are:",
       "options": [
         {
-          "id": "AAH2BKB2H7",
-          "text": "To help them distinguish between engaged modes and armed modes. MCP SPD HDG and ALT are engaged, and VOR/LOC is armed.",
+          "id": "OZNHBCLS2",
+          "text": "1, 6 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKAI7UGWX",
+          "text": "1, 2 and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFRC2FHTU",
+          "text": "1, 3 and 5.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ADLND93ZYL",
-          "text": "Because all modes are in a small font when first selected. After 5 seconds the font changes and the caption replaces the last mode in use in this example HDG.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3IAIUNCSH",
-          "text": "Because modes selected by buttons on the MCP are always in a large green font Managed modes selected via the FMC are in a small white font until the programmed parameter is achieved, when they change to a large white font.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A25POIDJFO",
-          "text": "Because modes based on ground radio navigation facilities are in a different font size to remind the pilot that they need to be tuned before use.",
+          "id": "OXUMBI1QF",
+          "text": "1, 5 and 2.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +38,80 @@
     }
   },
   {
-    "id": "QQQQVCPP",
+    "id": "QUCWALBT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106757", "BGS-220802"],
+    "externalIds": ["ATPLQ-226118", "BGS-221638", "AVEXAM-91090"],
     "annexes": [],
-    "learningObjectives": ["022.06.04.01.04"],
+    "learningObjectives": ["022.06.04.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to CS 25 concerning the electronic display systems, the colour associated with an engaged mode is:",
+      "question": "Refer to figure.\n\nIn this image of a typical FMA why is \"VOR/LOC” in a smaller font of a different colour?",
       "options": [
         {
-          "id": "AA2NVP9D9X",
-          "text": "green.",
+          "id": "O0R75X2HK",
+          "text": "To help them distinguish between engaged modes and armed modes. MCP SPD HDG and ALT are engaged, and VOR/LOC is armed.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASTYMG2QTU",
-          "text": "white.",
+          "id": "OHJKXOGVQ",
+          "text": "Because all modes are in a small font when first selected. After 5 seconds the font changes and the caption replaces the last mode in use in this example HDG.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9SEPRR6M5",
-          "text": "magenta.",
+          "id": "OJJVBPFQ7",
+          "text": "Because modes based on ground radio navigation facilities are in a different font size to remind the pilot that they need to be tuned before use.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZ59KJGUUA",
-          "text": "amber.",
+          "id": "OOWPVH4TX",
+          "text": "Because modes selected by buttons on the MCP are always in a large green font Managed modes selected via the FMC are in a small white font until the programmed parameter is achieved, when they change to a large white font.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEZQFUAR",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-228098",
+      "ATPLGS-628416",
+      "AVEXAM-13024",
+      "BGS-222331"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.06.04.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement about the Flight Mode Annunciator (FMA) is correct?",
+      "options": [
+        {
+          "id": "OPGL4XDAW",
+          "text": "When the mode is changed, a caption appears on the Electronic Attitude Direction Indicator that reads \"MODE CHG\".",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8TKR2UWM",
+          "text": "Every mode change is accompanied by a recognisable aural indication.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2VQMPZ0W",
+          "text": "If the mode changes, a caption on the Electronic Attitude Direction Indicator will change colour or appearance.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT8MJGA5Y",
+          "text": "A mode change is indicated by a series of gong sounds, normally four (4).",
           "correct": false,
           "why": ""
         }
@@ -84,219 +127,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "On a Flight Mode Annunciator (FMA), the pilot can check:\n1. the flight director modes\n2. the flaps/slats position\n3. the auto-throttle modes\nThe combination that regroups all of the correct statements is:",
+      "question": "On a Flight Mode Annunciator (FMA), the pilot can check:\n\n1 – the flight director modes.   \n 2 – the flaps/slats position.   \n 3 – the auto-throttle modes.\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AG3TMIHYJO",
+          "id": "OQLIOJX7X",
           "text": "1, 3.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASVGZPG0X2",
+          "id": "OVPNWGPQY",
           "text": "2.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A75UNF4F84",
+          "id": "OAKMLDFJU",
           "text": "1.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADXTHJYQDI",
+          "id": "OU6J2WSVJ",
           "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSKUWHVE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106750", "BGS-220801"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to CS 25 concerning the electronic display systems, the colour associated with an armed mode is:",
-      "options": [
-        {
-          "id": "AVKTWUVJYA",
-          "text": "white or cyan.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7PWQ4Q51N",
-          "text": "yellow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKQZSNAIAT",
-          "text": "green.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ4SLMHZIH",
-          "text": "magenta.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRZOJQQS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228178", "AVEXAM-94101"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following modes is indicated on the Flight Mode Annunciator (FMA) panel?",
-      "options": [
-        {
-          "id": "ABBZHVZG3E",
-          "text": "AFCS and autothrust modes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APDY7ZTNHA",
-          "text": "Weather radar modes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASLVPK65FL",
-          "text": "Flight warning system modes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5E7DO10PT",
-          "text": "EGPWS modes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCHGUFKQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-113323", "ATPLQ-225709", "BGS-222058"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On a Flight Mode Annunciator (FMA), the pilot can check \n1  the engaged and armed modes of the autopilot\n2  the automatic landing capacity\n3  the ACAS mode\nThe combination that regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "AKPT25YYIN",
-          "text": "1, 2.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF45GOZN3M",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU7E94PGSY",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASJGR9I9LC",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEZQFUAR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228098"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement about the Flight Mode Annunciator (FMA) is correct?",
-      "options": [
-        {
-          "id": "A9YUFSWHC6",
-          "text": "If the mode changes, a caption on the Electronic Attitude Direction Indicator will change colour or appearance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI2FDYVG2N",
-          "text": "A mode change is indicated by a series of gong sounds, normally four (4).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APB8S0IQ8D",
-          "text": "When the mode is changed, a caption appears on the Electronic Attitude Direction Indicator that reads \"MODE CHG\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A38WDP94BN",
-          "text": "Every mode change is accompanied by a recognisable aural indication.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVIKJABH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-30046"],
-    "annexes": ["290f8ec8d188eb85e60479e69e77f50e"],
-    "learningObjectives": ["022.06.04.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 022-32.\nWhich are the subsequent FMA modes until landing following those indicated in picture 1?",
-      "options": [
-        {
-          "id": "ADV78ZD5AL",
-          "text": "1, 3, 5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB31IYB7ED",
-          "text": "1, 5, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3RM60B1A7",
-          "text": "1, 6, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC4FNBEAS6",
-          "text": "1, 2, 3",
           "correct": false,
           "why": ""
         }
@@ -306,34 +159,34 @@
   {
     "id": "QRJNUSGI",
     "relatedQuestions": [],
-    "externalIds": ["BGS-221701"],
+    "externalIds": ["ATPLQ-226264", "AVEXAM-42043", "BGS-221701"],
     "annexes": [],
     "learningObjectives": ["022.06.04.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Only some mode change indications on the Flight Mode Annunciator (FMA) are accompanied by an aural notification or additional visual indications. These additional cues are used where...",
+      "question": "Only some mode change indications on the Flight Mode Annunciator (FMA) are accompanied by an aural notification or additional visual indications. When are these additional cues used? When:",
       "options": [
         {
-          "id": "A7NKL0ZYON",
-          "text": "The consequences of failing to notice a mode change might include an undesirable aircraft state or failure to adhere to an ATC clearance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF2CPI3FFY",
+          "id": "OPDHB6VNB",
           "text": "A common mode reverts to a lateral mode and a vertical mode, for example when TOGA is disengaged by a change to LNAV and VNAV or CLB and NAV.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3Z3BLBOSD",
+          "id": "OJCUPVZGY",
+          "text": "The consequences of failing to notice a mode change might include an undesirable aircraft state or failure to adhere to an ATC clearance.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVG2TR7SK",
           "text": "A mode change results in a dynamic change of trajectory. such as changing from vertical speed to altitude hold mode.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACHVOL20B8",
+          "id": "OCI9WEXRJ",
           "text": "A mode changes from a managed mode to a selected mode, or from a selected mode to a managed mode.",
           "correct": false,
           "why": ""
@@ -342,75 +195,37 @@
     }
   },
   {
-    "id": "QNJGJDKI",
+    "id": "QRZOJQQS",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106750", "BGS-220801"],
+    "externalIds": ["ATPLQ-228178", "AVEXAM-94101", "BGS-221577"],
     "annexes": [],
-    "learningObjectives": ["022.06.04.01.03"],
+    "learningObjectives": ["022.06.04.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to AMC 25.11 concerning the electronic display systems, the colour associated with an armed mode is",
+      "question": "In an autopilot system, What does the Flight Mode Annunciator (FMA) indicate?",
       "options": [
         {
-          "id": "AC1BFMGNXO",
-          "text": "white or cyan.",
+          "id": "OKEZB6WDG",
+          "text": "EGPWS modes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCNTDEHBZ",
+          "text": "Flight Warning System (FWS) modes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONQ8PK2NU",
+          "text": "AFCS and autothrust modes.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHX47ZYMG1",
-          "text": "yellow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASJQI7R1E3",
-          "text": "magenta.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZTTM02DXJ",
-          "text": "green.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMMZRIYL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106757", "BGS-220802"],
-    "annexes": [],
-    "learningObjectives": ["022.06.04.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to AMC 25.11 concerning the electronic display systems, the colour associated with an engaged mode is",
-      "options": [
-        {
-          "id": "AR7NZOL4S9",
-          "text": "green.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL9VPCOS63",
-          "text": "amber.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1ABF9JIXZ",
-          "text": "white.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM98YD5KPN",
-          "text": "magenta.",
+          "id": "OJLXPLSMQ",
+          "text": "Weather radar modes.",
           "correct": false,
           "why": ""
         }

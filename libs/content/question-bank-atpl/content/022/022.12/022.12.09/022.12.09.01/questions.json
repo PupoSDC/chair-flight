@@ -1,36 +1,36 @@
 [
   {
-    "id": "QBBZKNGI",
-    "relatedQuestions": ["QWQFPTFH"],
-    "externalIds": ["ATPLGS-106715", "ATPLGS-129381", "ATPLQ-222698"],
+    "id": "QLDQCADT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221233", "BGS-221695", "ATPLGS-628053"],
     "annexes": [],
     "learningObjectives": ["022.12.09.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The enhanced GPWS terrain display uses the following colors",
+      "question": "The crew of an aircraft fitted with a GPWS is on an ILS approach. As the aircraft reaches a height of 200 feet above the threshold the GPWS gives an aural alert of ‘’minimums, minimums’’. What GPWS mode does this refer to?",
       "options": [
         {
-          "id": "ACUQT5M4HE",
-          "text": "Green, Amber, Red, Blue",
+          "id": "OERPPRRAJ",
+          "text": "Mode 6.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AXWAPWSYYZ",
-          "text": "Red, Magenta, Blue",
+          "id": "O5TW9NE44",
+          "text": "Mode 8.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJW378GXKW",
-          "text": "Green, Amber, Red, White",
+          "id": "OQ8CZAEFH",
+          "text": "Mode 7.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMHRVIETWC",
-          "text": "Cyan, Amber, Red, Blue",
+          "id": "OUJGV2XX1",
+          "text": "Mode 5.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +38,42 @@
     }
   },
   {
-    "id": "QWQFPTFH",
-    "relatedQuestions": ["QBBZKNGI"],
-    "externalIds": ["ATPLGS-129381", "ATPLQ-222698"],
+    "id": "QMHELBVS",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-228655",
+      "AVEXAM-47800",
+      "BGS-220748",
+      "ATPLGS-112494"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
+    "learningObjectives": ["022.12.09.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The enhanced GPWS terrain display uses the following colors",
+      "question": "The GPWS warns the crew in case of:\n\n1 – deviation above or below the selected altitude   \n2 – deviation below the selected altitude   \n3 – unsafe terrain clearance with flaps not in landing configuration   \n4 – unsafe terrain clearance with landing gear not down.\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "APS7BY1W6M",
-          "text": "Green, Amber, Red, Blue",
+          "id": "O65NFSIT0",
+          "text": "2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5W0ATNNU",
+          "text": "3, 4.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1N15B19VU",
-          "text": "Green, Amber, Magenta, Blue",
+          "id": "OMKOR78NX",
+          "text": "1, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3D8DCXMH0",
-          "text": "Green, Amber, Red, White",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AORXGLFC1S",
-          "text": "Cyan, Amber, Red, Blue",
+          "id": "OZLY8SZ79",
+          "text": "2, 3, 4.",
           "correct": false,
           "why": ""
         }
@@ -76,113 +81,37 @@
     }
   },
   {
-    "id": "QXZGDTZV",
-    "relatedQuestions": ["QOOCGICA", "QXTDPCOY"],
-    "externalIds": ["ATPLQ-226641", "AVEXAM-93554", "BGS-220726"],
+    "id": "QCGZXVMD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222597"],
     "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
+    "learningObjectives": ["022.12.09.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The aural alert associated with the mode 3 (altitude loss after take-off or go-around) of the GPWS is:",
+      "question": "The purpose of GPWS is…",
       "options": [
         {
-          "id": "A066UXDGNK",
-          "text": "DON`T SINK",
+          "id": "O5BBPVYKR",
+          "text": "to alert the crew if there are deviations from certain aerodynamic parameters like altitude, airspeed and angle of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O12V3JQQE",
+          "text": "to avoid the aircraft having a CFIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9B0AOJOD",
+          "text": "to provide information and alert the pilots of a potentially hazardous terrain situation.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AC9IO1RXVQ",
-          "text": "TERRAIN",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKTU8YWV1O",
-          "text": "TOO LOW TERRAIN",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKPKMEK5F6",
-          "text": "SINKRATE",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOOCGICA",
-    "relatedQuestions": ["QXTDPCOY", "QXZGDTZV"],
-    "externalIds": ["ATPLQ-226641", "AVEXAM-93554", "BGS-220726"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert associated with the mode 3 (altitude loss after take-off or go-around) of the GPWS is:",
-      "options": [
-        {
-          "id": "ACXRA2QI2E",
-          "text": "\"DON'T SINK\".",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADWAG37IB3",
-          "text": "\"TOO LOW TERRAIN\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPFQHWTGW",
-          "text": "\"TERRAIN\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACYC5O763P",
-          "text": "\"SINK RATE\".",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXTDPCOY",
-    "relatedQuestions": ["QOOCGICA", "QXZGDTZV"],
-    "externalIds": ["ATPLQ-226641", "AVEXAM-93554", "BGS-220726"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert associated with the mode 3 (altitude loss after take-off or go-around) of the GPWS is:",
-      "options": [
-        {
-          "id": "A1JVQ3H7EF",
-          "text": "\"DON'T SINK\".",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP9HGP6H9T",
-          "text": "\"TOO LOW TERRAIN\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT75LHDL73",
-          "text": "\"SINKRATE\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEZHCTJAL0",
-          "text": "\"TERRAIN\".",
+          "id": "OYDJWXCS7",
+          "text": "to alert the pilots of hazardous terrain in front of and below the aircraft.",
           "correct": false,
           "why": ""
         }
@@ -198,428 +127,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The aural alert(s) associated with the mode 2 (excessive terrain closure rate) of the GPWS is (are):\n1) \"TERRAIN\".\n2) \"SINKRATE\".\n3) \"TOO LOW TERRAIN\".\n4) \"PULL UP\".\nThe combination that regroups all of the correct statements is:",
+      "question": "The aural alert(s) associated with the mode 2 (excessive terrain closure rate) of the GPWS is (are):\n\n1 – TERRAIN   \n 2 – SINKRATE   \n 3 – TOO LOW TERRAIN   \n 4 – PULL UP\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AIQDKJ6TO5",
-          "text": "1, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP80K62Q1N",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2WIBK1H69",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3A4F159PE",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMUEIKAH",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106715",
-      "ATPLGS-106719",
-      "ATPLQ-222698",
-      "ATPLQ-227995",
-      "AVEXAM-50290",
-      "AVEXAM-5953",
-      "BGS-991731"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Enhanced GPWS (EGPWS) terrain display uses the following colours:",
-      "options": [
-        {
-          "id": "ADX1IQBIWX",
-          "text": "green, amber, red, magenta.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACC6PZBZDS",
-          "text": "blue, red, magenta.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMKIKGO7JA",
-          "text": "magenta, red, flashing red.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3SPNV9KQU",
-          "text": "white, amber, red.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMHELBVS",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-112494",
-      "ATPLQ-228655",
-      "AVEXAM-47800",
-      "BGS-220748"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The GPWS warns the crew in case of:\n1. deviation above or below the selected altitude\n2. deviation below the selected altitude\n3. unsafe terrain clearance with flaps not in landing configuration\n4. unsafe terrain clearance with landing gear not down\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AQKH6H0VEA",
-          "text": "3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO6N9M2ON8",
+          "id": "OZRSAN9PD",
           "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVCHP599PT",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADMPKVMW37",
-          "text": "2, 3, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOXJDECS",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-990636"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The initial mode 1 GPWS Alert will be:",
-      "options": [
-        {
-          "id": "AQAWP4R7EE",
-          "text": "A red warning light and voice warnings “sink rate, sink rate”",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A33E5TVHTF",
-          "text": "A red warning light and a text display on the EADI",
+          "id": "OWKLSF5HR",
+          "text": "3.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADH557TNAM",
-          "text": "A red warning light and audio warnings “whoop whoop, pull up”",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWCDSX4O2V",
-          "text": "An amber warning light and voice warnings “terrain, terrain”",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQIKNNKZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222062"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The outputs of the GPWS are:1. Pitch up command to the AFCS  \n2. Aural alert  \n3. Aural Warning  \n4. Aural Klaxon Alert  \n5. Terrain shown on NDThe combination regrouping all correct statements is...",
-      "options": [
-        {
-          "id": "APSVVQIVU2",
-          "text": "2 and 3 only",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1LTMU8NX4",
-          "text": "2, 3, and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0ZN78TDJQ",
-          "text": "1, 2, 3 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2K04632LS",
-          "text": "2, 4 and 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLOAUVHZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-98140", "BGS-221059"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The GPWS CPU (Central Processing Unit) is able to detect:\n1) excessive descent rate.\n2) rapidly rising terrain.\n3) excessive angle of attack.\n4) excessive pitch down attitude.\n5) loss of altitude during go-around.\n6) abnormal flaps configuration.\n7) excessive bank angle.\nThe combination regrouping all the correct statements is:",
-      "options": [
-        {
-          "id": "A9O9CJ44IF",
-          "text": "1, 2, 5, 6, 7",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXGL482AHN",
-          "text": "3, 4, 5, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARS5PGPJCE",
-          "text": "2, 3, 5, 7",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX2E7ENMW2",
-          "text": "1, 2, 4, 6, 7",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMWSCAVP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228753", "AVEXAM-93530", "BGS-220751"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The operation of the GPWS is governed by laws taking the aircraft height into account as well as:\n1. the descent rate\n2. the climb rate\n3. the aircraft configuration\n4. the selected engine rpm\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AY5XDAJ443",
-          "text": "1, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWKPNIMOW3",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN722QOLGB",
+          "id": "O30YTI7KP",
           "text": "2, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFGJ2J51KE",
-          "text": "1, 2, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXAFDTLR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225338", "AVEXAM-89718", "BGS-220733"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 5 (excessive deviation below Glideslope) of the GPWS is (are):\n1. TERRAIN\n2. TOO LOW GLIDESLOPE\n3. GLIDESLOPE\n4. PULL UP\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ABQ6Z6R74R",
-          "text": "3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGOTVQUZ7O",
-          "text": "2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFM3VQH09D",
-          "text": "2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMP5L59FT0",
-          "text": "1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNXPNNVA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221027"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are on an approach when the aircraft generates the aural alert “windshear, windshear”. What GPWS mode does this refer to?",
-      "options": [
-        {
-          "id": "A8IBHDP3CJ",
-          "text": "7",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ0YL291XZ",
-          "text": "6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTVTPOXFL",
-          "text": "5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADD2BFGO3V",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDJQEUDW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106711",
-      "ATPLQ-221412",
-      "AVEXAM-64500",
-      "BGS-220744",
-      "BGS-222210"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Ground Proximity Warning System (GPWS) is a system working according to a height span ranging from",
-      "options": [
-        {
-          "id": "A0LULV7WVC",
-          "text": "the ground to 2 500 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACRIA3B5T5",
-          "text": "30 ft to 5 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZTDGDT1QC",
-          "text": "the ground to 500 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A81XTXRV17",
-          "text": "the ground to 1 000 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCYGLJZJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-990639"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When an aircraft is in the zone of increasing downdraft and tailwind a Mode 7 GPW  S warning will be:",
-      "options": [
-        {
-          "id": "AH33QRPOOF",
-          "text": "A red “windshear” light, possibly an audio warning and a “windshear, windshear” voice warning",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4RLOJJZGZ",
-          "text": "An amber “windshear” light and a bell",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A350XTK04N",
-          "text": "A red “windshear” light, and a “caution, windshear” voice warning",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACEW05Z4QC",
-          "text": "An amber “windshear” light and a “caution, windshear” voice warning",
+          "id": "OB14UOQ9S",
+          "text": "3, 4.",
           "correct": false,
           "why": ""
         }
@@ -638,26 +168,26 @@
       "question": "The aural alert associated with the mode 1 (excessive descent rate) of the GPWS is:",
       "options": [
         {
-          "id": "AKHRAUOIIN",
-          "text": "\"SINKRATE\".",
+          "id": "OQIU43FVK",
+          "text": "DON\\`T SINK",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4IRTYEJH",
+          "text": "TERRAIN",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHC8TJXF9",
+          "text": "SINK RATE",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZHFPGLDO4",
-          "text": "\"TOO LOW TERRAIN\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACV0CMWCU9",
-          "text": "\"TERRAIN\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATEKE3FT8J",
-          "text": "\"DON'T SINK\".",
+          "id": "OJFHS9L3I",
+          "text": "TOO LOW TERRAIN",
           "correct": false,
           "why": ""
         }
@@ -665,85 +195,37 @@
     }
   },
   {
-    "id": "QAONDDEX",
-    "relatedQuestions": ["QHAUAQNV"],
-    "externalIds": [
-      "ATPLGS-106721",
-      "ATPLQ-224848",
-      "AVEXAM-64479",
-      "BGS-221056"
-    ],
+    "id": "QNXPNNVA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221027", "ATPLGS-627850"],
     "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
+    "learningObjectives": ["022.12.09.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A ground proximity warning system (GPWS), when mandatory installed on board an aircraft, must in all cases generate :",
+      "question": "You are on an approach when the aircraft generates the aural alert “windshear, windshear”. What GPWS mode does this refer to?",
       "options": [
         {
-          "id": "AKTHXCZORP",
-          "text": "At least one sound alarm to which a visual alarm can be added",
+          "id": "OWFTKGTXR",
+          "text": "7",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1D7QZKV6R",
-          "text": "A sound and visual alarm",
+          "id": "OEJZFMZYU",
+          "text": "2",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP0DB0YMKB",
-          "text": "A visual alarm to which a sound alarm can be added",
+          "id": "OPWPN3OYG",
+          "text": "5",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1JK23V97U",
-          "text": "A sound alarm or a visual alarm",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHAUAQNV",
-    "relatedQuestions": ["QAONDDEX"],
-    "externalIds": [
-      "ATPLGS-106721",
-      "ATPLQ-224848",
-      "AVEXAM-64479",
-      "BGS-221056"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ground proximity warning system (GPWS), when installed on board an aircraft, must in all cases generate:",
-      "options": [
-        {
-          "id": "AENNOKNUY7",
-          "text": "at least one sound alarm to which a visual alarm can be added.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXN2TH20T0",
-          "text": "a sound alarm or a visual alarm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ5YGJ7DPD",
-          "text": "a sound and visual alarm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL3EDIS6O1",
-          "text": "a visual alarm to which a sound alarm can be added.",
+          "id": "ORYI1NOKW",
+          "text": "6",
           "correct": false,
           "why": ""
         }
@@ -753,7 +235,12 @@
   {
     "id": "QZAQLYLO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223376", "BGS-221621"],
+    "externalIds": [
+      "ATPLQ-223376",
+      "BGS-221621",
+      "AVEXAM-31376",
+      "ATPLGS-627835"
+    ],
     "annexes": [],
     "learningObjectives": ["022.12.09.01.01"],
     "explanation": "",
@@ -762,183 +249,152 @@
       "question": "A GPWS is able to alert the crew of excessive sink rate (rate of descent) while below a certain height above terrain. Where does the GPWS derive the sink rate from?",
       "options": [
         {
-          "id": "AP6LZV4FH1",
-          "text": "The Air data computer rate of descent.",
-          "correct": true,
+          "id": "ODCJ8KAE0",
+          "text": "The IRS vertical speed.",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AS8A33XPGK",
+          "id": "OMRLKWS3P",
           "text": "The rate of change of radar altitude.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALJ61FYJ2U",
+          "id": "OIG1LZYX4",
           "text": "The rate of change of GPS altitude.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASOYOZXEZC",
-          "text": "The IRS vertical speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVSVXRUZ",
-    "relatedQuestions": ["QCVTPGFE", "QJYKAOZQ"],
-    "externalIds": ["ATPLQ-225267", "AVEXAM-49286", "BGS-220736", "BGS-222254"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EGPWS:",
-      "options": [
-        {
-          "id": "A08MAX6BEA",
-          "text": "is an enhanced GPWS which has a its own world terrain database.",
+          "id": "OGENBEMYV",
+          "text": "The Air data computer rate of descent.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "ARVPP9N8XR",
-          "text": "has nothing to do with the GPWS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8OAZR9UX3",
-          "text": "is an enhanced GPWS which warns the crew if the aircraft is not in the appropriate configuration for take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A082ENYX1B",
-          "text": "is an enhanced GPWS which is able to provide resolution advisories in the lateral plane.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QCVTPGFE",
-    "relatedQuestions": ["QJYKAOZQ", "QVSVXRUZ"],
-    "externalIds": ["ATPLQ-225267", "AVEXAM-49286", "BGS-220736"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EGPWS:",
-      "options": [
-        {
-          "id": "AN3ZQAQDXU",
-          "text": "Is an enhanced GPWS which has a its own world terrain database.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXPHWT0UKJ",
-          "text": "Has nothing to do with the GPWS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5JPK5TNLO",
-          "text": "Is an enhanced GPWS which warns the crew if the airplane is not in the appropriate configuration for take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOZZN3WSOY",
-          "text": "Is an enhanced GPWS which is able to provide resolution advisories in the lateral plane.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJYKAOZQ",
-    "relatedQuestions": ["QCVTPGFE", "QVSVXRUZ"],
-    "externalIds": ["AVEXAM-49286"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EGPWS:",
-      "options": [
-        {
-          "id": "AJ433DWDT8",
-          "text": "is an enhanced GPWS which has its own world terrain database.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFCYBTLWHA",
-          "text": "is an enhanced GPWS which is able to provide resolution advisories in the lateral plane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A92BY4E26X",
-          "text": "is an enhanced GPWS which warns the crew if the airplane is not in the appropriate configuration for take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9LJQK59C3",
-          "text": "has nothing to do with the GPWS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLAFJZQV",
+    "id": "QVOGZVRB",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120703",
-      "ATPLQ-228397",
-      "AVEXAM-61354",
-      "BGS-221368"
+      "ATPLQ-221412",
+      "AVEXAM-64500",
+      "ATPLGS-106711",
+      "BGS-220744",
+      "AVEXAM-44505",
+      "BGS-222210"
     ],
     "annexes": [],
     "learningObjectives": ["022.12.09.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Mode 4 GPWS aural alerts are:",
+      "question": "The operating range of a GPWS is from:",
       "options": [
         {
-          "id": "AA8R7S7MGK",
-          "text": "\"Too low, gear\", Too low, flap\" or \"Too low, terrain\"",
+          "id": "O7NOVMOVS",
+          "text": "the ground to 500 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSOZZ55ZY",
+          "text": "the ground to 2500 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHOG9AH0EH",
-          "text": "\"Too low, terrain\" , \"Glideslope\"",
+          "id": "OEMXLXUJH",
+          "text": "30 ft to 5000 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A97OE3A5P4",
-          "text": "\"Too low flap\", \"Don't sink\"",
+          "id": "OQEHGX14V",
+          "text": "the ground to 1000 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFBOFOTN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-225299",
+      "BGS-220730",
+      "AVEXAM-2134",
+      "ATPLGS-625736"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.12.09.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The aural alerts associated with the mode 3 altitude loss after take-off or go-around of the GPWS is/are:\n\n1 -“DON\\`T SINK”   \n2 -“SINKRATE ”   \n3 -“TERRAIN”   \n4 -“PULL UP”\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "OAVK4U2J7",
+          "text": "2.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4Y1KYCXWM",
-          "text": "\"Too low, gear\", \"Pull up\"",
+          "id": "OXSCVR9V7",
+          "text": "1.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O0ASXZLDH",
+          "text": "2, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI9MJXMIS",
+          "text": "3, 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMUEIKAH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222698", "ATPLGS-129381", "ATPLGS-106715"],
+    "annexes": [],
+    "learningObjectives": ["022.12.09.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The enhanced GPWS terrain display uses the following colors",
+      "options": [
+        {
+          "id": "OFMMDAHPG",
+          "text": "Red, Magenta, Blue",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTLBP13F2",
+          "text": "Green, Amber, Red, White",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIHIHCMUC",
+          "text": "Green, Amber, Red, Blue",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXR0RZO6M",
+          "text": "Cyan, Amber, Red, Blue",
           "correct": false,
           "why": ""
         }
@@ -954,1044 +410,67 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The EGPWS may contain the following functions:\n\n1 – Abnormal Take-off Configuration (ATC)2 – Terrain Clearance Floor (TCF)3 – Predictive Wind Shear (PWS)4 – Terrain Look Ahead Alerting5 – Terrain Alerting and Display (TAD)\nThe combination that regroups all of the correct statements is:",
+      "question": "The EGPWS may contain the following functions:\n\n1 – Abnormal Take-off Configuration (ATC)   \n2 – Terrain Clearance Floor (TCF)   \n3 – Predictive Wind Shear (PWS)   \n4 – Terrain Look Ahead Alerting   \n5 – Terrain Alerting and Display (TAD)\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AVJ9U6BQMR",
-          "text": "2, 4, 5.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZNY84C8PM",
-          "text": "1, 3, 4.",
+          "id": "OKPRLILUH",
+          "text": "1, 2, 3, 5.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFRMC4ODD6",
+          "id": "O1IASNFBQ",
           "text": "2, 3, 4, 5.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIGTF30LT6",
-          "text": "1, 2, 3, 5.",
+          "id": "OPHSMTN2X",
+          "text": "1, 3, 4.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAYRWEVCM",
+          "text": "2, 4, 5.",
+          "correct": true,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QLDQCADT",
+    "id": "QXTDPCOY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221233", "BGS-221695"],
+    "externalIds": ["ATPLQ-226641", "AVEXAM-93554", "BGS-220726"],
     "annexes": [],
     "learningObjectives": ["022.12.09.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The crew of an aircraft fitted with a GPWS is on an ILS approach. As the aircraft reaches a height of 200 feet above the threshold the GPWS gives an aural alert of ‘’minimums, minimums’’. What GPWS mode does this refer to?",
+      "question": "The aural alert associated with the mode 3 (altitude loss after take-off or go-around) of the GPWS is:",
       "options": [
         {
-          "id": "AETKL6HSFW",
-          "text": "Mode 6.",
+          "id": "O7VVFSS9D",
+          "text": "DON\\`T SINK",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2GYHJDU1P",
-          "text": "Mode 8.",
+          "id": "OXOBUEZG2",
+          "text": "TOO LOW TERRAIN",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A62XBP8ZZM",
-          "text": "Mode 7.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A146RXYOYQ",
-          "text": "Mode 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPYJFQII",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-95897"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering GPWS, which mode issues the warning \"DON'T SINK\"?",
-      "options": [
-        {
-          "id": "A6HP99259P",
-          "text": "Mode 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOF6X8F4HI",
-          "text": "Mode 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP90D1IJKV",
-          "text": "Mode 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ9GLDWRQO",
-          "text": "Mode 1",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRINDEGP",
-    "relatedQuestions": ["QCIAWZUZ", "QJYSGOZU"],
-    "externalIds": ["ATPLQ-229182", "BGS-220725"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert associated with the mode 2 (excessive terrain closure rate) of the GPWS is:",
-      "options": [
-        {
-          "id": "ARDIQBXJP3",
-          "text": "\"TERRAIN\".",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUVCJ4KLLB",
-          "text": "\"SINK RATE\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AITVMMHP0W",
-          "text": "\"DON`T SINK\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQCF1H4Y0O",
-          "text": "\"CLIMB\".",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJYSGOZU",
-    "relatedQuestions": ["QCIAWZUZ", "QRINDEGP"],
-    "externalIds": ["ATPLQ-229182", "AVEXAM-34764", "BGS-220725"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert associated with the mode 2 (excessive terrain closure rate) of the GPWS is:",
-      "options": [
-        {
-          "id": "AFIT1W50E5",
+          "id": "OKRMUGUZI",
           "text": "TERRAIN",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFVPT72JRL",
-          "text": "DON`T SINK",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AL8TZ3L9FB",
+          "id": "OQEKSHQDX",
           "text": "SINKRATE",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVJRSB3Q5Z",
-          "text": "CLIMB",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCIAWZUZ",
-    "relatedQuestions": ["QJYSGOZU", "QRINDEGP"],
-    "externalIds": ["ATPLQ-229182", "AVEXAM-34764"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert associated with the mode 2 (excessive terrain closure rate) of the GPWS is:",
-      "options": [
-        {
-          "id": "AN6GDXCHTE",
-          "text": "\"TERRAIN\".",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4EE3EY4N4",
-          "text": "\"CLIMB\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARY2FEZLJX",
-          "text": "\"SINKRATE\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4QW36WP8R",
-          "text": "\"DON'T SINK\".",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKFYSXXC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106711", "BGS-220744"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The GPWS is a system working according to a height span ranging from:",
-      "options": [
-        {
-          "id": "AKOIG8K4WS",
-          "text": "50 ft to 2 500 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFUU3BQTTT",
-          "text": "The ground to 1 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXH1SH9HQB",
-          "text": "The ground to 500 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHY90DC3F1",
-          "text": "30 ft to 5 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWCVXGCK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627584"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is Mode 4B on the TAWS",
-      "options": [
-        {
-          "id": "AQO3XC6A1D",
-          "text": "Too low, flaps",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIBZT0B50L",
-          "text": "Too low, Air speed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL8H4XGGK1",
-          "text": "Too low, gear",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXHU8EEYTX",
-          "text": "Too low, terrain",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGWEIPIP",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-990638"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Response to GPWS warnings is:",
-      "options": [
-        {
-          "id": "A8MPDXYS1P",
-          "text": "Mandatory, unless VMC with no obvious conflict",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADCSWMZ69V",
-          "text": "Normally a smooth correction of bank or pitch",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEMTVD5MB1",
-          "text": "At the captain’s discretion",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A74SXRWZTR",
-          "text": "Optional",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUELXKPN",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120703",
-      "ATPLQ-228397",
-      "AVEXAM-61354",
-      "BGS-220731"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering GPWS, which warnings are issued by modes 4A and 4B?",
-      "options": [
-        {
-          "id": "A5O8DR0BVC",
-          "text": "\"TOO LOW GEAR\", \"TOO LOW FLAPS\", \"TOO LOW TERRAIN\"",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0051CODUV",
-          "text": "\"TOO LOW FLAPS\", \"TOO LOW GEAR\", \"GLIDE SLOPE\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX04E22I5G",
-          "text": "\"TOO LOW, TERRAIN\" only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5HJR88F3X",
-          "text": "\"TOO LOW, CHECK FLAPS\", \" TOO LOW, CHECK GEAR\".",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFMQICZG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-15491", "AVEXAM-80977", "BGS-221055"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A transport airplane is compelled to carry on board a Ground Proximity Warning System  (GPWS). This system will warn the crew in case of :\n \n1. Keeping the altitude at a lower level than the one shown in the flight plan entered in the FMS.\n2. Dangerous ground proximity.\n3. Loss of altitude during take-off or missed approach.\n4. Wrong landing configuration.\n5. Descent below Glide Path, within limits.\n \nThe combination regrouping all the correct statements is :",
-      "options": [
-        {
-          "id": "AQ2TI96DEN",
-          "text": "2,3,4,5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB29ZFBZ9X",
-          "text": "2,5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMG17WJOXM",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATV4P9Z8Q2",
-          "text": "1,3,4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFBOFOTN",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-625736",
-      "ATPLQ-222911",
-      "ATPLQ-225299",
-      "AVEXAM-2134",
-      "AVEXAM-93396",
-      "BGS-220730"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 3 (altitude loss after take-off or go-around) of the GPWS is (are):\n1) \"DON'T SINK\"\n2) \"SINKRATE\"\n3) \"TERRAIN\"\n4) \"PULL UP\"\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AT6VFYUTC2",
-          "text": "1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATA8EXIZG1",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALZAU4PCSM",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB325LS32W",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVNKYLNY",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221522"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During an approach you hear the voice alert 'Minimums'. What GPWS mode is that?",
-      "options": [
-        {
-          "id": "ASHXSFVGIH",
-          "text": "6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN1HOG634B",
-          "text": "7",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFXOLP5NOV",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAE6F3O04K",
-          "text": "4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGARWXDQ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-992994"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The GPWS (Ground Proximity Warning System) is active for a height range from:",
-      "options": [
-        {
-          "id": "ADRXAMEV24",
-          "text": "50 ft to 2 500 ft measured by the radio altimeter",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA2KUESHUP",
-          "text": "0 ft to 5 000 ft measured by the radio altimeter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABX0R8N353",
-          "text": "0 ft to 2 500 ft measured by the radio altimeter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXX2LA00MO",
-          "text": "50 ft to 5 000 ft measured by the radio altimeter.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIGHDPYG",
-    "relatedQuestions": ["QLMBDXPI", "QUSQBCZO"],
-    "externalIds": [
-      "ATPLGS-120703",
-      "ATPLQ-228397",
-      "AVEXAM-61354",
-      "AVEXAM-79193",
-      "BGS-220731",
-      "BGS-221368"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 4 of the GPWS (unsafe terrain clearance while not in the landing configuration) is (are):",
-      "options": [
-        {
-          "id": "ADMV47X63Z",
-          "text": "TOO LOW GEAR, TOO LOW FLAPS, TOO LOW TERRAIN",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARMSF8SCVT",
-          "text": "TOO LOW, CHECK FLAPS, CHECK GEAR.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJLXC9GWI2",
-          "text": "TOO LOW, TERRAIN only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A95O9DO26N",
-          "text": "TOO LOW FLAPS, TOO LOW GEAR, GLIDE SLOPE",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLMBDXPI",
-    "relatedQuestions": ["QIGHDPYG", "QUSQBCZO"],
-    "externalIds": ["ATPLGS-120703", "ATPLQ-228397"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 4 of the GPWS (unsafe terrain clearance while not in the landing configuration) is (are):",
-      "options": [
-        {
-          "id": "ALUUP0GIFD",
-          "text": "“TOO LOW GEAR”, “TOO LOW FLAPS”, “TOO LOW TERRAIN”",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS96RG5IKU",
-          "text": "“TOO LOW FLAPS”, “TOO LOW GEAR”, “GLIDE SLOPE”",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA3U7X4OSP",
-          "text": "“TOO LOW”, “CHECK FLAPS”, “CHECK GEAR”",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANNHPQBLLT",
-          "text": "“TOO LOW, TERRAIN” only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUSQBCZO",
-    "relatedQuestions": ["QIGHDPYG", "QLMBDXPI"],
-    "externalIds": ["ATPLGS-120703", "ATPLQ-228397", "AVEXAM-79193"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 4 of the GPWS (unsafe terrain clearance while not in the landing configuration) is (are):",
-      "options": [
-        {
-          "id": "A4964YOOFI",
-          "text": "\"TOO LOW GEAR\", \"TOO LOW FLAPS\", \"TOO LOW TERRAIN\"",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJJAW2GHUM",
-          "text": "\"TOO LOW FLAPS\", \"TOO LOW GEAR\", \"GLIDE SLOPE\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZLGXW3A19",
-          "text": "\"TOO LOW\", \"CHECK FLAPS\", \"CHECK GEAR\".",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALPOUB1Q99",
-          "text": "\"TOO LOW, TERRAIN\" only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVIZFCOI",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-625736",
-      "ATPLQ-222911",
-      "AVEXAM-2134",
-      "AVEXAM-23504",
-      "AVEXAM-93396",
-      "BGS-220728",
-      "BGS-220729"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 1 (excessive descent rate) of the GPWS is (are):\n1. TERRAIN\n2. DON'T SINK\n3. SINKRATE\n4. PULL UP\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "APOV0G4Z0Q",
-          "text": "3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE039KCE50",
-          "text": "2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADF00UWGG6",
-          "text": "2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGF6CVEXIH",
-          "text": "1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDVMLGBO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-10649"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aural alert(s) associated with the mode 1 of the GPWS is (are):",
-      "options": [
-        {
-          "id": "AK78A8B6SA",
-          "text": "“SINKRATE, SINKRATE”, then if situation intensifies an aural alert “WHOOP WHOOP PULL UP”",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZQHJOHZMZ",
-          "text": "“TERRAIN, TERRAIN”, then if situation intensifies an aural alert “WHOOP WHOOP PULL UP”",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIL5ZND60H",
-          "text": "TOO LOW GEAR\", \"TOO LOW FLAPS\", \"TOO LOW TERRAIN\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHPIODATA0",
-          "text": "\"DON'T SINK\"",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAODFMFS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106714", "ATPLQ-227095", "BGS-220735"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EGPWS provides a forward looking terrain avoidance (FLTA) function; this function uses:",
-      "options": [
-        {
-          "id": "ASPYGT7QXA",
-          "text": "An electronic map of the world giving ground elevation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP10L0OOA3",
-          "text": "The same caution and warning envelopes as the mode 2 GPWS (excessive terrain closure rate).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS16VSYVBI",
-          "text": "The weather radar to detect any high ground in conflict with the flight path of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ19K23DDE",
-          "text": "A specific radar to detect any high ground in conflict with the flight path of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEAHNBNG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106721", "ATPLQ-224848", "AVEXAM-64479"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When mandatory installed on board and aircraft, what must in all cases a ground proximity warning system (GPWS) generate?",
-      "options": [
-        {
-          "id": "AGYRILYINJ",
-          "text": "At least one sound alarm to which a visual alarm can be added.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARXQU6NILR",
-          "text": "A visual alarm to which a sound alarm can be added.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A10FOND361",
-          "text": "A sound and visual alarm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGVE11NUA6",
-          "text": "A sound alarm or a visual alarm.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUQLWKKJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-994929"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which modes of the GPWS have the voice warning \"PULL UP, PULL UP\"?",
-      "options": [
-        {
-          "id": "AYF5JFIGR5",
-          "text": "Modes 1 and 2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9E47G7MLU",
-          "text": "Mode 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AARSZOZN8B",
-          "text": "Modes 1, 2 and 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUVQG6FXXO",
-          "text": "Modes 2 and 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKESJKCJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221200"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the verbal alert for a Mode 1 on the GPWS?",
-      "options": [
-        {
-          "id": "AGCJFCNWAX",
-          "text": "\"Sink rate, sink rate\"",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7BVASSYHG",
-          "text": "\"Terrain, terrain\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOURH3BJCI",
-          "text": "\"Glideslope\"",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARWD3HA21F",
-          "text": "\"Don't sink\"",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVOGZVRB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106711", "ATPLQ-221412", "BGS-222210"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The operating range of a GPWS is from:",
-      "options": [
-        {
-          "id": "A9TVNMD17P",
-          "text": "the ground to 2500 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIVFXTC2PY",
-          "text": "the ground to 500 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKB25X73OE",
-          "text": "the ground to 1000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXSTJUYLBY",
-          "text": "30 ft to 5000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCGZXVMD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222597"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of GPWS is...",
-      "options": [
-        {
-          "id": "AMV32PYEZV",
-          "text": "to provide information and alert the pilots of a potentially hazardous terrain situation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJYTKJJVFT",
-          "text": "to alert the crew if there are deviations from certain aerodynamic parameters like altitude, airspeed and angle of attack.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC8EMQ4XJX",
-          "text": "to avoid the aircraft having a CFIT.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADJ59M5TR3",
-          "text": "to alert the pilots of hazardous terrain in front of and below the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWAKOXDP",
-    "relatedQuestions": ["QJOECUJG"],
-    "externalIds": ["AVEXAM-18330"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are on an approach and your GPWS provides you with an aural information: \"MINIMUMS\". Which mode does this refer to?",
-      "options": [
-        {
-          "id": "AG5I4J2TWK",
-          "text": "6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV0TX6RHMC",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ5XRPMLR0",
-          "text": "7",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ6TT88I0F",
-          "text": "4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJOECUJG",
-    "relatedQuestions": ["QWAKOXDP"],
-    "externalIds": ["AVEXAM-70568"],
-    "annexes": [],
-    "learningObjectives": ["022.12.09.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are on an approach and your GPWS provides you with an aural information: \"WINDSHEAR, WINDSHEAR\". Which mode does this refer to?",
-      "options": [
-        {
-          "id": "ARRLN3DVMG",
-          "text": "7",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWTN7VUIU0",
-          "text": "6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5CWRJIBXW",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANP661NMME",
-          "text": "5",
           "correct": false,
           "why": ""
         }

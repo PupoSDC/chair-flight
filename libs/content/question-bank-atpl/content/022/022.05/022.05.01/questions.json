@@ -1,195 +1,41 @@
 [
   {
-    "id": "QUYWXYRI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129519"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a ring laser gyro, the dither motor prevents lock-in:",
-      "options": [
-        {
-          "id": "AZ4ARJ9U5G",
-          "text": "at low input rotational rates",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQHY8HCIPZ",
-          "text": "at zero rotational rates",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ10GATSTM",
-          "text": "at all rotational rates",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACANLS3KJG",
-          "text": "at high input rotational rates",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBVFORYS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120966", "ATPLQ-224178", "BGS-222200"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inner loop control (stabilisation) is",
-      "options": [
-        {
-          "id": "ARKB7RU5NK",
-          "text": "closed through the flight control computer directly to the actuator.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASIKMF29I0",
-          "text": "controlled directly by the pilot.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A85MJIW0AO",
-          "text": "closed through the flight control computer at the junction point of the controller stick.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APSX2I6SAA",
-          "text": "controlled directly by the pilot through the flight control computer.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QADFWLIV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106308"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A gravity erector system is used to correct the errors on",
-      "options": [
-        {
-          "id": "AN7JD9L9WF",
-          "text": "an artificial horizon (attitude indicator).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEYB2XHEDN",
-          "text": "a turn indicator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIW9XVU7SX",
-          "text": "a directional gyro.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARS1RVPWK0",
-          "text": "a gyromagnetic compass.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHBZWYRE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106455"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "One of the errors inherent in a ring laser gyroscope occurs at low input rotation rates tending towards zero when a phenomenon known as lock-in is experienced\nWhat is the name of the technique",
-      "options": [
-        {
-          "id": "APQRH70Q6I",
-          "text": "Dither.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7WXQQEE0N",
-          "text": "Beam lock.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARF8EDVTBF",
-          "text": "Zero drop.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG5P2LYE9L",
-          "text": "Cavity rotation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAHBQOXN",
+    "id": "QCKDCIET",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106456",
-      "ATPLGS-120676",
-      "ATPLQ-221528",
-      "AVEXAM-33664",
-      "AVEXAM-46287",
-      "BGS-220364"
+      "ATPLQ-223300",
+      "ATPLGS-628545",
+      "AVEXAM-495",
+      "BGS-222489"
     ],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "To obtain the instantaneous speed from the accelerations",
+      "question": "After entering the starting position, an inertial navigation system provides continuous information on the aircraft's position by measuring the (1) \\_\\_\\_\\_\\_ in the vertical, horizontal and lateral planes. A first integration over time outputs the (2) \\_\\_\\_\\_\\_; a second integration over time gives (3) \\_\\_\\_\\_\\_.",
       "options": [
         {
-          "id": "A744M8W12M",
-          "text": "it is necessary to integrate the acceleration once in time, and to know the initial speed only.",
+          "id": "OUJDPEKLN",
+          "text": "(1) acceleration; (2) velocity; (3) distance travelled",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A82V5GBDAN",
-          "text": "it is necessary to integrate the acceleration once in time, and to know the initial position only.",
+          "id": "OPK0A5GLF",
+          "text": "(1) distance travelled; (2) velocity; (3) horizontal position",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A41LK28FSO",
-          "text": "integrating the acceleration once in time is sufficient.",
+          "id": "OCSICKW73",
+          "text": "(1) acceleration; (2) height; (3) present position",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4FRCMD2WZ",
-          "text": "it is necessary to integrate the acceleration once in time, and to know the initial speed and the initial position.",
+          "id": "O86WWAHQD",
+          "text": "(1) velocity; (2) last position; (3) acceleration",
           "correct": false,
           "why": ""
         }
@@ -197,775 +43,37 @@
     }
   },
   {
-    "id": "QQIRXJDQ",
+    "id": "QHMWQXHG",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106456",
-      "ATPLGS-120676",
-      "ATPLQ-221528",
-      "ATPLQ-224069",
-      "AVEXAM-46287",
-      "BGS-220364"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "To obtain the instantaneous position from the accelerations",
-      "options": [
-        {
-          "id": "A71M0VQSV6",
-          "text": "it is necessary to integrate twice the acceleration with respect to time, and to know the initial position and the initial speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGXOG05WSQ",
-          "text": "it is necessary to integrate twice the acceleration with respect to time, and to know the initial position only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A38UNP7NNW",
-          "text": "integrating twice acceleration with respect to time is sufficient.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0X1QNDR3S",
-          "text": "it is necessary to integrate twice the acceleration with respect to time, and to know the initial speed only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSMSEZMM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106432"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What are the components of a ring laser gyro?",
-      "options": [
-        {
-          "id": "AFMNBDXIIQ",
-          "text": "2 beams of laser light.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGNYJ1Y02G",
-          "text": "Mirrors and 2 cavities.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMJAR28ACN",
-          "text": "2 anodes and 2 cathodes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7OP657MLM",
-          "text": "Horizontal gyro axis and 1 degree of freedom.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRKCZLEK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106460", "AVEXAM-68159"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compared with a conventional gyro, a laser gyro",
-      "options": [
-        {
-          "id": "A248I8XG4W",
-          "text": "has a longer life cycle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3BALO10J4",
-          "text": "is influenced by temperature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHI5JPVI1X",
-          "text": "consumes a lot of power.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUBK8K4B14",
-          "text": "has a fairly long starting cycle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMSDCHNH",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120727",
-      "ATPLQ-229496",
-      "AVEXAM-11617",
-      "BGS-220430"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ring laser gyro is",
-      "options": [
-        {
-          "id": "AQPVUBIWWO",
-          "text": "a device which measures angular rates around its sensitive axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A00TEX77EH",
-          "text": "used for stabilising the INS platform.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB8KW957D7",
-          "text": "an optical accelerometer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACDRHYDT8Q",
-          "text": "a device which measures the earth rate precession.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFMMXZVT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106436", "AVEXAM-63516"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A laser gyro consists of",
-      "options": [
-        {
-          "id": "AZP3L7K1K0",
-          "text": "a laser generating two light waves.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ9X69DSK1",
-          "text": "2 electrodes (anode and cathode).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A90FMMB9RS",
-          "text": "two moving cavities provided with mirrors.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZS5GOR1NY",
-          "text": "a gyro with 2 degrees of freedom.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJVZZOOJ",
-    "relatedQuestions": ["QEBUHLYA"],
-    "externalIds": ["ATPLQ-226739", "AVEXAM-86130", "BGS-220403"],
+    "externalIds": ["ATPLQ-226922", "BGS-221714", "AVEXAM-13440"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.08"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The alignment time of a strapdown inertial system takes longer time when the aircraft is:",
+      "question": "_Complete the following sentence:_\n\nA strap-down inertial system uses three (1)\\_\\_ gyros, which are mounted on (2)\\_\\_.",
       "options": [
         {
-          "id": "AXCOGR639F",
-          "text": "at a high latitude.",
+          "id": "OBMHUDEAK",
+          "text": "(1) Laser ring; (2) the airframe.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5PL8CR71X",
-          "text": "at a location where the magnetic variation is greater than 15 degrees.",
+          "id": "OKLNKTMU3",
+          "text": "(1) Laser ring; (2) gimbals.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQ63QI55XG",
-          "text": "close to the equator.",
+          "id": "OSQADXTCV",
+          "text": "(1) Rate integrating; (2) the airframe.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9ODLYBQQB",
-          "text": "at a high longitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEBUHLYA",
-    "relatedQuestions": ["QJVZZOOJ"],
-    "externalIds": ["ATPLQ-226739", "AVEXAM-86130", "BGS-220403"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment time of a strapdown inertial system takes longer time when the aircraft is:",
-      "options": [
-        {
-          "id": "AIDEKKCWSK",
-          "text": "at a high latitude.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO7EW547WA",
-          "text": "at a high longitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2SD0F867F",
-          "text": "at a location where the magnetic variation is greater than 15°.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0I1S67MCJ",
-          "text": "close to the equator.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFSOGSLP",
-    "relatedQuestions": ["QGMAGHGB"],
-    "externalIds": [
-      "ATPLGS-113132",
-      "ATPLQ-225512",
-      "AVEXAM-31056",
-      "AVEXAM-76677",
-      "BGS-220401"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment of a strapdown inertial system consists in:",
-      "options": [
-        {
-          "id": "AT2T3D6AK2",
-          "text": "measuring the earth rotation and local gravitation to position the reference co-ordinate system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKIGTS32P8",
-          "text": "positioning the platform relative to the local vertical and true north.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACAECGNMDG",
-          "text": "positioning the gyroscopes and accelerometers relative to the fuselage axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACN5NEWWWI",
-          "text": "positioning the accelerometers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGMAGHGB",
-    "relatedQuestions": ["QFSOGSLP"],
-    "externalIds": [
-      "ATPLGS-113132",
-      "ATPLQ-225512",
-      "AVEXAM-76677",
-      "BGS-220401"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment of a strapdown inertial system consists in:",
-      "options": [
-        {
-          "id": "AWGM77P83I",
-          "text": "measuring the Earth rotation and local gravitation to position the reference trihedron.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASSETK0OXZ",
-          "text": "positionning the accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJO5GGNW11",
-          "text": "positioning the platform relative to the local vertical and true north.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIJGX6OMS7",
-          "text": "positioning the gyroscopes and accelerometers relative to the fuselage axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFLOEMBE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627218", "ATPLQ-221392", "BGS-221360"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the control panel of the Inertial Navigation System a caption BAT or ON DC illuminates. This means that the...",
-      "options": [
-        {
-          "id": "AWMV83444D",
-          "text": "normal electrical supply is lost and that the system is currently fed by the aircraft`s battery or a back-up battery.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0DI6BL698",
-          "text": "system is fed by DC current instead of the normal AC current supply, leading to a reduced system performance.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABXQ1TPC02",
-          "text": "initial alignment process is on-going and that the system is currently fed via a DC bus bar.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARFRJGW82F",
-          "text": "voltage of the battery, supplying electrical power to the system during normal operation, has dropped.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QODHGUGK",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106394",
-      "ATPLQ-229869",
-      "AVEXAM-32449",
-      "BGS-220351"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the integration process:\n1) amounts to making a time division.\n2) amounts to making a time multiplication.\n3) enable to get accelerations from position.\n4) enable to get position from accelerations.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A6LHOSSKG5",
-          "text": "2, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOZEC2ZGBT",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A16R2CRZJI",
-          "text": "1, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH0B5N6YTE",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQMYKCY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106445"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a strap-down IRS the accelerometers are oriented with their axes",
-      "options": [
-        {
-          "id": "A8NARXPQ36",
-          "text": "along yaw, longitudinal and lateral axis of the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOZLQ7UBIA",
-          "text": "with the local horizontal plane, the aircraft lateral axis and true north/south.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWT9XE12JQ",
-          "text": "with the lateral axis of the aircraft, true north/south and true east/west.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYU64438V3",
-          "text": "with the local vertical, true north and true east.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPWPJCPV",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-222183"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compared to a conventional gyroscope, a Ring Laser Gyroscope (RLG) has the following characteristics:",
-      "options": [
-        {
-          "id": "A6Y6EFKOEL",
-          "text": "no run-up time and very low sensitivity to gravitational (`g`) forces.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5IAV1PQV7",
-          "text": "low power requirement and long run-up time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYLRP7RQK9",
-          "text": "high reliability and long run-up time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHTSGFPLN",
-          "text": "high accuracy and high sensitivity to gravitational (`g`) forces.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKMRPZPG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106451", "ATPLQ-221197"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compared with a stabilised platform inertial system, a strapdown inertial system:\n\n1 – takes longer time to align2 – takes shorter time to align3 – is more reliable over time4 – is less reliable over time\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A5I9H086M8",
-          "text": "2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGDQR7IGWR",
-          "text": "2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG1NWLW5FW",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANOOM0T7MG",
-          "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYAUGCCM",
-    "relatedQuestions": ["QCAKPDCH"],
-    "externalIds": [
-      "ATPLGS-106390",
-      "ATPLGS-120678",
-      "ATPLQ-223284",
-      "ATPLQ-225041",
-      "AVEXAM-38533",
-      "BGS-220352",
-      "BGS-220353"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the principle used to obtain the change in speed is:",
-      "options": [
-        {
-          "id": "A4YFTP7C3E",
-          "text": "single integration of acceleration with respect to time.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APFUGGBN8H",
-          "text": "double integration of acceleration with respect to time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUMQ1VAY0W",
-          "text": "double integration of position with respect to time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIOJ044ZAQ",
-          "text": "single integration of position with respect to time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCAKPDCH",
-    "relatedQuestions": ["QYAUGCCM"],
-    "externalIds": [
-      "ATPLGS-106390",
-      "ATPLGS-120678",
-      "ATPLQ-223284",
-      "AVEXAM-38533",
-      "BGS-220353"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the principle used to obtain the change in speed is:",
-      "options": [
-        {
-          "id": "A5EZ7SWPBF",
-          "text": "single integration of acceleration according to time.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFUIOP38TZ",
-          "text": "double integration of acceleration according to time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A96CTOU9P0",
-          "text": "double integration of position according to time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACK60IRQ7D",
-          "text": "single integration of position according to time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUYSJKPK",
-    "relatedQuestions": ["QUEEGTLA"],
-    "externalIds": [
-      "ATPLGS-106409",
-      "ATPLGS-121213",
-      "ATPLQ-221745",
-      "AVEXAM-52315",
-      "BGS-222217"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inertial navigation system:",
-      "options": [
-        {
-          "id": "A7IYUL6ZVX",
-          "text": "can operate as stand alone equipment without any interface with other navigation equipment.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR3YLRONOM",
-          "text": "can only operate when interfacing with the GPS equipment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEUBYW7MPQ",
-          "text": "can only operate when communicating with ground installations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9XCZL3JAL",
-          "text": "can only operate when interfacing with the radionavigation equipment.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUEEGTLA",
-    "relatedQuestions": ["QUYSJKPK"],
-    "externalIds": [
-      "ATPLGS-106409",
-      "ATPLGS-121213",
-      "ATPLQ-221745",
-      "AVEXAM-52315",
-      "BGS-222217"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inertial navigation system:",
-      "options": [
-        {
-          "id": "A1Y24KCU10",
-          "text": "can operate as stand alone equipment without any interface with other navigation equipment.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHB4WRMHZX",
-          "text": "can only operate when interfacing with the GPS equipment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP0DEIEZRG",
-          "text": "can only operate when interfacing with the radio navigation equipment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A97H9LSGZP",
-          "text": "can only operate when communicating with ground installations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUWJIUKX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106392"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What measurement is used to carry out alignment of an Inertial Navigation System?",
-      "options": [
-        {
-          "id": "AUCF9D6EXS",
-          "text": "Acceleration sensed by the east gyro horizontal accelerometer.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7X264TYI1",
-          "text": "Acceleration sensed by the north gyro vertical accelerometer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASRWWJJJII",
-          "text": "Acceleration sensed by the north gyro horizontal accelerometer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV16JPL8PR",
-          "text": "Difference in magnitude of the value of gravity compared with the gravity at the last known position.",
+          "id": "OUHDQBM42",
+          "text": "(1) Rate integrating; (2) gimbals.",
           "correct": false,
           "why": ""
         }
@@ -975,7 +83,7 @@
   {
     "id": "QZVKRJKH",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228830", "AVEXAM-61740", "BGS-220395"],
+    "externalIds": ["ATPLQ-228830", "BGS-220395", "AVEXAM-61740"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.08"],
     "explanation": "",
@@ -984,663 +92,26 @@
       "question": "Considering a strapdown inertial system, the operating principle requires the use of at least:",
       "options": [
         {
-          "id": "A48ICCKMTR",
+          "id": "OTVHWQPRH",
           "text": "3 laser gyros and 3 accelerometers.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AN1EIWXGN0",
-          "text": "2 laser gyros and 2 accelerometers.",
+          "id": "OJTYP9KPF",
+          "text": "3 laser gyros and 2 accelerometers.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANJ0U2LN5U",
+          "id": "OBKVYOT8P",
           "text": "2 laser gyros and 3 accelerometers.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWFGIFNK4Y",
-          "text": "3 laser gyros and 2 accelerometers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTBOFDCQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106461"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following lists, which compares an Inertial Reference System that utilizes Ring Laser Gyroscopes (RLG) instead of conventional gyroscopes, is completely correct?",
-      "options": [
-        {
-          "id": "AYI0EJBQ2O",
-          "text": "There is little or no spin up time and it is insensitive to gravitational (g) forces.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4CCLXKNH7",
-          "text": "It does not suffer from lock in error and it is insensitive to gravitational (g) forces.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXHDQXNGVO",
-          "text": "The platform is kept stable relative to the earth mathematically rather than mechanically but it has a longer spin up time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIKILZGTIJ",
-          "text": "There is little or no spin up time and it does not suffer from lock in error.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIQQVJWD",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120668",
-      "ATPLQ-229084",
-      "AVEXAM-38299",
-      "AVEXAM-56479",
-      "BGS-220342"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering a stabilised platform inertial system, the principle of operation requires the use of at least:",
-      "options": [
-        {
-          "id": "ANR7O9K69V",
-          "text": "3 rate gyros and 2 accelerometers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR24RIQBRS",
-          "text": "2 rate gyros and 2 accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQM3OHIGOI",
-          "text": "2 rate gyros and 3 accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2UQBZ194N",
-          "text": "3 rate gyros and 4 accelerometers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUWSBUQU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120339", "ATPLQ-224834", "BGS-220340"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation systems, a TAS input is",
-      "options": [
-        {
-          "id": "A793DEZ40A",
-          "text": "required to provide a wind direction and velocity read out.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A12NNUNWZY",
-          "text": "not required.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAA2T1EVRX",
-          "text": "required for polar navigation only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATYZ8JVF6E",
-          "text": "required for the Automatic Flight Control System (AFCS) to compute a heading according to track.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQYFSGSO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106433"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the name given to an Inertial Reference System (IRS) which has the gyros and accelerometers as part of the units fixture to the aircraft structure?",
-      "options": [
-        {
-          "id": "AXIPQHFAUO",
-          "text": "Strap-down.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APKHJNIWIF",
-          "text": "Ring laser.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF0YTJ6VHQ",
-          "text": "Solid state.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7J0DWMMI3",
-          "text": "Rigid.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBKIAXXD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226096"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inertial navigation system includes in its composition three linear accelerometers, in order to measure the...",
-      "options": [
-        {
-          "id": "A6I9VY7DSQ",
-          "text": "acceleration along the North-South, East-West and vertical axes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKJ0WFHE2F",
-          "text": "indicated Airspeed (IAS) on the x,y and z axes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHWE37TOZR",
-          "text": "true airspeed (TAS) on the x,y and z axes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWSJSRK3OK",
-          "text": "acceleration along the aircraft's pitch, roll and yaw axes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSDITHFS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225611", "BGS-221693"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An Inertial Reference System (IRS) has...",
-      "options": [
-        {
-          "id": "AMVGIFOH6U",
-          "text": "solid-state, high-precision, angular rate sensors, and it uses a mathematically maintained stable platform.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJW0ONQPQ0",
-          "text": "mechanical rate-integrating gyroscopes, and it receives data from the Flight Management Computer (FMC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA4NZML888",
-          "text": "solid-state, high-precision, angular rate sensors, and it supplies data to an Inertial Navigation System (INS).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGK8DZVMBC",
-          "text": "mechanical rate-integrating gyroscopes, and it uses a mechanically stabilised platform.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGUBYOQT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-71904"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a stabilised platform inertial system, the accelerations are measured in a trihedron which is:\n(NB : \"aircraft trihedron\" = pitch, roll and yaw axis)",
-      "options": [
-        {
-          "id": "AF8JZREFZO",
-          "text": "free from the aircraft trihedron.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIZX3JBUN3",
-          "text": "merged with only two axis of the aircraft trihedron : the roll axis and the pitch axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUFM2YSKGZ",
-          "text": "merged with the aircraft's trihedron.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFUOI1HA0I",
-          "text": "fixed in absolute space.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDUQBWNH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229073", "AVEXAM-70460"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What additional information is required to be input to an Inertial Navigation System (INS) in order to obtain a wind direction and wind velocity (W/V) readout?",
-      "options": [
-        {
-          "id": "AQ82QQEEFK",
-          "text": "TAS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8JHUSHU42",
-          "text": "Altitude and OAT.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5ENIGJZ78",
-          "text": "Mach number.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM5TNVO3NX",
-          "text": "IAS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCLAMLRX",
-    "relatedQuestions": ["QAAEQQEL"],
-    "externalIds": [
-      "ATPLGS-120728",
-      "ATPLQ-222254",
-      "ATPLQ-222704",
-      "BGS-220397",
-      "BGS-220431",
-      "BGS-220433"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The accelerometers of a strap-down inertial system are in line with:",
-      "options": [
-        {
-          "id": "AQHJSB642Z",
-          "text": "the axes of the aircraft`s body co-ordinate system (longitudinal, lateral, normal).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APHYXLIV9K",
-          "text": "the geographical directions (N/S, E/W).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABZWQL6NPA",
-          "text": "the axes of the earth space co-ordinate system (X, Y, Z)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWCT4SE1M7",
-          "text": "the axes of the absolute space co-ordinate system (X, Y Z).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAAEQQEL",
-    "relatedQuestions": ["QCLAMLRX"],
-    "externalIds": [
-      "ATPLGS-120728",
-      "ATPLQ-222254",
-      "BGS-220397",
-      "BGS-220431",
-      "BGS-220433"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The accelerometers of a strap-down inertial system are in line with:",
-      "options": [
-        {
-          "id": "A5J76ZPYV8",
-          "text": "the axes of the aircraft`s body co-ordinate system (longitudinal, lateral, normal).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD9IHSL86L",
-          "text": "the geographical directions (N/S, E/W).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF5U4NHUEV",
-          "text": "the axes of the earth space co-ordinate system (X, Y, Z).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYIN5UVG7T",
-          "text": "the axes of the absolute space co-ordinate system (X, Y Z).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QILINQWL",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106426",
-      "ATPLQ-223845",
-      "AVEXAM-33668",
-      "BGS-220344"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering a stabilised platform inertial system\n1) the rate gyros and the accelerometers are mounted on the same platform.\n2) the rate gyros and the accelerometers are mounted on two separated platforms.\n3) the principle of operation requires at least 2 rate gyros.\n4) the principle of operation requires at least 2 accelerometers.The combination that regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "A0IDT3H41A",
-          "text": "1, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVH4GLXDRE",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT7WVQUWN5",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9F4LJ45V3",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVXPNMXN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-23028"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The data that needs to be inserted into an Inertial Reference System in order to enable the system to make a successful alignment for navigation is:",
-      "options": [
-        {
-          "id": "AMLSJJL5UF",
-          "text": "aircraft position in Latitude / Longitude.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABSC9P5V37",
-          "text": "aircraft heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4I7C9BDTY",
-          "text": "the navigation database reference.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABBBEC8PZI",
-          "text": "the position of an in-range DME.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDFGKZET",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120732", "BGS-220388"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A strapdown inertial system consists of:",
-      "options": [
-        {
-          "id": "ARN41RXWLJ",
-          "text": "a platform attached to the aircraft chassis and which includes gyroscopes and accelerometers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZGR6UGL2P",
-          "text": "gyroscopes attached to the aircraft chassis and accelerometers which are not.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO84FM036L",
-          "text": "accelerometers attached to the aircraft chassis and gyroscopes which are not.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJQWN1YBQY",
-          "text": "a platform free of the aircraft chassis which includes gyroscopes and accelerometers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBGOIYSU",
-    "relatedQuestions": ["QLGGJGOU"],
-    "externalIds": ["ATPLQ-224375", "AVEXAM-19834", "BGS-220387"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ring laser gyro can measure:",
-      "options": [
-        {
-          "id": "ACJKHO5O4D",
-          "text": "rotation about its sensitive axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXECOBXXWB",
-          "text": "rotation in all directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APDH0EOZNX",
-          "text": "acceleration in all directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWLFPQ8RG9",
-          "text": "acceleration about its sensitive axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLGGJGOU",
-    "relatedQuestions": ["QBGOIYSU"],
-    "externalIds": ["ATPLQ-224375", "AVEXAM-19834", "BGS-220387"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ring laser gyro can measure:",
-      "options": [
-        {
-          "id": "ALSVW3PLMD",
-          "text": "rotation about its sensitive axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAMKXNPKQ5",
-          "text": "rotation in all directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFFNWEDKQ9",
-          "text": "accelerations in all direction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZZPDAO19S",
-          "text": "accelerations about its sensitive axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUSQGUPT",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106417",
-      "ATPLGS-627216",
-      "ATPLQ-225838",
-      "BGS-220400"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The accuracy of the altitude computed by a stand alone inertial system",
-      "options": [
-        {
-          "id": "A86MM8OMBC",
-          "text": "decreases exponentially with flight time.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2870XOSK2",
-          "text": "decreases proportionally with flight time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJFKLSYWEC",
-          "text": "is poor at the beginning of the flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXAL6XMCRG",
-          "text": "is bounded.",
+          "id": "O4WQIP4AX",
+          "text": "2 laser gyros and 2 accelerometers.",
           "correct": false,
           "why": ""
         }
@@ -1650,508 +121,36 @@
   {
     "id": "QAJYIRBV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228724", "BGS-221608"],
+    "externalIds": ["ATPLQ-228724", "BGS-221608", "ATPLGS-628383"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A Ring Laser Gyro (RLG) consists of:\n1. Glass block for the laser pathway\n2. Rotary gimbal mounting\n3. Anode and cathode for the laser\n4. Stable platform mounting",
+      "question": "A Ring Laser Gyro (RLG) is a solid state gyro consisting of:\n\n1\\. Glass block for the laser pathway   \n 2\\. Rotary gimbal mounting   \n 3\\. Anode and cathode for the laser   \n 4\\. Stable platform mounting",
       "options": [
         {
-          "id": "AIERFZ27IU",
-          "text": "1 and 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXAO5VHXFK",
-          "text": "2 and 3",
+          "id": "OSNQ5BS3V",
+          "text": "2 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1CCNVQ3WR",
+          "id": "ONRIOZBEF",
           "text": "1 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZQPF640P6",
-          "text": "2 and 4",
+          "id": "OSSNN3DEZ",
+          "text": "2 and 3",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYGWLVSQ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106405",
-      "ATPLQ-226797",
-      "ATPLQ-229331",
-      "AVEXAM-76490",
-      "BGS-220354"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, to know the distance travelled, it is necessary to:\n1. integrate once the speed with respect to time\n2. to know the initial position\n3. to know the initial speed\nThe combination that regroups all of the correct statements is:",
-      "options": [
+        },
         {
-          "id": "AU327LBLC6",
-          "text": "1",
+          "id": "OQQLMSMZN",
+          "text": "1 and 3",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1YPVESTSL",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMO257A2MC",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU18M4OT82",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLSGUPDH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106437"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the position data (lat, long) is no longer computed an IRS, the affected system(s) is (are) the",
-      "options": [
-        {
-          "id": "AXFP91CABA",
-          "text": "FMS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AISQ1G0ZPD",
-          "text": "FMS and the TCAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO766W60EG",
-          "text": "ADC and the TCAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABGB0H9M1A",
-          "text": "TCAS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOLBKYPY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222792", "BGS-221370"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An INS uses the principle of",
-      "options": [
-        {
-          "id": "AR2HYNJEQO",
-          "text": "Gyros and accelerometers on a single platform with at least two accelerometers",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK0IS1LHXP",
-          "text": "Gyros and accelerometers on a single platform with at least two gyroscopes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A09HCD7K1G",
-          "text": "Gyros and accelerometers on a separate platforms",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDGHG20QO",
-          "text": "Gyros on a single platform with accelerometers attached to the aircraft structure",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QONGMSTZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129549", "ATPLQ-225779", "BGS-221273"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What does a stable platform inertial navigation system use?",
-      "options": [
-        {
-          "id": "A3OZPM4631",
-          "text": "A single platform with two accelerometers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4JQFGV8XA",
-          "text": "Two separate platforms with two accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWJFX8C2UY",
-          "text": "A single platform with two gyroscopes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATNV0JUENY",
-          "text": "Two separate platforms with two gyroscopes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWXACNQB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222704", "BGS-220397"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a strapdown inertial system, the accelerations are measured in an axis co-ordinate system which is fixed regarding to the:",
-      "options": [
-        {
-          "id": "AID1X5J83A",
-          "text": "aircraft's body axes co-ordinate system (pitch, roll, yaw)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2L8R5JW4X",
-          "text": "absolute space.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A39RPMMCBX",
-          "text": "earth's axes co-ordinate system (X, Y, Z)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0T2EYL0R2",
-          "text": "earth's axes co-ordinate system (longitude, latitude).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJRPRTWA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106413"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements concerning the aircraft positions indicated on a triple fit Inertial Navigation System (INS) / Inertial Reference System (IRS) on the CDU is correct?",
-      "options": [
-        {
-          "id": "A9MEEUZ9G8",
-          "text": "The positions are likely to differ because they are calculated from different sources.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ8XN77UJG",
-          "text": "The positions will only differ if one of the systems has been decoupled because of a detected malfunction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9YW0RGAQC",
-          "text": "The positions will be the same because they are an average of three different positions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZCX8774AT",
-          "text": "The positions will only differ if an error has been made when inputting the present position at the departure airport.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSPCJGDE",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106425",
-      "ATPLQ-222089",
-      "AVEXAM-38833",
-      "BGS-220350"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, integrating once the speed gives:",
-      "options": [
-        {
-          "id": "AESRCJHOW1",
-          "text": "a distance travelled.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1VZCNYULS",
-          "text": "an average acceleration.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWW5635DYH",
-          "text": "an instantaneous acceleration.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYA6CQ5PU0",
-          "text": "a position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGUMNEYV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106402", "AVEXAM-72368"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With reference to inertial navigation systems, a TAS input is",
-      "options": [
-        {
-          "id": "A7VYLAARKX",
-          "text": "required to provide a W/V read out.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXGC0HR3I5",
-          "text": "required for rhumb line navigation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFB8OBYQIW",
-          "text": "not required.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A206ZBJ08D",
-          "text": "required for Polar navigation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNFWRKPC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106472", "AVEXAM-32813"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The accelerometers of a strap-down Inertial Reference System are in line with:",
-      "options": [
-        {
-          "id": "ASBC5AYBFP",
-          "text": "the aircraft axes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATAZIZQ8BY",
-          "text": "the local vertical and the local meridian.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADLXDUOR6H",
-          "text": "the geographical directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACPSLE0T43",
-          "text": "the local meridian and parallel.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOKKTOAQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106404"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Gyro-compassing in an INS",
-      "options": [
-        {
-          "id": "AKL4EJ7E3Q",
-          "text": "is not possible in flight as the gyros cannot differentiate between acceleration due to aircraft movement and initial alignment errors.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A75ZMMIBCC",
-          "text": "is possible in flight as the gyros cannot differentiate between acceleration due to aircraft movement and initial alignment errors.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A42XBYIVSW",
-          "text": "is possible in flight as the gyros can differentiate between acceleration due to aircraft movement and initial alignment errors.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATOHXSOMWQ",
-          "text": "is not possible in flight as the gyros can differentiate between acceleration due to aircraft movement and initial alignment errors.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMFFCPZG",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106424",
-      "ATPLGS-120453",
-      "ATPLQ-227317",
-      "AVEXAM-43367"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the ground speed is computed",
-      "options": [
-        {
-          "id": "AB5KR8GP40",
-          "text": "by integrating the measured accelerations.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APIXKLSF1N",
-          "text": "by integrating gyroscopes precessions in N/S and E/W directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWK1QOIFLD",
-          "text": "with TAS and W/V provided by the ADC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ1NFLI91G",
-          "text": "with TAS and W/V from RNAV data.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQJDUQPD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627222", "BGS-220407"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The navigation precision of a stand alone inertial system decreases along the flight, due to:",
-      "options": [
-        {
-          "id": "AH0D9IK0IA",
-          "text": "the drift of the gyroscopes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQQR0BNSDS",
-          "text": "the motion of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWJLUPEKEK",
-          "text": "the meteorological conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR09BKKY5T",
-          "text": "the accelerations of the aircraft.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -2169,1504 +168,26 @@
       "question": "In an Inertial Navigation System, what input(s) are required to provide full attitude and navigation functions?",
       "options": [
         {
-          "id": "AXN8QVI0RB",
-          "text": "TAS only",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXEXS2DRUA",
+          "id": "OEVHD1PCL",
           "text": "No inputs required",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AU8MS2CGQP",
+          "id": "OPEVBRDHQ",
           "text": "TAS, GPS and Barometric altitude",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEUJO05WCV",
-          "text": "TAS &amp; GPS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHFZLJAW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106390",
-      "ATPLGS-120678",
-      "ATPLQ-225041",
-      "AVEXAM-38533",
-      "AVEXAM-73246",
-      "BGS-220352",
-      "BGS-220353"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the principle used to obtain position is\n1) Single integration of acceleration according to time.\n2) Double integration of acceleration according to time.\n3) Single integration of speed according to time.\n4) Double integration of speed according to time.The combination that regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "AIC1S8OWBY",
-          "text": "2 or 3",
+          "id": "OK08JICCL",
+          "text": "TAS only",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A18CDZR6AP",
-          "text": "1 or 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9C4TB2X1K",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADV3FRKZKA",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYCMZNYA",
-    "relatedQuestions": ["QBFJTYAA", "QDRSGKVT"],
-    "externalIds": ["ATPLQ-224256", "BGS-220355"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, to know the distance travelled:",
-      "options": [
-        {
-          "id": "AZ19UN6DHL",
-          "text": "integrating once the speed with respect to time is sufficient.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHAV3E5H0I",
-          "text": "it is necessary to integrate once the speed with respect to time, and to know the initial position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9IX9MSXUI",
-          "text": "it is necessary to integrate once the speed with respect to time, and to know the initial speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA0CNMOCIO",
-          "text": "it is necessary to integrate once the speed with respect to time, and to know the initial speed and the initial position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDRSGKVT",
-    "relatedQuestions": ["QBFJTYAA", "QYCMZNYA"],
-    "externalIds": ["ATPLQ-224256", "AVEXAM-38515", "BGS-220355"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, to know the distance travelled:",
-      "options": [
-        {
-          "id": "AHKL09FGEM",
-          "text": "integrating once the speed in time is sufficient.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJJ5YXXELH",
-          "text": "it is necessary to integrate once the speed in time, and to know the initial position only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIUM1ZH3CB",
-          "text": "it is necessary to integrate once the speed in time, and to know the initial speed and the initial position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOMIN1U76H",
-          "text": "it is necessary to integrate once the speed in time, and to know the initial speed only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBFJTYAA",
-    "relatedQuestions": ["QDRSGKVT", "QYCMZNYA"],
-    "externalIds": ["ATPLQ-224256", "AVEXAM-38515", "BGS-220355"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, to know the distance travelled:",
-      "options": [
-        {
-          "id": "AJ09QBAT78",
-          "text": "integrating once the speed with respect to time is sufficient.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX3E6T7FDK",
-          "text": "It is necessary to integrate once the speed in time, and to know the initial speed and the initial position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR0446V0RQ",
-          "text": "It is necessary to integrate once the speed in time, and to know the initial position only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9XN52U3RB",
-          "text": "It is necessary to integrate once the speed in time, and to know the initial speed only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKJOCQQS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222704", "BGS-220431"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a strap-down inertial system, accelerations are measured in reference with:",
-      "options": [
-        {
-          "id": "AQMS8NU6X7",
-          "text": "the aircraft's body axes co-ordinate system (longitudinal, lateral, normal).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARW1BHHT3W",
-          "text": "the earth's axes co-ordinate system (X, Y, Z).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOBNYY0FGA",
-          "text": "the absolute space axes co-ordinate system (X, Y, Z).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARNL69T5OS",
-          "text": "the direction of true north.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWNFWSLF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106429", "AVEXAM-33258"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The elements which take part in the local vertical alignment of an inertial strap-down unit are:",
-      "options": [
-        {
-          "id": "AILKL5YEJZ",
-          "text": "the accelerometers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5H0KGQJHZ",
-          "text": "the accelerometers and gyroscopes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1YN3IRNQM",
-          "text": "the gyroscopes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKPQPZRFKZ",
-          "text": "the flow inductors.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBVIGPYJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106385", "AVEXAM-80094"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A rate integrating gyro is used in which of the following\n1) inertial attitude unit.\n2) autopilot system.\n3) stabilizer servo mechanism system.\n4) inertial navigation unit.\n5) rate of turn indicator.",
-      "options": [
-        {
-          "id": "A0MSM8BOWJ",
-          "text": "1, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFTCG4QSNV",
-          "text": "2, 3, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZW7G44WBG",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEOA5QSC98",
-          "text": "1, 2, 3, 4, 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHJPBMVN",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106387",
-      "ATPLQ-228190",
-      "AVEXAM-55354",
-      "BGS-220375"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the TAS input to the inertial navigation system is for:",
-      "options": [
-        {
-          "id": "ANSDOZ0NY0",
-          "text": "the computation of wind velocity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR0120GTBD",
-          "text": "position update in Navigation mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A200LAX7OO",
-          "text": "the computation of magnetic heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB6AO0W6GP",
-          "text": "position update in Attitude mode.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVRKGHBK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228988", "AVEXAM-60238", "BGS-220361"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The operating principle of an inertial system consists in:",
-      "options": [
-        {
-          "id": "AFGKIKCTZB",
-          "text": "measuring the acceleration of the aircraft and performing integrations to elaborate the ground speed and the position.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A34PJD52XF",
-          "text": "measuring the acceleration, speed and position of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVPZP6E68E",
-          "text": "measuring the position of the aircraft and performing integrations to elaborate the ground speed and acceleration.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF2UG1W8LD",
-          "text": "measuring the earth rotation and performing integrations to elaborate the aircraft ground speed and position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNSZQDQC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106477"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compared with a stabilised platform inertial system, a strapdown inertial system\n1) can align while the aircraft is moving.\n2) has a quicker alignment phase.\n3) is more reliable in time.The combination that regroups all the correct statements is",
-      "options": [
-        {
-          "id": "AWXVQBHAYK",
-          "text": "2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXRFSEGJDU",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0B46CM2IA",
-          "text": "1, 2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMLG65PIHF",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNAXQYHA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106389", "AVEXAM-19951"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Double integration of the output from the East / West accelerometer of an inertial navigation system (INS) in the NAV mode gives",
-      "options": [
-        {
-          "id": "ARLX7YKUME",
-          "text": "distance East / West.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWQG9YHGKC",
-          "text": "vehicle longitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADERQ203JZ",
-          "text": "velocity East / West.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALXFY6ZEQP",
-          "text": "distance North / South.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCFTIHXK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222618"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If an aircraft is equipped with three operational IRS, the respective positions computed by the three IRS:",
-      "options": [
-        {
-          "id": "AEPYPG47B9",
-          "text": "are likely to differ slightly.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZXEP26QGA",
-          "text": "will remain exactly the same.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO8XB01FOV",
-          "text": "will differ only if a wrong position has been inserted during the alignment phase.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOAEGQZH4L",
-          "text": "will differ only if one IRS detects a malfunction.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QESAAJPO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106399",
-      "ATPLGS-627221",
-      "ATPLQ-229861",
-      "AVEXAM-43742",
-      "BGS-220341"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "As a result of the failure of the ADC, the inertial navigation system will no longer provide information about:",
-      "options": [
-        {
-          "id": "AD52A7HUKH",
-          "text": "the wind direction and velocity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANER9VKJU9",
-          "text": "the drift angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4XGKF04UN",
-          "text": "the ground speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMPM3RCMGX",
-          "text": "the time (TIME) at the next waypoint (WPT).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLHAQNWW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106473", "AVEXAM-11404"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Inertial Reference System sensors include",
-      "options": [
-        {
-          "id": "AL67NNTZ0F",
-          "text": "accelerometers, and laser gyros, mounted in the direction of the aircraft axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9B16TUEUI",
-          "text": "laser gyros mounted in the direction of the aircraft axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A35UUWSJUJ",
-          "text": "one east-west and one north-south gyro; one east-west and one north-south accelerometer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASHJ8E12ES",
-          "text": "accelerometers mounted in the direction of the aircraft axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPCZLDCE",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-94310"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ring laser gyro consists of...",
-      "options": [
-        {
-          "id": "AT5S7H7FBU",
-          "text": "two laser beams flowing within a glass casing.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABYTEVQDHQ",
-          "text": "a cathode and an anode fitted perpendicularly to a gyro-stabilized platform.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWXBA4EU0H",
-          "text": "a laser rotor spinning around an inertial platform.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN1QQM6RX7",
-          "text": "three rotating gyroscopes corresponding to each aircraft axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOUUYRVK",
-    "relatedQuestions": ["QATBBZRO"],
-    "externalIds": [
-      "ATPLGS-106452",
-      "ATPLGS-106459",
-      "ATPLQ-222626",
-      "ATPLQ-229331",
-      "AVEXAM-2052",
-      "AVEXAM-76490",
-      "AVEXAM-78995",
-      "BGS-220363",
-      "BGS-220365"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "To obtain the instantaneous position from the accelerations, it is necessary to:\n1. integrate twice the acceleration with respect to time\n2. know the initial position\n3. know the initial speed\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A18SBW9AQG",
-          "text": "1, 2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A43LVG69HX",
-          "text": "1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWX1VKEMWP",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABK8H0KG85",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QATBBZRO",
-    "relatedQuestions": ["QOUUYRVK"],
-    "externalIds": ["ATPLQ-222626", "AVEXAM-78995", "BGS-220365"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "To obtain the instantaneous speed from the accelerations, it is necessary to:\n1. integrate once the acceleration with respect to time\n2. know the initial position\n3. know the initial speed\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AAZ9ZUPT4X",
-          "text": "1, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6IWDFAX5X",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5WJVSKJQ4",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGMZBI65X1",
-          "text": "1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGARUWZY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222990"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "To provide complete attitude data and navigational data, what external input(s) does the INS computer require?",
-      "options": [
-        {
-          "id": "AF8XI77JQA",
-          "text": "TAS only.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALL7B9KOF4",
-          "text": "TAS, radar altitude and GPS position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARS5BRQIPM",
-          "text": "It requires no external input.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIAXT7Y7R3",
-          "text": "TAS and radar altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCNFHKVN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229825", "AVEXAM-25877"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The ring laser gyro uses which of the following?\n1. A rotor and a gimbal system \n 2. A triangular glass block, also known as cervit glass \n 3. A cathode and an anode to excite the lasing medium \n 4. A rotor, optically driven by a single laser beam",
-      "options": [
-        {
-          "id": "AUY205GUB8",
-          "text": "2 and 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1VI9TD4CJ",
-          "text": "1 and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVKDUSC0EV",
-          "text": "3 and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A23B4023L1",
-          "text": "1 and 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAXWOKUE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106397", "AVEXAM-14312"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a inertial navigation system, the integration process makes a",
-      "options": [
-        {
-          "id": "ATPPKQ0TP0",
-          "text": "time multiplication.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4GYAXNQ5Z",
-          "text": "distance division.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUVJKPSMHF",
-          "text": "distance multiplication.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOCPPVYNAV",
-          "text": "time division.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHUAVZNP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106474"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A laser reference system (IRS), as compared to a gyro reference system (INS)",
-      "options": [
-        {
-          "id": "AH17HCN6PL",
-          "text": "is strapped down and is not adversely affected by g-forces.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ5L8V0KL9",
-          "text": "the accelerometers are strapped down but the platform is not.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT68WBI1JF",
-          "text": "the platform is strapped down but the accelerometers are not.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1WKDEQSUV",
-          "text": "is not strapped down and is adversely affected by g-forces.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDAJCUQL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106447"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Few modern INS systems use a mechanically stabilized platform and mechanical gyros\nThese components have been replaced by",
-      "options": [
-        {
-          "id": "A4RXP9DMWC",
-          "text": "strap down ring laser gyros and accelerometers plus advanced digital computers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL15LNTZ11",
-          "text": "a combination of rate gyros and True North gyros.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1E1RBL5HX",
-          "text": "a digital horizon and gyro true-reading compass.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLGGTQHAO",
-          "text": "rotating accelerometers and analogue computers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMDWYPMA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106423", "AVEXAM-70460"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What additional information is required to be input to an Inertial Navigation System (INS) in order to obtain an W/V readout?",
-      "options": [
-        {
-          "id": "AEXLTEW3NK",
-          "text": "TAS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZHOOLO7X3",
-          "text": "Mach number.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABCXJJQQ3Y",
-          "text": "IAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARO5IU6OIM",
-          "text": "Altitude and OAT.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWRCORFV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-58129"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Gyrocompassing of an inertial reference system (IRS) is accomplished with the mode selector switched to:",
-      "options": [
-        {
-          "id": "AE0341R952",
-          "text": "ALIGN",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQAZC3746Q",
-          "text": "STBY",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXZ6JNIMLD",
-          "text": "ATT/REF",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXE7273WTV",
-          "text": "ON",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSRMPKIZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119560"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When considering a Laser Gyro, how can the `lock in` effect be described using the choices below?",
-      "options": [
-        {
-          "id": "A2Z2OIYF4U",
-          "text": "Special functional processing of the gyro is needed to measure very small rotational speeds.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ3T6U0056",
-          "text": "Lock In` means that a third laser beam is produced inside the Laser gyro to avoid dithering.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4DDW8JPKO",
-          "text": "Special functional processing of the gyro is needed to measure very high rotational velocities.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A78VHX6V2U",
-          "text": "Lock In` is achieved when a Laser Gyro is used which uses a blue ray laser beam.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIGAFHZX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-72202"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With regard to inertial navigation, (1) is the more recently developed system and (2) operates with laser gyroscopes.",
-      "options": [
-        {
-          "id": "A276LUZ09A",
-          "text": "(1) IRS, (2) IRS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV34RRMUSP",
-          "text": "(1) INS, (2) INS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8JQ5J3I6S",
-          "text": "(1) INS, (2) IRS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5D9YGKD2T",
-          "text": "(1) IRS, (2) INS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMRPLIZB",
-    "relatedQuestions": ["QAJRNDPA"],
-    "externalIds": ["ATPLQ-225373", "BGS-222047"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compare an IRS with an INS. Which statement is correct?",
-      "options": [
-        {
-          "id": "A4YPS80LTF",
-          "text": "Only the IRS has a strapped-down system that is solidly mounted to the aircraft chassis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFB0L9GYOQ",
-          "text": "Only the INS makes use of a ring laser gyro.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQKLHL2NR9",
-          "text": "Components that are part of an IRS include accelerometers, torque motors, and gimbals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ641OGI07",
-          "text": "The INS is a more modern development of the IRS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAJRNDPA",
-    "relatedQuestions": ["QMRPLIZB"],
-    "externalIds": ["ATPLGS-627215", "ATPLQ-225373"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compare an IRS with an INS. Which statement is correct?",
-      "options": [
-        {
-          "id": "AJBCOIG2KW",
-          "text": "Only the IRS has a strapped-down system that is solidly mounted to the aircraft chassis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX87XBIZ2G",
-          "text": "Components that are part of an IRS include accelerometers, torque motors, and gimbals",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM6ZSQSCDD",
-          "text": "Only the INS makes use of a ring laser gyro.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALDHPNPHSW",
-          "text": "The INS is a more modern development of the IRS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCQGWATO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225373", "BGS-221369"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Comparing INS and IRS, which statement is correct?",
-      "options": [
-        {
-          "id": "AHLPTQ1BFB",
-          "text": "IRS is strapped to the aircraft axes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD5L39THFI",
-          "text": "INS is a development of IRS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8CUG6RE43",
-          "text": "IRS uses gimbals and precession motors",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD28PPTNJG",
-          "text": "INS uses ring laser gyroscopes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEQEYGCU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222626", "AVEXAM-2052"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "To obtain the instantaneous speed from the accelerations, it is necessary to:\n\n- integrate once the acceleration in time.\n\n- know the initial position.\n\n- know the initial speed.</li>\n</ol>\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AYHV2YCOQ5",
-          "text": "1, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZS9FYI4CY",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZWZOGK5TX",
-          "text": "1 only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALUZJ1O4IS",
-          "text": "1, 2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOIJLMTK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106467"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an Inertial Reference System, accelerations are measured in relation to",
-      "options": [
-        {
-          "id": "A866I7W30N",
-          "text": "aircraft axis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8YCAE9VK7",
-          "text": "local vertical at the aircraft position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV1N7JGF6L",
-          "text": "the direction of True North.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0JMA28AN8",
-          "text": "WGS 84 Earth co-ordinates.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTFKGZZD",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120454",
-      "ATPLQ-229073",
-      "AVEXAM-70460",
-      "BGS-220380"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an inertial navigation system, the input(s) required to obtain a wind direction and velocity readout is (are):",
-      "options": [
-        {
-          "id": "APJ5QBWK79",
-          "text": "TAS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUHXSGTT1I",
-          "text": "IAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWWY896R4R",
-          "text": "altitude and OAT.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADX9JFDBYK",
-          "text": "Mach number.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWXPKWJE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228790", "BGS-221320"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Drift in inertial navigation systems",
-      "options": [
-        {
-          "id": "AVYJQ1SBHW",
-          "text": "is the main error",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJTGM4FNQU",
-          "text": "is caused by mass imbalance",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOULWDZKG4",
-          "text": "is due to earth rotation",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN0WRN9Y27",
-          "text": "is caused by gimbal error",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIGJXRBE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106464"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Compared with a stabilised platform inertial system, a strapdown inertial system\n1) is more accurate but less reliable in time.\n2) measures the accelerations in a trihedron which is fixed regarding to the aircraft trihedron.\n3) does not need any initial position to be inserted by the flight crew.The combination that regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "AK5J1GWNP9",
-          "text": "2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2CZHSLMYU",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATFMC1OT4M",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMMOAQVXIR",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCKDCIET",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223300"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "After entering the starting position, an inertial navigation system provides continuous information on the aircraft's position by measuring the (1) _____ in the vertical, horizontal and lateral planes. A first integration over time outputs the (2) _____; a second integration over time gives (3) _____.",
-      "options": [
-        {
-          "id": "AU2874DMOI",
-          "text": "(1) acceleration; (2) velocity; (3) distance travelled",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3IFX018GO",
-          "text": "(1) distance travelled; (2) velocity; (3) horizontal position",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APMQFDNJB2",
-          "text": "(1) acceleration; (2) height; (3) present position",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A85C36MUR5",
-          "text": "(1) velocity; (2) last position; (3) acceleration",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIHVQPMC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221071", "ATPLQ-225838"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Is there, by convention, a difference between an INS and an IRS?",
-      "options": [
-        {
-          "id": "ADGPVM4L30",
-          "text": "Yes, the INS is an older system based on a stabilised platform and mechanical gyros, while the IRS is a more modern, fixed system based on ring laser gyros or fibre optic gyros.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJA19OFGHM",
-          "text": "There is NO actual difference between an INS and an IRS, they are just different abbreviations used by different system manufacturers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9FELE1UOU",
-          "text": "Yes, the IRS is an older system based on a stabilised platform and mechanical gyros, while the INS is a more modern, fixed system based on ring laser gyros or fibre optic gyros.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALBXSGHHYO",
-          "text": "Yes, the INS requires electrical power for its operation, while the IRS is completely independent of the electrical power.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJNOFGMN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129529", "BGS-221231"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does the Inertial Navigation System calculate groundspeed?",
-      "options": [
-        {
-          "id": "ADUTMG67AT",
-          "text": "Integrating the N/S and E/W accelerometers",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8WGK5YQEA",
-          "text": "Integrating one accelerometer and one gyroscope",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUJDRCDDTF",
-          "text": "Using TAS and wind from the ADC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUM3QJB7AK",
-          "text": "Integrating the N/S and E/W gyroscopes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWTEPDYZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227446", "BGS-220427"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inertial reference and navigation system is a strapdown system when:",
-      "options": [
-        {
-          "id": "AZBNPCVL0R",
-          "text": "the gyroscopes and the accelerometers are fixed regarding to the aircraft's body axes co-ordinate system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1N9NOFTG5",
-          "text": "the gyroscopes and the accelerometers are mounted on a stabilised platform.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1GZ7178U8",
-          "text": "only the gyroscopes, and not the accelerometers, are fixed regarding to the aircraft's body axes co-ordinate system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACQ7Y4J22Q",
-          "text": "only the gyroscopes, and not the accelerometers, are mounted on a stabilised platform.",
+          "id": "OWEMKJSSS",
+          "text": "TAS & GPS",
           "correct": false,
           "why": ""
         }
@@ -3676,35 +197,418 @@
   {
     "id": "QDSQVAWF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228324", "BGS-221679"],
+    "externalIds": [
+      "ATPLQ-228324",
+      "BGS-221679",
+      "BGS-222462",
+      "ATPLGS-628374"
+    ],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the number of gyroscopes required on an INS platform?",
+      "question": "What is the minimum number of accelerometers required on an INS platform?",
       "options": [
         {
-          "id": "ALTLZNPRPD",
+          "id": "OZWF1XDYF",
           "text": "Three",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWPJ0A8PA",
+          "text": "Two",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2E2ED3XJD",
-          "text": "Two",
+          "id": "O6U9UJDLB",
+          "text": "Four",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AT961F9S00",
+          "id": "OHBIPE90Y",
           "text": "One",
           "correct": false,
           "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQIRXJDQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-221528",
+      "ATPLGS-120676",
+      "AVEXAM-33664",
+      "BGS-220364",
+      "AVEXAM-46287",
+      "ATPLGS-106456"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "To obtain at a given moment the instantaneous speed from the accelerations:",
+      "options": [
+        {
+          "id": "OMGMBJ2SN",
+          "text": "it is necessary to integrate the acceleration once with respect to time, and to know the initial position only.",
+          "correct": false,
+          "why": ""
         },
         {
-          "id": "ALVM79ODV3",
-          "text": "Four",
+          "id": "OMEDQVCTS",
+          "text": "it is necessary to integrate the acceleration once with respect to time, and to know the initial speed only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OK52X3CC2",
+          "text": "integrating the acceleration once with respect to time is sufficient.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1SXQI09K",
+          "text": "it is necessary to integrate the acceleration once with respect to time, and to know the initial speed and the initial position.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIQQVJWD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229084",
+      "AVEXAM-38299",
+      "ATPLGS-120668",
+      "BGS-220342"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Considering a stabilised platform inertial system, the principle of operation requires the use of at least:",
+      "options": [
+        {
+          "id": "OFVRPWBYD",
+          "text": "3 rate gyros and 4 accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFSFVNBOH",
+          "text": "2 rate gyros and 2 accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZOZ1SWUK",
+          "text": "2 rate gyros and 3 accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OX7YAJFS9",
+          "text": "3 rate gyros and 2 accelerometers.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHFZLJAW",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-225041",
+      "BGS-220353",
+      "ATPLGS-120678",
+      "ATPLGS-106390",
+      "AVEXAM-73246",
+      "BGS-220352"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an inertial navigation system, the principle used to obtain position is:\n\n1 – single integration of acceleration with respect to time   \n 2 – double integration of acceleration with respect to time   \n 3 – double integration of speed with respect to time\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "ODJ3LTRXM",
+          "text": "1 or 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAST9FANE",
+          "text": "1.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJWNLBVSH",
+          "text": "2.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBSWRAXXS",
+          "text": "1 or 2.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFSOGSLP",
+    "relatedQuestions": ["QGMAGHGB"],
+    "externalIds": ["ATPLQ-222564", "AVEXAM-31056", "BGS-222363"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which system is used to enter manual data for the IRS?",
+      "options": [
+        {
+          "id": "OIRL2GHPF",
+          "text": "Non-existent since data cannot be entered manually.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ53ZKMTY",
+          "text": "ND.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJZHYPCFK",
+          "text": "CDU/MCDU.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKLVIMKZ8",
+          "text": "PFD.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGMAGHGB",
+    "relatedQuestions": ["QFSOGSLP"],
+    "externalIds": [
+      "ATPLQ-225512",
+      "ATPLGS-113132",
+      "BGS-220401",
+      "AVEXAM-76677"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The alignment of a strapdown inertial system consists in:",
+      "options": [
+        {
+          "id": "OUUKXPY99",
+          "text": "measuring the earth rotation and local gravitation to position the reference co-ordinate system.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ON2RHK3QQ",
+          "text": "positioning the accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5N66TUNP",
+          "text": "positioning the platform relative to the local vertical and true north.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEZIPNWDB",
+          "text": "positioning the gyroscopes and accelerometers relative to the fuselage axis.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGARUWZY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222990", "AVEXAM-43041", "BGS-221783"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "To provide complete attitude data and navigational data, what external input(s) does the INS computer require?",
+      "options": [
+        {
+          "id": "OLJYHLU05",
+          "text": "TAS only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OL4ENP3UW",
+          "text": "TAS and radar altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF4KN8JAQ",
+          "text": "It requires no external input.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODNJXRULF",
+          "text": "TAS, radar altitude and GPS position.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAAEQQEL",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-222254",
+      "BGS-220397",
+      "BGS-220431",
+      "BGS-220433",
+      "ATPLGS-120728"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The accelerometers of a strap-down inertial system are in line with:",
+      "options": [
+        {
+          "id": "O6JERLB1X",
+          "text": "the axes of the absolute space co-ordinate system (X, Y Z).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUAHM2NXR",
+          "text": "the geographical directions (N/S, E/W).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ1ZL0BWW",
+          "text": "the axes of the aircraft\\`s body co-ordinate system (longitudinal, lateral, normal).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQYGUEVPK",
+          "text": "the axes of the earth space co-ordinate system (X, Y, Z).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCQGWATO",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-225373",
+      "BGS-221369",
+      "BGS-222047",
+      "ATPLGS-627215",
+      "AVEXAM-86794"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When comparing the INS with the IRS, which statement is correct?",
+      "options": [
+        {
+          "id": "OFXQCLMIX",
+          "text": "IRS is strapped to the aircraft axes",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKHY6OSQT",
+          "text": "INS is a development of IRS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIFXR9P6R",
+          "text": "IRS uses gimbals and precession motors",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGVZIGBRV",
+          "text": "INS uses ring laser gyroscopes",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBKIAXXD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226096", "AVEXAM-16391", "BGS-221900"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An inertial navigation system includes in its composition three linear accelerometers, in order to measure the…",
+      "options": [
+        {
+          "id": "OPJDI3901",
+          "text": "acceleration along the North-South, East-West and vertical axes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKA2PSGNZ",
+          "text": "acceleration along the aircraft's pitch, roll and yaw axes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBZRQLMH4",
+          "text": "indicated Airspeed (IAS) on the x,y and z axes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ6FLCEOD",
+          "text": "true airspeed (TAS) on the x,y and z axes.",
           "correct": false,
           "why": ""
         }
@@ -3714,7 +618,7 @@
   {
     "id": "QIYPSJPB",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222792", "BGS-221370"],
+    "externalIds": ["ATPLQ-222792", "AVEXAM-18217", "BGS-221370"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.03"],
     "explanation": "",
@@ -3723,25 +627,25 @@
       "question": "What is the principle of an INS?",
       "options": [
         {
-          "id": "A1S82INHCZ",
+          "id": "OCLL7NZBX",
           "text": "Gyros and accelerometers on a single platform with at least two accelerometers.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7KT7RUKC3",
-          "text": "Gyros and accelerometers on a separate platforms.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD8QZEW17C",
+          "id": "OEBDE5CNV",
           "text": "Gyros on a single platform with accelerometers attached to the aircraft structure.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AN78SD8M8T",
+          "id": "OUXHERKUT",
+          "text": "Gyros and accelerometers on a separate platforms.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZTNQDRPQ",
           "text": "Gyros and accelerometers on a single platform with at least two gyroscopes.",
           "correct": false,
           "why": ""
@@ -3750,37 +654,37 @@
     }
   },
   {
-    "id": "QHPRBEOP",
+    "id": "QSDITHFS",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-49990"],
+    "externalIds": ["ATPLQ-225611", "BGS-221693", "AVEXAM-60925"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the advantage of an IRS over an INS?",
+      "question": "An Inertial Reference System (IRS) has...",
       "options": [
         {
-          "id": "APXHAEVS9S",
-          "text": "It is more precise.",
+          "id": "ODTE9GRAS",
+          "text": "mechanical rate-integrating gyroscopes, and it uses a mechanically stabilised platform.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOR8UGNGV",
+          "text": "solid-state, high-precision, angular rate sensors, and it supplies data to an Inertial Navigation System (INS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIPZTYBAU",
+          "text": "solid-state, high-precision, angular rate sensors, and it uses a mathematically maintained stable platform.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0ES3385JI",
-          "text": "It takes more time to align.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6A1SZ295C",
-          "text": "It is cheaper.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACQDY48SFV",
-          "text": "It uses a 4-axis model.",
+          "id": "OFTPSUNY2",
+          "text": "mechanical rate-integrating gyroscopes, and it receives data from the Flight Management Computer (FMC).",
           "correct": false,
           "why": ""
         }
@@ -3788,429 +692,42 @@
     }
   },
   {
-    "id": "QJLWRQVU",
+    "id": "QCNFHKVN",
     "relatedQuestions": [],
-    "externalIds": ["BGS-220420"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The position data (lat/long) computed by an IRS can be used by the:\n1. yaw damper\n2. FMS\n3. radio altimeter\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AVJKAN5LQS",
-          "text": "2.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKBNEN9JG7",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHZE3663Q",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A199EOPA4H",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBTBETKQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106440"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "IRS differs from INS in that it",
-      "options": [
-        {
-          "id": "AH5UYI47RZ",
-          "text": "has a shorter spin-up time and suffers from laser lock.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGKHW8LIAD",
-          "text": "has a longer spin-up time and is not affected by vertical accelerations due to gravity.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKR490FV15",
-          "text": "does not experience Schuler errors as accelerometers are strapped down and are not rotated by a V/R feedback loop.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALODKPF0V5",
-          "text": "does not need to correct for Coriolis and central acceleration.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPRYZWXJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106463", "AVEXAM-85814"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements concerning the operation of an Inertial Navigation System (INS)/Inertial Reference System (IRS) is correct?",
-      "options": [
-        {
-          "id": "AXTHWF9NPJ",
-          "text": "NAV mode must be selected prior to movement of the aircraft off the gate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABXRX0BSK8",
-          "text": "NAV mode must be selected on the runway just prior to take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A57TPQAZYF",
-          "text": "NAV mode must be selected prior to the loading of passengers and/or freight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7TH34VN9Q",
-          "text": "NAV mode must be selected when the alignment procedure is commenced.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBICELOR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-121188", "BGS-220419"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The position data (lat, long) computed by an IRS can be used by the",
-      "options": [
-        {
-          "id": "ABDTRZX80X",
-          "text": "FMS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOIZ1CYT2F",
-          "text": "TCAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APTR6A5YLY",
-          "text": "ADC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASO7CF6LNG",
-          "text": "ILS receiver.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QELWPDIC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106635", "ATPLQ-226611", "AVEXAM-34059"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With regard to position computation, comparing the radio navigation system (VOR/DME) and the inertial navigation system:\n\n1 – the radio position is accurate when in DME range2 – the radio position may be obtained whatever the position on the earth3 – the inertial position may be obtained whatever the position on the earth.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AFKD0J4RR8",
-          "text": "1,3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABZNVT2P4P",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4Z704328S",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQGE69BF73",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHMWQXHG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226922"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "**Complete the following sentence:**\nA strap-down inertial system uses three (1)__ gyros, which are mounted on (2)__.",
-      "options": [
-        {
-          "id": "AO9R5VOMQH",
-          "text": "(1) Laser ring; (2) the airframe.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYCDTH38SP",
-          "text": "(1) Laser ring; (2) gimbals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANVA1NWTZ9",
-          "text": "(1) Rate integrating; (2) the airframe.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ8Q8H3OTZ",
-          "text": "(1) Rate integrating; (2) gimbals.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUTYHGIL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106411"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statement is correct concerning gyro-compassing of an inertial navigation system (INS)?",
-      "options": [
-        {
-          "id": "AG4IX4E4GA",
-          "text": "Gyro-compassing of an INS is not possible in flight because it cannot differentiate between movement induced and misalignment induced accelerations.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABCIW6HRB7",
-          "text": "Gyro-compassing of an INS is not possible in flight because it can differentiate between movement induced and misalignment induced accelerations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4R43KGTF0",
-          "text": "Gyro-compassing of an INS is possible in flight because it can differentiate between movement induced and misalignment induced accelerations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A92T2V282E",
-          "text": "Gyro-compassing of an INS is possible in flight because it cannot differentiate between movement induced and misalignment induced accelerations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAJHORCJ",
-    "relatedQuestions": ["QSEVZOLI"],
-    "externalIds": ["ATPLGS-124561"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Area Navigation is a method of navigation that permits aircraft operation on any desired flight path within the limits of the capability of self contained systems\n Which of the following systems is such a self contained system?",
-      "options": [
-        {
-          "id": "AO2C4UDAYB",
-          "text": "Inertial Reference System",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAW5GNPP2K",
-          "text": "VOR/DME-system",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALOSYD425W",
-          "text": "Global Positioning System",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMBNDUVSMZ",
-          "text": "DME/DME-system",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSEVZOLI",
-    "relatedQuestions": ["QAJHORCJ"],
-    "externalIds": ["ATPLGS-101042"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Area Navigation is a method of navigation that permits aircraft operation on any desired flight path within the limits of the capability of self contained systems\nWhich of the following systems is such a self contained sytem?",
-      "options": [
-        {
-          "id": "AIAWC7HRFC",
-          "text": "Inertial Reference System",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASVUXHM3U1",
-          "text": "VOR/DME-system",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZK7589AM9",
-          "text": "DME/DME-system",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGC55FRJOR",
-          "text": "Global Positioning System",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNYKJTMN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622538"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During loss of GPS signal, the FMS position will",
-      "options": [
-        {
-          "id": "ADRQUUG5Y7",
-          "text": "Deviate from the actual position",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU0OH5YHNE",
-          "text": "Will only show a speed deviation",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APVLUOI5CK",
-          "text": "Have no effect",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APX7AMF6V7",
-          "text": "Will fail the system and cannot be used",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRYBSRUA",
-    "relatedQuestions": ["QHSBPHUI"],
     "externalIds": [
-      "ATPLGS-106644",
-      "ATPLQ-225227",
-      "AVEXAM-2077",
-      "AVEXAM-22065",
-      "AVEXAM-27127",
-      "AVEXAM-29078",
-      "AVEXAM-50617",
-      "BGS-220656",
-      "BGS-221038",
-      "BGS-221039",
-      "BGS-221042"
+      "ATPLQ-229825",
+      "ATPLGS-628411",
+      "BGS-221741",
+      "AVEXAM-25877"
     ],
     "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
+    "learningObjectives": ["022.05.01.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n\n- DME\n\n- GPS\n\n- LOCALIZER\n\n- VOR</li>\n</ol>\nThe combination which regroups all of the correct statements is:",
+      "question": "The ring laser gyro uses which of the following?\n\n1\\. A rotor and a gimbal system   \n 2\\. A triangular glass block, also known as cervit glass   \n 3\\. A cathode and an anode to excite the lasing medium   \n 4\\. A rotor, optically driven by a single laser beam",
       "options": [
         {
-          "id": "AZTZVOQM57",
-          "text": "1, 2, 3, 4",
+          "id": "OZQAF5OG6",
+          "text": "1 and 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGWNTDEXT",
+          "text": "2 and 3",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A9RS0IK8N5",
-          "text": "1, 3, 4",
+          "id": "ON4AOKD0M",
+          "text": "3 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACKAAT2O97",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A39MNABSJV",
-          "text": "2, 3",
+          "id": "OY9WOC4DE",
+          "text": "1 and 4",
           "correct": false,
           "why": ""
         }
@@ -4218,75 +735,118 @@
     }
   },
   {
-    "id": "QHSBPHUI",
-    "relatedQuestions": ["QRYBSRUA"],
-    "externalIds": ["ATPLGS-106644", "AVEXAM-29078"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n\n- DME\n\n- GPS\n\n- LOCALIZER\n\n- NDB</li>\n</ol>\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AN7V2Q0PEE",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE7E5CRUZ3",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4EDA9HKAR",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APGCHIRQH2",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNCJDQCR",
+    "id": "QVRKGHBK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225455"],
+    "externalIds": ["ATPLQ-228988", "BGS-220361", "AVEXAM-60238"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The operating principle of an inertial system consists in:",
+      "options": [
+        {
+          "id": "O97EE6T8X",
+          "text": "measuring the position of the aircraft and performing integrations to elaborate the ground speed and acceleration.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUBGV6RYV",
+          "text": "measuring the earth rotation and performing integrations to elaborate the aircraft ground speed and position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2APCBAPB",
+          "text": "measuring the acceleration, speed and position of the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8JGEZKH9",
+          "text": "measuring the acceleration of the aircraft and performing integrations to elaborate the ground speed and the position.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTFKGZZD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229073",
+      "ATPLGS-120454",
+      "BGS-220380",
+      "AVEXAM-70460"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an inertial navigation system, the input(s) required to obtain a wind direction and velocity readout is(are):",
+      "options": [
+        {
+          "id": "OYTUXWHCD",
+          "text": "TAS.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OABS8UHQ0",
+          "text": "altitude and OAT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6R8S2STS",
+          "text": "Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ7I8CVBS",
+          "text": "IAS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWXPKWJE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-228790", "AVEXAM-76658", "BGS-221320"],
     "annexes": [],
     "learningObjectives": ["022.05.01.01.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following data can be found in the navigation database? \n1: SIDs and STARs 2: radio aids 3: optimum flight level 4: company routes5: cruise speeds",
+      "question": "What is drift in Inertial Navigation Systems?",
       "options": [
         {
-          "id": "AY7CHG9F7X",
-          "text": "Only 1, 2 and 4.",
+          "id": "OVOK3GHZV",
+          "text": "It is caused by gimbal error.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCDWCKUCP",
+          "text": "It is the main error.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATKYX1VLZL",
-          "text": "Only 2, 3 and 4.",
+          "id": "O1SCL9IW4",
+          "text": "It is due to earth rotation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACF0Z3SEDU",
-          "text": "1, 2 , 3, 4 and 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APVTVAIKAW",
-          "text": "Only 2, 3 and 5.",
+          "id": "O57JCOURQ",
+          "text": "It is caused by mass imbalance.",
           "correct": false,
           "why": ""
         }
@@ -4294,1121 +854,75 @@
     }
   },
   {
-    "id": "QYUXPNZK",
-    "relatedQuestions": ["QTIXFFOJ"],
-    "externalIds": ["AVEXAM-27127", "AVEXAM-50617"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n1) IRS\n2) DME\n3) NDB\n4) GPS\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AUKDGHQPYL",
-          "text": "1, 2, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ52XO7CZ8",
-          "text": "1, 2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFW6JBHW2S",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANLWFXFHD4",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTIXFFOJ",
-    "relatedQuestions": ["QYUXPNZK"],
-    "externalIds": ["ATPLGS-106644", "AVEXAM-2077"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n1) MLS\n2) GPS\n3) VOR\n4) IRS\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A9MQ6K6MOZ",
-          "text": "2, 3, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARZEVRG2N8",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJWK0R96OF",
-          "text": "1, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIP4F221FC",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDBKTPAI",
+    "id": "QKMRPZPG",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106630", "AVEXAM-82455"],
+    "externalIds": ["ATPLQ-221197", "AVEXAM-29260", "ATPLGS-106451"],
     "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
+    "learningObjectives": ["022.05.01.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the source of magnetic variation information in a Flight Management System (FMS)?",
+      "question": "Compared with a stabilised platform inertial system, a strapdown inertial system:\n\n1 – takes longer time to align   \n2 – takes shorter time to align   \n3 – is more reliable over time   \n4 – is less reliable over time\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AD6D7BMW4E",
-          "text": "Magnetic variation information is stored in each IRS memory; it is applied to the true heading calculated by the respective IRS.",
+          "id": "O52XMYETX",
+          "text": "2, 3.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A8TDDVNQYJ",
-          "text": "Magnetic variation is calculated by each IRS based on the respective IRS position and the aircraft magnetic heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALXZUM68QD",
-          "text": "The main directional gyro which is coupled to the magnetic sensor (flux valve) positioned in the wingtip.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0N4YWMH82",
-          "text": "The FMS calculates MH and MT from the FMC position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFJLDSTW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-221640",
-      "AVEXAM-33858",
-      "AVEXAM-93432",
-      "BGS-620481"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Flight Management System (FMS) is organised in such a way that the..",
-      "options": [
-        {
-          "id": "ADJDAPHHAU",
-          "text": "navigation database in the FMC is “read only”, but the pilot is able to add other navigational data.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0RO84JDGC",
-          "text": "navigation database in the FMC is valid for one year.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0SYV13ZKT",
-          "text": "pilot cannot modify the navigation database once it is installed in the FMC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQZVRUZJHF",
-          "text": "navigation database in the FMC is created by the pilot.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTBVUFPX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106612", "AVEXAM-61229"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "All the last generation aircraft use flight control systems. The Flight Management System (FMS) is the most advanced system; it can be defined as a:",
-      "options": [
-        {
-          "id": "AUKH1Z0ZIV",
-          "text": "global 4-D Flight Management System.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A06E9IXVY8",
-          "text": "global 2-D Flight Management System.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAX4PNK2QR",
-          "text": "management system optimized in the horizontal plane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVBQ95WX8C",
-          "text": "management system optimized in the vertical plane.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFIHTJVH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106620", "ATPLQ-226984", "AVEXAM-46244"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMC determines and update present aircraft position from the following systems:\n1 – GPS  \n2 – IRS  \n3 – Radio aids  \n4 – ACARSThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AN6ADY54FL",
-          "text": "1, 2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHK8L3OYAC",
-          "text": "3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AATXSXIXNM",
-          "text": "1, 2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV98DIP0O6",
-          "text": "1, 2, 3, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QANAQIRT",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221199"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Flight Management System (FMS) master connects to:",
-      "options": [
-        {
-          "id": "ACOOAIXMSW",
-          "text": "the AP, FD and A/T",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATUPCI880G",
-          "text": "the Captain's AP",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJH6QX41WW",
-          "text": "the FO's instruments",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9JATLDXH4",
-          "text": "the Captain's instruments",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRVVSXCE",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-124629",
-      "ATPLQ-222717",
-      "AVEXAM-10343",
-      "BGS-620485"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On modern passenger aircraft, the navigation data base usually contains",
-      "options": [
-        {
-          "id": "AH1FRU6736",
-          "text": "airport reference data.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU061R8FSK",
-          "text": "obstacle altitudes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ766N95W2",
-          "text": "ATC frequencies.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABYWSY4W6W",
-          "text": "aircraft performance data.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXORBBUZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106655"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMC position is",
-      "options": [
-        {
-          "id": "AOR2IJU7MV",
-          "text": "computer generated from the IRS and radio navigation positions.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A83LV17VLR",
-          "text": "the average of the IRS and radio navigation positions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A31KM8XOH6",
-          "text": "the average of the IRS positions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIVCV0RHKX",
-          "text": "computer generated from the radio navigation positions.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQTJKNYR",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221042"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n \n1. MLS\n2. GPS\n3. VOR\n4. IRS\n \nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A8C5J2JL7X",
-          "text": "2, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQBTH8U46T",
-          "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1Z2RR7IAI",
-          "text": "1, 2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR4AEGP5XT",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUCZGWXD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106453"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Comparing the present position display on the Boeing 737-400 FMC, you note that there is a 10-mile difference between the left IRS and the right IRS positions\nThis means that",
-      "options": [
-        {
-          "id": "ABJJBJBWQI",
-          "text": "at least one of the IRS is drifting.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6LVBRRIOA",
-          "text": "one position has been computer generated from radio nav positions whilst the other is raw IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG3H0H7TZ9",
-          "text": "no special significance - this is normal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDGFUKC5B",
-          "text": "one system is in IRS ONLY NAV operation and the other has the VHF Nav Radios selected to AUTO.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJTBITCH",
-    "relatedQuestions": ["QOBNNMKF"],
-    "externalIds": ["ATPLGS-127559", "ATPLQ-221500", "BGS-222101"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aircraft database of the Flight Management Computer is updated",
-      "options": [
-        {
-          "id": "AXCDIPBA9O",
-          "text": "only after a software update.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL05PZSPF7",
-          "text": "continuously during flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUOIZI4PUH",
-          "text": "manually every month.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A221PRPKIA",
-          "text": "automatically after touchdown.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOBNNMKF",
-    "relatedQuestions": ["QJTBITCH"],
-    "externalIds": ["ATPLGS-127559", "ATPLQ-221500", "BGS-222101"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The aircraft database of the Flight Management Computer is updated",
-      "options": [
-        {
-          "id": "AL5VEMIP22",
-          "text": "after a software update.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A22UG3LLYG",
-          "text": "manually every month.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3R5IKKFEX",
-          "text": "continuously during flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOQC90IS72",
-          "text": "automatically after touchdown.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGAPCQP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-20141"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the Flight Management Computer (FMC) of the Flight Management System (FMS), data relating to aircraft engine-thrust characteristics are stored in the:",
-      "options": [
-        {
-          "id": "ADZ5O7U8E5",
-          "text": "performance database.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACWNBJVTZ1",
-          "text": "engine database.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APLK924A46",
-          "text": "scratchpad file.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT8SQCCAUR",
-          "text": "navigation database.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUMNADUV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226741", "AVEXAM-43059", "BGS-620478"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Flight Management Computer (FMC) position is..",
-      "options": [
-        {
-          "id": "ANBWKBWSWF",
-          "text": "the computed position based on a number of sources, e.g. IRS, VOR/DME, ILS and GPS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFHQIV2J3G",
-          "text": "independent of other navigation sources.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6FEKD0ZAH",
-          "text": "the same as that given on the No. 1 IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADV5SFJFBD",
-          "text": "the actual position of the aircraft at any point in time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAVCLXEY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226199", "AVEXAM-47904"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMC determines and update present aircraft position from the following systems:\n\n1 – SATCOM2 – GPS3 – DME4 – IRS\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AHB68KQC8N",
-          "text": "2, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7HJD2AP2N",
+          "id": "OIRFTD04N",
           "text": "2, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AE2RAZK62R",
-          "text": "1, 2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARO48W6AQT",
+          "id": "OLDOKXOLX",
           "text": "1, 3.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLOPBDGC",
-    "relatedQuestions": ["QNTYOCID"],
-    "externalIds": [
-      "ATPLGS-127582",
-      "ATPLQ-229371",
-      "AVEXAM-49234",
-      "BGS-220630"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Some of the FMS have a navigation mode called Dead Reckoning mode (DR), computing airspeed, heading, wind data ground speed and time. This mode is:",
-      "options": [
-        {
-          "id": "AAHV0Q25YN",
-          "text": "a back up navigation mode to compute a FMS position when the other navigation sensors are no longer operating.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "A1CJUF77JM",
-          "text": "a navigation mode used to monitor the FMS position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO8024Y2WH",
-          "text": "an operating mode used to intercept radials To or From a flight plan waypoint.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHBRAY3KVY",
-          "text": "the normal navigation mode for FMS which do not use Inertial navigation Systems INS to compute the aircraft position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNTYOCID",
-    "relatedQuestions": ["QLOPBDGC"],
-    "externalIds": ["ATPLGS-127582", "ATPLQ-229371", "AVEXAM-49234"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Some of the FMS have a navigation mode called Dead Reckoning mode (DR), computing airspeed, heading, wind data ground speed and time. This mode is:",
-      "options": [
-        {
-          "id": "AY6ESL636Z",
-          "text": "a back up navigation mode to compute the FMS position when the other navigation sensors are no longer operating.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXOATM91R4",
-          "text": "the normal navigation mode for FMS which do not use Inertial navigation Systems INS to compute the aircraft position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEKM9JCLKK",
-          "text": "an operating mode used to intercept radials To or From a flight plan waypoint.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALJMAKATA0",
-          "text": "a navigation mode used to monitor the FMS position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIAVTIPU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106652"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Aircraft position determined by radio navigation in an FMC is most accurate when derived from",
-      "options": [
-        {
-          "id": "AHQT8XNWN2",
-          "text": "DME / DME.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3EV9H5ZDG",
-          "text": "VOR / ADF.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARJ91QI0KE",
-          "text": "DME ranges and/or VOR/ADF bearings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3N2X7PRMI",
-          "text": "VOR / DME.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCSMTKVU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106620", "ATPLQ-224442", "BGS-220636"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMC determines and update present aircraft position from the following systems:\n\n1 – LOC2 – DME3 – IRS4 – GPS\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ADWR45FU71",
-          "text": "1, 2, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK7BYH0WR6",
-          "text": "3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMY7VSNSPW",
-          "text": "2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIN546DPVI",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPIURBNJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-66777", "BGS-221117"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How is the radio position determined by the FMC in the B737-400 Electronic Flight Instrument System?",
-      "options": [
-        {
-          "id": "A4M1E8FARX",
-          "text": "DME/DME or VOR/DME",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYMGWX19W1",
-          "text": "VOR/VOR or ADF bearings",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY30U9YC6B",
-          "text": "DME ranges and/ or VOR/ADF bearings",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVQ7S52MCQ",
-          "text": "VOR/DME range and bearing",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFHLKLHI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229714", "AVEXAM-90783", "BGS-222298"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In flight, which navigation receivers are typically used for flight management position updating?",
-      "options": [
-        {
-          "id": "A3E4IDUAT5",
-          "text": "DME, VOR, LOC, and GPS receivers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4I0FTX9SK",
-          "text": "DME, VOR, LOC, and LORAN receivers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM49B8TW1T",
-          "text": "DME, VOR, LOC, and INS receivers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG0X76R9JJ",
-          "text": "DME, NDB, and GPS receivers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSPOGQMT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229800", "AVEXAM-89426", "BGS-220639"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS enables to fly an optimum flight profile. For this, the FMC (Flight Management Computer) uses:\n\n1 – flight-crew entered flight plan data2 – data from ADC3 – aircraft position4 – a memorised relief world data base5 – data from the FMC navigation data base.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A5NL6PI26K",
-          "text": "1, 2, 3, 5.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVL8H6T7S1",
-          "text": "1, 3, 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKWAZPI8QW",
-          "text": "2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABA2I90QYL",
-          "text": "1, 2, 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZFSUFEM",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120567",
-      "ATPLQ-222558",
-      "AVEXAM-42946",
-      "BGS-220624"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Concerning the FMS (Flight Management System), the cost index is determined by dividing:",
-      "options": [
-        {
-          "id": "A8JTKTHJM5",
-          "text": "aircraft operating cost by fuel cost.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY5MRNFGOP",
-          "text": "aircraft cruise speed by fuel cost.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHSPOC55OF",
-          "text": "fuel cost by aircraft operating cost.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP1C8MAEM6",
-          "text": "fuel cost by aircraft cruise speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDXXLICP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106641"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an aircraft equipped with a twin inertial system, the FMC displayed position",
-      "options": [
-        {
-          "id": "AT0YYAOX88",
-          "text": "would be between the mean inertial position and radio fix position.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0FIKIJJ8H",
-          "text": "would be half-way between the mean inertial position and the radio fix position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AULKQ5Q384",
-          "text": "would be the same as the primary inertial system position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASXJIYRA16",
-          "text": "would coincide with the mean inertial position.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGNRMCB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-56542"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In which of the following situations is the FMC present position of a B737-400 Electronic Flight Instrument System likely to be least accurate?",
-      "options": [
-        {
-          "id": "A46X7GLQUB",
-          "text": "At top of descent.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUM0UQ1OPT",
-          "text": "On final approach.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXMZNGQNLB",
-          "text": "Just after take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ9377RXIS",
-          "text": "At top of climb.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKOIKPYX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106635", "ATPLQ-226611", "AVEXAM-34059"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Comparing the radio navigation system and the inertial navigation system\n1) the radio position is accurate when in DME range.\n2) the radio position may be obtained whatever the position on the Earth.\n3) the inertial position may be obtained whatever the position on the Earth.The combination regrouping all the correct statements is",
-      "options": [
-        {
-          "id": "ANVK5U65BE",
-          "text": "1, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVOUH0R4A2",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAT28CM3R2",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYCCGZXNHL",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKBNFFSC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106658"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the most accurate method used by the FMC in the B737-400 for radio position determination?",
-      "options": [
-        {
-          "id": "AH3X7W7IO4",
-          "text": "DME/DME or VOR/DME.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK482ZFD0E",
-          "text": "VOR/VOR or VOR/ADF bearings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV16SJ1NHT",
-          "text": "VOR/DME range and bearing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL2X9J82X1",
-          "text": "DME ranges and/or VOR/ADF bearings.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFPGQVGP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225227"],
-    "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most common sensors interfacing a FMS to compute the aircraft position along the flight plan are:\n\n1 – GPS2 – NDB3 – DME4 – LORAN-C\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AFTUX8GGFA",
-          "text": "1, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A45XOYCED9",
+          "id": "OKSW7O2H0",
           "text": "1, 4.",
           "correct": false,
           "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLGGJGOU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224375", "AVEXAM-19834", "BGS-220387"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A ring laser gyro can measure:",
+      "options": [
+        {
+          "id": "OAHINTZ4B",
+          "text": "rotation about its sensitive axis.",
+          "correct": true,
+          "why": ""
         },
         {
-          "id": "AGAP4996JH",
-          "text": "2, 3.",
+          "id": "OAUN97VPV",
+          "text": "acceleration in all directions.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADOJI6P2WG",
-          "text": "1, 2, 3.",
+          "id": "O0HB7X6IE",
+          "text": "rotation in all directions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLCDLBEUZ",
+          "text": "acceleration about its sensitive axis.",
           "correct": false,
           "why": ""
         }
@@ -5416,38 +930,244 @@
     }
   },
   {
-    "id": "QQFHCOLT",
+    "id": "QMSDCHNH",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224463", "AVEXAM-74288", "BGS-222115"],
+    "externalIds": [
+      "ATPLQ-229496",
+      "ATPLGS-120727",
+      "BGS-220430",
+      "AVEXAM-11617"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.05.01.01.06"],
+    "learningObjectives": ["022.05.01.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During a loss of GPS signal, the FMS position...",
+      "question": "A ring laser gyro is:",
       "options": [
         {
-          "id": "AQA5ZL4RPP",
-          "text": "May deviate from the actual position.",
+          "id": "OW25NCV68",
+          "text": "a device which measures the earth rate precession.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYRRW4WQB",
+          "text": "an optical accelerometer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCNFDRUCN",
+          "text": "a device which measures angular rates around its sensitive axis.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAKGVUFFGR",
-          "text": "Will remain stable because GPS is only a secondary sensor for normal.",
+          "id": "OS3CUBSKS",
+          "text": "used for stabilising the INS platform.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUEEGTLA",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-221745",
+      "ATPLGS-121213",
+      "BGS-222217",
+      "ATPLGS-106409",
+      "AVEXAM-52315"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An inertial navigation system:",
+      "options": [
+        {
+          "id": "ODDDF2UAB",
+          "text": "can only operate when interfacing with the GPS equipment.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A58FYY4SJ4",
-          "text": "Will be completely reset.",
+          "id": "O9MLMVOBW",
+          "text": "can operate as stand alone equipment without any interface with other navigation equipment.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORTN3VUCD",
+          "text": "can only operate when interfacing with the radionavigation equipment.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8PFNDDF8X",
-          "text": "Will be calculated using the data from the current navigation database.",
+          "id": "OEOYWZE7C",
+          "text": "can only operate when communicating with ground installations.",
           "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QONGMSTZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-225779",
+      "ATPLGS-129549",
+      "AVEXAM-61111",
+      "BGS-221273"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does a stable platform inertial navigation system use?",
+      "options": [
+        {
+          "id": "OLIEZEYQ9",
+          "text": "A single platform with two gyroscopes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH719UBBR",
+          "text": "Two separate platforms with two gyroscopes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OESC7KU2U",
+          "text": "Two separate platforms with two accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEXXZLFCH",
+          "text": "A single platform with two accelerometers.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIHVQPMC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221071", "BGS-222339"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Is there, by convention, a difference between an INS and an IRS?",
+      "options": [
+        {
+          "id": "OHGRK2HMW",
+          "text": "Yes, the INS requires electrical power for its operation, while the IRS is completely independent of the electrical power.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OY9HOK07A",
+          "text": "Yes, the IRS is an older system based on a stabilised platform and mechanical gyros, while the INS is a more modern, fixed system based on ring laser gyros or fibre optic gyros.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYRZTLWPK",
+          "text": "Yes, the INS is an older system based on a stabilised platform and mechanical gyros, while the IRS is a more modern, fixed system based on ring laser gyros or fibre optic gyros.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOOOCGCOK",
+          "text": "There is NO actual difference between an INS and an IRS, they are just different abbreviations used by different system manufacturers.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBFJTYAA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224256", "AVEXAM-38515", "BGS-220355"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.07"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an inertial navigation system, to know the distance travelled:",
+      "options": [
+        {
+          "id": "OVFQDJKGY",
+          "text": "integrating once the speed with respect to time is sufficient.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHLPKURET",
+          "text": "It is necessary to integrate once the speed in time, and to know the initial position only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVNR2ZOJT",
+          "text": "It is necessary to integrate once the speed in time, and to know the initial speed and the initial position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF2UTM3RH",
+          "text": "It is necessary to integrate once the speed in time, and to know the initial speed only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3KMEN6NX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227484", "BGS-221679"],
+    "annexes": [],
+    "learningObjectives": ["022.05.01.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How many gyroscopes are required on a stable platform INS?",
+      "options": [
+        {
+          "id": "OSGLW4TFZ",
+          "text": "One",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTYWPWVZ",
+          "text": "Two",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUQC4Y1O1",
+          "text": "Four",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3QPKLGAF",
+          "text": "Three",
+          "correct": true,
           "why": ""
         }
       ]

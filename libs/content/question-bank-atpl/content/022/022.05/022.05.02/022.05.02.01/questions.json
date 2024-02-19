@@ -1,36 +1,36 @@
 [
   {
-    "id": "QDJEXRNU",
+    "id": "QRGNWRNB",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226419", "BGS-221652"],
+    "externalIds": ["ATPLQ-221961", "AVEXAM-27057", "BGS-221643"],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
+    "learningObjectives": ["022.05.02.01.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A modern aircraft has three Air Data Inertial Reference Units (ADIRUs). Each ADIRU combines an IRU with _____, which sends barometric altitude and TAS information to the IRU.",
+      "question": "On a scheduled flight, the ATC asks the pilots to change their route. What action is required for the IRS?",
       "options": [
         {
-          "id": "ALUOP36CE8",
-          "text": "an Air Data Computer.",
+          "id": "OAXULXZW7",
+          "text": "enter the new waypoints into the control unit of each IRS, ensuring the system in use is updated first.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORGCQDL3J",
+          "text": "enter the new waypoints into the MCDU of the FMS.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQHAW5BG3G",
-          "text": "an Electronic Attitude Direction Indicator.",
+          "id": "OHWQCIA2L",
+          "text": "the pilot will need to revert to manual navigation. The aircraft must be stationary to update waypoints in the IRS.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2MI6P90TE",
-          "text": "a Flight Management Computer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADQ2OENVF0",
-          "text": "an Attitude and Heading Reference System.",
+          "id": "OE358WXBQ",
+          "text": "modern aircraft have GPS, so the pilot does not need to update waypoints in the IRS.",
           "correct": false,
           "why": ""
         }
@@ -38,303 +38,37 @@
     }
   },
   {
-    "id": "QKVXXIBL",
+    "id": "QPCBUHWY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129535", "ATPLQ-224831", "BGS-221240"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the Air Data Computer fails, what information is lost to the flight crew?",
-      "options": [
-        {
-          "id": "ACMAH3B7S9",
-          "text": "Wind speed and direction.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZZNB2I6KP",
-          "text": "Drift angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFAVR17E3M",
-          "text": "Groundspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6KBPCSPED",
-          "text": "Time at next waypoint.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNUQRPQA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227799", "BGS-221978"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Mach number is subject to position error. This error varies with:",
-      "options": [
-        {
-          "id": "A524W1LYY9",
-          "text": "Mach number and angle of attack.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQS1ODNCEE",
-          "text": "TAS only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5LY01SCIT",
-          "text": "OAT only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJDTDFYJON",
-          "text": "TAS and OAT.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNNCYLED",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226111", "AVEXAM-71036"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The ADC (Air Data Computer) supplies data to the following:\n\n- EFIS symbol generator\n\n- Transponder\n\n- Auto Flight System</li>\n</ol>\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AOXYDB45CV",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5C7H3IEDP",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD09SY0X94",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABO7WZP36Y",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCTFOZZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105912"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With constant weight and configuration, an aircraft always takes off at the same",
-      "options": [
-        {
-          "id": "A362SYJTNL",
-          "text": "equivalent airspeed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVYD24ZF4Y",
-          "text": "ground speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIKQFXQJZC",
-          "text": "indicated airspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ523V9AH8",
-          "text": "true airspeed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQIMQSWZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222459", "AVEXAM-97047"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An air data computer (ADC):\n1) supplies the ground speed and the drift angle.\n2) determines the total temperature and the true altitude.\n3) receives the static pressure and the total pressure.\n4) supplies the TAS to the computer of the INS.\n5) determines the Mach number, the outside (static) air temperature.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A5H8WE71K2",
-          "text": "3, 4, 5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGDBO6SB4Z",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3174EG21F",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJJ0MZPLT0",
-          "text": "2, 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVHFVVXT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105988"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At constant weight, regardless of altitude, an aircraft always lifts off at a constant",
-      "options": [
-        {
-          "id": "AHBQNKG4R2",
-          "text": "EAS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGT1K2ETJM",
-          "text": "CAS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A05J3CYLB9",
-          "text": "ground speed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9QTGA68FX",
-          "text": "TAS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYVDUFYW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106251", "ATPLGS-106261", "AVEXAM-68824"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In An Air Data Computer (ADC), aeroplane altitude is calculated from:",
-      "options": [
-        {
-          "id": "AZBDRGD96N",
-          "text": "measurement of barometric pressure from a static source on the fuselage.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATIQQQ9N72",
-          "text": "measurement of outside air temperature (OAT).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1VV1RKHT5",
-          "text": "the difference between absolute and dynamic pressure at the fuselage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5AC3IW8S9",
-          "text": "measurement of elapsed time for a radio signal transmitted to the ground surface and back.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUHINNCX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106370", "AVEXAM-50728"],
+    "externalIds": ["ATPLQ-225890", "AVEXAM-84585", "BGS-222325"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The error in a direction indicator caused by the convergence of the meridians in northerly and southerly latitudes is called:",
+      "question": "What may lead to loss of alignment in an INS?",
       "options": [
         {
-          "id": "AZTTJNS0C4",
-          "text": "transport error.",
+          "id": "OPAKRJQXI",
+          "text": "Flying through or in the vicinity of thunderstorms.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO18R4XX4",
+          "text": "Entering the wrong latitude before initial alignment.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARNY5DG632",
-          "text": "turning error.",
+          "id": "OUTEEBQMA",
+          "text": "Entering the wrong longitude before initial alignment.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7I2HOVY3W",
-          "text": "drift error.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYFU120VQE",
-          "text": "mechanical error.",
+          "id": "OZURHTVYG",
+          "text": "Sudden aircraft attitude changes due to turbulence or similar disturbances.",
           "correct": false,
           "why": ""
         }
@@ -342,599 +76,43 @@
     }
   },
   {
-    "id": "QXQJOSXG",
+    "id": "QBFWTDXI",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106320",
-      "AVEXAM-18073",
-      "AVEXAM-49237",
-      "AVEXAM-61856"
+      "ATPLQ-221674",
+      "BGS-220360",
+      "AVEXAM-80380",
+      "AVEXAM-24219",
+      "AVEXAM-3230"
     ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When, in flight, the needle of a needle-and-ball indicator is on the left and the ball on the right, the aircraft is",
-      "options": [
-        {
-          "id": "AKK2NR71V1",
-          "text": "turning left with not enough bank.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4U1C5OQUE",
-          "text": "turning left with too much bank.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGFEXYNB26",
-          "text": "turning right with too much bank.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A03V8YNKRT",
-          "text": "turning right with not enough bank.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKNCJBSN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127595", "ATPLQ-226299", "AVEXAM-31942"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment time, at mid-latitudes, for an Inertial Reference System using laser ring gyros is approximately",
-      "options": [
-        {
-          "id": "AK4VFEYSNN",
-          "text": "10 min.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB0DHZLWNP",
-          "text": "5 min.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY17AKZBP3",
-          "text": "2 min.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYFHU2A0YV",
-          "text": "20 min.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTADWBMW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106408", "ATPLQ-225826", "AVEXAM-96542"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The characteristics of the Earth which are being used during the alignment of an INS platform are:",
-      "options": [
-        {
-          "id": "AGEEH8ZG5N",
-          "text": "Earth rotation and gravity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5JQCXUY5F",
-          "text": "Earth rotation and longitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A277DVJ09O",
-          "text": "longitude and gravity.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG337N697K",
-          "text": "Earth magnetic field and earth rotation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUJFFDWC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224362", "AVEXAM-97643", "BGS-221597"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How long will the ADIRU alignment approximately take at around 60º latitude?",
-      "options": [
-        {
-          "id": "A57NJMRINE",
-          "text": "10 minutes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS1FX37KJL",
-          "text": "No time because an ADIRU does NOT require alignment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABRSI9RY8V",
-          "text": "5 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXGD6RL3CV",
-          "text": "20 minutes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWJSVYOA",
-    "relatedQuestions": ["QDNUZYTX", "QSLWLCFJ"],
-    "externalIds": [
-      "ATPLGS-106428",
-      "ATPLQ-227074",
-      "AVEXAM-4384",
-      "BGS-220357"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment of a gyro stabilised inertial platform consists in positioning the platform relative to:",
-      "options": [
-        {
-          "id": "A6WXS5W5VP",
-          "text": "the vertical axis and true north.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A23DYXJV3C",
-          "text": "the roll axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUIUCSXFIA",
-          "text": "the pitch axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKYUEQE3MZ",
-          "text": "the pitch and roll axes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDNUZYTX",
-    "relatedQuestions": ["QSLWLCFJ", "QWJSVYOA"],
-    "externalIds": [
-      "ATPLGS-106428",
-      "ATPLQ-227074",
-      "AVEXAM-4384",
-      "BGS-220357"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment of a gyro stabilised inertial platform consists in positioning the platform relative to:",
-      "options": [
-        {
-          "id": "ADHBEQZOYZ",
-          "text": "the vertical axis and true north.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVAPPN13R6",
-          "text": "the roll axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANLZRNWVXM",
-          "text": "the pitch axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUBCCZCFY6",
-          "text": "the pitch and roll axis.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSLWLCFJ",
-    "relatedQuestions": ["QDNUZYTX", "QWJSVYOA"],
-    "externalIds": ["ATPLQ-227074", "AVEXAM-4384"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment of a gyro stabilized inertial platform consists in positioning the platform relative to:",
-      "options": [
-        {
-          "id": "AB7XGXU3SR",
-          "text": "the vertical axis and true north.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9VVBRWQ5G",
-          "text": "the pitch and roll axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHMM09E5KD",
-          "text": "the roll axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGRX19J6B5",
-          "text": "the pitch axis only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLHALYAY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223598"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a stabilised platform inertial system, the accelerations are measured in an axis co-ordinate system which is: (NB: aircraft`s body axis co-ordinate system = pitch, roll and yaw axis)",
-      "options": [
-        {
-          "id": "ATR82KFLCL",
-          "text": "free from the aircraft`s body axis co-ordinate system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW1A55UETD",
-          "text": "merged with only two axes of the aircraft`s body axis co-ordinate system: the roll and the pitch axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK5IHE2ZCR",
-          "text": "fixed in absolute space.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJL3FTN2LA",
-          "text": "merged with the aircraft`s body axis co-ordinate system.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QICMRILR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106401", "AVEXAM-12626"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot accidentally turning OFF the INS in flight, and then turns it back ON a few moments later\nFollowing this incident",
-      "options": [
-        {
-          "id": "AHR190IKL9",
-          "text": "it can only be used for attitude reference.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4MU11UKXK",
-          "text": "the INS is usable in NAV mode after a position update.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC3YE9JWDB",
-          "text": "everything returns to normal and is usable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFQ320D0OL",
-          "text": "no useful information can be obtained from the INS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXXCLBZZ",
-    "relatedQuestions": ["QWQPZMXP"],
-    "externalIds": [
-      "ATPLGS-106400",
-      "ATPLQ-229947",
-      "AVEXAM-56479",
-      "BGS-222044"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The full alignment of a stabilised platform inertial system can be carried out:",
-      "options": [
-        {
-          "id": "ADQQJV9FZC",
-          "text": "on the ground only and when the aircraft is at a full stop.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR8MF26MJ1",
-          "text": "at any time as long as an accurate position is computed by the FMS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6JPX49PS8",
-          "text": "during any phase of flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYMLBXPWF6",
-          "text": "on the ground or when in straight and level flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWQPZMXP",
-    "relatedQuestions": ["QXXCLBZZ"],
-    "externalIds": [
-      "ATPLGS-106400",
-      "ATPLQ-229947",
-      "AVEXAM-56479",
-      "BGS-222044"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The full alignment of a stabilised platform inertial system can be carried out:",
-      "options": [
-        {
-          "id": "ALQMXY7I24",
-          "text": "on the ground only and when the aircraft is at a full stop.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQQW26O8RD",
-          "text": "on the ground or when in straight and levelled flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAP5IIYPDV",
-          "text": "during any phase of flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGYN8EC2DE",
-          "text": "at any time as long as an accurate position is computed by the FMS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVZECSNB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627214", "ATPLQ-228095", "BGS-220386"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When an INS loses its alignment reference during flight, the..",
-      "options": [
-        {
-          "id": "AO0NGP7A5T",
-          "text": "NAV mode is lost until the next alignment is carried out on the ground.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A21DUY0Y71",
-          "text": "pilot must select STBY on the mode selector unit and wait for about 3 minutes before switching to the ALIGN mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A02D6FC08N",
-          "text": "pilot must select ALIGN on the mode selector unit and wait for about 10 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL8L30VM2O",
-          "text": "INS loses all functionality and should be switched off to save electrical power.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJBWVEBS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-27964"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When and where are IRS positions updated?",
-      "options": [
-        {
-          "id": "A0QCAN783V",
-          "text": "Only on the ground during the alignment procedure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AECM8DI5RC",
-          "text": "When the VHF Nav Radios are selected to AUTO.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATODHMQRJ6",
-          "text": "When the FMS is in IRS ONLY NAV operation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD5FV8TSY0",
-          "text": "During all phases of flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHGFBYHV",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106391",
-      "ATPLQ-221842",
-      "AVEXAM-13219",
-      "BGS-220343"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering a stabilised platform inertial system, this platform:\n1.  can be servo-controlled in azimuth\n2.  is kept levelled during alignment phase only\n3.  is always kept levelled\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A32JYY4JLE",
-          "text": "1, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKF1QPW931",
-          "text": "2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SVQRX7KU",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9NHUMGDLL",
-          "text": "3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSXXALBS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225326", "AVEXAM-50401", "BGS-220367"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "When the rotary knob on the INS control panel is set to \"NAV\" mode, it is:",
+      "question": "The positions of the mode selector of an inertial navigation unit are: OFF – STBY – ALIGN – NAV – ATT:\n\n1 – in \"STBY\", the unit aligns on the local geographic co-ordinate system   \n2 – the \"ATT\" position is used during automatic landing (LAND mode)   \n3 – in \"NAV\" the co-ordinates of the start position can be entered   \n4 – the platform is levelled before azimuth alignment   \n5 – in cruise, the unit can only be used in \"NAV\" mode.\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AEYTPIK1A4",
-          "text": "the normal operating mode allowing use of all the functions of the system.",
+          "id": "OIABSUILG",
+          "text": "2, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHIEUIOV9",
+          "text": "1, 3, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMFIK7RP6",
+          "text": "4",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALAPHS2HFO",
-          "text": "the navigation mode allowing use of all the functions of the system except heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9ZE99GROJ",
-          "text": "the alignment function in flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGDQ9JS4E8",
-          "text": "the navigation mode allowing use of all the functions of the system except attitude.",
+          "id": "OXOO0CLLL",
+          "text": "1, 2, 4.",
           "correct": false,
           "why": ""
         }
@@ -942,37 +120,37 @@
     }
   },
   {
-    "id": "QCNTHXJS",
+    "id": "QZNQEFOF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229728", "BGS-221525"],
+    "externalIds": ["ATPLQ-622076", "ATPLGS-127795", "AVEXAM-25215"],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
+    "learningObjectives": ["022.05.02.01.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The strap-down IRS...",
+      "question": "IRS is a self-contained system because...",
       "options": [
         {
-          "id": "AJ7ZNPO3AM",
-          "text": "is located close to the aircraft CG, and uses laser gyros to calculate angular movements.",
+          "id": "OILJ3BAYO",
+          "text": "the system has a battery back-up which guarantees the well-functioning of the system in case of power-failure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZQUAZLGR",
+          "text": "the system calculates the position of the aircraft without reference to externally generated (man-made) signals.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A9ZHM8LZUO",
-          "text": "consists of gyros and accelerometers. The gyros keep the platform level and the accelerometers calculate acceleration.",
+          "id": "OTSGG9KS0",
+          "text": "the system has the ability to calculate the aircraft’s radio position without any reference to either man-made or natural information.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AG0RZN6IBU",
-          "text": "is located away from the aircraft CG and uses laser gyros to calculate accelerations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3NDEJ3U3O",
-          "text": "is most reliable with a low frequency laser beam.",
+          "id": "OFWV1KX3Y",
+          "text": "the system has the ability to calculate the aircraft’s position with an accuracy comparable to the GPS position.",
           "correct": false,
           "why": ""
         }
@@ -980,37 +158,43 @@
     }
   },
   {
-    "id": "QGJZTQHU",
+    "id": "QMZGHSTV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106476", "AVEXAM-94519"],
+    "externalIds": [
+      "ATPLQ-229861",
+      "BGS-220341",
+      "ATPLGS-627221",
+      "AVEXAM-43742",
+      "ATPLGS-106399"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
+    "learningObjectives": ["022.05.02.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An IRS is aligned in order to",
+      "question": "As a result of the failure of the ADC, the inertial navigation system will no longer provide information about:",
       "options": [
         {
-          "id": "ANDP145SRT",
-          "text": "calculate the computed trihedron with respect to the Earth.",
+          "id": "OXDSZEWMP",
+          "text": "the drift angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7ZSCTXWP",
+          "text": "the time (TIME) at the next waypoint (WPT).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2D7TJP97",
+          "text": "the wind direction and velocity.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A3D1D5YYUO",
-          "text": "establish true and Magnetic North.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A04M9VXMAQ",
-          "text": "establish position relative to True North and Magnetic North.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4W8LPA5IZ",
-          "text": "establish Magnetic North.",
+          "id": "OMKAHGZBT",
+          "text": "the ground speed.",
           "correct": false,
           "why": ""
         }
@@ -1026,28 +210,28 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Concerning an IRS:\n\n1 – the aircraft may be moved during the alignment   \n2 – the aircraft must not be moved during alignment   \n3 – exceptionally, the alignment can be done in flight.\nThe combination that regroups all of the correct statements is:",
+      "question": "Concerning an IRS:\n\n1 – the aircraft may be moved during the alignment   \n2 – the aircraft must not be moved during alignment   \n3 – exceptionally, the alignment can be done in flight.\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AT5OZ532V8",
+          "id": "OOUCYSR0L",
           "text": "2",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZEP8DXL06",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2X4W0TREC",
+          "id": "OZQH64K19",
           "text": "1",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQEIRAIAKN",
+          "id": "OTDBGW1VO",
+          "text": "1, 3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWIS0TPUR",
           "text": "2, 3",
           "correct": false,
           "why": ""
@@ -1056,113 +240,42 @@
     }
   },
   {
-    "id": "QOPDISGE",
+    "id": "QHGFBYHV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627217", "ATPLQ-225435", "BGS-222045"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the average position error of a stabilised-platform Inertial Navigation System (INS)?",
-      "options": [
-        {
-          "id": "A8L1W1JY1I",
-          "text": "1.5 NM/hour or more.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQPJY5LFY8",
-          "text": "3.0 NM/hour or more.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AILCGWDD30",
-          "text": "0.5 NM/hour or less.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWEBJLCK7F",
-          "text": "1 NM/hour or less.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFVYQWMT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223738", "AVEXAM-12325", "BGS-220422"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The position error of a stand alone inertial system, is approximately:",
-      "options": [
-        {
-          "id": "A78IDRSEAF",
-          "text": "0.5 to 2 NM per hour.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A41PY68B1G",
-          "text": "8 to 10 NM per hour.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV3260DT23",
-          "text": "0.01 to 0.2 NM per hour.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A16UXXD1E5",
-          "text": "6 to 8 NM per hour.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QACQHSLU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-10521"],
+    "externalIds": [
+      "ATPLQ-221842",
+      "ATPLGS-106391",
+      "AVEXAM-13219",
+      "BGS-220343"
+    ],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In order to align an inertial reference system (IRS), it is required to insert the local geographical coordinates. This enables the IRS to:",
+      "question": "Considering a stabilised platform inertial system, this platform:\n\n1 – can be servo-controlled in azimuth   \n 2 – is kept levelled during alignment phase only   \n 3 – is always kept levelled\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "ALYF0RUDQC",
-          "text": "compare the latitude it finds with that entered by the operator.",
+          "id": "O4CPRJ0LO",
+          "text": "1, 3.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOEQFOPQSR",
-          "text": "compare the longitude it finds with that entered by the operator.",
+          "id": "OGFJ74ELO",
+          "text": "2.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZIMU2EJHY",
-          "text": "find True North.",
+          "id": "O20US0TZ6",
+          "text": "3.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADBBW501U0",
-          "text": "initialize the FMS flight plan.",
+          "id": "OTNBYY6AA",
+          "text": "1, 2.",
           "correct": false,
           "why": ""
         }
@@ -1170,37 +283,199 @@
     }
   },
   {
-    "id": "QPCBUHWY",
+    "id": "QSYSZNZV",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-84585"],
+    "externalIds": [
+      "ATPLQ-229947",
+      "BGS-222044",
+      "ATPLGS-106400",
+      "AVEXAM-56479"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The full alignment of a stabilised platform inertial system can be carried out:",
+      "options": [
+        {
+          "id": "O7499WVSX",
+          "text": "on the ground only and when the aircraft is at a full stop.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OA4FE5BSU",
+          "text": "at any time as long as an accurate position is computed by the FMS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZLDRWCGJ",
+          "text": "during any phase of flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI9PSI54O",
+          "text": "on the ground or when in straight and levelled flight.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDIHVNZB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229340", "AVEXAM-44277", "BGS-221569"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05.02.01.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nIn flight, the IRS detects a critical fault with excessive position error. Regarding the mode selector switch, what should the crew select?",
+      "options": [
+        {
+          "id": "OHZZUIJYB",
+          "text": "ATT, to retain attitude information.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAWEQWR9H",
+          "text": "OFF, since the system is unreliable.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OORMM9U0T",
+          "text": "NAV and monitor the position error.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOCTZ0ITW",
+          "text": "OFF than NAV, to realign the system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDMUOAUZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621388", "ATPLGS-124598", "AVEXAM-55437"],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The IRS is a self-contained system because",
+      "options": [
+        {
+          "id": "OYOEW0QD7",
+          "text": "the calculation of the position does not require any software.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWCHPGIWS",
+          "text": "the system generates a warning in case of a failure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOS2AUQLT",
+          "text": "it operates independently of navigational aids outside the aircraft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OX5RX5KUJ",
+          "text": "it operates off its own power supply.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSMTAIXQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223914", "BGS-221663", "AVEXAM-76636"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which one of the following can lead to loss of alignment in an INS?",
+      "question": "Before the INS alignment the pilot accidentally provides the system with an INCORRECT value of latitude. What is the consequence of this action?",
       "options": [
         {
-          "id": "AXOMA5FZ3S",
-          "text": "Entering the wrong longitude before initial alignment.",
+          "id": "OQXEN3T6G",
+          "text": "The system will start up in ATT REF mode, providing attitude data, but NOT navigation data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORS2FNCBP",
+          "text": "Nothing. The system will compensate for such errors, but the initial alignment process will take longer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4OSZYPVX",
+          "text": "The system will only function correctly when flying east-west, NOT north-south.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORSHR70IO",
+          "text": "The system will gradually lose its alignment, as the calculated drift due to Earth rotation will be wrong.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVZECSNB",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-228095",
+      "BGS-220386",
+      "AVEXAM-91313",
+      "ATPLGS-627214"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When an INS loses its alignment reference during flight, the..",
+      "options": [
+        {
+          "id": "OVWXVZTJR",
+          "text": "NAV mode is lost until the next alignment is carried out on the ground.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7HLG7QE4Q",
-          "text": "Flying through or in the vicinity of thunderstorms.",
+          "id": "ODVLYMCAT",
+          "text": "pilot must select ALIGN on the mode selector unit and wait for about 10 minutes.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD5I47RV33",
-          "text": "Sudden aircraft attitude changes due to turbulence or similar disturbances.",
+          "id": "OB52IQO2D",
+          "text": "INS loses all functionality and should be switched off to save electrical power.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALQQVT2YD2",
-          "text": "Entering the wrong latitude before initial alignment.",
+          "id": "ODC34WUDG",
+          "text": "pilot must select STBY on the mode selector unit and wait for about 3 minutes before switching to the ALIGN mode.",
           "correct": false,
           "why": ""
         }
@@ -1208,37 +483,281 @@
     }
   },
   {
-    "id": "QSVBPJTG",
-    "relatedQuestions": ["QRFIEKTR"],
-    "externalIds": ["ATPLQ-221272", "AVEXAM-35757"],
+    "id": "QDLFHYQG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224216", "BGS-220359", "AVEXAM-17024"],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The alignment phase of an IRS consists of:\n\n1 – searching for the local vertical   \n2 – searching for the true North   \n3 – searching for the latitude   \n4 – searching for the longitude   \n5 – comparison between the computed longitude and the one entered by the pilot   \n6 – comparison between the computed latitude and the one entered by the pilot.\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "ON3MMWXNS",
+          "text": "1, 2, 3, 4, 5, 6.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWYUTKDKG",
+          "text": "1, 2, 3, 6.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSZOCM2HS",
+          "text": "3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIZYAWAPT",
+          "text": "1, 2, 4, 5.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKNCJBSN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226299", "ATPLGS-127595"],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The alignment time, at mid-latitudes, for an Inertial Reference System using laser ring gyros is approximately:",
+      "options": [
+        {
+          "id": "OLWN9ZWL6",
+          "text": "10 min.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIVQ15JZA",
+          "text": "2 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYOF9SICX",
+          "text": "20 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZKGILDDH",
+          "text": "5 min.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXTJWJFI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224362", "ATPLGS-628052"],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Approximately how long will the ADIRU alignment take at mid latitudes (30 - 60º North)?",
+      "options": [
+        {
+          "id": "OJIGUU0YN",
+          "text": "10 - 20 minutes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OL1NJTBCH",
+          "text": "8 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH0GV3MBN",
+          "text": "5 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4ABS1HY3",
+          "text": "Alignment is instantaneous when powered up.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCNTHXJS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229728", "BGS-221525"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.08"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "How does an IRS work?",
+      "question": "The strapdown IRS:",
       "options": [
         {
-          "id": "AWV47EOGRF",
-          "text": "The IRS is located close to the aircraft C/G and it uses laser gyros to calculate angular rotations.",
+          "id": "OBGSC6SXR",
+          "text": "Consists of gyros and accelerometers. The gyros keep the platform level and the accelerometers calculate acceleration.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORV2CLRJN",
+          "text": "Is located close to the aircraft CG, and uses laser gyros to calculate angular movements.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZ2N2I2HAB",
-          "text": "It consists of gyros and accelerometers. The gyros keep the platform level and the accelerometers calculate acceleration.",
+          "id": "OWW4IWQJ6",
+          "text": "Is most reliable with a low frequency laser beam.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A474P6LT0C",
-          "text": "The IRS is most reliable using lower frequency laser beams.",
+          "id": "ONC2FFPPO",
+          "text": "Is located away from the aircraft CG and uses laser gyros to calculate accelerations.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIIMPXNV",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223569",
+      "AVEXAM-27870",
+      "BGS-220346",
+      "ATPLGS-113172",
+      "BGS-222042"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the navigation function of an INS is inoperative and the control rotary switch is set to ATT, the output data of the INS is (are):",
+      "options": [
+        {
+          "id": "O3FPTCFDT",
+          "text": "attitude and heading.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O7IWZ1FMB",
+          "text": "heading.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASDLOP3GWB",
-          "text": "The IRS is located a bit away from the aircraft C/G and it uses laser gyros to calculate accelerations.",
+          "id": "O7CDIMX77",
+          "text": "position and attitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD59GVJWA",
+          "text": "attitude and ground speed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEINRPDW",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-224197",
+      "AVEXAM-8708",
+      "BGS-220399",
+      "ATPLGS-627213"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On the INS control panel, the rotary knob can be selected to OFF, NAV or ATT positions. The correct statement is:",
+      "options": [
+        {
+          "id": "OWNB6H3DS",
+          "text": "ATT is the normal system setting; the NAV position inhibits the attitude data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTF04BTJD",
+          "text": "NAV is the normal system setting; the ATT position is the back up position in case of failure of the navigation function.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLLSCORMK",
+          "text": "NAV is the normal system setting; the OFF position is the back up position in case of failure of the navigation function.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYX07E5SK",
+          "text": "ATT is the normal system setting.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTHYXIGG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-224099",
+      "AVEXAM-90976",
+      "BGS-221629",
+      "ATPLGS-628539"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A pilot checks the position error of a stand-alone INS against a known position fix, having completed one hour of flying. The error is approximately 2 NM. This error varies and depends on:\n\n1\\. Gyro drift rate.   \n 2\\. Wind drift.   \n 3\\. Accelerometer bias.   \n 4\\. Initial misalignment   \n 5\\. Computational errors.   \n 6\\. Pilot handling skills.",
+      "options": [
+        {
+          "id": "OOTIPIGHO",
+          "text": "1, 3, 4 and 5.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OM9FAIPLK",
+          "text": "1, 2, 3 and 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5OB5ZPV9",
+          "text": "1, 2, 5 and 6.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3EXX5UT4",
+          "text": "2, 3, 4 and 6.",
           "correct": false,
           "why": ""
         }
@@ -1247,8 +766,8 @@
   },
   {
     "id": "QRFIEKTR",
-    "relatedQuestions": ["QSVBPJTG"],
-    "externalIds": ["ATPLQ-221272", "AVEXAM-35757"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221272", "AVEXAM-35757", "ATPLGS-628403"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.08"],
     "explanation": "",
@@ -1257,140 +776,26 @@
       "question": "How does an IRS work?",
       "options": [
         {
-          "id": "AO8P1UE5XG",
-          "text": "An IRS is located close to the aircrafts' centre of gravity and it uses laser gyros to calculate accelerations.",
+          "id": "OVCGWYWXL",
+          "text": "The IRS is most reliable using lower frequency laser beams.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7NSJT1BS",
+          "text": "It consists of gyros and accelerometers. The gyros keep the platform level and the accelerometers calculate acceleration.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUBB6FB0I",
+          "text": "The IRS is located close to the aircraft C/G and it uses laser gyros to calculate angular rotations.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ADOMEJU56G",
-          "text": "An IRS is located a bit away from the aircrafts' centre of gravity and it uses laser gyros to calculate accelerations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6BX1F9PT1",
-          "text": "An IRS is most reliable with low frequencies of the laser beam.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABW6W439Z9",
-          "text": "An IRS consists of gyros and accelerometers. The gyros keep the platform level and the accelerometers calculate accelerations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEJKRBKH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-30824"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements concerning the initial position indicated on the Inertial Reference System (IRS) display is correct?",
-      "options": [
-        {
-          "id": "ARZ83PLVNS",
-          "text": "It is not updated once the IRS mode is set to NAV.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABNKMK8929",
-          "text": "The positions from the two IRSs are compared to obtain a best position which is displayed on the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG1Z0WTKU1",
-          "text": "It is constantly updated from information obtained by the FMC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5TFL37K73",
-          "text": "It is updated when go-around is selected on take-off.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZXJSHDP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224216", "AVEXAM-17024", "BGS-220359"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment phase of an IRS consists of:\n1. searching for the local vertical\n2. searching for the true North\n3. searching for the latitude\n4. searching for the longitude\n5. comparison between the computed longitude and the one entered by the pilot\n6. comparison between the computed latitude and the one entered by the pilot\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AD6Z0IRQ8E",
-          "text": "1, 2, 3, 6.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW5014JVNZ",
-          "text": "1, 2, 4, 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKF0SL9M19",
-          "text": "1, 2, 3, 4, 5, 6.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEEQQIODLY",
-          "text": "3, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVXPHPML",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227761", "BGS-220434"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The full alignment of an IRS will be successful if the following data is inserted by the pilot:",
-      "options": [
-        {
-          "id": "AMRTSLYP1G",
-          "text": "aircraft position (latitude and longitude).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXUVZ6BTAW",
-          "text": "aircraft magnetic heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADV8CWZK6V",
-          "text": "airport elevation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANV6WJE8IM",
-          "text": "aircraft true heading.",
+          "id": "O6NRPOQER",
+          "text": "The IRS is located a bit away from the aircraft C/G and it uses laser gyros to calculate accelerations.",
           "correct": false,
           "why": ""
         }
@@ -1409,298 +814,26 @@
       "question": "Where is the majority of the output data from the INS/IRS presented on?",
       "options": [
         {
-          "id": "A2PBTI7TD8",
+          "id": "ORJGAP7UZ",
           "text": "CDU",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A6EUP64XQL",
-          "text": "CDI",
+          "id": "OBGCAQ6QH",
+          "text": "ADU",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0A7FFL9OZ",
+          "id": "OWEAP8QMO",
           "text": "ADI",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALUYPRBSXI",
-          "text": "ADU",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVMCSIEW",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221665"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How long does it normally take to align an INS/IRS at mid latitudes?",
-      "options": [
-        {
-          "id": "AUNVKENPVK",
-          "text": "About 20 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8JP0W5JLS",
-          "text": "About 10 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A24AWBKFRO",
-          "text": "Up to 30 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3H04NA4UJ",
-          "text": "Up to 5 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUOHXSHY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106410", "AVEXAM-22105"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The resultant of the second integration from the North / South accelerometer of an inertial navigation system (INS) in the NAV mode is",
-      "options": [
-        {
-          "id": "AYY7OEXLJ7",
-          "text": "distance North / South.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATKOZ1QV83",
-          "text": "distance East / West.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0H17UFTVY",
-          "text": "velocity North / South.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV0QS8D2PF",
-          "text": "velocity East / West.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDEBCESH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226484", "AVEXAM-52929", "BGS-222049"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The position error of a stand alone inertial system is:",
-      "options": [
-        {
-          "id": "AHCHB0D0D3",
-          "text": "small a few minutes after initialisation and increases along the flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AETHJJ86HT",
-          "text": "constant along the flight with an accuracy depending on the accuracy of the accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0UTIJ9FNH",
-          "text": "large a few minutes after initialisation and reduces along the flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AODMSTGQSM",
-          "text": "small and constant along the flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOHGSHXH",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221569"],
-    "annexes": ["8f4205ff9f057d6cc74d578bda585789"],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to the question annex).\nIn flight, the IRS detects a critical fault with excessive position error. Regarding the mode selector switch, the crew should select...",
-      "options": [
-        {
-          "id": "ALZXHHNEO1",
-          "text": "ATT, to retain attitude information.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZNKF60T4A",
-          "text": "OFF, since the system is unreliable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMDXOUMG1K",
-          "text": "NAV, and monitor the position error.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A17MCOLP8Z",
-          "text": "OFF then NAV, to realign the system.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXOHUECW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-221674",
-      "AVEXAM-24219",
-      "AVEXAM-3230",
-      "AVEXAM-80380",
-      "BGS-220360"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The mode selector of an inertial navigation unit (INS) comprises the OFF - STBY - ALIGN - NAV - ATT positions:\n1) on \"STBY\" the unit aligns on the local geographic trihedron.\n2) the \"ATT\" position is used in automatic landing (mode LAND).\n3) on \"NAV\" the coordinates of the present position are entered.\n4) on \"ALIGN\" the unit aligns on the local geographic trihedron.\n5) on \"ALIGN\" current position is updated upon the aircraft alignment on the runway.\nThe combination regrouping all the correct statements is:",
-      "options": [
-        {
-          "id": "ACNCVAF995",
-          "text": "4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARVA02INDI",
-          "text": "1, 3, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6ZVVMAY7S",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A15SG7G5N0",
-          "text": "2, 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSMTAIXQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223914", "BGS-221663"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Before the INS alignment the pilot accidentally provides the system with an INCORRECT value of latitude. What is the consequence of this action?",
-      "options": [
-        {
-          "id": "AVL6ASWP73",
-          "text": "The system will gradually lose its alignment, as the calculated drift due to Earth rotation will be wrong.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZCXSI9017",
-          "text": "The system will start up in ATT REF mode, providing attitude data, but NOT navigation data.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOXFJESSAC",
-          "text": "Nothing. The system will compensate for such errors, but the initial alignment process will take longer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFCALBRYM0",
-          "text": "The system will only function correctly when flying east-west, NOT north-south.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFGGZERN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-76998"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does the IRS compare to the INS?",
-      "options": [
-        {
-          "id": "AL19FSJB8O",
-          "text": "The IRS is a later version of the INS, fitted with Ring laser gyros.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVJWUURCBO",
-          "text": "The IRS is simply a derivative of the INS, functioning exactly in the same way.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5GIXK0W0Q",
-          "text": "Both systems use the RLG system, but only one of them is strap-down.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF6VCG70YH",
-          "text": "The INS is the oldest system of them two, that functions using the RLG system.",
+          "id": "OPY7F6F6V",
+          "text": "CDI",
           "correct": false,
           "why": ""
         }
@@ -1710,7 +843,12 @@
   {
     "id": "QIDPUJAG",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223177"],
+    "externalIds": [
+      "ATPLQ-223177",
+      "AVEXAM-75487",
+      "BGS-222475",
+      "AVEXAM-62062"
+    ],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.01"],
     "explanation": "",
@@ -1719,226 +857,188 @@
       "question": "How can an INS/IRS be realigned in flight if alignment is lost for some reason?",
       "options": [
         {
-          "id": "AIUEU32UFP",
-          "text": "It can NOT the aircraft must be stationary on the ground for alignment to be performed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZRIF5XTDM",
+          "id": "O9KAMJ3QS",
           "text": "By setting the INS mode selector to \"ALIGN\" and waiting for the required time.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYCEXW9URL",
+          "id": "OWLJTHPG9",
           "text": "By setting the INS mode selector to \"GPS\" and realigning the INSARS through the GPS.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1T74M7R1G",
+          "id": "ONKKHQUY9",
           "text": "By setting the INS mode selector to \"ALIGN\" and then flying straight and level with NO airspeed variations for at least 10 minutes.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNQRBABF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106424", "ATPLQ-227317", "AVEXAM-43367"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an Inertial Navigation System (INS), Ground Speed (GS) is calculated:",
-      "options": [
+        },
         {
-          "id": "A3FZ3IWSQJ",
-          "text": "by integrating measured acceleration.",
+          "id": "OUZBVWUQZ",
+          "text": "It can NOT, the aircraft must be stationary on the ground for alignment to be performed.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AV7QQW53RN",
-          "text": "from TAS and W/V from Air Data Computer (ADC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APR7N7T98R",
-          "text": "from TAS and W/V from RNAV data.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5ZP51T0WM",
-          "text": "by integrating gyro precession in N/S and E/W directions respectively.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QSYSZNZV",
+    "id": "QOOOVUAX",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106400", "ATPLQ-229947", "AVEXAM-56479"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The full alignment of the stable platform of an Inertial Navigation System:",
-      "options": [
-        {
-          "id": "AVW1LSZXAB",
-          "text": "is only possible on the ground when the aircraft is at a complete stop.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6OA1M6RR6",
-          "text": "may be carried out on the ground or when in straight and level flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ220FA18Y",
-          "text": "may be carried out at any time so long as an accurate position is inserted into the system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA3WUAW049",
-          "text": "may be carried out during any phase of flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJEWXKAM",
-    "relatedQuestions": ["QDBDZUIZ"],
     "externalIds": [
-      "ATPLGS-106421",
-      "ATPLQ-227583",
-      "AVEXAM-16654",
-      "BGS-220358"
+      "ATPLQ-223077",
+      "ATPLGS-120338",
+      "BGS-220381",
+      "AVEXAM-85398"
     ],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The drift of the azimuth gyro in an inertial unit induces an error. If \"t\" is the elapsed time, the average total error is:",
+      "options": [
+        {
+          "id": "OADR15ZIK",
+          "text": "sinusoidal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ3FULQ8J",
+          "text": "proportional to t.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSSJ2WSNS",
+          "text": "proportional to t2 (t squared).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTHOGT1NG",
+          "text": "proportional to t/2.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDEBCESH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226484", "BGS-222049", "AVEXAM-52929"],
+    "annexes": [],
+    "learningObjectives": ["022.05.02.01.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The position error of a stand alone inertial system is:",
+      "options": [
+        {
+          "id": "ODSTARU5F",
+          "text": "constant along the flight with an accuracy depending on the accuracy of the accelerometers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODFZKQENB",
+          "text": "small and constant along the flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVWB4JAMN",
+          "text": "large a few minutes after initialisation and reduces along the flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMQOAMYZG",
+          "text": "small a few minutes after initialisation and increases along the flight.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLHALYAY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223598"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The alignment phase of a gyro stabilised platform consists of:",
+      "question": "In a stabilised platform inertial system, the accelerations are measured in an axis co-ordinate system which is: (NB: aircraft\\`s body axis co-ordinate system = pitch, roll and yaw axis)",
       "options": [
         {
-          "id": "AOTRHZ5X8M",
-          "text": "levelling the platform and determining its orientation.",
+          "id": "OHLLKZF0C",
+          "text": "merged with the aircraft\\`s body axis co-ordinate system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9HCXZOLT",
+          "text": "fixed in absolute space.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCMWKBPAZ",
+          "text": "merged with only two axes of the aircraft\\`s body axis co-ordinate system: the roll and the pitch axis.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGEJFQA0A",
+          "text": "free from the aircraft\\`s body axis co-ordinate system.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A85URURII7",
-          "text": "aligning the platform axes with the aircraft axes (pitch, roll, yaw).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7COKW8O7T",
-          "text": "aligning the platform axes with the aircraft roll axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SX2TKO1I",
-          "text": "aligning the platform axes with the aircraft pitch axis only.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QDBDZUIZ",
-    "relatedQuestions": ["QJEWXKAM"],
+    "id": "QKBSZEHS",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106421",
-      "ATPLQ-227583",
-      "AVEXAM-16654",
-      "BGS-220358"
+      "ATPLQ-223988",
+      "AVEXAM-46195",
+      "AVEXAM-3631",
+      "BGS-222415"
     ],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
+    "learningObjectives": ["022.05.02.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The alignment phase of a gyro stabilised platform consists of:",
+      "question": "An aircraft experiences a failure of the inertial system in flight, resulting in loss of alignment with subsequent loss of (1).... data. However, (2)....information may still be available, The crew (3).... perform in-flight realignment.",
       "options": [
         {
-          "id": "A5W1CQIYKA",
-          "text": "levelling the platform and determining its orientation.",
+          "id": "OFBI4V0TA",
+          "text": "(1) altitude, (2) navigation, (3) CAN",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL5LJAC8D",
+          "text": "(1) attitude, (2) navigation, (3) CANNOT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4QQNOEH5",
+          "text": "(1) navigation, (2) attitude, (3) CANNOT",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ABXCPSV7NI",
-          "text": "aligning the platform axes with the aircraft axis (pitch, roll, yaw).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVVQ4XZRZ6",
-          "text": "aligning the platform axes with the aircraft roll axis only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALIS1IRQUW",
-          "text": "aligning the platform axes with the aircraft pitch axis only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXTJWJFI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224362", "AVEXAM-97643"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How much time does an ADIRU need for alignment at 60N°?",
-      "options": [
-        {
-          "id": "A5GFCCZTWF",
-          "text": "10 minutes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOJZSA30ZQ",
-          "text": "5 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEYD6XY0LM",
-          "text": "It doesn’t require alignment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8ZZFUTXCR",
-          "text": "20 minutes.",
+          "id": "OGN82XDRC",
+          "text": "(1) navigation, (2) attitude, (3) CAN",
           "correct": false,
           "why": ""
         }
@@ -1949,9 +1049,9 @@
     "id": "QRKRHYHR",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106403",
       "ATPLQ-227082",
       "AVEXAM-86009",
+      "ATPLGS-106403",
       "BGS-220402"
     ],
     "annexes": [],
@@ -1959,28 +1059,28 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The alignment of an inertial system can be sucessfully performed",
+      "question": "The alignment of an inertial system can be successfully performed:",
       "options": [
         {
-          "id": "A6E4900WMG",
-          "text": "when the aircraft is stationary.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A02QRKMJC7",
+          "id": "ONKFJW5QY",
           "text": "in all phases of flight outside areas of turbulence.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "APAK3HDEN6",
+          "id": "OIICMCODU",
+          "text": "when the aircraft is stationary.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OS3TVXQQB",
           "text": "in all phases of flight.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAAF6DDB12",
+          "id": "OYCZMRHKK",
           "text": "when the aircraft is taxiing.",
           "correct": false,
           "why": ""
@@ -1989,37 +1089,37 @@
     }
   },
   {
-    "id": "QJWHASBJ",
+    "id": "QKVXXIBL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106458", "BGS-994904"],
+    "externalIds": ["ATPLQ-224831", "ATPLGS-129535", "BGS-221240"],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
+    "learningObjectives": ["022.05.02.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "When is the last point at which an INS or IRS may be selected to NAV mode?",
+      "question": "What information is lost to the flight crew if the Air Data Computer fails?",
       "options": [
         {
-          "id": "A4AIEFHG1Z",
-          "text": "Immediately prior to hover taxi",
+          "id": "OVHZLNOZV",
+          "text": "Drift angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYIBCJRBV",
+          "text": "Wind speed and direction.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASRV06JTN4",
-          "text": "After passengers and freight are aboard",
+          "id": "ODTUVPVXG",
+          "text": "Groundspeed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASXRN8959R",
-          "text": "At the holding point",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWB7YPEGV4",
-          "text": "On operation of the TOGA switch after hover taxi to take –off",
+          "id": "OWBT0DC8Q",
+          "text": "Time at next waypoint.",
           "correct": false,
           "why": ""
         }
@@ -2027,395 +1127,37 @@
     }
   },
   {
-    "id": "QAIUXPVI",
+    "id": "QVMCSIEW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129507", "AVEXAM-28873"],
+    "externalIds": ["ATPLQ-224931", "BGS-221665"],
     "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
+    "learningObjectives": ["022.05.02.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During the initial alignment of an inertial navigation system (INS) the equipment",
+      "question": "What is the approximate time taken to initialise an INS/IRS at mid latitudes?",
       "options": [
         {
-          "id": "AS306RX317",
-          "text": "Will not accept a 10° error in initial latitude but will accept a 10° error in initial longitude",
+          "id": "OQMDASBQW",
+          "text": "More than 30 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQWJFIPU1",
+          "text": "20 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODAFHFYIK",
+          "text": "10 minutes.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A25ALDT19U",
-          "text": "Will not accept a 10° error in initial latitude or initial longitude",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYPWTKLD1A",
-          "text": "Will accept a 10° error in initial latitude and initial longitude",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A39HWOY7EC",
-          "text": "Will accept a 10° error in initial latitude but will not accept a 10° error in initial longitude",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOOOVUAX",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120338",
-      "ATPLQ-223077",
-      "AVEXAM-85398",
-      "BGS-220381"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The drift of the azimuth gyro in an inertial unit induces an error\nIf 't' is the elapsed time, the average total error is",
-      "options": [
-        {
-          "id": "ARWM9DRJJB",
-          "text": "proportional to t.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APJIPBBQCX",
-          "text": "proportional to t_ (t squared).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVDPYHKW6C",
-          "text": "proportional to t/2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXCLNEB9HR",
-          "text": "sinusoidal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMZGHSTV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106399", "ATPLQ-229861", "AVEXAM-43742"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "As a result of the failure of the central air data computer (CADC), the inertial navigation system (INS) will no longer provide information about",
-      "options": [
-        {
-          "id": "A8ND5ONLOS",
-          "text": "the wind direction and speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADEH7VYOHK",
-          "text": "the time (TIME) at the next waypoint (WPT).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AONKEAT7Z8",
-          "text": "the ground speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN0UTNGONB",
-          "text": "the drift.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFRRKYVU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-35307"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements concerning the alignment procedure for Inertial Navigation Systems (INS) / Inertial Reference Systems (IRS) at mid-latitudes is correct?",
-      "options": [
-        {
-          "id": "A5C980PYVO",
-          "text": "INS/IRS can be aligned in either the ALIGN or NAV mode.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV07J90TFH",
-          "text": "INS/IRS can be aligned in either the ALIGN or ATT mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG385LEQQU",
-          "text": "INS/IRS can only be aligned in NAV mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKGV0U7KSM",
-          "text": "INS/IRS can only be aligned in the ALIGN mode.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEHZCSCS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-2711"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "After alignment, is it possible to update IRS positions?",
-      "options": [
-        {
-          "id": "AE79C49VPQ",
-          "text": "No.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APJMHPLOCW",
-          "text": "Yes, the process is automatic in flight from the DMEs.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A722J5SONL",
-          "text": "Yes, the pilots can insert updates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACNK0TBDXR",
-          "text": "Yes - by operation of the TO/GA switch, the runway threshold co-ordinates are inserted into the IRS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGFJCKNF",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221212"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following are pilot inputs to the IRS?",
-      "options": [
-        {
-          "id": "ABXMPO8XIC",
-          "text": "Latitude",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR3FFHPIG2",
-          "text": "Magnetic Heading",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A60W0KXJOZ",
-          "text": "Magnetic variation",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQCT7IP3BI",
-          "text": "True Heading",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYNQQBGD",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106414",
-      "ATPLQ-225326",
-      "AVEXAM-40329",
-      "BGS-220367"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The platform of an inertial navigation system (INS) is maintained at right angles to the local vertical by applying corrections for the effects of:",
-      "options": [
-        {
-          "id": "ABVVG9MUCM",
-          "text": "aircraft manoeuvres, Earth rotation, transport wander and Coriolis.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABU4KQYCT3",
-          "text": "movement in the yawing plane, secondary precession and pendulous oscillation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A15JEX5XSD",
-          "text": "gyroscopic inertia, Earth precession and pendulous oscillation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASU2C1DZII",
-          "text": "vertical velocities, Earth precession, centrifugal forces and transport drift.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFWSBFFZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106442", "AVEXAM-5660"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements concerning the loss of alignment by an Inertial Reference System (IRS) in flight is correct?",
-      "options": [
-        {
-          "id": "A73A3TP3CR",
-          "text": "The navigation mode, including present position and ground speed outputs, is inoperative for the remainder of the flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2LH4PN46Q",
-          "text": "The mode selector has to be rotated to ATT then back through ALIGN to NAV in order to obtain an in-flight realignment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7G5IYA3A9",
-          "text": "The IRS has to be coupled to the remaining serviceable system and a realignment carried out in flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQYR180QL5",
-          "text": "It is not usable in any mode and must be shut down for the rest of the flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIIMPXNV",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-113172",
-      "ATPLQ-223569",
-      "AVEXAM-27870",
-      "BGS-220346",
-      "BGS-222042"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the navigation function of an INS is inoperative and the control rotary switch is set to ATT, the output data of the INS is (are)",
-      "options": [
-        {
-          "id": "ABTDA34E3B",
-          "text": "attitude and heading.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5AFW3VP4T",
-          "text": "attitude and ground speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC02BGS3NA",
-          "text": "position only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZSU2A6FQY",
-          "text": "position and attitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTUYIGXZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-36834"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Where are the outputs from an IRS/INS shown?",
-      "options": [
-        {
-          "id": "AAZOY8VX0P",
-          "text": "ADIRU",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI0Q0ZTR0R",
-          "text": "CDU",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJFJLG3FXG",
-          "text": "ADU",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFXWDKNNJZ",
-          "text": "CDI",
+          "id": "OVHM4GL9Q",
+          "text": "5 minutes.",
           "correct": false,
           "why": ""
         }
@@ -2425,1923 +1167,78 @@
   {
     "id": "QKSJCVUZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221134", "AVEXAM-11775", "BGS-220398"],
+    "externalIds": ["ATPLQ-221134", "BGS-220398", "AVEXAM-11775"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In order to align an IRS, it is required to insert the local geographical co-ordinates. This enables the IRS to:\n1. compare the computed latitude with the one entered by the pilot\n2. compare the computed longitude with the one entered by the pilot\n3. use the longitude\nThe combination that regroups all of the correct statements is:",
+      "question": "In order to align an IRS, it is required to insert the local geographical co-ordinates. This enables the IRS to:\n\n1 – compare the computed latitude with the one entered by the pilot   \n2 – compare the computed longitude with the one entered by the pilot   \n3 – use the longitude\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AYGFN372VZ",
-          "text": "1, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAPUFJHAWC",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGOPYN9NWF",
+          "id": "OSEZUATNK",
           "text": "2, 3.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKGWPNK3WW",
+          "id": "O7RAJEOCA",
           "text": "1, 2, 3.",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "O8JIVIYDE",
+          "text": "1, 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHFNRPWPL",
+          "text": "1, 3.",
+          "correct": true,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QBFWTDXI",
+    "id": "QSLWLCFJ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLQ-221674",
-      "AVEXAM-24219",
-      "AVEXAM-3230",
-      "AVEXAM-80380",
-      "BGS-220360"
+      "ATPLQ-227074",
+      "ATPLGS-106428",
+      "AVEXAM-4384",
+      "BGS-220357"
     ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The positions of the mode selector of an inertial navigation unit are: OFF – STBY – ALIGN – NAV – ATT:\n\n1 – in \"STBY\", the unit aligns on the local geographic co-ordinate system2 – the \"ATT\" position is used during automatic landing (LAND mode)3 – in \"NAV\" the co-ordinates of the start position can be entered4 – the platform is levelled before azimuth alignment5 – in cruise, the unit can only be used in \"NAV\" mode.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AZCLYSVL7C",
-          "text": "4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8RUJKD4HA",
-          "text": "1, 2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUQBURV7SD",
-          "text": "2, 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM0UC5IDVY",
-          "text": "1, 3, 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDIHVNZB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229340", "BGS-221569"],
-    "annexes": ["8f4205ff9f057d6cc74d578bda585789"],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure. \n In flight, the IRS detects a critical fault with excessive position error. Regarding the mode selector switch, what should the crew select?",
-      "options": [
-        {
-          "id": "A32K3PWNGO",
-          "text": "ATT, to retain attitude information.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATR8V3JY89",
-          "text": "OFF than NAV, to realign the system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASF3HCYW04",
-          "text": "NAV and monitor the position error.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC3QW0V46P",
-          "text": "OFF, since the system is unreliable.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFUYYSOM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-6576", "BGS-220347"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the navigation function of an INS is inoperative, the back up mode if existing, used to operate the INS is:",
-      "options": [
-        {
-          "id": "A3WKFHRXM4",
-          "text": "the ATT mode which supplies attitude and heading data.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A45ADIWYP0",
-          "text": "the ATT mode which allows to maintain pitch attitude only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOXF7OY9XK",
-          "text": "the GS mode which supplies ground speed and heading data.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMHNYAMLAD",
-          "text": "the OFF mode which turns off the navigation mode but recovers the heading mode.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPXWQAZN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106478"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an IRS",
-      "options": [
-        {
-          "id": "A5EB2KOKX8",
-          "text": "accelerometers and platform are both strapped down.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA63DLTFN5",
-          "text": "the accelerometers are strapped down but the platform is gyro stabilized.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKV3NQUMO6",
-          "text": "the platform is strapped down but the accelerometers are gyro stabilized.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVK2XS7Q2J",
-          "text": "accelerometers and platform are both gyro-stabilized.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDLFHYQG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224216", "AVEXAM-17024", "BGS-220359"],
     "annexes": [],
     "learningObjectives": ["022.05.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The alignment sequence of an IRS consists of:\n\n- Searching for the local vertical\n\n- Searching for the true north\n\n- Searching for the latitude\n\n- Searching for the longitude\n\n- Comparison between the computed longitude and the one entered by the pilot\n\n- Comparison between the computed latitude and the one entered by the pilot</li>\n</ol>\nThe combination that regroups all of the correct statements is:",
+      "question": "The alignment of a gyro stabilised inertial platform consists in positioning the platform relative to:",
       "options": [
         {
-          "id": "AI2IUDHPL6",
-          "text": "1, 2, 3, 6",
+          "id": "OTGNJWOSY",
+          "text": "the roll axis only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLKEJADHF",
+          "text": "the pitch axis only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OS2AKKYH5",
+          "text": "the vertical axis and true north.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASXKP3V5O1",
-          "text": "1, 2, 3, 4, 5, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIWNDS4P9A",
-          "text": "1, 2, 4, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUUVB3XKAH",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUQEJYVS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627223", "ATPLQ-223630", "BGS-222046"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the main cause of position error over time in a stabilised-platform Inertial Navigation System (INS)?",
-      "options": [
-        {
-          "id": "AWYZW2N7W0",
-          "text": "Imperfections within gyro bearings and mass imbalances.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATPW7VYVYK",
-          "text": "Imperfections in the mirrors, their coatings, and misalignment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQPOID2CAS",
-          "text": "Imperfections in the power supply of the INS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKOKAQ67RP",
-          "text": "The Earth`s rotation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCPLNFCY",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14636"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What happens when the ADIRU is switched to ATT mode?",
-      "options": [
-        {
-          "id": "A5IZ9RA9RU",
-          "text": "The inertial system provides attitude and heading.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVU13DTQZ6",
-          "text": "Aircraft attitude is monitored to provide flight envelope protection.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZTBYZ7APT",
-          "text": "The inertial system provides aircraft attitude only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHKPNI3OMP",
-          "text": "Position calculation are based on Acceleration, Time and Track.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLXNBEYQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106398", "AVEXAM-9079"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inertial Navigation System (INS) is:",
-      "options": [
-        {
-          "id": "AP9N7DM36G",
-          "text": "a self contained system which operates without signals from the ground.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF78N196K3",
-          "text": "a radio navigation system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA502G7VLA",
-          "text": "a system which operates on the Doppler principle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASU0MBYPVM",
-          "text": "a hyperbolic navigation system.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFWMFSIT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-8930", "BGS-220426"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The time for a normal alignment (not a quick alignment) of a strapdown inertial system is:",
-      "options": [
-        {
-          "id": "AT4VHWH1P6",
-          "text": "3 to 10 minutes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZOFBMEXDX",
-          "text": "1 to 2 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A95FL9MD11",
-          "text": "15 to 20 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ2B6UCF3D",
-          "text": "less than 1 minute.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKDOLKBK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106420"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The alignment time, at mid-latitudes, for an Inertial Navigation System using gimbal gyros is approximately",
-      "options": [
-        {
-          "id": "AMQ5SHSW6U",
-          "text": "15 mins",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AG3OSGINJD",
-          "text": "30 min",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A29SP28YGJ",
-          "text": "45 mins",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVKWEYR0ET",
-          "text": "5 min",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHTMBHUV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106396", "AVEXAM-51012"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During initial alignment an inertial navigation system is north aligned by inputs from",
-      "options": [
-        {
-          "id": "AHUTBWRZY3",
-          "text": "horizontal accelerometers and the east gyro.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGR13II8Z6",
-          "text": "the aircraft remote reading compass system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX01E14BF9",
-          "text": "vertical accelerometers and the north gyro.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A647LP9T00",
-          "text": "computer matching of measured gravity magnitude to gravity magnitude of initial alignment.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSVZKPHG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120684", "BGS-220394"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Considering a strapdown inertial system, the IRU (Inertial Reference Unit) measures",
-      "options": [
-        {
-          "id": "AZNBR2QZXN",
-          "text": "accelerations and angular rates.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A64LGQ60HV",
-          "text": "linear accelerations only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATXL9ZJB8A",
-          "text": "angular accelerations only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKLJ86A3NR",
-          "text": "angular rates only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQXSZGC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39335"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Where and when are the INS positions updated?",
-      "options": [
-        {
-          "id": "AC71S5BWYI",
-          "text": "Only on the ground during the alignment procedure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A17C730CLE",
-          "text": "Updating is normally carried out by the crew when over-flying a known position (VOR station or NDB).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6BWLYVQ6U",
-          "text": "During flight INS positions are automatically updated by the FMC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A00859T1LN",
-          "text": "INS positions are updated by pressing the Take-off/Go-around button at the start of the take-off roll.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWEDWPSH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106438"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On a triple-fit IRS system, present positions on the CDU",
-      "options": [
-        {
-          "id": "A9GJ2TZ9A4",
-          "text": "are likely to differ as the information comes from different sources.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHH28V5ZPS",
-          "text": "will not differ as the information is averaged.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGIP0L6EAC",
-          "text": "will only differ if one IRS has been decoupled due to a detected malfunction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7Q7FKRPSH",
-          "text": "will only differ if an initial input error of aircraft position has been made.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJPGCYKP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106386", "ATPLGS-106412", "AVEXAM-97623"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The resultant of the first integration of the output from the North / South accelerometer of an inertial navigation system (INS) in NAV mode is:",
-      "options": [
-        {
-          "id": "ALUVLRPSIN",
-          "text": "Velocity along the local meridian.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGJWSGM4CZ",
-          "text": "Ground speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACFA60UBU7",
-          "text": "Latitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A06H6VW1OK",
-          "text": "Change of latitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPISTHHE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221578"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The majority of the output data from the INS/IRS are presented on the...",
-      "options": [
-        {
-          "id": "AIRMTSKJCR",
-          "text": "CDU.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE39W4287B",
-          "text": "ADI.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASSKSZ9V88",
-          "text": "ADU.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIUFVUPW8E",
-          "text": "CDI.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFDZQOMV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627220"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Should an stabilised inertial platform be displaced from the horizontal, it would oscillate with a period of about:",
-      "options": [
-        {
-          "id": "A7UIWXLGF4",
-          "text": "84 minutes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0I8UAP4IF",
-          "text": "84 seconds.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI596WL61J",
-          "text": "8 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI04KUCO6Y",
-          "text": "4 minutes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTHYXIGG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224099", "BGS-221629"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot checks the position error of a stand-alone INS against a known position fix, having completed one hour of flying. The error is approximately 2 NM. This error varies and depends on:1. Gyro drift rate. \n 2. Wind drift. \n 3. Accelerometer bias. \n 4. Initial misalignment \n 5. Computational errors. \n 6. Pilot handling skills.",
-      "options": [
-        {
-          "id": "AKJGGIK5WR",
-          "text": "1, 3, 4 and 5.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANMT6YBQTR",
-          "text": "1, 2, 5 and 6.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5RKOAK1NE",
-          "text": "2, 3, 4 and 6.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHL3TM9PI0",
-          "text": "1, 2, 3 and 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKBSZEHS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223988"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft experiences a failure of the inertial system in flight, resulting in loss of alignment with subsequent loss of (1).... data. However, (2)....information may still be available, The crew (3).... perform in-flight realignment.",
-      "options": [
-        {
-          "id": "A8H0DQ1VIG",
-          "text": "(1) navigation, (2) attitude, (3) CANNOT",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A08GACLHFO",
-          "text": "(1) navigation, (2) attitude, (3) CAN",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJD5AB4RH0",
-          "text": "(1) attitude, (2) navigation, (3) CANNOT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG6Y9OYXDV",
-          "text": "(1) altitude, (2) navigation, (3) CAN",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMDYSBDS",
-    "relatedQuestions": ["QEINRPDW"],
-    "externalIds": [
-      "ATPLGS-627213",
-      "ATPLQ-224197",
-      "AVEXAM-8708",
-      "BGS-220399"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the INS control panel, the rotary knob can be selected to OFF, NAV or ATT positions. The correct statement is:",
-      "options": [
-        {
-          "id": "AT0M9R25HN",
-          "text": "NAV is the normal system setting; the ATT position is the back up position in case of failure of the navigation function.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5YZVYZ3UF",
-          "text": "ATT is the normal system setting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWKSJEZ0LI",
-          "text": "NAV is the normal system setting; the OFF position is the back up position in case of failure of the navigation function.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A37TKXRU8U",
-          "text": "ATT is the normal system setting; the NAV position inhibits the attitude data",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEINRPDW",
-    "relatedQuestions": ["QMDYSBDS"],
-    "externalIds": [
-      "ATPLGS-627213",
-      "ATPLQ-224197",
-      "AVEXAM-8708",
-      "BGS-220399"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the INS control panel, the rotary knob can be selected to OFF, NAV or ATT positions. The correct statement is:",
-      "options": [
-        {
-          "id": "AFGH6IXIRS",
-          "text": "NAV is the normal system setting; the ATT position is the back up position in case of failure of the navigation function.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC6YRS96IT",
-          "text": "ATT is the normal system setting; the NAV position inhibits the attitude data.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFJ04WBCZ8",
-          "text": "ATT is the normal system setting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLB43OQNQ",
-          "text": "NAV is the normal system setting; the OFF position is the back up position in case of failure of the navigation function.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCNWCCRC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106408", "ATPLQ-225826", "AVEXAM-96542"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The parameters that are sensed and used by an IRS for a full successful alignment are:",
-      "options": [
-        {
-          "id": "A6CPEOA17L",
-          "text": "earth rotation and gravity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUUAVGORI9",
-          "text": "earth rotation and longitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8QWPM3ROZ",
-          "text": "earth magnetic field and earth rotation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7YMDMKBGU",
-          "text": "longitude and gravity.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKAPGALB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-93174"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the average position error of the Inertial Navigation System?",
-      "options": [
-        {
-          "id": "AMXRNMABV1",
-          "text": "1.5 NM per hour or more",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGIVA8MXSB",
-          "text": "1 NM per hour or less",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4TZSPCN0Q",
-          "text": "3.0 NM per hour or more",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A22I9SX0C4",
-          "text": "0.5 NM per hour or less",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFHVBPIU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-42046"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft equipped with an Inertial Navigation System (INS) flies with INS 1 coupled with autopilot 1. Both inertial navigation systems are navigating from waypoint A to B. The inertial systems Central Display Units (CDU) shows (XTK = cross track):\n- XTK on INS 1 = 0\n- XTK on INS 2 = 8L\nFrom this information it can be deduced that:",
-      "options": [
-        {
-          "id": "AZ5Q8CE95J",
-          "text": "at least one of the inertial navigation systems is drifting.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQY6CDLQ3D",
-          "text": "only inertial navigation system No. 2 is drifting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN1W2VXANV",
-          "text": "only inertial navigation system No. 1 is drifting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALDADDYW1H",
-          "text": "the autopilot is unserviceable in NAV mode.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPHSAHJF",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-85161"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following correctly lists the order of available selections of the Mode Selector switches of an inertial reference system (IRS) mode panel?",
-      "options": [
-        {
-          "id": "A8PJFXU22S",
-          "text": "OFF - ALIGN - NAV - ATT.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3WUT550DJ",
-          "text": "OFF - ON - ALIGN - NAV.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALF3H49X2L",
-          "text": "OFF - STBY - ALIGN - NAV.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMG608SDTP",
-          "text": "OFF - STBY - ATT - NAV.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQXOJLDQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-69550"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a stabilised-platform inertial system, the platfom is\n1) Azimuth-controlled to True North.\n2) Azimuth-controlled to Magnetic North.\n3) Gyro-erected during alignment only.\n4) Continuously gyro-erected  throughout operation.",
-      "options": [
-        {
-          "id": "AQ79PI9BXH",
-          "text": "1 and 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADV3THCU4B",
-          "text": "1 and 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0N7I5CFSJ",
-          "text": "2 and 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOZ61D73K0",
-          "text": "2 and 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXHLLLUY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106407", "AVEXAM-2461"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "After alignment of the stable platform of an Inertial Navigation System, the output data from the platform is",
-      "options": [
-        {
-          "id": "AMB8W2SGPA",
-          "text": "acceleration north/south and east/west, attitude and true heading.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8C2ZAE9TR",
-          "text": "latitude, longitude and attitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4S0JYZ73M",
-          "text": "acceleration north/south and east/west and true heading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A322AIDWMJ",
-          "text": "latitude, longitude and true heading.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QADNROGI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-48004"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With reference to an inertial navigation system (INS), the initial great circle track between computer inserted waypoints will be displayed when the control display unit (CDU) is selected to:",
-      "options": [
-        {
-          "id": "A605LAVDYG",
-          "text": "DSR TK/STS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHY6EDOL96",
-          "text": "TK/GS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC0BWMWHBW",
-          "text": "HDG/DA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3E2JAHSRJ",
-          "text": "XTK/TKE.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMNOFUXO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106416", "AVEXAM-78067"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "After alignment of the stable platform of the Inertial Navigation System, the output data from the INS computer to the platform is:",
-      "options": [
-        {
-          "id": "AEXHWAAZTR",
-          "text": "rate corrections to the gyros.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKM2CBYOMU",
-          "text": "accelerations from the accelerometers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFH0LBOKDP",
-          "text": "latitude and longitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOKU9X7HL8",
-          "text": "attitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGJUYMOH",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-220423"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The position error of a stand alone inertial system:",
-      "options": [
-        {
-          "id": "AGHQ6LVMU2",
-          "text": "increases along the time.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP2ZGID2O3",
-          "text": "increases up to 2 NM due to the drift error of the gyroscopes, then stabilises.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8IVOFBSTP",
-          "text": "remains constant.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVBQNYCWMM",
-          "text": "is sinusoidal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXWNFHIK",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221371"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inner loop stability function is:",
-      "options": [
-        {
-          "id": "APKJI5SGUO",
-          "text": "closed by the autopilot at the servomotor/controller",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9MZW9L31N",
-          "text": "closed by the autopilot at the control column",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A23B6UF6YQ",
-          "text": "closed by the pilot at the servomotor/control",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APU6CEFOHJ",
-          "text": "closed by the pilot at the control column",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYVVNWDZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-29991"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The interception of a localizer beam by the autopilot takes place:",
-      "options": [
-        {
-          "id": "AJZYWDDQQP",
-          "text": "at a constant heading.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7RPYRJNAH",
-          "text": "according to an interception versus radio deviation law.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AELXIKCH2U",
-          "text": "at a constant magnetic course.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A60BQ35TB5",
-          "text": "according to an interception versus range and angular.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFQWZHTE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222707"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "FD commands can be displayed through the...",
-      "options": [
-        {
-          "id": "A0D9INR193",
-          "text": "vertical bar and the horizontal bar on the ADI.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAPNL38H39",
-          "text": "heading bug and the course deviation indicator on the HSI.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACKIGFQ0YG",
-          "text": "V-shaped bars and the collective cue on the HSI.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0GN1QHJNP",
-          "text": "localiser pointer and the glideslope pointer on the ADI.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUPBFQVN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222688", "BGS-222267"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the CDU of an FMS, the message \"Insufficient Fuel\" is displayed if...",
-      "options": [
-        {
-          "id": "AXL60H9ADL",
-          "text": "the calculated estimated fuel at the destination airport is less than the fuel reserve value entered.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APL0LPNWAW",
-          "text": "the refuelling process on the ground is stopped before the required amount of fuel is on board.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARMXY6XKQ2",
-          "text": "the fuel quantity falls to 25 % of the total capacity of the fuel tanks.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY5OF3VCT1",
-          "text": "too little fuel is on board for diversion when the flight crew initiates a go-around procedure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZGLXJHP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224101", "AVEXAM-36241", "BGS-620490"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Control and Display Unit (CDU) on an FMS is:",
-      "options": [
-        {
-          "id": "A60B0S909O",
-          "text": "used by the crew to input data into FMC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3OWWDTJ1R",
-          "text": "the system used to update the navigation database.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9Z91138B7",
-          "text": "used on ground only to monitor the maintenance procedure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP8QRCLHYO",
-          "text": "the Autopilot control panel.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDMUOAUZ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-124598",
-      "ATPLQ-222614",
-      "AVEXAM-55437",
-      "BGS-996477"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The IRS is a self-contained system because",
-      "options": [
-        {
-          "id": "AX6S9YE6K3",
-          "text": "it operates independently of navigational aids outside the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ7X4LL4QB",
-          "text": "the calculation of the position does not require any software.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL8XF64WLT",
-          "text": "the system generates a warning in case of a failure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A523CFD869",
-          "text": "it operates off its own power supply",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLLOHSBW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129555", "BGS-221311"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When does the message 'INSUFFICIENT FUEL' appear on the FMS MCDU?",
-      "options": [
-        {
-          "id": "AQTTZWWZUJ",
-          "text": "When insufficient fuel remains to reach the diversion after a go-around",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AM4GXUKJ42",
-          "text": "When less than 25% remains",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A67NB02KID",
-          "text": "When the ground refueller stops refuelling too soon",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE6MR72OGS",
-          "text": "When insufficient fuel has been inputted into the FMS to reach destination",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIRNVTAR",
-    "relatedQuestions": ["QKIQMUVO"],
-    "externalIds": [
-      "ATPLGS-127564",
-      "ATPLQ-221687",
-      "BGS-221405",
-      "BGS-222099"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The display of the FMS CDU (Control Display Unit) shows",
-      "options": [
-        {
-          "id": "AIYZWIS4AT",
-          "text": "a title, a number of selectable lines, and a scratchpad.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABYM7W1KF8",
-          "text": "a combined weather radar, collision avoidance, and terrain indicator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2VWZ3SM5X",
-          "text": "an integrated DME and Horizontal Situation Indicator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVT7ETMDKB",
-          "text": "an alphabetical performance and navigation database.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKIQMUVO",
-    "relatedQuestions": ["QIRNVTAR"],
-    "externalIds": ["ATPLGS-127564", "BGS-221405"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The display of the FMS CDU (Control Display Unit) shows",
-      "options": [
-        {
-          "id": "AQIUGWZX1S",
-          "text": "a title, a number of selectable lines, and a scratchpad.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AG8J4VTX3F",
-          "text": "a combined weather radar, collision avoidance, and terrain indicator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZR4IRQC5I",
-          "text": "an integrated DME and Horizontal Situation Indicator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD6YVVP9WG",
-          "text": "an alphabetical performance and navigation database",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPAPYBCV",
-    "relatedQuestions": ["QZNQEFOF"],
-    "externalIds": ["ATPLGS-127795", "ATPLQ-227604", "AVEXAM-25215"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "IRS is a self-contained system because",
-      "options": [
-        {
-          "id": "AIIM2EY94W",
-          "text": "the system calculates the position of the aircraft without reference to externally generated (man-made) signals.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVKA8ETM7K",
-          "text": "the system has a battery back-up which guarantees the well-functioning of the system in case of power-failure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACC73KQWCK",
-          "text": "the system has the ability to calculate the aircraft’s radio position without any reference to either man &amp;made or natural information",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1UWYJ11ZF",
-          "text": "the system has the ability to calculate the aircraft’s position with an accuracy comparable to the GPS&amp; position",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZNQEFOF",
-    "relatedQuestions": ["QPAPYBCV"],
-    "externalIds": ["ATPLGS-127795", "ATPLQ-227604", "AVEXAM-25215"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "IRS is a self-contained system because",
-      "options": [
-        {
-          "id": "A5EXRQD3LS",
-          "text": "the system calculates the position of the aircraft without reference to externally generated (man-made) signals.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI6JKV6047",
-          "text": "the system has a battery back-up which guarantees the well-functioning of the system in case of power-failure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU076BYZYS",
-          "text": "the system has the ability to calculate the aircraft’s radio position without any reference to either man-made or natural information",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A840GS7SFR",
-          "text": "the system has the ability to calculate the aircraft’s position with an accuracy comparable to the GPS position",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQJWZQIT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221245", "BGS-222109"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A new data base should be downloaded to the Flight Management System (FMS) on a cycle of every:",
-      "options": [
-        {
-          "id": "ASZ6483CM2",
-          "text": "28 days.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMLNRR2LO3",
-          "text": "14 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2A36KRQ0E",
-          "text": "90 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE3DIX4DK2",
-          "text": "30 days.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRGNWRNB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221961", "BGS-221643"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The pilot receives instructions from ATC to alter the route during a scheduled flight. What action is required for the IRS?",
-      "options": [
-        {
-          "id": "APRLADU74L",
-          "text": "Enter the new waypoints into the MCDU of the FMS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ62FECARQ",
-          "text": "The pilot will need to revert to manual navigation. The aircraft must be stationary to update waypoints in the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJRZU8L3FJ",
-          "text": "Modern aircraft have GPS, so the pilot does not need to update waypoints in the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A42UIONGGW",
-          "text": "Enter the new waypoints into the control unit of each IRS, ensuring the system in use is updated first.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZPVYTSM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224482", "AVEXAM-43953", "BGS-220752", "BGS-221372"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When EGPWS terrain is displayed, if the computed aircraft position becomes less accurate:",
-      "options": [
-        {
-          "id": "ASK4U18KTV",
-          "text": "the terrain display will diverge from the real terrain environment around the aircraft position.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFSZ7LX6KC",
-          "text": "the EGPWS will perform a correction of position thus the terrain display accuracy won`t be degraded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0ODM86WN4",
-          "text": "the EGPWS has its own position sensors thus the terrain display accuracy won`t be degraded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALUXDWJ5FD",
-          "text": "it has no consequence on the terrain display.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHJAAMOK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221910", "ATPLQ-225496", "AVEXAM-54629"],
-    "annexes": ["0064f5f2451bccd7edc7c5c674169130"],
-    "learningObjectives": ["022.05.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 022-05.\nWhich mode is selected on the following Navigation Display (EHSI)?",
-      "options": [
-        {
-          "id": "AXXDF7G3SZ",
-          "text": "Expanded VOR mode.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7R4UJDYAW",
-          "text": "Expanded ADF mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJQSHDYLAN",
-          "text": "Full VOR mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APRI8WRUMN",
-          "text": "Plan mode.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJZAUTES",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-38260"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which data will usually not be provided on the EADI while at FL190?",
-      "options": [
-        {
-          "id": "AGN3EL2H06",
-          "text": "Radio height",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A17MKG7IP5",
-          "text": "Flight director crossbars",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZJI0WH8BH",
-          "text": "Automatic flight modes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG2EP4ZO3E",
-          "text": "Pitch attitude",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNMVUJTI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-95493", "BGS-221078"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In accordance with (ICAO) Annex 6 part I, the flight data recorder is to be located in the aircraft :",
-      "options": [
-        {
-          "id": "AYT6D4V6QH",
-          "text": "As far to the rear as practicable",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A12ZW2OME8",
-          "text": "As near to the landing gear as practicable",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AANMOIIOY2",
-          "text": "As far forward as practicable",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF7788V8M8",
-          "text": "At the right or left wing tip",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYUJIKXL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129511", "AVEXAM-19538"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The sensors of an INS measure:",
-      "options": [
-        {
-          "id": "ADM2Z0N63X",
-          "text": "Acceleration",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFNLXGEHAB",
-          "text": "Precession",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ430K0E1Y",
-          "text": "The horizontal component of the earth's rotation",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMOUP2FN04",
-          "text": "Velocity",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVRRZSOU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226891"],
-    "annexes": [],
-    "learningObjectives": ["022.05.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What are the systems which provide input data into the FMS?\n1. AFCS \n 2. IRS \n 3. ADC \n 4. ATS",
-      "options": [
-        {
-          "id": "APCKT2UH5S",
-          "text": "2 and 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6E4463IHW",
-          "text": "1 and 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APPE1S83EC",
-          "text": "1 and 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS2YU5B4Z9",
-          "text": "2 and 4.",
+          "id": "OF2UDQYNI",
+          "text": "the pitch and roll axis.",
           "correct": false,
           "why": ""
         }

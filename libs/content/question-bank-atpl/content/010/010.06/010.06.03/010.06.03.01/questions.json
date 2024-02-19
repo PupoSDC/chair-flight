@@ -1,36 +1,122 @@
 [
   {
-    "id": "QMUSTAVP",
+    "id": "QSODOSSK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104036"],
+    "externalIds": ["ATPLQ-103565", "AVEXAM-21917"],
     "annexes": [],
     "learningObjectives": ["010.06.03.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During an omnidirectional departure, what height are you required to climb to before turning onto the desired track?",
+      "question": "According to ICAO 8168, regarding omnidirectional departures, what should you expect?",
       "options": [
         {
-          "id": "AJVFRRHT81",
-          "text": "120 m (394 ft).",
+          "id": "O9C1KXOKX",
+          "text": "Sectors to be avoided with no ATC service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXJDBOYTM",
+          "text": "Sectors to be departed with no ATC service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVS7L81GC",
+          "text": "Sectors to be flown with no navigation aids.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSL2N2JGF",
+          "text": "Sectors to be avoided with no navigation aids.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNJBMVWO",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-105728",
+      "AVEXAM-74244",
+      "BGS-101406",
+      "ATPLGS-627799"
+    ],
+    "annexes": [],
+    "learningObjectives": ["010.06.03.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "According to ICAO Doc 8168, In cases where NO track guidance is provided, a convenient and flexible method of ensuring obstacle clearance is to use the ... method.",
+      "options": [
+        {
+          "id": "OBVOALDHO",
+          "text": "Instrument departure",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFLWYCVLO",
+          "text": "Omnidirectional",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AWQHAK5NZ3",
-          "text": "1 000 ft.",
+          "id": "ODG2OEOMM",
+          "text": "Unidirectional",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2K3SQ11V9",
-          "text": "Transition altitude.",
+          "id": "OL7N0QWVX",
+          "text": "Multidirectional",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJHLMUIL",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-101754",
+      "ATPLGS-118935",
+      "AVEXAM-67687",
+      "BGS-100683"
+    ],
+    "annexes": [],
+    "learningObjectives": ["010.06.03.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Omnidirectional departures normally allow departures in any direction. If any restrictions exist, the restricted sectors are described by means of...",
+      "options": [
+        {
+          "id": "OA9YI3X5V",
+          "text": "latitude and longitude of the relevant points.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWL0TINNJA",
-          "text": "150 m.",
+          "id": "OMNAHGSOF",
+          "text": "bearings and distance.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2I73AQKF",
+          "text": "flying speed and time to reach the restriction.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVNUAQZTA",
+          "text": "GPS coordinates.",
           "correct": false,
           "why": ""
         }
@@ -46,295 +132,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In general, the main factor that determines the design of an instrument departure procedure is..",
+      "question": "In general, the main factor that determines the design of an instrument departure procedure is...",
       "options": [
         {
-          "id": "A70WXIPIUI",
-          "text": "the terrain surrounding the aerodrome.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0F1I54QCG",
-          "text": "the expected experience level of the operating flight deck crew.",
+          "id": "OD2PO3KIO",
+          "text": "the availability of navigation aids.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AH5J468M8U",
+          "id": "OW5Y4P9YT",
           "text": "the aircraft performance.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS7I9ZQH95",
-          "text": "the availability of navigation aids.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNJBMVWO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-105728", "BGS-101406"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Doc 8168, In cases where NO track guidance is provided, a convenient and flexible method of ensuring obstacle clearance is to use the ... method.",
-      "options": [
-        {
-          "id": "A86R7H33OE",
-          "text": "Omnidirectional",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANZYTEPATS",
-          "text": "Unidirectional",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ8KP3R8W4",
-          "text": "Multidirectional",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACX6QR978Y",
-          "text": "Instrument departure",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIZHYNWR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-103565", "AVEXAM-21917", "AVEXAM-55477"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO 8168, regarding omnidirectional departures, what should you expect?",
-      "options": [
-        {
-          "id": "AG3XXC9XBB",
-          "text": "Sectors to be avoided with no navigation aids.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKRPE7NCRW",
-          "text": "Sectors to be flown with no navigation aids.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACY2L8ZSZN",
-          "text": "Sectors to be avoided with no ATC service.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI7DY6GOI1",
-          "text": "Sectors to be departed with no ATC service.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMXKCAGG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621777", "AVEXAM-82995"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The main factor that dictates in general the design of an instrument departure procedure is:",
-      "options": [
-        {
-          "id": "A9M4T3C8BQ",
+          "id": "OJOQBRQSB",
           "text": "the terrain surrounding the aerodrome.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATRWKI1E55",
-          "text": "airspace restrictions applicable and in force.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A08XBIW8H7",
-          "text": "ATC availability and requirements.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARM4T09W5Y",
-          "text": "availability of navigation aids.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSODOSSK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-103565", "AVEXAM-55477"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For omnidirectional departures you can normally depart in any direction, but when there is a restriction it will be given in:",
-      "options": [
-        {
-          "id": "ALQQ71N5M1",
-          "text": "Sectors to be avoided with no navigation aids.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8XNIW9SJ8",
-          "text": "Sectors to be avoided with no ATC service.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP9IKH932R",
-          "text": "Sectors to be departed with no navigation aids.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASYZ3O7SMZ",
-          "text": "Sectors to be departed with no ATC service.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJHLMUIL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-118935", "ATPLQ-101754", "BGS-100683"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Omnidirectional departures normally allow departures in any direction. If any restrictions exist, the restricted sectors are described by means of...",
-      "options": [
-        {
-          "id": "AEZPQ76VS2",
-          "text": "bearings and distance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV2WKUMX9P",
-          "text": "flying speed and time to reach the restriction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKHWOK22GS",
-          "text": "GPS coordinates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8FNXKEG6O",
-          "text": "latitude and longitude of the relevant points.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWTTRQVX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-21917"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO **8168**, for omnidirectional departures, what could be expected?",
-      "options": [
-        {
-          "id": "A5FJCVFWTH",
-          "text": "10°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASRWXXBX7V",
-          "text": "20°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANY5506LHK",
-          "text": "15°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATZL6NUIZ4",
-          "text": "25°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWVZDZYC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-21978"],
-    "annexes": [],
-    "learningObjectives": ["010.06.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which obstacle clearance method is used for a departure where no track guidance is provided?",
-      "options": [
-        {
-          "id": "A1ODXV1LDR",
-          "text": "The omnidirectional departure is most suitable in such situations.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALMJCBVBE0",
-          "text": "A visual departure, shortly followed by radar contact with the ground ATC unit.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADM8Y21I9K",
-          "text": "The standard SID.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABDCYSS4X0",
-          "text": "The LVO departure.",
+          "id": "OI77ALRFX",
+          "text": "the expected experience level of the operating flight deck crew.",
           "correct": false,
           "why": ""
         }

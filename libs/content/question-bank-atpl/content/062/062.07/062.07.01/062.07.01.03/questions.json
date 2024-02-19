@@ -1,36 +1,41 @@
 [
   {
-    "id": "QAVVFMAD",
+    "id": "QZZROPKQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-621066", "BGS-621374"],
+    "externalIds": [
+      "ATPLQ-628955",
+      "ATPLGS-628318",
+      "BGS-621274",
+      "AVEXAM-21873"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.07.01.03.02"],
+    "learningObjectives": ["062.07.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Within the PBN concept, which of the following statements is correct?",
+      "question": "In relation to PBN operational approvals in accordance with the European Regulations on Air Operations, which of the following statements is correct?",
       "options": [
         {
-          "id": "AERFEGNHJW",
-          "text": "In the approach phases of flight, PBN accommodates both linear and angular laterally guided operations.",
+          "id": "OOL12XLO2",
+          "text": "The PBN specifications that require operational approval are MCTOM (Maximum Certified Take-Off Mass)-dependent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKPXUWEJG",
+          "text": "The PBN specifications that require operational approval are operator-dependent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH22P9GJF",
+          "text": "Only certain PBN specifications require an operational approval.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMIAGLB28E",
-          "text": "For oceanic/remote, en-route and terminal phases of flight, PBN is limited to operations with angular laterally guided operations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXSDC2E66U",
-          "text": "In the approach phases of flight, PBN is limited to operations with guidance to fly the ILS procedure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHJQIRMRH2",
-          "text": "For oceanic/remote, en-route and terminal phases of flight, PBN accommodates both linear and angular laterally guided operations.",
+          "id": "OBKPOSY7T",
+          "text": "All PBN specifications require an operational approval.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +43,80 @@
     }
   },
   {
-    "id": "QFGOSHUW",
+    "id": "QAVVFMAD",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-624933", "BGS-621211"],
+    "externalIds": ["ATPLQ-621066", "BGS-621374", "AVEXAM-76538"],
     "annexes": [],
     "learningObjectives": ["062.07.01.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You do a briefing for an approach on an airfield which uses PBN operations. Which kind of specification do you encounter in the STAR?",
+      "question": "Which of the following statements is correct with regards to the scope of the PBN concept?",
       "options": [
         {
-          "id": "A01YANMXBM",
-          "text": "RNAV 1",
+          "id": "O8B0OAKNP",
+          "text": "For oceanic/remote, en-route and terminal phases of flight, PBN accommodates both linear and angular laterally guided operations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OW58PYAKQ",
+          "text": "In the approach phases of flight, PBN is limited to operations with guidance to fly the ILS procedure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD1GIKEKN",
+          "text": "For oceanic/remote, en-route and terminal phases of flight, PBN is limited to operations with angular laterally guided operations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4DBWISTU",
+          "text": "In the approach phases of flight, PBN accommodates both linear and angular laterally guided operations.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSDFXXLG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627379",
+      "AVEXAM-38407",
+      "ATPLGS-629606",
+      "BGS-621272"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.07.01.03.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which term refers to the difference between the aircraft's estimated position and actual position in the context of PBN?",
+      "options": [
+        {
+          "id": "OG5G8IVN9",
+          "text": "Flight Technical Error (FTE)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1MYT9ALK",
+          "text": "Navigation System Error (NSE)",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A72IZ3ELWN",
-          "text": "RNAV 5",
+          "id": "OIOQBNZ8F",
+          "text": "Estimated Position Error (EPE)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD3544UTP7",
-          "text": "RNP AR APCH",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKKK3QEE3M",
-          "text": "RNAV 10",
+          "id": "OHMXY44ZU",
+          "text": "Path Definition Error (PDE)",
           "correct": false,
           "why": ""
         }
@@ -78,35 +126,40 @@
   {
     "id": "QJYQGLAO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-620918", "BGS-620836"],
+    "externalIds": [
+      "ATPLQ-623932",
+      "ATPLGS-620918",
+      "BGS-620836",
+      "AVEXAM-35366"
+    ],
     "annexes": [],
     "learningObjectives": ["062.07.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following terms refers to a fixed radius path for en-route sections using Performance Based Navigation (PBN)?",
+      "question": "Concerning Performance Based Navigation (PBN), which terms refers to fixed radius path for en-route sections?",
       "options": [
         {
-          "id": "AHSLFH0WQP",
-          "text": "FRT leg type",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXZZNUOM7B",
-          "text": "RF leg type",
+          "id": "OKNOHJUDD",
+          "text": "RF leg type.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7EHHTJ0U8",
+          "id": "OT37FF3XR",
+          "text": "FRT leg type.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O06W11WYG",
           "text": "ABC leg type",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A61K78OM2L",
-          "text": "TMA leg type",
+          "id": "O7NESFIUB",
+          "text": "TMA leg type.",
           "correct": false,
           "why": ""
         }
@@ -114,113 +167,42 @@
     }
   },
   {
-    "id": "QDVSUSFS",
+    "id": "QFGOSHUW",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-78394"],
-    "annexes": [],
-    "learningObjectives": ["062.07.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following are PBN requirements when flying within the North Atlantic High Level Airspace<b> (</b>NAT HLA)?",
-      "options": [
-        {
-          "id": "ABKWA45U25",
-          "text": "RNAV 10, RNP 10, RNP 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGOMB53LVA",
-          "text": "RNP 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYS21XCI9K",
-          "text": "RNAV 10, RNP 10",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE3VTAEPPQ",
-          "text": "RNP 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSDFXXLG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-627379"],
+    "externalIds": [
+      "ATPLQ-624933",
+      "AVEXAM-6627",
+      "BGS-621211",
+      "AVEXAM-53033"
+    ],
     "annexes": [],
     "learningObjectives": ["062.07.01.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which term refers to the difference between the aircraft's estimated position and actual position in the context of PBN?",
+      "question": "You do a briefing for an approach on an airfield which uses PBN operations. Which kind of specification do you encounter in the STAR?",
       "options": [
         {
-          "id": "AMYEM1S0I2",
-          "text": "Navigation System Error (NSE)",
+          "id": "OTKPYQYDC",
+          "text": "RNAV 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7H1GTZOQ",
+          "text": "RNP AR APCH",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTY5QFOZJ",
+          "text": "RNAV 1",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AKZ4AET3TL",
-          "text": "Estimated Position Error (EPE)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACATTDD1E6",
-          "text": "Path Definition Error (PDE)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADZO89T09X",
-          "text": "Flight Technical Error (FTE)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZZROPKQ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-621274"],
-    "annexes": [],
-    "learningObjectives": ["062.07.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements, in relation to PBN operational approvals in accordance with the European Regulations on Air Operations, is correct?",
-      "options": [
-        {
-          "id": "A501NJ3X0N",
-          "text": "Only certain PBN specifications require an operational approval.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALFH3FKP6T",
-          "text": "The PBN specifications that require operational approval are MCTOM (Maximum Certified Take-Off Mass)-dependent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMFAMATDLN",
-          "text": "The PBN specifications that require operational approval are operator-dependent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALWE831B5O",
-          "text": "All PBN specifications require an operational approval.",
+          "id": "OIJIMLAHF",
+          "text": "RNAV 10",
           "correct": false,
           "why": ""
         }

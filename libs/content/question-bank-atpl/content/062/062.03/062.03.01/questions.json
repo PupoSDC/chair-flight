@@ -1,36 +1,90 @@
 [
   {
-    "id": "QHIMOGER",
+    "id": "QHXUDOWC",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124537", "BGS-620361"],
+    "externalIds": [
+      "ATPLQ-626021",
+      "BGS-620347",
+      "ATPLGS-621443",
+      "AVEXAM-19397",
+      "ATPLGS-621475",
+      "AVEXAM-7409",
+      "BGS-620401"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.03.01.01.01"],
+    "learningObjectives": ["062.03.01.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following is a complete list of airborne weather radar antenna stabilisation axes?",
+      "question": "What equipment works on the interrogator/transponder principle?",
       "options": [
         {
-          "id": "AJV6K1V82L",
-          "text": "roll and pitch",
+          "id": "OEUM52X8V",
+          "text": "Airborne Weather Radar (AWR)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTSIZFYHL",
+          "text": "Secondary Surveillance Radar (SSR)",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AXKYMFQFXC",
-          "text": "roll, pitch and yaw",
+          "id": "OSLUKRW39",
+          "text": "Global Positioning System (GPS)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADLMNAS5M9",
-          "text": "pitch and yaw",
+          "id": "OOYF6JQSE",
+          "text": "Aerodrome Surface Movement Radar",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTEDH7Z9G",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622074",
+      "BGS-620347",
+      "ATPLGS-621443",
+      "AVEXAM-19397",
+      "ATPLGS-621475",
+      "AVEXAM-7409",
+      "BGS-620401"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.03.01.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following equipments uses primary radar principles?",
+      "options": [
+        {
+          "id": "ODHC2CRAW",
+          "text": "Airborne weather radar (AWR)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHVRIDZ40",
+          "text": "Global Positioning System (GPS)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AO512M68ID",
-          "text": "roll and yaw",
+          "id": "OZKWUC2KB",
+          "text": "Distance Measuring Equipment (DME)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHDG0IL5A",
+          "text": "Secondary Surveillance Radar (SSR)",
           "correct": false,
           "why": ""
         }
@@ -40,35 +94,41 @@
   {
     "id": "QDFRELTH",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-92730"],
+    "externalIds": [
+      "ATPLQ-629853",
+      "BGS-621317",
+      "AVEXAM-92730",
+      "ATPLGS-629731",
+      "BGS-621394"
+    ],
     "annexes": [],
     "learningObjectives": ["062.03.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A pilot wishes to cross-check the position of the aircraft using the airborne weather radar (AWR). This can be achieved by:",
+      "question": "How might you go about cross-checking your aircraft's position using the Airborne Weather Radar (AWR)?",
       "options": [
         {
-          "id": "A7O765RGOS",
-          "text": "Setting the mapping mode to obtain magnetic bearing from the aircraft to suitable echoes on the display.",
+          "id": "OFEJOZUYY",
+          "text": "By looking for a suitable point on the VFR map and comparing it with the dead reckoning position, using the heading and distance on the radar screen.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONFTGEYER",
+          "text": "By using the mapping mode to obtain a magnetic bearing from the aircraft to suitable echoes on the display.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHQ5WM7JB",
+          "text": "By selecting a suitable echo from the display, obtaining the relative bearing and distance, and converting it into a true bearing to plot on the chart.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1A42CG81X",
-          "text": "Comparing the DR position with a suitable point on the VFR chart using the heading and distance from the AWR display.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A84KYIPW54",
-          "text": "A suitable echo on the display to obtain relative bearing and distance and then plot a true bearing on the chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0PM0AOHQ0",
-          "text": "Echoes from a suitable point, such as a build-up area to obtain a fix.",
+          "id": "OZLVNYQTY",
+          "text": "By selecting a suitable point such as a large built-up area to obtain a fix.",
           "correct": false,
           "why": ""
         }
@@ -76,151 +136,42 @@
     }
   },
   {
-    "id": "QVSTWYAH",
+    "id": "QHIMOGER",
     "relatedQuestions": [],
-    "externalIds": ["BGS-620333"],
+    "externalIds": [
+      "ATPLQ-622418",
+      "BGS-620361",
+      "AVEXAM-10530",
+      "ATPLGS-124537"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.03.01.01.03"],
+    "learningObjectives": ["062.03.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A radar facility transmitting at a Pulse Recurrence Frequency (PRF) of 1200 pulses/second will have a maximum unambiguous range of approximately...",
+      "question": "Which of the following is a complete list of airborne weather radar antenna stabilisation axes?",
       "options": [
         {
-          "id": "ASQHE9TJZ1",
-          "text": "67 NM.",
+          "id": "OC3UVH33K",
+          "text": "roll and yaw",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O59UMKIZC",
+          "text": "roll and pitch",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASMBUBUQ9A",
-          "text": "27 NM.",
+          "id": "OYIYRE016",
+          "text": "roll, pitch and yaw",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMOJD9H7KA",
-          "text": "270 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A811A9ZYGF",
-          "text": "135 NM.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHXUDOWC",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-620347"],
-    "annexes": [],
-    "learningObjectives": ["062.03.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following equipment uses primary radar principles?",
-      "options": [
-        {
-          "id": "APKEKAWMMK",
-          "text": "Airborne weather radar (AWR)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI25DMDWD5",
-          "text": "Secondary Surveillance Radar (SSR)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APA3CBYNKY",
-          "text": "Global Positioning System (GPS)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APT99IYRYB",
-          "text": "Distance Measuring Equipment (DME)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEXLKPYG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-59843"],
-    "annexes": [],
-    "learningObjectives": ["062.03.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A typical primary pulse radar uses:",
-      "options": [
-        {
-          "id": "AX773LFYTJ",
-          "text": "a directional aerial for both transmission and reception.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY7YHWOW2I",
-          "text": "an omni-directional aerial for transmission and directional aerial for reception.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADYAGQSG7A",
-          "text": "a directional aerial for transmission and an omni-directional aerial for reception.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWTSQFH95F",
-          "text": "a directional aerial for transmission and another one for reception.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QODJILHA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621427", "BGS-620340"],
-    "annexes": [],
-    "learningObjectives": ["062.03.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ground radar transmitting at a PRF of 1200 pulses/second will have a maximum unambiguous range of approximately...",
-      "options": [
-        {
-          "id": "A010Z0VAVY",
-          "text": "67 NM.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKY6HJ9CBK",
-          "text": "270 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A13J8PDQ5K",
-          "text": "135 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE368EHUXS",
-          "text": "27 NM.",
+          "id": "O6NLW4YEJ",
+          "text": "pitch and yaw",
           "correct": false,
           "why": ""
         }

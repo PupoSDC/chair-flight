@@ -1,340 +1,41 @@
 [
   {
-    "id": "QCQUIPLM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129506", "AVEXAM-16144"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Waypoints can be entered in an INS memory in different formats. In which of the following formats can waypoints be entered into all INSs?",
-      "options": [
-        {
-          "id": "ADPJH5GZTI",
-          "text": "Geographic coordinates.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXOFS1YY0N",
-          "text": "By waypoints name.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY69MS2BTI",
-          "text": "Hexadecimal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALKC3Q070P",
-          "text": "Bearing and distance.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZNOKTMT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-21607"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight crew just filled out the pre-flight FMS data with their route info. They realize afterward that the Navigation Database is out of date. What will happen if they decide to update the database to the current cycle?",
-      "options": [
-        {
-          "id": "A2MX2SYMZQ",
-          "text": "The data they entered will be deleted.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3I7P5W6VB",
-          "text": "The inserted route info will still be there.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZH2DTR3YO",
-          "text": "Some of the route legs will be missing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIQOB7AMJV",
-          "text": "The FMS restarts and all previous info will be deleted.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNXVQVVH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-42862"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How can a pilot enter a waypoint into his FMS RNAV system?",
-      "options": [
-        {
-          "id": "A7CTD4MLSC",
-          "text": "Control Display Unit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1PZ65BZGV",
-          "text": "Navigation Display.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7GF335IQ7",
-          "text": "Symbol Generator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO2H4I5NC7",
-          "text": "Course Deviation Indicator.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWYLVXLU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106626"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When can a pilot change the data in the FMS Navigation database?",
-      "options": [
-        {
-          "id": "ADQZQ857BK",
-          "text": "He cannot. For the pilot the FMS data base is read-only.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO7WBULK8G",
-          "text": "When deemed necessary.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A56YQUWUEO",
-          "text": "When there is a fault.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADZ5MYGIFF",
-          "text": "Every 28 days.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPFHMUOP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-92525"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During the cockpit preparation, the pilot has started to load the route into the FMS and, because of a distraction, he accidentally changed the current navigation database with a newer version before its active date. Is this an issue and why?",
-      "options": [
-        {
-          "id": "AWFIVFUZ5O",
-          "text": "It can be an issue because certain waypoints and airways might have changed their coordinates, and the aircraft will follow an incorrect routing.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP9G13F4P4",
-          "text": "It is not a problem if the captain’s FMS still has the old (correct) database.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC0CYFM46J",
-          "text": "It is a problem and you will probably get a warning.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APD5555VE0",
-          "text": "It is an issue because the pilot will need to load the flight plan again.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGYHEUFI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106628", "AVEXAM-41745"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The period of validity of an Navigation FMS database is",
-      "options": [
-        {
-          "id": "AINV2AGQ9Y",
-          "text": "28 days.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW8CBCXHF0",
-          "text": "one week.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASVRIT2DZC",
-          "text": "56 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH3ICDKAOW",
-          "text": "varies depending on the area of operational cover.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDFXBOEJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-69075"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the period of validity of the navigational database for FMC units?",
-      "options": [
-        {
-          "id": "AW7ZL2Q3X2",
-          "text": "28 days.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVVLDQWWKN",
-          "text": "7 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK428PYT7B",
-          "text": "21 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTVGRQCTQ",
-          "text": "14 days.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZJKOKQA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120695", "ATPLQ-221184", "AVEXAM-22055"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The duration of a FMS navigation database loaded before expiring is",
-      "options": [
-        {
-          "id": "AWQ8UO98R9",
-          "text": "28 days.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3F9HZ1NO8",
-          "text": "3 months.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1GFVLKJUE",
-          "text": "15 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH8BPP0NKA",
-          "text": "2 months.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QHAJRDHU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106621", "ATPLQ-222384", "AVEXAM-25814"],
+    "externalIds": [
+      "ATPLQ-222384",
+      "BGS-221881",
+      "AVEXAM-25814",
+      "ATPLGS-106621"
+    ],
     "annexes": [],
     "learningObjectives": ["022.11.02.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the validity period of the permanent data base of aeronautical information stored in the FMS is",
+      "question": "The validity period of the navigation data base of a FMS is:",
       "options": [
         {
-          "id": "AS0KEJX0GZ",
+          "id": "O1FPRCWWZ",
           "text": "28 days.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASH0YB8CA7",
-          "text": "One calendar month.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAGEYVPIS2",
-          "text": "14 days.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU2CN2LBX1",
+          "id": "OG0LIITJ2",
           "text": "3 calendar months.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYAMYTH4A",
+          "text": "one calendar month.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQT1MWRYU",
+          "text": "14 days.",
           "correct": false,
           "why": ""
         }
@@ -344,112 +45,36 @@
   {
     "id": "QXXGGEVE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227319", "AVEXAM-39305"],
+    "externalIds": ["ATPLQ-227319", "AVEXAM-39305", "BGS-221902"],
     "annexes": [],
     "learningObjectives": ["022.11.02.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the main threat arising after the flight crew accidentally changes the active navigation database with the standby database?",
+      "question": "The flight crew accidently changes the active navigation database with the standby database. What is the main threat that may arise from such action?",
       "options": [
         {
-          "id": "A00O2H8IZ0",
-          "text": "The aircraft may continue flying along an incorrect flight plan route leading to a loss of separation with other traffic.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB21K2SK4P",
+          "id": "OK39GCA88",
           "text": "The only threat is the computed airport approaches, however, the flight crew can refer to the paper approach charts always present onboard the aircraft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZPS33MZU9",
+          "id": "OIKDRHQJD",
+          "text": "Nothing, it is impossible to change the navigation database in flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OECQCWNDD",
           "text": "The main threat is related to the loss of magnetic variation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACH79NWGR8",
-          "text": "Nothing, it is impossible to change the navigation database in flight.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEFIAOJM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229473", "AVEXAM-94559"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot conducting a single-pilot operation flight is doing some paperwork/administrative tasks and he is not looking at the cockpit instruments panel. How will he be informed if an immediate crew awareness but no immediate action is required?",
-      "options": [
-        {
-          "id": "A4V4LXVLLB",
-          "text": "Amber or yellow warning and aural warning.",
+          "id": "OOPNP1CEG",
+          "text": "The aircraft may continue flying along an incorrect flight plan route leading to a loss of separation with other traffic.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY954LWPB7",
-          "text": "Aural warning only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJB7RSCTWP",
-          "text": "An indication.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASVJV5FN5A",
-          "text": "Red visual warning only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMPOZAOW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120893", "ATPLQ-221479", "BGS-222156"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A Navigation Display",
-      "options": [
-        {
-          "id": "AHHK9R5HPB",
-          "text": "provides a mode-selectable flight progress display.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE1DG7698G",
-          "text": "provides all the parameters required for flight path control.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB4Y64I1SD",
-          "text": "is an electronic instrument showing published navigation charts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ3EOALIUT",
-          "text": "is a full-colour aircraft systems navigation display.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -458,35 +83,73 @@
   {
     "id": "QIBPRPQO",
     "relatedQuestions": [],
-    "externalIds": ["BGS-221708"],
+    "externalIds": ["ATPLQ-226509", "AVEXAM-19876", "BGS-221708"],
     "annexes": [],
     "learningObjectives": ["022.11.02.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which one of the following would be a likely purpose for user-defined waypoints based on latitude/longitude coordinates?",
+      "question": "What would be a likely purpose for user-defined waypoints based on latitude/longitude coordinates?",
       "options": [
         {
-          "id": "AAY7BWGD2G",
+          "id": "OGEVXLIWD",
           "text": "Planning routes that are far from fixed waypoints or navigation aids.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A8VUJXPFDQ",
+          "id": "OBXHO2QCR",
           "text": "Planning routes that cross the borders between two or more different States.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQ3J1HHL3P",
-          "text": "Inserting, into the navigation system, new radio navigation aids for which the information in the AIP still needs to be updated.",
+          "id": "OUHVWTJJU",
+          "text": "Marking points of interest that lie close to the planned flight in order to inform the passengers on board.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKB4YYSG6E",
-          "text": "Marking points of interest that lie close to the planned flight in order to inform the passengers on board.",
+          "id": "OHBBCQ3MX",
+          "text": "Inserting, into the navigation system, new radio navigation aids for which the information in the AIP still needs to be updated.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZJKOKQA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221184", "AVEXAM-22055", "ATPLGS-120695"],
+    "annexes": [],
+    "learningObjectives": ["022.11.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The duration of a FMS navigation database loaded before expiring is:",
+      "options": [
+        {
+          "id": "O7JQOV8OE",
+          "text": "28 days.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1O27RYKG",
+          "text": "2 months.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYTXBLEOT",
+          "text": "15 days.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONOYUS7CA",
+          "text": "3 months.",
           "correct": false,
           "why": ""
         }

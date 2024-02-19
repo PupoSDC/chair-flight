@@ -1,36 +1,36 @@
 [
   {
-    "id": "QKMKQHWU",
+    "id": "QQWPNKJI",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104231"],
+    "externalIds": ["ATPLQ-101932", "BGS-100254", "BGS-100256"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For VFR flights, continuous two-way radio communication with ATS is required in the following airspace classes",
+      "question": "What is the class of airspace where IFR and VFR flights are permitted, all participating IFR flights receive an air traffic advisory service and all flights receive flight information service if requested?",
       "options": [
         {
-          "id": "AHHYWTYR8K",
-          "text": "B, C, D.",
+          "id": "OW8LN32IT",
+          "text": "Class E.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG4DVENHT",
+          "text": "Class G.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE9HLUKPJ",
+          "text": "Class F.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AXUFB3FSEZ",
-          "text": "B, C, D, E.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATY6QVHMBL",
-          "text": "B, C, D, E, F, G.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWN9KMYVZ8",
-          "text": "B, C, D, E, F.",
+          "id": "OSW9XKKDJ",
+          "text": "Class D.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +38,37 @@
     }
   },
   {
-    "id": "QVREJYDJ",
+    "id": "QBWAEGKE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104249"],
+    "externalIds": ["ATPLQ-109791", "AVEXAM-55537", "ATPLGS-628693"],
     "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
+    "learningObjectives": ["010.07.01.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An ATS airspace where IFR and VFR flights are permitted, all participating IFR flights receive an air traffic advisory service and all flights receive flight information service if requested, is classified",
+      "question": "Several aircraft are all enterring the same region of controlled airspace at the same level, what can the controller do to provide separation?",
       "options": [
         {
-          "id": "AECYXQDJF4",
-          "text": "airspace F.",
+          "id": "OZQHD5YVL",
+          "text": "Ask aircraft to fly different ATS routes.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOFCQRZ3F4",
-          "text": "airspace G.",
+          "id": "OAWDNXRQH",
+          "text": "Ask aircraft to fly strategical lateral offset.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGUR5FYTOG",
-          "text": "airspace E.",
+          "id": "ODIWKEMIO",
+          "text": "Give aircraft VOR radials diverging by 5°.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADES01U52E",
-          "text": "airspace D.",
+          "id": "OWOURNAPD",
+          "text": "Track aircraft via an NDB on tracks which diverge by 10°.",
           "correct": false,
           "why": ""
         }
@@ -76,313 +76,37 @@
     }
   },
   {
-    "id": "QWJAVECS",
+    "id": "QBKIYSSC",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104228", "ATPLGS-104264", "ATPLQ-109331"],
+    "externalIds": ["ATPLQ-108384", "AVEXAM-17491"],
     "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
+    "learningObjectives": ["010.07.01.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An ATS airspace where IFR and VFR flights are permitted and all flights are subject to air traffic control service; IFR flights are separated from other IFR flights and receive traffic information in respect of VFR flights; VFR flights receive traffic information in respect of all other flights, is classified as",
+      "question": "ATC have access to both PSR and SSR (Primary and Secondary Surveillance Radar). In what different ways can aircraft be identified?\n\n1) By squawking a specific code.   \n 2) By squawk IDENT.   \n 3) By squawk an Emergency Code.   \n 4) Asking the aircraft to change its heading by 30 degrees.   \n 5) Asking the aircraft to climb or descend.",
       "options": [
         {
-          "id": "AQBVPSU82T",
-          "text": "airspace D.",
+          "id": "OQQ43SXA5",
+          "text": "1, 2 and 4",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALP9ET1MTU",
-          "text": "airspace A.",
+          "id": "ONSWMQPAC",
+          "text": "2, 3 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7BA4I2EQJ",
-          "text": "airspace E.",
+          "id": "O7NR5YXSA",
+          "text": "1, 2 and 5",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A21S1FOYGH",
-          "text": "airspace B.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFOGHQPI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-102633"],
-    "annexes": ["33d52b04ff66e08e76d2ad4c1dfeb11f"],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure. \n How does a signalman (marshaller) request the pilot to proceed to next signalman or as directed by tower/ground control?",
-      "options": [
-        {
-          "id": "A0MFCWR6M1",
-          "text": "Pointing both arms upward; moving and extending arms outward to sides of body and pointing with wands to direction signalman or taxi area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2G1NX5ATH",
-          "text": "Pointing one arm upward; moving and extending it outward to sides of body and pointing with the wand to direction signalman or taxi area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB9YHFH3ZM",
-          "text": "Moving and extending arms outward to sides of body and pointing with wands to direction signalman or taxi area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW4RFO7CTJ",
-          "text": "Pointing both arms upward; moving arms inward and pointing with wands to direction signalman or taxi area.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPGLOUDZ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-118861",
-      "ATPLQ-102597",
-      "AVEXAM-61371",
-      "BGS-100130"
-    ],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft taxiing on the manoeuvring area of an aerodrome shall give way to..",
-      "options": [
-        {
-          "id": "ADP7C78YQ5",
-          "text": "aircraft taking off or about to take off.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7XKY78S7J",
-          "text": "larger aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASUL0ZKOM1",
-          "text": "converging aircraft from the left.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK8G0C3OGN",
-          "text": "all vehicles on the taxiways except the “follow me” vehicle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXZYZWST",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-108643", "AVEXAM-71151"],
-    "annexes": ["e9026f3414f7845c5e7997322a1215fd"],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure. \n What does the signal from the signalman (marshaller) situated at the aircraft wing tip, which is shown in the attached figure, mean?",
-      "options": [
-        {
-          "id": "A4ZE5GQGWW",
-          "text": "The aircraft movement on/off a parking position would be unobstructed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJJQER14K8",
-          "text": "The aircraft movement on/off a parking position would be obstructed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHEIJA7ME8",
-          "text": "Chokes inserted.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7W8Z70UJR",
-          "text": "Caution, birds on the apron.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYKQCDOU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104215"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ATS airspaces where IFR and VFR flights are permitted, all flights are subject to air traffic control service and are separated from each other are classified as",
-      "options": [
-        {
-          "id": "A24O3UN4R8",
-          "text": "airspace B.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGJU7SNCJ2",
-          "text": "airspace E.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A286SKBUI9",
-          "text": "airspace D.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGQMHE7IDL",
-          "text": "airspace A.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPGDILSE",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-119052",
-      "ATPLGS-119054",
-      "ATPLQ-108221",
-      "ATPLQ-109693"
-    ],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In airspace Class C below 10000 ft (3050 m) AMSL, the speed for flights under IFR is",
-      "options": [
-        {
-          "id": "AAWXCNTFFU",
-          "text": "not restricted.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD1O6ZO31N",
-          "text": "250 kt TAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYOBV2842I",
-          "text": "240 kt IAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFRHTDDROJ",
-          "text": "250 kt IAS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJOMITPN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-969"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "EASA AIR OPS Part-SPA (Annex V) refers to...",
-      "options": [
-        {
-          "id": "AUG5V5LN17",
-          "text": "specific approvals.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APNE5BOAN9",
-          "text": "synthetic pilot approvals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8T66RDSFT",
-          "text": "seaplane approvals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO1GOGZBI5",
-          "text": "authority requirements for air operations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAJZVEJX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-102567", "AVEXAM-80776", "AVEXAM-93840"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following lists all subparts of EASA AIR OPS Part-NCO (Annex VII)?",
-      "options": [
-        {
-          "id": "ALFA8FV5L9",
-          "text": "General requirements, Operational procedures, Aircraft performance and operating limitations, Instruments, data and equipment, Specific requirements",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3BDLTLJH7",
-          "text": "General requirements, Aircraft performance and operating limitations, Instruments, data and equipment, Specific requirements",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU4R81BQ0U",
-          "text": "General requirements, Operational procedures, Instruments, data and equipment, Specific requirements",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQY95YKDA1",
-          "text": "General requirements, Operational procedures, Aircraft performance and operating limitations, Instruments, data and equipment",
+          "id": "OUUINJKQ9",
+          "text": "1, 3 and 5",
           "correct": false,
           "why": ""
         }
@@ -393,18 +117,19 @@
     "id": "QWTHLNND",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-104215",
-      "ATPLGS-104228",
-      "ATPLGS-104249",
-      "ATPLGS-104264",
-      "ATPLGS-127421",
       "ATPLQ-109331",
-      "AVEXAM-1388",
-      "AVEXAM-35421",
-      "AVEXAM-41808",
-      "AVEXAM-69134",
+      "ATPLGS-104228",
+      "AVEXAM-91708",
       "AVEXAM-80777",
-      "AVEXAM-91708"
+      "ATPLGS-127421",
+      "AVEXAM-69134",
+      "AVEXAM-35421",
+      "AVEXAM-1388",
+      "AVEXAM-43203",
+      "ATPLGS-104215",
+      "AVEXAM-41808",
+      "ATPLGS-104249",
+      "ATPLGS-104264"
     ],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.01"],
@@ -414,26 +139,26 @@
       "question": "An ATS airspace where IFR and VFR flights are permitted, all flights are subject to air traffic control service and are separated from each other is classified as..",
       "options": [
         {
-          "id": "A3X6325R9N",
+          "id": "OSTG6KEWI",
           "text": "Airspace B",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVTKVEBAOM",
-          "text": "Airspace C",
+          "id": "OEHGZUX25",
+          "text": "Airspace E",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKO1F0GDB7",
+          "id": "OVEDN74CD",
           "text": "Airspace D",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATLF91RX44",
-          "text": "Airspace E",
+          "id": "OR9RXGJRW",
+          "text": "Airspace C",
           "correct": false,
           "why": ""
         }
@@ -441,493 +166,46 @@
     }
   },
   {
-    "id": "QNSNFNDB",
-    "relatedQuestions": ["QMRLPSXU"],
-    "externalIds": ["ATPLGS-119267", "ATPLQ-103743", "BGS-100973"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Annex 14, an Apron Management Service is defined as a service provided to regulate the activities and the movement of aircraft and vehicles on",
-      "options": [
-        {
-          "id": "ALSAZX346K",
-          "text": "an apron.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3V8DTBLAC",
-          "text": "a runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A53OY26QTT",
-          "text": "a taxiway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A84LUJX53E",
-          "text": "an aerodrome.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMRLPSXU",
-    "relatedQuestions": ["QNSNFNDB"],
-    "externalIds": ["ATPLGS-119267", "ATPLQ-103743", "BGS-100973"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Annex 14, an Apron Management Service is defined as a service provided to regulate the activities and the movement of aircraft and vehicles on...",
-      "options": [
-        {
-          "id": "A5QYDJS5E0",
-          "text": "an apron.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APO0GGSI57",
-          "text": "an aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO12S5PMFT",
-          "text": "a taxiway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACTBQGKZSY",
-          "text": "a runway.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGUJKSXA",
+    "id": "QPGDILSE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-101811", "BGS-101386"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Annex 11, to whom may the task of providing services on the apron be assigned?",
-      "options": [
-        {
-          "id": "A8MWKXHAZO",
-          "text": "An aerodrome control tower.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMP8NSV63I",
-          "text": "An area control centre.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW0OO5XL0P",
-          "text": "A flight information unit.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUVT6PZMJ5",
-          "text": "An approach control unit.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFSRDPSC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107750", "AVEXAM-27608"],
+    "externalIds": [
+      "ATPLQ-108221",
+      "ATPLGS-119052",
+      "AVEXAM-7018",
+      "ATPLGS-119054",
+      "AVEXAM-74955",
+      "AVEXAM-40326",
+      "AVEXAM-8782",
+      "ATPLGS-621997"
+    ],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which provisions on a VFR flight in Class E airspace are correct?",
+      "question": "In airspace Class B below 10000 ft (3050 m) AMSL, the maximum speed for flights under VFR and IFR is?",
       "options": [
         {
-          "id": "AFRJ19YMGV",
-          "text": "Service provided: Traffic Information as far as practical; ATC Clearance: not required.",
+          "id": "OHBZUN05H",
+          "text": "260 kt IAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMXJRCGQL",
+          "text": "not restricted.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOXRL6VQN7",
-          "text": "Service provided: Air Traffic Control Service; ATC Clearance: not required.",
+          "id": "OW7NHFAKG",
+          "text": "250 kt IAS.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFW0M8318D",
-          "text": "Service provided: Traffic Information as far as practical; ATC Clearance: required.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALI7PBVIZU",
-          "text": "Service provided: Air Traffic Control Service; ATC Clearance: required.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPDKJBEA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621900", "AVEXAM-57351"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Air Traffic Control Service is provided for the purpose of:",
-      "options": [
-        {
-          "id": "APGF3FW6XE",
-          "text": "preventing collisions between aircraft, between aircraft and obstacles on the manoeuvring area and expediting and maintaining an orderly flow of air traffic.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATDW78JVHU",
-          "text": "avoiding collisions between all aircraft and maintaining an orderly flow of air traffic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A30TLEPOKD",
-          "text": "applying separation between aircraft and expediting and maintaining an orderly flow of air traffic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6F0TH5MEH",
-          "text": "preventing collisions between controlled air traffic and expediting and maintaining an orderly flow of air traffic.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCZMWKQZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119085", "ATPLQ-105386"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When does a clearance issued by an ATC unit include the prevention of collision with terrain?",
-      "options": [
-        {
-          "id": "A5WX7IEVGJ",
-          "text": "When radar vectoring an IFR flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A46HW7ELEL",
-          "text": "When radar vectoring a VFR flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ2MV0VEU9",
-          "text": "When an aircraft is within a control zone.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY70WCZVNW",
-          "text": "When an aircraft is entering a holding area.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIAVNEYG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-103443", "AVEXAM-57679"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Clearances will be issued by an ATC unit for the purpose of:",
-      "options": [
-        {
-          "id": "AEGVYVNDHS",
-          "text": "achieving separation between controlled flights.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXZ8NDZZEP",
-          "text": "providing Flight Information Service.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD3UGPWEXL",
-          "text": "providing Advisory Services.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK7JEMQ1VP",
-          "text": "providing Alerting Services.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBJEHPBM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119040", "ATPLQ-102294"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following is one of the objectives of Air Traffic Services?",
-      "options": [
-        {
-          "id": "AHBVFKFND2",
-          "text": "To prevent collisions between aircraft on the manoeuvring area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO02B85M0H",
-          "text": "To provide separation between aircraft operating in airspace Class F.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8TOCMF5VJ",
-          "text": "To prevent collisions between aircraft on the movement area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM3YQJV6SY",
-          "text": "To separate VFR traffic from other VFR traffic in airspace Class C.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWRUSSLG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107151", "BGS-101436"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot is flying IFR in the upper airspace. The airspace is classified as Class C. Which type of air traffic service will the pilot receive?",
-      "options": [
-        {
-          "id": "AT2CM46WYO",
-          "text": "Air traffic control.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASR4G2XH20",
-          "text": "Traffic flow management.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXH73YZJKH",
-          "text": "Air traffic advisory service.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0H74SRW93",
-          "text": "Aeronautical information service.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNTKBLNS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-105704"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the objective of the Aerodrome Control Service?\n(1) To prevent collisions between aircraft.(2) To expedite and maintain an orderly flow of air traffic.(3) To prevent collisions between aircraft on the manoeuvring area and obstructions in that area.",
-      "options": [
-        {
-          "id": "AK3TGJX1SS",
-          "text": "(1), (2), (3)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4FO1O9901",
-          "text": "(2), (3) only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5IKLILSXK",
-          "text": "(1) only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1Q79Y84NG",
-          "text": "(1), (2) only",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIUORFKX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-84018"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Approach Control Service is an Air Traffic Control Service:",
-      "options": [
-        {
-          "id": "AKVMVNGJG4",
-          "text": "provided for the arriving and departing controlled flights.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHPPUQ8KZN",
-          "text": "provided for IFR traffic within a Control Zone.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APFJ52T9GV",
-          "text": "for IFR flights arriving and departing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHIMQ7OR0I",
-          "text": "provided for IFR and VFR flights within a Control Zone.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGZSBTMA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107231", "AVEXAM-56594"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which condition is requested so that an aerodrome may be considered controlled?",
-      "options": [
-        {
-          "id": "AM63N3A20I",
-          "text": "The aerodrome shall be provided with a Control Tower.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY44WAIUW4",
-          "text": "The aerodrome shall be located within a Control Zone.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHA1SWFSG6",
-          "text": "The aerodrome shall be located within a controlled airspace.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANDL8F5LSR",
-          "text": "The aerodrome shall be located within a Control Zone (CTR) and provided with a Control Tower.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEJCFTNI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-62191"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Special VFR flights may be authorized to operate locally within a control zone when the ground visibility is not less than 1 500 meters, even when the aircraft is not equipped with a functioning radio receiver within class:",
-      "options": [
-        {
-          "id": "ANHSCX1HUD",
-          "text": "E airspace",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABV9HEJVB4",
-          "text": "C, D and E airspaces",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADB9DM45GQ",
-          "text": "D and E airspaces",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXGNDEEYS8",
-          "text": "D airspace",
+          "id": "OFQVL5DO8",
+          "text": "250 kt TAS.",
           "correct": false,
           "why": ""
         }
@@ -937,310 +215,154 @@
   {
     "id": "QASCHVQV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-106722"],
+    "externalIds": ["ATPLQ-106722", "ATPLGS-628335"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Regarding the clearance message:\n“Speedjet 645 cleared to Athens via the LISTOA2A Departure, squawk 5125, FL340, wind 050/40”\nWhich of the following parameters is not required to be given in a clearance message?",
+      "question": "Regarding the clearance message:\n\n“Speedjet 645 cleared to Athens via the LISTOA2A Departure, squawk 5125, FL340, wind 050/40”\n\nWhich of the following parameters is not required to be given in a clearance message?",
       "options": [
         {
-          "id": "ANWBT1K7TS",
-          "text": "Wind",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAUIUE04OL",
-          "text": "Squawk",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARS2OGZ45X",
+          "id": "OCZEHHYL9",
           "text": "Flight level",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AM1U3U5CYV",
+          "id": "OOJ8AESTJ",
+          "text": "Squawk",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHKWUHML2",
           "text": "Destination",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTVJURQY",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-33070"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The units providing Air Traffic Services are:",
-      "options": [
+        },
         {
-          "id": "ATCJQIVDOM",
-          "text": "Area Control Centre - Flight Information Centre - Approach Control Office - Aerodrome Control Tower and Air Traffic Services reporting office.",
+          "id": "OIUMNEFQZ",
+          "text": "Wind",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AMUG5PTYTM",
-          "text": "Area Control Centre - Approach Control Office and Aerodrome Control Tower.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV6W0A3HEG",
-          "text": "Area Control Centre - Advisory Centre - Flight Information Centre - Approach Control Office and Tower.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADG14HWX7P",
-          "text": "Area Control Centre - Flight Information Region - Approach Control Office and Tower.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QPNDCGYA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622003"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For an aerodrome to be 'controlled' it must",
-      "options": [
-        {
-          "id": "AUME5P61UD",
-          "text": "Have a Tower",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AABR4PDYTE",
-          "text": "Be located within a Control Zone",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1S9HFWOKT",
-          "text": "Be located in a Control Area",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKMGX4F6JD",
-          "text": "Be located in a Control Zone and have a control tower",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQWPNKJI",
+    "id": "QWRUSSLG",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLQ-101950",
-      "ATPLQ-109193",
-      "AVEXAM-70850",
-      "AVEXAM-80777",
-      "BGS-100252",
-      "BGS-100254",
-      "BGS-100256",
-      "BGS-100981"
+      "ATPLQ-107151",
+      "ATPLGS-628608",
+      "BGS-101436",
+      "AVEXAM-43133"
     ],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the class of airspace where IFR and VFR flights are permitted, an air traffic control service is available for all flights, separation is provided between IFR flights and other IFR and VFR flights, and also between VFR and IFR flights, and traffic information is provided for other VFR flights?",
+      "question": "A pilot is flying IFR in the upper airspace and the airspace is classified as Class C. What type of air traffic service will the pilot receive?",
       "options": [
         {
-          "id": "A22D3RF8C0",
-          "text": "Class C.",
+          "id": "OSKOODMLI",
+          "text": "Aeronautical information service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWLLAWNES",
+          "text": "Air traffic advisory service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWNKABYPU",
+          "text": "Traffic flow management.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCYRSFUOO",
+          "text": "Air traffic control.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR4DT2Q86Z",
-          "text": "Class B.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK2YPLHUYU",
-          "text": "Class D.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW9D8XGAWW",
-          "text": "Class E.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QMAKRPCX",
+    "id": "QGUJKSXA",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111916", "ATPLQ-104228"],
+    "externalIds": ["ATPLQ-101811", "AVEXAM-42538", "BGS-101386"],
     "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
+    "learningObjectives": ["010.07.01.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Classification of Airspace  Name the Class of Airspace with the following conditions and services  1IFR and VFR permitted  2Air traffic control service none  3Separation not provided  4Information Flight Information Service if requested.",
+      "question": "According to ICAO Annex 11, to whom may the task of providing services on the apron be assigned?",
       "options": [
         {
-          "id": "ATVOYOYETX",
-          "text": "Class G",
+          "id": "OOL1RRVNP",
+          "text": "An approach control unit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKZOUL90R",
+          "text": "A flight information unit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJVWXIAUJ",
+          "text": "An area control centre.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH4ZBLSVN",
+          "text": "An aerodrome control tower.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQOGNRIO1L",
-          "text": "Class C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFCB0GUG91",
-          "text": "Class E",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7L2M1RPOT",
-          "text": "Class F",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QOMJDMYC",
+    "id": "QGZSBTMA",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-108653", "AVEXAM-44982"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Air Traffic Service unit means:",
-      "options": [
-        {
-          "id": "A6O4BO9N23",
-          "text": "Air Traffic Control units, Flight Information Centres or Air Services reporting offices.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT1F0G4VG7",
-          "text": "Flight Information Centres and Air Services reporting offices.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A48G2V4K9V",
-          "text": "Air Traffic Control units and Flight Information Centres.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGO3XUWMV6",
-          "text": "Air Traffic Control units and Air Services reporting offices.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBKIYSSC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-108384"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ATC have access to both PSR and SSR (Primary and Secondary Surveillance Radar). In what different ways can aircraft be identified?1) By squawking a specific code. \n 2) By squawk IDENT. \n 3) By squawk an Emergency Code. \n 4) Asking the aircraft to change its heading by 30 degrees. \n 5) Asking the aircraft to climb or descend.",
-      "options": [
-        {
-          "id": "AHPQTL6QWU",
-          "text": "1, 2 and 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO6M4LBOH5",
-          "text": "1, 2 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHTYYVEVSD",
-          "text": "1, 3 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASY40OVA0K",
-          "text": "2, 3 and 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLUJSKBK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-103300", "AVEXAM-23651"],
+    "externalIds": ["ATPLQ-107231", "ATPLGS-622012", "AVEXAM-56594"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to ICAO Annex 11, why must the movement of all persons, vehicles and towed aircraft on the maneuvering area be controlled by the aerodrome control tower?",
+      "question": "Which condition is requested so that an aerodrome may be considered controlled?",
       "options": [
         {
-          "id": "ACXMGWR70J",
-          "text": "To avoid hazard to them, or to aircrafts landing, taxiing, or taking off.",
+          "id": "OLGNMTJHK",
+          "text": "The aerodrome shall be located within a Control Zone.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKRWCJQMQ",
+          "text": "The aerodrome shall be located within a Control Zone (CTR) and provided with a Control Tower.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF8QNFRJY",
+          "text": "The aerodrome shall be provided with a Control Tower.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AYT9WK5G3Y",
-          "text": "To avoid damage to aerodrome navigation aids.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYJEWDOCPN",
-          "text": "To provide safe vehicular access to aprons.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZXTFCHESL",
-          "text": "To maintain an orderly flow of air and ground traffic on the movement area.",
+          "id": "OKKIWCOLJ",
+          "text": "The aerodrome shall be located within a controlled airspace.",
           "correct": false,
           "why": ""
         }
@@ -1250,225 +372,73 @@
   {
     "id": "QQETRYLS",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-102922"],
+    "externalIds": ["ATPLQ-102922", "AVEXAM-54658"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Air Traffic Control Services – The purpose of the issue of Clearances by an Air Traffic Control Unit is to..",
+      "question": "Air Traffic Control Services – The purpose of the issue of Clearances by an Air Traffic Control Unit is to...",
       "options": [
         {
-          "id": "ABW8YS4FAW",
-          "text": "prevent collision between aircraft under its control and expediting and maintaining an orderly flow of traffic.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9T4D1047I",
+          "id": "OHB6POSTA",
           "text": "direct traffic to the shortest routing and expediting and maintaining an orderly flow of traffic.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACI09220CE",
+          "id": "ODPJIRUOT",
+          "text": "provide advisory service and expediting and maintaining an orderly flow of traffic.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK9XKVPLY",
           "text": "provide Flight Information Service and expediting and maintaining an orderly flow of traffic.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9W4CP2VIL",
-          "text": "provide advisory service and expediting and maintaining an orderly flow of traffic.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCCXPDTM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622323"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In which airspace is ATCS provided to VFR traffic",
-      "options": [
-        {
-          "id": "AC2DNLRK2L",
-          "text": "B,C,D",
+          "id": "OA0LMN9YM",
+          "text": "prevent collision between aircraft under its control and expediting and maintaining an orderly flow of traffic.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "A80R5CFC7N",
-          "text": "A,B,C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJAPOE4TX5",
-          "text": "D,E",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A32TZ3SVBZ",
-          "text": "C,D,E",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QTOYHKPD",
+    "id": "QCZMWKQZ",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-94736"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Name all classes where IFR are provided with Air Traffic Control Services...",
-      "options": [
-        {
-          "id": "AXWY1JEUL2",
-          "text": "A, B, C, D, E",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQA0BL6VJC",
-          "text": "A, B, C, D, E, F",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV4NML2L9R",
-          "text": "A, B, C, D, E, F, G",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS7LNTUQ96",
-          "text": "A, B, C, D, G",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPISXXXE",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-72443"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is required for an aerodrome to be controlled?",
-      "options": [
-        {
-          "id": "AM49RE4LDZ",
-          "text": "Air Traffic Control Services to aircraft flying in the vicinity of the aerodrome.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASTJMQHTT4",
-          "text": "Different radio frequencies for GROUND, APPROACH, and TOWER.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKOOTWFTJE",
-          "text": "A TMA / CTA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0AYHN94NO",
-          "text": "A CTR.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRYVSTDC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621884"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements regarding aerodrome control service is correct?\n   ",
-      "options": [
-        {
-          "id": "AP5G4N8RFF",
-          "text": "An aircraft entering the traffic circuit without permission of ATC, will be cleared to land if this is desirable ;",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY7DO0T1N4",
-          "text": "Suspension of VFR operations can not be initiated by the aerodrome controller;",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0RKJQZJDJ",
-          "text": "ATC permission is required for entering the apron with a vehicle",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANKH8LXIHH",
-          "text": "The aerodrome control service is a service provided for the purpose of preventing collisions between aircraft on the movement area;",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYAERMYG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-102559", "AVEXAM-70186", "BGS-100260"],
+    "externalIds": ["ATPLQ-105386", "AVEXAM-96359", "ATPLGS-119085"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Area Control Centres issue clearances for the purpose of:",
+      "question": "When does a clearance issued by an ATC unit include the prevention of collision with terrain?",
       "options": [
         {
-          "id": "A6BW4KHZAC",
-          "text": "Achieving separation between controlled flights",
+          "id": "OJ74DLNGE",
+          "text": "When an aircraft is within a control zone.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODGYSIOPZ",
+          "text": "When radar vectoring an IFR flight.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AGWUD9D31A",
-          "text": "Providing flight Information Service",
+          "id": "OCVYLKZBJ",
+          "text": "When radar vectoring a VFR flight.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A6HVKYCIAH",
-          "text": "Achieving separation between IFR flights",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A73VXTV2JU",
-          "text": "Providing advisory service",
+          "id": "OUELWSUB1",
+          "text": "When an aircraft is entering a holding area.",
           "correct": false,
           "why": ""
         }
@@ -1476,384 +446,37 @@
     }
   },
   {
-    "id": "QBWAEGKE",
+    "id": "QLUJSKBK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-109791"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Several aircraft are all enterring the same region of controlled airspace at the same level, what can the controller do to provide separation?",
-      "options": [
-        {
-          "id": "AJWMU83CKU",
-          "text": "Ask aircraft to fly different ATS routes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB7IKV6ASM",
-          "text": "Ask aircraft to fly strategical lateral offset.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYP4CYYHCW",
-          "text": "Give aircraft VOR radials diverging by 5°.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXDBVFEUVG",
-          "text": "Track aircraft via an NDB on tracks which diverge by 10°.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLPXVBGT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622329"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the purpose of an ATC Clearance?",
-      "options": [
-        {
-          "id": "A8CDPPNOHH",
-          "text": "Prevent collision, organize and expedite air traffic\nflow",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANNRNW4NWS",
-          "text": "Organize traffic only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOO1763PBZ",
-          "text": "Prevent collision only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALHDBUPGYC",
-          "text": "Prevent colliision &amp; Provide fuel efficient routing",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPRABRIK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-103443", "AVEXAM-57679"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An ATC unit will issue clearances for the purpose of",
-      "options": [
-        {
-          "id": "AKLD1K12V6",
-          "text": "achieving separation between controlled flights.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0ZSIVOWUJ",
-          "text": "providing advisory services.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1JMMKCDZ5",
-          "text": "providing alerting services.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABDDF7RXG6",
-          "text": "providing a Flight Information Service.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAOHBKTM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-108049", "BGS-101373"],
+    "externalIds": ["ATPLQ-103300", "BGS-101829", "AVEXAM-23651"],
     "annexes": [],
     "learningObjectives": ["010.07.01.04.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The \"Manoeuvring area\" is:",
+      "question": "According to ICAO Doc 4444, why must the movement of all persons, vehicles and towed aircrafts on the manoeuvring area be controlled by the aerodrome control tower?",
       "options": [
         {
-          "id": "AYI3RSM643",
-          "text": "That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, excluding aprons.",
+          "id": "OPVCDT09H",
+          "text": "To maintain an orderly flow of air and ground traffic on the movement area.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AB5YB2SGYO",
-          "text": "That part of the aerodrome designated for the manoeuvring of aircraft in front of the hangars only.",
+          "id": "OWQBIFOIQ",
+          "text": "To avoid damage to aerodrome navigation aids.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMVV7DD6TK",
-          "text": "That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, consisting of the movement area and the apron.",
+          "id": "OHLOXNCSO",
+          "text": "To provide safe vehicular access to aprons.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8GA5JKYWA",
-          "text": "That part of the aerodrome suitable for the safe and efficient manoeuvring of aircraft; to include aprons, taxiways and runways.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKQUNMPO",
-    "relatedQuestions": ["QFYAJSWW"],
-    "externalIds": ["ATPLGS-626450", "ATPLQ-109337", "AVEXAM-79521"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The apron is part of...",
-      "options": [
-        {
-          "id": "AQ5LLBG3DZ",
-          "text": "the movement area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AALRRHD4D9",
-          "text": "the manoeuvring area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEU37Q87YR",
-          "text": "the landside.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVL7HZLRPL",
-          "text": "the terminal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFYAJSWW",
-    "relatedQuestions": ["QKQUNMPO"],
-    "externalIds": ["ATPLGS-626450", "ATPLQ-109337", "AVEXAM-79521"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The apron is part of...",
-      "options": [
-        {
-          "id": "AXU59PY1KL",
-          "text": "the movement area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJO1G5Z1P9",
-          "text": "the airside.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZSN17J5LQ",
-          "text": "the maneuvering area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAUJJP0LTA",
-          "text": "the terminal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QELMIVIZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119167", "ATPLQ-106720"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Manoeuvring Areas and Movement Areas are parts of an aerodrome. – Which of the following options is correct?",
-      "options": [
-        {
-          "id": "AB7PVPJLMR",
-          "text": "Aprons are part of the Movement Area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A40CWNRPGV",
-          "text": "Movement Areas include the terminal building.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABUEFXFLP1",
-          "text": "Manoeuvring Areas include the hangars.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5KM4GZ0R2",
-          "text": "Aprons are part of the Manoeuvring Area.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPAHYRFG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627001", "ATPLQ-103776", "BGS-101008"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For the aeroplane for which the taxiway is intended, the taxiway designer assumes that on a taxiway curve the..",
-      "options": [
-        {
-          "id": "A4UVM8NTF1",
-          "text": "cockpit of the aeroplane will remain over the taxiway centre-line markings.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJN7PK2UW1",
-          "text": "pilot will oversteer and the cockpit will NOT follow the centre-line markings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4Q2QNED0A",
-          "text": "width of the taxiway is increased on the outer curve.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A22NQ8RLF9",
-          "text": "width of the taxiway is decreased on the inner curve.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYGLCFSR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-623173"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the objective of the Aerodrome Control Service?",
-      "options": [
-        {
-          "id": "ASOSXQR73Z",
-          "text": "All of the above.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZMPK6FWTN",
-          "text": "To expedite and maintain an orderly flow of air traffic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7MX5F1EOH",
-          "text": "To maintain separation between vehicles on the ground and aircraft on the apron",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A07ORG1UTB",
-          "text": "To prevent collisions between aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJGMJVVA",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-118744",
-      "ATPLQ-105413",
-      "AVEXAM-54968",
-      "BGS-100488"
-    ],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The movement area of an aerodrome, the adjacent terrain and buildings or portions thereof with controlled access is known as;",
-      "options": [
-        {
-          "id": "AAS6RBNHND",
-          "text": "airside",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARUGIM8Q8P",
-          "text": "the manoeuvring area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFA11RVXU3",
-          "text": "the terminal area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9XPZ1V9QA",
-          "text": "the security programme.",
+          "id": "OPOZR6PE0",
+          "text": "To assure, under the air traffic controllers responsibility, the safety of flight operations.",
           "correct": false,
           "why": ""
         }

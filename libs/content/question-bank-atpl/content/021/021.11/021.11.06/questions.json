@@ -1,36 +1,79 @@
 [
   {
-    "id": "QYFMQXCQ",
+    "id": "QATRRDLF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120268", "BGS-211024"],
-    "annexes": ["0ed5b1a7b2a208e3648b807d49c7b6e3"],
-    "learningObjectives": ["021.11.06.01.01"],
+    "externalIds": [
+      "ATPLQ-217038",
+      "BGS-212234",
+      "AVEXAM-98916",
+      "ATPLGS-120000"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.11.06.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "(refer to image)Given the system in the image with all tanks containing fuel, the APU can receive fuel from:",
+      "question": "Which of the following will start the APU from the flight deck / cockpit?",
       "options": [
         {
-          "id": "AOUIH06YOJ",
-          "text": "all tanks.",
+          "id": "OK0ECLO7H",
+          "text": "APU bleed switch",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFCGGUAHT",
+          "text": "APU generator switch",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OC3ETQQOI",
+          "text": "APU fuel-pump switch",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSWRZOZKM",
+          "text": "Dedicated start switch",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYKQNMXK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213967", "ATPLGS-120017", "AVEXAM-51028"],
+    "annexes": [],
+    "learningObjectives": ["021.11.06.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What will cause an APU to shut down automatically?",
+      "options": [
+        {
+          "id": "O1IYFXPX8",
+          "text": "The oil temperature being too low.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUT7AIZWA",
+          "text": "The exhaust gas temperature being too high.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "APQC882G1U",
-          "text": "the right main tank only.",
+          "id": "OU41UFENT",
+          "text": "A faulty bleed valve.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASGR3U9KGA",
-          "text": "the centre tank only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB3FI7HGWT",
-          "text": "the left main tank only.",
+          "id": "OMCQ09Z4T",
+          "text": "The oil pressure being too high.",
           "correct": false,
           "why": ""
         }
@@ -40,111 +83,73 @@
   {
     "id": "QAZZVPSD",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120001", "ATPLQ-218795"],
+    "externalIds": ["ATPLQ-218795", "AVEXAM-90681", "ATPLGS-120001"],
     "annexes": [],
     "learningObjectives": ["021.11.06.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An APU that is certified for use in flight must be able to",
+      "question": "An APU that is certified for use in flight must be able to..",
       "options": [
         {
-          "id": "ABCXFDAZW8",
-          "text": "start at high altitudes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUQ1CU1PHS",
-          "text": "shut down if the APU generator voltage becomes too high.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXJVS767NK",
+          "id": "OMSXQXHUS",
           "text": "shed its electrical loads in the air, if all engine generators are available.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A54N2LYSPN",
+          "id": "OHSEH5LFA",
+          "text": "shut down if the APU generator voltage becomes too high.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMQANAK65",
           "text": "shut down if APU bleed requirements become excessive.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDXEMNPX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-73756"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What would cause an APU to automatically shut-down?\n1) High oil pressure\n2) Low oil pressure\n3) High EGT\n4) Low APU speed\n5) Overspeed\n6) APU fire\n ",
-      "options": [
+        },
         {
-          "id": "ACA4JKNMET",
-          "text": "2), 3), 5), 6)",
+          "id": "OWWYOFFO4",
+          "text": "start at high altitudes and operate under load at even higher altitudes.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKYHTVCFXM",
-          "text": "2), 3). 4), 5), 6)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHUR86G87K",
-          "text": "2), 3), 4)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A472JNX1RT",
-          "text": "1), 2), 3), 4), 5), 6)",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QTJKDBZE",
+    "id": "QBOXKYAS",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-29010"],
+    "externalIds": ["ATPLQ-217195", "BGS-211907", "ATPLGS-119961"],
     "annexes": [],
-    "learningObjectives": ["021.11.06.01.01"],
+    "learningObjectives": ["021.11.06.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is used to start an APU?",
+      "question": "What information is provided by cockpit indications as regards starting and operating the APU?",
       "options": [
         {
-          "id": "A38UXSATB8",
-          "text": "Electricity from batteries.",
+          "id": "ONVDCQFEV",
+          "text": "Air inlet pressure",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9S0UYD93",
+          "text": "Bleed air temperature",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYKEFNNPO",
+          "text": "Fault status",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVIGNYEZ4L",
-          "text": "Hydraulic turbine electrical power.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVA0JFVCV2",
-          "text": "Pneumatic air from gas bottles.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABE6MM4EUR",
-          "text": "By a small piston engine/generator.",
+          "id": "ODJ3XSOE0",
+          "text": "Fuel flow",
           "correct": false,
           "why": ""
         }
@@ -154,7 +159,7 @@
   {
     "id": "QWIALRSB",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216914"],
+    "externalIds": ["ATPLQ-216914", "AVEXAM-97845"],
     "annexes": [],
     "learningObjectives": ["021.11.06.01.01"],
     "explanation": "",
@@ -163,292 +168,26 @@
       "question": "Which of the following can be used to start an APU?",
       "options": [
         {
-          "id": "AR1EJXSPBC",
-          "text": "Ground power from an external unit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZZKCY2XGY",
+          "id": "OC7PCXE6E",
           "text": "Pneumatic pressure from the ram air turbine.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AV4I088Z5K",
-          "text": "Hydraulic pressure from the ram air turbine.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A03GM8TNO0",
+          "id": "OQYDBWI2B",
           "text": "Pneumatic air from gas bottles.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYKQNMXK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120017", "ATPLQ-213967"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What will cause an APU to shut down automatically?",
-      "options": [
+        },
         {
-          "id": "A89Q8WNYXA",
-          "text": "The exhaust gas temperature being too high.",
+          "id": "OZRVAKGEH",
+          "text": "Ground power from an external unit.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0904PXD69",
-          "text": "The oil temperature being too low.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT7FVPOMZV",
-          "text": "The oil pressure being too high.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3YEF56NGL",
-          "text": "A faulty bleed valve.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QATRRDLF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120000", "ATPLQ-217038", "AVEXAM-98916"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following will start the APU from the flight deck / cockpit?",
-      "options": [
-        {
-          "id": "APY2VTFSSG",
-          "text": "Dedicated start switch",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZS0BWPHHW",
-          "text": "APU bleed switch",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALMLGBNCJQ",
-          "text": "APU fuel-pump switch",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHO37IXPRD",
-          "text": "APU generator switch",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWXCVJPI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14932"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When starting the APU, which instruments should be monitored?",
-      "options": [
-        {
-          "id": "A1BOVK0CYC",
-          "text": "Fault status",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUCTPOCGK1",
-          "text": "APU bleed air",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9DGLNAUX2",
-          "text": "N1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2HV2LY7GB",
-          "text": "APU fuel pumps",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQUXQSCB",
-    "relatedQuestions": ["QBOXKYAS"],
-    "externalIds": ["ATPLGS-119961", "ATPLQ-217195", "BGS-211907"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What information is provided by cockpit indications as regards starting and operating the APU?",
-      "options": [
-        {
-          "id": "A3BTI9T1L5",
-          "text": "Fault status",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADQT19FX7H",
-          "text": "Fuel flow",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6CC9TA5N1",
-          "text": "Air inlet pressure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIAJNXIQGA",
-          "text": "Bleed air temperature",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBOXKYAS",
-    "relatedQuestions": ["QQUXQSCB"],
-    "externalIds": ["ATPLGS-119961", "ATPLQ-217195", "BGS-211907"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What information is provided by cockpit indications as regards starting and operating the APU?",
-      "options": [
-        {
-          "id": "A8I8MJA2Z0",
-          "text": "Fault status.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABB0MOSFW9",
-          "text": "Bleed air temperature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY280N7ZSL",
-          "text": "Fuel flow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARUU8LPJS1",
-          "text": "Air inlet pressure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOOYHOFY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105846", "AVEXAM-38418"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In addition to fire detection/protection, most auxiliary power units (APUs) have automatic controls for starting, stopping and maintaining operation within safe limits. These controls provide correct sequencing of the starting cycle as well as protection against",
-      "options": [
-        {
-          "id": "AWR0N8ZBPH",
-          "text": "high turbine gas temperature (TGT), overspeed, loss of oil pressure and high oil temperature.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARFWDMQU7Y",
-          "text": "high TGT and loss of oil pressure only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFQKBVAUZU",
-          "text": "high TGT only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAAB1GHLJ9",
-          "text": "overspeed and high oil temperature only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJFOTEQB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-98916"],
-    "annexes": [],
-    "learningObjectives": ["021.11.06.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How do you start an APU (auxiliary power unit) from the flight deck?",
-      "options": [
-        {
-          "id": "AVORHQZ2KD",
-          "text": "By a dedicated starter button.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF289M5HRS",
-          "text": "By pulling the APU circuit breaker.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXAHY5FB97",
-          "text": "By the APU bleed air switch.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1WTEA3BOO",
-          "text": "By the APU generator switch.",
+          "id": "OVSWB3FVQ",
+          "text": "Hydraulic pressure from the ram air turbine.",
           "correct": false,
           "why": ""
         }

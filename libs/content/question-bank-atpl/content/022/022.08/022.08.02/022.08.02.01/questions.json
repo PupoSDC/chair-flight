@@ -1,42 +1,163 @@
 [
   {
-    "id": "QCDUODHM",
+    "id": "QFHMEKCU",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120622",
-      "ATPLQ-227013",
-      "AVEXAM-90588",
-      "BGS-220565"
+      "ATPLQ-224769",
+      "BGS-220562",
+      "ATPLGS-120689",
+      "AVEXAM-76339"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.08.02.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\nMH = magnetic heading of the aircraft   \nOmega = yawing rate of the aircraft\n\nThe yaw damper computer sends a motion order to the rudder if:",
+      "options": [
+        {
+          "id": "OHK8ZLLIC",
+          "text": "the derivative of MH with respect to time is not equal to zero.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLQNWSF7I",
+          "text": "the derivative of Omega with respect to time is equal to zero.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJTGX4PRR",
+          "text": "the derivative of Omega with respect to time is not equal to zero.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMCEPZD2A",
+          "text": "the derivative of MH with respect to time is equal to zero.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSXXAMTS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223770", "AVEXAM-12952", "BGS-221742"],
+    "annexes": [],
+    "learningObjectives": ["022.08.02.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the main purpose of dutch roll filter?",
+      "options": [
+        {
+          "id": "OCVVS5HHD",
+          "text": "To prevent yaw damper overreacting to dutch roll.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONYROU3RB",
+          "text": "To distinguish commanded turn inputs from yaw due to a disturbance or apparent Dutch roll.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O0T0ZONTH",
+          "text": "To sense the aeroplane’s motion about the normal or vertical axis.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVDEOKXMA",
+          "text": "To prevent yaw damper from reacting too quickly to dutch roll.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGPZHOZG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229140", "BGS-221940", "AVEXAM-85056"],
+    "annexes": [],
+    "learningObjectives": ["022.08.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft fitted with a yaw damper. The pilot deliberately manipulates the rudder pedals to induce a yaw. What stops the yaw damper from counteracting the deliberate command input?",
+      "options": [
+        {
+          "id": "OC44WKJH9",
+          "text": "A Hydraulic Actuator",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSTB4JH85",
+          "text": "A Dutch Roll Filter",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OFL1OHNQF",
+          "text": "A rate gyro",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPLKMJBAN",
+          "text": "Rudder pedal sensors",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYEABHWC",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-222890",
+      "ATPLGS-106576",
+      "AVEXAM-87517",
+      "AVEXAM-97644",
+      "ATPLGS-120333",
+      "BGS-220568"
     ],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The yaw damper affects",
+      "question": "The yaw damper system controls:",
       "options": [
         {
-          "id": "ACJUHYCQCH",
-          "text": "rudder only.",
+          "id": "OAADFGHF9",
+          "text": "the ailerons, with the angular rate about the yaw axis as the input signal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV8XBQX20",
+          "text": "the ailerons, with Mach Number as the input signal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG6ZVU4GX",
+          "text": "the rudder, with Mach Number as the input signal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPSHJY8NV",
+          "text": "the rudder, with the angular rate about the yaw axis as the input signal.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6RRMPUHFU",
-          "text": "ailerons only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF4DQPGW92",
-          "text": "ailerons and rudder.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A41NEPHMG5",
-          "text": "all control surfaces in a co-ordinated way.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -46,8 +167,8 @@
     "id": "QFNWFZIQ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120738",
       "ATPLQ-228682",
+      "ATPLGS-120738",
       "AVEXAM-49640",
       "BGS-220573"
     ],
@@ -59,189 +180,69 @@
       "question": "When the yaw damper system sends motion orders to the rudder:",
       "options": [
         {
-          "id": "AXS4TPDY57",
-          "text": "no feedback is provided on the rudder pedals.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV0MK30FDI",
+          "id": "O9WMO2OYP",
           "text": "a feedback is provided on the rudder pedals only.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFGM5U101Z",
-          "text": "a feedback is provided on the roll trim only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO2BDZWFZ4",
+          "id": "OTRAXG6FT",
           "text": "a feedback is provided on the rudder pedals and the roll trim.",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "OCRWFQGXA",
+          "text": "no feedback is provided on the rudder pedals.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OE00NA78S",
+          "text": "a feedback is provided on the roll trim only.",
+          "correct": false,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QYBMGNLG",
+    "id": "QQEIHNOL",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106571",
-      "ATPLGS-121100",
-      "ATPLQ-224905",
-      "AVEXAM-55347",
-      "BGS-220563"
+      "ATPLQ-228986",
+      "ATPLGS-628400",
+      "BGS-221519",
+      "AVEXAM-61377"
     ],
     "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
+    "learningObjectives": ["022.08.02.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In a yaw damper system, sensing of a disturbance in yaw is usually provided by",
+      "question": "The yaw damper detects and filters Dutch Roll. How?\n\n1\\. By the use of a horizontal axis rate gyro that measure angular rate.   \n 2\\. By the use of inputs from the IRS.   \n 3\\. By the use of a vertical axis rate gyro that measures angular rate.   \n 4\\. It will depend on the aircraft type, but both 1 and 2 can be correct.",
       "options": [
         {
-          "id": "A7YP7S5VCF",
-          "text": "a rate gyro or a set of accelerometers.",
+          "id": "O65CDGLUJ",
+          "text": "2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEPOGPLEX",
+          "text": "4",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZAC0TIEL8",
-          "text": "the measure of the roll rate.",
+          "id": "O7RR2GBN2",
+          "text": "3",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AM4W3N51G0",
-          "text": "the measure of the ailerons movements.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYQIQRYFBE",
-          "text": "the measure of the rudder movements.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUVZFXXT",
-    "relatedQuestions": ["QVKIUBSY"],
-    "externalIds": [
-      "ATPLGS-120690",
-      "ATPLQ-226525",
-      "AVEXAM-51820",
-      "BGS-220570"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper system sends a motion order to the rudder if the yawing rate of the aircraft:",
-      "options": [
-        {
-          "id": "AI194YZGAQ",
-          "text": "is not constant.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5MQ2J0QL7",
-          "text": "is &gt; 0 only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3MDVL0VPV",
-          "text": "is &gt; 1 only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5RUWP9YMQ",
-          "text": "is constant.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVKIUBSY",
-    "relatedQuestions": ["QUVZFXXT"],
-    "externalIds": ["ATPLGS-120690", "ATPLQ-226525", "BGS-220570"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper system sends a motion order to the rudder if the yawing rate of the aircraft:",
-      "options": [
-        {
-          "id": "AHIKMI3RED",
-          "text": "is not constant.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWYFTSSNHT",
-          "text": "is constant.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFSWJ4BF8O",
-          "text": "is 0 only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX03Y18P2D",
-          "text": "is 1 only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQISHEQC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224063", "AVEXAM-80465"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What device does a Yaw Damper require?",
-      "options": [
-        {
-          "id": "AG7Y7H3SC2",
-          "text": "rate gyro.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7HHNTADBL",
-          "text": "flight augmentation generator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZQUBDGHE2",
-          "text": "tied gyro.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB8J7ASDKY",
-          "text": "rudder sensor.",
+          "id": "OBFR9EQWN",
+          "text": "1",
           "correct": false,
           "why": ""
         }
@@ -252,10 +253,10 @@
     "id": "QFTMVZBN",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-127580",
       "ATPLQ-228399",
+      "BGS-220569",
       "AVEXAM-64552",
-      "BGS-220569"
+      "ATPLGS-127580"
     ],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
@@ -265,153 +266,108 @@
       "question": "The yaw damper system is operative:",
       "options": [
         {
-          "id": "AR5VRRYVHB",
-          "text": "during manual or automatic flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVN0KPQ1XU",
+          "id": "OBB1JLMO6",
           "text": "only if the flight director is engaged.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AV4EN17YXB",
+          "id": "OKMZZK6EM",
           "text": "only if the autopilot is engaged.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7KPKSM38Y",
+          "id": "OBRTOCB4E",
           "text": "only when flying manually.",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "OGDOO7LS9",
+          "text": "during manual or automatic flight.",
+          "correct": true,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QVPEHLJX",
+    "id": "QNHXGBGJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225944"],
+    "annexes": [],
+    "learningObjectives": ["022.08.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How does the yaw damper detect dutch roll?",
+      "options": [
+        {
+          "id": "OAF5CTF36",
+          "text": "Using a rate gyro that measures angular rate.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFTRGMJU0",
+          "text": "Using inputs from the IRS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQFOTSAJ3",
+          "text": "Using a gyro and inputs from the IRS, depending on the aircraft type.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOGRIBVJQ",
+          "text": "Using accelerometers and inputs from the IRS only, depending on the aircraft type.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXPOPRXI",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106576",
-      "ATPLGS-120333",
-      "ATPLQ-222890",
-      "AVEXAM-87517",
-      "AVEXAM-97644",
-      "BGS-220568"
+      "ATPLQ-229627",
+      "BGS-220572",
+      "ATPLGS-120456",
+      "ATPLGS-106574",
+      "AVEXAM-5319"
     ],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The yaw damper, which suppresses Dutch roll controls the",
+      "question": "When available, the yaw damper indicator supplies the pilot with information regarding the:",
       "options": [
         {
-          "id": "ADQVHNELPK",
-          "text": "rudder, with the angular rate about the vertical axis as the input signal.",
+          "id": "OPTJT9TGS",
+          "text": "rudder position",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQIMSE0SB",
+          "text": "yaw damper action only on the ground",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXQLMFSHM",
+          "text": "yaw damper action on the rudder",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AH33DMVNQA",
-          "text": "ailerons, with Mach number as the input signal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0LTSVQVUE",
-          "text": "rudder, with Mach number as the input signal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFMKZ9A161",
-          "text": "ailerons, with the angular rate about the vertical axis as the input signal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFHMEKCU",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120689",
-      "ATPLQ-224769",
-      "AVEXAM-76339",
-      "AVEXAM-80465",
-      "BGS-220562"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\nMH = magnetic heading of the aircraftOmega = yawing rate of the aircraft\nThe yaw damper computer sends a motion order to the rudder if:",
-      "options": [
-        {
-          "id": "AAU23VQUEY",
-          "text": "the derivative of Omega with respect to time is not equal to zero.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9YVQI01Z5",
-          "text": "the derivative of Omega with respect to time is equal to zero.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9N2MKN2TH",
-          "text": "the derivative of MH with respect to time is equal to zero.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU1CFQEI6T",
-          "text": "the derivative of MH with respect to time is not equal to zero.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTQIHRQR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224613", "AVEXAM-41418"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Yaw Damper filter is used...",
-      "options": [
-        {
-          "id": "AOQFT3FUMT",
-          "text": "to detect the roll rates that initiate Dutch roll.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1C3RO01TZ",
-          "text": "to amplify normal aircraft roll rates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALKPFLKZLM",
-          "text": "to eliminate Dutch roll rates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2159UK2HV",
-          "text": "to detect the normal rates of the aircraft and eliminate the Dutch roll rates.",
+          "id": "ONJYIYC9Y",
+          "text": "rudder displacement by the rudder pedals",
           "correct": false,
           "why": ""
         }
@@ -427,225 +383,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The yaw damper is designed to increase the damping ratio of...",
+      "question": "The Yaw Damper system is designed to increase the damping ratio of..",
       "options": [
         {
-          "id": "AZ21YAXBJB",
-          "text": "Dutch roll.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARDK5L4WM6",
+          "id": "O3I0A9FFP",
           "text": "pitch oscillation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AABM5EJVI0",
-          "text": "phugoid roll.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5NW8P0AMI",
+          "id": "O6STMRV9U",
           "text": "aileron roll.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXPOPRXI",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106574",
-      "ATPLGS-120456",
-      "ATPLQ-229627",
-      "AVEXAM-5319",
-      "BGS-220572"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper indicator supplies the pilot with information regarding the:",
-      "options": [
-        {
-          "id": "APZTSMC4S5",
-          "text": "yaw damper action on the rudder.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "A97O7UGN0H",
-          "text": "yaw damper action only on the ground.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5AKWTNBYS",
-          "text": "rudder position.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGJS14LTGE",
-          "text": "rudder displacement by the rudder pedals.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEBDVXPR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106569", "AVEXAM-90771"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A yaw damper",
-      "options": [
-        {
-          "id": "AVHMXE1VZJ",
-          "text": "is a rudder damper and its purpose is to avoid Dutch roll.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A30SK7N3CF",
-          "text": "is a trim tab for roll control.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3VEZEW9SQ",
-          "text": "is an elevator augmentation system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZVEXM2YZ6",
-          "text": "is an elevator augmentation system which counteracts the nose-down effect if the Mach number is higher than 0.8.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBRMJUES",
-    "relatedQuestions": ["QQEIHNOL"],
-    "externalIds": ["ATPLQ-228986", "BGS-221519"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper detects and filters Dutch Roll. How?\n1. By the use of a horizontal axis rate gyro that measure angular rate. \n 2. By the use of inputs from the IRS. \n 3. By the use of a vertical axis rate gyro that measures angular rate. \n 4. It will depend on the aircraft type, but both 1 and 2 can be correct.",
-      "options": [
-        {
-          "id": "A8OGIB41O4",
-          "text": "4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9XZX3H2YA",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A55DTETC2Q",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4QFB956V6",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQEIHNOL",
-    "relatedQuestions": ["QBRMJUES"],
-    "externalIds": ["ATPLQ-228986", "BGS-221519"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper detects and filters Dutch Roll. How?\n1. By the use of a horizontal axis rate gyro that measures angular rate.\n2. By the use of inputs from the IRS.\n3. By the use of a vertical axis rate gyro that measures angular rate.\n4. It will depend on the aircraft type but both 1 and 2 can be correct.",
-      "options": [
-        {
-          "id": "AD4M8NE8LG",
-          "text": "4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANLTX7638O",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQWSFX2QS9",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGU8CGAEWF",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFAWXTNK",
-    "relatedQuestions": ["QRJZTEHU"],
-    "externalIds": ["ATPLQ-222627", "BGS-221506"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane has a yaw damper that is unserviceable, and by the MEL is restricted to flight at or below FL170. What is the potential problem that the yaw damper is intended to prevent from happening at high altitudes?",
-      "options": [
-        {
-          "id": "AT8KNOIDQX",
+          "id": "OIZC5JUAZ",
           "text": "Dutch roll.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQ16FQDW6X",
-          "text": "Autopilot instability.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ2JGX32ZO",
-          "text": "Sprial instability.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZJO1T8PZH",
-          "text": "Excessive directional stability.",
+          "id": "OI72Y3OUJ",
+          "text": "phugoid roll.",
           "correct": false,
           "why": ""
         }
@@ -654,35 +414,35 @@
   },
   {
     "id": "QRJZTEHU",
-    "relatedQuestions": ["QFAWXTNK"],
-    "externalIds": ["ATPLQ-222627", "BGS-221506"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222627", "AVEXAM-88169", "BGS-221506"],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aeroplane has a yaw damper that is unserviceable, and by the MEL is restricted to fly only at or below FL170. What is the potential problem that the yaw damper is intended to prevent from happening at high altitudes?",
+      "question": "An aeroplane has a yaw damper that is unserviceable, and by the MEL is restricted to fly only at or below FL170\\. What is the potential problem that the yaw damper is intended to prevent from happening at high altitudes?",
       "options": [
         {
-          "id": "AKPBUEMW4X",
+          "id": "OIJGOZRMZ",
           "text": "Dutch roll.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A87CDPANZK",
+          "id": "OUDA2ZDAM",
           "text": "Spiral instability.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7PK5F0TOI",
+          "id": "OQJ9CLHT9",
           "text": "Excessive longitudinal stability.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AH4GP9V88Y",
+          "id": "OMBDVKA6M",
           "text": "Excessive directional stability.",
           "correct": false,
           "why": ""
@@ -691,45 +451,37 @@
     }
   },
   {
-    "id": "QFBVOYNQ",
-    "relatedQuestions": ["QSAVIVGN"],
-    "externalIds": [
-      "ATPLGS-127579",
-      "ATPLQ-224886",
-      "ATPLQ-226643",
-      "AVEXAM-15260",
-      "AVEXAM-63156",
-      "BGS-220560",
-      "BGS-220561"
-    ],
+    "id": "QZKIRVIU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226202", "ATPLGS-626473", "AVEXAM-88190"],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft is in a steady right turn, with not enough right rudder (slipping turn). The yaw damper system:",
+      "question": "The yaw damper is installed to reduce the roll ratio in…",
       "options": [
         {
-          "id": "ABZUKD5IWI",
-          "text": "is not designed to provide a balanced turn.",
+          "id": "ODMYD7B4Y",
+          "text": "Automated flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXTZXSVOE",
+          "text": "Dutch roll conditions.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1S50NCZVQ",
-          "text": "acts on the right rudder pedal to provide a balanced turn.",
+          "id": "ORY9XICKJ",
+          "text": "Moderate to severe turbulence.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALBJVQ358B",
-          "text": "acts only in case of skidding turns (turn with not enough bank).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8VPSYU3Y4",
-          "text": "acts on the left rudder pedal to provide a balanced turn.",
+          "id": "OOD2LBNUO",
+          "text": "Steep turns.",
           "correct": false,
           "why": ""
         }
@@ -737,173 +489,42 @@
     }
   },
   {
-    "id": "QSAVIVGN",
-    "relatedQuestions": ["QFBVOYNQ"],
-    "externalIds": [
-      "ATPLGS-127579",
-      "ATPLQ-224886",
-      "AVEXAM-15260",
-      "BGS-220561"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is in a steady right turn, with not enough right rudder (slipping turn).\nThe yaw damper system:",
-      "options": [
-        {
-          "id": "AYR7A8T9XA",
-          "text": "is not designed to provide a balanced turn.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6R73QU2ZG",
-          "text": "acts on the left rudder pedal to provide a balanced turn.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A96Z9LFXYF",
-          "text": "acts on the right rudder pedal to provide a balanced turn.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN39P6VZY5",
-          "text": "acts only in case of skidding turns -turn with not enough bank-.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDPXNGEX",
+    "id": "QVKIUBSY",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120848",
-      "ATPLQ-226180",
-      "AVEXAM-29378",
-      "BGS-222079"
+      "ATPLQ-226525",
+      "AVEXAM-51820",
+      "ATPLGS-120690",
+      "BGS-220570"
     ],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The yaw damper system acts on",
+      "question": "The yaw damper system sends a motion order to the rudder if the yawing rate of the aircraft:",
       "options": [
         {
-          "id": "A0BYHKN8ZT",
-          "text": "the rudder without moving the rudder pedals.",
+          "id": "OZKJIXQZL",
+          "text": "is not constant.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAV5SCS219",
-          "text": "the ailerons without moving the roll trim.",
+          "id": "OFS61ZOSB",
+          "text": "is constant.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A35PDINI4U",
-          "text": "the rudder and simultaneously moves the rudder pedals.",
+          "id": "OSWZO9QW2",
+          "text": "is > 0 only.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8RQU6AL0R",
-          "text": "the ailerons and simultaneously moves the roll trim.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDFUUBSX",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106570",
-      "ATPLQ-225246",
-      "AVEXAM-92531",
-      "BGS-220571"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Yaw Damper system\n1) counters any wrong pilot action on the rudder pedals.\n2) counters Dutch roll.\n3) is active only when autopilot is engaged.The combination regrouping all the correct statements are",
-      "options": [
-        {
-          "id": "AOIKLOLPRJ",
-          "text": "2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVLVUI9TWE",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUZR2D7DNI",
-          "text": "1, 2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXATC6U6YZ",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYEABHWC",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106576",
-      "ATPLGS-120333",
-      "ATPLQ-222890",
-      "AVEXAM-87517",
-      "AVEXAM-97644",
-      "BGS-220568"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper system controls:",
-      "options": [
-        {
-          "id": "AQ6CSUSJB8",
-          "text": "the rudder, with the angular rate about the yaw axis as the input signal.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU228BOUV3",
-          "text": "the ailerons, with the angular rate about the yaw axis as the input signal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQQ0Q31K47",
-          "text": "the ailerons, with Mach number as the input signal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT7N1CFQXC",
-          "text": "the rudder, with Mach number as the input signal.",
+          "id": "O9XOQQVNM",
+          "text": "is > 1 only.",
           "correct": false,
           "why": ""
         }
@@ -919,29 +540,73 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the role of the yaw damper filter?",
+      "question": "The Yaw Damper filter is used...",
       "options": [
         {
-          "id": "AZS06FNFYK",
-          "text": "To detect the roll rates that initiate Dutch roll.",
+          "id": "O5WIS5XAQ",
+          "text": "to eliminate Dutch roll rates.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQL4WGWJ0",
+          "text": "to detect the normal rates of the aircraft and eliminate the Dutch roll rates.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O30HQ4R9H",
+          "text": "to amplify normal aircraft roll rates.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZUXAYLL1",
+          "text": "to detect the roll rates that initiate Dutch roll.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYBMGNLG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-224905",
+      "AVEXAM-55347",
+      "BGS-220563",
+      "ATPLGS-121100",
+      "ATPLGS-106571"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.08.02.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a yaw damper system, sensing of a disturbance in yaw is usually provided by:",
+      "options": [
+        {
+          "id": "OI5UTORPA",
+          "text": "the measure of the ailerons movements.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWJH5WVAL",
+          "text": "the measure of the roll rate.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O39MR9QNJ",
+          "text": "a rate gyro or a set of accelerometers.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASP3JIB4N4",
-          "text": "To detect the normal rates of the aircraft and eliminate the Dutch roll rates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7G5IMAOP9",
-          "text": "To amplify normal aircraft roll rates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5RRDB2VM0",
-          "text": "To eliminate Dutch roll rates.",
+          "id": "OLPTQMEYN",
+          "text": "the measure of the rudder movements.",
           "correct": false,
           "why": ""
         }
@@ -949,113 +614,44 @@
     }
   },
   {
-    "id": "QGPZHOZG",
+    "id": "QSAVIVGN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229140"],
+    "externalIds": [
+      "ATPLQ-224886",
+      "BGS-220560",
+      "ATPLGS-127579",
+      "AVEXAM-63156",
+      "AVEXAM-15260",
+      "BGS-220561"
+    ],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft fitted with a yaw damper. The pilot deliberately manipulates the rudder pedals to induce a yaw. What stops the yaw damper from counteracting the deliberate command input?",
+      "question": "An aircraft is in a steady right turn, with not enough right rudder (slipping turn). The yaw damper system:",
       "options": [
         {
-          "id": "AZQWCWNBF8",
-          "text": "A Dutch Roll Filter",
+          "id": "OJUWYAI4C",
+          "text": "acts on the right rudder pedal to provide a balanced turn.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPK3W1CMC",
+          "text": "acts on the left rudder pedal to provide a balanced turn.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OARSGXKUA",
+          "text": "is not designed to provide a balanced turn.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMZJYTI8HO",
-          "text": "A rate gyro",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A17V80A88V",
-          "text": "A Hydraulic Actuator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7EMSMI2BM",
-          "text": "Rudder pedal sensors",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZKIRVIU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626473", "ATPLQ-226202", "AVEXAM-88190"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The yaw damper is installed to reduce the roll ratio in?",
-      "options": [
-        {
-          "id": "ATEDP89TIF",
-          "text": "Dutch roll conditions.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFC17NYMWA",
-          "text": "Steep turns.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUEY0341CZ",
-          "text": "Automated flight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKNOO2P4BU",
-          "text": "Moderate to severe turbulence.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQEAYOB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106567"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a yaw damper",
-      "options": [
-        {
-          "id": "ASJ3OJ1GM9",
-          "text": "rudder is moved in proportion to rate of angular velocity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARPAHVMBT5",
-          "text": "rudder is moved in proportion to Mach number.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZE8EBPV5F",
-          "text": "ailerons are moved in proportion to rate of angular velocity.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7PO2B9BCU",
-          "text": "ailerons are moved in proportion to Mach number.",
+          "id": "ODQN3Y6VJ",
+          "text": "acts only in case of skidding turns (turn with not enough bank).",
           "correct": false,
           "why": ""
         }
@@ -1065,7 +661,7 @@
   {
     "id": "QTFQQQSN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228282", "AVEXAM-9465", "BGS-220564"],
+    "externalIds": ["ATPLQ-228282", "BGS-220564", "AVEXAM-9465"],
     "annexes": [],
     "learningObjectives": ["022.08.02.01.01"],
     "explanation": "",
@@ -1074,216 +670,26 @@
       "question": "The commands sent out by the yaw damper computer:",
       "options": [
         {
-          "id": "ATQB0HR897",
+          "id": "OJ3IEM5OJ",
           "text": "are added to or subtracted from the rudder deflection orders sent out by the pilot or the autopilot.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AP007FPAUE",
-          "text": "are inhibited when the pilot acts on the rudder pedals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI9I86MZTB",
+          "id": "OKOJILSPW",
           "text": "inhibit the rudder deflection orders sent out by the pilot or the autopilot.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7N83L825L",
+          "id": "OB2C66KKF",
           "text": "are inhibited when the autopilot is engaged.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKVSYVYY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223770", "AVEXAM-12952"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Why is a Dutch roll filter fitted to a yaw damper?",
-      "options": [
-        {
-          "id": "AME90F0BK0",
-          "text": "To distinguish yaw caused by Dutch roll from yaw during a normal turn.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "ACKJMILR06",
-          "text": "To avoid reacting too quickly to Dutch roll.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A85HXNODDC",
-          "text": "To avoid overreacting to the Dutch roll.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH609SBST0",
-          "text": "To distinguish yaw from roll controls in response to Dutch roll.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSXXAMTS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223770", "AVEXAM-12952"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the main purpose of dutch roll filter?",
-      "options": [
-        {
-          "id": "AC3U3W3NUP",
-          "text": "To distinguish commanded turn inputs from yaw due to a disturbance or apparent Dutch roll.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABARMFUPO8",
-          "text": "To sense the aeroplane’s motion about the normal or vertical axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWJ4U0ZMHE",
-          "text": "To prevent yaw damper overreacting to dutch roll.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZGHTRVR26",
-          "text": "To prevent yaw damper from reacting too quickly to dutch roll.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBUJYLCO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106563"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Yaw Damper signal for a given rate of oscillation, is",
-      "options": [
-        {
-          "id": "AHTT95ACKO",
-          "text": "varied inversely according to the airspeed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANL3J8YJUL",
-          "text": "constant regardless of airspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASU1LFRX41",
-          "text": "increased proportional with the square of the airspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS7NGKA8KY",
-          "text": "varied proportional according to the airspeed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNHXGBGJ",
-    "relatedQuestions": ["QSMXVVSY"],
-    "externalIds": ["ATPLQ-225944"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does the yaw damper detect dutch roll?",
-      "options": [
-        {
-          "id": "AZFBOAFAEA",
-          "text": "Using a gyro and inputs from the IRS, depending on the aircraft type.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASDSIPK22L",
-          "text": "Using a rate gyro that measures angular rate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWZHB0A76D",
-          "text": "Using inputs from the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A957KZRLTG",
-          "text": "Using accelerometers and inputs from the IRS only, depending on the aircraft type.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSMXVVSY",
-    "relatedQuestions": ["QNHXGBGJ"],
-    "externalIds": ["AVEXAM-25970"],
-    "annexes": [],
-    "learningObjectives": ["022.08.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does the yaw damper detect dutch roll?",
-      "options": [
-        {
-          "id": "AVXDVC2LQM",
-          "text": "It depends on the aircraft type but both, by the use of a horizontal axis rate gyro that measures angular rate, and by the use of inputs from the IRS can be correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9XNFJR2JB",
-          "text": "By the use of a vertical axis rate gyro that measures angular rate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWIWEKFVS0",
-          "text": "Only by the use of inputs from the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0SKZB7QO9",
-          "text": "Only by the use of a horizontal axis rate gyro that measures angular rate.",
+          "id": "OVDW2AZCW",
+          "text": "are inhibited when the pilot acts on the rudder pedals.",
           "correct": false,
           "why": ""
         }

@@ -1,112 +1,124 @@
 [
   {
-    "id": "QQOOYTSN",
+    "id": "QOVOPWCF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125009", "ATPLQ-625050"],
+    "externalIds": [
+      "ATPLQ-628061",
+      "BGS-620169",
+      "ATPLGS-621294",
+      "AVEXAM-96301",
+      "BGS-620285",
+      "AVEXAM-37713"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.02.04.01.04"],
+    "learningObjectives": ["062.02.04.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following statements regarding the DME range is correct?",
+      "question": "Which of the following frequencies is within the DME frequency band?",
       "options": [
         {
-          "id": "AFFA9CAAB7",
-          "text": "The range of DME is line of sight.",
+          "id": "OARKQJEGT",
+          "text": "10 MHz",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUEB9AGQW",
+          "text": "100 GHz",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLQBYHUM8",
+          "text": "100 MHz",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKQCGQKWI",
+          "text": "1000 MHz",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQAWGV902J",
-          "text": "The DME operates on the principle of phase comparison.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJFBZS05LS",
-          "text": "The DME operates on VHF.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFVK91G5SD",
-          "text": "The DME has unlimited range due to ground wave propagation.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QNCMVZQI",
+    "id": "QPWYXNVE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-623884", "BGS-621319"],
+    "externalIds": [
+      "ATPLQ-621134",
+      "ATPLGS-621118",
+      "BGS-620192",
+      "AVEXAM-77591"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.02.04.01.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A DME is located at MSL. An aircraft passing vertically above the station at flight level FL360 will obtain a DME range of approximately:",
+      "options": [
+        {
+          "id": "O6DNQDLPZ",
+          "text": "11 NM ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMTMRNNLC",
+          "text": "8 NM ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSCQSEZ14",
+          "text": "7 NM ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORODGDU13",
+          "text": "6 NM",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQGUFFGT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622271", "ATPLGS-124663"],
     "annexes": [],
     "learningObjectives": ["062.02.04.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following correctly describes the principle of operation of Distance Measuring Equipment (DME)?\r<ol>\r<li> The aircraft's primary radar system transmits a signal that triggers a reply from the DME station.</li>\r<li> A transmission from the aircraft's interrogator triggers a reply from the DME station. </li>\r<li> The time taken from interrogation transmission to the reply reception is used to determine slant range.</li>\r<li> The time taken from interrogation transmission to the reply reception is used to determine plan range.</li>\r</ol>",
+      "question": "A DME-measurement is initiated by",
       "options": [
         {
-          "id": "AN05GT45QV",
-          "text": "2 and 3",
+          "id": "OZUVD01UL",
+          "text": "the interrogator in the DME-station.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ88URZIH",
+          "text": "the transponder in the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEICX9C4Y",
+          "text": "the interrogator in the aircraft.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AP1NDS9XYC",
-          "text": "2 and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM1O46R3RA",
-          "text": "1 and 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS3KDB64LG",
-          "text": "3 and 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXSCZNSW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-9992"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are disobeying international restrictions and making an ILS approach in Russia. The DME indicates 2.5 NM and you are at a height of 1 000 m. What is your ground distance from the runway?",
-      "options": [
-        {
-          "id": "AI1NROI3NR",
-          "text": "4 520 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABJHFV50DO",
-          "text": "4 740 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASJ747H442",
-          "text": "4 630 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3C9NXJE5A",
-          "text": "3 630 m",
+          "id": "OFXJMIEPL",
+          "text": "the transponder in the DME-station.",
           "correct": false,
           "why": ""
         }
@@ -116,73 +128,40 @@
   {
     "id": "QKADXOVT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127819", "ATPLQ-621733", "AVEXAM-1310"],
+    "externalIds": [
+      "ATPLQ-621733",
+      "ATPLGS-127819",
+      "BGS-621005",
+      "AVEXAM-1310"
+    ],
     "annexes": [],
     "learningObjectives": ["062.02.04.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which one of the statements below is correct regarding the DME?",
+      "question": "Which one of the statements below regarding DME is correct?",
       "options": [
         {
-          "id": "ACZUFBVKTM",
-          "text": "The DME operating frequencies are in the UHF frequency band.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJEZW0DR5R",
-          "text": "Two lines of position obtained from two different DME's give an unambiguous fix.",
+          "id": "OBT6UHNNK",
+          "text": "The indicated distance is the ground distance measured from the aircraft’s projected position on the ground to the DME ground installation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANVUOK16JQ",
-          "text": "The indicated distance is the ground distance measured from the aircraft's projected position on the ground to the DME ground installation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEH8DHMSL7",
+          "id": "OT1YCQEMK",
           "text": "The DME ground station is always co-located with a VOR station.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEZTYGJL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-65558"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are approaching a DME station during a flight in Russia. The DME indication is 1.5 NM and your height is 1 000 m. What is your ground distance to the station?\n<i>(your result may differ slightly, please choose the closest value)</i>",
-      "options": [
+        },
         {
-          "id": "AJA5X2XRIG",
-          "text": "2 592 m",
+          "id": "OTW68VQDS",
+          "text": "The DME operating frequencies are in the UHF band.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A61BFKSGTE",
-          "text": "782 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALY1TNO489",
-          "text": "975 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVNNU7PILB",
-          "text": "4 167 m",
+          "id": "O6WXANK8L",
+          "text": "Two lines of position obtained from two different DMEs give an unambiguous fix.",
           "correct": false,
           "why": ""
         }
@@ -190,494 +169,38 @@
     }
   },
   {
-    "id": "QPWYXNVE",
+    "id": "QNCMVZQI",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621118", "ATPLQ-621134"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A DME is located at MSL\nAn aircraft passing vertically above the station at flight level FL 360 will obtain a DME range of approximately:",
-      "options": [
-        {
-          "id": "AZA9XZTEGY",
-          "text": "6 NM",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP1WUPS2CN",
-          "text": "7 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A92DQ5VQD3",
-          "text": "11 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANWVQWH91K",
-          "text": "8 NM",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QISIMBUR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-628927", "AVEXAM-9271", "BGS-620193"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A DME station is located 1000 feet above MSL. An aircraft 15 NM away from the DME station, in ISA conditions at FL370, will indicate a DME range of approximately..",
-      "options": [
-        {
-          "id": "AYZZWYDGJE",
-          "text": "16 NM.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A94ZLPXREJ",
-          "text": "15 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB3WUWSM44",
-          "text": "17 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4AK8URI6I",
-          "text": "14 NM.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQGUFFGT",
-    "relatedQuestions": ["QPLXMCZZ"],
-    "externalIds": ["ATPLQ-622271"],
+    "externalIds": ["ATPLQ-623884", "BGS-621319", "AVEXAM-97936"],
     "annexes": [],
     "learningObjectives": ["062.02.04.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A DME-measurement is initiated by",
+      "question": "Which of the following statements correctly describe the principles of operation of Distance Measuring Equipment (DME)?\n\n1\\. The aircraft's primary radar output transmits a signal that triggers a reply from the DME station.   \n 2\\. A transmission from the aircraft's interrogator triggers a reply from the DME station.   \n 3\\. The time taken from interrogation transmission to the reply reception is used to determine slant range.   \n 4\\. The time taken from interrogation transmission to the reply reception is used to determine plan range.",
       "options": [
         {
-          "id": "AP3XWV0MWJ",
-          "text": "the interrogator in the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7NE46UDWG",
-          "text": "the transponder in the DME-station.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4DAW7Q13L",
-          "text": "the transponder in the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ5XLYCIVS",
-          "text": "the interrogator in the DME-station.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPLXMCZZ",
-    "relatedQuestions": ["QQGUFFGT"],
-    "externalIds": ["ATPLGS-124663"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A DME-measurement is initiated by",
-      "options": [
-        {
-          "id": "AH1FN79ZJG",
-          "text": "the interrogator in the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUHCAELG6B",
-          "text": "the interrogator in the DME-station",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "API6EFZG3O",
-          "text": "the transponder in the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHS6H425I9",
-          "text": "the transponder in the DME-station.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOVOPWCF",
-    "relatedQuestions": ["QWRQTSSN"],
-    "externalIds": ["ATPLQ-628061", "BGS-620169"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following frequencies is within the DME frequency band?",
-      "options": [
-        {
-          "id": "AAYLAAQYIP",
-          "text": "1000 MHz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7Z3HK7H5A",
-          "text": "100 MHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALLOXBJK77",
-          "text": "100 GHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP62WO01FB",
-          "text": "10 MHz",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWRQTSSN",
-    "relatedQuestions": ["QOVOPWCF"],
-    "externalIds": ["AVEXAM-37713"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following frequencies is within the DME frequency band?",
-      "options": [
-        {
-          "id": "AJ4ZYW5LNK",
-          "text": "1 000 MHz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI8QUAF22X",
-          "text": "600 MHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARTSSHBIR7",
-          "text": "300 MHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT0WSIDEC1",
-          "text": "110 MHz",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOBXTCKU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-11090"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A DME that has difficulty obtaining a lock-on: (PRF - Pulse Recurrence Frequency, pps - pulses per second)",
-      "options": [
-        {
-          "id": "A1NNI2UNNM",
-          "text": "stays in search mode but reduces PRF to max. 60 pps after 15 000 pulse pairs have been transmitted.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABTRG7DSBR",
-          "text": "stays in search mode without a reduction in PRF.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMOOPBLZVW",
-          "text": "stays in search mode but reduces PRF to max. 60 pps after 60 seconds.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9OVI4HXKG",
-          "text": "alternates search mode with periods of memory mode lasting 10 seconds.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPZKJUCC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621201", "ATPLQ-621044"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With respect to the principle of distance measurement using DME can be stated that:\n\n1. the interrogation signal is transmitted on the same frequency as the reply signal.2. the DME station always has a transponder delay of 50 milliseconds.3. the time between the pulse pairs of the interrogation signal is at random.4. In the search mode more pulse pairs per second are transmitted than in the tracking mode.\nWhich of the above given statements are correct?\n ",
-      "options": [
-        {
-          "id": "AUVZUIU83G",
-          "text": "3 and 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY6HP57F2G",
+          "id": "OW10CTIMZ",
           "text": "1 and 2",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3S5HJOWKO",
-          "text": "1, 2, 3, and 4",
+          "id": "OKCRUPIBM",
+          "text": "3 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABQH6SGW84",
-          "text": "2, 3 and 4",
+          "id": "O9EQFLUHJ",
+          "text": "2 and 4",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTRBBGVJ",
-    "relatedQuestions": ["QKOLJNZP"],
-    "externalIds": ["ATPLGS-621375"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct with respect to selections on the transponder control panel?",
-      "options": [
+        },
         {
-          "id": "ABYI9VZCQ4",
-          "text": "With ALT selected a reply in the modes A, C and S can be transmitted.",
+          "id": "O7RF4KSRG",
+          "text": "2 and 3",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6K28PX1G1",
-          "text": "With ON selected a reply in the modes A,C and S can be transmitted.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOTJ7QF7CZ",
-          "text": "The correct ICAO 24 bits aircraft address code must be inserted on the control panel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQDB578XD7",
-          "text": "With the selector knobs the four digits of the squawk can be selected using the decimal symbols 0 through 9.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKOLJNZP",
-    "relatedQuestions": ["QTRBBGVJ"],
-    "externalIds": ["AVEXAM-37396", "BGS-620405"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct with respect to selections on the transponder control panel?",
-      "options": [
-        {
-          "id": "A433NPB6HR",
-          "text": "With ALT selected a reply in the modes A, C and S can be transmitted.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFXTSYH3G9",
-          "text": "The correct ICAO 24 bits aircraft address code must be inserted on the control panel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APBLLVMRFM",
-          "text": "With the selector knobs the four digits of the squawk can be selected using the decimal symbols 0 through 9.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARO02UUXX7",
-          "text": "With ON selected a reply in the modes A, C and S can be transmitted.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHLXVHKW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-7409"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following equipment works on the interrogator/transponder principle?",
-      "options": [
-        {
-          "id": "AHMQBTUMM3",
-          "text": "Secondary Surveillance Radar (SSR).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJVNC06PGQ",
-          "text": "Airborne Weather Radar (AWR).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMJ2784PNK",
-          "text": "Global Positioning System (GPS).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASDPRTG7NF",
-          "text": "Aerodrome Surface Movement Radar.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QASXNYFF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621435"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A radar which employs an interrogator/transponder principle is:",
-      "options": [
-        {
-          "id": "AGHAP5TJ8J",
-          "text": "Secondary Surveillance Radar",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2HCMEWVYS",
-          "text": "Continuous Wave Radar",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYY9W6DVXV",
-          "text": "Doppler Radar",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYAH4W52XU",
-          "text": "Primary Radar",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMBHLLQX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626537", "ATPLQ-624295", "AVEXAM-20635"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following is an ABAS input device mounted in an aircraft?",
-      "options": [
-        {
-          "id": "AP3ZJUTYY0",
-          "text": "IRS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APPRQEBIY8",
-          "text": "TCAS II",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM1GSHUYC0",
-          "text": "ADS-B",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASQ41HJU7F",
-          "text": "WAAS",
-          "correct": false,
           "why": ""
         }
       ]

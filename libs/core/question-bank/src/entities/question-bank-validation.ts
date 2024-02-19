@@ -48,6 +48,19 @@ export const questionBankValidation = z
       () => true,
     );
 
+    // validate no duplicate question ids
+    const questionIdSet = new Set();
+    val.questionTemplates.forEach((qt) => {
+      if (questionIdSet.has(qt.id)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Question id ${qt.id} is duplicated`,
+          path: ["questionTemplates"],
+        });
+      }
+      questionIdSet.add(qt.id);
+    });
+
     val.questionTemplates.forEach((qt) => {
       qt.relatedQuestions.forEach((q) => {
         if (questionIds[q]) return;

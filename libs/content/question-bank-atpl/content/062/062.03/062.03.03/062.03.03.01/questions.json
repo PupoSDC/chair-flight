@@ -1,11 +1,55 @@
 [
   {
+    "id": "QNLXVNKH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-624539",
+      "ATPLGS-621397",
+      "BGS-620360",
+      "AVEXAM-1821"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.03.03.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A frequency of 10 GHz is considered to be the optimum for use in an airborne weather radar system because..",
+      "options": [
+        {
+          "id": "ODXBUXSYE",
+          "text": "larger water droplets give more distinct echoes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ODBKCLV20",
+          "text": "greater detail can be obtained at more distant ranges for smaller water droplets.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLRD25ULR",
+          "text": "static interference is minimised.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODLXGLTSH",
+          "text": "it enables the weather radar to detect clear air turbulence.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
     "id": "QCJZQDPY",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-621449",
       "ATPLQ-627708",
       "AVEXAM-57698",
+      "ATPLGS-621449",
+      "BGS-620375",
       "BGS-621269"
     ],
     "annexes": [],
@@ -16,141 +60,27 @@
       "question": "A weather radar, set to the 100 NM scale, shows a squall between 40 NM and 50 NM. By changing the scale to 50 NM, the return on the radar screen should..",
       "options": [
         {
-          "id": "AHDKQCOU6V",
-          "text": "increase in area and move to the top of the screen.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7KL9NW4GY",
-          "text": "decrease in area and move to the top of the screen.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYL2MAJF3F",
+          "id": "ODZIKIUIJ",
           "text": "increase in area and appear nearer to the bottom of the screen.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS40K1J3CO",
+          "id": "ONMY1NOFF",
+          "text": "decrease in area and move to the top of the screen.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ4MM73KM",
           "text": "decrease in area but not change in position on the screen.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNLXVNKH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-1821", "BGS-620360"],
-    "annexes": [],
-    "learningObjectives": ["062.03.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A frequency of 10 GHz is considered to be the optimum for use in an airborne weather radar system because:",
-      "options": [
+        },
         {
-          "id": "ACE4AFQTAS",
-          "text": "the larger water droplets will give good echoes and the antenna can be kept relatively small.",
+          "id": "O6HVOPNT4",
+          "text": "increase in area and move to the top of the screen.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJIHZ9RRC8",
-          "text": "less power output is required in the mapping mode.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKXNFS2GMX",
-          "text": "greater detail can be obtained at the more distant ranges of the smaller water droplets.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYVPP3A3VZ",
-          "text": "static interference is minimised.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKEGFMBI",
-    "relatedQuestions": ["QYNXUAFI"],
-    "externalIds": ["ATPLGS-621417"],
-    "annexes": [],
-    "learningObjectives": ["062.03.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A frequency of airborne weather radar is:",
-      "options": [
-        {
-          "id": "ASSG9F46E8",
-          "text": "9375 MHz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB6GEF9CZS",
-          "text": "9375 kHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA565CNJHH",
-          "text": "93.75 MHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACSOBEZCR5",
-          "text": "9375 GHz",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYNXUAFI",
-    "relatedQuestions": ["QKEGFMBI"],
-    "externalIds": ["AVEXAM-21323"],
-    "annexes": [],
-    "learningObjectives": ["062.03.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A frequency of airborne weather radar is:",
-      "options": [
-        {
-          "id": "AOC7V6PS0I",
-          "text": "9 375 MHz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGR7WLJXXB",
-          "text": "9 375 GHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7D6ZFH0Q4",
-          "text": "9 375 kHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJOEMDXW8I",
-          "text": "93.75 MHz",
-          "correct": false,
           "why": ""
         }
       ]

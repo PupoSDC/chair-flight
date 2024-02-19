@@ -1,36 +1,43 @@
 [
   {
-    "id": "QBNDSWIY",
+    "id": "QROGAJKC",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-625769"],
+    "externalIds": [
+      "ATPLQ-629671",
+      "AVEXAM-44628",
+      "AVEXAM-57239",
+      "ATPLGS-116165",
+      "BGS-620697",
+      "AVEXAM-66662"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.01.01.03.02"],
+    "learningObjectives": ["062.01.01.03.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following options contains the correct frequency band, propagation path and frequency range for radio communications using a single side band?",
+      "question": "A radio signal may be classified by three symbols in accordance with the ITU radio regulation e.g. A1A. Which statement is true?",
       "options": [
         {
-          "id": "AINYYKO4VC",
-          "text": "HF, surface and sky waves, 3 MHz to 30 MHz.",
+          "id": "ORMV1FFTR",
+          "text": "The second symbol indicates the nature of information to be transmitted",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OREJPMULZ",
+          "text": "The third symbol indicates the nature of the signal modulating the main carrier",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV41PWKH9",
+          "text": "The first symbol indicates the type of modulation of the main carrier",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5QN7HWW03",
-          "text": "HF, surface waves only, 3 MHz to 30 MHz.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASYK84E6FV",
-          "text": "MF, surface and sky waves, 190 KHz to 1750 KHz.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOLCQ3VZHT",
-          "text": "VHF, sky waves, 108 MHz to 117.975 MHz.",
+          "id": "OHWVJ1Z8S",
+          "text": "The three symbols together indicate which device is transmitting on the carrier",
           "correct": false,
           "why": ""
         }
@@ -49,64 +56,26 @@
       "question": "3-30 kHz frequency band is referred to...",
       "options": [
         {
-          "id": "AK958O3DMP",
+          "id": "O7WD43LCR",
           "text": "VLF.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0EFEVRZ1U",
-          "text": "SHF.",
+          "id": "OU1C81YMX",
+          "text": "ULF.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVK4PH2NGR",
-          "text": "VHF.",
+          "id": "OYM9ZVGEI",
+          "text": "LF.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAO3PQTIVL",
-          "text": "HF.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QROGAJKC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-629671"],
-    "annexes": [],
-    "learningObjectives": ["062.01.01.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A radio signal may be classified by three symbols in accordance with the ITU radio regulation e.g. A1A. Which statement is true?",
-      "options": [
-        {
-          "id": "AQ5N6NNGLU",
-          "text": "The first symbol indicates the type of modulation of the main carrier",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A24YSX9FF1",
-          "text": "The third symbol indicates the nature of the signal modulating the main carrier",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOV5ULAYRR",
-          "text": "The three symbols together indicate which device is transmitting on the carrier",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASDXLRG5RR",
-          "text": "The second symbol indicates the nature of information to be transmitted",
+          "id": "OBLIBB99W",
+          "text": "ELF.",
           "correct": false,
           "why": ""
         }
@@ -114,75 +83,44 @@
     }
   },
   {
-    "id": "QVCWWOOK",
+    "id": "QBNDSWIY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621005"],
+    "externalIds": [
+      "ATPLQ-625769",
+      "BGS-621170",
+      "BGS-621542",
+      "ATPLGS-629615",
+      "AVEXAM-64436",
+      "AVEXAM-12781"
+    ],
     "annexes": [],
-    "learningObjectives": ["062.01.01.03.04"],
+    "learningObjectives": ["062.01.01.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A radio signal is transmitted in A2A. These three symbols collectively mean:",
+      "question": "Which of the following options contains the correct frequency band, propagation path and frequency range for radio communications using a single side band?",
       "options": [
         {
-          "id": "ADT41JFOVQ",
-          "text": "an on-off keying of an amplitude modulated transmission used for aural telegraphy",
+          "id": "ORWY5HRHD",
+          "text": "HF, surface waves only, 3 MHz to 30 MHz.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGMO9ETGL",
+          "text": "HF, surface and sky waves, 3 MHz to 30 MHz.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ANZI87PLLK",
-          "text": "an amplitude modulation used for telephony, single sideband, with suppressed carrier",
+          "id": "ONVF3THEP",
+          "text": "MF, surface and sky waves, 190 KHz to 1750 KHz.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9GGNJVOUL",
-          "text": "an amplitude modulation used for telephony, double sideband",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7NGI92OVN",
-          "text": "a frequency modulation with on-off keying telegraphy of an audio frequency",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEHZILWC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-50928"],
-    "annexes": [],
-    "learningObjectives": ["062.01.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A frequency of 119.70 MHz is typical for:",
-      "options": [
-        {
-          "id": "A69YAX7E1P",
-          "text": "Approach control.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX7CBRJROJ",
-          "text": "Terminal VOR.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH4X0KNYUU",
-          "text": "ILS Localiser.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW3XH5R1AY",
-          "text": "En-Route VOR.",
+          "id": "O28U1ZI8G",
+          "text": "VHF, sky waves, 108 MHz to 117.975 MHz.",
           "correct": false,
           "why": ""
         }

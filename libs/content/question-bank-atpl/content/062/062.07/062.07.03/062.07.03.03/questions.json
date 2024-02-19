@@ -2,35 +2,35 @@
   {
     "id": "QGMXWSLL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-629304"],
+    "externalIds": ["ATPLQ-629304", "AVEXAM-93428", "BGS-621499"],
     "annexes": [],
     "learningObjectives": ["062.07.03.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Why is strict adherence to flight director guidance important when manually flying a radius to fix (RF) leg? The flight director...",
+      "question": "Why is strict adherence to flight director guidance important when manually flying a radius to fix (RF) leg? The flight director…",
       "options": [
         {
-          "id": "A3YV6PAM39",
-          "text": "is required to provide the necessary level of guidance and precision during the turn.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB6J3SC1VC",
-          "text": "allows the pilot to cross-check the DME arc guidance along the RF procedure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACZL4JINFE",
+          "id": "OSATAC3GV",
           "text": "provides guidance based on a fixed radius calculated with current TAS and bank angle.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8RUYAHMJT",
+          "id": "OIAVKJ5SA",
           "text": "must be used in place of the autopilot as it provides more precise guidance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD8SRMFAE",
+          "text": "is required to provide the necessary level of guidance and precision during the turn.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2ZJB6HVK",
+          "text": "allows the pilot to cross-check the DME arc guidance along the RF procedure.",
           "correct": false,
           "why": ""
         }
@@ -40,74 +40,41 @@
   {
     "id": "QJSUVVIL",
     "relatedQuestions": [],
-    "externalIds": ["BGS-621161"],
+    "externalIds": [
+      "ATPLQ-629156",
+      "ATPLGS-628243",
+      "AVEXAM-64433",
+      "BGS-621161"
+    ],
     "annexes": [],
     "learningObjectives": ["062.07.03.03.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Why must the flight director be used for guidance when flying an RF leg without the autopilot?",
+      "question": "When flying an RF leg without autopilot, the flight director must be used for guidance. Why?",
       "options": [
         {
-          "id": "ARQMJ3NIOF",
-          "text": "The RF leg is based on a fixed radius turn with guidance calculated by the aircraft's RNAV system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB5UEYUG9N",
-          "text": "The RNP system uploads the RF procedure to the FAC, which then provides guidance via the flight director.",
+          "id": "OSAFVT8ED",
+          "text": "The flight director will give a visual and audible alert if the actual navigation performance exceeds the RNP during the RF leg.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOP71FMC3E",
+          "id": "ON4KXYSG8",
           "text": "The flight director displays guidance based on the information received from ground-based transmitters.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS2UIH2MH0",
-          "text": "The flight director will give a visual and audible alert if the actual navigation performance exceeds the RNP during the RF leg.",
+          "id": "OPBUSICLY",
+          "text": "The RNP system uploads the RF procedure to the FAC, which then provides guidance via the flight director.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCYFVUBD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-620934"],
-    "annexes": [],
-    "learningObjectives": ["062.07.03.03.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is true regarding an offset flight path?",
-      "options": [
+        },
         {
-          "id": "APRQWL09Q3",
-          "text": "It allows the crew to specify a lateral offset from a defined route",
+          "id": "OCGKDQXRP",
+          "text": "The RF leg is based on fixed radius turn with guidance calculated by the aircraft’s RNAV system.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZM0W3UDMN",
-          "text": "It allows the crew to specify a vertical offset from a defined route",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZS1UGRQZW",
-          "text": "An offset flight path is used for holding",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKIZLC20F1",
-          "text": "An offset flight path is used for parallel approaches in terminal areas",
-          "correct": false,
           "why": ""
         }
       ]

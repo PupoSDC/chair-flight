@@ -1,41 +1,41 @@
 [
   {
-    "id": "QXSXWNRS",
+    "id": "QHNUPCUS",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125766",
-      "ATPLQ-811247",
-      "AVEXAM-2962",
-      "BGS-810852"
+      "ATPLQ-814916",
+      "BGS-812645",
+      "ATPLGS-628116",
+      "AVEXAM-86088"
     ],
     "annexes": [],
-    "learningObjectives": ["081.05.06.02.02"],
+    "learningObjectives": ["081.05.06.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "When power assisted controls are used for pitch control:",
+      "question": "Which of the following is/are required in a fully-powered control system but not required for power-assisted controls?",
       "options": [
         {
-          "id": "AJCDZLOPA3",
-          "text": "a part of the aerodynamic forces is still felt on the column.",
+          "id": "OVJBBLWJT",
+          "text": "Power flying control unit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYCGV6Y7G",
+          "text": "Hydraulic servos.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIGDNKHQX",
+          "text": "Artificial feel system.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVLPZEQWM9",
-          "text": "trimming is superfluous.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACIM48NEOK",
-          "text": "aerodynamic balancing of the control surfaces is meaningless.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2O9I7OEPM",
-          "text": "they only function in combination with an elevator trim tab.",
+          "id": "OJRTMED3U",
+          "text": "Balance tabs and mass balance.",
           "correct": false,
           "why": ""
         }
@@ -46,9 +46,9 @@
     "id": "QRSCYNNI",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125640",
       "ATPLQ-812650",
       "AVEXAM-91152",
+      "ATPLGS-125640",
       "BGS-810856"
     ],
     "annexes": [],
@@ -59,25 +59,25 @@
       "question": "Artificial feel is required:",
       "options": [
         {
-          "id": "ACM0SM7K9U",
-          "text": "with fully powered flight controls.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1FG9LUJP0",
-          "text": "with power assisted flight controls.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A62E54QJDO",
+          "id": "OJUSFFQOQ",
           "text": "when there is a trimmable stabiliser.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AE1USAYPVL",
+          "id": "OJ6Y4D5UH",
+          "text": "with fully powered flight controls.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAFEMZDHC",
+          "text": "with power assisted flight controls.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVA92CRYY",
           "text": "when the flight control surfaces are fitted with control tabs or trim tabs.",
           "correct": false,
           "why": ""
@@ -86,47 +86,14 @@
     }
   },
   {
-    "id": "QMIRYKEM",
-    "relatedQuestions": ["QCDJOQJJ", "QDBOWMAE"],
-    "externalIds": ["AVEXAM-62022", "BGS-810855"],
-    "annexes": [],
-    "learningObjectives": ["081.05.06.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the primary input for an artificial feel system?",
-      "options": [
-        {
-          "id": "ABLDVE400L",
-          "text": "IAS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQTDVT9EAD",
-          "text": "TAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A61K2SLDBX",
-          "text": "Mach number.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX1NYNVZEK",
-          "text": "Static pressure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QCDJOQJJ",
-    "relatedQuestions": ["QDBOWMAE", "QMIRYKEM"],
-    "externalIds": ["ATPLQ-818873"],
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-818873",
+      "ATPLGS-125854",
+      "BGS-810855",
+      "AVEXAM-62022"
+    ],
     "annexes": [],
     "learningObjectives": ["081.05.06.02.03"],
     "explanation": "",
@@ -135,103 +102,27 @@
       "question": "What is the primary input for an artificial feel system?",
       "options": [
         {
-          "id": "AXLID5Q6XY",
-          "text": "IAS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJJ1E47TMA",
+          "id": "OLLBWUTDP",
           "text": "Mach number",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANI9SXMCKK",
-          "text": "TAS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMTJVDAEOD",
+          "id": "OPWEW3B1C",
           "text": "Static pressure",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDBOWMAE",
-    "relatedQuestions": ["QCDJOQJJ", "QMIRYKEM"],
-    "externalIds": ["ATPLGS-125854"],
-    "annexes": [],
-    "learningObjectives": ["081.05.06.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the primary input for an artificial feel system?",
-      "options": [
-        {
-          "id": "AD3YTI7M2V",
-          "text": "IAS",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "A6XRZ59N65",
-          "text": "Static pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADZXEDJCCO",
-          "text": "Mach number.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AONKZ22K7O",
+          "id": "ONJTK8JV8",
           "text": "TAS",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHNUPCUS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-814916"],
-    "annexes": [],
-    "learningObjectives": ["081.05.06.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following is/are required in a fully-powered control system but not required for power-assisted controls?",
-      "options": [
+        },
         {
-          "id": "AV6XAI0JAE",
-          "text": "Artificial feel system.",
+          "id": "O7YFDOST5",
+          "text": "IAS",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A63KRIJAYJ",
-          "text": "Hydraulic servos.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE0KY7RRBM",
-          "text": "Power flying control unit.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVV286N92W",
-          "text": "Balance tabs and mass balance.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -239,73 +130,35 @@
   },
   {
     "id": "QXKONSCF",
-    "relatedQuestions": ["QJYQLJSC"],
-    "externalIds": ["ATPLQ-818121", "BGS-811408"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-818121", "BGS-811408", "ATPLGS-118668"],
     "annexes": [],
     "learningObjectives": ["081.05.06.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In a power-assisted flight control system, most of the force is provided by the...",
+      "question": "In a power-assisted flight control system, most of the force is provided by the…",
       "options": [
         {
-          "id": "ADGE8H8PH4",
-          "text": "hydraulic system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHNMHRZYKS",
+          "id": "O11JXYKOB",
           "text": "servo tab.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8CDJ1ICVJ",
-          "text": "servo valve.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0WSJ548OE",
-          "text": "pilot.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJYQLJSC",
-    "relatedQuestions": ["QXKONSCF"],
-    "externalIds": ["ATPLGS-118668"],
-    "annexes": [],
-    "learningObjectives": ["081.05.06.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a power-assisted flight control system, most of the force is provided by the",
-      "options": [
-        {
-          "id": "A1CZPZSZLR",
+          "id": "OZKIAU6WD",
           "text": "hydraulic system.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMAQ71FQYR",
-          "text": "servo tab.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5QR7IXSVC",
+          "id": "OVAYWHAHX",
           "text": "servo valve.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A284ROJNQR",
+          "id": "OKIYZKYWX",
           "text": "pilot.",
           "correct": false,
           "why": ""

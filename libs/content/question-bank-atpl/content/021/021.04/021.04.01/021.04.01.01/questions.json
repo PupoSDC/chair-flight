@@ -1,119 +1,5 @@
 [
   {
-    "id": "QIGEAEGW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104862", "AVEXAM-51483"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When do you say that an aircraft has a cantilever wing?",
-      "options": [
-        {
-          "id": "ASW3E4CZHY",
-          "text": "When the wing is not supported by any external structures such as struts or braces.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AES70EUQT7",
-          "text": "When the wing is supported by braces or strut, linked to the fuselage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOFCIB3CYJ",
-          "text": "When the wing is attached to the lower part of the fuselage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPD5WN77H",
-          "text": "When the wing planform is other than rectangular.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QECAIMOE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120460"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A large aeroplane must be fitted with a take-off configuration warning\n During the initial portion of the take-off roll, which of these statements are correct or incorrect?\n1. ? An aural warning is provided if the longitudinal trim device is in a position that would not allow a safe take-off\n2. ? An aural warning is provided if the parking brake is unreleased.",
-      "options": [
-        {
-          "id": "ATB79VJEX2",
-          "text": "1is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUHWAFKPKK",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAOV48PA4X",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB0834A3ZA",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGBSTTSE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120741"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A large aeroplane must be fitted with a take-off configuration warning. During the initial portion of the take-off roll, which of these statements are correct or incorrect?\n1.  An aural warning is provided if the elevator is not in a safe position for take-off.\n2.  An aural warning is provided if the parking brake is unreleased.",
-      "options": [
-        {
-          "id": "AGQJ9WY4EY",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHLCDGDU36",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A20760MW06",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4H7XWR6G9",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QXRQVFBZ",
     "relatedQuestions": [],
     "externalIds": ["ATPLQ-219977", "AVEXAM-80104"],
@@ -122,29 +8,67 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Some airplanes have steering capability on some wheels of the main landing gear. Why?",
+      "question": "Some aeroplanes have main landing gear that have steering capability on the ground. What is the main purpose for this?",
       "options": [
         {
-          "id": "A5CASS6WYU",
-          "text": "To relieve sideways stress on long main wheels assemblies.",
+          "id": "ORQEL03FL",
+          "text": "To simulate narrow body aircraft steering capabilities.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOMCTILE8",
+          "text": "In order to allow for a larger turning radius.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCVDXAZP1",
+          "text": "To efficiently control the aircraft during high speed taxiing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIEX19OBS",
+          "text": "To relieve sideways stress on long main wheel assemblies.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJXRGQMJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218298", "BGS-211805", "BGS-211834", "AVEXAM-26599"],
+    "annexes": [],
+    "learningObjectives": ["021.04.01.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The nose wheel extension of an aircraft is 2 inches less than normal when the aircraft is correctly loaded, the most likely cause is:",
+      "options": [
+        {
+          "id": "O1TGIVCKS",
+          "text": "Too much oil in the oleo strut.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLMRZWKUY",
+          "text": "Too little nitrogen in the oleo strut.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAHOB32D25",
-          "text": "To efficiently control the aircraft on the ground.",
+          "id": "OQWNGXCQW",
+          "text": "A down draught at the tail.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY5MPNKEMJ",
-          "text": "To simulate a narrow body steering capabilities.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A34CH9B836",
-          "text": "In order to allow for a larger turning radius.",
+          "id": "OECAPKTLY",
+          "text": "Too much nitrogen in the oleo strut.",
           "correct": false,
           "why": ""
         }
@@ -154,187 +78,41 @@
   {
     "id": "QTYRKDZM",
     "relatedQuestions": [],
-    "externalIds": ["BGS-211296"],
-    "annexes": ["ca69258416d1789b17309e363a4c1c42"],
+    "externalIds": [
+      "ATPLQ-217528",
+      "BGS-211255",
+      "BGS-211296",
+      "ATPLGS-104957",
+      "AVEXAM-66185"
+    ],
+    "annexes": ["AMKHHV2ON"],
     "learningObjectives": ["021.04.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to the image.  Which part of the nose landing gear is shown by the number 2?",
+      "question": "Refer to figure.\n\nWhich part of the nose landing gear is shown by the number 1?",
       "options": [
         {
-          "id": "ADWA68LFU7",
-          "text": "Retraction actuator",
+          "id": "OEHVG18CJ",
+          "text": "Torsion link.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9RPCY81N",
+          "text": "Steering actuator.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHS5M2NFLK",
-          "text": "Torsion link",
+          "id": "OYGRZCDZN",
+          "text": "Shock absorber.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A20C1UOSPA",
-          "text": "Shock absorber",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6RFT8D2VE",
-          "text": "Steering actuator",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJXRGQMJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-218298", "AVEXAM-26599"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is correctly loaded, but its nosewheel extension is two inches less than normal. What is the most likely cause?",
-      "options": [
-        {
-          "id": "AFI6UACRVC",
-          "text": "Too little nitrogen in the oleo strut.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2GRAUT23C",
-          "text": "Too much nitrogen in the oleo strut.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUVJLMAQK6",
-          "text": "Too much oil in the oleo strut.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A76EDBG8SQ",
-          "text": "A downdraught at the tail.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTDFJUVZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-212475"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane extends its flaps asymmetrically. The aircraft will roll...",
-      "options": [
-        {
-          "id": "AJVRX9HM6F",
-          "text": "towards the side with fewer flaps and have a yawing moment to the opposite side.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADOP64WC8H",
-          "text": "towards the side with more flaps and have a yawing moment to the opposite side.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3RN7AT8SR",
-          "text": "towards the side with more flaps and have a yawing moment to the same side.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARMRP4T3XX",
-          "text": "towards the side with fewer flaps and have a yawing moment to the same side.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCGQUJOI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119848", "ATPLQ-218883", "BGS-210209"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For most large aeroplanes, spoilers are..",
-      "options": [
-        {
-          "id": "ANN4BQ3DOC",
-          "text": "upper wing surface devices and their deflection can be either symmetrical or asymmetrical.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5GQM8BF2O",
-          "text": "upper wing surface devices and their deflection is always asymmetrical.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALQ0A805DL",
-          "text": "lower wing surface devices and their deflection can be either symmetrical or asymmetrical.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARZ25V17IC",
-          "text": "lower wing surface devices and their deflection is always asymmetrical.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUAKHPML",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-211640"],
-    "annexes": [],
-    "learningObjectives": ["021.04.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With regard to a jet aeroplane, specific range is the:",
-      "options": [
-        {
-          "id": "A64XW6D7QD",
-          "text": "nautical air miles flown per unit mass of fuel.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKBAVCDTHJ",
-          "text": "fuel flow divided by TAS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKWFAR9IW9",
-          "text": "fuel flow per unit of thrust.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEA0N01MAM",
-          "text": "nautical air miles flown divided by the specific fuel consumption.",
+          "id": "OHOV9ST4F",
+          "text": "Retraction actuator.",
           "correct": false,
           "why": ""
         }

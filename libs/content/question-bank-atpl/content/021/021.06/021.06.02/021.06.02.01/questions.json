@@ -1,74 +1,41 @@
 [
   {
-    "id": "QVKPNTAH",
+    "id": "QQRMFBTQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119330", "ATPLQ-214750", "AVEXAM-9267"],
+    "externalIds": [
+      "ATPLQ-213280",
+      "AVEXAM-83954",
+      "BGS-210245",
+      "ATPLGS-120066"
+    ],
     "annexes": [],
-    "learningObjectives": ["021.06.02.01.02"],
+    "learningObjectives": ["021.06.02.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Temperature regulation of an air conditioning system:",
+      "question": "The purpose of the pack cooling fans in the air conditioning system is to ..",
       "options": [
         {
-          "id": "AFFJ8YZNC3",
-          "text": "is automatically controlled by sensing the output temperature from the control valve in relation to the temperature set on the pilot's control panel.",
+          "id": "OVDYEF4VQ",
+          "text": "supply the Passenger Service Unit (PSU) with fresh air.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIXGRWTFS",
+          "text": "supply the heat exchangers with cooling air during slow flights and ground operation.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A60D0XLX89",
-          "text": "is manually controlled by the pilot reading the cabin temperature gauge and increasing or decreasing hot air as required.",
+          "id": "OD6TA91CO",
+          "text": "supply the heat exchangers with cooling air during cruise flight.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALI2D4AYTM",
-          "text": "cannot be automatically controlled.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKPM508LNP",
-          "text": "is automatically controlled by sensing cabin temperature in relation to engine compressor outlet temperatures.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLKEZVQH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120122", "ATPLQ-216383", "AVEXAM-24524"],
-    "annexes": [],
-    "learningObjectives": ["021.06.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the automatic control of an air conditioning system fails:",
-      "options": [
-        {
-          "id": "A8AS1GUAJ1",
-          "text": "the pilot can revert to manual control and set the control valve to the required setting.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0D8H5AHA5",
-          "text": "the system must be shut down.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQXJQ6HP9D",
-          "text": "a red failure light will illuminate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYU8S2JPL9",
-          "text": "manual control can be selected but this is limited to \"hot air\" or \"cold air\" setting only.",
+          "id": "OFQOHMFB9",
+          "text": "cool the APU compartment.",
           "correct": false,
           "why": ""
         }
@@ -78,36 +45,79 @@
   {
     "id": "QOMXJLLT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-215127", "AVEXAM-35584", "BGS-210264"],
-    "annexes": ["43c07a6ffcf5f870da7405de7f331b7f"],
+    "externalIds": [
+      "ATPLQ-215127",
+      "BGS-210264",
+      "ATPLGS-119740",
+      "AVEXAM-35584"
+    ],
+    "annexes": ["AOKO9HOUL"],
     "learningObjectives": ["021.06.02.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For this question refer to the annex.  According to the diagram, automatic temperature control of the system is achieved by...",
+      "question": "Refer to figure.\n\nAccording to the diagram, automatic temperature control of the system is achieved by..",
       "options": [
         {
-          "id": "A6AJXFPH89",
+          "id": "ODHOH62WM",
+          "text": "the cabin sensors and the temperature control regulator modulating the ram air.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTORUG036",
           "text": "the temperature selector in conjunction with cabin sensors and the temperature regulator, modulating the mix valve.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1JCY6OY03",
+          "id": "OTP09DLTL",
           "text": "the temperature selector only, modulating the mix valve.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AR0G8MZ0HW",
+          "id": "OR2LMYDVP",
           "text": "automatic control of the ram air.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLKEZVQH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-216383", "ATPLGS-120122", "AVEXAM-24524"],
+    "annexes": [],
+    "learningObjectives": ["021.06.02.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the automatic control of an air conditioning system fails:",
+      "options": [
+        {
+          "id": "ODECCKUPI",
+          "text": "manual control can be selected but this is limited to \\`hot air\\` or \\`cold air\\` only.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A72EMLQ3NV",
-          "text": "the cabin sensors and the temperature control regulator modulating the ram air.",
+          "id": "O2PJZOCRR",
+          "text": "the red failure light will illuminate.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHSKWRTIF",
+          "text": "the system must be shut down.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAGZEFZXL",
+          "text": "the pilot can revert to manual control and set the control valve to the required setting.",
+          "correct": true,
           "why": ""
         }
       ]
@@ -125,146 +135,26 @@
       "question": "A commonly-used refrigerant in a Vapour Cycle Air Conditioning System is..",
       "options": [
         {
-          "id": "AZ0YSTL6EZ",
+          "id": "OWNKD9QCV",
           "text": "freon",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AIJVVRLJE7",
-          "text": "nitrogen",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXCUOHJEFG",
+          "id": "OE2HDV7ND",
           "text": "water",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATEL545A57",
+          "id": "OGPWVWLHZ",
           "text": "helium",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEEMHRNQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105113", "AVEXAM-10515"],
-    "annexes": [],
-    "learningObjectives": ["021.06.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "\"Conditioned\" air is air that has:",
-      "options": [
-        {
-          "id": "AEBVIO36AK",
-          "text": "been controlled in respect of temperature and pressure.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AD4MGSNR54",
-          "text": "had the oxygen content reduced.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3TWCUL3T0",
-          "text": "had the oxygen content increased.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APYRXQT59B",
-          "text": "had any moisture removed from it.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKJGBTPF",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-105123",
-      "ATPLGS-120224",
-      "ATPLQ-218305",
-      "AVEXAM-10335",
-      "BGS-210248"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.06.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a turbo compressor air conditioning system (bootstrap system), the purpose of the heat exchangers is to",
-      "options": [
-        {
-          "id": "AYOZ1ZH4W0",
-          "text": "cool the bleed air in front and behind the compressor of the air cycle machine.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATX4UDL1FE",
-          "text": "cool bleed air before entering the complete pneumatic system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIAAFZA6IT",
-          "text": "allow a homogeneous temperature by mixing air flows from various air conditioning groups in operation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALKHDP1K3X",
-          "text": "allow a steady compressor outlet temperature.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQRMFBTQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120066", "ATPLQ-213280", "BGS-210245"],
-    "annexes": [],
-    "learningObjectives": ["021.06.02.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the pack cooling fans in the air conditioning system is to ...",
-      "options": [
-        {
-          "id": "A86SDZ33DV",
-          "text": "supply the heat exchangers with cooling air during slow flights and ground operation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADAAIQK325",
-          "text": "supply the Passenger Service Unit (PSU) with fresh air.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOPX8A1V04",
-          "text": "cool the APU compartment.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWT52EARLO",
-          "text": "supply the heat exchangers with cooling air during cruise flight.",
+          "id": "OWXMO2DKX",
+          "text": "nitrogen",
           "correct": false,
           "why": ""
         }
@@ -275,8 +165,8 @@
     "id": "QVLXVYZG",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120067",
       "ATPLQ-214252",
+      "ATPLGS-120067",
       "AVEXAM-81339",
       "BGS-210230"
     ],
@@ -288,65 +178,27 @@
       "question": "The purpose of an air conditioning pack inlet flow valve (pack valve) is to ..",
       "options": [
         {
-          "id": "A2PZVH3SAO",
-          "text": "maintain a constant and sufficient air mass flow to ventilate the cabin.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A65DVFTXQ2",
+          "id": "OQB8RSKF7",
           "text": "discharge cabin air to atmosphere if cabin pressure rises above the selected altitude.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKXUK5EXDL",
+          "id": "OXB0RS0PN",
+          "text": "regulate cabin pressure to the selected altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHOGSJFMK",
           "text": "regulate cabin pressure at the maximum cabin pressure differential.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJ10JUKJUM",
-          "text": "regulate cabin pressure to the selected altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTWWBVOJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105580"],
-    "annexes": ["1d8434024aa19c975b43b7dda66157f7"],
-    "learningObjectives": ["021.06.02.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You can find the fan between the stations",
-      "options": [
-        {
-          "id": "A31L3UK9LL",
-          "text": "2 and 2.5",
+          "id": "OBB2N10HB",
+          "text": "maintain a constant and sufficient air mass flow to ventilate the cabin.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ49XSBKQ3",
-          "text": "6 and 7",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL7PXQSVSM",
-          "text": "1 and 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHAFPX3OX0",
-          "text": "2.5 and 3",
-          "correct": false,
           "why": ""
         }
       ]
