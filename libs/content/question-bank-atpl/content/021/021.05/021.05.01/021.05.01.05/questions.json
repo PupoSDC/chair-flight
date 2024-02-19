@@ -67,33 +67,19 @@
     "learningObjectives": ["021.05.01.05.05"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about rudder limiting are correct?\n\n1\\. A rudder ratio changer system reduces the rudder deflection for a given rudder pedal deflection as the IAS decreases.   \n2\\. A variable stop system limits both rudder and rudder pedal deflection as the IAS increases.",
-      "options": [
-        {
-          "id": "OJWSCZLS8",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSFZXG8M8",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHGEZZ8GK",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQDETVTPN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about rudder limiting are correct?",
+      "firstCorrectStatements": [
+        "A variable stop system limits both rudder and rudder pedal deflection as the IAS increases."
+      ],
+      "firstIncorrectStatements": [
+        "A variable stop system limits both rudder and rudder pedal deflection as the IAS decreases."
+      ],
+      "secondCorrectStatements": [
+        "A rudder ratio changer system reduces the rudder deflection for a given rudder pedal deflection as the IAS decreases."
+      ],
+      "secondIncorrectStatements": [
+        "A rudder ratio changer system increases the rudder deflection for a given rudder pedal deflection as the IAS decreases."
       ]
     }
   },
@@ -146,33 +132,19 @@
     "learningObjectives": ["021.05.01.05.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a gust lock system are correct?\n\n1\\. There should be suitable design precautions to prevent flight with the gust lock engaged.   \n2\\. There is no need for a gust lock on reversible flight controls.",
-      "options": [
-        {
-          "id": "O9KSL7MB5",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ODELKA36A",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OC5YKJCJZ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWLPCSJJE",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a gust lock system are correct?",
+      "firstCorrectStatements": [
+        "There should be suitable design precautions to prevent flight with the gust lock engaged."
+      ],
+      "firstIncorrectStatements": [
+        "There should be unsuitable design precautions to prevent flight with the gust lock engaged."
+      ],
+      "secondCorrectStatements": [
+        "There is a need for a gust lock on reversible flight controls."
+      ],
+      "secondIncorrectStatements": [
+        "There is no need for a gust lock on reversible flight controls."
       ]
     }
   },
@@ -268,33 +240,19 @@
     "learningObjectives": ["021.05.01.05.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a gust lock system are correct?\n\n1\\. There is no need for a gust lock on irreversible flight controls.   \n2\\. There is no need for a gust lock on a fully manual flight control system.",
-      "options": [
-        {
-          "id": "O15JTSHHM",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OZYQZKLMX",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXVHJUMVP",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OI4PCPHH5",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a gust lock system are correct?",
+      "firstCorrectStatements": [
+        "There is no need for a gust lock on irreversible flight controls."
+      ],
+      "firstIncorrectStatements": [
+        "There is a need for a gust lock on irreversible flight controls."
+      ],
+      "secondCorrectStatements": [
+        "There is a need for a gust lock on a fully manual flight control system."
+      ],
+      "secondIncorrectStatements": [
+        "There is no need for a gust lock on a fully manual flight control system."
       ]
     }
   },
@@ -328,33 +286,19 @@
     "learningObjectives": ["021.05.01.05.05"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about rudder limiting are correct or incorrect?\n\nI. A rudder ratio changer system reduces the rudder deflection for a given rudder pedal deflection as the IAS increases   \nII. A variable stop system limits both rudder and rudder pedal deflection as the IAS decreases.",
-      "options": [
-        {
-          "id": "OMQBZOIFS",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OAZJCCUL4",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXWDCKEJE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSDYHGWXF",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about rudder limiting are correct or incorrect?",
+      "firstCorrectStatements": [
+        "A rudder ratio changer system reduces the rudder deflection for a given rudder pedal deflection as the IAS increases."
+      ],
+      "firstIncorrectStatements": [
+        "A rudder ratio changer system increases the rudder deflection for a given rudder pedal deflection as the IAS increases."
+      ],
+      "secondCorrectStatements": [
+        "A variable stop system limits both rudder and rudder pedal deflection as the IAS decreases."
+      ],
+      "secondIncorrectStatements": [
+        "A variable stop system limits neither rudder nor rudder pedal deflection as the IAS decreases."
       ]
     }
   },
@@ -407,33 +351,19 @@
     "learningObjectives": ["021.05.01.05.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a gust lock system are correct?\n\n1\\. There should be suitable design precautions to prevent flight with the gust lock engaged.   \n2\\. Reversible flight controls should have a gust lock.",
-      "options": [
-        {
-          "id": "OCSAEE7CB",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMJTVTZRW",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQMGFBHPY",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOAAGJYGM",
-          "text": "Both 1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a gust lock system are correct?",
+      "firstCorrectStatements": [
+        "There should be suitable design precautions to prevent flight with the gust lock engaged."
+      ],
+      "firstIncorrectStatements": [
+        "There should be suitable design precautions to allow flight with the gust lock engaged."
+      ],
+      "secondCorrectStatements": [
+        "Reversible flight controls should have a gust lock."
+      ],
+      "secondIncorrectStatements": [
+        "Irreversible flight controls should have a gust lock."
       ]
     }
   },
@@ -453,33 +383,19 @@
     "learningObjectives": ["021.05.01.05.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a gust lock system are correct or incorrect?\n\nI. A gust lock can be used in flight to reduce the effects of turbulence.   \nII. Reversible flight controls should have a gust lock.",
-      "options": [
-        {
-          "id": "ORWOBVBHF",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OW8DWEYB3",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OILUHKADU",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OE02YZCSU",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a gust lock system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Reversible flight controls should have a gust lock."
+      ],
+      "firstIncorrectStatements": [
+        "A gust lock can be used in flight to increase the effects of turbulence."
+      ],
+      "secondCorrectStatements": [
+        "A gust lock cannot be used in flight to reduce the effects of turbulence."
+      ],
+      "secondIncorrectStatements": [
+        "Reversible flight controls should not have a gust lock."
       ]
     }
   },
@@ -532,33 +448,19 @@
     "learningObjectives": ["021.05.01.05.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a gust lock system are correct?\n\n1\\. There is no need for a gust lock on irreversible flight controls.   \n2\\. A fully manual flight control system should have a gust lock.",
-      "options": [
-        {
-          "id": "OW9CZ82SI",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONOEL2LGR",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKFPL7CP2",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3GCH5CPD",
-          "text": "Both 1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a gust lock system are correct?",
+      "firstCorrectStatements": [
+        "There is no need for a gust lock on irreversible flight controls."
+      ],
+      "firstIncorrectStatements": [
+        "There is a need for a gust lock on irreversible flight controls."
+      ],
+      "secondCorrectStatements": [
+        "A fully manual flight control system should have a gust lock."
+      ],
+      "secondIncorrectStatements": [
+        "A fully manual flight control system should not have a gust lock."
       ]
     }
   }

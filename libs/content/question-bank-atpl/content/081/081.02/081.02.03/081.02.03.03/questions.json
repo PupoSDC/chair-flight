@@ -26,33 +26,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. The drag divergence Mach number is equal to M**CRIT**.  \n2\\. Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD is practically constant as the Mach number changes.",
-      "options": [
-        {
-          "id": "OCY7HKAPT",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O378X3YBH",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ONFFND5ZG",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMZJGFI7L",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD is practically constant as the Mach number changes."
+      ],
+      "firstIncorrectStatements": [
+        "The drag divergence Mach number is not equal to M**CRIT**."
+      ],
+      "secondCorrectStatements": [
+        "The drag divergence Mach number is equal to M**CRIT**."
+      ],
+      "secondIncorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD is not constant as the Mach number changes."
       ]
     }
   },
@@ -85,33 +71,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. The drag divergence Mach number is lower than MCRIT.   \n 2\\. Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD increases as the Mach number increases.",
-      "options": [
-        {
-          "id": "OEL3TNUZN",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPUMA7QGG",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OK191JGNV",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORSFETQ5H",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The drag divergence Mach number is higher than MCRIT."
+      ],
+      "firstIncorrectStatements": [
+        "The drag divergence Mach number is lower than MCRIT."
+      ],
+      "secondCorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD decreases as the Mach number increases."
+      ],
+      "secondIncorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD does not change as the Mach number increases."
       ]
     }
   },
@@ -152,33 +124,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. The drag divergence Mach number is lower than MCRIT.  \n2\\. Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD decreases as the Mach number decreases.",
-      "options": [
-        {
-          "id": "OYMDWR9B5",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCZWYBHTP",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OH2NL01K3",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTZCSNRSK",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD decreases as the Mach number decreases."
+      ],
+      "firstIncorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD increases as the Mach number decreases."
+      ],
+      "secondCorrectStatements": [
+        "The drag divergence Mach number is lower than MCRIT."
+      ],
+      "secondIncorrectStatements": [
+        "The drag divergence Mach number is higher than MCRIT."
       ]
     }
   },
@@ -227,33 +185,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. MCRIT is lower than the drag divergence Mach number.  \n2\\. Assuming a given angle of attack and for M < 1 the drag coefficient CD decreases above the drag divergence Mach number.",
-      "options": [
-        {
-          "id": "O47TRJRRR",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOOUT0OZY",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6Z8NJK3I",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O1QKTXQRS",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "MCRIT is lower than the drag divergence Mach number."
+      ],
+      "firstIncorrectStatements": [
+        "MCRIT is higher than the drag divergence Mach number."
+      ],
+      "secondCorrectStatements": [
+        "Assuming a given angle of attack and for M < 1 the drag coefficient CD increases above the drag divergence Mach number."
+      ],
+      "secondIncorrectStatements": [
+        "Assuming a given angle of attack and for M < 1 the drag coefficient CD decreases above the drag divergence Mach number."
       ]
     }
   },
@@ -343,33 +287,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. MCRIT is higher than the drag divergence Mach number.  \n2\\. Assuming a given angle of attack and for M < 1 the drag coefficient CD increases above the drag divergence Mach number.",
-      "options": [
-        {
-          "id": "OY841HLGD",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODM6EA6BT",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OBJCBNZIS",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCOHTZG4V",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Assuming a given angle of attack and for M < 1 the drag coefficient CD increases above the drag divergence Mach number."
+      ],
+      "firstIncorrectStatements": [
+        "Assuming a given angle of attack and for M < 1 the drag coefficient CD decreases above the drag divergence Mach number."
+      ],
+      "secondCorrectStatements": [
+        "MCRIT is higher than the drag divergence Mach number."
+      ],
+      "secondIncorrectStatements": [
+        "MCRIT is lower than the drag divergence Mach number."
       ]
     }
   },
@@ -563,33 +493,19 @@
     "learningObjectives": ["081.02.03.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?\n\n1\\. The drag divergence Mach number is higher than MCRIT.   \n 2\\. Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD increases as the Mach number increases.",
-      "options": [
-        {
-          "id": "OBEMY0MXI",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O7NMX0DKF",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O71NQKAFH",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLGVHJWT3",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about drag divergence Mach number are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The drag divergence Mach number is higher than MCRIT."
+      ],
+      "firstIncorrectStatements": [
+        "The drag divergence Mach number is lower than MCRIT."
+      ],
+      "secondCorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD decreases as the Mach number increases."
+      ],
+      "secondIncorrectStatements": [
+        "Below the drag divergence Mach number and for a given angle of attack the drag coefficient CD increases as the Mach number increases."
       ]
     }
   }

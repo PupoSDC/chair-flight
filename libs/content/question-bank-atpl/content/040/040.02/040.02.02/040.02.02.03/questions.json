@@ -93,34 +93,17 @@
     "learningObjectives": ["040.02.02.03.19"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "When flying through a thunderstorm with lightning you can protect yourself from flash blindness by:\n\n1\\. turning down the intensity of cockpit lights,   \n2\\. looking inside the cockpit   \n3\\. wearing sunglasses   \n4\\. using blinds or curtains when installed.",
-      "options": [
-        {
-          "id": "OCCYXFIC0",
-          "text": "2, 3, and 4 are correct, 1 is false",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYOW7PI7L",
-          "text": "3 and 4 are correct, 1 and 2 are false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOENVDXE1",
-          "text": "1 and 2 are correct, 3 and 4 are false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OGLO248HL",
-          "text": "1, 2 and 3 are correct, 4 is false",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "When flying through a thunderstorm with lightning you can protect yourself from flash blindness by:",
+      "firstCorrectStatements": [
+        "Looking inside the cockpit.",
+        "Using blinds or curtains when installed."
+      ],
+      "firstIncorrectStatements": [
+        "Turning down the intensity of cockpit lights."
+      ],
+      "secondCorrectStatements": ["Wearing sunglasses."],
+      "secondIncorrectStatements": ["Not wearing sunglasses."]
     }
   },
   {

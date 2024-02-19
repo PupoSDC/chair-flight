@@ -202,33 +202,19 @@
     "learningObjectives": ["040.03.01.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Divided attention is the ability:\n\n1\\. to execute several mental activities at almost the same time (i.e. when switching attention from outside the aircraft to the airspeed indicator on the instrument panel)   \n2\\. to monitor the progress of a motor programme (i.e. flying or taxiing the aircraft) on a relatively subconscious level, while making a radio call at the same time (requiring a rather conscious level)   \n3\\. to select information and check if it is relevant to the task in hand. At the same time no other operation can be performed.   \n4\\. to delegate tasks to the co-pilot while concentrating on the procedures",
-      "options": [
-        {
-          "id": "OVEZ9VTVW",
-          "text": "Only 3 is false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OV6EJIRS1",
-          "text": "1 and 3 are correct, 2 and 4 are false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLR1TUMWP",
-          "text": "1 and 2 are correct, 3 and 4 are false",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OKY2O0VII",
-          "text": "1, 2 and 3 are correct, 4 is false",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Divided attention is the ability:",
+      "firstCorrectStatements": [
+        "To execute several mental activities at almost the same time (i.e. when switching attention from outside the aircraft to the airspeed indicator on the instrument panel)."
+      ],
+      "firstIncorrectStatements": [
+        "To select information and check if it is relevant to the task in hand. At the same time, no other operation can be performed."
+      ],
+      "secondCorrectStatements": [
+        "To monitor the progress of a motor programme (i.e. flying or taxiing the aircraft) on a relatively subconscious level, while making a radio call at the same time (requiring a rather conscious level)."
+      ],
+      "secondIncorrectStatements": [
+        "To delegate tasks to the co-pilot while concentrating on the procedures."
       ]
     }
   },

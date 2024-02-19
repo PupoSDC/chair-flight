@@ -57,33 +57,19 @@
     "learningObjectives": ["081.04.03.12.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct?\n\nI. Stick force per g is independent of altitude.   \nII. Stick force per g increases when the centre of gravity moves forward.",
-      "options": [
-        {
-          "id": "OGHJ2EVBS",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOYRY7NUY",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OFDTERU0R",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYZYQMFTD",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct?",
+      "firstCorrectStatements": [
+        "Stick force per g increases when the centre of gravity moves forward."
+      ],
+      "firstIncorrectStatements": [
+        "Stick force per g decreases when the centre of gravity moves forward."
+      ],
+      "secondCorrectStatements": [
+        "Stick force per g is independent of altitude."
+      ],
+      "secondIncorrectStatements": [
+        "Stick force per g is dependent on altitude."
       ]
     }
   },

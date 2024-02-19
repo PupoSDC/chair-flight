@@ -412,33 +412,19 @@
     "learningObjectives": ["050.06.02.02.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "What do you know about the correctness of the following statements?\n\n1\\. Prefrontal thunderstorms can occur ahead of cold fronts   \n2\\. A warm front passing a mountain range may become a front Aloft",
-      "options": [
-        {
-          "id": "O5ES7E6MB",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORTBLL5ZG",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZ2MP2WRF",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXHMHRBV4",
-          "text": "1 and 2 are correct",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "What do you know about the correctness of the following statements?",
+      "firstCorrectStatements": [
+        "Prefrontal thunderstorms can occur ahead of cold fronts."
+      ],
+      "firstIncorrectStatements": [
+        "Prefrontal thunderstorms cannot occur ahead of cold fronts."
+      ],
+      "secondCorrectStatements": [
+        "A warm front passing a mountain range may become a front Aloft."
+      ],
+      "secondIncorrectStatements": [
+        "A warm front passing a mountain range may not become a front Aloft."
       ]
     }
   },

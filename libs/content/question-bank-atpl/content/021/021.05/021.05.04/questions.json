@@ -538,33 +538,19 @@
     "learningObjectives": ["021.05.04.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a Fly-By-Wire (FBW) flight control system are correct or incorrect?\n\n1\\. A FBW flight control system relies on electricity and digital control circuits and it is therefore less reliable than a conventional flight control system.   \n 2\\. An advantage of a FBW flight control system is the reduced weight of its components in comparison with a conventional flight control system.",
-      "options": [
-        {
-          "id": "OZSW3I4LL",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OVYG4W4T0",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLM6WD327",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6MB2Y4OF",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a Fly-By-Wire (FBW) flight control system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "An advantage of a FBW flight control system is the reduced weight of its components in comparison with a conventional flight control system."
+      ],
+      "firstIncorrectStatements": [
+        "A FBW flight control system relies on electricity and digital control circuits and it is therefore more reliable than a conventional flight control system."
+      ],
+      "secondCorrectStatements": [
+        "A FBW flight control system relies on electricity and digital control circuits and it is therefore less reliable than a conventional flight control system."
+      ],
+      "secondIncorrectStatements": [
+        "An advantage of a FBW flight control system is the increased weight of its components in comparison with a conventional flight control system."
       ]
     }
   },

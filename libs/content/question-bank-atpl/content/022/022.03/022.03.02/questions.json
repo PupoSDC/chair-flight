@@ -645,33 +645,19 @@
     "learningObjectives": ["022.03.02.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the properties of a simple bar magnet are correct or incorrect?\n\n1\\. – North or south poles cannot exist separately.   \n 2\\. – Magnetism is concentrated at the extremities of the bar.",
-      "options": [
-        {
-          "id": "ONRZ3TNTW",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OIO54GMYU",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6X67AAM6",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OQ8DFMFEE",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the properties of a simple bar magnet are correct or incorrect?",
+      "firstCorrectStatements": [
+        "North or south poles cannot exist separately."
+      ],
+      "firstIncorrectStatements": [
+        "North or south poles can exist separately."
+      ],
+      "secondCorrectStatements": [
+        "Magnetism is concentrated at the extremities of the bar."
+      ],
+      "secondIncorrectStatements": [
+        "Magnetism is not concentrated at the extremities of the bar."
       ]
     }
   },

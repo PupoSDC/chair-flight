@@ -151,33 +151,15 @@
     "learningObjectives": ["081.01.04.02.07"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement, about an aeroplane entering ground effect at constant angle of attack, is correct?\n\nI. The lift coefficient CL decreases.  \nII. The induced drag coefficient CDI increases.",
-      "options": [
-        {
-          "id": "OFCQINZOE",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFXSQQ848",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OH29NYDBE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTRCJHU1R",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement, about an aeroplane entering ground effect at constant angle of attack, is correct?",
+      "firstCorrectStatements": ["The lift coefficient CL increases."],
+      "firstIncorrectStatements": ["The lift coefficient CL decreases."],
+      "secondCorrectStatements": [
+        "The induced drag coefficient CDI decreases."
+      ],
+      "secondIncorrectStatements": [
+        "The induced drag coefficient CDI increases."
       ]
     }
   },
@@ -394,33 +376,19 @@
     "learningObjectives": ["081.01.04.02.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?\n\nI. Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases.   \nII. The strength of wing tip vortices increases as the aspect ratio decreases.",
-      "options": [
-        {
-          "id": "OWWLZBNGB",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKBE8MTIT",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZHEHGCRZ",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OPK9GR5JJ",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases."
+      ],
+      "firstIncorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices increases as the angle of attack decreases."
+      ],
+      "secondCorrectStatements": [
+        "The strength of wing tip vortices increases as the aspect ratio decreases."
+      ],
+      "secondIncorrectStatements": [
+        "The strength of wing tip vortices decreases as the aspect ratio decreases."
       ]
     }
   },
@@ -504,33 +472,19 @@
     "learningObjectives": ["081.01.04.02.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?\n\nI. Assuming no flow separation, the strength of wing tip vortices increases as the angle of attack decreases.   \nII. The strength of wing tip vortices decreases as the aspect ratio increases.",
-      "options": [
-        {
-          "id": "OIEB151XJ",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O2KVJS5GE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3WDIBBGK",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O30HVWHNV",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The strength of wing tip vortices decreases as the angle of attack decreases."
+      ],
+      "firstIncorrectStatements": [
+        "The strength of wing tip vortices increases as the angle of attack decreases."
+      ],
+      "secondCorrectStatements": [
+        "The strength of wing tip vortices increases as the aspect ratio increases."
+      ],
+      "secondIncorrectStatements": [
+        "The strength of wing tip vortices decreases as the aspect ratio increases."
       ]
     }
   },
@@ -626,33 +580,19 @@
     "learningObjectives": ["081.01.04.02.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?\n\n1) Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases.   \n2) The strength of wing tip vortices increases as the aspect ratio increases.",
-      "options": [
-        {
-          "id": "OUW0CHEC8",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OK2LLH40B",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYL9YCDPC",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMETVAVAJ",
-          "text": "1) is correct, 2) is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases."
+      ],
+      "firstIncorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices increases as the angle of attack decreases."
+      ],
+      "secondCorrectStatements": [
+        "The strength of wing tip vortices does not increase as the aspect ratio increases."
+      ],
+      "secondIncorrectStatements": [
+        "The strength of wing tip vortices increases as the aspect ratio increases."
       ]
     }
   },

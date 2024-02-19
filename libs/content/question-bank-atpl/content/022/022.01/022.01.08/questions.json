@@ -262,33 +262,19 @@
     "learningObjectives": ["022.01.08.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct as regards a synchroscope on a multi-engine aircraft? A synchroscope is used to…\n\n1\\. reduce structural vibration and noise   \n2\\. achieve symmetrical thrust and fuel consumption.",
-      "options": [
-        {
-          "id": "OXC8KB11S",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXA9KTZ0R",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OGULCET0G",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O0VDVCOPG",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct as regards a synchroscope on a multi-engine aircraft? A synchroscope is used to…",
+      "firstCorrectStatements": [
+        "A synchroscope is used to reduce structural vibration and noise."
+      ],
+      "firstIncorrectStatements": [
+        "A synchroscope is used to increase structural vibration and noise."
+      ],
+      "secondCorrectStatements": [
+        "A synchroscope is used to achieve symmetrical thrust and fuel consumption."
+      ],
+      "secondIncorrectStatements": [
+        "A synchroscope is used to achieve asymmetrical thrust and fuel consumption."
       ]
     }
   },

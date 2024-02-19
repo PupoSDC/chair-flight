@@ -3588,33 +3588,19 @@
     "learningObjectives": ["071.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements about using Portable Electronic Devices (PEDs) inside an airplane is correct?\n\n1\\. Using PEDs is NOT permitted in cases where they would adversely affect the performance of the airplane's systems.  \n2\\. According with the prescribed procedures, the Commander may insist on a specific PED on board being switched off.",
-      "options": [
-        {
-          "id": "O3KFA3UW6",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OCYFT3CVZ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ON0ZFAWN6",
-          "text": "1 is incorrect. 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1MQGSAED",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements about using Portable Electronic Devices (PEDs) inside an airplane is correct?",
+      "firstCorrectStatements": [
+        "Using PEDs is NOT permitted in cases where they would adversely affect the performance of the airplane's systems."
+      ],
+      "firstIncorrectStatements": [
+        "Using PEDs is permitted in cases where they would adversely affect the performance of the airplane's systems."
+      ],
+      "secondCorrectStatements": [
+        "According to the prescribed procedures, the Commander may insist on a specific PED on board being switched off."
+      ],
+      "secondIncorrectStatements": [
+        "According to the prescribed procedures, the Commander may not insist on a specific PED on board being switched off."
       ]
     }
   },

@@ -3283,33 +3283,19 @@
     "learningObjectives": ["040.02.01.02.24"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct:\n\n1\\. Hyperventilation can be a symptom of fear or distress.   \n 2\\. Distress is a potential trigger for hyperventilation.",
-      "options": [
-        {
-          "id": "OZ8KKQS97",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OAVSTANY5",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OIVXDLWKG",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O35Q66MHO",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct:",
+      "firstCorrectStatements": [
+        "Hyperventilation can be a symptom of fear or distress."
+      ],
+      "firstIncorrectStatements": [
+        "Hyperventilation can't be a symptom of fear or distress."
+      ],
+      "secondCorrectStatements": [
+        "Distress is a potential trigger for hyperventilation."
+      ],
+      "secondIncorrectStatements": [
+        "Distress is not a potential trigger for hyperventilation."
       ]
     }
   },
@@ -4128,33 +4114,19 @@
     "learningObjectives": ["040.02.01.02.24"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Hypoxia can be caused by which of the following?\n\n1\\. A decreased saturation of oxygen in the blood due to carbon monoxide attached to the haemoglobin.   \n2\\. Low partial pressure of oxygen in the atmosphere when flying at high altitudes without pressurisation and supplemental oxygen.   \n3\\. Malfunction of the body cells to metabolise oxygen.   \n4\\. Blood pooling in the lower extremities due to inertia (+Gz).",
-      "options": [
-        {
-          "id": "OZPZMYOXS",
-          "text": "1, 2, and 3 are correct, 4 is false.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OIK9VDDKC",
-          "text": "1 and 2 are correct, 3 and 4 are false.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBVQCIUJ6",
-          "text": "1, 2, 3 and 4 are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYCEFAENY",
-          "text": "3 and 4 are correct, 1 and 2 are false.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Hypoxia can be caused by which of the following?",
+      "firstCorrectStatements": [
+        "A decreased saturation of oxygen in the blood due to carbon monoxide attached to the haemoglobin."
+      ],
+      "firstIncorrectStatements": [
+        "A decreased saturation of oxygen in the blood due to carbon dioxide attached to the haemoglobin."
+      ],
+      "secondCorrectStatements": [
+        "Low partial pressure of oxygen in the atmosphere when flying at high altitudes without pressurisation and supplemental oxygen."
+      ],
+      "secondIncorrectStatements": [
+        "High partial pressure of oxygen in the atmosphere when flying at high altitudes without pressurisation and supplemental oxygen."
       ]
     }
   },

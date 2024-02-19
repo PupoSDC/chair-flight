@@ -572,34 +572,12 @@
     "learningObjectives": ["081.01.06.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statements about an aeroplane leaving ground effect are correct or incorrect?\n\n1) The downwash angle increases.   \n2) The induced angle of attack increases.",
-      "options": [
-        {
-          "id": "OZRRFHLXB",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSDNLNS3G",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKVJOE0OC",
-          "text": "1) is correct, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUBYLEWAY",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statements about an aeroplane leaving ground effect are correct or incorrect?",
+      "firstCorrectStatements": ["The downwash angle increases."],
+      "firstIncorrectStatements": ["The downwash angle decreases."],
+      "secondCorrectStatements": ["The induced angle of attack increases."],
+      "secondIncorrectStatements": ["The induced angle of attack decreases."]
     }
   },
   {

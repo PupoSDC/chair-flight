@@ -38,33 +38,19 @@
     "learningObjectives": ["021.11.05.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding a jet engine, which of the following statements is/are correct?\n\n1\\. The maximum thrust increases slightly as the pressure altitude increases.   \n2\\. The specific fuel consumption decreases slightly as the pressure altitude increases at constant TAS.",
-      "options": [
-        {
-          "id": "OXW09CVDO",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPDNEIGAE",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OAI8LIGKP",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOZQG2V3B",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding a jet engine, which of the following statements is/are correct?",
+      "firstCorrectStatements": [
+        "The specific fuel consumption decreases slightly as the pressure altitude increases at constant TAS."
+      ],
+      "firstIncorrectStatements": [
+        "The specific fuel consumption increases slightly as the pressure altitude increases at constant TAS."
+      ],
+      "secondCorrectStatements": [
+        "The maximum thrust increases slightly as the pressure altitude increases."
+      ],
+      "secondIncorrectStatements": [
+        "The maximum thrust decreases slightly as the pressure altitude increases."
       ]
     }
   },
@@ -108,33 +94,19 @@
     "learningObjectives": ["021.11.05.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct, as regards a jet engine?\n\n1\\. The maximum thrust increases as the pressure altitude decreases.   \n2\\. The specific fuel consumption is proportional to pressure altitude, at constant TAS.",
-      "options": [
-        {
-          "id": "OZVMEOJUV",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSX2W1JBX",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ONG00OLX6",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVRUEHF8P",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct, as regards a jet engine?",
+      "firstCorrectStatements": [
+        "The maximum thrust increases as the pressure altitude decreases."
+      ],
+      "firstIncorrectStatements": [
+        "The maximum thrust decreases as the pressure altitude decreases."
+      ],
+      "secondCorrectStatements": [
+        "The specific fuel consumption is inversely proportional to pressure altitude, at constant TAS."
+      ],
+      "secondIncorrectStatements": [
+        "The specific fuel consumption is proportional to pressure altitude, at constant TAS."
       ]
     }
   },
@@ -260,33 +232,19 @@
     "learningObjectives": ["021.11.05.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding a jet engine, which of the following statements is/are correct?\n\n1- maximum thrust decreases as the pressure altitude increases.   \n2- specific fuel consumption is inversely proportional to pressure altitude, at constant TAS.",
-      "options": [
-        {
-          "id": "OBWKZXGNY",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXACAXUKH",
-          "text": "Both 1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O3KFTPPU8",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3T3OJC3N",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding a jet engine, which of the following statements is/are correct?",
+      "firstCorrectStatements": [
+        "Maximum thrust decreases as the pressure altitude increases."
+      ],
+      "firstIncorrectStatements": [
+        "Maximum thrust increases as the pressure altitude increases."
+      ],
+      "secondCorrectStatements": [
+        "Specific fuel consumption is inversely proportional to pressure altitude, at constant TAS."
+      ],
+      "secondIncorrectStatements": [
+        "Specific fuel consumption is directly proportional to pressure altitude, at constant TAS."
       ]
     }
   },
@@ -329,33 +287,19 @@
     "learningObjectives": ["021.11.05.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct, as regards a jet engine?\n\n1\\. The maximum thrust decreases slightly as the pressure altitude decreases.   \n2\\. The specific fuel consumption increases slightly as the pressure altitude decreases at constant TAS.",
-      "options": [
-        {
-          "id": "OUKENH44Q",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3E5SROQI",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OPHK8YXQA",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OY9WVXLP6",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct, as regards a jet engine?",
+      "firstCorrectStatements": [
+        "The specific fuel consumption increases slightly as the pressure altitude decreases at constant TAS."
+      ],
+      "firstIncorrectStatements": [
+        "The specific fuel consumption decreases slightly as the pressure altitude decreases at constant TAS."
+      ],
+      "secondCorrectStatements": [
+        "The maximum thrust decreases slightly as the pressure altitude decreases."
+      ],
+      "secondIncorrectStatements": [
+        "The maximum thrust increases slightly as the pressure altitude decreases."
       ]
     }
   },
@@ -509,33 +453,19 @@
     "learningObjectives": ["021.11.05.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an impulse turbine are correct or incorrect?\n\nI. The pressure remains constant across the nozzle guide vanes.   \nII. The pressure remains constant across the rotor blades.",
-      "options": [
-        {
-          "id": "ONHUTFNWN",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OS4G2XADG",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O94MUEZLH",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O4SQJLRDE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an impulse turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the rotor blades."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure does not remain constant across the rotor blades."
+      ],
+      "secondCorrectStatements": [
+        "The pressure remains constant across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure does not remain constant across the nozzle guide vanes."
       ]
     }
   },

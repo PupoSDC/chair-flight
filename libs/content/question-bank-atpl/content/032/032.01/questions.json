@@ -544,33 +544,19 @@
     "learningObjectives": ["032.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements are correct/incorrect regarding V**Y** in a climb with one engine inoperative?\n\n(1) Following an engine failure, V**Y** decreases, becoming V**YSE**.   \n (2) V**YSE** expressed as a true air speed will increase during the climb.",
-      "options": [
-        {
-          "id": "O7LXEPLEO",
-          "text": "(1) is incorrect; (2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEIV5CZGW",
-          "text": "(1) is correct; (2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OGUJ1UFWM",
-          "text": "(1) is correct; (2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQ2SDPTJA",
-          "text": "(1) is incorrect; (2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements are correct/incorrect regarding VY in a climb with one engine inoperative?",
+      "firstCorrectStatements": [
+        "Following an engine failure, VY decreases, becoming VYSE."
+      ],
+      "firstIncorrectStatements": [
+        "Following an engine failure, VY increases, becoming VYSE."
+      ],
+      "secondCorrectStatements": [
+        "VYSE expressed as a true airspeed will decrease during the climb."
+      ],
+      "secondIncorrectStatements": [
+        "VYSE expressed as a true airspeed will not change during the climb."
       ]
     }
   },

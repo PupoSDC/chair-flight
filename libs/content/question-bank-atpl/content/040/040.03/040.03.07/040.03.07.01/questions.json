@@ -197,33 +197,19 @@
     "learningObjectives": ["040.03.07.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements about autoflight systems is/are correct?\n\n1\\. Autoflight systems are designed to assist and reduce the workload of the pilot and possess the creativity to deal with unforeseen situations.   \n 2\\. An autoflight system is, at its core, a computer, operated by logic, and is NOT capable of performing with the same personal motivation as a pilot, with regard to safety.",
-      "options": [
-        {
-          "id": "OUKMPHZNZ",
-          "text": "1 is incorrect and 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OW2J15JHZ",
-          "text": "1 is correct and 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6WZ8FJ9S",
-          "text": "1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCPIN5SE5",
-          "text": "1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements about autoflight systems is/are correct?",
+      "firstCorrectStatements": [
+        "An autoflight system is, at its core, a computer, operated by logic, and is NOT capable of performing with the same personal motivation as a pilot, with regard to safety."
+      ],
+      "firstIncorrectStatements": [
+        "An autoflight system is, at its core, a computer, operated by logic, and is capable of performing with the same personal motivation as a pilot, with regard to safety."
+      ],
+      "secondCorrectStatements": [
+        "Autoflight systems are designed to assist and reduce the workload of the pilot and possess the creativity to deal with unforeseen situations."
+      ],
+      "secondIncorrectStatements": [
+        "Autoflight systems are designed to hinder and increase the workload of the pilot and lack the creativity to deal with unforeseen situations."
       ]
     }
   },

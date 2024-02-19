@@ -2299,33 +2299,19 @@
     "learningObjectives": ["033.06"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "A pilot has planned a track of 276° (T) taking into account the following forecast wind: 240°(T)/15 kt. But, during the cruise phase, he/she realizes that the actual wind is not as forecasted, but it is 290°(T)/25 kt. Which statement below is correct/incorrect, assuming that the actual airspeed is the same as the planned airspeed?\n\n1\\. With a lower groundspeed, the actual timings will be later than the planned timings.   \n 2\\. The wind correction angle must be altered from a value to the right to a value to the left.",
-      "options": [
-        {
-          "id": "OJWG0R6V9",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFIXGFKDG",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5QKKF1QQ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1U26SW3L",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "A pilot has planned a track of 276° (T) taking into account the following forecast wind: 240°(T)/15 kt. But, during the cruise phase, he/she realizes that the actual wind is not as forecasted, but it is 290°(T)/25 kt. Which statement below is correct/incorrect, assuming that the actual airspeed is the same as the planned airspeed?",
+      "firstCorrectStatements": [
+        "With a lower groundspeed, the actual timings will be later than the planned timings."
+      ],
+      "firstIncorrectStatements": [
+        "With a higher groundspeed, the actual timings will be later than the planned timings."
+      ],
+      "secondCorrectStatements": [
+        "The wind correction angle must be altered from a value to the right to a value to the left."
+      ],
+      "secondIncorrectStatements": [
+        "The wind correction angle must be altered from a value to the left to a value to the right."
       ]
     }
   },

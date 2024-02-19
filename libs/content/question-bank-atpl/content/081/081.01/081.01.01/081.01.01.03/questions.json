@@ -299,33 +299,15 @@
     "learningObjectives": ["081.01.01.03.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Assuming no flow separation, which of these statements about the flow around an aerofoil as the angle of attack increases are correct or incorrect?\n\nI. The stagnation point moves down.   \nII. The point of lowest static pressure moves forward.",
-      "options": [
-        {
-          "id": "OLT3GDRCS",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8ZVPDHPG",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OKW1AEBKR",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHIVS9FFA",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Assuming no flow separation, which of these statements about the flow around an aerofoil as the angle of attack increases are correct or incorrect?",
+      "firstCorrectStatements": ["The stagnation point moves down."],
+      "firstIncorrectStatements": ["The stagnation point moves up."],
+      "secondCorrectStatements": [
+        "The point of lowest static pressure moves forward."
+      ],
+      "secondIncorrectStatements": [
+        "The point of lowest static pressure moves backward."
       ]
     }
   },
@@ -814,34 +796,12 @@
     "learningObjectives": ["081.01.01.03.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement, about the effects on drag of fitting external tip tanks to the wings of an aeroplane, is correct?\n\nI. Parasite drag decreases.   \nII. Induced drag decreases.",
-      "options": [
-        {
-          "id": "OGILQXABN",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OABWE6V4J",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O6854MCPO",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OUUQXWYGT",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement, about the effects on drag of fitting external tip tanks to the wings of an aeroplane, is correct?",
+      "firstCorrectStatements": ["Induced drag decreases."],
+      "firstIncorrectStatements": ["Induced drag increases."],
+      "secondCorrectStatements": ["Parasite drag increases."],
+      "secondIncorrectStatements": ["Parasite drag decreases."]
     }
   },
   {
@@ -1346,33 +1306,15 @@
     "learningObjectives": ["081.01.01.03.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Assuming no flow separation, which of these statements about the flow around an aerofoil as the angle of attack decreases are correct or incorrect?\n\nI. The stagnation point moves down.   \nII. The point of lowest static pressure moves forward.",
-      "options": [
-        {
-          "id": "OE24O6KKQ",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODJFVYMDN",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCJPLYCQ5",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O2IQU64TN",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Assuming no flow separation, which of these statements about the flow around an aerofoil as the angle of attack decreases are correct or incorrect?",
+      "firstCorrectStatements": ["The stagnation point moves up."],
+      "firstIncorrectStatements": ["The stagnation point moves down."],
+      "secondCorrectStatements": [
+        "The point of lowest static pressure moves aft."
+      ],
+      "secondIncorrectStatements": [
+        "The point of lowest static pressure moves forward."
       ]
     }
   },

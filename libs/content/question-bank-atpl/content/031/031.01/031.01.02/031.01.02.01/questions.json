@@ -209,33 +209,19 @@
     "learningObjectives": ["031.01.02.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct?\n\nI. Stall speeds are determined with the CG at the forward limit.   \n II. Minimum control speeds are determined with the CG at the aft limit.",
-      "options": [
-        {
-          "id": "OUQCOZRAW",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQMV95PZ5",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O3SS0PKGJ",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQ0EX2D3I",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct?",
+      "firstCorrectStatements": [
+        "Stall speeds are determined with the CG at the forward limit."
+      ],
+      "firstIncorrectStatements": [
+        "Stall speeds are determined with the CG at the aft limit."
+      ],
+      "secondCorrectStatements": [
+        "Minimum control speeds are determined with the CG at the aft limit."
+      ],
+      "secondIncorrectStatements": [
+        "Minimum control speeds are determined with the CG at the forward limit."
       ]
     }
   },

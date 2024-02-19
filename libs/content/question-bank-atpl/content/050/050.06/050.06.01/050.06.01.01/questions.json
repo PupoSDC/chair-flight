@@ -248,33 +248,19 @@
     "learningObjectives": ["050.06.01.01.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about air masses are correct or incorrect?\n\n1\\. The polar ice caps are source regions of polar air.  \n2\\. Regarding stability, all air masses are stable at source.",
-      "options": [
-        {
-          "id": "OZFJ2HZMK",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBYATKOPH",
-          "text": "Both 1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O9HM6BV2P",
-          "text": "Both 1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OUI5DPKN8",
-          "text": "1 is not correct, 2 is correct",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about air masses are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Regarding stability, all air masses are stable at source."
+      ],
+      "firstIncorrectStatements": [
+        "Regarding stability, all air masses are unstable at source."
+      ],
+      "secondCorrectStatements": [
+        "The polar ice caps are not source regions of polar air."
+      ],
+      "secondIncorrectStatements": [
+        "The polar ice caps are source regions of polar air."
       ]
     }
   },

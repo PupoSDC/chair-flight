@@ -7,33 +7,19 @@
     "learningObjectives": ["032.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "With regard to Obstacle-Limited Take-Off Mass, which of the following statements is correct?\n\n1\\. Maximum Obstacle-Limited Take-Off Mass is the limiting take-off mass if the climb gradient to clear obstacle with required margins is higher than the minimum climb gradient.   \n 2\\. Obstacle limitations may overcompensate the positive effects of headwinds.",
-      "options": [
-        {
-          "id": "OTIRW5SCS",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEGRH6C57",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWHK4XKY3",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O0ZM5PUHF",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "With regard to Obstacle-Limited Take-Off Mass, which of the following statements is correct?",
+      "firstCorrectStatements": [
+        "Maximum Obstacle-Limited Take-Off Mass is the limiting take-off mass if the climb gradient to clear obstacle with required margins is lower than the minimum climb gradient."
+      ],
+      "firstIncorrectStatements": [
+        "Maximum Obstacle-Limited Take-Off Mass is the limiting take-off mass if the climb gradient to clear obstacle with required margins is higher than the minimum climb gradient."
+      ],
+      "secondCorrectStatements": [
+        "Obstacle limitations may not fully compensate the positive effects of headwinds."
+      ],
+      "secondIncorrectStatements": [
+        "Obstacle limitations may overcompensate the positive effects of headwinds."
       ]
     }
   },

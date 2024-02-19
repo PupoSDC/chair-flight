@@ -688,34 +688,12 @@
     "learningObjectives": ["040.02.02.05.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "The inner ear is able to perceive:\n\n1\\. angular acceleration   \n2\\. linear acceleration   \n3\\. Noise",
-      "options": [
-        {
-          "id": "OPWYAIQMI",
-          "text": "1 and 2 are correct, 3 is false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVFGJNW44",
-          "text": "2 is correct, 1 and 3 are both false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF89IU63F",
-          "text": "1 and 2 and 3 are correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLBIY8MNW",
-          "text": "2 and 3 are correct, 1 is false",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "The inner ear is able to perceive:",
+      "firstCorrectStatements": ["Angular acceleration"],
+      "firstIncorrectStatements": ["Angular deceleration"],
+      "secondCorrectStatements": ["Linear acceleration"],
+      "secondIncorrectStatements": ["Linear deceleration"]
     }
   },
   {

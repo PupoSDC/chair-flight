@@ -270,33 +270,19 @@
     "learningObjectives": ["050.07.02.01.08"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct?\n\n1\\. A blocking anticyclone is a warm high pressure.   \n 2\\. Sea-breeze fronts can occur in mid-latitudes as well as other latitudes.",
-      "options": [
-        {
-          "id": "O2PAN5MZK",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLFWTK5II",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMFP6AZXC",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORYRSGTBO",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is correct?",
+      "firstCorrectStatements": [
+        "A blocking anticyclone is a warm high pressure."
+      ],
+      "firstIncorrectStatements": [
+        "A blocking anticyclone is a cold high pressure."
+      ],
+      "secondCorrectStatements": [
+        "Sea-breeze fronts can occur in mid-latitudes as well as other latitudes."
+      ],
+      "secondIncorrectStatements": [
+        "Sea-breeze fronts can only occur in tropical latitudes."
       ]
     }
   }

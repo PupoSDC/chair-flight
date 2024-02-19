@@ -443,33 +443,19 @@
     "learningObjectives": ["021.11.01.02.12"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "The bypass ratio:\n\nI. is the ratio of bypass air mass flow to HP compressor mass flow.   \nII. can be determined from the inlet air mass flow and the HP compressor mass flow.",
-      "options": [
-        {
-          "id": "OBDGYLSFS",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKYU9JKGK",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OP4RDLT6H",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCHJUS9MW",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "The bypass ratio:",
+      "firstCorrectStatements": [
+        "The bypass ratio is the ratio of bypass air mass flow to HP compressor mass flow."
+      ],
+      "firstIncorrectStatements": [
+        "The bypass ratio is the ratio of HP compressor mass flow to bypass air mass flow."
+      ],
+      "secondCorrectStatements": [
+        "The bypass ratio can be determined from the inlet air mass flow and the HP compressor mass flow."
+      ],
+      "secondIncorrectStatements": [
+        "The bypass ratio cannot be determined from the inlet air mass flow and the HP compressor mass flow."
       ]
     }
   },
@@ -744,33 +730,19 @@
     "learningObjectives": ["021.11.01.02.12"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "The bypass ratio:\n\nI. is the ratio of the volume of air passing through the inlet to that through the HP compressor.   \nII. can be determined from the inlet air mass flow and the bypass mass flow.",
-      "options": [
-        {
-          "id": "OQ1OKDTXM",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBS6WMX42",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O5QKVEGN6",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OARRDXJWA",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "The bypass ratio:",
+      "firstCorrectStatements": [
+        "The bypass ratio can be determined from the inlet air mass flow and the bypass mass flow."
+      ],
+      "firstIncorrectStatements": [
+        "The bypass ratio can't be determined from the inlet air mass flow and the bypass mass flow."
+      ],
+      "secondCorrectStatements": [
+        "The ratio of the volume of air passing through the inlet to that through the HP compressor is the bypass ratio."
+      ],
+      "secondIncorrectStatements": [
+        "The ratio of the volume of air passing through the inlet to that through the HP compressor is not the bypass ratio."
       ]
     }
   },

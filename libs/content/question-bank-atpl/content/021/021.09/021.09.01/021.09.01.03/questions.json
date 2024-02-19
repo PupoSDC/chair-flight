@@ -126,34 +126,12 @@
     "learningObjectives": ["021.09.01.03.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct about frequency?\n\n1) The SI unit for frequency is RPM   \n 2) Frequency is oscillations per second",
-      "options": [
-        {
-          "id": "OCZWZLIXO",
-          "text": "1 is true; 2 is false.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBZXEOVTO",
-          "text": "1 is false; 2 is true.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O2PHUM5LR",
-          "text": "1 and 2 are true.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OB9V7V9HE",
-          "text": "1 and 2 are false.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement is correct about frequency?",
+      "firstCorrectStatements": ["Frequency is oscillations per second"],
+      "firstIncorrectStatements": ["Frequency is oscillations per minute"],
+      "secondCorrectStatements": ["The SI unit for frequency is Hz"],
+      "secondIncorrectStatements": ["The SI unit for frequency is RPM"]
     }
   },
   {

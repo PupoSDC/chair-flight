@@ -1,6 +1,6 @@
 [
   {
-    "id": "QMJQVAYA",
+    "id": "QHGZLYRJ",
     "relatedQuestions": [],
     "externalIds": [
       "ATPLQ-815007",
@@ -96,46 +96,76 @@
       "ATPLGS-126236",
       "ATPLGS-126528",
       "ATPLGS-126074",
-      "BGS-810239"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.06.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. If flutter occurs, IAS should be reduced.   \nII. Resistance to flutter increases with increasing wing stiffness.",
-      "options": [
-        {
-          "id": "OWCKEM70Y",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEFYYFVXJ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O9IL608JI",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OF8OSUBMX",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEUVGJLX",
-    "relatedQuestions": [],
-    "externalIds": [
+      "BGS-810239",
+      "ATPLQ-811494",
+      "BGS-810110",
+      "ATPLGS-126174",
+      "BGS-810628",
+      "BGS-810233",
+      "BGS-810245",
+      "ATPLGS-126176",
+      "ATPLGS-126276",
+      "ATPLGS-126231",
+      "BGS-810278",
+      "BGS-810109",
+      "BGS-810289",
+      "BGS-810107",
+      "BGS-811448",
+      "BGS-811456",
+      "BGS-810284",
+      "BGS-810105",
+      "BGS-811482",
+      "ATPLGS-126175",
+      "ATPLGS-126234",
+      "ATPLGS-126232",
+      "ATPLGS-126233",
+      "ATPLGS-125535",
+      "BGS-810227",
+      "BGS-811205",
+      "BGS-810226",
+      "BGS-810290",
+      "BGS-810104",
+      "BGS-810908",
+      "BGS-810903",
+      "BGS-811194",
+      "ATPLGS-126077",
+      "ATPLGS-126173",
+      "BGS-810906",
+      "ATPLGS-126235",
+      "ATPLGS-126136",
+      "BGS-810909",
+      "BGS-810277",
+      "ATPLGS-126157",
+      "ATPLGS-126158",
+      "ATPLGS-126137",
+      "ATPLGS-126135",
+      "ATPLGS-126139",
+      "ATPLGS-126134",
+      "ATPLGS-126133",
+      "ATPLGS-126129",
+      "ATPLGS-126138",
+      "ATPLGS-126159",
+      "ATPLGS-126127",
+      "ATPLGS-126131",
+      "ATPLGS-126128",
+      "ATPLGS-126132",
+      "ATPLGS-126126",
+      "BGS-810108",
+      "ATPLGS-126130",
+      "BGS-810237",
+      "BGS-810243",
+      "BGS-810283",
+      "BGS-810281",
+      "BGS-810106",
+      "ATPLGS-126076",
+      "BGS-810103",
+      "BGS-810911",
+      "ATPLGS-126236",
+      "BGS-811207",
+      "ATPLGS-118274",
+      "ATPLGS-126528",
+      "ATPLGS-126074",
+      "BGS-810239",
       "ATPLQ-818737",
       "BGS-810110",
       "ATPLGS-126174",
@@ -199,33 +229,23 @@
     "learningObjectives": ["081.06.01.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. Aero-elastic coupling does not affect flutter characteristics.  \nII. Occurrence of flutter is independent of IAS.",
-      "options": [
-        {
-          "id": "OIBSKSPPV",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OK43OQXNU",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLDCKB5FH",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXJPD0ZWM",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about flutter are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The risk of flutter increases as IAS increases.",
+        "Occurrence of flutter is dependent on IAS.",
+        "If flutter occurs, IAS should be reduced."
+      ],
+      "firstIncorrectStatements": [
+        "The risk of flutter increases as IAS decreases.",
+        "Occurrence of flutter is independent of IAS.",
+        "If flutter occurs, IAS should be increased."
+      ],
+      "secondCorrectStatements": [
+        "Aero-elastic coupling affects flutter characteristics."
+      ],
+      "secondIncorrectStatements": [
+        "Aero-elastic coupling does not affect flutter characteristics."
       ]
     }
   },
@@ -342,114 +362,6 @@
         {
           "id": "OWSLM3NJI",
           "text": "aerodynamic balancing of the control surface.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHGZLYRJ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-811494",
-      "BGS-810110",
-      "ATPLGS-126174",
-      "BGS-810628",
-      "BGS-810233",
-      "BGS-810245",
-      "ATPLGS-126176",
-      "ATPLGS-126276",
-      "ATPLGS-126231",
-      "BGS-810278",
-      "BGS-810109",
-      "BGS-810289",
-      "BGS-810107",
-      "BGS-811448",
-      "BGS-811456",
-      "BGS-810284",
-      "BGS-810105",
-      "BGS-811482",
-      "ATPLGS-126175",
-      "ATPLGS-126234",
-      "ATPLGS-126232",
-      "ATPLGS-126233",
-      "ATPLGS-125535",
-      "BGS-810227",
-      "BGS-811205",
-      "BGS-810226",
-      "BGS-810290",
-      "BGS-810104",
-      "BGS-810908",
-      "BGS-810903",
-      "BGS-811194",
-      "ATPLGS-126077",
-      "ATPLGS-126173",
-      "BGS-810906",
-      "ATPLGS-126235",
-      "ATPLGS-126136",
-      "BGS-810909",
-      "BGS-810277",
-      "ATPLGS-126157",
-      "ATPLGS-126158",
-      "ATPLGS-126137",
-      "ATPLGS-126135",
-      "ATPLGS-126139",
-      "ATPLGS-126134",
-      "ATPLGS-126133",
-      "ATPLGS-126129",
-      "ATPLGS-126138",
-      "ATPLGS-126159",
-      "ATPLGS-126127",
-      "ATPLGS-126131",
-      "ATPLGS-126128",
-      "ATPLGS-126132",
-      "ATPLGS-126126",
-      "BGS-810108",
-      "ATPLGS-126130",
-      "BGS-810237",
-      "BGS-810243",
-      "BGS-810283",
-      "BGS-810281",
-      "BGS-810106",
-      "ATPLGS-126076",
-      "BGS-810103",
-      "BGS-810911",
-      "ATPLGS-126236",
-      "BGS-811207",
-      "ATPLGS-118274",
-      "ATPLGS-126528",
-      "ATPLGS-126074",
-      "BGS-810239"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.06.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. Aero-elastic coupling does not affect flutter characteristics.  \nII. The risk of flutter increases as IAS increases.",
-      "options": [
-        {
-          "id": "OBTSARIZG",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCMCJZ2A1",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OX1XEWVIX",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYYQBUTYP",
-          "text": "I is incorrect, II is incorrect.",
           "correct": false,
           "why": ""
         }

@@ -83,33 +83,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an reaction turbine are correct or incorrect?\n\nI. The pressure remains constant across the nozzle guide vanes.   \n II. The pressure rises across the rotor blades.",
-      "options": [
-        {
-          "id": "OFJWUAMLX",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OKCUNQVA0",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF7USVYPB",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O73HPPPEK",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure decreases across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure rises across the rotor blades."
       ]
     }
   },
@@ -195,33 +181,17 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a reaction turbine are correct or incorrect?\n\nI. The pressure rises across the nozzle guide vanes.  \nII. The pressure drops across the rotor blades.",
-      "options": [
-        {
-          "id": "O4RYUSHZT",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OFHLCZNWX",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQUYOT4NA",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OX8NBDQCR",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": ["The pressure drops across the rotor blades."],
+      "firstIncorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure drops across the rotor blades."
       ]
     }
   },
@@ -329,33 +299,17 @@
     "learningObjectives": ["021.11.02.04.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an impulse turbine are correct or incorrect?\n\nI. The pressure rises across the nozzle guide vanes.   \nII. The pressure rises across the rotor blades.",
-      "options": [
-        {
-          "id": "ODQL7KQWU",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXTFVLI8S",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OGJYUI6NI",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFGUPRFVF",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an impulse turbine are correct or incorrect?",
+      "firstCorrectStatements": ["The pressure rises across the rotor blades."],
+      "firstIncorrectStatements": [
+        "The pressure drops across the rotor blades."
+      ],
+      "secondCorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
       ]
     }
   },
@@ -445,33 +399,19 @@
     "learningObjectives": ["021.11.02.04.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct about the flow in a divergent (subsonic) gas turbine engine intake?\n\n1\\. The static pressure remains constant in flow direction.   \n2\\. The total temperature decreases in flow direction.",
-      "options": [
-        {
-          "id": "OYMLRDDR9",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHW8A9L65",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJXPUE5MB",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBP2QUN9G",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is correct about the flow in a divergent (subsonic) gas turbine engine intake?",
+      "firstCorrectStatements": [
+        "The static pressure decreases in flow direction."
+      ],
+      "firstIncorrectStatements": [
+        "The static pressure remains constant in flow direction."
+      ],
+      "secondCorrectStatements": [
+        "The total temperature increases in flow direction."
+      ],
+      "secondIncorrectStatements": [
+        "The total temperature decreases in flow direction."
       ]
     }
   },
@@ -860,33 +800,17 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a reaction turbine are correct or incorrect?\n\nI. The pressure drops across the nozzle guide vanes.  \nII. The pressure rises across the rotor blades.",
-      "options": [
-        {
-          "id": "OBDVDT010",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OS9BTE05J",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXZQWM96E",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMCLOACFB",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": ["The pressure rises across the rotor blades."],
+      "firstIncorrectStatements": [
+        "The pressure drops across the rotor blades."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
       ]
     }
   },
@@ -962,33 +886,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an reaction turbine are correct or incorrect?\n\nI. The pressure rises across the nozzle guide vanes.   \nII. The pressure remains constant across the rotor blades.",
-      "options": [
-        {
-          "id": "O52L0ZCLF",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O1PUFPAW1",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O4SFU7KRG",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLRLVTKKY",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the rotor blades."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure changes across the rotor blades."
       ]
     }
   },
@@ -1048,33 +958,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an impulse turbine are correct or incorrect?\n\nI. The pressure rises across the nozzle guide vanes.   \nII. The pressure drops across the rotor blades.",
-      "options": [
-        {
-          "id": "ONDMGISA6",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVVPRMLTL",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODJJBQDFL",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OEK3Q7IOB",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an impulse turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure rises across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure drops across the rotor blades."
       ]
     }
   },
@@ -1223,33 +1119,15 @@
     "learningObjectives": ["021.11.02.04.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct about the flow in a divergent jet engine inlet?\n\n1\\. The speed increases in flow direction.   \n2\\. The total pressure increases in flow direction.",
-      "options": [
-        {
-          "id": "OF2VA7LBX",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMUSLEU7U",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXCSZUXJY",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OY6Y5UPFL",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct about the flow in a divergent jet engine inlet?",
+      "firstCorrectStatements": ["The speed decreases in flow direction."],
+      "firstIncorrectStatements": ["The speed increases in flow direction."],
+      "secondCorrectStatements": [
+        "The total pressure decreases in flow direction."
+      ],
+      "secondIncorrectStatements": [
+        "The total pressure increases in flow direction."
       ]
     }
   },
@@ -1369,33 +1247,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an reaction turbine are correct or incorrect?\n\nI. The pressure drops across the nozzle guide vanes.   \n II. The pressure remains constant across the rotor blades.",
-      "options": [
-        {
-          "id": "ON5JXMTKQ",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKEZXZWT0",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJ7CGXOJE",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQOTC7N6T",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the rotor blades."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure remains constant across the rotor blades."
       ]
     }
   },
@@ -1586,33 +1450,17 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an reaction turbine are correct or incorrect?\n\nI. The pressure drops across the nozzle guide vanes.   \n II. The pressure drops across the rotor blades.",
-      "options": [
-        {
-          "id": "OYRWFSHJH",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFHQ5STRD",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMHXGPCM3",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONRIGV2CU",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": ["The pressure drops across the rotor blades."],
+      "firstIncorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure drops across the rotor blades."
       ]
     }
   },
@@ -1701,33 +1549,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a reaction turbine are correct or incorrect?\n\nI. The pressure rises across the nozzle guide vanes.  \nII. The pressure rises across the rotor blades.",
-      "options": [
-        {
-          "id": "ORMZ3ISSB",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZ9GXSX3G",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OFFTFYTAQ",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6RNNK716",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure falls across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure rises across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure falls across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure rises across the rotor blades."
       ]
     }
   },
@@ -2014,33 +1848,19 @@
     "learningObjectives": ["021.11.02.04.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct about the flow in a divergent (subsonic) gas turbine engine intake?\n\n1\\. The dynamic pressure increases in flow direction.   \n2\\. The static temperature increases in flow direction.",
-      "options": [
-        {
-          "id": "OSBAYIBHC",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUSFXWJ13",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBRZZ7FY2",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCKCMEIK0",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is correct about the flow in a divergent (subsonic) gas turbine engine intake?",
+      "firstCorrectStatements": [
+        "The static temperature increases in flow direction."
+      ],
+      "firstIncorrectStatements": [
+        "The static temperature decreases in flow direction."
+      ],
+      "secondCorrectStatements": [
+        "The dynamic pressure decreases in flow direction."
+      ],
+      "secondIncorrectStatements": [
+        "The dynamic pressure increases in flow direction."
       ]
     }
   },
@@ -2079,33 +1899,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an impulse turbine are correct or incorrect?\n\nI. The pressure drops across the nozzle guide vanes.   \nII. The pressure remains constant across the rotor blades.",
-      "options": [
-        {
-          "id": "OPCYYXT3T",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OAMZKWGIY",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OSNK5F4HV",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODJVUSIP2",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an impulse turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure drops across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure remains constant across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure remains constant across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure drops across the rotor blades."
       ]
     }
   },
@@ -2188,33 +1994,19 @@
     "learningObjectives": ["021.11.02.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a reaction turbine are correct or incorrect?\n\nI. The pressure remains constant across the nozzle guide vanes.   \n II. The pressure drops across the rotor blades.",
-      "options": [
-        {
-          "id": "OLJ2M5WK4",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYBRI5MI5",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWULOVVQP",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLRULLA0N",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure varies across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure drops across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure remains constant across the rotor blades."
       ]
     }
   },
@@ -2304,33 +2096,19 @@
     "learningObjectives": ["021.11.02.04.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an reaction turbine are correct or incorrect?\n\nI. The pressure remains constant across the nozzle guide vanes.   \n II. The pressure remains constant across the rotor blades.",
-      "options": [
-        {
-          "id": "O30VTDHWS",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQTG3RIEA",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKWSCT11Z",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OHSBIEI5B",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a reaction turbine are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The pressure remains constant across the nozzle guide vanes."
+      ],
+      "firstIncorrectStatements": [
+        "The pressure remains variable across the nozzle guide vanes."
+      ],
+      "secondCorrectStatements": [
+        "The pressure remains variable across the rotor blades."
+      ],
+      "secondIncorrectStatements": [
+        "The pressure remains constant across the rotor blades."
       ]
     }
   },

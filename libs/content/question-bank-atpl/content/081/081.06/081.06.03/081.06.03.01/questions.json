@@ -1054,33 +1054,19 @@
     "learningObjectives": ["081.06.03.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement regarding the manoeuvre and gust load diagram in the clean configuration is correct?\n\nI. The gust load diagram has a symmetrical shape with respect to the n = 1 line for speeds above VB.   \nII. The manoeuvre load diagram does not extend beyond the speed VC.",
-      "options": [
-        {
-          "id": "OGCXUSBJE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOLVOQWT3",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OINXR4LJS",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O2RSFTFJV",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement regarding the manoeuvre and gust load diagram in the clean configuration is correct?",
+      "firstCorrectStatements": [
+        "The gust load diagram has a symmetrical shape with respect to the n = 1 line for speeds above VB."
+      ],
+      "firstIncorrectStatements": [
+        "The gust load diagram has an asymmetrical shape with respect to the n = 1 line for speeds above VB."
+      ],
+      "secondCorrectStatements": [
+        "The manoeuvre load diagram does not extend beyond the speed VC."
+      ],
+      "secondIncorrectStatements": [
+        "The manoeuvre load diagram extends beyond the speed VC."
       ]
     }
   }

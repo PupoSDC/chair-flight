@@ -328,33 +328,13 @@
     "learningObjectives": ["022.15.01.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct regarding data buses?\n\n(1) It organizes the series and operations.   \n (2) It carries data between computers.",
-      "options": [
-        {
-          "id": "O7CQXE8CN",
-          "text": "(1) is incorrect; (2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLCQQVKGG",
-          "text": "(1) is correct; (2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODDKJWNHK",
-          "text": "(1) is correct; (2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWHE6HJRW",
-          "text": "(1) is incorrect; (2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is correct regarding data buses?",
+      "firstCorrectStatements": ["It carries data between computers."],
+      "firstIncorrectStatements": ["It does not carry data between computers."],
+      "secondCorrectStatements": ["It organizes the series and operations."],
+      "secondIncorrectStatements": [
+        "It does not organize the series and operations."
       ]
     }
   },

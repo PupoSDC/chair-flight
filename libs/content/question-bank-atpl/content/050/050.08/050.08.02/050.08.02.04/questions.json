@@ -1,5 +1,40 @@
 [
   {
+    "id": "QMRMDOTO",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-505244",
+      "ATPLGS-123644",
+      "AVEXAM-65414",
+      "AVEXAM-19891",
+      "ATPLGS-123642",
+      "BGS-501659",
+      "AVEXAM-88624",
+      "ATPLQ-504616",
+      "ATPLGS-123644",
+      "AVEXAM-65414",
+      "AVEXAM-19891",
+      "ATPLGS-123642",
+      "BGS-501659",
+      "AVEXAM-88624"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.08.02.04.01", "050.07.04.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": [
+        "The summer monsoon in India is a SW monsoon."
+      ],
+      "firstIncorrectStatements": [
+        "The summer monsoon in India is a NE monsoon."
+      ],
+      "secondCorrectStatements": ["Hurricanes occur usually in summer."],
+      "secondIncorrectStatements": ["Hurricanes occur usually in winter."]
+    }
+  },
+  {
     "id": "QIAEKLVL",
     "relatedQuestions": [],
     "externalIds": ["ATPLQ-507765", "AVEXAM-85703", "AVEXAM-73217"],
@@ -69,52 +104,6 @@
         {
           "id": "OSB5DKDAK",
           "text": "Dry dusty Sirocco wind reduces visibility and thermal convection causes moderate to severe turbulence. During the winter, the dry, dusty weather is replaced and stable conditions bring extensive rain from NS clouds.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMRMDOTO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-504616",
-      "ATPLGS-123644",
-      "AVEXAM-65414",
-      "AVEXAM-19891",
-      "ATPLGS-123642",
-      "BGS-501659",
-      "AVEXAM-88624"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.08.02.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. The summer monsoon in India is a SW monsoon   \n2\\. Hurricanes occur usually in winter",
-      "options": [
-        {
-          "id": "O0G9ENEN0",
-          "text": "1 is correct, 2 is not correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OJS6VLSTO",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEGTMM3YD",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJ6GD1UEW",
-          "text": "1 and 2 are not correct",
           "correct": false,
           "why": ""
         }
@@ -457,34 +446,16 @@
     "learningObjectives": ["050.08.02.04.05"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. Trade winds reach up to the tropopause   \n2\\. The air advected by the SW monsoon over West Africa has its source region in the southern hemisphere",
-      "options": [
-        {
-          "id": "OTHYMRQ8F",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCF3APNI4",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OUZUDP3PV",
-          "text": "1 is not correct, 2 is correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ORGIPRXEO",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": [
+        "The air advected by the SW monsoon over West Africa has its source region in the southern hemisphere"
+      ],
+      "firstIncorrectStatements": [
+        "The air advected by the SW monsoon over West Africa has its source region in the northern hemisphere"
+      ],
+      "secondCorrectStatements": ["Trade winds reach up to the troposphere"],
+      "secondIncorrectStatements": ["Trade winds reach up to the stratosphere"]
     }
   },
   {
@@ -504,33 +475,19 @@
     "learningObjectives": ["050.08.02.04.06"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. The summer monsoon in the southern part of India is a NE monsoon   \n2\\. The prevailing climatic zone in Australia is the dry climate",
-      "options": [
-        {
-          "id": "OV25R7ZSN",
-          "text": "1 is not correct, 2 is correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5IXP0B6J",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORQCN1719",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O0SAJSSUI",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": [
+        "The prevailing climatic zone in Australia is the dry climate"
+      ],
+      "firstIncorrectStatements": [
+        "The summer monsoon in the southern part of India is a NE monsoon"
+      ],
+      "secondCorrectStatements": [
+        "The summer monsoon in the southern part of India is a SW monsoon"
+      ],
+      "secondIncorrectStatements": [
+        "The prevailing climatic zone in Australia is not the dry climate"
       ]
     }
   },

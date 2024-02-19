@@ -337,33 +337,19 @@
     "learningObjectives": ["022.01.09.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "In a vibration monitoring system, a filter:\n\n1\\. erases any output which is normal to the engine.   \n2\\. allows through to the amplifier any frequency that is considered to be harmful to the engine.",
-      "options": [
-        {
-          "id": "OAJN82OWB",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OCQ06N2GJ",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFPJQ2SWP",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFE96JTYB",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "In a vibration monitoring system, a filter:",
+      "firstCorrectStatements": [
+        "Erases any output which is normal to the engine."
+      ],
+      "firstIncorrectStatements": [
+        "Allows through to the amplifier any frequency that is considered to be harmful to the engine."
+      ],
+      "secondCorrectStatements": [
+        "Allows through to the amplifier any frequency that is considered to be harmful to the engine."
+      ],
+      "secondIncorrectStatements": [
+        "Erases any output which is harmful to the engine."
       ]
     }
   },

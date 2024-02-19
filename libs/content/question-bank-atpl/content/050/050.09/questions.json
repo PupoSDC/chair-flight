@@ -5076,33 +5076,19 @@
     "learningObjectives": ["050.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about thunderstorms are correct or incorrect?\n\n1\\. If a trough is situated behind a cold front, thunderstorms may occur in it   \n 2\\. Prefrontal thunderstorms can occur ahead of cold fronts",
-      "options": [
-        {
-          "id": "OZKQA9BMD",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONAT4HHTF",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONGY8P5P4",
-          "text": "1 and 2 are correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5PSEUSVU",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about thunderstorms are correct or incorrect?",
+      "firstCorrectStatements": [
+        "If a trough is situated behind a cold front, thunderstorms may occur in it."
+      ],
+      "firstIncorrectStatements": [
+        "If a trough is situated behind a cold front, thunderstorms may not occur in it."
+      ],
+      "secondCorrectStatements": [
+        "Prefrontal thunderstorms can occur ahead of cold fronts."
+      ],
+      "secondIncorrectStatements": [
+        "Prefrontal thunderstorms cannot occur ahead of cold fronts."
       ]
     }
   },

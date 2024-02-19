@@ -1220,33 +1220,19 @@
     "learningObjectives": ["062.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "What is true about SSR compared with Primary Radar?\n\n1\\. SSR range is increased due to the active participation of the airborne equipment.   \n 2\\. SSR allows identification of primary radar targets by code and call sign. ",
-      "options": [
-        {
-          "id": "OYK34Y4AR",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OACEYLQNR",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORT17CSKF",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OKGVZKNDG",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "What is true about SSR compared with Primary Radar?",
+      "firstCorrectStatements": [
+        "SSR range is increased due to the active participation of the airborne equipment."
+      ],
+      "firstIncorrectStatements": [
+        "SSR range is decreased due to the active participation of the airborne equipment."
+      ],
+      "secondCorrectStatements": [
+        "SSR allows identification of primary radar targets by code and call sign."
+      ],
+      "secondIncorrectStatements": [
+        "SSR does not allow identification of primary radar targets by code and call sign."
       ]
     }
   },

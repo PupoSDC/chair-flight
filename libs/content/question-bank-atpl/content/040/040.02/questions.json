@@ -726,33 +726,19 @@
     "learningObjectives": ["040.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct? \n\n1\\. A state of hyperventilation can occur in response to psychological stress.   \n 2\\. Physiological stress, e.g. through intense exercise, can cause hyperventilation.",
-      "options": [
-        {
-          "id": "OGUJT2OUA",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYEPZZRXM",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHC7FWF4Z",
-          "text": "Both 1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OE8JOIL9N",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct?",
+      "firstCorrectStatements": [
+        "A state of hyperventilation can occur in response to psychological stress."
+      ],
+      "firstIncorrectStatements": [
+        "A state of hyperventilation cannot occur in response to psychological stress."
+      ],
+      "secondCorrectStatements": [
+        "Physiological stress, e.g. through intense exercise, can cause hyperventilation."
+      ],
+      "secondIncorrectStatements": [
+        "Physiological stress, e.g. through intense exercise, cannot cause hyperventilation."
       ]
     }
   },

@@ -78,33 +78,19 @@
     "learningObjectives": ["081.06.03.02.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the gust load factor on an aeroplane are correct or incorrect?\n\nI. When the slope of the lift versus angle of attack curve increases, the gust load factor increases.   \nII. When the wing loading increases, the gust load factor decreases.",
-      "options": [
-        {
-          "id": "O3JKXCEIX",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKBBZGHHP",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBXXVKYNI",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMNSUYB5V",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the gust load factor on an aeroplane are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When the slope of the lift versus angle of attack curve increases, the gust load factor increases."
+      ],
+      "firstIncorrectStatements": [
+        "When the slope of the lift versus angle of attack curve decreases, the gust load factor increases."
+      ],
+      "secondCorrectStatements": [
+        "When the wing loading decreases, the gust load factor increases."
+      ],
+      "secondIncorrectStatements": [
+        "When the wing loading increases, the gust load factor decreases."
       ]
     }
   },
@@ -228,33 +214,19 @@
     "learningObjectives": ["081.06.03.02.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the gust load factor on an aeroplane are correct or incorrect?\n\nI. When the slope of the lift versus angle of attack curve decreases, the gust load factor decreases.   \nII. When the wing loading decreases, the gust load factor increases.",
-      "options": [
-        {
-          "id": "OMOL0ZE5Z",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOQRXGBXI",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3X3SLJR3",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUURFCK2H",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the gust load factor on an aeroplane are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When the slope of the lift versus angle of attack curve decreases, the gust load factor decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When the slope of the lift versus angle of attack curve increases, the gust load factor decreases."
+      ],
+      "secondCorrectStatements": [
+        "When the wing loading decreases, the gust load factor increases."
+      ],
+      "secondIncorrectStatements": [
+        "When the wing loading increases, the gust load factor increases."
       ]
     }
   },
