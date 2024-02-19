@@ -127,33 +127,19 @@
     "learningObjectives": ["081.01.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about a steady subsonic flow are correct or incorrect?\n\n1\\. The static pressure does not change as the streamlines diverge.   \n2\\. The velocity decreases as the streamlines diverge.",
-      "options": [
-        {
-          "id": "O3FTOMZE4",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OO4USXA9P",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCJRHKJJX",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWJMYQY1N",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about a steady subsonic flow are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The velocity decreases as the streamlines diverge."
+      ],
+      "firstIncorrectStatements": [
+        "The velocity increases as the streamlines diverge."
+      ],
+      "secondCorrectStatements": [
+        "The static pressure does not change as the streamlines diverge."
+      ],
+      "secondIncorrectStatements": [
+        "The static pressure changes as the streamlines diverge."
       ]
     }
   },

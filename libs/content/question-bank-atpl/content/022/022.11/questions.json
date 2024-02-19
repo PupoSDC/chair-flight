@@ -753,34 +753,12 @@
     "learningObjectives": ["022.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "In order to calculate the optimum vertical profile, the FMS uses the performance database. Before the flight, during the FMS preparation, the performance database has to be checked for:\n\n1\\. Correct engines types and configuration   \n 2\\. Correct aircraft type and variant   \n 3\\. Current navigational data cycle   ",
-      "options": [
-        {
-          "id": "OERQCNBTC",
-          "text": "2 and 3 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1YPSHQER",
-          "text": "1, 2 and 3 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCAUBQJWK",
-          "text": "1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OM64C4L5S",
-          "text": "1 and 3 are correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "In order to calculate the optimum vertical profile, the FMS uses the performance database. Before the flight, during the FMS preparation, the performance database has to be checked for:",
+      "firstCorrectStatements": ["Correct engines types and configuration"],
+      "firstIncorrectStatements": ["Incorrect engines types and configuration"],
+      "secondCorrectStatements": ["Correct aircraft type and variant"],
+      "secondIncorrectStatements": ["Incorrect aircraft type and variant"]
     }
   },
   {

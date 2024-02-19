@@ -755,33 +755,19 @@
     "learningObjectives": ["050.05"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. The maximum water vapour pressure is higher over ice than over water with the same temperature   \n2\\. For unsaturated air the dew-point temperature is lower than the temperature",
-      "options": [
-        {
-          "id": "OLTRP1KAQ",
-          "text": "1 is not correct, 2 is correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OM37XB6XC",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTUX3AHSD",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8TULRDYM",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": [
+        "For unsaturated air the dew-point temperature is lower than the temperature"
+      ],
+      "firstIncorrectStatements": [
+        "For unsaturated air the dew-point temperature is higher than the temperature"
+      ],
+      "secondCorrectStatements": [
+        "The maximum water vapour pressure is higher over ice than over water with the same temperature"
+      ],
+      "secondIncorrectStatements": [
+        "The maximum water vapour pressure is lower over ice than over water with the same temperature"
       ]
     }
   },

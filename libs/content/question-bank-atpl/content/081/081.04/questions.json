@@ -528,33 +528,19 @@
     "learningObjectives": ["081.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements are correct or incorrect regarding a sideslip, with the relative airflow coming from the left, on an aeroplane that exhibits both directional and lateral stability?\n\nI. The initial tendency of the nose of the aeroplane is to move to the right.   \nII. The initial tendency of the left wing is to move down.",
-      "options": [
-        {
-          "id": "OFMARTT7Q",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OR4CIMM0W",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OHMQQOKF4",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOKOLYQ9U",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements are correct or incorrect regarding a sideslip, with the relative airflow coming from the left, on an aeroplane that exhibits both directional and lateral stability?",
+      "firstCorrectStatements": [
+        "The initial tendency of the nose of the aeroplane is to move to the left."
+      ],
+      "firstIncorrectStatements": [
+        "The initial tendency of the nose of the aeroplane is to move to the right."
+      ],
+      "secondCorrectStatements": [
+        "The initial tendency of the left wing is to move up."
+      ],
+      "secondIncorrectStatements": [
+        "The initial tendency of the left wing is to move down."
       ]
     }
   },
@@ -727,33 +713,19 @@
     "learningObjectives": ["081.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements are correct or incorrect regarding a sideslip, with the relative airflow coming from the right, on an aeroplane that exhibits both directional and lateral stability?\n\nI. The initial tendency of the nose of the aeroplane is to move to the right.   \nII. The initial tendency of the left wing is to move down.",
-      "options": [
-        {
-          "id": "OSMJRTCVY",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPBXMJCHK",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLQL0RJ3N",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHVUPQFSP",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements are correct or incorrect regarding a sideslip, with the relative airflow coming from the right, on an aeroplane that exhibits both directional and lateral stability?",
+      "firstCorrectStatements": [
+        "The initial tendency of the nose of the aeroplane is to move to the right."
+      ],
+      "firstIncorrectStatements": [
+        "The initial tendency of the nose of the aeroplane is to move to the left."
+      ],
+      "secondCorrectStatements": [
+        "The initial tendency of the left wing is to move down."
+      ],
+      "secondIncorrectStatements": [
+        "The initial tendency of the left wing is to move up."
       ]
     }
   },

@@ -16,33 +16,19 @@
     "learningObjectives": ["021.04.03.03.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements about an anti-skid system are correct/incorrect?\n\n(1) The anti-skid computer compares wheel speed to aeroplane reference speed to provide a slip ratio for maximum braking performance;   \n(2) If a pilot is careful when braking manually, he/she will be able to achieve the same braking efficiency as if braking with anti-skid.",
-      "options": [
-        {
-          "id": "OTZSEG4IM",
-          "text": "(1) is incorrect; (2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQXXL47VD",
-          "text": "(1) is correct; (2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSPYUVBUY",
-          "text": "(1) is correct; (2) is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OIWA965ZF",
-          "text": "(1) is incorrect; (2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements about an anti-skid system are correct/incorrect?",
+      "firstCorrectStatements": [
+        "The anti-skid computer compares wheel speed to aeroplane reference speed to provide a slip ratio for maximum braking performance."
+      ],
+      "firstIncorrectStatements": [
+        "The anti-skid computer compares wheel speed to aeroplane reference speed to provide a slip ratio for minimum braking performance."
+      ],
+      "secondCorrectStatements": [
+        "If a pilot is careful when braking manually, he/she will still not be able to achieve the same braking efficiency as if braking with anti-skid."
+      ],
+      "secondIncorrectStatements": [
+        "If a pilot is careful when braking manually, he/she will be able to achieve the same braking efficiency as if braking with anti-skid."
       ]
     }
   },
@@ -73,33 +59,19 @@
     "learningObjectives": ["021.04.03.03.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an anti-skid system are correct or incorrect?\n\n1\\. The \"regulation of slip ratio\" function of an anti-skid system ensures optimum braking performance.   \n2\\. Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system.",
-      "options": [
-        {
-          "id": "OH74S15JF",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF74RHNJV",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OT0PXOAFU",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSHN7VZEC",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an anti-skid system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The \"regulation of slip ratio\" function of an anti-skid system ensures optimum braking performance."
+      ],
+      "firstIncorrectStatements": [
+        "The \"regulation of slip ratio\" function of an anti-skid system does not ensure optimum braking performance."
+      ],
+      "secondCorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure cannot achieve the same performance as a properly functioning anti-skid system."
+      ],
+      "secondIncorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system."
       ]
     }
   },
@@ -132,33 +104,19 @@
     "learningObjectives": ["021.04.03.03.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an anti-skid system are correct or incorrect?\n\n1\\. The \"regulation of slip ratio\" function of an anti-skid system ensures optimum braking performance.   \n2\\. Careful brake application by the pilot in case of anti-skid failure can never achieve the same performance as a properly functioning anti-skid system.",
-      "options": [
-        {
-          "id": "OSIVX4WAM",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF2EXXD7H",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OS3KFVZPT",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OHGKJGMKR",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an anti-skid system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The \"regulation of slip ratio\" function of an anti-skid system ensures optimum braking performance."
+      ],
+      "firstIncorrectStatements": [
+        "The \"regulation of slip ratio\" function of an anti-skid system does not ensure optimum braking performance."
+      ],
+      "secondCorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system."
+      ],
+      "secondIncorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can never achieve the same performance as a properly functioning anti-skid system."
       ]
     }
   },
@@ -232,33 +190,19 @@
     "learningObjectives": ["021.04.03.03.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an anti-skid system are correct or incorrect?\n\n1\\. In case of failure of an anti-skid system the auto-brake system takes over the regulation of the slip ratio.   \n2\\. Careful brake application by the pilot in case of anti-skid failure can never achieve the same performance as a properly functioning anti-skid system.",
-      "options": [
-        {
-          "id": "OAYWNV3AC",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPBKVSXXL",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OGU66OMDT",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOY1HGBOB",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an anti-skid system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system."
+      ],
+      "firstIncorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can never achieve the same performance as a properly functioning anti-skid system."
+      ],
+      "secondCorrectStatements": [
+        "In case of failure of an anti-skid system, the auto-brake system does not take over the regulation of the slip ratio."
+      ],
+      "secondIncorrectStatements": [
+        "In case of failure of an anti-skid system, the auto-brake system takes over the regulation of the slip ratio."
       ]
     }
   },
@@ -427,33 +371,19 @@
     "learningObjectives": ["021.04.03.03.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an anti-skid system are correct or incorrect?\n\n1\\. In case of failure of an anti-skid system the auto-brake system takes over the regulation of the slip ratio.   \n2\\. Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system.",
-      "options": [
-        {
-          "id": "OOJO8ENZF",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOGUKIB2N",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBYZSORLQ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQA4GAZ8V",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an anti-skid system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure can achieve the same performance as a properly functioning anti-skid system."
+      ],
+      "firstIncorrectStatements": [
+        "In case of failure of an anti-skid system the auto-brake system takes over the regulation of the slip ratio."
+      ],
+      "secondCorrectStatements": [
+        "In case of failure of an anti-skid system the auto-brake system does not take over the regulation of the slip ratio."
+      ],
+      "secondIncorrectStatements": [
+        "Careful brake application by the pilot in case of anti-skid failure cannot achieve the same performance as a properly functioning anti-skid system."
       ]
     }
   }

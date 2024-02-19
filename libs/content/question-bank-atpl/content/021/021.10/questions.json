@@ -717,33 +717,19 @@
     "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Both gas turbine and piston engines use a cycle made up of induction, compression, combustion and exhaust phases. Which of these statements about a piston engine are correct?\n\n1\\. The process in a piston engine is continuous.   \n2\\. Theoretically the combustion occurs at constant volume.",
-      "options": [
-        {
-          "id": "O8YSBNNRT",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O22PGZYFH",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OO6KZJGMT",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHOMAYTVE",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Both gas turbine and piston engines use a cycle made up of induction, compression, combustion and exhaust phases. Which of these statements about a piston engine are correct?",
+      "firstCorrectStatements": [
+        "Theoretically the combustion occurs at constant volume."
+      ],
+      "firstIncorrectStatements": [
+        "Theoretically the combustion occurs at constant pressure."
+      ],
+      "secondCorrectStatements": [
+        "The process in a piston engine is not continuous."
+      ],
+      "secondIncorrectStatements": [
+        "The process in a piston engine is continuous."
       ]
     }
   },

@@ -136,33 +136,19 @@
     "learningObjectives": ["050.04.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about steam fog are correct or incorrect?\n\n1\\. Steam fog is formed in air with cold air mass properties   \n2\\. Steam fog is formed only in windless conditions",
-      "options": [
-        {
-          "id": "OYTNAQ4AK",
-          "text": "1 and 2 are not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLQ179TUQ",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O5GZCVHER",
-          "text": "1 is correct, 2 is not correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OIOCLQ3BL",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about steam fog are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Steam fog is formed in air with cold air mass properties"
+      ],
+      "firstIncorrectStatements": [
+        "Steam fog is not formed in air with cold air mass properties"
+      ],
+      "secondCorrectStatements": [
+        "Steam fog is not formed only in windless conditions"
+      ],
+      "secondIncorrectStatements": [
+        "Steam fog is formed only in windless conditions"
       ]
     }
   },
@@ -293,33 +279,19 @@
     "learningObjectives": ["050.04.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. Fog only occurs in air with cold air mass properties   \n2\\. Both mist and haze are formed by water droplets and/or ice crystals in the atmosphere",
-      "options": [
-        {
-          "id": "OOTQZWRKN",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVARGYDKX",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OICWMH4DY",
-          "text": "1 and 2 are not correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OAMGP7Y86",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": [
+        "Fog only occurs in air with warm air mass properties."
+      ],
+      "firstIncorrectStatements": [
+        "Fog only occurs in air with cold air mass properties."
+      ],
+      "secondCorrectStatements": [
+        "Both mist and haze are not formed by water droplets and/or ice crystals in the atmosphere."
+      ],
+      "secondIncorrectStatements": [
+        "Both mist and haze are formed by water droplets and/or ice crystals in the atmosphere."
       ]
     }
   },

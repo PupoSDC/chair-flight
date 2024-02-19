@@ -13,33 +13,19 @@
     "learningObjectives": ["081.03.02.02.06"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Refer to figure.\n\nRegarding the Buffet Onset Boundary Chart in the annexe, which of these statements are correct or incorrect?\n\n1\\. Flying at M = 0.84 provides the optimum margin with respect to buffet onset.   \n 2\\. The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is higher at M = 0.82 than at M = 0.75.",
-      "options": [
-        {
-          "id": "OHCGWHUNQ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OROAWDZBI",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O2ESFJLLX",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQWCISLLO",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding the Buffet Onset Boundary Chart in the annexe, which of these statements are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is higher at M = 0.82 than at M = 0.75."
+      ],
+      "firstIncorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is lower at M = 0.82 than at M = 0.75."
+      ],
+      "secondCorrectStatements": [
+        "Flying at M = 0.84 provides the optimal margin with respect to buffet onset."
+      ],
+      "secondIncorrectStatements": [
+        "Flying at M = 0.84 does not provide the optimal margin with respect to buffet onset."
       ]
     }
   },
@@ -166,33 +152,19 @@
     "learningObjectives": ["081.03.02.02.07"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?\n\n1\\. When speed decreases the buffet free range increases.   \n2\\. When the CG moves forward the buffet free range increases.",
-      "options": [
-        {
-          "id": "OXM1JZMAG",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OPBKFHAVC",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMX0ADMJG",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONCKVOSK6",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed decreases the buffet free range decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed decreases the buffet free range increases."
+      ],
+      "secondCorrectStatements": [
+        "When the CG moves forward the buffet free range decreases."
+      ],
+      "secondIncorrectStatements": [
+        "When the CG moves forward the buffet free range increases."
       ]
     }
   },
@@ -353,33 +325,19 @@
     "learningObjectives": ["081.03.02.02.07"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?\n\n1\\. When speed increases the buffet free range decreases.   \n2\\. When altitude decreases the buffet free range decreases.",
-      "options": [
-        {
-          "id": "OWFORS13B",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OE33HAOQZ",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJVZM53FH",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OPMEQGJTR",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed increases the buffet free range increases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed increases the buffet free range decreases."
+      ],
+      "secondCorrectStatements": [
+        "When altitude increases the buffet free range increases."
+      ],
+      "secondIncorrectStatements": [
+        "When altitude decreases the buffet free range decreases."
       ]
     }
   },
@@ -504,33 +462,19 @@
     "learningObjectives": ["081.03.02.02.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?\n\n1\\. During a push-over manoeuvre the buffet free range decreases.   \n2\\. When the mass increases the buffet free range decreases.",
-      "options": [
-        {
-          "id": "OYP0ZJDOS",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O01NKKV3R",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OU0CM0PVT",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OFGWY1KSK",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the buffet free range in a buffet onset boundary graph are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When the mass increases the buffet free range decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When the mass increases the buffet free range increases."
+      ],
+      "secondCorrectStatements": [
+        "During a push-over manoeuvre the buffet free range decreases."
+      ],
+      "secondIncorrectStatements": [
+        "During a push-over manoeuvre the buffet free range increases."
       ]
     }
   },
@@ -547,33 +491,19 @@
     "learningObjectives": ["081.03.02.02.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Refer to figure.\n\nRegarding the Buffet Onset Boundary Chart in the annex, which of these statements are correct or incorrect?\n\n1\\. Flying at M = 0.8 provides the optimum margin with respect to buffet onset.   \n 2\\. The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is higher at M = 0.82 than at M = 0.75.",
-      "options": [
-        {
-          "id": "O37QHHBKQ",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZSMGAXVA",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLTMA6V1X",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OK4WMBYCP",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Refer to figure. Regarding the Buffet Onset Boundary Chart in the annex, which of these statements are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Flying at M = 0.8 provides the optimum margin with respect to buffet onset."
+      ],
+      "firstIncorrectStatements": [
+        "Flying at M = 0.85 provides the optimum margin with respect to buffet onset."
+      ],
+      "secondCorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is higher at M = 0.82 than at M = 0.75."
+      ],
+      "secondIncorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset, according to Certification Specifications, is lower at M = 0.82 than at M = 0.75."
       ]
     }
   },
@@ -590,33 +520,19 @@
     "learningObjectives": ["081.03.02.02.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "(For this question use annex 081-001 issue date July 2009).   \nRegarding the Buffet Onset Boundary Chart in the annex which of these statements are correct or incorrect?\n\n1\\. Flying at M = 0.84 provides the optimum margin with respect to buffet onset.   \n2\\. The maximum altitude that can be achieved with respect to buffet onset according to Certification Specifications is lower at M = 0.82 than at M = 0.75.",
-      "options": [
-        {
-          "id": "O2NGOTDDY",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMLNHBLAT",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OETDN8WQ1",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6I2IABX3",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding the Buffet Onset Boundary Chart in the annex which of these statements are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Flying at M = 0.84 provides the suboptimal margin with respect to buffet onset."
+      ],
+      "firstIncorrectStatements": [
+        "Flying at M = 0.84 provides the optimum margin with respect to buffet onset."
+      ],
+      "secondCorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset according to Certification Specifications is higher at M = 0.82 than at M = 0.75."
+      ],
+      "secondIncorrectStatements": [
+        "The maximum altitude that can be achieved with respect to buffet onset according to Certification Specifications is lower at M = 0.82 than at M = 0.75."
       ]
     }
   },

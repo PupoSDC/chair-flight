@@ -403,34 +403,14 @@
     "learningObjectives": ["021.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct for a gas turbine engine with constant speed propeller and free power turbine, when the power setting is decreased?\n\nI. The propeller blade angle increases.   \nII. The free power turbine speed remains constant.",
-      "options": [
-        {
-          "id": "OYUZ8ELM9",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEXFML4WX",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEZYKKKOS",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJFLTX78Z",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement is correct for a gas turbine engine with constant speed propeller and free power turbine, when the power setting is decreased?",
+      "firstCorrectStatements": ["The propeller blade angle decreases."],
+      "firstIncorrectStatements": ["The propeller blade angle increases."],
+      "secondCorrectStatements": [
+        "The free power turbine speed remains constant."
+      ],
+      "secondIncorrectStatements": ["The free power turbine speed changes."]
     }
   },
   {
@@ -1146,33 +1126,19 @@
     "learningObjectives": ["021.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "With regards to a gas turbine engine combustion chamber, which of the following statements are correct/incorrect?\n\n1\\. Within the combustion chamber, the air/fuel mixture coming from the diffuser section of the engine is ignited and burned.   \n 2\\. The combustion process in the combustion chamber of a turbine engine is continuous. Under normal operation, the ignition system is only required during engine start.",
-      "options": [
-        {
-          "id": "OR4J1OAW3",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O6NUWEIAN",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMM0ZOQ4Q",
-          "text": "1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCPA93KFH",
-          "text": "1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "With regards to a gas turbine engine combustion chamber, which of the following statements are correct/incorrect?",
+      "firstCorrectStatements": [
+        "The combustion process in the combustion chamber of a turbine engine is continuous."
+      ],
+      "firstIncorrectStatements": [
+        "The combustion process in the combustion chamber of a turbine engine is intermittent."
+      ],
+      "secondCorrectStatements": [
+        "Within the combustion chamber, the air/fuel mixture coming from the diffuser section of the engine is not ignited and burned."
+      ],
+      "secondIncorrectStatements": [
+        "Within the combustion chamber, the air/fuel mixture coming from the diffuser section of the engine is ignited and burned."
       ]
     }
   },
@@ -1508,34 +1474,12 @@
     "learningObjectives": ["021.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct for a gas turbine engine with a constant speed propeller and free power turbine, when the power setting is decreased?\n\n1\\. The HP spool speed remains constant.   \n2\\. The EGT increases.",
-      "options": [
-        {
-          "id": "O0B8LFKP7",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODO0QKBO7",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ON9944WSI",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O62W6RKCF",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": true,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct for a gas turbine engine with a constant speed propeller and free power turbine, when the power setting is decreased?",
+      "firstCorrectStatements": ["The HP spool speed increases."],
+      "firstIncorrectStatements": ["The HP spool speed remains constant."],
+      "secondCorrectStatements": ["The EGT decreases."],
+      "secondIncorrectStatements": ["The EGT increases."]
     }
   },
   {
@@ -2447,33 +2391,19 @@
     "learningObjectives": ["021.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Both gas turbine and piston engines use a cycle made up of induction, compression, combustion and exhaust phases. Which of these statements about a gas turbine are correct?\n\n1\\. The process in a gas turbine engine is intermittent.   \n2\\. Theoretically the combustion occurs at constant pressure.",
-      "options": [
-        {
-          "id": "OSJ9PP44C",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWP2KZFLX",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTAYX7FSK",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OFP5YMFEA",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Both gas turbine and piston engines use a cycle made up of induction, compression, combustion and exhaust phases. Which of these statements about a gas turbine are correct?",
+      "firstCorrectStatements": [
+        "Theoretically the combustion occurs at constant pressure."
+      ],
+      "firstIncorrectStatements": [
+        "Theoretically the combustion occurs at variable pressure."
+      ],
+      "secondCorrectStatements": [
+        "The process in a gas turbine engine is continuous."
+      ],
+      "secondIncorrectStatements": [
+        "The process in a gas turbine engine is intermittent."
       ]
     }
   },
@@ -3207,34 +3137,12 @@
     "learningObjectives": ["021.11"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct for a gas turbine engine with constant speed propeller and free power turbine, when the power setting is decreased?\n\nI. The propeller blade angle decreases.   \nII. The free power turbine speed increases.",
-      "options": [
-        {
-          "id": "ODXOWDI60",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONMLLGSYN",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMS8X0ZF6",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJ2F2XEQ3",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement is correct for a gas turbine engine with constant speed propeller and free power turbine, when the power setting is decreased?",
+      "firstCorrectStatements": ["The propeller blade angle decreases."],
+      "firstIncorrectStatements": ["The propeller blade angle increases."],
+      "secondCorrectStatements": ["The free power turbine speed decreases."],
+      "secondIncorrectStatements": ["The free power turbine speed increases."]
     }
   },
   {

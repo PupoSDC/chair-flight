@@ -1667,33 +1667,22 @@
     "learningObjectives": ["040.02.02.06.08"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "How can a pilot overcome vertigo, encountered during a real or simulated instrument flight?\n\n1\\. Establish and maintain an effective instrument cross-check.  \n2\\. Always believe the instruments  \n3\\. Jerk your head around.  \n4\\. Ignore arising illusions.",
-      "options": [
-        {
-          "id": "OLTEQ50PU",
-          "text": "1 and 4 are correct, 2 and 3 are false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSPACI9EZ",
-          "text": "never trust your sense of feeling",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1KEUORJY",
-          "text": "1, 2, and 4 are correct, 3 is false",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OQJIBQG0I",
-          "text": "1 and 2 are correct, 3 and 4 are false",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "How can a pilot overcome vertigo, encountered during a real or simulated instrument flight?",
+      "firstCorrectStatements": [
+        "Establish and maintain an effective instrument cross-check.",
+        "Always believe the instruments.",
+        "Ignore arising illusions."
+      ],
+      "firstIncorrectStatements": ["Jerk your head around."],
+      "secondCorrectStatements": [
+        "Establish and maintain an ineffective instrument cross-check.",
+        "Always doubt the instruments.",
+        "Acknowledge arising illusions."
+      ],
+      "secondIncorrectStatements": [
+        "Jerking your head around helps in overcoming vertigo.",
+        "Ignoring arising illusions worsens the situation."
       ]
     }
   },

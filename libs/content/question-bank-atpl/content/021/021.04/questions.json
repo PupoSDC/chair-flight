@@ -656,33 +656,19 @@
     "learningObjectives": ["021.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an auto-brake system are correct or incorrect?\n\n1\\. An auto-brake system can function properly, even when the anti-skid system is inoperative.   \n2\\. In the RTO mode a maximum constant deceleration is applied.",
-      "options": [
-        {
-          "id": "ONGG7MZKX",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUTOBJ5WO",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVDZH16WV",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O601PDHPE",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an auto-brake system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "An auto-brake system can function properly only when the anti-skid system is operative."
+      ],
+      "firstIncorrectStatements": [
+        "An auto-brake system can function properly, even when the anti-skid system is inoperative."
+      ],
+      "secondCorrectStatements": [
+        "In the RTO mode a maximum constant deceleration is not applied."
+      ],
+      "secondIncorrectStatements": [
+        "In the RTO mode a maximum constant deceleration is applied."
       ]
     }
   },
@@ -1014,33 +1000,19 @@
     "learningObjectives": ["021.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "The autobrake system is deactivated:\n\n1) below a preset minimum speed.   \n2) when reverse thrust is activated.",
-      "options": [
-        {
-          "id": "ODOLGMGTV",
-          "text": "1) is correct, 2) is incorrect",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLBGWQ8IB",
-          "text": "1) is incorrect, 2) is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OADGZEVMG",
-          "text": "1) is incorrect, 2) is incorrect",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXBCMCWUV",
-          "text": "1) is correct, 2) is correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "The autobrake system is deactivated:",
+      "firstCorrectStatements": [
+        "The autobrake system is deactivated above a preset minimum speed."
+      ],
+      "firstIncorrectStatements": [
+        "The autobrake system is deactivated below a preset minimum speed."
+      ],
+      "secondCorrectStatements": [
+        "The autobrake system is deactivated when reverse thrust is not activated."
+      ],
+      "secondIncorrectStatements": [
+        "The autobrake system is deactivated when reverse thrust is activated."
       ]
     }
   },
@@ -1118,33 +1090,19 @@
     "learningObjectives": ["021.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an auto-brake system are correct or incorrect?\n\n1\\. Proper functioning of an auto-brake system requires proper functioning of the anti-skid system.   \n2\\. In the RTO mode a maximum constant deceleration is applied.",
-      "options": [
-        {
-          "id": "OI9ZHXNBE",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8MXMPN6Y",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5GVQYAIB",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYCYYT0CA",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an auto-brake system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Proper functioning of an auto-brake system requires proper functioning of the anti-skid system."
+      ],
+      "firstIncorrectStatements": [
+        "Proper functioning of an auto-brake system does not require proper functioning of the anti-skid system."
+      ],
+      "secondCorrectStatements": [
+        "In the RTO mode a maximum constant acceleration is applied."
+      ],
+      "secondIncorrectStatements": [
+        "In the RTO mode a maximum constant deceleration is not applied."
       ]
     }
   },

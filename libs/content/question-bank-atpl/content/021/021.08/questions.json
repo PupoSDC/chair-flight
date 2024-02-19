@@ -256,33 +256,19 @@
     "learningObjectives": ["021.08.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct?\n\n1\\. The freezing point for Jet A is at a lower temperature than that for Jet B.   \n2\\. The flash point for Jet A is at a lower temperature than that for Jet B.",
-      "options": [
-        {
-          "id": "OEYW72XLI",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O2DB8NMCG",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYA3QWRPU",
-          "text": "1 is incorrect. 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8NTPPHAC",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct?",
+      "firstCorrectStatements": [
+        "The freezing point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "firstIncorrectStatements": [
+        "The freezing point for Jet A is at a lower temperature than that for Jet B."
+      ],
+      "secondCorrectStatements": [
+        "The flash point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "secondIncorrectStatements": [
+        "The flash point for Jet A is at a lower temperature than that for Jet B."
       ]
     }
   },
@@ -344,33 +330,19 @@
     "learningObjectives": ["021.08.02.02.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Refer to figure.\n\nWhich of these statements about the fuel system in the annex are correct or incorrect?\n\n1\\. If the AC fuel pumps are not running in the system configuration shown in the annex, it is still possible to feed both engines from the main tanks.   \n 2\\. If the APU isolation valve opens, the APU fuel shut off valve is closed and there is no AC power, the DC fuel pump can supply fuel to the engines.",
-      "options": [
-        {
-          "id": "OXFO3DFJI",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5OUV3653",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQI8HDUFC",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6IJP5X5H",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Refer to figure. Which of these statements about the fuel system in the annex are correct or incorrect?",
+      "firstCorrectStatements": [
+        "If the AC fuel pumps are not running in the system configuration shown in the annex, it is still possible to feed both engines from the main tanks."
+      ],
+      "firstIncorrectStatements": [
+        "If the AC fuel pumps are not running in the system configuration shown in the annex, it is not possible to feed both engines from the main tanks."
+      ],
+      "secondCorrectStatements": [
+        "If the APU isolation valve opens, the APU fuel shut off valve is closed and there is no AC power, the DC fuel pump can supply fuel to the engines."
+      ],
+      "secondIncorrectStatements": [
+        "If the APU isolation valve opens, the APU fuel shut off valve is closed and there is no AC power, the DC fuel pump cannot supply fuel to the engines."
       ]
     }
   },
@@ -1937,33 +1909,19 @@
     "learningObjectives": ["021.08.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct?\n\n1\\. The freezing point for Jet A is at a higher temperature than that for Jet B.   \n2\\. The flash point for Jet A is at a higher temperature than that for Jet B.",
-      "options": [
-        {
-          "id": "OV9LBALVZ",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODOYHP5MQ",
-          "text": "Both 1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OK1QMMAEV",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OX4UPIDQS",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct?",
+      "firstCorrectStatements": [
+        "The freezing point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "firstIncorrectStatements": [
+        "The freezing point for Jet A is at a lower temperature than that for Jet B."
+      ],
+      "secondCorrectStatements": [
+        "The flash point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "secondIncorrectStatements": [
+        "The flash point for Jet A is at a lower temperature than that for Jet B."
       ]
     }
   },
@@ -2226,33 +2184,19 @@
     "learningObjectives": ["021.08.02.02.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Refer to figure.\n\nWhich of these statements about the fuel system in the annex are correct?\n\n1\\. If the AC fuel pumps are not running in the system configuration shown in the annex, it is still possible to feed both engines from the main tanks.   \n 2\\. In the system configuration shown in the annex the DC fuel pump can supply fuel to the engines.",
-      "options": [
-        {
-          "id": "O3OSGNR3J",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OHJ93WWSE",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJFUBO7LY",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OGTQLFUAS",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the fuel system in the annex are correct?",
+      "firstCorrectStatements": [
+        "If the AC fuel pumps are not running in the system configuration shown in the annex, it is still possible to feed both engines from the main tanks."
+      ],
+      "firstIncorrectStatements": [
+        "If the AC fuel pumps are not running in the system configuration shown in the annex, it is not possible to feed both engines from the main tanks."
+      ],
+      "secondCorrectStatements": [
+        "In the system configuration shown in the annex the DC fuel pump cannot supply fuel to the engines."
+      ],
+      "secondIncorrectStatements": [
+        "In the system configuration shown in the annex the DC fuel pump can supply fuel to the engines."
       ]
     }
   },
@@ -2318,33 +2262,19 @@
     "learningObjectives": ["021.08.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct?\n\nI. The freezing point for Jet A is at a lower temperature than that for Jet B.   \nII. The flash point for Jet A is at about the same temperature as that for Jet B.",
-      "options": [
-        {
-          "id": "OCP0PKTHI",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSQY4OSWH",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFIEFWJIC",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXHCYQ7FP",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct?",
+      "firstCorrectStatements": [
+        "The flash point for Jet A is at about the same temperature as that for Jet B."
+      ],
+      "firstIncorrectStatements": [
+        "The flash point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "secondCorrectStatements": [
+        "The freezing point for Jet A is at a higher temperature than that for Jet B."
+      ],
+      "secondIncorrectStatements": [
+        "The freezing point for Jet A is at a lower temperature than that for Jet B."
       ]
     }
   },

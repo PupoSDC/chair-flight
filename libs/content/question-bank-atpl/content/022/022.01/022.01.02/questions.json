@@ -20,34 +20,12 @@
     "learningObjectives": ["022.01.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given: C = the temperature in Celsius. K = the temperature in Kelvin. F = the temperature in Fahrenheit. Which of these statements about temperature units are correct or incorrect?\n\n1\\. C = K – 273.   \n2\\. F = (C x 1.8) + 32.",
-      "options": [
-        {
-          "id": "OVZSWRMJE",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OW8AZC1SI",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OAVP0ASJV",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXEHMTRPQ",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which of these statements about temperature units are correct or incorrect?",
+      "firstCorrectStatements": ["C = K – 273."],
+      "firstIncorrectStatements": ["C = K + 273."],
+      "secondCorrectStatements": ["F = (C x 1.8) + 32."],
+      "secondIncorrectStatements": ["F = (C x 1.8) - 32."]
     }
   },
   {
@@ -109,34 +87,12 @@
     "learningObjectives": ["022.01.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about temperature units are correct or incorrect?\n\n1\\. 20° Celsius = 68° Fahrenheit.   \n2\\. 0° Celsius = 273° Kelvin.",
-      "options": [
-        {
-          "id": "OGXETG6WW",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLLID3MZN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1GY2LTNL",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXNYUMFRL",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which of these statements about temperature units are correct or incorrect?",
+      "firstCorrectStatements": ["20° Celsius = 68° Fahrenheit."],
+      "firstIncorrectStatements": ["20° Celsius ≠ 68° Fahrenheit."],
+      "secondCorrectStatements": ["0° Celsius = 273° Kelvin."],
+      "secondIncorrectStatements": ["0° Celsius ≠ 273° Kelvin."]
     }
   },
   {
@@ -160,34 +116,12 @@
     "learningObjectives": ["022.01.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about temperature units are correct or incorrect?   \n  \n 1\\. 15º Celsius = 273º Kelvin   \n 2\\. 15º Celsius = 59º Fahrenheit",
-      "options": [
-        {
-          "id": "OY8L7OWSM",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMC1IOMXM",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJKK7OLUE",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OX9UPYX3H",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which of these statements about temperature units are correct or incorrect?",
+      "firstCorrectStatements": ["15º Celsius = 59º Fahrenheit"],
+      "firstIncorrectStatements": ["15º Celsius = 273º Kelvin"],
+      "secondCorrectStatements": ["15º Celsius = 273º Kelvin"],
+      "secondIncorrectStatements": ["15º Celsius = 59º Fahrenheit"]
     }
   },
   {

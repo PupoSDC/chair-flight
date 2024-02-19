@@ -991,33 +991,19 @@
     "learningObjectives": ["081.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement is correct?\n\nI. Stall speeds are determined with the CG at the aft limit.   \nII. Minimum control speeds are determined with the CG at the forward limit.",
-      "options": [
-        {
-          "id": "OSWNZOUK3",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBBIKRI3P",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCRWSRYSQ",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6EEBNOPD",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statement is correct?",
+      "firstCorrectStatements": [
+        "Minimum control speeds are determined with the CG at the forward limit."
+      ],
+      "firstIncorrectStatements": [
+        "Minimum control speeds are determined with the CG at the aft limit."
+      ],
+      "secondCorrectStatements": [
+        "Stall speeds are determined with the CG at the aft limit."
+      ],
+      "secondIncorrectStatements": [
+        "Stall speeds are determined with the CG at the forward limit."
       ]
     }
   },
@@ -1968,33 +1954,19 @@
     "learningObjectives": ["081.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statements are correct or incorrect?\n\n1) A stick pusher activates at a higher angle of attack than a stick shaker.   \n2) A stick pusher prevents the pilot from increasing the angle of attack further.",
-      "options": [
-        {
-          "id": "OX4YRSNOE",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ODOKHBCET",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTX6HEDMW",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQ7ELHEVU",
-          "text": "1) is correct, 2) is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statements are correct or incorrect?",
+      "firstCorrectStatements": [
+        "A stick pusher activates at a higher angle of attack than a stick shaker."
+      ],
+      "firstIncorrectStatements": [
+        "A stick pusher activates at a lower angle of attack than a stick shaker."
+      ],
+      "secondCorrectStatements": [
+        "A stick pusher allows the pilot to increase the angle of attack further."
+      ],
+      "secondIncorrectStatements": [
+        "A stick pusher prevents the pilot from increasing the angle of attack further."
       ]
     }
   },
@@ -2177,33 +2149,19 @@
     "learningObjectives": ["081.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?\n\n1\\. The centre of pressure on an unswept wing moves forward as the angle of attack approaches and exceeds the critical angle of attack.   \n2\\. When sweep back increases the centre of pressure has an increased tendency to move forward as the angle of attack approaches and exceeds the critical angle of attack.",
-      "options": [
-        {
-          "id": "OSNIZVGKB",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O1K1C9HFB",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OU1ZOPX3Z",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXCRMGHVT",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When sweep back increases the centre of pressure has an increased tendency to move forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "firstIncorrectStatements": [
+        "When sweep back increases the centre of pressure has an increased tendency to move backward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondCorrectStatements": [
+        "The centre of pressure on an unswept wing moves forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondIncorrectStatements": [
+        "The centre of pressure on an unswept wing moves backward as the angle of attack approaches and exceeds the critical angle of attack."
       ]
     }
   },
@@ -2271,33 +2229,19 @@
     "learningObjectives": ["081.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?\n\n1\\. The centre of pressure on an unswept wing moves forward as the angle of attack approaches and exceeds the critical angle of attack.   \n2\\. When sweep back increases the centre of pressure has an increased tendency to move aft as the angle of attack approaches and exceeds the critical angle of attack.",
-      "options": [
-        {
-          "id": "ORWVJZ1V6",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF8LCF7CE",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCJ7V0NOO",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ODXVDXOW2",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The centre of pressure on an unswept wing moves aft as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "firstIncorrectStatements": [
+        "The centre of pressure on an unswept wing moves forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondCorrectStatements": [
+        "When sweep back increases, the centre of pressure has an increased tendency to move forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondIncorrectStatements": [
+        "When sweep back increases, the centre of pressure has an increased tendency to move aft as the angle of attack approaches and exceeds the critical angle of attack."
       ]
     }
   },
@@ -4278,33 +4222,19 @@
     "learningObjectives": ["081.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?\n\n1\\. The centre of pressure on an unswept wing moves aft as the angle of attack approaches and exceeds the critical angle of attack.   \n2\\. When sweep back increases the centre of pressure has an increased tendency to move aft as the angle of attack approaches and exceeds the critical angle of attack.",
-      "options": [
-        {
-          "id": "O50COJCZD",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWNP90YFQ",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKIFB62OS",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZHHBAVWD",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the effect of wing sweep on centre of pressure location are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The centre of pressure on an unswept wing moves aft as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "firstIncorrectStatements": [
+        "The centre of pressure on an unswept wing moves forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondCorrectStatements": [
+        "When sweep back increases the centre of pressure has an increased tendency to move forward as the angle of attack approaches and exceeds the critical angle of attack."
+      ],
+      "secondIncorrectStatements": [
+        "When sweep back increases the centre of pressure has an increased tendency to move aft as the angle of attack approaches and exceeds the critical angle of attack."
       ]
     }
   },

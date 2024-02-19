@@ -1278,34 +1278,12 @@
     "learningObjectives": ["081.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement about an aeroplane leaving ground effect is correct?\n\nI. The downwash angle increases.   \nII. The induced angle of attack decreases.",
-      "options": [
-        {
-          "id": "OTOFEIPHN",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPAIVQPIP",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLOKKSLFN",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJUIE4VFV",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement about an aeroplane leaving ground effect is correct?",
+      "firstCorrectStatements": ["The downwash angle increases."],
+      "firstIncorrectStatements": ["The downwash angle decreases."],
+      "secondCorrectStatements": ["The induced angle of attack increases."],
+      "secondIncorrectStatements": ["The induced angle of attack decreases."]
     }
   },
   {
@@ -1518,34 +1496,12 @@
     "learningObjectives": ["081.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statement about an aeroplane entering ground effect is correct?\n\nI. The downwash angle decreases.   \nII. The induced angle of attack decreases.",
-      "options": [
-        {
-          "id": "OLHZURUR5",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFDXYFDHW",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OO5YQCS8R",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZ5QKGMF1",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Which statement about an aeroplane entering ground effect is correct?",
+      "firstCorrectStatements": ["The downwash angle decreases."],
+      "firstIncorrectStatements": ["The downwash angle increases."],
+      "secondCorrectStatements": ["The induced angle of attack decreases."],
+      "secondIncorrectStatements": ["The induced angle of attack increases."]
     }
   },
   {
@@ -3301,33 +3257,19 @@
     "learningObjectives": ["081.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about induced drag are correct or incorrect?\n\nI. Induced drag increases as angle of attack increases.   \nII. At constant load factor, induced drag increases with increasing aeroplane mass.",
-      "options": [
-        {
-          "id": "OIS6LHAQN",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OE4QFLTRH",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6IWCJWSV",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWZSWWIXU",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about induced drag are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Induced drag increases as angle of attack increases."
+      ],
+      "firstIncorrectStatements": [
+        "Induced drag decreases as angle of attack increases."
+      ],
+      "secondCorrectStatements": [
+        "At constant load factor, induced drag increases with increasing aeroplane mass."
+      ],
+      "secondIncorrectStatements": [
+        "At constant load factor, induced drag decreases with increasing aeroplane mass."
       ]
     }
   },
@@ -4028,33 +3970,17 @@
     "learningObjectives": ["081.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statements about an aeroplane entering ground effect are correct or incorrect?\n\n1) The downwash angle remains constant.   \n2) The induced angle of attack decreases.",
-      "options": [
-        {
-          "id": "OEJDLBKS1",
-          "text": "1) is correct, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6USFS9E1",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OW1OH8MEE",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OALUK6PMP",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statements about an aeroplane entering ground effect are correct or incorrect?",
+      "firstCorrectStatements": ["The induced angle of attack decreases."],
+      "firstIncorrectStatements": [
+        "The induced angle of attack increases.",
+        "The induced angle of attack remains constant."
+      ],
+      "secondCorrectStatements": ["The downwash angle remains constant."],
+      "secondIncorrectStatements": [
+        "The downwash angle increases.",
+        "The downwash angle decreases."
       ]
     }
   },
@@ -5951,33 +5877,19 @@
     "learningObjectives": ["081.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?\n\nI. Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases.   \nII. The strength of wing tip vortices is not affected by aspect ratio.",
-      "options": [
-        {
-          "id": "O2UG1ARTN",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYRQHBDL5",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHDWCQODW",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONNPKKM8B",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about the strength of wing tip vortices are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices decreases as the angle of attack decreases."
+      ],
+      "firstIncorrectStatements": [
+        "Assuming no flow separation, the strength of wing tip vortices increases as the angle of attack decreases."
+      ],
+      "secondCorrectStatements": [
+        "The strength of wing tip vortices is affected by aspect ratio."
+      ],
+      "secondIncorrectStatements": [
+        "The strength of wing tip vortices is not affected by aspect ratio."
       ]
     }
   },

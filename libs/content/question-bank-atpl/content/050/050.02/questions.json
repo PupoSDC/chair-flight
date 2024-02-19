@@ -1443,33 +1443,19 @@
     "learningObjectives": ["050.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about turbulence are correct or incorrect?\n\n1\\. Severe CAT may be expected in the core of a jet stream.   \n2\\. At 500 ft/AGL mechanical turbulence occurs more often than at 5000 ft/AGL.",
-      "options": [
-        {
-          "id": "OLIDFK7EJ",
-          "text": "1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O70Z648ZU",
-          "text": "1 and 2 are not correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFMQYUWN9",
-          "text": "1 is not correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OGGDQV4GB",
-          "text": "1 is correct, 2 is not correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about turbulence are correct or incorrect?",
+      "firstCorrectStatements": [
+        "At 500 ft/AGL mechanical turbulence occurs more often than at 5000 ft/AGL."
+      ],
+      "firstIncorrectStatements": [
+        "Severe CAT may be expected in the core of a jet stream."
+      ],
+      "secondCorrectStatements": [
+        "Severe CAT may be expected in the core of a jet stream."
+      ],
+      "secondIncorrectStatements": [
+        "At 500 ft/AGL mechanical turbulence occurs less often than at 5000 ft/AGL."
       ]
     }
   },

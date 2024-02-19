@@ -3408,34 +3408,12 @@
     "learningObjectives": ["050.10"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Runway Visual Range (RVR) is passed to the pilots via:\n\n1\\. Data-link   \n 2\\. Aeronautical broadcasts",
-      "options": [
-        {
-          "id": "OW6JUDDB5",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJPN4MJFO",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OW6VEO6I2",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ONDJB6TPB",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Runway Visual Range (RVR) is passed to the pilots via:",
+      "firstCorrectStatements": ["Data-link"],
+      "firstIncorrectStatements": ["Aeronautical broadcasts"],
+      "secondCorrectStatements": ["Aeronautical broadcasts"],
+      "secondIncorrectStatements": ["Data-link"]
     }
   },
   {

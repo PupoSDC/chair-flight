@@ -25,33 +25,19 @@
     "learningObjectives": ["021.02.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about composite and metal structures are correct or incorrect?\n\nI. In composite structural components, the tensile strength is the same in all directions independent of the direction of the fibres.   \n II. Metals structures are chosen preferably to achieve structures with higher strength-to-weight ratio than composite materials.",
-      "options": [
-        {
-          "id": "OHGUSFLFQ",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OC0SIBYD2",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ONNOUGVWE",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O7PCMITTE",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about composite and metal structures are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Metals structures are not chosen preferably to achieve structures with higher strength-to-weight ratio than composite materials."
+      ],
+      "firstIncorrectStatements": [
+        "In composite structural components, the tensile strength is the same in all directions independent of the direction of the fibres."
+      ],
+      "secondCorrectStatements": [
+        "Composites structural components have tensile strength that varies based on the direction of the fibres."
+      ],
+      "secondIncorrectStatements": [
+        "Metal structures are chosen preferably to achieve structures with higher strength-to-weight ratio than composite materials."
       ]
     }
   },
@@ -81,33 +67,19 @@
     "learningObjectives": ["021.02.02.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about composite and metal structures are correct or incorrect?\n\nI. In composite structural components, the tensile strength is the same in all directions independent of the direction of the fibres.   \nII. Composite materials enable manufacturing structures with a higher strength-to-weight ratio than metal structures.",
-      "options": [
-        {
-          "id": "OPINFTHWZ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OB9OHZHNE",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OZMZBVOCK",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OUZAJ9NUN",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about composite and metal structures are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Composite materials enable manufacturing structures with a higher strength-to-weight ratio than metal structures."
+      ],
+      "firstIncorrectStatements": [
+        "Composite structural components, the tensile strength is different in all directions dependent on the direction of the fibres."
+      ],
+      "secondCorrectStatements": [
+        "In composite structural components, the tensile strength is the same in all directions independent of the direction of the fibres."
+      ],
+      "secondIncorrectStatements": [
+        "Composite materials do not enable manufacturing structures with a higher strength-to-weight ratio than metal structures."
       ]
     }
   }

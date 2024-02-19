@@ -250,33 +250,19 @@
     "learningObjectives": ["021.12.02.02.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is/are correct concerning Engine fire detectors?\n\n1\\. An engine fire detector needs to be protected against nuisance warnings as well as undetected malfunction.   \n2\\. It is safe to depart with one fire detector failed.",
-      "options": [
-        {
-          "id": "OXZZA8G1V",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCPGDG43N",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ORM27OPUT",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5KFWJFZK",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements is/are correct concerning Engine fire detectors?",
+      "firstCorrectStatements": [
+        "An engine fire detector needs to be protected against nuisance warnings as well as undetected malfunction."
+      ],
+      "firstIncorrectStatements": [
+        "An engine fire detector needs to be protected against nuisance warnings and detected malfunction."
+      ],
+      "secondCorrectStatements": [
+        "It is safe to depart with one fire detector failed."
+      ],
+      "secondIncorrectStatements": [
+        "It is not safe to depart with one fire detector failed."
       ]
     }
   },
@@ -650,33 +636,19 @@
     "learningObjectives": ["021.12.02.02.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about fire-extinguishing agents are correct or incorrect?\n\nI. The fire extinguishing effect of Halon is mainly based on cooling when the agent exhausts via a venturi during discharge.   \nII. Halon should be used with caution because it is highly corrosive particularly for aluminium alloys.",
-      "options": [
-        {
-          "id": "OXE4HSZOU",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFGCPL832",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJV8S9PAM",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF8QEFJUJ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about fire-extinguishing agents are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Halon should be used with caution because it is highly corrosive particularly for aluminium alloys."
+      ],
+      "firstIncorrectStatements": [
+        "The fire extinguishing effect of Halon is mainly based on cooling when the agent exhausts via a venturi during discharge."
+      ],
+      "secondCorrectStatements": [
+        "The fire extinguishing effect of Halon is mainly based on smothering when the agent exhausts via a venturi during discharge."
+      ],
+      "secondIncorrectStatements": [
+        "Halon should not be used with caution because it is not corrosive to aluminium alloys."
       ]
     }
   },

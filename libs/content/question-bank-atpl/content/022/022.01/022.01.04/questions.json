@@ -230,33 +230,19 @@
     "learningObjectives": ["022.01.04.01.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which statements about fuel flow are correct or incorrect?\n\n1\\. Fuel flow may be measured by volume per unit of time.   \n2\\. Fuel flow may be measured by mass per unit of time.",
-      "options": [
-        {
-          "id": "OYJ4YPCZI",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWS0UEMVJ",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OKC1TXM3O",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYU5DR34V",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which statements about fuel flow are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Fuel flow may be measured by volume per unit of time."
+      ],
+      "firstIncorrectStatements": [
+        "Fuel flow may be measured by mass per unit of time."
+      ],
+      "secondCorrectStatements": [
+        "Fuel flow may be measured by mass per unit of time."
+      ],
+      "secondIncorrectStatements": [
+        "Fuel flow may be measured by volume per unit of time."
       ]
     }
   },

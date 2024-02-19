@@ -81,33 +81,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed decreases, induced drag increases.   \n2\\. When mass decreases, induced drag increases.",
-      "options": [
-        {
-          "id": "OXMVO4FJS",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJZFTSWJI",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OYCATH1AV",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFC17DLZM",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed decreases, induced drag increases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed increases, induced drag increases."
+      ],
+      "secondCorrectStatements": [
+        "When mass increases, induced drag increases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass decreases, induced drag increases."
       ]
     }
   },
@@ -454,33 +440,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed increases, induced drag increases.  \n2\\. When mass increases, induced drag increases.",
-      "options": [
-        {
-          "id": "OVURFONFX",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONAUHXMXB",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJGRIESX4",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OVZI7PW3L",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed increases, induced drag decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed increases, induced drag increases."
+      ],
+      "secondCorrectStatements": [
+        "When mass increases, induced drag increases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass increases, induced drag decreases."
       ]
     }
   },
@@ -766,33 +738,19 @@
     "learningObjectives": ["081.01.04.03.04"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about induced drag are correct or incorrect?\n\nI. An elliptical spanwise lift distribution generates less induced drag than a rectangular lift distribution.   \nII. Induced drag decreases with decreasing aspect ratio.",
-      "options": [
-        {
-          "id": "OYTOPVQBQ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBFHQQKA5",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWABO2VYN",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHUG7ODIT",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about induced drag are correct or incorrect?",
+      "firstCorrectStatements": [
+        "An elliptical spanwise lift distribution generates less induced drag than a rectangular lift distribution."
+      ],
+      "firstIncorrectStatements": [
+        "An elliptical spanwise lift distribution generates more induced drag than a rectangular lift distribution."
+      ],
+      "secondCorrectStatements": [
+        "Induced drag increases with decreasing aspect ratio."
+      ],
+      "secondIncorrectStatements": [
+        "Induced drag decreases with decreasing aspect ratio."
       ]
     }
   },
@@ -1192,33 +1150,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed decreases, induced drag decreases.   \n2\\. When mass decreases, induced drag decreases.",
-      "options": [
-        {
-          "id": "O7E1I22VN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O6N9PCHGC",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OR6ZIDLCA",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFBJHNRXV",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When mass decreases, induced drag decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When mass increases, induced drag decreases."
+      ],
+      "secondCorrectStatements": [
+        "When speed decreases, induced drag increases."
+      ],
+      "secondIncorrectStatements": [
+        "When speed increases, induced drag increases."
       ]
     }
   },
@@ -1369,33 +1313,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed decreases, induced drag decreases.   \n2\\. When mass decreases, induced drag increases.",
-      "options": [
-        {
-          "id": "OVD6UJN2J",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O5GWOJARU",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O2E66SMDK",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVADESZVI",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed increases, induced drag decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed decreases, induced drag decreases."
+      ],
+      "secondCorrectStatements": [
+        "When mass increases, induced drag decreases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass decreases, induced drag increases."
       ]
     }
   },
@@ -2092,33 +2022,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed decreases, induced drag increases.   \n2\\. When mass decreases, induced drag decreases.",
-      "options": [
-        {
-          "id": "OMBVXLASW",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ORXRQNZQ4",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSZCGG6W3",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQQ1SIFJN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed decreases, induced drag increases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed decreases, induced drag decreases."
+      ],
+      "secondCorrectStatements": [
+        "When mass decreases, induced drag decreases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass increases, induced drag increases."
       ]
     }
   },
@@ -2212,33 +2128,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements is correct about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed increases, induced drag decreases.   \n2\\. When mass increases, induced drag decreases.",
-      "options": [
-        {
-          "id": "OSEINEVCL",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O92P07L9O",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVVBIVMOL",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVCI7JRIC",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements is correct about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed increases, induced drag decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed decreases, induced drag increases."
+      ],
+      "secondCorrectStatements": [
+        "When mass decreases, induced drag decreases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass increases, induced drag increases."
       ]
     }
   },
@@ -2469,33 +2371,19 @@
     "learningObjectives": ["081.01.04.03.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?\n\n1\\. When speed increases, induced drag decreases.   \n2\\. When mass increases, induced drag increases.",
-      "options": [
-        {
-          "id": "O3SWBPHDS",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O2F7QT5WJ",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O3B3NVOMI",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OSO2VEFO3",
-          "text": "1 is correct, 2 is correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?",
+      "firstCorrectStatements": [
+        "When speed increases, induced drag decreases."
+      ],
+      "firstIncorrectStatements": [
+        "When speed increases, induced drag increases."
+      ],
+      "secondCorrectStatements": [
+        "When mass increases, induced drag increases."
+      ],
+      "secondIncorrectStatements": [
+        "When mass decreases, induced drag decreases."
       ]
     }
   }

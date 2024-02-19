@@ -12,33 +12,21 @@
     "learningObjectives": ["040.03.04.04.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements regarding interpersonal interactions are correct?\n\n1- If the sender perceives that the receiver is incompetent, he/she will simplify the message   \n2 -If the receiver is of non-native tongue, the sender will reinforce what he is saying by using more complicated words so as to optimize understanding   \n3- If the sender considers there is doubt that the message has been correctly understood, he/she must seek clarification.   \n4 -It is much safer to fly with a crew who know each other well because communication will always be excellent.",
-      "options": [
-        {
-          "id": "OPERSE2QW",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJHQUU791",
-          "text": "1 and 3 are correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O7U7LXVFA",
-          "text": "2 and 3 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OH1BYC4CC",
-          "text": "3 and 4 are correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements regarding interpersonal interactions are correct?",
+      "firstCorrectStatements": [
+        "If the sender perceives that the receiver is incompetent, he/she will simplify the message.",
+        "If the sender considers there is doubt that the message has been correctly understood, he/she must seek clarification."
+      ],
+      "firstIncorrectStatements": [
+        "If the sender perceives that the receiver is incompetent, he/she will complicate the message.",
+        "If the sender considers there is doubt that the message has been correctly understood, he/she can safely ignore it."
+      ],
+      "secondCorrectStatements": [
+        "If the receiver is of non-native tongue, the sender will use simpler words to optimize understanding."
+      ],
+      "secondIncorrectStatements": [
+        "If the receiver is of non-native tongue, the sender will reinforce what he is saying by using more complicated words so as to optimize understanding."
       ]
     }
   },

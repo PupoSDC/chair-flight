@@ -66,33 +66,19 @@
     "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about \"tuck under\" are correct or incorrect?\n\nI. \"Tuck under\" is caused by an aft movement of the centre of pressure of the wing.   \nII. \"Tuck under\" is caused by a reduction in the downwash angle at the location of the horizontal stabiliser.",
-      "options": [
-        {
-          "id": "OSVF1FBLY",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8GUNOZBL",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OP098O8OH",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUXKNV5TZ",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about \"tuck under\" are correct or incorrect?",
+      "firstCorrectStatements": [
+        "\"Tuck under\" is caused by an aft movement of the centre of pressure of the wing."
+      ],
+      "firstIncorrectStatements": [
+        "\"Tuck under\" is caused by a forward movement of the centre of pressure of the wing."
+      ],
+      "secondCorrectStatements": [
+        "\"Tuck under\" is caused by a reduction in the downwash angle at the location of the horizontal stabiliser."
+      ],
+      "secondIncorrectStatements": [
+        "\"Tuck under\" is caused by an increase in the downwash angle at the location of the horizontal stabiliser."
       ]
     }
   },

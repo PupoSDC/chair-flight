@@ -100,33 +100,19 @@
     "learningObjectives": ["081.08.02.04.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "VMCA is the minimum speed at which directional control can be maintained when, amongst others:\n\n1\\. maximum take-off thrust was set and is maintained on the remaining engines.   \n2\\. a sudden engine failure occurs on the most critical engine.   \n3\\. flaps are in any position.   \n4\\. the gear is either up or down.   \n5\\. the aeroplane is either in or out of ground effect.\n\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "OH0GSP7EJ",
-          "text": "3, 4 and 5 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OFRGFDIWA",
-          "text": "2, 3 and 5 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJSKQHT6O",
-          "text": "1, 2 and 4 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OE5OJ3QVY",
-          "text": "1 and 2 are correct.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "VMCA is the minimum speed at which directional control can be maintained when, amongst others:",
+      "firstCorrectStatements": [
+        "Maximum take-off thrust was set and is maintained on the remaining engines."
+      ],
+      "firstIncorrectStatements": [
+        "Maximum take-off thrust was not set and maintained on the remaining engines."
+      ],
+      "secondCorrectStatements": [
+        "A sudden engine failure occurs on the most critical engine."
+      ],
+      "secondIncorrectStatements": [
+        "A sudden engine failure does not occur on the most critical engine."
       ]
     }
   },

@@ -102,33 +102,17 @@
     "learningObjectives": ["081.06.01.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. If flutter occurs, IAS should be reduced.   \nII. Resistance to flutter increases with increasing wing stiffness.",
-      "options": [
-        {
-          "id": "OWCKEM70Y",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OEFYYFVXJ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O9IL608JI",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OF8OSUBMX",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about flutter are correct or incorrect?",
+      "firstCorrectStatements": ["If flutter occurs, IAS should be reduced."],
+      "firstIncorrectStatements": [
+        "If flutter occurs, IAS should be increased."
+      ],
+      "secondCorrectStatements": [
+        "Resistance to flutter increases with increasing wing stiffness."
+      ],
+      "secondIncorrectStatements": [
+        "Resistance to flutter decreases with increasing wing stiffness."
       ]
     }
   },
@@ -199,33 +183,17 @@
     "learningObjectives": ["081.06.01.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. Aero-elastic coupling does not affect flutter characteristics.  \nII. Occurrence of flutter is independent of IAS.",
-      "options": [
-        {
-          "id": "OIBSKSPPV",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OK43OQXNU",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OLDCKB5FH",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OXJPD0ZWM",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about flutter are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Aero-elastic coupling affects flutter characteristics."
+      ],
+      "firstIncorrectStatements": [
+        "Aero-elastic coupling does not affect flutter characteristics."
+      ],
+      "secondCorrectStatements": ["Occurrence of flutter is dependent on IAS."],
+      "secondIncorrectStatements": [
+        "Occurrence of flutter is independent of IAS."
       ]
     }
   },
@@ -426,33 +394,19 @@
     "learningObjectives": ["081.06.01.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about flutter are correct or incorrect?\n\nI. Aero-elastic coupling does not affect flutter characteristics.  \nII. The risk of flutter increases as IAS increases.",
-      "options": [
-        {
-          "id": "OBTSARIZG",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCMCJZ2A1",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OX1XEWVIX",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OYYQBUTYP",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about flutter are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The risk of flutter increases as IAS increases."
+      ],
+      "firstIncorrectStatements": [
+        "Aero-elastic coupling does affect flutter characteristics."
+      ],
+      "secondCorrectStatements": [
+        "Aero-elastic coupling does not affect flutter characteristics."
+      ],
+      "secondIncorrectStatements": [
+        "The risk of flutter does not increase as IAS increases."
       ]
     }
   }

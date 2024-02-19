@@ -53,33 +53,19 @@
     "learningObjectives": ["081.03.01.01.13"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:\n\nI. An aeroplane with a low horizontal tail and wings with sweepback is normally prone to deep stall.   \n II. An aeroplane with a canard is normally prone to deep stall.",
-      "options": [
-        {
-          "id": "O5CJSIUQS",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONDHUZBAY",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHSZTX509",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBYXLVCWZ",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:",
+      "firstCorrectStatements": [
+        "An aeroplane with a low horizontal tail and wings with sweepback is normally prone to deep stall."
+      ],
+      "firstIncorrectStatements": [
+        "An aeroplane with a low horizontal tail and wings without sweepback is normally prone to deep stall."
+      ],
+      "secondCorrectStatements": [
+        "An aeroplane with a canard is not normally prone to deep stall."
+      ],
+      "secondIncorrectStatements": [
+        "An aeroplane with a canard is normally prone to deep stall."
       ]
     }
   },
@@ -397,33 +383,19 @@
     "learningObjectives": ["081.03.01.01.13"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:\n\nI. The combination of a wing with sweepback and a T-tail make an aeroplane prone to deep stall.   \nII. A stick pusher system can be fitted to an aeroplane that exhibits abnormal stall characteristics.",
-      "options": [
-        {
-          "id": "OGU4EXWR3",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ON1ITDGYW",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHWSVDXSV",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONEM7EXWZ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:",
+      "firstCorrectStatements": [
+        "The combination of a wing with sweepback and a T-tail make an aeroplane prone to deep stall."
+      ],
+      "firstIncorrectStatements": [
+        "The combination of a wing with sweepback and a T-tail make an aeroplane resistant to deep stall."
+      ],
+      "secondCorrectStatements": [
+        "A stick pusher system can be fitted to an aeroplane that exhibits abnormal stall characteristics."
+      ],
+      "secondIncorrectStatements": [
+        "A stick pusher system cannot be fitted to an aeroplane that exhibits abnormal stall characteristics."
       ]
     }
   },
@@ -673,33 +645,19 @@
     "learningObjectives": ["081.03.01.01.13"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:\n\nI. A wing with forward sweep and a low horizontal tail makes an aeroplane prone to deep stall.   \nII. A stick shaker system is fitted to an aeroplane to resolve deep stall problems.",
-      "options": [
-        {
-          "id": "OKQA5N7DL",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OCZDLVA1N",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTQQ7CT4G",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O6DEJYX5S",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:",
+      "firstCorrectStatements": [
+        "A wing with forward sweep and a low horizontal tail makes an aeroplane resistant to deep stall."
+      ],
+      "firstIncorrectStatements": [
+        "A wing with forward sweep and a low horizontal tail makes an aeroplane prone to deep stall."
+      ],
+      "secondCorrectStatements": [
+        "A stick pusher system is fitted to an aeroplane to resolve deep stall problems."
+      ],
+      "secondIncorrectStatements": [
+        "A stick shaker system is fitted to an aeroplane to resolve deep stall problems."
       ]
     }
   },
@@ -803,33 +761,19 @@
     "learningObjectives": ["081.03.01.01.13"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:\n\nI. The combination of a wing with sweepback and a T-tail make an aeroplane prone to deep stall.   \nII. A stick shaker system is fitted to an aeroplane to resolve deep stall problems.",
-      "options": [
-        {
-          "id": "OMWG0YZDD",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OVASKBRLH",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OBM57JKKJ",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMEIFLWQY",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Regarding deep stall characteristics, identify whether the following statements are correct or incorrect:",
+      "firstCorrectStatements": [
+        "The combination of a wing with sweepback and a T-tail make an aeroplane prone to deep stall."
+      ],
+      "firstIncorrectStatements": [
+        "The combination of a wing without sweepback and a T-tail make an aeroplane prone to deep stall."
+      ],
+      "secondCorrectStatements": [
+        "A stick shaker system is not fitted to an aeroplane to resolve deep stall problems."
+      ],
+      "secondIncorrectStatements": [
+        "A stick shaker system is fitted to an aeroplane to resolve deep stall problems."
       ]
     }
   },

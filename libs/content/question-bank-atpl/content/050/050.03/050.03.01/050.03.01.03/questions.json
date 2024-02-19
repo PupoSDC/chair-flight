@@ -284,33 +284,19 @@
     "learningObjectives": ["050.03.01.03.05"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of the following statements are correct/incorrect? \n\n1\\. The actual temperature of an air mass is higher than the dew point temperature if the air mass is unsaturated.   \n 2\\. For a saturated air mass, the dew point temperature over ice is lower than the dew point temperature over water.",
-      "options": [
-        {
-          "id": "OHMY1KCOV",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OIYUJKMC1",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O44FYOC46",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OXUKKGHPN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of the following statements are correct/incorrect?",
+      "firstCorrectStatements": [
+        "The actual temperature of an air mass is higher than the dew point temperature if the air mass is unsaturated."
+      ],
+      "firstIncorrectStatements": [
+        "The actual temperature of an air mass is lower than the dew point temperature if the air mass is unsaturated."
+      ],
+      "secondCorrectStatements": [
+        "For a saturated air mass, the dew point temperature over ice is higher than the dew point temperature over water."
+      ],
+      "secondIncorrectStatements": [
+        "For a saturated air mass, the dew point temperature over ice is lower than the dew point temperature over water."
       ]
     }
   },

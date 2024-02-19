@@ -56,33 +56,19 @@
     "learningObjectives": ["021.13.01.01.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?\n\nI. Chemical oxygen generators are often used to supply passenger oxygen.   \nII. The oxygen supply of chemical oxygen generators, once activated, can be switched off.",
-      "options": [
-        {
-          "id": "OVNGHMNND",
-          "text": "I is correct, II is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ODHWUDBBD",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OITGR43TB",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHGI8B48Q",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Chemical oxygen generators are often used to supply passenger oxygen."
+      ],
+      "firstIncorrectStatements": [
+        "Chemical oxygen generators are rarely used to supply passenger oxygen."
+      ],
+      "secondCorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, cannot be switched off."
+      ],
+      "secondIncorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, can be switched off."
       ]
     }
   },
@@ -238,33 +224,19 @@
     "learningObjectives": ["021.13.01.01.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?\n\nI. Chemical oxygen generators are used to supply the cockpit oxygen system.   \nII. The oxygen supply of chemical oxygen generators, once activated, cannot be switched off.",
-      "options": [
-        {
-          "id": "OUWVGST2M",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OTXBJGI2I",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O1CZZLC5T",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPAT1RN5D",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, cannot be switched off."
+      ],
+      "firstIncorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, can be switched off."
+      ],
+      "secondCorrectStatements": [
+        "Chemical oxygen generators are used to supply the cockpit oxygen system."
+      ],
+      "secondIncorrectStatements": [
+        "Chemical oxygen generators are not used to supply the cockpit oxygen system."
       ]
     }
   },
@@ -444,33 +416,19 @@
     "learningObjectives": ["021.13.01.01.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about chemical oxygen generators are correct?\n\n1\\. Chemical oxygen generators are used to supply the cockpit oxygen system.   \n2\\. The oxygen supply of chemical oxygen generators, once activated, can be switched off.",
-      "options": [
-        {
-          "id": "OVKX5HPGO",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONMK1N7ZI",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OE2MES5WL",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OQSXIE2P3",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about chemical oxygen generators are correct?",
+      "firstCorrectStatements": [
+        "Chemical oxygen generators are not used to supply the cockpit oxygen system."
+      ],
+      "firstIncorrectStatements": [
+        "Chemical oxygen generators are used to supply the cockpit oxygen system."
+      ],
+      "secondCorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, cannot be switched off."
+      ],
+      "secondIncorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, can be switched off."
       ]
     }
   },
@@ -1322,33 +1280,19 @@
     "learningObjectives": ["021.13.01.01.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?\n\nI. Chemical oxygen generators are often used to supply passenger oxygen.   \nII. The oxygen supply of chemical oxygen generators, once activated, cannot be switched off.",
-      "options": [
-        {
-          "id": "OGBHWJYCB",
-          "text": "I is correct, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OB6OCPO6C",
-          "text": "I is incorrect, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWLJKY7HY",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OOIABJ70H",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about chemical oxygen generators are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Chemical oxygen generators are often used to supply passenger oxygen."
+      ],
+      "firstIncorrectStatements": [
+        "Chemical oxygen generators are not used to supply passenger oxygen."
+      ],
+      "secondCorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, cannot be switched off."
+      ],
+      "secondIncorrectStatements": [
+        "The oxygen supply of chemical oxygen generators, once activated, can be switched off."
       ]
     }
   },

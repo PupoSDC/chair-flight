@@ -247,33 +247,19 @@
     "learningObjectives": ["022.12.06.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "A large aeroplane must be fitted with a take-off configuration warning. During the initial portion of the take-off roll, which of these statements are correct or incorrect?\n\nI – An aural warning is provided if the elevator is not in a safe position for take-off.   \nII – An aural warning is provided if the parking brake is unreleased.",
-      "options": [
-        {
-          "id": "OYICOWKGO",
-          "text": "I is incorrect, II is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OJZFQH85V",
-          "text": "I is incorrect, II is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OQCZRQUST",
-          "text": "I is correct, II is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O0GBNTKVT",
-          "text": "I is correct, II is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "A large aeroplane must be fitted with a take-off configuration warning. During the initial portion of the take-off roll, which of these statements are correct or incorrect?",
+      "firstCorrectStatements": [
+        "An aural warning is provided if the parking brake is unreleased."
+      ],
+      "firstIncorrectStatements": [
+        "An aural warning is provided if the elevator is not in a safe position for take-off."
+      ],
+      "secondCorrectStatements": [
+        "An aural warning is provided if the elevator is not in a safe position for take-off."
+      ],
+      "secondIncorrectStatements": [
+        "An aural warning is provided if the parking brake is released."
       ]
     }
   },

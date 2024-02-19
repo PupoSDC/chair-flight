@@ -626,33 +626,19 @@
     "learningObjectives": ["050.06"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about air masses are correct or incorrect?\n\n1\\. The polar ice caps are source regions of polar air.   \n2\\. Tropical air may have cold air mass temperature and humidity properties.",
-      "options": [
-        {
-          "id": "OICVCOUKP",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OUIUICSAO",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OBMYLAETY",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLH6OWZ7P",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about air masses are correct or incorrect?",
+      "firstCorrectStatements": [
+        "Tropical air may have cold air mass temperature and humidity properties."
+      ],
+      "firstIncorrectStatements": [
+        "Tropical air may not have cold air mass temperature and humidity properties."
+      ],
+      "secondCorrectStatements": [
+        "The polar ice caps are not source regions of polar air."
+      ],
+      "secondIncorrectStatements": [
+        "The polar ice caps are source regions of polar air."
       ]
     }
   },

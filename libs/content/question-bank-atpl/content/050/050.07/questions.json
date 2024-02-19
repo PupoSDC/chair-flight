@@ -1282,33 +1282,15 @@
     "learningObjectives": ["050.07"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. A blocking high must be a warm high   \n 2\\. Sea-breeze fronts only occur at mid-latitudes",
-      "options": [
-        {
-          "id": "OLFBJARJZ",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OE5UQQT5X",
-          "text": "1 and 2 are not correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ORAJXT77C",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OPFRISLD9",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": ["A blocking high must be a cold high"],
+      "firstIncorrectStatements": ["A blocking high must be a warm high"],
+      "secondCorrectStatements": [
+        "Sea-breeze fronts can occur at any latitude"
+      ],
+      "secondIncorrectStatements": [
+        "Sea-breeze fronts only occur at mid-latitudes"
       ]
     }
   },
@@ -1729,34 +1711,16 @@
     "learningObjectives": ["050.07"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Check the correctness of the following statements.\n\n1\\. The summer monsoon in India is a NE monsoon   \n2\\. Hurricanes usually occur in winter",
-      "options": [
-        {
-          "id": "OZWDMETCO",
-          "text": "1 is correct, 2 is not correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OZSCF7N6T",
-          "text": "1 and 2 are not correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OBSNGR0XK",
-          "text": "1 is not correct, 2 is correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLCWOCH7O",
-          "text": "1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        }
-      ]
+      "type": "one-two",
+      "question": "Check the correctness of the following statements.",
+      "firstCorrectStatements": ["Hurricanes usually occur in winter."],
+      "firstIncorrectStatements": [
+        "The summer monsoon in India is a NE monsoon."
+      ],
+      "secondCorrectStatements": [
+        "The summer monsoon in India is a SW monsoon."
+      ],
+      "secondIncorrectStatements": ["Hurricanes usually occur in summer."]
     }
   },
   {

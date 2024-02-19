@@ -83,33 +83,17 @@
     "learningObjectives": ["021.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about frequency are correct/incorrect?\n\n1\\. The SI unit for frequency is revolutions per minute (RPM).   \n 2\\. Frequency is defined as a number of cycles per unit of time.",
-      "options": [
-        {
-          "id": "ONK4TL8RT",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O0GM7UBMC",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OW0P9WBW4",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OMHBOTYDE",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about frequency are correct/incorrect?",
+      "firstCorrectStatements": [
+        "Frequency is defined as a number of cycles per unit of time."
+      ],
+      "firstIncorrectStatements": [
+        "Frequency is defined as a number of waves per unit of time."
+      ],
+      "secondCorrectStatements": ["The SI unit for frequency is Hertz (Hz)."],
+      "secondIncorrectStatements": [
+        "The SI unit for frequency is revolutions per minute (RPM)."
       ]
     }
   },
@@ -1107,33 +1091,19 @@
     "learningObjectives": ["021.09"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "You are flying a twin-engined aircraft with an AC electrical system fed by two engine driven generators when one generator has a complete failure. Which of the following statements is correct in reference to the subsequent power distribution.\n\n1\\. In an AC electrical system with a split-bus design, the load from the failed generator is automatically taken over by the remaining generator through the automatic AC bus-transfer function.   \n 2\\. In an AC electrical system with a parallel bus design, the load from the failed generator is directly taken over by the aircraft's battery providing DC electrical power to the bus.",
-      "options": [
-        {
-          "id": "OIF68EWUL",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OETDWFGQG",
-          "text": "Both 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OCJHHYRZS",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OACM0UBAE",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "You are flying a twin-engined aircraft with an AC electrical system fed by two engine driven generators when one generator has a complete failure. Which of the following statements is correct in reference to the subsequent power distribution.",
+      "firstCorrectStatements": [
+        "In an AC electrical system with a split-bus design, the load from the failed generator is automatically taken over by the remaining generator through the automatic AC bus-transfer function."
+      ],
+      "firstIncorrectStatements": [
+        "In an AC electrical system with a split-bus design, the load from the failed generator is manually taken over by the remaining generator through the manual AC bus-transfer function."
+      ],
+      "secondCorrectStatements": [
+        "In an AC electrical system with a parallel bus design, the load from the failed generator is not directly taken over by the aircraft's battery providing DC electrical power to the bus."
+      ],
+      "secondIncorrectStatements": [
+        "In an AC electrical system with a parallel bus design, the load from the failed generator is directly taken over by the aircraft's battery providing DC electrical power to the bus."
       ]
     }
   },

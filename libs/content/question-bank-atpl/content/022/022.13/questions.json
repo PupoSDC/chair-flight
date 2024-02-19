@@ -1460,33 +1460,19 @@
     "learningObjectives": ["022.13"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Consider the following statements about the principle, features and limitations of an Enhanced Visual System (EVS). Which are correct or incorrect?\n\n1\\. The imagery on the Primary Flight Display (PFD) or Head-Up Display (HUD) is based on actual sensory information coming from external sensors.   \n 2\\. An accurate aircraft position is needed for the EVS to provide the real-time imagery on the PFD or HUD.",
-      "options": [
-        {
-          "id": "OYAU4WUUX",
-          "text": "Both 1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O9MMZZBBP",
-          "text": "1 is correct, 2 is incorrect",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "O6LWLRWPM",
-          "text": "Both 1 and 2 are incorrect",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OABAAK0ZL",
-          "text": "1 is incorrect, 2 is correct",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Consider the following statements about the principle, features and limitations of an Enhanced Visual System (EVS). Which are correct or incorrect?",
+      "firstCorrectStatements": [
+        "The imagery on the Primary Flight Display (PFD) or Head-Up Display (HUD) is based on actual sensory information coming from external sensors."
+      ],
+      "firstIncorrectStatements": [
+        "The imagery on the Primary Flight Display (PFD) or Head-Up Display (HUD) is based on simulated information coming from onboard databases."
+      ],
+      "secondCorrectStatements": [
+        "An inaccurate aircraft position is needed for the EVS to provide the real-time imagery on the PFD or HUD."
+      ],
+      "secondIncorrectStatements": [
+        "An accurate aircraft position is needed for the EVS to provide the real-time imagery on the PFD or HUD."
       ]
     }
   },

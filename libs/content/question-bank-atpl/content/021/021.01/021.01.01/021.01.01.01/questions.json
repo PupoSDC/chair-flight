@@ -22,33 +22,15 @@
     "learningObjectives": ["021.01.01.01.01"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about structural design principles are correct ?\n\n1\\. Fail-safe implies multiple load paths.   \n2\\. Safe life is the preferred design technique for aircraft.",
-      "options": [
-        {
-          "id": "OM02LUYMG",
-          "text": "Both 1 and 2 are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OAJXSWDG3",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OM22YPXDS",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OVK4XXPEM",
-          "text": "Both 1 and 2 are incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about structural design principles are correct?",
+      "firstCorrectStatements": ["Fail-safe implies multiple load paths."],
+      "firstIncorrectStatements": ["Safe life implies multiple load paths."],
+      "secondCorrectStatements": [
+        "Safe life is the preferred design technique for aircraft."
+      ],
+      "secondIncorrectStatements": [
+        "Fail-safe is the preferred design technique for aircraft."
       ]
     }
   },

@@ -949,33 +949,21 @@
     "learningObjectives": ["040.02.03.04.15"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "The consumption of medicines or other substances may have consequences on the qualification to fly for the following reasons:\n\n1\\. The disease requiring a treatment may be a cause for disqualification.   \n2\\. Flight conditions may modify the reactions of the body to a treatment.   \n3\\. The licence holder is prohibited from flying when taking any prescribed medicine.   \n4\\. The effects of the medicine may continue after the treatment is stopped.",
-      "options": [
-        {
-          "id": "OTOUHYRAR",
-          "text": "1, 2 and 3 are correct, 4 is false",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OWOLX4ET3",
-          "text": "Only 2 is false.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLZYXUECM",
-          "text": "3 and 4 are false, 1 and 2 are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ONRQHL5VK",
-          "text": "1, 2, and 4 are correct, 3 is false",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "The consumption of medicines or other substances may have consequences on the qualification to fly for the following reasons:",
+      "firstCorrectStatements": [
+        "The disease requiring a treatment may be a cause for disqualification.",
+        "Flight conditions may modify the reactions of the body to a treatment.",
+        "The effects of the medicine may continue after the treatment is stopped."
+      ],
+      "firstIncorrectStatements": [
+        "The licence holder is allowed to fly when taking any prescribed medicine."
+      ],
+      "secondCorrectStatements": [
+        "The licence holder is prohibited from flying when taking any prescribed medicine."
+      ],
+      "secondIncorrectStatements": [
+        "The disease requiring a treatment is not a cause for disqualification."
       ]
     }
   },

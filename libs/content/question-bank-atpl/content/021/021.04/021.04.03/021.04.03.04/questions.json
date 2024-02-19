@@ -468,33 +468,19 @@
     "learningObjectives": ["021.04.03.04.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an auto-brake system are correct or incorrect?\n\n1\\. During landing and rejected take-off auto-brakes stop operating below a certain low speed.   \n2\\. During landing auto-brakes stop operating and disarm when reverse thrust is selected.",
-      "options": [
-        {
-          "id": "O0NOIZBRA",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OMWS3CXMU",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OHBSQKBY1",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OTHQRAX3B",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an auto-brake system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "During landing and rejected take-off auto-brakes stop operating above a certain low speed."
+      ],
+      "firstIncorrectStatements": [
+        "During landing and rejected take-off auto-brakes stop operating below a certain low speed."
+      ],
+      "secondCorrectStatements": [
+        "During landing auto-brakes continue operating even when reverse thrust is selected."
+      ],
+      "secondIncorrectStatements": [
+        "During landing auto-brakes stop operating and disarm when reverse thrust is selected."
       ]
     }
   },
@@ -646,33 +632,19 @@
     "learningObjectives": ["021.04.03.04.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an auto-brake system are correct or incorrect?\n\n1\\. During landing and rejected take-off auto-brakes stop operating and disarm below a certain low speed.   \n2\\. During landing auto-brakes keep operating when idle reverse thrust is selected.",
-      "options": [
-        {
-          "id": "ONQ5IB4HH",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "OBS0JKRZZ",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OS62DPPZ6",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O13Y8WUJS",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an auto-brake system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "During landing auto-brakes keep operating when idle reverse thrust is selected."
+      ],
+      "firstIncorrectStatements": [
+        "During landing auto-brakes keep operating when idle reverse thrust is not selected."
+      ],
+      "secondCorrectStatements": [
+        "During landing and rejected take-off auto-brakes stop operating and disarm below a certain low speed."
+      ],
+      "secondIncorrectStatements": [
+        "During landing and rejected take-off auto-brakes continue operating and don't disarm below a certain low speed."
       ]
     }
   },
@@ -877,33 +849,19 @@
     "learningObjectives": ["021.04.03.04.03"],
     "explanation": "",
     "variant": {
-      "type": "simple",
-      "question": "Which of these statements about an auto-brake system are correct or incorrect?\n\n1\\. During landing and rejected take-off auto-brakes keep operating until the pilot presses the brake pedals.   \n2\\. During landing auto-brakes stop operating and disarm when reverse thrust is selected.",
-      "options": [
-        {
-          "id": "OJJAQFFYW",
-          "text": "1 is incorrect, 2 is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OLBCOUVMN",
-          "text": "1 is incorrect, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "O8MUHLEFV",
-          "text": "1 is correct, 2 is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "OF216JY89",
-          "text": "1 is correct, 2 is incorrect.",
-          "correct": true,
-          "why": ""
-        }
+      "type": "one-two",
+      "question": "Which of these statements about an auto-brake system are correct or incorrect?",
+      "firstCorrectStatements": [
+        "During landing and rejected take-off auto-brakes keep operating until the pilot presses the brake pedals."
+      ],
+      "firstIncorrectStatements": [
+        "During landing and rejected take-off auto-brakes stop operating before the pilot presses the brake pedals."
+      ],
+      "secondCorrectStatements": [
+        "During landing auto-brakes continue to operate even when reverse thrust is selected."
+      ],
+      "secondIncorrectStatements": [
+        "During landing auto-brakes stop operating and disarm when reverse thrust is selected."
       ]
     }
   },
