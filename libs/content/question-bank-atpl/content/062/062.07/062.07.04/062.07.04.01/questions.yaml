@@ -1,0 +1,69 @@
+- id: QGFWSEPG
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625358
+    - AVEXAM-55172
+    - BGS-621155
+    - ATPLGS-629613
+  annexes: []
+  learningObjectives:
+    - 062.07.04.01.04
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      Within PBN operations, what is the make-up of the "Total System Error"
+      (TSE)?
+
+
+      PDE = Path Definition Error   
+       FTE = Flight Technical Error   
+       NSE = Navigation System Error
+    options:
+      - id: OQFEXQEX2
+        text: PDE + FTE + NSE
+        correct: true
+        why: ""
+      - id: OLBDF9VOR
+        text: PDE x FTE x NSE
+        correct: false
+        why: ""
+      - id: OSCZIOCAN
+        text: PDE + FTE - NSE
+        correct: false
+        why: ""
+      - id: ODBRM7Z04
+        text: (PDE + FTE) / NSE
+        correct: false
+        why: ""
+- id: QQAVROTX
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628687
+    - BGS-621328
+    - AVEXAM-79512
+  annexes: []
+  learningObjectives:
+    - 062.07.04.01.03
+  explanation: ""
+  variant:
+    type: simple
+    question: In Performance Based Navigation (PBN), with respect to navigation
+      error components, the Total System Error (TSE) is...
+    options:
+      - id: ONBA9E8BB
+        text: zero if the Navigation System Error (NSE) is zero.
+        correct: false
+        why: ""
+      - id: OIAM7HCWA
+        text: a measure of the navigation accuracy.
+        correct: true
+        why: ""
+      - id: O4ZKIDZVN
+        text: a value for the accuracy of the 3-dimensional position.
+        correct: false
+        why: ""
+      - id: OQUH8RVPL
+        text: a fixed value indicating the lateral navigation error.
+        correct: false
+        why: ""

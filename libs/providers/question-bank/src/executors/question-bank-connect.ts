@@ -135,7 +135,7 @@ export const connectQuestionBank = ({
     const docId = losMap[docLo].doc;
     const doc = docsMap[docId];
     q.doc = doc.id;
-    q.srcLocation = doc.fileName.replace("page.md", "questions.json");
+    q.srcLocation = doc.fileName.replace("page.md", "questions.yaml");
   });
 
   // Link questions to annexes
@@ -159,7 +159,7 @@ export const connectQuestionBank = ({
     const docId = losMap[docLo].doc;
     const doc = docsMap[docId];
     annex.doc = doc.id;
-    annex.srcLocation = doc.fileName.replace("page.md", "annexes.json");
+    annex.srcLocation = doc.fileName.replace("page.md", "annexes.yaml");
   });
 
   // Link docs to one another

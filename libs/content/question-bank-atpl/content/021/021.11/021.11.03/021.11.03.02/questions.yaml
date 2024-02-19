@@ -1,0 +1,221 @@
+- id: QTPGDHUX
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-213609
+    - BGS-212152
+    - AVEXAM-3236
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.05
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      A turbine engine with a dual channel FADEC has a single channel fault.
+      Which of these actions should the crew take?
+    options:
+      - id: O1AZ7AZBK
+        text:
+          Continue the flight, since the healthy channel automatically assumes full
+          engine control.
+        correct: true
+        why: ""
+      - id: OMCSJUC7E
+        text:
+          Intervene and take manual control of the engine, due to the loss of the
+          redundancy.
+        correct: false
+        why: ""
+      - id: OBB8QJL1L
+        text:
+          Set the power of the affected engine to IDLE, because engine indications
+          are completely lost.
+        correct: false
+        why: ""
+      - id: OHLEA4QIO
+        text:
+          Avoid a high-power setting on the affected engine, due to single-channel
+          limitations.
+        correct: false
+        why: ""
+- id: QVVGKZWX
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-215018
+    - BGS-210772
+    - ATPLGS-628163
+    - AVEXAM-10366
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      "The Throttle Lever Angle (TLA) information of a FADEC controlled gas
+      turbine engine is provided:"
+    options:
+      - id: OYJRKARTZ
+        text: to the hydro mechanical main engine control.
+        correct: false
+        why: ""
+      - id: O7FGZFAVG
+        text:
+          to the electronic engine control unit by a direct electrical wiring
+          connection.
+        correct: true
+        why: ""
+      - id: OVUWCUXNZ
+        text: to a single dedicated channel of the FADEC.
+        correct: false
+        why: ""
+      - id: O6YOPBWBN
+        text: via cables and pulleys.
+        correct: false
+        why: ""
+- id: QKKYZNTU
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-218699
+    - ATPLGS-113058
+    - AVEXAM-62495
+    - BGS-210775
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.07
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      "On a FADEC gas turbine engine during normal flight, the power for the
+      FADEC\\`s sensors comes from:"
+    options:
+      - id: OY9UO35P6
+        text: the aircraft battery.
+        correct: false
+        why: ""
+      - id: OXVAGZJI7
+        text: the aircraft generator.
+        correct: false
+        why: ""
+      - id: OWZUGAQ1J
+        text: the FADEC power source(s) on the engine.
+        correct: true
+        why: ""
+      - id: O8IKM5JMW
+        text: the APU generator.
+        correct: false
+        why: ""
+- id: QPZNWEEA
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-218345
+    - AVEXAM-63117
+    - BGS-210774
+    - ATPLGS-627818
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      The electronic engine control unit (ECU) of a gas turbine engine uses data
+      from:
+
+
+      1\. aircraft systems  
+
+      2\. cockpit display units  
+
+      3\. its own engine sensors  
+
+      4\. electronic engine control units of the other engines(s)
+
+
+      The combination that regroups all of the correct statements is:
+    options:
+      - id: OSSU2YGMA
+        text: 1, 3.
+        correct: true
+        why: ""
+      - id: OFXWH3YSW
+        text: 2, 4.
+        correct: false
+        why: ""
+      - id: OJDLXDER8
+        text: 2, 3.
+        correct: false
+        why: ""
+      - id: OJKMNV735
+        text: 1, 4.
+        correct: false
+        why: ""
+- id: QPHNIYGU
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-212934
+    - AVEXAM-4232
+    - ATPLGS-112955
+    - BGS-210767
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      "The primary input signals for a hydro-mechanical gas turbine engine
+      fuel control system include:"
+    options:
+      - id: OLHZHR3ZB
+        text: N2, bypass ratio, EPR, fuel shut-off, thrust lever angle.
+        correct: false
+        why: ""
+      - id: OSGB5HKOO
+        text: N1, N2, bypass ratio, fuel shut-off, thrust lever angle.
+        correct: false
+        why: ""
+      - id: ONVBWFL1T
+        text:
+          N2, turbine inlet temperature, fuel shut-off, generator, thrust lever
+          angle.
+        correct: false
+        why: ""
+      - id: ORJ6BBF10
+        text:
+          N2, compressor discharge pressure, compressor inlet temperature, fuel
+          shut-off, thrust lever angle.
+        correct: true
+        why: ""
+- id: QUNQBVBT
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-212600
+    - AVEXAM-97488
+  annexes: []
+  learningObjectives:
+    - 021.11.03.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question: What does a FADEC consist of?
+    options:
+      - id: OO8KK69KG
+        text:
+          "A fuel control system and its accessories (sensors, wiring, sensors,...
+          etc.). "
+        correct: true
+        why: ""
+      - id: OFX12LS39
+        text: "A fuel control system and gauges shown to the pilots. "
+        correct: false
+        why: ""
+      - id: OMQANUCEU
+        text: A fuel control system only.
+        correct: false
+        why: ""
+      - id: OZTRXTI37
+        text: All fuel control systems on board an aircraft.
+        correct: false
+        why: ""

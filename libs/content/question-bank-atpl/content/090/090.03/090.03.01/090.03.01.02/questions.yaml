@@ -1,0 +1,449 @@
+- id: QINXGTOO
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-915951
+    - ATPLGS-626575
+    - AVEXAM-51044
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question: |-
+      Decode the following RVR from a METAR message:
+
+      R28/1000U
+    options:
+      - id: OC5H8R5IS
+        text: |-
+          | Runway 28, 1 000 metres, unchanged |  |
+          | ---------------------------------- |  |
+        correct: false
+        why: ""
+      - id: OBGSGWH9R
+        text: |-
+          | Runway 28, 1 000 metres upper limit |  |
+          | ----------------------------------- |  |
+        correct: false
+        why: ""
+      - id: OUN6VR2XC
+        text: |-
+          | Runway 28, under 1 000 metres |  |
+          | ----------------------------- |  |
+        correct: false
+        why: ""
+      - id: OUYZPL8KW
+        text: |-
+          | Runway 28, 1 000 metres changing upwards |  |
+          | ---------------------------------------- |  |
+        correct: true
+        why: ""
+- id: QJRZPQCA
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-916191
+    - AVEXAM-60776
+    - ATPLGS-129151
+    - BGS-910098
+    - ATPLGS-128994
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question: What is normally used for ATIS broadcasts?
+    options:
+      - id: OGNLLVMIX
+        text: NDB frequencies.
+        correct: false
+        why: ""
+      - id: O6TDT7FOK
+        text: DME voice channel.
+        correct: false
+        why: ""
+      - id: OT1GQXQ88
+        text: Voice channel of an ILS.
+        correct: false
+        why: ""
+      - id: OQFEYEVIR
+        text: Discrete VHF frequency or/and VOR.
+        correct: true
+        why: ""
+- id: QMRKQPGT
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-909234
+    - AVEXAM-77725
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      VOLMET is meteorological information for aircraft in flight. D-VOLMET
+      is obtained through...
+    options:
+      - id: O4SLEJ1ES
+        text: The ACARS system.
+        correct: true
+        why: ""
+      - id: OFQI25JQS
+        text: The EICAS/ECAM system.
+        correct: false
+        why: ""
+      - id: OOZZELRZW
+        text: The transponder.
+        correct: false
+        why: ""
+      - id: OI272HEOR
+        text: The FADEC system.
+        correct: false
+        why: ""
+- id: QBAIEASJ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-909495
+    - AVEXAM-88469
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      You are en-route to a destination which is still about 500 NM away. As
+      you suspect a significant change in weather might have occurred, you wish
+      to obtain the latest meteorological data. What is the best option to check
+      the latest weather?
+    options:
+      - id: OTUFXNSVI
+        text: UHF voice communication
+        correct: false
+        why: ""
+      - id: OIF1AL3HW
+        text: ATIS by SELCAL
+        correct: false
+        why: ""
+      - id: OK4TBMHKY
+        text: VHF ATIS
+        correct: false
+        why: ""
+      - id: ONA1HKCPA
+        text: HF VOLMET
+        correct: true
+        why: ""
+- id: QBTBQFOF
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-913933
+    - ATPLGS-129156
+    - BGS-910099
+    - ATPLGS-128996
+    - ATPLGS-129153
+    - AVEXAM-60899
+    - ATPLGS-128995
+    - BGS-910097
+    - AVEXAM-10282
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: Which information can aircraft in flight obtain by VOLMET?
+    options:
+      - id: O6E47H68A
+        text: SIGMET.
+        correct: false
+        why: ""
+      - id: O5HQ4AYNU
+        text: SPECIAL and TAF.
+        correct: false
+        why: ""
+      - id: OLJJ02IPU
+        text: Runway reports.
+        correct: false
+        why: ""
+      - id: OLQFZIKNS
+        text: Aviation routine weather reports (METAR) of specific airports.
+        correct: true
+        why: ""
+- id: QFBOKDQS
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-908393
+    - BGS-900173
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: An aircraft in flight wants to obtain weather information for the
+      destination airport. If available, how can a D-VOLMET be obtained?
+    options:
+      - id: OOOK3STDC
+        text: Via ADSB.
+        correct: false
+        why: ""
+      - id: OZRL1CZL8
+        text: Via data link.
+        correct: true
+        why: ""
+      - id: O1JSKKX46
+        text: By tuning a specific HF frequency.
+        correct: false
+        why: ""
+      - id: O0LN1BPDQ
+        text: By tuning a specific VHF frequency.
+        correct: false
+        why: ""
+- id: QCXIGSCH
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-906985
+    - BGS-920228
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      Before departure the pilot is informed of changing weather conditions at
+      the destination airport.   
+       During the flight in the cruise, with approximately 500 NM to go, the pilot wishes to check the destination weather. Where/how could this information be obtained?
+    options:
+      - id: OJP0KMEDU
+        text: D-ATIS by using Satcom and data link equipment such as ACARS.
+        correct: true
+        why: ""
+      - id: OY7URVAH1
+        text: ATIS on High Frequencies (HF).
+        correct: false
+        why: ""
+      - id: O1ZUMG6IB
+        text:
+          ATIS using the designated frequency of an airport en-route, on Very High
+          Frequencies (VHF).
+        correct: false
+        why: ""
+      - id: O51OMNMOL
+        text: The scheduled VOLMET on Super High Frequencies (SHF).
+        correct: false
+        why: ""
+- id: QUDLUSWZ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-919949
+    - AVEXAM-83347
+    - ATPLGS-117680
+    - BGS-920215
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      A pilot has just noted the latest ATIS for the destination aerodrome on
+      the 20th day of the month.
+
+
+      "Dusseldorf Information Bravo, MET report time one zero two zero, expect ILS approach, runway in use two three left and two three right, new procedures for localiser critical areas apply, expect short time ILS interference, transition level six zero, wind three six zero degrees four knots, visibility one zero kilometres, present weather light rain, cloud few one thousand five hundred feet, scattered two thousand feet, broken four thousand feet, temperature one three, dew point one one, QNH one zero one four hecto-pascal, trend NOSIG, information Bravo out. "
+
+
+      From which of the following METARs has this ATIS message been created?
+    options:
+      - id: ODNMHATER
+        text: 201020Z 36004KT 9999 -RA FEW015 SCT020 BKN040 13/11 Q1014 NOSIG=
+        correct: true
+        why: ""
+      - id: ODOBOM0BS
+        text: 201020Z 36004KT 9999 RA FEW015 SCT020 BKN040 13/11 Q1014=
+        correct: false
+        why: ""
+      - id: O0EK8XKXV
+        text: 201020Z T06036004KT 9999 -RA FEW015 SCT020 BKN040 13/11 Q1014=
+        correct: false
+        why: ""
+      - id: O3U0MHSMP
+        text: 201020Z 36004KT 1000 R23 -RA FEW015 SCT020 BKN040 13/11 Q1014 NOSIG=
+        correct: false
+        why: ""
+- id: QCIPMNWP
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-914434
+    - ATPLGS-128328
+    - ATPLGS-129149
+    - BGS-910243
+    - AVEXAM-88728
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: What is "VOLMET"?
+    options:
+      - id: ODBW6L4DQ
+        text: Meteorological station.
+        correct: false
+        why: ""
+      - id: OGZKXWA6C
+        text: Meteorological information for aircraft in flight.
+        correct: true
+        why: ""
+      - id: O31T6YK8Q
+        text: Volume control meter.
+        correct: false
+        why: ""
+      - id: OJD2YYX0Y
+        text: A device used for measuring cloud base.
+        correct: false
+        why: ""
+- id: QBGHKHOB
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-902629
+    - AVEXAM-60106
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: What clouds are reported in the ATIS?
+    options:
+      - id: OUYXLXM11
+        text: all clouds above the aerodrome.
+        correct: false
+        why: ""
+      - id: OMNQIWNYQ
+        text: all clouds up to 5 000 ft.
+        correct: false
+        why: ""
+      - id: OILQ50Z5C
+        text: all clouds near the landing area.
+        correct: false
+        why: ""
+      - id: OPJNDKXS0
+        text: all clouds up to 5 000 ft or MSA, whichever is highest.
+        correct: true
+        why: ""
+- id: QGHGEKRO
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-918869
+    - ATPLGS-128556
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.04
+  explanation: ""
+  variant:
+    type: simple
+    question: D-ATIS is defined as..
+    options:
+      - id: OKQ4PD324
+        text: Downgraded Automatic Terminal Information Service.
+        correct: false
+        why: ""
+      - id: OOMJDJ8RJ
+        text: Data link – Automatic Terminal Information Service.
+        correct: true
+        why: ""
+      - id: OOIUKZ6R9
+        text: Digital Automated Terminal Information Service.
+        correct: false
+        why: ""
+      - id: O7ZXVW01R
+        text: Data Auto Transfer Integrated System.
+        correct: false
+        why: ""
+- id: QLWIHQOL
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-924876
+    - AVEXAM-69992
+    - ATPLGS-128586
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: A continuous VOLMET broadcast contains..
+    options:
+      - id: O9IAWF2CD
+        text: the latest TAFs and METARs for major international aerodromes.
+        correct: false
+        why: ""
+      - id: ORV61POUJ
+        text: an area forecast for flights in the FIR below 5000 ft AGL.
+        correct: false
+        why: ""
+      - id: OCKRWZ60B
+        text:
+          recently received routine and special reports from aircraft within the
+          FIR.
+        correct: false
+        why: ""
+      - id: OO2INFDL1
+        text: recent METAR and SPECI reports from a published selection of aerodromes.
+        correct: true
+        why: ""
+- id: QSSKYLCM
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-904312
+    - AVEXAM-20298
+    - BGS-900157
+    - BGS-900211
+  annexes: []
+  learningObjectives:
+    - 090.03.01.02.03
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      An aircraft is approaching Otopeni, the destination aerodrome, and has
+      received the following ATIS broadcast. Who would you call to inform that
+      you have received the ATIS?
+
+
+      ‘’OTOPENI INFORMATION OSCAR.   
+       TIME 12:50   
+       EXPECT AN ILS APPROACH.   
+       ARRIVALS RUNWAY 08 RIGHT. DEPARTURES RUNWAY 08 LEFT   
+       TRANSITION ALTITUDE 4000 FT.   
+       WORK IN PROGRESS ON APRON TWO.   
+       SURFACE WIND 250, 14 KNOTS.   
+       VISIBILITY 10 KILOMETRES OR MORE.   
+       SCATTERED 2400 FEET, BROKEN 4600 FEET.   
+       CUMULONIMBUS DETECTED.   
+       TEMPERATURE +19, DEW POINT +4\.   
+       QNH 1007   
+       NO SIGNIFICANT CHANGE   
+       ACKNOWLEDGE RECEIPT OF INFORMATION OSCAR WITH APP ON 119.415\.   
+       DEPARTURE WITH DELIVERY ON 121.955.‘’
+    options:
+      - id: OWQORL3V3
+        text: Departure, 121.955
+        correct: false
+        why: ""
+      - id: ODN8ELGZX
+        text: Approach, 119.415
+        correct: true
+        why: ""
+      - id: OH6OCIOYV
+        text: Approach, 121.955
+        correct: false
+        why: ""
+      - id: OIOUGNITR
+        text: Departure, 119.415
+        correct: false
+        why: ""
