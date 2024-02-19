@@ -1,46 +1,8 @@
 [
   {
-    "id": "QGXDAQYM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-40115"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The SI unit, used for AC frequencies, is...",
-      "options": [
-        {
-          "id": "A1DVFSXJ67",
-          "text": "Hertz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHF8ZO52P4",
-          "text": "Period",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOFJDWANEQ",
-          "text": "Ampere",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUXWYYA8XU",
-          "text": "Volt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QGGTJBTP",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-217547"],
+    "externalIds": ["ATPLQ-217547", "BGS-212179"],
     "annexes": [],
     "learningObjectives": ["021.09.01.03.04"],
     "explanation": "",
@@ -49,27 +11,70 @@
       "question": "What unit of measurement is used to express frequency?",
       "options": [
         {
-          "id": "AK4YWAD365",
-          "text": "Hertz.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8QKH86EZ5",
-          "text": "RPM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFNKPLD678",
+          "id": "O9DWV8T8D",
           "text": "period",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A89R6FOT3D",
+          "id": "OCTCNMADF",
+          "text": "Hertz.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPDBTJKFY",
+          "text": "RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVGSP3PR0",
           "text": "cycle.",
           "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCWSUUHV",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-216115",
+      "BGS-210407",
+      "ATPLGS-119698",
+      "AVEXAM-19059"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.09.01.03.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": " Alternating current can be derived from direct current by..",
+      "options": [
+        {
+          "id": "OBXBWBXT8",
+          "text": "a rectifier.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZGBHM3OQ",
+          "text": "an alternating current motor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPKEAYKMK",
+          "text": "a transformer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEJPOPQMW",
+          "text": "an inverter.",
+          "correct": true,
           "why": ""
         }
       ]
@@ -84,111 +89,30 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the correct relationship between DC and AC with reference to an inverter?",
+      "question": "In reference to an inverter unit, which of these relationships between AC and DC is correct?",
       "options": [
         {
-          "id": "AQVKTNFNSD",
-          "text": "DC x Volt - AC y Volt",
+          "id": "OFYCW6SJJ",
+          "text": "AC → DC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6NRAANHJ",
+          "text": "y Volts of DC → y Volts of AC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXTHFMKBU",
+          "text": "x Volts DC → x Volts of AC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJI9TCYN8",
+          "text": "x Volts of DC → y Volts of AC",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASSVQ0I60A",
-          "text": "AC - DC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6B95RBJCR",
-          "text": "DC y Volt - AC y Volt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A66U0882ET",
-          "text": "DC x Volt - AC x Volt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCWSUUHV",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-119698",
-      "ATPLQ-216115",
-      "AVEXAM-19059",
-      "BGS-210407"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Alternating current can be derived from direct current by",
-      "options": [
-        {
-          "id": "A9S754GUAF",
-          "text": "an inverter.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT17BJVXET",
-          "text": "a transformer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXE862K9D2",
-          "text": "a rectifier.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5OX3D1C5L",
-          "text": "an alternating current motor.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPSDCTXI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105339", "AVEXAM-47608"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The advantages of alternating current on board an aircraft are:\n1) simple connection.\n2) high starting torque.\n3) flexibility in use.\n4) lighter weight of equipment.\n5) easy to convert into direct current.\n6) easy maintenance of machines.\nThe combination of correct statements is:",
-      "options": [
-        {
-          "id": "AS0KLVY584",
-          "text": "3, 4, 5, 6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO4B657IJV",
-          "text": "1, 2, 3, 5, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOQI1EHDIJ",
-          "text": "1, 2, 3, 4, 5, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW3AJ95BQ4",
-          "text": "1, 4, 6",
-          "correct": false,
           "why": ""
         }
       ]
@@ -203,29 +127,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which statement is correct about frequency?1) The SI unit for frequency is RPM \n 2) Frequency is oscillations per second",
+      "question": "Which statement is correct about frequency?\n\n1) The SI unit for frequency is RPM   \n 2) Frequency is oscillations per second",
       "options": [
         {
-          "id": "AH304PTF31",
-          "text": "1 is false; 2 is true.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABS1BFFBPZ",
+          "id": "OCZWZLIXO",
           "text": "1 is true; 2 is false.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AG5GXJ9DGL",
-          "text": "1 and 2 are false.",
+          "id": "OBZXEOVTO",
+          "text": "1 is false; 2 is true.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2PHUM5LR",
+          "text": "1 and 2 are true.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXP3SRCZBL",
-          "text": "1 and 2 are true.",
+          "id": "OB9V7V9HE",
+          "text": "1 and 2 are false.",
           "correct": false,
           "why": ""
         }
@@ -244,64 +168,26 @@
       "question": "Which of these devices is used to convert AC power to DC power?",
       "options": [
         {
-          "id": "AN8I66QNV0",
-          "text": "Transformer Rectifier Unit",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE28ODCDSZ",
+          "id": "OSW3UHGVT",
           "text": "Generator",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXQJ8ISQEN",
+          "id": "O3AOUMDOU",
           "text": "Static Inverter",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARNV1NKIIV",
-          "text": "Alternator",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSSRFLDB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127463", "BGS-210353"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The most widely used AC frequency in aircraft is:",
-      "options": [
-        {
-          "id": "AOGJCJSTYE",
-          "text": "400 Hz.",
+          "id": "OAQMXAM8Y",
+          "text": "Transformer Rectifier Unit",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUVHEE83XI",
-          "text": "60 Hz.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTDBLHCOU",
-          "text": "50 Hz.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL94HYJIZE",
-          "text": "115 Hz.",
+          "id": "OTPMYFCCN",
+          "text": "Alternator",
           "correct": false,
           "why": ""
         }

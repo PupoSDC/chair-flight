@@ -1,36 +1,36 @@
 [
   {
-    "id": "QIJIUKLL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625671", "ATPLQ-335964"],
-    "annexes": [],
+    "id": "QTKLPRZL",
+    "relatedQuestions": ["QZJVJJWI"],
+    "externalIds": ["ATPLQ-334091"],
+    "annexes": ["AIJN9EEZJ"],
     "learningObjectives": ["033.03.02.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the maximum extra fuel that may be uplifted?\n \nMZFM: 170,000 kg\nMTOM: 223,000 kg\nMLM: 182,000 kg\nPlanned ZFM: 165,767 kg\nTOF: 51,616 kg\nTrip Fuel: 45854 kg\n \nFuel Penalty:\nTake Off: 282.7/1000 kg\nLanding: 394/1000 kg",
+      "question": "Refer to figure.   \nDue to a hydraulic failure, the landing gear of a transport category aircraft stays extended after take-off.   \nBased on the flight planning data given below, calculate the time penalty for the flight, based on (standard) endurance.\n\nUsable fuel: 6 metric tons   \nFuel consumption: 2400 kg/h",
       "options": [
         {
-          "id": "AM5AO6SOCF",
-          "text": "5617 kg",
+          "id": "OA8EES2LZ",
+          "text": "1.6 h",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A67Z8VLZV6",
-          "text": "4988 kg",
+          "id": "OP9UEDHSO",
+          "text": "1.5 h",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5U185NC8Z",
-          "text": "4328 kg",
+          "id": "OYSYTHZGR",
+          "text": "53 min",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGAGCCTW2L",
-          "text": "2396 kg",
+          "id": "OKE5MLWGH",
+          "text": "1 h 50",
           "correct": false,
           "why": ""
         }
@@ -39,8 +39,14 @@
   },
   {
     "id": "QAEREVVB",
-    "relatedQuestions": ["QPUIBKXJ"],
-    "externalIds": ["ATPLGS-126628", "ATPLQ-332608"],
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-332608",
+      "ATPLGS-126628",
+      "AVEXAM-22062",
+      "BGS-331103",
+      "BGS-331095"
+    ],
     "annexes": [],
     "learningObjectives": ["033.03.02.04.02"],
     "explanation": "",
@@ -49,25 +55,25 @@
       "question": "Which person is entitled to require the uplift of Extra Fuel?",
       "options": [
         {
-          "id": "AJKN7EKJ63",
-          "text": "The commander.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWZ5GPFTO7",
+          "id": "OSYLSFIBI",
           "text": "The operator.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A6DU31ULBI",
+          "id": "OKJJLTHJO",
           "text": "The flight dispatcher.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2O2FQVW0V",
+          "id": "O45IZDTN6",
+          "text": "The commander.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVLALYA0Q",
           "text": "The head of flight operations.",
           "correct": false,
           "why": ""
@@ -76,199 +82,68 @@
     }
   },
   {
-    "id": "QPUIBKXJ",
-    "relatedQuestions": ["QAEREVVB"],
-    "externalIds": ["BGS-331095", "BGS-331103"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which person is entitled to require the uplift of Extra Fuel?",
-      "options": [
-        {
-          "id": "A54M9JRK95",
-          "text": "The Commander",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGUAN0GZTY",
-          "text": "The Flight Dispatcher",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEY8QBH2P1",
-          "text": "The Head of Flight Operations",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE16MZH9GZ",
-          "text": "The Operator",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAUDAZAF",
+    "id": "QIJIUKLL",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-625343",
-      "ATPLQ-334365",
-      "ATPLQ-336787",
-      "ATPLQ-336955",
-      "ATPLQ-338565",
-      "BGS-330880",
-      "BGS-331078",
-      "BGS-331184",
-      "BGS-339787"
+      "ATPLQ-335964",
+      "AVEXAM-80674",
+      "AVEXAM-9254",
+      "AVEXAM-28827",
+      "AVEXAM-3533",
+      "AVEXAM-91851",
+      "AVEXAM-9820",
+      "AVEXAM-40692",
+      "ATPLGS-625671",
+      "BGS-330312",
+      "AVEXAM-24254",
+      "AVEXAM-82542",
+      "AVEXAM-66218",
+      "AVEXAM-54317",
+      "AVEXAM-79817",
+      "AVEXAM-26833",
+      "AVEXAM-87808",
+      "AVEXAM-94928",
+      "AVEXAM-97387",
+      "AVEXAM-62430",
+      "AVEXAM-87590",
+      "AVEXAM-77027",
+      "ATPLGS-622531",
+      "ATPLGS-622530",
+      "AVEXAM-57399",
+      "AVEXAM-48253",
+      "AVEXAM-81505",
+      "ATPLGS-114050",
+      "AVEXAM-23218",
+      "AVEXAM-53293"
     ],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel to be uplifted.\nMaximum Zero Fuel Mass MZFM: 2000 kgActual Zero Fuel Mass AZFM: 2000 kgRegulated Take-Off Mass RTOM: 3000 kgMaximum Landing Mass MLM: 2200 kgFuel Tank Capacity: 550 kgTrip Fuel TF: 190 kgMinimum Block Fuel (BF): 300 kg\n ",
-      "options": [
-        {
-          "id": "A90D4RBHSY",
-          "text": "90 kg.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUAL03E0IR",
-          "text": "60 kg.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUT1W7MEEA",
-          "text": "Not able to carry Extra Fuel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV17U15L55",
-          "text": "250 kg.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKMQBAUY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622510", "BGS-330772"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following planning data, calculate the maximum possible extra fuel in Kg,\nincluding any fuel penalty, that can be uplifted.\nMax Ramp Mass 77 500 Kg\nMTOM 73 000 Kg\nMLM 66 360 Kg\nMZFM 62 720 Kg\nDOM 42 845 Kg\nTraffic Load 17 460 Kg\nPlanned T/O fuel 10 365 Kg\nTrip Fuel 7 890 Kg\nTaxi Fuel 195 Kg\nFuel Penalty: 135 Kg / 1000 Kg extra fuel\nMax Fuel tank capacity 21 000 Kg",
-      "options": [
-        {
-          "id": "AQ7H1TEK3R",
-          "text": "2330KG",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARJUCEKOF2",
-          "text": "2694KG",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9E18UOTWW",
-          "text": "3580KG",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9BPJ4OOA6",
-          "text": "4139KG",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVZEMWNI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-113914", "BGS-330887", "BGS-330888"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any Fuel Penalty, that can be uplifted.\n MTOM 233 000 Kg            MZFM 170 000 Kg         DOM 122 550 Kg          MLM 182 000 Kg\n Traffic Load 35 367 Kg      Fuel Tank Capacity 110 000 Kg    Taxi Fuel 300 Kg           Trip Fuel  62 332 Kg\n Planned T/O Fuel 67 885 Kg                   ",
-      "options": [
-        {
-          "id": "AI86959XWU",
-          "text": "7198 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOJU0ORQFB",
-          "text": "18530 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANGZTR769C",
-          "text": "6898 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ6AO0WQX1",
-          "text": "12751 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNVRSSNA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-332342", "ATPLQ-334482", "ATPLQ-339142"],
     "annexes": [],
     "learningObjectives": ["033.03.02.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any fuel penalty, that can be uplifted.\n\nMaximum Ramp Mass: 63060 kgMTOM: 62800 kgMLM: 54900 kgMZFM: 51300 kgDOM: 33200 kgTraffic Load: 12375 kgT/O Fuel: 3575 kgTrip Fuel: 2100 kgTaxi Fuel: 195 kgFuel penalty for carrying Extra Fuel: 40 kg per 1000 kg of Extra FuelFuel tank capacity: 16145 kg",
+      "question": "What is the maximum extra fuel that may be uplifted?\n\nMZFM: 170,000 kg   \nMTOM: 223,000 kg   \nMLM: 182,000 kg   \nPlanned ZFM: 165,767 kg   \nTOF: 51,616 kg   \nTrip Fuel: 45854 kg\n\nFuel Penalty:\n\nTake Off: 282.7/1000 kg   \nLanding: 394/1000 kg",
       "options": [
         {
-          "id": "A4VS6LFLBT",
-          "text": "8164 kg",
+          "id": "O182HQKR0",
+          "text": "5617 kg",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AACY1ZURAS",
-          "text": "7850 kg",
+          "id": "OICEX6ZZG",
+          "text": "4328 kg",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWVU70PW95",
-          "text": "5725 kg",
+          "id": "O6GKKQXEQ",
+          "text": "4988 kg",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZAW2YBM71",
-          "text": "13650 kg",
+          "id": "OG0Q78UYE",
+          "text": "2396 kg",
           "correct": false,
           "why": ""
         }
@@ -278,73 +153,49 @@
   {
     "id": "QDPYFXLZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-337437", "ATPLQ-339978"],
+    "externalIds": [
+      "ATPLQ-337437",
+      "ATPLGS-113959",
+      "AVEXAM-42337",
+      "ATPLGS-625670",
+      "ATPLGS-627355",
+      "AVEXAM-81900",
+      "ATPLGS-625283",
+      "ATPLGS-625669",
+      "ATPLGS-114065",
+      "BGS-330880",
+      "BGS-330879",
+      "ATPLGS-625291",
+      "BGS-330878"
+    ],
     "annexes": [],
     "learningObjectives": ["033.03.02.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following planning data, calculate the maximum possible extra fuel in kg, including any fuel penalty, that can be uplifted:\n \nMaximum Ramp Mass: 77,500kg\nMaximum Take Off Mass: 73,000kg\nMaximum Landing Mass: 66,360kg\nMaximum Zero Fuel Mass: 62,720kg\nDry Operating Mass: 42,845kg\nTraffic Load: 17460kg\nPlanned Take Off Fuel: 10365kg\nTrip Fuel: 7890kg\nTaxi Fuel: 195kg\nFuel Penalty: 135kg/1000kg of extra fuel\nMax Fuel Tank Capacity: 21,000kg\n ",
+      "question": "Given the following planning data, calculate the maximum possible extra fuel in kg, including any fuel penalty that can be uplifted:\n\nMaximum Ramp Mass: 77,500kg   \nMaximum Take Off Mass: 77,000kg   \nMaximum Landing Mass: 66,360kg   \nMaximum Zero Fuel Mass: 62,720kg   \nDry Operating Mass: 42,845kg   \nTraffic Load: 17460kg   \nPlanned Take Off Fuel: 10365kg   \nTrip Fuel: 7890kg   \nTaxi Fuel: 195kg   \nFuel Penalty: 135kg/1000kg of extra fuel   \nMax Fuel Tank Capacity: 14,000kg",
       "options": [
         {
-          "id": "ATVVQKKIG4",
-          "text": "2330 kg",
+          "id": "OAODJ7E2U",
+          "text": "3440 kg",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AELYAQPT3M",
-          "text": "1450 kg",
+          "id": "OZSNND5GP",
+          "text": "6635 kg",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIJ0FM3PTH",
-          "text": "3260 kg",
+          "id": "OWMQT2U7R",
+          "text": "3580 kg",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A59LFGE3MU",
-          "text": "2140 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQZEEZRC",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991711"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Concerning Dry Operating Mass (DOM), which of the following statements is incorrect?",
-      "options": [
-        {
-          "id": "AI2L0LHVZZ",
-          "text": "The DOM is the total mass of the helicopter excluding useable\nfuel",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANIV1LVSJ1",
-          "text": "Zero Fuel Mass is the sum of DOM plus Traffic\nLoad",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ6DLH7CP3",
-          "text": "The DOM is the total mass of the helicopter excluding\nuseable fuel and traffic load",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AONZGAGTXQ",
-          "text": "The DOM includes items such as crew, crew baggage and\ncatering equipment",
+          "id": "OOY2VMDH3",
+          "text": "4139 kg",
           "correct": false,
           "why": ""
         }
@@ -355,764 +206,47 @@
     "id": "QZNNDZBR",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-622526",
-      "ATPLGS-622533",
       "ATPLQ-334756",
-      "ATPLQ-338671"
+      "AVEXAM-90101",
+      "ATPLGS-626104",
+      "AVEXAM-95918",
+      "ATPLGS-622533",
+      "AVEXAM-56563",
+      "AVEXAM-8090",
+      "AVEXAM-31383",
+      "BGS-331233",
+      "AVEXAM-12251",
+      "AVEXAM-2449",
+      "ATPLGS-126689"
     ],
     "annexes": [],
     "learningObjectives": ["033.03.02.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any fuel penalty, that can be uplifted.\n\nMTOM: 875 000 lbMLM: 652 000 lbMZFM: 555 100 lbDOM: 394 100 lbTraffic Load: 109 350 lbTrip Fuel: 289 750 lbPlanned T/O Fuel: 315 315 lbTaxi Fuel: 1600 lbFuel penalty for carrying Extra Fuel: 470 lb per 1000 lb of Extra FuelFuel tank capacity: 377 750 lb",
+      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any fuel penalty, that can be uplifted.\n\nMTOM: 875 000 lb   \nMLM: 652 000 lb   \nMZFM: 555 100 lb   \nDOM: 394 100 lb   \nTraffic Load: 109 350 lb   \nTrip Fuel: 289 750 lb   \nPlanned T/O Fuel: 315 315 lb   \nTaxi Fuel: 1600 lb   \nFuel penalty for carrying Extra Fuel: 470 lb per 1000 lb of Extra Fuel   \nFuel tank capacity: 377 750 lb",
       "options": [
         {
-          "id": "A9M2Z6QX0L",
+          "id": "OUW7KBOFI",
+          "text": "51650 lb",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCY8VTZWE",
           "text": "56235 lb",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAVWHPSD8H",
-          "text": "180 788 lb",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A30SCUPW7O",
+          "id": "OBRSGDFG0",
           "text": "57835 lb",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIJ7R3B36I",
-          "text": "51650 lb",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNHHFSAB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79645"],
-    "annexes": [
-      "232306a481174cf8c18d1ca40191141a",
-      "232306a481174cf8c18d1ca40191141a"
-    ],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 033-155.\nGiven:\n\n-  Cruise speed: Mach 0.79\n  </tr>\n  <tr> Maximum Zero Fuel Mass (MZFM): 62 731 kg\n  </tr>\n  <tr> Actual Zero Fuel Mass (AZFM): 59 031 kg\n  </tr>\n  <tr> Regulated Take-off Mass (RTOM): 76 000 kg\n  </tr>\n  <tr> Maximum Landing Mass (MLM): 66 360 kg\n  </tr>\n  <tr> Taxi fuel: 240 kg\n  </tr>\n  <tr> Trip fuel: 4 761 kg\n  </tr>\n  <tr> Minimum block fuel: 8 000 kg\n  </tr>\n  <tr> Capacity of fuel tank: 16 000 kg\n\nCalculate the maximum possible extra fuel to be uplifted, if the commander of a commercial flight wants to climb directly to the optimum altitude of 37 000 ft.",
-      "options": [
-        {
-          "id": "A7ECRN35SD",
-          "text": "1 209 kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYHZ7ONPOB",
-          "text": "8 000 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVOMXADZCT",
-          "text": "4 330 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANGQILHZNU",
-          "text": "9 209 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QINSGIWU",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-330889", "BGS-330890"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any Fuel Penalty, that can be uplifted.\nRTOM 76 000 Kg  MZFM 62 731 Kg   Actual ZFM 59 031 Kg     MLM 66 360 Kg Fuel Tank Capacity 16 000 Kg   \nTaxi Fuel 240 Kg   Trip Fuel  4 761 Kg\nMinimum Block fuel 8 000 Kg   ",
-      "options": [
-        {
-          "id": "A497WH22DC",
-          "text": "4 330 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAPRK6M1DS",
-          "text": "8 000 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJP2B9HC1T",
-          "text": "9 640 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A789ORK4NL",
-          "text": "9 209 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVAKZXNY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-107841"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The fuel burn-off is 200 kg/hr with a relative fuel density of 0.8\n If the relative fuel density is 0.75, the fuel burn will be",
-      "options": [
-        {
-          "id": "ACOJWB5QHO",
-          "text": "200 kg/hr",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFIKRWLH1H",
-          "text": "267 kg/hr",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMNUSQ8OIU",
-          "text": "213 kg/hr",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7ERM591QK",
-          "text": "188 kg/hr",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGFMWRB",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-330877"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial air Transport operation, calculate the maximum possible Extra Fuel, including any fuel penalty, that can be uplifted.\nMax Ramp Mass (MRM) 63 060 Kg     MTOM 62 800 Kg     MLM 54 900 Kg   Tank Capacity 16 145 Kg\nDOM 33 200 Kg   Traffic Load 12 375 Kg   T/O Fuel 3 575 Kg   Trip Fuel 2 100 Kg   Taxi Fuel 195 Kg\nFuel Penalty 40 Kg / 1000 Kg.",
-      "options": [
-        {
-          "id": "ABKSP9NMQO",
-          "text": "8164 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB3BFZZSUS",
-          "text": "7 850 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMPJ5FM37D",
-          "text": "13 650 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZNZRHF617",
-          "text": "5 725 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVCABXHY",
-    "relatedQuestions": ["QJPHYQDE"],
-    "externalIds": ["BGS-330881", "BGS-330882", "BGS-330883"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel to be uplifted.\n MZFM 2 000 Kg  Actual ZFM 2 000 Kg   RTOM 2 900 Kg  MLM 2 600 Kg\n Fuel Tank Capacity 950 Kg     Trip Fuel 350 Kg  Minimum Block fuel 500 Kg",
-      "options": [
-        {
-          "id": "AAT6V1FEDO",
-          "text": "400 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1K8AON6OP",
-          "text": "450 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AETLXSYOZV",
-          "text": "600 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMJO9LFYI5",
-          "text": "Not able to carry Extra Fuel",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJPHYQDE",
-    "relatedQuestions": ["QVCABXHY"],
-    "externalIds": ["BGS-330881"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel to be uplifted.\n MZFM 2 000 Kg  Actual ZFM 2 000 Kg   RTOM 3 000 Kg  MLM 2 200 Kg\n Fuel Tank Capacity 550 Kg     Trip Fuel 190 Kg  Minimum Block fuel 300 Kg",
-      "options": [
-        {
-          "id": "A8LGKXBBIR",
-          "text": "90 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALAX5F5X7P",
-          "text": "Not able to carry Extra Fuel",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP560I5090",
-          "text": "60 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUJM02A7B0",
-          "text": "250 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVSKZQMZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625668", "ATPLQ-338221"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Maximum Allowable Take-Off Mass: 64,400 kgMaximum Landing Mass: 56,200 kgMaximum Zero Fuel Mass: 53,000 kgDry Operating Mass: 35,500 kgEstimated Load: 14,500 kgEstimated Trip Fuel: 4,900 kgMinimum Take Off Fuel: 7,400 kg\nIt is then decided to ‘fuel tanker’ because of the very expensive fuel cost at the destination aerodrome. For every additional 1000 kg of fuel carried in excess of the stated minimum take-off fuel, there is a fuel burn penalty of 75 kg.\nWhat is the maximum extra fuel that can be loaded and the maximum permitted take off fuel?\n ",
-      "options": [
-        {
-          "id": "AQ50F0TTR2",
-          "text": "4000 kg Max Extra, 11,400 kg Max permitted take off fuel",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4C34HBA4I",
-          "text": "4000 kg Max Extra, 10,400 kg Max permitted take off fuel",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASSY0D2YVG",
-          "text": "2700 kg Max Extra, 10,800 kg Max permitted take off fuel",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3CV7KD0IR",
-          "text": "3200 kg Max Extra, 11,900 kg Max permitted take off fuel",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJFAFYZF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-107849"],
-    "annexes": ["24c805dea6d374da4bcc17dd0e0c673a"],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given? FL310? Mach 078? Cruise mass of 56 000 kg\nWhat is the fuel penalty?",
-      "options": [
-        {
-          "id": "ALGCKY4XUH",
-          "text": "2%",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL9IFZ835J",
-          "text": "4%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAO4UXYYP7",
-          "text": "1%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACGKP9O9P6",
-          "text": "10%",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLXBATQL",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-330933"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the maximum extra fuel, including any fuel penalty, at Take-Off, that can be uplifted.\nMTOM 233 000 Kg   MLM 182 000 Kg  MZFM 170 000 Kg  Plan ZFM 157 917 Kg\nTraffic Load 155 215 Kg  Trip Fuel 62 332 Kg  Tank Capacity 110 000 Kg   T/O Fuel 67 885 Kg\nFuel Penalty Corrections  TOM + 282.6 Kg   LDM +394 Kg",
-      "options": [
-        {
-          "id": "AZP0SHKE7Z",
-          "text": "7 198 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH23CVKE8S",
-          "text": "18 530 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APNCCCDIYP",
-          "text": "9 232 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY4ULRTGQ1",
-          "text": "25 819 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIIQTFST",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-990819"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Concerning Dry Operating Mass (DOM), which of the following statements is incorrect?\n ",
-      "options": [
-        {
-          "id": "ADV8REX7QA",
-          "text": "The DOM is the total mass of the aeroplane excluding\nuseable fuel",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV6BF4LZU2",
-          "text": "The DOM includes items such as crew, crew baggage and\ncatering equipment",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN9760OWXB",
-          "text": "The DOM is the total mass of the aeroplane excluding\nuseable fuel and traffic load",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEJB9JXM3A",
-          "text": "The DOM is the sum of Basic Empty Mass (BEM) and Variable\nLoad (VL)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZJVJJWI",
-    "relatedQuestions": ["QTKLPRZL"],
-    "externalIds": ["ATPLQ-337816"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.Due to a hydraulic failure, the landing gear of a transport category aircraft stays extended after take-off.Based on the flight planning data given below, calculate the time penalty in percentage for the flight, based on (standard) endurance.\nUsable fuel: 6 metric tonsFuel consumption: 2400 kg/h",
-      "options": [
-        {
-          "id": "A0B4YI9OIH",
-          "text": "65%",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL8QUGBHK9",
-          "text": "38%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9H9SV4DSA",
-          "text": "26%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADEUF1VTHL",
-          "text": "74%",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTKLPRZL",
-    "relatedQuestions": ["QZJVJJWI"],
-    "externalIds": ["ATPLQ-334091"],
-    "annexes": ["46df348bc5c810270e70685145e08895"],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.Due to a hydraulic failure, the landing gear of a transport category aircraft stays extended after take-off.Based on the flight planning data given below, calculate the time penalty for the flight, based on (standard) endurance.\nUsable fuel: 6 metric tonsFuel consumption: 2400 kg/h",
-      "options": [
-        {
-          "id": "A96PO24IEK",
-          "text": "1.6 h",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW8EI6VFJM",
-          "text": "1 h 50",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3LBCXHGK6",
-          "text": "1.5 h",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQZH2E56VC",
-          "text": "53 min",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRKIIUJA",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-330891"],
-    "annexes": ["da2206f2acb750bcb3ecf648c38dee9e"],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel, including any Fuel Penalty, that can be uplifted.    If the Commander wishes to climb directly to the Optimum Altitude of 37 000 ft.  Cruise Speed 0.79 Mach\n RTOM 76 000 Kg  MZFM 62 731 Kg   Actual ZFM 59 031 Kg     MLM 66 360 Kg Fuel Tank Capacity 16 000 Kg   \n Taxi Fuel 240 Kg   Trip Fuel  4 761 Kg\n Minimum Block fuel 8 000 Kg   ",
-      "options": [
-        {
-          "id": "AZDGZ5TH0T",
-          "text": "1209 Kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9PYG209JH",
-          "text": "8000 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS06XITKZ4",
-          "text": "9209 Kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AESDP1EIOY",
-          "text": "4330 Kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEQMGBZM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-66150"],
-    "annexes": ["232306a481174cf8c18d1ca40191141a"],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 033-155.\nGiven:\n\n- Mass restriction at 37 000 ft: 68 000 kg\n- Maximum Zero Fuel Mass (MZFM): 62 731 kg\n- Actual Zero Fuel Mass (AZFM): 55 031 kg\n- Regulated Take-off Mass (RTOM): 76 000 kg\n- Maximum Landing Mass (MLM): 66 360 kg\n- Fuel Tank Capacity: 20 000 kg\n- Taxi Fuel: 240 kg\n- Trip Fuel: 7 931 kg\n- Minimum Block Fuel: 11 249 kg\n\nConsider a commercial flight. Calculate the maximum possible extra fuel to be uplifted if the captain wants to climb directly to the optimum altitude of 37 000 ft.",
-      "options": [
-        {
-          "id": "ADD29DM9U8",
-          "text": "1 960 kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADKCGE7MFX",
-          "text": "8 251 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW56TJPUSR",
-          "text": "8 751 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A985X7PMCU",
-          "text": "Not able to carry any extra fuel.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUXPFERT",
-    "relatedQuestions": ["QLJVTHKT", "QRJAPFUN", "QWWSWLLZ"],
-    "externalIds": ["AVEXAM-48253"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Because of the very high fuel price at the destination, the decision is made to “fuel tanker”. For every additional 1 000 kg of fuel carried in excess of the given minimum take-off fuel, there is a fuel penalty of 75 kg. From the data given below, calculate the maximum amount of extra fuel and the maximum permitted take-off fuel.\n\n\n- MTOM: 64 400 kg\n- MLM: 56 200 kg\n- MZFM: 53 000 kg\n- DOM: 35 500 kg\n- Estimated load: 14 500 kg\n- Estimated trip fuel: 4 900 kg\n- MINTOF: 7 400 kg",
-      "options": [
-        {
-          "id": "AZMNU3R95U",
-          "text": "3 977 kg and 11 377 kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGEO5MRGQM",
-          "text": "9 500 kg and 14 400 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR2RWPM5YM",
-          "text": "3 700 kg and 11 100 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7MPJ1U6BF",
-          "text": "6 500 kg and 11 400 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRJAPFUN",
-    "relatedQuestions": ["QLJVTHKT", "QUXPFERT", "QWWSWLLZ"],
-    "externalIds": ["AVEXAM-81505"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Because of the very high fuel price at the destination, the decision is made to “fuel tanker”. For every additional 1 000 kg of fuel carried in excess of the given minimum take-off fuel, there is a fuel penalty of 125 kg. From the data given below, calculate the maximum amount of extra fuel and the maximum permitted take-off fuel.\n\n\n- MTOM: 63 500 kg\n- MLM: 58 100 kg\n- MZFM: 54 600 kg\n- DOM: 36 900 kg\n- Estimated load: 15 200 kg\n- Estimated trip fuel: 5 200 kg\n- Min. TOF: 7 800 kg",
-      "options": [
-        {
-          "id": "A6NX7AEFP8",
-          "text": "3 600 kg and 11 400 kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7YXRHBOVY",
-          "text": "3 885 kg and 11 400 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AICMP9TX7A",
-          "text": "3 600 kg and 8 800 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL6PUR4N2P",
-          "text": "3 400 kg and 11 200 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWWSWLLZ",
-    "relatedQuestions": ["QLJVTHKT", "QRJAPFUN", "QUXPFERT"],
-    "externalIds": ["AVEXAM-79817"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Because of the very high fuel price at the destination, the decision is made to “fuel tanker”. For every additional 1 000 kg of fuel carried in excess of the given minimum take-off fuel, there is a fuel penalty of 89 kg. From the data given below, calculate the maximum amount of extra fuel and the maximum permitted take-off fuel.\n\n\n- MTOM: 67 000 kg\n- MLM: 59 800 kg\n- MZFM: 56 500 kg\n- DOM: 38 200 kg\n- Estimated load: 14 300 kg\n- Estimated trip fuel: 5 100 kg\n- Min. TOF: 8 300 kg",
-      "options": [
-        {
-          "id": "AWCEC83UHH",
-          "text": "4 464 kg and 12 764 kg",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEKNHGPG0A",
-          "text": "6 200 kg and 11 300 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUXG54USZG",
-          "text": "4 500 kg and 9 600 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR2AMV19X2",
-          "text": "4 100 kg and 12 400 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLJVTHKT",
-    "relatedQuestions": ["QRJAPFUN", "QUXPFERT", "QWWSWLLZ"],
-    "externalIds": ["AVEXAM-90101"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Because of the very high fuel price at the destination, the decision is made to “fuel tanker”. For every additional 1 000 lbs of fuel carried in excess of the given minimum take-off fuel, there is a fuel penalty of 150 lbs. From the data given below, calculate the maximum amount of extra fuel and the maximum permitted take-off fuel.\n\n\n- MTOM: 235 800 lbs\n- MLM: 208 400 lbs\n- MZFM: 200 750 lbs\n- DOM: 157 600 lbs\n- Estimated load: 42 500 lbs\n- Estimated trip fuel: 14 300 lbs\n- Min. TOF: 20 900 lbs",
-      "options": [
-        {
-          "id": "ATI9UULT8G",
-          "text": "1 955 lbs and 22 855 lbs",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5Z1LCM9YK",
-          "text": "14 800 lbs and 35 700 lbs",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABT162YGVH",
-          "text": "14 800 lbs and 29 100 lbs",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW8SZ3YVTN",
-          "text": "13 000 lbs and 33 900 lbs",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGEYDNHJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-330755"],
-    "annexes": [],
-    "learningObjectives": ["033.03.02.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Who decides whether extra fuel is required?",
-      "options": [
-        {
-          "id": "A9V576P576",
-          "text": "The commander.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKSA7YUW7U",
-          "text": "The dispatch officer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX4XOXO2FO",
-          "text": "The operator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACJ22OY2ZD",
-          "text": "The operations officer.",
+          "id": "OETQZLDS9",
+          "text": "180 788 lb",
           "correct": false,
           "why": ""
         }
@@ -1122,36 +256,139 @@
   {
     "id": "QFVSZNNZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-331264"],
+    "externalIds": [
+      "ATPLQ-331264",
+      "ATPLGS-626104",
+      "AVEXAM-75606",
+      "AVEXAM-99497",
+      "AVEXAM-95918",
+      "AVEXAM-56563",
+      "AVEXAM-8090",
+      "BGS-331233",
+      "ATPLGS-126689"
+    ],
     "annexes": [],
     "learningObjectives": ["033.03.02.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Calculate the maximum possible extra fuel, based on the flight and aircraft data given below.\nMTOM: 476 100 lbMLM: 387 350 lbMZFM: 362 700 lbPlanned ZFM: 323 450 lbTrip fuel: 72 460 lbTake-off fuel:124 830 lbFuel penalty:630 lb/1 000 lb",
+      "question": "Calculate the maximum possible extra fuel, based on the flight and aircraft data given below.\n\nMTOM: 476 100 lb   \nMLM: 387 350 lb   \nMZFM: 362 700 lb   \nPlanned ZFM: 323 450 lb   \nTrip fuel: 72 460 lb   \nTake-off fuel:124 830 lb   \nFuel penalty:630 lb/1 000 lb",
       "options": [
         {
-          "id": "AZ5QKPMQCY",
+          "id": "O4AL63ANT",
+          "text": "11 530 lb",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2YJWDZQA",
           "text": "18793 lb",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0LPM6D3A5",
+          "id": "OUMHTVPE3",
           "text": "31 162 lb",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9096TV84F",
+          "id": "OATTX5DDK",
           "text": "27 820 lb",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLJVTHKT",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-337457",
+      "AVEXAM-90101",
+      "AVEXAM-75606",
+      "AVEXAM-99497",
+      "AVEXAM-95918",
+      "ATPLGS-622533",
+      "AVEXAM-56563",
+      "AVEXAM-8090",
+      "AVEXAM-31383",
+      "AVEXAM-46843",
+      "BGS-331233",
+      "BGS-331340",
+      "AVEXAM-12251",
+      "AVEXAM-2449",
+      "ATPLGS-126689",
+      "BGS-331466"
+    ],
+    "annexes": [],
+    "learningObjectives": ["033.03.02.04.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A Commercial Air Transport operation is to be pre-positioned to a remote operating location in mountainous terrain. The commander wishes to take as much extra fuel as possible. Given the following information, determine the maximum amount of Extra Fuel (including the fuel penalty) that the Commander can upload:\n\nMTOM: 6250 lb   \n MLM: 4500 lb   \n ZFEM: 3825 lb   \n Planned T/O fuel: 705 lb   \n Trip fuel: 375 lb   \n Fuel tank capacity: 1100 lb   \n Fuel burn correction per 100 lb of extra fuel based upon: TOM +9.1 lb and LM +10 lb",
+      "options": [
+        {
+          "id": "O9XHO8INC",
+          "text": "345 lb",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUU60BZ1Q1",
-          "text": "11 530 lb",
+          "id": "O3H9XOVMF",
+          "text": "0 lb",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGPPEHTQM",
+          "text": "395 lb",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVW9DRYNJ",
+          "text": "379 lb",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZJVJJWI",
+    "relatedQuestions": ["QTKLPRZL"],
+    "externalIds": ["ATPLQ-337816", "AVEXAM-55924"],
+    "annexes": [],
+    "learningObjectives": ["033.03.02.04.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.   \nDue to a hydraulic failure, the landing gear of a transport category aircraft stays extended after take-off.   \nBased on the flight planning data given below, calculate the time penalty in percentage for the flight, based on (standard) endurance.\n\nUsable fuel: 6 metric tons   \nFuel consumption: 2400 kg/h",
+      "options": [
+        {
+          "id": "OQAWOI3DP",
+          "text": "38%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQHZSC7WV",
+          "text": "26%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFAI2RXIV",
+          "text": "74%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF1HVUKCQ",
+          "text": "65%",
+          "correct": true,
           "why": ""
         }
       ]

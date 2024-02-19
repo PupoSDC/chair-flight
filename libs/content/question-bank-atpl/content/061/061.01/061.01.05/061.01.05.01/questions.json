@@ -1,75 +1,37 @@
 [
   {
-    "id": "QPYPFROB",
+    "id": "QNHVOTVL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611184"],
+    "externalIds": ["ATPLQ-611714", "BGS-611644", "BGS-610466"],
     "annexes": [],
     "learningObjectives": ["061.01.05.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the follofing information, calculate the TAS.\nAltitude: 2000 ftOAT: +10°CIAS/CAS: 135 kt.",
+      "question": "Using a mechanical computer, determine the TAS. Given:\n\nCAS: 160 kt   \n Cruising level: FL260   \n Temperature: ISA + 18°C",
       "options": [
         {
-          "id": "AFC8NJES71",
-          "text": "139 kt",
+          "id": "O5RCMEWJA",
+          "text": "231 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPVKHP3XT",
+          "text": "243 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORGHWUSRX",
+          "text": "218 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCAVIGX6A",
+          "text": "250 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFXOCRM1RJ",
-          "text": "133 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A26KI4U53R",
-          "text": "188 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMVU31GK2F",
-          "text": "195 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJEQSHTQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-96214"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is at 9 000 ft on a standard QNH. Given the TAS = 250 kt and the CAS = 220 kt, calculate the Mach number:",
-      "options": [
-        {
-          "id": "AZBKG9BCSU",
-          "text": "180 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQLDAEEDD5",
-          "text": "260 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8WJENH7MF",
-          "text": "165 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK3NO4ZVHA",
-          "text": "156 kt",
-          "correct": false,
           "why": ""
         }
       ]
@@ -78,378 +40,36 @@
   {
     "id": "QLWSGCIE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-615575"],
+    "externalIds": ["ATPLQ-615575", "AVEXAM-17716", "BGS-611437"],
     "annexes": [],
     "learningObjectives": ["061.01.05.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information and using a mechanical computer, what is the change in CAS required to reduce the TAS of an aircraft from 150 kt to 105 kt?\nPressure altitude: 7 000 ftOAT: -8ºC",
+      "question": "Given the following information and using a mechanical computer, what is the change in CAS required to reduce the TAS of an aircraft from 150 kt to 105 kt?\n\nPressure altitude: 7 000 ft   \nOAT: -8ºC",
       "options": [
         {
-          "id": "AQ8WWPWBSW",
+          "id": "OPCUCYZAP",
+          "text": "36 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI63KMHX3",
+          "text": "39 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLVHOCEKE",
+          "text": "52 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCGQCRSVP",
           "text": "41 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARJHBPKS6N",
-          "text": "36 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH32F8AGUP",
-          "text": "39 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHDTX2K604",
-          "text": "52 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBIUKNVG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-63586"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information and using a mechanical computer, calculate the TAS of the aircraft:\n \n\n-  Altitude: 3 000 ft\n  </tr>\n  <tr> QNH: 1 046 hPa\n  </tr>\n  <tr> OAT: +10 °C\n  </tr>\n  <tr> CAS: 154 kt",
-      "options": [
-        {
-          "id": "AW502Q72NZ",
-          "text": "158 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXA2QFQK9W",
-          "text": "150 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASM8LRWUP0",
-          "text": "156 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW9P21PPX7",
-          "text": "162 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUAJKKLK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-614683"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the drift and groundspeed: TAS: 472 kt Heading: 005°T Wind velocity: 110°T /50 kt",
-      "options": [
-        {
-          "id": "A0QU4LKP2B",
-          "text": "Drift: 6°L, groundspeed: 490 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7SDTYTWBQ",
-          "text": "Drift: 6°R, groundspeed: 462 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMJS51YRMS",
-          "text": "Drift: 6°R, groundspeed: 490 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHARJD9USO",
-          "text": "Drift: 6°L, groundspeed: 480 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBDMBABJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611279"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:Mach number .34 \n Pressure Altitude = 9000 ft \n OAT = ISA-15ºCalculate TAS:",
-      "options": [
-        {
-          "id": "A1LLVE5PNH",
-          "text": "212 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKSX1YBI38",
-          "text": "204 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATHVMD20DW",
-          "text": "190 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXPVNHULU1",
-          "text": "218 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNHVOTVL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611714"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Using a mechanical computer, determine the TAS. Given:CAS: 160 kt \n Cruising level: FL260 \n Temperature: ISA + 18°C",
-      "options": [
-        {
-          "id": "A47YVT329N",
-          "text": "250 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASHHFXYG4B",
-          "text": "243 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKKAJQVPJ6",
-          "text": "231 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6YDI3U4M8",
-          "text": "218 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNDYSJYV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14184"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Calculate the Mach number considering compressibility, when the following is given:\nFL410, OAT = -42°C, CAS = 220 kt, compressibility factor = 0.95",
-      "options": [
-        {
-          "id": "A8N94LRGYZ",
-          "text": "0.75",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUA1T2CA4S",
-          "text": "0.80",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6A23FGB1T",
-          "text": "0.70",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARTR9CZ5H0",
-          "text": "0.77",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSJVECKQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-17716"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information and using a mechanical computer, what is the change in CAS required to reduce the TAS of an aircraft from 150 kt to 105 kt?\n\n- Level: FL70\n- OAT: +25 °C",
-      "options": [
-        {
-          "id": "A57E2SWL17",
-          "text": "39 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A84YWAMGPV",
-          "text": "52 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9W7EAEW7Y",
-          "text": "36 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALQ5ZO05IJ",
-          "text": "42 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYWRSFDR",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-611278"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information and using a mechanical computer, what is the TAS? CAS: 140 kt\nAltitude: 7000 ft \nOAT: -15°C",
-      "options": [
-        {
-          "id": "A3TQF9JNQ1",
-          "text": "151 kt ",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMLFW230ZY",
-          "text": "130 kt ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGQZ52HVCT",
-          "text": "160 kt ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIWWYJXZOF",
-          "text": "123 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHWBWLHJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625492"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given: \nFL 390 \nOAT = ISA -15°C \nCAS = 280 kt \n \nCalculate the TAS, assuming a compressibility factor of 0.95.",
-      "options": [
-        {
-          "id": "ARA7EURS2R",
-          "text": "505 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVI66DQL8I",
-          "text": "520 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANQW57WDWW",
-          "text": "495 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AANNRU0T11",
-          "text": "530 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKATNIPK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611071", "BGS-610491"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, what is the TAS? Pressure altitude: 9000 ft OAT: -32°C CAS: 200 kt",
-      "options": [
-        {
-          "id": "AKT011B8ZT",
-          "text": "216 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI91CVPCBB",
-          "text": "210 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS5MLVAD5H",
-          "text": "200 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX2EEIGDM9",
-          "text": "212 kt",
-          "correct": false,
           "why": ""
         }
       ]
@@ -458,35 +78,137 @@
   {
     "id": "QMYQFMVN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612290"],
+    "externalIds": [
+      "ATPLQ-612290",
+      "ATPLGS-627943",
+      "AVEXAM-63586",
+      "AVEXAM-71242",
+      "AVEXAM-5368"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Using a mechanical computer, determine the TAS of the aircraft. Given the following information:Altitude: 3 000 ft \n QNH: 1 046 hPa \n OAT: +10 °C \n CAS: 154 kt",
+      "question": "Using a mechanical computer, determine the TAS of the aircraft. Given the following information:\n\nAltitude: 3 000 ft   \n QNH: 1 046 hPa   \n OAT: +10 °C   \n CAS: 154 kt",
       "options": [
         {
-          "id": "AS1E5P8A9E",
-          "text": "158 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACLCS0WF04",
+          "id": "OJP4JWQ86",
           "text": "150 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP5RFC1P42",
+          "id": "OWCX6XADY",
+          "text": "162 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSZ5WECYA",
           "text": "156 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOSHS6NJPW",
-          "text": "162 kt",
+          "id": "OCVLNP6UG",
+          "text": "158 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPYPFROB",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-611184",
+      "BGS-610428",
+      "BGS-610439",
+      "BGS-611609",
+      "AVEXAM-95505",
+      "AVEXAM-24277",
+      "BGS-610426",
+      "AVEXAM-13625",
+      "AVEXAM-66029",
+      "AVEXAM-71242",
+      "AVEXAM-5368"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the follofing information, calculate the TAS.\n\nAltitude: 2000 ft   \nOAT: +10°C   \nIAS/CAS: 135 kt.",
+      "options": [
+        {
+          "id": "OCNZBPYUS",
+          "text": "133 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSEU0WRFM",
+          "text": "188 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZDHMP760",
+          "text": "195 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONX1AYC5V",
+          "text": "139 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKATNIPK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-618726",
+      "BGS-610491",
+      "AVEXAM-3152",
+      "BGS-611683",
+      "ATPLGS-127774",
+      "BGS-610464",
+      "AVEXAM-98215"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given:\n\nTrue altitude 9000 FT   \nOAT -32°C   \nCAS 200 kt\n\nWhat is the TAS ?",
+      "options": [
+        {
+          "id": "OZHLXQAW9",
+          "text": "200 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU77GYDQM",
+          "text": "220 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O6DVELADJ",
+          "text": "210 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFAYRL2T2",
+          "text": "215 kt",
           "correct": false,
           "why": ""
         }
@@ -496,149 +218,35 @@
   {
     "id": "QQKWMPIK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611925"],
+    "externalIds": ["ATPLQ-611925", "BGS-610423"],
     "annexes": [],
     "learningObjectives": ["061.01.05.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the heading T and groundspeed: TAS: 465 kt Track: 007°T Wind velocity: 300°T /80 kt",
+      "question": "Given the following information, calculate the heading (T) and groundspeed:   \n TAS: 465 kt   \n Track: 007°T   \n Wind velocity: 300°T /80 kt",
       "options": [
         {
-          "id": "AF15AKYFB4",
-          "text": "Heading: 358°T, groundspeed: 428 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQUE9BXK7V",
-          "text": "Heading: 017°T, groundspeed: 490 kt",
+          "id": "OXCRNGIPX",
+          "text": "Heading: 001°T, groundspeed: 435 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABITKXH1IB",
+          "id": "OBLIUJ5XC",
           "text": "Heading: 357°T, groundspeed: 502 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1GVUXSVYJ",
-          "text": "Heading: 001°T, groundspeed: 435 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTWLYSKD",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-71242"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, using a mechanical computer, calculate the TAS.\n\n- Altitude: 2 000 ft\n- OAT: +10 °C\n- IAS/CAS: 135 kt",
-      "options": [
-        {
-          "id": "ANSDU2T4YD",
-          "text": "138 kt",
+          "id": "OWB3SNHB0",
+          "text": "Heading: 358°T, groundspeed: 428 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AX3CKO6FKX",
-          "text": "188 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR8CUYL224",
-          "text": "195 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7BC9IY3OQ",
-          "text": "133 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRBSGCMW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-46842"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n \n\n-  Mach Number: 0.34\n  </tr>\n  <tr> Outside Air Temperature (OAT): ISA-15ºC\n  </tr>\n  <tr> Pressure Altitude (PA): 9 000 ft\n\nCalculate your calibrated airspeed (CAS):",
-      "options": [
-        {
-          "id": "AI0KNTOEY9",
-          "text": "191 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXIXM7K2V0",
-          "text": "200 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMCD8RCSIU",
-          "text": "212 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A33ZON6CZ2",
-          "text": "223 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIHBPSBW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613849"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Determine the change in CAS required to reduce the TAS of an aircraft from 150 kt to 105 kt, given the following information and using a mechanical computer:\nLevel: FL70OAT: +25 °C",
-      "options": [
-        {
-          "id": "AWAS89HTHL",
-          "text": "39 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW1IU6AR5T",
-          "text": "52 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADEBVXIK7N",
-          "text": "36 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZGYX9ZQBD",
-          "text": "41 kt",
+          "id": "OT26HWIB4",
+          "text": "Heading: 017°T, groundspeed: 490 kt",
           "correct": false,
           "why": ""
         }

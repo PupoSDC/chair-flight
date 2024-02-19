@@ -1,36 +1,79 @@
 [
   {
-    "id": "QLEEFVXB",
+    "id": "QXGVASDB",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-76854"],
+    "externalIds": ["ATPLQ-708577", "AVEXAM-95116"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to the AIR OPS requirement, the route of a twin-engined aircraft, non ETOPS, with a maximum certificated Take-off Mass exceeding 45 360 kg or a maximum seating configuration of 20 passengers or more must be planned in such a way that on one engine an appropriate aerodrome may be reached in ___ minutes at the cruise speed, one engine inoperative.",
+      "question": "A two-engine aeroplane has an ETOPS approval for 180 minutes. Those 180 minutes are based an the one engine inoperative speed. The departure aerodrome cannot be used as a take-off alternate because of meteorological conditions. There are no MEL restrictions. What is the maximum allowed flight time to the take-off alternate?",
       "options": [
         {
-          "id": "A36GPWKUGB",
-          "text": "60",
+          "id": "OKSKTY8JW",
+          "text": "180 minutes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE9WVI3NG",
+          "text": "60 minutes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJMCLZWZG",
+          "text": "90 minutes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFZNVOMCB",
+          "text": "120 minutes",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCSSOCNY",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-705906",
+      "ATPLGS-116946",
+      "BGS-700123",
+      "BGS-711395"
+    ],
+    "annexes": [],
+    "learningObjectives": ["071.01.03.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "According to OPS regulations, what are the circling approach planning minima for an ETOPS En-Route Alternate Aerodrome?",
+      "options": [
+        {
+          "id": "OITRYIJWI",
+          "text": "RVR/VIS + 1500 m, MDA/H + 400 ft.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOFXUUYGA3",
-          "text": "30",
+          "id": "ONO3GKZ5R",
+          "text": "RVR/VIS + 1200 m, MDA/H + 250 ft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQOO7KQUXG",
-          "text": "120",
+          "id": "O447M1ACS",
+          "text": "RVR/VIS+ 800 m, MDA/H + 300 ft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0YW3JT5JF",
-          "text": "90",
+          "id": "OUFOZEATQ",
+          "text": "RVR/VIS + 1000 m, MDA/H +200 ft.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +81,42 @@
     }
   },
   {
-    "id": "QJJBRBKW",
+    "id": "QQWMWMIB",
     "relatedQuestions": [],
-    "externalIds": ["BGS-711419"],
+    "externalIds": [
+      "ATPLQ-717085",
+      "ATPLGS-628870",
+      "BGS-700054",
+      "AVEXAM-58364"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You are flying in MNPS airspace, under EASA Ops, for a flight operating under ETOPs regulations, the distance from an adequate diversion must be:",
+      "question": "An aircraft has been flying with one of its two transponders defective and the failure has been deferred in accordance with the MEL. During a 30 minute turnaround, an engineer replaces the defective transponder with a new one. Prior to commencing the next commercial air transport flight, what must the commander ensure?",
       "options": [
         {
-          "id": "A4G4D6FD7F",
-          "text": "Within the operator’s approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
+          "id": "OO86KJ1AR",
+          "text": "The commander must visually inspect to ensure that the transponder has been changed in accordance with the prescribed procedure prior to signing the maintenance release.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORWNMEIS5",
+          "text": "NO additional documentation is required. When the engineer performing the deferral in accordance with the MEL signed for the pending change of the transponder, this included clearance for the maintenance release at a later point.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUNTYPST1",
+          "text": "The engineer must certify to have changed the transponder in accordance with the prescribed procedures and maintenance release must be signed for by an authorised person.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASQHTKLCCR",
-          "text": "Within the operator’s approved ETOPS diversion time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYIDT2UKUR",
-          "text": "Within the operator’s approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, or the diversion time detailed in the Aeroplane Flight Manual, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A61F66S3NV",
-          "text": "Within a distance corresponding to 180 minutes at the one engine inoperative cruise speed",
+          "id": "OB2NHOOJS",
+          "text": "There is NO requirement for any additional documentation since the defective transponder was deferred according to the MEL and needed to be changed at the first opportunity.",
           "correct": false,
           "why": ""
         }
@@ -76,513 +124,43 @@
     }
   },
   {
-    "id": "QSAOSRRG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-80862"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During the flight of two aircraft in MNPS airspace with a leading aircraft flying at higher speed, the longitudinal separation must not be below:",
-      "options": [
-        {
-          "id": "AC1URYEXKX",
-          "text": "5 minutes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1KL70OJSD",
-          "text": "15 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATX805WZQH",
-          "text": "20 minutes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFK2MVAEJH",
-          "text": "10 minutes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRFDCJTG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-702037"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, select the lowest required weather conditions for the aerodrome to be used as an ETOPS en-route alternate aerodrome with the following approaches available:\n\nApproach type: ILS CAT I, DH: 240 feet, RVR/Visibility: 550 metresApproach type: LOC DME, MDH: 420 feet, RVR/Visibility: 1 200 metres\n<strong>SPA.ETOPS.115 ETOPS en-route alternate aerodrome planning minima</strong>\nTable 1 - Planning minima for ETOPS en route alternate aerodrome:\n<strong>Type of approach</strong> <strong>Planning minima</strong>Precision approach DA/H + 200 ft; RVR/VIS + 800 m*Non-precision approach or Circling approach MDA/H + 400 ft* RVR/VIS + 1 500 m\n* VIS: visibility; MDA/H: minimum descent altitude / height",
-      "options": [
-        {
-          "id": "AYN0CK8UNG",
-          "text": "Ceiling 440 ft and visibility 1 350 m.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2EABVWYF3",
-          "text": "Ceiling 240 ft and visibility 550 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP4YME0E3B",
-          "text": "Ceiling 200 ft and visibility 800 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZV3WQA0SM",
-          "text": "Ceiling 420 ft and visibility 1 200 m.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDHBQRNZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-77039"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An \"ETOPS\" flight is a twin engine jet aeroplane flight conducted over a route, where no suitable airport is available within an area of:",
-      "options": [
-        {
-          "id": "ACEA99YD1F",
-          "text": "60 minutes flying time in still air at the approved one engine out cruise speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKPCSFKUGN",
-          "text": "60 minutes flying time in still air at the normal cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOZR6U0QSJ",
-          "text": "30 minutes flying time at the normal cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQPV2SXW0G",
-          "text": "75 minutes flying time at the approved one engine out cruise speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFNOCIDH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-97310"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For twin-engined aircraft, the take-off alternate shall be located at a distance that: (Annex 6, Part I)",
-      "options": [
-        {
-          "id": "ABZFLAA6XZ",
-          "text": "does not exceed the equivalent of one hour of flight time, at cruising speed with only one engine operative.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW475L7NTV",
-          "text": "does not exceed the equivalent of two hours of flight time, at cruising speed with only one engine operative.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOIC4R0CO1",
-          "text": "does not exceed the equivalent of two hour of flight time at cruising speed, all engines operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUMGCOT6L1",
-          "text": "does not exceed the equivalent of one hour of flight time at cruising speed, all engines operating.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFKWQJDN",
+    "id": "QNNMKRWW",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLQ-712044",
-      "ATPLQ-717706",
-      "AVEXAM-36926",
-      "AVEXAM-90615",
-      "BGS-710457"
+      "ATPLQ-708223",
+      "ATPLGS-627045",
+      "BGS-700122",
+      "BGS-711563",
+      "ATPLGS-117113"
     ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For turbo-jet aircraft, in the flight preparation stage, for a dry runway, the landing distance at the scheduled destination aerodrome shall be less than the available landing distance multiplied by a factor of:",
+      "question": "Given the following information, state the maximum time to be used in order to determine the furthest distance that an adequate take-off alternate aerodrome may be situated from the departure aerodrome for a two-engine aeroplane. Assume the departure aerodrome cannot be used as a take-off alternate due to meteorological reasons.\n\n1- Approved ETOPS operational diversion time: 180 minutes   \n2- The times are determined using the One-Engine-Inoperative cruising speed according to the AFM, in still-air standard conditions based on the actual take-off mass.   \n3- No MEL restrictions apply.",
       "options": [
         {
-          "id": "ABU6BYZ25X",
-          "text": "0.6",
+          "id": "OKCCUBX79",
+          "text": "120 minutes",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5BI0M8ETW",
-          "text": "0.8",
+          "id": "OXS9ZF1UX",
+          "text": "90 minutes",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANKB7R010T",
-          "text": "0.5",
+          "id": "OMZPHWHML",
+          "text": "180 minutes",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7DFQ0T7RW",
-          "text": "0.7",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYFVSZRP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129246"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the ETOPS planning minima with precision approach available?",
-      "options": [
-        {
-          "id": "AS5103H0KG",
-          "text": "200FT DH",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMC2N29MJ8",
-          "text": "600 RVR",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWDJSV8Z02",
-          "text": "300FT DH",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A425ZI2WNO",
-          "text": "200 RVR",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHWZRFXU",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-711382", "BGS-711430"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An ETOPS sector is planned using an alternate with a circling approach. The required planning minima are:",
-      "options": [
-        {
-          "id": "AGSEPECEEN",
-          "text": "MDA/H + 400 ft    RVR/VIS + 1500 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6KNDANLY9",
-          "text": "MDA/H + 300 ft    RVR/VIS + 1200 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXSQPL0HUN",
-          "text": "MDA/H + 250 ft    RVR/VIS + 1000 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD7YJ58CXJ",
-          "text": "MDA/H + 200 ft    RVR/VIS + 800 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QATBHBNZ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-711383"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Prior to conducting an ETOPS flight, the operator shall ensure that an ETOPS en-route alternate aerodrome is available:",
-      "options": [
-        {
-          "id": "AQLBF896JG",
-          "text": "within either the operator's approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW1NMEM1YX",
-          "text": "within the operator's approved diversion time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8ARUMI787",
-          "text": "if the weather conditions would not permit VFR operations",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2ZHNKX5MI",
-          "text": "if the operations officer considers it necessary",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFWFPRFP",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991292"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If a take off alternate is required, how close to the departure airfield does it need to be for a two engine non ETOPS aircraft?",
-      "options": [
-        {
-          "id": "AR04HWLC8W",
-          "text": "1 hour in still air at single engine cruise speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOOW1PY16S",
-          "text": "1 hour at normal (two engine) cruise speed taking account of the forecast wind on the day.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU9MMNBEM0",
-          "text": "1 hour in still air at normal (two engine) cruise speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5MIZO7S9P",
-          "text": "1 hour at single engine cruise speed taking account of the forecast wind on the day.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCUOEHKR",
-    "relatedQuestions": ["QPLTGPJO", "QPOEFHFD"],
-    "externalIds": [
-      "ATPLGS-125097",
-      "ATPLGS-125139",
-      "ATPLQ-704668",
-      "AVEXAM-43854",
-      "AVEXAM-58037",
-      "AVEXAM-97310",
-      "BGS-710037",
-      "BGS-710038",
-      "BGS-711057",
-      "BGS-711066"
-    ],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For two-engined aeroplanes not approved for ETOPS, the take-off alternate, if required, shall be located (in still air conditions) within:",
-      "options": [
-        {
-          "id": "AEC0GZKTO4",
-          "text": "one hour flight time at one engine inoperative cruising speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4FEIUL1DZ",
-          "text": "two hours flight time at cruising speed with all engines operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHVKF685C",
-          "text": "one hour flight time at holding speed with one engine inoperative.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2RBQRN1DN",
-          "text": "two hours flight time at one engine inoperative cruising speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPLTGPJO",
-    "relatedQuestions": ["QCUOEHKR", "QPOEFHFD"],
-    "externalIds": ["AVEXAM-58037"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For two-engined aeroplanes not approved for ETOPS, the take-off alternate, if required, shall be located (in still air conditions) within:",
-      "options": [
-        {
-          "id": "AJOKHDQ2I8",
-          "text": "1 hour flight time at one engine inoperative cruising speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APWE336M0Z",
-          "text": "1 hour flight time at cruising speed with all engines operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ93AEMMNB",
-          "text": "2 hours flight time at one engine inoperative cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATEGUL98O0",
-          "text": "2 hours flight time at cruising speed with all engines operating.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPOEFHFD",
-    "relatedQuestions": ["QCUOEHKR", "QPLTGPJO"],
-    "externalIds": ["ATPLGS-125097", "BGS-711066"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For two-engined aeroplanes not approved for ETOPS, the take-off alternate, if required, shall be located (in still air conditions) within:",
-      "options": [
-        {
-          "id": "AEYKP1R5JU",
-          "text": "One hour flight time at one engine inoperative cruising speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGQMK7CURL",
-          "text": "Two hours flight time at cruising speed with all engines operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVBLGBYB8C",
-          "text": "One hour flight time at cruising speed with all engines operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A67BAD6E5P",
-          "text": "Two hours flight time at one engine inoperative cruising speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEQKOCBV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125440", "ATPLQ-702275"],
-    "annexes": [
-      "787ee24991aecbdae69ceec4ccc0493b",
-      "22ef65b67552d107863b0c21b6375099"
-    ],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given Flight in a twin-engine aircraft from PARIS to WASHINGTON ETOPS authorisation 105 minutes at 420 kt \n\nTRACK A Flight time 08h03 \n\nTRACK B Flight time 08h10 \n\nTRACK C Flight time 08h15 \n\nTRACK D Flight time 08h20 \n\nOnly three alternates are available SHANNON, SANTA MARIA, ST JOHN TORBAY\n The track to be chosen will be",
-      "options": [
-        {
-          "id": "AVAZVP5MIL",
-          "text": "Track C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0FX3V2IHT",
-          "text": "Track D.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANPGBCUF51",
-          "text": "Track B.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQL5HGCOA0",
-          "text": "Track A.",
+          "id": "OZERARAXX",
+          "text": "60 minutes",
           "correct": false,
           "why": ""
         }
@@ -592,427 +170,36 @@
   {
     "id": "QPBYQJCQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-702275", "BGS-711152"],
-    "annexes": ["22ef65b67552d107863b0c21b6375099"],
+    "externalIds": ["ATPLQ-702275", "BGS-711152", "ATPLGS-125440"],
+    "annexes": ["AGCK4VFO2", "ACB67WFUY"],
     "learningObjectives": ["071.01.03.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "(For this question refer to the image) Given: Flight in a twin-engine aircraft from PARIS to WASHINGTON ETOPS authorisation: \n105 minutes at 420 kt \nTRACK A: Flight time 08h03 \nTRACK B: Flight time 08h10 \nTRACK C: Flight time 08h15 \nTRACK D: Flight time 08h20 \nOnly three alternates are available: SHANNON, SANTA MARIA, ST JOHN TORBAY. \nThe track to be chosen will be:",
+      "question": "Refer to figure.  \nGiven:\n\nFlight in a twin-engine aircraft from PARIS to WASHINGTON ETOPS authorisation: 105 minutes at 420 kt\n\nTRACK A: Flight time 08h03  \nTRACK B: Flight time 08h10  \nTRACK C: Flight time 08h15  \nTRACK D: Flight time 08h20\n\nOnly three alternates are available: SHANNON, SANTA MARIA, ST JOHN TORBAY.\n\nThe track to be chosen will be:",
       "options": [
         {
-          "id": "A6B1OG0US2",
-          "text": "Track C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJKSGYH21M",
-          "text": "Track B.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATJ2MPWTJ7",
+          "id": "O22GIBB9Z",
           "text": "Track D.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXCNHH5PGB",
+          "id": "OE44C39SI",
+          "text": "Track B.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5W1JKQOY",
           "text": "Track A.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAPVBFGW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-719385"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In order to carry out ETOPS operations, the following must be certified:",
-      "options": [
+        },
         {
-          "id": "A0NHR6CAQ4",
-          "text": "Aircraft and Crew.",
+          "id": "OJWYFIJB8",
+          "text": "Track C.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5B1FS5375",
-          "text": "Crew only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2CB9VYD0C",
-          "text": "The Operator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFSNV0YV2Z",
-          "text": "Aircraft only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWAOBNEX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-122961", "AVEXAM-36437"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane operating under the 180 minutes ETOPS rule may be up to",
-      "options": [
-        {
-          "id": "ALXN23SPC7",
-          "text": "180 minutes flying time to a suitable airport in still air with one engine inoperative.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQPTGUQNFD",
-          "text": "180 minutes flying time from suitable airport in still air with both engines operating at a normal cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2GQ9ZNIB5",
-          "text": "180 minutes flying time to a suitable airport under the prevailing weather condition with one engine inoperative. B",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALKD7PHR8M",
-          "text": "60 minutes flying time in still air with both engines operating at the normal cruising speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGWQUMZQ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-116944",
-      "ATPLGS-125140",
-      "ATPLQ-703667",
-      "ATPLQ-704149",
-      "ATPLQ-708163",
-      "AVEXAM-83811",
-      "AVEXAM-94057",
-      "BGS-710245",
-      "BGS-710246",
-      "BGS-711070"
-    ],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to EASA AIR OPS, without an ETOPS approval, the maximum distance from an adequate aerodrome for two-engined aeroplanes in Performance Class A, with a maximum approved passenger seating configuration of 20 or more, is the distance flown in ___ minutes at the one-engine-inoperative cruise speed.",
-      "options": [
-        {
-          "id": "AUO1S1QEC0",
-          "text": "60",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A40NB0HY3X",
-          "text": "90",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5PFOHL295",
-          "text": "120",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8ROC4YRPA",
-          "text": "30",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRZKCKOD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125138", "ATPLQ-709154", "BGS-710040"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In accordance with OPS regulations, for an aeroplane with a turbine engine, the operator shall have a fuel policy including a final reserve fuel to fly above destination aerodrome elevation in standard conditions",
-      "options": [
-        {
-          "id": "AT6YBGJS2U",
-          "text": "30 minutes at holding speed at 1500 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ8FZXSC3F",
-          "text": "30 minutes at long range speed at holding altitude",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9M5SHBFMH",
-          "text": "45 minutes at cruising speed at holding altitude",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKD6YIO0Y5",
-          "text": "45 minutes at holding speed at 1500 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDECQJPJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125106", "ATPLQ-707583"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A four-engine aeroplane is operated over water at a distance of 340 NM away from land which is suitable for an emergency landing\nNormal cruising speed is 180 kt\nCruising speed with the critical power unit inoperative is 155 kt\nIn accordance with OPS regulations, the aeroplane must be fitted with",
-      "options": [
-        {
-          "id": "A4X1GK0BDV",
-          "text": "life jackets available for each person on board",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH8IJ1XS8U",
-          "text": "life jackets and rafts available for all occupants.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7DFLZ7A7L",
-          "text": "one survival ELT and rafts to accommodate all occupants of the aeroplane",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A53L7HW8A1",
-          "text": "life rafts able to accommodate all occupants of the aeroplane in the event of a loss of one raft of the largest rated capacity",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBMZCHXG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-64599"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In accordance with the fuel policy for isolated aerodromes (AIR OPS), for aeroplanes with turbine engines, the amount of Additional Fuel should not be less than the fuel to fly after arriving overhead the destination aerodrome for:",
-      "options": [
-        {
-          "id": "AK409OV6WZ",
-          "text": "30 minutes at holding consumption at 1 500 ft (450 m) above aerodrome elevation in standard conditions.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANCOJY0D21",
-          "text": "30 minutes at normal cruise consumption, including final reserve fuel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A17GL0W8GL",
-          "text": "2 hours at holding consumption at 1 500 ft (450 m) above aerodrome elevation in standard conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASCSVDSHBU",
-          "text": "2 hours at normal cruise consumption, including final reserve fuel.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMSAQBVP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125299", "ATPLQ-701765", "BGS-711441"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A take-off alternate can be a destination alternate when you can:",
-      "options": [
-        {
-          "id": "AP8ZKI6GZO",
-          "text": "Land at the take-off alternate should it become either impossible or inadvisable to land at the aerodrome of intended landing.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A41RRQO9DU",
-          "text": "Land should this become necessary shortly after take-off and it is not possible to use the aerodrome of departure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0AIM5H63F",
-          "text": "Take-off following an in-flight diversion.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWE1KO1EYE",
-          "text": "Land at the take-off alternate whilst en-route to the destination airfield.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGXAQAHO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-703175", "AVEXAM-85695"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In accordance with the EASA AIR OPS, an airplane with one passenger deck, equipped with 245 passenger seats and effectively carrying 195 passengers, is scheduled to fly 8-hour flight from Paris to New York (90-minute ETOPS route). It must be equipped with:",
-      "options": [
-        {
-          "id": "ARXSIVX8WV",
-          "text": "1 emergency medical kit",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4J36S3SQL",
-          "text": "no emergency medical kits need to be carried",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5EJPZY9G3",
-          "text": "2 emergency medical kits",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGXF8YKD6T",
-          "text": "3 emergency medical kits",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOTQUCTT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127836"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to OPS regulations, the pre-flight fuel calculation for a VFR flight for aeroplanes with reciprocating engines must include a final reserve to fly for",
-      "options": [
-        {
-          "id": "AWAOCJ9523",
-          "text": "45 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYYXZ9IN0Y",
-          "text": "15 minutes at holding speed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5YYLVY3B6",
-          "text": "30 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLHLG69A7",
-          "text": "30 minutes at holding speed",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZAQGGHC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627046", "ATPLQ-705956", "AVEXAM-54798"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to the European Regulations on Air Operations, the Operator has to specify the required ETOPS en-route alternate aerodrome(s), for a given flight, both in the ATS Flight Plan and",
-      "options": [
-        {
-          "id": "A808ZGR6W6",
-          "text": "Operational Flight Plan.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO0HZ01XZ3",
-          "text": "General Declaration.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A09S5Q8T6D",
-          "text": "Journey Log Book.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXJ0A40B1L",
-          "text": "Operations Manual Part B.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -1021,7 +208,12 @@
   {
     "id": "QXTUCXED",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626095", "ATPLQ-719309", "AVEXAM-24519"],
+    "externalIds": [
+      "ATPLQ-719309",
+      "ATPLGS-626095",
+      "AVEXAM-2362",
+      "AVEXAM-24519"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.04"],
     "explanation": "",
@@ -1030,683 +222,26 @@
       "question": "What is the planning minima for the ETOPS en route alternate aerodrome?",
       "options": [
         {
-          "id": "ALGINLM8EQ",
-          "text": "Precision approach DA/H + 200 ft; RVR/VIS + 800 m",
-          "correct": true,
+          "id": "O2GTWY7PM",
+          "text": "Precision approach DA/H + 400 ft; RVR/VIS + 1500 m",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AQJV929IOH",
+          "id": "OBTHVMRTU",
           "text": "Non-precision approach or circling approach: MDA/H + 300 ft; RVR/VIS + 1000 m",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AO3OG2D56R",
+          "id": "OPKSQUOKJ",
+          "text": "Precision approach DA/H + 200 ft; RVR/VIS + 800 m",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGVC82CFO",
           "text": "Non-precision approach or circling approach: MDA/H + 400 ft; RVR/VIS + 800 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVW6W35W3X",
-          "text": "Precision approach DA/H + 400 ft; RVR/VIS + 1500 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTANDAJX",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-710471"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EASA OPS is based on:",
-      "options": [
-        {
-          "id": "ALTZPT3KXE",
-          "text": "ICAO Annex 6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A28AW06IQ6",
-          "text": "An EASA guideline",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APSUY1GO94",
-          "text": "The Federal Aviation Requirements (FAR)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH5SZTU28N",
-          "text": "The air transport rules",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXGVASDB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-708577", "AVEXAM-95116"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A two-engine aeroplane has an ETOPS approval for 180 minutes. Those 180 minutes are based on the one engine inoperative speed. The departure aerodrome cannot be used as a take-off alternate because of meteorological conditions. There are no MEL restrictions. What is the maximum allowed flight time to the take-off alternate?",
-      "options": [
-        {
-          "id": "ADG3P47P2R",
-          "text": "120 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGPV24F30X",
-          "text": "180 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AODO6SV9QV",
-          "text": "60 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF4WXOPKOS",
-          "text": "90 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFFNYHWG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125486", "ATPLQ-709302"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to the European Regulations on Air Operations, who will receive an operational approval for ETOPS? The",
-      "options": [
-        {
-          "id": "A52V71F4FH",
-          "text": "Operator.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANKFWZNIU1",
-          "text": "Holder of the Type-Certificate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMBNAUQ49E",
-          "text": "Pilot-in-Command/Commander.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKLQ9LS82G",
-          "text": "Owner of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPMCOOYE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-710622"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On overwater flights life-rafts are required in aeroplanes, capable of continuing the flight to an aerodrome with the critical engine(s) becoming inoperative, at a distance away from land which is suitable for making an emergency landing, greater than that corresponding to:",
-      "options": [
-        {
-          "id": "AQAJF7OJK8",
-          "text": "120 minutes at cruising speed or 400 NM, whichever is the lesser.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKXGRZP4W2",
-          "text": "300 NM or 90 minutes at cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZBRMXC6XG",
-          "text": "200 NM or 45 minutes at cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYE9OAWZI3",
-          "text": "100 NM or 30 minutes at cruising speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBPRFVBD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125330", "ATPLQ-707662", "BGS-712137"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An adequate ETOPS En-Route Alternate Aerodrome should be available within the Operator`s approved diversion time",
-      "options": [
-        {
-          "id": "A7JV5LMSWB",
-          "text": "or a diversion time based on the MEL-generated serviceability status of the aeroplane, whichever is shorter.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATSXKPT4D6",
-          "text": "and take into account route characteristics and the commander`s experience.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC627YI4MA",
-          "text": "and shall not be further away from any point on the route than the distance flown in 30 minutes, at the one-engine-inoperative cruise speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY8BFTZX6J",
-          "text": "or a diversion time based on the AFM and the MEL-generated serviceability status of the aeroplane, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEJDCLET",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79931"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Who will receive an ETOPS approval?",
-      "options": [
-        {
-          "id": "AWJ9CFLIZR",
-          "text": "The operator.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVPJE5BPGN",
-          "text": "The pilot in command (PIC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1XUVM3YA3",
-          "text": "EASA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1FQ00SH9E",
-          "text": "The aerodorme.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVZKAJVH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-77560"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Prior to conducting an ETOPS flight, the operator shall ensure that an ETOPS en-route alternate aerodrome is available, within either the operator’s approved diversion time, or...",
-      "options": [
-        {
-          "id": "A1VMYX4MSS",
-          "text": "the maximum allowable time flying with OEI stated in the OM or MEL, whichever is shorter.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5F3VC9JAB",
-          "text": "the maximum allowable time flying with OEI stated in the AFM, OM or MEL, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC90UVAF71",
-          "text": "a diversion time based on the local authority, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALDZQWKHHG",
-          "text": "a diversion time based on the state of registry, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRTFGXAK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-715548", "BGS-711579"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The MOCA is 6900 ft, what is maximum obstacle or terrain height?",
-      "options": [
-        {
-          "id": "AW3KQJAY1D",
-          "text": "5 830 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACJZRPX45Y",
-          "text": "5 370 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A27CWDRWNK",
-          "text": "5 990 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4C8A162S7",
-          "text": "4 880 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRVHOWDA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-712044", "AVEXAM-36926", "BGS-710457"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ICAO Annex 6:\nIn the flight preparation stage for a turbo-propeller aircraft, the landing distance at an alternate aerodrome shall be less than the available landing distance multiplied by a factor of:",
-      "options": [
-        {
-          "id": "AIDTMG5QG9",
-          "text": "0.7",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI3JOFZZW8",
-          "text": "0.5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4RJC6QXB1",
-          "text": "0.8",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW6O1VLW1T",
-          "text": "0.6",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKRBFBQK",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-711291"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to Regulations, for two-engined aeroplanes in Performance class B or C \nwithout an ETOPS approval, the maximum distance from an adequate aerodrome is the distance flown in ....(i)...  minutes at the one-engine-inoperative cruise speed, or ....(ii).... nautical miles, whichever is less.",
-      "options": [
-        {
-          "id": "A45ZUF6MYW",
-          "text": "(i)    120 minutes    (ii)   300 NM",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN2WRTBQEF",
-          "text": "(i)      60  minutes (ii)   300 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APKOKSPAT2",
-          "text": "(i)  120 minutes (ii)   200 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLCSTIFY8",
-          "text": "(i)    60 minutes   (ii)   200 NM",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDQXPXKD",
-    "relatedQuestions": ["QGFCXWTS"],
-    "externalIds": ["ATPLGS-125303", "ATPLQ-702736"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to OPS regulations, an operator must select two destination alternates when the appropriate weather reports or forecasts for the destination, or any combination thereof, indicate that the weather conditions will be below the applicable planning minima, during a period:",
-      "options": [
-        {
-          "id": "AXRTAM3RAW",
-          "text": "commencing 1 hour before and ending 1 hour after the estimated time of arrival.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWD1NXMMD0",
-          "text": "commencing 2 hours before and ending 2 hours after the estimated time of arrival.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9PKJ25I2A",
-          "text": "commencing 1 hour before and ending 2 hours after the estimated time of arrival.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A89ZDG3P49",
-          "text": "commencing at the estimated time of arrival and ending 1 hour after.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGFCXWTS",
-    "relatedQuestions": ["QDQXPXKD"],
-    "externalIds": ["ATPLGS-125303", "ATPLQ-702736"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to OPS regulations, an operator must select two destination alternates when the appropriate weather reports or forecasts for the destination, or any combination thereof, indicate that the weather conditions will be below the applicable planning minima, during a period",
-      "options": [
-        {
-          "id": "AXMDKZCFG5",
-          "text": "commencing 1 hour before and ending 1 hour after the estimated time of arrival.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAXK21UWL7",
-          "text": "commencing at the estimated time of arrival and ending 1 hour after.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZI9UK01C9",
-          "text": "commencing 1 hour before and ending 2 hours after the estimated time of arrival.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFMZ0RKVH8",
-          "text": "commencing 2 hours before and ending 2 hours after the estimated time of arrival.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBVTVCVZ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991293"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If a take off alternate is required, how close to the departure airfield does it need to be for an aircraft with three or more engines?",
-      "options": [
-        {
-          "id": "A4N7AFW4Y6",
-          "text": "2 hours in still air at one engine out cruise\nspeed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJPX3YSQZJ",
-          "text": "1 hour in still air at one engine out cruise\nspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5SGXI9PTG",
-          "text": "2 hours in still air at normal (all engine) cruise\nspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACA3R1UTZO",
-          "text": "1 hour in still air at normal (all engine) cruise\nspeed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFQNCEMM",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-712044",
-      "AVEXAM-36926",
-      "AVEXAM-90615",
-      "BGS-710457"
-    ],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the flight preparation stage, for turbo-jet aircraft, the landing distance at the scheduled destination aerodrome shall be less than the available landing distance multiplied by a factor of ___.",
-      "options": [
-        {
-          "id": "AYRFPGTHG5",
-          "text": "0.6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8USWTBO3Y",
-          "text": "0.5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQHF231HSE",
-          "text": "0.8",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEHCB80XNV",
-          "text": "0.7",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKYSBAXO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-116651",
-      "ATPLQ-709124",
-      "ATPLQ-713924",
-      "AVEXAM-93305",
-      "BGS-710152"
-    ],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On overwater flights, for aeroplanes capable of continuing the flight to an aerodrome with the critical power unit(s) becoming inoperative at any point along the route or planned diversions, sufficient life-rafts to carry all persons on board are to be carried, to operate an aeroplane at a distance away from land, which is suitable for making an emergency landing, greater than that corresponding to (i)minutes at cruising speed or .(ii) nautical miles, whichever is the lesser The required v",
-      "options": [
-        {
-          "id": "ARUWLBFMRH",
-          "text": "(i) 120 min (ii) 400 NM",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANW9XK56AX",
-          "text": "(i) 45 min (ii) 200 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5H40QNERR",
-          "text": "(i) 90 min (ii) 300 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0QHKEI7W4",
-          "text": "(i) 30 min (ii) 100 NM",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCTADUBG",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-711557"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Once airborne (or ‘post-dispatch’) the ETOPs en-route alternate weather minima should be:",
-      "options": [
-        {
-          "id": "AVYAXZAN5C",
-          "text": "equal to or better than the normal landing minima for the available instrument approach",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUMP3F70QN",
-          "text": "the same as the ETOPS alternate planning minima",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUL76A2ECU",
-          "text": "equal to or better than the normal landing minima for the available instrument approach + 50%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVLX7G3UAB",
-          "text": "equal to or better than the normal landing minima for the available instrument approach + 25%",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHRSXRKZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-23469"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to EASA AIR OPS, for two-engined aeroplanes in Performance class B or C without an ETOPS approval, the maximum distance from an adequate aerodrome is the distance flown in ___ minutes at the one-engine-inoperative cruise speed, or ___ nautical miles, whichever is less.",
-      "options": [
-        {
-          "id": "A0JDB5KUZR",
-          "text": "120; 300",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALJ227OEOR",
-          "text": "60; 300",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A09KFUX9VI",
-          "text": "120; 200",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK306RTTGS",
-          "text": "60; 200",
           "correct": false,
           "why": ""
         }
@@ -1718,76 +253,81 @@
     "relatedQuestions": [],
     "externalIds": [
       "ATPLQ-709124",
-      "ATPLQ-713924",
+      "BGS-710152",
       "AVEXAM-93305",
-      "BGS-710152"
+      "ATPLGS-116651"
     ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Unless sufficient life-rafts to carry all persons on board are carried, on overwater flights, an operator shall not operate an aeroplane at a distance away from land, which is suitable for making an emergency landing, greater than that corresponding to ___ minutes at cruising speed or ___ nautical miles, whichever is the lesser, for aeroplanes capable of continuing the flight to an aerodrome with the critical power unit(s) becoming inoperative at any point along the route or planned diversions.",
+      "question": "On overwater flights, for aeroplanes capable of continuing the flight to an aerodrome with the critical power unit(s) becoming inoperative at any point along the route or planned diversions, sufficient life-rafts to carry all persons on board are to be carried, to operate an aeroplane at a distance away from land, which is suitable for making an emergency landing, greater than that corresponding to … : (i) … minutes at cruising speed or ... (ii) … nautical miles, whichever is the lesser The required values are:",
       "options": [
         {
-          "id": "A9SRZHJ7NH",
-          "text": "120 minutes; 400 NM",
+          "id": "OYZXSSGGK",
+          "text": "(i) 30 min (ii) 100 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR16MQTWP",
+          "text": "(i) 45 min (ii) 200 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBQOYP4V6",
+          "text": "(i) 90 min (ii) 300 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1GX0JVD1",
+          "text": "(i) 120 min (ii) 400 NM",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ8NNBFQ4W",
-          "text": "30 minutes; 100 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUOUJ503P0",
-          "text": "90 minutes; 300 NM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUZTKQ5KSV",
-          "text": "45 minutes; 200 NM",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QQINIFMA",
+    "id": "QLDP23RZV",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-45019", "BGS-711283"],
+    "externalIds": [
+      "ATPLQ-713924",
+      "BGS-712071",
+      "AVEXAM-1015",
+      "ATPLGS-627992"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Prior to conducting an ETOPS flight, the operator shall ensure that:",
+      "question": "A flight crew has been on standby duty for 4 hours at an airport. This standby will count as \\_\\_\\_\\_\\_ of duty time.",
       "options": [
         {
-          "id": "A4ZZREJ1AX",
-          "text": "An ETOPS en-route alternate aerodrome is available, within either the operator's approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
+          "id": "O067I1UTL",
+          "text": "6 hours, (as airport standby counts as 150 % duty time).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYP9DNSNT",
+          "text": "4 hours, (as airport standby counts in full as duty time).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ANLN6Z1ZDO",
-          "text": "An ETOPS destination alternate aerodrome is available, within either the operator's approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
+          "id": "OZHBIZKGQ",
+          "text": "None, (as airport standby does not count as duty time).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AH2417DFN4",
-          "text": "An ETOPS en-route alternate aerodrome is available, within either the operator's approved diversion time, or a minimum of 90 minutes at the one engine inoperative cruise speed in still air.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASRJD6Z2ZZ",
-          "text": "An ETOPS en-route alternate aerodrome is available, within the operator's AOC approved diversion time.",
+          "id": "OPFJM5R2Y",
+          "text": "2 hours (as airport standby counts as 50 % duty time).",
           "correct": false,
           "why": ""
         }
@@ -1795,37 +335,48 @@
     }
   },
   {
-    "id": "QRPZVOWW",
+    "id": "QCUOEHKR",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-712699"],
+    "externalIds": [
+      "ATPLQ-704668",
+      "BGS-710038",
+      "ATPLGS-125139",
+      "AVEXAM-43854",
+      "AVEXAM-97310",
+      "AVEXAM-58037",
+      "ATPLGS-125097",
+      "BGS-711066",
+      "BGS-711057",
+      "BGS-710037"
+    ],
     "annexes": [],
-    "learningObjectives": ["071.01.03.04.01"],
+    "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An operator is granted an ETOPS operational approval by:",
+      "question": "For two-engined aeroplanes not approved for ETOPS, the take-off alternate, if required, shall be located (in still air conditions) within:",
       "options": [
         {
-          "id": "AR591XDEBQ",
-          "text": "Competent Authority.",
+          "id": "O6BDHMUUW",
+          "text": "two hours flight time at one engine inoperative cruising speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLIOUHJBA",
+          "text": "one hour flight time at one engine inoperative cruising speed.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A62VFS6ISR",
-          "text": "Oceanic Aviation Authorities.",
+          "id": "ODDMQTARO",
+          "text": "two hours flight time at cruising speed with all engines operating.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXKPYL1EI8",
-          "text": "ICAO.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8CL0FQPT3",
-          "text": "EASA.",
+          "id": "O6MTUZ4HH",
+          "text": "one hour flight time at holding speed with one engine inoperative.",
           "correct": false,
           "why": ""
         }
@@ -1833,151 +384,37 @@
     }
   },
   {
-    "id": "QCSSOCNY",
+    "id": "QFFNYHWG",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-116946", "ATPLQ-705906", "BGS-711395"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to OPS regulations, what are the circling approach planning minima for an ETOPS En\nRoute Alternate Aerodrome?",
-      "options": [
-        {
-          "id": "AJAS7KI5LG",
-          "text": "RVR/VIS + 1500 m, MDA/H + 400 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0G3ID9FH1",
-          "text": "RVR/VIS + 1000 m, MDA/H +200 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAT9GI0VL9",
-          "text": "RVR/VIS+ 800 m, MDA/H + 300 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A60G4QPLCG",
-          "text": "RVR/VIS + 1200 m, MDA/H + 250 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWEXXJWJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39035"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The operator shall only select an aerodrome as an ETOPS en-route alternate aerodrome when the appropriate weather reports or forecasts, or any combination thereof, indicate that, between the anticipated time of landing until one hour after the latest possible time of landing, conditions will exist at or above the planning minima for a circling approach calculated by adding the additional limits of:",
-      "options": [
-        {
-          "id": "AF9I5F1JX9",
-          "text": "MDA/H + 400 ft; RVR/VIS + 1 500 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI8RQGMM80",
-          "text": "MDA/H + 300 ft; RVR/VIS + 1 200 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUTRAVD5E7",
-          "text": "DA/H + 200 ft; RVR/VIS + 800 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPGY76I1S",
-          "text": "MDA/H + 200 ft; RVR/VIS + 1 500 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCCIXJEE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991295"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements regarding planning minima for approaches at the alternate is false?",
-      "options": [
-        {
-          "id": "AG64D2YJJI",
-          "text": "Cloud base is never considered, only visibility /\nRVR.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOACIDILZK",
-          "text": "For a precision approach at an alternate, only RVR /\nvisibility are considered.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6ONT1OSMH",
-          "text": "For a non precision approach at the alternate, RVR, MDA\nand ceiling must be considered.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXNI5CMU5V",
-          "text": "The approach considered for planning purposes at an\nalternate must be downgraded compared to what is actually available\nat the airfield.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQCBLLKW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-72980"],
+    "externalIds": ["ATPLQ-709302", "BGS-700093", "ATPLGS-125486"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "One shall not initiate any flight made in accordance with instrument flight rules unless the available information indicates that the conditions at the aerodrome of predicted destination or, at an aerodrome of alternative destination, are: (EASA AIR OPS)",
+      "question": "According to the European Regulations on Air Operations, who will receive an operational approval for ETOPS? The..",
       "options": [
         {
-          "id": "AT83K6PE43",
-          "text": "at the predicted time of arrival equal to or better than the minimum conditions required for aerodrome use.",
+          "id": "OQKVYZJLV",
+          "text": "Owner of the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1STDYHEY",
+          "text": "Pilot-in-Command/Commander.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7VHER428",
+          "text": "Operator.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AW452RJMTL",
-          "text": "at the predicted time of take-off equal to or better than the minimum conditions required for aerodrome use.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR9J4QVQBJ",
-          "text": "at the predicted time of arrival better than the minimum conditions required for aerodrome use.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKWJS3RFCQ",
-          "text": "at the predicted time of arrival, and for a reasonable period before and after such a predicted time, equal to or better than the minimum conditions required for aerodrome use.",
+          "id": "OAAOYQMT7",
+          "text": "Holder of the Type-Certificate.",
           "correct": false,
           "why": ""
         }
@@ -1985,232 +422,43 @@
     }
   },
   {
-    "id": "QBQSAMCI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79295"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Assuming a multi-engine land aeroplane with 60 persons on board. The cruising speed is 180 kt. The aeroplane is capable of continuing the flight with the critical power-unit becoming inoperative. The track will overfly water for a distance of 380 NM from land which is suitable for making an emergency landing. According to EASA AIR OPS, the minimum number of life rafts shall be:",
-      "options": [
-        {
-          "id": "AEZZ2IRS4G",
-          "text": "3 life rafts of 30-seat capacity.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGCLPSR8CK",
-          "text": "1 life raft of 30-seat capacity and 2 life rafts of 20-seat capacity.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIOAJGE8RC",
-          "text": "none, distance being less than 400 NM.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWJ167E9KO",
-          "text": "2 life rafts of 30-seat capacity.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQDMLKY",
-    "relatedQuestions": ["QDWJMHKD"],
-    "externalIds": ["ATPLGS-125374", "BGS-711394"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If an Aeroplane Flight Manual does not contain a One-Engine-Inoperative (OEI) cruise speed, the speed to be used in the case of OEI flight shall be that which is achieved with the remaining engine(s) set at",
-      "options": [
-        {
-          "id": "AGJXYY5DJP",
-          "text": "maximum continuous power.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADKUAYP4C4",
-          "text": "maximum power available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZMSXBVFR3",
-          "text": "nominal power.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ3QV63Q40",
-          "text": "cruising power.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDWJMHKD",
-    "relatedQuestions": ["QHQDMLKY"],
-    "externalIds": ["ATPLGS-125374", "BGS-711394"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If an Aeroplane Flight Manual does not contain a One-Engine-Inoperative (OEI) cruise speed, the speed to be used in the case of OEI flight shall be that which is achieved with the remaining engine(s) set at...",
-      "options": [
-        {
-          "id": "AXY5YXWJWG",
-          "text": "maximum continuous power.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9K27QRD7J",
-          "text": "maximum power available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDJM3V2OG",
-          "text": "nominal power.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXUWWC20EK",
-          "text": "cruising power.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOCGVNSO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-16653"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to AIR OPS, an operator must select two destination alternates when the appropriate weather reports or forecasts for the destination, or any combination thereof, indicate that during a period commencing ___ hour(s) before and ending ___ hour(s) after the estimated ___, the weather conditions will be below the applicable planning minima.",
-      "options": [
-        {
-          "id": "A8DEBL4IKK",
-          "text": "one; one; time of arrival",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFC6S32CQX",
-          "text": "two; two; time of arrival",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGZC6HH93G",
-          "text": "one; one; time of departure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4793JAZTA",
-          "text": "two; two; time of departure",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNNMKRWW",
+    "id": "QMWGOHAU",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-117113",
-      "ATPLGS-627045",
-      "ATPLQ-708223",
-      "BGS-711563"
+      "ATPLQ-707407",
+      "AVEXAM-99903",
+      "ATPLGS-125276",
+      "AVEXAM-22166",
+      "BGS-710039"
     ],
     "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, \n\nstate the maximum time to be used in order to determine the furthest distance that an adequate take-off alternate aerodrome may be situated from the departure aerodrome for a two-engine aeroplane\n Assume the departure aerodrome cannot be used as a takeoff alternate due to meteorological reasons\n \n1) Approved ETOPS operational diversion time 180 minutes \n2) The times are determined using the One-Engine-Inoperative cruising speed according to the AFM, in stil",
-      "options": [
-        {
-          "id": "ARZ3IOL4U4",
-          "text": "120 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANNIUR4KEF",
-          "text": "90 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALPP62TV7H",
-          "text": "60 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQKQRTAFNJ",
-          "text": "180 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIWFRMXA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-36486"],
-    "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In the case of aeroplanes, pilots that have been issued a type rating based on a zero flight time training (ZFTT) course shall commence line flying under supervision not later than ___ after the completion of the skill test or after appropriate training provided by the operator. The content of such training shall be described in the operations manual.",
+      "question": "According to OPS regulations, if no alternate aerodrome is required, the flight must be conducted so that the expected usable fuel remaining on arrival at the destination aerodrome is not less than:",
       "options": [
         {
-          "id": "AUEH3BH66I",
-          "text": "21 days",
+          "id": "OW3UPTXFU",
+          "text": "fuel equal to 5% of trip fuel.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGJ8ZRHNH",
+          "text": "final reserve fuel.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQVEJS5S18",
-          "text": "60 days",
+          "id": "O2OLEF7AA",
+          "text": "fuel to fly 30 minutes at holding speed and FL100.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "APJX72BNOF",
-          "text": "30 days",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABDOGVDRRW",
-          "text": "15 days",
+          "id": "OY1YMF262",
+          "text": "fuel to fly 15 minutes at 1500 ft above the destination aerodrome.",
           "correct": false,
           "why": ""
         }
@@ -2218,227 +466,75 @@
     }
   },
   {
-    "id": "QMCHHDCH",
+    "id": "QAPVBFGW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622191"],
+    "externalIds": ["ATPLQ-719385", "ATPLGS-628969"],
     "annexes": [],
-    "learningObjectives": ["071.01.03.04.04"],
+    "learningObjectives": ["071.01.03.04.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Where do you record your ETOPS alternate as well as the Flight Plan?",
+      "question": "In order to carry out ETOPS operations, the following must be certified:",
       "options": [
         {
-          "id": "A7PO4N3SF0",
-          "text": "Operational flight plan",
+          "id": "OA6XZLTWE",
+          "text": "The Operator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV5MEVHF8",
+          "text": "Aircraft only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODGROAG4D",
+          "text": "Crew only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMTH3YZCZ",
+          "text": "Aircraft and Crew.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A70FKT6TO4",
-          "text": "Pilots log book",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A59G10FAHS",
-          "text": "Journey Log",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV7J7FOZK5",
-          "text": "Ops manual",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QLZQZLIY",
+    "id": "QBMOXKQT",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-16589"],
-    "annexes": ["da5df1bfca3db640b765b36f9c261062"],
-    "learningObjectives": ["071.01.03.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 070-03.\nFlight in a twin-engine aircraft from PARIS to WASHINGTON.\n\n\n- ETOPS authorisation: 105 minutes at 420 kt\n- Track A: time 8 hours 3 minutes\n- Track B: time 8 hours 10 minutes\n- Track C: time 8 hours 15 minutes\n- Track D: time 8 hours 20 minutes\n\nGiven that the three alternate aerodromes taken into account are SHANNON, SANTA MARIA, ST JOHN TORBAY, the track to be chosen between will be:",
-      "options": [
-        {
-          "id": "A34QI7XFC7",
-          "text": "track C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANCN81Q9KL",
-          "text": "track A.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARIOKIMEPM",
-          "text": "track B.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWFIURNRGX",
-          "text": "track D.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAKXDWXW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-45019", "BGS-711283"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Prior conducting an ETOPS flight, the operator shall ensure that:",
-      "options": [
-        {
-          "id": "A4PS35MRM4",
-          "text": "an ETOPS en route alternate aerodrome is available, within either the operator's approved diversion time, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A24E62MSLI",
-          "text": "two ETOPS en route alternate aerodromes are available, within either the operator's approved diversion distance, or a diversion time based on the MEL generated serviceability status of the aeroplane, whichever is shorter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO8FTE02SL",
-          "text": "an ETOPS en route alternate aerodrome is available, within the operator's approved diversion time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWUGG0MWCE",
-          "text": "an ETOPS en route alternate aerodrome is available, within the operator's approved diversion distance.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRJWECSR",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-31045"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to EASA AIR OPS, an operator shall not operate across areas in which search and rescue would be especially difficult, unless it is equipped with:\n1) signalling equipment.\n2) at least one ELT.\n3) at least 2 ELTs.\n4) additional survival equipment for the route to be flown.",
-      "options": [
-        {
-          "id": "AJ1NR44B1B",
-          "text": "1, 2, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A32X6OJZDC",
-          "text": "1, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB7YGD0311",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A67BLOHFEP",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDBKOOIX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-43554", "BGS-710554"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is operated over water at a distance of 340 NM away from an aerodrome where an emergency landing could be performed. Normal cruising speed is 180 kt. One engine out airspeed is 155 kt, and it is capable to join the diversion aerodrome.",
-      "options": [
-        {
-          "id": "AWVJP09V9U",
-          "text": "Life jackets must be available for all occupants.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWBH6TW2MR",
-          "text": "The regulation does not require life jackets or rafts to be taken on board in this particular case.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2B66GTFQ5",
-          "text": "Life jackets and rafts must be available for all occupants.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A78G9WLPYT",
-          "text": "Life rafts must be available for all occupants.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMVEPUQT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-27961"],
+    "externalIds": ["ATPLQ-714788", "ATPLGS-628856", "AVEXAM-21686"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If required, a take-off alternate for a 2-engined aeroplane must be located within:",
+      "question": "A non-ETOPS Airbus A320 departing from Oslo suffers from a bird strike after takeoff which results in an engine failure. Due to low visibility, the aircraft cannot return to the aerodrome of departure. How far away can the take-off alternate be in still air conditions?",
       "options": [
         {
-          "id": "ADNSXPX0EP",
-          "text": "60 minutes at one engine cruise speed.",
+          "id": "ON2DCOCZC",
+          "text": "90 min",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2JG2IOGE",
+          "text": "180 min",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGLJBBCXL",
+          "text": "60 min",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOZUQG5OIK",
-          "text": "60 minutes at normal cruise speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOSEKWK2GB",
-          "text": "120 minutes at one engine cruise speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUJAFQ4LSS",
-          "text": "120 minutes at normal cruise speed.",
+          "id": "OKPQUMADG",
+          "text": "120 min",
           "correct": false,
           "why": ""
         }
@@ -2446,349 +542,75 @@
     }
   },
   {
-    "id": "QDLRSBVF",
+    "id": "QZAQGGHC",
     "relatedQuestions": [],
-    "externalIds": ["BGS-710451"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Following an explosive decompression, the maximum altitude without oxygen supply at which flight crew efficiency is not impaired is:",
-      "options": [
-        {
-          "id": "AQBNTK19QF",
-          "text": "8 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVXPW32HSL",
-          "text": "25 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEIO1XCEOH",
-          "text": "14 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARHC7J356W",
-          "text": "2 500 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTLIDBXZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125251", "ATPLQ-706308", "BGS-710361"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For the purpose of wake turbulence separation, what is the ICAO minimum radar separation distance if a HEAVY aeroplane is following directly behind another HEAVY aeroplane on the approach to the same runway?",
-      "options": [
-        {
-          "id": "A35PVN74PP",
-          "text": "7.4 km (4 NM)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX7BT1UA98",
-          "text": "9.3 km (5 NM)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF5PBD8CT1",
-          "text": "11.1 km (6 NM)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK99I7OEWZ",
-          "text": "3.7 km (2 NM)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXZRIPRV",
-    "relatedQuestions": ["QVGZUFMX"],
-    "externalIds": [
-      "ATPLGS-125445",
-      "ATPLGS-125446",
-      "ATPLQ-702746",
-      "ATPLQ-704631",
-      "AVEXAM-33919",
-      "AVEXAM-38934",
-      "AVEXAM-81251"
-    ],
-    "annexes": ["2440d55582d9b6db7e43776dfa04ce3f"],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 070-05.\nDue to a cabin pressurization defect the maximum differential pressure is limited to 2 psi. Assuming you don't want the cabin altitude being greater than 10 000 feet, the maximum achievable flight altitude is approximately:",
-      "options": [
-        {
-          "id": "A95UX9FGWB",
-          "text": "15 100 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6SFVXJYBG",
-          "text": "12 100 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A39HXFNFIV",
-          "text": "15 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE708RWA6T",
-          "text": "12 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVGZUFMX",
-    "relatedQuestions": ["QXZRIPRV"],
-    "externalIds": ["AVEXAM-38934"],
-    "annexes": ["2440d55582d9b6db7e43776dfa04ce3f"],
-    "learningObjectives": ["071.01.03.04.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 070-05.\nDue to a cabin pressurization defect the maximum differential pressure is limited to 2 psi. Assuming you don't want the cabin altitude being greater than 14 000 feet, the maximum achievable flight altitude is approximately:",
-      "options": [
-        {
-          "id": "AOC48WXZJM",
-          "text": "20 500 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASSR39EDXJ",
-          "text": "8 600 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ3F3L1O59",
-          "text": "12 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABBM1ZBSNG",
-          "text": "2 900 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIQRWAVT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125441", "ATPLQ-704032", "BGS-711495"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In accordance with the 'clean aircraft concept', which of the following conditions is acceptable for take-off?",
-      "options": [
-        {
-          "id": "AC7ZJC2L52",
-          "text": "Thin hoar-frost on the fuselage.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASUMFC9PA6",
-          "text": "Frost covering up to a maximum of 80 % of the wings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFCSSDDO4K",
-          "text": "Semi-frozen slush on the elevator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASRJR4OV31",
-          "text": "Snow on low-speed ailerons.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMKRHTQK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-719918"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft started the take-off run and at 60 knots IAS, the pilot rejected take-off. What shall the flight crew do next?",
-      "options": [
-        {
-          "id": "A7ZZMWXZD9",
-          "text": "Calculate the time for brake cooling and then take-off.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AADSJAEGZK",
-          "text": "If the tires/wheels didn’t explode/ignite you can take-off immediately.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIS6AQ5DF9",
-          "text": "ATC needs to be asked for brake cooling before second take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8V79CIBIJ",
-          "text": "If the aircraft has carbon brakes, you can take-off immediately.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEMVOGVZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-712894", "AVEXAM-15196"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to Jeppesen GSPRM Training Route Manual - VFR Chart ED-4. A crew is planning a VFR flight from Schönberg aerodrome EDPK (N48°03’, E012°30’) to Grabenstätt aerodrome (N47°51’, E012°33’). What is a possible hazard the pilot can expect?",
-      "options": [
-        {
-          "id": "ABTIVJSGWP",
-          "text": "Increased risk of bird strike.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8MCLJKBYK",
-          "text": "The Radio/TV tower Northwest of Schonberg aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACZZ778XQ7",
-          "text": "The pilot may become lost because there are no distinct ground features for orientation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8FSLR41OP",
-          "text": "A sun glare.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIIBNXXP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-719220", "BGS-712136"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Two aeroplanes are arriving from the same direction to land at an airport where making a straight-in approach and landing with a tailwind (within operational limits) will shorten the flight time by a few minutes. One of the aeroplanes has carbon brakes and the other steel brakes.\nThe aeroplane with:",
-      "options": [
-        {
-          "id": "A9WO21D9C9",
-          "text": "There can be a benefit in landing with a tailwind using carbon brakes as carbon brakes remain efficient at high temperatures and the wear is mainly determined by the number of applications.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7BG9WSN5X",
-          "text": "Steel brakes should use the runway with a headwind as steel brakes are more efficient at absorbing energy at higher brake temperatures, making them less susceptible than carbon brakes to brake fading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX4DJSHD4M",
-          "text": "Carbon brakes are more likely to suffer from brake overheat if landing with a tailwind as carbon brakes are sensitive to heat and will NOT absorb the energy as efficiently as steel brakes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK6U37E4OY",
-          "text": "Steel brakes should NOT land with a tailwind as steel brakes are NOT approved for hard braking because steel brakes cannot absorb large amounts of energy.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFAFQPNS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-712031"],
+    "externalIds": ["ATPLQ-705956", "ATPLGS-627046", "AVEXAM-54798"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A flight from Europe to Canada is being planned on a large twin-engined jet transport aeroplane. During the pre-flight preparations, a technical issue occurs which only affects the ETOPS status of the aeroplane. The flight must now be operated as NON-ETOPS. What implications does this have to the conduct of the flight? The pilots:",
+      "question": "According to the European Regulations on Air Operations, the Operator has to specify the required ETOPS en-route alternate aerodrome(s), for a given flight, both in the ATS Flight Plan and in the..",
       "options": [
         {
-          "id": "AIQ6A6IGHC",
-          "text": "Can only follow the planned route if the aeroplane remains within 1 hour, at the One Engine Inoperative cruising speed, of a suitable alternate aerodrome.",
+          "id": "OAR8MZV7C",
+          "text": "Journey Log Book.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OERVLHFVQ",
+          "text": "Operational Flight Plan.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5U0NF4TV5",
-          "text": "Can only follow the blue spruce routes through NAT HLA airspace since these routes are designed for aeroplanes that are NOT ETOPS compliant.",
+          "id": "O9T9JXORE",
+          "text": "General Declaration.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8E4INK9JM",
-          "text": "Must request a reroute to ensure that the aeroplane remains within 1 hour flight time, at the normal cruising speed, of an adequate aerodrome.",
+          "id": "O3MA5LIQY",
+          "text": "Operations Manual Part B.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXGWFCHL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-717467", "BGS-712166", "ATPLGS-628910"],
+    "annexes": [],
+    "learningObjectives": ["071.01.03.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft with an MOPSC of 19 is scheduled for a 1 hour flight. However, the aeroplane Operator notices that the aeroplane does NOT contain a first-aid kit. What must the Operator do?",
+      "options": [
+        {
+          "id": "OKELTWAH2",
+          "text": "Proceed with the flight as normal if the aeroplane is carrying 50 % or less of its total passenger capacity.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJWDV4IW0T",
-          "text": "Must request a reroute to remain outside of NAT HLA since the aeroplane does NOT conform to the entry requirement of being ETOPS compliant.",
+          "id": "OQOOUF7ML",
+          "text": "Install an appropriate first-aid kit or cancel the flight, as at least one kit is required for an aeroplane of this size.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZQWLPJXH",
+          "text": "Proceed with the flight as normal, as there are NO formal requirements for first-aid kits in aeroplanes of this size.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO7DMFAMV",
+          "text": "Leave the decision as to whether to proceed with the flight or NOT to the Commander.",
           "correct": false,
           "why": ""
         }
@@ -2798,7 +620,7 @@
   {
     "id": "QIESEWHC",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-703175", "AVEXAM-91416"],
+    "externalIds": ["ATPLQ-703175", "AVEXAM-91416", "AVEXAM-85695"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
@@ -2807,26 +629,70 @@
       "question": "An aeroplane with one passenger deck, an MOPSC of 245 and effectively carrying 195 passengers, is scheduled to fly 8 hour flight from Paris to New York (90 minute ETOPS route). It must be equipped with:",
       "options": [
         {
-          "id": "AJTQ5HFD78",
+          "id": "ODUNFSPN6",
+          "text": "0 emergency medical kit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR8YGPAQG",
           "text": "1 emergency medical kit.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AE2Z3LLQUS",
+          "id": "OB94OTGVE",
           "text": "3 emergency medical kits.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1UI904QQ3",
+          "id": "OK7YED984",
           "text": "2 emergency medical kits.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUZURPKM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-712303",
+      "BGS-700121",
+      "ATPLGS-628931",
+      "BGS-712158",
+      "AVEXAM-3687"
+    ],
+    "annexes": [],
+    "learningObjectives": ["071.01.03.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The flight crew performs an in-flight fuel check and they determine that the usable fuel at destination is LESS than the alternate fuel plus final reserve. What should the PIC do?\n\n1\\. Proceed to destination or divert to an alternate.   \n 2\\. Declare an emergency and divert to an alternate.   \n 3\\. Assure a safe landing with NOT LESS THAN final reserve fuel remaining.   \n 4\\. Assure a safe landing with NOT LESS THAN contingency fuel remaining.",
+      "options": [
+        {
+          "id": "OTXWTBI6S",
+          "text": "2 and 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEOPRA7OCL",
-          "text": "0 emergency medical kit.",
+          "id": "OVFFQCJL5",
+          "text": "1 and 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIWMCZO45",
+          "text": "1 and 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9RMGLV3M",
+          "text": "2 and 3.",
           "correct": false,
           "why": ""
         }
@@ -2847,30 +713,30 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For a turbo-propeller aircraft, in the flight preparation, the landing distance at an alternate aerodrome shall be less than the available landing distance multiplied by a factor of ___.",
+      "question": "For a turbo-propeller aircraft, in the flight preparation, the landing distance at an alternate aerodrome shall be less than the available landing distance multiplied by a factor of \\_\\_\\_.",
       "options": [
         {
-          "id": "AI2K07ECD5",
-          "text": "0.7",
-          "correct": true,
+          "id": "OFADRWRIO",
+          "text": "0.8",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AOLR69VEKI",
+          "id": "OLKM6VK1M",
           "text": "0.5",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVLMNQNKK3",
+          "id": "OHMLOCAK7",
           "text": "0.6",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AW6GDZKR4J",
-          "text": "0.8",
-          "correct": false,
+          "id": "OXLJ0W6UJ",
+          "text": "0.7",
+          "correct": true,
           "why": ""
         }
       ]
@@ -2879,35 +745,41 @@
   {
     "id": "QCFSOSCH",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-711105"],
+    "externalIds": [
+      "ATPLQ-711105",
+      "AVEXAM-54266",
+      "BGS-700124",
+      "BGS-712152",
+      "ATPLGS-628917"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A NOT ETOPS-approved twin-engined aeroplane on a commercial air transport operation departs from Athens to Milan. Shortly after departure, visibility in Athens deteriorates. The flight crew decides to select a different take-off alternate. This new take-off alternate must be located within: \n **(OEI: One-Engine-Inoperative)**",
+      "question": "A NOT ETOPS-approved twin-engined aeroplane on a commercial air transport operation departs from Athens to Milan. Shortly after departure, visibility in Athens deteriorates. The flight crew decides to select a different take-off alternate. This new take-off alternate must be located within:   \n_(OEI: One-Engine-Inoperative)_",
       "options": [
         {
-          "id": "AK8HTGBXI9",
+          "id": "OXQI3KEL0",
+          "text": "One hour flying time, at best-range speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTVXKL4VY",
           "text": "One hour flying time, at OEI cruising speed.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHQVUE9R4E",
+          "id": "OOVUFV2AG",
           "text": "Two hours flying time, at best-range speed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADQGTTQBGO",
+          "id": "OD5P2YOWZ",
           "text": "Two hours flying time, at OEl cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACD47XIHFE",
-          "text": "One hour flying time, at best-range speed.",
           "correct": false,
           "why": ""
         }
@@ -2915,42 +787,80 @@
     }
   },
   {
-    "id": "QMWGOHAU",
+    "id": "QBPRFVBD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-707662", "BGS-712137", "ATPLGS-125330"],
+    "annexes": [],
+    "learningObjectives": ["071.01.03.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An adequate ETOPS En-Route Alternate Aerodrome should be available within the Operator\\`s approved diversion time..",
+      "options": [
+        {
+          "id": "OFIKC2PJ1",
+          "text": "or a diversion time based on the MEL-generated serviceability status of the aeroplane, whichever is shorter.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQVCZYCIU",
+          "text": "and take into account route characteristics and the commander\\`s experience.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSNLPXCAT",
+          "text": "and shall not be further away from any point on the route than the distance flown in 30 minutes, at the one-engine-inoperative cruise speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXEX1AIGA",
+          "text": "or a diversion time based on the AFM and the MEL-generated serviceability status of the aeroplane, whichever is shorter.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFAFQPNS",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125276",
-      "ATPLQ-707407",
-      "AVEXAM-99903",
-      "BGS-710039"
+      "ATPLQ-712031",
+      "AVEXAM-74269",
+      "BGS-712193",
+      "ATPLGS-628929"
     ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to OPS regulations, if no alternate aerodrome is required, the flight must be conducted so that the expected usable fuel remaining on arrival at the destination aerodrome is not less than",
+      "question": "A flight from Europe to Canada is being planned on a large twin-engined jet transport aeroplane. During the pre-flight preparations, a technical issue occurs which only affects the ETOPS status of the aeroplane. The flight must now be operated as NON-ETOPS. What implications does this have to the conduct of the flight? The pilots:",
       "options": [
         {
-          "id": "A3O298GOC5",
-          "text": "final reserve fuel.",
+          "id": "OWOQCUM3Z",
+          "text": "Can only follow the planned route if the aeroplane remains within 1 hour, at the One Engine Inoperative cruising speed, of a suitable alternate aerodrome.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALZ0RM30NG",
-          "text": "fuel to fly 30 minutes at holding speed and FL100.",
+          "id": "OTCETZ0UK",
+          "text": "Must request a reroute to remain outside of NAT HLA since the aeroplane does NOT conform to the entry requirement of being ETOPS compliant.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGL7AEG8QE",
-          "text": "fuel equal to 5 % of trip fuel.",
+          "id": "OTYPLUVYZ",
+          "text": "Must request a reroute to ensure that the aeroplane remains within 1 hour flight time, at the normal cruising speed, of an adequate aerodrome.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A04OW6D94O",
-          "text": "fuel to fly 15 minutes at 1500 ft above the destination aerodrome.",
+          "id": "OK7HQMMVH",
+          "text": "Can only follow the blue spruce routes through NAT HLA airspace since these routes are designed for aeroplanes that are NOT ETOPS compliant.",
           "correct": false,
           "why": ""
         }
@@ -2958,75 +868,42 @@
     }
   },
   {
-    "id": "QQWMWMIB",
+    "id": "QFQNCEMM",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-717085"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft has been flying with one of its two transponders defective and the failure has been deferred in accordance with the MEL. During a 30 minute turnaround, an engineer replaces the defective transponder with a new one. Prior to commencing the next commercial air transport flight, what must the commander ensure?",
-      "options": [
-        {
-          "id": "A1HBV0RMNL",
-          "text": "The engineer must certify to have changed the transponder in accordance with the prescribed procedures and maintenance release must be signed for by an authorised person.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZWBFEHOZH",
-          "text": "NO additional documentation is required. When the engineer performing the deferral in accordance with the MEL signed for the pending change of the transponder, this included clearance for the maintenance release at a later point.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY5O6QLVFW",
-          "text": "The commander must visually inspect to ensure that the transponder has been changed in accordance with the prescribed procedure prior to signing the maintenance release.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AITYDDQGV7",
-          "text": "There is NO requirement for any additional documentation since the defective transponder was deferred according to the MEL and needed to be changed at the first opportunity.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBMOXKQT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-714788"],
+    "externalIds": [
+      "ATPLQ-712044",
+      "AVEXAM-36926",
+      "AVEXAM-90615",
+      "BGS-710457"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A non-ETOPS Airbus A320 departing from Oslo suffers from a bird strike after takeoff which results in an engine failure. Due to low visibility, the aircraft cannot return to the aerodrome of departure. How far away can the take-off alternate be in still air conditions?",
+      "question": "In the flight preparation stage, for turbo-jet aircraft, the landing distance at the scheduled destination aerodrome shall be less than the available landing distance multiplied by a factor of \\_\\_\\_.",
       "options": [
         {
-          "id": "AXMOJ2X3HG",
-          "text": "60 min",
+          "id": "OIFUTSMQC",
+          "text": "0.7",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHVS7MPT6",
+          "text": "0.6",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ASHUFE3M9Z",
-          "text": "90 min",
+          "id": "OM2DQQHBB",
+          "text": "0.8",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARFHLGPUVG",
-          "text": "120 min",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOI8XDBQ8S",
-          "text": "180 min",
+          "id": "OFUYWX1YX",
+          "text": "0.5",
           "correct": false,
           "why": ""
         }
@@ -3036,7 +913,12 @@
   {
     "id": "QBXVAKBW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-718941"],
+    "externalIds": [
+      "ATPLQ-718941",
+      "AVEXAM-52950",
+      "ATPLGS-628926",
+      "BGS-712204"
+    ],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.06"],
     "explanation": "",
@@ -3045,26 +927,26 @@
       "question": "A Commercial Air Transport Operator plans a flight over the North Atlantic with a two-engine, fully operational, Performance Class A aeroplane. ETOPS operational approval has been granted. The flight is full, with 180 passengers. Each point of the selected route must NOT be further away from:",
       "options": [
         {
-          "id": "AS4C5HL30B",
+          "id": "OKP5IRXEZ",
+          "text": "An adequate en-route alternate aerodrome located within a distance flown in 120 minutes at the One-Engine-Inoperative cruising speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSEQZ4HU5",
           "text": "An available adequate en-route aerodrome meeting the required weather and operating planning minima at the anticipated time of landing and until 1 hour after, within the Operator's approved diversion time.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AEIJVJPV32",
-          "text": "An adequate en-route alternate aerodrome located within a distance flown in the Operator's approved diversion time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0B7Y8S2Q3",
+          "id": "OZFGDPAPC",
           "text": "An available adequate en-route aerodrome meeting the required weather and operating planning minima at the anticipated time of landing and until 1 hour after, within a distance flown in 120 minutes at the One-Engine-Inoperative cruising speed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAOZIDETTW",
-          "text": "An adequate en-route alternate aerodrome located within a distance flown in 120 minutes at the One-Engine-Inoperative cruising speed.",
+          "id": "OE47J52OZ",
+          "text": "An adequate en-route alternate aerodrome located within a distance flown in the Operator's approved diversion time.",
           "correct": false,
           "why": ""
         }
@@ -3072,122 +954,76 @@
     }
   },
   {
-    "id": "QERWMPWB",
+    "id": "QRTFGXAK",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-125305",
-      "ATPLGS-125306",
-      "ATPLQ-706249",
-      "ATPLQ-708006",
-      "AVEXAM-25146",
-      "AVEXAM-77820",
-      "BGS-710050"
-    ],
+    "externalIds": ["ATPLQ-715548", "BGS-711579"],
+    "annexes": [],
+    "learningObjectives": ["071.01.03.04.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The MOCA is 6 900 ft. Determine the maximum obstacle or terrain height:",
+      "options": [
+        {
+          "id": "OLT0F7TGJ",
+          "text": "4 980 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5ZR1SWRL",
+          "text": "5 370 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPJHVDMDH",
+          "text": "5 990 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OA42OF88O",
+          "text": "5 830 ft",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRFDCJTG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-702037", "AVEXAM-6702"],
     "annexes": [],
     "learningObjectives": ["071.01.03.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to OPS regulations, the flight preparation planning minima for a destination alternate with a CAT I approach available is:",
+      "question": "Given the following information, select the lowest required weather conditions for the aerodrome to be used as an ETOPS en-route alternate aerodrome with the following approaches available:\n\nApproach type: ILS CAT I, DH: 240 feet, RVR/Visibility: 550 metres   \nApproach type: LOC DME, MDH: 420 feet, RVR/Visibility: 1 200 metres\n\n**SPA.ETOPS.115 ETOPS en-route alternate aerodrome planning minima**\n\nTable 1 - Planning minima for ETOPS en route alternate aerodrome:\n\n**Type of approach** **Planning minima**   \nPrecision approach DA/H + 200 ft; RVR/VIS + 800 m\\*   \nNon-precision approach or Circling approach MDA/H + 400 ft\\* RVR/VIS + 1 500 m\n\n\\* VIS: visibility; MDA/H: minimum descent altitude / height",
       "options": [
         {
-          "id": "APEMJA40X5",
-          "text": "Non-precision minima ( RVR and the ceiling at or above MDH / DH).",
+          "id": "OSKDQTNQW",
+          "text": "Ceiling 240 ft and visibility 550 m.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONCY25OPN",
+          "text": "Ceiling 420 ft and visibility 1 200 m.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OERG60XUI",
+          "text": "Ceiling 200 ft and visibility 800 m.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OENGSPIRN",
+          "text": "Ceiling 440 ft and visibility 1 350 m.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATG2ONCWV7",
-          "text": "Non-precision minima plus 200 ft/1000 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX167K9D6N",
-          "text": "Circling minima.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A37SOMXU8W",
-          "text": "RVR according to Cat I + 200m.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUZURPKM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-712303"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight crew performs an in-flight fuel check and they determine that the usable fuel at destination is LESS than the alternate fuel plus final reserve. What should the PIC do?\n1. Proceed to destination or divert to an alternate. \n 2. Declare an emergency and divert to an alternate. \n 3. Assure a safe landing with NOT LESS THAN final reserve fuel remaining. \n 4. Assure a safe landing with NOT LESS THAN contingency fuel remaining.",
-      "options": [
-        {
-          "id": "AYVOB3X741",
-          "text": "1 and 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7XAHDA3U4",
-          "text": "1 and 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A18JLB56OP",
-          "text": "2 and 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP85R8AU59",
-          "text": "2 and 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXGWFCHL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-717467"],
-    "annexes": [],
-    "learningObjectives": ["071.01.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft with an MOPSC of 19 is scheduled for a 1 hour flight. However, the aeroplane Operator notices that the aeroplane does NOT contain a first-aid kit. What must the Operator do?",
-      "options": [
-        {
-          "id": "AGJCR9MNOT",
-          "text": "Install an appropriate first-aid kit or cancel the flight, as at least one kit is required for an aeroplane of this size.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIRIJC6MHM",
-          "text": "Leave the decision as to whether to proceed with the flight or NOT to the Commander.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7QHBYJKLF",
-          "text": "Proceed with the flight as normal, as there are NO formal requirements for first-aid kits in aeroplanes of this size.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4242AL9QR",
-          "text": "Proceed with the flight as normal if the aeroplane is carrying 50 % or less of its total passenger capacity.",
-          "correct": false,
           "why": ""
         }
       ]

@@ -1,8 +1,46 @@
 [
   {
+    "id": "QHJGBCAM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621137", "AVEXAM-35916", "ATPLGS-628329"],
+    "annexes": [],
+    "learningObjectives": ["062.02.06.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements about the MLS is correct?",
+      "options": [
+        {
+          "id": "OGPHYJNZE",
+          "text": "It operates in the VHF band and the frequency allocation is between 108.1 to 111.95 MHz.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH1EK1IUP",
+          "text": "It operates on one of 40 channels in the band 329.15 to 335 MHz (UHF).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEL0IK8JY",
+          "text": "It operates on one of 126 channels within an allocated frequency spread of 960 to 1215 MHz (UHF).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OS9MDG0Y7",
+          "text": "It operates on one of 200 channels in the band 5.03 GHz to 5.09 GHz (SHF).",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
     "id": "QHNZGFIQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-624854"],
+    "externalIds": ["ATPLQ-624854", "AVEXAM-35526", "BGS-621510"],
     "annexes": [],
     "learningObjectives": ["062.02.06.01.02"],
     "explanation": "",
@@ -11,64 +49,26 @@
       "question": "Which of these options correctly describes the basic principles of operation of an MLS?",
       "options": [
         {
-          "id": "A5VVXIWTTH",
-          "text": "The time interval between the TO and FROM scans in Azimuth and elevation determines the aircraft position within the coverage area.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL2NMWVYA5",
-          "text": "Guidance is given using the localiser and the glide path selected by the pilot, the guidance is based on the received and measured difference in depth of modulation (DDM).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADGNM9ABX4",
+          "id": "OQCNWFCA7",
           "text": "Guidance is provided based on the pilots’ selection of the transmitters providing the pilot with the required localiser and glide path.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACIHT86GXT",
-          "text": "The distance between the TO and FROM scans in azimuth and elevation determines the aircraft position, within the coverage area.",
+          "id": "OZHF1RCDA",
+          "text": "Guidance is given using the localiser and the glide path selected by the pilot, the guidance is based on the received and measured difference in depth of modulation (DDM).",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHJGBCAM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-621137", "AVEXAM-35916"],
-    "annexes": [],
-    "learningObjectives": ["062.02.06.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements about the MLS is true?",
-      "options": [
+        },
         {
-          "id": "A1RFGNM1OK",
-          "text": "It operates in the VHF band and the frequency allocation is between 108.1 to 111.95 MHz.",
+          "id": "ODBHJC6Y8",
+          "text": "The time interval between the TO and FROM scans in Azimuth and elevation determines the aircraft position within the coverage area.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2BEICK94I",
-          "text": "It operates on one of 40 channels in the band 329.15 to 335 MHz (UHF).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFHTN701DJ",
-          "text": "It operates on one of 200 channels in the band 5.03 GHz to 5.09 GHz (SHF).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARKKVLRMZ7",
-          "text": "It operates on one of 126 channels within an allocated frequency spread of 960 to 1 215 MHz (UHF).",
+          "id": "OQC636T2T",
+          "text": "The distance between the TO and FROM scans in azimuth and elevation determines the aircraft position, within the coverage area.",
           "correct": false,
           "why": ""
         }

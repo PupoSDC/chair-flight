@@ -1,0 +1,4074 @@
+[
+  {
+    "id": "QNCWPUDQW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621851", "BGS-621545"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "EGNOS (European Geostationary Navigation Overlay System) informs the users of any GPS malfunctions within 6 seconds to enhance safety. How are these malfunctions broadcast to EGNOS users?",
+      "options": [
+        {
+          "id": "OTJLHYJP0",
+          "text": "Differential corrections and integrity messages are broadcast every 3 hours.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQYC18T2Y",
+          "text": "The data are broadcast from all satellites with navigation packages.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODEPRCTQW",
+          "text": "Alerts are sent to all the satellites in view and then re-transmitted to the user.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYJSMBIYT",
+          "text": "Data are broadcast from geostationary satellites.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMVAIYTFC",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-626105",
+      "BGS-621141",
+      "AVEXAM-22185",
+      "ATPLGS-626330"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does EGNOS mean?",
+      "options": [
+        {
+          "id": "O3Z7SU0EA",
+          "text": "European Ground based Navigation Service",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSPGHSXVB",
+          "text": "Enhanced Global Navigation System",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7RTRRHOG",
+          "text": "European Global Navigation Operating System",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIT5AEDDY",
+          "text": "European Geostationary Navigation Overlay Service",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEQGXGUZD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629205",
+      "ATPLGS-628306",
+      "AVEXAM-6579",
+      "BGS-621181"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft flying out of sight of land, using GNSS and ABAS (without SBAS), briefly loses power to the IRS. The navigation Information of the IRS is lost due to the temporary power loss. What effect could this failure have on how GNSS is used during the flight?",
+      "options": [
+        {
+          "id": "OEXI1MEYA",
+          "text": "Reduced accuracy of the GNSS position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6KEK7JPF",
+          "text": "Reducing ABAS to RAIM and barometric altitude only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQO9TVFJX",
+          "text": "Loss of all integrity monitoring of the GNSS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORLONJFHL",
+          "text": "Loss of RAIM, leaving only barometric altitude for ABAS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q4RPRQAHX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625010", "BGS-621190", "BGS-621189", "AVEXAM-99270"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a GBAS...",
+      "options": [
+        {
+          "id": "OVUAJH68F",
+          "text": "The L2 frequency is used, and compared to the data received from the L1 frequency, to reduce the ionospheric error.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OENFOCT7E",
+          "text": "An extra satellite is used to verify the integrity of the signals from the other satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGVF0MZTQ",
+          "text": "A pseudolite is positioned close to the runway, transmitting information about the ionospheric and tropospheric errors to nearby aircraft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCTMIU7LC",
+          "text": "Information about the ionosphere is up-linked to a geostationary satellite, which distributes the information to properly equipped receivers.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRBHBQ7WU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629405", "AVEXAM-45390"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Geometric Dilution of precision (GDOP) error can be minimized when:",
+      "options": [
+        {
+          "id": "OBRSG6NXY",
+          "text": "Four satellites are spaced by 90 degrees in azimuth.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEBSW4T48",
+          "text": "Two satellites are spaced by 180 degrees in azimuth, one satellite is directly overhead, and one satellite is directly opposed to the satellite overhead.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEFJSVFVY",
+          "text": "Three satellites are spaced by 120 degrees in the vertical plane and one satellite is directly overhead.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJOSA6WG",
+          "text": "Three satellites are spaced by 120 degrees in azimuth and one satellite is directly overhead.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXTPRONC1",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627184", "ATPLGS-621675", "AVEXAM-62822"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the minimum Ground-Based Augmentation System (GBAS) plan coverage?",
+      "options": [
+        {
+          "id": "OBEWIWE67",
+          "text": "25 NM from the landing threshold within 45° apart the final approach path and 20° apart between 25 and 20 NM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJNTAMHOY",
+          "text": "15 NM from the landing threshold within 45° apart the final approach path and 20° apart between 15 and 20 NM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGIJEV5DT",
+          "text": "25 NM from the landing threshold within 35° apart the final approach path and 10° apart between 25 and 30 NM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORHQI8EUK",
+          "text": "15 NM from the landing threshold within 35° apart the final approach path and 10° apart between 15 and 20 NM.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHYENDBMP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629998", "ATPLGS-629661"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "GBAS landing systems (1) \\_\\_\\_\\_\\_ the standard GNSS navigation signal and provide the capability for a (2) \\_\\_\\_\\_\\_ approach.",
+      "options": [
+        {
+          "id": "OYI1ZB4JX",
+          "text": "(1) correct; (2) precision",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OF3EEHU33",
+          "text": "(1) replace; (2) non-precision",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPHQW8ZSY",
+          "text": "(1) replace; (2) precision",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OA8UZHDEH",
+          "text": "(1) correct; (2) non-precision",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF6ZYBVLL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629013", "BGS-621381", "AVEXAM-93844"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "GPS uses two frequencies, L1 and L2\\. Choose the correct statement from these options.",
+      "options": [
+        {
+          "id": "O0TD3SYE6",
+          "text": "L2 is required for civilian users in order to achieve basic accuracy.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYQMW5T3Q",
+          "text": "The L2C part of L2 is required to achieve the required accuracy.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEQHBWGT7",
+          "text": "L1 and L2 are both required for the Standard Positioning Service (SPS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTXBKOD9X",
+          "text": "L1 is required for the standard positioning and timing service, SPS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QA9AQ6ZXE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-628394",
+      "ATPLGS-621641",
+      "BGS-620582",
+      "AVEXAM-64705",
+      "AVEXAM-28223"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the meaning of the term Receiver Autonomous Integrity Monitoring (RAIM) with regards to GPS/NAVSTAR?",
+      "options": [
+        {
+          "id": "OHWFIJNI9",
+          "text": "It is the ability of the GPS satellites to check the integrity of the data transmitted by the monitoring stations of the ground segment.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGP9LJD4C",
+          "text": "It is a technique whereby the receivers of the world-wide distributed monitor stations (ground segment) automatically determine the integrity of the navigation message.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODRASASWI",
+          "text": "It is a method whereby a receiver ensures the integrity of the Pseudo Random Noise (PRN) code transmitted by the satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6K6R5P72",
+          "text": "It is a technique by which a receiver checks the reliability of the signals it is receiving and can detect if one of the signals is incorrect.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVMEVLR2A",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629878",
+      "ATPLGS-124991",
+      "BGS-621025",
+      "AVEXAM-17792",
+      "BGS-620800"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The clock correction parameters in the navigation message are used to correct..",
+      "options": [
+        {
+          "id": "O696Z8TCF",
+          "text": "the satellite time.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKQOV4XEB",
+          "text": "the receiver time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBIMLYOLP",
+          "text": "both the satellite time and receiver time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAX6GDIG8",
+          "text": "for the ionospheric delay.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBSSB0S7B",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629220",
+      "AVEXAM-72133",
+      "ATPLGS-621583",
+      "BGS-620524"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In relation to the NAVSTAR/GPS satellite navigation system, what is involved in the differential technique (D-GPS)?",
+      "options": [
+        {
+          "id": "OY2VSLLP4",
+          "text": "Receivers from various manufacturers are operated in parallel to reduce the characteristic receiver noise error.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQK8RZVB4",
+          "text": "The difference between signals transmitted on the L1 and L2 frequencies are processed by the receiver to determine an error correction.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSPPD01XR",
+          "text": "Fixed ground stations compute position errors and transmit correction data to a suitable receiver on the aircraft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGEXSPIAN",
+          "text": "Signals from satellites are received by 2 different antennas which are located a fixed distance apart. This enables a suitable receiver on the aircraft to recognise and correct for multipath errors.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGSIV5FON",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629327",
+      "ATPLGS-621705",
+      "BGS-620870",
+      "AVEXAM-41308",
+      "ATPLGS-124694"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Each range calculated by the GPS-receiver defines",
+      "options": [
+        {
+          "id": "ORBFNTPHP",
+          "text": "a sphere with its centre at the receiver.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHXG35OUN",
+          "text": "a circle with its centre at the receiver.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORBPKQU3U",
+          "text": "a circle with its centre at the satellite.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLKXTFPFC",
+          "text": "a sphere with its centre at the satellite.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMWIBBDD8",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622085", "BGS-621096", "ATPLGS-124695"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "By using EGNOS in combination with GPS",
+      "options": [
+        {
+          "id": "O7TDPQHJO",
+          "text": "the integrity is improved by reducing the mean failure reporting time from up to 3 hours to 6 seconds.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O7HV58DMF",
+          "text": "no improvements are obtained apart from the redundancy.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJOXZD4AY",
+          "text": "a better position accuracy is obtained but the integrity of the system is not improved.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQVYGU9AN",
+          "text": "the errors caused by multi path and noise are eliminated.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDS4YAPZE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621660", "BGS-621553"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is executing the GLS RWY 19R approach. That is a GNSS (1) \\_\\_\\_\\_\\_ approach using a (2) \\_\\_\\_\\_\\_ station to make corrections to the signal.",
+      "options": [
+        {
+          "id": "ONF6V8HDO",
+          "text": "(1) non-precision; (2) ground",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTAMGC9HW",
+          "text": "(1) precision; (2) satellite",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZXFELUHJ",
+          "text": "(1) precision; (2) ground",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMYKYNPOP",
+          "text": "(1) non-precision; (2) satellite",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUW07QUMA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623178", "BGS-621321", "AVEXAM-98802"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Receiver Autonomous Integrity Monitoring (RAIM) is a method used to ensure GNSS position integrity withing a GNSS receiver. This is achieved by using the 3D position and timing data from...",
+      "options": [
+        {
+          "id": "OSGEYRUHP",
+          "text": "any number of visible satellites beyond 4 to create several independent positions which should agree.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O99MAXP5D",
+          "text": "multiple aircraft systems and compare to the GPS 3D position and time data to check for consistency**.**",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSWUBCA46",
+          "text": "more than one GPS receiver and compare these to eliminate the receiver that shows incorrect data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWPVPYRWX",
+          "text": "a database in the GPS receiver and compare to the 3D position and time data derived from 4 satellites.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUOS1SHKA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-628520"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What factors contribute to the formation of User Equivalent Range Error (UERE)?",
+      "options": [
+        {
+          "id": "OE5XVY6M8",
+          "text": "Position Dilution of Precision (PDOP) and Ephemeris Error (EE).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPWYHP7XK",
+          "text": "Geometric Dilution of Precision (GDOP) and Ionospheric Delay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4F0BNI3Y",
+          "text": "Satellite Clock Error and Tropospheric Delay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEGGZD3IB",
+          "text": "Combination of various errors including Selective Availability (SA), Ephemeris Error (EE), Satellite Clock Error, and Atmospheric Delays.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSTWGIZEH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627101"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is a GLS approach?",
+      "options": [
+        {
+          "id": "OON9HZIVH",
+          "text": "A non-precision approach with SBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHONNMCXF",
+          "text": "A precision approach with GBAS.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJ4ADMH5H",
+          "text": "A non-precision approach with GBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKES38V2O",
+          "text": "A precision approach with SBAS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QC6NLNYOI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621528", "ATPLGS-628225"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are flying at high latitude and you are unable to identify your position. Which of the following should you use as back-up?",
+      "options": [
+        {
+          "id": "ODUQA5LUA",
+          "text": "INS and clock.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7UPCTCLP",
+          "text": "On-board clock to aid time reference and SBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFDVNFPDW",
+          "text": "Barometric altimeter and clock only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8FE3U2I0",
+          "text": "IRS and Barometric altimeter.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUZ7EV50C",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627436", "ATPLGS-627961"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If a GPS malfunction occurs, EGNOS provides an alert time within:",
+      "options": [
+        {
+          "id": "OCQEVYC0M",
+          "text": "6 minutes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJWASDEFO",
+          "text": "6 seconds.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONAQN5XUA",
+          "text": "3 seconds.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUBKBHI3O",
+          "text": "3 hours.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUVLXQUFU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622255", "BGS-621166", "AVEXAM-72408"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Ground Based Augmentation System (GBAS) provides data which defines the Final Approach Segment (FAS). The data is transmitted on…",
+      "options": [
+        {
+          "id": "O1WU52VKU",
+          "text": "UHF providing error corrections for the glide slope.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUCLQMWKT",
+          "text": "VHF to arriving aircraft to correct any anomalies in the localiser aspect of the approach.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O99ZYEPBS",
+          "text": "VHF to arriving aircraft, together with differential position corrections and integrity information for each satellite.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5UNJXY3I",
+          "text": "UHF to arriving aircraft, together with differential position corrections and integrity information for each satellite in view.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QH81EWQKH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623013",
+      "AVEXAM-51863",
+      "BGS-621543",
+      "ATPLGS-628076"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Final Approach Segment (FAS) data block as transmitted by a Ground Based Augmentation System (GBAS) contains a set of parameters:",
+      "options": [
+        {
+          "id": "OH6UP4CHT",
+          "text": "Providing guidance in the terminal area.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJK5X8AQY",
+          "text": "Defining an approach path for horizontal guidance only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZTXZPNGM",
+          "text": "Defining the final approach path for lateral and vertical guidance.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4QX8Z7AK",
+          "text": "Providing guidance to interceptions of the Instrument Landing System (ILS).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDX1BXRDQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623144",
+      "ATPLGS-621646",
+      "AVEXAM-97608",
+      "BGS-620587"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "EGNOS (European Geostationary Navigation Overlay System) is a form of:",
+      "options": [
+        {
+          "id": "OLYEU7FM2",
+          "text": "Local Area Augmentation System (LAAS)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONJ39CWEI",
+          "text": "Wide Area Differential GPS (WADGPS)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQN74JMYR",
+          "text": "Local Area Differential GPS (LADGPS)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXMOIF34I",
+          "text": "stand-alone Global Navigation Satellite System (GNSS)",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QA85AKVWM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-626535", "ATPLGS-628062", "AVEXAM-34350"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is the GPS receiver able to calculate aircraft's ground speed?",
+      "options": [
+        {
+          "id": "OE9SZSVC6",
+          "text": "Using the space vehicle (SV) Doppler frequency shift.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ODZCCGQQD",
+          "text": "Using the time measured from the signal leaving the satellite to the receiver.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKPCCN7NM",
+          "text": "Using the pseudo-range measurements.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OERQYWTZW",
+          "text": "Using aircraft position and known reference points on the ground.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUULB4EYU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-621571",
+      "AVEXAM-7335",
+      "ATPLGS-621682",
+      "AVEXAM-99183",
+      "ATPLGS-621709",
+      "BGS-621399",
+      "ATPLGS-116224",
+      "ATPLGS-628262",
+      "BGS-620893",
+      "BGS-621055",
+      "AVEXAM-27320",
+      "ATPLGS-621708"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Assume that one of the satellites used by a GPS receiver is faulty and that the PDOP has a relatively low value. When the signals of six satellites are received (including the faulty one) the RAIM software in the receiver is:",
+      "options": [
+        {
+          "id": "OT0ZSVPUL",
+          "text": "Able to detect that one of the satellites is faulty but is unable to identify the faulty one.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCUIA4OAE",
+          "text": "Unable to detect and identify the faulty satellite.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEWAZPXWL",
+          "text": "Able to detect that one of the satellites is faulty and is able to identify and isolate the faulty one.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2WZ1NE8I",
+          "text": "NOT active, as the software needs at least eight satellites to function correctly.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPFXFNZNL",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623780",
+      "BGS-621162",
+      "AVEXAM-35498",
+      "ATPLGS-628305"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The accuracy of the NAVSTAR GPS position depends on the geometry of the intersecting lines. Select the correct statement:",
+      "options": [
+        {
+          "id": "OGGWFHGZU",
+          "text": "If the satellites, as viewed by the GPS receiver, are close together, there will be a poor angle of intersection, resulting in a loss of accuracy.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O18JVBQO2",
+          "text": "The position accuracy will Increase if the satellites, as viewed by the GPS receiver, are paced 60° apart and close to the horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2BSTX9SE",
+          "text": "The worst configuration to give an accurate fix would be three satellites spaced 120°apart and a fourth satellite overhead.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3YFL8DP8",
+          "text": "There will be a good angle of intersection if the satellites, as viewed by the GPS receiver, are close together, resulting in an Increase In accuracy.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRAEYN8TH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627025", "AVEXAM-54698", "BGS-621198"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For a satellite to be visible to a GPS receiver:",
+      "options": [
+        {
+          "id": "OIXBMMMMH",
+          "text": "It needs a higher elevation than 5° above the horizon.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4ZUS2OHU",
+          "text": "It needs a higher elevation than 5° below the horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPTFLTSX2",
+          "text": "It needs a higher elevation than 15° above the horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7QSAGJJG",
+          "text": "It needs a higher elevation than 55° above the horizon.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBSQBBRKH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629534",
+      "BGS-621494",
+      "AVEXAM-29808",
+      "ATPLGS-628235"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Complete the following sentence:\n\nReceiver Autonomous Integrity Monitoring (RAIM) of GNSS signals requires (1) \\_\\_\\_\\_\\_ satellites with good geometry. For Fault Detection and Exclusion (FDE) (2) \\_\\_\\_\\_\\_ satellites are required.",
+      "options": [
+        {
+          "id": "OG7RNALJ4",
+          "text": "(1) six; (2) seven",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLNJGWYHV",
+          "text": "(1) three; (2) four",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONTNGKJH4",
+          "text": "(1) five; (2) six",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQOJPDLIQ",
+          "text": "(1) four; (2) five",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSA7LHTON",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623360", "BGS-621286", "AVEXAM-50201"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The typical coverage of a Ground-Based Augmentation System (GBAS) station is approximately…",
+      "options": [
+        {
+          "id": "O3SUG3NYO",
+          "text": "10 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7UA5TBRI",
+          "text": "25 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5FVK2YMO",
+          "text": "30 NM",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVVZWITBS",
+          "text": "20 NM",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYIDC1ERO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624981", "AVEXAM-37261", "BGS-620529"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the minimum number of satellites required by a GPS in order to obtain a three dimensional fix?",
+      "options": [
+        {
+          "id": "OUZJCVMD3",
+          "text": "5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEHPM0WTE",
+          "text": "3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORIPU5TWV",
+          "text": "6",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORHRKBDIQ",
+          "text": "4",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QR8Z8FDVD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625740", "BGS-621386"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "GPS employs two frequencies, L1 and L2, to offer Standard Positioning Service (SPS) and Precise Positioning Service (PPS). L1 is essential for delivering...",
+      "options": [
+        {
+          "id": "OOFAXUHX1",
+          "text": "SPS using the P code, while PPS requires both the C/A code and the P code transmitted on L1 and L2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5DHNYGBN",
+          "text": "PPS using both the C/A code and the P code, while SPS requires the C/A code transmitted on L2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSGJDLOGU",
+          "text": "SPS using only the C/A code, while PPS requires the P code, which is transmitted on both L1 and L2.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OV72NEDDH",
+          "text": "PPS using only the C/A code, while SPS requires both the C/A code and the P code transmitted on L1 and L2.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QL7OBYVAV",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621246", "ATPLGS-628324", "AVEXAM-5640"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does the term \"SBAS\" stand for?",
+      "options": [
+        {
+          "id": "OOTLGKE8V",
+          "text": "Supplement Based Augmentation System",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7BHBN9YX",
+          "text": "Satellite Based Area System",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODVUKHWD3",
+          "text": "Service Broadcast Application System",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOWPI0DQF",
+          "text": "Satellite Based Augmentation System",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEQSQXUR9",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625678", "BGS-621097"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When a GPS position is augmented by EGNOS, what time to alert can be expected after a loss of integrity?",
+      "options": [
+        {
+          "id": "O0MCL7CLK",
+          "text": "6 seconds",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT7HSUKZV",
+          "text": "10 seconds",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFZJLTYAJ",
+          "text": "15 seconds",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL99FDWKN",
+          "text": "0.3 seconds",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5FQENTQO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627669", "AVEXAM-45370", "ATPLGS-124784"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements correctly describe the clock system in the Galileo Global Navigation Satellite System (GNSS)?\n\n1\\. There are two independent, identical atomic clocks on each satellite.   \n2\\. There are two independent, non-identical atomic clocks on each satellite.   \n3\\. There is one master atomic clock and one reference clock on each satellite.   \n4\\. The satellite clocks are synchronised with each other.",
+      "options": [
+        {
+          "id": "O67B0AF6E",
+          "text": "2 only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4OMLCAJY",
+          "text": "1 only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O83ZPGLAV",
+          "text": "1 and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBY8OHYER",
+          "text": "2 and 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q0X9EPWP5",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622479", "BGS-621523"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the statement describing the effect of ionosperic delay and satellite clock errors on the position of an aircraft using NAVSTAR GPS without augmentation?",
+      "options": [
+        {
+          "id": "OG8OZRBMS",
+          "text": "Satellite clocks are so accurate that their contribution to the position error is zero.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP0YQWS9G",
+          "text": "Satellite clock error affects the position, but the ionospheric delay is more significant.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUYUHJJM3",
+          "text": "The ionospheric delay affects the position, but satellite clock error is more significant.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCR9GZQRL",
+          "text": "Neither ionospheric delay NOR satellite clock error gives significant position errors.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGIYESIPA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622033", "BGS-621418"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "GPS satellites broadcast signals that enable a suitable receiver to obtain a position. Each satellite transmits:",
+      "options": [
+        {
+          "id": "OTAHJBURD",
+          "text": "Receiver position data on the L1 UHF frequency only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJNRVDMWB",
+          "text": "Distance information for civilian users on the L1 UHF frequency only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O70HFPREE",
+          "text": "Ranging signals on the L1 and L2 UHF frequencies.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OP77N7CWT",
+          "text": "Receiver position data on the L1 and L2 UHF frequencies.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBJWOLOIC",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623921",
+      "BGS-620547",
+      "AVEXAM-46925",
+      "AVEXAM-43190",
+      "ATPLGS-621606",
+      "ATPLGS-125028"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The influence of the ionosphere on the accuracy of NAVSTAR/GPS is..",
+      "options": [
+        {
+          "id": "OU9UBKS8P",
+          "text": "minimised by computing the average of all signals.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU8RB6GQT",
+          "text": "negligible.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKMOC3HA8",
+          "text": "only significant if the satellites are located at a small elevation angle above the horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJMGUCOHK",
+          "text": "reduced in Standard Positioning Service (SPS) receivers by using a model of the ionosphere transmitted by the satellites.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXH6MORKF",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622754",
+      "ATPLGS-628311",
+      "AVEXAM-72988",
+      "BGS-621209"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In the Global Navigation Satellite System (GNSS), what is the User Equivalent Range Error (UERE)? It is a computed value for:",
+      "options": [
+        {
+          "id": "OPIJ0FMZQ",
+          "text": "Inaccuracies from the geometry of the satellites above the user's horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPE1P8U8C",
+          "text": "The correction for the receiver errors as transmitted in the navigation message.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMETIQU2Q",
+          "text": "The correction for the receiver clock error as transmitted by a differential station.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6X8ZRS68",
+          "text": "Residual errors in the receivers which have not been corrected.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZAI5QCEI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629828", "ATPLGS-124691", "BGS-620915"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In general a GNSS-receiver is able to determine:",
+      "options": [
+        {
+          "id": "OESPECN1F",
+          "text": "only a three dimensional position and groundspeed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1ZDFOZG2",
+          "text": "a three dimensional position, groundspeed and a precise time reference.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKGJAWBBA",
+          "text": "only a three dimensional position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5VLBAUHI",
+          "text": "only a three dimensional position and a time reference.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q633GX070",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-626907", "BGS-621525"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which pair of factors, when brought together, can establish the estimate of the GNSS position accuracy?",
+      "options": [
+        {
+          "id": "OHUO7M1EB",
+          "text": "The User Equivalent Range Error (UERE) and the Geometric Dilution of Precision (GDOP).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKHH919TM",
+          "text": "The User Equivalent Range Error (UERE) and Precision Dilution of Precision (PDOP).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJUJQ3NIY",
+          "text": "The Time Dilution of Precision (TDOP) and the Geometric Dilution of Precision (GDOP).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ3YRQSBJ",
+          "text": "The Horizontal Dilution of Precision (HDOP) and Vertical Dilution of Precision (VDOP).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8YJVH7UJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627874", "AVEXAM-83460", "BGS-621169"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Receiver Autonomous Integrity Monitoring (RAIM) is a method used to ensure the integrity of navigational data. With GNSS, this is achieved by…",
+      "options": [
+        {
+          "id": "O0WVOI3SG",
+          "text": "averaging the position solutions obtained from five satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONTY7NIFV",
+          "text": "using information from additional on-board sensors such as the Inertial Reference System (IRS)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSK0XLAAB",
+          "text": "applying the ionospheric and atmospheric corrections to the range measurements from satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR0VGIGU9",
+          "text": "checking the consistency of the range measurements from a group of at least five satellites.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIUGFA9I7",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623106",
+      "BGS-621037",
+      "AVEXAM-58288",
+      "ATPLGS-125003"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "One of the advantages of a Satellite Based Augmentation System (SBAS) over a Ground Based Augmentation System (GBAS) is..",
+      "options": [
+        {
+          "id": "OSIZMOLPY",
+          "text": "the rate at which the pseudo-range corrections reach the users is much higher for a GBAS than for an SBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBBECPAZZ",
+          "text": "the pseudo-range corrections of an SBAS are much more accurate than those of a GBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP4KLTJYT",
+          "text": "an SBAS does not, like a GBAS, need ground stations for the estimation of the pseudo-range corrections.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYW7ITSF",
+          "text": "the coverage area of an SBAS is much larger than that of a GBAS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXQT6UQ5V",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621944"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does \"ABAS\" stand for?",
+      "options": [
+        {
+          "id": "OEJJDQZAS",
+          "text": "Aircraft-based application safety.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONR6JQCOV",
+          "text": "Aircraft-based augmentation systems.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5QVEMR4U",
+          "text": "Aircraft-based augmentation safety.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORLOPIRUF",
+          "text": "Aerial broadcast application systems.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q6F5HIN0O",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625827"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which element exerts the greatest influence on GPS accuracy?",
+      "options": [
+        {
+          "id": "ORM5WPGVT",
+          "text": "Satellite signal strength.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFADHR7UU",
+          "text": "Dilution of Precision.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O3TPFHW6V",
+          "text": "Receiver sensitivity.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3371G05R",
+          "text": "Atmospheric conditions.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q6XT5JLWD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-625815",
+      "ATPLGS-621641",
+      "BGS-620582",
+      "AVEXAM-64705",
+      "AVEXAM-28223"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Referring to the NAVSTAR/GPS satellite navigation system, what is the meaning of the term Receiver Autonomous Integrity Monitoring (RAIM)?",
+      "options": [
+        {
+          "id": "OM5HMELHZ",
+          "text": "it is a technique whereby the receivers of the world-wide distributed monitor stations – ground segment – automatically determine the integrity of the navigation message.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLL6PUDMC",
+          "text": "it is a technique that ensures the integrity of the provided data by redundant measurements.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAXRKZPZE",
+          "text": "it is a method whereby a receiver ensures the integrity of the Pseudo Random Noise -PRN- code transmitted by the satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUE5AZXKB",
+          "text": "it is the ability of the GPS satellites to check the integrity of the data transmitted by the monitoring stations of the ground segment.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QI5UWPPKV",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624265", "BGS-620923", "ATPLGS-628071"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What are GNSS IFR procedures mainly designed for?",
+      "options": [
+        {
+          "id": "OKG60FTOA",
+          "text": "WAAS and LAAS operations.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O0NZC0JKD",
+          "text": "Supplementary en-route navigation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMCPNPQBH",
+          "text": "Enroute, terminal area and non precision approach procedures.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSFD3OLQQ",
+          "text": "SID, STAR, non precision approach and precision approach procedures.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKRFC7Z2J",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-626130",
+      "BGS-620902",
+      "BGS-621250",
+      "ATPLGS-621712"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What are the two functions of GBAS?. When the aircraft is approaching the airfield and is fitted with a GBAS receiver, GBAS..",
+      "options": [
+        {
+          "id": "O7QURGH5Y",
+          "text": "replaces the aircraft’s on-board GPS position and provides the non-precision approach path details.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWDTDGSMY",
+          "text": "corrects the aircraft’s on-board GPS position and provides the precision approach path details.  ",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJEXRX1FE",
+          "text": "replaces the aircraft’s on-board GPS position and provides the precision approach path details.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTBSVIXJG",
+          "text": "corrects the aircraft’s on-board GPS position and provides the non-precision approach path details.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHLSU77MF",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627073",
+      "AVEXAM-59048",
+      "ATPLGS-627960",
+      "BGS-621156"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Amongst others, SBAS allows for the implementation of:",
+      "options": [
+        {
+          "id": "OC0HRIOPX",
+          "text": "2D precision and non-precision approaches.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSANH0RET",
+          "text": "4D FMS approaches.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCEJG9U1E",
+          "text": "3D Type-A and Type-B approaches.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCIDKHQYO",
+          "text": "1D Baro-VNAV approaches.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNLDCMCPQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629191",
+      "ATPLGS-125044",
+      "BGS-621312",
+      "AVEXAM-7490",
+      "BGS-620793",
+      "AVEXAM-42082",
+      "BGS-621071",
+      "ATPLGS-125031"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In the case of an Airborne-Based Augmentation System (ABAS), which method of integrity monitoring uses information from GNSS and from additional on-board sensors such as Inertial Reference Systems (IRS)?",
+      "options": [
+        {
+          "id": "ODX4GTMYI",
+          "text": "Receiver Autonomous Integrity Monitoring (RAIM)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONERW7BEG",
+          "text": "Aircraft Station Autonomous Integrity Monitoring (ASAIM)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQTZR5VT3",
+          "text": "GNSS/IRS Autonomous Integrity Monitoring (GIAIM)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVGFPGZWD",
+          "text": "Aircraft Autonomous Integrity Monitoring (AAIM)",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVY10N85U",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621373", "AVEXAM-5284"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following are current or planned Global Navigation Satellite Systems (GNSS)?\n\n1\\. EGNOS   \n 2\\. WAAS   \n 3\\. GLONASS   \n 4\\. BEIDOU   \n 5\\. GAGAN   \n 6\\. NAVSTAR GPS   \n 7\\. MSAS   \n 8\\. GALILEO",
+      "options": [
+        {
+          "id": "OUPP8NA0P",
+          "text": "1, 2, 5 and 7",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKYPBIRRR",
+          "text": "3, 5, 6 and 8",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMEH6ALHG",
+          "text": "3, 4, 6 and 8",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPTQIJCMB",
+          "text": "1, 2, 3 and 6",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQHZU4VFS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624295", "AVEXAM-20635", "ATPLGS-626537"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is an ABAS input device mounted in an aircraft?",
+      "options": [
+        {
+          "id": "OUHSD84K1",
+          "text": "| TCAS II |  |\n| ------- |  |",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQE6X1FQK",
+          "text": "| WAAS |  |\n| ---- |  |",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOC9GJU0B",
+          "text": "| IRS |  |\n| --- |  |",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJQOMZZTT",
+          "text": "| ADS-B |  |\n| ----- |  |",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QV1PF6BQN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621754", "AVEXAM-58984", "BGS-621434"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does a satellite based augmentation system (SBAS) use to improve integrity alerting to within 6 seconds if a GNSS malfunction occurs?",
+      "options": [
+        {
+          "id": "OOABP1IIU",
+          "text": "Up to 4 geostationary satellites are used to improve accuracy to within 1 m to 2 m horizontally and to advise of any GNSS malfunction.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONXKVZA49",
+          "text": "At least 1 geostationary satellite is required to relay integrity and safety messages to the user.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEPOCXXBV",
+          "text": "2 geostationary satellites are used to broadcast GNSS malfunctions using the L2 frequency, which includes an additional ranging signal to augment the signals from the GPS satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE6TAA3Q3",
+          "text": "Error signals are sent to the GNSS satellite to correct any position error.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIVNQL6AE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625119", "ATPLGS-626541", "AVEXAM-45946"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In preparation for an RNP approach, the GNSS equipment intended to be used shows a RAIM prediction error. This means, that...",
+      "options": [
+        {
+          "id": "OUCKGYZAM",
+          "text": "| at the expected time of approach, an insufficient number of satellites to assure fault detection is predicted to be available. |  |\n| ------------------------------------------------------------------------------------------------------------------------------ |  |",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5DZJSXH7",
+          "text": "| the automatic RAIM prediction function has failed and the pilot has to verify the number of available satellites with the ATC. |  |\n| ------------------------------------------------------------------------------------------------------------------------------ |  |",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKP0P1T9P",
+          "text": "| at the expected time of approach, the predicted navigation accuracy of the system is worse than the requirement for that approach coded in the database. |  |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------- |  |",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6LRUFC5O",
+          "text": "| the GNSS cannot calculate the estimated time of arrival at the initial approach fix. |  |\n| ------------------------------------------------------------------------------------ |  |",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF8WJITRN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-621086",
+      "ATPLGS-621622",
+      "AVEXAM-54264",
+      "BGS-620563",
+      "ATPLGS-621666"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The different segments of the satellite navigation system NAVSTAR/GPS are the..",
+      "options": [
+        {
+          "id": "ORDBABBOF",
+          "text": "atomic clock, power supply, and transponder.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK84SXZMB",
+          "text": "main control station, the monitoring station, and the ground antennas.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORO7MO1LA",
+          "text": "control, space, and user.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORLSAPNX0",
+          "text": "antenna, the receiver, and the central control unit.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUSPRJOOC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-628354", "AVEXAM-1087", "ATPLGS-628309"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An estimate of the position accuracy from the Global Navigation Satellite System (GNSS) can be derived from several factors, including:",
+      "options": [
+        {
+          "id": "O9S60RVSC",
+          "text": "Geometric Dilution Of Precision (GDOP) and User Equivalent Range Error (UERE).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT25HF5ZA",
+          "text": "The correction for the receiver clock error as transmitted by a differential station.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONTJUWMRZ",
+          "text": "Inaccuracies from the geometry of the satellites above the user's horizon.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTBDU5KIF",
+          "text": "User Equivalent Range Error (UERE) alone.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q39MOCHLF",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623841",
+      "BGS-620901",
+      "ATPLGS-621711",
+      "AVEXAM-37769"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is a difference between satellites used by EGNOS and those used by GPS?",
+      "options": [
+        {
+          "id": "OXWZQVT49",
+          "text": "EGNOS satellites have much shorter orbit times than GPS satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGLDZP7KX",
+          "text": "The signal format broadcasted by EGNOS differs considerably from GPS signal format.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OA6SD3TKI",
+          "text": "The signals broadcasted by EGNOS are more prone to multipath effects than GPS signals.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVZ671OPC",
+          "text": "EGNOS satellites are geostationary and GPS satellites are not.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKJXCS5JE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625547", "AVEXAM-27617", "BGS-621335"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is Receiver Autonomous Integrity Monitoring (RAIM)?",
+      "options": [
+        {
+          "id": "OBTCJL7D6",
+          "text": "An ATC-based augmentation system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYXHVEKBI",
+          "text": "An aircraft-based augmentation system.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZBCA7CAJ",
+          "text": "A space-based augmentation system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF3LSSUQB",
+          "text": "A ground-based augmentation system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QW3DFCVGU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-625372", "BGS-621108", "ATPLGS-622631"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The type of GPS receiver that is used in aviation is",
+      "options": [
+        {
+          "id": "OEM4EWLXA",
+          "text": "a two channel receiver",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPHHFNOUV",
+          "text": "a multichannel receiver",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OFNE1W8LR",
+          "text": "a multiplex receiver",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOQD1MFUC",
+          "text": "a sequential receiver",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXUJ3GD9F",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623454", "ATPLGS-629678"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is GBAS information sent from the ground station to the aircraft?",
+      "options": [
+        {
+          "id": "OTC7WPGCA",
+          "text": "VHF voice transmission.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5FAYJQNH",
+          "text": "UHF voice transmission.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONMYCEFX6",
+          "text": "VHF datalink.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMV0SQSVI",
+          "text": "UHF datalink.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUHYGTU40",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-628208",
+      "ATPLGS-621667",
+      "AVEXAM-16715",
+      "AVEXAM-56303",
+      "ATPLGS-621677"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the frequency band of the GBAS data link?",
+      "options": [
+        {
+          "id": "OZ3176ZPR",
+          "text": "VHF band 108.0 to 111.975 MHz.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O85CIQ1FZ",
+          "text": "UHF band between 960 - 1215 MHz.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5CX7TLWW",
+          "text": "A signal with the same frequency as GPS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORVNUZG6Z",
+          "text": "VHF band of ILS and VOR systems.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9N4YD6P7",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624494", "ATPLGS-621662", "AVEXAM-80140"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How many elements of an SBAS (Satellite Based Augmentation System) are there?",
+      "options": [
+        {
+          "id": "O7WUHEU3W",
+          "text": "2 elements",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OC5QYNGDP",
+          "text": "1 element",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8XE4FTRW",
+          "text": "3 elements",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGYZQN6IF",
+          "text": "4 elements",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBAASOEJJ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622368",
+      "ATPLGS-629739",
+      "BGS-621502",
+      "AVEXAM-22560"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is one of the most significant factors as regards GPS accuracy?",
+      "options": [
+        {
+          "id": "O4YA6FIFW",
+          "text": "The insufficient number of radio paths.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5VEWMJTH",
+          "text": "The low number of operational satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O77FI95XR",
+          "text": "A too high dilution of precision value.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OU7ZUUORZ",
+          "text": "Too few satellite orbits.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8SEWY9IK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622499",
+      "AVEXAM-60356",
+      "ATPLGS-628258",
+      "BGS-621284"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Ground-Based Augmentation System (GBAS) provides differential GPS positioning to calculate an error correction. The ground-based receiver uses:",
+      "options": [
+        {
+          "id": "OJGWP9BEB",
+          "text": "Only the satellites being used by the aircraft to compute the error information.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3KRYFZPH",
+          "text": "Timing signals from at least four satellites to establish the position error correction, which is then relayed to the aircraft's GPS receiver.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXSQL066Y",
+          "text": "Only one satellite to check its position with the position calculated by the incoming signal, and then relays any error back to the satellite.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHUUQCJO3",
+          "text": "The precision codes broadcast by the satellites to determine any position errors.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVPOVOSZ8",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623684",
+      "AVEXAM-7335",
+      "ATPLGS-621682",
+      "AVEXAM-99183",
+      "ATPLGS-621709",
+      "BGS-621399",
+      "ATPLGS-116224",
+      "ATPLGS-628262",
+      "BGS-620893",
+      "BGS-621055",
+      "AVEXAM-27320",
+      "ATPLGS-621708"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Assume that one of the satellites used by a GPS-receiver is faulty. When the signals of 5 satellites are received (including the faulty one) the RAIM software in the receiver:",
+      "options": [
+        {
+          "id": "O4R6TOUI7",
+          "text": "is able to detect that one of the satellites is faulty but is unable to identify the faulty one.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OWY0KCRNW",
+          "text": "is unable to detect and identify the faulty satellite.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ4PI4CRK",
+          "text": "is able to detect that one of the satellites is faulty and is able to identify the faulty one.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1KQIBN03",
+          "text": "is not active, as the software needs at least 8 satellites to function correctly.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHVVESYQU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-624792",
+      "ATPLGS-629721",
+      "AVEXAM-22839",
+      "BGS-621404"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "With regards to ICAO Annex 10, Volume 1, GPS and GLONASS...",
+      "options": [
+        {
+          "id": "OHFYWOP5L",
+          "text": "are two completely separate systems but only GPS is capable of providing approved position data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP5192QSP",
+          "text": "can both be used in a suitably equipped aircraft as the systems are compatible and their functions are interoperable.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O9V9BVG9X",
+          "text": "can both be used, but because their information is NOT compatible an aircraft CANNOT use both systems.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYKPQVS6",
+          "text": "are two separate systems and only GPS is covered by EU regulations so only that service can be used by European Operators.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF2NIGH21",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-622412", "AVEXAM-65182", "BGS-621385"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Flying around different parts of Europe, it is apparent that there are a significant number of EGNOS based procedures available. When it comes to approaches, all parts of the continent use the same EGNOS system but for each runway there is a given 5-digit channel number. Which of the following statements is correct?",
+      "options": [
+        {
+          "id": "OCCOHGEPW",
+          "text": "Any GNSS receivers are by default capable of using the EGNOS signals since they use the same frequency as GPS whereas additional equipment is needed to receive GBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFC2REXNT",
+          "text": "EGNOS covers an extensive area by using geostationary satellites and the channel number is used for approach identification only since EGNOS uses the normal GPS frequency.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OECNV0PRL",
+          "text": "EGNOS is the European SBAS that is used to improve accuracy and integrity of general GNSS navigation and GBAS is used to augment SBAS when selecting its channel number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHTG3PK7Q",
+          "text": "EGNOS is the European satellite system running in parallel with GPS but has more satellites, enabling greater accuracy, and the channel number is to tune the receiver to EGNOS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNZSUDMZQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623155", "AVEXAM-19568", "BGS-621042"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is the Final Approach Segment (FAS) of a GBAS Precision Approach Procedure defined?",
+      "options": [
+        {
+          "id": "OJOOJRVJW",
+          "text": "The GBAS ground facility transmits the approach-path guidance parameters to the GBAS-equipped aircraft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZOFHVUOC",
+          "text": "The GNSS space segment transmits the approach-path guidance parameters to the GBAS-equipped aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAXIIOO9T",
+          "text": "The GBAS ground facility transmits an error correction message to the ground-based azimuth and glidepath-guidance transmitters.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF3RKHUI0",
+          "text": "The GBAS reference receivers transmit-error correction messages to the ground-based azimuth and elevation-guidance transmitters.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZYNRDKOK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-626324", "ATPLGS-629702", "AVEXAM-1930"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Select the correct statement about the European Satellite Based Augmentation System, EGNOS:",
+      "options": [
+        {
+          "id": "OMEC0KEZ8",
+          "text": "EGNOS uses at least 1 geostationary satellite to transmit integrity and safety related messages to aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI0DR6BWI",
+          "text": "EGNOS uses up to 2 geostationary satellites to transmit ranging signals in the L2 frequency.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE52ZGKTM",
+          "text": "EGNOS uses at least 3 geostationary satellites to transmit receiver clock error and integrity data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYULQP36H",
+          "text": "EGNOS uses up to 4 geostationary satellites to transmit integrity data and ranging signals to aircraft.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRFIIL6DF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629426", "ATPLGS-627008"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The fully-operational Galileo Global Navigation Satellite System(GNSS) will consist of (1) ... satellites in (2) ... orbital planes at an altitude of (3) ... km. Which are the correct values for 1, 2, and 3?",
+      "options": [
+        {
+          "id": "OFXN1CCEY",
+          "text": "1\\. 24 satellites 2\\. 4 orbital planes 3\\. 20200 km",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODDBVGXWD",
+          "text": "1\\. 30 satellites 2\\. 3 orbital planes 3\\. 23222 km",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONVV6NXOV",
+          "text": "1\\. 24 satellites 2\\. 6 orbital planes 3\\. 12539 km",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQXK7NFUA",
+          "text": "1.30 satellites 2\\. 4 orbital planes 3\\. 19100 km",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJOYROZXH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-628592",
+      "BGS-620988",
+      "AVEXAM-10191",
+      "ATPLGS-124996"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Doppler frequency shift of the received GPS carrier frequency may be used to..",
+      "options": [
+        {
+          "id": "OXGTZFIWP",
+          "text": "correct the calculated position for frequency shifts.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHSMJW97T",
+          "text": "correct the calculated position for a change in receiver clock error.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD7030PIX",
+          "text": "calculate the height of the aircraft more accurately.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONZPKH829",
+          "text": "calculate the groundspeed of the aircraft.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q4DVB40CM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627255",
+      "AVEXAM-67253",
+      "BGS-621154",
+      "ATPLGS-628075"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The satellite navigation system NAVSTAR GPS uses two navigation frequencies, L1 and L2\\.   \n Choose the correct statement:\n\n_SPS: standard positioning service_ \n _PPS: precise positioning service_",
+      "options": [
+        {
+          "id": "ONCKB2VDU",
+          "text": "Only the L1 frequency is used for PPS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONJ1KM7XB",
+          "text": "Only the L2 frequency is used for PPS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O17E7VQLS",
+          "text": "The L1 frequency is used for PPS and the L2 frequency is used for SPS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYYQYJA3",
+          "text": "Both L1 and L2 frequencies are used for PPS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGS2FFCV1",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627591",
+      "ATPLGS-125044",
+      "BGS-621312",
+      "AVEXAM-7490",
+      "BGS-620793",
+      "AVEXAM-42082",
+      "ATPLGS-125031",
+      "ATPLGS-621698"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an Airborne-Based Augmentation System (ABAS), the method of integrity monitoring that only uses information from the GNSS is called..",
+      "options": [
+        {
+          "id": "OCNVMJMYO",
+          "text": "Aircraft Station Autonomous Integrity Monitoring (ASAIM).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR6081HB5",
+          "text": "GNSS Autonomous Integrity Monitoring (GAIM).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OX0BDWHMJ",
+          "text": "Aircraft Autonomous Integrity Monitoring (AAIM).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYYMWWJMU",
+          "text": "Receiver Autonomous Integrity Monitoring (RAIM).",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QN8EZEACQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627827",
+      "AVEXAM-82918",
+      "BGS-620537",
+      "ATPLGS-621596"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How many satellites are required for signal reception to perform an independent three-dimensional fix, Receiver Autonomous Integrity Monitoring (RAIM), and identify and exclude any faulty satellites for failure detection?",
+      "options": [
+        {
+          "id": "OEA78ZE4E",
+          "text": "4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYGHEI62L",
+          "text": "7",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMJXC2B0Z",
+          "text": "5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZGXPBGBS",
+          "text": "6",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPKMQ5XVV",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623608", "AVEXAM-14254"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the follwing codes can an unauthorized aircraft read?",
+      "options": [
+        {
+          "id": "O6XNZJZIV",
+          "text": "C/A codes",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJX4MMNKT",
+          "text": "Neither C/A nor P codes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEGEUSLJS",
+          "text": "P and C/A codes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYZEJXIER",
+          "text": "P codes",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7LUFFAW9",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-626362", "AVEXAM-71034", "ATPLGS-626538"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How does the GBAS precision approach work?",
+      "options": [
+        {
+          "id": "ODC9RQR47",
+          "text": "A GBAS station sends approach path information directly to the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJIJ2HFCL",
+          "text": "A GBAS satellite sends azimuth and glidepath information to the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUYKLOZDR",
+          "text": "A GBAS ground station sends correction signals to a ground transmitter, which sends azimuth and glidepath information to the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHPNPTRJB",
+          "text": "A GBAS ground station sends correction data to the aircraft, which uses the data to determine the correct azimuth and glidepath.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QW4S9CAO9",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-628539", "AVEXAM-44397", "BGS-621322"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the definition of Receiver Autonomous Integrity Monitoring (RAIM) as a system utilised by an aviation GNSS receiver? RAIM is the...",
+      "options": [
+        {
+          "id": "OATLE3B9S",
+          "text": "use of redundant range measurements to verify the position produced by the minimum number of satellites required for a 3D fix.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJGO8G755",
+          "text": "ability of the receiver to perform a receiver clock-error computation and enhance the accuracy of the initial pseudo-ranges.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGQOWJK6I",
+          "text": "exclusion of faulty satellites by means of comparing the satellite clock data and isolating satellites transmitting differing clock data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5VGDYGUY",
+          "text": "use of ground-based facilities such as VOR and/or DME to verify and enhance the accuracy of its calculated position.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUTNOEBMB",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629223",
+      "ATPLGS-628325",
+      "AVEXAM-54678",
+      "ATPLGS-621680",
+      "BGS-620695"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which system is capable of measuring on the ground, the signal errors transmitted by GNSS satellites and transmitting differential corrections and integrity messages to navigation satellites?",
+      "options": [
+        {
+          "id": "ODZG3RMUA",
+          "text": "ABAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQTLDGKNE",
+          "text": "GBAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8P8HS4OW",
+          "text": "RBAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGQ7EM1D5",
+          "text": "SBAS",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYSIILRQL",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623911",
+      "AVEXAM-67333",
+      "BGS-621013",
+      "ATPLGS-124841"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The navigation message of a GPS satellite contains the parameters of the model of the ionosphere. This enables..",
+      "options": [
+        {
+          "id": "OMX9ASW73",
+          "text": "the use of the satellites with the least tropospheric delay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OITRDHOXX",
+          "text": "the receiver to calculate the delay of GPS signals passing through the ionosphere.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBEQUN5PM",
+          "text": "the authorised users to work on the L1 and L2 frequencies.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ2YA5PZN",
+          "text": "the receiver to choose the satellites with the best geometric dilution of precision.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGKEIII1U",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-623056",
+      "AVEXAM-92093",
+      "ATPLGS-124698",
+      "BGS-621036"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the frequency band used by the data-link of a GPS-based Satellite Based Augmentation System (SBAS)?",
+      "options": [
+        {
+          "id": "OHADXNREO",
+          "text": "UHF",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQMBJ2UNJ",
+          "text": "HF",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9CBOE1C1",
+          "text": "VHF",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCXIUH4HF",
+          "text": "SHF",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXUS1ATW0",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629329", "AVEXAM-72460", "ATPLGS-626160"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The system capable of \"on the ground\" measuring the signal errors transmitted by GNSS satellites and relaying the measured errors to the user for receiver correction is?",
+      "options": [
+        {
+          "id": "OO6USV0TL",
+          "text": "ABAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU8MIIF5Z",
+          "text": "SBAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOGGDVJHB",
+          "text": "TBAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZD90MJTI",
+          "text": "GBAS",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVWFJKNFX",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-628540",
+      "ATPLGS-628285",
+      "AVEXAM-39521",
+      "BGS-621261"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "User Equivalent Range Error (UERE) or User Range Accuracy (URA) is a signal-in-space error consisting of several individual errors. The most significant of these errors is:",
+      "options": [
+        {
+          "id": "O4PCHLAYP",
+          "text": "Receiver clock error",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFCOWRAWH",
+          "text": "lonospheric Propagation Delay (IPD)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHIO1ML6G",
+          "text": "Dilution of Precision (DOP)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKAAKS8OW",
+          "text": "Satellite clock errors",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZYFWVFWZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622934",
+      "BGS-621281",
+      "ATPLGS-628260",
+      "AVEXAM-62266"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How does the GBAS system provide improved position accuracy to an aircraft? By way of a:",
+      "options": [
+        {
+          "id": "OL9YJCINV",
+          "text": "VHF reference signal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYEAFSYLZ",
+          "text": "VHF data broadcast.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPWV9WKWX",
+          "text": "UHF reference signal.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCSZY2IF5",
+          "text": "UHF data broadcast.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLOKAWZ5T",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-627217",
+      "BGS-621244",
+      "AVEXAM-33915",
+      "ATPLGS-628310"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In the NAVSTAR GPS system, what can authorised users calculate positions from?",
+      "options": [
+        {
+          "id": "ONIMEFVO8",
+          "text": "PPS as well as the less accurate SPS.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVFPJTTH9",
+          "text": "SBAS as well as the less accurate C/A code.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQQHMPTP0",
+          "text": "C/A code as well as the less accurate SBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODPXKQ0I5",
+          "text": "SPS as well as the less accurate PPS.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGBMOORUT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623362", "AVEXAM-32152"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How many satellites are required for GBAS to function correctly?",
+      "options": [
+        {
+          "id": "O75LBBKGF",
+          "text": "GBAS uses the signals from at least 3 geostationary satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6XFQEQK3",
+          "text": "GBAS uses the exact same satellites as the receiver in the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH7YAGLWK",
+          "text": "4 satellites are required for GBAS operations.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORJEVHENS",
+          "text": "GBAS requires at least 5 satellites to detect and exclude the possible faulty satellite.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q4TK13Q0K",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-626603", "ATPLGS-628079", "BGS-621352"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The following system is a Global Navigation Satellite System (GNSS):",
+      "options": [
+        {
+          "id": "OR66EIDK3",
+          "text": "EGNOS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGRUA8GIP",
+          "text": "GAGAN",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKL2CIC58",
+          "text": "ADIRU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8F1IIFBD",
+          "text": "BeiDou",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFKPZJQPF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629815", "AVEXAM-20174"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the coverage of NAVSTAR/GPS?",
+      "options": [
+        {
+          "id": "ORYARCUEF",
+          "text": "The coverage is always greatest at the poles.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUEFNJHAA",
+          "text": "The coverage varies with time.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVVA8GQVO",
+          "text": "The coverage is always greatest at the equator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPBMNITD1",
+          "text": "There is good coverage everywhere on Earth at all times.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKQJJ5G2R",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629221",
+      "ATPLGS-629626",
+      "BGS-621372",
+      "AVEXAM-57235"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "User Equivalent Range Error (UERE) or User Range Error (URE) is a signal in space error consisting of several individual GNSS errors. One of these individual errors consists of the variations of the satellites' orbits, called ephemeris. What causes this ephemeris error to occur?",
+      "options": [
+        {
+          "id": "OQKQ4DMUW",
+          "text": "jet streams and areas of significant weather along the orbit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWXMKID3T",
+          "text": "stronger than forecast ionospheric winds and electromagnetic forces.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFGWHRO3L",
+          "text": "solar winds and gravitational forces of the Sun and the Moon.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVHRIENJL",
+          "text": "high solar activity causing variations to the depth of the ionosphere.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDK5Y9BGB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624487", "AVEXAM-86559"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is true about the “visibility” of NAVSTAR GPS satellites?",
+      "options": [
+        {
+          "id": "OTGGJBERO",
+          "text": "Visibility is the same across the entire globe.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONA6LHRI7",
+          "text": "Visibility is greatest at the poles.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OC43WGC4L",
+          "text": "Visibility varies depending on time and aircraft’s position.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5QIO3SXN",
+          "text": "Visibility is greatest at the equator.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUY6EYVLA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-629268", "AVEXAM-69078", "ATPLGS-628225"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are approaching an airport in Sweden at 73ºN. Due to this high latitude, the GPS is unreliable. What systems can you use?",
+      "options": [
+        {
+          "id": "OFORMTBJK",
+          "text": "AAIM with Baro.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OYSW9J4CQ",
+          "text": "On-board clock to aid time reference and SBAS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUCYW9OLI",
+          "text": "INS and clock.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONFDH0FFS",
+          "text": "Barometric altimeter and clock only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIGCLVFNL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621616", "BGS-621410", "AVEXAM-99533"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Some of the inherent errors in NAVSTAR/GPS signals can be corrected by using a Ground Based Augmentation System (GBAS). The GBAS station…",
+      "options": [
+        {
+          "id": "O21VISMUK",
+          "text": "will only calculate errors in the signals that are being viewed by the users receiver.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFQUDTLPT",
+          "text": "is located in an accurately surveyed position and analyses the received signals to provide an error correction.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OE3JTCZ3M",
+          "text": "transmits error information to each satellite where there is a conflict as regards position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIBJMBP2C",
+          "text": "checks the position calculated by the received signals against its own position, then sends error signals back to the satellites, which correct the errors.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUC48NSOC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621928", "ATPLGS-116223", "AVEXAM-2949"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Regarding NAVSTAR/GPS which of the following statements is correct?\n\n1\\. It takes 7 minutes for a GPS receiver to receive all the data frames in the navigation message   \n2\\. The almanac contains only the orbital data of the specific satellite   \n3\\. The clock correction parameters are data for correction of the satellite clock   \n4\\. The UTC parameters are factors determining the difference between GMT and UTC",
+      "options": [
+        {
+          "id": "O9RHFC8BY",
+          "text": "4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONJDTSMAM",
+          "text": "1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJOXFC4Y",
+          "text": "3",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIZB8YENV",
+          "text": "2",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5486GZUB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-624743", "BGS-621208"],
+    "annexes": ["ASRUUMBB9"],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhich of these diagrams shows the correct standard coverage area for a Ground-Based Augmentation System (GBAS) providing three-dimensional (3D) guidance in the final approach segment?",
+      "options": [
+        {
+          "id": "OMOOBJKNH",
+          "text": "Figure B",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBBXIRWZ0",
+          "text": "Figure D",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVQ4JVMIW",
+          "text": "Figure A",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OB7F867YJ",
+          "text": "Figure C",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8S8TO4MF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-628270", "AVEXAM-91137"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "SBAS improves the performance (position accuracy) of GNSS/GPS receivers by:",
+      "options": [
+        {
+          "id": "OPSNO5MZR",
+          "text": "providing an additional signal to GPS receivers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9JFVG6WC",
+          "text": "reducing clock errors.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIVJIKKRS",
+          "text": "providing an additional signal coming from the geostationary satellites.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEGR7VXST",
+          "text": "providing an additional signal coming from the navigation satellites.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1OUP5WH4",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-626431",
+      "AVEXAM-2927",
+      "BGS-620566",
+      "ATPLGS-621625",
+      "AVEXAM-90902"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is one of the primary tasks of the space segment of NAVSTAR/GPS?",
+      "options": [
+        {
+          "id": "OGZIRTQNO",
+          "text": "Transmitting signals to suitable receivers and monitoring the orbital planes autonomously.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMXQQMTIY",
+          "text": "Transmitting signals which can be used, by suitable receivers, to determine time, position and velocity.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZ0NCLSK6",
+          "text": "Monitoring the satellites' orbits and status.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHYOTIXR4",
+          "text": "Computing the user position from the receiver user messages and transmitting the computed position back to the user segment.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCCG3BDMP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-628196", "BGS-621344"],
+    "annexes": ["AMEYVTEGA"],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nOne of the tasks that must be completed prior to commencing a flight is to have an awareness of what instrument approach procedures are available at the destination aerodrome and any alternates. The annex shows an example of an RNP approaches to an aerodrome (only the top section of the approach plate is required). The information that is highlighted in red means that…",
+      "options": [
+        {
+          "id": "OWZE4CBDF",
+          "text": "RNAV approaches augmented by GBAS are available.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZI6ZBLFG",
+          "text": "GNSS approaches augmented by SBAS are available.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGHFBFSU5",
+          "text": "GLS approaches augmented by GBAS are available.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONH9P7EHG",
+          "text": "ILS approaches augmented by GNSS are available.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8WGZBHDL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-623714", "AVEXAM-27856", "BGS-621422"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "One of the more significant errors that reduces the accuracy of the GNSS signal-in-space is…",
+      "options": [
+        {
+          "id": "OPN4EOAYJ",
+          "text": "dilution of precision caused by the relative positions of the navigation satellites.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONBLKGLSP",
+          "text": "interference from other space vehicles operating in the same frequency band.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJX4OPWNR",
+          "text": "receiver clock error caused by variations in the satellites' orbits.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4TNNIBRB",
+          "text": "tropospheric propagation delay caused by pollution in lower atmospheric layers.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QATOITR9A",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-621350",
+      "AVEXAM-69423",
+      "BGS-620754",
+      "ATPLGS-621688"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "By using both GPS frequencies L1 and L2, GPS receivers can almost eliminate..",
+      "options": [
+        {
+          "id": "OD7BG51PX",
+          "text": "atmospheric propagation delay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODANL4OJK",
+          "text": "ionospheric propagation delay.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAWQOM6XA",
+          "text": "both ionospheric and atmospheric propagation delay.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGHPLOOY6",
+          "text": "position dilution of precision.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKJGPT7QX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627459", "BGS-621557"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the purpose of ABAS?",
+      "options": [
+        {
+          "id": "OGUMD7QMG",
+          "text": "Ensure integrity of navigational data.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEDTJ9ICI",
+          "text": "Update IRS navigational data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQKWAD5JU",
+          "text": "Correct GPS altitude calculated by the FMC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMAIWAZBT",
+          "text": "Increase accuracy of GNSS transmission.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZPPYWKOS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627197", "ATPLGS-124730", "BGS-621093"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "AAIM (Aircraft Autonomous Integrity Monitoring) is a type of Airborne Based Augmentation System that",
+      "options": [
+        {
+          "id": "OHYOMDGQJ",
+          "text": "relies on information from additional on-board sensors only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTTX8UR0P",
+          "text": "can only function within the range of a Ground Based Augmentation System.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOKTF9VXU",
+          "text": "relies on GNSS information only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWF2MVWSV",
+          "text": "relies on GNSS information as well as information from additional on-board sensors.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QO81EZZTK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-624509",
+      "BGS-620534",
+      "ATPLGS-621593",
+      "AVEXAM-8765"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In which frequency band do Satellite-Assisted Navigation systems (GNSS/GPS) provide position information that is available to civil aircraft?",
+      "options": [
+        {
+          "id": "OS4XJ01PN",
+          "text": "UHF",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGDHS5IMB",
+          "text": "EHF",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSOGQZWKG",
+          "text": "VHF",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMPVYOGLK",
+          "text": "SHF",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAUKSDZYS",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-629300",
+      "AVEXAM-88325",
+      "ATPLGS-125001",
+      "BGS-620693"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Errors in GPS satellite orbits are due to..",
+      "options": [
+        {
+          "id": "OR4D1V9AN",
+          "text": "Earth and lunar precession.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAMT9PXP0",
+          "text": "the lunar wind and the gravitation of the Earth, moon and stars.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWBE1JCRD",
+          "text": "solar and lunar precession.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVBSLRHMW",
+          "text": "the solar wind and the gravitation of the Sun, moon and planets.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLAFNLZM1",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-621835"],
+    "annexes": [],
+    "learningObjectives": ["062.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the name of a main Chinese GNSS system?",
+      "options": [
+        {
+          "id": "OWWX1FPXK",
+          "text": "EGNOS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPY6ZTENE",
+          "text": "WASS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8IIN0U4W",
+          "text": "GAGAN",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHK2DHOBQ",
+          "text": "BEIDOU",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  }
+]

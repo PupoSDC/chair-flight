@@ -1,502 +1,36 @@
 [
   {
-    "id": "QJXJEKXV",
+    "id": "QEKQQAZQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105253"],
+    "externalIds": ["ATPLQ-213094", "BGS-210372", "ATPLGS-105259"],
     "annexes": [],
     "learningObjectives": ["021.09.02.01.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The connection in series of two 12 volt / 40 Ah batteries, will create a unit with the following characteristics",
+      "question": "The test to assess the state of charge of a lead-acid battery is to:",
       "options": [
         {
-          "id": "ADIPEYUPV9",
-          "text": "24 volt / 40 Ah",
+          "id": "OWDSBTHXF",
+          "text": "check the discharge current of the battery “on-load”",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF1JSBFOO",
+          "text": "check the level of the electrolyte.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSNR3IJLX",
+          "text": "compare the “on-load” and “off-load” battery voltages.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ACISLIORY6",
-          "text": "24 volt / 80 Ah",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACYQ8ISIAU",
-          "text": "12 volt / 80 Ah",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3FU3TRTXS",
-          "text": "12 volt / 40 Ah",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIDQZPMZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127511"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The connection in parallel of two 12 volt/40 amp hours batteries, will create a unit with the following characteristics",
-      "options": [
-        {
-          "id": "A8KW9SQ51O",
-          "text": "12 volt/80 amp hours",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMBEE0QYUH",
-          "text": "24 volt/40 amp hours",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARBBWN227S",
-          "text": "24 volt/80 amp hours",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZYVQIQM68",
-          "text": "12v",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUVDYHKI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-213751", "AVEXAM-1359", "BGS-211924"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following is a risk associated with the use of Lithium-ion batteries in flight?",
-      "options": [
-        {
-          "id": "A6TLE2WEG0",
-          "text": "Overheating during charging, which could lead to self-ignition if not properly monitored.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACG7O7SA2W",
-          "text": "An excessive increase in temperature due to the evaporation of the electrolyte.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AICJMY6HMA",
-          "text": "When the battery is discharged excessively.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9DAH0NRN1",
-          "text": "Shorting the terminals causing a high current flow, rapid heating, and risk of explosion.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBNGPCRE",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120081",
-      "ATPLQ-211899",
-      "AVEXAM-23417",
-      "BGS-210369"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The capacity of a battery is the:",
-      "options": [
-        {
-          "id": "APK3A3J21V",
-          "text": "amount of Ampere-hour (Ah) that a fully charged battery can supply.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A956TIGBNA",
-          "text": "no-load voltage of the battery multiplied by its rated output current.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY0X77C1O8",
-          "text": "number of cycles (charging and discharging) that a battery can withstand without deterioration of its cells.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3H5NP6IYI",
-          "text": "intensity withstood by the battery during charging.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPUYKZNF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105252", "AVEXAM-62970"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If one of the 12 cells of a Lead-acid battery has a broken connection rendering it inoperable, the battery",
-      "options": [
-        {
-          "id": "AIV9DLPTB9",
-          "text": "is unserviceable.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGJE926VI9",
-          "text": "has 1/12 less voltage, but can still be used.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX4SIAOWU0",
-          "text": "has 1/12 less voltage and less capacity, but can still be used.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYSPO5T219",
-          "text": "has 1/12 less capacity, but can still be used.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVZLRYRY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120082"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Connecting two 12 volt 40 ampere-hour capacity batteries in series will result in a total voltage and capacity respectively of",
-      "options": [
-        {
-          "id": "AR66KEW5SF",
-          "text": "24 volts, 40 ampere-hours.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJMQ5PSE50",
-          "text": "12 volts, 80 ampere-hours.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASQN6ZKMIH",
-          "text": "24 volts, 80 ampere-hours.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEJ74T8WNQ",
-          "text": "12 volts, 40 ampere-hours.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKEIOUNF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-214222", "AVEXAM-76331", "BGS-210375"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When a battery is almost fully discharged there is a tendency for the:",
-      "options": [
-        {
-          "id": "AM5PHG2NM4",
-          "text": "voltage to decrease even under light loads.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQSIVEK9E4",
-          "text": "current produced to increase due to the reduced voltage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOLEZQZF0M",
-          "text": "voltage drop to be the same as for a fully charged battery under a given load.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD1EGGLZ3I",
-          "text": "voltage to increase due to the current available.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSHKERCE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-214964"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "<div>\nWhich of the following is a risk associated with Lithium batteries?",
-      "options": [
-        {
-          "id": "A7H80RAO3T",
-          "text": "<div class=\"WordSection1\">Self-ignition when the charging process is NOT properly controlled.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASF7YLJ465",
-          "text": "<div class=\"WordSection1\">\nRelease of flammable gases when they are discharged at too high of a rate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF8LR3VMRY",
-          "text": "Corrosion of the grounding wire attached to the metal airframe.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7J74RDB1D",
-          "text": "<div class=\"WordSection1\">\nA short-circuit when the electrolyte comes into contact with the electrodes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBDUFJHS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-52921"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A lithium ion battery has to be considered most unsafe when...",
-      "options": [
-        {
-          "id": "A0DOXJOCWH",
-          "text": "it has an internal short-circuit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXWISF2LGV",
-          "text": "it is discharged quickly.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALG5PJKN04",
-          "text": "it has a low state of charge.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8D0SQ0L9T",
-          "text": "it is charged quickly.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYHBEMIB",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-105212",
-      "ATPLQ-216498",
-      "AVEXAM-1995",
-      "BGS-210349"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A current limiter fuse (thermal) in a DC generation system is used to:",
-      "options": [
-        {
-          "id": "A8A9UPTV6V",
-          "text": "allow a short term overload before rupturing.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4IPD02W6X",
-          "text": "instantaneously rupture to limit the current in the load.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APZ7Z1ZMB9",
-          "text": "limit the current in the armature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3A3DRHQMB",
-          "text": "limit the current in the field circuit.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSTQTOJU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127455", "ATPLQ-211731"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The voltage of a fully charged lead-acid battery cell under no electrical load is:",
-      "options": [
-        {
-          "id": "A353X9IL42",
-          "text": "2.2 volts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVJ1KQLJCZ",
-          "text": "1.8 volts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQP47DHX6P",
-          "text": "1.2 volts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1NJI2A7WI",
-          "text": "1.4 volts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKTZZSNO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-217650", "AVEXAM-89578"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is true regarding a thermal runaway?\n1. A thermal runaway is an uncontrolled positive feedback loop. \n 2. A lithium-ion battery that has been damaged externally may suffer from a thermal runaway.",
-      "options": [
-        {
-          "id": "AGAV87EQA3",
-          "text": "1. correct, 2. correct",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2PX8Z42FM",
-          "text": "1. incorrect, 2. Incorrect",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0ZKKRY5QO",
-          "text": "1. incorrect, 2. correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGFN6LWMKW",
-          "text": "1. correct, 2. incorrect",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDKEBWLV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-218404", "BGS-211810", "BGS-211925"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A Lithium Ion battery can be considered most unsafe...",
-      "options": [
-        {
-          "id": "AYQUO5X56P",
-          "text": "When the battery has an internal short circuit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0X6SOCYXZ",
-          "text": "When the battery is quickly discharged.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6GMYBHCZQ",
-          "text": "When the battery is quickly charged.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEOMFNID8A",
-          "text": "When the battery has a very low charge.",
+          "id": "OZFX2IEBG",
+          "text": "check the battery voltage “off-load”",
           "correct": false,
           "why": ""
         }
@@ -506,35 +40,40 @@
   {
     "id": "QVFBOOOT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-218126", "AVEXAM-6906", "BGS-211909"],
+    "externalIds": [
+      "ATPLQ-218126",
+      "BGS-211909",
+      "AVEXAM-6906",
+      "ATPLGS-628192"
+    ],
     "annexes": [],
     "learningObjectives": ["021.09.02.01.06"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of these statements about the capacity of a battery and its measurement are correct or incorrect?\n\n- The battery capacity is determined by multiplying a current flow in amperes by the time in hours that the battery is being discharged.\n\n- The total battery capacity is dependent on the voltage rating of its battery cells.</li>\n</ol>",
+      "question": "Regarding the capacity of a battery and its measurement, which statement(s) is/are correct/incorrect?\n\n1.The battery capacity is determined by multiplying a current flow in Amperes by the time in hours that the battery is being discharged.   \n 2.The total battery capacity is dependent on the voltage rating of its battery cells.",
       "options": [
         {
-          "id": "AHPITFAL8G",
-          "text": "(1) is correct, (2) is incorrect",
+          "id": "OTW5TM22H",
+          "text": "1\\. correct; 2\\. correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGWH75FLN",
+          "text": "1\\. incorrect; 2\\. correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJKEPES60",
+          "text": "1\\. correct; 2\\. incorrect.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AK3FW2AAJ6",
-          "text": "Both (1) and (2) are incorrect",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT34BCO2IC",
-          "text": "Both (1) and (2) are correct",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWBI0H1HUP",
-          "text": "(1) is incorrect, (2) is correct",
+          "id": "ODDYYUBEK",
+          "text": "1\\. incorrect; 2\\. incorrect.",
           "correct": false,
           "why": ""
         }
@@ -542,75 +81,42 @@
     }
   },
   {
-    "id": "QEKQQAZQ",
+    "id": "QDKEBWLV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105259", "BGS-210372"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A test to assess the state of charge of a Lead-acid battery would involve",
-      "options": [
-        {
-          "id": "AAT8QF5UFQ",
-          "text": "comparing the on-load and off-load battery voltages.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH32P83V6O",
-          "text": "checking the discharge current of the battery on-load.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A006SIMJ2P",
-          "text": "checking the level of the electrolyte.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2V9EFKEIA",
-          "text": "checking the discharge current of the battery \"off-load\".",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLFUAQPZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-35979", "BGS-211810"],
+    "externalIds": [
+      "ATPLQ-218404",
+      "BGS-211925",
+      "ATPLGS-628172",
+      "BGS-211810"
+    ],
     "annexes": [],
     "learningObjectives": ["021.09.02.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In which circumstance is a Lithium-ion battery considered most unsafe?",
+      "question": "A Lithium Ion battery can be considered most unsafe...",
       "options": [
         {
-          "id": "AZMIA15Z2P",
-          "text": "When the battery has an internal short circuit",
+          "id": "OEQA0TFZY",
+          "text": "When the battery is quickly discharged.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBD2OOCEH",
+          "text": "When the battery has a very low charge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKVUWSXN8",
+          "text": "When the battery has an internal short circuit.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AX5EV3KNUI",
-          "text": "When the battery has a low charge",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGBI4Z0DCE",
-          "text": "When the battery is quickly discharged",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A34XCIHDMQ",
-          "text": "When the battery is quickly charged",
+          "id": "OV1BICN12",
+          "text": "When the battery is quickly charged.",
           "correct": false,
           "why": ""
         }
@@ -618,37 +124,80 @@
     }
   },
   {
-    "id": "QCTDRCSB",
+    "id": "QUVDYHKI",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105257", "AVEXAM-29544"],
+    "externalIds": [
+      "ATPLQ-213751",
+      "AVEXAM-1359",
+      "BGS-211924",
+      "ATPLGS-628187"
+    ],
     "annexes": [],
-    "learningObjectives": ["021.09.02.01.02"],
+    "learningObjectives": ["021.09.02.01.09"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In aeronautics, the most commonly used batteries are NiCd because:",
+      "question": "One of the risks associated with the use of Lithium-ion batteries in flight is:",
       "options": [
         {
-          "id": "AWRCP3U8IY",
-          "text": "they weigh less than lead-acid batteries.",
+          "id": "OJ6NTBKOI",
+          "text": "When the battery is discharged excessively.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVEUMJRN0",
+          "text": "An excessive increase in temperature due to the evaporation of the electrolyte.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR0IPCKEJ",
+          "text": "if the terminals are short-circuited, causing rapid and high current flow, heat and risk of explosion.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3NJEJVSQ",
+          "text": "Overheating during charging, which could lead to self-ignition if not properly monitored.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSTQTOJU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211731", "ATPLGS-127455"],
+    "annexes": [],
+    "learningObjectives": ["021.09.02.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The voltage of a fully charged lead-acid battery cell under no electrical load is:",
+      "options": [
+        {
+          "id": "OXWKDEQZ9",
+          "text": "2.2 volts.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A15JR1L5IX",
-          "text": "their electrolyte is neither corrosive nor dangerous.",
+          "id": "OYNVZHE5O",
+          "text": "1.8 volts.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYCBRZXHX3",
-          "text": "they are cheaper than lead-acid batteries.",
+          "id": "OK5DUJIAQ",
+          "text": "1.2 volts.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A6MMGIGKNW",
-          "text": "their output voltage is less constant than lead-acid batteries.",
+          "id": "OGPZ4WGPP",
+          "text": "1.4 volts.",
           "correct": false,
           "why": ""
         }
@@ -659,9 +208,9 @@
     "id": "QIEBBISK",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-127456",
       "ATPLQ-213487",
       "AVEXAM-26671",
+      "ATPLGS-127456",
       "BGS-210371"
     ],
     "annexes": [],
@@ -669,105 +218,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The capacity of a battery is given in",
+      "question": "The capacity of a battery is given in:",
       "options": [
         {
-          "id": "AUILEFH175",
-          "text": "Ampere hours.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUWCQQK0FS",
-          "text": "Watts",
+          "id": "OXQWZUOP7",
+          "text": "Amperes/volts",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AR44OC71U5",
-          "text": "Amperes/volts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB2WZA0ZTJ",
+          "id": "OMRRNCBZR",
           "text": "Ohms",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJELHEEC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105258", "AVEXAM-64881"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The voltage of a fully charged lead-acid battery cell is approximately",
-      "options": [
+        },
         {
-          "id": "APJHH9UT4K",
-          "text": "2.2 V",
+          "id": "OLC3AI9CP",
+          "text": "Ampere hours",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A50DRSXL1N",
-          "text": "1.8 V",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWS741S1UT",
-          "text": "1.2 V",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJH1EN109X",
-          "text": "1.4 V",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGEOBLO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105310", "ATPLQ-215816", "AVEXAM-502"],
-    "annexes": [],
-    "learningObjectives": ["021.09.02.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What can be the cause of a significant increase in battery temperature?",
-      "options": [
-        {
-          "id": "AM0HFVCOJK",
-          "text": "Thermal runaway",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A52KWR83AA",
-          "text": "A failure of the voltage regulator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5JHB1NIGI",
-          "text": "A failure of the alternator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A20PHB6XO7",
-          "text": "Excessive battery load",
+          "id": "OELVBE6MP",
+          "text": "Watts",
           "correct": false,
           "why": ""
         }
@@ -777,35 +250,202 @@
   {
     "id": "QTLYNJXB",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105310", "ATPLQ-215816", "AVEXAM-502"],
+    "externalIds": ["ATPLQ-215816", "ATPLGS-105310", "AVEXAM-502"],
     "annexes": [],
     "learningObjectives": ["021.09.02.01.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A significant increase in battery temperature is an indication of",
+      "question": "A significant increase in battery temperature during charge is an indication of:",
       "options": [
         {
-          "id": "ACI6N68ZG9",
-          "text": "thermal runaway.",
+          "id": "OCONCKAZV",
+          "text": "Excess load on the battery.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3QTKBGBX",
+          "text": "Thermal runaway.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQX8T4HI5H",
-          "text": "alternator failure.",
+          "id": "ON2DYIAXL",
+          "text": "Alternator failure.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AF8V7EDYVG",
-          "text": "excess load on the battery.",
+          "id": "ODFE768KG",
+          "text": "Voltage regulator failure.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBNGPCRE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-211899",
+      "AVEXAM-23417",
+      "BGS-210369",
+      "ATPLGS-120081"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.09.02.01.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The capacity of a battery is the:",
+      "options": [
+        {
+          "id": "OFVM6GQBO",
+          "text": "no-load voltage of the battery multiplied by its rated output current.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A385CDA17F",
-          "text": "voltage regulator failure.",
+          "id": "OMQYL9VMI",
+          "text": "number of cycles (charging and discharging) that a battery can withstand without deterioration of its cells.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAGVTVM5P",
+          "text": "amount of Ampere-hour (Ah) that a fully charged battery can supply.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLMQFF9CW",
+          "text": "intensity withstood by the battery during charging.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSHKERCE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-214964",
+      "AVEXAM-1270",
+      "AVEXAM-58366",
+      "ATPLGS-628193"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.09.02.01.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is a risk associated with Lithium batteries?",
+      "options": [
+        {
+          "id": "O6SB3HXBT",
+          "text": "A short-circuit when the electrolyte comes into contact with the electrodes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5HTRXXF6",
+          "text": "Release of flammable gases when they are discharged at too high of a rate.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU41BOMX4",
+          "text": "Self-ignition when the charging process is NOT properly controlled.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OL2PLLUKA",
+          "text": "Corrosion of the grounding wire attached to the metal airframe.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYHBEMIB",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-216498",
+      "AVEXAM-1995",
+      "ATPLGS-105212",
+      "BGS-210349"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.09.02.01.08"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A current limiter fuse in a DC system is used to..",
+      "options": [
+        {
+          "id": "O8HWIULMA",
+          "text": "limit the current in the armature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHNZ2U8XX",
+          "text": "allow a short term overload before rupturing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORFOFXIAL",
+          "text": "allow no overload before rupturing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVRVUZ2C5",
+          "text": "limit the current in the field circuit.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLFUAQPZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219403", "AVEXAM-35979", "BGS-211811"],
+    "annexes": [],
+    "learningObjectives": ["021.09.02.01.09"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A lithium polymer battery is most likely to be a hazard to the aircraft when:",
+      "options": [
+        {
+          "id": "OL46Q42O3",
+          "text": "The battery is rapidly discharged.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OICYPRJLJ",
+          "text": "Electrolyte is dripping out of the battery.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKL3IESHG",
+          "text": "The battery has an extreme internal pressure.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTKYDW09Z",
+          "text": "The battery is rapidly charged.",
           "correct": false,
           "why": ""
         }

@@ -1,5 +1,7 @@
-import { makeMap } from "@cf/base/utils";
+import { keepUnique, makeMap } from "@cf/base/utils";
 import type { Annex, Doc, QuestionTemplate } from "@cf/core/question-bank";
+
+const sortString = (a: string, b: string) => a.localeCompare(b);
 
 export const arrangeQuestions = ({
   questionTemplates,
@@ -25,10 +27,12 @@ export const arrangeQuestions = ({
     const cleanQuestion = {
       id: question.id,
       questionBank: question.questionBank ?? "atpl",
-      relatedQuestions: question.relatedQuestions.sort(),
-      externalIds: question.externalIds.sort(),
-      annexes: question.annexes,
-      learningObjectives: question.learningObjectives.sort(),
+      relatedQuestions: keepUnique(question.relatedQuestions).sort(sortString),
+      externalIds: keepUnique(question.externalIds).sort(sortString),
+      annexes: keepUnique(question.annexes).sort(sortString),
+      learningObjectives: keepUnique(question.learningObjectives).sort(
+        sortString,
+      ),
       explanation: question.explanation,
       variant: question.variant,
       doc: question.doc,

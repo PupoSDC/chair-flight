@@ -1,454 +1,119 @@
 [
   {
-    "id": "QNIOOCGR",
+    "id": "QLMGEUNY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-618947", "BGS-611488"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the headwind/tailwind component (HWC/TWC) and the crosswind component (XWC).Aircraft lined-up on runway 26 \n ATIS W/V: 285°/24 kt \n Variation: 15° W",
-      "options": [
-        {
-          "id": "A6LW3AS90D",
-          "text": "HWC: 22 kt, XWC: 10 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1GTI9Y235",
-          "text": "HWC: 4 kt, XWC: 22 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARUZ1N3BOD",
-          "text": "HWC: 24 kt, XWC: 4 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR2AH4R4GD",
-          "text": "HWC: 18 kt, XWC: 15 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPKXFVCU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-59336"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Runway: 32\n- W/V 005º(M)/20 kt\n- Variation: 15º(E)\n\nUsing Mental Dead Reckoning (clock code rule), calculate the crosswind component.",
-      "options": [
-        {
-          "id": "AFX44XTDHR",
-          "text": "15 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2UFHX91FB",
-          "text": "10 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7B0E5NYJG",
-          "text": "5 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA97321X5Z",
-          "text": "20 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHRGASPW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-618269"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Using both the Mental Dead Reckoning (MDR) technique, calculate the tailwind component for the following infromation given:Runway 33 \n Surface wind (from the tower): 190°/15 kt, \n Variation: 20°W",
-      "options": [
-        {
-          "id": "ADY086SBKC",
-          "text": "11.5 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AABEVANE26",
-          "text": "7.5 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A52GBPSDKJ",
-          "text": "15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACEI5O308U",
-          "text": "10 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYRUOEPY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-619549", "AVEXAM-59575"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is planned to fly from position A to position B, distance 250 NM at an average GS of 115 kts. It departs A at 09:00 UTC.After flying 75 NM along track from A, the aircraft is 1.5 min behind planned time.\n\nUsing the actual GS experienced, what is the revised ETA at B?",
-      "options": [
-        {
-          "id": "A315HZS2X8",
-          "text": "11:15 UTC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP48SLO82U",
-          "text": "11:10 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZZ3NRQIGI",
-          "text": "10:44 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATTDJZVGS7",
-          "text": "10:50 UTC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAFEUEFI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-616675"],
+    "externalIds": ["ATPLQ-615213", "BGS-610371", "AVEXAM-58903"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Determine the GS using the following data;TT: 300º \n TAS: 182 kt \n W/V: 150º/25 kt.",
+      "question": "Given the following information, what is the heading M and GS?\n\nRequired course: 045°M   \nVariation: 15°E   \nW/V: 190°T/30 kt   \nCAS: 120 kt at FL 55 in standard atmosphere",
       "options": [
         {
-          "id": "AXU520POSE",
-          "text": "204 kt",
+          "id": "OGVJJ44LZ",
+          "text": "052° M and 154 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8WRWJ2WS",
+          "text": "036° M and 151 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKFLIBKHB",
+          "text": "056° M and 137 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5AZTJXA9",
+          "text": "055° M and 147 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKCI7O4JPN",
-          "text": "212 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANU54LATS4",
-          "text": "160 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATCZ0U8YQ6",
-          "text": "151 kt",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QINXXVZN",
+    "id": "QMWVJCPD",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124371", "ATPLQ-617991"],
+    "externalIds": [
+      "ATPLQ-613525",
+      "BGS-611418",
+      "BGS-610423",
+      "BGS-611428",
+      "AVEXAM-39794",
+      "AVEXAM-71947"
+    ],
     "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
+    "learningObjectives": ["061.01.05.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the time from A to B GS 120 kt Distance from A to B 84 NM",
+      "question": "Using Mental Dead Reckoning (MDR), calculate the ground speed for the following situation:\n\nTrack: 337°(T)   \n TAS: 465 kt   \n Wind: 220°(T)/50 kt",
       "options": [
         {
-          "id": "AZ9L7I120J",
-          "text": "42 minutes",
+          "id": "OIMB9JBQP",
+          "text": "515 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJFDGHWYB",
+          "text": "440 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYA94J1KW",
+          "text": "415 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTPAIFK22",
+          "text": "490 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6WXDUEGP9",
-          "text": "43 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH2S2E7FZM",
-          "text": "45 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT4GMTCJN9",
-          "text": "44 minutes",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QYSIYEKM",
-    "relatedQuestions": ["QAATMMMI", "QGRNTUQG", "QJJKJOIG", "QXDYOPMI"],
-    "externalIds": ["ATPLQ-616235"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B:\n\nGS: 105 ktDistance from A to B: 103 NM",
-      "options": [
-        {
-          "id": "AH8H3LWSZ5",
-          "text": "59 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6BVODE62I",
-          "text": "57 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKSA8778GC",
-          "text": "56 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFF7FRU46Z",
-          "text": "58 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJJKJOIG",
-    "relatedQuestions": ["QAATMMMI", "QGRNTUQG", "QXDYOPMI", "QYSIYEKM"],
-    "externalIds": ["ATPLQ-618067"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B:\n\nGS: 122 ktDistance from A to B: 985 NM",
-      "options": [
-        {
-          "id": "AKTRKIAVL8",
-          "text": "8 hours 4 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGQ3274WQ8",
-          "text": "7 hours 48 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKITLNTD1C",
-          "text": "8 hours 10 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKEJE28AYB",
-          "text": "7 hours 49 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAATMMMI",
-    "relatedQuestions": ["QGRNTUQG", "QJJKJOIG", "QXDYOPMI", "QYSIYEKM"],
-    "externalIds": ["ATPLQ-619748"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B:\n\nGS: 135 ktDistance from A to B: 433 NM",
-      "options": [
-        {
-          "id": "A3468LT5K5",
-          "text": "3 hours 12 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AODWF9ZLTO",
-          "text": "3 hours 20 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8RIOIVCJ3",
-          "text": "3 hours 19 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVEQWK5PA3",
-          "text": "3 hours 25 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGRNTUQG",
-    "relatedQuestions": ["QAATMMMI", "QJJKJOIG", "QXDYOPMI", "QYSIYEKM"],
-    "externalIds": ["ATPLQ-619823"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B:\n\nGS: 236 ktDistance from A to B: 354 NM",
-      "options": [
-        {
-          "id": "ASH4JQTVEB",
-          "text": "1 hour 30 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANM3UL68BF",
-          "text": "1 hour 10 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC5BD5VTMI",
-          "text": "1 hour 40 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2RSCQ7OGE",
-          "text": "1 hour 09 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXDYOPMI",
-    "relatedQuestions": ["QAATMMMI", "QGRNTUQG", "QJJKJOIG", "QYSIYEKM"],
-    "externalIds": ["ATPLQ-614337"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B:\n\nGS: 345 ktDistance from A to B: 3560 NM",
-      "options": [
-        {
-          "id": "AHRXBB65ZM",
-          "text": "10 hours 19 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALC851M1T0",
-          "text": "10 hours 05 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD0UBSMS25",
-          "text": "11 hours 02 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACSO7MJGVW",
-          "text": "11 hours 00 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUYDYNYV",
+    "id": "QNIOOCGR",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612328"],
+    "externalIds": ["ATPLQ-618947", "BGS-611488", "AVEXAM-10254", "BGS-610472"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If an aircraft flies 64 NM in 12 minutes, what is the true W/V, given the following information:\n\nTrack: 210°MHDG: 215°MVAR: 15°ETAS: 360 kt\n ",
+      "question": "Given the following information, calculate the headwind/tailwind component (HWC/TWC) and the crosswind component (XWC).\n\nAircraft lined-up on runway 26   \n ATIS W/V: 285°/24 kt   \n Variation: 15° W",
       "options": [
         {
-          "id": "AS551RVM2Q",
-          "text": "265°T /50 kt",
+          "id": "ONABEYLTH",
+          "text": "HWC: 4 kt, XWC: 22 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6YQB8YFB",
+          "text": "HWC: 18 kt, XWC: 15 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9KSZIW5Z",
+          "text": "HWC: 22 kt, XWC: 10 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A8F42UFR5I",
-          "text": "300°T /30 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2J631CMNJ",
-          "text": "195°T /50 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK6N140OIA",
-          "text": "235°T /50 kt",
+          "id": "ONXXULYKW",
+          "text": "HWC: 24 kt, XWC: 4 kt",
           "correct": false,
           "why": ""
         }
@@ -456,113 +121,80 @@
     }
   },
   {
-    "id": "QYEIVCCK",
+    "id": "QLESSIOP",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-617744", "AVEXAM-723"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is planned to fly from position ‘A’ to position ‘B’, distance 320 NM, at an average GS of 180 kt. It departs ‘A’ at 12:00 UTC. After flying 70 NM along track from ‘A’, the aircraft is 3 MIN ahead of planned time.Using the actual GS experienced, what is the revised ETA at ‘B’?",
-      "options": [
-        {
-          "id": "AM8AVANDC1",
-          "text": "13:33 UTC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADQ2U54SMD",
-          "text": "14:01 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AULEIRMCOW",
-          "text": "13:47 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATUUVQT93Q",
-          "text": "13:40 UTC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNIAKMUN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110549", "BGS-610582"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is planned to fly from position ‘A’ to position ‘B’, distance 480 NM at an average GS of 240 kt. It departs ‘A’ at 1000 UTC. After flying 150 NM along track from ‘A’, the aircraft is 2 MIN behind planned time. Using the actual GS experienced, what is the revised ETA at ‘B’?",
-      "options": [
-        {
-          "id": "AJO29QNKP0",
-          "text": "1206",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6NJR0ELDP",
-          "text": "1157",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXL42ZXS93",
-          "text": "1203",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGVS64XP2F",
-          "text": "1153",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMFBRLWM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-617450", "BGS-611435"],
+    "externalIds": [
+      "ATPLQ-614074",
+      "AVEXAM-23430",
+      "BGS-610423",
+      "ATPLGS-127781"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Using trigonometry, calculate the headwind component, to the nearest full knot, for the following situation.\nRunway: 01 \nSurface wind (from the Tower): 300°/26 kt \nVariation: 13°W",
+      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 233°T   \nTAS: 480 kt   \nTrack: 240°T   \nGS: 523 kt",
       "options": [
         {
-          "id": "A8IXTFZ4GG",
-          "text": "9 kt",
+          "id": "OBNZUOQE1",
+          "text": "110°T /80 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCXOBC411",
+          "text": "115°T /70 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKRGIITYE",
+          "text": "110°T /75 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5D8P2VP64",
-          "text": "14 kt",
+          "id": "O6JQHMTKH",
+          "text": "105°T /75 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLPFCGTF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-614105", "BGS-610778"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the parameters:\n\nTAS : 250 kts   \n HDG: 080° (T)   \n TRK : 090° (T)   \n GS: 290 kts\n\nWhat is the value of the crosswind on your heading and which way is it blowing you?",
+      "options": [
+        {
+          "id": "OGCHBUCKQ",
+          "text": "43 kts left",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASAYYBYEF4",
-          "text": "3 kt",
+          "id": "OKCB2MQQE",
+          "text": "43 kts right",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AITAESAJ2P",
-          "text": "26 kt",
+          "id": "ORNVYSYTV",
+          "text": "49 kts right",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLHZKKPDK",
+          "text": "49 kts left",
           "correct": false,
           "why": ""
         }
@@ -572,149 +204,80 @@
   {
     "id": "QTWUWMSL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-615438"],
+    "externalIds": [
+      "ATPLQ-615438",
+      "BGS-611418",
+      "BGS-610423",
+      "BGS-611477",
+      "BGS-611428",
+      "AVEXAM-50305"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the ground speed for the following situation, using a mechanical computer.Track: 264°(T) \n TAS: 480 kt \n Wind velocity: 190°(T)/50 kt",
+      "question": "Given the following information, calculate the ground speed for the following situation, using a mechanical computer.\n\nTrack: 264°(T)   \n TAS: 480 kt   \n Wind velocity: 190°(T)/50 kt",
       "options": [
         {
-          "id": "AH6R3TWRU7",
-          "text": "463 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABOKPF7ZMY",
+          "id": "OJX3FZ15I",
           "text": "453 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2G29WMQZ8",
+          "id": "OFUL5NUY8",
+          "text": "469 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O38T8SAAV",
           "text": "473 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFK0MY92M5",
-          "text": "469 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGUYCDIZ",
-    "relatedQuestions": ["QFGGNYZS"],
-    "externalIds": ["BGS-610382"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B: GS: 345 kt Distance from A to B: 3560 NM",
-      "options": [
-        {
-          "id": "AYNGBO3PB9",
-          "text": "10 hours 19 minutes",
+          "id": "O1B2DOGFI",
+          "text": "463 kt",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AD0MYFLO00",
-          "text": "11 hours 02 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANY2C492SE",
-          "text": "11 hours 00 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC7TRJTP5F",
-          "text": "10 hours 05 minutes",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QFGGNYZS",
-    "relatedQuestions": ["QGUYCDIZ"],
-    "externalIds": ["BGS-610376"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the time from A to B: GS: 480 kt Distance from A to B: 5360 NM",
-      "options": [
-        {
-          "id": "A2FP3PGQB6",
-          "text": "11 hours 10 minutes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASS6QJIE8U",
-          "text": "11 hours 06 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ20D64VV5",
-          "text": "11 hours 07 minutes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1ZP22U8G3",
-          "text": "11 hours 15 minutes",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTSUUFJE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625370", "BGS-610451"],
+    "id": "QFGXJMTS",
+    "relatedQuestions": ["QDICNLDG"],
+    "externalIds": ["ATPLQ-615449"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the effective headwind component: Runway direction 083°(M) Surface W/V 035°(M)/35 kt",
+      "question": "Calculate Mach:\n\nFL 450   \nISA -12°C   \nTAS : 505 kts",
       "options": [
         {
-          "id": "ABYH77PLXH",
-          "text": "24 kt",
+          "id": "ORQYRCX2J",
+          "text": "0.86",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O0LWGTZUQ",
+          "text": "0.78",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV3PO0FPH",
+          "text": "0.90",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AP6SKYMDNA",
-          "text": "31 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGT7H395SN",
-          "text": "34 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ1UC5940U",
-          "text": "27 kt",
+          "id": "ODYPI1TKX",
+          "text": "0.82",
           "correct": false,
           "why": ""
         }
@@ -722,75 +285,93 @@
     }
   },
   {
-    "id": "QLMGEUNY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-615213"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, what is the heading M and GS?\n\nRequired course: 045°MVariation: 15°EW/V: 190°T/30 ktCAS: 120 kt at FL 55 in standard atmosphere\n ",
-      "options": [
-        {
-          "id": "AZVXBJQW9V",
-          "text": "055° M and 147 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKV4S5097J",
-          "text": "052° M and 154 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT3BS6J4ST",
-          "text": "056° M and 137 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5AHG98BYO",
-          "text": "036° M and 151 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPZCJPHW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-13066"],
+    "id": "QDICNLDG",
+    "relatedQuestions": ["QFGXJMTS"],
+    "externalIds": [
+      "ATPLQ-615351",
+      "AVEXAM-36318",
+      "AVEXAM-11125",
+      "BGS-610420",
+      "BGS-610423",
+      "AVEXAM-26249",
+      "AVEXAM-4685",
+      "AVEXAM-745",
+      "ATPLGS-127781",
+      "AVEXAM-38863",
+      "AVEXAM-68921",
+      "BGS-610464"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\n\n- True heading (TH): 079°\n- Deviation: 3°E\n- Variation: 7°W\n\nCalculate magnetic heading (MH) and compass heading (CH)...",
+      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 133°T   \nTAS: 225 kt   \nTrack: 144°T   \nGS: 206 kt",
       "options": [
         {
-          "id": "AVKI0O9IBQ",
-          "text": "MH 086°, CH 083°",
+          "id": "OAICCCIP9",
+          "text": "070°T/40 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQQTOJK2J",
+          "text": "075°T/50 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYYZYFTAS",
+          "text": "070°T/50 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO0PRYZEL",
+          "text": "075°T/45 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPKXFVCU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-615926",
+      "AVEXAM-59336",
+      "BGS-611711",
+      "AVEXAM-51069"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following information,determine the crosswind components (XWC), according to Mental Dead Reckoning (MDR)...\n\nMagnetic track: 315°   \n Wind (magnetic): 015°/20 kt",
+      "options": [
+        {
+          "id": "OS01ZQFJU",
+          "text": "20 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A4ZRDFC9ZJ",
-          "text": "MH 076°, CH 083°",
+          "id": "OZPZVEETP",
+          "text": "5 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4HMCZTR8B",
-          "text": "MH 086°, CH 089°",
+          "id": "OLLKVTKD3",
+          "text": "10 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEIKNNN509",
-          "text": "MH 072°, CH 075°",
+          "id": "OWJNR5PSL",
+          "text": "15 kt",
           "correct": false,
           "why": ""
         }
@@ -798,37 +379,165 @@
     }
   },
   {
-    "id": "QMWVJCPD",
+    "id": "QHVOHGOW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613341", "ATPLQ-613525", "BGS-611418", "BGS-611428"],
+    "externalIds": ["ATPLQ-614821", "AVEXAM-83943", "ATPLGS-625606"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft approaches runway 24 of Ryan airfield. The tower gives a wind of 260°/26 kt.The magnetic variation is 12°E. According to the airport chart the direction of runway 24 is 238°.\n\nCalculate the head/tailwind component.",
+      "options": [
+        {
+          "id": "OANNXAOU0",
+          "text": "24 kt tailwind",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJMHNR5CD",
+          "text": "28 kt headwind",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSERO8Q57",
+          "text": "28 kt tailwind",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6XAT8JWD",
+          "text": "24 kt headwind",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMFBRLWM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-616348", "BGS-611668", "BGS-611435"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following:\n\nRunway 31   \n Surface wind given by ATIS: 265°/32 kt   \n Variation: 18°E \n\nUsing trigonometry, what is the headwind component to the nearest full knot?",
+      "options": [
+        {
+          "id": "O146IG0C0",
+          "text": "23 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLXLRRSTS",
+          "text": "32 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCVX2FHNN",
+          "text": "29 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCAZBS4AB",
+          "text": "15 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYOKJZBLH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-613341",
+      "BGS-611418",
+      "BGS-610423",
+      "BGS-611428",
+      "AVEXAM-39794",
+      "AVEXAM-71947"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Using Mental Dead Reckoning (MDR), calculate the ground speed for the following situation. \nTrack: 133°(T)\nTAS: 465 kt \nWind velocity: 196°(T)/50 kt",
+      "question": "Using Mental Dead Reckoning (MDR), determine the ground speed, given:\n\nTrack: 136°(T)   \n TAS: 465 kt   \n Wind velocity: 196°(T)/50 kt",
       "options": [
         {
-          "id": "AXTNEWFNKI",
-          "text": "440 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT4AFEBDMG",
+          "id": "ORF3PM3MS",
           "text": "415 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVWTSABYS4",
+          "id": "OJFI286MX",
           "text": "515 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AB571XIN7Y",
+          "id": "OUYSRE7EZ",
+          "text": "440 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4B3DFFAJ",
           "text": "490 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHRGASPW",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-618269",
+      "BGS-611435",
+      "AVEXAM-86682",
+      "AVEXAM-91740",
+      "ATPLGS-625590",
+      "BGS-610419"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Using trigonometry, calculate the tailwind component for the following information given:\n\nRunway 33  \nSurface wind (from the tower): 190°/15 kt,  \nVariation: 20°W",
+      "options": [
+        {
+          "id": "ODZLOFLAO",
+          "text": "7.5 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKMMMD4PX",
+          "text": "12 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXVU3MX9N",
+          "text": "15 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQFM5YY8U",
+          "text": "10 kt",
           "correct": false,
           "why": ""
         }
@@ -844,751 +553,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the heading T and groundspeed:\n\nTAS: 200 ktTrack: 110°TWind velocity: 015°T /40 kt",
+      "question": "Given the following information, calculate the heading T and groundspeed:\n\nTAS: 200 kt   \nTrack: 110°T   \nWind velocity: 015°T /40 kt",
       "options": [
         {
-          "id": "AO1VSIDGBO",
-          "text": "Heading: 099°T, groundspeed: 199 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXPHHIKSNM",
-          "text": "Heading: 121°T, groundspeed: 199 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XVTMOMC4",
+          "id": "ORSSJWJH2",
           "text": "Heading: 121°T, groundspeed: 207 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAEBW9X8R6",
+          "id": "O6JVSV6LM",
+          "text": "Heading: 099°T, groundspeed: 199 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIE13R2AI",
           "text": "Heading: 097°T, groundspeed: 201 kt",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRMLBDUL",
-    "relatedQuestions": ["QCSOKNGU"],
-    "externalIds": ["ATPLQ-612170"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the heading T and groundspeed:\n\nTAS: 200 ktTrack: 073°TWind velocity: 210°T /20 kt\n ",
-      "options": [
-        {
-          "id": "AWXK0ZXYZS",
-          "text": "Heading: 077°T, groundspeed: 214 kt",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AKCQTD5YLX",
-          "text": "Heading: 079°T, groundspeed: 211 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFCIXET7G1",
-          "text": "Heading: 075°T, groundspeed: 213 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASJU9RJAL3",
-          "text": "Heading: 077°T, groundspeed: 210 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJHKRXGU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625360", "BGS-610475"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, what is the maximum allowable wind speed that can be accepted without exceeding the tailwind limit? Maximum allowable tailwind component for landing: 10 kt Planned runway: 05 (047°(M)) Surface wind direction reported by ATIS: 210° VAR: 17°E",
-      "options": [
-        {
-          "id": "AEA9CNLA2H",
-          "text": "10 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A94YQ2SCQ9",
-          "text": "8 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1O4E04L6N",
-          "text": "15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVMO9SX0XO",
-          "text": "18 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPOENMBU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-94356"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- ETA to cross a meridian: 21:00 UTC\n- GS: 441 kt\n- TAS: 491 kt\n\nAt 20:10 UTC, ATC requests a speed reduction to cross the meridian at 21:05 UTC. The reduction to TAS will be approximately:",
-      "options": [
-        {
-          "id": "AUUR3Z84U3",
-          "text": "40 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARGKLH0TGM",
-          "text": "60 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU6Q4NTO1N",
-          "text": "75 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMO1D8L5QW",
-          "text": "90 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMBOVWHZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-48257"],
-    "annexes": ["65a9340d8875422c0f54bfdf83e78cf2"],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-01.\nFind the ETA at waypoint 3 (Z) if the following values are given:\nWPT 1 (X): ATA 13:04 UTC\nWPT 2 (Y): ETA 13:43 UTC\nWPT 2 (Y): ATA 13:51 UTC\nWPT 3 (Z): ETA?",
-      "options": [
-        {
-          "id": "A40G7KZSWC",
-          "text": "14:22 UTC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH9Q7KSY2R",
-          "text": "14:14 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU62ACYAEK",
-          "text": "13:35 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZNHFCU91G",
-          "text": "15:02 UTC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHVOHGOW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625606", "ATPLQ-614821"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft approaches runway 24 of Ryan airfield. The tower gives a wind of 260°/26 kt.The magnetic variation is 12°E. \n \nAccording to the airport chart the direction of runway 24 is 238°.Calculate the head/tailwind component.",
-      "options": [
-        {
-          "id": "AF0LN1NOY7",
-          "text": "24 kt headwind",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4T2J7USVG",
-          "text": "24 kt tailwind",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9LMHX5RZN",
-          "text": "28 kt headwind",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG7BLEQ25P",
-          "text": "28 kt tailwind",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYWEUKGR",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-46439"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The TAS is 240 kt and the wind is blowing 30° from the right of your track at 60 kt. Using Mental Dead Reckoning, calculate the Crosswind component (XWC) and the Headwind component (HWC).",
-      "options": [
-        {
-          "id": "ADXMLF8NQD",
-          "text": "XWC: 30kt; HWC: 54 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKD3FQOWHB",
-          "text": "XWC: 36 kt; HWC: 48 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI5PQ906DW",
-          "text": "XWC: 54 kt; HWC: 30 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACF78OHEEG",
-          "text": "XWC: 48 kt; HWC: 36 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOVSGRRX",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-611211"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given\nFor take-off an aircraft requires a headwind component of at least 10 kt and has a cross-wind limitation of 35 kt\nThe angle between the wind direction and the runway is 60° , Calculate the minimum and maximum allowable wind speeds",
-      "options": [
-        {
-          "id": "AVL7629BKI",
-          "text": "20 kt and 40 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADO3UO7HIN",
-          "text": "18 kt and 50 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYAQ1MF9K7",
-          "text": "15 kt and 43 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASR10XM4AL",
-          "text": "12 kt and 38 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDICNLDG",
-    "relatedQuestions": ["QFGXJMTS", "QMSHGESI"],
-    "externalIds": ["ATPLQ-615351"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 133°TTAS: 225 ktTrack: 144°TGS: 206 kt\n ",
-      "options": [
-        {
-          "id": "A48UNN20GN",
-          "text": "075°T/45 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4VB41TX8V",
-          "text": "070°T/50 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH0I9B0PGT",
-          "text": "075°T/50 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAVGD18BB7",
-          "text": "070°T/40 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFGXJMTS",
-    "relatedQuestions": ["QDICNLDG", "QMSHGESI"],
-    "externalIds": ["ATPLQ-615359", "ATPLQ-615449"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 002°TTAS: 130 ktTrack: 353°TGS: 132 kt\n ",
-      "options": [
-        {
-          "id": "A4OY5R0HLO",
-          "text": "092°T /20 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXHCD72VJP",
-          "text": "270°T /20 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATP9GEDFYS",
-          "text": "088°T /15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUGOS01RA9",
-          "text": "095°T /25 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMSHGESI",
-    "relatedQuestions": ["QDICNLDG", "QFGXJMTS"],
-    "externalIds": ["ATPLQ-617342"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 307°TTAS: 230 ktTrack: 313°TGS: 210 kt\n ",
-      "options": [
-        {
-          "id": "AYJUP620SH",
-          "text": "260°T /30 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS9QUJPFXV",
-          "text": "257°T /35 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWIR8SR05K",
-          "text": "265°T /30 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANO26LR6E6",
-          "text": "255°T /25 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFRAPYJL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-13696"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Maximum allowable tailwind component for landing: 10 kts\n- Planned runway: 05 (047° magnetic)\n- The direction of the surface wind reported by ATIS: 210°\n- Variation: 17°E\n\nCalculate the maximum allowable wind speed that can be accepted without exceeding the tailwind limit.",
-      "options": [
-        {
-          "id": "AIWO9I28OW",
-          "text": "10 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3UXA4OE6V",
-          "text": "8 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI5K73TD00",
-          "text": "15 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A49BR29YJ1",
-          "text": "18 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZUAFSGD",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-51593"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Track:    315° (M)\n- HDG: 301°(M)\n- VAR: 5°W\n- TAS: 225 kt\n\nThe aircraft flies 50 NM in 12 min. Calculate the W/V (°T).",
-      "options": [
-        {
-          "id": "AW9WO1LYWI",
-          "text": "190° / 63 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYA4UICPMN",
-          "text": "355° / 15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHJVBY6EFV",
-          "text": "195° / 61 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9E1FKD8C8",
-          "text": "195° / 63 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMFRRZZC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-24679"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information:\n \n\n-  TAS: 465 kt\n  </tr>\n  <tr> Track:  007° (T)\n  </tr>\n  <tr> W/V:   300° (T) / 80 kt\n\nCalculate the HDG and GS.",
-      "options": [
-        {
-          "id": "AJSWC3AAXS",
-          "text": "358° (T) - 428 kt.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW5X3U0VKE",
-          "text": "357° (T) - 502 kt.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIRMAG886J",
-          "text": "017° (T) - 490 kt.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG1Q3X5B0Z",
-          "text": "001° (T) - 435 kt.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTFTHENC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613325"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Determine the wind direction/velocity (ºT), given:\nTAS: 135 ktMagnetic track: 144°Variation: 12°WDrift angle: 6°LHeadwind: 15 kt",
-      "options": [
-        {
-          "id": "AGKZLV45IT",
-          "text": "177°/20 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AG2R74WZAS",
-          "text": "189°/20 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY31D0NVLF",
-          "text": "087°/20 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGAZ7QJB21",
-          "text": "200°/20 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKFXCBAT",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610374"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given: GS = 120 kt. Distance from A to B = 84 NM. What is the time from A to B?",
-      "options": [
-        {
-          "id": "AXYJDC5T1N",
-          "text": "00 HR 42 MIN",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATUJUM1J25",
-          "text": "00 HR 45 MIN",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A34QHGREMX",
-          "text": "00 HR 44 MIN",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARH2ZL3PLV",
-          "text": "00 HR 43 MIN",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLESSIOP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-614074"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 233°TTAS: 480 ktTrack: 240°TGS: 523 kt\n ",
-      "options": [
-        {
-          "id": "ASYX290ZCA",
-          "text": "110°T /75 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARSG066R9A",
-          "text": "105°T /75 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJEHHPS2U4",
-          "text": "110°T /80 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI8V94CKEF",
-          "text": "115°T /70 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQCTXZCI",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610747"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The TT is 215°. TAS is 90 kt. W/V is 260°/20 kt.   \n \nThe TH and GS are:",
-      "options": [
-        {
-          "id": "ATYCPP5CLW",
-          "text": "224° and 75 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AG3N7MYI1M",
-          "text": "224° and 103 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0NNO5UJTH",
-          "text": "206° and 75 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADX9DK43JM",
-          "text": "206° and 103 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRXAMMIP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-91348"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a given heading the:\n\n\n- Wind component: +45 kt\n- Drift angle: 15° left\n- TAS: 240 kt\n\nWhat is the wind component on the reverse track?",
-      "options": [
-        {
-          "id": "AR3BLM1MR7",
-          "text": "-45 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK9VW8UUMR",
-          "text": "-40 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUCVXL2AR9",
-          "text": "-35 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDO8JM2H1",
-          "text": "-60 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOWVVFGQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-617993"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, using a mechanical computer, calculate the equivalent wind component.Track: 240°(T) \n Wind vector: 030°(T)/25 kt \n TAS: 90 kt",
-      "options": [
-        {
-          "id": "A21WOKICF5",
-          "text": "Tailwind 22 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7RCLB1ESP",
-          "text": "Headwind 12 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3DVSHPJPF",
-          "text": "Tailwind 12 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADVK4GV2OI",
-          "text": "Headwind 22 kt",
+          "id": "OEILE3AG0",
+          "text": "Heading: 121°T, groundspeed: 199 kt",
           "correct": false,
           "why": ""
         }
@@ -1598,339 +585,35 @@
   {
     "id": "QRXLCZEW",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39420"],
+    "externalIds": ["ATPLQ-612872", "AVEXAM-39420", "BGS-611211"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\nFor take-off an aircraft requires a headwind component of at least 10 kt and has a crosswind limitation of 35 kt. The angle between the wind direction and the runway is 60°.\nCalculate the minimum and maximum allowable wind speeds.",
+      "question": "A single-engine class B aeroplane has the following wind limitations:\n\nCrosswind: 17 kt  \nHeadwind: 30 kt  \nTailwind: 10 kt  \nConsider a take-off from runway 20 with wind from 265°  \n  \nUsing trigonometry, determine the maximum wind speed which allows to stay below the crosswind limit of 17 kt and take-off:  \n_(use 2 decimal places for all the calculations)_",
       "options": [
         {
-          "id": "ADYO2MIDP0",
-          "text": "4 %",
+          "id": "ODJ26PTUQ",
+          "text": "19 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUWKQ7IXG",
+          "text": "18 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AEMHPBUABU",
-          "text": "2.5 %",
+          "id": "OLSUGC9W6",
+          "text": "17 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3G2I5VAUG",
-          "text": "3.7 %",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AESQ9OTEXQ",
-          "text": "3.4 %",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRFGIGRF",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610464"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given: Heading 090T°, TAS 200 kt, W/V 220°/30 kt. Calculate the GS?",
-      "options": [
-        {
-          "id": "AWMINBEYPV",
-          "text": " 220 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ0G86X1X9",
-          "text": "200 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADNRJ29C2I",
-          "text": "230 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATYX0RM1L3",
-          "text": "180 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRSSXLMB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111119", "AVEXAM-17496"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Runway direction: 083°(M)\n- Surface W/V: 035/35 kt\n\nCalculate the effective headwind component.",
-      "options": [
-        {
-          "id": "APSK6QJEY7",
-          "text": "24 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWYG6N8OIN",
-          "text": "31 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADU2VGU7UI",
-          "text": "34 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYZMDA8QMR",
-          "text": "27 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIHWCMDP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-8829"],
-    "annexes": ["092dd98034344abb3c2dc6417d7a91b8"],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-10.\nComplete line 4 of the FLIGHT NAVIGATION LOG, positions 'G' to 'H'. What is the HDG° (M) and ETA?",
-      "options": [
-        {
-          "id": "AYQUFUTHG8",
-          "text": "HDG 344° - ETA 1336 UTC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK4MWMH2DS",
-          "text": "HDG 034° - ETA 1336 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO2E8JH4WP",
-          "text": "HDG 344° - ETA 1303 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATFLYQLVLJ",
-          "text": "HDG 354° - ETA 1326 UTC.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIAYTGTO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-616086"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\nMagnetic track = 315°HDG = 301°MVAR = 5°WTAS = 225 kt\nThe aircraft flies 50 NM in 12 MIN.Calculate the W/V° T?",
-      "options": [
-        {
-          "id": "AHJHMUCN9C",
-          "text": "190°/63 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY1H1T9APL",
-          "text": "195°/61 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKE6O2DHYU",
-          "text": "355°/15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8MOSEET8Y",
-          "text": "195°/63 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWULGZXJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-6201"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Distance A to B: 415 NM\n- Planned GS: 295 kts\n- ATD: 10:00 UTC\n\nAt 10:20 UTC fix is obtained 110 NM along track. What GS must be maintained from the fix in order to achieve planned ETA at B?",
-      "options": [
-        {
-          "id": "AAY3JZWH45",
-          "text": "286 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD9EXK8ZNX",
-          "text": "295 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU2MGUVPON",
-          "text": "268 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALWH5G1EN3",
-          "text": "320 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFFVUIYA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-616926"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Determine the TH and GS, given:TT: 215° \n TAS: 90 kt \n W/V: 260°/20 kt",
-      "options": [
-        {
-          "id": "AHXO9VV19I",
-          "text": "224° and 75 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIFN0WXZ3U",
-          "text": "206° and 75 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJIMCOB4H9",
-          "text": "206° and 103 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO0OT4JHWL",
-          "text": "224° and 103 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLPFCGTF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-614105"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the parameters:\nTAS : 250 ktsHDG: 080° (T)TRK : 090° (T)GS: 290 kts\nWhat is the value of the crosswind on your heading and which way is it blowing you?",
-      "options": [
-        {
-          "id": "ASI2RJ9PBM",
-          "text": "49 kts right",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAS8CLIS5M",
-          "text": "43 kts right",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV8D88MJUU",
-          "text": "49 kts left",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5GG9WAG48",
-          "text": "43 kts left",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGDHGJWD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-617017"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 035°TTAS: 245 ktTrack: 046°TGS: 220 kt",
-      "options": [
-        {
-          "id": "ADDTEIAICO",
-          "text": "340°T /50 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMAJVMSGCU",
-          "text": "335°T /45 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXV0TPSGQ0",
-          "text": "335°T /55 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX0EGR13MQ",
-          "text": "340°T /45 kt",
+          "id": "OSDFHY6TV",
+          "text": "20 kt",
           "correct": false,
           "why": ""
         }
@@ -1940,35 +623,321 @@
   {
     "id": "QOVGDWUV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-614907"],
+    "externalIds": [
+      "ATPLQ-614907",
+      "AVEXAM-61443",
+      "AVEXAM-3875",
+      "ATPLGS-127777",
+      "BGS-610425"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\n\nMagnetic track = 075°,HDG = 066°(M),VAR = 11°E,TAS = 275 kt\nAircraft flies 48 NM in 10 MIN.Calculate the true W/V °?\n ",
+      "question": "Given:\n\nMagnetic track = 075°,   \nHDG = 066°(M),   \nVAR = 11°E,   \nTAS = 275 kt\n\nAircraft flies 48 NM in 10 MIN.Calculate the true W/V °?",
       "options": [
         {
-          "id": "A44EFASGGE",
-          "text": "335°/45 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADQB6ZZ14J",
-          "text": "210°/15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABCKV65MUK",
+          "id": "OGWV4ULHQ",
           "text": "180°/45 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A6AGNJ40IA",
+          "id": "OJXJQ1XHV",
           "text": "320°/50 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6TNPPDWQ",
+          "text": "210°/15 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFNJFYSDF",
+          "text": "335°/45 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYRUOEPY",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-619549",
+      "AVEXAM-723",
+      "BGS-610580",
+      "ATPLGS-625503",
+      "ATPLGS-110538",
+      "BGS-610581",
+      "AVEXAM-59575",
+      "AVEXAM-90049",
+      "ATPLGS-127765"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.06"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is planned to fly from position A to position B, distance 250 NM at an average GS of 115 kts. It departs A at 09:00 UTC.After flying 75 NM along track from A, the aircraft is 1.5 min behind planned time.\n\nUsing the actual GS experienced, what is the revised ETA at B?",
+      "options": [
+        {
+          "id": "OVYQ3EN3Y",
+          "text": "10:50 UTC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD6DPQHTC",
+          "text": "11:10 UTC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORZOIKYKZ",
+          "text": "10:44 UTC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBQ5F22CJ",
+          "text": "11:15 UTC",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTFTHENC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-613325", "AVEXAM-31114"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Determine the wind direction/velocity (ºT), given:\n\nTAS: 135 kt   \nMagnetic track: 144°   \nVariation: 12°W   \nDrift angle: 6°L   \nHeadwind: 15 kt",
+      "options": [
+        {
+          "id": "OFN9RSHPE",
+          "text": "200°/20 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIHBK6SLZ",
+          "text": "189°/20 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLCPNGKNF",
+          "text": "087°/20 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSFQFZXNF",
+          "text": "177°/20 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAFEUEFI",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-616675",
+      "AVEXAM-36318",
+      "AVEXAM-11125",
+      "AVEXAM-26934",
+      "AVEXAM-61843",
+      "BGS-610428",
+      "AVEXAM-92529",
+      "AVEXAM-91673",
+      "BGS-610420",
+      "BGS-610436",
+      "AVEXAM-26249",
+      "AVEXAM-93560",
+      "AVEXAM-34062",
+      "BGS-611609",
+      "ATPLGS-115954",
+      "AVEXAM-4685",
+      "AVEXAM-745",
+      "ATPLGS-127781",
+      "BGS-610426",
+      "AVEXAM-38863",
+      "BGS-610427",
+      "BGS-610430",
+      "AVEXAM-90048",
+      "ATPLGS-127783",
+      "BGS-610437",
+      "BGS-610464",
+      "AVEXAM-43938",
+      "ATPLGS-127782",
+      "BGS-610466"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Determine the GS using the following data;\n\nTT: 300º   \n TAS: 182 kt   \n W/V: 150º/25 kt.",
+      "options": [
+        {
+          "id": "OEVBSA15G",
+          "text": "212 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCSCWGFWP",
+          "text": "204 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O3OKOKHGF",
+          "text": "151 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSNY17MHI",
+          "text": "160 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFFVUIYA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-616926", "BGS-610747"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Determine the TH and GS, given:\n\nTT: 215°   \n TAS: 90 kt   \n W/V: 260°/20 kt",
+      "options": [
+        {
+          "id": "ONURI0BHJ",
+          "text": "206° and 103 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBBAUKEKB",
+          "text": "224° and 75 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O0XSQWTDH",
+          "text": "206° and 75 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJFKE7AWW",
+          "text": "224° and 103 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJRXMQN3C",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-617450",
+      "BGS-611435",
+      "AVEXAM-86682",
+      "AVEXAM-91740",
+      "ATPLGS-625590",
+      "BGS-610419"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following information, using trigonometry, calculate the headwind component, to the nearest full knot.\n\nRunway: 01   \n Surface wind (from the Tower): 300°/26 kt   \n Variation: 13°W",
+      "options": [
+        {
+          "id": "OOR4HTLCK",
+          "text": "3 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJLO7LVFR",
+          "text": "26 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXVGCDYT6",
+          "text": "14 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEBROSKYV",
+          "text": "9 kt",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGFJHDQG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-618597",
+      "AVEXAM-52917",
+      "BGS-610577",
+      "ATPLGS-115985"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft tracks radial 200 inbound to a VOR station with a Magnetic Heading (MH) of 010°. After being overhead the VOR station the aircraft tracks radial 090 outbound with a MH of 080°. The TAS is 240 kt and the magnetic variation in the area is 5°W. What is the wind vector (T)?",
+      "options": [
+        {
+          "id": "OEIBWQ1OC",
+          "text": "300°/50 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTL7Y4UN",
+          "text": "320°/50 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORARRFUJO",
+          "text": "330°/50 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3IB6KOLV",
+          "text": "310°/60 kt",
           "correct": false,
           "why": ""
         }
@@ -1978,34 +947,34 @@
   {
     "id": "QDWUBUAR",
     "relatedQuestions": [],
-    "externalIds": ["BGS-611257"],
+    "externalIds": ["ATPLQ-616839", "BGS-611257"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Using Mental Dead Reckoning (MDR) and the clock code technique, calculate the crosswind component (to the nearest whole knot) for the following situation.\nRunway: 32\nSurface wind (from the tower): 005°/20 kt (wind from the tower is magnetic)\nVariation: 15° E",
+      "question": "Using Mental Dead Reckoning (MDR) and the clock code technique, what is the crosswind component (to the nearest whole knot)? Given:\n\nRunway: 32   \n Surface wind (from the tower): 005°/20 kt (wind from the tower is magnetic)   \n Variation: 15° E",
       "options": [
         {
-          "id": "A5EAPCCD8N",
-          "text": "15 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0932XH6I6",
-          "text": "10 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK31U54LH2",
+          "id": "OUPZB4VF3",
           "text": "20 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0B9CTQYDP",
+          "id": "O1VVIQNRO",
+          "text": "15 kt",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4JQEAWZC",
+          "text": "10 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O70UFQZRO",
           "text": "5 kt",
           "correct": false,
           "why": ""
@@ -2014,37 +983,44 @@
     }
   },
   {
-    "id": "QBHLJYLG",
+    "id": "QJHKRXGU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110547"],
+    "externalIds": [
+      "ATPLQ-611524",
+      "BGS-610475",
+      "AVEXAM-13696",
+      "ATPLGS-111129",
+      "ATPLGS-625360",
+      "BGS-610448"
+    ],
     "annexes": [],
-    "learningObjectives": ["061.01.05.04.06"],
+    "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given\n ETA to cross a meridian 2100 UTC\n GS 441 kts\n TAS 491 kts\n At 2010 UTC, ATC requests a speed reduction to cross the meridian at 2105 UTC. The reduction to TAS will be approximately",
+      "question": "Given the following information, what is the maximum allowable wind speed that can be accepted without exceeding the tailwind limit?\n\nMaximum allowable tailwind component for landing: 10 kt   \nPlanned runway: 05 047°M   \nSurface wind direction reported by ATIS: 210°   \nVAR: 17°E",
       "options": [
         {
-          "id": "A40A8CEETJ",
-          "text": "40 kts",
+          "id": "OEYJQBXSH",
+          "text": "15 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGFRGPADD",
+          "text": "18 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVIBLBZ2E",
+          "text": "10 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVHC82D4RZ",
-          "text": "60 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADZ4JK68PT",
-          "text": "90 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGCS8Z89JT",
-          "text": "75 kts",
+          "id": "OGVD2FPLB",
+          "text": "8 kt",
           "correct": false,
           "why": ""
         }
@@ -2052,456 +1028,81 @@
     }
   },
   {
-    "id": "QLJMCOWT",
+    "id": "QOWVVFGQ",
     "relatedQuestions": [],
-    "externalIds": ["BGS-610466"],
+    "externalIds": [
+      "ATPLQ-617993",
+      "AVEXAM-72876",
+      "ATPLGS-626405",
+      "AVEXAM-97491"
+    ],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given: TAS = 220 kt; Magnetic course = 212 º, W/V 160 º(M)/ 50kt, Calculate the GS?",
+      "question": "Given the following information, using a mechanical computer, calculate the equivalent wind component.\n\nTrack: 240°(T)   \n Wind vector: 030°(T)/25 kt   \n TAS: 90 kt",
       "options": [
         {
-          "id": "AZ1WWSTM3U",
-          "text": "186 kt",
+          "id": "OYSRVDSCW",
+          "text": "Headwind 22 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OS0KR38WL",
+          "text": "Headwind 12 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7FPHQRYZ",
+          "text": "Tailwind 12 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUR9JQ48E",
+          "text": "Tailwind 22 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAOKZEHTHQ",
-          "text": "250 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A22GFZ6T7A",
-          "text": "246 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AETPSIFACK",
-          "text": "290 kt",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QGFJHDQG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-115985", "ATPLQ-618597"],
+    "id": "QRMLBDUL",
+    "relatedQuestions": ["QCSOKNGU"],
+    "externalIds": ["ATPLQ-612170", "ATPLGS-627156"],
     "annexes": [],
     "learningObjectives": ["061.01.05.04.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft tracks radial 200 inbound to a VOR station with a Magnetic Heading (MH) of 010°\nAfter being overhead the VOR station the aircraft tracks radial 090 outbound with a MH of 080°\nThe TAS is 240 kt and the magnetic variation in the area is 5°W\nWhat is the wind vector (T)?",
+      "question": "Given the following information, calculate the heading T and groundspeed:\n\nTAS: 200 kt   \nTrack: 073°T   \nWind velocity: 210°T /20 kt",
       "options": [
         {
-          "id": "A6D3FTZKHK",
-          "text": "320/50 kt",
+          "id": "OKHHWCCHE",
+          "text": "Heading: 079°T, groundspeed: 211 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODIDI8DC0",
+          "text": "Heading: 077°T, groundspeed: 210 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIVOIGIGI",
+          "text": "Heading: 075°T, groundspeed: 213 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O0TSC3GAC",
+          "text": "Heading: 077°T, groundspeed: 214 kt",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ9CWBYXUJ",
-          "text": "330/50 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3YLCQ7IMS",
-          "text": "310/60 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVHSMS7B8Z",
-          "text": "300/50 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTCYYZIB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110196"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If compass HDG is 340°  and deviation +3\nWhat is magnetic heading?",
-      "options": [
-        {
-          "id": "AFE2318SIK",
-          "text": "Deviation is positive (Easterly), therefore magnetic heading is 343°.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2QEYF55HS",
-          "text": "Deviation is positive (Westerly), therefore magnetic heading is 343°.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABAT93QDOE",
-          "text": "Deviation is positive (Easterly), therefore magnetic heading is 337°.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJOMMILBJL",
-          "text": "Deviation is positive (Westerly), therefore magnetic heading is 337°.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFSVQBIU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-616743"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the wind velocity:\n\nHDG: 145°TTAS: 240 ktTrack: 150°TGS: 210 kt",
-      "options": [
-        {
-          "id": "A4ANPH8UVN",
-          "text": "115°T /35 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJSAOY223B",
-          "text": "360°T /35 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9BFZBIQO8",
-          "text": "295°T /35 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKOXJ53FZ6",
-          "text": "180°T /35 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSLGMBLZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111127"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given TAS 130 kts\nTrack003°(T)\nW/V190/40 kts\nCalculate the HDG and GS.",
-      "options": [
-        {
-          "id": "AXXZHDZVO2",
-          "text": "001° (T) - 170 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZFWQ1WAAJ",
-          "text": "359° (T) - 166 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATH7EBU5IC",
-          "text": "002° (T) - 173 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARRM4L1GFT",
-          "text": "357° (T) - 168 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAZHODMI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110429"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given True HDG 002° Track  353°(T)\nTAS 130 kts\nGround speed 132 kts\nCalculate the W/V",
-      "options": [
-        {
-          "id": "A5ORKSE9R2",
-          "text": "092° / 20 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A899D14YJO",
-          "text": "270° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS6SOZD3G5",
-          "text": "088° / 15 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANJ348Y23C",
-          "text": "095° / 25 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVNPRTPI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127777"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given Magnetic track = 075°\nHDG = 066° (M)\nVariation = 11° E\nTAS = 275 kt\nIf the aircraft flies 48 NM in 10 Minutes, what is the true W/V ° ?",
-      "options": [
-        {
-          "id": "AQBQZBGJ4B",
-          "text": "335°/45 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYN2W96XAL",
-          "text": "210°/15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATLFTN98NM",
-          "text": "180°/45 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS9ZTXP5JJ",
-          "text": "320°/50 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMMEKEZJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110417"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given\n  Track   315°  (M)\n HDG 301° (M)\n VAR 5° W\n TAS 225 kts\n The aircraft flies 50 NM in 12 min\n Calculate the W/V (° T).",
-      "options": [
-        {
-          "id": "A4IO2CJBJH",
-          "text": "190° / 63 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AICGEGDOYN",
-          "text": "195° / 63 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVWQ94GHNS",
-          "text": "195° / 61 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6T0CU2Y2F",
-          "text": "355° / 15 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIKZPTMB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111145"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given TAS 220 kts\n Magnetic course 212° W/V (° M)160° /50 kts\n Calculate the GS.",
-      "options": [
-        {
-          "id": "AV93JV531F",
-          "text": "186 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ4VWIZCOV",
-          "text": "250 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUXEDKIOHM",
-          "text": "246 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMA572EE0E",
-          "text": "290 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHZAMAQJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111113"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given TAS465 kts\nTrack 007°(T) \nW/V300°/80 kts\nCalculate the HDG and GS.",
-      "options": [
-        {
-          "id": "AFHXNSPULJ",
-          "text": "358° (T) - 428 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1S26PE1E8",
-          "text": "357° (T) - 502 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB3J7Q0N3Q",
-          "text": "001° (T) - 435 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AINXC5LQ1V",
-          "text": "017° (T) - 490 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCBXBONR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110383"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given HDG 133°  (T) \nTrack   144°  (T)\nTAS 225 Kts\nGS 206 kts\nCalculate the W/V.",
-      "options": [
-        {
-          "id": "AJDUTU1E6Y",
-          "text": "075° / 45 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5OC28YYDV",
-          "text": "070° / 45 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL3LFYCMEI",
-          "text": "075° / 50 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT5H6O3NEI",
-          "text": "070° / 40 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOCQDZCI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110571"],
-    "annexes": ["092dd98034344abb3c2dc6417d7a91b8"],
-    "learningObjectives": ["061.01.05.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Complete line 1 of the FLIGHT NAVIGATION LOG; positions 'A' to 'B'What is the HDG°  (M) and ETA?",
-      "options": [
-        {
-          "id": "A53F5CQLO6",
-          "text": "268°; 1 114 UTC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQLK8Z6Y19",
-          "text": "268°; 1 128 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5JG3IQZO6",
-          "text": "282°; 1 128 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMAODQDO7S",
-          "text": "282°; 1 114 UTC.",
-          "correct": false,
           "why": ""
         }
       ]

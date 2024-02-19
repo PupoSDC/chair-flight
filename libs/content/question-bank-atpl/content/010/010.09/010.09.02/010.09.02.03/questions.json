@@ -1,36 +1,36 @@
 [
   {
-    "id": "QYJEXIAF",
+    "id": "QPLPVEFT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622081"],
+    "externalIds": ["ATPLQ-104374", "ATPLGS-623179"],
     "annexes": [],
     "learningObjectives": ["010.09.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "When would TODA, TORA, ASDA and LDA be equal.",
+      "question": "In which of the following cases will ASDA, LDA, TODA and TORA have the same length?",
       "options": [
         {
-          "id": "ATSECIIW9Y",
-          "text": "Where there is no displaced threshold, no stopway and no clearway.",
+          "id": "OMVZSR7SW",
+          "text": "No stopway but a clearway and a displaced threshold are available.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCYVMV63X",
+          "text": "No stopway, no clearway, no displaced threshold.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AWCMMYTML2",
-          "text": "Where there is no displaced threshold and no clearway.",
+          "id": "OAQLMCXHD",
+          "text": "Stopway and clearway are equal but no displaced threshold.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZA8L4T2SQ",
-          "text": "Where there is no displaced threshold.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5B29BXCS7",
-          "text": "Where there is no stopway and no clearway.",
+          "id": "O0AYISFAR",
+          "text": "Stopway and clearway equal and a displaced threshold is available.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +38,37 @@
     }
   },
   {
-    "id": "QWVFWWVJ",
+    "id": "QXPMOORV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622096", "AVEXAM-61122"],
+    "externalIds": ["ATPLQ-104219"],
     "annexes": [],
     "learningObjectives": ["010.09.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "'ASDA' (Acceleration Stop Distance Available) is:",
+      "question": "What is affected by a displaced threshold of an active runway?",
       "options": [
         {
-          "id": "ACYY31C9CT",
-          "text": "The length of the take-off run available plus the length of stop way (if stop way provided) .",
+          "id": "OSBNJ1CWX",
+          "text": "LDA and TODA. TORA, ASDA not affected.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWSFBSZ9V",
+          "text": "TODA only. ASDA, LDA and TORA are the same.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OACLPJ0TK",
+          "text": "LDA only. ASDA, TODA and TORA are the same.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AD107ZAHXW",
-          "text": "The length of the take-off run available plus the length of stop way and clearway (if provided) .",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKHEZ05VCW",
-          "text": "The length of the take-off run available plus the length of the clearway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXQ9B8RI5Q",
-          "text": "The length of the runway plus the length of stop way available (if stop way provided).",
+          "id": "OH1LUTP4C",
+          "text": "LDA, TORA, TODA, ASDA not affected.",
           "correct": false,
           "why": ""
         }
@@ -76,37 +76,37 @@
     }
   },
   {
-    "id": "QMUMLBZK",
+    "id": "QLQSHACF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-106004", "BGS-100772"],
+    "externalIds": ["ATPLQ-108545", "AVEXAM-75003", "BGS-101715"],
     "annexes": [],
     "learningObjectives": ["010.09.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The four declared distances specified for a runway direction (TORA, TODA, ASDA, and LDA) would be equal if the runway...",
+      "question": "The declared distances, which shall be calculated for each runway direction, are the take-off run available (TORA), ..",
       "options": [
         {
-          "id": "AGDV6H7VN1",
-          "text": "is without a stopway or clearway, and also without a displaced threshold.",
+          "id": "O03AFSWIR",
+          "text": "take-off distance available (TODA), accelerate-stop distance available (ASDA), and landing distance available (LDA).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ADBPRZXX90",
-          "text": "is without a stopway and also without a displaced threshold.",
+          "id": "OIXMADOWY",
+          "text": "take-off distance available (TODA), accelerate-stop distance available (ASDA), and runway-end safety area (RESA).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEOCA49AS2",
-          "text": "is without a stopway or clearway, but there is a displaced threshold with a starter extension.",
+          "id": "O03MSOI7F",
+          "text": "accelerate-stop distance available (ASDA), landing distance available (LDA), and, if present, length of any displaced thresholds (THR).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AILXFJQ37W",
-          "text": "has a stopway and clearway of equal length, but is without a displaced threshold.",
+          "id": "OJ5EMLDA8",
+          "text": "take-off distance available (TODA), and runway length (RL).",
           "correct": false,
           "why": ""
         }
@@ -117,269 +117,80 @@
     "id": "QSJNKRTK",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-119204",
-      "ATPLGS-622065",
       "ATPLQ-102501",
-      "ATPLQ-104258",
+      "BGS-100409",
+      "ATPLGS-119204",
+      "BGS-100410",
+      "ATPLGS-622065",
       "AVEXAM-99641",
-      "BGS-100410"
+      "AVEXAM-61122"
     ],
     "annexes": [],
     "learningObjectives": ["010.09.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Take-off distance available (TODA) is the length of the...",
+      "question": "Accelerate stop distance available (ASDA) is the length of the..",
       "options": [
         {
-          "id": "AV79TU023Y",
-          "text": "take-off run available plus the length of provided clearway.",
+          "id": "OXUCNKLRJ",
+          "text": "take-off run available plus the length of provided stopway.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AV0MC02LKO",
-          "text": "runway available plus the length of provided clearway.",
+          "id": "OV4F78CT3",
+          "text": "runway available plus the length of provided stopway.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXHZ5TWSJ0",
+          "id": "OREFOSRT9",
+          "text": "take-off run available plus the length of provided clearway.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONEHXRPSC",
           "text": "take-off run available plus the length of provided stopway and clearway.",
           "correct": false,
           "why": ""
-        },
-        {
-          "id": "A2ZL4GXXW8",
-          "text": "take-off run available plus the length of provided stopway.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QTHPKAKK",
-    "relatedQuestions": ["QPLPVEFT"],
-    "externalIds": ["ATPLGS-623179", "ATPLQ-104374"],
-    "annexes": [],
-    "learningObjectives": ["010.09.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In which of the following cases will ASDA, LDA, TODA and TORA have the same length?",
-      "options": [
-        {
-          "id": "ARFJB03BMT",
-          "text": "No stopway, no clearway, no displaced threshold.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANJPZEAW2U",
-          "text": "Stopway and clearway are equal but no displaced threshold.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYKO733KGE",
-          "text": "No stopway but a clearway and a displaced threshold are available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABN96FBIJ3",
-          "text": "Stopway and clearway equal and a displaced threshold is available.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPLPVEFT",
-    "relatedQuestions": ["QTHPKAKK"],
-    "externalIds": ["ATPLGS-623179", "ATPLQ-104374"],
-    "annexes": [],
-    "learningObjectives": ["010.09.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In which of the following cases will ASDA, LDA, TODA and TORA have the same length?",
-      "options": [
-        {
-          "id": "AP4063NXVS",
-          "text": "No stopway, no clearway, no displaced threshold.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOC7GQLAT5",
-          "text": "Stopway and clearway equal and a displaced threshold is available.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOTQV1ZWV7",
-          "text": "When 2 runways parrell to each other are in use",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUTDM9171C",
-          "text": "No stopway",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXPMOORV",
+    "id": "QMUMLBZK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626452", "ATPLQ-104219"],
+    "externalIds": ["ATPLQ-106004", "AVEXAM-56260", "BGS-100772"],
     "annexes": [],
     "learningObjectives": ["010.09.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is affected by a displaced threshold of an active runway?",
+      "question": "The four declared distances specified for a runway direction (TORA, TODA, ASDA, and LDA) would be equal if the runway..",
       "options": [
         {
-          "id": "AY817KR7Z4",
-          "text": "LDA",
+          "id": "OQLY9CZIQ",
+          "text": "is without a stopway or clearway, and also without a displaced threshold.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0YWC0GPL1",
-          "text": "ASDA",
+          "id": "O6VPRQQVI",
+          "text": "has a stopway and clearway of equal length, but is without a displaced threshold.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQ2U9GA8EQ",
-          "text": "TODA",
+          "id": "OLYGIHHBB",
+          "text": "is without a stopway or clearway, but there is a displaced threshold with a starter extension.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5WTNOCQBG",
-          "text": "TORA",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXHJKTHC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104654", "AVEXAM-14059"],
-    "annexes": [],
-    "learningObjectives": ["010.09.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding declared airfield distances the ASDA is",
-      "options": [
-        {
-          "id": "AU8UU18TDM",
-          "text": "the distance from the start of the take-off run to the end of the stopway.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY26A1P3KY",
-          "text": "the distance from the start of the take-off run to the end of the clearway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARCNMNTBLS",
-          "text": "the distance from the start of the take-off run to the last point capable of bearing the full weight of the aircraft under normal operating conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADGQAVSFLM",
-          "text": "the area beyond the end of the prepared surface only available to aircraft stopping in an emergency.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJYJQAMR",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-96547"],
-    "annexes": [],
-    "learningObjectives": ["010.09.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What calculations are required before a flight takes off?",
-      "options": [
-        {
-          "id": "AKYS6F0UKA",
-          "text": "TOR, TOD, and ASD.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYC3K3JJ9Z",
-          "text": "TOR, TOD, ASD, and LD.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A04WN683V3",
-          "text": "Only TOR.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKFPQVXLN6",
-          "text": "Runway length and stopway.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLQSHACF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-108545"],
-    "annexes": [],
-    "learningObjectives": ["010.09.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The declared distances, which shall be calculated for each runway direction, are the take-off run available (TORA), ..",
-      "options": [
-        {
-          "id": "APZF430DB3",
-          "text": "take-off distance available (TODA), accelerate-stop distance available (ASDA), and landing distance available (LDA).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY5ZVPR0UP",
-          "text": "take-off distance available (TODA), and runway length (RL).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADY1XXOO3J",
-          "text": "accelerate-stop distance available (ASDA), landing distance available (LDA), and, if present, length of any displaced thresholds (THR).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVUD87I1YC",
-          "text": "take-off distance available (TODA), accelerate-stop distance available (ASDA), and runway-end safety area (RESA).",
+          "id": "ORMFGBOJ2",
+          "text": "is without a stopway and also without a displaced threshold.",
           "correct": false,
           "why": ""
         }

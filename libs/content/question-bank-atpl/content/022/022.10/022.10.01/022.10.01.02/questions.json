@@ -1,41 +1,36 @@
 [
   {
-    "id": "QGIIQUJJ",
+    "id": "QAGTKLAF",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-113221",
-      "ATPLQ-226111",
-      "AVEXAM-71036",
-      "BGS-220240"
-    ],
+    "externalIds": ["ATPLQ-223538", "AVEXAM-81925", "BGS-221620"],
     "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
+    "learningObjectives": ["022.10.01.02.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The output data from an ADC are used by 1  Transponder 2  EFIS via the symbol generator 3  Automatic Flight Control System (AFCS) The combination that regroups all of the correct statements is",
+      "question": "You are in the cruise, and approaching a FIR in which CPDLC is available but NOT compulsory. What factors influence whether to use the data link or rely on voice communications?",
       "options": [
         {
-          "id": "AR5L8N21ED",
-          "text": "1, 2, 3.",
+          "id": "OIUFYJQQQ",
+          "text": "Voice communications are more reliable and easier for the controller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSN8ICXKS",
+          "text": "Short-cuts and direct routings are easier for both pilots and controllers using voice communications.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLUZNWUFP",
+          "text": "Pilot errors and workload are reduced, and ATC workload is reduced, by using datalink communications.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A4KKNN9IJS",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM4AANN7YK",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A58C8U3EVY",
-          "text": "1, 2.",
+          "id": "OWCHH3ZIV",
+          "text": "In remote areas, with datalink there is a greater risk of being out of range of the current controller WITHOUT being handed over to the next controller.",
           "correct": false,
           "why": ""
         }
@@ -43,37 +38,199 @@
     }
   },
   {
-    "id": "QCUUXONO",
+    "id": "QLVDDQLX",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225916", "AVEXAM-4795", "BGS-220592"],
+    "externalIds": [
+      "ATPLQ-225416",
+      "AVEXAM-37442",
+      "BGS-220596",
+      "ATPLGS-628044"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.10.01.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The ACARS allows air/ground datalink communications for:",
+      "options": [
+        {
+          "id": "O0CCAXWF6",
+          "text": "Airline Operational and Public Communications (AOC & PC).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMYML6RTG",
+          "text": "Airline Operational and Air Traffic Communications (AOC & ATC).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGEGQBWH7",
+          "text": "Air Traffic Control Communication only (ATC).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYI4AHKK",
+          "text": "Airline Operational Communication only (AOC).",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPFHAKDP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226358", "BGS-222097", "AVEXAM-76820"],
     "annexes": [],
     "learningObjectives": ["022.10.01.02.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A MAYDAY datalink message can be sent to the ATC via the:",
+      "question": "Which channels are currently used for datalink transmissions by Air Traffic Services?",
       "options": [
         {
-          "id": "APCTCDUVHI",
-          "text": "CPDLC application.",
+          "id": "OV4DSDASP",
+          "text": "VHF and SATCOM only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWCNYMBIQ",
+          "text": "SATCOM, HF and UHF.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFC6YHLHF",
+          "text": "VHF, SATCOM and UHF.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIDSEY9TM",
+          "text": "VHF, SATCOM and HF.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFQGTLBO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227016", "BGS-221873", "AVEXAM-87917"],
+    "annexes": [],
+    "learningObjectives": ["022.10.01.02.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct regarding D-ATIS?",
+      "options": [
+        {
+          "id": "OLAZTKQV1",
+          "text": "It is an ATIS with the identifier ‘D’.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCLUBASOD",
+          "text": "ATIS is available only for German airfields, usually used by military traffic.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM5U3I8SS",
+          "text": "It’s a new weather report provider in Europe.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU1HNBLPL",
+          "text": "ATIS received via datalink.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOFLWEXO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227172", "ATPLGS-106593", "AVEXAM-6104"],
+    "annexes": [],
+    "learningObjectives": ["022.10.01.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The systems that can be connected to the Communication Management Unit (CMU), are:\n\n1 – Flight Director   \n 2 – VHF   \n 3 – HF   \n 4 – SATCOM\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "OIZ2U8BGR",
+          "text": "1, 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ32Q7YIW",
+          "text": "4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM4OJ7IMW",
+          "text": "1, 2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOBQFUCQS",
+          "text": "2, 3, 4.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOKYTQEM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-228488",
+      "ATPLGS-627230",
+      "AVEXAM-2933",
+      "BGS-221334"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.10.01.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What are the functions of the on-board ATSU (Air Traffic Services Unit)? To enable access to all available communications media,",
+      "options": [
+        {
+          "id": "OCNCN7O4L",
+          "text": "manage the HMI (Human Machine Interface), and manage engine thrust.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUZUVWDIO",
+          "text": "manage the HMI (Human Machine Interface), and select the appropriate ATC centre for datalink throughout the flight.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AAP3JCS95L",
-          "text": "AFN application.",
+          "id": "ONXS5R5SE",
+          "text": "select the appropriate ATC centre for data link throughout the flight, and manage EGPWS warnings.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIGKVIZK2G",
-          "text": "ADS application.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWEO22WLFQ",
-          "text": "ACAS application.",
+          "id": "OBGPIMMT4",
+          "text": "select the appropriate ATC centre for data link throughout the flight, and manage engine thrust.",
           "correct": false,
           "why": ""
         }
@@ -84,10 +241,10 @@
     "id": "QDDIRCQW",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106598",
       "ATPLQ-229762",
-      "AVEXAM-79898",
-      "BGS-220608"
+      "BGS-220608",
+      "ATPLGS-106598",
+      "AVEXAM-79898"
     ],
     "annexes": [],
     "learningObjectives": ["022.10.01.02.05"],
@@ -97,343 +254,70 @@
       "question": "Which of the following ATC clearances can be received via the datalink application?",
       "options": [
         {
-          "id": "A4Q430ZJSW",
-          "text": "Departure, Oceanic.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEP75NMF5U",
-          "text": "Take off, En route, Landing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4UJPFMWX3",
+          "id": "OLVDPHGDW",
           "text": "Departure, Take off, En route.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGML9HQ4ZV",
+          "id": "ONO75QEEB",
+          "text": "Take off, En route, Landing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2ZD7YKN9",
           "text": "Departure, En route, Landing.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJUAWVVK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-37311"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ACARS system consists of:",
-      "options": [
+        },
         {
-          "id": "A8LHVLMKYK",
-          "text": "on-board units + ground units.",
+          "id": "OHBV80FC4",
+          "text": "Departure, Oceanic.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "APMCNAOE3T",
-          "text": "on-board units + dedicated satellites that receive info from the on-board units.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4HDQ58GPA",
-          "text": "ground units + existing VHF radios on-board.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASBX8G08VI",
-          "text": "on-board units only.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QFQGTLBO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227016", "AVEXAM-87917"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is a D-ATIS?",
-      "options": [
-        {
-          "id": "A00YYPXWQ4",
-          "text": "ATIS received via datalink.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXZT87SAR8",
-          "text": "It is an ATIS with the identifier ‘D’.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIOICXRG0C",
-          "text": "It’s a new weather report provider in Europe.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKTLSYBO3W",
-          "text": "ATIS available only for German airfields, usually used by military traffic.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPNZTJXO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-121055", "ATPLQ-224120", "BGS-221378"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which types of ATC messages may be sent via datalink?",
-      "options": [
-        {
-          "id": "AMIYHKG1YE",
-          "text": "Pre-departure clearances, ATIS, and oceanic clearances.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2NV87EW1E",
-          "text": "Taxi clearances, in-flight flight-level-change clearances, and take-off clearances.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZJGJA94R4",
-          "text": "Pre-departure clearances, landing clearances, and oceanic clearances.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABFOYIXKGV",
-          "text": "Pre-departure clearances, taxi clearances, take-off clearances, and landing clearances.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOKYTQEM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627230", "ATPLQ-228488", "BGS-221334"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What are the functions of the on-board ATSU (Air Traffic Services Unit)? To enable access to all available communications media,",
-      "options": [
-        {
-          "id": "A16VTSFJIN",
-          "text": "manage the HMI (Human Machine Interface), and select the appropriate ATC centre for datalink throughout the flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGWWAKCSJ6",
-          "text": "select the appropriate ATC centre for data link throughout the flight, and manage engine thrust.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A103RNR9ZJ",
-          "text": "select the appropriate ATC centre for data link throughout the flight, and manage EGPWS warnings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6IZ1R673G",
-          "text": "manage the HMI (Human Machine Interface), and manage engine thrust.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOLPWVHL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106589", "ATPLQ-228006", "AVEXAM-80998"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The systems that can be connected to the Communication Management Unit (CMU) are:\n\n- EGPWS\n\n- HF Communication Unit\n\n- Multipurpose Control and Display Unit (MCDU)\n\n- VHF Communication Unit\n\n- Satcom</li>\n</ol>\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AW64NV6AG1",
-          "text": "2, 3, 4, 5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A755V8F6KY",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQQ7NR7XX3",
-          "text": "2, 4, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG9B7JMZWM",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAFUTQLA",
+    "id": "QQTHXHBTD",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106599",
-      "ATPLQ-224777",
-      "AVEXAM-72185",
-      "BGS-220599"
+      "ATPLQ-228006",
+      "ATPLGS-106593",
+      "AVEXAM-6104",
+      "AVEXAM-80998",
+      "ATPLGS-106589"
     ],
     "annexes": [],
     "learningObjectives": ["022.10.01.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The basic on-board datalink communication system is typically composed by the following sub systems:\n1. Communication Management Unit (CMU)\n2. Multi-purpose Control and Display Unit (MCDU)\n3. Audio Control Panel (ACP)\nThe combination that regroups all of the correct statements is:",
+      "question": "The units that can be connected to the Communication Management Unit (CMU) are:\n\n1 – EGPWS   \n2 – HF Communication Unit   \n3 – Multipurpose Control and Display Unit (MCDU)   \n4 – VHF Communication Unit   \n5 – Satcom\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "A8SX4OFD9M",
-          "text": "1, 2.",
+          "id": "O6KY53YEY",
+          "text": "1, 3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O74UA5UVK",
+          "text": "2, 3, 4, 5.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0YTF8S9D0",
+          "id": "OSJCLY9ZP",
           "text": "1, 3.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2LMRV5ADL",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO46F3XODL",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOFLWEXO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106589",
-      "ATPLGS-106593",
-      "ATPLQ-227172",
-      "ATPLQ-228006",
-      "AVEXAM-6104",
-      "AVEXAM-72185",
-      "AVEXAM-80998"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The systems that can be connected to the Communication Management Unit (CMU), are\n1) Flight Director.\n2) FMS.\n3) Multipurpose Control and Display Unit (MCDU).\n4) communication unit (VHF, HF, Satcom).The combination which regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "A1TY0RFPSB",
-          "text": "2, 3, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHUIO31JKJ",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6LI9X3I4S",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4DAPEUBHE",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFODIRPO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226358", "AVEXAM-76820", "BGS-222097"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which channels are currently used for datalink transmissions by Air Traffic Services?",
-      "options": [
-        {
-          "id": "AL5AH680AM",
-          "text": "VHF, SATCOM and HF.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGKYIE8E7F",
-          "text": "VHF, SATCOM and UHF.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANFPF79KF0",
-          "text": "VHF and SATCOM only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A72N4131J3",
-          "text": "SATCOM, HF and UHF.",
+          "id": "OJJM6LMMQ",
+          "text": "2, 4, 5.",
           "correct": false,
           "why": ""
         }
@@ -449,454 +333,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Why is data link useful?\na) It can be used for departure clearances.b) It is used in oceanic flights in remote areasc) It is more efficient for controllers and eliminates possible interpretation errors.d) ATC prefer Voice transmissions because they are more clear.",
+      "question": "Why is data link useful?\n\na) It can be used for departure clearances.   \nb) It is used in oceanic flights in remote areas   \nc) It is more efficient for controllers and eliminates possible interpretation errors.   \nd) ATC prefer Voice transmissions because they are more clear.",
       "options": [
         {
-          "id": "A5A05IU654",
+          "id": "OXYIVELTW",
+          "text": "c).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJUV7D6RN",
           "text": "a), b) and c).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1BA6NTXKE",
+          "id": "OCDVVB3BJ",
           "text": "a), b) and d).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A2ZCNHE2JE",
+          "id": "OHQ7DTBBF",
           "text": "b) and c).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANULQ0TDK8",
-          "text": "c).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGVXCGLZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-4348", "AVEXAM-89261"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A ground station sends a digital message to an aircraft in flight. This is called...",
-      "options": [
-        {
-          "id": "AJRB2QOID6",
-          "text": "message / data uplink.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4F0R7C4NY",
-          "text": "message / data downlink.\n ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIF0Y63KYZ",
-          "text": "two-way communication HF message.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJH48X5J9P",
-          "text": "two-way communication VHF message.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAGTKLAF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223538", "BGS-221620"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are in the cruise, and approaching an FIR in which CPDLC is available, but not compulsory. What factors influence whether to use the datalink or rely on voice communications?",
-      "options": [
-        {
-          "id": "AF3F386E81",
-          "text": "Pilot errors and workload are reduced, and ATC workload is reduced, by using datalink communications.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHZV2533Z7",
-          "text": "Voice communications are more reliable and easier for the controller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYEAYTOKJI",
-          "text": "In remote areas, with datalink there is a greater risk of being out of range of the current controller without being handed over to the next controller.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0CAADT99B",
-          "text": "Short cuts and direct routings are easier for both pilots and cotrollers using voice communications.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPFHAKDP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226358", "AVEXAM-76820", "BGS-222097"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which communication channels are currently in use for datalink transmissions by air traffic services?",
-      "options": [
-        {
-          "id": "ALOD07WRHB",
-          "text": "HF, VHF and SATCOM",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APLLDMAC90",
-          "text": "VHF only",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A970WIJYN6",
-          "text": "HF and VHF",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKPVO2ZXMR",
-          "text": "HF only",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAHCKCNZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-32931", "BGS-220601"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The CPDLC function consists in exchanging messages related to:\n1) route modifications.\n2) crossing constraints.\n3) transfer of ATC center.\n4) speed changes.\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AAJPL0KZIZ",
-          "text": "1, 2, 3, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMHCKGXE4R",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATAA4VGGWR",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM35H3LAOW",
-          "text": "2, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLVDDQLX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225416", "AVEXAM-37442", "BGS-220596"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The ACARS allows air/ground datalink communications for:",
-      "options": [
-        {
-          "id": "AFXILMY1W0",
-          "text": "Airline Operational and Air Traffic Communications (AOC &amp; ATC).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHQARRONUH",
-          "text": "Airline Operational and Public Communications (AOC &amp; PC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVDK3BA9SV",
-          "text": "Air Traffic Control Communication only (ATC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEF3ZZJZ2D",
-          "text": "Airline Operational Communication only (AOC).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFISUBCR",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106593",
-      "ATPLGS-106599",
-      "ATPLQ-224777",
-      "AVEXAM-6104",
-      "AVEXAM-72185",
-      "BGS-220599"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The basic on-board datalink communication system is typically composed by the following sub systems\n1) Communication Management Unit (CMU).\n2) Multi-purpose Control and Display Unit (MCDU).\n3) Communication unit (VHF, HF, Satcom).The combination which regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "AG03GXB4M2",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVG9L7MB5Q",
-          "text": "1, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUUR3YOLRO",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0GNOASNIO",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDJIZUGN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106588"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ACARS messages may be of the following types\n1) Air Traffic Control (ATC).\n2) Aeronautical Operational Control (AOC).\n3) Airline Administrative Control (AAC).\n4) Air-to-Air Communications (ATAC).\n5) Air-to-Air Data transmission (ATAD).",
-      "options": [
-        {
-          "id": "A1JH9VD22B",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A05ET7LU33",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZHU7SDV5K",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK7UITBCNU",
-          "text": "1, 3, 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYTSSYGZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106596"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The ACARS digital datalink communications system can use the following means for the data transmission",
-      "options": [
-        {
-          "id": "AXBN0J6JZZ",
-          "text": "SAT-COM, HF, VHF",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6LU2XFKC5",
-          "text": "SAT-COM, HF",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5UD812T6S",
-          "text": "SAT-COM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMBEB2647Z",
-          "text": "only a dedicated datalink frequency range",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOCPTRHL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622449"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the purpose of an on board ATSU",
-      "options": [
-        {
-          "id": "AJUGMWEBYH",
-          "text": "manages the data link information exchange between the. aircraft and the Air Traffic",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAMG6SZ68M",
-          "text": "Thrust management",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAML58QFPA",
-          "text": "fuel management",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9Y6TJCLVJ",
-          "text": "management of the Human Machine Interface",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSHKJOUD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222488", "AVEXAM-79040"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which type of communication is used in ACMS (Aeroplane Condition Monitoring System)?",
-      "options": [
-        {
-          "id": "ALM4BI5KGC",
-          "text": "By datalink without crew notification.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJEVQGMQ2J",
-          "text": "By crew voice communication reports.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XF1KKUV4",
-          "text": "By the FDR on the ground, done by the maintenance personnel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALBK5WZ4QE",
-          "text": "By command via HF and VHF.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QULAYTQF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622646"],
-    "annexes": [],
-    "learningObjectives": ["022.10.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The software used to run the ATSU application (ATC &amp; AOC)",
-      "options": [
-        {
-          "id": "AW8TTSTDP2",
-          "text": "Is certified according to an equipment certification standard(ED12b,D0178B)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA56B5C7KK",
-          "text": "is only approved and tested by the manufacturer",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIXVBIM2D1",
-          "text": "Only approved by the company",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV91T543SP",
-          "text": "Certified according to CS25",
           "correct": false,
           "why": ""
         }

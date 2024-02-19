@@ -1,36 +1,41 @@
 [
   {
-    "id": "QRZIICGU",
+    "id": "QTARUTPZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124109", "ATPLQ-509319", "BGS-500060"],
+    "externalIds": [
+      "ATPLQ-506285",
+      "AVEXAM-45437",
+      "BGS-501091",
+      "ATPLGS-123708"
+    ],
     "annexes": [],
-    "learningObjectives": ["050.10.02.03.02"],
+    "learningObjectives": ["050.10.02.03.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An isohypse (contour)..",
+      "question": "On an upper wind and temperature chart:",
       "options": [
         {
-          "id": "AELYXAQ5OG",
-          "text": "indicates the true altitude of a pressure level.",
+          "id": "OYH1AE6YZ",
+          "text": "the wind increases from south to north.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8CCHR6C4",
+          "text": "the pressure is constant all over the chart.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZD78M7F5J",
-          "text": "is the limit between two air masses of different temperature.",
+          "id": "OMUMLICU8",
+          "text": "the height is constant all over the chart.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AN188I43CJ",
-          "text": "is the longest slope line of a frontal surface.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6ZPGZMR30",
-          "text": "indicates the altitude of the zero degree isotherm.",
+          "id": "OTLZOMS2C",
+          "text": "the temperature is constant all over the chart.",
           "correct": false,
           "why": ""
         }
@@ -38,893 +43,151 @@
     }
   },
   {
-    "id": "QHGDLFKU",
+    "id": "QBVTXBAM",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108816", "AVEXAM-16848"],
+    "externalIds": ["ATPLQ-504528", "AVEXAM-26182", "BGS-501153"],
+    "annexes": [],
+    "learningObjectives": ["050.10.02.03.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the lowest visibility forecast for Bangkok at ETA 14:00 UTC?\n\nTAF VTBD 271800Z 2800/2824 VRB05KT 1200 BR TEMPO 2800/2802 4000 BECMG 2802/2805 9999 NSW SCT015 BKN100 TEMPO 2811/2818 04010G20KT 4500 TSRA SCT009 BKN014 BKN018CB BECMG 2820/2824 4000=",
+      "options": [
+        {
+          "id": "OWSPJDXB8",
+          "text": "1200 metres",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZYV5H0C8",
+          "text": "6 km",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCIPZY0FH",
+          "text": "4500 metres",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1RTCQKTK",
+          "text": "10 km or more",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEPZBQAG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-506018",
+      "AVEXAM-19602",
+      "BGS-501125",
+      "ATPLGS-123449"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.10.02.03.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is a trend forecast?",
+      "options": [
+        {
+          "id": "OVXEXIWST",
+          "text": "A route forecast valid for 24 hours",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFHJ73NFQ",
+          "text": "An aerodrome forecast valid for 9 hours",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJVQDXWSA",
+          "text": "A routine report",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKIT0GXFR",
+          "text": "A landing forecast appended to METAR/SPECI, valid for 2 hours",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPVRJQES",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-502218",
+      "BGS-501866",
+      "BGS-501861",
+      "BGS-502105",
+      "BGS-501865",
+      "BGS-501867",
+      "ATPLGS-111412",
+      "AVEXAM-48897",
+      "ATPLGS-111465",
+      "ATPLGS-111434",
+      "BGS-501045",
+      "BGS-501097",
+      "BGS-501046",
+      "ATPLGS-108833",
+      "ATPLGS-108785",
+      "AVEXAM-11540",
+      "AVEXAM-63749",
+      "ATPLGS-108828",
+      "BGS-501056",
+      "BGS-501062",
+      "BGS-501864",
+      "BGS-501862",
+      "ATPLGS-108809",
+      "BGS-501059",
+      "AVEXAM-71457",
+      "AVEXAM-51774",
+      "AVEXAM-56633",
+      "AVEXAM-61712",
+      "ATPLGS-123713",
+      "ATPLGS-111415",
+      "ATPLGS-123541",
+      "BGS-501061"
+    ],
     "annexes": [],
     "learningObjectives": ["050.10.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A line on a chart joining places of equal sea level pressure is called an:",
+      "question": "The constant pressure chart which is standard for FL140 is:",
       "options": [
         {
-          "id": "A0D2QUWA7E",
-          "text": "isobar.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5PF8436IE",
-          "text": "isogonal.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6EQFCQR9C",
-          "text": "agonic line.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR82PWI1U3",
-          "text": "isotherm.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJETWUHR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124085", "AVEXAM-78311", "BGS-500041"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An isothermal layer is a layer of air in which the temperature...",
-      "options": [
-        {
-          "id": "ABPCK0SV54",
-          "text": "remains constant with height.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APH5WMK6XG",
-          "text": "may increase or decrease at irregular intervals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANNCIRMQ0A",
-          "text": "increases with height at a constant rate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0KSRKWYEV",
-          "text": "decreases with height at a constant rate.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRPFDSDJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124093", "ATPLQ-505933"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An isothermal layer is a layer of air..",
-      "options": [
-        {
-          "id": "AUDGIYNCJC",
-          "text": "in which the lapse rate is zero.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4P3WROLSR",
-          "text": "in which isotherms in a horizontal plane all run parallel and are equidistant.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACU3LBP3NP",
-          "text": "in which there is no horizontal temperature gradient.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU82SME7BV",
-          "text": "which is thermally insulated, i.e. which has no heat exchange with its environment.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QADISMKA",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500293"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to Annex) Considering the sector Rome to 25°N on the route indicated, what mean upper winds may be expected at FL 300 during winter?",
-      "options": [
-        {
-          "id": "AYOR763TVJ",
-          "text": "Westerly jet streams in excess of 70 kt.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB16SQJ1DI",
-          "text": "Variable easterlies.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARK58OKH1Y",
-          "text": "Light westerlies.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE3ZU35AIM",
-          "text": "Easterlies at 40 kt.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCTEUVT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124022", "ATPLQ-506963"],
-    "annexes": ["8e220bdeae608221a256dcfd0e285438"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Select from the map the average wind for the route Shannon ? Oslo at FL 290.",
-      "options": [
-        {
-          "id": "AZA14QSB6V",
-          "text": "290/120",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A107ASZTTJ",
-          "text": "130/140",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVO68REWME",
-          "text": "310/150",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC9NCRATTU",
-          "text": "100/130",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFWURVGY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111359"],
-    "annexes": ["6bde70eae2b0e8acddbecb21939db4a7"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the average wind forecast for FL300 between Edinburgh and Madrid?",
-      "options": [
-        {
-          "id": "AX1NMSKR2R",
-          "text": "275° / 30 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADG8V6DMUF",
-          "text": "180° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABIS84S08E",
-          "text": "300° / 45 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGGIHLLVHV",
-          "text": "240° / 25 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDAHCYSH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111361"],
-    "annexes": ["e5eb6e66dac22f8627335dd3acea5532"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Judging by the chart, what wind speeds can you expect at FL310 above London?",
-      "options": [
-        {
-          "id": "ACO59PTAGV",
-          "text": "90 KTS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADOIH79WBF",
-          "text": "110 km/h",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHDOH7FVMK",
-          "text": "140 KTS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4ZZMVLU4U",
-          "text": "300 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBXSKQBG",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111400", "AVEXAM-31919"],
-    "annexes": ["161646fb8b2417d7b63065ada859721c"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "0.What is the average wind for the route Athens - Kabul at FL390?",
-      "options": [
-        {
-          "id": "A6S2JQO3JU",
-          "text": "260° / 45 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS2XG0DFV5",
-          "text": "280° / 60 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY3O65HA0K",
-          "text": "240° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8JFGY1Y52",
-          "text": "266° / 25 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTYUNPLI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111403"],
-    "annexes": ["4301f447b72bf651685cdcb62c500727"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the average wind for the route Shannon - Lisboa at FL290?",
-      "options": [
-        {
-          "id": "A8BHOCMKVG",
-          "text": "360° / 80 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9QYIIQ7DL",
-          "text": "030° / 70 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMX52BJEZS",
-          "text": "190° / 75 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWFZU9IGPI",
-          "text": "340° / 90 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRFAMMHQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-109117", "ATPLQ-504482", "AVEXAM-69943"],
-    "annexes": ["0f177b243a2bcde7b1db7a2c20c8fc83"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A flight is performed from Rome to Nairobi\nConsidering the sector Rome to 25° N on the route indicated, what mean upper winds may be expected at FL300 during the winter?",
-      "options": [
-        {
-          "id": "AQQ6YLI171",
-          "text": "Westerly jet streams in excess of 70 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHJ4N5NG3F",
-          "text": "Light westerlies.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABI008BTJS",
-          "text": "Variable easterlies.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A76W6I8JG8",
-          "text": "Easterlies at 40 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYCDYLON",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501363"],
-    "annexes": ["e98b85c0ec77da71f0b3958688840870"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the Annex. What are the expected upper wind patterns in July?",
-      "options": [
-        {
-          "id": "AVPIUKSCYX",
-          "text": "1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGAOXSV6KL",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASLO1LGOZN",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANAJDRNBPB",
-          "text": "4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QETHLCIA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111388"],
-    "annexes": ["0f5424a063f29783c2016a1e628b6840"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "1.What wind is forecast at FL390 overhead Shannon?",
-      "options": [
-        {
-          "id": "AKZLHT9ZDH",
-          "text": "290° / 85 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACJZ5BOWGK",
-          "text": "310° / 35 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFMOL325JN",
-          "text": "300° / 45 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZLSO02TOT",
-          "text": "290° / 60 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFTFEVUN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124091", "ATPLQ-502420", "AVEXAM-47092"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an isothermal layer the state of the atmosphere is:",
-      "options": [
-        {
-          "id": "ABYYH2M37M",
-          "text": "absolutely stable.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMN77KUO5P",
-          "text": "neutral.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APXIS1E35J",
-          "text": "absolutely unstable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADR613UXTB",
-          "text": "conditionally unstable.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJJHPYZP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104033"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When constructing a turning area departure the temperature used is",
-      "options": [
-        {
-          "id": "AQLKT48F3T",
-          "text": "ISA +15 °C corresponding to the altitude.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMIX24JY5C",
-          "text": "JSA -15 °C corresponding to the altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFPS3Q4YTC",
-          "text": "JSA +15 °C corresponding to the altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKNKRRCY03",
-          "text": "ISA -15 °C corresponding to the altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCWZMBHT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-51803"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the upper limit of the trade winds?",
-      "options": [
-        {
-          "id": "A5PBCNCVU7",
-          "text": "Approx. FL 100",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3VGRMKJEG",
-          "text": "Tropopause",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SFVABZYN",
-          "text": "Stratopause",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A05GPPKPQX",
-          "text": "Approx. 5 000 ft over land or 3 000 ft over water",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBZNRCRG",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500775"],
-    "annexes": ["174a774f7134611f74326ac8451291b8"],
-    "learningObjectives": ["050.10.02.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to Annex) The dotted line designated Z represents the",
-      "options": [
-        {
-          "id": "A142ND3CZ6",
-          "text": "mean position of the intertropical convergence zone during July",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW19E7EMLI",
-          "text": "northerly limit of the SE trade winds during January",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A040GD85RY",
-          "text": "northerly limit of the sub tropical jet stream during July",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOC1BR2PAP",
-          "text": "mean position of the intertropical convergence zone during January",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQETROC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-123970", "BGS-500766"],
-    "annexes": ["174a774f7134611f74326ac8451291b8"],
-    "learningObjectives": ["050.10.02.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to Annex) The dotted line labelled Y represents the",
-      "options": [
-        {
-          "id": "A6CH6IVG8I",
-          "text": "mean position of the intertropical convergence zone during January",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC254NFUCX",
-          "text": "axis of the subtropical jet stream during January",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHXVIAJCKK",
-          "text": "axis of the equatorial jet stream during July",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4HA3B3IGN",
-          "text": "mean position of the intertropical convergence zone during July",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGFYPZOV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-78230"],
-    "annexes": ["1f4bdbf63e85fb22ef0db5dd70587dd3"],
-    "learningObjectives": ["050.10.02.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-33.\nThe dotted line designated \"Y\" represents the:",
-      "options": [
-        {
-          "id": "ANAEOF48R2",
-          "text": "mean position of the Intertropical Convergence Zone (ITCZ) during January.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT4OALWS4Q",
-          "text": "axis of the equatorial jet stream during July.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF5S6JYMY5",
-          "text": "mean position of the Intertropical Convergence Zone (ITCZ) during July.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A22VV10R33",
-          "text": "axis of the subtropical jet stream during January.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAYXAGLU",
-    "relatedQuestions": ["QVBKYJHD"],
-    "externalIds": [
-      "ATPLGS-109810",
-      "ATPLQ-502864",
-      "AVEXAM-29970",
-      "BGS-500902"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Above and below a low level inversion the wind is likely to:",
-      "options": [
-        {
-          "id": "A2ISW9FKLQ",
-          "text": "change significantly in speed and direction.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALZYFVRSDT",
-          "text": "experience little or no change in speed and direction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4YY9P958C",
-          "text": "change in direction but not in speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5M3T9P84Q",
-          "text": "change in speed but not in direction.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVBKYJHD",
-    "relatedQuestions": ["QAYXAGLU"],
-    "externalIds": ["BGS-500902"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Above and below a low level inversion the wind is likely to:",
-      "options": [
-        {
-          "id": "AHYKKJEGFF",
-          "text": "Change significantly in speed and direction",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWLWII365H",
-          "text": "Change in direction but not in speed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR6F7Y73JH",
-          "text": "Change in speed but not in direction",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ8L9HEJRS",
-          "text": "Experience little or no change in speed and\ndirection",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUSLYUEC",
-    "relatedQuestions": ["QDWDRJSG"],
-    "externalIds": [
-      "ATPLGS-123631",
-      "ATPLQ-501858",
-      "AVEXAM-58951",
-      "BGS-501075"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In what hPa range is an upper weather chart for FL 340 situated?",
-      "options": [
-        {
-          "id": "AH6Y7Z8W0O",
-          "text": "300 - 200 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4KNYIN9GC",
-          "text": "600 - 500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1RHQ5X9RL",
-          "text": "500 - 400 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9VFM5M73Y",
-          "text": "400 - 300 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDWDRJSG",
-    "relatedQuestions": ["QUSLYUEC"],
-    "externalIds": ["ATPLGS-123631", "ATPLQ-501858"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In what hPa range is an upper weather chart for FL 340 situated?",
-      "options": [
-        {
-          "id": "AJ7L5IXRKW",
-          "text": "300 – 200 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJWLQWVMLB",
-          "text": "400 – 300 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3G6O86YDI",
-          "text": "600 – 500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWBAZ0Y744",
-          "text": "500 – 400 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWCBKAKK",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-111373",
-      "ATPLGS-111378",
-      "ATPLGS-123543",
-      "ATPLQ-504047",
-      "ATPLQ-504831",
-      "AVEXAM-48362",
-      "AVEXAM-80180",
-      "BGS-501060",
-      "BGS-501070"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When planning a flight at FL110, which upper wind and temperature chart would be nearest your flight level?",
-      "options": [
-        {
-          "id": "ADL79AGATC",
+          "id": "OENS1OY88",
           "text": "700 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMUFZWPOC",
+          "text": "600 hPa",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMA7SGV4FK",
-          "text": "500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAIXUHVXYK",
-          "text": "300 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH4MPRPMKD",
+          "id": "O5CTXY7LE",
           "text": "850 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI6B0UWS3",
+          "text": "400 hPa",
           "correct": false,
           "why": ""
         }
@@ -935,500 +198,42 @@
     "id": "QEQYXCTY",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-111365",
-      "ATPLGS-123409",
       "ATPLQ-505921",
-      "BGS-501030"
+      "AVEXAM-55320",
+      "BGS-501020",
+      "BGS-501030",
+      "ATPLGS-111365",
+      "AVEXAM-47479",
+      "ATPLGS-123409"
     ],
     "annexes": [],
     "learningObjectives": ["050.10.02.03.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In which meteorological forecast chart is information about CAT regions found?",
+      "question": "In which meteorological forecast chart is information about CAT areas found?",
       "options": [
         {
-          "id": "ACN7U7KI8H",
-          "text": "Significant Weather Chart.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE3HWUCJK8",
-          "text": "500 hPa chart.",
+          "id": "OH5AMXWO2",
+          "text": "300 hPa chart.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWYX5OBPXY",
+          "id": "OVDJR97BB",
           "text": "24 hour surface forecast.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVQ61WHC7W",
-          "text": "300 hPa chart.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAVMQWTE",
-    "relatedQuestions": ["QWYVNWXO"],
-    "externalIds": ["ATPLGS-111491"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How may the correct wind speed be found, for a level, which is between two upper air chart levels? (e.gwind at FL250, when the 500 hPa and the 300 hPa chart are available).",
-      "options": [
-        {
-          "id": "ATEVBMFOIG",
-          "text": "By interpolation of the wind information available from the two charts, while also considering the maximum wind information found on the Significant Weather Chart.",
+          "id": "O4PKRZ1BF",
+          "text": "Significant weather chart.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AECZLU2QJK",
-          "text": "By reading wind direction and speed from the 300 hPa chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA7FQPMVNQ",
-          "text": "By simple interpolation of wind information available from the two charts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFX3MZ7KBY",
-          "text": "By reading wind direction and speed from the next higher chart.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWYVNWXO",
-    "relatedQuestions": ["QAVMQWTE"],
-    "externalIds": ["AVEXAM-84844"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How may the correct wind speed be found, for a level, which is between two upper air chart levels? (e.g. wind at FL250, when the 500 hPa and the 300 hPa chart are available).",
-      "options": [
-        {
-          "id": "AB1M0EBPD1",
-          "text": "By interpolation of the wind information available from the two charts, while also considering the maximum wind information found on the Significant Weather Chart.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXVULFMRN8",
-          "text": "By reading wind direction and speed from the next higher chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1JV9CFAE0",
-          "text": "By simple interpolation of wind information available from the two charts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9Y6BP6J13",
-          "text": "By reading wind direction and speed from the 300 hPa chart.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYZXNKOE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111442", "AVEXAM-2001"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The lines on a contour chart join points of",
-      "options": [
-        {
-          "id": "A7QSFZRP9Y",
-          "text": "equal height.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVUHMNNV07",
-          "text": "equal pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A38LHH747I",
-          "text": "equal temperature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AACP5COGIF",
-          "text": "equal humidity.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIWJSTCT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-109904", "AVEXAM-23667"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the defined upper level of the WS activity in the following message?MOD WS APCH RWY18 FCST=",
-      "options": [
-        {
-          "id": "A5SBGGP8F2",
-          "text": "1 600 ft above runway level.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK3EIV324T",
-          "text": "2 000 ft above circling altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7C3IUX1N5",
-          "text": "2 500 ft above runway level.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8MBWF4SEM",
-          "text": "1 000 ft above circling altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRSOLASJ",
-    "relatedQuestions": ["QCKUTXGI", "QSTJHKVD"],
-    "externalIds": ["ATPLGS-626013", "AVEXAM-53797"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The upper wind and temperature chart of 250 hPa corresponds, in a standard atmosphere, to about:",
-      "options": [
-        {
-          "id": "ACN8EICX42",
-          "text": "34 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASB8WJNYT2",
-          "text": "30 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0M4US8I1I",
-          "text": "32 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYK3KBFC6M",
-          "text": "39 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCKUTXGI",
-    "relatedQuestions": ["QRSOLASJ", "QSTJHKVD"],
-    "externalIds": ["BGS-501065"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The upper wind and temperature chart of 250 hPa corresponds, in a standard atmosphere, to about:",
-      "options": [
-        {
-          "id": "A9BJE56ZLM",
-          "text": "34000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAXEVKRRT7",
-          "text": "32000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVCKNO14IE",
-          "text": "39000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYPCNIKWA5",
-          "text": "30000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSTJHKVD",
-    "relatedQuestions": ["QCKUTXGI", "QRSOLASJ"],
-    "externalIds": ["ATPLQ-502648"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The upper wind and temperature chart of 250 hPa corresponds, in a standard atmosphere, to about:",
-      "options": [
-        {
-          "id": "A1OWNIMXHC",
-          "text": "34 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABIOQ24RQN",
-          "text": "30 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUQRCL63DE",
-          "text": "39 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZL9PEQIE3",
-          "text": "32 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWYFBLVT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501546"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  The chart shows wind vector, speed, and temperature at various altitudes above the indicated positions. What weather phenomenon might the pilot of an aircraft departing from an airport located in the area of 5230N 0230W expect shortly after take-off when passing 2000 ft if the associated weather is nimbostratus cloud with a base of 3500 ft?",
-      "options": [
-        {
-          "id": "APTIYG3NAK",
-          "text": "Freezing rain",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMFZ2VAH1N",
-          "text": "Wind shear",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE3T3XXX2G",
-          "text": "CAT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWP5T47VI3",
-          "text": "Hail",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQARULRX",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-111423",
-      "ATPLGS-123714",
-      "ATPLQ-505000",
-      "BGS-501071"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If a flight at FL150 is planned, which of these upper wind and temperature charts would be nearest to that flight level?",
-      "options": [
-        {
-          "id": "AUW7MK8HIN",
-          "text": "600 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP05H2Q2ZB",
-          "text": "500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1228TZYYU",
-          "text": "700 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATCK3OTHV2",
-          "text": "850 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPVRJQES",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502218"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The constant pressure chart which is standard for FL140 is:",
-      "options": [
-        {
-          "id": "AYU6RULAPI",
-          "text": "600 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIQMIT26FH",
-          "text": "700 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1HL7709ID",
-          "text": "850 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1WQBSM2AZ",
-          "text": "400 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRUFAZNC",
-    "relatedQuestions": ["QJCANAYY"],
-    "externalIds": ["ATPLGS-127973", "ATPLQ-502185", "AVEXAM-70396"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A line connecting places that have the same temperature is called an:",
-      "options": [
-        {
-          "id": "AR1AD76QHD",
-          "text": "isotherm",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS5FSQG1SD",
-          "text": "isotach",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAEFENPDZ4",
-          "text": "isobar",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMEUXHQPKM",
-          "text": "isohypse",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCANAYY",
-    "relatedQuestions": ["QRUFAZNC"],
-    "externalIds": ["AVEXAM-70396"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A line connecting places that have the same temperature is called an:",
-      "options": [
-        {
-          "id": "A69XFUMGZZ",
-          "text": "isotherm.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4FZDUJGUC",
-          "text": "isobar.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH8X6Z0XNH",
-          "text": "isotach.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO1N64ATK1",
-          "text": "isohypse.",
+          "id": "O4ITFS4KG",
+          "text": "500 hPa chart.",
           "correct": false,
           "why": ""
         }
@@ -1438,73 +243,40 @@
   {
     "id": "QFPOGOSE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-624950", "ATPLQ-502999"],
+    "externalIds": [
+      "ATPLQ-502999",
+      "ATPLGS-624950",
+      "AVEXAM-8102",
+      "BGS-501133"
+    ],
     "annexes": [],
     "learningObjectives": ["050.10.02.03.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What surface wind is forecast for 2200 UTC? EDDF 272200Z 2806/2824 VRB05KT 4000 BR SCT005 OVC013 BECMG 2813/2814 9000 SHRA OVC015 PROB40 TEMPO 2814/2816 VRB15G25KT 1600 TSRA OVC010CB BECMG 2816/2818 26010KT BECMG 2821/2822 CAVOK=",
+      "question": "What surface wind is forecast for 22:00 UTC?\n\nEDDF 272200Z 2806/2824 VRB05KT 4000 BR SCT005 OVC013 BECMG 2813/2814 9000 SHRA OVC015 PROB40 TEMPO 2814/2816 VRB15G25KT 1600 TSRA OVC010CB BECMG 2816/2818 26010KT BKN030 BECMG 2821/2822 CAVOK",
       "options": [
         {
-          "id": "A36BTDXB76",
-          "text": "260°/10 kts",
+          "id": "OBSDDTTL5",
+          "text": "260°/10 kts.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AV5NVD0Z18",
-          "text": "Variable/05 kt",
+          "id": "OIRDY8WND",
+          "text": "Variable/05 kts.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMOLEKPBAK",
-          "text": "Variable/15 to 25 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW638HYLXF",
+          "id": "OYPOIEQGT",
           "text": "Calm",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQSWWXTN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-63929"],
-    "annexes": ["2d7e04890eb183e564b7cd5acfae6311"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-108.\nWhat is the average wind for the route Berlin - Oslo at FL240?",
-      "options": [
-        {
-          "id": "AV33KFNYGY",
-          "text": "220° / 40 kts",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "ABPGU2P66S",
-          "text": "250° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWMB13IEQN",
-          "text": "190° / 40 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABCCPJJWVH",
-          "text": "040° / 40 kts",
+          "id": "O83J2CAB1",
+          "text": "Variable/15 to 25 kts.",
           "correct": false,
           "why": ""
         }
@@ -1512,1365 +284,37 @@
     }
   },
   {
-    "id": "QHZBCEAR",
+    "id": "QWYFBLVT",
     "relatedQuestions": [],
-    "externalIds": ["BGS-501100"],
-    "annexes": ["023772c2c7f5606ce51d6d8db53bf093"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nSelect from the map the average wind for the route Shannon - Lisboa at FL 290.",
-      "options": [
-        {
-          "id": "AMUZ27WCI6",
-          "text": "360/80",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A25EPGDBC2",
-          "text": "340/90",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABUYNDHZ1A",
-          "text": "190/75",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHTV5MBX3G",
-          "text": "030/70",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTLKWOHK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-25080", "BGS-501058"],
+    "externalIds": ["ATPLQ-501546", "ATPLGS-124177", "AVEXAM-8652"],
     "annexes": [],
     "learningObjectives": ["050.10.02.03.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "When planning a flight at FL60, which upper wind and temperature chart would be nearest to your flight level?",
+      "question": "Refer to figure.  \nThe chart shows wind vector, speed, and temperature at various altitudes above the indicated positions. What weather phenomenon might the pilot of an aircraft departing from an airport located in the area of 5230N 0230W expect shortly after take-off when passing 2000 ft if the associated weather is nimbostratus cloud with a base of 3500 ft?",
       "options": [
         {
-          "id": "AEN8T05ISO",
-          "text": "850 hPa",
+          "id": "ORJFVLOBU",
+          "text": "CAT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCKJVXHQP",
+          "text": "Freezing rain",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMEER2WS0D",
-          "text": "500 hPa",
+          "id": "OKFXNCU14",
+          "text": "Wind shear",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKQS5ZSKY4",
-          "text": "300 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP414TTI0C",
-          "text": "700 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHIIXRCX",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501277"],
-    "annexes": ["e5e9c6c1eb00cd7766814919ff680e81"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image)   \nJudging by the chart, what wind speeds can you expect at FL 310 above London?",
-      "options": [
-        {
-          "id": "A7LJ5YSTP8",
-          "text": "90 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD565I1M79",
-          "text": "110 km/h",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK1H22HHVT",
-          "text": "140 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAN5MRR7PT",
-          "text": "300 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUCFVACC",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501051"],
-    "annexes": ["a4e67f49f5fbd4dc76df2a94d4ded82b"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nWhat wind is forecast at FL 390 over Paris?",
-      "options": [
-        {
-          "id": "A1VXFR2ZAK",
-          "text": "210/40",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVI50I0ME1",
-          "text": "240/20",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC9VV87G5Z",
-          "text": "190/40",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7ACO3G3LA",
-          "text": "030/40",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQWPWTEZ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-111481",
-      "ATPLQ-505877",
-      "AVEXAM-33421",
-      "BGS-501090"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Isotachs are lines joining the points of equal:",
-      "options": [
-        {
-          "id": "A1DL7LBLGO",
-          "text": "wind speeds.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQMNTERIRM",
-          "text": "wind speed lapse rates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7UXSEW3CG",
-          "text": "horizontal wind speed gradients.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI39OBPP3B",
-          "text": "sea-level pressures.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIPCNQGQ",
-    "relatedQuestions": ["QYKTDXAE"],
-    "externalIds": ["BGS-501094"],
-    "annexes": ["191a74f3472078da43c2e9eab61b5a7d"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nSelect from the map the average wind for the route Frankfurt - Rome at FL 170.",
-      "options": [
-        {
-          "id": "A7WZDP1WPT",
-          "text": "230/40",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANESFCX0U9",
-          "text": "030/35",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGW7JICED9",
-          "text": "050/40",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ0I5Y05PE",
-          "text": "200/50",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYKTDXAE",
-    "relatedQuestions": ["QIPCNQGQ"],
-    "externalIds": ["BGS-501095"],
-    "annexes": ["7a37149ae6046de3d9298dd55db2c5dc"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nSelect from the map the average wind for the route Zurich - Rome at FL 110.",
-      "options": [
-        {
-          "id": "ADN8XCIMWZ",
-          "text": "230/10",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0CPWZYACI",
-          "text": "200/30",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAMM7S9PZY",
-          "text": "250/20",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYRPD4ALMV",
-          "text": "040/10",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTARUTPZ",
-    "relatedQuestions": ["QUNVXXAV"],
-    "externalIds": [
-      "ATPLGS-123708",
-      "ATPLQ-506285",
-      "AVEXAM-45437",
-      "BGS-501091"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On an upper wind and temperature chart:",
-      "options": [
-        {
-          "id": "A7164O50F0",
-          "text": "the pressure is constant all over the chart.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8FC21E2JK",
-          "text": "the wind increases from south to north.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A96FWKMCS5",
-          "text": "the height is constant all over the chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6E4MVHNQK",
-          "text": "the temperature is constant all over the chart.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUNVXXAV",
-    "relatedQuestions": ["QTARUTPZ"],
-    "externalIds": ["BGS-501091"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On an upper wind and temperature chart:",
-      "options": [
-        {
-          "id": "AXLA357MDV",
-          "text": "The pressure is constant all over the chart.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARHLIX268Q",
-          "text": "The temperature is constant all over the\nchart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXFLQ1X0DL",
-          "text": "The height is constant all over the chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU4DEECSJC",
-          "text": "The wind increases from south to north.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAZOUYUZ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501068"],
-    "annexes": ["4fc83ff6e15ec58934edd8fe25f95a11"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nSelect from the map the average wind for the route Athens - Geneva at FL 160.",
-      "options": [
-        {
-          "id": "AFLM4YFPE9",
-          "text": "240/40",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAWMHY2XIH",
-          "text": "210/25",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN51THM6FI",
-          "text": "260/40",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXCYPXZ102",
-          "text": "050/35",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNTPVNHV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-23778"],
-    "annexes": ["2355183ab191dd672cb88ea2a12f81e2"],
-    "learningObjectives": ["050.10.02.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-24.\nA convergence line is indicated by letter:",
-      "options": [
-        {
-          "id": "ARM3MOR159",
-          "text": "A",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALZEGY5GCC",
-          "text": "C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACVGD4Z5JD",
-          "text": "B",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ77ZZX1Z0",
-          "text": "D",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZSISQGZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-58921"],
-    "annexes": ["02d36f34bb746aab62867976b6051d68"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-82.\nSelect from the map the average wind for the route Athens - Geneva at FL160:",
-      "options": [
-        {
-          "id": "A0VU9Y127N",
-          "text": "240° / 40 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFZWG8YLUU",
-          "text": "210° / 25 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A43SD0EV96",
-          "text": "050° / 35 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI65HPMSAM",
-          "text": "260° / 45 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZANXNYX",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501053"],
-    "annexes": ["8ddd44d2a4f207d713742b0f44298e8c"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nWhat is the average wind forecast for FL 300 between Edinburgh and Madrid?",
-      "options": [
-        {
-          "id": "A6U70P91NS",
-          "text": "280/30",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYSJ697R0A",
-          "text": "300/45",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A04NOHHC29",
-          "text": "180/20",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW8HJ6R6HT",
-          "text": "240/25",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDWPZKCB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-391"],
-    "annexes": ["68edf3526396340519996efd5528802b"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-84.\nSelect from the map the average wind for the route Zurich - Hamburg at FL240:",
-      "options": [
-        {
-          "id": "AIRULZEKKB",
-          "text": "230° / 15 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABJ99SIN9U",
-          "text": "020° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANIWY5JJK8",
-          "text": "260° / 25 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM4DVGSBOI",
-          "text": "200° / 20 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEPZBQAG",
-    "relatedQuestions": ["QPDGFIWB", "QQMCYACY"],
-    "externalIds": ["ATPLGS-123449", "ATPLQ-506018"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is a trend forecast?",
-      "options": [
-        {
-          "id": "A4SGVSYKYP",
-          "text": "A landing forecast appended to METAR/SPECI, valid for 2 hours",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE753BCRFH",
-          "text": "A routine report",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2WYLEHOL7",
-          "text": "An aerodrome forecast valid for 9 hours",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYMPVA5W46",
-          "text": "A route forecast valid for 24 hours",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPDGFIWB",
-    "relatedQuestions": ["QEPZBQAG", "QQMCYACY"],
-    "externalIds": ["AVEXAM-19602"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is a trend forecast?",
-      "options": [
-        {
-          "id": "AGOS2J1CS9",
-          "text": "A landing forecast appended to METAR/SPECI, valid for 2 hours.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASB0EO8LCL",
-          "text": "A route forecast valid for 24 hours.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARUGX4M8FS",
-          "text": "A routine report.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN2LVYYUD0",
-          "text": "An aerodrome forecast valid for 9 hours.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQMCYACY",
-    "relatedQuestions": ["QEPZBQAG", "QPDGFIWB"],
-    "externalIds": ["BGS-501125"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is a trend forecast?",
-      "options": [
-        {
-          "id": "AIUEQ2MDMQ",
-          "text": "A landing forecast appended to METAR/SPECI, valid for 2\nhours",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9T3ST7WBD",
-          "text": "A routine report",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIOQ98JAP8",
-          "text": "A route forecast valid for 24 hours",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANPPVH8PLE",
-          "text": "An aerodrome forecast valid for 9 hours",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTVPEPCE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501364"],
-    "annexes": ["193862d39f1106b358ee3b09fd11c178"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the Annex showing forecast winds at FL300. What would be the average forecast wind for a route from Moscow to Kiev?",
-      "options": [
-        {
-          "id": "AGMKL31DSE",
-          "text": "020/65",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVXP83YUNE",
-          "text": "150/60",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU7LSL5S24",
-          "text": "020/35",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACSPUNBYZZ",
-          "text": "200/80",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDHQFQVF",
-    "relatedQuestions": ["QDCZGKGY"],
-    "externalIds": ["AVEXAM-75966"],
-    "annexes": ["a3a81c3d0d3d7667ce777b9c1031b329"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-83.\nSelect from the map the average wind for the route Frankfurt - Rome at FL170:",
-      "options": [
-        {
-          "id": "ABZ0AHWW84",
-          "text": "230° / 30 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5NFA47VAJ",
-          "text": "050°/ 40 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWZGD4TM4V",
-          "text": "200° / 50 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8VW7SSISE",
-          "text": "030° / 35 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDCZGKGY",
-    "relatedQuestions": ["QDHQFQVF"],
-    "externalIds": ["AVEXAM-63093"],
-    "annexes": ["923f0b5f8cddce2453a0b0890db3c58e"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-78.\nSelect from the map the approximate average wind for the route Zurich - Rome at FL110:",
-      "options": [
-        {
-          "id": "AWGGYH95NV",
-          "text": "230° / 10 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5QDUL2R82",
-          "text": "250° / 20 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5DKMC60GT",
-          "text": "200° / 30 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY73BRBUCN",
-          "text": "040° / 10 kts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QATRDJKM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501115"],
-    "annexes": ["0964d0d368558b1bf9a3de09c98e1af0"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  Select from the map the average wind for the route Zurich - Rome at FL 110.",
-      "options": [
-        {
-          "id": "A7VLTWY9I0",
-          "text": "230/10",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACQ9TJGPZO",
-          "text": "250/20",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3JHFWSG95",
-          "text": "040/10",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH6T4BH7QQ",
-          "text": "200/30",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHFNFBTA",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-8102"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What surface wind is forecast for 22:00 UTC?\nEDDF **272200Z** **2806**/**2824** VRB05KT **4000** BR SCT005 OVC013 BECMG **2813**/**2814** **9000** SHRA OVC015 PROB40 TEMPO **2814**/**2816** VRB15G25KT **1600** TSRA OVC010CB BECMG **2816**/**2818** **26010KT** BKN030 BECMG **2821**/**2822** CAVOK",
-      "options": [
-        {
-          "id": "AEBZ5HN1HQ",
-          "text": "Visibility 2.5 kilometres, mist, cloud base 500 feet, wind speed 5 knots.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC1SNUXF3X",
-          "text": "Visibility 800 metres, fog, wind from 230°, cloud base 500 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4HKZOF4RA",
-          "text": "Visibility 800 metres, fog, vertical visibility 200 feet, wind calm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABXYS895SD",
-          "text": "Visibility 6 kilometres, cloud base 500 feet, wind speed 5 knots.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAYJWMEW",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-53441"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the lowest possible cloud base forecast for **2300** UTC?\nEDDF **272200Z** **2806**/**2824** VRB05KT **4000** BR SCT005 OVC013 BECMG **2813**/**2814** **9000** SHRA OVC015 PROB40 TEMPO **2814**/**2816** VRB15G25KT **1600** TSRA OVC010CB BECMG **2816**/**2818** **26010KT** BKN030 BECMG **2821**/**2822** CAVOK=",
-      "options": [
-        {
-          "id": "AZSY3F1NTU",
-          "text": "3 000 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW2L4NGR2Y",
-          "text": "10 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZNRUQEPZ5",
-          "text": "1 500 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2X72MICOU",
-          "text": "5 000 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJPJNOGH",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJSMIEID",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-53585"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What surface wind is forecast for ETA 17:00 UTC at Kingston?\nMKJP **160430Z** **1606**/**1706** **36010KT** **9999** FEW025CB **BECMG1613**/**1615** **14020G34KT** FEW015CB SCT025 PROB30 TEMPO **1617**/**1620** **2500** +SHRA SCT010 BKN015CB BECMG **1623**/**1701** **34010KT** FEW025=",
-      "options": [
-        {
-          "id": "A1J6AJWJBU",
-          "text": "140° / 20 kts gusts 34 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4J2RNY3BO",
-          "text": "340° / 10 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACVHGP83QV",
-          "text": "140° / 27 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7U4612WW7",
-          "text": "360° / 10 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXMUJKCG",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QNGTAMNG"
-    ],
-    "externalIds": ["AVEXAM-27192"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the lowest possible cloud base forecast for ETA 17:00 UTC at Kingston?\nTAF MKJP **160000Z** **1606**/**1706** **36010KT** **9999** FEW025 BECMG **1613**/**1615** **14020G34KT** FEW015CB SCT025 PROB30 TEMPO **1615**/**1620** **6000** +SHRA SCT010 BKN015CB BECMG **1623**/**1701** **34010KT** FEW025=",
-      "options": [
-        {
-          "id": "A70S54L9C1",
-          "text": "1 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWCKT1RK01",
-          "text": "1 000 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO3G1H0AVO",
-          "text": "1 500 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK611DA949",
-          "text": "1 500 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBVTXBAM",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-26182"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the lowest visibility forecast for Bangkok at ETA 14:00 UTC?\nTAF VTBD **271800Z** **2800**/**2824** VRB05KT **1200** BR TEMPO **2800**/**2802** **4000** BECMG **2802**/**2805** **9999** SCT015 BKN100 TEMPO **2811**/**2818** **04010G20KT** **5000** TSRA SCT009 BKN014 BKN018CB BECMG **2820**/**2824** **6000**=",
-      "options": [
-        {
-          "id": "AOEHVJ7YJQ",
-          "text": "5 km",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYLHMUR3PN",
-          "text": "1 200 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATHCSF9E0G",
-          "text": "6 km",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APT4QN4M3U",
-          "text": "10 km or more",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJSMIEID",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-29651"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What type of precipitation might occur at 17:00 UTC?\nMKJP **160430Z** **1606**/**1706** **36010KT** **9999** FEW025 BECMG **1613**/**1615** **14020G34KT** FEW015CB SCT025 PROB30 TEMPO **1617**/**1620** **6000** +SHRA SCT010 BKN015CB BECMG **1622**/**1624** **34010KT** FEW025=",
-      "options": [
-        {
-          "id": "A6ZVBGO0UA",
-          "text": "Heavy rain showers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANQK1QON87",
-          "text": "Continuous moderate rain.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKZOVCW6O8",
-          "text": "Intermittent light rain.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO28YLELXS",
-          "text": "None.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAUYVOAV",
-    "relatedQuestions": [
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QNGTAMNG",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-79150"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "LFPG **221100Z** **2212**/**2219** **22010KT** **4500** RA BKN010 OVC015 TEMPO **2212**/**2214** **1200** +RA OVC005 **FM221430** **29020G35KT** **6000** SHRA BKN008TCU OVC015 TEMPO **2216**/**2219** **25010KT** **9999** NSW BKN020 PROB30 TEMPO **2216**/**2219** **1500** TSGR BKN007CB =\nWhat is the lowest cloud base you may encounter at 13:45Z?",
-      "options": [
-        {
-          "id": "A37JPMV6Y3",
-          "text": "500 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFMY7G1A82",
-          "text": "1 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARRIFTHNNS",
-          "text": "12 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPNGVHPLR",
-          "text": "700 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNGTAMNG",
-    "relatedQuestions": [
-      "QAUYVOAV",
-      "QAYJWMEW",
-      "QBVTXBAM",
-      "QHFNFBTA",
-      "QJPJNOGH",
-      "QJSMIEID",
-      "QXMUJKCG"
-    ],
-    "externalIds": ["AVEXAM-95723"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "LFPG **221100Z** **2212**/**2219** **22010KT** **4500** RA BKN010 OVC015 TEMPO **2212**/**2214** **1500** +RA OVC005 **FM221430** **29020G35KT** **6000** SHRA BKN008TCU OVC015 TEMPO **2216**/**2219** **25010KT** **9999** NSW BKN020 PROB30 TEMPO **2216**/**2219** **1500** TSGR BKN007CB =\nWhat is the most likely visibility for landing at 13:45Z?",
-      "options": [
-        {
-          "id": "AYR8VYU8WR",
-          "text": "4 500 m",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZHPXAWQW0",
-          "text": "12 000 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABSOPBLF3M",
-          "text": "6 000 m",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5SQNPRZ2R",
-          "text": "1 500 m",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPQWVQFD",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-995869"],
-    "annexes": ["27a22c330dae13238d42741d5ce38992"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What does the SIGWX chart symbol mean? Please refer to image attached.",
-      "options": [
-        {
-          "id": "AV0N9EBORJ",
-          "text": "Moderate icing",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWWF92PYQW",
-          "text": "Hail",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL3DJ828F0",
-          "text": "Widespread fog",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1HK11QSQD",
-          "text": "Severe turbulence",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPUSRHEB",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501353"],
-    "annexes": ["299317afd21bfa9b250e4c1c24cf7766"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image)\nWhat is the average wind forecast for FL 300 between London and Rome?",
-      "options": [
-        {
-          "id": "AG8ONTBYY6",
-          "text": "260/40",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASG2LY9T13",
-          "text": "170/30",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV8GE5B6PP",
-          "text": "300/50",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8IFIBWBEK",
-          "text": "220/20",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQHPQVVJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502635"],
-    "annexes": [],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": " \n Select from the map the average wind for the route Athens – Munich at FL 170.",
-      "options": [
-        {
-          "id": "A6ELSDRFJB",
-          "text": "270/55",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOWVQRDY50",
-          "text": "090/60",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXCHIXDRZL",
-          "text": "120/50",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3OENSM5IF",
-          "text": "300/60",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRNTRTVA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-62119"],
-    "annexes": ["4301f447b72bf651685cdcb62c500727"],
-    "learningObjectives": ["050.10.02.03.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-85.\nWhat is the average wind for the route Shannon - Lisboa at FL290?",
-      "options": [
-        {
-          "id": "ABUSHPQHP3",
-          "text": "360° / 80 kts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQL8Y8X5GQ",
-          "text": "030° / 70 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACT34BYJ4I",
-          "text": "190° / 75 kts.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP0I17XJSJ",
-          "text": "340° / 90 kts.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXKVLFXA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-87844"],
-    "annexes": ["076481193c7c28e91f12acf9938bcc65"],
-    "learningObjectives": ["050.10.02.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-68.\nJudging by the chart, what wind speeds can you expect at FL310 above London?",
-      "options": [
-        {
-          "id": "A7WIUZXX72",
-          "text": "90 kts",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASDHSJG0BO",
-          "text": "110 km/h",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFFGTYX1G8",
-          "text": "140 kts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATS5Z975UA",
-          "text": "300 kts",
+          "id": "OFJBZJM6S",
+          "text": "Severe hail",
           "correct": false,
           "why": ""
         }

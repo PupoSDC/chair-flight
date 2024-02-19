@@ -1,159 +1,125 @@
 [
   {
-    "id": "QTFUTUIX",
-    "relatedQuestions": ["QLOIHNUY"],
-    "externalIds": ["ATPLGS-129539", "BGS-221246"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How many gyros are in an AHRS (attitude and heading reference system)?",
-      "options": [
-        {
-          "id": "AYRNBACBXA",
-          "text": "3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A25K9U1XRG",
-          "text": "4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4KHD4F4CB",
-          "text": "5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA30OZ561G",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLOIHNUY",
-    "relatedQuestions": ["QTFUTUIX"],
-    "externalIds": ["ATPLGS-129539", "BGS-221246"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How many gyros are in an AHRS (attitude and heading reference system)?",
-      "options": [
-        {
-          "id": "A5VUVQ582B",
-          "text": "3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC6JCFAJ3W",
-          "text": "6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARNCNRC33R",
-          "text": "4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEOH8O01YS",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDQCDVXB",
+    "id": "QVDSY00FO",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-105899",
-      "ATPLGS-120326",
-      "ATPLGS-626285",
-      "ATPLQ-229662",
-      "ATPLQ-703911",
-      "AVEXAM-55313",
-      "AVEXAM-79812",
-      "BGS-220138"
+      "ATPLQ-228730",
+      "BGS-220016",
+      "AVEXAM-30476",
+      "ATPLGS-120478"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the static source to an airspeed indicator (ASI) becomes blocked during a descent the instrument will:",
+      "question": "The aeroplane outside air temperature probe measures the:",
       "options": [
         {
-          "id": "A1I7C6V6VN",
-          "text": "over-read.",
+          "id": "OX1MLYXMI",
+          "text": "static air temperature, this must be corrected for compressibility effects to obtain the total air temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXSQG1JZG",
+          "text": "total air temperature, this must be corrected for compressibility effects to obtain the static air temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK5XHXUL3",
+          "text": "total air temperature, this must be corrected for ram rise and recovery factor to obtain the static air temperature.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARZGWW4F0S",
+          "id": "OXAEZBON7",
+          "text": "static air temperature, this must be corrected for ram rise and recovery factor to obtain the total air temperature.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMUVQ2JDN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223859", "BGS-222430", "AVEXAM-63095"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does 470 ft/min equal to?",
+      "options": [
+        {
+          "id": "ON9PBNGIL",
+          "text": "143 m/s",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OULRFVYJ2",
+          "text": "2.4 m/s ",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZVEIPQCT",
+          "text": "1.8 m/s",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ3NQWESA",
+          "text": "235 m/s",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5F6GMBOH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-228690",
+      "AVEXAM-80671",
+      "BGS-220091",
+      "AVEXAM-85385",
+      "BGS-220092",
+      "AVEXAM-35362",
+      "ATPLGS-121082"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the static source of an altimeter becomes blocked during a descent the instrument will:",
+      "options": [
+        {
+          "id": "O3YWXSTEY",
+          "text": "indicate height when the subscale setting is on QNH.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7HGBHG5D",
           "text": "under-read.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARIIA9Y9KN",
-          "text": "continue to indicate the speed applicable to that at the time of the blockage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM68DJ0R65",
-          "text": "read zero.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBJCKZXU",
-    "relatedQuestions": ["QXHKGCYW"],
-    "externalIds": ["ATPLGS-129537", "BGS-221242"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.14"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight data recorder records:",
-      "options": [
-        {
-          "id": "AWXGOIKSP6",
-          "text": "Pressure altitude, thrust, heading, time or relative time count.",
+          "id": "O9UJ25SNB",
+          "text": "continue to display the reading at which the blockage occurred.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALYPIXG383",
-          "text": "Thrust, passengers, time or relative time count, fuel remaining, .",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQTHIWGRTX",
-          "text": "Engine overspeed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOVNZ2DZAW",
-          "text": "Fuel remaining, thrust, heading, hydraulic pressures.",
+          "id": "OY9UJD0US",
+          "text": "gradually indicate zero.",
           "correct": false,
           "why": ""
         }
@@ -161,123 +127,199 @@
     }
   },
   {
-    "id": "QXHKGCYW",
-    "relatedQuestions": ["QBJCKZXU"],
-    "externalIds": ["ATPLGS-129537", "BGS-221242"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.14"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight data recorder records:",
-      "options": [
-        {
-          "id": "A5OA00XJBQ",
-          "text": "Pressure altitude, thrust, heading, time or relative time count.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQYPEZ3OJ2",
-          "text": "Pressure altitude, fuel remaining, thrust, fuel burn rate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG9KJXUOJT",
-          "text": "Thrust, passengers, time or relative time count, fuel remaining, .",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWZC1IQDRL",
-          "text": "Fuel remaining, thrust, heading, hydraulic pressures.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUWBBSJK",
-    "relatedQuestions": ["QHQDESQG"],
+    "id": "Q051HFKYF",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120335",
+      "ATPLQ-226111",
+      "ATPLGS-106252",
+      "AVEXAM-71036",
+      "ATPLGS-113221",
+      "BGS-220240"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The output data from an ADC are used by:\n\n1 – Transponder   \n2 – EFIS via the symbol generator   \n3 – Automatic Flight Control System (AFCS)\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "O5MATOWCB",
+          "text": "1, 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTK3H42Q4",
+          "text": "1, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMNCEREXM",
+          "text": "2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD02825NN",
+          "text": "1, 2, 3.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTBOYXRQC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222051", "AVEXAM-22339", "BGS-221580"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The following parameters must be determined first before displaying the Mach number:",
+      "options": [
+        {
+          "id": "OB2QGLDTU",
+          "text": "Static pressure and outside air temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1HXPSOBZ",
+          "text": "Air density and dynamic pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIU8CTKKP",
+          "text": "Outside air temperature and air density.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OREPLCRCO",
+          "text": "Dynamic pressure and static pressure.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPMELTKUU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225255", "BGS-221723", "BGS-222413"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An Air-Data Inertial Reference Unit (ADIRU) has separate controls for switching the air-data and inertial reference part ON or OFF. The pilot accidentally switches OFF the incorrect system when following a procedure to address a fault. What is correct?\n\n(For this question, only consider the system as a standalone part NOT including other aircraft systems that may also be affected by the scenario.)\n\n1\\. If the air-data part is switched OFF instead of the inertial reference part, there is NO effect as the data can be recovered when the air-data part is switched back on.   \n 2\\. If the air-data part is switched OFF instead of the inertial reference part, the function is severely limited as the air-data part CANNOT be initialised when switched back ON.   \n 3\\. If the inertial reference part is switched OFF instead of the air-data part, the function is severely limited as the inertial reference part CANNOT be fully re-aligned when switched back ON.   \n 4\\. If the inertial reference part is switched OFF instead of the air-data part, there is NO effect as the data can be recovered when the inertial reference part is switched back on.",
+      "options": [
+        {
+          "id": "OCKWZROVY",
+          "text": "1 and 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEDRGBQCE",
+          "text": "2 and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWRUD0NXI",
+          "text": "1 and 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZSUCJ5PJ",
+          "text": "2 and 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1XY8PCBW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225697", "BGS-222382", "BGS-222452", "BGS-222340"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Consider a barometric VSI with a non-linear scale. What does this mean?",
+      "options": [
+        {
+          "id": "OGE36FNPF",
+          "text": "A small ROC or ROD is displayed more accurately than a large one.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBAJEDJXV",
+          "text": "The ROC scale is more accurate than the ROD scale.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCHULCGXP",
+          "text": "The increments between zero and the maximum value are equally spaced.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVRWXDHSP",
+          "text": "The ROD scale is more accurate than the ROC scale.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q0FH4WRNW",
+    "relatedQuestions": [],
+    "externalIds": [
       "ATPLQ-222106",
       "AVEXAM-85526",
+      "ATPLGS-120335",
       "BGS-220123"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "081.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "An aeroplane is descending from FL 390 to ground level at maximum speed. The limit(s) in speed is (are):",
       "options": [
         {
-          "id": "ARTXZXSFKZ",
-          "text": "initially M~MO~   , then V~MO~   below a given flight level.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEEYFX2AY3",
-          "text": "initially V~MO~   , then M~MO~   below a given flight level.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A44DELUKDH",
-          "text": "M~MO~  only during all the descent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A24VSWLI85",
-          "text": "V~MO~  only during all the descent.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHQDESQG",
-    "relatedQuestions": ["QUWBBSJK"],
-    "externalIds": [
-      "ATPLGS-120335",
-      "ATPLQ-222106",
-      "ATPLQ-814442",
-      "AVEXAM-85526",
-      "BGS-220123"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is descending from FL 390 to ground level at maximum speed. The limit(s) in speed is (are):",
-      "options": [
-        {
-          "id": "AR13XIJM06",
-          "text": "initially MMO, then VMO below a given flight level.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHNL2N9JC7",
-          "text": "VMO only during all the descent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AECY8A3103",
+          "id": "ODEESWL5H",
           "text": "MMO only during all the descent.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMRWJL4I0I",
+          "id": "OPCJM4EUC",
+          "text": "initially MMO, then VMO below a given flight level.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O6JDNB9BK",
+          "text": "VMO only during all the descent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHHFWH0T1",
           "text": "initially VMO, then MMO below a given flight level.",
           "correct": false,
           "why": ""
@@ -286,45 +328,42 @@
     }
   },
   {
-    "id": "QMNLHAIS",
+    "id": "QZKS9DSH8",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-129534",
-      "ATPLGS-622542",
-      "ATPLQ-225742",
-      "ATPLQ-226220",
-      "AVEXAM-18720",
-      "AVEXAM-81714",
-      "BGS-221239"
+      "ATPLQ-221635",
+      "ATPLGS-120329",
+      "BGS-222478",
+      "BGS-220120"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In an AHRS, what does the three-axis magnetometer provide?",
+      "question": "A leak in the total pressure line of a non-pressurised aircraft to an airspeed indicator would cause it to:",
       "options": [
         {
-          "id": "A2RDK1YYLW",
-          "text": "The horizontal and vertical components of the earth's magnetic field.",
+          "id": "OHON0H8QZ",
+          "text": "overread.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUQOIQAZW",
+          "text": "underread in a climb and over-read in a descent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTL3PBERM",
+          "text": "underread.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AT77WHEX7R",
-          "text": "The orientation of magnetic North only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOGAXDDTRX",
-          "text": "The vertical component of the earth's magnetic field.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC4Q0YSKDP",
-          "text": "The horizontal component of the earth's magnetic field.",
+          "id": "OLRCLIVFW",
+          "text": "overread in a climb and under-read in a descent.",
           "correct": false,
           "why": ""
         }
@@ -332,123 +371,42 @@
     }
   },
   {
-    "id": "QEJEYMEJ",
-    "relatedQuestions": ["QGFLULSL"],
-    "externalIds": ["ATPLGS-129383", "ATPLQ-225456"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Can an autopilot and flight director be active at the same time:",
-      "options": [
-        {
-          "id": "ALFM7LXSKT",
-          "text": "Yes Providing it is programmed with a VNAV or LNAV settings",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGFRN50MCV",
-          "text": "No The flight director uses the autopilot for guidance",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKO922J4AQ",
-          "text": "Yes if nothing is programmed is programmed with VNAV or LNAV settings",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVCZYSW5N4",
-          "text": "Yes provided the autopilot was used at some point",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGFLULSL",
-    "relatedQuestions": ["QEJEYMEJ"],
-    "externalIds": ["ATPLGS-129383", "ATPLQ-225456"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Can an autopilot and flight director be active at the same time:",
-      "options": [
-        {
-          "id": "AEGB5GTHXA",
-          "text": "Yes Providing it is programmed with a VNAV or LNAV settings",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT4NYGHE0P",
-          "text": "Yes provided the autopilot was used at some point",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AROPFVHSDL",
-          "text": "Yes if nothing is programmed with VNAV or LNAV settings",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ1Q9EBH2B",
-          "text": "No The flight director uses the autopilot for guidance",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXFWLNPM",
-    "relatedQuestions": ["QBERDBRP", "QCCGUQPQ"],
+    "id": "QIPEKBXI7",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-121082",
-      "ATPLGS-626283",
-      "ATPLGS-626289",
-      "ATPLQ-228690",
-      "ATPLQ-702848",
-      "ATPLQ-703064",
-      "AVEXAM-31945",
-      "AVEXAM-80671",
-      "AVEXAM-87150"
+      "ATPLQ-225413",
+      "BGS-220124",
+      "AVEXAM-70401",
+      "ATPLGS-120595"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the static source of an altimeter becomes blocked during a descent the instrument will:",
+      "question": "An airspeed indicator displays:",
       "options": [
         {
-          "id": "A3B5LUD4C2",
-          "text": "continue to display the reading at which the blockage occurred.",
+          "id": "OYTU6B2MR",
+          "text": "TAS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEMD5JY7B",
+          "text": "IAS",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AJM2FRPFZ0",
-          "text": "under-read.",
+          "id": "OQB1AVVOO",
+          "text": "EAS",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AR1H4U1SNG",
-          "text": "gradually indicate zero.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A90WD0MNSS",
-          "text": "indicate a height equivalent to the setting on the millibar subscale.",
+          "id": "OZFBDPFEL",
+          "text": "CAS",
           "correct": false,
           "why": ""
         }
@@ -456,45 +414,93 @@
     }
   },
   {
-    "id": "QCCGUQPQ",
-    "relatedQuestions": ["QBERDBRP", "QXFWLNPM"],
+    "id": "QMEH6GAAI",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-121082",
-      "ATPLQ-228690",
-      "AVEXAM-35362",
-      "AVEXAM-80671",
-      "AVEXAM-85385",
-      "BGS-220091",
-      "BGS-220092"
+      "ATPLQ-221069",
+      "BGS-220193",
+      "BGS-220182",
+      "AVEXAM-55111",
+      "BGS-222002",
+      "AVEXAM-52840",
+      "ATPLGS-120543",
+      "ATPLGS-106228",
+      "BGS-220183",
+      "AVEXAM-56071",
+      "BGS-220197"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the static source of an altimeter becomes blocked during a descent the instrument will:",
+      "question": "Assuming the flight level and Mach number remain constant, when the OAT decreases:",
       "options": [
         {
-          "id": "AWSPCSIJSJ",
-          "text": "continue to display the reading at which the blockage occurred.",
+          "id": "O2LSRU0UP",
+          "text": "CAS decreases and TAS increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8MJIF5AY",
+          "text": "CAS remains constant and TAS increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYZ9QUCT",
+          "text": "CAS and TAS both decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OY0MC1WOQ",
+          "text": "CAS remains constant and TAS decreases.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QU4PI06N8",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-226665",
+      "AVEXAM-80750",
+      "AVEXAM-38456",
+      "BGS-222461",
+      "BGS-222432"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The white arc of a conventional Airspeed Indicator (ASI) corresponds to the…",
+      "options": [
+        {
+          "id": "OUTSIQCOD",
+          "text": "Normal operating speed range.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIAL48XZ8",
+          "text": "Flap operating speed range.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AM49FJQPAJ",
-          "text": "indicate height when the subscale setting is on QNH.",
+          "id": "OT9OSIUUD",
+          "text": "Lowest part of the caution speed range.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5IGQXUWHR",
-          "text": "under-read.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ23HC8K7Z",
-          "text": "gradually indicate zero.",
+          "id": "O0GOG53WW",
+          "text": "Standard approach speed range.",
           "correct": false,
           "why": ""
         }
@@ -502,42 +508,281 @@
     }
   },
   {
-    "id": "QBERDBRP",
-    "relatedQuestions": ["QCCGUQPQ", "QXFWLNPM"],
+    "id": "QJ1A7WPT2",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229556", "AVEXAM-14794"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How can a pilot recognize an unreliable speed condition?\n\n1\\. Vibration on elevator   \n 2\\. Vibration on the floor   \n 3\\. Vibration on the pedals   \n 4\\. Pitch up attitude   \n 5\\. Indication on EFIS",
+      "options": [
+        {
+          "id": "OW4ZOWLNO",
+          "text": "2, 3 and 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMPSCTN1A",
+          "text": "1, 2, 4 and 5",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAUBYMCYD",
+          "text": "1, 4 and 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONJLKRYYO",
+          "text": "1, 2, 3, 4 and 5",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUR5O1PTN",
+    "relatedQuestions": [],
     "externalIds": [
+      "ATPLQ-229603",
+      "ATPLGS-105892",
+      "ATPLGS-120392",
+      "BGS-220121",
+      "AVEXAM-63997"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "After an aircraft has passed through a volcanic cloud, the inlet of the pitot tube is blocked. The pilot begins a stabilised descent and finds that the IAS:",
+      "options": [
+        {
+          "id": "ONANTRE3P",
+          "text": "increases abruptly towards VNE",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHDQ5AWO3",
+          "text": "decreases steadily",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOJ2MMM0Q",
+          "text": "decreases abruptly towards zero",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8BQDKUH7",
+          "text": "increases steadily",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTAKR6KRK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229164", "BGS-221258"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The “barber pole” on an ASI indicates:",
+      "options": [
+        {
+          "id": "OS8TJJ7OX",
+          "text": "The higher of VNE and VMO.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXOABSTWR",
+          "text": "VMO.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKABLVFDG",
+          "text": "The lower of VNE and VMO.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONWHBWBIR",
+          "text": "VNE.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUANGGBLI",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223079",
+      "BGS-220885",
+      "AVEXAM-57541",
+      "ATPLGS-106209"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is the indication of Mach number obtained? From:",
+      "options": [
+        {
+          "id": "OTZYJL1KD",
+          "text": "A kind of echo sound comparing velocity of sound with indicated speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM0W5LP9T",
+          "text": "An ordinary airspeed indicator scaled for Mach numbers instead of knots.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCJCHBRGJ",
+          "text": "Indicated speed (IAS) compared with true air speed (TAS) from the air data computer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZQLTV8OC",
+          "text": "Indicated speed and altitude using a speed indicator equipped with an altimeter type aneroid.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3W2GQOO4",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225107", "BGS-222346", "AVEXAM-46361"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aeroplane is approaching the runway for landing. During the flare, it stalls without warning and experiences a hard landing. What factor could explain this?",
+      "options": [
+        {
+          "id": "OSCWR5RPC",
+          "text": "The pitot tube was blocked, resulting in false airspeed indications.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSACFSWTY",
+          "text": "The AoA sensor vane was stuck in one position.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONV4TKZO3",
+          "text": "The stall warning light was defective.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORKNDIQWW",
+          "text": "The stick shaker motor was burnt out.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOYYOT5GV",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222190", "BGS-222455"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which option best describes the operation principle of an Air Data Computer (ADC)?",
+      "options": [
+        {
+          "id": "OPY5FSRFL",
+          "text": "Raw data generated by the aerodynamic probes (static pressure, pitot) are digitised by data processing modules; the ADC uses these binary values to calculate the air data (pressure altitude, speeds, temperatures)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZWAXAGDB",
+          "text": "Data from classical analogue instruments are used (altimeter, airspeed indicator, temperature probes) and are fed into the ADC; the ADC collects air data (pressure altitude, speeds, temperature) for other systems",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOONBGVR4",
+          "text": "Data generated by the IRS are used by the ADC to calculate the air data (altitude, speeds)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8YVNVJQO",
+          "text": "Data are generated by accelerometers (in the three dimensions) and are used by ADC to calculate the air data (pressure altitude, speeds)",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOC3OUC6K",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229662",
       "ATPLGS-105899",
       "ATPLGS-120326",
-      "ATPLQ-229662",
-      "AVEXAM-79812",
-      "BGS-220138"
+      "BGS-220138",
+      "AVEXAM-79812"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "If the static source of an airspeed indicator becomes blocked during a descent the instrument will:",
       "options": [
         {
-          "id": "AOM8FZ1IK1",
-          "text": "over-read",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL1DQLHA8M",
-          "text": "read zero",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SOTYOQD1",
+          "id": "OHP5D6ZSV",
           "text": "continue to indicate the speed applicable to that at the time of the blockage",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIJFME442D",
+          "id": "OG2VHPPDP",
+          "text": "over-read",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O6QYSRIIJ",
+          "text": "read zero",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9VKXPQUP",
           "text": "under-read",
           "correct": false,
           "why": ""
@@ -546,850 +791,981 @@
     }
   },
   {
-    "id": "QFGOGSQK",
-    "relatedQuestions": ["QDUHISGS"],
-    "externalIds": ["ATPLGS-106491", "AVEXAM-68705"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In heading select the autopilot delivers roll commands to the controls to bank the aircraft\n1) proportional to TAS, but not beyond a specified maximum.\n2) set bank of 27° .\n3) set bank of 15° .\n4) proportional to the deviation from the selected heading.",
-      "options": [
-        {
-          "id": "A2SR9JYN66",
-          "text": "1, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2JAKZRFL8",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2DTKUNGUG",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARXRT0ZLW8",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDUHISGS",
-    "relatedQuestions": ["QFGOGSQK"],
-    "externalIds": ["ATPLGS-106491", "AVEXAM-68705"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In heading select the autopilot delivers roll commands to the controls to bank the aircraft:\n1) proportional to TAS, but not beyond a specified maximum.\n2) set bank of 27°.\n3) set bank of 15°.\n4) proportional to the deviation from the selected heading.",
-      "options": [
-        {
-          "id": "ANPB0XYVX6",
-          "text": "1, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFCXDOIV8T",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A17UC48RIB",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANT0PHKMYS",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGDHIAFT",
-    "relatedQuestions": ["QQYPLNRE", "QTMUSYXM", "QXADAQTL"],
-    "externalIds": ["ATPLGS-106101"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "050.06", "050.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements is true?",
-      "options": [
-        {
-          "id": "A7EBDJ8XVL",
-          "text": "The probes used for RAT measurements have a recovery factor of 0.75 to 0.90, while the probes used for TAT measurements have a recovery factor of around 1.00.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFIPI0DQYC",
-          "text": "The probes used for RAT measurements have a recovery factor of around 1.00.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASG4DNAHRI",
-          "text": "The probes used for TAT measurements are directly connected to the temperature indicator instruments.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJXZ2FGVRV",
-          "text": "The probes used for SAT measurements have a recovery factor ranging from 75 to 90 percent.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQYPLNRE",
-    "relatedQuestions": ["QGDHIAFT", "QTMUSYXM", "QXADAQTL"],
-    "externalIds": ["ATPLGS-111516"],
-    "annexes": ["40133beebadeb300b13d51fdd8aa578d"],
-    "learningObjectives": ["022.02", "050.06", "050.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements is true?",
-      "options": [
-        {
-          "id": "AI312CCMH1",
-          "text": "Turbulence is likely to be encountered at FL310 west of Madrid.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIB8SBZHWJ",
-          "text": "Scattered thunderstorms can be expected over France.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADO2DH9PLQ",
-          "text": "The front to the north of London is moving south.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANPAXZ37Q9",
-          "text": "Freezing level above Madrid is higher than FL120.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTMUSYXM",
-    "relatedQuestions": ["QGDHIAFT", "QQYPLNRE", "QXADAQTL"],
-    "externalIds": ["ATPLQ-504235"],
-    "annexes": ["40133beebadeb300b13d51fdd8aa578d"],
-    "learningObjectives": ["022.02", "050.06", "050.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  Which of these statements is true?",
-      "options": [
-        {
-          "id": "AI8AK66UI7",
-          "text": "Local snow and severe aircraft icing can be expected over Germany",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABAS2NNBD0",
-          "text": "The front to the east of Paris (LFPO) is moving south",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH3Q8YSK52",
-          "text": "Turbulence is likely to be encountered at FL 400 over Malaga (LEMG)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0FQ58MVUG",
-          "text": "Freezing level above London (EGLL) is higher than FL 065",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXADAQTL",
-    "relatedQuestions": ["QGDHIAFT", "QQYPLNRE", "QTMUSYXM"],
-    "externalIds": ["ATPLGS-124018"],
-    "annexes": ["4ae42ff6f6c79c4955da798fa7766332"],
-    "learningObjectives": ["022.02", "050.06", "050.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements is true?",
-      "options": [
-        {
-          "id": "AEX20F349J",
-          "text": "Local snow and severe aircraft icing can be expected over Germany",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN7IVML2HW",
-          "text": "Turbulence is likely to be encountered at FL 400 over Malaga (LEMG)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHYQQKX8Z",
-          "text": "Freezing level above London (EGLL) is higher than FL 065",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9BPPPAJQJ",
-          "text": "The front to the east of Paris (LFPO) is moving south",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLDSEONO",
-    "relatedQuestions": ["QQLWRQJU"],
-    "externalIds": ["ATPLGS-622563", "BGS-221275"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.12"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When TAWS is fitted it must be connected to a:",
-      "options": [
-        {
-          "id": "AE9RB3ZLU0",
-          "text": "4-dimensional FMS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADCH0FUJ8T",
-          "text": "3-dimensional position sensor",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC53GUNQA8",
-          "text": "1-dimensional VSI",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4ZBN9X56X",
-          "text": "2-dimensional terrain model",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQLWRQJU",
-    "relatedQuestions": ["QLDSEONO"],
-    "externalIds": ["ATPLGS-622563", "BGS-221275"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.12"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When TAWS is fitted it must be connected to a:",
-      "options": [
-        {
-          "id": "AP82V8JTYP",
-          "text": "3-dimensional position sensor.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A88IVCZ0Q7",
-          "text": "1-dimensional VSI.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4MW5C9TC9",
-          "text": "4-dimensional FMS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGOCUB0L21",
-          "text": "2-dimensional terrain model.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYXPZZIJ",
-    "relatedQuestions": ["QGAWBZNY"],
-    "externalIds": ["ATPLGS-622561", "ATPLQ-224904"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Mach trim system:",
-      "options": [
-        {
-          "id": "AQ1DWPPZ4X",
-          "text": "Compensates for Mach tuck caused by the rearward movement of the shockwave as an aircraft accelerates",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKTTE2B88B",
-          "text": "Controls the aircraft in roll",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABOM2SVUX1",
-          "text": "Is operational at low subsonic speeds",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8I8SEWB1R",
-          "text": "Compensates for the forward movement of the CP due to the shock wave",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGAWBZNY",
-    "relatedQuestions": ["QYXPZZIJ"],
-    "externalIds": ["ATPLQ-225003", "BGS-220555"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Mach trim system:",
-      "options": [
-        {
-          "id": "AA7R8IFEXH",
-          "text": "increases the static longitudinal stability of an aeroplane by adjusting the horizontal stabiliser according to Mach number.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1OS4PFYJP",
-          "text": "compensates the pitch up tendency at high Mach numbers.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6BO2OYD6Q",
-          "text": "ensures optimum C.G. location by transferring fuel into the horizontal stabiliser.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJTZJM1OTV",
-          "text": "adjust the horizontal stabiliser position during a high speed stall.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNCGXZDJ",
-    "relatedQuestions": ["QCVLCPGN", "QKFAJJHA", "QROTHIZO"],
-    "externalIds": ["ATPLGS-105932"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "032.01", "040.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "VNO is defined as",
-      "options": [
-        {
-          "id": "A7WTMSI7Y5",
-          "text": "maximum structural cruising speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHC751IR43",
-          "text": "maximum operating speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALEHW8YAFT",
-          "text": "never exceed speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJX8MK4K0O",
-          "text": "manoeuvring speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QROTHIZO",
-    "relatedQuestions": ["QCVLCPGN", "QKFAJJHA", "QNCGXZDJ"],
-    "externalIds": ["ATPLGS-107603", "AVEXAM-65588"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "032.01", "040.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "VLO is defined as",
-      "options": [
-        {
-          "id": "ABRES086DG",
-          "text": "the maximum speed for landing gear operation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2OH76TBUW",
-          "text": "minimum possible speed that the aircraft could lift off the ground.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJLUBMIB5Z",
-          "text": "the long range cruise speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZRU7QUZJI",
-          "text": "actual speed that the aircraft lifts off the ground.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCVLCPGN",
-    "relatedQuestions": ["QKFAJJHA", "QNCGXZDJ", "QROTHIZO"],
-    "externalIds": ["ATPLGS-121342", "ATPLQ-405700"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "032.01", "040.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Metacommunication is defined as",
-      "options": [
-        {
-          "id": "AMUS82L0NI",
-          "text": "those aids, other than the actual words, which compliment those words in order to communicate",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A203ZDJPBD",
-          "text": "having an assessment conversation",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7OK6P4Q8U",
-          "text": "active listening",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO4RS6X8DD",
-          "text": "balancing the own ideas and interests with those of the receiver",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKFAJJHA",
-    "relatedQuestions": ["QCVLCPGN", "QNCGXZDJ", "QROTHIZO"],
-    "externalIds": ["ATPLGS-107252"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "032.01", "040.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "ASDA is defined as",
-      "options": [
-        {
-          "id": "AAQ9B896DM",
-          "text": "TORA plus stopway.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A23UX2DGP6",
-          "text": "TORA plus clearway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2LT00JE19",
-          "text": "TODA plus stopway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYEL4R2R9R",
-          "text": "the same as TODA.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTCLQXPR",
+    "id": "QXVC9FOYF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626605", "ATPLQ-227703"],
+    "externalIds": ["ATPLQ-223111"],
     "annexes": [],
-    "learningObjectives": ["022.02", "022.14"],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The altimeter of an aircraft provides indications from 0 - 30 000 ft. The aircraft is on a position of known elevation at the airfield and the altimeter is set to the local QNH. The altimeter will read the elevation of that point:",
+      "options": [
+        {
+          "id": "OGXXRJKY7",
+          "text": "plus the height of the altimeter from the ground with a +/- 80 ft tolerance",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7ZSZQZEX",
+          "text": "+/- 80 ft tolerance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOBTSYOB4",
+          "text": "+/- 25 ft tolerance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTL8NKPRN",
+          "text": "plus the height of the altimeter from the ground with a +/- 60 ft tolerance",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QI4H6KNEP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227549", "BGS-222385", "AVEXAM-82334"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens when speed becomes unreliable?",
+      "options": [
+        {
+          "id": "OAAYTG9CW",
+          "text": "Vibration on the floor and pedals.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLKJ0FJYI",
+          "text": "It is shown on the PFD, \"Speed disagreement\".",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ODD65CFAU",
+          "text": "From the horizontal stabiliser, the pilots will receive some kind of vibration through flight controls.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORXDHWQTB",
+          "text": "Nose pitch up.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEXZQ0XFG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229725", "AVEXAM-6658", "BGS-222392"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Angle of attack vane is damaged during the flight. Which of the following will be directly impacted?",
+      "options": [
+        {
+          "id": "OIYXESMZB",
+          "text": "CDU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEM8YM0LR",
+          "text": "FMS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJEPXS3W8",
+          "text": "IRU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAJHIGUCC",
+          "text": "ADC",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q95U5UNDA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223653", "BGS-221925", "ATPLGS-628415"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During climb with a rate of 500 feet per minute the static ports of the aircraft become blocked. For the rest of the flight, the vertical speed indications will…",
+      "options": [
+        {
+          "id": "O9QLGWNKU",
+          "text": "constantly indicates a 500 feet per minute climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLNSXEVJ0",
+          "text": "be under-reading during climbs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9CJGNYQL",
+          "text": "return to, and indicate, zero feet per minute.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUDFTLWCL",
+          "text": "be over-reading during climbs.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWGNS9ZBW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222529", "BGS-221748"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Due to an aircraft upset, the pilot's instrument scan is disrupted. When he/she next looks at the instruments, he/she sees that the airspeed needle has moved from within the range of the yellow arc to beyond that indicated by a red line. These speed markings represent:",
+      "options": [
+        {
+          "id": "OHRTICKYN",
+          "text": "The normal speed range and the flaps extended speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHSBLKOG3",
+          "text": "The caution range and the normal operating speed limit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCLTGCNQ7",
+          "text": "The caution range and the never exceed speed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2Z0IXJDM",
+          "text": "The normal speed range and the never exceed speed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMMOJEXW4",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229507", "ATPLGS-120890"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a mechanical instrument, the VMO/MMO pointer (barberpole) connects to which of the items listed below?\n\n1\\. Aneroid capsule   \n2\\. Differential pressure capsule   \n3\\. Temperature-sensitive capsule",
+      "options": [
+        {
+          "id": "OYWKRYXKB",
+          "text": "1 and 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8F5AIYVS",
+          "text": "1 only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZZMRGSB6",
+          "text": "1, 2, and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXVVT0FEJ",
+          "text": "2 only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZBLY2DY8",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223732",
+      "AVEXAM-54392",
+      "AVEXAM-99898",
+      "AVEXAM-82267",
+      "AVEXAM-87028"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of these statements about failures of different ADIRU parts are correct or incorrect?\n\n1\\. If an ADC is accidentally switched off during flight, it is possible to turn it back on.   \n 2\\. If an IRS is accidentally switched off during flight, it can be problematic as it is not possible to realign it during flight.",
+      "options": [
+        {
+          "id": "OBGAAF9V9",
+          "text": "(1) incorrect; (2) incorrect",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5CUOI3QB",
+          "text": "(1) correct; (2) incorrect",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6ADTJUXJ",
+          "text": "(1) correct; (2) correct",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OS2ZSINLO",
+          "text": "(1) incorrect; (2) correct",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q6N1Y1OZP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227694"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The airspeed, altitude, and angle of attack are fed to the ADIRU by the \\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "O4RX6SEJF",
+          "text": "EADI",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPPKVSGHC",
+          "text": "FCU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OT2JUWE9J",
+          "text": "ADC",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4RUBW65W",
+          "text": "MCP",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZWLZMUXM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-221261",
+      "BGS-220161",
+      "AVEXAM-26418",
+      "ATPLGS-105909",
+      "ATPLGS-105958",
+      "ATPLGS-120358",
+      "AVEXAM-82300",
+      "BGS-220160",
+      "AVEXAM-39082",
+      "BGS-220158"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The limits of the yellow arc (caution speed range) of an airspeed indicator are:",
+      "options": [
+        {
+          "id": "O9QDVX9GM",
+          "text": "VFE for the lower limit and VNE for the upper limit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2881ZBYE",
+          "text": "VLE for the lower limit and VNE for the upper limit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8OQNBFJ2",
+          "text": "VNO for the lower limit and VNE for the upper limit.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCTPIUZGH",
+          "text": "VLO for the lower limit and VNE for the upper limit.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8X67YWNM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227799", "BGS-221978", "AVEXAM-12272"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Mach Meter is subject to position error. This error varies with:",
+      "options": [
+        {
+          "id": "OH3BYWA7W",
+          "text": "OAT only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJIGFCXPQ",
+          "text": "TAS and OAT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMEJQANFL",
+          "text": "Mach number and angle of attack.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKRFFMQEK",
+          "text": "TAS only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNSKIZDTN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-221990",
+      "BGS-220161",
+      "AVEXAM-26418",
+      "ATPLGS-105909",
+      "ATPLGS-120358",
+      "AVEXAM-82300",
+      "BGS-220160",
+      "AVEXAM-39082",
+      "BGS-220158"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The limits of the white scale of an airspeed indicator are:",
+      "options": [
+        {
+          "id": "OENRHBHN6",
+          "text": "VS0 for the lower limit and VLE for the upper limit",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6CWAWPWQ",
+          "text": "VS0 for the lower limit and VFE for the upper limit",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O419IBZZ5",
+          "text": "VS1 for the lower limit and VFE for the upper limit",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMSVOKXJO",
+          "text": "VS1 for the lower limit and VLE for the upper limit",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVTVVZG1D",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229409", "AVEXAM-90999"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If flying an aircraft not equipped with automatic temperature correction, to which altitudes should the PIC apply temperature correction?",
+      "options": [
+        {
+          "id": "OF4FVI41A",
+          "text": "only at MDH/MDA or DH/DA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUA84HCQD",
+          "text": "at MDH/MDA or DH/DA and step-down fixes inside the final approach fix (FAF).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZNNKYJA0",
+          "text": "only at the step-down fixes inside the final approach fix (FAF).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONBEPYMFW",
+          "text": "only at the intermediate section.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBGHT3PY6",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226720", "BGS-222383"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the ADC fails, which of the following instruments related to the pitot-static instruments are affected?\n\n1\\. Air Speed Indicator  \n2\\. Vertical Speed Indicator  \n3\\. Altimeter  \n4\\. Attitude indicator",
+      "options": [
+        {
+          "id": "OVFO3ZXVV",
+          "text": "1, 2 and 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OM8T77SQB",
+          "text": "1 and 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZZVFKP0Z",
+          "text": "1 and 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4MSH9HPG",
+          "text": "1, 2, 3 and 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVI5RYFRA",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-226419",
+      "ATPLGS-628541",
+      "BGS-221652",
+      "AVEXAM-89227"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Most modern transport aircraft have three Air Data Inertial Reference Units (ADIRUs). Each ADIRU combines an IRS with ....., which sends barometric altitude and TAS information to the IRS.",
+      "options": [
+        {
+          "id": "O0ZMQHBUW",
+          "text": "an Electronic Attitude Direction Indicator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZGZBVWVX",
+          "text": "a Flight Management Computer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXXDCYS0X",
+          "text": "an Air Data Computer.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORFQLN4N1",
+          "text": "an Attitude and Heading Reference System.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5W8CXZNI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225672", "BGS-222395"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is flying with an IVSI when another aircraft in front, same level and route, reports moderate turbulence. How does this affect the IVSI?",
+      "options": [
+        {
+          "id": "OTP45HBTQ",
+          "text": "Lags behind.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OANSAR5CT",
+          "text": "Freeze at zero.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIDZN3OST",
+          "text": "Indicates a climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLGNM1XWA",
+          "text": "Overreact.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5EG7KOJS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222459", "BGS-220232", "AVEXAM-97047"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An air data computer\n\n1– supplies GS and drift angle   \n2 – determines TAT and true altitude   \n3 – receives static pressure and total pressure   \n4 – supplies TAS to the INS computer   \n5 – determines Mach number and OAT.\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "OBHNLITLO",
+          "text": "2, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLFS26RNW",
+          "text": "3, 4, 5.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIQJ9UOIL",
+          "text": "1, 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPGEFPSRR",
+          "text": "2, 3, 4.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QE7MOCVB6",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221254", "BGS-222429", "AVEXAM-94468"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to TAS and ROC if an aircraft climbs at constant CAS of 300kt and a vertical speed of 2 000 ft/min?",
+      "options": [
+        {
+          "id": "OZ3XC8IHM",
+          "text": "TAS and ROC decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7THVGON0",
+          "text": "TAS and ROC increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGVW6GBEL",
+          "text": "TAS increases, ROC decreases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OB1IUYZ0E",
+          "text": "TAS decreases, ROC increases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDYQDEHXP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222874", "AVEXAM-4460"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "ATC asks you to “expedite climb” in departure. Which speed should you use, and how is it indicated?",
+      "options": [
+        {
+          "id": "O2I1KSXTS",
+          "text": "Best RATE of climb speed. Blue line.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORWGDJTRB",
+          "text": "Best angle of climb speed. Blue line.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7KYCJQLB",
+          "text": "Best rate of climb speed. Green arc.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ59C8YE8",
+          "text": "Best angle of climb speed. White arc.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSZQVQQYR",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229666", "AVEXAM-26024"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How many capsules can you find in a sensitive altimeter?",
+      "options": [
+        {
+          "id": "OOLURI8D1",
+          "text": "At least two.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHQZXGXQV",
+          "text": "One, or more.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O75GXOTQG",
+          "text": "At least three.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTAZCUZ7E",
+          "text": "One.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTRTSUA5W",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227703", "ATPLGS-626605"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "During a preflight inspection of a multi engined aircraft, you notice that the AOA sensor is damaged. Which systems are affected?",
       "options": [
         {
-          "id": "A1URRMFYP8",
-          "text": "ADC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9ALO77SXN",
-          "text": "IRS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3O1QZ7P00",
+          "id": "OJ4C9SVR2",
           "text": "TAT Probe",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7PI24E5FE",
+          "id": "OQAPRLW0K",
           "text": "INS",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRHLAXHU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-34754", "AVEXAM-63095"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "470 ft/min equals...",
-      "options": [
-        {
-          "id": "A5AREXI001",
-          "text": "2.4 m/s",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "ALEM50WVU4",
-          "text": "235 m/s",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARGV8BEQJJ",
-          "text": "8.83 m/s",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGEPD8BSZQ",
-          "text": "1.8 m/s",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPIZRIRB",
-    "relatedQuestions": ["QANISUYH"],
-    "externalIds": [
-      "ATPLGS-106372",
-      "ATPLGS-625746",
-      "ATPLQ-228027",
-      "BGS-220322"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For an aircraft flying a true track of 360° between the 5° S and 5° N parallels, the precession error of the directional gyro due to apparent drift is equal to...",
-      "options": [
-        {
-          "id": "AQFMOV07WY",
-          "text": "approximately 0° per hour.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMUWI6QD54",
-          "text": "-5° per hour.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQKEW2E8PM",
-          "text": "+5° per hour.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A09NVDA1EQ",
-          "text": "15° per hour.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QANISUYH",
-    "relatedQuestions": ["QPIZRIRB"],
-    "externalIds": ["ATPLGS-106372", "ATPLQ-228027"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For an aircraft flying a true track of 180°  between the 5° N and 5° S parallels, the precession error of the directional gyro due to apparent drift is equal to",
-      "options": [
-        {
-          "id": "AKTJI26PXJ",
-          "text": "approximately 0° / hour",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAUNVRN0PM",
-          "text": "-5° / hour",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI4UNSL9VV",
-          "text": "+5° / hour",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTW7BL849",
-          "text": "+15° / hour",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBWTFNLU",
-    "relatedQuestions": ["QOFGRMII", "QSGBTBEC"],
-    "externalIds": [
-      "ATPLGS-120951",
-      "ATPLQ-227220",
-      "AVEXAM-88913",
-      "BGS-220296"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At a low bank angle, the measurement of rate-of-turn consists of measuring the...",
-      "options": [
-        {
-          "id": "AA0Y4S0MCA",
-          "text": "yaw rate of the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9XZ2MPFJI",
-          "text": "bank of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGV8PLRS2R",
-          "text": "pitch rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXFCAQEQCE",
-          "text": "roll rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGBTBEC",
-    "relatedQuestions": ["QBWTFNLU", "QOFGRMII"],
-    "externalIds": ["ATPLGS-120951", "ATPLQ-227220"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At a low bank angle, the measurement of rate-of-turn consists of measuring the",
-      "options": [
-        {
-          "id": "A3K2IAZG5J",
-          "text": "yaw rate of the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1RLSR168J",
-          "text": "pitch rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4SE5JY3KC",
-          "text": "roll rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0AA3LRD6C",
-          "text": "bank of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOFGRMII",
-    "relatedQuestions": ["QBWTFNLU", "QSGBTBEC"],
-    "externalIds": [
-      "ATPLGS-120951",
-      "ATPLQ-227220",
-      "AVEXAM-88913",
-      "BGS-220296"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At a low bank angle, the measurement of rate-of-turn consists of measuring the..",
-      "options": [
-        {
-          "id": "A9320E0ZS6",
-          "text": "yaw rate of the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOZTQE4JRV",
-          "text": "bank of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARR44ADM8E",
-          "text": "roll rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8DA3RPOVN",
-          "text": "pitch rate of the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSQVHBGK",
-    "relatedQuestions": ["QOKYBEIN"],
-    "externalIds": ["ATPLQ-228264"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The output of an ADC can be used by:",
-      "options": [
-        {
-          "id": "A8O1F8VASD",
+          "id": "OIBZ672JX",
           "text": "IRS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWKX0V6FF9",
-          "text": "ADI",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADVIHH5FSX",
+          "id": "OFFECVYXC",
+          "text": "ADC",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYFCWVOOH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223746", "BGS-221921", "AVEXAM-46245", "BGS-222393"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How is the risk of stalling affected if an aeroplane climbs at constant Mach number?",
+      "options": [
+        {
+          "id": "ODMKUWWBI",
+          "text": "It is unaffected, as the TAS will remain the same.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSEZHPHPK",
+          "text": "It decreases, as the TAS of the aircraft is increasing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWV6IIJ1D",
+          "text": "It increases up to around FL200, and then decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAG7DILIQ",
+          "text": "It increases, as the TAS of the aircraft is decreasing.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDTUA0ZXM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226061", "BGS-222010", "BGS-220212", "AVEXAM-7371"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Mach number is the:",
+      "options": [
+        {
+          "id": "OXCTAT6TN",
+          "text": "CAS divided by the local speed of sound.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6TVMIMKI",
+          "text": "EAS divided by the local speed of sound.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYJ6FALKD",
+          "text": "IAS divided by the local speed of sound.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOS9CDN4F",
+          "text": "TAS divided by the local speed of sound.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q2XBXFKSC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229363", "AVEXAM-10697", "BGS-221899"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The captain's ASI reads a 5 kt difference from the co-pilot’s ASI. What additional action can the pilots perform?",
+      "options": [
+        {
+          "id": "OEYZNFKWM",
+          "text": "They can change the ADC readout.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG8LPUE26",
+          "text": "There is nothing the flight crew can do as the difference is within limits.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSACRWR7P",
+          "text": "They should divert as soon as possible.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONLWBD0E0",
+          "text": "The groundspeed can be verified from the INS/GNSS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7TXBV7JP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221590"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following systems uses output data from the Air Data Computer?",
+      "options": [
+        {
+          "id": "OX4CEUSCF",
+          "text": "AFCS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPSCCAVKK",
+          "text": "RPM indicator",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEHYPJT8A",
+          "text": "DG",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHNUFR2Y1",
           "text": "GPS",
           "correct": false,
           "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QH2GQBTNZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225730", "BGS-221304", "BGS-222505", "AVEXAM-5460"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is considered a peripheral device for the Digital Air Data Computer (DADC)?",
+      "options": [
+        {
+          "id": "O4HXSEEJR",
+          "text": "Vertical accelerometer.",
+          "correct": false,
+          "why": ""
         },
         {
-          "id": "ALYJ6E3F3F",
-          "text": "ADIRU",
+          "id": "OI3KYAGYN",
+          "text": "Radio altimeter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKN9XE8GD",
+          "text": "Angle of attack vane.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAW2TFDEI",
+          "text": "Standby altitude and airspeed indicator.",
           "correct": false,
           "why": ""
         }
@@ -1397,75 +1773,82 @@
     }
   },
   {
-    "id": "QOKYBEIN",
-    "relatedQuestions": ["QSQVHBGK"],
-    "externalIds": ["ATPLQ-229577", "BGS-221345"],
+    "id": "QBPOXYXBH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-226934",
+      "ATPLGS-120322",
+      "ATPLGS-106089",
+      "AVEXAM-43156",
+      "BGS-220085",
+      "AVEXAM-3742"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.02", "022.05"],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The open-ended tube parallel to the longitudinal axis of the aircraft senses the:",
+      "options": [
+        {
+          "id": "OLITGPRRV",
+          "text": "static pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORI3JMDYY",
+          "text": "total pressure plus static pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBCVFQTPF",
+          "text": "dynamic pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUCHEIJOU",
+          "text": "total pressure.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQZA348NK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229577", "AVEXAM-69406", "BGS-221345"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "The outputs of an ADC can be used by:",
       "options": [
         {
-          "id": "AT1KZ4CJ6B",
-          "text": "SAT pointer",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGTLIN15JB",
+          "id": "OHKCBWFRU",
           "text": "ADI",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANM0WP3YW1",
-          "text": "GPS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XEFFZUDN",
+          "id": "OW1SHUE72",
           "text": "RMI",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLOVLDEJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129530", "ATPLQ-223359", "BGS-221232"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "022.09"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which autothrottle mode would normally be used on initial approach?",
-      "options": [
+        },
         {
-          "id": "A2HNKKKQE0",
-          "text": "IAS only",
+          "id": "OXHWMIIUE",
+          "text": "SAT pointer",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AX5W4QFNQ0",
-          "text": "IAS and N1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A370COV8TJ",
-          "text": "Mach number and EPR",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1FH9LHNCP",
-          "text": "TAS and N1",
+          "id": "OJR5WCFH8",
+          "text": "GPS",
           "correct": false,
           "why": ""
         }
@@ -1473,37 +1856,37 @@
     }
   },
   {
-    "id": "QPXGEZDB",
+    "id": "QCIYLQOSF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627233", "ATPLQ-224865", "BGS-222316"],
+    "externalIds": ["ATPLQ-222577", "BGS-221718"],
     "annexes": [],
-    "learningObjectives": ["022.02", "022.12"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The main input of a stall protection system is:",
+      "question": "During the cruise at FL400, the pitot tubes of your aircraft become blocked by volcanic ash. After starting a descent, what should you be aware of? The airspeed display will…",
       "options": [
         {
-          "id": "AO4YQUN1AX",
-          "text": "the angle of attack.",
+          "id": "OKNXPMLUR",
+          "text": "under-read.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AWYHY4J8WQ",
-          "text": "the pitch angle.",
+          "id": "OTAO07BP3",
+          "text": "be unaffected.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8HLN3KIBS",
-          "text": "the airspeed.",
+          "id": "O6NKMXVS8",
+          "text": "be frozen.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A42OCP0C4G",
-          "text": "the g load.",
+          "id": "OODXJNX01",
+          "text": "over-read.",
           "correct": false,
           "why": ""
         }
@@ -1511,42 +1894,233 @@
     }
   },
   {
-    "id": "QWZBALDF",
+    "id": "QGJTY7ZES",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222537", "AVEXAM-10748"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What can be said regarding small airplane's Angle of Attack (AoA) sensor?",
+      "options": [
+        {
+          "id": "OFL2HVMXK",
+          "text": "It is located on the tail of the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODGKPQSJA",
+          "text": "It is a small vane on the leading edge of the wing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTBVBTZ5D",
+          "text": "It is located on the side of the fuselage.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE4MVC6X8",
+          "text": "It is a small radar dish on top of the cockpit.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTAPBBXRN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224891"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In which of the following conditions are TAS and EAS equal?",
+      "options": [
+        {
+          "id": "OB74QGQFL",
+          "text": "P: 1 013.25 hPa, OAT: 15°C and TAS < 200 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVURKR5OL",
+          "text": "P: 1 013.25 hPa and OAT: 15°C",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OS48RZ4EN",
+          "text": "P: 1 013.25 hPa and OAT: 273 K",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYEGICYNS",
+          "text": "P: 1 013.25 hPa, OAT: 15°C and TAS > 200 kt",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXAMBSTFI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229944", "BGS-221355", "AVEXAM-6265"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What does the logarithmic scale of a Vertical Speed Indicator (VSI) mean?",
+      "options": [
+        {
+          "id": "OVB7VRV8J",
+          "text": "A small rate of change is displayed more accurately than a large rate of change.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OYCPPO7UX",
+          "text": "A large rate of change is displayed more accurately than a small rate of change.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHM7IDNC2",
+          "text": "The VSI only reads correctly under ISA conditions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM87UTPJZ",
+          "text": "All rates of climb and descent are displayed with the same accuracy.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBKLHWUXM",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-626288",
-      "ATPLQ-709366",
-      "AVEXAM-24292",
-      "AVEXAM-66383"
+      "ATPLQ-227847",
+      "ATPLGS-106180",
+      "ATPLGS-120391",
+      "AVEXAM-37915",
+      "BGS-220116"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What happens when the static pressure supply, to a Vertical Speed Indicator, becomes blocked during a descent?",
+      "question": "The response time of a vertical speed detector may be decreased by adding a:",
       "options": [
         {
-          "id": "A0740507YQ",
-          "text": "Reading gradually reduces to zero.",
+          "id": "OYYH9SXAG",
+          "text": "second calibrated port.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFVTBVOZB",
+          "text": "bimetallic strip.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODIJ2AQY7",
+          "text": "return spring.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOUYAO8SC",
+          "text": "correction based on an acceleration sensor.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYK5TNMNB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227471", "AVEXAM-86290", "BGS-222431"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How could a pilot notice an airspeed unreliable condition?\n\n1\\. Flight controls vibrations  \n2\\. Floor vibrations  \n3\\. Message on the PFD  \n4\\. Different airspeed indications on the ASIs  \n5\\. Buffeting",
+      "options": [
+        {
+          "id": "OHTYRVV63",
+          "text": "3, 4 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYPKNNUXW",
+          "text": "2, 4 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGR5AXMIB",
+          "text": "1, 4 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFGX2HT60",
+          "text": "1, 2, 3, 4 and 5.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEKWPS9T5",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222280", "AVEXAM-24426"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If you are flying through turbulence, you can expect the IVSI to (1) \\_\\_\\_\\_\\_. You should (2) \\_\\_\\_\\_\\_ small fluctuations.",
+      "options": [
+        {
+          "id": "OVR6ND3RX",
+          "text": "(1) Overreact, (2) Correct (slowly)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCWIMTA7Y",
+          "text": "(1) Overreact, (2) Ignore",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0VBRPUKNA",
-          "text": "Under-reads.",
+          "id": "O9OAMGRPF",
+          "text": "(1) Underreact, (2) Correct (slowly)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAFSKBTS29",
-          "text": "Over-reads.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWVDERX2NJ",
-          "text": "Indicates altitude at which blockage occurred.",
+          "id": "OTZFXRPOX",
+          "text": "(1) Underreact, (2) Ignore",
           "correct": false,
           "why": ""
         }
@@ -1554,43 +2128,87 @@
     }
   },
   {
-    "id": "QEVVICEO",
+    "id": "QOHIRKGDQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221206"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What feature makes the IVSI a better instrument?",
+      "options": [
+        {
+          "id": "OQ76HLNML",
+          "text": "It uses accelerometers to make the reaction time quicker.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTVW2VAE3",
+          "text": "It relies on mechanical linkages to sense changes in air pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXKT9TT4U",
+          "text": "It uses GPS signals to calculate vertical speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBOR4YFJ4",
+          "text": "Accelerometers change the pressure in the capsule.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF7NMTWVZ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-105940",
-      "ATPLGS-626282",
-      "ATPLQ-702785",
-      "AVEXAM-76026",
-      "AVEXAM-95521"
+      "ATPLQ-222256",
+      "ATPLGS-625718",
+      "AVEXAM-59272",
+      "BGS-220100",
+      "AVEXAM-56696",
+      "AVEXAM-40013",
+      "AVEXAM-40468",
+      "ATPLGS-106138",
+      "ATPLGS-625715",
+      "ATPLGS-106136",
+      "AVEXAM-75494"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "With a pitot probe blocked due to ice buildup, the aircraft airspeed indicator will indicate in descent a:",
+      "question": "The altimeter indicates 16 000 ft with a subscale-setting of 1013,25 mb. QNH is 993 hPa. OAT is -3°C. The pressure altitude of the aircraft is:  ",
       "options": [
         {
-          "id": "APDP6ME1FC",
-          "text": "decreasing speed.",
+          "id": "OVNQM73Y9",
+          "text": "16 000 ft  ",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AF3BZFPY9R",
-          "text": "increasing speed.",
+          "id": "OLNV9Z0ZJ",
+          "text": "17 700 ft  ",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATL3YDVOZI",
-          "text": "fluctuating speed.",
+          "id": "OW9DVU6LG",
+          "text": "548 hPa  ",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AE3SS2Z5K5",
-          "text": "constant speed.",
+          "id": "OS2VQK1JY",
+          "text": "14 200 ft  ",
           "correct": false,
           "why": ""
         }
@@ -1598,432 +2216,194 @@
     }
   },
   {
-    "id": "QHJDWJLU",
-    "relatedQuestions": ["QCUGXTGE"],
+    "id": "QKBUHSPFB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224984", "ATPLGS-121162"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "EAS is equal to:  ",
+      "options": [
+        {
+          "id": "OZDJDVE53",
+          "text": "CAS corrected for density error.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI88FZNQR",
+          "text": "TAS corrected for compressibility error.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQXH5WPBF",
+          "text": "IAS corrected for compressibility error.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKNM0R9KX",
+          "text": "IAS corrected for position, instrument and compressibility errors.  ",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QT4QHWPEF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223462", "BGS-221864"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Give the meaning of the acronym PUDSOD.",
+      "options": [
+        {
+          "id": "ONNWGYA9H",
+          "text": "Previously used DME source of distance measurement",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBK1JNGRW",
+          "text": "Pitot underreads in descent, static overreads in descent",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBSQYATI7",
+          "text": "Pilot-used device – system-operated device",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBSSOVVF0",
+          "text": "Performance unit drive system on drive",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSB8SFV7M",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227649"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What input data is required by an AOA sensor?\n\n1\\. Autothrust mode   \n2\\. Thrust   \n3\\. Flaps   \n4\\. Slats   \n5\\. CAS",
+      "options": [
+        {
+          "id": "OCQ1FRSEW",
+          "text": "2, 3 only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZPFM6MTJ",
+          "text": "2, 3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHJOIHSQC",
+          "text": "3, 4 only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQXUZWKTG",
+          "text": "1, 2, 3.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHHMIJKP7",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227295", "BGS-221781", "BGS-222384"],
+    "annexes": [],
+    "learningObjectives": ["022.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When flying steadily at FL180 with the AP engaged you suspect erroneous altimeter indications. What could you check to know which altimeter delivers a correct indication?",
+      "options": [
+        {
+          "id": "OOCCRWHJG",
+          "text": "Cabin pressure altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYTD5A84T",
+          "text": "Weather radar altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQDTVN1RI",
+          "text": "Mode-C altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVCWBPBL6",
+          "text": "GPS altitude.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJHSC2EYN",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-105892",
-      "ATPLGS-105964",
-      "ATPLGS-626287",
-      "ATPLQ-702084",
-      "AVEXAM-63997",
-      "AVEXAM-69024",
-      "AVEXAM-87413"
+      "ATPLQ-225177",
+      "AVEXAM-95254",
+      "BGS-220076",
+      "ATPLGS-120321"
     ],
     "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
+    "learningObjectives": ["022.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During a climb after take-off from a contaminated runway, if the total pressure probe of the airspeed indicator is blocked, the pilot finds that indicated airspeed:",
+      "question": "If the pilot increases the reference pressure using the sub-scale setting knob, the altitude indicated by the altimeter:",
       "options": [
         {
-          "id": "AI6L24BX07",
-          "text": "increases steadily.",
+          "id": "OFDXG650W",
+          "text": "decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAWCJSVWV",
+          "text": "decreases if QNH < 1013 hPa.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGBOOMTQJ",
+          "text": "increases.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVPPOK04R0",
-          "text": "increases abruptly towards V~NE~.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK71EARSUN",
-          "text": "decreases steadily.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZLMXKM5WH",
-          "text": "decreases, abruptly towards zero.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCUGXTGE",
-    "relatedQuestions": ["QHJDWJLU"],
-    "externalIds": [
-      "ATPLGS-105892",
-      "ATPLGS-105964",
-      "ATPLGS-626287",
-      "ATPLQ-702084",
-      "AVEXAM-69024",
-      "AVEXAM-87413"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.02", "071.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During a climb after take-off from a contaminated runway, if the total pressure probe of the airspeed indicator is blocked, the pilot finds that indicated airspeed:",
-      "options": [
-        {
-          "id": "ANLOFNUIHH",
-          "text": "increases steadily.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR42QG3SP5",
-          "text": "decreases steadily.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A049XZ4TG5",
-          "text": "increases abruptly towards VNE.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A90Q2W1RDJ",
-          "text": "decreases, abruptly towards zero.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZSWFFQJ",
-    "relatedQuestions": ["QGSHXSLC"],
-    "externalIds": ["ATPLGS-627460"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The difference between IAS and TAS will",
-      "options": [
-        {
-          "id": "A9Z7VMOAUC",
-          "text": "Decrease as altitude decreases",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATT8OHV15Q",
-          "text": "Increases as air density increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2NJSJ5KDN",
-          "text": "Decrease as speed increase",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKIHMENDAB",
-          "text": "Increases as temperature decreases",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGSHXSLC",
-    "relatedQuestions": ["QZSWFFQJ"],
-    "externalIds": ["ATPLGS-126580"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The difference between IAS and TAS will",
-      "options": [
-        {
-          "id": "ALXXI9LPU9",
-          "text": "decrease as altitude decreases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7XTXRW4YX",
-          "text": "increase as temperature decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUG2PFR14C",
-          "text": "decrease as speed increases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH7J91WTTL",
-          "text": "increase as air density increases.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJBFMBXG",
-    "relatedQuestions": ["QPYJSXIC"],
-    "externalIds": ["AVEXAM-70442"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Calculate the difference in TAS between M.74 at -54°C and M.79 at -52°C.",
-      "options": [
-        {
-          "id": "AZ9F5KRBT1",
-          "text": "30 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS582CB9NN",
-          "text": "47 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIMT2S0XRE",
-          "text": "15 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS6KEAB2LW",
-          "text": "8 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPYJSXIC",
-    "relatedQuestions": ["QJBFMBXG"],
-    "externalIds": ["AVEXAM-15432"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "081.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Calculate the difference in TAS between M.78 at -52°C and M.82 at -55°C.",
-      "options": [
-        {
-          "id": "AARH1IIT9K",
-          "text": "21 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARE1UF63B1",
-          "text": "8 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APZJ2LDYAP",
-          "text": "40 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQDYKZ68HN",
-          "text": "16 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEJYARGD",
-    "relatedQuestions": ["QAFWIEKR", "QJQKQOID", "QPZDFAJN", "QSXBHNJW"],
-    "externalIds": ["BGS-810944"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "040.02", "050.01", "081.03", "081.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "VRA is:",
-      "options": [
-        {
-          "id": "AJPMWT0WS1",
-          "text": "The recommended turbulence penetration airspeed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACNFRAC1ND",
-          "text": "The stall speed in turbulent conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX2VIBTUWC",
-          "text": "A speed just below Mach buffet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW12UHYEI4",
-          "text": "A speed just above low speed buffet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPZDFAJN",
-    "relatedQuestions": ["QAFWIEKR", "QEJYARGD", "QJQKQOID", "QSXBHNJW"],
-    "externalIds": ["BGS-812068"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "040.02", "050.01", "081.03", "081.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "VS0 is:",
-      "options": [
-        {
-          "id": "ALGI5M7C6A",
-          "text": "the stall speed in the landing configuration.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AED70VY0FH",
-          "text": "the reference stall speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACSTWWMVLY",
-          "text": "the minimum speed at which the aeroplane can develop a lift force -normal to the flight path- equal to its weight.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHA4LNWNAA",
-          "text": "the stall speed in a specified configuration.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJQKQOID",
-    "relatedQuestions": ["QAFWIEKR", "QEJYARGD", "QPZDFAJN", "QSXBHNJW"],
-    "externalIds": ["AVEXAM-24673"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "040.02", "050.01", "081.03", "081.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Advection is:",
-      "options": [
-        {
-          "id": "A65BFTGU29",
-          "text": "horizontal motion of air.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHIMZKM56R",
-          "text": "vertical motion of air.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF3IF84HF5",
-          "text": "the same as subsidence.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1YAHAJQ9J",
-          "text": "the same as convection.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSXBHNJW",
-    "relatedQuestions": ["QAFWIEKR", "QEJYARGD", "QJQKQOID", "QPZDFAJN"],
-    "externalIds": ["AVEXAM-7565"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "040.02", "050.01", "081.03", "081.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Autokinesis is:",
-      "options": [
-        {
-          "id": "AKK5QOWB8Z",
-          "text": "the apparent movement of a static single light when stared at for a relatively long period of time in the dark.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZRCQC6XNU",
-          "text": "the automatic adjustment of the crystalline lens to objects situated at different distances.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARF7B9ZG0N",
-          "text": "the change in diameter of the pupil, when looking in the dark.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADXXCQ0PB0",
-          "text": "the phenomenon of spinning lights after the abuse of alcohol.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAFWIEKR",
-    "relatedQuestions": ["QEJYARGD", "QJQKQOID", "QPZDFAJN", "QSXBHNJW"],
-    "externalIds": ["ATPLQ-224543"],
-    "annexes": [],
-    "learningObjectives": ["022.02", "040.02", "050.01", "081.03", "081.06"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "QNH is:",
-      "options": [
-        {
-          "id": "AWILIEJBCE",
-          "text": "the equivalent sea level pressure at the airfield.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATTQAZK672",
-          "text": "the standard pressure setting of 1013 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM1PW15DAJ",
-          "text": "the setting that will give zero indication on the airfield.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARHHU9CC9C",
-          "text": "the airfield barometric pressure.",
+          "id": "OZX1IYAI9",
+          "text": "decreases if QNH > 1013 hPa.",
           "correct": false,
           "why": ""
         }

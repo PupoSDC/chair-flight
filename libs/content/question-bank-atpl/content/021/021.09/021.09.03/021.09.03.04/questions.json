@@ -1,74 +1,36 @@
 [
   {
-    "id": "QUXQIAWA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105220"],
-    "annexes": ["0edef6b95d7d25a49ec39c84540c7e49"],
-    "learningObjectives": ["021.09.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What does the following truth table represent?",
-      "options": [
-        {
-          "id": "AKH6SMP2XC",
-          "text": "NOR.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADVTEAKHGY",
-          "text": "OR.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARSXEG104S",
-          "text": "Exclusive AND.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH9PHG1VUK",
-          "text": "NAND.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QPEIRLRN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120199", "ATPLQ-213192", "BGS-210406"],
+    "externalIds": ["ATPLQ-213192", "BGS-210406", "ATPLGS-120199"],
     "annexes": [],
     "learningObjectives": ["021.09.03.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An inverter is a",
+      "question": "An inverter is a..",
       "options": [
         {
-          "id": "A0S9UU70O2",
-          "text": "unit used to convert DC into AC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEKMTPXOLD",
+          "id": "OMM0NE2XL",
           "text": "device for reversing the polarity of the static charge.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AT93F5GQ7T",
-          "text": "unit used to change AC to DC.",
+          "id": "OWP0CIHKR",
+          "text": "unit used to convert DC into AC.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O297RASAL",
+          "text": "device for changing mechanical movement into electrical energy.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOPAR1E7Y1",
-          "text": "device for changing mechanical movement into electrical energy.",
+          "id": "OF0DGYTOS",
+          "text": "unit used to change AC to DC.",
           "correct": false,
           "why": ""
         }
@@ -76,37 +38,82 @@
     }
   },
   {
-    "id": "QSACUASN",
+    "id": "QIPBQOUU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105239", "AVEXAM-73479"],
-    "annexes": [],
+    "externalIds": [
+      "ATPLQ-215184",
+      "ATPLGS-119877",
+      "ATPLGS-105329",
+      "AVEXAM-30409",
+      "AVEXAM-55415",
+      "ATPLGS-105341"
+    ],
+    "annexes": ["AAYZWETDB"],
     "learningObjectives": ["021.09.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The type of gate that requires all \"TRUE\" inputs for a \"TRUE\" output is:",
+      "question": "Refer to figure.\n\nIn case of failure of the TRU 1: (NB: all contactors not mentioned are assumed to remain open)",
       "options": [
         {
-          "id": "ASKPL53YCG",
-          "text": "AND",
+          "id": "OCUPMJHFR",
+          "text": "DC BUS 1 can be fed by TRU 2 if C3.1 and C3.2 are closed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHRLX0TLT",
+          "text": "DC BUS 1 can be fed via DC ESS BUS if C5.1, C3.1 and C5.2 are closed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFDYHYGZC",
+          "text": "DC BUS 1 cannot be fed via DC BAT BUS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODUO0BGZA",
+          "text": "DC BUS 1 can be fed by TRU 2 via DC BUS 2 and DC BAT BUS if C5.3, C7.4 and C7.1 are closed.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBOZKIUB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214459", "BGS-211366", "ATPLGS-112454"],
+    "annexes": [],
+    "learningObjectives": ["021.09.03.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A rectifier is used to:",
+      "options": [
+        {
+          "id": "OVAK8ZZU9",
+          "text": "change AC to DC.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARUA2GOBNK",
-          "text": "NAND",
+          "id": "OP157WBPY",
+          "text": "change DC to AC.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "APJR073GTT",
-          "text": "OR",
+          "id": "OJRAO0VEP",
+          "text": "increase voltage.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD35EEOBW1",
-          "text": "NOR",
+          "id": "OLRJKJUOC",
+          "text": "decrease voltage.",
           "correct": false,
           "why": ""
         }
@@ -114,38 +121,76 @@
     }
   },
   {
-    "id": "QDYONCUI",
+    "id": "QSRSLFXT",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119888", "ATPLQ-213027", "AVEXAM-74335"],
-    "annexes": ["1b3b4474d6d7038bc14fe2075c14ab08"],
-    "learningObjectives": ["021.09.03.04.03"],
+    "externalIds": ["ATPLQ-212409", "AVEXAM-38241"],
+    "annexes": ["ANEYSTHGB"],
+    "learningObjectives": ["021.09.03.04.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to figure 021-30.\nIn case of failure of the static inverter:\n(Note: all contactors not mentioned are assumed to remain open)",
+      "question": "Refer to figure.\n\nThe function of X-TIE is:",
       "options": [
         {
-          "id": "ABF5WXRQLD",
-          "text": "AC ESS BUS can be powered, if required, by the EMER GEN if C4-1 is closed.",
+          "id": "OXJOYUNCV",
+          "text": "To supply DC BUS 1 when the ESS TRU is feeding the ESS DC BUS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBOSTFRHQ",
+          "text": "To allow DC BUS 2 to be supplied in the case of a failure of TRU 2.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0QTOYNDHD",
-          "text": "DC ESS BUS will not be provided, even if GEN 1 and 2 are supplying AC and the appropriate contactors are closed.",
+          "id": "OPG7W4TN7",
+          "text": "For redundancy in case the ESS TRU fails.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYTZF9YNKC",
-          "text": "AC ESS BUS can be fed by DC ESS BUS.",
+          "id": "OV7Y5HK0P",
+          "text": "To allow DC BUS 1 to supply the ESS DC BUS in the case of ESS TRU failure.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLVOJKZSA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-216523", "AVEXAM-59507"],
+    "annexes": ["ANEYSTHGB"],
+    "learningObjectives": ["021.09.03.04.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nIf TRU 1 fails, DC BUS 1 can be fed via:",
+      "options": [
+        {
+          "id": "OHKGVDVZ1",
+          "text": "The ESS TRU.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4HG4NT226",
-          "text": "AC can be generated by the batteries using the ESS TRU, provided the appropriate contactors are closed.",
+          "id": "ORWWNWEB8",
+          "text": "TRU 2, via the AC BUS 2.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXG1Y9HQG",
+          "text": "The ESS DC BUS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUWYDVY1Y",
+          "text": "GEN 2, AC BUS 2, TRU 2, DC BUS 2 and X-TIE.",
+          "correct": true,
           "why": ""
         }
       ]
@@ -154,73 +199,35 @@
   {
     "id": "QVXMKWAN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119888", "ATPLQ-213027", "AVEXAM-74335"],
+    "externalIds": ["ATPLQ-213027", "ATPLGS-119888", "AVEXAM-74335"],
     "annexes": [],
     "learningObjectives": ["021.09.03.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Annex 021-020 -2008In case of failure of the static inverter (NB all contactors not mentioned are assumed to remain open)",
+      "question": "Refer to figure.\n\nIn case of failure of the static inverter: (NB: all contactors not mentioned are assumed to remain open)",
       "options": [
         {
-          "id": "AOTO4URFRI",
-          "text": "AC ESS BUS can be powered, if required, by the EMER GEN if C4.1 is closed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0N5QA2QUW",
-          "text": "AC can be generated by the batteries using the ESS TRU, provided the appropriate contactors are closed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM9X4P17VD",
+          "id": "OVW4NMETS",
           "text": "DC ESS BUS will not be powered, even if GEN 1 and 2 are supplying AC and the appropriate contactors are closed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3DY0D75P0",
-          "text": "AC ESS BUS can be fed by DC ESS BUS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPDDCZEL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-81657"],
-    "annexes": [],
-    "learningObjectives": ["021.09.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inverter can produce...",
-      "options": [
-        {
-          "id": "AHOOZ41LLN",
-          "text": "115 V AC from 28 V DC",
+          "id": "OI7XRIZNY",
+          "text": "AC ESS BUS can be powered, if required, by the EMER GEN if C4.1 is closed.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ACEOD9C4QL",
-          "text": "28 V AC from 115 V DC",
+          "id": "OIR0NLEIZ",
+          "text": "AC can be generated by the batteries using the ESS TRU, provided the appropriate contactors are closed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9LH2I1YRA",
-          "text": "28 V DC from 115 V AC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8LXUU6NAO",
-          "text": "115 V DC from 28 V AC",
+          "id": "ODELEKSI1",
+          "text": "AC ESS BUS can be fed by DC ESS BUS.",
           "correct": false,
           "why": ""
         }
@@ -231,10 +238,10 @@
     "id": "QXQIUSDY",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120085",
       "ATPLQ-216950",
-      "AVEXAM-33619",
-      "BGS-210408"
+      "BGS-210408",
+      "ATPLGS-120085",
+      "AVEXAM-33619"
     ],
     "annexes": [],
     "learningObjectives": ["021.09.03.04.03"],
@@ -244,179 +251,27 @@
       "question": "The input and output of a static inverter are respectively:",
       "options": [
         {
-          "id": "ABO13MOCJB",
-          "text": "DC and AC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB2VHAZ36Y",
+          "id": "OYPQLNIGT",
           "text": "AC and AC.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFB90Y2MD9",
+          "id": "OMIY9G8CX",
           "text": "AC and DC.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A44NF9HI3N",
+          "id": "OEU5G8UEH",
           "text": "DC and DC.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBOZKIUB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-112454", "ATPLQ-214459", "BGS-211366"],
-    "annexes": [],
-    "learningObjectives": ["021.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A rectifier is used to:",
-      "options": [
+        },
         {
-          "id": "AFUPQL7RO0",
-          "text": "change AC to DC.",
+          "id": "OQNZKEPUC",
+          "text": "DC and AC.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3MN7NDEWA",
-          "text": "increase voltage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHZTVVDVLN",
-          "text": "decrease voltage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7S4H7LT6W",
-          "text": "change DC to AC.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSRSLFXT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216523", "AVEXAM-38241"],
-    "annexes": ["499a8e5c64a6b4d525b21b574f1c2098"],
-    "learningObjectives": ["021.09.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 021-35.\nWhat is the function of the X-TIE?",
-      "options": [
-        {
-          "id": "AS1XMP7CZK",
-          "text": "can be fed via GEN 2, AC BUS 2, TRU 2, DC BUS 2 and X-TIE.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APNF4VRBNC",
-          "text": "can be fed via the ESS DC BUS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADASL681V3",
-          "text": "can be fed via TRU 2, via the AC BUS 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJBOOPWV2Q",
-          "text": "can be fed via the ESS TRU.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKXPWSWH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-89036"],
-    "annexes": [],
-    "learningObjectives": ["021.09.03.04.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An inverter converts ___ to___.",
-      "options": [
-        {
-          "id": "ABCL6952X3",
-          "text": "28V DC, 115V AC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A02V6YAQCE",
-          "text": "28V DC, 115V DC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG8GV2MTD9",
-          "text": "115V AC, 28V DC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFWKWQ8RCO",
-          "text": "115V AC, 28V AC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIPBQOUU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119877"],
-    "annexes": ["1b3b4474d6d7038bc14fe2075c14ab08"],
-    "learningObjectives": ["021.09.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Annex 021-020 -2008)\n In case of failure of the TRU 2 \n\n(NB all contactors not mentioned are assumed to remain open)",
-      "options": [
-        {
-          "id": "AL3PPM1F3J",
-          "text": "DC BUS 2 can be fed by TRU 1 via DC BUS 1 and DC BAT BUS if C5.1, C7.1 and C7.4 are closed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATCYWS97EJ",
-          "text": "DC BUS 2 can be fed by TRU 1 if C3.1 and C3.2 are closed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQADM4SYIX",
-          "text": "DC BUS 2 cannot be fed via DC BAT BUS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFR5TAHOVF",
-          "text": "DC BUS 2 can be fed via DC ESS BUS if C5.3, C3.2 and C5.2 are closed.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -425,111 +280,35 @@
   {
     "id": "QQJPEIJO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216653"],
+    "externalIds": ["ATPLQ-216653", "AVEXAM-89036"],
     "annexes": [],
     "learningObjectives": ["021.09.03.04.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Complete the following sentence:\nAn inverter converts (1) _____ to (2) _____.",
+      "question": "Complete the following sentence:\n\nAn inverter converts (1) \\_\\_\\_\\_\\_ to (2) \\_\\_\\_\\_\\_.",
       "options": [
         {
-          "id": "AXK5GB18GR",
+          "id": "O09BGU9XX",
+          "text": "(1) 28V DC; (2) 115V DC ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFPVOBSGM",
+          "text": "(1) 115V AC; (2) 28V AC ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYFB8N3TE",
           "text": "(1) 28V DC; (2) 115V AC",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AG43JY7IIT",
-          "text": "(1) 28V DC; (2) 115V DC  ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOEQS6FVLB",
-          "text": "(1) 115V AC; (2) 28V AC  ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMGJGOG8NZ",
+          "id": "OQMG2LZPE",
           "text": "(1) 115V AC; (2) 28V DC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNXIIAIG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-85952"],
-    "annexes": ["499a8e5c64a6b4d525b21b574f1c2098"],
-    "learningObjectives": ["021.09.03.04.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 021-35.\nWhen TRU 1 has a failure...",
-      "options": [
-        {
-          "id": "A3UXA6B2ON",
-          "text": "DC BUS 1 can be restored through DC X-TIE function.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASEWHD7S9S",
-          "text": "AC BUS 1 can be restored through AC ESS BUS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA4CR9WHZI",
-          "text": "AC BUS 1 can be restored through AC X-TIE function.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACRVUC5GTH",
-          "text": "DC BUS 1 can be restored through the DC ESS BUS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBOXLKFP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-8108"],
-    "annexes": [],
-    "learningObjectives": ["021.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A rectifier is a unit that:",
-      "options": [
-        {
-          "id": "AOYC0HS2N6",
-          "text": "produces a DC output from AC input.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZL9L067TL",
-          "text": "transforms one AC voltage to a greater/smaller AC voltage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A970R8F2DG",
-          "text": "protects the electrical system from over-voltages induced in the system itself.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0JSHULB7U",
-          "text": "prevents rectified current from occurring in the electrical system.",
           "correct": false,
           "why": ""
         }

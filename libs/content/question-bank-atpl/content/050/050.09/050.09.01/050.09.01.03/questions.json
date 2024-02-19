@@ -1,36 +1,36 @@
 [
   {
-    "id": "QIQXPEGY",
+    "id": "QESHWUJE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-505856", "BGS-500093"],
+    "externalIds": ["ATPLQ-502241"],
     "annexes": [],
     "learningObjectives": ["050.09.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In the ICAO Standard Atmosphere the decrease in temperature with height below 11 km is...",
+      "question": "Given a 0ºC isotherm layer at FL60 and NS at FL70, what is the lowest FL with severe icing hazard?",
       "options": [
         {
-          "id": "ARCD3AFG49",
-          "text": "0.65°C per 100m.",
+          "id": "OXVKENTCV",
+          "text": "FL90",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O0RHLH7V5",
+          "text": "FL70",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AB97VV8RRC",
-          "text": "0.6°C per 100m.",
+          "id": "O7JVLTI4A",
+          "text": "FL60",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8EM67HTLR",
-          "text": "0.5°C per 100m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0I4PX5GAC",
-          "text": "1°C per 100m.",
+          "id": "O4BKEGYGY",
+          "text": "FL120",
           "correct": false,
           "why": ""
         }
@@ -38,113 +38,37 @@
     }
   },
   {
-    "id": "QUZKRPCO",
-    "relatedQuestions": ["QACLWQVF"],
-    "externalIds": ["AVEXAM-69217"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct regarding the specifications of the ICAO Standard Atmosphere at MSL?",
-      "options": [
-        {
-          "id": "A2QB2M8INT",
-          "text": "Temperature +15°C, pressure 1 013.25 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWG8ROEUC4",
-          "text": "Temperature +15°C, pressure 1 013 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABN3LP9SDE",
-          "text": "Temperature +13°C, pressure 1 013.25 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5N0ZKBYD2",
-          "text": "Temperature +13°C, pressure 1 013 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QACLWQVF",
-    "relatedQuestions": ["QUZKRPCO"],
-    "externalIds": ["ATPLGS-108849"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct regarding the specifications of the ICAO Standard Atmosphere at MSL?",
-      "options": [
-        {
-          "id": "ATMOMCCWUR",
-          "text": "Temperature +15°C, pressure 1 013.25 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX3OSWTZ68",
-          "text": "Temperature +13°C, pressure 1 013.25 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFO8A4RJ7F",
-          "text": "Temperature +13°C, pressure 1 013 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU341KKGQW",
-          "text": "Temperature +15°C, pressure 1 013 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBCYSSIE",
+    "id": "QQFYSLJY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108061"],
-    "annexes": ["26b2890dd7e70ae9e8daa5239622d0a2"],
+    "externalIds": ["ATPLQ-501764"],
+    "annexes": [],
     "learningObjectives": ["050.09.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which describes the intensity of icing, if any, at FL180 in the vicinity of the CANARY ISLANDS (29° N 015° W)?",
+      "question": "In mature CBs the probability of severe icing, according to meteorological rules, is greatest in the following temperature range:",
       "options": [
         {
-          "id": "A2HFU1YJ21",
-          "text": "Moderate or severe.",
+          "id": "OPNW85OHZ",
+          "text": "\\-40°C to -60°C.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OE7MQTMNR",
+          "text": "\\-23°C to -40°C.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGDE3RBMR",
+          "text": "0°C to -23°C.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AYE1HS3ZAX",
-          "text": "Nil.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AENLV29KJF",
-          "text": "Moderate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH3S4CNHS3",
-          "text": "Light.",
+          "id": "O6CTCP5NF",
+          "text": "+5°C to 0°C.",
           "correct": false,
           "why": ""
         }
@@ -152,42 +76,170 @@
     }
   },
   {
-    "id": "QTICXFDB",
-    "relatedQuestions": ["QLUPMATF", "QUEYSRQE"],
+    "id": "QWNIPFPU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-501539", "AVEXAM-50891"],
+    "annexes": [],
+    "learningObjectives": ["050.09.01.03.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A dangerous mistake which can be made when checking for in-flight icing would be:",
+      "options": [
+        {
+          "id": "OTLLB2LGB",
+          "text": "Descending to a different flight level where icing conditions are not suspected.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGWPBX9UE",
+          "text": "Informing ATC about the icing conditions mentioning the levels between icing conditions were experienced.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK7BMELQC",
+          "text": "Not noticing hoar frost, as it may not have changed the aerodynamic shape of the wing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIPK68MIW",
+          "text": "Ice protection systems are selected ON.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTAIVNIA",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-626009",
-      "ATPLQ-503492",
-      "AVEXAM-15498",
-      "BGS-500973"
+      "ATPLQ-505952",
+      "BGS-502606",
+      "AVEXAM-47012",
+      "ATPLGS-123865"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.09.01.03.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An explicit hazard of icing caused by freezing rain on the aerofoil of an aircraft is the..",
+      "options": [
+        {
+          "id": "O2N5EN6DG",
+          "text": "formation of a very thin layer of icing mixed with rain that can remain unnoticed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OANDDPLGC",
+          "text": "ailerons freezing at the outer ends of the wing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTXDI96PA",
+          "text": "accretion of ice on the elevator due to the slipstream from the flaps.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPRVSTIMM",
+          "text": "potential accretion of ice aft of the ice-protection equipment.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDFEJAJG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-504493",
+      "ATPLGS-109728",
+      "AVEXAM-62372",
+      "BGS-500851"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.09.01.03.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The most dangerous icing conditions are encountered in..",
+      "options": [
+        {
+          "id": "OPQDLIRI5",
+          "text": "zones where the air temperature is below -15°C.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OW1FC4ALX",
+          "text": "unstable clouds at medium levels.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGSJCYLWD",
+          "text": "freezing precipitation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMZY5VHI6",
+          "text": "icy clouds at high levels.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSYGPAQG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-504861",
+      "BGS-500883",
+      "BGS-500880",
+      "ATPLGS-123536",
+      "AVEXAM-13175",
+      "AVEXAM-23144",
+      "ATPLGS-109755",
+      "BGS-500881"
     ],
     "annexes": [],
     "learningObjectives": ["050.09.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You are flying with an outside air temperature of -12 °C and a TAS of 250 kt at FL150 through overcast NS clouds. What type and degree of icing is most probable?",
+      "question": "At what degree of icing should ICAO\\`s \"Change of course and/or altitude desirable\" recommendation be followed?",
       "options": [
         {
-          "id": "AGIPAEWNR8",
-          "text": "In clouds pushed up against the mountains, moderate to severe mixed ice.",
+          "id": "OX8MJYPB8",
+          "text": "Severe",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOYYR7NDI",
+          "text": "Moderate",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AG3AAIH8YL",
-          "text": "Over flat terrain, moderate hoar frost.",
+          "id": "OJSITVHMK",
+          "text": "Extreme",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AT7O86YH4M",
-          "text": "In clouds pushed up against the mountains, moderate to severe rime ice.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKANPPN9K6",
-          "text": "Over flat terrain, away from fronts, moderate to severe mixed ice.",
+          "id": "OMA4D25PY",
+          "text": "Light",
           "correct": false,
           "why": ""
         }
@@ -195,75 +247,37 @@
     }
   },
   {
-    "id": "QLUPMATF",
-    "relatedQuestions": ["QTICXFDB", "QUEYSRQE"],
-    "externalIds": ["ATPLGS-626009"],
+    "id": "QAGODNJQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-509828", "BGS-500888", "BGS-500882"],
     "annexes": [],
     "learningObjectives": ["050.09.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You are flying with an outside air temperature of -12 °C and a TAS of 250 kts at FL150 through overcast NS clouds. What type and degree of icing is most probable?",
+      "question": "What degree of aircraft icing is determined by the following ICAO description?\n\n\"Conditions in which change of heading and/or altitude may be considered desirable\"",
       "options": [
         {
-          "id": "A1JKXKEQ7B",
-          "text": "In clouds pushed up against the mountains, moderate to severe mixed ice.",
+          "id": "OW9QUIEA6",
+          "text": "Violent",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHWTPSKEF",
+          "text": "Light",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAATSR0OW",
+          "text": "Moderate",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AN3F7VZUMP",
-          "text": "Over flat terrain, away from fronts, moderate to severe mixed ice.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANAN1FMZY3",
-          "text": "Over flat terrain, moderate hoar frost.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM4Y9CLY1Z",
-          "text": "In clouds pushed up against the mountains, moderate to severe rime ice.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUEYSRQE",
-    "relatedQuestions": ["QLUPMATF", "QTICXFDB"],
-    "externalIds": ["ATPLQ-503492"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are flying with an outside air temperature of -12°C and a TAS of 250 kts at FL150 through overcast NS clouds. What type and degree of icing is most probable?",
-      "options": [
-        {
-          "id": "AOIPQ5WXPN",
-          "text": "In clouds pushed up against the mountains, moderate to severe mixed ice.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2OLXVCVKE",
-          "text": "In clouds pushed up against the mountains, moderate to severe rime ice.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWQT82KWL3",
-          "text": "Over flat terrain, moderate hoar frost.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APLYJ2QHKG",
-          "text": "Over flat terrain, away from fronts, moderate to severe mixed ice.",
+          "id": "O0LRZM8OG",
+          "text": "Severe",
           "correct": false,
           "why": ""
         }
@@ -282,26 +296,26 @@
       "question": "What intensity and type of aircraft icing is likely to occur at FL 100 in a thunderstorm, with the freezing level at 7000 ft?",
       "options": [
         {
-          "id": "ALTUIWY3SM",
+          "id": "OILRLPVEI",
+          "text": "Light icing due to rime ice.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHNNRFACO",
           "text": "Moderate to severe icing due to clear ice.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A389ZSWELQ",
-          "text": "Moderate to severe icing due to rime ice.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XG2ZH170",
+          "id": "OUAV9TGC0",
           "text": "Light icing due to clear ice.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9A5Y94BF8",
-          "text": "Light icing due to rime ice.",
+          "id": "OG7QQZNGF",
+          "text": "Moderate to severe icing due to rime ice.",
           "correct": false,
           "why": ""
         }
@@ -309,42 +323,42 @@
     }
   },
   {
-    "id": "QDFEJAJG",
+    "id": "QUEYSRQE",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-109728",
-      "ATPLQ-504493",
-      "AVEXAM-62372",
-      "BGS-500851"
+      "ATPLQ-503492",
+      "BGS-500973",
+      "ATPLGS-626009",
+      "AVEXAM-15498"
     ],
     "annexes": [],
-    "learningObjectives": ["050.09.01.03.02"],
+    "learningObjectives": ["050.09.01.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The most dangerous icing conditions are encountered in",
+      "question": "You are flying with an outside air temperature of -12°C and a TAS of 250 kts at FL150 through overcast NS clouds. What type and degree of icing is most probable?",
       "options": [
         {
-          "id": "AFQIIGOE2J",
-          "text": "supercooled precipitation.",
+          "id": "OALMTCPV5",
+          "text": "In clouds pushed up against the mountains, moderate to severe mixed ice.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AWDHMGG73W",
-          "text": "unstable clouds at medium levels.",
+          "id": "OMUTACYX2",
+          "text": "Over flat terrain, moderate hoar frost.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD5RC648QI",
-          "text": "icy clouds at high levels.",
+          "id": "ODWNRFZEM",
+          "text": "Over flat terrain, away from fronts, moderate to severe mixed ice.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUOYR1J7CJ",
-          "text": "zones where the air temperature is below -15 °C.",
+          "id": "OZ7IQSC7H",
+          "text": "In clouds pushed up against the mountains, moderate to severe rime ice.",
           "correct": false,
           "why": ""
         }
@@ -354,7 +368,7 @@
   {
     "id": "QLNQVZPU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-123868", "ATPLQ-503694", "BGS-502081"],
+    "externalIds": ["ATPLQ-503694", "ATPLGS-123868", "BGS-502081"],
     "annexes": [],
     "learningObjectives": ["050.09.01.03.03"],
     "explanation": "",
@@ -363,1528 +377,26 @@
       "question": "Which of the following is a potential hazard associated with the assessment of ice accretion by a pilot?",
       "options": [
         {
-          "id": "AKJUD9Z5LN",
-          "text": "With hoar frost the aerodynamic contour of the aerofoil appears to be unchanged.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR0HG7VJDB",
+          "id": "OUFWLJBRW",
           "text": "Rime ice covers the fuselage on all sides, preventing detection.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AC8GRHG176",
+          "id": "OWVARDD8P",
           "text": "Clear ice accretes mainly on the trailing edges of aircraft parts.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKIEC7XKCZ",
+          "id": "OSOCDKT0U",
+          "text": "With hoar frost the aerodynamic contour of the aerofoil appears to be unchanged.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OPWJS91QH",
           "text": "During flight, mixed ice is invisible on white surfaces.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QESHWUJE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502241", "AVEXAM-91919"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given a 0ºC isotherm layer at FL60 and NS at FL70, what is the lowest FL with severe icing hazard?",
-      "options": [
-        {
-          "id": "A5LWN0GGH1",
-          "text": "FL70",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFOJXH2HQ5",
-          "text": "FL90",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGBED706ND",
-          "text": "FL60",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AISVB7PQJT",
-          "text": "FL120",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWAWCQXP",
-    "relatedQuestions": ["QSYGPAQG"],
-    "externalIds": [
-      "ATPLGS-109755",
-      "ATPLQ-504861",
-      "AVEXAM-13175",
-      "BGS-500883"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what degree of icing should ICAOs \"Change of course and/or altitude desirable\" recommendation be followed?",
-      "options": [
-        {
-          "id": "A8F1SLPWGK",
-          "text": "Moderate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI3KCNMSOS",
-          "text": "Light.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK09QX7Y1B",
-          "text": "Severe.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXJKR800B8",
-          "text": "Extreme.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSYGPAQG",
-    "relatedQuestions": ["QWAWCQXP"],
-    "externalIds": ["ATPLQ-504861"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what degree of icing should ICAO`s \"Change of course and/or altitude desirable\" recommendation be followed?",
-      "options": [
-        {
-          "id": "ARAIV3K8XH",
-          "text": "Moderate",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP5YGEPJF5",
-          "text": "Extreme",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARBL5W6COJ",
-          "text": "Light",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOFPLAD7ER",
-          "text": "Severe",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QINTCUOP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-109758", "AVEXAM-13264"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During the en-route phase of your flight you encounter severe icing. According to the ICAO recommendations, you should:",
-      "options": [
-        {
-          "id": "AZ6U92ME0D",
-          "text": "divert.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIYJ6BZWT5",
-          "text": "climb above the clouds.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVEDVWV3OB",
-          "text": "climb below the clouds.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYHAR4RUM1",
-          "text": "continue on course with minimum possible flight control deflections.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQYOZDAI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-504470"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft in flight experiences airframe icing which makes a change of heading and/or altitude desirable. Which intensity of ice accretion is present according to ICAO terms?",
-      "options": [
-        {
-          "id": "AMHWJYW2SJ",
-          "text": "Moderate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFMM1BBY9J",
-          "text": "Light.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0XAYQHWCH",
-          "text": "Extreme.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADH02Y91WT",
-          "text": "Severe.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUHYWRWX",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-123536",
-      "AVEXAM-23144",
-      "BGS-500880",
-      "BGS-500881"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what degree of icing can ICAO`s No change of course and altitude necessary recommendation be followed?",
-      "options": [
-        {
-          "id": "A4JQVXXA2X",
-          "text": "Light",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AULFNAS04J",
-          "text": "Extreme",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF41MJVL5Y",
-          "text": "Severe",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZXTQCGMJB",
-          "text": "Moderate",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAGODNJQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502585", "BGS-500888"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What degree of aircraft icing is determined by the following ICAO description?\n\n\"Conditions in which immediate change of heading and/or altitude is considered essential\"",
-      "options": [
-        {
-          "id": "A8BO3BVWVC",
-          "text": "Severe",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFRIWDJXXL",
-          "text": "Light",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATYU52R26W",
-          "text": "Violent",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEUEPZQGOD",
-          "text": "Moderate",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWNIPFPU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501539"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A dangerous mistake which can be made while checking icing during the flight would be:",
-      "options": [
-        {
-          "id": "AS4J9XEACR",
-          "text": "Hoar frost can appear to not affect the aerodynamic shape of the wing.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJA8RRO6P2",
-          "text": "Informing ATC about the icing conditions mentioning the levels between icing conditions were experienced.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXYVL0K1Z6",
-          "text": "Descending to a different flight level where icing conditions are not suspected.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK9K4E4X8H",
-          "text": "Ice protection systems are selected ON.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQNTJZXS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-109763", "ATPLQ-506618", "AVEXAM-63851"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what degree of icing (ICAO) should an aircraft change course and/or altitude immediately instruction be followed?",
-      "options": [
-        {
-          "id": "AJ6CH691P1",
-          "text": "Severe.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQB7O645LH",
-          "text": "Light.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0GAATOX8R",
-          "text": "Moderate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARS7EPKGR0",
-          "text": "Extreme.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTAIVNIA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-123865", "AVEXAM-47012"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A hazard of icing by freezing rain on the aerofoil of an aircraft is...",
-      "options": [
-        {
-          "id": "A1A9XF2SUB",
-          "text": "Potential accretion of ice aft of the ice protection equipment.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7ATCP8HPZ",
-          "text": "Formation of a very thin layer of icing mixed with rain that can remain unnoticed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7TM2ZX7SK",
-          "text": "Ailerons freezing at the outer ends of the wind.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOPO5IPR85",
-          "text": "Formation of dangerous hoar frost.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVRABZCY",
-    "relatedQuestions": ["QQFYSLJY", "QWBGYEPR"],
-    "externalIds": ["ATPLGS-626002", "AVEXAM-18979"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In mature CBs the probability of severe icing, according to meteorological rules, is greatest in the following temperature range:",
-      "options": [
-        {
-          "id": "A6FEN0TQ55",
-          "text": "0 °C to -23 °C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEKS14TCD8",
-          "text": "+5 °C to 0 °C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABESXT4ST6",
-          "text": "-40 °C to -60 °C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9GMQ7FM6F",
-          "text": "-23 °C to -40 °C.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQFYSLJY",
-    "relatedQuestions": ["QVRABZCY", "QWBGYEPR"],
-    "externalIds": ["ATPLQ-501764"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In mature CBs the probability of severe icing, according to meteorological rules, is greatest in the following temperature range:",
-      "options": [
-        {
-          "id": "AUGSJE9WVU",
-          "text": "0°C to -23°C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A62Y4A0A2J",
-          "text": "+5°C to 0°C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC8Q472FPW",
-          "text": "-23°C to -40°C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANZS51D69Y",
-          "text": "-40°C to -60°C.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWBGYEPR",
-    "relatedQuestions": ["QQFYSLJY", "QVRABZCY"],
-    "externalIds": ["BGS-500840"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In mature CBs the probability of severe icing, according to meteorological rules, is greatest in the following temperature range:",
-      "options": [
-        {
-          "id": "A29INAHLEG",
-          "text": "0°C to -23°C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAIOFUOCUL",
-          "text": "-23°C to -40°C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANK7F19BIZ",
-          "text": "-40°C to -60°C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALBPH0JGRM",
-          "text": "+5°C to 0°C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUABBZEL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-63030"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents mist?",
-      "options": [
-        {
-          "id": "AMUC2W45XF",
-          "text": "16",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUG4B0AT38",
-          "text": "18",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SDJKF4WR",
-          "text": "11",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFNHZQZBBF",
-          "text": "17",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSQEOWBU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501833", "BGS-501312"],
-    "annexes": ["26b2890dd7e70ae9e8daa5239622d0a2"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.  \n  Which best describes the maximum intensity of icing, if any, at FL150 in the vicinity of BUCHAREST (45°N 026°E)?",
-      "options": [
-        {
-          "id": "A9JKHQIK19",
-          "text": "Moderate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQRP5Y3HUV",
-          "text": "Light.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFK4MSKHKU",
-          "text": "Severe.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD153KLPFJ",
-          "text": "Nil.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJBMJQBE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124074", "ATPLQ-504520", "BGS-502131"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following documents available during flight planning may be consulted to determine reported in-flight icing conditions?",
-      "options": [
-        {
-          "id": "ADM90BKFB3",
-          "text": "Special AIREP",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS08WKTRWE",
-          "text": "SNOWTAM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9MRNGCK2K",
-          "text": "AIRPROX",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AELONUAH0L",
-          "text": "MOTNE",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLDTHTBG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-57060"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents a severe squall line?",
-      "options": [
-        {
-          "id": "AST75BGSG5",
-          "text": "5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJTDD9M1O9",
-          "text": "18",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARTQVGU5PI",
-          "text": "7",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQIT02SHVH",
-          "text": "3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJFSKJSR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501490", "AVEXAM-38649", "BGS-501202"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot is warned of severe icing at certain flight levels by information supplied in:",
-      "options": [
-        {
-          "id": "AHSOCGPGSI",
-          "text": "SWC and SIGMET.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5K8A2DWB7",
-          "text": "TAF and METAR.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABYDG0OI6A",
-          "text": "TAF and SIGMET.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADG3KWN5WT",
-          "text": "METAR and SIGMET.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEWENXEL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-508053"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "YSCB AD WRNG 1 VALID 161500/162230ZFROST EXPECTED AT THE AERODROME DURING THE VALIDITY PERIOD. THE MINIMUM TEMPERATURE IS EXPECTED TO BE MINUS THREE DEGREEES.\nThis message is (1) __ providing information about (2) __.",
-      "options": [
-        {
-          "id": "AXR5IUPTXN",
-          "text": "1. an aerodrome warning; 2. frost.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATYISJZV3H",
-          "text": "1. a SIGMET; 2. Icing conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGK2KNBGY4",
-          "text": "1. a NOTAM; 2. closure of the aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXZ72WWDLQ",
-          "text": "1. an AIRMET; 2. low temperatures.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCCGFZW",
-    "relatedQuestions": ["QDOOCJJM", "QHLLFLBG"],
-    "externalIds": [
-      "ATPLGS-124011",
-      "ATPLQ-507778",
-      "ATPLQ-509534",
-      "BGS-501269"
-    ],
-    "annexes": ["099500d852318dfd6a60fc405027b24b"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO, which symbol indicates danger to an aircraft flying according to instrument flight rules (IFR)?",
-      "options": [
-        {
-          "id": "AW04680P79",
-          "text": "Symbol 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGUPL0JPIF",
-          "text": "Symbol 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC8VVZRRH2",
-          "text": "Symbol 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANWM1SLATG",
-          "text": "Symbol 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHLLFLBG",
-    "relatedQuestions": ["QDOOCJJM", "QJCCGFZW"],
-    "externalIds": ["ATPLQ-507778"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  According to ICAO, which symbol indicates danger to an aircraft flying according to instrument flight rules (IFR)?",
-      "options": [
-        {
-          "id": "A2KSCVP4KO",
-          "text": "Symbol 2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKE8PVYPCS",
-          "text": "Symbol 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASIYONQXWO",
-          "text": "Symbol 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX3FBP2QXY",
-          "text": "Symbol 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDOOCJJM",
-    "relatedQuestions": ["QHLLFLBG", "QJCCGFZW"],
-    "externalIds": ["ATPLQ-509534"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  According to ICAO, which symbol indicates danger to an aircraft flying according to instrument flight rules (IFR)?",
-      "options": [
-        {
-          "id": "AAJ00S3Q1O",
-          "text": "Symbol 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJDFHNDXON",
-          "text": "Symbol 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN6IZHT6U0",
-          "text": "Symbol 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXCVI7GV16",
-          "text": "Symbol 1",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAZJWBHG",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501334"],
-    "annexes": ["1a352ff90d0422c62f7e96dae394c5d5"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image)\nWhich best describes the maximum intensity of icing, if any, at FL160 in the vicinity of BERLIN (53° N013°E)?",
-      "options": [
-        {
-          "id": "AC0KRPRQ5C",
-          "text": "Moderate",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKZRW9YNYV",
-          "text": "Light",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUHV5NQUOC",
-          "text": "Nil",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOER1DQWKS",
-          "text": "Severe",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIJFRKDC",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-626018",
-      "ATPLQ-502461",
-      "AVEXAM-75503",
-      "BGS-501224"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During the preparation for approach to Zurich airport (1 416 ft/AMSL) a pilot hears the following message on the ATIS: \"Inversion warning. Inversion of 12°C between 1 900 ft and 2 300 ft altitude.\" This message indicates that the pilot should be prepared:",
-      "options": [
-        {
-          "id": "AY3G1GZ1Z5",
-          "text": "for wind shear just above the inversion.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW7HPKRH0D",
-          "text": "that the performance of the engine will be reduced from inversion level down to ground.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQMIY30WX3",
-          "text": "for fog below the inversion.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALNHY5IWPM",
-          "text": "for freezing precipitation below the inversion.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHMQMJIR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-111466", "AVEXAM-46076"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following ICAO chart symbols represents severe icing?",
-      "options": [
-        {
-          "id": "AP70ZVCUPQ",
-          "text": "9",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYJ26I0FFB",
-          "text": "13",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1VRRVUJ2I",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH98I0MC7G",
-          "text": "7",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSEXOJML",
-    "relatedQuestions": ["QOGOHQOQ"],
-    "externalIds": ["AVEXAM-56113"],
-    "annexes": ["0965a7b65d99e114c43da442d3db0837"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents danger to an aircraft flying according to instrument flight rules (IFR)?",
-      "options": [
-        {
-          "id": "AFYQG93YDS",
-          "text": "12",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2IY5VTN9I",
-          "text": "8",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJCDCRAINM",
-          "text": "16",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A99WNK0JHN",
-          "text": "14",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOGOHQOQ",
-    "relatedQuestions": ["QSEXOJML"],
-    "externalIds": ["AVEXAM-18225"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents danger to an aircraft flying according to instrument flight rules (IFR)?",
-      "options": [
-        {
-          "id": "A0PL63WKSC",
-          "text": "3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVDBONLXVY",
-          "text": "10",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANFL757CHE",
-          "text": "13",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATZ8GMOHKS",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDDELLTI",
-    "relatedQuestions": ["QOTRYATF"],
-    "externalIds": ["ATPLGS-124008", "ATPLQ-504265", "BGS-501023"],
-    "annexes": ["acaba1443de21205f18e8e7e5ce23fc8"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO, which symbol indicates severe icing?",
-      "options": [
-        {
-          "id": "AS21FJUXJ5",
-          "text": "Symbol 1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI6DQCRGE3",
-          "text": "Symbol 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG63QJNANZ",
-          "text": "Symbol 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMV8PMWJ5U",
-          "text": "Symbol 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOTRYATF",
-    "relatedQuestions": ["QDDELLTI"],
-    "externalIds": ["ATPLQ-504265"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  According to ICAO, which symbol indicates severe icing?",
-      "options": [
-        {
-          "id": "A291K55HS2",
-          "text": "Symbol 1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJYGILPGME",
-          "text": "Symbol 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5C1K3RUAF",
-          "text": "Symbol 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS8NSYPUFU",
-          "text": "Symbol 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHDHOYTW",
-    "relatedQuestions": ["QOGKMBNQ"],
-    "externalIds": ["AVEXAM-34134"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents fog?",
-      "options": [
-        {
-          "id": "ARDAYUAEVE",
-          "text": "17",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXAC3GE53A",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4IKOW12D9",
-          "text": "11",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5B9DHI4CS",
-          "text": "16",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOGKMBNQ",
-    "relatedQuestions": ["QHDHOYTW"],
-    "externalIds": ["AVEXAM-94034"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents freezing fog?",
-      "options": [
-        {
-          "id": "AQBAAEZRTZ",
-          "text": "18",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOHWVLZ4J6",
-          "text": "1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6X2ID59PS",
-          "text": "9",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANE385Y5WR",
-          "text": "12",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTZKIOHX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-505991"],
-    "annexes": [],
-    "learningObjectives": ["050.09.01.03.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  On which of these routes would you not need to worry about icing at FL 180?",
-      "options": [
-        {
-          "id": "AY07GQAPEV",
-          "text": "Bordeaux – Zurich",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0GNQJAI7B",
-          "text": "Helsinki – Copenhagen",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD2YNZSCRD",
-          "text": "Shannon – Stockholm",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG9IAP1826",
-          "text": "Frankfurt – Madrid",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQPMOQWB",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501310"],
-    "annexes": ["044ea516069ae0f96e3a5a91de93f98f"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image)\nWhich of the following describes the maximum intensity of icing, if any, at FL 180 in the vicinity of CASABLANCA (33°N 008°W)?",
-      "options": [
-        {
-          "id": "ANTXHR2SD2",
-          "text": "Severe",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A191ILQVH2",
-          "text": "Light",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A33M4FQXUP",
-          "text": "Moderate",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW65828KN1",
-          "text": "Nil",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXUQUZLA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-3798"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents shower?",
-      "options": [
-        {
-          "id": "AX7LC2GDHK",
-          "text": "10",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFBQW1XEA0",
-          "text": "14",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOEL4QHVZD",
-          "text": "13",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APCFN7DHT2",
-          "text": "11",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOIQZLSA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-34027"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents snow?",
-      "options": [
-        {
-          "id": "AEDAWS8ICY",
-          "text": "1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI4HGYXDHV",
-          "text": "14",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZM2KIKEJK",
-          "text": "13",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO1R2TLE9U",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEKTDNAV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-36781"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents haze?",
-      "options": [
-        {
-          "id": "AVVFWY8J01",
-          "text": "2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A21L1VR1LR",
-          "text": "8",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZZ0WCTOUM",
-          "text": "11",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A61E0Y9T9W",
-          "text": "16",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEVQQRSN",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501335"],
-    "annexes": ["1a352ff90d0422c62f7e96dae394c5d5"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to  image)\nWhich describes the intensity of icing, if any, at FL 150 in the vicinity of TOULOUSE (44° N 01°E)?",
-      "options": [
-        {
-          "id": "AF27LEN1HJ",
-          "text": "Moderate or severe",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASU63HBAIS",
-          "text": "Nil",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2CND9G53U",
-          "text": "Light",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXDOMLH2YL",
-          "text": "Moderate",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIVNCZPC",
-    "relatedQuestions": ["QGLKDGQZ"],
-    "externalIds": ["AVEXAM-67421"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents moderate rain?",
-      "options": [
-        {
-          "id": "AAJPACWC0Z",
-          "text": "13",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJAEP9PRCT",
-          "text": "14",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDK0TW9TG",
-          "text": "9",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHQ3BGBKOB",
-          "text": "2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGLKDGQZ",
-    "relatedQuestions": ["QIVNCZPC"],
-    "externalIds": ["AVEXAM-35238"],
-    "annexes": ["10a67e933119691930d06f60d38513c7"],
-    "learningObjectives": ["050.09.01.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-04.\nWhich of the following ICAO chart symbols represents rain?",
-      "options": [
-        {
-          "id": "AJ3IQ5GBTB",
-          "text": "14",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2NRUBUT7P",
-          "text": "12",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2DY77IT2Q",
-          "text": "17",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGPJ7DE9EG",
-          "text": "1",
           "correct": false,
           "why": ""
         }

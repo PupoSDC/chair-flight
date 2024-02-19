@@ -1,79 +1,42 @@
 [
   {
-    "id": "QPKOJZAJ",
+    "id": "QIYPGZJE0",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626197", "AVEXAM-40805"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following would cause the requirement for a compass swinging procedure?",
-      "options": [
-        {
-          "id": "ADIL24GB49",
-          "text": "After a flight during which the aircraft was hit by lightning.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEBJNUA69W",
-          "text": "After a flight across the agonic line.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARALAOT3DD",
-          "text": "After a flight during which there was an interruption to the aircrafts electrical supply.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD8LCQQ22K",
-          "text": "After a flight at an extremely high magnetic latitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYMTOLBB",
-    "relatedQuestions": ["QHFFWKBQ"],
     "externalIds": [
-      "ATPLGS-112395",
-      "ATPLQ-226904",
-      "AVEXAM-39290",
-      "BGS-220276"
+      "ATPLQ-228370",
+      "BGS-222041",
+      "BGS-220337",
+      "BGS-220334",
+      "ATPLGS-120407"
     ],
     "annexes": [],
-    "learningObjectives": ["022.03", "022.04"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In a remote indicating compass system the amount of deviation caused by aircraft magnetism and electrical circuits may be minimised by:",
+      "question": "In a gyromagnetic compass, the flux valve feeds the:  ",
       "options": [
         {
-          "id": "APJ1MSKQF7",
-          "text": "mounting the detector unit (flux valve) in the wingtip.",
+          "id": "O5TQMRBPL",
+          "text": "erecting system.  ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPLDDBBKU",
+          "text": "error detector  ",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ACRX4RMSD0",
-          "text": "mounting the detector unit (flux valve) in the cockpit.",
+          "id": "OHTDELF96",
+          "text": "heading indicator.  ",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS634WHB1Y",
-          "text": "using a vertically mounted gyroscope instead of a horizontally mounted one.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY3WLESOT7",
-          "text": "positioning the gyroscope in the centre of the aircraft.",
+          "id": "OOQL5MYPM",
+          "text": "amplifier.  ",
           "correct": false,
           "why": ""
         }
@@ -81,42 +44,272 @@
     }
   },
   {
-    "id": "QHFFWKBQ",
-    "relatedQuestions": ["QYMTOLBB"],
+    "id": "Q3UDELXIW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223522", "AVEXAM-57821"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Near the North Pole, when using a direct-reading magnetic compass:",
+      "options": [
+        {
+          "id": "OZDHS8C1P",
+          "text": "The magnetic compass indications are unreliable as it aligns with the vertical magnetic meridians. ",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJMDRIOPO",
+          "text": "True North and Magnetic North are in the same place/too close together to give an accurate reading.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJBMF8RIQ",
+          "text": "The magnetic compass works accurately as it is not affected by proximity to the North Pole. ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWDRX2IK6",
+          "text": "The magnetic compass readings are slightly skewed, but a skilled pilot can compensate for this.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHGC8ESUG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229337"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Determine the deviation, given:\n\nTrue heading: 124º  \nMagnetic heading: 120º  \nCompass deviation card reading: ‘’FOR 120º STEER 114º’’",
+      "options": [
+        {
+          "id": "ORNVARIOP",
+          "text": "6ºE",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ON20DE3ZE",
+          "text": "6ºW",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5KPTME89",
+          "text": "4ºW",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFB0N1NLU",
+          "text": "4ºE",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3YUPZTOX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-228366", "BGS-222338", "AVEXAM-73663", "BGS-222402"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Navigation Display (ND) indicates the magnetic heading of the aircraft. The detector unit that senses the (1) \\_\\_\\_\\_\\_ component of the Earth's magnetic field, is the (2) \\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "OH6KVQQAA",
+          "text": "(1) vertical; (2) flux valve",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLFI2BKWT",
+          "text": "(1) vertical; (2) ND itself",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP9LRCFEW",
+          "text": "(1) horizontal; (2) ND itself",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWA40OYTW",
+          "text": "(1) horizontal; (2) flux valve",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBNIIIBDL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-229271", "AVEXAM-17396"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "From what system is the gyromagnetic compass decoupled in free mode, when fitted with a “free or slaved” switch?",
+      "options": [
+        {
+          "id": "ONU781M07",
+          "text": "Magnetic compass",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXMIV74KL",
+          "text": "Gyroscope",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM5GTGLKU",
+          "text": "Flux valve",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXIQXUNAT",
+          "text": "Wing",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHFEO20RT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223432", "AVEXAM-8984"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The Directive Force…",
+      "options": [
+        {
+          "id": "OUFJGUMGH",
+          "text": "equals the vertical component of the Earth’s magnetic field.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1GKGRYTA",
+          "text": "is the component of the Earth’s magnetic field which aligns the compass needle.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5SHWGIJA",
+          "text": "is zero over the geographical poles.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O49NVC1EB",
+          "text": "is about twice as strong on 60°N/S as on the Equator.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8SMAPOJ5",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224415", "ATPLGS-627839", "BGS-222026"],
+    "annexes": [],
+    "learningObjectives": ["022.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The residual deviation after the compass swing procedure is..",
+      "options": [
+        {
+          "id": "OWXVJTWEZ",
+          "text": "eliminated when the avionics are switched on.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVKA0UUA6",
+          "text": "indicated on the magnetic compass by small red dots.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXKZMGN0V",
+          "text": "almost zero, so can be disregarded for the flight.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFMII2ELV",
+          "text": "noted on a compass deviation correction card.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QP9WE0WSP",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-112395",
-      "ATPLQ-226904",
-      "AVEXAM-39290",
-      "BGS-220276"
+      "ATPLQ-228066",
+      "AVEXAM-61382",
+      "ATPLGS-106279",
+      "ATPLGS-625741",
+      "AVEXAM-71445",
+      "ATPLGS-106280"
     ],
     "annexes": [],
-    "learningObjectives": ["022.03", "022.04"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In a remote indicating compass system the amount of deviation caused by aircraft magnetism and electrical circuits may be minimized by:",
+      "question": "A pilot wishes to turn left on to a northerly heading with 10° bank at a latitude of 50° North. Using a direct reading compass, in order to achieve this he must stop the turn on an approximate heading of:",
       "options": [
         {
-          "id": "AJOSYBUA9U",
-          "text": "mounting the detector unit in the wingtip.",
+          "id": "OCHOIYYZL",
+          "text": "355°",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZM5VP1OB",
+          "text": "030°",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AW1VF9DAP9",
-          "text": "the use of repeater cards.",
+          "id": "OJLCVZQHR",
+          "text": "330°",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXYFEWMFZW",
-          "text": "positioning the master unit in the center of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABMM15Z6WU",
-          "text": "using a vertically mounted gyroscope.",
+          "id": "OWWIOMCQK",
+          "text": "015°",
           "correct": false,
           "why": ""
         }
@@ -124,37 +317,64 @@
     }
   },
   {
-    "id": "QXUTUSSB",
+    "id": "QOE8ZZYCE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124632", "ATPLQ-622457"],
+    "externalIds": [
+      "ATPLQ-227032",
+      "AVEXAM-2583",
+      "AVEXAM-34259",
+      "AVEXAM-19132",
+      "BGS-222025",
+      "AVEXAM-78952",
+      "AVEXAM-71708",
+      "AVEXAM-24139",
+      "AVEXAM-38712",
+      "AVEXAM-77619",
+      "AVEXAM-28547",
+      "AVEXAM-13996",
+      "BGS-220272",
+      "AVEXAM-12417",
+      "AVEXAM-51214",
+      "AVEXAM-75703",
+      "AVEXAM-19529",
+      "AVEXAM-45592",
+      "BGS-220260",
+      "BGS-220259",
+      "BGS-220258",
+      "BGS-220269",
+      "BGS-220257",
+      "ATPLGS-110229",
+      "BGS-220255",
+      "BGS-220254"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.03", "062.01"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which statement is true about the Direct Reading Compass (DRC)?",
+      "question": "In the northern hemisphere, during a take-off run in a westerly direction, a direct reading magnetic compass indicates:",
       "options": [
         {
-          "id": "AG28ONF3FB",
-          "text": "Before Take Off the DRC should be checked by comparing the heading to the runway direction.",
+          "id": "OQ8KY1OE2",
+          "text": "an apparent turn to the north.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQKGEM2YRU",
-          "text": "The DRC is serviceable when the indication is within 2 degrees of the magnetic track on the navigation chart.",
+          "id": "O40TYRUWS",
+          "text": "turn left",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVLJ630ESL",
-          "text": "The DRC is serviceable when the indication during take off differs by not more than 2 degrees from the runway true direction.",
+          "id": "OP1Z8KK7T",
+          "text": "an apparent turn to the south.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY4IYD0M6Z",
-          "text": "The heading of the DRC can only be checked with the runway direction after allowing for magnetic variation.",
+          "id": "OP3KEMLMO",
+          "text": "no apparent turn.",
           "correct": false,
           "why": ""
         }
@@ -162,157 +382,75 @@
     }
   },
   {
-    "id": "QRVVUUUY",
+    "id": "Q16KCIHXP",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625416", "ATPLQ-225334", "AVEXAM-90107"],
+    "externalIds": ["ATPLQ-225334", "AVEXAM-90107"],
     "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "What is the value of the magnetic dip at the magnetic South Pole?",
       "options": [
         {
-          "id": "AJSRS4E6DO",
-          "text": "90°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A85YQFTWB6",
-          "text": "0°",
+          "id": "OFKSXYA1W",
+          "text": "60°",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIPYHSYJW7",
+          "id": "OPB0NPMBM",
           "text": "45°",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIXIEUACUP",
-          "text": "60°",
+          "id": "OSNIEY0IJ",
+          "text": "0°",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLGKHCKJ",
-    "relatedQuestions": ["QPBDAGWF"],
-    "externalIds": [
-      "ATPLGS-120407",
-      "ATPLQ-228370",
-      "BGS-220334",
-      "BGS-220337",
-      "BGS-222041"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.03", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a gyromagnetic compass, the flux valve feeds the:",
-      "options": [
+        },
         {
-          "id": "AKCB0U1FZG",
-          "text": "error detector",
+          "id": "OKMGNGLUM",
+          "text": "90°",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AL7F2S4YDG",
-          "text": "amplifier.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASC47J9TTV",
-          "text": "heading indicator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADHCC1FRCA",
-          "text": "erecting system.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QPBDAGWF",
-    "relatedQuestions": ["QLGKHCKJ"],
-    "externalIds": ["BGS-220334"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "022.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a gyromagnetic compass, the flux valve feeds the:",
-      "options": [
-        {
-          "id": "AJOFHDQXXP",
-          "text": "Error detector.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYRN9K9HHW",
-          "text": "Amplifier.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4SAQ6SQYA",
-          "text": "Erecting system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM5JV4MI4A",
-          "text": "Heading indicator.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWKYGHGM",
+    "id": "QJNSSLRCZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627427", "ATPLQ-227976", "BGS-222181"],
+    "externalIds": ["ATPLQ-221616", "AVEXAM-57821", "BGS-221752"],
     "annexes": [],
-    "learningObjectives": ["022.03", "022.04"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The function of a flux detection unit is to..",
+      "question": "A DRC will not function in the vicinity of the magnetic North Pole because:",
       "options": [
         {
-          "id": "AVBX8FJ4HS",
-          "text": "sense the strength and direction of magnetic fields.",
+          "id": "OJJXSRZNK",
+          "text": "The true and magnetic North Pole share the same location.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOIG1HH8Y",
+          "text": "The variation between the true and magnetic North Pole is too large in this region.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMPPQOVVI",
+          "text": "The compass needle points vertically downwards.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ACBW7XBO1O",
-          "text": "measure the engine fuel flow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0MNKFSZYO",
-          "text": "compare the direction of the Earth`s magnetic field with the direction of the IRS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABUFA7GDD5",
-          "text": "measure the phase of an AC generator.",
+          "id": "OK1FJV4LI",
+          "text": "The earth’s magnetic field is heavy disturbed by large amount of ice.",
           "correct": false,
           "why": ""
         }
@@ -320,422 +458,37 @@
     }
   },
   {
-    "id": "QPHASMDM",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-50498"],
+    "id": "QVPBCXMHE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221371", "ATPLGS-124632"],
     "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
+    "learningObjectives": ["022.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\n\n\n- Compass heading:   242°\n- True Track: 245°\n- Variation: 3°E\n- Drift: 5°R\n\nCalculate the deviation.",
+      "question": "Which statement is true about the Direct Reading Compass (DRC)?",
       "options": [
         {
-          "id": "ANPSOD4OTA",
-          "text": "5°W",
+          "id": "OZZBCAJQG",
+          "text": "The DRC is serviceable when the indication is within 2 degrees of the magnetic track on the navigation chart.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTFGPUK0Q",
+          "text": "Before Take Off the DRC should be checked by comparing the heading to the runway direction.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ABGH4U4W21",
-          "text": "11°E",
+          "id": "OXNQIZEPM",
+          "text": "The heading of the DRC can only be checked with the runway direction after allowing for magnetic variation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALXKAIQLYS",
-          "text": "5°E",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQY8140IXC",
-          "text": "1°E",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZIGLVYO",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM"
-    ],
-    "externalIds": ["AVEXAM-93320"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True track: 180°\n- Drift: 8°R\n- Compass heading: 195°\n- Deviation: -2°\n\nCalculate the variation.",
-      "options": [
-        {
-          "id": "ABPOVOVV0M",
-          "text": "21°W",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A46U27FC5N",
-          "text": "25°W",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGFL4KE766",
-          "text": "5°W",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEW643QV4B",
-          "text": "9°W",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFOWRDVF",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-86206"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True track: 070°\n- Variation: 30°W\n- Deviation: +1°\n- Drift: 10°R\n\nCalculate the compass heading.",
-      "options": [
-        {
-          "id": "AV2IJDY1F3",
-          "text": "089°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0OTZ7NVJV",
-          "text": "101°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH5XFQ30Y0",
-          "text": "100°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQFC6B20BH",
-          "text": "091°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QALIDQKK",
-    "relatedQuestions": [
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-32875"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True Track:   245°\n- Compass HDG:  242°\n- Variation: 3°E\n- Drift: 5°R\n\nCalculate the magnetic heading.",
-      "options": [
-        {
-          "id": "AYKDJU53HR",
-          "text": "237°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC588M27W6",
-          "text": "253°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX0KF2NY8D",
-          "text": "247°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0K3J0KCSX",
-          "text": "243°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXJDLLSM",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-25581"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True Track:  300°\n- Drift: 8°R\n- Variation:   10°W\n- Deviation: -4°\n\nCalculate the compass heading.",
-      "options": [
-        {
-          "id": "A3EOX3HWR4",
-          "text": "306°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATLLVUGAKD",
-          "text": "322°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABP3EMM547",
-          "text": "278°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A287J7P79M",
-          "text": "294°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUMSQGGG",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-70540"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True track: 348°\n- Drift: 17° left\n- Variation: 32°W\n- Deviation: 4°E\n\nWhat is the compass heading?",
-      "options": [
-        {
-          "id": "AV0UZ95H2L",
-          "text": "033°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVDKN1UXH3",
-          "text": "359°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9UG4P9J1P",
-          "text": "007°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARZJNT14GN",
-          "text": "337°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEGXNZUZ",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-89614"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- Compass Heading: 124°\n- Deviation: -3°\n- Variation: 4°W\n\nDetermine the True Heading:",
-      "options": [
-        {
-          "id": "A57QUSUDSL",
-          "text": "117º",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFY1RMOJR2",
-          "text": "131º",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADKM0DPND3",
-          "text": "125º",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOTHAFVAO9",
-          "text": "123º",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRSCRADA",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QPHKHHCA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-61812"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n\n\n- True course from A to B: 090°\n- TAS: 460 kt\n- W/V: 360°(T)/100 kt\n- Average variation: 10°E\n- Deviation: -2°\n\nCalculate the compass heading and GS.",
-      "options": [
-        {
-          "id": "AV2JEJ98CU",
-          "text": "078° - 455 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9M7EQ1RHO",
-          "text": "089° - 445 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABHSQ8NHF3",
-          "text": "067° - 464 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL9224WSDT",
-          "text": "069° - 449 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPHKHHCA",
-    "relatedQuestions": [
-      "QALIDQKK",
-      "QEGXNZUZ",
-      "QFOWRDVF",
-      "QPHASMDM",
-      "QRSCRADA",
-      "QUMSQGGG",
-      "QXJDLLSM",
-      "QZIGLVYO"
-    ],
-    "externalIds": ["AVEXAM-48309"],
-    "annexes": [],
-    "learningObjectives": ["022.03", "061.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following:\n\n\n- Magnetic heading: 060°\n- Magnetic variation: 8°W\n- Drift angle:   4° right\n\nWhat is the true track?",
-      "options": [
-        {
-          "id": "AL2JOVUS65",
-          "text": "056°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGOQL6OH6G",
-          "text": "072°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3JXN0BJN5",
-          "text": "048°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALSZN2DE3I",
-          "text": "064°",
+          "id": "O8F9BCE7Q",
+          "text": "The DRC is serviceable when the indication during take off differs by not more than 2 degrees from the runway true direction.",
           "correct": false,
           "why": ""
         }

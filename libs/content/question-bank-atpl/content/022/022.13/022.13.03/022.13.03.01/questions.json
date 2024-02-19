@@ -1,36 +1,36 @@
 [
   {
-    "id": "QGLDKYUE",
+    "id": "QQMGWWDK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622562"],
+    "externalIds": ["ATPLQ-228428", "BGS-221879"],
     "annexes": [],
     "learningObjectives": ["022.13.03.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An EFIS equipped aircraft, the V1 speed reference is the",
+      "question": "The EFIS control panel allows the pilots to change which of the following?\n\n1\\. Altimeter pressure setting.   \n 2\\. ND range.   \n 3\\. TCAS mode.   \n 4\\. VOR/ADF information.   \n 5\\. GPWS display.",
       "options": [
         {
-          "id": "AJ52OFD51T",
-          "text": "Take-off decision speed and is normally indicated on the airspeed indicator on the PFD",
+          "id": "OLVUTNGPS",
+          "text": "2,4 and 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGFZTHHOH",
+          "text": "1,3 and 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEBTVBYPD",
+          "text": "1,2 and 4",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0UV1H5NZP",
-          "text": "Take-off safety speed and is normally indicated on the VSI on the PFD",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL1ZTA23VX",
-          "text": "Take-off decision speed and is normally indicated on the VSI on the PFD",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHDTKMI2Y2",
-          "text": "Take-off safety speed and is normally indicated on the airspeed indicator on the PFD",
+          "id": "OSS767K73",
+          "text": "1,2 and 3",
           "correct": false,
           "why": ""
         }
@@ -38,247 +38,50 @@
     }
   },
   {
-    "id": "QMWDIOFF",
+    "id": "QDDVUJWU",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-113382",
-      "ATPLGS-127544",
-      "ATPLQ-226328",
-      "AVEXAM-21183",
-      "AVEXAM-647",
-      "BGS-221225"
+      "ATPLQ-227895",
+      "BGS-620504",
+      "BGS-620506",
+      "ATPLGS-124886",
+      "BGS-620512",
+      "BGS-620511",
+      "BGS-620513",
+      "BGS-620507",
+      "BGS-620503",
+      "BGS-620508",
+      "BGS-620510",
+      "BGS-620509"
     ],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On an Electronic Flight Instrument System (EFIS), the following EGT parameters may be displayed \n1  instantaneous EGT\n2  commanded EGT\n3  maximum continuous EGT limit\n4  maximum takeoff EGT limit\nThe combination that regroups all of the correct statements is",
-      "options": [
-        {
-          "id": "ABVOE5SZJD",
-          "text": "1, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYRZID24TH",
-          "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APWLBU79CU",
-          "text": "1, 2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9B4TME5BB",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFHBSWGO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-4132"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an Electronic Flight Instrument System (EFIS) data relating primarily to navigation in the FMC is provided by:",
-      "options": [
-        {
-          "id": "AJNOHRRGTL",
-          "text": "Navigation radios, GPS, Inertial Reference Systems.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIEPHHB0Q4",
-          "text": "GPS, Aircraft Weather Radar, Navigation radios.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVQHQD2L05",
-          "text": "Inertial Reference Systems, Aircraft Weather Radar, Navigation radios.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOA8GNGLIP",
-          "text": "Inertial Reference Systems, Navigation radios, Terrain Collision Alerting System.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLSBIVPN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225347", "AVEXAM-10846", "BGS-992958"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding Electronic Flight Instrument System (EFIS):\n1) the Navigation Display (ND) displays Flight Director Bars.\n2) the altimeter setting is displayed on the PFD (Primary Flight Display).\n3) the PFD is the main flying instrument.\n4) the FMA (Flight Mode Annunciator) is part of the ND.\nThe combination re-grouping all the correct statements is:",
-      "options": [
-        {
-          "id": "AMWXA1MZR8",
-          "text": "2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANOTZTIV7J",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ2L1IQ0VT",
-          "text": "1, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A249AWR1UJ",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWOXWTRL",
-    "relatedQuestions": ["QQHITZAT"],
-    "externalIds": [
-      "ATPLGS-106762",
-      "ATPLGS-625749",
-      "ATPLQ-225269",
-      "AVEXAM-39454",
-      "BGS-221214",
-      "BGS-222153"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which option lists the correct modes displayed on the Navigation Display of an EFIS equipped aircraft?",
-      "options": [
-        {
-          "id": "AR9TAGV264",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to True North).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4IXFKN448",
-          "text": "MAP or ARC (covering approximately 45° either side of the current heading), ROSE (orientated to instantaneous track up) and PLAN (flight plan map orientated to Magnetic North).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARHWTZQJO6",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to instantaneous track up) and PLAN (flight plan map orientated to True North).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1X3Z2UW5B",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to Magnetic North).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQHITZAT",
-    "relatedQuestions": ["QWOXWTRL"],
-    "externalIds": [
-      "ATPLGS-106762",
-      "ATPLGS-625749",
-      "ATPLQ-225269",
-      "AVEXAM-39454",
-      "BGS-222153"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which option lists the correct modes displayed on the Navigation Display of an EFIS equipped aircraft?",
-      "options": [
-        {
-          "id": "AQZQWS2DYM",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to True North).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANUFC7YRDZ",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to instantaneous track up) and PLAN (flight plan map orientated to True North).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XNXB6GGW",
-          "text": "MAP or ARC (covering approximately 45° either side of the current heading), ROSE (orientated to instantaneous track up)and PLAN (flight plan map orientated to Magnetic North).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEX4NBUY3P",
-          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to Magnetic North).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAIYJDWY",
-    "relatedQuestions": ["QGQZMCKR"],
-    "externalIds": ["ATPLQ-226182", "AVEXAM-25589", "BGS-220808"],
-    "annexes": [],
+    "annexes": ["ACDFW25KD"],
     "learningObjectives": ["022.13.03.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An EFIS includes the following components:",
+      "question": "Refer to figure.\n\nWhich of the figures depicts an Electronic Flight Instrument System (EFIS) display in full VOR/ILS mode with a VOR frequency selected?",
       "options": [
         {
-          "id": "APJL70JXNP",
-          "text": "symbol generator, display unit(s), control panel.",
+          "id": "OTNACYAHY",
+          "text": "Figure 1",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUTN8W8KBN",
-          "text": "ADC, inertial navigation computer, display unit(s).",
+          "id": "ODQMUDO1F",
+          "text": "Figure 3",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AF13L4XJES",
-          "text": "display unit(s) only.",
+          "id": "OEIIDCAL5",
+          "text": "Figure 2",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASZTESNDFK",
-          "text": "FMS, symbol generator, display unit(s).",
+          "id": "OBSL4BDJC",
+          "text": "Figure 4",
           "correct": false,
           "why": ""
         }
@@ -286,37 +89,45 @@
     }
   },
   {
-    "id": "QGQZMCKR",
-    "relatedQuestions": ["QAIYJDWY"],
-    "externalIds": ["ATPLQ-226182", "AVEXAM-25589"],
-    "annexes": [],
+    "id": "Q6LZ8JUKI",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223381",
+      "BGS-620504",
+      "BGS-620507",
+      "BGS-620503",
+      "BGS-620508",
+      "BGS-620510",
+      "BGS-620509"
+    ],
+    "annexes": ["ACKWHTICR"],
     "learningObjectives": ["022.13.03.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An EFIS includes the following components:",
+      "question": "Refer to figure.\n\nWhich of the figures shows an Electronic Flight Instrument System (EFIS) display in map mode?",
       "options": [
         {
-          "id": "AVXTWPHB67",
-          "text": "symbol generator, display unit(s), control panel, remote light sensor.",
+          "id": "OX4NBAVK3",
+          "text": "Figure 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OY9QFT1LQ",
+          "text": "Figure 3",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUEIPHJUKN",
-          "text": "FMS, symbol generator, display unit(s).",
+          "id": "OHIWSWVOO",
+          "text": "Figure 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWWN756LLJ",
-          "text": "display unit(s) only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAVPGHZTQD",
-          "text": "ADC, inertial navigation computer, display unit(s).",
+          "id": "OMGOQF8L9",
+          "text": "Figure 1",
           "correct": false,
           "why": ""
         }
@@ -324,42 +135,84 @@
     }
   },
   {
-    "id": "QHBVSMCB",
+    "id": "QVCWWVAM",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-225347",
-      "AVEXAM-10846",
-      "AVEXAM-96380",
-      "BGS-992958"
-    ],
+    "externalIds": ["ATPLQ-221589", "BGS-220811", "AVEXAM-89914", "BGS-222294"],
     "annexes": [],
     "learningObjectives": ["022.13.03.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Select the option which groups all the correct statements regarding the Electronic Flight Instrument System (EFIS):\n1) the Navigation Display (ND) displays Flight Director Bars.2) the altimeter setting is displayed on the PFD (Primary Flight Display).3) the PFD is the main flying instrument.4) the FMA (Flight Mode Annunciator) is part of the ND.",
+      "question": "On the navigation display (ND) of an EFIS equipped aircraft, the colours used are:",
       "options": [
         {
-          "id": "A2QST7BGNZ",
-          "text": "2 and 3.",
+          "id": "OHGGRHRA0",
+          "text": "amber or white for the active waypoint (TO waypoint), yellow for high precipitation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCAF9SUPO",
+          "text": "magenta or white for the active waypoint (TO waypoint), green for light precipitation.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A3TS2AGYZY",
-          "text": "3 and 4.",
+          "id": "OKGI3EGDJ",
+          "text": "white or blue for the active waypoint (TO waypoint), red for medium precipitation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANMSL2QPMV",
-          "text": "1 and 4.",
+          "id": "OFEXU4BEM",
+          "text": "magenta or red for the active waypoint (TO waypoint), amber for medium precipitation.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDJCPPQI",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-224166",
+      "AVEXAM-74681",
+      "BGS-620506",
+      "ATPLGS-124886",
+      "BGS-620512",
+      "BGS-620511",
+      "BGS-620507",
+      "AVEXAM-89986"
+    ],
+    "annexes": ["ADRIPQPKF"],
+    "learningObjectives": ["022.13.03.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhich of the figures depicts an Electronic Flight Instrument System (EFIS) display in Expanded (EXP) VOR/ILS mode with an VOR frequency selected?",
+      "options": [
+        {
+          "id": "O1DNHHHVA",
+          "text": "Figure 6",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYACONU6LJ",
-          "text": "1 and 2.",
+          "id": "OZAV4X7G3",
+          "text": "Figure 1",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVILPUM4Y",
+          "text": "Figure 4",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLOQ7NJCK",
+          "text": "Figure 5",
           "correct": false,
           "why": ""
         }
@@ -370,11 +223,11 @@
     "id": "QWJAHKMG",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106762",
-      "ATPLGS-625749",
       "ATPLQ-225269",
       "AVEXAM-39454",
       "BGS-221214",
+      "ATPLGS-106762",
+      "ATPLGS-625749",
       "BGS-222153"
     ],
     "annexes": [],
@@ -382,1143 +235,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The Navigation Display (ND) of a modern EFIS-equipped jet transport aircraft can display the following information:",
+      "question": "Which option lists the correct modes displayed on the Navigation Display of an EFIS equipped aircraft?",
       "options": [
         {
-          "id": "AJZ0RVLU9K",
-          "text": "ARC or MAP (covering 45 degrees on either side of the instantaneous track), ROSE (with current heading up) and PLAN (map orientated to True North)",
+          "id": "ODOZC8DBS",
+          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to Magnetic North).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAXWWLWIM",
+          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to instantaneous track up) and PLAN (flight plan map orientated to True North).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYQAAZYCQ",
+          "text": "MAP or ARC (covering approximately 45° either side of the instantaneous track), ROSE (orientated to current heading up) and PLAN (flight plan map orientated to True North).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOQ691X039",
-          "text": "<p class=\"MsoNormal\">ARC or MAP (with current heading up), ROSE (covering 45 degrees on either side of the instantaneous track) and PLAN (map orientated to Magnetic North)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADA7LTISFY",
-          "text": "ARC or MAP (with current heading up), ROSE (covering 45 degrees on either side of the instantaneous track) and PLAN (map orientated to True North)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU7YNXD14R",
-          "text": "ARC or MAP (covering 45 degrees on either side of the instantaneous track), ROSE (with current heading up) and PLAN (map orientated to Magnetic North)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNZMMXAR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229398", "BGS-620512", "BGS-620513"],
-    "annexes": ["e01184fd4b562810fe21e483ebb6c5bb"],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.  \n  Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in full VOR/ILS mode with an ILS frequency selected?",
-      "options": [
-        {
-          "id": "A3ZE8P6GAM",
-          "text": "Figure 6",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4JWJUUASG",
-          "text": "Figure 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANXRC14SGL",
-          "text": "Figure 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEI34LPEA2",
-          "text": "Figure 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHRBHBNT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-64872"],
-    "annexes": ["062f65d865c98fe6d0e572ee65946949"],
-    "learningObjectives": ["022.13.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 062-10.\nWhich of the figures depicts an EFIS display in a PLAN mode?",
-      "options": [
-        {
-          "id": "A7HHB8V6MI",
-          "text": "Figure 2.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYE18V8Y5O",
-          "text": "Figure 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5NVTYW03Y",
-          "text": "Figure 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQTGJUI913",
-          "text": "Figure 6.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVCWWVAM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221589", "AVEXAM-89914", "BGS-220811", "BGS-222294"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the navigation display (ND) of an EFIS equipped aircraft, the colours used are:",
-      "options": [
-        {
-          "id": "AK4EJQUGYB",
-          "text": "magenta or white for the active waypoint (TO waypoint), green for light precipitation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVDJ5W0PYX",
-          "text": "amber or white for the active waypoint (TO waypoint), yellow for high precipitation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZCM5A9GOP",
-          "text": "magenta or red for the active waypoint (TO waypoint), amber for medium precipitation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOR6GQW5DS",
-          "text": "white or blue for the active waypoint (TO waypoint), red for medium precipitation.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDJCPPQI",
-    "relatedQuestions": ["QIRTUXXJ"],
-    "externalIds": ["AVEXAM-74681"],
-    "annexes": [
-      "062f65d865c98fe6d0e572ee65946949",
-      "062f65d865c98fe6d0e572ee65946949"
-    ],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 062-10.\nWhich of the figures depicts an EFIS display in FULL VOR/ILS mode with an VOR frequency selected?",
-      "options": [
-        {
-          "id": "AGAOLJUP6T",
-          "text": "Figure 1.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXUQJ0E8E6",
-          "text": "Figure 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4GB39KI5T",
-          "text": "Figure 6.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG1WS6T4QC",
-          "text": "Figure 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIRTUXXJ",
-    "relatedQuestions": ["QDJCPPQI"],
-    "externalIds": ["AVEXAM-19497", "BGS-620513"],
-    "annexes": [
-      "062f65d865c98fe6d0e572ee65946949",
-      "062f65d865c98fe6d0e572ee65946949"
-    ],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 062-10.\nWhich of the figures depicts an EFIS display in FULL VOR/ILS mode with an ILS frequency selected?",
-      "options": [
-        {
-          "id": "AND4XLM103",
-          "text": "Figure 6.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABF3GEGG68",
-          "text": "Figure 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A66ZWSENEW",
-          "text": "Figure 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKIOTOZL3Y",
-          "text": "Figure 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLKKVIVF",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-47717"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does a typical EFIS system respond to the failure of a VHF navigation (VOR) receiver?",
-      "options": [
-        {
-          "id": "AKSH5ZTPW3",
-          "text": "It removes the associated magenta deviation bar and/or pointer from the display.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALPTH740DC",
-          "text": "The pointer flashes and a VOR 1 or 2 failure warning bar appears.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5UY4KCSMI",
-          "text": "The deviation bar and/or pointer change colour to red and flash intermittently.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6O7KJXFPN",
-          "text": "The pointer rotates around the display and a VOR 1 or 2 failure warning bar appears.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTNRQJSX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120940", "ATPLQ-222639", "BGS-220813"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What data are displayed on the Navigation Display (ND) of an EFIS equipped aircraft?",
-      "options": [
-        {
-          "id": "AYX69SAYPL",
-          "text": "The flight plan, weather radar, terrain map, and intruder alerts.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXB6LORR0N",
-          "text": "The flight plan, engine failure, navigation aids, and resolution advisories.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUOQKZ5O1O",
-          "text": "A terrain map, navigation aids, bearings, and flight director active modes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH9UB1639E",
-          "text": "Intruder alerts, altitude, autopilot active modes, and weather radar.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYNIYOST",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221623"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following may be selected through an EFIS control panel?\r<ol>\r<li>Altimeter pressure setting</li>\r<li>ND range</li>\r<li>TCAS mode</li>\r<li>VOR/ADF display</li>\r<li>GPWS display</li>\r</ol>",
-      "options": [
-        {
-          "id": "AU34DXUI7T",
-          "text": "1, 2 and 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7ZAXWMPGO",
-          "text": "1, 2, 3 and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZT5MHXALZ",
-          "text": "1, 3 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABJR82LVVQ",
-          "text": "2, 3 and 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHPZDRRG",
-    "relatedQuestions": ["QUOKFGSM"],
-    "externalIds": ["ATPLQ-223725", "BGS-221962"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On an Electronic Flight Instrument System (EFIS), the following fuel data may be displayed:\n1. fuel quantity in each tank\n2. total fuel quantity\n3. fuel type\n4. fuel temperature.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AYWEPCE7JA",
-          "text": "1, 2, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOZRPR3JBU",
-          "text": "1, 2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR48XVB91B",
-          "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5YR5DZCP5",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUOKFGSM",
-    "relatedQuestions": ["QHPZDRRG"],
-    "externalIds": ["ATPLQ-223725", "BGS-221380"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On an Electronic Flight Instrument System (EFIS), the following fuel data may be displayed:\n1. fuel density\n2. fuel quantity in each tank\n3. total fuel quantity\n4. fuel temperature\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ACMJWRV7JJ",
-          "text": "2, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5OD5GRJP9",
-          "text": "1, 2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGRLM45UQX",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJB15FCNYG",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIFVXDOU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225876", "AVEXAM-47922", "BGS-222150"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an EFIS equipped aircraft, V~1~ speed reference is the...",
-      "options": [
-        {
-          "id": "A6I2O29SEF",
-          "text": "take-off decision speed, which is displayed on the primary flight display.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADWPR6YQVX",
-          "text": "take-off decision speed, which is displayed on the navigation display.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN53NX14SP",
-          "text": "take-off safety speed, which is displayed on the primary flight display.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYY0Y30ATW",
-          "text": "rotation speed, which is displayed on the primary flight display.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCFQHKKC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106767", "ATPLQ-228969"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What colour is used to display command information on the EFIS (EHSI)?",
-      "options": [
-        {
-          "id": "AVMTSKA462",
-          "text": "Magenta",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHFECPZC4O",
-          "text": "Green",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO8QVA1MW7",
-          "text": "Cyan",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXGGPQOSEK",
-          "text": "White",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPQSVZBG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-28503"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What are the main components of an Electronic Flight Instrument System (EFIS)?",
-      "options": [
-        {
-          "id": "AO9XNDG6TY",
-          "text": "Symbol generator, display screens, command panel.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A59ZLX2C9W",
-          "text": "Flight Management Computer, symbol generator, display screens.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL2MAOFEYL",
-          "text": "Air Data Computer, display screens, command panel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX9O7EZCNQ",
-          "text": "Display screens only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSKDPWQA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-222675"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The rotary mode-selector knob of the EFIS ND allows the crew to select...",
-      "options": [
-        {
-          "id": "A0KJBKN6AM",
-          "text": "a display that is oriented as either “heading up” or “track up”.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX5K85UE6Y",
-          "text": "a side-view, a top-view, or a three-dimensional view.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOWRSJ5VBC",
-          "text": "a colour palette from a menu.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXC5AVV059",
-          "text": "an aircraft symbol in the centre or in the lower part of the screen.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQMGWWDK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228428"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EFIS control panel allows the pilots to change which of the following?\n1. Altimeter pressure setting. 2. ND range. 3. TCAS mode. 4. VOR/ADF information. 5. GPWS display.",
-      "options": [
-        {
-          "id": "A3Z9TIA1AL",
-          "text": "1,2 and 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU9X6301ZU",
-          "text": "1,3 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJVF51IYA1",
-          "text": "1,2 and 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMXVHE7F24",
-          "text": "2,4 and 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMHYETIC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227422", "BGS-620507", "BGS-620512"],
-    "annexes": ["432d4d48a83d1182fe27bf5d08a703b1"],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the image. Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in Expanded (EXP) VOR/ILS mode with a VOR frequency selected?",
-      "options": [
-        {
-          "id": "AHCT8CO6NM",
-          "text": "Figure 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR4GSVBRPL",
-          "text": "Figure 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATK0VYL0P2",
-          "text": "Figure 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVNVMIP9AB",
-          "text": "Figure 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDOAEGEP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227422", "AVEXAM-41432", "AVEXAM-89986"],
-    "annexes": ["062f65d865c98fe6d0e572ee65946949"],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 062-10.\nWhich of the figures depicts an EFIS display in the Expanded (EXP) VOR/ILS mode with a VOR frequency selected?",
-      "options": [
-        {
-          "id": "A45EU4O692",
-          "text": "Figure 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6NTGXGXXE",
-          "text": "Figure 6.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADD9FA30IT",
-          "text": "Figure 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKKFTSESBZ",
-          "text": "Figure 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHYGONSK",
-    "relatedQuestions": ["QRRZBEZZ"],
-    "externalIds": ["BGS-620510"],
-    "annexes": ["dccea6f720ac44004ab763b885cd5e19"],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the image. Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in full VOR/ILS mode with a VOR frequency selected?",
-      "options": [
-        {
-          "id": "AK79P5GX05",
-          "text": "Figure 1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVRP0LG4FJ",
-          "text": "Figure 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAP7GKFHYD",
-          "text": "Figure 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABDN9FOIAA",
-          "text": "Figure 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRRZBEZZ",
-    "relatedQuestions": ["QHYGONSK"],
-    "externalIds": ["BGS-620508"],
-    "annexes": ["d105aa08efe4acb6a52be0b1bee35db3"],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the image. Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in full VOR/ILS mode with a VOR frequency selected?",
-      "options": [
-        {
-          "id": "A4IRC5I0FA",
-          "text": "Figure 1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8SQC647BL",
-          "text": "Figure 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA15KSD6LJ",
-          "text": "Figure 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ3MA2KAK7",
-          "text": "Figure 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEOBVQEY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225206", "AVEXAM-52760"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What information can be shown on an EFIS Navigation Display?\n1. Terrain display at aircraft position. \n 2. Nav aids. \n 3. Intruding traffic. \n 4. Altitude. \n 5. Flight crew oxygen reserve.",
-      "options": [
-        {
-          "id": "APJCDNEJ73",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAUBY3CG0R",
-          "text": "2, 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7Q9ZLNKEU",
-          "text": "1, 3, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUS6P771F0",
-          "text": "3, 4, 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQPDBNNN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127568", "BGS-221274"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The remote light sensor of an EFIS is a",
-      "options": [
-        {
-          "id": "AHUOH9D4TV",
-          "text": "photodiode that measures ambient light conditions.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAMQE48DFD",
-          "text": "solar cell that supplies power during a total electrical failure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUPHFMJLGY",
-          "text": "small camera that measures the light intensity of the display units.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A434LEZJV7",
-          "text": "potentiometer that measures the position of the brightness switch.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QADEOIPD",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLQ-221366",
-      "ATPLQ-228776",
-      "BGS-620503",
-      "BGS-620507",
-      "BGS-620512"
-    ],
-    "annexes": ["021e6b560d4ec1111964a942a5c7c351"],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure.  \n  Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in plan mode?",
-      "options": [
-        {
-          "id": "A6WJK06D6Z",
-          "text": "Figure 2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP2C5AJHRY",
-          "text": "Figure 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXJMGZWTE0",
-          "text": "Figure 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACW7VS641D",
-          "text": "Figure 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSGZJLQK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225347", "AVEXAM-96380", "BGS-220820"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For an aircraft EFIS equipped:\n \n1. The ND displays flight director command bars\n2. The PFD displays the altimeter setting\n3. The ND displays the attitude of the aircraft\n4. The flight mode annunciator is part of the ND\n \nThe combination regrouping all the correct statements is:",
-      "options": [
-        {
-          "id": "AKTUTCXHD1",
-          "text": "2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALNSTZN6FW",
-          "text": "2, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8AWMWRU7Q",
-          "text": "1, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0U31J0AJJ",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMGWNDBY",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991724"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On the EFIS NAV display, weather radar can be displayed in which modes?",
-      "options": [
-        {
-          "id": "AKZDH90YKT",
-          "text": "Weather radar can be displayed on some expanded modes\n ",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR4OE0FU09",
-          "text": "Weather radar can be displayed on all modes\n ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASVSS01QEX",
-          "text": "Weather radar can be displayed on Full Rose modes only\n ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9SPAANU3I",
-          "text": "Weather radar is not displayed",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEULSUGJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228722", "AVEXAM-73534", "BGS-221399"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EFIS Navigation Display (ND) may show...",
-      "options": [
-        {
-          "id": "AJL4P37HYR",
-          "text": "Magnetic Heading, track, and course-related information.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMNUSIIHSJ",
-          "text": "information from ground-, weather-, primary-, and secondary radar.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARJUE6K2XN",
-          "text": "speed information such as Mach number, IAS, Groundspeed, and Wind Velocity.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALUBSHYQGS",
-          "text": "present position in latitude and longitude coordinates.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQQIFZGM",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-991725"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The EFIS display receives information from:\n \n1. Inertial Systems\n2. FMS\n3. Weather Radar\n4. ADC\n5. Radio Atimeter\n6. Direct Reading Compass\n \nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A6BT9PG04K",
-          "text": "1, 2, 3, 4, 5",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8W6ZJQ04B",
-          "text": "1, 3, 4, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2DS15BMN8",
-          "text": "1, 3, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQAXTG440F",
-          "text": "1, 2, 3, 4, 5, 6",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLHNRUWD",
-    "relatedQuestions": ["QTAWKIKJ"],
-    "externalIds": ["AVEXAM-94427"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Under EASA regulations color code rules for EFIS displays, the recommended color for the selected data and values is?",
-      "options": [
-        {
-          "id": "AEE0H4YPFK",
-          "text": "green",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAO8GK503B",
-          "text": "yellow",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7VNMIT7DL",
-          "text": "magenta",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT3I1WWRH4",
-          "text": "white",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTAWKIKJ",
-    "relatedQuestions": ["QLHNRUWD"],
-    "externalIds": ["AVEXAM-52430"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Under EASA regulations color code rules for EFIS displays, the recommended color for the current data and values is?",
-      "options": [
-        {
-          "id": "A7MIQWV7D8",
-          "text": "white",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANXJUW6WQH",
-          "text": "red",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV3K8FP0TH",
-          "text": "cyan",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8P4R92JQ3",
-          "text": "magenta",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXTHYKDP",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221377"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is V1 and where is it shown on an EFIS aircraft?",
-      "options": [
-        {
-          "id": "AYI6E4RDZK",
-          "text": "take-off decision speed, displayed on the PFD airspeed tape",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARXRFH5LZJ",
-          "text": "take-off decision speed, displayed on the PFD VSI",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA7OIIUOBY",
-          "text": "the safe climb speed, displayed on the PFD VSI",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMRB6QCXBS",
-          "text": "the safe climb speed, displayed on the PFD airspeed tape",
+          "id": "OGML8YPXW",
+          "text": "MAP or ARC (covering approximately 45° either side of the current heading), ROSE (orientated to instantaneous track up) and PLAN (flight plan map orientated to Magnetic North).",
           "correct": false,
           "why": ""
         }
@@ -1528,35 +267,35 @@
   {
     "id": "QAXZOPCX",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-513"],
+    "externalIds": ["ATPLQ-229557", "BGS-222391", "AVEXAM-49338", "AVEXAM-513"],
     "annexes": [],
     "learningObjectives": ["022.13.03.01.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The commander’s PFD display fails. Which of the following is true about reconfiguration?",
+      "question": "The copilot's PFD LCD fails. What happens?",
       "options": [
         {
-          "id": "AXL04KZKY9",
-          "text": "The copilot’s PFD display is automatically duplicated on the screen corresponding to the commander’s ND.",
+          "id": "ODGLYIQT9",
+          "text": "The PFD of the copilot is shown on the Co-pilot's ND.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7NAHPVVHD",
+          "id": "OOH32MKB2",
+          "text": "The PFD of the copilot is shown on the Captain's ND.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGPG0E2K9",
           "text": "Reconfiguration is not possible since the screen is not working.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABS0OGJ87S",
-          "text": "The copilot’s PFD display is automatically duplicated on the screen corresponding to the copilot’s ND.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9AWEEZD2F",
-          "text": "Reconfiguration is not required since the copilot’s PFD is still working.",
+          "id": "OALQRQRIS",
+          "text": "Reconfiguration is not required since the captain’s PFD is still working.",
           "correct": false,
           "why": ""
         }
@@ -1564,37 +303,167 @@
     }
   },
   {
-    "id": "QPESAVAD",
+    "id": "QSKDPWQA",
     "relatedQuestions": [],
-    "externalIds": ["BGS-990593"],
+    "externalIds": ["ATPLQ-222675", "BGS-221749", "AVEXAM-93257"],
     "annexes": [],
-    "learningObjectives": ["022.13.03.01.04"],
+    "learningObjectives": ["022.13.03.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In an EFIS with two symbol generators, if one fails the serviceable symbol generator:\n ",
+      "question": "The rotary mode-selector knob of the EFIS ND allows the crew to select…",
       "options": [
         {
-          "id": "AY2YVXASCG",
-          "text": "Can be switched manually to supply both displays, but both will be the same",
+          "id": "OFHDKHIK9",
+          "text": "a display that is oriented as either “heading up” or “track up”.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODMTDGLRK",
+          "text": "an aircraft symbol in the centre or in the lower part of the screen.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "APW6IO7EJR",
-          "text": "Can be switched manually to supply either display, but not both",
+          "id": "OS3J5WGKD",
+          "text": "a side-view, a top-view, or a three-dimensional view.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0INY7NT4P",
-          "text": "Will switch automatically to supply both the Captain’s and FO’s displays",
+          "id": "OVIBN4CMX",
+          "text": "a colour palette from a menu.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLKKVIVF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225282", "BGS-222400", "AVEXAM-47717"],
+    "annexes": [],
+    "learningObjectives": ["022.13.03.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a typical EFIS system, the failure of a VHF navigation (VOR) receiver will result in the following response:",
+      "options": [
+        {
+          "id": "OJRTPB8TA",
+          "text": "The associated magenta deviation bar and/or pointer is removed from the display.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJFEQQJMA",
+          "text": "The pointer flashes and a VOR 1 or 2 failure warning bar appears.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD5U2BP7GD",
-          "text": "Will switch automatically to supply each display according to its own selection on the control panel",
+          "id": "OZUILKYOG",
+          "text": "The pointer rotates around the display and a VOR 1 or 2 failure warning bar appears.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8PX6GDSM",
+          "text": "The deviation bar and/or pointer change colour to red and flash intermittently.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTNRQJSX",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-222639",
+      "AVEXAM-18959",
+      "ATPLGS-120940",
+      "BGS-220813"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.13.03.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What data are displayed on the Navigation Display (ND) of an EFIS equipped aircraft?",
+      "options": [
+        {
+          "id": "ONSYCDFXH",
+          "text": "The flight plan, engine failure, navigation aids, and resolution advisories.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLSKHD705",
+          "text": "A terrain map, navigation aids, bearings, and flight director active modes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQNUU35XJ",
+          "text": "Intruder alerts, altitude, autopilot active modes, and weather radar.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZVHB1XJE",
+          "text": "The flight plan, weather radar, terrain map, and intruder alerts.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QADEOIPD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-221624",
+      "BGS-620506",
+      "ATPLGS-124886",
+      "BGS-620512",
+      "BGS-620511",
+      "BGS-620513",
+      "BGS-620507",
+      "BGS-620508",
+      "AVEXAM-41432",
+      "BGS-620510"
+    ],
+    "annexes": ["ADRIPQPKF"],
+    "learningObjectives": ["022.13.03.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhich of the figures depicts an Electronic Flight Instrument System (EFIS) display in Expanded (EXP) VOR/ILS mode with an ILS frequency selected?",
+      "options": [
+        {
+          "id": "O7EFYAZAB",
+          "text": "Figure 2",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORWOHLWLS",
+          "text": "Figure 3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBJYF6WGX",
+          "text": "Figure 5",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORDQPWL4P",
+          "text": "Figure 6",
           "correct": false,
           "why": ""
         }
@@ -1603,264 +472,41 @@
   },
   {
     "id": "QOATOZQM",
-    "relatedQuestions": ["QLVPACAJ"],
-    "externalIds": ["ATPLQ-229896"],
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229896",
+      "ATPLGS-628390",
+      "BGS-221654",
+      "AVEXAM-49827"
+    ],
     "annexes": [],
     "learningObjectives": ["022.13.03.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "According to CS-25, in case of an EFIS failure, standby instruments must normally be...",
+      "question": "According to CS-25, in case of an EFIS failure, standby instruments must normally be…",
       "options": [
         {
-          "id": "A5CDANS7T2",
-          "text": "available without additional flight crew action.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADM4D5ADM7",
-          "text": "available upon activation by the Commander or Co-pilot.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4NWU31DVJ",
+          "id": "OI0D5OYSI",
           "text": "switched on manually by the flight crew.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGTQQUYXDR",
+          "id": "OHPYFPBQB",
           "text": "switched on manually. or in case of a combination of failures, switched on automatically",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLVPACAJ",
-    "relatedQuestions": ["QOATOZQM"],
-    "externalIds": ["BGS-221654"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to CS-25, in case of an EFIS failure, standby instruments must normally be...",
-      "options": [
+        },
         {
-          "id": "AUR4TOR8KQ",
+          "id": "OHW3SQH3R",
           "text": "available without additional flight crew action.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7NGA2749Y",
-          "text": "switched on manually by the flight crew.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1USWDKG3G",
-          "text": "switched on manually, or in the case of combination of failures, switched on automatically.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHOJV12VTG",
-          "text": "available upon activation by the Commander of Co-pilot.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVWTPPYI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-17588"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Under the EASA regulations color code rules for EFIS displays, the features displayed in GREEN indicate:",
-      "options": [
-        {
-          "id": "AEVMC69ZTM",
-          "text": "engaged modes.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0RALYM5PK",
-          "text": "cautions, abnormal sources.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFMZQ0OL3Z",
-          "text": "the ILS deviation pointer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABOBCBWPH0",
-          "text": "the earth.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYVEXULW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-97748"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which component of typical EFIS generates the visual displays on the EADI and EHSI?",
-      "options": [
-        {
-          "id": "AO28EMZY46",
-          "text": "Symbol Generator.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOWW3M9T6W",
-          "text": "Flight Management Computer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWINRIRI8L",
-          "text": "Flight Control Computer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ318WYN8P",
-          "text": "Navigation database.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHCQFVJF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223725", "BGS-221380", "BGS-221962"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On aircraft equipped with Electronic Flight Instrument System (EFIS), which of the following fuel data may be displayed:1. fuel density \n 2. fuel quantity in each tank \n 3. total fuel quantity \n 4. fuel temperature",
-      "options": [
-        {
-          "id": "AF90BCRRBV",
-          "text": "2, 3, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AK2HDAZR7X",
-          "text": "1, 2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA2I0WCBED",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7ONYTXKIJ",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDDVUJWU",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-620504", "BGS-620509"],
-    "annexes": ["cf234676eb516d0c6e4f4dd1561e2023"],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the image. Which of the figures depicts an Electronic Flight Instrument System (EFIS) display in map mode?",
-      "options": [
-        {
-          "id": "AD39D8NI6T",
-          "text": "Figure 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXNSXZZII1",
-          "text": "Figure 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5RW7PI0A9",
-          "text": "Figure 1",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZALBMSN30",
-          "text": "Figure 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPYPDAXI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229409"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What represents on the EFIS GREEN?  ",
-      "options": [
-        {
-          "id": "ASW7FCQGZQ",
-          "text": "Engaged Modes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APS122QRKJ",
-          "text": "Go",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGAV36WD51",
-          "text": "Caution",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOM31G8B4F",
-          "text": "Terrain",
+          "id": "OKSYPQOWA",
+          "text": "available upon activation by the Commander or Co-pilot.",
           "correct": false,
           "why": ""
         }
@@ -1870,7 +516,7 @@
   {
     "id": "QAVZAYUK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229652", "AVEXAM-50754"],
+    "externalIds": ["ATPLQ-625659", "AVEXAM-50754"],
     "annexes": [],
     "learningObjectives": ["022.13.03.01.01"],
     "explanation": "",
@@ -1879,64 +525,26 @@
       "question": "According to certification specifications colour standardisations, features displayed in red on an EFIS indicate..",
       "options": [
         {
-          "id": "AN2XTG5JTK",
-          "text": "Warnings, flight envelope, system limits.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIDN0LXVAT",
+          "id": "OGKDTR6OD",
           "text": "Flight envelope, system limits, engaged mode.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5YO3F27WB",
-          "text": "Warnings, cautions, abnormal sources.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP9SX034GF",
+          "id": "OZC0DZZU4",
           "text": "Cautions, abnormal sources, engaged mode.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVYRKDNA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221603"],
-    "annexes": [],
-    "learningObjectives": ["022.13.03.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The colour red on an Electronic Flight Instrument System (EFIS) indicates:",
-      "options": [
+        },
         {
-          "id": "AF76NPUM8F",
-          "text": "Warnings; flight envelope and system limits",
+          "id": "O1WH03GHC",
+          "text": "Warnings, flight envelope, system limits.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AIFGJH6CZ3",
-          "text": "Cautions and abnormal sources; engaged modes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJB0BBROQE",
-          "text": "Flight envelope and system limits; engaged modes",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2ZEWYZZVH",
-          "text": "Warnings; cautions and abnormal sources",
+          "id": "O2IIFDY6K",
+          "text": "Warnings, cautions, abnormal sources.",
           "correct": false,
           "why": ""
         }
@@ -1944,37 +552,37 @@
     }
   },
   {
-    "id": "QKIYPBLU",
+    "id": "QSGZJLQK",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-61196"],
+    "externalIds": ["ATPLQ-225347", "AVEXAM-10846"],
     "annexes": [],
-    "learningObjectives": ["022.13.03.01.02"],
+    "learningObjectives": ["022.13.03.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "On a common EFIS display, how are deviations from the glide slope indicated?",
+      "question": "Select the option which groups all the correct statements regarding the Electronic Flight Instrument System (EFIS):\n\n1) the Navigation Display (ND) displays Flight Director Bars.   \n2) the altimeter setting is displayed on the PFD (Primary Flight Display).   \n3) the PFD is the main flying instrument.   \n4) the FMA (Flight Mode Annunciator) is part of the ND.",
       "options": [
         {
-          "id": "AD1DDCYKCA",
-          "text": "By a diamond moving on a measuring tape",
+          "id": "OSKNALZTO",
+          "text": "1 and 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUZ356B6H",
+          "text": "2 and 3.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AL0X7J0XVM",
-          "text": "By a pointer and colour-coded dial",
+          "id": "OOTZ5LTBR",
+          "text": "3 and 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AN0OIRM18Q",
-          "text": "By a white horizontal line moving vertically in the EADI",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVFMLEU4YV",
-          "text": "On a numbered tape right beside the ADI",
+          "id": "OOFUCFF9H",
+          "text": "1 and 4.",
           "correct": false,
           "why": ""
         }

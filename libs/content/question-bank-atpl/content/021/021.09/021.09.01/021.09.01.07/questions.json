@@ -1,36 +1,41 @@
 [
   {
-    "id": "QBIMXIBO",
+    "id": "QNHYQWND",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105426"],
+    "externalIds": [
+      "ATPLQ-216900",
+      "ATPLGS-112325",
+      "AVEXAM-866",
+      "BGS-210426"
+    ],
     "annexes": [],
-    "learningObjectives": ["021.09.01.07.06"],
+    "learningObjectives": ["021.09.01.07.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In addition to the fire hazard introduced, excessive priming should be avoided because",
+      "question": "A magnetic circuit-breaker..",
       "options": [
         {
-          "id": "ALVX5Z270H",
-          "text": "it washes off the lubricant from the cylinder walls.",
+          "id": "OBW3U75JJ",
+          "text": "is a protection system with a slow trip response time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ69LRORV",
+          "text": "can be safely reset even when a fault remains.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORSCXKBCJ",
+          "text": "is a protection system with a quick trip response time.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AKHYMM8Y59",
-          "text": "it drains the carburettor float chamber.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUO3Y6X6T5",
-          "text": "Heats the engine",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIUOO1I8IS",
-          "text": "the gasoline dilutes the oil and necessitates changing oil.",
+          "id": "OPM0E3OXS",
+          "text": "permits an overcurrent limited in time.",
           "correct": false,
           "why": ""
         }
@@ -38,75 +43,43 @@
     }
   },
   {
-    "id": "QZPISKCZ",
+    "id": "QHLLJPYQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105181"],
+    "externalIds": [
+      "ATPLQ-214440",
+      "ATPLGS-120080",
+      "ATPLGS-105254",
+      "BGS-210348",
+      "AVEXAM-12110"
+    ],
     "annexes": [],
-    "learningObjectives": ["021.09.01.07.04"],
+    "learningObjectives": ["021.09.01.07.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, which statement is the most correct?\n While in cruise flight, a circuit breaker corresponding to one of the fuel boost pumps, trips. The circuit breaker cannot be reset.",
+      "question": "The rating of electrical fuses is expressed in:",
       "options": [
         {
-          "id": "A2HAHLD7K0",
-          "text": "The pump remains inoperative.",
+          "id": "OSXJQ87R4",
+          "text": "ohms",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGX3H9UPJ",
+          "text": "amperes",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATPH55R9FZ",
-          "text": "The output of the pump will still be satisfactory for normal requirements.",
+          "id": "OJVDH6OSE",
+          "text": "watts",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGOPM00S0W",
-          "text": "The DC circuit breakers should be pulled to prevent the control relay from melting.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACXW4DDFN4",
-          "text": "The pump motor will fail unless the remaining circuit breakers are pulled immediately.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTIAJOHS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216394"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On Fly-By-Wire equipped aircraft, in case of failure of the electric wiring controlling one of the ailerons, the system can...",
-      "options": [
-        {
-          "id": "AFOSZ8MKPK",
-          "text": "use a different actuator with a different computer.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYNHZYG7BF",
-          "text": "use a different cable with the same computer and actuator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE8Q98ATIZ",
-          "text": "immediately disconnect the autopilot.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMDWYC4BFJ",
-          "text": "immediately revert to direct law.",
+          "id": "OJD9NOKXB",
+          "text": "volts",
           "correct": false,
           "why": ""
         }
@@ -116,7 +89,12 @@
   {
     "id": "QJZBLRHO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216489", "AVEXAM-7396", "BGS-211930"],
+    "externalIds": [
+      "ATPLQ-216489",
+      "AVEXAM-7396",
+      "AVEXAM-69988",
+      "BGS-211930"
+    ],
     "annexes": [],
     "learningObjectives": ["021.09.01.07.02"],
     "explanation": "",
@@ -125,26 +103,26 @@
       "question": "When using a fuse with a higher rating than prescribed:",
       "options": [
         {
-          "id": "A7KEA8K4X8",
-          "text": "In a healthy system nothing problematic will happen.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIF4KQ37P5",
-          "text": "The current in the circuit will be too high, resulting in a blown fuse.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A142O5FQYX",
+          "id": "OTLCFBVUA",
           "text": "It will take too much time to detect an open circuit.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AA2Q41BKB2",
+          "id": "OZECDKKYA",
+          "text": "In a healthy system nothing problematic will happen.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKTDNQMLS",
           "text": "The whole circuit will overheat, which is a potential fire hazard.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWLGF6WZE",
+          "text": "The current in the circuit will be too high, resulting in a blown fuse.",
           "correct": false,
           "why": ""
         }
@@ -152,46 +130,80 @@
     }
   },
   {
-    "id": "QZHPCEOY",
+    "id": "QTSMVIPD",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLQ-218944",
-      "AVEXAM-15449",
-      "AVEXAM-83839",
-      "AVEXAM-96469",
-      "BGS-210361",
-      "BGS-210362",
-      "BGS-210363",
-      "BGS-210364"
+      "ATPLQ-219107",
+      "BGS-210355",
+      "ATPLGS-112400",
+      "AVEXAM-1117"
     ],
     "annexes": [],
-    "learningObjectives": ["021.09.01.07.08"],
+    "learningObjectives": ["021.09.01.07.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Assuming the initiating cause is removed, which of these statements about resetting are correct or incorrect?\n\n1.  A fuse is not resettableII. A circuit breaker is resettable.",
+      "question": "A thermal circuit breaker:",
       "options": [
         {
-          "id": "A6MR5E7C5U",
-          "text": "I is correct, II is correct.",
+          "id": "O2JEZEFDZ",
+          "text": "protects the system in the event of any overcurrent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1QPAXQ0L",
+          "text": "protects the system in the event of a prolonged overcurrent.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AFCSM3H4J9",
-          "text": "I is incorrect, II is correct.",
+          "id": "OIHVJ80WE",
+          "text": "protects the system in the event of a prolonged overheating.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A43IGBZP9O",
-          "text": "I is correct, II is incorrect.",
+          "id": "OYAFXQFRA",
+          "text": "protects the system in the event of any overheating.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDGERGJB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215035", "BGS-211814", "AVEXAM-42600"],
+    "annexes": [],
+    "learningObjectives": ["021.09.01.07.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an electrical circuit, you have a supply of 240 V and a load of 50 Ohms. The load is suddenly malfunctioning, providing a lower resistance than rated. What can you expect?",
+      "options": [
+        {
+          "id": "OUIPDFDBI",
+          "text": "The supply will increase which will lead to an increased heat output.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANU7X6MYJ2",
-          "text": "I is incorrect, II is incorrect.",
+          "id": "O5AZQA6QA",
+          "text": "The ampere will decrease which will lead to an increased heat output.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKNYI0FNK",
+          "text": "The ampere will increase which will lead to an increased heat output.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O8AWTOMOJ",
+          "text": "The resistance will increase which will lead to an increased heat output.",
           "correct": false,
           "why": ""
         }
@@ -202,10 +214,9 @@
     "id": "QMCQDPCZ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-627794",
-      "ATPLQ-213744",
       "ATPLQ-218254",
       "AVEXAM-24096",
+      "ATPLGS-627794",
       "BGS-210360"
     ],
     "annexes": [],
@@ -213,29 +224,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Circuit breakers protecting circuits may be:",
+      "question": "Circuit breakers are used to protect..",
       "options": [
         {
-          "id": "A57KT2T498",
-          "text": "used in AC and DC circuits.",
+          "id": "OUHES00QF",
+          "text": "only series-connected circuits.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLCIFE4TP",
+          "text": "only DC circuits.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXBL9DVIJ",
+          "text": "AC and DC circuits.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AKV60476RZ",
-          "text": "used only in AC circuits.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AONPSFET3A",
-          "text": "used only in DC circuits.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGBMFLBZK0",
-          "text": "reset at any time.",
+          "id": "OXTFEJQTM",
+          "text": "only AC circuits.",
           "correct": false,
           "why": ""
         }
@@ -243,37 +254,42 @@
     }
   },
   {
-    "id": "QZCNAJGG",
+    "id": "QWVIXZ2VZ",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-72238"],
+    "externalIds": [
+      "ATPLQ-211892",
+      "AVEXAM-7396",
+      "AVEXAM-69988",
+      "BGS-211930"
+    ],
     "annexes": [],
-    "learningObjectives": ["021.09.01.07.04"],
+    "learningObjectives": ["021.09.01.07.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Circuit Breakers are used for:",
+      "question": "When using a fuse with a higher rating than prescribed:",
       "options": [
         {
-          "id": "AWDWGNG67Z",
-          "text": "AC and DC electrical systems.",
+          "id": "OK3HUGLK4",
+          "text": "It will take too much time to detect an open circuit.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOSGPE7NO",
+          "text": "Overcurrent might go undetected and cause a fire.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2CQGF3RSV",
-          "text": "AC electrical systems.",
+          "id": "O8VBJ394V",
+          "text": "The current in the circuit will be too high, resulting in a blown fuse.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0OB55P1WI",
-          "text": "DC electrical systems.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR5G1WGV2R",
-          "text": "oil systems.",
+          "id": "OGB4YXNOK",
+          "text": "The whole circuit will overheat, which is a potential fire hazard.",
           "correct": false,
           "why": ""
         }
@@ -283,35 +299,42 @@
   {
     "id": "QHICMZVR",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-42782"],
+    "externalIds": [
+      "ATPLQ-215915",
+      "AVEXAM-69027",
+      "AVEXAM-42782",
+      "ATPLGS-628196",
+      "BGS-212219",
+      "BGS-212202"
+    ],
     "annexes": [],
     "learningObjectives": ["021.09.01.07.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A circuit breaker has to be able to withstand a transient overcurrent due to...",
+      "question": "Circuit Breakers must be able to withstand the transient overcurrents that occur when switching on:",
       "options": [
         {
-          "id": "ACS7611AZQ",
-          "text": "Heating.",
+          "id": "OTYBM5AGX",
+          "text": "ignition boxes",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ON3QBMKVP",
+          "text": "electric motors (inductive loads)",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2OI1KN3J3",
-          "text": "Amperage.",
+          "id": "OZLWICNCN",
+          "text": "heating elements",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A73J9ONDD1",
-          "text": "Electrical motors (inductive load).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWNBLBIKVJ",
-          "text": "Ignition.",
+          "id": "OLPPDDVJ8",
+          "text": "strobe lights (intermittent loads)",
           "correct": false,
           "why": ""
         }
@@ -319,80 +342,37 @@
     }
   },
   {
-    "id": "QNHYQWND",
+    "id": "QWLNAYIX",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-112325",
-      "ATPLQ-216900",
-      "AVEXAM-866",
-      "BGS-210426"
-    ],
+    "externalIds": ["ATPLQ-211890", "AVEXAM-78970"],
     "annexes": [],
-    "learningObjectives": ["021.09.01.07.03"],
+    "learningObjectives": ["021.09.01.07.08"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A magnetic circuit breaker:",
+      "question": "It is NOT recommended to reset a tripped circuit breaker during flight because:",
       "options": [
         {
-          "id": "AQF6OKMCH9",
-          "text": "is a protection system that has a quick tripping response.",
+          "id": "OKMC5Q9KN",
+          "text": "The member of the flight crew must leave the flight deck.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWVYDJ1YV",
+          "text": "The overload condition may still be present and the electrical damage could become worse.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AYVAH23FYR",
-          "text": "can be reset without any danger even when fault remains.",
+          "id": "OKPPNDD8T",
+          "text": "There is a risk of electrocution.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY0ZVTVP19",
-          "text": "is a system with a slow response time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APYT78DQQU",
-          "text": "permits an overcurrent limited in time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDGERGJB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-215035", "AVEXAM-42600", "BGS-211814"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In an electrical circuit where you have a supply of 240V and a load of 50 Ohms, what can you expect if the load is suddenly malfunctioning, providing a lower resistance than rated?",
-      "options": [
-        {
-          "id": "APUBXQA2Z3",
-          "text": "The ampere will increase which will lead to an increased heat output.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWRNS3VRH2",
-          "text": "The resistance will increase which will lead to an increased heat output.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQIDK5V0B9",
-          "text": "The ampere will decrease which will lead to an increased heat output.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8QDXO6Y8G",
-          "text": "The supply will increase which will lead to an increased heat output.",
+          "id": "OA20S12GX",
+          "text": "This should only be done when the aircraft is on the ground with the main battery turned off.",
           "correct": false,
           "why": ""
         }
@@ -408,352 +388,30 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What should pilots pay particular attention to when checking and using fuses and circuit breakers?\n\n- Circuit breakers should always be reset\n\n- Circuit breakers should never be reset\n\n- Circuit breakers shouldn’t be reset to often\n\n- After a fuse has tripped, it’s better to replace it with a fuse of a higher rating\n\n- After a fuse has tripped, it’s better to replace it with a fuse of a lower rating\n\n- After a fuse has tripped, it’s better to replace it with a fuse of the same rating</li>\n</ol>",
+      "question": "Which one of the following statements is true when checking and using fuses and circuit breakers?   \n  \n (1) Circuit breakers should always be reset.   \n (2) Circuit breakers should never be reset.   \n (3) Circuit breakers should not be reset too often.   \n (4) After a fuse has tripped, it is better to replace it with a fuse of a higher rating.   \n (5) After a fuse has tripped, it is better to replace it with a fuse of a lower rating.   \n (6) After a fuse has tripped, it is better to replace it with a fuse of the same rating.",
       "options": [
         {
-          "id": "A6F0XVG1H3",
-          "text": "3 and 6",
+          "id": "O2KDV7JGB",
+          "text": "(2) and (5).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ5OSYZFT",
+          "text": "(2) and (6).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD44SESFO",
+          "text": "(3) and (5)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVDCY075U",
+          "text": "(3) and (6).",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A74P58MO8Y",
-          "text": "2 and 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP2AGNH8EN",
-          "text": "2 and 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AERX9AP9HF",
-          "text": "3 and 5",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHLLJPYQ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-105254",
-      "ATPLGS-120080",
-      "ATPLQ-214440",
-      "AVEXAM-12110",
-      "BGS-210348"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The rating of electrical fuses is expressed in:",
-      "options": [
-        {
-          "id": "A6APQEN5MK",
-          "text": "amperes",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANR1WNB081",
-          "text": "volts",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVKVLYAK1X",
-          "text": "ohms",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYROUKVD4P",
-          "text": "watts",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWLNAYIX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-211890"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "It is NOT recommended to reset a tripped circuit breaker during flight because:",
-      "options": [
-        {
-          "id": "A3NM68PP6J",
-          "text": "The overload condition may still be present and the electrical damage could become worse.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZEG62UUXK",
-          "text": "This should only be done when the aircraft is on the ground with the main battery turned off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWPGRMM0NM",
-          "text": "There is a risk of electrocution.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW0MGFCX9X",
-          "text": "The member of the flight crew must leave the flight deck.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEGSEZAA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-1171"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A \"trip-free\" type circuit breaker is a circuit protection device which:",
-      "options": [
-        {
-          "id": "ALKHSWAHV0",
-          "text": "will not allow the contacts to be held closed while a current fault exists in the circuit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWDT7SQKXE",
-          "text": "will allow the contacts to be held closed in order to clear a fault in the circuit.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMPFYP0XLP",
-          "text": "is free from the normal CB tripping characteristic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD46Y4UZC1",
-          "text": "can be reset at any time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXYULNCU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-98740"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A circuit breaker:",
-      "options": [
-        {
-          "id": "A353I93GDH",
-          "text": "may be reset manually after the fault has been rectified.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATBSH1J6N9",
-          "text": "can be reset on the ground only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKI6TRKIQG",
-          "text": "can only be reset after major maintenance.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWK097C9MQ",
-          "text": "is self resetting after the fault has been rectified.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTGVZAIY",
-    "relatedQuestions": ["QTSMVIPD"],
-    "externalIds": ["AVEXAM-27640"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A thermal circuit breaker:",
-      "options": [
-        {
-          "id": "AV6DZUJ6WF",
-          "text": "protects the system in the event of overload / overheating.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAOQIMI2R6",
-          "text": "uses electromagnetic trip system to prevent overheating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7H2855ZTM",
-          "text": "limits any overcurrent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0YV48CIUP",
-          "text": "can be re-engaged without any danger even if the fault remains.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTSMVIPD",
-    "relatedQuestions": ["QTGVZAIY"],
-    "externalIds": [
-      "ATPLGS-112400",
-      "ATPLQ-219107",
-      "AVEXAM-1117",
-      "BGS-210355"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A thermal circuit breaker:",
-      "options": [
-        {
-          "id": "ATX1DVDW60",
-          "text": "protects the system in the event of a prolonged overcurrent.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A79I8V5ZQJ",
-          "text": "protects the system in the event of any overheating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1K14BHIQ6",
-          "text": "protects the system in the event of a prolonged overheating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A06QRX1XWQ",
-          "text": "protects the system in the event of any overcurrent.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYFFGHES",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-50142"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Assuming the initiating cause is removed, which of these statements about resetting are correct or incorrect?\n1) A fuse is resettable\n2) A circuit breaker is resettable.",
-      "options": [
-        {
-          "id": "APN3CE4UC4",
-          "text": "1) is incorrect, 2) is correct.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVRUVZUXK2",
-          "text": "1) is correct, 2) is correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEG7APSMHM",
-          "text": "1) is correct, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0WW1E79W0",
-          "text": "1) is incorrect, 2) is incorrect.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAHIHAKT",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-105473",
-      "ATPLGS-119855",
-      "ATPLQ-215340",
-      "AVEXAM-16804",
-      "AVEXAM-79810",
-      "BGS-210351"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.07.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A capacitor in parallel with contact breaker points",
-      "options": [
-        {
-          "id": "AJUI1M10XF",
-          "text": "prevents arcing across the contact breaker points.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA8Z3745PZ",
-          "text": "permits arcing across the contact breaker points",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASHXLJ5X6B",
-          "text": "induces a very high current across the secondary windings.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM53KDDH1J",
-          "text": "induces a very high current across the primary windings.",
-          "correct": false,
           "why": ""
         }
       ]

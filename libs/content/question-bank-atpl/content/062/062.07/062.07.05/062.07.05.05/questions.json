@@ -1,46 +1,8 @@
 [
   {
-    "id": "QPVBFJDS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-48385"],
-    "annexes": [],
-    "learningObjectives": ["062.07.05.05.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A flight at 74°N is conducted in IMC at night and due to the constellation of the satellites, the flight crew decided to fly an RNP APCH to LNAV/VNAV minimum, based on baro-VNAV and horizontal guidance from the GNSS. The published minimum temperature for this approach is -8 °C and the temperature reported by ATIS is -6 °C. Your aircraft is not fitted with an automatic temperature compensation.\nWhile flying the final approach, ATC suddenly instructs you to commence a go-around due to terrain separation. What has happened?",
-      "options": [
-        {
-          "id": "AYXL36MMO1",
-          "text": "The actual temperature is lower than -8 °C, resulting in wrong indications for the baro-VNAV approach.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ3I4AQARL",
-          "text": "Possible glide slope signal or localiser interferences from a nearby runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU5PNN9H9J",
-          "text": "Signal loss or weak signals of the GNSS due to the high latitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9UQRZJH6O",
-          "text": "Signal loss of the GABS.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QOCHSENO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-628386"],
+    "externalIds": ["ATPLQ-628386", "AVEXAM-33990"],
     "annexes": [],
     "learningObjectives": ["062.07.05.05.08"],
     "explanation": "",
@@ -49,179 +11,27 @@
       "question": "Which of the following options is correct for an LPV approach?",
       "options": [
         {
-          "id": "AC3NRNA9UP",
-          "text": "It is a non-precision approach.",
-          "correct": true,
+          "id": "OBRG61YPZ",
+          "text": "It is a radar precision approach available at military fields only.",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "ABMUX27WK7",
+          "id": "ORHHWZRUH",
           "text": "It is a 2D Navigation approach.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQJJ2GYRXU",
+          "id": "OUBTL5LKL",
           "text": "It is a precision approach.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASTIKISMPV",
-          "text": "It is a radar precision approach available at military fields only.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QELDGZWU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-98898"],
-    "annexes": [],
-    "learningObjectives": ["062.07.05.05.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following are considered 3D approaches?\n\n- RNP APCH (baro-VNAV)\n\n- GLS\n\n- PAR\n\n- LNAV\n\n- RNP 1\n\n- ILS\n\n- RNP APCH (SBAS)</li>\n</ol>",
-      "options": [
-        {
-          "id": "A8XEHK0UDV",
-          "text": "1, 2, 3, 6, 7",
+          "id": "ORKQKLXGT",
+          "text": "It is a non-precision approach.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2207HV12F",
-          "text": "3, 4, 5",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF7SHK87TX",
-          "text": "1, 2, 3, 5, 6",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A67TECOKIQ",
-          "text": "4, 5, 6",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYBQRIHD",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-40883"],
-    "annexes": [],
-    "learningObjectives": ["062.07.05.05.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": " For an operation in NAT HLA airpsace, which RNP is required for a 50 NM lateral offset?",
-      "options": [
-        {
-          "id": "A3GEOW1UNO",
-          "text": "RNP 10",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9I85648FK",
-          "text": "RNP 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5OW2TRTTL",
-          "text": "RNP 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6XF9JB19Y",
-          "text": "RNP1",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHUHXKVV",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-620847"],
-    "annexes": [],
-    "learningObjectives": ["062.07.05.05.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following PBN approaches is a non-precision instrument approach procedure designed for 2D approach operations?",
-      "options": [
-        {
-          "id": "A7MHARRQBT",
-          "text": "RNP APCH to LNAV minima",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7MS807XWZ",
-          "text": "RNP LVP",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMA3Y3MSCD",
-          "text": "RNP APCH to LNAV / VNAV minima",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8V6NOJGGC",
-          "text": "RNP GLS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEKVBYJV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-627157", "BGS-621387"],
-    "annexes": [],
-    "learningObjectives": ["062.07.05.05.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pilot is planning to conduct a flight under the specifications of PBN. An RNP approach to LNAV/VNAV minima may only be flow with vertical guidance...",
-      "options": [
-        {
-          "id": "ACZ0JT9E7H",
-          "text": "certified for the purpose.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A87B4O68U8",
-          "text": "from a barometric altimeter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEWGY4ID0U",
-          "text": "from a radio altimeter.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2R06DCI4M",
-          "text": "from an ILS or MLS glide slope.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -230,35 +40,122 @@
   {
     "id": "QVOXISFL",
     "relatedQuestions": [],
-    "externalIds": ["BGS-621420"],
+    "externalIds": [
+      "ATPLQ-626828",
+      "AVEXAM-35592",
+      "BGS-621420",
+      "ATPLGS-629719"
+    ],
     "annexes": [],
     "learningObjectives": ["062.07.05.05.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A flight crew prepares to execute an RNP APCH. Which of the following actions shall they take? \r<ol>\r<li> Load the procedure from a valid aircraft navigation database,</li>\r<li> Insert each waypoint's coordinates, into the navigation system, </li>\r<li> Cross-check the waypoint sequence with a valid approach chart, </li>\r<li> Cross-check the lateral path with a VOR overlay approach.</li>\r</ol>",
+      "question": "A flight crew is in the cruise, preparing to fly an RNP APCH. Which of the following should they do?\n\n1\\. Load the procedure from a valid aircraft navigation database.   \n 2\\. Individually insert each waypoint's coordinates into the navigation system.   \n 3\\. Cross-check the waypoint sequence with a valid approach chart.   \n 4\\. Cross-check the lateral path with a VOR or NDB overlay approach.",
       "options": [
         {
-          "id": "AP0RVKTRNR",
+          "id": "O6PFJZZAL",
           "text": "1 and 3",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHG0TYL7LC",
+          "id": "OXKESIEGF",
+          "text": "1 and 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OC1TTCZA3",
           "text": "2 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A21M8Q2ICA",
+          "id": "O9D7I8L7X",
           "text": "2 and 3",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPVBFJDS",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-622706",
+      "AVEXAM-48385",
+      "ATPLGS-629687",
+      "BGS-621329",
+      "AVEXAM-91852"
+    ],
+    "annexes": [],
+    "learningObjectives": ["062.07.05.05.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are flying in IMC at night above the 73°North latitude. Because of the high latitude and the GNSS satellite positions, you elect to fly an RNP APCH to LNAV/VNAV minima based on barometric VNAV with GNSS horizontal guidance. The minimum published temperature for the approach is -8°C, and your aircraft does not have automatic temperature-compensation fitted. The temperature given by the most recent ATIS is -6°C. During final approach, ATC tells you to make an immediate go around because terrain separation is no longer guaranteed. What is the most likely reason for losing minimum terrain separation?",
+      "options": [
+        {
+          "id": "OBHX7TESW",
+          "text": "Loss of the GNSS signal because of the low satellite elevations above the horizon.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARWFTAQQOZ",
-          "text": "1 and 4",
+          "id": "OOV8KWQ0D",
+          "text": "The GBAS signal has been lost.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OILXVNBNR",
+          "text": "ATC has detected interference from the glide slope signals of the parallel runway.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2KWRSOVK",
+          "text": "The temperature has fallen below -8°C, invalidating the indicated altitudes of the current barometric VNAV setup.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEKVBYJV",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-627157", "BGS-621387", "AVEXAM-43003"],
+    "annexes": [],
+    "learningObjectives": ["062.07.05.05.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A pilot is planning to conduct a flight under the specifications of PBN. An RNP approach to LNAV/VNAV minima may only be flown with vertical guidance…",
+      "options": [
+        {
+          "id": "OSCT7Y4GE",
+          "text": "from an ILS or MLS glide slope.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQUSYXU9V",
+          "text": "certified for the purpose.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OU1BZFZUP",
+          "text": "from a barometric altimeter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGZS0RT7M",
+          "text": "from a radio altimeter.",
           "correct": false,
           "why": ""
         }

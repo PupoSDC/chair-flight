@@ -1,42 +1,41 @@
 [
   {
-    "id": "QMJABIYD",
-    "relatedQuestions": ["QBYJOCMI", "QVJXGVKI"],
+    "id": "QJATFZFLP",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-122962",
-      "ATPLQ-211996",
-      "ATPLQ-322063",
-      "ATPLQ-328913",
-      "AVEXAM-91145"
+      "ATPLQ-219258",
+      "BGS-210549",
+      "AVEXAM-13562",
+      "ATPLGS-127493"
     ],
     "annexes": [],
-    "learningObjectives": ["021.10", "032.02"],
+    "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Consider a climb with a piston engine aeroplane. What will happen to the fuel flow if the pilot maintains the same power setting?",
+      "question": "A turbocharger in a reciprocating engine consists of a:",
       "options": [
         {
-          "id": "A0YC1QNF4C",
-          "text": "With increasing altitude air density decreases and the power output of the engine decreases. This has to be compensated for by an increased fuel flow.",
+          "id": "O31ZKVDOU",
+          "text": "turbine driving a compressor via a reduction gear.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJN6XUV9",
+          "text": "compressor and turbine mounted on a common shaft.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AKH2GCXZ7Q",
-          "text": "The temperature decreases and thereby compensates for the decreasing air density which is caused by the decreasing pressure. Therefore the fuel flow remains the same.",
+          "id": "OM7L7ZMVP",
+          "text": "compressor and turbine on individual shafts.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3Y13PSJ2K",
-          "text": "The temperature decreases and thereby over-compensates for the decreasing air density which is caused by the decreasing pressure. This results in a decreasing fuel flow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR986C51AH",
-          "text": "With increasing altitude air density decreases, therefore less fuel is required for combustion, so the fuel flow decreases.",
+          "id": "OQNHLY1VE",
+          "text": "compressor driving a turbine via a reduction gear.",
           "correct": false,
           "why": ""
         }
@@ -44,43 +43,118 @@
     }
   },
   {
-    "id": "QBYJOCMI",
-    "relatedQuestions": ["QMJABIYD", "QVJXGVKI"],
+    "id": "Q9A7DR21V",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214835"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements is correct regarding aircraft engine turbochargers?",
+      "options": [
+        {
+          "id": "O2TGN0ZF3",
+          "text": "The compressor compresses the mixture only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH56OXRDD",
+          "text": "The compressor compresses air only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OQAZPKSB9",
+          "text": "The turbine drives the waste-gate actuator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVXDZUSSC",
+          "text": "The waste-gate actuator diverts exhaust gases to the compressor.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRJMOGJMA",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-122962",
-      "ATPLQ-322063",
-      "AVEXAM-65032",
-      "AVEXAM-91145",
-      "BGS-320694"
+      "ATPLQ-219572",
+      "ATPLGS-112560",
+      "AVEXAM-67721",
+      "BGS-210495"
     ],
     "annexes": [],
-    "learningObjectives": ["021.10", "032.02"],
+    "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Consider a climb with a piston engine aeroplane. What will happen to the fuel flow if the pilot maintains the same power setting?",
+      "question": "The purpose of a distributor in an ignition system of a piston engine is to distribute:",
       "options": [
         {
-          "id": "A6W4E30RIG",
-          "text": "With increasing altitude air density decreases and the power output of the engine decreases. This has to be compensated for by an increased fuel flow. ",
+          "id": "OZ1GY9DS7",
+          "text": "primary current to the capacitor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9F7XS6EW",
+          "text": "secondary current to the capacitor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORDQA5QQJ",
+          "text": "primary current to the sparking plugs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUYEHFYMZ",
+          "text": "secondary current to the sparking plugs.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQCKTFHLH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218952", "AVEXAM-12575"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a dry sump system, the (1) \\_\\_\\_\\_\\_ pump has a (2) \\_\\_\\_\\_\\_ volume compared to the (3) \\_\\_\\_\\_\\_ pump to make sure that the engine sump remains dry.",
+      "options": [
+        {
+          "id": "OINXA561U",
+          "text": "(1) scavenge; (2) smaller (3) pressure",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQGIMU5EY",
+          "text": "(1) scavenge; (2) greater; (3) pressure",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5I4HU9JVW",
-          "text": "The temperature decreases and thereby over-compensates for the decreasing air density which is caused by the decreasing pressure. This results in a decreasing fuel flow. ",
+          "id": "OWQKCB7CC",
+          "text": "(1) pressure; (2) similar; (3) scavenge",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A19TEYE189",
-          "text": "With increasing altitude air density decreases, therefore less fuel is required for combustion, so the fuel flow decreases. ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGSGKH3TB8",
-          "text": "The temperature decreases and thereby compensates for the decreasing air density which is caused by the decreasing pressure. Therefore the fuel flow remains the same. ",
+          "id": "OJDTXYCPI",
+          "text": "(1) pressure; (2) greater; (3) scavenge",
           "correct": false,
           "why": ""
         }
@@ -88,37 +162,37 @@
     }
   },
   {
-    "id": "QVJXGVKI",
-    "relatedQuestions": ["QBYJOCMI", "QMJABIYD"],
-    "externalIds": ["ATPLQ-322063", "ATPLQ-328913", "AVEXAM-65032"],
+    "id": "Q6GAJTXBQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-216072"],
     "annexes": [],
-    "learningObjectives": ["021.10", "032.02"],
+    "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Consider a climb with a piston engine airplane. What will happen to the fuel flow if the pilot maintains the same power setting?",
+      "question": "The oil is stored underneath the engine, with NO external reservoir and a higher oil capacity. Which type of oil system is being described?",
       "options": [
         {
-          "id": "AMWZGEIJSV",
-          "text": "With increasing altitude air density decreases and the power output of the engine decreases. This has to be compensated for by an increased fuel flow.",
+          "id": "OBW3VP7DA",
+          "text": "Wet sump.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMP3JJGI6",
+          "text": "Dry sump.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLRB21RY7",
+          "text": "Neither system is being described.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AU9A6V4NVV",
-          "text": "The temperature decreases and thereby compensates for the decreasing air density which is caused by the decreasing pressure. Therefore the fuel flow remains the same.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACM7A6OGD4",
-          "text": "The temperature decreases and thereby over-compensates for the decreasing air density which is caused by the decreasing pressure. This results in a decreasing fuel flow.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMKB9OJJC2",
-          "text": "With increasing altitude air density decreases, therefore less fuel is required for combustion, so the fuel flow decreases.",
+          "id": "OYKVGDLKO",
+          "text": "Both systems may be being described.",
           "correct": false,
           "why": ""
         }
@@ -126,75 +200,590 @@
     }
   },
   {
-    "id": "QSFOZHGH",
-    "relatedQuestions": ["QDFGGEOC"],
-    "externalIds": ["ATPLQ-223358", "AVEXAM-74690"],
+    "id": "Q4BFMQ9VS",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215986"],
     "annexes": [],
-    "learningObjectives": ["021.10", "022.01"],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of these can be controlled by the FADEC system on a piston engine?",
+      "options": [
+        {
+          "id": "OVBS8JWLO",
+          "text": "Improve ignition timing when RPM varies.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVFOPYORL",
+          "text": "Automatically shut down the engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCYZNEJ8K",
+          "text": "Changing the mixture when the temperature at the fuel metering valve becomes too high.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5YZJVTUT",
+          "text": "Automatically start the engine.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7KYDFMDY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215822"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The compression ratio of a piston engine is a ratio of:",
+      "options": [
+        {
+          "id": "OEZQZP75F",
+          "text": "volumes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXU70ZUS3",
+          "text": "areas.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGZA32AQX",
+          "text": "area and volume.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OECFHONZU",
+          "text": "pressures.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPKDYCHFI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218504", "BGS-211901", "AVEXAM-27112"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A FADEC piston engine has two \\_\\_\\_\\_\\_ to achieve redundancy.",
+      "options": [
+        {
+          "id": "OIYREIMBM",
+          "text": "magnetos with impulse-coupling starters and dual sensors",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9KKQKWUC",
+          "text": "power supplies and two separate but identical channels",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONGPXZB4U",
+          "text": "starter motors and generators",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPMHS6JGT",
+          "text": "injectors and spark plugs per cylinder",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q78ZYBGVY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214614", "BGS-210472", "ATPLGS-119795"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct concerning the effect of the application of carburettor heat?",
+      "options": [
+        {
+          "id": "O8VH7TPPG",
+          "text": "The volume of the air entering the carburettor is reduced, which leans the fuel/air mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1WVFUBXK",
+          "text": "The density of the air entering the carburettor is reduced, which leans the fuel/air mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUZYLTYAM",
+          "text": "The volume of the air entering the carburettor is reduced, which enriches the fuel/air mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBCOA68BQ",
+          "text": "The density of the air entering the carburettor is reduced, which enriches the fuel/air mixture.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q34CLGTQM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-217233",
+      "ATPLGS-113027",
+      "AVEXAM-36755",
+      "BGS-210449"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Apart from flight into known icing conditions, the intake system of a diesel engine:",
+      "options": [
+        {
+          "id": "OUVCF5KFG",
+          "text": "is never heated because diesel engines operate at very high temperatures.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAOUEQSMK",
+          "text": "needs to be heated to prevent ice on the air filter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OA0CZBAIY",
+          "text": "is never heated because a diesel engine is a injection engine.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OYDFWVC42",
+          "text": "needs to be heated at low power settings, due to vaporisation heat.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q0KDNMPHO",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-216870",
+      "ATPLGS-105475",
+      "AVEXAM-31370",
+      "BGS-210555"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a normally aspirated piston engine, when altitude increases, the mixture must be adjusted because there is..",
+      "options": [
+        {
+          "id": "OWYUCQLKH",
+          "text": "an increase of air density resulting in too lean a mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM7FRPP1H",
+          "text": "an increase of air density resulting in too rich a mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOPPAGIS9",
+          "text": "a decrease in air density resulting in too rich a mixture.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O8IQSKFZL",
+          "text": "a decrease of air density resulting in too lean a mixture.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWB8GPC1C",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215509"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is the safest way to prime a piston engine for start-up?",
+      "options": [
+        {
+          "id": "ODO2QKIZV",
+          "text": "Excercising the carburretor heat during start.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONBLDGAJC",
+          "text": "injecting fuel straight onto the sparkplugs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWKOOSNLE",
+          "text": "Injecting fuel straight into the inlet valves.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONQUHJ2ZR",
+          "text": "Pumping the throttle a few times.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QS90NW8TF",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-213329",
+      "ATPLGS-105483",
+      "BGS-210515",
+      "AVEXAM-50118"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When excessively leaning the mixture of a piston engine for a better fuel economy, but still on the rich side of the peak EGT, which of the following engine parameters may exceed their normal operating range?",
+      "options": [
+        {
+          "id": "OCITMOV23",
+          "text": "Oil temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSVVWKCRS",
+          "text": "Engine RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYANJL0KP",
+          "text": "Cylinder head and exhaust gas temperature.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OYRVXIKKP",
+          "text": "Manifold pressure.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUACG1MRX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214523", "BGS-212175"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is performing a go-around having had a critical engine failure. Which of the following combinations gives the BIGGEST stress on the rudder?",
+      "options": [
+        {
+          "id": "OWKG6XKR7",
+          "text": "Forward CG, 1/2 slip ball deflection towards the inoperative engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLIVWACFW",
+          "text": "Forward CG, no slip indication.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEOB0DLDC",
+          "text": "Aft CG, 1/2 slip ball deflection towards the operative engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODAR6ZY2W",
+          "text": "Aft CG, no slip indication.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9Z26DA6N",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218479", "ATPLGS-112356", "AVEXAM-79595"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A piston engine may use a fuel of a different grade than the recommended:",
+      "options": [
+        {
+          "id": "OUBAZDHKI",
+          "text": "never",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4JNSABCB",
+          "text": "provided that it is an aeronautical petrol",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7KLDACCN",
+          "text": "provided that the grade is higher",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONTUK3CAE",
+          "text": "provided that the grade is lower",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPVQUEK1E",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-213527",
+      "AVEXAM-84285",
+      "AVEXAM-6156",
+      "ATPLGS-119481"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following statements about diesel engines:\n\n1 power is set by the mixture control.   \n2 there is no mixture control.   \n3 the amount of power is determined by the fuel flow only.   \n4 thermal efficiency is higher than that for a petrol engine.   \n5 diesel fuel is more inflammable than petrol.\n\nThe combination that regroups all of the correct statements is :",
+      "options": [
+        {
+          "id": "OYMQUV0GD",
+          "text": "2,3,4.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEMAF6GL3",
+          "text": "1,2,3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOGPIZBZT",
+          "text": "1,3,5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO35GMO5N",
+          "text": "2,4,5",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRIYUHS7B",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211662", "BGS-212225"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "If a manifold pressure gauge consistently registers atmospheric pressure, the cause is probably:",
       "options": [
         {
-          "id": "AYUISH5IDY",
-          "text": "leak in pressure gauge line.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3IMDA47E5",
-          "text": "ice in induction system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGCQCGKQ5E",
-          "text": "fuel of too low volatility.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD14KGP119",
-          "text": "too high float level.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDFGGEOC",
-    "relatedQuestions": ["QSFOZHGH"],
-    "externalIds": ["ATPLGS-120413", "ATPLQ-211662", "BGS-220004"],
-    "annexes": [],
-    "learningObjectives": ["021.10", "022.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If a manifold pressure gauge consistently registers atmospheric pressure, the cause is probably:",
-      "options": [
-        {
-          "id": "AEP6Z1UBTA",
-          "text": "leak in pressure gauge line.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZH8V22GTR",
+          "id": "OL2UCP8VO",
           "text": "an aneroid capsule which is not properly calibrated.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIQ179SXXS",
+          "id": "OGV3NE1ER",
           "text": "a very high atmospheric pressure.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AHP4ZLDHHP",
+          "id": "OCXYGDZR9",
           "text": "a very low atmospheric pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTO27RC9B",
+          "text": "leak in pressure gauge line.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QH1YIVYDQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-217086",
+      "ATPLGS-105369",
+      "ATPLGS-105617",
+      "ATPLGS-112174",
+      "ATPLGS-119701",
+      "ATPLGS-112172",
+      "BGS-210456",
+      "BGS-210457",
+      "BGS-210458",
+      "BGS-210459",
+      "ATPLGS-119702",
+      "ATPLGS-112178",
+      "ATPLGS-112173",
+      "ATPLGS-112177",
+      "ATPLGS-119751",
+      "AVEXAM-59198",
+      "AVEXAM-32117",
+      "AVEXAM-85489",
+      "ATPLGS-119705",
+      "ATPLGS-105380",
+      "ATPLGS-105576",
+      "BGS-210636",
+      "BGS-210638",
+      "AVEXAM-38357",
+      "BGS-210639",
+      "ATPLGS-119700",
+      "ATPLGS-120205",
+      "ATPLGS-119706",
+      "ATPLGS-112332",
+      "ATPLGS-105575",
+      "ATPLGS-105371",
+      "ATPLGS-105367",
+      "ATPLGS-105625"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Both gas turbine and piston engines use a cycle made up of induction, compression, combustion and exhaust phases. Which of these statements about a piston engine are correct?\n\n1\\. The process in a piston engine is continuous.   \n2\\. Theoretically the combustion occurs at constant volume.",
+      "options": [
+        {
+          "id": "O8YSBNNRT",
+          "text": "1 is correct, 2 is incorrect.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O22PGZYFH",
+          "text": "Both 1 and 2 are incorrect.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO6KZJGMT",
+          "text": "Both 1 and 2 are correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHOMAYTVE",
+          "text": "1 is incorrect, 2 is correct.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF97WGQSN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-211199",
+      "AVEXAM-10669",
+      "ATPLGS-119833",
+      "BGS-210547"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a piston engine, turbocharger boost pressure can be monitored by..",
+      "options": [
+        {
+          "id": "OJR4LNWWF",
+          "text": "engine RPM readings and a manifold pressure gauge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQIUXUEL7",
+          "text": "a manifold pressure gauge only.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O8GRYPGS7",
+          "text": "a cylinder head temperature gauge and manifold pressure gauge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6XJIRXKG",
+          "text": "a cylinder head temperature gauge, a manifold pressure gauge and engine RPM readings.",
           "correct": false,
           "why": ""
         }
@@ -202,38 +791,2036 @@
     }
   },
   {
-    "id": "QZQDFQRN",
+    "id": "QTLXCW2CL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105517", "ATPLQ-212446", "BGS-210530"],
+    "externalIds": ["ATPLQ-211128"],
     "annexes": [],
-    "learningObjectives": ["021.10", "081.07"],
+    "learningObjectives": ["021.10"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The `slipstream effect` of a propeller is most prominent at:",
+      "question": "Which of the following statements is correct regarding aircraft engine turbochargers?",
       "options": [
         {
-          "id": "ACDNUSTHSY",
-          "text": "low airspeeds with high power setting.",
+          "id": "O3KC7LPRP",
+          "text": "The waste-gate is situated in the inlet manifold.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHI8PARUK",
+          "text": "When the waste-gate is fully open the turbocharger is running at full speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPNPBL43M",
+          "text": "The waste-gate actuator is controlled by the waste-gate.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQKIEGW69",
+          "text": "The waste-gate diverts exhaust gas to drive the turbine.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8LZT79WC",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212023", "ATPLGS-120011", "BGS-211181"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which option is a desired characteristic for piston-engine fuel?",
+      "options": [
+        {
+          "id": "O9VK4YS0W",
+          "text": "Specific gravity greater than 1.0 kg/l.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7SFXCKY4",
+          "text": "High viscosity.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU7AHA7G4",
+          "text": "Good anti-knock properties.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AT3BB8HDBR",
+          "id": "OP8ISIXSV",
+          "text": "High flash point.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QL0FWSHHD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211857", "AVEXAM-41980"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What are the actions to unfeather a variable pitch prop…",
+      "options": [
+        {
+          "id": "OFQHFERDD",
+          "text": "Push the propeller lever forward into the normal operating range which results in a blade angle with no thrust.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZAKYCTB5",
+          "text": "Pull the propeller backward into the normal operating range which results in a blade angle producing thrust.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYWSVBZAO",
+          "text": "Push the propeller lever forward into the normal operating range which results in a blade angle producing thrust.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUYDMVZSS",
+          "text": "Pull the propeller lever backward into the normal operating range which results in a blade angle with no thrust.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZNP1JS7I",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-219264",
+      "ATPLGS-119320",
+      "BGS-210551",
+      "AVEXAM-43692",
+      "AVEXAM-73661",
+      "ATPLGS-105550"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When changing power on piston engines equipped with a constant speed propeller, engine overboost is avoided by:",
+      "options": [
+        {
+          "id": "OJOA7FJHM",
+          "text": "reducing the RPM before reducing the manifold pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZLMJ3IAU",
+          "text": "increasing the manifold pressure before adjusting the fuel flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP3NF1PXS",
+          "text": "increasing the manifold pressure before increasing the RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHDQ5XZJO",
+          "text": "increasing the RPM before increasing the manifold pressure.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMVGXJNUK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219886", "AVEXAM-5128", "ATPLGS-105373"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The thermal efficiency of a piston engine is about:",
+      "options": [
+        {
+          "id": "OI8IQHA8B",
+          "text": "50%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONCZLKRFQ",
+          "text": "80%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONHK64QRL",
+          "text": "70%",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMMLZKVZK",
+          "text": "30%",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHDKKKWFV",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-213418",
+      "AVEXAM-49611",
+      "AVEXAM-8619",
+      "BGS-210443",
+      "ATPLGS-120414",
+      "ATPLGS-105377"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A piston engine compression ratio is the ratio of the:",
+      "options": [
+        {
+          "id": "OYOFSKH0T",
+          "text": "total volume to the clearance volume.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMVOLZVAH",
+          "text": "total volume to the swept volume.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3ZEJGDMT",
+          "text": "clearance volume to the swept volume.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFVVAUVP1",
+          "text": "swept volume to the clearance volume.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUYLI48ZA",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-218666",
+      "ATPLGS-105545",
+      "BGS-210546",
+      "AVEXAM-13450"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The air in a piston engine turbocharger enters the centrifugal compressor at:",
+      "options": [
+        {
+          "id": "O7AB1RACR",
+          "text": "the eye of the impeller and leaves it almost at a tangent to the periphery.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ON538ID1M",
+          "text": "the periphery and leaves via the eye of the impeller.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIOMW48XL",
+          "text": "the diffuser and is fed to the impeller at the optimum angle of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTG6CZJXY",
+          "text": "a tangent to the rotor and leaves via the stator.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPG7B7EGH",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-211111",
+      "BGS-212127",
+      "ATPLGS-119973",
+      "AVEXAM-21608"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "There is a gradual loss of oil from the engine lubrication system. Which of the following indications can be expected as a result of this leak?",
+      "options": [
+        {
+          "id": "ONXORNMMN",
+          "text": "Low/fluctuating oil pressure, low oil temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORSJYOBEC",
+          "text": "High/fluctuating oil pressure, low oil temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTNYEPZHL",
+          "text": "Low/fluctuating oil pressure, high oil temperature.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OK3A33IEE",
+          "text": "High/fluctuating oil pressure, high oil temperature.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLFD18U5R",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-211720",
+      "AVEXAM-23208",
+      "BGS-212201",
+      "AVEXAM-62047"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which one of the following situations might cause a higher-than-normal oil pressure indication?",
+      "options": [
+        {
+          "id": "O00VGCBHH",
+          "text": "A high outside air temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGVT3JGV3",
+          "text": "A gradual leak in the engine lubrication system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJAQ7SXJB",
+          "text": "Clogging of the engine oil cooler.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGWEAQYUF",
+          "text": "A stuck oil pressure relief valve.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZQIOHLCM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211187", "AVEXAM-57339", "BGS-211818"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "To prevent vapour locking, which can lead to fuel starvation, a common type of limitation imposed by the Minimum Equipment List (MEL) in large transport aeroplanes for complete boost pump failure is:",
+      "options": [
+        {
+          "id": "OSEB7P4MH",
+          "text": "Minimum fuel temperature limitation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLFVCSEHZ",
+          "text": "No fuel may be carried in the affected fuel tank.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIOHA24XM",
+          "text": "Extra reserve fuel has to be carried.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYIAVEN88",
+          "text": "Maximum operating altitude limitation.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1QSHYQ7P",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-213574",
+      "ATPLGS-105375",
+      "AVEXAM-34963",
+      "ATPLGS-119699",
+      "BGS-210434"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The formula to calculate the total displacement of a multi-cylinder piston engine is..",
+      "options": [
+        {
+          "id": "OJXHEWOTJ",
+          "text": "cylinder volume x number of cylinders.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOFZ7KWQA",
+          "text": "piston area x piston stroke x number of cylinders.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZVEP3HEN",
+          "text": "cylinder length x cylinder diameter.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWADMDZCE",
+          "text": "piston area x piston stroke.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QASYIMCYN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215323", "AVEXAM-48743"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A multi-engine aircraft with clockwise rotating propellers suffers an engine failure after takeoff. Considering the aircraft maintains a zero bank and no power changes, which situation would lead to the largest rudder deflection?",
+      "options": [
+        {
+          "id": "ONSAL3KZQ",
+          "text": "Left crosswind, right engine failure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OB3WYRHRR",
+          "text": "Left crosswind, left engine failure.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O3UN4MSFD",
+          "text": "Right crosswind, left engine failure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2LV9E5A7",
+          "text": "Right crosswind, right engine failure.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRNEN7DDE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215398"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following factors contribute to the process of combustion within a piston engine?",
+      "options": [
+        {
+          "id": "O8YVSU7BT",
+          "text": "Atmospheric pressure and carburettor compression.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONKWJTRVW",
+          "text": "Fuel viscosity and exhaust gas temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSNT6BVYI",
+          "text": "Spark plug temperature and oil viscosity.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEQC8UEA8",
+          "text": "Atmospheric pressure and pressure within the cylinder.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QP5RCD5KE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219422", "BGS-212150"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following components would NOT be found as part of the wet-sump oil system of a piston engine?",
+      "options": [
+        {
+          "id": "OVG2RJLZP",
+          "text": "An integrated oil reservoir.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORGOHGKBR",
+          "text": "A pump to provide oil flow to the engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLR2B314M",
+          "text": "An oil filter with a bypass indicator.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBPOQX654",
+          "text": "A separate oil reservoir.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFBAPJGL0",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219913", "AVEXAM-64103", "BGS-211199", "BGS-210446"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A piston engine\\`s compression ratio is the ratio of..",
+      "options": [
+        {
+          "id": "OF8QARJDW",
+          "text": "piston travel during the compression stroke to travel during the intake stroke.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGKHGWPOD",
+          "text": "the cylinder volume with the piston at bottom dead centre to the cylinder volume at top dead centre.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJPTRGIML",
+          "text": "the fuel to air mixture in the combustion chamber.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODFNLWY32",
+          "text": "degrees of crankshaft rotation of compression stroke to power stroke.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QN5FVA369",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212132"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is one of the new features provided by Full Authority Digital Engine Control (FADEC) in modern piston aircraft engines?",
+      "options": [
+        {
+          "id": "OJBDTS9KX",
+          "text": "Fuel injection control.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORI3FXP9S",
+          "text": "Ignition timing control.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O3F0I6KTD",
+          "text": "Cabin pressurisation control.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU1WWYOXB",
+          "text": "Landing gear control.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWUMJJWI7",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219782", "AVEXAM-26869"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are flying a multi-engine propeller aircraft. During the cruise, the critical engine fails and the propeller moves to the feathered position. Which configuration creates the most stress on the rudder?",
+      "options": [
+        {
+          "id": "O3YIPUVKR",
+          "text": "Aft CG, yaw toward the critical engine.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBJCLBMP0",
+          "text": "Aft CG, yaw away from the critical engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONUQNWNO0",
+          "text": "Fwd CG, yaw toward the critical engine.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMKRAQUIF",
+          "text": "Fwd CG, yaw away from the critical engine.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPYLCEQVB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214398"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What moves the propeller blade towards fine pitch?",
+      "options": [
+        {
+          "id": "OLWRZX0BA",
+          "text": "High RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIJKB3VHZ",
+          "text": "Windmilling RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O58GSWBDM",
+          "text": "Aerodynamic forces.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTTN3RE5U",
+          "text": "Centrifugal Force.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMGIPJFPR",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-212061",
+      "BGS-212143",
+      "AVEXAM-10607",
+      "ATPLGS-105429",
+      "ATPLGS-119526",
+      "AVEXAM-62505",
+      "BGS-212242"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The function of an accelerator pump in the carburettor of a piston engine is to:",
+      "options": [
+        {
+          "id": "OINPNZ38E",
+          "text": "enable engine starting.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSLEAC6ND",
+          "text": "maintain a constant mixture in a piston engine at low and high power settings.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOMYIVLX3",
+          "text": "enable engine idling.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCNXHC7OL",
+          "text": "enable proper functioning of a piston engine during throttle advance.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9OKQ03HJ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-215340",
+      "BGS-210351",
+      "ATPLGS-119855",
+      "ATPLGS-105473",
+      "AVEXAM-79810",
+      "AVEXAM-16804"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A capacitor in parallel with contact breaker points..",
+      "options": [
+        {
+          "id": "OONVUDCMA",
+          "text": "prevents arcing across the contact breaker points.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLXOXASJT",
+          "text": "permits arcing across the contact breaker points.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OY4N6SGKJ",
+          "text": "induces a very high current across the secondary windings.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQNXEF94W",
+          "text": "induces a very high current across the primary windings.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKLGXICCG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211563", "AVEXAM-25445", "BGS-211815"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the engine control element the pilot may expect on the flight deck of an aircraft with a piston engine controlled by FADEC?",
+      "options": [
+        {
+          "id": "OTTPSO9CC",
+          "text": "Mixture lever",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIPAKQTHE",
+          "text": "FADEC restart switch",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFNBGWNHG",
+          "text": "Throttle valve control lever",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBEFCN49A",
+          "text": "Crank switch",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7LFKNYYJ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-212857",
+      "AVEXAM-42249",
+      "ATPLGS-119756",
+      "BGS-210557"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An EGT (Exhaust Gas Temperature) indicator for a piston engine is used to..",
+      "options": [
+        {
+          "id": "OKKYKEEUQ",
+          "text": "assist the pilot to set the correct mixture.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSOP9T1YX",
+          "text": "control the cylinder head temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMUA35FTY",
+          "text": "control the carburettor inlet airflow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVSJEZ3FG",
+          "text": "control the fuel temperature.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QL2Y6E4N6",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218533", "BGS-211976", "AVEXAM-183"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a 4-stroke normally aspirated piston engine at altitude, which of the following causes the air-fuel mixture to enter the cylinders?",
+      "options": [
+        {
+          "id": "ORNNWAOPG",
+          "text": "The difference between ambient pressure and pressure inside the cylinder.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBFNSUBJJ",
+          "text": "Compression from devices upstream of the carburettor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUOFB56KR",
+          "text": "The difference between ambient pressure and exhaust back pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ8ZC2JYN",
+          "text": "Compression from devices downstream of the carburettor.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTC2FWHB0",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213634", "AVEXAM-2448"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Where is the engine oil stored in a wet-sump oil system?",
+      "options": [
+        {
+          "id": "OB2I4FOMS",
+          "text": "A seperate tank.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODTRSCZJJ",
+          "text": "There is no oil storage.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ0KRGF76",
+          "text": "The bottom of the engine.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OI5PMROST",
+          "text": "Inside the engine cylinders.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYWPAHUKJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219204"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Regarding a normally aspirated piston engine, which of the following statements is correct?",
+      "options": [
+        {
+          "id": "O7UFKKCKN",
+          "text": "Power available will increase with altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODHKTAQIK",
+          "text": "Power output depends, amongst other things, on the mass of the mixture entering the cylinder.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIDKDRNAZ",
+          "text": "Power available will increase with density altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEFN53JGO",
+          "text": "High atmospheric humidity increases power.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5UFCU3TE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214678", "AVEXAM-44587"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is a turbocharger used for in a piston aero-engine?",
+      "options": [
+        {
+          "id": "OJFHISN2T",
+          "text": "To compensate for the decrease in MAP with increasing altitude.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OMLUVDZD5",
+          "text": "To increase the engine power output with altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFN6NAEIR",
+          "text": "To increase the engine power output at sea level.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8VCOXOVH",
+          "text": "To reduce the stress on all the engine components.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBLR6HFDP",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-219873",
+      "ATPLGS-105497",
+      "BGS-210516",
+      "AVEXAM-10632",
+      "AVEXAM-22143"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given an aeroplane with a fixed pitch propeller, and a basic float carburettor, with the throttle maintaining a constant RPM. In a climb as altitude is increased, if the mixture is not leaned..",
+      "options": [
+        {
+          "id": "OH6MH7ZDH",
+          "text": "the density of air entering the carburettor decreases and the fuel flow increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPY0BV36Z",
+          "text": "both the density of air entering the carburettor and the fuel flow decrease.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLSLYYLHO",
+          "text": "the volume of air entering the carburettor remains constant and the fuel flow increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O38Z6MDFR",
+          "text": "the mixture remains constant and the fuel flow decreases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QSUXOILRU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214390", "AVEXAM-5772", "AVEXAM-15028"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The camshaft of a piston engine rotates at:",
+      "options": [
+        {
+          "id": "OQF9T1ZIQ",
+          "text": "twice the speed of the crankshaft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORJH6T6CY",
+          "text": "half the speed of the crankshaft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZELU5BIW",
+          "text": "the same speed as the crankshaft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAN52OF8Z",
+          "text": "four times the speed of the crankshaft.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMO66LPQE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-214712",
+      "AVEXAM-58301",
+      "ATPLGS-119835",
+      "BGS-210541",
+      "ATPLGS-105560"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The kind of compressor normally used in a piston engine as a turbocharger is..",
+      "options": [
+        {
+          "id": "OGQ84ZBH8",
+          "text": "a hybrid compressor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL3TS5RRW",
+          "text": "an axial compressor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKTUSX9QG",
+          "text": "a piston compressor.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODHX8CZCT",
+          "text": "a centrifugal compressor.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHU86Z3ZN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-217262"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Consider two twin-engine airplanes:\n\nAirplane 1 has clockwise-rotating propellers.   \n Airplane 2 has inward-rotating propellers.\n\nIf, on both airplanes, the left engine fails, which will give the largest yawing moment, and from which side will it be?",
+      "options": [
+        {
+          "id": "OIBAJ41F6",
+          "text": "Airplane 1 will have the greatest yaw moment, and it will produce a yaw to the right.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYOK54NVB",
+          "text": "Airplane 1 will have the greatest yaw moment, and it will produce a yaw to the left.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OGWMXLGUV",
+          "text": "Airplane 2 will have the greatest yaw moment, and it will produce a yaw to the right.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OINF3HRX6",
+          "text": "Airplane 2 will have the greatest yaw moment, and it will produce a yaw to the left.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLZUI2KNK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218731", "AVEXAM-9160"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How can FADEC systems on piston engines usually achieve a level of redundancy?",
+      "options": [
+        {
+          "id": "OTDNNHLOU",
+          "text": "Each engine is fitted with two FADEC computers.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OINN6BUI1",
+          "text": "A piston engine FADEC is much more performant than a gas turbine one because of the lower operating costs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPIBKLRJX",
+          "text": "Extra redundancy is achieved via a continuous operator monitoring system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O09NJ52RJ",
+          "text": "The FADEC architecture is equipped with a reinforced wiring system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3CMIQQLQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213110"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Assuming incompressible flow, when considering streamlines in the vicinity of an aerofoil, which of the following answers is correct?",
+      "options": [
+        {
+          "id": "OQQKMAXB0",
+          "text": "Converging streamlines indicate that the speed of the flow is increasing and that the static pressure is decreasing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OFKP9FANZ",
+          "text": "Diverging streamlines indicate that the speed of the flow is decreasing and that the static pressure is decreasing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU08QUIMI",
+          "text": "Diverging streamlines indicate that the speed of the flow is increasing and that the static pressure is increasing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OS1ZHWHEK",
+          "text": "Converging streamlines indicate that the speed of the flow is decreasing and that the static pressure is increasing.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZWQTGIWE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213835"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a piston engine, applying carburettor heat decreases the (1) \\_\\_\\_\\_\\_ of air entering the engine, thereby making the mixture (2) \\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "ODDKECWV2",
+          "text": "(1) density; (2) richer.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O7LBLIVT2",
+          "text": "(1) pressure; (2) richer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV7IXDRI6",
+          "text": "(1) density; (2) leaner.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSDSKCYX2",
+          "text": "(1) pressure; (2) leaner.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPIW3NITN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-212841",
+      "BGS-212143",
+      "AVEXAM-10607",
+      "ATPLGS-105429",
+      "ATPLGS-119526",
+      "AVEXAM-62505",
+      "BGS-212242"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The function of a diffuser (compensating jet) is to:",
+      "options": [
+        {
+          "id": "OAMLLZ8CC",
+          "text": "enable engine starting.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWDIFIJU6",
+          "text": "maintain a constant mixture in a piston engine at low and high power settings.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORAUER1GO",
+          "text": "enable proper functioning of a piston engine during throttle advance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCPNXV8X8",
+          "text": "enable engine idling.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAH2MKKFY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214437", "AVEXAM-62930"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When are the auxiliary fuel pumps installed on single-engine low-wing aeroplanes typically used?\n\n1\\. during take-off.   \n 2\\. during cruise.   \n 3\\. during landing.   \n 4\\. in emergency situations.   \n 5\\. in case of a suspected vapour lock.   \n 6\\. in case of failure of the engine fuel pump.",
+      "options": [
+        {
+          "id": "OUMA900XP",
+          "text": "1, 3, 4 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2JMIOEEM",
+          "text": "1, 2, 3, 4, 5 and 6.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPX9X8EOK",
+          "text": "1, 2, 3, 4 and 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTZSPASWW",
+          "text": "1, 3, 4, 5 and 6.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q8QEOOF63",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213676", "BGS-212204"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following is true with regards to a wet-sump oil system?",
+      "options": [
+        {
+          "id": "OKGL1PFQE",
+          "text": "The oil is pumped from the reservoir to the engine for lubrication and cooling.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8SYDVOQM",
+          "text": "The oil reservoir is within the engine casing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAZOTOEWP",
+          "text": "The oil is stored outside the aircraft, in a separate tank, to avoid contamination.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OENQGGE8L",
+          "text": "The oil reservoir is located in the main rotor gearbox.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWFWX2CNA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-216722", "ATPLGS-119282", "AVEXAM-18314"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The torque of an aeroplane engine can be measured at the:",
+      "options": [
+        {
+          "id": "OMNQBUIYB",
+          "text": "camshaft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMGWYTVKS",
+          "text": "accessory gear box.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXFF9QGGG",
+          "text": "gear box which is located between the engine and the propeller.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZ36LFQOF",
+          "text": "propeller blades.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDP5TVVIR",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-218866",
+      "ATPLGS-120235",
+      "ATPLGS-105387",
+      "AVEXAM-79243",
+      "BGS-210445"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For a piston engine, specific fuel consumption is defined as the..",
+      "options": [
+        {
+          "id": "OYVGLBR1U",
+          "text": "designed fuel consumption for a given RPM.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGBGJJLOE",
+          "text": "maximum fuel consumption of the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMXEVE4UL",
+          "text": "mass of fuel required to produce unit power for unit time.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBF61DDQQ",
+          "text": "quantity of fuel required to run the engine for one minute at maximum operating conditions.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9BSZO6R0",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-218635"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following will you find in a \"wet sump\" lubrication system?\n\n1\\. Pressure pump.   \n 2\\. Separate oil reservoir.   \n 3\\. Scavenge pump.   \n 4\\. Integrated oil reservoir.",
+      "options": [
+        {
+          "id": "OTUQUXGHA",
+          "text": "1, 2 and 3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4VQVAP7D",
+          "text": "1 and 4",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBM41COKP",
+          "text": "3 and 4",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJC4WYH5T",
+          "text": "2 and 3",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNXM22TKY",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-216574", "AVEXAM-37628"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following indications related to engine lubrication is most important to monitor during start-up of a piston engine?",
+      "options": [
+        {
+          "id": "OZX16FGEO",
+          "text": "A low oil temperature indication or warning light.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4KCDQII1",
+          "text": "A warning from the chip detector.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSPXAHQKT",
+          "text": "The filter bypass warning.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXKYHZXPZ",
+          "text": "A low oil pressure indication or warning light.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKEQKOQK4",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-219215"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What could be said about exhaust back pressure when using a supercharged (but not turbocharged) engine?",
+      "options": [
+        {
+          "id": "ODAUPGFUT",
+          "text": "Increased back pressure increases engine power slightly.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL3OXIY5F",
+          "text": "Exhaust back pressure reduces with altitude and increases engine power slightly.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAFLTBL7H",
+          "text": "Increased exhaust back pressure at altitude improves scavenging.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPYTYSWHY",
+          "text": "Exhaust back pressure is a result of increased humidity.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYCIPOE3G",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-214924", "BGS-212171"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following may be controlled by FADEC in a piston engine?",
+      "options": [
+        {
+          "id": "OB67PUXD8",
+          "text": "Carburettor heat and spark plug voltage.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTPXNRX0Y",
+          "text": "Cooling and lubrication.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBHCHH2KQ",
+          "text": "The mixture ratio and ignition timing.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUTUR0ZRV",
+          "text": "Magneto operation and the impulse coupling starter.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QU94NZRL8",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-212484",
+      "AVEXAM-1356",
+      "ATPLGS-127482",
+      "BGS-211996"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct with regards to ice accretion in piston engine induction systems.",
+      "options": [
+        {
+          "id": "OJUF5B5GI",
+          "text": "Fuel ice is normally formed in the induction system of fuel injected engines.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQLJUMSSJ",
+          "text": "Ice on the throttle valve is only found in the induction system of fuel injection systems.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHQVMA3TA",
+          "text": "Ice accretion affects both fuel injection systems and engines equipped with carburettors.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCQLUU320",
+          "text": "Induction system icing affects only engines equipped with carburettors.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLKZJFIUM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-211996"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Consider a climb with a piston engine aeroplane. What will happen to the fuel flow if the pilot maintains the same power setting?",
+      "options": [
+        {
+          "id": "OORJJXBVV",
+          "text": "With increasing altitude air density decreases and the power output of the engine decreases. This has to be compensated for by an increased fuel flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTUQAOWM",
+          "text": "The temperature decreases and thereby over-compensates for the decreasing air density which is caused by the decreasing pressure. This results in a decreasing fuel flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTVVBMZDK",
+          "text": "The temperature decreases and thereby compensates for the decreasing air density which is caused by the decreasing pressure. Therefore the fuel flow remains the same.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAM4OPKJ4",
+          "text": "With increasing altitude air density decreases, therefore less fuel is required for combustion, so the fuel flow decreases.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q5QPUJ26V",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212446", "ATPLGS-105517"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The \\`slipstream effect\\` of a propeller is most prominent at:",
+      "options": [
+        {
+          "id": "OBWCXP6XN",
+          "text": "low airspeeds with low power setting.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCY3SYG8H",
           "text": "high airspeeds with high power setting.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AX58VV35I3",
+          "id": "OXJDEPBRC",
+          "text": "low airspeeds with high power setting.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OC0HLYJVF",
           "text": "high airspeeds with low power setting.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGROZX09M",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-211629",
+      "AVEXAM-19012",
+      "AVEXAM-26840",
+      "AVEXAM-74414",
+      "AVEXAM-4624"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements are correct, with regards to a dry sump oil system in comparison to a wet sump system?\n\n1\\. Temperature control is more difficult in a wet sump system.   \n 2\\. The oil quantity in a wet sump system depends on the external oil reservoir.",
+      "options": [
+        {
+          "id": "OACXNNA5F",
+          "text": "1 and 2 are both correct.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3EDWCLGYR",
-          "text": "low airspeeds with low power setting.",
+          "id": "O4IIPVBKW",
+          "text": "1 and 2 are both incorrect.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHIBS4TSV",
+          "text": "1 is correct; 2 is incorrect.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAEDDLK17",
+          "text": "1 is incorrect; 2 is correct.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNL6OTXSU",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-218346",
+      "AVEXAM-19012",
+      "AVEXAM-26840",
+      "AVEXAM-74414",
+      "AVEXAM-4624"
+    ],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements are correct, with regards to a dry sump oil system in comparison to a wet sump system?\n\n1\\. Temperature control is more difficult in a dry sump system.   \n 2\\. The oil quantity in a dry sump system depends on the external oil reservoir.",
+      "options": [
+        {
+          "id": "OQTGKIKBG",
+          "text": "1 and 2 are both correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTM1WFMUO",
+          "text": "1 is correct; 2 is incorrect.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOKITHZC3",
+          "text": "1 is incorrect; 2 is correct.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSWHNIFSL",
+          "text": "1 and 2 are both incorrect.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCRQSB4RA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-217903"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The use of too low octane gasoline in a piston engine would cause:",
+      "options": [
+        {
+          "id": "O6CWA5KQU",
+          "text": "excessive low cylinder head temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6X1ZQVBR",
+          "text": "fouled plugs.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKFYCAGEX",
+          "text": "detonation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUXVSA4HX",
+          "text": "no difference except at high RPM.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWATX23ST",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212676"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The use of carburettor heating during take-off and climb is discouraged because of the:",
+      "options": [
+        {
+          "id": "OHQN6NYLE",
+          "text": "Impossibility of engine supplying enough heat.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ86XTEY9",
+          "text": "Increased drag.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMOC3KE1F",
+          "text": "Loss of power and increased risk of detonation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOHI5IA5X",
+          "text": "Risk of fire.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIIQ3STCU",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-213641", "AVEXAM-72484"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The turbocharger waste gate is located in (1) \\_\\_\\_\\_\\_ and the maximum RPM is achieved when the valve is (2) \\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "O23CHMT2H",
+          "text": "(1) Compressor; (2) closed",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG9EDJBIW",
+          "text": "(1) Turbine; (2) open",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O19SXVGP4",
+          "text": "(1) Compressor; (2) open",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCFCOPDIF",
+          "text": "(1) Turbine; (2) closed",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QN6PFY69T",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-212071", "AVEXAM-8531"],
+    "annexes": [],
+    "learningObjectives": ["021.10"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What should the pilot do if a piston engine aircraft experiences detonation during climb-out?",
+      "options": [
+        {
+          "id": "OB2RDEGZL",
+          "text": "Climb at a higher rate of climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGWQBACQQ",
+          "text": "Lean the mixture.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFDHGIBUN",
+          "text": "Partially close the cowl flaps.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHE789SFU",
+          "text": "Decrease manifold pressure.",
+          "correct": true,
           "why": ""
         }
       ]

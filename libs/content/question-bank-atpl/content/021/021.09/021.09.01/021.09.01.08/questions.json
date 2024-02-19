@@ -1,36 +1,41 @@
 [
   {
-    "id": "QZIEITSK",
+    "id": "QSHBIRDW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105223"],
-    "annexes": ["0da05ce676ebb0c0b16a991e97d41cb6"],
+    "externalIds": [
+      "ATPLQ-215713",
+      "BGS-210366",
+      "ATPLGS-119828",
+      "AVEXAM-11658"
+    ],
+    "annexes": [],
     "learningObjectives": ["021.09.01.08.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which logic gate is equivalent to figure 5?",
+      "question": "The function of a NOT logic gate within a circuit is to..",
       "options": [
         {
-          "id": "A6C3QFXXGT",
-          "text": "NOR",
+          "id": "OBF0DTOYN",
+          "text": "process only high voltage input signals.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O989B9VX9",
+          "text": "invert the input signal such that the output is always of the opposite state.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATGN72PVCH",
-          "text": "OR",
+          "id": "ORLRYHMTG",
+          "text": "accept the input signal only if it is AC.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP4HJDJLY1",
-          "text": "NAND",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AODJGFYW54",
-          "text": "XOR",
+          "id": "OUZNTYIUI",
+          "text": "ensure the output signal is of the same state as the input signal.",
           "correct": false,
           "why": ""
         }
@@ -40,7 +45,7 @@
   {
     "id": "QGJXCIIU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216686", "BGS-970065"],
+    "externalIds": ["ATPLQ-216686", "AVEXAM-40699"],
     "annexes": [],
     "learningObjectives": ["021.09.01.08.01"],
     "explanation": "",
@@ -49,221 +54,26 @@
       "question": "Computer life expectancy is affected by temperature. If a computer has a life expectancy of 40 000 hours running at 30ºC, what would be the life expectancy if running at 40ºC?",
       "options": [
         {
-          "id": "A23XNWCR4T",
+          "id": "OPWVDJBPV",
           "text": "20 000 hours",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A904F8RF12",
-          "text": "10 000 hours",
+          "id": "O98ZO9N65",
+          "text": "80 000 hours",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACKEG4MWFV",
+          "id": "OLCJKOZGM",
           "text": "30 000 hours",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP5CDZ8W0N",
-          "text": "80 000 hours",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJFJKQIK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105240", "BGS-210365"],
-    "annexes": ["78dc685a4c101141b79a59f0f818bd85"],
-    "learningObjectives": ["021.09.01.08.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For this question use annex . Assuming positive logic, the symbol shown represents:",
-      "options": [
-        {
-          "id": "AZMEPFNWDM",
-          "text": "an INVERT or NOT gate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABPGURPRVN",
-          "text": "a NAND gate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGDKBLKXZ2",
-          "text": "a NOR gate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACYZBD1VQ5",
-          "text": "an EXCLUSIVE gate.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDPPVCJM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105226", "AVEXAM-63773", "AVEXAM-64937"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.08.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Because of the input/output relationship of an AND gate, it is often referred to as the",
-      "options": [
-        {
-          "id": "AA1I1STQMV",
-          "text": "all or nothing gate.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6V6RX2BAI",
-          "text": "\"any or all\" gate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB5YMA5WJ5",
-          "text": "inhibited or negated gate.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB5YMA5WJ6",
-          "text": "be all, end all gate.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQTJQPVM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-11658", "BGS-210360"],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.08.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The function of a NOT logic gate within a circuit is to:",
-      "options": [
-        {
-          "id": "A2DTE4MFO6",
-          "text": "used in AC and DC circuits.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AM8LYQG9LF",
-          "text": "used only in DC circuits.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A05PPE5FLH",
-          "text": "used only in AC circuits.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ2OYNWA9H",
-          "text": "reset at any time.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSHBIRDW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-119828",
-      "ATPLQ-215713",
-      "AVEXAM-11658",
-      "BGS-210366"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.09.01.08.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The function of a NOT logic gate within a circuit is to...",
-      "options": [
-        {
-          "id": "AC4LHEBF49",
-          "text": "invert the input signal such that the output is always of the opposite state.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFAWBNLQUG",
-          "text": "accept the input signal only if it is AC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT3EX14ISG",
-          "text": "process only high voltage input signals.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7IQCB1DW7",
-          "text": "ensure the output signal is of the same state as the input signal.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZAYUGHF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105238"],
-    "annexes": ["0da05ce676ebb0c0b16a991e97d41cb6"],
-    "learningObjectives": ["021.09.01.08.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The symbol 2 represents ___ logic gate",
-      "options": [
-        {
-          "id": "AYRZYTP2OO",
-          "text": "NAND",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY08SYN5UZ",
-          "text": "NOT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN1F5BN3HB",
-          "text": "XOR",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATJNWNQFUL",
-          "text": "AND",
+          "id": "OOTEROOIE",
+          "text": "10 000 hours",
           "correct": false,
           "why": ""
         }

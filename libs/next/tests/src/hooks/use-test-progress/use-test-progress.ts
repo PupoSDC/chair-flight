@@ -154,7 +154,7 @@ export const useTestProgress = create<TestProgress>()(
           set({ tests: { ...newTests } });
         },
       }),
-      { name: "cf-test-progress", version: 1 },
+      { name: "cf-test-progress", version: 2 },
     ),
   ),
 );

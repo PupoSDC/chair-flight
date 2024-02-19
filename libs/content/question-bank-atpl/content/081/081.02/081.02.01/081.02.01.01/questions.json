@@ -1,378 +1,36 @@
 [
   {
-    "id": "QAXEFJOI",
+    "id": "QSQQBGTL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-121108"],
+    "externalIds": ["ATPLQ-816899", "AVEXAM-92809", "AVEXAM-54399"],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Sound propagates through the air at a speed which only depends on",
+      "question": "The local speed of sound in air is proportional to the…",
       "options": [
         {
-          "id": "AMSL3REE91",
-          "text": "temperature.",
+          "id": "OYELWC6S8",
+          "text": "Air temperature in Kelvin (K).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPJ1XV96E",
+          "text": "Square root of the air temperature in Kelvin (K).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AB8XJ1RYLF",
-          "text": "density.",
+          "id": "OT3EOKAOD",
+          "text": "Air temperature in degrees Celsius (ºC).",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY3U3X75UG",
-          "text": "pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY5F15SGC3",
-          "text": "temperature and the pressure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFXEZHAV",
-    "relatedQuestions": ["QABXLSWM", "QBWFTQUG", "QLGWMMVW"],
-    "externalIds": ["ATPLGS-126040", "ATPLQ-815498", "AVEXAM-37405"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the supersonic speed range is correct?",
-      "options": [
-        {
-          "id": "AQCICV8Q53",
-          "text": "The airflow everywhere around the aeroplane is supersonic.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2RMMWPMCV",
-          "text": "The airflow around the aeroplane is transonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR3QH3RO1W",
-          "text": "The supersonic speed range starts at a Mach number below M = 1 and extends to Mach numbers above M = 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4YT1516AI",
-          "text": "The supersonic speed range starts at M = 1 and ends at Mcrit.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QABXLSWM",
-    "relatedQuestions": ["QBWFTQUG", "QFXEZHAV", "QLGWMMVW"],
-    "externalIds": ["AVEXAM-51618"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the transonic speed range is correct?",
-      "options": [
-        {
-          "id": "A0AUDORN4M",
-          "text": "The transonic speed range starts at MCRIT and extends to Mach numbers above M = 1.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEGWBH7Z2G",
-          "text": "The airflow everywhere around the aircraft is supersonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7QRNCE0L5",
-          "text": "The airflow everywhere around the aircraft is subsonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A13QICCIW3",
-          "text": "The transonic speed range starts at M = 0.5 and ends at MCRIT.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLGWMMVW",
-    "relatedQuestions": ["QABXLSWM", "QBWFTQUG", "QFXEZHAV"],
-    "externalIds": ["ATPLGS-125950", "BGS-810505"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the transonic speed range is correct ?",
-      "options": [
-        {
-          "id": "ACGEZSPHWV",
-          "text": "The transonic speed range starts at Mcrit and extends to Mach numbers above M = 1.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXTTKQXKHQ",
-          "text": "The airflow everywhere around the aeroplane is subsonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMZVP2H1QF",
-          "text": "The airflow everywhere around the aeroplane is supersonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A068L0X6BN",
-          "text": "The transonic speed range starts at M = 0.5 and ends at Mcrit.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBWFTQUG",
-    "relatedQuestions": ["QABXLSWM", "QFXEZHAV", "QLGWMMVW"],
-    "externalIds": ["ATPLQ-817028"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of these statements about the transonic speed range is correct ?",
-      "options": [
-        {
-          "id": "A1V0HRH6OA",
-          "text": "The transonic speed range starts at M~CRIT~ and extends to Mach numbers above M = 1.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALCY3WMTEX",
-          "text": "The transonic speed range starts at M = 0.5 and ends at M~CRIT~.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMQEFOFVIY",
-          "text": "The airflow everywhere around the aeroplane is supersonic.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARVD3RBPP7",
-          "text": "The airflow everywhere around the aeroplane is subsonic.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGDKPRAE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-126039", "AVEXAM-75071"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The subsonic speed range",
-      "options": [
-        {
-          "id": "A8SIPJT0BX",
-          "text": "ends at Mcrit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5GTTH6WN7",
-          "text": "implies both subsonic and supersonic speeds exist in the flow around the aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ7SKIE62P",
-          "text": "ends at M = 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHL9AYC5I1",
-          "text": "ends at a Mach number just above M = 1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QECCLUFW",
-    "relatedQuestions": ["QBMPZRVX", "QMTMLRZZ"],
-    "externalIds": ["ATPLGS-127896", "BGS-810477"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement with respect to the speed of sound is correct?",
-      "options": [
-        {
-          "id": "A3W17RUGRR",
-          "text": "Varies with the square root of the absolute temperature.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AG0OZYF0MS",
-          "text": "Increases always if the density of the air decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5ZB90MZFU",
-          "text": "Doubles if the temperature increases from 9° to 36° Centigrade.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKHEGPK8Y8",
-          "text": "Is independent of altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBMPZRVX",
-    "relatedQuestions": ["QECCLUFW", "QMTMLRZZ"],
-    "externalIds": ["AVEXAM-63020"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement with respect to the speed of sound is correct?",
-      "options": [
-        {
-          "id": "APSKDL7VZ5",
-          "text": "Varies with the square root of the absolute temperature.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0IK63CN5T",
-          "text": "Increases always if the density of the air decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUC3G7WBYK",
-          "text": "Is independent of altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU5W1P43LA",
-          "text": "Doubles if the temperature increases from 9° to 36 °C.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMTMLRZZ",
-    "relatedQuestions": ["QBMPZRVX", "QECCLUFW"],
-    "externalIds": ["ATPLQ-818082"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement with respect to the speed of sound is correct?",
-      "options": [
-        {
-          "id": "AYY4G7M39I",
-          "text": "Varies with the square root of the absolute temperature.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5GSF20HTH",
-          "text": "Is independent of altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ6PA7HB75",
-          "text": "Doubles if the temperature increases from 9° to 36°C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3N0YMH90V",
-          "text": "Increases always if the density of the air decreases.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXUOMYXY",
-    "relatedQuestions": ["QIAZAABN"],
-    "externalIds": ["AVEXAM-29215"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does the Local Speed of Sound (LSS) change with increasing altitude?",
-      "options": [
-        {
-          "id": "ATTW9JIEB6",
-          "text": "LSS will decrease below the stratosphere.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGX8BW00Q7",
-          "text": "LSS will decrease above the troposphere.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5FSE4PJBV",
-          "text": "LSS will increase above the troposphere.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7JPXYM2WT",
-          "text": "LSS will increase below the stratosphere.",
+          "id": "O8IO36NG3",
+          "text": "Square root of the air temperature in degrees Celsius (ºC).",
           "correct": false,
           "why": ""
         }
@@ -381,8 +39,8 @@
   },
   {
     "id": "QIAZAABN",
-    "relatedQuestions": ["QXUOMYXY"],
-    "externalIds": ["ATPLQ-817346"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817346", "AVEXAM-29215", "BGS-812616"],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.02"],
     "explanation": "",
@@ -391,26 +49,155 @@
       "question": "How does the Local Speed of Sound (LSS) change with increasing altitude?",
       "options": [
         {
-          "id": "AQ4PJLQ8AF",
+          "id": "OHBCDFPXN",
+          "text": "LSS will remain constant below the troposphere",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIATGWBWG",
           "text": "LSS will decrease in the troposphere",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AU8GWBEICX",
-          "text": "LSS will increase in the lower stratosphere",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXULR4HJ4S",
+          "id": "OLTCOFDWH",
           "text": "LSS will decrease in the lower stratosphere",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJG8XOZ81C",
-          "text": "LSS will remain constant below the troposphere",
+          "id": "OM7UQAOQK",
+          "text": "LSS will increase in the lower stratosphere",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYZLHNVK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-816283",
+      "AVEXAM-73071",
+      "BGS-810500",
+      "ATPLGS-126038"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02.01.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Regarding the transonic speed range:",
+      "options": [
+        {
+          "id": "OQLSEXKDZ",
+          "text": "it starts at MCRIT and extends to Mach number equal to 1.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEXNEL9XA",
+          "text": "it starts at a Mach number equal to 1.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5KMNAMPL",
+          "text": "both subsonic and supersonic speeds exist in the flow around the aeroplane.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVVYKJAKD",
+          "text": "it starts at a Mach number just above 1.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVTVFHZC",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813259",
+      "AVEXAM-73962",
+      "BGS-810498",
+      "ATPLGS-125825"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02.01.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Transonic speed is:",
+      "options": [
+        {
+          "id": "OJSSQ7TY9",
+          "text": "a speed at which locally an oblique shock wave has developed in the flow along the aeroplane.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUAVHXGRQ",
+          "text": "a speed at which compressibility effects are first noticeable.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBWVNGI7R",
+          "text": "the speed range between MCRIT and MMO.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLKYETE69",
+          "text": "a speed at which locally around the aeroplane both supersonic and subsonic speeds exist.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGDKPRAE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-818039",
+      "ATPLGS-126039",
+      "AVEXAM-75071",
+      "BGS-810501"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02.01.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The subsonic speed range:",
+      "options": [
+        {
+          "id": "O79BAGJHS",
+          "text": "implies both subsonic and supersonic speeds exist in the flow around the aeroplane.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4GBNWZ4W",
+          "text": "ends at M = 1.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8IEEUQ34",
+          "text": "ends at MCRIT.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTUVN2TAP",
+          "text": "ends at a Mach number just above M = 1.",
           "correct": false,
           "why": ""
         }
@@ -420,7 +207,12 @@
   {
     "id": "QPSSUOOF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125617", "ATPLQ-816502", "BGS-810476"],
+    "externalIds": [
+      "ATPLQ-816502",
+      "BGS-810476",
+      "ATPLGS-125617",
+      "AVEXAM-47676"
+    ],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.01"],
     "explanation": "",
@@ -429,183 +221,26 @@
       "question": "The speed of sound is determined only by:",
       "options": [
         {
-          "id": "AA2Y5U4EO5",
+          "id": "OHWIIUIE0",
           "text": "temperature.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AW00MLTWCJ",
-          "text": "pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHRI63KFBU",
+          "id": "OTTHXOAFA",
           "text": "density.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOMJX47RYU",
+          "id": "OAKWCDKOR",
           "text": "humidity.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJTYWRKC",
-    "relatedQuestions": ["QUIGSXLF", "QYZLHNVK"],
-    "externalIds": [
-      "ATPLGS-126038",
-      "ATPLQ-816283",
-      "AVEXAM-73071",
-      "BGS-810500"
-    ],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding the transonic speed range:",
-      "options": [
-        {
-          "id": "ANMRNS61CZ",
-          "text": "both subsonic and supersonic speeds exist in the flow around the aeroplane.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "ARKMG664XV",
-          "text": "it starts at a Mach number just above 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1VJ0D84VM",
-          "text": "it starts at Mcrit and extends to Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP1O415H8O",
-          "text": "it starts at a Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUIGSXLF",
-    "relatedQuestions": ["QJTYWRKC", "QYZLHNVK"],
-    "externalIds": ["AVEXAM-73071"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding the transonic speed range:",
-      "options": [
-        {
-          "id": "ARMFYNMLRS",
-          "text": "both subsonic and supersonic speeds exist in the flow around the aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ4J71Z10H",
-          "text": "it starts at MCRIT and extends to Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A31BUMXTB4",
-          "text": "it starts at a Mach number just above 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFOE2O6JDF",
-          "text": "it starts at a Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYZLHNVK",
-    "relatedQuestions": ["QJTYWRKC", "QUIGSXLF"],
-    "externalIds": ["ATPLQ-816283"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding the transonic speed range:",
-      "options": [
-        {
-          "id": "A4BUJ7ZQ6R",
-          "text": "both subsonic and supersonic speeds exist in the flow around the aeroplane.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3QKZBM8Q7",
-          "text": "it starts at a Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMGEO2U9VU",
-          "text": "it starts at a Mach number just above 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY699NEM2B",
-          "text": "it starts at M~CRİT~ and extends to Mach number equal to 1.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDCCDMSX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-33016"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which speed region is called transonic?",
-      "options": [
-        {
-          "id": "AG5XYMNMX1",
-          "text": "The region around Mach 1.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUXMCI2EDJ",
-          "text": "The whole region above Mach 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8J3ZNSZKG",
-          "text": "The whole region above Mach 0.75.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKVS1KD8EO",
-          "text": "The whole region from 0 to Mach 1.",
+          "id": "OPTIKQIJL",
+          "text": "pressure.",
           "correct": false,
           "why": ""
         }
@@ -615,577 +250,128 @@
   {
     "id": "QZIQSZXY",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-819838"],
+    "externalIds": [
+      "ATPLQ-819838",
+      "AVEXAM-29215",
+      "AVEXAM-95866",
+      "BGS-812616"
+    ],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "How does the speed of sound change with changing altitude in International Standard Atmosphere (ISA) conditions? As the altitude increases, the speed of sound..",
+      "question": "How does the speed of sound change with changing altitude in International Standard Atmosphere (ISA) conditions? As the altitude increases, the speed of sound...",
       "options": [
         {
-          "id": "AV53C2JC56",
-          "text": "decreases in the troposphere.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP72BJTLYJ",
-          "text": "decreases in the lower part of the stratosphere.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASMRJZ4HNU",
+          "id": "OZTLFLD4B",
           "text": "increases in the troposphere.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIVZI4V0VU",
+          "id": "OJKEAJOSI",
           "text": "increases in the lower part of the stratosphere.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMKEKLDV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-47676"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The speed of sound is affected only by the ___ of the air.",
-      "options": [
+        },
         {
-          "id": "AUT15169LO",
-          "text": "temperature",
+          "id": "OG6K6KATW",
+          "text": "decreases in the lower part of the stratosphere.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEHMCNIBW",
+          "text": "decreases in the troposphere.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "A72U5HX4RT",
-          "text": "humidity",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH1J1N9Q0L",
-          "text": "pressure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2BE72N286",
-          "text": "density",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QPIYLHVI",
+    "id": "QMTMLRZZ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125952",
-      "ATPLQ-816528",
-      "AVEXAM-25423",
-      "BGS-810569"
+      "ATPLQ-818082",
+      "AVEXAM-63020",
+      "BGS-810477",
+      "ATPLGS-127896"
     ],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the highest speed possible without supersonic flow over the wing?",
+      "question": "Which statement with respect to the speed of sound is correct?",
       "options": [
         {
-          "id": "APV9K7ZTLV",
-          "text": "Critical Mach number.",
+          "id": "OEWXSZCRW",
+          "text": "Doubles if the temperature increases from 9° to 36°C.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPZA3Q3UL",
+          "text": "Is independent of altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSFCAUC3G",
+          "text": "Increases always if the density of the air decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPWEPFKAV",
+          "text": "Varies with the square root of the absolute temperature.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVOBYC9HUC",
-          "text": "M = 1.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXMUS2Q0TZ",
-          "text": "Tuck under speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A724U7KEEY",
-          "text": "Initial Mach buffet speed.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QKQBFCDQ",
-    "relatedQuestions": ["QKYYRUUR", "QVTVFHZC"],
+    "id": "QBWFTQUG",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125825",
-      "ATPLQ-813259",
-      "AVEXAM-73962",
-      "BGS-810498"
+      "ATPLQ-817028",
+      "BGS-810505",
+      "AVEXAM-37405",
+      "ATPLGS-125950",
+      "ATPLGS-126040",
+      "AVEXAM-51618"
     ],
     "annexes": [],
     "learningObjectives": ["081.02.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Transonic speed is:",
+      "question": "Which of these statements about the transonic speed range is correct ?",
       "options": [
         {
-          "id": "AVN8ZJ8OZR",
-          "text": "a speed at which locally around the aeroplane both supersonic and subsonic speeds exist.",
+          "id": "ODTMAV0LL",
+          "text": "The airflow everywhere around the aeroplane is supersonic.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9LY67HUS",
+          "text": "The transonic speed range starts at M = 0.5 and ends at MCRIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOD62POCQ",
+          "text": "The transonic speed range starts at MCRIT and extends to Mach numbers above M = 1.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A440450F7C",
-          "text": "a speed at which locally an oblique shock wave has developed in the flow along the aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHZU8EYXY1",
-          "text": "a speed at which compressibility effects are first noticeable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOAJ63LFKO",
-          "text": "the speed range between Mcrit and MMO.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVTVFHZC",
-    "relatedQuestions": ["QKQBFCDQ", "QKYYRUUR"],
-    "externalIds": ["ATPLQ-813259"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Transonic speed is:",
-      "options": [
-        {
-          "id": "AIGM6SI5Z6",
-          "text": "a speed at which locally around the aeroplane both supersonic and subsonic speeds exist.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASXQ77BG22",
-          "text": "a speed at which compressibility effects are first noticeable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACSL5O2Y74",
-          "text": "a speed at which locally an oblique shock wave has developed in the flow along the aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGP9NR9FYC",
-          "text": "the speed range between M~CRIT~ and M~MO~.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKYYRUUR",
-    "relatedQuestions": ["QKQBFCDQ", "QVTVFHZC"],
-    "externalIds": ["AVEXAM-73962"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Transonic speed is:",
-      "options": [
-        {
-          "id": "AHS8CMMI59",
-          "text": "a speed at which locally around the aircraft both supersonic and subsonic speeds exist.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AM0OKFLN5W",
-          "text": "a speed at which compressibility effects are first noticeable.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ13F4Z3D0",
-          "text": "the speed range between MCRIT and MMO.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6CU4A36QJ",
-          "text": "a speed at which locally an oblique shock wave has developed in the flow along the aircraft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFZPFSTQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-118163"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The sonic boom of an aeroplane flying at supersonic speed is created by",
-      "options": [
-        {
-          "id": "AZCODPZVD8",
-          "text": "shock waves around the aeroplane.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZJVL2LK6C",
-          "text": "aerodynamic heating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYVX4YTWMF",
-          "text": "the expansion flow behind the aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHRR1H640D",
-          "text": "the centre of pressure, which is moving aft on the aerofoil.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLABOXCU",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-92809"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The speed of sound in air is proportional to the...",
-      "options": [
-        {
-          "id": "ALI1L1FEQU",
-          "text": "square root of the air temperature in Kelvin.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH6VODITXC",
-          "text": "square root of the air temperature in degrees Celsius.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1K7SX3IOM",
-          "text": "air temperature in degrees Celsius.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A30O71KGGM",
-          "text": "air temperature in Kelvin.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSQQBGTL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-816899"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The local speed of sound in air is proportional to the...",
-      "options": [
-        {
-          "id": "AXQKU5JVKU",
-          "text": "Square root of the air temperature in Kelvin (K).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD1V3VIHBB",
-          "text": "Air temperature in Kelvin (K).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4Y7416H13",
-          "text": "Square root of the air temperature in degrees Celsius (ºC).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0IFR6VAZW",
-          "text": "Air temperature in degrees Celsius (ºC).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQFIHRNM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-82613"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "How does temperature influence the speed of sound?",
-      "options": [
-        {
-          "id": "APQB0AKA8R",
-          "text": "can occur at different points on the aeroplane in transonic flight.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A99SVVH744",
-          "text": "is a discontinuity plane in an airflow, in which the temperature drops suddenly.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2RFL6C3CF",
-          "text": "is a discontinuity plane in an airflow, in which the pressure drops suddenly.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM27FY1EG9",
-          "text": "is a discontinuity plane in an airflow, which is always normal to the surface.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QISQPJTD",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-32353"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Speed of sound:",
-      "options": [
-        {
-          "id": "AH1ETYT3HA",
-          "text": "is proportional to the square root of the absolute temperature.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMK62L8K28",
-          "text": "decreases with increasing pressure altitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIII6CIB2P",
-          "text": "doubles when temperature doubles.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8AP69CM0P",
-          "text": "increases with increasing air density.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHFZYDRE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129458"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In supersonic flight:",
-      "options": [
-        {
-          "id": "AC4413AXMI",
-          "text": "A straight wing has a lower CD than a swept wing",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AAHYFU1ZD7",
-          "text": "The CD of the swept wing is lower than a straight if the section is symmetrical",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACX6BX6X2K",
-          "text": "The CD is not dependant on wing plan form",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A99AX6G6OH",
-          "text": "A swept wing has a lower CD than a straight wing",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSCJATEB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-58799"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When air has passed through a shock wave, the speed of sound is?",
-      "options": [
-        {
-          "id": "APC4TOTLP7",
-          "text": "Increased.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYUELNLKHI",
-          "text": "Decreased.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS1RJ1K4L1",
-          "text": "Not affected.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A139B189PA",
-          "text": "Decreased and beyond a certain Mach number start increasing again.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPRHOGUV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-54399"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The speed of sound is proportional to the:",
-      "options": [
-        {
-          "id": "AH11KWIYI4",
-          "text": "square root of the absolute temperature (unit Kelvin).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV9KDJ3NCO",
-          "text": "square of the absolute temperature (unit Kelvin).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2GP2KM96S",
-          "text": "air temperature in degrees Celsius.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF7BLEBCD5",
-          "text": "square root of the air temperature in degrees Celsius.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNTFJNGO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-814098", "BGS-811404"],
-    "annexes": [],
-    "learningObjectives": ["081.02.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the definition and purpose of the speed designated \"V~C~  \"?",
-      "options": [
-        {
-          "id": "AWWMR9D3MC",
-          "text": "The \"Design Cruise Speed\", used to show compliance with gust intensity loading",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU3XPCGV24",
-          "text": "The \"Design Speed for Maximum Gust Intensity\", used to show compliance with gust intensity loading.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO87FX7L2R",
-          "text": "Maximum landing gear extended speed, to prevent damage to aircraft with retractable undercarriage.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA188M17BR",
-          "text": "The \"Design Dive Speed\",  the highest speed planned to be achieved in testing.",
+          "id": "O06HDBG1Q",
+          "text": "The airflow everywhere around the aeroplane is subsonic.",
           "correct": false,
           "why": ""
         }

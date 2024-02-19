@@ -1,226 +1,117 @@
 [
   {
-    "id": "QJGEIQYX",
+    "id": "QKUYRFBQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110120"],
+    "externalIds": ["ATPLQ-611430", "AVEXAM-5524"],
     "annexes": [],
     "learningObjectives": ["061.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the difference between UTC and GMT?",
+      "question": "What is the UTC and date when it is 23:00 LMT on the 21st August at position A(11°00’N, 067°30’W)?",
       "options": [
         {
-          "id": "AT4APS0EQU",
-          "text": "UTC is slightly more accurate than GMT, but the difference between the two is so small that it has no importance in everyday navigation of aircraft.",
+          "id": "O9AG2SJL6",
+          "text": "18:30 UTC 21st August",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9XJCS9SF",
+          "text": "18:30 UTC 22nd August",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5VYVPTTX",
+          "text": "03:30 UTC 21st August",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLOFUV0NE",
+          "text": "03:30 UTC 22nd August",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARZ2AC9SXB",
-          "text": "All answers above are correct.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A543YKOHYQ",
-          "text": "GMT is valid only at the Greenwich meridian and is of no use at other longitudes.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIW7A7AUI4",
-          "text": "UTC is adjusted abruptly at announced time and is hence not practical to use.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QFECNZUH",
+    "id": "QSUEHQVF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124473"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement regarding the apparent Sun and the mean Sun is correct?",
-      "options": [
-        {
-          "id": "ATIII0WKWO",
-          "text": "The apparent Sun is the visible Sun, and the mean sun does not exist.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUQHWRAG4T",
-          "text": "The apparent Sun is a fictitious Sun coupled to UTC, the mean Sun is related to local mean time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKTTH3VVWZ",
-          "text": "The mean Sun moves along the ecliptic, the apparent Sun moves along the celestial equator.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUHHRMQQ9M",
-          "text": "The apparent Sun is not important for navigation as there is only a maximum time difference of 4 seconds compared to the mean Sun.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIBLCATM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110111"],
+    "externalIds": [
+      "ATPLQ-611955",
+      "ATPLGS-625659",
+      "AVEXAM-73536",
+      "BGS-610104"
+    ],
     "annexes": [],
     "learningObjectives": ["061.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "UTC stands for",
+      "question": "Position \"Elephant Point\" is situated at 58°00’N, 135°30’W. Standard time for this location is listed in the Air Almanac as UTC -8\\. If sunset occurs at 00:57 UTC on 21st January, what is the time of sunset in LMT?",
       "options": [
         {
-          "id": "A0GIRJPB5Y",
-          "text": "Universal Time Co-ordinated.",
+          "id": "OIM1P4JL1",
+          "text": "09:59 on January 21st.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJRFBUXA",
+          "text": "08:57 on January 21st.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OERHNTPX0",
+          "text": "16:57 on January 20th.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYCSWIVFX",
+          "text": "15:55 on January 20th.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1N9DR55BI",
-          "text": "Universal Time Compensated.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8COLD5XZW",
-          "text": "Universal Time Coefficient.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1PRREAW92",
-          "text": "Universal Time Constant.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QTVUPYCS",
+    "id": "QFPMEZVV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124493"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct about the apparent solar day?",
-      "options": [
-        {
-          "id": "AL7TY6AFJN",
-          "text": "The apparent solar day is the period between two successive transits of the true Sun through the same meridian.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A40KAK33PB",
-          "text": "The duration of the apparent solar day is constant throughout a year due to the constant rotational speed of the Earth around its axis.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARW6O492WD",
-          "text": "The apparent solar day is the period between two successive transits of the mean Sun through the same meridian.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB5SM6TLR5",
-          "text": "The duration of the apparent solar day is constant throughout a year due to the constant velocity of the Earth in its orbit around the Sun.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDLFUSFV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124431", "BGS-610014"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In which statement is the 'Mean Sun' best described?",
-      "options": [
-        {
-          "id": "A5TIS9E5F8",
-          "text": "The mean sun is a fictitious sun travelling along the celestial equator at uniform speed.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A09187854B",
-          "text": "The mean sun is a fictitious sun travelling along the ecliptic at uniform speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV6JPJL77D",
-          "text": "The mean sun is a fictitious sun, the orbit of which coincides with that of the apparent sun, but is corrected for mean astronomical and atmospheric refraction.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ36C4ZCNH",
-          "text": "The mean sun is a fictitious sun, the orbit of which coincides with that of the apparent sun, but is corrected for the mean difference in hour angle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QURRQPHR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611995"],
+    "externalIds": ["ATPLQ-612575", "BGS-610758"],
     "annexes": [],
     "learningObjectives": ["061.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Calculate the difference in LMT between Dublin (53°29'N, 006°15'W) and Bremen airport (53°09'N, 008°45'E):",
+      "question": "An aircraft departs at 02:43 LMT from an airport located on the 160°E meridian and after a 3-hour flight reaches at a destination airport located on the 170°W meridian. What will be the Local Mean Time on landing at the destination aerodrome?",
       "options": [
         {
-          "id": "A89U1ZZUTB",
-          "text": "01h 00m.",
+          "id": "ORHTK8YO9",
+          "text": "07:43",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHQ7LPND0N",
-          "text": "02h 00m.",
+          "id": "OFALANUI9",
+          "text": "05:43",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOQLK20ZF5",
-          "text": "00h 00m.",
+          "id": "O6OBUR66Y",
+          "text": "16:43",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3DXFQL0CR",
-          "text": "03h 00m.",
+          "id": "OS5K0EI51",
+          "text": "19:03",
           "correct": false,
           "why": ""
         }
@@ -230,567 +121,35 @@
   {
     "id": "QTVLQPBA",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611377"],
+    "externalIds": ["ATPLQ-611377", "AVEXAM-54059"],
     "annexes": [],
     "learningObjectives": ["061.05.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the Local Mean Time LMT at 35°25’S, 110°45’W if the Coordinated Universal Time UTC is 18:34 on September 4th?",
+      "question": "What is the Local Mean Time LMT at (35°25’S, 110°45’W) if the Coordinated Universal Time UTC is 18:34 on September 4th?",
       "options": [
         {
-          "id": "ATQG64QU0K",
-          "text": "11:11 on September 4th",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARYVSHQWKU",
+          "id": "OZUVRDQF2",
           "text": "11:34 on September 4th",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASM30T17PT",
-          "text": "01:34 on September 5th",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1BMLGBQM6",
+          "id": "OC01ATI7Z",
           "text": "01:57 on September 5th",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHXZYMCK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-91312"],
-    "annexes": ["0e8379f7e24dd0553fb43599835cb8f3"],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-20.\nUsing the diagram determine the sunrise time (LMT) in HONOLULU HAWAII (N21°20' W157°55') on 9th of April and calculate the corresponding UTC.",
-      "options": [
+        },
         {
-          "id": "A0JV0S9EGY",
-          "text": "0545 LMT; 1617 UTC",
+          "id": "O33FPQHDK",
+          "text": "11:11 on September 4th",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AW421J10FS",
-          "text": "1815 LMT; 0447 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLET7QPBC",
-          "text": "1617 LMT; 0545 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8M09XCQTP",
-          "text": "1815 LMT; 1815 UTC",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOLEWRKE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625458", "ATPLQ-613602", "BGS-610771"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft departs position A on the 170°00’E meridian at 01:30 Local Mean Time LMT on 11 February on an easterly course. It arrives at position B on the 160°00’W meridian 3:00 hours later.\n\nWhat is the LMT and local date of arrival at position B?",
-      "options": [
-        {
-          "id": "AXOX5061DO",
-          "text": "06:30, 10th February",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A42ZUUZ1ZR",
-          "text": "07:30, 11th February",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV9HZCBIXT",
-          "text": "01:30, 10th February",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACUXWGI4WS",
-          "text": "02:30, 11th February",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFPMEZVV",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610758"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft takes off from an airport located on the 160^o^ E meridian at 0243 LMT and flies for 3 hours to a destination airport located on the  170^o^ W  meridian.. At what time LMT does it land at its destination?",
-      "options": [
-        {
-          "id": "ARQZ9C166T",
-          "text": "0743",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQ9EB1Z5FU",
-          "text": "1903",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGEN7F30XN",
-          "text": "1643",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A59TLVOBHU",
-          "text": "0543",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPKKGZCI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79540"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the LMT at position at 46º00'N 094°30'E when it is **14:00** UTC?",
-      "options": [
-        {
-          "id": "A2453UP85J",
-          "text": "20:18 LMT",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD065KOIBY",
-          "text": "07:42 LMT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8MWDOOSMA",
-          "text": "07:30 LMT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVAD5WB15Z",
-          "text": "20:30 LMT",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMYRBZGW",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-60297"],
-    "annexes": ["ef30f5402eeb94acdadf38a0285882d0"],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-19.\nCalculate LMT for evening civil twilight at FUA AMOTO / NFTF, airport on 7th of March.\n(Location FUA AMOTO: S21°14'28\" W175°8'23\")",
-      "options": [
-        {
-          "id": "AOE2YVIPSH",
-          "text": "1845 LMT, 7th of March",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A857C4BOO4",
-          "text": "1829 LMT, 7th of March",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW6HMOVL42",
-          "text": "1834 LMT, 7th of March",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJAKSH0SSA",
-          "text": "1823 LMT, 7th of March",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKUYRFBQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611430"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the UTC and date when it is 23:00 LMT on the 21st August at position A(11°00’N, 067°30’W)?",
-      "options": [
-        {
-          "id": "ADHKRKLLK4",
-          "text": "03:30 UTC 22nd August",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUV9FUBOI9",
-          "text": "03:30 UTC 21st August",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1GTP8S6D8",
-          "text": "18:30 UTC 21st August",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHCNX3Y3JG",
-          "text": "18:30 UTC 22nd August",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QESTLSZP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626257", "ATPLQ-613136", "AVEXAM-358"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The local hour angle of the mean sun at 1200 LMT is:",
-      "options": [
-        {
-          "id": "ATDGPR57AU",
-          "text": "000°",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR1UMK56TJ",
-          "text": "270°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARADP0QFMC",
-          "text": "090°",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A64K88OPYK",
-          "text": "180°",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNKKUHUW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626321", "ATPLQ-619582", "AVEXAM-99958"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Local Mean Time (LMT) and date at 160°W is 23:15, 23rd July. What is the LMT and date at 160°E, which is on the side of the International Date Line?",
-      "options": [
-        {
-          "id": "AUADFKESJK",
-          "text": "20:35, 24th July",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANRHV99HBY",
-          "text": "01:35, 24th July",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXXIR4UYNZ",
-          "text": "01:55, 24th July",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABSQHBP1OG",
-          "text": "20:35, 23rd July",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGXATEDQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79175"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft departs an airfield on the 170ºE meridian at **0130** LMT on the 11th February. It flies on an easterly heading and lands at an airfield on the 160ºW meridian after 3 hours. What is the LMT and the date on arrival at the destination airfield.",
-      "options": [
-        {
-          "id": "ABS5BDA7C1",
-          "text": "0630 LMT on the 10th February",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A74K0G2E1M",
-          "text": "0630 LMT on the 11th February",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACJKY7I3MR",
-          "text": "0730 LMT on the 11th February",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX0A5F88A6",
-          "text": "0130 LMT on the 12th February",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZEODDVZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611023", "BGS-610088"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At 0000 Local Mean Time of an observer:",
-      "options": [
-        {
-          "id": "AVYMN00U0Y",
-          "text": "The mean sun is in transit with the observer's\nanti-meridian.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6VZ7GTRSD",
-          "text": "The mean sun is in transit with the observer's\nmeridian.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVLRPFTTQG",
-          "text": "The apparent sun is in transit with the observer's\nmeridian.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX1PK56WPR",
-          "text": "The apparent sun is in transit with the observer's\nanti-meridian.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUEKZZDE",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-617565", "AVEXAM-18749"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the LMT and local date at 102º30'E, when it is **1045** LMT on the 5th October at 156º30'W?",
-      "options": [
-        {
-          "id": "A3564XT93D",
-          "text": "0401 LMT on the 6th October",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKVN3TWVHW",
-          "text": "1529 LMT on the 6th October",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A90NTR0Y28",
-          "text": "0401 LMT on the 5th October",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABKAG0ENWM",
-          "text": "1529 LMT on the 5th October",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBZKUQAR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110103", "ATPLQ-611729", "BGS-610089"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When the time is 1400 LMT at 90°  West, \nit is",
-      "options": [
-        {
-          "id": "AYCJ9NTJIZ",
-          "text": "12:00 LMT at 120° West.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVCRMC8FTP",
-          "text": "06:00 LMT at the Prime meridian.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AII1OQT61O",
-          "text": "14:00 LMT at 90° East.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARO4PUWIYK",
-          "text": "10:00 LMT at 60° West.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSUEHQVF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625659"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Position 'Elephant Point' is situated at 58°00?N, 135°30?W. Standard time for this location is listed in the Air Almanac as UTC -8. If sunset occurs at 00:57 UTC on 21st January, what is the time of sunset in LMT?",
-      "options": [
-        {
-          "id": "ADKC4MP5NP",
-          "text": "15:55 on January 20th.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHN5RX2CPM",
-          "text": "08:57 on January 21st.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHTMTADKLM",
-          "text": "09:59 on January 21st.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYTBHCRNL6",
-          "text": "16:57 on January 20th.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUTVUQQM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611770"],
-    "annexes": [],
-    "learningObjectives": ["061.05.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Determine the LMT at position 46°00’N, 094°30’W when it is 14:00 UTC:",
-      "options": [
-        {
-          "id": "A1H302LQSB",
-          "text": "07:42 LMT",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGWTS9QKDS",
-          "text": "20:18 LMT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9H2TCWRYM",
-          "text": "20:30 LMT",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYENXICURX",
-          "text": "07:30 LMT",
+          "id": "OD2SMYRA0",
+          "text": "01:34 on September 5th",
           "correct": false,
           "why": ""
         }
@@ -809,26 +168,145 @@
       "question": "Determine the Local Mean Time (LMT) and date at position 45°20´S, 101°15´W, at 19:00 UTC on the 16th May.",
       "options": [
         {
-          "id": "AUXUOS9RZF",
-          "text": "12:15, 16th May",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXD379675J",
+          "id": "OZJAT05KL",
           "text": "01:45, 17th May",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AU4AXR5X9W",
+          "id": "O1ZSD8DSV",
           "text": "06:45, 16th May",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1JXGBEA8Z",
+          "id": "OC948N4DC",
+          "text": "12:15, 16th May",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAZFJBFJP",
           "text": "15:59, 16th May",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUTVUQQM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-611770", "AVEXAM-37122", "AVEXAM-79540"],
+    "annexes": [],
+    "learningObjectives": ["061.05.01.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Determine the LMT at position 46°00’N, 094°30’W when it is 14:00 UTC:",
+      "options": [
+        {
+          "id": "OS0GEAOU4",
+          "text": "20:18 LMT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONVQBALY9",
+          "text": "07:42 LMT",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOZRKFR4Y",
+          "text": "20:30 LMT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2JX3QFLV",
+          "text": "07:30 LMT",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUEKZZDE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-617565", "AVEXAM-18749"],
+    "annexes": [],
+    "learningObjectives": ["061.05.01.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the LMT and local date at \"A\" 102º30’E, when it is 1045 LMT 5th of Oct at \"B\" 156º30’W?",
+      "options": [
+        {
+          "id": "OKSIDXB7K",
+          "text": "1529 LMT, 5th of Oct",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYVIKDC2P",
+          "text": "1529 LMT, 6th of Oct",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYLOVRAWK",
+          "text": "0401 LMT, 5th of Oct",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODAJ4PFVP",
+          "text": "0401 LMT, 6th of Oct",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZEODDVZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-611023",
+      "ATPLGS-625361",
+      "BGS-610088",
+      "AVEXAM-32485"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.05.01.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "At 00:00 Local Mean Time the…",
+      "options": [
+        {
+          "id": "OTFD9CMCC",
+          "text": "apparent Sun is in transit with the observer’s meridian.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODOKILCXW",
+          "text": "mean Sun is in transit with the observer’s anti-meridian.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OA9UMC80R",
+          "text": "mean Sun is in transit with the observer’s meridian.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OASZXNCLR",
+          "text": "apparent Sun is in transit with the observer’s anti-meridian.",
           "correct": false,
           "why": ""
         }

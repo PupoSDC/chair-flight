@@ -1,74 +1,41 @@
 [
   {
-    "id": "QJGPNAYD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-629857", "BGS-620646"],
-    "annexes": [],
-    "learningObjectives": ["062.01.02.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following summaries lists only directional antennae?",
-      "options": [
-        {
-          "id": "AFZX5ZPK08",
-          "text": "Loop antenna, parabolic antenna, slotted planar array antenna, helical antenna.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9FF1G86R5",
-          "text": "Dipole antenna, loop antenna, parabolic antenna, slotted planar array antenna.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3DYK2ZE80",
-          "text": "Dipole antenna, sense antenna, parabolic antenna, helical antenna.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHAFLXAYI4",
-          "text": "Sense antenna, parabolic antenna, slotted planar array antenna, helical antenna.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QGHYBDBC",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14571"],
+    "externalIds": [
+      "ATPLQ-623593",
+      "BGS-621354",
+      "AVEXAM-14571",
+      "ATPLGS-628257"
+    ],
     "annexes": [],
     "learningObjectives": ["062.01.02.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following describes antenna shadowing?",
+      "question": "What is correct regarding antenna shadowing?",
       "options": [
         {
-          "id": "A0JB3G4MG3",
-          "text": "The signal is blocked by the aircraft parts/structure.",
+          "id": "OGHZIXXJO",
+          "text": "Poor reception of GPS signals due to very weak signals compared to the background noise at that frequency.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPMH48IWO",
+          "text": "Terrain blocking the path between the transmitter and receiver/aircraft antenna.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONGYV7VSC",
+          "text": "Reduced reception by an antenna when part of the airframe blocks the signal to the antenna.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ANPZ6UMNGU",
-          "text": "The radar-reception antenna is protected from strong signals which are produced by a nearby transmission antenna.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATBGCRYQCP",
-          "text": "Cloud behind another cloud can’t be seen.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASK2XJ9RUF",
-          "text": "Terrain blocking the path between transmitter and receiver/aircraft antenna.",
+          "id": "OWTWNC3SL",
+          "text": "Protection of a radar-reception antenna from the strong signals produced by a nearby transmission antenna.",
           "correct": false,
           "why": ""
         }
@@ -76,37 +43,42 @@
     }
   },
   {
-    "id": "QCATGUFK",
+    "id": "QJGPNAYD",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-41387"],
+    "externalIds": [
+      "ATPLQ-629857",
+      "BGS-620646",
+      "ATPLGS-620964",
+      "AVEXAM-41387"
+    ],
     "annexes": [],
     "learningObjectives": ["062.01.02.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following lists only includes directional antennas?",
+      "question": "Which of the following summaries lists only directional antennas?",
       "options": [
         {
-          "id": "AO0ZHJ7T0M",
-          "text": "Loop antenna, parabolic antenna, slotted planar antenna, helical antenna.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A86MG2DHZA",
-          "text": "Dipole antenna, sense antenna, parabolic antenna, helical antenna.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD1GX60JFO",
+          "id": "OLYJ3PCSX",
           "text": "Sense antenna, parabolic antenna, slotted planar array antenna, helical antenna.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANTFXGL0QX",
+          "id": "O64SITDIO",
+          "text": "Loop antenna, parabolic antenna, slotted planar array antenna, helical antenna.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLKCBK2G6",
           "text": "Dipole antenna, loop antenna, parabolic antenna, slotted planar array antenna.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWOKUUTLL",
+          "text": "Dipole antenna, sense antenna, parabolic antenna, helical antenna.",
           "correct": false,
           "why": ""
         }
@@ -116,35 +88,40 @@
   {
     "id": "QDAVVKBV",
     "relatedQuestions": [],
-    "externalIds": ["BGS-621163"],
+    "externalIds": [
+      "ATPLQ-627871",
+      "BGS-621163",
+      "ATPLGS-628259",
+      "AVEXAM-1717"
+    ],
     "annexes": [],
     "learningObjectives": ["062.01.02.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following might be caused by antenna shadowing?",
+      "question": "The following might be caused by antenna shadowing:",
       "options": [
         {
-          "id": "AICHD1OK0L",
-          "text": "Poor radio reception of a VOR ident signal while the aircraft is making an orbit (360° medium-level turn).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A87L0EMU8E",
-          "text": "An aircraft appearing as two distinct Indications on a radar controller's display.",
+          "id": "OPHRGZWME",
+          "text": "A weather radar failing to show a distant turbulent cloud due to the signals being blocked by a nearer cloud.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5FNOG4YOQ",
+          "id": "OUADHUUI7",
           "text": "Blocking of a VOR transmission caused by buildings close to the antenna.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY3XDGDGSL",
-          "text": "A weather radar failing to show a distant turbulent cloud due to the signals being blocked by a nearer cloud.",
+          "id": "ONVPESXDJ",
+          "text": "Poor radio reception of a VOR ident signal while the aircraft is making an orbit (360° medium-level turn).",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJVGY8OQO",
+          "text": "An aircraft appearing as two distinct Indications on a radar controller's display.",
           "correct": false,
           "why": ""
         }

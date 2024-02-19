@@ -1,302 +1,36 @@
 [
   {
-    "id": "QKITAMOI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622390"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Where can you obtain the Transition Level?",
-      "options": [
-        {
-          "id": "A4GVT7XHZB",
-          "text": "ATIS, ATC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUDKMVXKIA",
-          "text": "ATIS, TeleText",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4WKQI4DC9",
-          "text": "ATC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS3XTTSQF3",
-          "text": "AIP,ATC,ATIS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXAVQKZX",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621772", "AVEXAM-96740"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The transition level:",
-      "options": [
-        {
-          "id": "AC1CGHBSSV",
-          "text": "Will be passed to aircraft by ATS units",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP4GZFXGV7",
-          "text": "Is published and updated in the NOTAM",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3YZG77D6U",
-          "text": "Is calculated by the Pilot-in command",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0OBVK5LF7",
-          "text": "Is published on the approach and landing chart for each aerodrome",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLKCHNXZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107068"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You have an inextinguishable fire and want to notify ATC about it. Which combination would you use:",
-      "options": [
-        {
-          "id": "AHA86NG5HZ",
-          "text": "Distress Squawk 7700",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ1KCFPB78",
-          "text": "Urgency Squawk 7700",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADLVIWZ4VI",
-          "text": "Urgency squawk 7500",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP3QW917BM",
-          "text": "Distresss Squawk 7600",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYISXUBV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107483"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following units assigns the transition level?",
-      "options": [
-        {
-          "id": "A7ZGHFQNMG",
-          "text": "ATS unit",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQPNUZJUIA",
-          "text": "Aerodrome management",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0JV5RH3WI",
-          "text": "AIS office",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASV0VN6UQ1",
-          "text": "Met office",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUUSUSNW",
-    "relatedQuestions": ["QWPDSYYO"],
-    "externalIds": ["ATPLQ-106983", "AVEXAM-79458"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The transfer of an aircraft from one ATC unit to another is done:",
-      "options": [
-        {
-          "id": "A41BMZMSD6",
-          "text": "by agreement with the receiving unit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE4OQJ727C",
-          "text": "through a central control unit.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AER76OL32F",
-          "text": "with the pilot's consent.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ6CWYNDK3",
-          "text": "automatically at the control zone boundary.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QWPDSYYO",
-    "relatedQuestions": ["QUUSUSNW"],
-    "externalIds": ["ATPLGS-622023", "ATPLQ-106983"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-106983", "AVEXAM-79458", "ATPLGS-622023"],
     "annexes": [],
     "learningObjectives": ["010.07.01.02.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The transfer of an aircraft from one ATC unit to another is done:",
+      "question": "Select the option which correctly completes the following statement:   \n  \n The transfer of an aircraft from one ATC unit to another is done:",
       "options": [
         {
-          "id": "A2ZJ07KWRU",
+          "id": "OYZGDJ0XG",
           "text": "By agreement with the receiving unit.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AKU5VER5M3",
-          "text": "Through a central control unit.",
+          "id": "OCKNMYEGI",
+          "text": "With the pilot's consent.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMPUXYAU91",
-          "text": "Automatically at the control zone boundary.",
+          "id": "O0SSFGZEK",
+          "text": "Automatically before the control zone boundary.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYM9195UTB",
-          "text": "With the pilots consent.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEBZHDEB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119041", "ATPLQ-108751"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "On which of the following frequencies can a pilot expect to be contacted by ATS in case of an emergency? Assume that communication attempts on the frequency in use have been without success.",
-      "options": [
-        {
-          "id": "AZNZSCLKJ9",
-          "text": "121.5 MHz",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6QQRPJVKY",
-          "text": "234.0 MHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2Y1SEVZTB",
-          "text": "243.0 kHz",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A587Y06MT1",
-          "text": "122.5 MHz",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZCAHNLO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39567"],
-    "annexes": [],
-    "learningObjectives": ["010.07.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Name the three basic types of air traffic services:",
-      "options": [
-        {
-          "id": "ANE968O06G",
-          "text": "air traffic control service, flight information service, alerting service",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A24PXYTC21",
-          "text": "area control service, aerodrome control service, alerting service",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYE2MZMG6M",
-          "text": "air traffic control service, flight information service, advisory service",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV9IEACQID",
-          "text": "area control service, approach control service, aerodrome control service",
+          "id": "O7VZYRDAX",
+          "text": "Automatically through a central unit.",
           "correct": false,
           "why": ""
         }
@@ -307,12 +41,14 @@
     "id": "QDKOIHAO",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-119042",
       "ATPLQ-101509",
+      "ATPLGS-119039",
       "AVEXAM-20708",
       "AVEXAM-39567",
       "AVEXAM-75067",
-      "BGS-100996"
+      "BGS-100835",
+      "BGS-100996",
+      "ATPLGS-119042"
     ],
     "annexes": [],
     "learningObjectives": ["010.07.01.02.03"],
@@ -322,26 +58,149 @@
       "question": "According to ICAO Annex 11, what are the three basic types of Air Traffic Control services?",
       "options": [
         {
-          "id": "A6BODFIWWQ",
-          "text": "Area control service, approach control service, and aerodrome control service.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A30XMTPLU2",
+          "id": "OFQMAO9RT",
           "text": "Air traffic control service, flight information service, and alerting service.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AW0BN2GG0Y",
+          "id": "OFGVYG3R1",
           "text": "Air traffic control service, flight information service, and advisory service.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUULF3SRCJ",
+          "id": "OQ31KOCKN",
           "text": "Area control service, alerting service, and aeronautical information service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOA4KBLGO",
+          "text": "Area control service, approach control service, and aerodrome control service.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEREJOEP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-105460"],
+    "annexes": [],
+    "learningObjectives": ["010.07.01.02.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "After vacating the active runway and while taxiing towards the apron, the Tower East advises the pilot to stay on the current frequency 113.55\\. Subsequently, just before approaching the apron, the frequency becomes blocked. The pilot decides to change the frequency on his/her own initiative. The pilot may expect the following frequencies to provide him/her with specified services on the apron:\n\n1\\. Tower West: 118.75   \n 2\\. Ground: 121.65   \n 3\\. Delivery: 120.35   \n 4\\. AFIS: 126.70   \n 5\\. ATIS: 131.70",
+      "options": [
+        {
+          "id": "O4NPVDLTK",
+          "text": "1 and 2",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OD2VZKKIW",
+          "text": "2 and 3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLGQQLVSG",
+          "text": "4 and 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4EOEMFRH",
+          "text": "3 and 4",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUQVBWL2W",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-109536",
+      "ATPLGS-119039",
+      "AVEXAM-20708",
+      "AVEXAM-39567",
+      "AVEXAM-75067",
+      "BGS-100835",
+      "BGS-100996",
+      "ATPLGS-119042"
+    ],
+    "annexes": [],
+    "learningObjectives": ["010.07.01.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "According to ICAO Annex 11, what are the three basic types of Air Traffic Services?",
+      "options": [
+        {
+          "id": "ONF2FFPK4",
+          "text": "Area control service, approach control service, and aerodrome control service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMRJL5E2K",
+          "text": "Air traffic control service, flight information service, and alerting service.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKFKEKRCY",
+          "text": "Area control service, alerting service, and aeronautical information service.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6T6VYQ6O",
+          "text": "Air traffic control service, flight information service, and advisory service.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEBZHDEB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-108751", "ATPLGS-119041"],
+    "annexes": [],
+    "learningObjectives": ["010.07.01.02.04"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On which of the following frequencies can a pilot expect to be contacted by ATS in case of an emergency? Assume that communication attempts on the frequency in use have been without success.",
+      "options": [
+        {
+          "id": "OOZ5G6416",
+          "text": "234.0 MHz",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAYTOIUU7",
+          "text": "122.5 MHz",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAATQVKQ0",
+          "text": "121.5 MHz",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSUNPRTQO",
+          "text": "243.0 kHz",
           "correct": false,
           "why": ""
         }
@@ -360,64 +219,64 @@
       "question": "A pilot is in contact with Berlin ATC. Suddenly, the aeroplane depressurises and the pilot is in an emergency situation. As regards air traffic communications, what must the pilot do?",
       "options": [
         {
-          "id": "AX44Y4S9LE",
-          "text": "Contact Berlin ATC or switch to 121.5 MHz frequency.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOAU8H2RV1",
+          "id": "OCTF1JD6V",
           "text": "Immediately switch to 121.5 MHz frequency and wait for clearance to deliver the message.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "APROGYD3WS",
+          "id": "O16MXRYB5",
+          "text": "Contact Eurocontrol and, if unsuccessful, revert to Berlin ATC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORXUYTIFB",
           "text": "Request the ATC unit which frequency he/she should contact to declare an emergency.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AR3PE2UFVQ",
-          "text": "Contact Eurocontrol and, if unsuccessful, revert to Berlin ATC.",
-          "correct": false,
+          "id": "OOABJ0PDR",
+          "text": "Contact Berlin ATC or switch to 121.5 MHz frequency.",
+          "correct": true,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QEREJOEP",
+    "id": "QYISXUBV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-105460"],
+    "externalIds": ["ATPLQ-107483", "ATPLGS-628630", "AVEXAM-49708"],
     "annexes": [],
-    "learningObjectives": ["010.07.01.02.04"],
+    "learningObjectives": ["010.07.01.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "After vacating the active runway and while taxiing towards the apron, the Tower East advises the pilot to stay on the current frequency 113.55. Subsequently, just before approaching the apron, the frequency becomes blocked. The pilot decides to change the frequency on his/her own initiative. The pilot may expect the following frequencies to provide him/her with specified services on the apron:1. Tower West: 118.75 \n 2. Ground: 121.65 \n 3. Delivery: 120.35 \n 4. AFIS: 126.70 \n 5. ATIS: 131.70",
+      "question": "Which of the following units assigns the transition level?",
       "options": [
         {
-          "id": "AG001INLOG",
-          "text": "1 and 2",
+          "id": "OCKWMQY4V",
+          "text": "Met office",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORPTKMLFP",
+          "text": "ATS unit",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A7XRVE0UR8",
-          "text": "2 and 3",
+          "id": "ORO6OR1QK",
+          "text": "Aerodrome management",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOC802QNVJ",
-          "text": "3 and 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFZQSPIJQV",
-          "text": "4 and 5",
+          "id": "O4B4HIX0T",
+          "text": "AIS office",
           "correct": false,
           "why": ""
         }

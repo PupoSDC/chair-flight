@@ -1,37 +1,45 @@
 [
   {
-    "id": "QJWXQIPX",
+    "id": "QBWMGWGX",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625365", "ATPLQ-618234", "BGS-610395"],
-    "annexes": [],
+    "externalIds": [
+      "ATPLQ-612093",
+      "AVEXAM-8829",
+      "AVEXAM-16694",
+      "ATPLGS-110569",
+      "AVEXAM-83806",
+      "AVEXAM-77847",
+      "AVEXAM-16124"
+    ],
+    "annexes": ["AG9XTBKDX"],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, calculate the Mach number:\n \nTAS: 485 kt OAT: ISA +10°C FL410.",
+      "question": "Refer to figure.\n\nComplete line 6 of the 'FLIGHT NAVIGATION LOG', positions \"L\" to \"M\". What is the HDG° (M) and ETA?",
       "options": [
         {
-          "id": "AGF661BP6B",
-          "text": "0.83",
+          "id": "OGIW0ABJ7",
+          "text": "HDG 070°; ETA 14:59 UTC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6HVFITS2",
+          "text": "HDG 075°; ETA 14:52 UTC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUFKLKVU1",
+          "text": "HDG 064°; ETA 14:49 UTC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUIGHWA4I",
+          "text": "HDG 075°; ETA 15:02 UTC.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD970W3U4D",
-          "text": "0.72",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASRX57XAJV",
-          "text": "0.89",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI94IYEYPU",
-          "text": "0.60",
-          "correct": false,
           "why": ""
         }
       ]
@@ -40,34 +48,34 @@
   {
     "id": "QSSJLPVC",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625481", "ATPLQ-619874"],
+    "externalIds": ["ATPLQ-619874"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Calculate the Mach number, given the following: \n \nTAS: 455 kt \nOAT: -40° C",
+      "question": "Calculate the Mach number, given the following:\n\nTAS: 455 kt   \nOAT: -40°C",
       "options": [
         {
-          "id": "AL88E0KL0D",
-          "text": "0.77",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMQEVZUAEC",
-          "text": "0.73",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYVVDV2AQ2",
+          "id": "OQ0YU3RZJ",
           "text": "0.81",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQ80NEYB0K",
+          "id": "OQP1J6XSI",
+          "text": "0.77",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZT2DL6LR",
+          "text": "0.73",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXVBCLWCK",
           "text": "0.75",
           "correct": false,
           "why": ""
@@ -76,189 +84,37 @@
     }
   },
   {
-    "id": "QPUZQDUU",
+    "id": "QJWXQIPX",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-79103"],
-    "annexes": ["f9c09120fd900d0b77ecd47e9ab4e1c9"],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-10.\nComplete line 1 of the FLIGHT NAVIGATION LOG; positions \"A\" to \"B\". What is the HDG° (M) and ETA?",
-      "options": [
-        {
-          "id": "AX22N0AZBC",
-          "text": "268°; 1114 UTC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AM2WDMFW63",
-          "text": "268°; 1128 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARPFZF4AKB",
-          "text": "282°; 1114 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOC952I46J",
-          "text": "282°; 1128 UTC.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLKXYSTH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-72970"],
+    "externalIds": ["ATPLQ-618234", "BGS-610395", "ATPLGS-625365"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n\n- Leg TAS (kt) t (min)\n- 1 426 12\n- 2 434 15\n- 3 434 12\n- 4 430 8\n- 5 423 9",
+      "question": "Given the following information, calculate the Mach number:\n\nTAS: 485 kt OAT: ISA +10ºC FL410.",
       "options": [
         {
-          "id": "ADQYFEN4LM",
-          "text": "430 kt",
+          "id": "OWHRWXHMU",
+          "text": "0.72",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXUGHPCGK",
+          "text": "0.85",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATE6CNYP27",
-          "text": "426 kt",
+          "id": "OALP3HZJX",
+          "text": "0.60",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A81PU6NDTB",
-          "text": "428 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHK7DB9OPI",
-          "text": "434 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUPLHVZW",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610570"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given : OAT = -45^o^ C   TAS = 480 KtsCalculate the Mach No",
-      "options": [
-        {
-          "id": "AQTD2V3E38",
-          "text": "0.81",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A94XVX2P2Q",
-          "text": "0.79",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9CFEW8XQ5",
-          "text": "0.83",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHNHQ4WY85",
-          "text": "0.87",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLRRIGZS",
-    "relatedQuestions": ["QDZTWXFP", "QKJOHNFU"],
-    "externalIds": ["AVEXAM-598"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n\n-  Leg TAS (kt) t (min)\n  </tr>\n  <tr> 1 216 22\n  </tr>\n  <tr> 2 228 17\n  </tr>\n  <tr> 3 221 13\n  </tr>\n  <tr> 4 224 16\n  </tr>\n  <tr> 5 224 8",
-      "options": [
-        {
-          "id": "AFI5O5EJFJ",
-          "text": "222 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9LUX7BKMX",
-          "text": "223 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC0OR1LOOV",
-          "text": "224 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT4XCBGKYF",
-          "text": "221 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKJOHNFU",
-    "relatedQuestions": ["QDZTWXFP", "QLRRIGZS"],
-    "externalIds": ["AVEXAM-98363"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to the extract from an OFP. What is the average TAS for the given route segments?\n\n-  Leg TAS (kt) t (min)\n  </tr>\n  <tr> 1 312 18\n  </tr>\n  <tr> 2 297 13\n  </tr>\n  <tr> 3 304 15\n  </tr>\n  <tr> 4 304 9",
-      "options": [
-        {
-          "id": "A84ZZ5HNJ5",
-          "text": "305 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A91PE37HLN",
-          "text": "306 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4EHA1EQBZ",
-          "text": "300 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYRS0IBYHN",
-          "text": "304 kt",
+          "id": "OLBTO6BZM",
+          "text": "0.89",
           "correct": false,
           "why": ""
         }
@@ -267,378 +123,36 @@
   },
   {
     "id": "QDZTWXFP",
-    "relatedQuestions": ["QKJOHNFU", "QLRRIGZS"],
-    "externalIds": ["ATPLQ-612952"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-612952", "AVEXAM-72970"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to the OFP.\nThe average TAS for the given route segments is:\n\n-  <strong>LEG</strong> <strong>TAS (kt)</strong> <strong>t (min</strong>\n  </tr>\n  <tr> 1 426 12\n  </tr>\n  <tr> 2 434 15\n  </tr>\n  <tr> 3 434 12\n  </tr>\n  <tr> 4 430 8\n  </tr>\n  <tr> 5 423 9",
+      "question": "Refer to the OFP.\n\nThe average TAS for the given route segments is:\n\n| **LEG** | **TAS (kt)** | **t (min** |\n| ------- | ------------ | ---------- |\n| 1       | 426          | 12         |\n| 2       | 434          | 15         |\n| 3       | 434          | 12         |\n| 4       | 430          | 8          |\n| 5       | 423          | 9          |",
       "options": [
         {
-          "id": "A323H80PNO",
-          "text": "430 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGNHJ8E1QL",
-          "text": "376 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATWEQO8N6Z",
+          "id": "OKRRL5N7R",
           "text": "428 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A88ZNNP8P6",
+          "id": "OQYPXDFF9",
           "text": "426 kt",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNJSREBV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613338"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, what is the TAS of an aircraft flying at FL310?OAT: -56°C \n Mach number: 0.80",
-      "options": [
+        },
         {
-          "id": "A906LL19RE",
-          "text": "460 kt",
+          "id": "OVWAMBNUI",
+          "text": "430 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AV16N2S2ZE",
-          "text": "573 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACXA1TRWYU",
-          "text": "468 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWRKQP9NXF",
-          "text": "498 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDVSXBAI",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-16694"],
-    "annexes": ["5fa924365c7769639aeb118fe0eea701"],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-10.\nComplete line 6 of the FLIGHT NAVIGATION LOG, positions \"L\" to \"M\". What is the HDG° (M) and ETA?",
-      "options": [
-        {
-          "id": "AM0HXU19BS",
-          "text": "HDG 076°; ETA 1502 UTC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARYNBN83ED",
-          "text": "HDG 075°; ETA 1452 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMCLKMQS52",
-          "text": "HDG 070°; ETA 1459 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4YYC31A0E",
-          "text": "HDG 064°; ETA 1449 UTC.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTAQFMTW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625565"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n \nFL 400\nOAT = -65° C\nM = 0.90\n \nCalculate the TAS.",
-      "options": [
-        {
-          "id": "AATDEYL8SF",
-          "text": "506 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A22R94AIED",
-          "text": "480 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEGQ3CK4F1",
-          "text": "542 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYW435LKPB",
-          "text": "500 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEZQYILZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625408", "ATPLQ-619208", "BGS-610396"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Calculate the TAS and the Local Speed of Sound LSS given:\n\nFL350Mach 0.80OAT -55°C",
-      "options": [
-        {
-          "id": "A24NH6E8DG",
-          "text": "TAS 461 kt and LSS 576 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4JITY4LHS",
-          "text": "TAS 490 kt and LSS 461 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0QKEZAWQK",
-          "text": "TAS 237 kt and LSS 296 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX5GKM2FA2",
-          "text": "TAS 461 kt and LSS 296 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZXJHPZK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-615492"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information;FL410 \n ISA +8°C \n M 0.82Calculate the TAS?",
-      "options": [
-        {
-          "id": "AOJGZX4HFZ",
-          "text": "480 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3EPNNM0OQ",
-          "text": "432 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTETTBN0L",
-          "text": "522 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5E0PW9J22",
-          "text": "584 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCNDEINT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110423", "AVEXAM-9958"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\nFL350\nMach 0.80\nOAT -55 °C\nCalculate the values for TAS and local speed of sound (LSS).",
-      "options": [
-        {
-          "id": "AN1UUGQM2M",
-          "text": "TAS: 460 kt; LSS: 575 kt.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3FRIZCRJB",
-          "text": "TAS: 490 kt; LSS: 460 kt.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJQURK8AB1",
-          "text": "TAS: 237 kt; LSS: 296 kt.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYB5MGJHMA",
-          "text": "TAS: 460 kt; LSS: 296 kt.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLWEHPRG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-26537"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n \n\n-  Mach number: 0.8\n  </tr>\n  <tr> Flight level: 330\n  </tr>\n  <tr> OAT: ISA +15°C\n\nTAS is approximately (compressibility factor 0.94):",
-      "options": [
-        {
-          "id": "AXB4BZHEE2",
-          "text": "480 kt",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFLJV5SC1F",
-          "text": "450 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZNT0B9JC3",
-          "text": "265 kt",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1YXVRKG9O",
-          "text": "420 kt",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMVLUQYJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610493"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given: FL250, OAT -15 ºC, TAS 250 kt.  Calculate the Mach No.?",
-      "options": [
-        {
-          "id": "AXXI82JN65",
-          "text": "0.4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN3NEP0N3X",
-          "text": "0.39",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1EA4YNKTC",
-          "text": "0.44",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4QQPC05XB",
-          "text": "0.42",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZYOEWNI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625450", "ATPLQ-611876"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following, what is the Mach number?\n\nTrue Airspeed TAS: 488 ktPressure altitude: 32000 feetOutside Air Temperature OAT: ISA +15°C\n ",
-      "options": [
-        {
-          "id": "ASLQESNDM7",
-          "text": "0.81 M",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHXBR8ADBH",
-          "text": "0.87 M",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADYZEOR96K",
-          "text": "0.74 M",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3OLEDXP70",
-          "text": "0.83 M",
+          "id": "OXZSP1GC8",
+          "text": "376 kt",
           "correct": false,
           "why": ""
         }
@@ -654,143 +168,67 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\n\nTAS = 480 ktOAT = ISA +10°CFL 300\nCalculate the Mach number.",
+      "question": "Given:\n\nTAS = 480 kt   \nOAT = ISA +10°C   \nFL 300\n\nCalculate the Mach number.",
       "options": [
         {
-          "id": "AYW722QBZZ",
-          "text": "0.81",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADSWRETVZ8",
-          "text": "0.85",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC9KWNQJK4",
+          "id": "ORLOPTJZK",
           "text": "0.72",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7IU6NI1HI",
+          "id": "ON0ZVPGST",
+          "text": "0.85",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZG2KACDS",
           "text": "0.83",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIREZQCI",
-    "relatedQuestions": ["QHZONKSQ"],
-    "externalIds": ["AVEXAM-61756"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n \n\n-  TAS: 480 kt\n  </tr>\n  <tr> OAT: ISA + 8°C\n  </tr>\n  <tr> Cruising level: FL410\n\nCalculate the Mach number:",
-      "options": [
-        {
-          "id": "ADF0XAY0B5",
-          "text": "0.82",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AYEGSE6CGX",
-          "text": "0.85",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8KXQHZKPO",
-          "text": "0.84",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABI0SRGITP",
-          "text": "0.88",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHZONKSQ",
-    "relatedQuestions": ["QIREZQCI"],
-    "externalIds": ["AVEXAM-86343"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given:\n \n\n-  TAS: 485 kt\n  </tr>\n  <tr> OAT: ISA + 10°C\n  </tr>\n  <tr> Cruising level: FL410\n\nCalculate the Mach number:",
-      "options": [
-        {
-          "id": "AZF3PVT4E0",
-          "text": "0.825",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8RZSA2NP8",
-          "text": "0.90",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AACSJIMBEI",
-          "text": "0.85",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJFZFF1AHC",
-          "text": "0.87",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBKXSUWA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611591", "BGS-610492"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given the following information, calculate the Mach number: TAS: 487 k t FL 330 Temperature: ISA + 15°.",
-      "options": [
-        {
-          "id": "AD51G27X2B",
+          "id": "OI2OAOY0P",
           "text": "0.81",
           "correct": true,
           "why": ""
-        },
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZYOEWNI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-611876", "ATPLGS-625450", "AVEXAM-32368"],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Given the following, what is the Mach number?\n\nTrue Airspeed TAS: 488 kt   \nPressure altitude: 32000 feet   \nOutside Air Temperature OAT: ISA +15°C",
+      "options": [
         {
-          "id": "ABG227G8X8",
-          "text": "0.76",
+          "id": "OUO2ECJY4",
+          "text": "0.74 M",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYQ972VLVM",
-          "text": "0.84",
+          "id": "OAOYPIOVN",
+          "text": "0.83 M",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3V9T968BX",
-          "text": "0.78",
+          "id": "O5IYLWDPR",
+          "text": "0.81 M",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OODG6PH9K",
+          "text": "0.87 M",
           "correct": false,
           "why": ""
         }
@@ -798,37 +236,37 @@
     }
   },
   {
-    "id": "QFIGSIYW",
+    "id": "QZXJHPZK",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-96171"],
+    "externalIds": ["ATPLQ-615492", "AVEXAM-65167"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information:\n \n\n-  True course A to B: 250°\n- Distance A to B: 315 NM\n- TAS: 450 kt\n- W/V: 200°(T)/60 kt\n- ETD A: **0650** UTC\n\nWhat is the ETA at B?",
+      "question": "Given the following information;\n\nFL410   \n ISA +8°C   \n M 0.82\n\nCalculate the TAS?",
       "options": [
         {
-          "id": "A20ET8KS70",
-          "text": "0736 UTC",
+          "id": "ORE6UA55N",
+          "text": "584 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTK8RAGQ1",
+          "text": "480 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVJN7WZJQH",
-          "text": "0730 UTC",
+          "id": "OHCNMY6MP",
+          "text": "522 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AV69GPVAUL",
-          "text": "0716 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATCQ6QSF2O",
-          "text": "0810 UTC",
+          "id": "OPKWVHW53",
+          "text": "432 kt",
           "correct": false,
           "why": ""
         }
@@ -838,36 +276,79 @@
   {
     "id": "QUODBEFW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613035"],
+    "externalIds": ["ATPLQ-613035", "ATPLGS-110430", "ATPLGS-116156"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given:\n\nTAS = 210 ktCAS = 190 ktPressure Altitude = 9000 ft\nCalculate Mach number:",
+      "question": "Given:\n\nTAS = 210 kt   \nCAS = 190 kt   \nPressure Altitude = 9000 ft\n\nCalculate Mach number:",
       "options": [
         {
-          "id": "A9O4XFB04L",
+          "id": "OJYUBEJFQ",
+          "text": "0.28",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAFH1AMJU",
           "text": "0.34",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZZ81UZ64F",
+          "id": "OWSPOSJ41",
           "text": "0.31",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKTRHSWT3A",
+          "id": "OFN77OLQK",
           "text": "0.32",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QEZQYILZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-619208",
+      "BGS-610396",
+      "ATPLGS-625408",
+      "AVEXAM-9958"
+    ],
+    "annexes": [],
+    "learningObjectives": ["061.01.05.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Calculate the TAS and the Local Speed of Sound LSS given:\n\nFL350   \nMach 0.80   \nOAT -55°C",
+      "options": [
+        {
+          "id": "OSBEWCW6X",
+          "text": "TAS 490 kt and LSS 461 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIINNM5JSS",
-          "text": "0.28",
+          "id": "OLNBO5CKI",
+          "text": "TAS 237 kt and LSS 296 kt",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTXYLB3T6",
+          "text": "TAS 461 kt and LSS 296 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4OKSOOAI",
+          "text": "TAS 461 kt and LSS 576 kt",
+          "correct": true,
           "why": ""
         }
       ]
@@ -882,70 +363,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following information, what is the Mach number?\n\nFL25OAT: -15°CTAS: 250 kt.",
+      "question": "Given the following information, what is the Mach number?\n\nFL25   \nOAT: -15°C   \nTAS: 250 kt.",
       "options": [
         {
-          "id": "ALVY9357UU",
-          "text": "0.40",
-          "correct": true,
+          "id": "OW82VA4CT",
+          "text": "0.44",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AI1APNABAX",
+          "id": "OIVFPBH3M",
           "text": "0.39",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARNO9D37AB",
-          "text": "0.42",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA1L6R0ZNW",
-          "text": "0.44",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRENGVIO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-52382"],
-    "annexes": [
-      "65a9340d8875422c0f54bfdf83e78cf2",
-      "65a9340d8875422c0f54bfdf83e78cf2"
-    ],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 061-01.\nGiven:\n\n\n- TAS: 120 kt\n- ATA X: 12:32 UTC\n- ETA Y: 12:47 UTC\n- ATA Y: 12:50 UTC\n\nWhat is ETA at Z?",
-      "options": [
-        {
-          "id": "ANEERNUMCW",
-          "text": "1302 UTC",
+          "id": "O5S4NHLKE",
+          "text": "0.40",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AJ2WNKJ9GU",
-          "text": "1300 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARUCGROLYK",
-          "text": "1257 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5OKN9PHUQ",
-          "text": "1303 UTC",
+          "id": "ON1GIGMIA",
+          "text": "0.42",
           "correct": false,
           "why": ""
         }
@@ -953,37 +393,37 @@
     }
   },
   {
-    "id": "QGNVRVIJ",
+    "id": "QBKXSUWA",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110396"],
+    "externalIds": ["ATPLQ-611591", "BGS-610492", "ATPLGS-110396"],
     "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given TAS 487 kts\nFL330 Temperature\nISA +15\nCalculate the Mach number.",
+      "question": "Given the following information, calculate the Mach number:\n\nTAS: 487 kt   \nFL 330   \nTemperature: ISA + 15°",
       "options": [
         {
-          "id": "AHA08OJP5H",
+          "id": "ONC3BXVS6",
           "text": "0.81",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARILL8YG6J",
-          "text": "0.84",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQCVWKY80U",
+          "id": "O0F2DXSFW",
           "text": "0.76",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5I5H9YFQF",
+          "id": "OZVWIME6P",
           "text": "0.78",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWPKQI4Z8",
+          "text": "0.84",
           "correct": false,
           "why": ""
         }
@@ -991,37 +431,37 @@
     }
   },
   {
-    "id": "QBWMGWGX",
+    "id": "QNJSREBV",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612093"],
-    "annexes": ["536fce724f0e8d2abc57b2b5c9113005"],
+    "externalIds": ["ATPLQ-613338", "AVEXAM-50270"],
+    "annexes": [],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Refer to figure.  \n  Complete line 6 of the 'FLIGHT NAVIGATION LOG', positions \"L\" to \"M\". What is the HDG° (M) and ETA?",
+      "question": "Given the following information, what is the TAS of an aircraft flying at FL310?\n\nOAT: -56°C   \n Mach number: 0.80",
       "options": [
         {
-          "id": "AH0N1XHP1S",
-          "text": "HDG 075°; ETA 15:02 UTC.",
+          "id": "OO0UAZFUQ",
+          "text": "468 kt",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEGSJIFM1",
+          "text": "460 kt",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AP2WLWE3VC",
-          "text": "HDG 070°; ETA 14:59 UTC.",
+          "id": "ORYG94A0M",
+          "text": "573 kt",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5YIILD0Q3",
-          "text": "HDG 064°; ETA 14:49 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP6YCNBDJ1",
-          "text": "HDG 075°; ETA 14:52 UTC.",
+          "id": "O2PXTAFUU",
+          "text": "498 kt",
           "correct": false,
           "why": ""
         }
@@ -1031,111 +471,35 @@
   {
     "id": "QRYOOUKF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-611122"],
-    "annexes": ["168b0f93327cd8cecd6cc2ba0ee5fa1f"],
+    "externalIds": ["ATPLQ-611122", "AVEXAM-52382"],
+    "annexes": ["AWQIX3Z0E"],
     "learningObjectives": ["061.01.05.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Given the following, what is the revised ETA 'Z'?\nTAS: 120 kt.ATA 'X': 12:32UTCETA 'Y': 12:47UTCATA 'Y': 12:50 UTC",
+      "question": "(For this question use annex 061-11993A).   \n Given the following, what is the revised ETA 'Z'?\n\nTAS: 120 kt   \n ATA at 'X': 12:32 UTC   \n ETA at 'Y': 12:47 UTC   \n ATA at 'Y': 12:50 UTC",
       "options": [
         {
-          "id": "APOGUSQLC0",
-          "text": "13:02 UTC",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALS5JSMQ5R",
-          "text": "12:57 UTC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFZPKX4S20",
+          "id": "OTF260PIQ",
           "text": "13:03 UTC",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AT2QK7W9VN",
+          "id": "OEPKQXION",
+          "text": "13:02 UTC",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJ6ZW43CP",
           "text": "13:00 UTC",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QODSHLYW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625893"],
-    "annexes": [],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Given a specific gravity of 0.82, what is the mass of 2510 litres of fuel?",
-      "options": [
-        {
-          "id": "AGP6SJWUPF",
-          "text": "2060 kg",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AJVDH2YWR4",
-          "text": "3060 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHRSNAQLS6",
-          "text": "3120 kg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4VJZO0IRB",
-          "text": "2040 kg",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIMCZIJV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110569"],
-    "annexes": ["092dd98034344abb3c2dc6417d7a91b8"],
-    "learningObjectives": ["061.01.05.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Complete line 6 of the FLIGHT NAVIGATION LOG, positions 'L' to 'M'\nWhat is the HDG°  (M) and ETA?",
-      "options": [
-        {
-          "id": "AA4IZUIDSL",
-          "text": "HDG 075°; ETA 1 502 UTC.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARVFZZWTMF",
-          "text": "HDG 070°; ETA 1 459 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZSB839AB3",
-          "text": "HDG 064°; ETA 1 449 UTC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0OKSMACGK",
-          "text": "HDG 075°; ETA 1 452 UTC.",
+          "id": "OO7IKODD5",
+          "text": "12:57 UTC",
           "correct": false,
           "why": ""
         }

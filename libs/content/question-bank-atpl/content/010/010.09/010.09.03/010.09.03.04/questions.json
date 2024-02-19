@@ -1,46 +1,15 @@
 [
   {
-    "id": "QPBLSDGN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-109805"],
-    "annexes": [],
-    "learningObjectives": ["010.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Where a runway is provided with a (1)__, the TODA will include the length of the (2)__.",
-      "options": [
-        {
-          "id": "ALXGHIJ5DL",
-          "text": "(1) clearway; (2) clearway.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE5PSY6GBL",
-          "text": "(1) stopway; (2) stopway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFYRLO5Z18",
-          "text": "(1) stopway; (2) clearway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMN6703HYX",
-          "text": "(1) clearway; (2) stopway.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QHIKBJYU",
     "relatedQuestions": ["QEOTCQZJ"],
-    "externalIds": ["ATPLGS-626999", "ATPLQ-105858", "BGS-101083"],
+    "externalIds": [
+      "ATPLQ-105858",
+      "ATPLGS-627785",
+      "ATPLGS-622111",
+      "BGS-101083",
+      "BGS-101478",
+      "ATPLGS-626999"
+    ],
     "annexes": [],
     "learningObjectives": ["010.09.03.04.01"],
     "explanation": "",
@@ -49,26 +18,64 @@
       "question": "What is the ICAO definition for clearway?",
       "options": [
         {
-          "id": "AK6ZPY4M8J",
-          "text": "A defined rectangular area on the ground or water, selected or prepared as a suitable area over which an aircraft may make a portion of its initial climb to a specified height.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWLTE5BNR8",
-          "text": "A defined area including the runway and stopway intended to protect aircraft flying over it during take-off or landing operations",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0K5OOLW26",
+          "id": "OJVEQUTA4",
           "text": "A defined rectangular area on the ground at the end of take-off run available prepared as a suitable area in which an aircraft can be stopped in the case of an abandoned take-off.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABRT9MZP62",
+          "id": "OHPJZVXX3",
+          "text": "A defined area including the runway and stopway intended to protect aircraft flying over it during take-off or landing operations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR7FQSFKZ",
+          "text": "A defined rectangular area on the ground or water, selected or prepared as a suitable area over which an aircraft may make a portion of its initial climb to a specified height.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCENTXNPY",
           "text": "An area symmetrical about the extended runway centre line and adjacent to the end of the strip primarily intended to reduce the risk of damage to an aircraft undershooting or overrunning the runway.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPBLSDGN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-109805", "BGS-101492"],
+    "annexes": [],
+    "learningObjectives": ["010.09.03.04.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Where a runway is provided with a (1)\\_\\_\\_\\_\\_, the TODA will include the length of the (2)\\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "OGNY8YISY",
+          "text": "(1) stopway; (2) stopway.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2WO46JH9",
+          "text": "(1) stopway; (2) clearway.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUL4UX3FH",
+          "text": "(1) clearway; (2) clearway.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OWH8SJ6UE",
+          "text": "(1) clearway; (2) stopway.",
           "correct": false,
           "why": ""
         }
@@ -79,10 +86,11 @@
     "id": "QEOTCQZJ",
     "relatedQuestions": ["QHIKBJYU"],
     "externalIds": [
-      "ATPLGS-626999",
-      "ATPLGS-627785",
       "ATPLQ-109262",
-      "BGS-101083"
+      "ATPLGS-627785",
+      "BGS-101083",
+      "BGS-101478",
+      "ATPLGS-626999"
     ],
     "annexes": [],
     "learningObjectives": ["010.09.03.04.01"],
@@ -92,102 +100,26 @@
       "question": "What is the ICAO definition for stopway?",
       "options": [
         {
-          "id": "AUNDHH4QJY",
+          "id": "OZW3F3G1B",
+          "text": "A defined rectangular area on the ground or water established to protect aircraft during take-off or landing operations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O883YOSSZ",
           "text": "A defined rectangular area on the ground at the end of take-off run available prepared as a suitable area in which an aircraft can be stopped in the case of an abandoned take-off.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A9I6KE14QC",
-          "text": "A defined rectangular area on the ground at the end of take-off run available prepared to reduce the risk of damage to aircraft running off a runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFTJA6L5Z5",
+          "id": "O9H2Q2WOH",
           "text": "A defined rectangular area on the ground or water established to permit aircraft to make a portion of its initial climb to a specific height.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A85CSBHIA6",
-          "text": "A defined rectangular area on the ground or water established to protect aircraft during take-off or landing operations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIVKUDPG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-5572"],
-    "annexes": [],
-    "learningObjectives": ["010.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The shape of a clearway is:",
-      "options": [
-        {
-          "id": "ASWQYXIW5Q",
-          "text": "rectangular, over land or water.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXJ98WOPLD",
-          "text": "conical.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK547PKJGA",
-          "text": "triangular.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMI71J2OWT",
-          "text": "semi circular.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIVPXKSP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-104025", "AVEXAM-67637"],
-    "annexes": [],
-    "learningObjectives": ["010.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Select the correct option regarding the shape and location of a clearway:",
-      "options": [
-        {
-          "id": "AHDMW3VUM6",
-          "text": "It is rectangular, found at the end of TORA.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A90NTRGNG5",
-          "text": "It is trapezoidal with a length of at least half the TORA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A00JSKKQN9",
-          "text": "it is rectangular, located at the end of the TORA with a length of at least half the TORA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANZOI8X1KH",
-          "text": "It is semi-circular, found at the end of the TORA.",
+          "id": "OKTRQDUO5",
+          "text": "A defined rectangular area on the ground at the end of take-off run available prepared to reduce the risk of damage to aircraft running off a runway.",
           "correct": false,
           "why": ""
         }
@@ -203,68 +135,30 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the shape and location of a clearway?",
+      "question": "Select the correct option regarding the shape and location of a clearway:",
       "options": [
         {
-          "id": "AC6ST6PJ8M",
-          "text": "Rectangular at the end of TORA.",
+          "id": "ON1M4DVEG",
+          "text": "it is rectangular, located at the end of the TORA with a length of at least half the TORA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OW5QRRZAN",
+          "text": "It is trapezoidal with a length of at least half the TORA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEDIZ76ZN",
+          "text": "It is semi-circular, found at the end of the TORA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFZZ7M0BT",
+          "text": "It is rectangular, found at the end of TORA.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO649V0X76",
-          "text": "Semi-circular at the end of the TORA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMF5SJ6KK3",
-          "text": "Trapezoidal with a length of at least half the TORA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP4XZQJQZR",
-          "text": "Rectangular at the end of the TORA with a length of at least half the TORA.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWBNHTFL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104515", "AVEXAM-54297"],
-    "annexes": [],
-    "learningObjectives": ["010.09.03.04.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "'Clearway' is defined rectangular area established to",
-      "options": [
-        {
-          "id": "AV9WSAJOPM",
-          "text": "permit aircraft to make a portion of its initial climb to a specific height.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ2GU7A7BP",
-          "text": "permit the aircraft to stop if it fails the take-off.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU3K0XA3HU",
-          "text": "reduce the risk of damage to aircraft running off a runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APGZ9FMUZO",
-          "text": "protect aircraft during take-off or landing operations.",
-          "correct": false,
           "why": ""
         }
       ]

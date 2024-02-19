@@ -1,36 +1,41 @@
 [
   {
-    "id": "QHKLJOWK",
+    "id": "QYRKIMSH",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-50597"],
+    "externalIds": [
+      "ATPLQ-107926",
+      "AVEXAM-79026",
+      "ATPLGS-628604",
+      "BGS-101438"
+    ],
     "annexes": [],
     "learningObjectives": ["010.08.03.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Flight information service shall be provided to all aircraft which are likely to be affected by the information and which are:",
+      "question": "An AIS is responsible for the provision of information and data concerning:",
       "options": [
         {
-          "id": "AJ9OLPAEZZ",
-          "text": "provided with the air traffic control services or otherwise known to the relevant air traffic service units.",
+          "id": "OPORN0FHH",
+          "text": "Air traffic control only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEIX0KQVH",
+          "text": "Air traffic services.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A40W7UC68A",
-          "text": "known to the relevant air traffic services units.",
+          "id": "OX9RYSQ5H",
+          "text": "Flight licenses.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AT66ZYBLJU",
-          "text": "known to the relevant air traffic services units by a filed flight plan.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOHWHEQ29U",
-          "text": "provided with air traffic control services, only.",
+          "id": "O4AMAXM0E",
+          "text": "Air operations.",
           "correct": false,
           "why": ""
         }
@@ -40,7 +45,7 @@
   {
     "id": "QPJWHOUQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626443", "ATPLQ-105857", "AVEXAM-71215"],
+    "externalIds": ["ATPLQ-105857", "ATPLGS-626443", "AVEXAM-71215"],
     "annexes": [],
     "learningObjectives": ["010.08.03.01.01"],
     "explanation": "",
@@ -49,216 +54,26 @@
       "question": "When, at the latest, are AIS services active for a particular flight?",
       "options": [
         {
-          "id": "A5ATBAV1SO",
-          "text": "2 hours before",
+          "id": "OJTKPZBKW",
+          "text": "| 6 hours before |  |\n| -------------- |  |",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ7U75GES",
+          "text": "| 2 hours before |  |\n| -------------- |  |",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A27X1C3AWQ",
-          "text": "4 hours before",
+          "id": "OKB2XEPQJ",
+          "text": "| 24 hours before |  |\n| --------------- |  |",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP1KZ48NC6",
-          "text": "24 hours before",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIOVZA7U28",
-          "text": "6 hours before",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYRKIMSH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-107926", "BGS-101438"],
-    "annexes": [],
-    "learningObjectives": ["010.08.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Annex 15, an AIS is responsible for the provision of information and data concerning...",
-      "options": [
-        {
-          "id": "AX98IACKXA",
-          "text": "air operations.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMHL8D6OXN",
-          "text": "flight licenses.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANTC9Q7ZA0",
-          "text": "air traffic control only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO52MYHZPP",
-          "text": "air traffic services.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPRNAAVL",
-    "relatedQuestions": ["QUYMOZJL"],
-    "externalIds": ["ATPLGS-127428", "ATPLQ-109802", "AVEXAM-31256"],
-    "annexes": [],
-    "learningObjectives": ["010.08.03.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Each contracting state shall provide an Aeronautical Information Service (AIS) in its territory and for areas in which the state is responsible for the Air Traffic Services outside its territory, and this shall include the preparation and origination of:",
-      "options": [
-        {
-          "id": "AAS9H0STO2",
-          "text": "Integrated Aeronautical Information Package.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3XQP3M3GU",
-          "text": "Only AIP and NOTAMs.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVACIRFS6A",
-          "text": "Only NOTAMs and Circulars.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOZB1ONSGE",
-          "text": "AIP, NOTAMs, Circular and AIRAC.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUYMOZJL",
-    "relatedQuestions": ["QPRNAAVL"],
-    "externalIds": ["ATPLGS-127428", "ATPLQ-109802", "AVEXAM-31256"],
-    "annexes": [],
-    "learningObjectives": ["010.08.03.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Each contracting state shall provide an Aeronautical Information Service (AIS) in its territory and for areas in which the state is responsible for the Air Traffic Services outside its territory, and this shall include the preparation and origination of",
-      "options": [
-        {
-          "id": "AGNAPJR7LD",
-          "text": "Integrated Aeronautical Information Package.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7IBMHW1M7",
-          "text": "AIP, NOTAMs, Circular and AIRAC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM6DJ40X7L",
-          "text": "Only NOTAMs and Circulars.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADT88OZ87Z",
-          "text": "Only AIP and NOTAMs.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQDLWKLH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119163", "ATPLQ-109684", "BGS-100745"],
-    "annexes": [],
-    "learningObjectives": ["010.08.03.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Who is responsible for the provision of the aeronautical data and aeronautical information that is necessary for the safety, regularity, and efficiency of air navigation?",
-      "options": [
-        {
-          "id": "A8KQB1UN9N",
-          "text": "The Aeronautical Information Service (AIS)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALLDVNEJ88",
-          "text": "The National Civil Aviation Authority",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADLC96FUIE",
-          "text": "The Air Traffic Service (ATS)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A43JGGQBW5",
-          "text": "The Aerodrome Operator",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKMQMZFD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-104452", "AVEXAM-97480"],
-    "annexes": [],
-    "learningObjectives": ["010.08.03.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the purpose of AIS?",
-      "options": [
-        {
-          "id": "A4V1QWGSPT",
-          "text": "To ensure the flow of information necessary for the safety, regularity and efficiency of international air navigation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABSENKYAAM",
-          "text": "Providing the ATC service to pilots in the air.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANHU0Z36QH",
-          "text": "To ensure that all aeronautical documents and publications are kept up to date.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB5CAZNRE1",
-          "text": "To ensure good contact between ATC services and flight crews.",
+          "id": "ORZSYTUYQ",
+          "text": "| 4 hours before |  |\n| -------------- |  |",
           "correct": false,
           "why": ""
         }
@@ -268,7 +83,7 @@
   {
     "id": "QFYXPWHE",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-109557"],
+    "externalIds": ["ATPLQ-109557", "AVEXAM-64819"],
     "annexes": [],
     "learningObjectives": ["010.08.03.01.02"],
     "explanation": "",
@@ -277,27 +92,27 @@
       "question": "Which of the following information shall be provided by the Aeronautical Information Services (AIS) to flight crews, for pre-flight purposes?",
       "options": [
         {
-          "id": "AS2I4URZEF",
-          "text": "NOTAMs",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJCTC1OQAX",
+          "id": "OYBJ48WZE",
           "text": "Aircraft performance charts",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8XP3YBKD0",
+          "id": "OTDZ46X7C",
           "text": "Operational Flight Plan",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AKF0T4IRQE",
+          "id": "ODRUUTESK",
           "text": "Aircraft Minimum Equipment List",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1YKZ1A48",
+          "text": "NOTAMs",
+          "correct": true,
           "why": ""
         }
       ]
@@ -306,35 +121,73 @@
   {
     "id": "QGCJBUYJ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119164", "ATPLQ-107143"],
+    "externalIds": ["ATPLQ-107143", "AVEXAM-49024", "ATPLGS-119164"],
     "annexes": [],
     "learningObjectives": ["010.08.03.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the objective of the Aeronautical Information Service (AIS)? ? To provide?",
+      "question": "What is the objective of the Aeronautical Information Service (AIS)? To provide...",
       "options": [
         {
-          "id": "AN3ZFS9ZVD",
-          "text": "aeronautical data and information.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT1CLDI4YS",
-          "text": "data on aircraft performance and limitations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEQRSZSMLA",
+          "id": "OSTPT7YEW",
           "text": "an Air Traffic Control Service.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD8EAJ8FHP",
+          "id": "OCONTSRFF",
+          "text": "aeronautical data and information.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT8X67M6P",
+          "text": "data on aircraft performance and limitations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCKOAV1BT",
           "text": "radio navigation aids.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUYMOZJL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-109802", "AVEXAM-31256", "ATPLGS-127428"],
+    "annexes": [],
+    "learningObjectives": ["010.08.03.01.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Each contracting state shall provide an Aeronautical Information Service (AIS) in its territory and for areas in which the state is responsible for the Air Traffic Services outside its territory, and this shall include the preparation and origination of:",
+      "options": [
+        {
+          "id": "O0VCMFVKO",
+          "text": "AIP, NOTAMs, Circular and AIRAC.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXMETIWUG",
+          "text": "Integrated Aeronautical Information Package.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1BGDPMYV",
+          "text": "Only NOTAMs and Circulars.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ34T7OJH",
+          "text": "Only AIP and NOTAMs.",
           "correct": false,
           "why": ""
         }

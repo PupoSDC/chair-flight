@@ -1,36 +1,41 @@
 [
   {
-    "id": "QQCGGBMO",
+    "id": "QMYMOVZF",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-129527", "ATPLQ-225076", "BGS-221229"],
+    "externalIds": [
+      "ATPLQ-225880",
+      "AVEXAM-79395",
+      "ATPLGS-628339",
+      "BGS-222463"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.11.02.02.05"],
+    "learningObjectives": ["022.11.02.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The factor(s) which are considered by the FMS for Cost Index (CI) is/are:",
+      "question": "The data stored in the performance database of an FMS is mainly used..",
       "options": [
         {
-          "id": "AD6EOO88KG",
-          "text": "One engine inoperative.",
+          "id": "OUFFJF9WR",
+          "text": "to calculate engine thrust settings.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZ44VP0JUK",
-          "text": "One engine inoperative and flaps stuck partially deployed.",
+          "id": "OEMHONOQG",
+          "text": "for LNAV calculations",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7P2J2GFXQ",
-          "text": "Landing gear stuck down.",
+          "id": "ORYCPVVTX",
+          "text": "to validate GNSS position and satellite data.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AD3VLMYV5E",
-          "text": "Air brakes stuck partially deployed.",
+          "id": "OMNWYH7F6",
+          "text": "to calculate IRS positions.",
           "correct": false,
           "why": ""
         }
@@ -38,37 +43,75 @@
     }
   },
   {
-    "id": "QFQRVGOO",
+    "id": "QPBQERJJ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127558", "ATPLQ-228743", "BGS-222095"],
+    "externalIds": ["ATPLQ-225962", "AVEXAM-16253", "BGS-222265"],
     "annexes": [],
-    "learningObjectives": ["022.11.02.02.01"],
+    "learningObjectives": ["022.11.02.02.04"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which Flight Management System databases are typically loadable?",
+      "question": "Which of the following statements regarding the \"performance factor\" is correct? It is a…",
       "options": [
         {
-          "id": "A1Z7XZ03X8",
-          "text": "The navigation database and the performance database.",
+          "id": "OZPGLKFC4",
+          "text": "positive or negative factor that is used to correct the predicted fuel flow.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVWR4KYBYD",
-          "text": "The navigation database and the operating system.",
+          "id": "OCYXG5D91",
+          "text": "positive or negative factor that is used to calculate the percentage error in fuel consumption due to differences between nominal and icing conditions.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8MOG4O7R2",
-          "text": "The navigation database and the user database.",
+          "id": "OZLJT57N1",
+          "text": "positive factor that is used to show the percentage increase in fuel consumption when there is an abnormal increase in drag.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A293897BHL",
-          "text": "The performance database and the user database.",
+          "id": "OW5WIT3AA",
+          "text": "cost index used to show the efficiency of the aircraft as a percentage of the nominal performance.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGWZGWOR",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221717", "BGS-221498", "AVEXAM-39151"],
+    "annexes": [],
+    "learningObjectives": ["022.11.02.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During FMS initialization, the crew must verify that the aircraft performance database correct, based on the aeroplane and engine configuration. This is because the FMS uses the data to...",
+      "options": [
+        {
+          "id": "OTW14R2Y8",
+          "text": "calculate an optimum vertical profile.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSN0FHBAB",
+          "text": "determine which mass and balance requirements apply.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJWNQ91Z",
+          "text": "determine the Regulated Take-Off Mass restrictions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIYIWSJH4",
+          "text": "calculate an optimum lateral profile.",
           "correct": false,
           "why": ""
         }
@@ -87,64 +130,69 @@
       "question": "During the cockpit preparation phase, the flight crew notices that the Performance Database is incorrect on the FMS, being for a different aircraft and engine type. What must they do in this case?",
       "options": [
         {
-          "id": "AKBU09SZ6J",
+          "id": "OTRTSIHZC",
           "text": "The mechanics must change the database.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AYDFL1BV5M",
+          "id": "O70JHSOK8",
+          "text": "Manually select the correct database.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMQMJNOUO",
           "text": "Proceed with the flight but notify the maintenance crew.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXYKIE8SLW",
+          "id": "ON3ALJ23P",
           "text": "Nothing, this is not an issue.",
           "correct": false,
           "why": ""
-        },
-        {
-          "id": "AMU1I499ND",
-          "text": "Manually select the correct database.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QQYLLWJS",
+    "id": "QQCGGBMO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224206", "AVEXAM-82333", "BGS-221319"],
+    "externalIds": [
+      "ATPLQ-225076",
+      "AVEXAM-72592",
+      "BGS-221229",
+      "ATPLGS-129527"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.11.02.02.02"],
+    "learningObjectives": ["022.11.02.02.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The performance factor is used to correct predicted fuel flow when the actual aircraft drag and the engine performance differs from the nominal model due to:",
+      "question": "The factor(s) which are considered by the FMS for Cost Index (CI) is/are:",
       "options": [
         {
-          "id": "AB0VGSEG27",
-          "text": "the aircraft`s age.",
+          "id": "OUPAKZZTZ",
+          "text": "Landing gear stuck down.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4LZNFK9E",
+          "text": "One engine inoperative.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A6C1QCNTQR",
-          "text": "the aircraft`s take-off weight.",
+          "id": "OYWIKM7KD",
+          "text": "Air brakes stuck partially deployed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AN9NTU8T05",
-          "text": "the aircraft type.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUUHDZ37BU",
-          "text": "weather conditions.",
+          "id": "OIWT0SFR6",
+          "text": "One engine inoperative and flaps stuck partially deployed.",
           "correct": false,
           "why": ""
         }
@@ -152,265 +200,42 @@
     }
   },
   {
-    "id": "QDLUNGEJ",
+    "id": "QFQRVGOO",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-81226"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the purpose of a performance database?",
-      "options": [
-        {
-          "id": "AY6YQR51QP",
-          "text": "To provide information for the FMS regarding the performance characteristics of a given aircraft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARO853YIDB",
-          "text": "To track the performance of the aircraft over time and make adjustments due to age and wear.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUUIAXML2N",
-          "text": "To adjust the route depending on the performance of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKP7190JMZ",
-          "text": "To monitor the performance of the crew.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPBQERJJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225962", "AVEXAM-16253", "BGS-222265"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements regarding the \"performance factor\" is correct? It is a...",
-      "options": [
-        {
-          "id": "A5FRNHRIHS",
-          "text": "positive or negative factor that is used to correct the predicted fuel flow.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANJVDRIEXT",
-          "text": "positive factor that is used to show the percentage increase in fuel consumption when there is an abnormal increase in drag.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1LAKU0704",
-          "text": "positive or negative factor that is used to calculate the percentage error in fuel consumption due to differences between nominal and icing conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWUUI90L3N",
-          "text": "cost index used to show the efficiency of the aircraft as a percentage of the nominal performance.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBYIRPCF",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221312"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.04"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which is the true answer below about \"Performance Factor\"",
-      "options": [
-        {
-          "id": "ALGVU7B7SN",
-          "text": "A positive or negative figure to modify the factor in predicted fuel burn",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF4AXJCUIP",
-          "text": "a time addition that has to be applied to the ETAs overhead waypoints to account for changes in speed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7RS99H65J",
-          "text": "A positive percentage related to fuel penalty due to extra drag of the aircraft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA3VYSUKMX",
-          "text": "a factor applied to the Take-Off Distance Required (TODR) under ISA conditions to get the TODR underr actual conditions",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGWZGWOR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221717", "BGS-221498"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During FMS initialization, the crew must verify that the aircraft performance database correct, based on the aeroplane and engine configuration. This is because the FMS uses the data to...",
-      "options": [
-        {
-          "id": "AP1UW047Y8",
-          "text": "calculate an optimum vertical profile.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7ZGUF4PWZ",
-          "text": "determine the Regulated Take-Off Mass restrictions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWMLEVPF7M",
-          "text": "calculate an optimum lateral profile.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJK9AXA7NV",
-          "text": "determine which mass and balance requirements apply.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEDAHUEO",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-221710"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In pre-flight checks, the pilot notices notices that the performance datatbase is for the wirong aircraft type.  What should they do?",
-      "options": [
-        {
-          "id": "ABSSJD1L2S",
-          "text": "Report to maintanance as this is a maintenance task to fix this fault",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADFVI36062",
-          "text": "Fly the aircraft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6MSM1KZAI",
-          "text": "Update the database manually",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1XXWIBLRV",
-          "text": "Fly the flight but report it to maintenance on completion for rectification",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTZZBZIO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228599", "AVEXAM-97370"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Is it possible for the flight crew to change data in the performance database?",
-      "options": [
-        {
-          "id": "A2ITDXJGSS",
-          "text": "No, it can only be done by maintenance.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZH0319HZW",
-          "text": "Yes, it can only change engine thrust rating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD0ENGKQWU",
-          "text": "No, because there’s no indication in the aircraft about the performance database the can be accessed by the flight crew.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP6IWZUA4Q",
-          "text": "Yes, it can only change the fuel consumption.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNRZABWQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228033", "BGS-221584"],
+    "externalIds": [
+      "ATPLQ-228743",
+      "ATPLGS-127558",
+      "BGS-222095",
+      "AVEXAM-93142"
+    ],
     "annexes": [],
     "learningObjectives": ["022.11.02.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What does the pilot need to do regarding the performance database in the FCM before taking off?",
+      "question": "Which Flight Management System databases are typically loadable?",
       "options": [
         {
-          "id": "ALQ43T7TA8",
-          "text": "Enter the correct numbers from the load sheet.",
+          "id": "OP9DVZZTJ",
+          "text": "The navigation database and the operating system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXEUY49KE",
+          "text": "The performance database and the user database.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJNMBXJY4",
+          "text": "The navigation database and the performance database.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHVKX2ICZI",
-          "text": "Download to maintenance staff and erase it.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8B4EIT8GI",
-          "text": "Nothing needs to be done by the pilot.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHDFJVZJ0R",
-          "text": "Check that it is up to date.",
+          "id": "OGXBFDSZT",
+          "text": "The navigation database and the user database.",
           "correct": false,
           "why": ""
         }
@@ -429,64 +254,69 @@
       "question": "Concerning the FMS, entering a high cost index results in:",
       "options": [
         {
-          "id": "ANG4LVE7Y0",
-          "text": "high airspeed and high fuel consumption.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AN9A6U57EX",
-          "text": "maximum range airspeed.",
+          "id": "OBNRDYPGD",
+          "text": "minimum trip fuel.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMMNH0U0P0",
+          "id": "O7TRIF20C",
           "text": "minimum airspeed.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AH5S37XUNW",
-          "text": "minimum trip fuel.",
+          "id": "OTBHYHFDO",
+          "text": "maximum range airspeed.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM5I7ALE4",
+          "text": "high airspeed and high fuel consumption.",
+          "correct": true,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QMYMOVZF",
+    "id": "QDLUNGEJ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225880"],
+    "externalIds": [
+      "ATPLQ-221499",
+      "AVEXAM-89816",
+      "BGS-221753",
+      "AVEXAM-81226"
+    ],
     "annexes": [],
     "learningObjectives": ["022.11.02.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The data stored in the performance database of an FMS is mainly used..",
+      "question": "The purpose of the performance database in the FMC is:",
       "options": [
         {
-          "id": "AKSQ8B4S10",
-          "text": "to calculate engine thrust settings.",
+          "id": "OFXFTX17M",
+          "text": "To let the FMC know the optimum performance data for the aircraft in question.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALDLZLI61C",
-          "text": "to calculate IRS positions.",
+          "id": "OZOKA8YR7",
+          "text": "To tell the FMC the required performance to be able to fly a certain route.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXZ9ILDWY7",
-          "text": "for LNAV calculations",
+          "id": "OZ7ILZJUO",
+          "text": "To record the performance of the aircraft over time and to adapt the flight routes accordingly.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AI5MY6HO63",
-          "text": "to validate GNSS position and satellite data.",
+          "id": "OEB1ZZQ3A",
+          "text": "To keep track of the performance of the flight crew.",
           "correct": false,
           "why": ""
         }
@@ -494,156 +324,75 @@
     }
   },
   {
-    "id": "QIBCPOKH",
+    "id": "QEDAHUEO",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-80719"],
+    "externalIds": ["ATPLQ-223467", "BGS-221710"],
     "annexes": [],
-    "learningObjectives": ["022.11.02.02.04"],
+    "learningObjectives": ["022.11.02.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is meant by the “Performance factor”?",
+      "question": "During the pre-flight checks, you notice that the performance database is for the wrong aircraft type. What should you do?",
       "options": [
         {
-          "id": "AM6Q1XNEWE",
-          "text": "A percentage that must be applied to get a better fuel burn prediction from the FMS.",
+          "id": "O1HFHCGA9",
+          "text": "Fly the aircraft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPRBWFWFL",
+          "text": "Update the database manually.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXXFJOHKS",
+          "text": "Fly the flight but report it to maintenance on completion for rectification.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTBZJINFG",
+          "text": "Report to maintenance as this is a maintenance task to fix this fault.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5T8MZ5RUL",
-          "text": "A factor that has to be applied to account for actual pilot performance in relation to the best achievable performance with that aircraft type.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB9I4ZNEFY",
-          "text": "The take-off performance (take-off distance required, TODR) under the actual weather and airfield conditions, relative to standard conditions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APPK9ESE7Z",
-          "text": "A time addition that has to be made to compute accurate estimated times overhead the following waypoints, to account for poor ground speed data.",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QNTCJUQO",
-    "relatedQuestions": ["QWHICCBV"],
-    "externalIds": [
-      "ATPLGS-106795",
-      "ATPLQ-227371",
-      "BGS-221079",
-      "BGS-993010"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight data recorder must automatically stop data recording when the:",
-      "options": [
-        {
-          "id": "AZOGJZZVSZ",
-          "text": "Airplane cannot any longer move by its own power.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD7SKQPLAC",
-          "text": "Landing gear is extended and locked.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKKMW9UY3S",
-          "text": "Airplane clears the runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC689WZZY8",
-          "text": "Main gear shock strut compresses when touching  the runway.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWHICCBV",
-    "relatedQuestions": ["QNTCJUQO"],
-    "externalIds": ["ATPLQ-227371", "BGS-993010"],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The flight data recorder must automatically stop data recording when the:",
-      "options": [
-        {
-          "id": "AB4MLEOC7Y",
-          "text": "Aeroplane cannot any longer move by its own power.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AATUQFE0VL",
-          "text": "Main gear shock strut compresses when touching  the runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMDPN3EYMA",
-          "text": "Aeroplane clears the runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARW84DSKBO",
-          "text": "Landing gear is extended and locked.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSFKSVGT",
+    "id": "QTZZBZIO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223976", "BGS-990650"],
+    "externalIds": ["ATPLQ-228599", "AVEXAM-97370"],
     "annexes": [],
     "learningObjectives": ["022.11.02.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Cockpit voice recordings may not be used for any other purpose other than accident or incident investigation:\n ",
+      "question": "Is it possible for the flight crew to change data in the performance database?",
       "options": [
         {
-          "id": "AJA97CRUPH",
-          "text": "Without the consent of all crewmembers",
+          "id": "OLAVLFHAN",
+          "text": "No, it can only be done by maintenance.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AZBYQWF560",
-          "text": "Without the consent of the aircraft Captain",
+          "id": "OL2I74H9K",
+          "text": "Yes, it can only change engine thrust rating.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZ4OY3P7T3",
-          "text": "Except for maintenance analysis",
+          "id": "O9TPJWMCK",
+          "text": "Yes, it can only change the fuel consumption.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASN1ABTNHT",
-          "text": "Without the consent of the next of kin of all deceased crew",
+          "id": "OFCNLM8FJ",
+          "text": "No, because there’s no indication in the aircraft about the performance database the can be accessed by the flight crew.",
           "correct": false,
           "why": ""
         }
@@ -651,81 +400,86 @@
     }
   },
   {
-    "id": "QMLMTADO",
+    "id": "QNRZABWQ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106795",
-      "ATPLQ-227371",
-      "BGS-221079",
-      "BGS-993010"
+      "ATPLQ-228033",
+      "AVEXAM-49532",
+      "BGS-221584",
+      "AVEXAM-13622"
     ],
-    "annexes": [],
-    "learningObjectives": ["022.11.02.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When must the flight data recorder automatically stop data recording?",
-      "options": [
-        {
-          "id": "ADC02YM6M7",
-          "text": "When the aeroplane cannot any longer move by its own power.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZTH0QG1A8",
-          "text": "When the main gear shock strut compresses when touching the runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABJK7NPB0A",
-          "text": "When the aeroplane clears the runway.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXSPTQEPUK",
-          "text": "When the landing gear is extended and locked.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGYTFNSS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-120907", "ATPLQ-227407", "BGS-222313"],
     "annexes": [],
     "learningObjectives": ["022.11.02.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What technologies are used for data storage in aircraft recording systems?",
+      "question": "What does the pilot need to do regarding the performance database in the FMC before taking off?",
       "options": [
         {
-          "id": "AY6JHO2L54",
-          "text": "Chip circuits and magnetic tape.",
+          "id": "O7JIW5Z9T",
+          "text": "Enter the correct number index of load sheet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI76RD1MQ",
+          "text": "Download to maintenance staff and erase it.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGU0HOKFG",
+          "text": "Nothing needs to be done by the pilot.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQASTGVCF",
+          "text": "Check that it is up to date.",
           "correct": true,
           "why": ""
-        },
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCIDCOL0M",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223629",
+      "AVEXAM-89816",
+      "BGS-221753",
+      "AVEXAM-81226"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11.02.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The purpose of a performance database is:",
+      "options": [
         {
-          "id": "A15R6J64AH",
-          "text": "Chip circuits and capacitors.",
+          "id": "OIYKTZ0A6",
+          "text": "To adjust the route depending on the performance of the aircraft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3W28HHXOD",
-          "text": "Scratch foil and capacitors.",
+          "id": "OJ9U7TXUF",
+          "text": "To track the performance of the aircraft over time and make adjustments due to age and wear.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADRRFT8J2W",
-          "text": "Electric wire and optical discs.",
+          "id": "OUNYU07ZJ",
+          "text": "To monitor the performance of the crew.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLQK2WFYD",
+          "text": "To provide information for the FMS regarding the performance characteristics of a given aircraft.",
+          "correct": true,
           "why": ""
         }
       ]

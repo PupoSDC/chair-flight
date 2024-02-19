@@ -1,188 +1,85 @@
 [
   {
-    "id": "QQRAKRCP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-812037", "BGS-812129"],
-    "annexes": [],
-    "learningObjectives": ["081.04.04.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft demonstrates positive static directional stability. How does this relate to the interaction between the aircraft’s yawing moment coefficient, C~N~, and sideslip angle, B (beta)?",
-      "options": [
-        {
-          "id": "A1FAM9K82V",
-          "text": "C~N~ is positive and the aircraft experiences a positive sideslip angle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A39RQSSVOX",
-          "text": "C~N~ is negative and the aircraft experiences a positive sideslip angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ8KKGQIDF",
-          "text": "C~N~=0 and the aircraft experiences a negative sideslip angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABF59JK5I4",
-          "text": "C~N~ is positive and the aircraft experiences a negative sideslip angle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZGUPWTD",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-73186"],
-    "annexes": [],
-    "learningObjectives": ["081.04.04.03.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft demonstrates positive static directional stability. How does this relate to the interaction between the aircraft's yawing moment coefficient C~n~ and its sideslip angle (ß)?",
-      "options": [
-        {
-          "id": "AJR4AA7ED5",
-          "text": "Cn is positive and the aircraft experiences a positive sideslip angle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQOLUV9IU2",
-          "text": "Cn = 0 and the aircraft experiences a negative sideslip angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASQVZVLPUB",
-          "text": "Cn is positive and the aircraft experiences a negative sideslip angle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMSSHCSVOC",
-          "text": "Cn is negative and the aircraft experiences a positive sideslip angle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNOZNCYW",
-    "relatedQuestions": ["QZVYTXNR"],
-    "externalIds": ["ATPLQ-811379"],
-    "annexes": [],
-    "learningObjectives": ["081.04.04.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": " \n  Which statement is correct regarding the pitching moment coefficient C~M~ versus angle of attack diagram? ",
-      "options": [
-        {
-          "id": "AQ19RUBMKK",
-          "text": "Line 3 shows an aeroplane with reducing static longitudinal stability at high angles of attack.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AM5ODOZ0J4",
-          "text": "Line 1 shows an aeroplane with increasing static longitudinally instability at very high angles of attack.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ8HYA4CJL",
-          "text": "Line 4 shows an aeroplane with reducing static longitudinal stability at very high angles of attack.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0O51CKR5U",
-          "text": "Line 4 shows an aeroplane with greater static longitudinal stability at low angles of attack than that in shown line 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QZVYTXNR",
-    "relatedQuestions": ["QNOZNCYW"],
-    "externalIds": ["ATPLQ-815579"],
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-815579",
+      "BGS-810695",
+      "AVEXAM-97580",
+      "ATPLGS-102636",
+      "AVEXAM-77928",
+      "BGS-810692",
+      "AVEXAM-17134",
+      "AVEXAM-89585",
+      "BGS-810696",
+      "BGS-810699"
+    ],
     "annexes": [],
     "learningObjectives": ["081.04.04.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "  \n  Which statement is correct regarding the pitching moment coefficient C~M~ versus angle of attack diagram?",
+      "question": "(For this question use annex 081-025 issue date July 2006).   \n Which statement is correct regarding the pitching moment coefficient CM versus angle of attack diagram?",
       "options": [
         {
-          "id": "AXSX3QVEIV",
-          "text": "Line 4 shows an aeroplane with increasing static longitudinal stability at very high angles of attack.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A8FJX5NO0O",
-          "text": "Line 4 shows an aeroplane with a greater static longitudinal stability at low angles of attack than that shown in line 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXAKQ08U7M",
+          "id": "OVIC8IGD8",
           "text": "Line 1 shows an aeroplane with increasing static longitudinal instability at very high angles of attack.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AFZIY7ZB5K",
+          "id": "OGF77EEDZ",
           "text": "Line 3 shows an aeroplane with increasing static longitudinal stability at high angles of attack.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAC4STNK2",
+          "text": "Line 4 shows an aeroplane with a greater static longitudinal stability at low angles of attack than that shown in line 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCOFEKNKH",
+          "text": "Line 4 shows an aeroplane with increasing static longitudinal stability at very high angles of attack.",
+          "correct": true,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QYLNRRCT",
+    "id": "QQRAKRCP",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-102636"],
-    "annexes": ["1250d251de1565f881743336a919b554"],
-    "learningObjectives": ["081.04.04.03.01"],
+    "externalIds": ["ATPLQ-812037", "AVEXAM-73186", "BGS-812129"],
+    "annexes": [],
+    "learningObjectives": ["081.04.04.03.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": " Which statement is correct regarding the pitching moment coefficient Cm versus angle of attack image?",
+      "question": "An aircraft demonstrates positive static directional stability. How does this relate to the interaction between the aircraft’s yawing moment coefficient, CN, and sideslip angle, B (beta)?",
       "options": [
         {
-          "id": "AO204886KT",
-          "text": "Line 1 shows an aeroplane with reducing static longitudinal instability at very high angles of attack.",
+          "id": "OUN44Z9EG",
+          "text": "CN is negative and the aircraft experiences a positive sideslip angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQGLJNAQM",
+          "text": "CN is positive and the aircraft experiences a positive sideslip angle.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AWVA7HZM8A",
-          "text": "Line 4 shows an aeroplane with reducing static longitudinal stability at very high angles of attack.",
+          "id": "O7VVF1DGV",
+          "text": "CN\\=0 and the aircraft experiences a negative sideslip angle.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS8ONVO7J4",
-          "text": "Line 3 shows an aeroplane with increasing static longitudinal stability at high angles of attack.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXUKXGPDXU",
-          "text": "Line 4 shows an aeroplane with a greater static longitudinal stability at low angles of attack than that shown in line 3.",
+          "id": "OGQQPGEF6",
+          "text": "CN is positive and the aircraft experiences a negative sideslip angle.",
           "correct": false,
           "why": ""
         }

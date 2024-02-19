@@ -1,41 +1,36 @@
 [
   {
-    "id": "QLIYPDFK",
+    "id": "QY7TNEQJU",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-113224",
-      "ATPLQ-222381",
-      "AVEXAM-16562",
-      "BGS-220438"
-    ],
+    "externalIds": ["ATPLQ-225927"],
     "annexes": [],
-    "learningObjectives": ["022.05", "022.06"],
+    "learningObjectives": ["022.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In an autopilot system, the functions that control the path of the aircraft are the:",
+      "question": "Which of the following is associated with INS rather than IRS?\n\n1\\. Mechanical gyros   \n 2\\. Integration with FMS   \n 3\\. Accelerometers   \n 4\\. Stand-alone flight planning computer",
       "options": [
         {
-          "id": "A25G3H5IMD",
-          "text": "guidance functions.",
+          "id": "OCWRKLPBS",
+          "text": "1 and 4.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AJD1KQ8FS2",
-          "text": "stability functions.",
+          "id": "OXWUS9QXP",
+          "text": "1 and 2.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASOR8DG82P",
-          "text": "attitude functions.",
+          "id": "OHFYNPGSV",
+          "text": "1 and 3.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A12UBE1QQE",
-          "text": "inner loop functions.",
+          "id": "O7USCGPAG",
+          "text": "2 and 4.",
           "correct": false,
           "why": ""
         }
@@ -43,36 +38,621 @@
     }
   },
   {
-    "id": "QRXSGKHZ",
+    "id": "QWACVRQTW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626277", "ATPLQ-223727", "AVEXAM-84628"],
+    "externalIds": ["ATPLQ-229830", "BGS-222450", "BGS-221770"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhat is the control panel in the image used for?",
+      "options": [
+        {
+          "id": "OW7DE70Y7",
+          "text": "Traffic collision and avoidance system (TCAS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2JETHNLR",
+          "text": "Ground proximity warning system (GPWS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGZH89L4K",
+          "text": "Navigation display (ND).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXOAA6LX9",
+          "text": "Inertial reference system (IRS).",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFOLBKTBY",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229760",
+      "ATPLGS-120404",
+      "BGS-220282",
+      "AVEXAM-74839"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.05", "022.14"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A laser gyro can measure:",
+      "options": [
+        {
+          "id": "OPBDODOSE",
+          "text": "an acceleration and a speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONFOO5IFY",
+          "text": "an acceleration.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMJSZXRD9",
+          "text": "a rotation motion.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1ROAW58Y",
+          "text": "an acceleration and a rotation motion.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QO1DPW920",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221489", "AVEXAM-39118"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following statements about the INS and IRS is true?",
+      "options": [
+        {
+          "id": "ONREXFMJN",
+          "text": "IRS is an older system that uses gyros.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQX2EVMI7",
+          "text": "The INS and IRS are identical systems with separate names chosen by the manufacturers.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTE4AWKJC",
+          "text": "​INS and IRS are two completely different systems with no similarities.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ3SEZ1OW",
+          "text": "INS is an older system that uses gyros. IRS is a newer version that uses lasers.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3WNXPLKN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221469", "AVEXAM-97820"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The sideslip indication displayed on the PFD (Primary Flight Display) is a data derived from the:",
+      "options": [
+        {
+          "id": "OCWJAMIOU",
+          "text": "yaw damper.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJAV70PMP",
+          "text": "Automatic Flight Control System (AFCS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYW9R0SQC",
+          "text": "stall protection system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI2XNFRLQ",
+          "text": "IRS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q336AGTNR",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226863", "BGS-221763", "AVEXAM-49809"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nIn flight, under normal conditions, what should each one of the three IRU mode selector switches be set to?",
+      "options": [
+        {
+          "id": "OD5FRGP4Y",
+          "text": "NAV, although attitude information is not available in this mode.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYT490ALD",
+          "text": "NAV, thus providing the outputs of acceleration, attitude and heading.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXGZZYGNQ",
+          "text": "ATT, as it is the rightmost position, it superimposes NAV and ATT modes.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O36XSPJSV",
+          "text": "ATT during steep turns, thus providing increased accuracy for pitch and roll.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QU7JHGFSB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225386", "BGS-222229"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following items are outputs generated by an Inertial Reference System (IRS)?\n\n1\\. True heading   \n2\\. Magnetic heading   \n3\\. TCAS traffic information   \n4\\. Groundspeed   \n5\\. Latitude and longitude of the position   \n6\\. EGPWS modes",
+      "options": [
+        {
+          "id": "O8BKX04NJ",
+          "text": "1, 5, and 6",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTM1IITL0",
+          "text": "2 and 3 only",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK5MNQIIT",
+          "text": "2, 4, 5, and 6",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM19ZMJKG",
+          "text": "1, 2, 4, and 5",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXCAZC4SG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222800"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "To assess the performance of the IRU at the end of the flight, the pilot looks for:",
+      "options": [
+        {
+          "id": "O0JWYMACO",
+          "text": "Illumination of the amber \"END OF NAV\" caption.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8WPJPCEW",
+          "text": "An error rate expressed in NM/hr.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHLBWGLYH",
+          "text": "Unhealthy GNSS satellites.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHPZFD9NL",
+          "text": "By checking the air speed.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZPG2VNRZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-222381",
+      "BGS-220438",
+      "ATPLGS-113224",
+      "AVEXAM-16562"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an autopilot system, the functions that control the path of the aircraft are the:",
+      "options": [
+        {
+          "id": "OENNJTCFF",
+          "text": "guidance functions.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OFUXTY4CU",
+          "text": "inner loop functions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVEDNVLNQ",
+          "text": "stability functions.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONQ24RHLL",
+          "text": "attitude functions.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q2LD2QLMM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226373", "BGS-221725", "AVEXAM-44461"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Before shutdown at the end of the flight, the pilot wants to calculate the drift error of the IRU. What are the two parameters that need to be inserted into an IRU to obtain an error in NM/hr?",
+      "options": [
+        {
+          "id": "O7LUQQULP",
+          "text": "Average TAS and average Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJHZ2LUS6",
+          "text": "Average ground speed and flight time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI4VFGX35",
+          "text": "Ramp position coordinates and hours of IRU operation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT9LVRTJF",
+          "text": "Average TAS and hours of IRU operation.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLFRC9HGG",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-226533",
+      "AVEXAM-46195",
+      "AVEXAM-3631",
+      "BGS-222415"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft experiences a power failure of the inertial system during flight and as a result, alignment is lost with subsequent loss of the (1) \\_\\_\\_\\_\\_ data, but with the (2) \\_\\_\\_\\_\\_ information still available. The pilot (3) \\_\\_\\_\\_\\_ perform in-flight re-alignment.",
+      "options": [
+        {
+          "id": "OCQMBJJKN",
+          "text": "(1) attitude; (2) navigation; (3) CANNOT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5ZTEDXOB",
+          "text": "(1) navigation; (2) attitude; (3) CANNOT",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEFQST5A5",
+          "text": "(1) attitude; (2) navigation; (3) CAN",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOIDGQG6K",
+          "text": "(1) navigation; (2) attitude; (3) CAN",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOH9I48SW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224815", "BGS-222370"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How long does an INS/IRS take to align?",
+      "options": [
+        {
+          "id": "OTLOSXA0Y",
+          "text": "Up to 30 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OB1ZBZZ4B",
+          "text": "Up to 5 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OX4WAYAFD",
+          "text": "About 2 min.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKVFZZXCI",
+          "text": "About 10 min.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7GCD6QGH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222315", "AVEXAM-51163"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What do the three accelerometers that are part of an IRS measure?",
+      "options": [
+        {
+          "id": "OVQ9YNQPK",
+          "text": "Linear accelerations along the roll, yaw and pitch.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5CL072YN",
+          "text": "Angular accelerations around all axis.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9M6TWORF",
+          "text": "Linear and angular accelerations.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJXQ5FNPB",
+          "text": "Linear accelerations along the N/S, W/E and vertical directions.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKXQRCYZ9",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223279"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhich IRS mode should be used in flight?",
+      "options": [
+        {
+          "id": "OWGXQ8EFP",
+          "text": "ATT mode with pitch and roll information and heading.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFSCLDKS6",
+          "text": "ATT mode with pitch and roll information only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYCZDHIX7",
+          "text": "NAV with ATT functions thus measuring HDG, ATT and accelerations.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUH6UGLGJ",
+          "text": "NAV but not with ATT functions.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHE3AHUBW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221312"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following correctly describes the behaviour of an Inertial Navigation System (INS)?",
+      "options": [
+        {
+          "id": "ONDH4XRE2",
+          "text": "The INS operates independently of any reference.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEDKOA43U",
+          "text": "The INS will move freely and point to the North.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO6ETLC6P",
+          "text": "The INS is always level and points to the North.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OG5CKWEYI",
+          "text": "The INS is always level and moves on the azimuth.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKW2N36NP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-221182", "AVEXAM-64439"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In an Inertial Reference System (IRS), what is one of the primary functions of the Inertial Reference Unit (IRU)?",
+      "options": [
+        {
+          "id": "OC3BOBFQS",
+          "text": "To measure angular acceleration.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2AGHVLIF",
+          "text": "To measure linear acceleration only.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYQSMISAQ",
+          "text": "To measure both angular acceleration and angular rate.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O0I7IYRXH",
+          "text": "To measure angular rate.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBMQEYB8V",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223727", "ATPLGS-626277", "AVEXAM-84628"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "Which statements below that applies best to an ADIRU?",
       "options": [
         {
-          "id": "A1UJ4R6DHM",
+          "id": "OBGERXKNH",
           "text": "ADIRU is an Air Data Computer which is integrated with an Inertial Reference Unit",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARVKSAJ84U",
+          "id": "OYUECLIXW",
           "text": "ADIRU is an Air Data Computer which is integrated with an Inertial Unit and GPS",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9GC9ITHFO",
+          "id": "OBSVCEDBV",
           "text": "ADIRU is an Attitude Director Indicator which is integrated with an Inertial Reference Unit",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADZBDN9FHP",
+          "id": "OQPLLFKRC",
           "text": "ADIRU is an Air Data Computer which is integrated with an Inertial Navigation System",
           "correct": false,
           "why": ""
@@ -81,37 +661,37 @@
     }
   },
   {
-    "id": "QUBENGZE",
-    "relatedQuestions": ["QAGBLIHU"],
-    "externalIds": ["ATPLGS-621501"],
-    "annexes": [],
-    "learningObjectives": ["022.05", "062.07"],
+    "id": "QSCWC2FUD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-225482", "BGS-222327", "AVEXAM-85853"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which one of the following sensors/systems is self-contained?",
+      "question": "Refer to figure.\n\nYou inadvertently set the IRS mode selector from NAV to ATT mode, resulting in loss of alignment in flight. What are the implications of this?",
       "options": [
         {
-          "id": "AJDA2O81MM",
-          "text": "Inertial Navigation System",
+          "id": "OWXS0HTLT",
+          "text": "Navigation data is lost and realignment is NOT possible in flight.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOI16K6S4J",
-          "text": "Basic RNAV system",
+          "id": "O3XDXZPXC",
+          "text": "Groundspeed data is lost, although position information may still be available.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AONPLTI2K0",
-          "text": "GPS",
+          "id": "OVYNL5KZW",
+          "text": "Navigation and attitude information is completely lost.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARV8C38QV8",
-          "text": "VOR/DME",
+          "id": "OJW4Y045U",
+          "text": "Attitude data is lost, but realignment is possible in flight.",
           "correct": false,
           "why": ""
         }
@@ -119,37 +699,384 @@
     }
   },
   {
-    "id": "QAGBLIHU",
-    "relatedQuestions": ["QUBENGZE"],
-    "externalIds": ["ATPLGS-101045"],
+    "id": "QKCWN2UDM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-227474",
+      "AVEXAM-25862",
+      "BGS-220289",
+      "ATPLGS-120429"
+    ],
     "annexes": [],
-    "learningObjectives": ["022.05", "062.07"],
+    "learningObjectives": ["022.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which one of the following sensors / systems is self-contained?",
+      "question": "The principle of a laser gyro is based on:",
       "options": [
         {
-          "id": "AEG61FEJPQ",
-          "text": "Inertial Navigation System.",
+          "id": "O7NBHGXAQ",
+          "text": "a gyroscope associated with a laser compensating for apparent wander due to the rotation of the earth.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM8X9HCV9",
+          "text": "a gyroscope associated with a laser compensating for gimballing errors.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVSIH01Y9",
+          "text": "two rotating cavities provided with mirrors.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQWH8K8EW",
+          "text": "frequency difference between two laser beams rotating in opposite direction.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QESKX2QVE",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-222478", "BGS-220841", "AVEXAM-55400"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What information can be obtained if the selector on the ADIRU is set to \"ATT\"?",
+      "options": [
+        {
+          "id": "OOWPRQQOR",
+          "text": "No information from the ADC, and no information from the IRU.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAMI7UHNQ",
+          "text": "Complete information from the ADC, but only attitude and heading information from the IRU.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AA5WTF306R",
-          "text": "GPS.",
+          "id": "O3LCELIXA",
+          "text": "Complete information from the ADC, and complete information from the IRU.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMLB3QZ0P8",
-          "text": "Basic RNAV system.",
+          "id": "OOPI1HRXN",
+          "text": "No information from the ADC, and complete information from the IRU.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGUV5XDPP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-227271", "AVEXAM-51274"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In transport aircraft, which of the following is the primary source of attitude data and one of the primary sources of navigation data?",
+      "options": [
+        {
+          "id": "O7QNZUMEI",
+          "text": "GPS",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A852JBN0N4",
-          "text": "VOR/DME.",
+          "id": "OAKDWIUQZ",
+          "text": "Flux valve",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIZ33JU69",
+          "text": "INS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ON1OUPQOY",
+          "text": "ADI",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q0L1OFHHG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-228264"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The output of an ADC can be used by:",
+      "options": [
+        {
+          "id": "OC0NVOFVD",
+          "text": "IRS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVSLWV48J",
+          "text": "GPS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHABKR9XG",
+          "text": "ADIRU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTW3H3ZHK",
+          "text": "ADI",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9EVUVL9M",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223317"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following options correctly describes the relationship between the FMS and IRS in an aircraft.",
+      "options": [
+        {
+          "id": "O52MAECHJ",
+          "text": "There is no relationship between the FMS and the IRS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM1XSDHQH",
+          "text": "The FMC can be accessed through the IRS system.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVRLFOUPW",
+          "text": "The IRS can be accessed through the FMC or MCDU.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OOPRUBH6O",
+          "text": "They are the same system.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QF6WUBRMT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226244"],
+    "annexes": ["AYS2KYZ5H"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhich instrument is represented in the picture?",
+      "options": [
+        {
+          "id": "OZBUKSNJA",
+          "text": "MCDU",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKGX8JQCO",
+          "text": "IRS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKSQVG1DZ",
+          "text": "ADC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2QC2G8IX",
+          "text": "ND control panel",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNLCO0HXX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226498", "BGS-221922", "AVEXAM-14568"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "During flight the Commander would like to check whether the actual wind matches what the forecast says. The Commander turns the mode selector knob on the INS CDU to \"WIND\". The actual wind is displayed on the INS CDU. To calculate the wind, the system uses:",
+      "options": [
+        {
+          "id": "O0T8YNSGN",
+          "text": "Wind information downloaded by data link.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXXTCOBWJ",
+          "text": "ADC data and GPS data.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLC7MBTYG",
+          "text": "INS/IRS data and TAS.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1RHP8CNA",
+          "text": "GPS data only.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q3OJSATVF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-223030"],
+    "annexes": ["APHNUHKJW"],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Refer to figure.\n\nWhat instrument is shown in the attached figure?",
+      "options": [
+        {
+          "id": "OEJBDMCZH",
+          "text": "EFIS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OADYGXGXJ",
+          "text": "INS/IRS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUVTDQNMW",
+          "text": "Transponder",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYSHPDBB7",
+          "text": "FMC",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRFJAHXAK",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226327", "AVEXAM-92585"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "After landing, the pilot can check the IRU performance:",
+      "options": [
+        {
+          "id": "OWPZ0WRGQ",
+          "text": "By IRU and current position.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4YWZXJBA",
+          "text": "By reviewing the residual indicated ground speed when the aircraft has parked.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONRBBCUT8",
+          "text": "By ATC route compared with IRU.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKPTOGHGB",
+          "text": "By checking CDU for any error messages.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q0PWYLCA2",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-226232", "AVEXAM-68686"],
+    "annexes": [],
+    "learningObjectives": ["022.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What can you find in an INS but not in an IRS?",
+      "options": [
+        {
+          "id": "OZXKVLZCV",
+          "text": "The INS does not use accelerometers, while the IRS does.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTVJBFVUV",
+          "text": "The INS is less expensive to install and maintain than the IRS.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUKZUB3GN",
+          "text": "The INS has a mechanical gyroscope and stand alone computer.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORMWJ2QBE",
+          "text": "The INS is less accurate than the IRS.",
           "correct": false,
           "why": ""
         }

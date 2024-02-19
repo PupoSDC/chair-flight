@@ -335,7 +335,7 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
   },
 }));
 
-const persistOpts = { name: persistenceKey };
+const persistOpts = { name: persistenceKey, version: 2 };
 const sharedOpts = { name: persistenceKey };
 const ssrSafeEditor = persist(immer(questionEditor), persistOpts);
 

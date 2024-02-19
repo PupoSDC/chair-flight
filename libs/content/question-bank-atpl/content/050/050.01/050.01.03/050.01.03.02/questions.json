@@ -1,391 +1,45 @@
 [
   {
-    "id": "QZFTOSFW",
+    "id": "QAFRNCEO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124110", "AVEXAM-50434", "BGS-500067"],
+    "externalIds": [
+      "ATPLQ-502384",
+      "ATPLGS-108911",
+      "AVEXAM-31232",
+      "AVEXAM-39446",
+      "BGS-502137",
+      "AVEXAM-62694",
+      "BGS-500140",
+      "AVEXAM-88016"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the approximate vertical interval which is equal to a pressure change of 1 hPa at sea level?",
+      "question": "An aircraft lands at an airport (airport elevation 540 ft, QNH 978 hPa) with the altimeter set to 1003 hPa. What will it indicate?   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "ACOPKJERQP",
-          "text": "8 m (27 ft)",
+          "id": "OCRRAOVOQ",
+          "text": "Minus 135 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKYLUUPEH",
+          "text": "1215 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVSH0QNO75",
-          "text": "64 m (210 ft)",
+          "id": "OHOAI4LKP",
+          "text": "0 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AS0JGQI1MP",
-          "text": "15 m (50 ft)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHXBPQJCZ",
-          "text": "32 m (105 ft)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSTXZWVT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108869", "BGS-500084"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct regarding the ICAO Standard Atmosphere? At MSL...",
-      "options": [
-        {
-          "id": "AMUQVVDU9C",
-          "text": "temperature is 15°C and pressure is 1013.25hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGWRP0LBQ7",
-          "text": "temperature is 10°C and the decrease in temperature with height is 1°C per 100m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACU560T6NV",
-          "text": "temperature is 15°C and the decrease in temperature with height is 1°C per 100m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5J6LMB04O",
-          "text": "pressure is 1013.25 hPa and the decrease of temperature with height is 1°C per 100m.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXCTGXVX",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-108780",
-      "ATPLGS-108785",
-      "ATPLGS-108828",
-      "ATPLGS-108833",
-      "AVEXAM-11540"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The isohypse 2 960 m can be expected at the constant pressure chart for the following pressure level",
-      "options": [
-        {
-          "id": "A9AVHOW53E",
-          "text": "700 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADDA60H5HJ",
-          "text": "300 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANAW0W9XXP",
-          "text": "850 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7HA1R109D",
-          "text": "500 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRPLWPBC",
-    "relatedQuestions": ["QYHHRKCA"],
-    "externalIds": ["ATPLQ-503833"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the approximate value of atmospheric pressure at 5500 m AMSL in comparison to the atmospheric pressure at mean sea level?",
-      "options": [
-        {
-          "id": "AIRIATK4N8",
-          "text": "One half",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATGEWPODY8",
-          "text": "The same",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APF43IDZZR",
-          "text": "One eighth",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8PLP9BIR5",
-          "text": "One fourth",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYHHRKCA",
-    "relatedQuestions": ["QRPLWPBC"],
-    "externalIds": ["ATPLQ-501291"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the approximate value of atmospheric pressure at 11000 m AMSL in comparison to the atmospheric pressure at mean sea level?",
-      "options": [
-        {
-          "id": "AG1YYHRBZ9",
-          "text": "One fourth",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYCJ2JSGKE",
-          "text": "One half",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXEV0W7012",
-          "text": "One eighth",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGNE9PRI36",
-          "text": "The same",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKMVYKNZ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-624965",
-      "ATPLQ-502754",
-      "ATPLQ-504258",
-      "ATPLQ-505011",
-      "ATPLQ-505700",
-      "BGS-500166"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft maintains a constant indicated altitude of 7 500 ft from A (270 ft AMSL - QNH 1021 hPa) to B (1 650 ft AMSL - QNH 983 hPa).Assuming that the altimeter sub-scale setting remains unchanged at 1021 hPa, \nthe height of the aircraft above the surface at B are:",
-      "options": [
-        {
-          "id": "AW7E6GF91V",
-          "text": "4 824 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AODD0MOCU9",
-          "text": "6 474 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJY1KSK003",
-          "text": "6 204 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1D2K1F4FC",
-          "text": "6 876 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOQVLRRW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502948", "AVEXAM-78767"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "After landing at an aerodrome (QNH 993 hPa) it is noticed that the altimeter is still set to **1013,2** hPa and that it reads 1 200 feet. What is the elevation of the aerodrome above mean sea level?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AA5UDI53KL",
-          "text": "660 feet.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARJU3EH8AX",
-          "text": "1 740 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKVSYGJ92O",
-          "text": "1 200 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8739K3UQM",
-          "text": "2 280 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEYQRDRQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502220", "AVEXAM-42343"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aeroplane is flying at a pressure altitude of 10 000 ft, its altimeter indicates 9 500 ft. The temperature is ISA -10°C. The altimeter does not have an instrument error. What is the true altitude?",
-      "options": [
-        {
-          "id": "A35WTE5UWB",
-          "text": "9 120 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL6ES1YAJI",
-          "text": "9 462 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN5LB73Y3B",
-          "text": "9 880 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABS58WTTSD",
-          "text": "9 600 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWGKCKQP",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-90089"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are planning an IFR flight eastbound and find that the highest obstacle along the route has an elevation of 5 400 ft. The ISA deviation is -20 °C and the QNH is 990 hPa. What is the lowest usable flight level on this flight?\n<i>(1 hPa = 30 ft)</i>",
-      "options": [
-        {
-          "id": "A4IXL0RL83",
-          "text": "FL090",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR3HRK8PPL",
-          "text": "FL060",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJYN3YMFXP",
-          "text": "FL080",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9RV8BCC9M",
-          "text": "FL070",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFVQRTSC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625717"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The altimeter indicates 15 000 ft with a subscale-setting of 1013,25 mb. OAT is -21°C. The pressure altitude of the aircraft is:",
-      "options": [
-        {
-          "id": "AJDV0YBL9K",
-          "text": "15 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AF809X4ZR5",
-          "text": "14 640 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGGLUX7TAM",
-          "text": "15 360 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0ZIOZWWC7",
-          "text": "572 hPa",
+          "id": "OFYMA8QWY",
+          "text": "1080 ft",
           "correct": false,
           "why": ""
         }
@@ -396,10 +50,10 @@
     "id": "QLWPWBXD",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-108850",
       "ATPLQ-509369",
       "AVEXAM-95334",
-      "BGS-500085"
+      "BGS-500085",
+      "ATPLGS-108850"
     ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
@@ -409,302 +63,26 @@
       "question": "Which of the following combinations of pressure and temperature is correct in the ICAO standard atmosphere?",
       "options": [
         {
-          "id": "APKO05IPJG",
-          "text": "500 hPa -21.1°C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKVCXCUNUE",
+          "id": "OBG8VEBKI",
           "text": "700 hPa -8.4°C",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AI8NZ98XJC",
+          "id": "OELCC5BKN",
           "text": "300 hPa -50.5°C",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXFI3AZ0C1",
+          "id": "OTZH91SKT",
+          "text": "500 hPa -21.1°C",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXCGQ0IG6",
           "text": "200 hPa -62.3°C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJCCGEKQ",
-    "relatedQuestions": [],
-    "externalIds": [
-      "AVEXAM-50272",
-      "AVEXAM-63046",
-      "AVEXAM-66032",
-      "AVEXAM-77129"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft maintains a constant indicated altitude of 5 500 ft from A (1 050 ft AMSL - QNH 968 hPa) to B (650 ft AMSL - QNH **1016** hPa). Assuming that the altimeter subscale setting remains unchanged at 968 hPa, the height of the aircraft above the surface at B are:\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AOF573LPHD",
-          "text": "6 146 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A1Z4RB1G6Z",
-          "text": "4 854 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUY65MBBEI",
-          "text": "7 446 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9KOPDSN3D",
-          "text": "6 796 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIDMONXH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-87012"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are cleared to climb to FL060 after take-off from an airport. You level off at FL060, but you forget to reset your altimeter. Local QNH 999 hPa remains set. What is the difference between your aircraft and other traffic at FL060? I am...\n<i>(Barometric lapse rate: 30 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AQ8P5TQ9U6",
-          "text": "420 ft higher",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKMHB1CFQT",
-          "text": "459 ft higher.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOTXGDIG86",
-          "text": "530 ft higher",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A75U7EG5TH",
-          "text": "420 ft lower.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVVLYQZF",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108860", "AVEXAM-98067"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the International Standard Atmosphere the decrease in temperature with height below 11 km is",
-      "options": [
-        {
-          "id": "ANUXA8WSH5",
-          "text": "0.65 °C per 100 m.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AW10OUX4W6",
-          "text": "0.6 °C per 100 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUGOZBBOM4",
-          "text": "0.5 °C per 100 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHUYO6K7D2",
-          "text": "1 °C per 100 m.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJRHCFYX",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-62282"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are departing an aerodrome (600 ft AMSL, QNH **1012** hPa) and proceed to another airfield (195 ft AMSL) with the same QNH. After landing, which barometric setting on the altimeter makes it again indicate 600 ft?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "ANSCLBK6LK",
-          "text": "1 027 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACLV6QT5TX",
-          "text": "992 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A80T5UI334",
-          "text": "1 032 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1VF21CEYW",
-          "text": "997 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTPVHHWQ",
-    "relatedQuestions": ["QDZOLIUT"],
-    "externalIds": [
-      "ATPLGS-127952",
-      "ATPLQ-508799",
-      "ATPLQ-509427",
-      "BGS-500078"
-    ],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QFF at an airfield located 400 metres above sea level is 1016 hPa. The air temperature is 10°C lower than a standard atmosphere. What is the QNH?\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
-        {
-          "id": "AZ9UUE3I8F",
-          "text": "Less than 1016 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMMNP89O92",
-          "text": "More than 1016 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUIVSY0H8C",
-          "text": "It is not possible to give a definitive answer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR1K7F4W2F",
-          "text": "1016 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDZOLIUT",
-    "relatedQuestions": ["QTPVHHWQ"],
-    "externalIds": ["ATPLQ-509427"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QFF at an airfield located 400 metres above sea level is 1016 hPa.The air temperature is 10°C higher than a standard atmosphere. What is the QNH?\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
-        {
-          "id": "AO95733SYY",
-          "text": "More than 1016 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD2W0VIZ8Y",
-          "text": "It is not possible to give a definitive answer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI6KQTWUSI",
-          "text": "Less than 1016 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0NMNCLOPT",
-          "text": "1016 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLEDUNJY",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-5913"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "According to ICAO Standard Atmosphere (ISA) the pressure at sea level is:",
-      "options": [
-        {
-          "id": "ARVYV3RXUL",
-          "text": "1 013.25 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ3PQMJTD7",
-          "text": "1 012.35 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEC921P2KP",
-          "text": "29.95 in Hg",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AERADRYP3U",
-          "text": "1 025.13 hPa",
           "correct": false,
           "why": ""
         }
@@ -714,7 +92,7 @@
   {
     "id": "QYVVYOFU",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502182"],
+    "externalIds": ["ATPLQ-502182", "AVEXAM-15718", "AVEXAM-88602"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
@@ -723,64 +101,26 @@
       "question": "According to ISA, at what altitude is the pressure 80% of the pressure at Ground Level?",
       "options": [
         {
-          "id": "APFTBEYR0A",
-          "text": "5 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYYAHFPQ4W",
-          "text": "28 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKNRZYSS2O",
+          "id": "O4XATAXVV",
           "text": "18 000 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AV4D1IMBRI",
+          "id": "OUWYMFVT5",
           "text": "14 000 ft",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLMKBTSQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108908", "ATPLQ-506013", "AVEXAM-5331"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In Geneva, the local QNH is 994 hPa. The elevation of Geneva is 1 411 ft. The QFE in Geneva is:\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
+        },
         {
-          "id": "AQHZ250ZNA",
-          "text": "942 hPa",
+          "id": "OXWCAVN0O",
+          "text": "5 000 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A25Z3D7TST",
-          "text": "948 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A43XAJURLL",
-          "text": "967 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYHWQXZ7PP",
-          "text": "961 hPa",
+          "id": "OZTAMJ9QL",
+          "text": "28 000 ft",
           "correct": false,
           "why": ""
         }
@@ -788,503 +128,86 @@
     }
   },
   {
-    "id": "QWNLELFZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108830", "AVEXAM-82180", "BGS-501293"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At an altitude of 25 000 ft when the temperature is -40°C and the pressure is 375 hPa, the height interval corresponding to 1 mb decrease in pressure is approximately:",
-      "options": [
-        {
-          "id": "AXMGV7VRVQ",
-          "text": "60 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2H0Y2YDVW",
-          "text": "50 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHV9L8FSQA",
-          "text": "65 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANO0NG00AZ",
-          "text": "27 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPAHGQVL",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-996204"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the ISA temperature at 10,000ft",
-      "options": [
-        {
-          "id": "AB73LMA554",
-          "text": "minus 5 degrees C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGXHNOV4PQ",
-          "text": "ISA minus 5 degrees C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVOXVQQ9N5",
-          "text": "Zero degrees C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE5VFPJJI5",
-          "text": "Zero degrees Fahrenheit",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAGOWWYD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108835", "AVEXAM-5836"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In relation to the total mass of the atmosphere, the mass of the atmosphere between mean sea level and a height of 5 500 m is:",
-      "options": [
-        {
-          "id": "A5OS5QJENT",
-          "text": "50%",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACB5CZXS9U",
-          "text": "25%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKJ86X3QGC",
-          "text": "99%",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A857IBT8JO",
-          "text": "1%",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOIGWWUA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-63470"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft has to fly over a mountain ridge. The highest obstacle, indicated in the navigation chart, has an elevation of 10 290 ft. The QNH, given by a meteorological station at an elevation of 5 200 ft, is 1 013 hPa. The OAT = ISA-20º C. Calculate the approximate indicated altitude, respectively flight level, to obtain a clearance of 2 000 ft.",
-      "options": [
-        {
-          "id": "AIRDYZN5CV",
-          "text": "FL130",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADX2QVZ5ZV",
-          "text": "FL120",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEKL7CO1SO",
-          "text": "FL110",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJK6GWBJSQ",
-          "text": "FL150",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEZCQUDI",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-501368"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The minimum safe altitude for flight above a mountain is 8000ft. The local QNH is 990 hPa and the reported air temperature at Flight Level 100 is -24C. What is the minimum safe IFR flight level to achieve safe clearance from the mountain? ",
-      "options": [
-        {
-          "id": "A44L0YVAXJ",
-          "text": "FL 100",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYULL0QSKM",
-          "text": "FL 80 ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIKPOK3OAM",
-          "text": "FL 90",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9XF5YVN1W",
-          "text": "FL 120",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLKVLSHJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-995868"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is flying in an air mass whose temperature is colder than ISA at a constant indicated altitude. If the aircraft flies into an air mass which is warmer than ISA, which of the following statements applies:",
-      "options": [
-        {
-          "id": "AJZW3H2B78",
-          "text": "The aircraft's true altitude is likely to be higher than indicated on the altimeter",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGI7DPMF1B",
-          "text": "The aircraft's true altitude cannot be assessed",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9E5NK0THO",
-          "text": "The aircraft's true altitude will be the same as the indicated altitude if the correct QNH is set",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7QXUCB4PV",
-          "text": "The aircraft's true altitude is likely to be lower than indicated on the altimeter",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGZJUSGN",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500096"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is, approximately, the temperature at 20000 ft in the ICAO Standard Atmosphere?",
-      "options": [
-        {
-          "id": "AVHM7L0TC0",
-          "text": "-25°C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2IH9LPPIH",
-          "text": "-30°C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABP5YIIVL6",
-          "text": "-15°C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMADB10QI6",
-          "text": "-20°C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIOMLCNA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-509996"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft has to fly over a mountain ridge. The highest obstacle, indicated in the navigation chart, has an elevation of 10 290 ft. The QNH, given by a meteorological station at an elevation of 5 100 ft, is 1013 hPa. The average temperature deviation from ISA is -20ºC. \n What is the minimum safe flight level that should be selected to give a terrain separation of at least 2 000 feet?",
-      "options": [
-        {
-          "id": "AFQAXCHVDN",
-          "text": "FL130",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT59759B2Q",
-          "text": "FL110",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYMAW25238",
-          "text": "FL120",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6F37HBING",
-          "text": "FL160",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOEAHJNI",
+    "id": "QESUHENA",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLQ-505315",
-      "ATPLQ-508043",
-      "AVEXAM-59152",
-      "BGS-500130"
+      "ATPLQ-509997",
+      "AVEXAM-83749",
+      "ATPLGS-108887",
+      "AVEXAM-25383"
     ],
     "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is flying over the sea at FL 100, with a true altitude of 10000 feet local QNH is 1003 hPa. What assumption, if any, can be made about the air mass in which the aircraft is flying?",
-      "options": [
-        {
-          "id": "AODK87X3WO",
-          "text": "It is warmer than ISA.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJA1TPIVX8",
-          "text": "There is insufficient information to come to any conclusion.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJ4Z3TUICF",
-          "text": "It is colder than ISA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH389XT55R",
-          "text": "Its average temperature is about ISA.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLBDUYNG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-19"],
-    "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You’re at FL60, but you forget to switch to the standard pressure setting and remain instead on the local QNH of **1025** hPa. How much higher or lower are you from the other aircraft at FL60 with the standard pressure setting correctly set? \n<i>(Barometric lapse rate: 30 ft / hPa)</i>",
+      "question": "An aircraft flying at FL45 (OAT 6°C) obtains a reading of 1 860 ft on its radio altimeter (ground elevation 3 090 ft). What is the value of the QNH, to the nearest hPa, at that point?   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "AQM7VUI2Q4",
-          "text": "360 ft lower. ",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGDYYWX42W",
-          "text": "300 ft lower. ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACIKYHCEXR",
-          "text": "360 ft higher. ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANEO7R06YP",
-          "text": "300 ft higher. ",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QACRGONH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-507769", "AVEXAM-8006"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is flying at FL80. The local QNH is 1000 hPa. After the second altimeter has been adjusted to the local QNH, the reading will be approximately:\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
-        {
-          "id": "ABQUQYYFFB",
-          "text": "7 650 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A648UC15G7",
-          "text": "8 350 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQCMMHKOFH",
-          "text": "8 600 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUDBSG3DT0",
-          "text": "8 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMAHQOBV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-66775"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During descent, Transition Level given by ATC is at FL55; True altitude is 6 000 ft; temperature is on average ISA +10 ºC. Calculate the local QNH.\n<i>(Barometric lapse rate: 30 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "ANT15ESGI7",
-          "text": "1 022 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARQVW20OTV",
-          "text": "It is not possible to calculate the local QNH.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL4RPO0HRT",
-          "text": "1 029 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACDSORXRGU",
+          "id": "OOVPPLESY",
           "text": "1 013 hPa",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "OHHW4XD3D",
+          "text": "996 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM8M07OJX",
+          "text": "1 030 hPa",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1GNYRCIH",
+          "text": "1 042 hPa",
+          "correct": false,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QFDSUWKW",
-    "relatedQuestions": ["QCZSATUS"],
+    "id": "QWMCWJMM",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-625919",
-      "ATPLQ-507926",
-      "AVEXAM-78002",
-      "BGS-500088"
+      "ATPLQ-501310",
+      "AVEXAM-15718",
+      "BGS-502065",
+      "AVEXAM-88602",
+      "ATPLGS-627914"
     ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Between mean sea level and a height of 20 km, the lowest temperature in the ICAO Standard Atmosphere (ISA) is:",
+      "question": "At what altitude is the pressure 50% in ISA?",
       "options": [
         {
-          "id": "A050D99YL8",
-          "text": "-56.5°C",
+          "id": "O3MYZLSKW",
+          "text": "18,000 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A4GS29IMIM",
-          "text": "-273°C",
+          "id": "O8EYBPPG7",
+          "text": "7,000 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALQC985VPZ",
-          "text": "-100°C",
+          "id": "O5VCLDE5F",
+          "text": "24,000 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIO19ZJZFS",
-          "text": "-44.7°C",
+          "id": "OUYMCMDOR",
+          "text": "14,000 ft",
           "correct": false,
           "why": ""
         }
@@ -1292,493 +215,37 @@
     }
   },
   {
-    "id": "QCZSATUS",
-    "relatedQuestions": ["QFDSUWKW"],
-    "externalIds": ["ATPLGS-625919", "AVEXAM-78002"],
+    "id": "QEYQRDRQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-502220"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Between mean sea level and a height of 20 km, the lowest temperature in the ICAO Standard Atmosphere (ISA) is:",
+      "question": "An aeroplane is flying at a pressure altitude of 10 000 ft, its altimeter indicates 9 500 ft. The temperature is ISA -10°C. The altimeter does not have an instrument error. What is the true altitude?",
       "options": [
         {
-          "id": "AK59F1I2AM",
-          "text": "-56.5 °C",
+          "id": "OXL5D4ZGK",
+          "text": "9 462 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5WLFLMLB",
+          "text": "9 120 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVN9ILTA3I",
-          "text": "-100 °C",
+          "id": "OK8TQVX2M",
+          "text": "9 880 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A7EX5GS3ON",
-          "text": "-44.7 °C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP7VJ0W04B",
-          "text": "-273 °C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBJBFSXA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-23839"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The pressure at 11 000 m is approximately ___ of the pressure at sea level.",
-      "options": [
-        {
-          "id": "AIF5BA6MSB",
-          "text": "1/4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7921M15SJ",
-          "text": "1/2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ8GWY6RIJ",
-          "text": "the same",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADPLSG2W6V",
-          "text": "1/8",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYRCBMZL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-503314", "AVEXAM-94175"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QNH of an airport at sea level is 983 hPa and the temperature deviation from ISA is -15 °C below FL100. What is the approximate true altitude of FL100?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AICL3ZYVJA",
-          "text": "8 640 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS2WCWOQ63",
-          "text": "9 800 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5GLYVMDHE",
-          "text": "11 400 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A582PGEN9P",
-          "text": "10 200 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSBMKJHO",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39592"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Aerodrome elevation is 429 ft. QFE is **992** hPa, temperature is ISA +15°C at all altitudes. Calculate the QFF (assume 27 ft/hPa).",
-      "options": [
-        {
-          "id": "A98RNBBMTJ",
-          "text": "1007 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADVMM0M1PW",
-          "text": "1003 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALO86ZYT32",
-          "text": "1009 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOVV543HIR",
-          "text": "1012 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRGAAEAE",
-    "relatedQuestions": ["QLAQEZBY"],
-    "externalIds": ["BGS-500147"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QNH of an airport at sea level is 983 hPa and the temperature deviation from ISA is -15°C below FL 100.What is the true altitude of FL 100?",
-      "options": [
-        {
-          "id": "AZH06UXNUW",
-          "text": "8640 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APUXN4NQMZ",
-          "text": "10160 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APF3FEDP6Y",
-          "text": "11460 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5PSPKA86M",
-          "text": "9740 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLAQEZBY",
-    "relatedQuestions": ["QRGAAEAE"],
-    "externalIds": ["ATPLGS-127994"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QNH of an airport at sea level is 983 hPa and the temperature deviation from ISA is -15° C below FL 100What is the true altitude of FL 100 ?",
-      "options": [
-        {
-          "id": "AJW1192S59",
-          "text": "8640 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A062TRIAJY",
-          "text": "10160 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0TIVTFSL0",
-          "text": "9740 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5HCBMDPTQ",
-          "text": "11460 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QASFEMYP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-508741", "AVEXAM-20184", "BGS-500124"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You must make an emergency landing at sea. The QNH of a field on a nearby island with an elevation of 4 000 ft is **1025** hPa and the temperature is -20 °C. What is your pressure altimeter reading when landing if **1025** hPa is set in the subscale?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AS37UI10Y1",
-          "text": "Less than 0 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0YWH6TH17",
-          "text": "4 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASTYTM5DDR",
-          "text": "More than 0 ft, but less than 4 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A36MMPME69",
-          "text": "0 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QECJUOAE",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-46776"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is flying over the sea at FL120, with a true altitude of 12 000 feet, local QNH is **1013** hPa. What assumption, if any, can be made about the air mass in which the aircraft is flying?",
-      "options": [
-        {
-          "id": "ALEMRV3PF1",
-          "text": "Its average temperature is the same as ISA.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWBSVIC9HV",
-          "text": "It is warmer than ISA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASWPOL09T1",
-          "text": "It is colder than ISA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUHP5HF26I",
-          "text": "There is insufficient information to come to any conclusion.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBUCCPEK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-96522"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At sea level, the pressure of the atmosphere on a standard day will cause the mercury in the column to rise to:",
-      "options": [
-        {
-          "id": "AWBQGEALEC",
-          "text": "29.92 inches.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4QI47C5NA",
-          "text": "29.29 inches.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASQ811GBH9",
-          "text": "92.29 inches.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APEMIO8F73",
-          "text": "19.19 inches.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRQYIYMJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-996205"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the ISA temperature at 42,000ft?",
-      "options": [
-        {
-          "id": "A9SG3G941O",
-          "text": "-56.5 degrees C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKLILT0DOV",
-          "text": "-100 degrees C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH7VRIN85N",
-          "text": "minus 212 degrees Fahrenheit",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV78ZB28ZL",
-          "text": "ISA minus 42 degrees C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQXKLDNL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108872", "AVEXAM-65648"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the temperature at 20 000 ft in the ICAO Standard Atmosphere?",
-      "options": [
-        {
-          "id": "AY7AEDZMZK",
-          "text": "-25 °C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGHY3ACHZT",
-          "text": "-20 °C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD2TZ3EPIU",
-          "text": "-15 °C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFGMSUNQ9Q",
-          "text": "-30 °C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRWKEXUS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108786", "ATPLQ-508347", "BGS-500066"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the approximate vertical interval which is equal to a pressure change of 1 hPa at an altitude of 5500 m?",
-      "options": [
-        {
-          "id": "AB83IVMEOL",
-          "text": "15 m (50 ft).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB7F96AF12",
-          "text": "8 m (27 ft).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8DJB9MTVV",
-          "text": "64 m (210 ft).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGGCQO9JUL",
-          "text": "32 m (105 ft).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIDKFFKC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124105", "ATPLQ-506591", "AVEXAM-88709"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the troposphere the decrease of pressure per 100 m increase in height..",
-      "options": [
-        {
-          "id": "AYKH1BMUPL",
-          "text": "is smaller at higher levels than at lower levels.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP1AABPPT4",
-          "text": "is greater at higher levels than at lower levels.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A97UVV9IRW",
-          "text": "remains constant at all levels.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUTBEITHNN",
-          "text": "is in the order of 27 hPa near MSL.",
+          "id": "OKEZXMRJD",
+          "text": "9 600 ft",
           "correct": false,
           "why": ""
         }
@@ -1794,181 +261,29 @@
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An operator wants to fly a new route heading Eastbound in a mountainous area with the highest nearby obstacle at 12 500 ft. According to a historical report, the lowest temperature ever recorded in the region was ISA -25°C. The QNH is 980 hPa. What is the lowest usable flight level the operator can select with a clearance margin of 2 000 ft?",
+      "question": "An operator wants to fly a new route over a mountainous area with the highest nearby obstacle at 12 500 ft. According to a historical report, the average temperature in the region is ISA -25°C. The QNH is 980 hPa, from a station at sea level. What is the lowest usable flight level the operator can select with a clearance margin of 2 000 ft?",
       "options": [
         {
-          "id": "AEQTBQ0DIW",
+          "id": "OEU39MS7Q",
           "text": "FL170",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A8CWN6DSIN",
-          "text": "FL130",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX6XMSHV6T",
-          "text": "FL180",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVRAXSNVX5",
+          "id": "OO3MWXCTY",
           "text": "FL160",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEGEIFCE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500170"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You plan a flight over a mountain range at a true altitude of 15000 ft/AMSL. The air is on an average 15°C colder than ISA, the pressure at sea level is 1003 hPa. What approximate indication should the altimeter (setting 1013 hPa) read?\nUse 30 ft per hPa in your calculation.",
-      "options": [
-        {
-          "id": "AE4GO4XQK2",
-          "text": "16200 ft",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AIJF0X2703",
-          "text": "15690 ft",
+          "id": "ODNQF5HDG",
+          "text": "FL140",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALGE9MJO38",
-          "text": "14370 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A13UVIZ50A",
-          "text": "13830 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJGBTWIO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108886"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are planning to fly across a mountain range. The chart recommends a minimum altitude of 12 000 ft above mean sea level. The air mass you will be flying through is an average 10 ° C warmer than ISA. Your altimeter is set to 1023 hPa (QNH of a nearby airport at nearly sea level).\n What altitude will the altimeter show when you have reached the recommended minimum altitude?",
-      "options": [
-        {
-          "id": "A1H9K8KXMQ",
-          "text": "11 520 feet.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV2ZNFWK5O",
-          "text": "11 250 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFYUDNZGKV",
-          "text": "12 210 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADEAAQIM6V",
-          "text": "11 790 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCHYVXHT",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-502065"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the  ISA, at approximately what altitude is atmospheric pressure 50 % of that found at mean sea level?",
-      "options": [
-        {
-          "id": "A32XYXU4AY",
-          "text": "18000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGSX0915VU",
-          "text": "12000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADWKGAC4ZA",
-          "text": "24500 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMMN9AAYBY",
-          "text": "22000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEUUYZPR",
-    "relatedQuestions": ["QFADPNCO", "QNZJVFMZ"],
-    "externalIds": ["BGS-500079"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In relation to the total weight of the atmosphere, the weight of the atmosphere between mean sea level and a height of 5500 m is...",
-      "options": [
-        {
-          "id": "A0K1NM41R1",
-          "text": "50%.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALC6XETJUB",
-          "text": "25%.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMPHYL8V7V",
-          "text": "99%.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9DS0BO7NZ",
-          "text": "1%.",
+          "id": "OTBVC7WZ3",
+          "text": "FL150",
           "correct": false,
           "why": ""
         }
@@ -1977,8 +292,14 @@
   },
   {
     "id": "QFADPNCO",
-    "relatedQuestions": ["QEUUYZPR", "QNZJVFMZ"],
-    "externalIds": ["ATPLQ-503018"],
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-503018",
+      "ATPLGS-108835",
+      "AVEXAM-5836",
+      "BGS-500079",
+      "BGS-501821"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
@@ -1987,25 +308,25 @@
       "question": "In relation to the total weight of the atmosphere, the weight of the atmosphere between mean sea level and a height of 5500 m is..",
       "options": [
         {
-          "id": "AW9WHCPCU5",
-          "text": "50%.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKLP4PNBVG",
-          "text": "25%.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG6LJPJK9R",
+          "id": "ONXHHESHE",
           "text": "1%.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ADR7KIZO0K",
+          "id": "OAKHYS6TA",
+          "text": "25%.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIOYM4OEJ",
+          "text": "50%.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OI299DYRY",
           "text": "99%.",
           "correct": false,
           "why": ""
@@ -2014,37 +335,240 @@
     }
   },
   {
-    "id": "QNZJVFMZ",
-    "relatedQuestions": ["QEUUYZPR", "QFADPNCO"],
-    "externalIds": ["BGS-501821"],
+    "id": "QDZOLIUT",
+    "relatedQuestions": ["QTPVHHWQ"],
+    "externalIds": [
+      "ATPLQ-509427",
+      "BGS-500069",
+      "ATPLGS-127952",
+      "BGS-500075",
+      "AVEXAM-13492",
+      "AVEXAM-72338",
+      "AVEXAM-23032",
+      "BGS-500074",
+      "AVEXAM-95567",
+      "AVEXAM-68713",
+      "ATPLGS-127955",
+      "BGS-500078",
+      "BGS-500077",
+      "AVEXAM-98013",
+      "ATPLGS-127977",
+      "AVEXAM-1664",
+      "ATPLGS-108797"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The QFF at an airfield located 400 metres above sea level is 1016 hPa.The air temperature is 10°C higher than a standard atmosphere. What is the QNH?   \n_(Barometric lapse rate: 27 ft/hPa)_",
+      "options": [
+        {
+          "id": "OZEIOY9LI",
+          "text": "It is not possible to give a definitive answer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFBXWPSTW",
+          "text": "Less than 1016 hPa.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJANTI8WA",
+          "text": "More than 1016 hPa.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUQJ87CGH",
+          "text": "1016 hPa.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKMVYKNZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-504258",
+      "AVEXAM-77129",
+      "BGS-500166",
+      "AVEXAM-50272",
+      "ATPLGS-108959",
+      "BGS-500132",
+      "AVEXAM-63046",
+      "ATPLGS-625943",
+      "AVEXAM-66032",
+      "ATPLGS-624965",
+      "BGS-500167",
+      "BGS-500163"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In relation to the total weight of the atmosphere, the weight of the atmosphere between mean sea level and a height of 5500 m is..",
+      "question": "An aircraft maintains a constant indicated altitude of 5 500 ft from A (1 050 ft AMSL - QNH 968 hPa) to B (650 ft AMSL - QNH 1016 hPa).Assuming that the altimeter subscale setting remains unchanged at 968 hPa, the height of the aircraft above the surface at B are:   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "AFC0RS4EJU",
-          "text": "50%",
+          "id": "O481BLWPP",
+          "text": "6 146 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUFDDT3FOV",
-          "text": "25%",
+          "id": "OQP1KFJRW",
+          "text": "6 796 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "APH08UHOMP",
-          "text": "99%",
+          "id": "OTEGPD7W3",
+          "text": "4 854 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJG8AE01WP",
-          "text": "10%",
+          "id": "OT19G8BFX",
+          "text": "7 446 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKOA11IN6",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-505700",
+      "AVEXAM-77129",
+      "BGS-500166",
+      "AVEXAM-50272",
+      "ATPLGS-108959",
+      "BGS-500132",
+      "AVEXAM-63046",
+      "ATPLGS-625943",
+      "AVEXAM-66032",
+      "ATPLGS-624965",
+      "BGS-500167",
+      "BGS-500163"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft maintains a constant indicated altitude of 7 500 ft from A (270 ft AMSL - QNH 1021 hPa) to B (1 650 ft AMSL - QNH 983 hPa).Assuming that the altimeter sub-scale setting remains unchanged at 1021 hPa, the height of the aircraft above the surface at B are:   \n_(Barometric lapse rate: 27 ft/hPa)_",
+      "options": [
+        {
+          "id": "OMBYCRKXS",
+          "text": "6 474 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4VIULL6M",
+          "text": "6 876 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG5DGVKPD",
+          "text": "6 204 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYODWQGMX",
+          "text": "4 824 ft",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZFTOSFW",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-502076",
+      "AVEXAM-50434",
+      "BGS-500067",
+      "ATPLGS-124110",
+      "BGS-500066",
+      "ATPLGS-108786"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the approximate vertical interval which is equal to a pressure change of 1 hPa at sea level?",
+      "options": [
+        {
+          "id": "O5FM6PS23",
+          "text": "15 m (50 ft)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OM5T2BJAE",
+          "text": "32 m (105 ft)",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJAIJY6EI",
+          "text": "8 m (27 ft)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OC33LHVDL",
+          "text": "64 m (210 ft)",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QASFEMYP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-508741", "AVEXAM-20184", "BGS-500124"],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You must make an emergency landing at sea. The QNH of a field on a nearby island with an elevation of 4 000 ft is 1025 hPa and the temperature is -20°C. What is your pressure altimeter reading when landing if 1025 hPa is set in the subscale?   \n_(Barometric lapse rate: 27 ft/hPa)_",
+      "options": [
+        {
+          "id": "OJ33FA76U",
+          "text": "4 000 ft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQKCJHONB",
+          "text": "Less than 0 ft.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORQSRTA3T",
+          "text": "More than 0 ft, but less than 4 000 ft.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8X3W5BLO",
+          "text": "0 ft.",
           "correct": false,
           "why": ""
         }
@@ -2054,35 +578,35 @@
   {
     "id": "QLMSPBNQ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-627500"],
+    "externalIds": ["ATPLQ-507141", "ATPLGS-627500"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In the International Standard Atmosphere, the temperature at 20 000 ft is :",
+      "question": "What is the temperature at 20 000 ft in the ICAO Standard Atmosphere?",
       "options": [
         {
-          "id": "AEVYEJX13F",
-          "text": "- 25°C",
+          "id": "OAQCVGFTB",
+          "text": "\\-25°C",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AGPZEGATDQ",
-          "text": "- 20°C",
+          "id": "O7N4W8D7S",
+          "text": "\\-30°C",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A12S9SYIGP",
-          "text": "- 30°C",
+          "id": "OXWP0D7XB",
+          "text": "\\-15°C",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVNQFR0CE4",
-          "text": "- 15°C",
+          "id": "OMIOF50BS",
+          "text": "\\-20°C",
           "correct": false,
           "why": ""
         }
@@ -2090,303 +614,42 @@
     }
   },
   {
-    "id": "QZDNSXHL",
+    "id": "QYRCBMZL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-506875"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The destination airport has an elevation of 210 ft BELOW MSL. Below, you can take a look at the airport’s METAR:\nKDRA 271235Z 21007KT 5000 26/M03 Q1018 NOSIG\nWhat is correct?",
-      "options": [
-        {
-          "id": "A5DYPW7NIT",
-          "text": "QFF is greater than QNH.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4DHMC0DBE",
-          "text": "QFF is equal to 1011.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALW5211A19",
-          "text": "QFF is less than QNH.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWHJG6BW2W",
-          "text": "QFE is equal to 1018.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUDCBRWL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-83148"],
+    "externalIds": [
+      "ATPLQ-503314",
+      "BGS-500147",
+      "AVEXAM-94175",
+      "ATPLGS-127994"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft is in level flight at FL100 over a mountain range, which extends up to 2 400 metres AMSL. If the regional QNH is 998 hPa, what is the approximate terrain clearance?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
+      "question": "The QNH of an airport at sea level is 983 hPa and the temperature deviation from ISA is -15°C below FL 100\\. What is the true altitude of FL 100 ?   \n_(Barometric lapse rate: 30 ft/hPa)_",
       "options": [
         {
-          "id": "A4654OLPS0",
-          "text": "1 700 feet.",
+          "id": "OJVYIF4XG",
+          "text": "9740 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O0XMKSLYT",
+          "text": "11460 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUXXRARB0",
+          "text": "8640 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ANJBNEYEGR",
-          "text": "405 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPVG4IWSU",
-          "text": "2 536 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFR2YJBLRK",
-          "text": "7 821 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQHWOUET",
-    "relatedQuestions": ["QYFVVPRM"],
-    "externalIds": ["ATPLGS-108876"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A 700 hPa pressure level can vary in heightIn temperate regions which of the following average heights is applicable?",
-      "options": [
-        {
-          "id": "AKGE6HKH3C",
-          "text": "FL100",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4S2EKHEOT",
-          "text": "FL180",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF2IUG5QYP",
-          "text": "FL390",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASG5LITX6Z",
-          "text": "FL300",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYFVVPRM",
-    "relatedQuestions": ["QQHWOUET"],
-    "externalIds": ["ATPLGS-108861"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A 500 hPa pressure level can vary in heightIn temperate regions which of the following average heights is applicable?",
-      "options": [
-        {
-          "id": "AFQGUH1JRN",
-          "text": "FL180",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9Q9J0G7P0",
-          "text": "FL160",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APEGNYSRJX",
-          "text": "FL390",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVTRT1Y6ST",
-          "text": "FL100",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDLFIBWJ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108813", "AVEXAM-56406"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At an airport (0 m AMSL), a QNH of **1022** hPa is observed and the temperature is unknown:",
-      "options": [
-        {
-          "id": "AHOO82BSHN",
-          "text": "the QFF equals 1 022 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATQRREEZKL",
-          "text": "the QFF cannot be determined.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYVB7GFRDK",
-          "text": "the QFF is lower than 1 022 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYU4UICAAV",
-          "text": "the QFF is higher than 1 022 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCEHHWQD",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500094", "BGS-993605"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The temperature at 10000 ft in the ICAO Standard Atmosphere is...",
-      "options": [
-        {
-          "id": "AEKMJWSUSH",
-          "text": "-5°C.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOLJS1Y0Y0",
-          "text": "0°C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATK2RLBQSH",
-          "text": "-35°C.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8RM4UQ6GY",
-          "text": "-20°C.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPVFXOJB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39168", "BGS-500138"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are planning to fly across a mountain range. The chart recommends a minimum altitude of 12 000 ft above mean sea level. The air mass you will be flying through is an average 10 °C warmer than ISA. Your altimeter is set to **1023** hPa (QNH of a nearby airport at nearly sea level). What altitude will the altimeter show when you have reached the recommended minimum altitude?",
-      "options": [
-        {
-          "id": "ANB70Q9BHB",
-          "text": "FL105",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADRL9T67ET",
-          "text": "FL145",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ5P8C14AE",
-          "text": "FL115",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR4DW0SIF0",
-          "text": "FL125",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QESUHENA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-509997", "AVEXAM-83749"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft flying at FL45 (OAT 6 °C) obtains a reading of 1 860 ft on its radio altimeter (ground elevation 3 090 ft). What is the value of the QNH, to the nearest hPa, at that point?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AY636AO8UO",
-          "text": "1 030 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWTPF47FK3",
-          "text": "1 042 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANP6ROPHT5",
-          "text": "1 013 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARVNEMCBVN",
-          "text": "996 hPa",
+          "id": "OQOHUJL86",
+          "text": "10160 ft",
           "correct": false,
           "why": ""
         }
@@ -2396,73 +659,73 @@
   {
     "id": "QDADCWMO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-507958"],
+    "externalIds": ["ATPLQ-507958", "AVEXAM-90089", "AVEXAM-3794"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You are supposed to fly above a mountain which has a peak of 8600 feet on a westbound VFR flight. The ISA deviation in the area is - 9 degrees Celsius and the local QNH is 0995 hPa. What is the lowest usable flight level for this segment of the flight?\n**Note that you are expected to clear terrain by 2000 ft. Assume 1 hPa = 27 ft.**",
+      "question": "You are supposed to fly above a mountain which has a peak of 8600 feet on a westbound VFR flight. The ISA deviation in the area is - 9 degrees Celsius and the local QNH is 0995 hPa. What is the lowest usable flight level for this segment of the flight?\n\n_Note that you are expected to clear terrain by 2000 ft. Assume 1 hPa = 27 ft._",
       "options": [
         {
-          "id": "A3YRUEX15B",
+          "id": "OBNUOKCLD",
           "text": "FL125",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALYHJK83GP",
-          "text": "FL100",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0YYD5RGW0",
+          "id": "OUVJHT4KM",
           "text": "FL115",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AW6AO2RFBS",
+          "id": "OPMFVITKF",
           "text": "FL120",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "OXHYC37SI",
+          "text": "FL100",
+          "correct": false,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QHRGLURD",
+    "id": "QZDNSXHL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-503751", "AVEXAM-66343", "AVEXAM-84881"],
+    "externalIds": ["ATPLQ-506875", "AVEXAM-57455", "BGS-502395"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft is flying at 2 600 ft with altimeter set to **1000** hPa (QNH of an nearby airfield at 600 ft). The air mass at that airfield is on average 8ºC colder than standard. What is the true altitude over the field?",
+      "question": "The destination airport has an elevation of 210 ft BELOW MSL. Below, you can take a look at the airport’s METAR:\n\nKDRA 271235Z 21007KT 5000 26/M03 Q1018 NOSIG\n\nWhat is correct?",
       "options": [
         {
-          "id": "AMUL1ZP1VR",
-          "text": "2 540 ft",
+          "id": "ODWEMMAVH",
+          "text": "QFF is greater than QNH.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVBPKW6J53",
-          "text": "2 605 ft",
+          "id": "OJO2OZLLZ",
+          "text": "QFF is less than QNH.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANBUPSA9NS",
-          "text": "2 595 ft",
+          "id": "OCKLB50DL",
+          "text": "QFE is equal to 1018.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AM2WX9PD6F",
-          "text": "2 665 ft",
+          "id": "OBNHENJQX",
+          "text": "QFF is equal to 1011.",
           "correct": false,
           "why": ""
         }
@@ -2470,341 +733,95 @@
     }
   },
   {
-    "id": "QFTPETPS",
+    "id": "QOQVLRRW",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108868", "AVEXAM-17061"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In ISA conditions:",
-      "options": [
-        {
-          "id": "AHHA8AEZZZ",
-          "text": "the tropopause height is 36 090 ft AMSL.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOYUOVTX1N",
-          "text": "pressure decreases by 1 hPa every 30 ft above mean sea level (MSL).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE01I5CC5Y",
-          "text": "temperature decreases by 2°C per 1 km.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0O230NZE6",
-          "text": "the tropopause height is 10 km AMSL.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLYCVBEH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501446"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the approximate true altitude of the aircraft? It is flying at 3000 ft indicated altitude with an outside air temperature of ISA +20°C and with the QNH of 998 hPa set on the altimeter subscale, measured by a nearby airport at sea level.",
-      "options": [
-        {
-          "id": "AAZXQT2EU7",
-          "text": "3240 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A54P2WR6X0",
-          "text": "2800 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM84HTAXRT",
-          "text": "2760 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5QY670N8E",
-          "text": "3480 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFUNKMIA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108809"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The isohypse 11 880 m can be expected at the constant pressure chart for following pressure level",
-      "options": [
-        {
-          "id": "A5T366UVC4",
-          "text": "200 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADXZ01NLY3",
-          "text": "500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIPW7L1QLI",
-          "text": "850 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A74I1NCP13",
-          "text": "700 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNQQZFXS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-508986", "AVEXAM-98850"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The temperature at 10 000 ft in the International Standard Atmosphere is:",
-      "options": [
-        {
-          "id": "ADNYM7D8RQ",
-          "text": "-5 °C",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4Y5TG6RY5",
-          "text": "-35 °C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALA56OG5IA",
-          "text": "0 °C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANIZHTPKB6",
-          "text": "-20 °C",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QPTLXNMB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-503379", "AVEXAM-39343"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At which pressure and temperature conditions may you safely assume that the minimum usable flight level at least lies at the same height, as the minimum sector altitude?",
-      "options": [
-        {
-          "id": "AGECPWL3S0",
-          "text": "At a temperature greater than or equal to that of the ISA and where the QNH is greater than or equal to 1013.25 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZQWCFY9OL",
-          "text": "In a very cold area with a QNH of 1015 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A84IVJ6F6K",
-          "text": "At a temperature less than or equal to that of the ISA and where the QNH is less than 1013.25 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR1QE264LS",
-          "text": "In a cold low pressure region",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJWPDFLP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-507776"],
+    "externalIds": [
+      "ATPLQ-502948",
+      "ATPLGS-123500",
+      "AVEXAM-78767",
+      "BGS-500126"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the QFE at Locarno (200 metres above sea level) is 1000 hPa, what is the approximate QNH?  \n  **       Assume 1 hPa = 27 ft.**",
+      "question": "After landing at an aerodrome (QNH 993 hPa) it is noticed that the altimeter is still set to 1013.2 hPa and that it reads 1200 feet. What is the elevation of the aerodrome above mean sea level ?  \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "AUH65FUZYB",
+          "id": "OMQ7VMHXM",
+          "text": "1740 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1VHWNFZ7",
+          "text": "2280 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOU7F3X2P",
+          "text": "660 feet.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTVT8ESOR",
+          "text": "1200 feet.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIMUUXBM",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-502290",
+      "AVEXAM-33933",
+      "ATPLGS-108980",
+      "BGS-500134",
+      "AVEXAM-96580",
+      "AVEXAM-11514",
+      "AVEXAM-42686",
+      "AVEXAM-53133",
+      "BGS-500152",
+      "AVEXAM-80692",
+      "BGS-500123",
+      "ATPLGS-108979",
+      "BGS-500135",
+      "AVEXAM-68325"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "If the QNH at Locarno (200 metres above sea level) is 1025 hPa, what is the approximate QFE?   \n_Assume 27 ft/hPa._",
+      "options": [
+        {
+          "id": "O7BRC62EW",
           "text": "1025 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZUGJRDAG",
+          "text": "995 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ON9L5JAZA",
+          "text": "1000 hPa",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQ2AW11SAM",
-          "text": "1035 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1LWSOIOZX",
-          "text": "990 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY310WRC4W",
-          "text": "985 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFVPGVOR",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-54965"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are flying at FL200. Outside air temperature is -40 °C, and the pressure at sea level is **1033** hPa. What is the approximate true altitude?\n<i>(Note: assume 1 hPa = 27 ft)</i>",
-      "options": [
-        {
-          "id": "AWEXTO46VF",
-          "text": "19 310 feet.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AKI8GQ2UC0",
-          "text": "21 740 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANJKSZDSD9",
-          "text": "20 660 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7FT9Y1Z9V",
-          "text": "18 260 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOJFBYNK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-27115"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a given airfield the QFE is 980 hPa and the QNH is **1000** hPa. The approximate elevation of the airfield is:\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "A2JXE39FL7",
-          "text": "160 metres.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ4OIY7UPG",
-          "text": "600 metres.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A374JXUV3W",
-          "text": "540 metres.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7R51UI1K0",
-          "text": "120 metres.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJJFPAQL",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-507724"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are flying from Manchester to Dublin and the highest obstruction is 3 860 ft.Given the following meteorological report from a nearby aerodrome at 36 ft AMSL, determine the lowest safe flight level giving 2 000 ft terrain separation:QNH: 972 hPa \n Temperature: -2°C \n Assume 30 ft per 1 hPa",
-      "options": [
-        {
-          "id": "AIA61FFQ3A",
-          "text": "FL75",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO7EZ20RE1",
-          "text": "FL60",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SX7BI0L9",
-          "text": "FL50",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7925BFLTX",
-          "text": "FL70",
+          "id": "OAEMIUSYK",
+          "text": "1005 hPa",
           "correct": false,
           "why": ""
         }
@@ -2814,566 +831,34 @@
   {
     "id": "QPRWJPYS",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-64349", "BGS-500129"],
+    "externalIds": ["ATPLQ-505826", "BGS-500129", "AVEXAM-64349"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "You intend to overfly a mountain range. The recommended minimum flight altitude is, according to the aviation chart, 15 000 ft AMSL. The air mass that you will fly through is on average 15 °C warmer than the standard atmosphere. The altimeter is set to **1023** hPa (QNH of a nearby airport at nearly sea level). At what altimeter reading will you effectively be at the recommended minimum flight altitude?",
+      "question": "You intend to overfly a mountain range. The recommended minimum flight altitude is, according to the aviation chart, 15 000 ft AMSL. The air mass that you will fly through is on average 15°C warmer than the standard atmosphere. The altimeter is set to 1023 hPa (QNH of a nearby airport at nearly sea level). At what altimeter reading will you effectively be at the recommended minimum flight altitude?",
       "options": [
         {
-          "id": "A4NA1ZRTK0",
-          "text": "14 100 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFI39XJGYP",
-          "text": "14 370 ft",
+          "id": "OIP4MOV9A",
+          "text": "13 830 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABJAD1UP4Y",
+          "id": "O2S9DBNLB",
           "text": "15 900 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A8L3NESUQX",
-          "text": "13 830 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQWKYHPS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108934"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You plan a flight over a mountain range at a true altitude of 15 000 ft AMSLThe air is on an average 15 ° C colder than ISA, the pressure at sea level is 1003 hPa\n What approximate indication should the altimeter (setting 1013.2 hPa) read?",
-      "options": [
-        {
-          "id": "AVHWRGCF8I",
-          "text": "16 230 ft",
+          "id": "OQICBXXSO",
+          "text": "14 100 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AI7HQ89SEQ",
-          "text": "15 690 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3XV7KZVK2",
-          "text": "13 830 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1KBMDA3XV",
-          "text": "14 370 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTFNVNVT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-88602"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what altitude is the atmospheric pressure 50 % of the pressure in MSL in ISA?",
-      "options": [
-        {
-          "id": "ACBRVPGXUR",
-          "text": "18 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AY2DXGNYWA",
-          "text": "21 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS9NH5K79P",
-          "text": "32 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACCAYOH23K",
-          "text": "16 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLEKFTPR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-503063"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The atmospheric density is expected to be 50% of the density at MSL in ISA at:",
-      "options": [
-        {
-          "id": "APJS4VVEAI",
-          "text": "22 000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYH90PG7BI",
-          "text": "35 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACMUQJNOO3",
-          "text": "40 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5NIMG37QX",
-          "text": "18 000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCJILWFC",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-15889"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft has to fly over a 14 200 ft mountain chain with a minimum clearance of 2 000 ft. The temperature and pressure measured at a meteorological station situated at 6 500 ft are respectively -23 °C and 1 013 hPa. What altitude should be indicated on your altimeter?",
-      "options": [
-        {
-          "id": "ANH1483NE1",
-          "text": "17 200 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWXGCZ2XXB",
-          "text": "16 200 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJAKFXT0T0",
-          "text": "16 800 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APHLSYKEES",
-          "text": "18 200 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAFRNCEO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-502384"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft lands at an airport (airport elevation 540 ft, QNH 978 hPa) with the altimeter set to 1003 hPa. What will it indicate?\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
-        {
-          "id": "A4XH41Z2SX",
-          "text": "1215 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ALF96516Y3",
-          "text": "1080 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3K4BD1DC6",
-          "text": "Minus 135 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5YJ0GAHS8",
-          "text": "0 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQTKMDOL",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-30846"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The pressure at 5 500 m is approximately ___ of the pressure at sea level.",
-      "options": [
-        {
-          "id": "A4U8IG1R5F",
-          "text": "1/2",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACIMPOQMC6",
-          "text": "1/8",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVS87G7BTH",
-          "text": "1/4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APFBSSSBAN",
-          "text": "the same",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIMUUXBM",
-    "relatedQuestions": ["QDNAECWF", "QMYXOWZT"],
-    "externalIds": ["ATPLQ-502290"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QNH at Locarno (200 metres above sea level) is 1025 hPa, what is the approximate QFE?  \n  **Assume 27 ft/hPa.**",
-      "options": [
-        {
-          "id": "ATSURYH05J",
-          "text": "1000 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APFMV0HBAU",
-          "text": "1005 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APA17RNSOW",
-          "text": "995 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABCCFMTEO9",
-          "text": "1025 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDNAECWF",
-    "relatedQuestions": ["QIMUUXBM", "QMYXOWZT"],
-    "externalIds": ["ATPLQ-509532"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QNH at Locarno (200 metres above sea level) is 1015 hPa, what is the approximate QFE?\n\n**Assume 27 ft/hPa.**",
-      "options": [
-        {
-          "id": "AC43FR0EDW",
-          "text": "990 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATX1U6YMO4",
-          "text": "1000 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK4KNS1668",
-          "text": "995 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAHOPJGU5I",
-          "text": "1005 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMYXOWZT",
-    "relatedQuestions": ["QDNAECWF", "QIMUUXBM"],
-    "externalIds": ["ATPLQ-506019"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QFE at Locarno (200 metres above sea level) is 980 hPa, what is the approximate QNH?\n\n**Assume 27 ft/hPa.**",
-      "options": [
-        {
-          "id": "AUTPH1KZDG",
-          "text": "1005 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2D65BZK04",
-          "text": "1000 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF8159CYGN",
-          "text": "1010 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW90QH315Z",
-          "text": "1015 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBOPVGHT",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108844", "AVEXAM-8967"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Atmospheric density at 40 000 ft is approximately:",
-      "options": [
-        {
-          "id": "AIA5OUUBLK",
-          "text": "¼ of the mean sea level value.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AP6WHZAJEJ",
-          "text": "the same as the mean sea level value.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APCG4GFAYD",
-          "text": "½ of the mean sea level value.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWN9R5YDIX",
-          "text": "four times the mean sea level value.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAYIEJJV",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500168"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In Geneva, the local QNH is 994 hPa. The elevation of Geneva is 1411 ft. The QFE adjustment in Geneva is...\nUse 1hPa = 30ft (9m)- the value required by the new syllabus LOs",
-      "options": [
-        {
-          "id": "AG92DQI3NW",
-          "text": "947 hPa.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABES2VFA7Q",
-          "text": "961 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5K75IAFU2",
-          "text": "967 hPa.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYBE2N4E6E",
-          "text": "942 hPa.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXXIXOXS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-68713"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At an airfield located 200 metres above sea level, the QNH is **1006** hPa. The air temperature is 10°C below ISA. What is the QFF?",
-      "options": [
-        {
-          "id": "AHDQZYI90I",
-          "text": "More than 1006 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A89WG6S89E",
-          "text": "This cannot be answered with the given information",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWZ6HFK7DT",
-          "text": "1006 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A283ITNA5C",
-          "text": "Less than 1006 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVQFTWHH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-3794"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You are supposed to fly above a mountain that has a peak of 8 600 feet on a westbound VFR flight. The ISA deviation in the area is - 9 degrees Celsius and the local QNH is 995 hPa. What is the lowest usable flight level for this segment of the flight?",
-      "options": [
-        {
-          "id": "AIZVUJFF46",
-          "text": "FL105",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3ZNOX2J6M",
-          "text": "FL145",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANX9R6JZIN",
-          "text": "FL125",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMB9GWGCCI",
-          "text": "FL115",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTYXEHRP",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-504069", "AVEXAM-47434"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "You plan a flight over a mountain range at a true altitude of 15 000 ft AMSL. The air is on an average 15 °C colder than ISA, the pressure at sea level is **1003** hPa. What approximate indication should the altimeter (setting **1013.2** hPa) read?",
-      "options": [
-        {
-          "id": "A3U6STEY0W",
-          "text": "16 230 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH3CXLU7ZD",
-          "text": "13 830 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU6HV6E9AZ",
-          "text": "15 690 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0BFSUPUSX",
+          "id": "OWVLDC9AH",
           "text": "14 370 ft",
           "correct": false,
           "why": ""
@@ -3384,643 +869,40 @@
   {
     "id": "QZPEZJSL",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-503713", "AVEXAM-29390"],
+    "externalIds": [
+      "ATPLQ-503713",
+      "BGS-500144",
+      "AVEXAM-29390",
+      "ATPLGS-108975"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aeroplane flies at FL40. Elevation of the aerodrome is 990 ft and the QNH is 976 hPa. The tower clears the pilot to fly at 3 000 ft QNH. Which of the following statements is correct?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
+      "question": "An aircraft flies at flight level 40\\. Elevation of the aerodrome: 990 ft; QNH 976 hPa.The tower clears the pilot to fly at 3000 ft QNH. Which of the following statements is correct?   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "ACY4OAJDWO",
-          "text": "Only a small change of altitude is necessary.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A85V3N5AIF",
-          "text": "The aeroplane has to climb about 1 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX54HTXJTH",
-          "text": "The aeroplane has to descend about 2 000 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJUEJOWGN5",
-          "text": "The aeroplane has to descend about 1 000 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDRDMXAS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-77639"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Suppose that you are flying at FL40 and that you reset the altimeter to reference pressure 993 hPa. The altimeter then indicates:\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AG8GMTOY27",
-          "text": "3 460 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS5O5MHGBS",
-          "text": "4 540 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AECLCVJ8IT",
-          "text": "3 740 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARSULU72ZW",
-          "text": "4 320 ft.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJTVJSWY",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-96195"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A 300 hPa pressure level can vary in height. In temperate regions which of the following average heights is applicable?",
-      "options": [
-        {
-          "id": "AG8IXW5MR2",
-          "text": "FL300",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AINX0W6BBF",
-          "text": "FL390",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A9046MHBNL",
-          "text": "FL50",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM3NAOXEFU",
-          "text": "FL100",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZTPJCOJ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-42686"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QNH at Locarno (200 metres above sea level) is 1 025 hPa, what is the approximate QFE?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "AM4JMT5TC4",
-          "text": "1 000 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A74EDE04IF",
-          "text": "985 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU2DWDSQMK",
-          "text": "1 025 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM9S5B13OT",
-          "text": "990 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYEAJSBR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-504098"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A vertical spacing of 1000 ft is the standard required separation between two FL. Under conditions of cold air advection (ISA -15°C), what would the true vertical separation be ?\n\n**(Barometric lapse rate: 27 ft/hPa)**",
-      "options": [
-        {
-          "id": "A9E1GOE5TD",
-          "text": "Less than 1000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A207V3AFGA",
-          "text": "It remains 1000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO37Y118BV",
-          "text": "Without QNH information, it can not be determined",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACR32140IB",
-          "text": "More than 1000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUHMIUAN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-80692", "AVEXAM-96580"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QFE at an airport (elevation of 200 m AMSL) is 980 hPa, what is the approximate QNH?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "A2BF11Z6ZH",
-          "text": "1 005 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUQKTQYL32",
-          "text": "1 000 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFHHHQ0ZMT",
-          "text": "1 010 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABHT5Q51S1",
-          "text": "1 015 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOKXWCPH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-1664"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QNH of an aerodrome located 32 m below sea level is **1017** hPa. The air temperature is 10°C below ISA at all altitudes. What is the QFF?",
-      "options": [
-        {
-          "id": "AF98AT362U",
-          "text": "Lower than 1017 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYJII3HYAD",
-          "text": "This cannot be answered with the given information.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL2YIB05HE",
-          "text": "Equal to 1017 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL2SODDT2U",
-          "text": "Higher than 1017 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKZIGKBE",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-995846"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is flying at 4000 ft based on QNH 1013 hPa in an air mass that has ISA characteristics. If the aircraft flies into an air mass where the temperature colder than ISA, but QNH is unchanged, what will the aircraft's true altitude be if the altimeter continues to read 4000 ft?",
-      "options": [
-        {
-          "id": "AJE5117TCU",
-          "text": "Lower than 4000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A7QBNIGMP5",
-          "text": "FL40",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4NWX28J7F",
-          "text": "Higher than 4000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3UPCOP4OB",
-          "text": "4000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHBHAKNC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-507562", "BGS-500065"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In the troposphere the decrease in pressure per 100 m increase in height is...",
-      "options": [
-        {
-          "id": "ACNY1EQL9F",
-          "text": "larger in the lower layers than in the higher layers.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A69RTTQKZN",
-          "text": "always larger in a high pressure area than in a low pressure area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APA094FV86",
-          "text": "in the order of 27 hPa per 100 m in the friction layer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAD3O1AMSK",
-          "text": "larger in the higher layers than in the lower layers.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWQXPXVH",
-    "relatedQuestions": ["QJNYRHRN"],
-    "externalIds": ["AVEXAM-86978"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which pressure, according to ISA, corresponds to FL340?",
-      "options": [
-        {
-          "id": "A68GSPHS7I",
-          "text": "300 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6AIKXQR2S",
-          "text": "200 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF3GZ8QC90",
-          "text": "350 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV3DDA27LJ",
-          "text": "250 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJNYRHRN",
-    "relatedQuestions": ["QWQXPXVH"],
-    "externalIds": ["AVEXAM-80040"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which pressure, according to ISA, corresponds to FL300?",
-      "options": [
-        {
-          "id": "ATGPFHSNQZ",
-          "text": "300 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVYGMW3W2P",
-          "text": "250 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVFLAO896Z",
-          "text": "400 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR5HOXGGLY",
-          "text": "350 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QSQDLJTV",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-39446"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft lands at an airport (airport elevation 1 240 ft, QNH **1008** hPa). The altimeter is set to **1013** hPa. The altimeter will indicate:\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "ABK1S41U58",
-          "text": "1 375 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A2NKOI59A4",
-          "text": "1 280 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIRK6ZH3LN",
-          "text": "1 200 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKED44JGSJ",
-          "text": "1 105 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOUJVIPN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-95941"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At 18 000 ft the OAT is -35 °C. What is the density at this altitude?",
-      "options": [
-        {
-          "id": "AJ1QGGH2Q5",
-          "text": "Higher than ISA.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6TW9WVZEQ",
-          "text": "Lower than ISA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACBMQJ9DQS",
-          "text": "Equal to ISA.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5MZA4RGE8",
-          "text": "Unknown because we do not know the QNH.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWMCWJMM",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501310"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what altitude is the pressure 50% in ISA?",
-      "options": [
-        {
-          "id": "A43LW6FBJ3",
-          "text": "18,000 ft",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A727W6MR4M",
-          "text": "14,000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW1XZAYGOO",
-          "text": "7,000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ7VTANWAP",
-          "text": "24,000 ft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCJMXZDZ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-16358", "AVEXAM-8226"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The QNH of an aerodrome located 43 ft below sea level is **1011** hPa. The air temperature is 15°C above ISA at all altitudes. What is the QFF?",
-      "options": [
-        {
-          "id": "AHRNCKUKYO",
-          "text": "Higher than 1011 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A52V33YIHA",
-          "text": "This cannot be answered with the given information.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMLZ3IKBGF",
-          "text": "Lower than 1011 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEBSCAJF46",
-          "text": "Equal to 1011 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJTCBSAZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108902"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "During a flight at FL100 from Marseille (QNH 1012 hPa) to Palma de Mallorca (QNH 1015 hPa), an aircraft remains at a constant true altitude\n The reason for this is that",
-      "options": [
-        {
-          "id": "AMPKKLD33A",
-          "text": "the air at Marseille is warmer than that at Palma de Mallorca.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A74KG94POU",
-          "text": "the altimeters are erroneous, and need to be tested.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARK07QI262",
-          "text": "one of the two QNH values may be incorrect.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS8D1D8HPT",
-          "text": "the air at Marseille is colder than that at Palma de Mallorca.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBBEDLCJ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500144"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft flies at flight level 40. Elevation of the aerodrome: 990 ft; QNH 976 hPa. The tower clears the pilot to fly at 3000 ft QNH.  Which of the following statements is correct?",
-      "options": [
-        {
-          "id": "ARJY0XXO8X",
-          "text": "Only a small change of altitude is necessary.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWNT5MCKEN",
+          "id": "OIREZUQ3N",
           "text": "The aircraft has to climb about 1000 ft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3NYVUFABV",
-          "text": "The aircraft has to descend about 1000 ft.",
+          "id": "OLGHHUO35",
+          "text": "The aircraft has to descend about 2000 ft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A1YTZO8NJB",
-          "text": "The aircraft has to descend about 2000 ft.",
+          "id": "OGAOFT2V4",
+          "text": "Only a small change of altitude is necessary.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OY6D60JAW",
+          "text": "The aircraft has to descend about 1000 ft.",
           "correct": false,
           "why": ""
         }
@@ -4028,37 +910,540 @@
     }
   },
   {
-    "id": "QAIXLGDW",
+    "id": "QOEAHJNI",
     "relatedQuestions": [],
-    "externalIds": ["BGS-996208"],
+    "externalIds": [
+      "ATPLQ-505315",
+      "AVEXAM-88216",
+      "ATPLGS-124263",
+      "ATPLGS-108930",
+      "BGS-500117",
+      "AVEXAM-46776",
+      "BGS-500130",
+      "AVEXAM-43770",
+      "BGS-500149",
+      "BGS-500157",
+      "AVEXAM-88940",
+      "AVEXAM-59152",
+      "ATPLGS-124262",
+      "ATPLGS-108982"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the pressure in the ISA at sea level?",
+      "question": "An aircraft is flying over the sea at FL120, with a true altitude of 12 000 feet, local QNH is 1013 hPa. What assumption, if any, can be made about the air mass in which the aircraft is flying?",
       "options": [
         {
-          "id": "ASDM2H1AX8",
-          "text": "1013.25hPa",
+          "id": "O7SJQ7CCN",
+          "text": "It is colder than ISA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBSY7OM8I",
+          "text": "It is warmer than ISA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O0ZPWXZV9",
+          "text": "There is insufficient information to come to any conclusion.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLOZZCBQP",
+          "text": "Its average temperature is the same as ISA.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHRGLURD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-506311",
+      "ATPLGS-628025",
+      "AVEXAM-84881",
+      "AVEXAM-66343"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is flying at 2 600 ft with altimeter set to 1000 hPa (QNH of an nearby airfield at 600 ft). Considering that the air mass at that airfield is on average 8ºC colder than standard, calculate the aircraft's true altitude over the field:",
+      "options": [
+        {
+          "id": "OCS8ZDCAL",
+          "text": "2 605 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVYWDDNKO",
+          "text": "2 595 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OY9IFIQHH",
+          "text": "2 540 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUA64C44TY",
-          "text": "1013.25 inHg",
+          "id": "OCMNIQ626",
+          "text": "2 665 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJJFPAQL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-507724", "BGS-502345", "AVEXAM-42037"],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are flying from Manchester to Dublin and the highest obstruction is 3 860 ft.\n\nGiven the following meteorological report from a nearby aerodrome at 36 ft AMSL, determine the lowest safe flight level giving 2 000 ft terrain separation:\n\nQNH: 972 hPa   \n Temperature: -2°C   \n Assume 30 ft per 1 hPa",
+      "options": [
+        {
+          "id": "OHVOZ5HNH",
+          "text": "FL50",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AUGY0Q15EX",
-          "text": "1000mb",
+          "id": "OVXEWGUXS",
+          "text": "FL70",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABWRZ9KZHV",
-          "text": "1031.25inHg",
+          "id": "O1KWXCZMM",
+          "text": "FL60",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF66TCNBI",
+          "text": "FL75",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWRECGGJZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-502754",
+      "AVEXAM-77129",
+      "BGS-500166",
+      "AVEXAM-50272",
+      "ATPLGS-108959",
+      "BGS-500132",
+      "AVEXAM-63046",
+      "ATPLGS-625943",
+      "AVEXAM-66032",
+      "ATPLGS-624965",
+      "BGS-500167",
+      "BGS-500163"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft maintains a constant indicated altitude of 6 500 ft from A (600 ft AMSL - QNH 1012 hPa) to B (930 ft AMSL - QNH 977 hPa). Assuming that the altimeter subscale setting remains unchanged at 1012 hPa, the height of the aircraft above the surface at B are:   \n_(Barometric lapse rate: 27 ft/hPa)_",
+      "options": [
+        {
+          "id": "OSJRANKAM",
+          "text": "5 225 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ON3WHTADG",
+          "text": "4 625 ft",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2HCUBTLZ",
+          "text": "5 555 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJEC6R5U9",
+          "text": "6 515 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q23DYQMEN",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-508043",
+      "AVEXAM-88216",
+      "ATPLGS-124263",
+      "ATPLGS-108930",
+      "BGS-500117",
+      "AVEXAM-46776",
+      "BGS-500130",
+      "AVEXAM-43770",
+      "BGS-500149",
+      "BGS-500157",
+      "AVEXAM-88940",
+      "AVEXAM-59152",
+      "ATPLGS-124262",
+      "ATPLGS-108982"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is flying over the sea at FL 100, with a true altitude of 10000 feet local QNH is 1003 hPa. What assumption, if any, can be made about the air mass in which the aircraft is flying?",
+      "options": [
+        {
+          "id": "ONQWF171Z",
+          "text": "There is insufficient information to come to any conclusion.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHJOO25WC",
+          "text": "It is colder than ISA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMCKA9IG6",
+          "text": "It is warmer than ISA.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OODXFRL6A",
+          "text": "Its average temperature is about ISA.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLEKFTPR",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-503063", "AVEXAM-60419", "ATPLGS-627917"],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The atmospheric density is expected to be 50% of the density at MSL in ISA at:",
+      "options": [
+        {
+          "id": "OZTQ96MVV",
+          "text": "40 000 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH1SSUAAT",
+          "text": "18 000 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCPXJ917T",
+          "text": "22 000 ft",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLMRTZOU9",
+          "text": "35 000 ft",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLBDUYNG",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-506238", "AVEXAM-19"],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is flying at FL60\\. The pilots forget to switch to the standard pressure setting and remain instead on the local QNH of 1 025 hPa. Determine how much higher or lower the aircraft is comparing to the other aircraft at FL60 with the standard pressure setting correctly set.",
+      "options": [
+        {
+          "id": "O7EZPL7TU",
+          "text": "300 ft lower.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYBDH70YS",
+          "text": "360 ft higher.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPKJCRGHB",
+          "text": "300 ft higher.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHAUMXPM3",
+          "text": "360 ft lower.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRWKEXUS",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-508347",
+      "AVEXAM-50434",
+      "BGS-500067",
+      "ATPLGS-124110",
+      "BGS-500066",
+      "ATPLGS-108786"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the approximate vertical interval which is equal to a pressure change of 1 hPa at an altitude of 5500 m?",
+      "options": [
+        {
+          "id": "OANJS6SMT",
+          "text": "8 m (27 ft).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6Q8D1WZN",
+          "text": "32 m (105 ft).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O54HSFMUY",
+          "text": "64 m (210 ft).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHKURVZ2M",
+          "text": "15 m (50 ft).",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUDCBRWL",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-502161", "AVEXAM-83148"],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is in level flight at FL100 over a mountain range, which extends up to 2 400 metres AMSL. Determine the approximate terrain clearance, if the regional QNH is 998 hPa.   \n (Barometric lapse rate: 30 ft / hPa)",
+      "options": [
+        {
+          "id": "ORBCVSVG4",
+          "text": "1 700 feet.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBTDIKAKM",
+          "text": "2 536 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYUOXXIFA",
+          "text": "405 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3OJADTH9",
+          "text": "7 821 feet.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTPVHHWQ",
+    "relatedQuestions": ["QDZOLIUT"],
+    "externalIds": [
+      "ATPLQ-508799",
+      "BGS-500069",
+      "ATPLGS-127952",
+      "BGS-500075",
+      "AVEXAM-13492",
+      "AVEXAM-72338",
+      "AVEXAM-16358",
+      "AVEXAM-23032",
+      "AVEXAM-80252",
+      "BGS-500074",
+      "AVEXAM-95567",
+      "AVEXAM-68713",
+      "ATPLGS-127955",
+      "BGS-500078",
+      "BGS-500077",
+      "AVEXAM-98013",
+      "ATPLGS-127977",
+      "AVEXAM-1664",
+      "ATPLGS-108797"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The QFF at an airfield located 400 metres above sea level is 1016 hPa. The air temperature is 10°C lower than a standard atmosphere. What is the QNH?   \n_(Barometric lapse rate: 27 ft/hPa)_",
+      "options": [
+        {
+          "id": "ORPT0HOQX",
+          "text": "More than 1016 hPa.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYWCIA4N9",
+          "text": "1016 hPa.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJQBSX2UF",
+          "text": "It is not possible to give a definitive answer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI8IEG4NX",
+          "text": "Less than 1016 hPa.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPTLXNMB",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-503379",
+      "AVEXAM-39343",
+      "BGS-500154",
+      "ATPLGS-123371"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "At which pressure and temperature conditions may you safely assume that the minimum usable flight level at least lies at the same height, as the minimum sector altitude?",
+      "options": [
+        {
+          "id": "O1WDN3BJJ",
+          "text": "At a temperature less than or equal to that of the ISA and where the QNH is less than 1013.25 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7LJ38I7I",
+          "text": "In a cold low pressure region",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTAPOU9F",
+          "text": "In a very cold area with a QNH of 1015 hPa",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU30Y1WBD",
+          "text": "At a temperature greater than or equal to that of the ISA and where the QNH is greater than or equal to 1013.25 hPa",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTYXEHRP",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-504069",
+      "ATPLGS-108934",
+      "AVEXAM-47434",
+      "BGS-500170"
+    ],
+    "annexes": [],
+    "learningObjectives": ["050.01.03.02.03"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You plan a flight over a mountain range at a true altitude of 15 000 ft AMSL. The air is on an average 15 °C colder than ISA, the pressure at sea level is 1003 hPa. What approximate indication should the altimeter (setting 1013.2 hPa) read?   \n_(Barometric lapse rate: 30 ft/hPa)_",
+      "options": [
+        {
+          "id": "OLJUBRW7K",
+          "text": "16 230 ft",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHTGP7SNL",
+          "text": "15 690 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWYNXUYNA",
+          "text": "13 830 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONU16AINK",
+          "text": "14 370 ft",
           "correct": false,
           "why": ""
         }
@@ -4067,35 +1452,35 @@
   },
   {
     "id": "QUVSDGGV",
-    "relatedQuestions": ["QBCRANWT"],
-    "externalIds": ["ATPLQ-504930"],
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-504930", "AVEXAM-18575", "BGS-500142"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following conditions gives the highest value of the QNH?\n\n**(Barometric lapse rate: 27 ft/hPa)**",
+      "question": "Which of the following conditions gives the highest value of the QNH?   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "AQWPJQH6SG",
-          "text": "QFE = 995 hPa, elevation = 1600 ft (488m)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6CM3JEN8C",
+          "id": "ODZG3YUYX",
           "text": "QFE = 1003 hPa, elevation = 1200 ft (366m)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AOLPL4YGR2",
+          "id": "OFC2NQBI1",
+          "text": "QFE = 995 hPa, elevation = 1600 ft (488m)",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OLJXNHRUP",
           "text": "QFE = 1000 hPa, elevation = 1200 ft (366m)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARMGO8PA1I",
+          "id": "OQHCCUAFV",
           "text": "QFE = 995 hPa, elevation = 1200 ft (366m)",
           "correct": false,
           "why": ""
@@ -4104,75 +1489,37 @@
     }
   },
   {
-    "id": "QBCRANWT",
-    "relatedQuestions": ["QUVSDGGV"],
-    "externalIds": ["AVEXAM-18575"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following conditions gives the highest value of the QNH?\n<i>(Barometric lapse rate: 27 ft / hPa)</i>",
-      "options": [
-        {
-          "id": "A2B7ZQZ1T8",
-          "text": "QFE = 995 hPa, elevation = 1 600 ft (488 m).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AU53XM4BYZ",
-          "text": "QFE = 995 hPa, elevation = 1 200 ft (366 m).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD53T1XF3J",
-          "text": "QFE = 1 003 hPa, elevation = 1 200 ft (366 m).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A077LVCIOC",
-          "text": "QFE = 1 000 hPa, elevation = 1 200 ft (366 m).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCHASKBI",
+    "id": "QIOMLCNA",
     "relatedQuestions": [],
-    "externalIds": ["BGS-996206"],
+    "externalIds": ["ATPLQ-509996", "AVEXAM-63470"],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the actual temperature at 5000ft when expressed as 'ISA + 1 degrees C'? (use an ISA temperature lapse rate of 2 degrees per 1000ft)",
+      "question": "An aircraft has to fly over a mountain ridge. The highest obstacle, indicated in the navigation chart, has an elevation of 10 290 ft. The QNH, given by a meteorological station at an elevation of 5 100 ft, is 1013 hPa. The average temperature deviation from ISA is -20ºC.   \n What is the minimum safe flight level that should be selected to give a terrain separation of at least 2 000 feet?",
       "options": [
         {
-          "id": "ACHVX3CNPA",
-          "text": "+6 degrees C",
+          "id": "OS3AVONFW",
+          "text": "FL110",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OB2LLR1KV",
+          "text": "FL120",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFF5TC9ES",
+          "text": "FL130",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AXYMJIRJOQ",
-          "text": "+ 16 degrees Fahrenheit",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIWP6L0BVT",
-          "text": "- 6 degrees C",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARB75OQUTN",
-          "text": "+16 degrees C",
+          "id": "OPU37HBVF",
+          "text": "FL135",
           "correct": false,
           "why": ""
         }
@@ -4180,37 +1527,50 @@
     }
   },
   {
-    "id": "QDATMWZK",
+    "id": "QTLI2UYTE",
     "relatedQuestions": [],
-    "externalIds": ["BGS-501959"],
+    "externalIds": [
+      "ATPLQ-505011",
+      "AVEXAM-77129",
+      "BGS-500166",
+      "AVEXAM-50272",
+      "ATPLGS-108959",
+      "BGS-500132",
+      "AVEXAM-63046",
+      "ATPLGS-625943",
+      "AVEXAM-66032",
+      "ATPLGS-624965",
+      "BGS-500167",
+      "BGS-500163"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Air density and pressure vary with altitude. At approximately what altitude, under ISA conditions, is the density 50% of that at sea level?",
+      "question": "An aircraft maintains a constant indicated altitude of 4 500 ft from A (360 ft AMSL - QNH 986 hPa) to B (690 ft AMSL - QNH 1011 hPa). Assuming that the altimeter sub-scale setting remains unchanged at 986 hPa, the height of the aircraft above the surface at B are:   \n_(Barometric lapse rate: 27 ft/hPa)_",
       "options": [
         {
-          "id": "AZ49FOJ5K3",
-          "text": "22 000 ft",
+          "id": "OX9ZFCOCO",
+          "text": "3 135 ft",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLPAPQUY0",
+          "text": "4 485 ft",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AHO5982MQU",
-          "text": "18 000 ft",
+          "id": "OET6CJYG1",
+          "text": "4 815 ft",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZ7KTZ8R12",
-          "text": "13 000 ft",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJVWBQYACL",
-          "text": "40 000 ft",
+          "id": "OOITOQ6LL",
+          "text": "5 175 ft",
           "correct": false,
           "why": ""
         }
@@ -4218,878 +1578,97 @@
     }
   },
   {
-    "id": "QYYGFIJW",
+    "id": "QJWPDFLP",
     "relatedQuestions": [],
-    "externalIds": ["BGS-500152"],
+    "externalIds": [
+      "ATPLQ-507776",
+      "AVEXAM-33933",
+      "ATPLGS-108980",
+      "BGS-500134",
+      "AVEXAM-96580",
+      "AVEXAM-11514",
+      "AVEXAM-42686",
+      "ATPLGS-108946",
+      "AVEXAM-53133",
+      "BGS-500152",
+      "AVEXAM-80692",
+      "BGS-500123",
+      "ATPLGS-108979",
+      "BGS-500135",
+      "AVEXAM-68325"
+    ],
     "annexes": [],
     "learningObjectives": ["050.01.03.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "If the QNH at Locarno (200 metres above sea level) is 1025 hPa, what is the approximate QFE? \nUse 8m (27 ft) / hPa.",
+      "question": "If the QFE at Locarno (200 metres above sea level) is 1000 hPa, what is the approximate QNH?   \n_​​​​​​​Assume 1 hPa = 27 ft._",
       "options": [
         {
-          "id": "AOJEOJN25H",
-          "text": "1000 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQED39OIH2",
-          "text": "1025 hPa",
+          "id": "OSI4LQYRV",
+          "text": "985 hPa",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AHSM728UEB",
-          "text": "1005 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO11NT3W3T",
-          "text": "995 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTWXCJCC",
-    "relatedQuestions": ["QELCPIWL", "QKHWHIEC"],
-    "externalIds": ["BGS-500135"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QNH at Locarno (200 metres above sea level) is 1015 hPa, what is the approximate QFE?\nPressure change is 1 hPa per 8 m  (27ft)",
-      "options": [
-        {
-          "id": "AHOFPRXS7A",
-          "text": "990 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEJ2IVD7XS",
-          "text": "1000 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWE528SZNO",
-          "text": "1005 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIBHTA4RPZ",
-          "text": "995 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKHWHIEC",
-    "relatedQuestions": ["QELCPIWL", "QTWXCJCC"],
-    "externalIds": ["BGS-500123"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QFE at Locarno (200 metres above sea level) is 980 hPa, what is the approximate QNH?\nPressure change is 1 hPa per 8 m  (27ft)",
-      "options": [
-        {
-          "id": "A0D4TFKXTC",
-          "text": "1005 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHXVI95M86",
-          "text": "1010 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQLQ7NFPN5",
-          "text": "1015 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGEHU8U5PL",
-          "text": "1000 hPa",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QELCPIWL",
-    "relatedQuestions": ["QKHWHIEC", "QTWXCJCC"],
-    "externalIds": ["BGS-500134"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "If the QFE at Locarno (200 metres above sea level) is 1000 hPa, what is the approximate QNH?\nPressure change is 1 hPa per 8 m  (27ft)",
-      "options": [
-        {
-          "id": "A1N85G5JT9",
-          "text": "1025 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AE46SW0XY8",
-          "text": "990 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKS7GFOHLT",
+          "id": "OE4FHGLQW",
           "text": "1035 hPa",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEAI0TX3D8",
-          "text": "985 hPa",
+          "id": "OGPVASCD9",
+          "text": "990 hPa",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQIKNRIQ",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-22448"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What happens if you increase your altimeter setting by 20 hPa?\n<i>(Barometric lapse rate: 30 ft / hPa)</i>",
-      "options": [
+        },
         {
-          "id": "AARAIYYA3L",
-          "text": "Your altimeter reading increases by 600 ft.",
+          "id": "OKSYNJDN0",
+          "text": "1025 hPa",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AQ794797LM",
-          "text": "Your altimeter reading decreases by 600 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI9K5LNZJ4",
-          "text": "Your altimeter reading decreases by more than 600 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6DVLVMNU4",
-          "text": "Your altimeter reading increases by more than 600 ft.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QRMJXIVU",
-    "relatedQuestions": ["QNKJACPV"],
-    "externalIds": ["AVEXAM-95416"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct regarding the variation of wind with height?",
-      "options": [
-        {
-          "id": "AS9CZIPJ3Y",
-          "text": "The wind normally veers during climb out through the first 2000-3 000 ft in the northern hemisphere.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYYQXFGM0P",
-          "text": "The wind normally backs during climb out through the first 2000-3 000 ft in the northern hemisphere.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AT6NWUVFSO",
-          "text": "The wind strength normally increases by a factor of 2 per 500 ft up to the 700 hPa level.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADPHKSZVUF",
-          "text": "The wind strength normally increases by a factor of 2 per 1 000 ft up to the 850 hPa level.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNKJACPV",
-    "relatedQuestions": ["QRMJXIVU"],
-    "externalIds": ["ATPLGS-123690", "ATPLQ-509670"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following statements is correct regarding the variation of wind with height?",
-      "options": [
-        {
-          "id": "AHJYRP6BS1",
-          "text": "The wind normally veers during climb out through the first 2000-3000 feet in the northern hemisphere.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AR741VA0M7",
-          "text": "The wind normally backs during climb out through the first 2000-3000 feet in the northern hemisphere.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANHXGP6EEZ",
-          "text": "The wind strength normally increases by a factor of 2 per 500 feet up to the 700 hPa level.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A39BBUAS5U",
-          "text": "The wind strength normally increases by a factor of 2 per 1000 feet up to the 850 hPa level.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRFSVZQU",
+    "id": "QMGL3AYMC",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-109264",
-      "ATPLQ-508810",
-      "AVEXAM-82517",
-      "BGS-500395"
+      "ATPLQ-506798",
+      "BGS-500129",
+      "BGS-500138",
+      "AVEXAM-39168",
+      "ATPLGS-108886"
     ],
     "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The height of the lifting condensation level is determined by",
-      "options": [
-        {
-          "id": "AM2KBLJHKH",
-          "text": "temperature and dew point at the surface.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIM070RQ8R",
-          "text": "wet adiabatic lapse rate and dew point at the surface.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1AJB71H0X",
-          "text": "temperature at surface and air pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY3C8YJMKO",
-          "text": "wind and dew point at the surface.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAHLEUMQ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500682"],
-    "annexes": ["288a629c6d434d46bf724d81897fd2a3"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nWhat change in pressure will occur at point A during the next hour?",
-      "options": [
-        {
-          "id": "AMMV82CGJ2",
-          "text": "A rise in pressure",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A08E5L25D2",
-          "text": "Approximately constant pressure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXMGUWVW6D",
-          "text": "Irregular fluctuations",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACK5WXDR7P",
-          "text": "A drop in pressure",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QURMCGCM",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-500685"],
-    "annexes": ["2f1942193e70ac5fe13c8caefa616691"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to Annex) What change in pressure, will occur at point F, during the next hour?",
-      "options": [
-        {
-          "id": "AAEX1FW7IW",
-          "text": "A drop in pressure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AOKTKXPFHQ",
-          "text": "Constant pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2EORXVPGE",
-          "text": "Irregular fluctuations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZ4HCRYM9H",
-          "text": "A rise in pressure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVUYDLVA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-124036", "BGS-500684"],
-    "annexes": ["2f1942193e70ac5fe13c8caefa616691"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "(Refer to image) \nWhat change in pressure, will occur at point B, during the next hour?",
-      "options": [
-        {
-          "id": "AYA3MP2FF3",
-          "text": "Approximately constant pressure",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA8BABNFU7",
-          "text": "A drop in pressure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATJMHG8SXS",
-          "text": "A rise in pressure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATPNG7I7RZ",
-          "text": "Irregular fluctuations",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLUMLJDH",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-88672"],
-    "annexes": ["2a45338e10eb2d0b5205ed6c481edb80"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-25.\nWhat happens to the pressure at position A on the chart as the front approaches?",
-      "options": [
-        {
-          "id": "A6UA8CVR1K",
-          "text": "It will decrease.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "APN6SII3OK",
-          "text": "Remain unchanged.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFQOQ4OCC5",
-          "text": "Fluctuate up and down by about 50 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3QC21WEZO",
-          "text": "It will increase.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QJKFXSIS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108891"],
-    "annexes": [],
     "learningObjectives": ["050.01.03.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "While maintaining FL135 the true altitude of your aircraft is 13 500 ft.\n The local QNH is 1019 hPa. With regard to the temperature of the air mass around you it is possible to say that the conditions are, on average",
+      "question": "You are planning to fly across a mountain range. The chart recommends a minimum altitude of 12 000 ft above mean sea level. The air mass you will be flying through is an average 10°C warmer than ISA. Your altimeter is set to 1023 hPa (QNH of a nearby airport at nearly sea level). What altitude will the altimeter show when you have reached the recommended minimum altitude?",
       "options": [
         {
-          "id": "A3IJSED906",
-          "text": "colder than ISA.",
+          "id": "OEHXEXA9V",
+          "text": "11 790 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHTZHGNZG",
+          "text": "11 250 feet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIBMZVYAN",
+          "text": "11 520 feet.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A4XU5IGWFB",
-          "text": "there is insufficient information to determine the average temperature deviation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALVTG78NUV",
-          "text": "at ISA standard temperature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AST5P2JJ1V",
-          "text": "warmer than ISA.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKCSUWQS",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108831"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The rate of pressure decrease with height is",
-      "options": [
-        {
-          "id": "AR2H5LLGHL",
-          "text": "greater in cold air than in warm air.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJM68TXZBQ",
-          "text": "independent of temperature",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUK5Q9UK1T",
-          "text": "directly proportional to temperature.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8MM89XQWU",
-          "text": "greater in warm air than in cold air.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCVVYECC",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-108800"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A pressure difference of 10 hPa close to the ground corresponds to a height difference of",
-      "options": [
-        {
-          "id": "AWTF95WB0M",
-          "text": "about 300 ft.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AC6PSSEC2X",
-          "text": "about 50 m.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQHLEJ8J84",
-          "text": "about 30 ft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABW8FDI559",
-          "text": "about 150 m.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYIULXUB",
-    "relatedQuestions": ["QIRTVIZB"],
-    "externalIds": ["ATPLGS-108794"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At which average height can the 700 hPa pressure level in moderate latitude be expected?",
-      "options": [
-        {
-          "id": "AD8PNHPNVE",
-          "text": "3 km AMSL.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHPCRYWC6M",
-          "text": "9 km AMSL.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADBZ1D2XQ1",
-          "text": "12 km AMSL.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUEWDO9UE9",
-          "text": "5.5 km AMSL.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QIRTVIZB",
-    "relatedQuestions": ["QYIULXUB"],
-    "externalIds": ["ATPLGS-108787", "AVEXAM-97315"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At which average height can the 850 hPa pressure level in moderate latitudes be expected?",
-      "options": [
-        {
-          "id": "AJ58C37YAO",
-          "text": "1.5 km AMSL.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABCQY0J8ZS",
-          "text": "12 km AMSL.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP4EPJ719L",
-          "text": "3 km AMSL.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A61IB5HIVH",
-          "text": "9 km AMSL.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYWSGUDH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110465"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The pressure alt is 29 000 feet and the SAT is -55 ° C\nWhat is density altitude?",
-      "options": [
-        {
-          "id": "AU85TEXYGJ",
-          "text": "27 500 feet.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4TIZAROVG",
-          "text": "30 000 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AK49929BEH",
-          "text": "26 000 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE96C1X9I8",
-          "text": "31 000 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWYCUDUY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-110454"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Your pressure altitude is FL55, the QNH is 998, and the OAT is +30 ° C\nWhat is density altitude?",
-      "options": [
-        {
-          "id": "AK36LR2M8M",
-          "text": "8 620 feet.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AB9UY6NN09",
-          "text": "6 980 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANL1XIRPA0",
-          "text": "7 750 feet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2IFE8LMTB",
-          "text": "10 020 feet.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCSIAHKK",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-88881"],
-    "annexes": ["2a45338e10eb2d0b5205ed6c481edb80"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-25.\nWhat change in pressure is likely to occur at point \"F\" during the next hour?",
-      "options": [
-        {
-          "id": "A3HPA9NQ55",
-          "text": "A drop in pressure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD9NJHSKPB",
-          "text": "A rise in pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3OW3UZDIC",
-          "text": "Approximately constant pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARSBRLFNEC",
-          "text": "Irregular pressure fluctuations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVIYWDWU",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-501408"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  What change in pressure, will occur at point F, during the next hour?",
-      "options": [
-        {
-          "id": "ARPSCBE4HB",
-          "text": "A drop in pressure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASC3U2YX5U",
-          "text": "Irregular fluctuations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ6DGWUC57",
-          "text": "A rise in pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADRVK6II63",
-          "text": "Constant pressure.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLPENYTA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-3273"],
-    "annexes": ["2a45338e10eb2d0b5205ed6c481edb80"],
-    "learningObjectives": ["050.01.03.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure 050-25.\nWhat change in pressure is likely to occur at point \"A\" during the next approximately 1 to 2 hours?",
-      "options": [
-        {
-          "id": "A2RPZN2OF3",
-          "text": "A rise in pressure.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL8GQKASR0",
-          "text": "A drop in pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A963VH98OC",
-          "text": "Approximately constant pressure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A35HB2XZFP",
-          "text": "Irregular pressure fluctuations.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOPCOWQI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-504743"],
-    "annexes": [],
-    "learningObjectives": ["050.01.03.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "At what pressure level can the isohypse 8 760 m be expected in a constant pressure chart?",
-      "options": [
-        {
-          "id": "A4588TCTM1",
-          "text": "300 hPa",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AVLSPFCG52",
-          "text": "500 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A87N5APJ33",
-          "text": "450 hPa",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEE7JKII7N",
-          "text": "200 hPa",
+          "id": "OGDV4U0SW",
+          "text": "12 210 feet.",
           "correct": false,
           "why": ""
         }

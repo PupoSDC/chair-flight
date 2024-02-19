@@ -2,7 +2,7 @@
   {
     "id": "QMYNNZHK",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-625615", "BGS-620741"],
+    "externalIds": ["ATPLQ-625615", "BGS-620741", "AVEXAM-57900"],
     "annexes": [],
     "learningObjectives": ["062.02.04.03.01"],
     "explanation": "",
@@ -11,27 +11,27 @@
       "question": "A DME ground station can generally respond to a maximum of 100 aircraft at once. What is the reason for this limitation?",
       "options": [
         {
-          "id": "A9V96V3HH4",
-          "text": "Saturation of the DME ground station working on only one receive frequency and one transmit frequency.",
-          "correct": true,
+          "id": "OBXAOQ7NY",
+          "text": "Limitation of transmission by the echo protection circuit, which avoids replies being reflected and coming back into the DME ground station.",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "A5FFF7WTAE",
+          "id": "O2KQKCKHZ",
           "text": "Saturation of the DME receivers in the aircraft, receiving all interrogations of other aircraft in the vicinity that are on the same frequency.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMR8W6OLPK",
+          "id": "OTNNMXM3S",
           "text": "The difference in strengths of the received signals CANNOT be differentiated by the DME ground station, and consequently the weakest signals fall off.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AX5X4QWLGH",
-          "text": "Limitation of transmission by the echo protection circuit, which avoids replies being reflected and coming back into the DME ground station.",
-          "correct": false,
+          "id": "O05TGJFYN",
+          "text": "Saturation of the DME ground station working on only one receive frequency and one transmit frequency.",
+          "correct": true,
           "why": ""
         }
       ]
@@ -40,112 +40,36 @@
   {
     "id": "QXNXPIQC",
     "relatedQuestions": [],
-    "externalIds": ["BGS-621307"],
+    "externalIds": ["ATPLQ-621885", "BGS-621307"],
     "annexes": [],
     "learningObjectives": ["062.02.04.03.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "A DME ground station is used by more than 100 aircraft. Which aircraft it will respond to depends on...",
+      "question": "A particular DME ground station is very busy and can sometimes be used by more than 100 aircraft at a time. When during one of these extremely busy periods, the DME ground station may not respond to some aircraft based on...",
       "options": [
         {
-          "id": "A1MUV93II9",
-          "text": "...the transmitter power of the aircraft and its range from the DME.",
+          "id": "OBDWGJQFX",
+          "text": "the type of aircraft operation, with aircraft on IFR approaches having the highest priority.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWO3SNPTW",
+          "text": "the range of the aircraft from the DME, and how long it has been searching for a lock-on.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAGPJ2W1X",
+          "text": "how long each aircraft has been searching for a lock-on, with the one waiting longest having the highest priority.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O19CSSJ2W",
+          "text": "the transmitter power of the aircraft and its range from the DME.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJF8M8RULY",
-          "text": "...the type of aircraft operation, with IFR approaches having the highest priority.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6MWZ6LT8G",
-          "text": "...how long each aircraft has been searching for a lock-on, with the one waiting longest having the highest priority.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEVQAKDJ6Y",
-          "text": "...the range of the aircraft from the DME, and how long it has been searching for a lock-on.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXXGYKGA",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-71305"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Why can DME stations only send out distance information to approximately 100 aircraft at a time?",
-      "options": [
-        {
-          "id": "AVJL1A5U3W",
-          "text": "A DME ground station is only able to process 2 700 ppps.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJTNHXSZAK",
-          "text": "A DME ground station can only monitor 100 aircraft at a time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8D92LNG0Q",
-          "text": "Aircraft are sending out 12 ppps and a DME station is only able to process around 1 200 ppps.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFJ5JP56ST",
-          "text": "A DME ground station is only able to process 100 ppps.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFUVEZOZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621352"],
-    "annexes": [],
-    "learningObjectives": ["062.02.04.03.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Why is a conventional DME limited to providing distance information to around 100 aircaft at any given time?",
-      "options": [
-        {
-          "id": "AKNMKRLFMI",
-          "text": "The DME transmission and reception is limited to 2,700 pulses per second",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL04VOF1LM",
-          "text": "The transmission is limited by the curvature of the earth",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD3W85I8SL",
-          "text": "The transmission power is limited/reduced so that only 100 aircraft can receive it",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJI79H0C6P",
-          "text": "The DME ground station can only monitor 100 aircraft",
-          "correct": false,
           "why": ""
         }
       ]
@@ -154,7 +78,7 @@
   {
     "id": "QTTOCXXN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-621062", "ATPLQ-628613"],
+    "externalIds": ["ATPLQ-628613", "ATPLGS-621062", "AVEXAM-81120"],
     "annexes": [],
     "learningObjectives": ["062.02.04.03.02"],
     "explanation": "",
@@ -163,26 +87,26 @@
       "question": "Which statement about the interrogation by the DME-interrogator is correct?",
       "options": [
         {
-          "id": "AU05R6GQYM",
-          "text": "The interrogation does not start before pulse-pairs of the tuned DME-station are received.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AH1WVW876V",
+          "id": "OYJMK4XVO",
           "text": "The interrogation starts when the interrogator has been warmed up sufficiently, whether pulse-pairs are received or not.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ABO57RK2WB",
-          "text": "The interrogation can only take place if the Echo Protection Circuit has been locked.",
+          "id": "ORU84DZRJ",
+          "text": "The interrogation starts directly after the correct DME-frequency has been selected on the frequency-selecting-panel by the pilot.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AYHX5REIT3",
-          "text": "The interrogation starts directly after the correct DME-frequency has been selected on the frequency-selecting-panel by the pilot.",
+          "id": "ORQ0JQHNF",
+          "text": "The interrogation does not start before pulse-pairs of the tuned DME-station are received.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O4BGZOT6U",
+          "text": "The interrogation can only take place if the Echo Protection Circuit has been locked.",
           "correct": false,
           "why": ""
         }

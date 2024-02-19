@@ -1,465 +1,41 @@
 [
   {
-    "id": "QAZHXIUW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227627", "AVEXAM-79080", "BGS-221576"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What does the FMS compute during normal LNAV mode?",
-      "options": [
-        {
-          "id": "AOX586UV3D",
-          "text": "The great circle track between two or more waypoints, based on IRS, VOR, DME and GNSS information.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AFL47F2506",
-          "text": "The optimum vertical flight profile, taking into account efficient fuel consumption based on the cost index.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR1C2J37J5",
-          "text": "The altitude restrictions of the airspace above, and the minimum crossing altitude of a waypoint.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADD9WJX36S",
-          "text": "The lateral flight path with regard to the theoretical performance of the aircraft from the performance database.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLZKTYDJ",
+    "id": "QDVHNMEO",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106514",
-      "ATPLGS-120758",
-      "ATPLQ-227367",
-      "AVEXAM-74548",
-      "BGS-220483"
+      "ATPLQ-224327",
+      "BGS-222296",
+      "ATPLGS-625733",
+      "AVEXAM-31499"
     ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When engaged in the FMS lateral navigation mode (NAV or LNAV) the autopilot uses the command provided by the",
-      "options": [
-        {
-          "id": "AU6M1QNRM8",
-          "text": "FMS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A4KPTW0HA8",
-          "text": "track selector.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVZJPE3OEZ",
-          "text": "VOR or Localizer receiver.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACPSZMB5DA",
-          "text": "VOR receiver.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKOWWGDQ",
-    "relatedQuestions": ["QEBYGWET"],
-    "externalIds": ["ATPLQ-224828", "BGS-222270"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the Flight Mode Annunciator (FMA) is to:",
-      "options": [
-        {
-          "id": "APTD2MF22G",
-          "text": "check and confirm any selection made by the pilot on the autopilot control panel",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASIPMP36YJ",
-          "text": "check and confirm in which mode the FMS is operating.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2SXTOSI4H",
-          "text": "visualise the instantaneous flight path of the aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKQBMFHPWX",
-          "text": "visualise any input made by the pilot on the control commands.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEBYGWET",
-    "relatedQuestions": ["QKOWWGDQ"],
-    "externalIds": ["ATPLGS-625730", "AVEXAM-5286", "BGS-222271"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the Flight Mode Annunciator (FMA) is to:",
-      "options": [
-        {
-          "id": "A36FLO668O",
-          "text": "Check and confirm in which modes the automatic flight control systems are armed and/or engaged.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGX9IKWZ71",
-          "text": "Visually announce any EGPWS alarm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQLY0H7QLL",
-          "text": "Visually announce any ACAS alarm.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8HKG9LJLG",
-          "text": "Check and confirm the aeroplane configuration.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTQQPLEQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106510", "AVEXAM-67548"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When engaged in the FMS lateral navigation mode (LNAV) the autopilot uses:",
-      "options": [
-        {
-          "id": "A6Y5SRUI90",
-          "text": "the roll or heading command computed by the FMS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJIFQ59GHT",
-          "text": "the FMS active (TO) waypoint coordinates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEP2XARKWD",
-          "text": "the path angle command computed by the FMS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2E4P306J9",
-          "text": "the FMS computation of the aircraft position and the FMS active (TO) waypoint bearing.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QISYYIDG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-55902"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding automatic flight control, which equipment is required for the FMS to control the vertical flight path?",
-      "options": [
-        {
-          "id": "ATBV4HH83P",
-          "text": "Auto throttle",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AD2KMJ01MK",
-          "text": "Pitch controller",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUEKA7IMVJ",
-          "text": "Flight director",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AELDVW3XM9",
-          "text": "Electronic flight bag",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWXFGTXG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-24233"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The Flight Management System (FMS) is organised in such a way that the pilot can:",
-      "options": [
-        {
-          "id": "A2SYOFXR18",
-          "text": "insert additional temporary navigation data between two database updates.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A24GFQWCA9",
-          "text": "modify the data in the navigation database between two updates.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALHI9R1197",
-          "text": "read and write at any time in any database.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASDPW7Z1P6",
-          "text": "modify any of the databases every 28 days.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZPUCPMV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229673"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft with a dual FMS configuration is ready to descend, according to the profile of an instrument approach procedure. An amber message is generated on the Crew Alerting System (CAS) concerning the failure of No.1 (Flight Management Computer FMC1). Following the failure of FMC1, which of the following are correct?\n1. Both FMS units operate in independent mode (degraded operation), \n 2. FMS2 operates in single mode, while FMS1 has failed, \n 3. FMS2 computations are unreliable due to faulty data sent from FMS1, \n 4. The crew shall revert to other navigational sources, if required.",
+      "question": "In a dual FMS architecture, when an incompatibility between the two FMC\\`s occurs: NB: FMC = Flight Management Computer",
       "options": [
         {
-          "id": "AIBOT8SM32",
-          "text": "2 and 4",
+          "id": "O3XLMV6UY",
+          "text": "both FMC's are working independently; they are linked only to their own peripherals.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AIJP9U2B1E",
-          "text": "1 and 4",
+          "id": "OXWISPVO3",
+          "text": "the left FMC becomes the master FMC.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXXHDFR7HI",
-          "text": "3 and 4",
+          "id": "OMXIFDN8I",
+          "text": "one FMC is automatically switched OFF.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJI3MHKT9Z",
-          "text": "2 and 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOTKVPNV",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106616",
-      "ATPLQ-228828",
-      "AVEXAM-63140",
-      "BGS-220658"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The role of the FMS is to aid the flight crew with:\n\n1 – immediate actions in case of emergency procedure2 – navigation3 – in-flight performance optimisation4 – electronic check-lists.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "A8THEK07JT",
-          "text": "2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A30E1IJ8D6",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP3V83KQCK",
-          "text": "2, 3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH448NB8YE",
-          "text": "3, 4.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QAEJKMFH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626476", "ATPLQ-223394", "AVEXAM-97314"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS requires for operation...",
-      "options": [
-        {
-          "id": "A4JZP5IVUX",
-          "text": "Performance and navigation database",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASQW87QDK2",
-          "text": "TCAS and GPWS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABN2EJT0TL",
-          "text": "GPS and GLONASS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APE11VIKKS",
-          "text": "Autoflight systems and EFIS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUGWOFGQ",
-    "relatedQuestions": ["QNHXCHSF"],
-    "externalIds": ["ATPLGS-627232", "BGS-222169"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement concerning FMS design is correct?",
-      "options": [
-        {
-          "id": "AJVXSM9CAB",
-          "text": "The FMS computer integrates performance management with Area Navigation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0VQ6YEZ02",
-          "text": "The FMS computer is the interface between the Autoflight system and EFIS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJXH5CT6V3",
-          "text": "The FMS Control Display Unit allows engagement of Autopilot and Autothrottle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALQWKCX6AP",
-          "text": "The FMS computer combines FADEC and FBW -Fly-By-Wire- functions.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNHXCHSF",
-    "relatedQuestions": ["QUGWOFGQ"],
-    "externalIds": ["ATPLGS-627232", "ATPLQ-223002", "BGS-222169"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement concerning FMS design is correct?",
-      "options": [
-        {
-          "id": "AJSAOBOCJN",
-          "text": "The FMS computer integrates performance management with Area Navigation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A27O3PF3S2",
-          "text": "The FMS computer is the interface between the Autoflight system and EFIS.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHLKIN4UFD",
-          "text": "The FMS Control Display Unit allows engagement of Autopilot and Autothrottle.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO5JEAVTSI",
-          "text": "The FMS computer combines FADEC and FBW (Fly-By-Wire) functions.",
+          "id": "OJHIAKIJ9",
+          "text": "both FMC\\`s are automatically switched OFF.",
           "correct": false,
           "why": ""
         }
@@ -470,202 +46,40 @@
     "id": "QLPWSXNS",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106609",
-      "ATPLQ-221421",
       "ATPLQ-226406",
       "AVEXAM-75821",
-      "BGS-220649"
+      "BGS-220649",
+      "ATPLGS-106609",
+      "ATPLGS-106617"
     ],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS provides the following functions\n1) traffic advisories emission.\n2) resolution advisories emission.\n3) aid for fuel management.\n4) lateral flight plan management.The combination that regroups all of the correct statements is",
+      "question": "The FMS provides the following functions:\n\n1 – traffic advisories emission   \n2 – resolution advisories emission   \n3 – aid for fuel management   \n4 – lateral flight plan management\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "A727SEBK2Y",
-          "text": "3, 4",
+          "id": "OQHYAUCBZ",
+          "text": "3, 4.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AG6FXFBXRP",
-          "text": "1, 4",
+          "id": "OIIT4AIF2",
+          "text": "1, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AXA9XJT4VD",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQLJEN14JR",
-          "text": "1, 2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCGTURUK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106643", "AVEXAM-38904"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the FMS temperature compensation function is:",
-      "options": [
-        {
-          "id": "AVMX0ZR3XN",
-          "text": "to provide compensated altitudes for temperatures different from ISA along the vertical approach profile.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO43IN043S",
-          "text": "to provide compensated temperatures at the waypoints along the vertical approach profile.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMS9KFBO12",
-          "text": "to provide the destination airport or runway elevation.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV2Y15AY0S",
-          "text": "to provide the destination airport air temperature.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTPENZGW",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-127562",
-      "ATPLQ-222472",
-      "AVEXAM-69552",
-      "BGS-221305"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS cost index is used to adapt the:",
-      "options": [
-        {
-          "id": "AF8H3MO8VD",
-          "text": "flight path to the direct operating cost.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEDKHU3JZ7",
-          "text": "take-off thrust to the outside air temperature (OAT).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS25B1AN0Q",
-          "text": "specific fuel consumption (SFC) to the fuel density.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO3566G4RX",
-          "text": "performance index to the actual wind.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLQBYYHT",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-625732",
-      "ATPLQ-221604",
-      "ATPLQ-228340",
-      "AVEXAM-19846"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct as regards a dual Flight Management System (FMS)? Note: FMC = Flight Management Computer",
-      "options": [
-        {
-          "id": "A8CX9GT6UG",
-          "text": "In `Independent Mode` both FMCs are decoupled, and there is zero cross-checking between them.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANDUR86YG2",
-          "text": "In `Single Mode` both FMCs are decoupled",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ACEK6PQVPE",
-          "text": "In `Dual Mode` both FMCs independently process the pilots` inputs",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMQCEWOU27",
-          "text": "there is zero cross-checking between the FMCs.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXZXOLEY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221586", "AVEXAM-67498", "BGS-220659"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The role of the FMS is to:\n1. aid the crew with navigation\n2. shut down the engine in case of a malfunction\n3. automatically avoid conflicting traffic when autopilot engaged\n4. reduce crew workload\n5. aid fuel efficiency\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AGAY79RHKL",
-          "text": "1, 4, 5.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AROW9SQ3LO",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX65U0IZ3Y",
+          "id": "O5SZ5AV1D",
           "text": "1, 3, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARDGM7X9SL",
-          "text": "2, 3, 4, 5.",
+          "id": "OLUXEBFY4",
+          "text": "1, 2, 3.",
           "correct": false,
           "why": ""
         }
@@ -673,242 +87,42 @@
     }
   },
   {
-    "id": "QUBIUTYQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-223531", "AVEXAM-17652"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS lateral offset function consists in:",
-      "options": [
-        {
-          "id": "A0TRU2NNKD",
-          "text": "flying along the flight plan legs with a constant right or left offset manually entered on the FMS CDU.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AQJIOIEL3I",
-          "text": "flying a FMS selected lateral pattern used for search and rescue operations.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD7TTUDVZE",
-          "text": "displaying the lateral cross track deviation (XTK) of the aircraft according to the active flight plan leg.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIXGLWXWR3",
-          "text": "creating a new waypoint using a reference flight plan waypoint and a distance from this waypoint along the flight plan legs.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXALYHTK",
-    "relatedQuestions": ["QHVMGIML"],
-    "externalIds": ["ATPLGS-106642", "AVEXAM-73059", "BGS-221031"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS is approved to provide guidance for the following approaches:",
-      "options": [
-        {
-          "id": "AUEI6Z9SQB",
-          "text": "non-precision approaches.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS0TJ0ZZP7",
-          "text": "precision approaches limited to CAT II.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC01HZVCA5",
-          "text": "non-precision approaches and ILS CAT I precision approaches only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4DUDRILK7",
-          "text": "non-precision and precision approaches.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHVMGIML",
-    "relatedQuestions": ["QXALYHTK"],
-    "externalIds": ["ATPLGS-106642", "BGS-221031"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS is approved to provide guidance for the following approaches:",
-      "options": [
-        {
-          "id": "A45FV5KUG7",
-          "text": "Non precision approaches",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A182JZEMN1",
-          "text": "Non precision approaches and ILS CAT I precision approaches only.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APXXBJQRET",
-          "text": "Non precision and precision approaches.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE08K6G4MY",
-          "text": "Precision approaches limited to CAT II.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVHVAZXE",
+    "id": "QZPUCPMV",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-120645",
-      "ATPLQ-223441",
-      "AVEXAM-92047",
-      "BGS-220638"
+      "ATPLQ-229673",
+      "BGS-221724",
+      "ATPLGS-628406",
+      "AVEXAM-61088"
     ],
     "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
+    "learningObjectives": ["022.11.01.01.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS cross track (XTK) is:",
+      "question": "An aircraft with a dual FMS configuration is ready to descend, according to the profile of an instrument approach procedure. An amber message is generated on the Crew Alerting System (CAS) concerning the failure of No.1 (Flight Management Computer FMC1). Following the failure of FMC1, which of the following are correct?\n\n1\\. Both FMS units operate in independent mode (degraded operation),   \n 2\\. FMS2 operates in single mode, while FMS1 has failed,   \n 3\\. FMS2 computations are unreliable due to faulty data sent from FMS1,   \n 4\\. The crew shall revert to other navigational sources, if required.",
       "options": [
         {
-          "id": "AV95MT5O9L",
-          "text": "the abeam distance error, to the left or right from the desired flight plan leg to the aircraft position.",
+          "id": "OUWAIUMD4",
+          "text": "2 and 4",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5OGAIV0YI",
-          "text": "the distance error between the FMS computed position and the IRS computed position.",
+          "id": "OAL643B4I",
+          "text": "2 and 3",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ASGB7DEA2G",
-          "text": "the distance error between the FMS computed position and the GPS computed position.",
+          "id": "O6WV3N6HU",
+          "text": "1 and 4",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGBOUL3J99",
-          "text": "the angular distance error, to the left or right from the desired track (DT) to the aircraft track (TK).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZNLKGXE",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106661",
-      "ATPLQ-223913",
-      "ATPLQ-226169",
-      "AVEXAM-22263",
-      "AVEXAM-38575",
-      "AVEXAM-8422",
-      "AVEXAM-96591",
-      "BGS-220641",
-      "BGS-220642"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS FLIGHT PLAN or LEG page displays the following parameters relative to the flight plan legs or waypoints:\n1) aircraft position (Long / Lat).\n2) speed.\n3) distance.\n4) track.\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ASQJEF5UFV",
-          "text": "2, 3, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A83BDKLWKN",
-          "text": "1, 2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8NSN2JPNW",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQTDXIBA6Z",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDTJLJXH",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-127557", "ATPLQ-226986", "BGS-221271"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the core functionality of the FMS?",
-      "options": [
-        {
-          "id": "AHA15F5R60",
-          "text": "Construction of the flight plan and of the four-dimensional aircraft trajectory.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJUG4JCCC2",
-          "text": "Flight plan construction and communication.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1AYNHFD1B",
-          "text": "Construction of the flight plan and of the two-dimensional aircraft trajectory.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2PR4AHOHN",
-          "text": "Construction of the two-dimensional aircraft trajectory for navigation purposes.",
+          "id": "OQZB6NPSU",
+          "text": "3 and 4",
           "correct": false,
           "why": ""
         }
@@ -918,111 +132,35 @@
   {
     "id": "QMRFYKFN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225129", "AVEXAM-90435", "BGS-221035"],
+    "externalIds": ["ATPLQ-225129", "BGS-221035", "AVEXAM-90435"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS Overfly function consists in:",
+      "question": "What does the FMS Overfly function consist of?",
       "options": [
         {
-          "id": "A285CULA9I",
+          "id": "ODZVXQDQP",
           "text": "Manually selecting a flight plan waypoint to fly over when sequencing it instead of flying by at the transition.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ATHE8JQJQN",
-          "text": "Manually selecting a flight plan waypoint to hold over for a selected time.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL6HAN19OI",
+          "id": "OFEFZW82R",
           "text": "Manually selecting a flight plan to fly over each of the waypoints at the transitions along the route.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQYU916ZOQ",
+          "id": "OPRASLFF4",
+          "text": "Manually selecting a flight plan waypoint to hold over for a selected time.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODFAGVL0M",
           "text": "Selecting the secondary flight plan making it active to fly over the legs.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZEVYGBV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106648", "AVEXAM-44101", "BGS-221030"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS is approved for Localizer approaches:",
-      "options": [
-        {
-          "id": "AHOO0JMCZ9",
-          "text": "If the Localizer signals are used by the FMS.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AIANZI1XH5",
-          "text": "If the GPS only is used as navigation sensor.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7XT8HO3A2",
-          "text": "If the GPS and DMEs only are used as combined navigation sensors.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A14566JWJ2",
-          "text": "If the DMEs only are used as navigation sensors.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDVHNMEO",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-625733", "ATPLQ-224327", "BGS-222296"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a dual FMS architecture, when an incompatibility between the two FMC's occurs: \n(NB: FMC = Flight Management Computer)",
-      "options": [
-        {
-          "id": "AIQPVDDU86",
-          "text": "both FMC's are working independently; they are linked only to their own peripherals.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARJN9ODJH7",
-          "text": "the left FMC becomes the master FMC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5K2KQ9D01",
-          "text": "both FMC's are automatically switched OFF.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2RLAP7ETD",
-          "text": "one FMC is automatically switched OFF.",
           "correct": false,
           "why": ""
         }
@@ -1041,145 +179,64 @@
       "question": "What should be done in case of failure of one FMC unit?",
       "options": [
         {
-          "id": "A8QV19EMGZ",
-          "text": "The failed FMS data should be replaced by the data from the operative FMS.",
-          "correct": true,
+          "id": "OUJX5PNEW",
+          "text": "There’s a quick recovery procedure of the failed FMC in the QRH.",
+          "correct": false,
           "why": ""
         },
         {
-          "id": "AKZWNY7OD1",
+          "id": "O3OLAMLE0",
           "text": "The failed FMC is not usable anymore for the remainder of the flight.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AP0EO3JK20",
+          "id": "OTK6HDQHO",
           "text": "The airline MOC will give you instructions via ACARS.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AMMVQ0YVFZ",
-          "text": "There’s a quick recovery procedure of the failed FMC in the QRH.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QGYSGJKR",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-106611", "AVEXAM-39884"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The purpose of the Flight Management System (FMS), as for example installed in the B737-400, is to provide",
-      "options": [
-        {
-          "id": "A02T8JPZER",
-          "text": "continuous automatic navigation guidance and performance management.",
+          "id": "OI8GLQHRH",
+          "text": "The failed FMS data should be replaced by the data from the operative FMS.",
           "correct": true,
           "why": ""
-        },
-        {
-          "id": "AVCCW3Z6T8",
-          "text": "both manual navigation guidance and performance management.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKETABMWM0",
-          "text": "manual navigation guidance and automatic performance management.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1M0VU90SF",
-          "text": "continuous automatic navigation guidance as well as manual performance management.",
-          "correct": false,
-          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QJLEHKIX",
+    "id": "QVOVQJJN",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-224218", "AVEXAM-79162", "BGS-220625"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Concerning the FMS, the parameters used to work out the vertical flight profile are:\n\n1 – zero fuel weight2 – cost index3 – fuel quantity4 – oxygen quantity available for flight crew5 – minimum safe enroute altitude\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ATPF4SP7NJ",
-          "text": "1, 2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AUB3HQIU77",
-          "text": "1, 2, 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOCV4T6R8N",
-          "text": "3, 4, 5.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXAB5PAI05",
-          "text": "1, 2, 3, 5.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKYVUYCT",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106625",
-      "ATPLQ-229017",
-      "AVEXAM-8630",
-      "BGS-220633"
-    ],
+    "externalIds": ["ATPLQ-221604", "ATPLGS-625732", "AVEXAM-19846"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The data base of an FMC (flight management computer) is divided into two major sections:",
+      "question": "With regard to a dual Flight Management System (FMS), which statement is correct?\n\nFMC = Flight Management Computer",
       "options": [
         {
-          "id": "A66ZMTKZBF",
-          "text": "aeroplane performance and navigation.",
+          "id": "OG0IB3IQ1",
+          "text": "In \\`Single Mode\\` both FMCs are decoupled, and there is zero cross-checking between them.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSLJFOVLV",
+          "text": "In \\`Independent Mode\\` both FMCs are decoupled, and there is zero cross-checking between them.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A882WO05LM",
-          "text": "navigation and meteorology.",
+          "id": "O6CE281HA",
+          "text": "Both FMS independently process the respective pilot’s inputs in “dual mode”, and cross-checking between them does not occur.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A43PHABGHK",
-          "text": "aeroplane performance and fuel saving.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATBCNYJKAX",
-          "text": "inertial and navigation.",
+          "id": "OT15EIKWU",
+          "text": "In \\`Dual Mode\\` both FMCs independently process the pilots\\` inputs, there is zero cross-checking between the FMCs.",
           "correct": false,
           "why": ""
         }
@@ -1187,127 +244,43 @@
     }
   },
   {
-    "id": "QHHXGGLB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-18456"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Name the core functionality of the flight management system (FMS).",
-      "options": [
-        {
-          "id": "A3TUYX135O",
-          "text": "Construction of a four-dimensional flight plan and assistance with navigation",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AHC0QAX2GI",
-          "text": "Autonomous construction of a three-dimensional flight plan and assistance with communication",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A55B1ZDHZH",
-          "text": "Calculation of a lateral flight plan and compliance with entered time constraints",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2D1UCHRJ4",
-          "text": "Computation of the flight plan in two-dimensional space and automatic lateral navigation",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMALBRRI",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-228407", "BGS-222297"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Under normal conditions, in a dual FMS architecture, the master FMC sends its commands to the: (NB: FMC = Flight Management Computer)",
-      "options": [
-        {
-          "id": "AK5MG5G1EQ",
-          "text": "autopilot, flight director, and autothrottle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3G7GXPMGP",
-          "text": "the captain instruments.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A81H1SO3V1",
-          "text": "the first officer instruments.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7VXS6EQ9W",
-          "text": "the captain autopilot.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQCCMYCU",
+    "id": "QRQVKMVI",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106610",
-      "ATPLGS-106618",
-      "ATPLQ-221421",
-      "ATPLQ-225229",
-      "ATPLQ-226701",
-      "ATPLQ-228162",
-      "AVEXAM-13703",
-      "AVEXAM-26741",
-      "AVEXAM-49764",
-      "AVEXAM-57474",
-      "AVEXAM-95659",
-      "BGS-220651",
-      "BGS-221041"
+      "ATPLQ-223677",
+      "BGS-221901",
+      "AVEXAM-88853",
+      "AVEXAM-55918",
+      "ATPLGS-628397"
     ],
     "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
+    "learningObjectives": ["022.11.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS provides the following functions\n1) lateral and vertical flight path management.\n2) de icing management.\n3) aircraft position computation.\n4) terrain awareness and warning.The combination which regroups all of the correct statements is",
+      "question": "One FMS is in disagreement with another, what happens?",
       "options": [
         {
-          "id": "ARVBATEVPE",
-          "text": "1, 3",
+          "id": "O3KTAESHJ",
+          "text": "FMS will show an alert message.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ARHLSTDEEV",
-          "text": "1, 3, 4",
+          "id": "OXD4N83WC",
+          "text": "The correct FMS overrides the faulty one automatically.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ATMMSB4BEU",
-          "text": "1, 2, 3",
+          "id": "OEBJSZFRT",
+          "text": "The FMS shuts down automatically, forcing the pilots to navigate without it.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AX3VEBLZJD",
-          "text": "4",
+          "id": "OEOCHFS5E",
+          "text": "Nothing, the FMS will continue as normal with frequent cross-checks.",
           "correct": false,
           "why": ""
         }
@@ -1318,40 +291,217 @@
     "id": "QPLATNEC",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106613",
       "ATPLQ-228044",
-      "AVEXAM-82648",
-      "BGS-220620"
+      "BGS-220620",
+      "ATPLGS-106613",
+      "AVEXAM-82648"
     ],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Components of the FMS are:\n1. CDU (Control and Display Unit)\n2. Database\n3. FMC (Flight Management Computer)\n4. electronic check-lists\n5. GPWS mode controller\nThe combination that regroups all of the correct statements is:",
+      "question": "Components of the FMS are:\n\n1 – CDU (Control and Display Unit)   \n2 – Database   \n3 – FMC (Flight Management Computer)   \n4 – electronic check-lists.   \n5 – GPWS mode controller.\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AGZRTWVBVC",
-          "text": "1, 2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJCYEWMPSW",
+          "id": "OFYFZOY5X",
           "text": "1, 2, 4, 5.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGVXW0N9L2",
-          "text": "1, 3.",
+          "id": "OFUST3WAI",
+          "text": "1, 2, 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OHTR0VMIS",
+          "text": "3, 4.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANNV9WS47J",
+          "id": "O60AIQ0IH",
+          "text": "1, 3.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKYVUYCT",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229017",
+      "BGS-220633",
+      "ATPLGS-106625",
+      "AVEXAM-8630"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11.01.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The data base of a FMC (flight management computer) is divided into two major sections:",
+      "options": [
+        {
+          "id": "OXHAH2ZMQ",
+          "text": "inertial and navigation.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6SQSOJ20",
+          "text": "aeroplane performance and fuel saving.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIBY4NLKE",
+          "text": "aeroplane performance and navigation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OWSYQJHMC",
+          "text": "navigation and meteorology.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJLEHKIX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-224218", "BGS-220625", "AVEXAM-79162"],
+    "annexes": [],
+    "learningObjectives": ["022.11.01.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Concerning the FMS, the parameters used to work out the vertical flight profile are:\n\n1 – zero fuel weight   \n2 – cost index   \n3 – fuel quantity   \n4 – oxygen quantity available for flight crew   \n5 – minimum safe enroute altitude\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "OLSDZXEWJ",
+          "text": "1, 2, 3.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEYVZWRKJ",
+          "text": "1, 2, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIQP9TDXS",
+          "text": "1, 2, 3, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUQABZ1WS",
+          "text": "3, 4, 5.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLJSEPKQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-229688",
+      "BGS-221647",
+      "ATPLGS-628543",
+      "ATPLGS-628377",
+      "AVEXAM-36224"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11.01.01.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In a typical FMS architecture including two FMCs, two CDUs and one cross-talk bus when the system operates in the normal DUAL mode, one (1) \\_\\_\\_\\_\\_ is the master and the other is the slave. Both (2) \\_\\_\\_\\_\\_ exchange data together and synchronise via a cross-talk bus.",
+      "options": [
+        {
+          "id": "OVXGHF004",
+          "text": "(1) CDU; (2) FMCS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9S6QPLMY",
+          "text": "(1) FMC; (2) FMCS",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O5JWOTWJZ",
+          "text": "(1) CDU; (2) CDUS",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIUDTMAII",
+          "text": "(1) FMC; (2) CDUS",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXJFLNEQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-225229",
+      "ATPLGS-106618",
+      "ATPLGS-106617",
+      "BGS-220648",
+      "AVEXAM-49764",
+      "AVEXAM-67614",
+      "ATPLGS-106615",
+      "AVEXAM-26741",
+      "AVEXAM-95659",
+      "BGS-220650",
+      "BGS-221040",
+      "ATPLGS-106614",
+      "AVEXAM-57474"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11.01.01.05"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The FMS provides the following functions:\n\n1 – aid for fuel management   \n2 – lateral flight plan management   \n3 – check-list completion   \n4 – aircraft position computation\n\nThe combination that regroups all of the correct statements is:",
+      "options": [
+        {
+          "id": "OYZEMOL9Y",
           "text": "3, 4.",
           "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCK1S9Y2K",
+          "text": "1, 2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAFQPTSVF",
+          "text": "2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIZIULTTW",
+          "text": "1, 2, 4.",
+          "correct": true,
           "why": ""
         }
       ]
@@ -1361,164 +511,89 @@
     "id": "QWEZKTNE",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106610",
-      "ATPLQ-221421",
-      "ATPLQ-225229",
       "ATPLQ-226701",
-      "ATPLQ-228162",
+      "ATPLGS-106618",
       "AVEXAM-13703",
+      "ATPLGS-106617",
+      "AVEXAM-49764",
+      "ATPLGS-106615",
+      "BGS-220652",
       "AVEXAM-95659",
-      "BGS-220652"
+      "ATPLGS-106610",
+      "ATPLGS-106614",
+      "AVEXAM-57474"
     ],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS provides the following functions:\n1) vertical flight plan management.\n2) fuel management.\n3) lateral flight plan management.\n4) terrain awareness and warning.\nThe combination which regroups all of the correct statements is:",
+      "question": "The FMS provides the following functions:\n\n1 – vertical flight plan management   \n2 – aid for fuel management   \n3 – lateral flight plan management   \n4 – terrain awareness and warning\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "ASGSFCBDVN",
-          "text": "1, 2, 3",
+          "id": "ORBMVUIJP",
+          "text": "2, 3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZDJ5JYW2",
+          "text": "1, 3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTDJOKFW1",
+          "text": "1, 2, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O18SQ7VOC",
+          "text": "1, 2, 3.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3VJCP6TQF",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7ROFQCDOZ",
-          "text": "1, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO8V1JQQ8T",
-          "text": "1, 2, 4",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QKTDYWTT",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-21791"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which statement is correct regarding the modes of operation of a dual FMS installation?",
-      "options": [
-        {
-          "id": "AD4FHXGCJE",
-          "text": "In independent mode, the boxes do not exchange data.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AX5689QIUS",
-          "text": "In single mode, the boxes do not routinely exchange data.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AJXG5QCE71",
-          "text": "In dual mode, no exchange of data between the boxes is possible.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A6BM4U7SRW",
-          "text": "In dual mode, the data from both boxes are usually combined and averaged.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTCRXZUQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226628"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is equipped with a dual FMS configuration. The Pilot Monitoring (PM) enters flight plan data through his/her Multifunction Control and Display Unit (MCDU). Soon after, the crew realises that those data are NOT shown on the cross-side MCDU, and the PM reads an alerting message concerning the operational mode of the FMSs.\nThe FMS operate in (1) _____ mode, there is a problem with data transferring over the (2) _____ bus, and each MCDU communicates only with the (3) _____ FMS.",
-      "options": [
-        {
-          "id": "AF3DMOKQ5C",
-          "text": "(1) independent; (2) cross-talk; (3) on-side",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMSOBO5Q8G",
-          "text": "(1) independent; (2) navigation data; (3) cross-side",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC7Y75MXOX",
-          "text": "(1) dual; (2) performance data; (3) cross-side",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APLQASESYR",
-          "text": "(1) single; (2) flight plan data; (3) on-side",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHJBSXEB",
+    "id": "QTPENZGW",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-106646",
-      "ATPLGS-106656",
-      "AVEXAM-25384",
-      "AVEXAM-35226",
-      "BGS-221032",
-      "BGS-221033"
+      "ATPLQ-222472",
+      "AVEXAM-69552",
+      "BGS-221305",
+      "ATPLGS-127562"
     ],
     "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
+    "learningObjectives": ["022.11.01.01.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The FMS is approved  to provide guidance for the following approaches\n1) RNAV\n2) PAR\n3) VOR/DME, VOR\n4) MLSThe combination which regroups all of the correct statements is",
+      "question": "The FMS Cost Index is used to adapt the",
       "options": [
         {
-          "id": "AU02HN6UEB",
-          "text": "1, 3",
+          "id": "ODCCVL5G0",
+          "text": "take-off thrust to the Outside Air Temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYYRLSLED",
+          "text": "flight path to the direct operating cost.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A2DRF9Z1V3",
-          "text": "1, 3, 4",
+          "id": "OF5CHOXY0",
+          "text": "Specific Fuel Consumption to the fuel density.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AQKT26CC4W",
-          "text": "1, 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2STHWF04K",
-          "text": "2, 4",
+          "id": "OJO9IXMIH",
+          "text": "performance index to the actual wind.",
           "correct": false,
           "why": ""
         }
@@ -1526,189 +601,37 @@
     }
   },
   {
-    "id": "QPHAZWEA",
+    "id": "QVROOCMN",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-46687"],
+    "externalIds": ["ATPLQ-227171", "BGS-220654", "AVEXAM-54151"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following lists all the stages of flight when it is possible to change the route in the active flight plan on an FMS equipped aircraft?",
+      "question": "The FMS vertical navigation management is generally performed based on:",
       "options": [
         {
-          "id": "ALU0K9W0QI",
-          "text": "At any time before take-off and throughout the flight.",
+          "id": "OJXVFHMYI",
+          "text": "the GPS altitude computed by the GPS receiver.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQYMSLGYO",
+          "text": "the geometric altitude input from the Terrain Awareness and Warning System (TAWS).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFNTVIJLD",
+          "text": "the baro altitude input from the ADC.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A3NV1LLDXS",
-          "text": "Only once the aircraft is airborne.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AO1QB1IJJQ",
-          "text": "Only before the flight plan is activated.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A009P4M8VC",
-          "text": "Only before take-off.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QZRWLGFS",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-57474"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS provides the following functions:\n1) aircraft position computation.\n2) traffic alerts.\n3) lateral flight plan management.\n4) fuel management.\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AUVPGD6MST",
-          "text": "1, 3, 4",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AXMEBH7MQZ",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASLNORXU6F",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWUZTXVSES",
-          "text": "1, 2, 3",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QYGYVLSN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-91248", "BGS-221118"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which component of the B737-400 Flight Management System (FMS) is used to enter flight plan routing and performance parameters?",
-      "options": [
-        {
-          "id": "ARWON1Z1DC",
-          "text": "Multi-Function Control Display Unit.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AV2LAXWZ9F",
-          "text": "Flight Director system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A32GEZILJB",
-          "text": "Flight Management Computer.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1SYYZS5MP",
-          "text": "Inertial Reference System.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXZJPSSZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-226651", "BGS-221164"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Under normal conditions, in a dual FMS architecture: (NB: FMC = Flight Management Computer)",
-      "options": [
-        {
-          "id": "ACIEOEKDOG",
-          "text": "one FMC is working as the master and the other as a slave.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYRTEP9QID",
-          "text": "the master FMC is ON, the other is OFF and ready to start in case a failure of the master FMC.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APUQAWO1M5",
-          "text": "only one FMC feeds the two FMS`s.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXX7ZLNOZ5",
-          "text": "one FMC is used by the captain, the other by the first officer. The FMC`s are not synchronised.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUYBEMRW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229899", "AVEXAM-80939", "BGS-220627"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a FMS designed with the vertical navigation capability coupled to the autopilot, the FMS vertical command output can be:\n1. an angle of attack\n2. a flight path angle\n3. a speed target\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "AX75DL9XGR",
-          "text": "2, 3.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3VEFURKVY",
-          "text": "1, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANUSKGLFO4",
-          "text": "1, 2.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR2WHO6PHJ",
-          "text": "2.",
+          "id": "OB8J1FY6M",
+          "text": "a mix of baro and GPS altitudes.",
           "correct": false,
           "why": ""
         }
@@ -1727,102 +650,145 @@
       "question": "In a dual FMS architecture, what happens if one of the FMS fails?",
       "options": [
         {
-          "id": "AP8UOMA8ED",
-          "text": "Redundancy is lost, the operative FMS will fully take over.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS5EVOUICB",
+          "id": "OZ2TDBZ9Y",
           "text": "The operative FMS will continue sending inputs to the failed FMS in order to recover it.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AWAO3JAV76",
+          "id": "OPYXRUKNM",
           "text": "If one FMS fails, the second will be lost as well.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A654K1Q0LM",
+          "id": "OKTGQK47X",
           "text": "Pilots have to make an FMS reset as soon as possible.",
           "correct": false,
           "why": ""
+        },
+        {
+          "id": "O86LW9IBM",
+          "text": "Redundancy is lost, the operative FMS will fully take over.",
+          "correct": true,
+          "why": ""
         }
       ]
     }
   },
   {
-    "id": "QYXNJDJQ",
+    "id": "QTCRXZUQ",
     "relatedQuestions": [],
-    "externalIds": ["BGS-221332"],
+    "externalIds": ["ATPLQ-226628", "AVEXAM-65432"],
     "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
+    "learningObjectives": ["022.11.01.01.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Pick the correct statement about the operation of 2 FMCs",
+      "question": "An aircraft is equipped with a dual FMS configuration. The Pilot Monitoring (PM) enters flight plan data through his/her Multifunction Control and Display Unit (MCDU). Soon after, the crew realises that those data are NOT shown on the cross-side MCDU, and the PM reads an alerting message concerning the operational mode of the FMSs.\n\nThe FMS operate in (1) \\_\\_\\_\\_\\_ mode, there is a problem with data transferring over the (2) \\_\\_\\_\\_\\_ bus, and each MCDU communicates only with the (3) \\_\\_\\_\\_\\_ FMS.",
       "options": [
         {
-          "id": "A99ORQ2X2R",
-          "text": "in single mode one FMC outputs to both pilots' CDUs and EFIS displays",
+          "id": "OLPMAMGRP",
+          "text": "(1) dual; (2) performance data; (3) cross-side",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONOZ069G3",
+          "text": "(1) independent; (2) navigation data; (3) cross-side",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ7RUBNNP",
+          "text": "(1) single; (2) flight plan data; (3) on-side",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKOGLB3OB",
+          "text": "(1) independent; (2) cross-talk; (3) on-side",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARGMJYQCWP",
-          "text": "in dual mode no information is exchanged, the FMCs are not synchronised and each FMC outputs to only one pilot's peripherals",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ADKX6HAGTJ",
-          "text": "in independent mode information is exchanged and each FMC outputs to one pilot's CDU and EFIS displays",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVCPUM7BAX",
-          "text": "In independent mode the FMCs are synchronised but data can only be entered on the correct CDU for the FMC",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QZHBSLSY",
+    "id": "QXZXOLEY",
     "relatedQuestions": [],
-    "externalIds": ["AVEXAM-31496"],
+    "externalIds": ["ATPLQ-221586", "BGS-220659", "AVEXAM-67498"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.05"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "One of the main functions of the Flight Management System (FMS) is...",
+      "question": "The role of the FMS is to:\n\n1 – aid the crew with navigation   \n2 – shut down the engine in case of a malfunction   \n3 – automatically avoid conflicting traffic when autopilot engaged   \n4 – reduce crew workload   \n5 – aid fuel efficiency\n\nThe combination that regroups all of the correct statements is:",
       "options": [
         {
-          "id": "AOPOKQ5CLL",
-          "text": "to construct a four-dimensional aircraft trajectory.",
+          "id": "OV0YYZ7HU",
+          "text": "2, 3, 4, 5.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZOWZXJLF",
+          "text": "1, 3, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORNT1MXET",
+          "text": "1, 2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZDBAOYWS",
+          "text": "1, 4, 5.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVHVAZXE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-223441",
+      "BGS-220638",
+      "AVEXAM-92047",
+      "ATPLGS-120645"
+    ],
+    "annexes": [],
+    "learningObjectives": ["022.11.01.01.01"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The FMS cross track (XTK) is:",
+      "options": [
+        {
+          "id": "OC2RVGI69",
+          "text": "the abeam distance error, to the left or right from the desired flight plan leg to the aircraft position.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AG2KEXO3J3",
-          "text": "to construct a three-dimensional aircraft trajectory.",
+          "id": "OY0P5CDTJ",
+          "text": "the distance error between the FMS computed position and the IRS computed position.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACWY44C5GJ",
-          "text": "to make accurate fuel predictions in abnormal and emergency situations.",
+          "id": "OVMJ96ZUP",
+          "text": "the distance error between the FMS computed position and the GPS computed position.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZU1BFZMXM",
-          "text": "to operate the control surfaces of an aircraft when the autopilot is engaged.",
+          "id": "OAQRYRPXA",
+          "text": "the angular distance error, to the left or right from the desired track (DT) to the aircraft track (TK).",
           "correct": false,
           "why": ""
         }
@@ -1832,7 +798,7 @@
   {
     "id": "QSFPSKQR",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-221773", "AVEXAM-9329", "BGS-220622"],
+    "externalIds": ["ATPLQ-221773", "BGS-220622", "AVEXAM-9329"],
     "annexes": [],
     "learningObjectives": ["022.11.01.01.01"],
     "explanation": "",
@@ -1841,493 +807,27 @@
       "question": "Concerning the FMS, entering a cost index of zero:",
       "options": [
         {
-          "id": "AIW6LKZC7R",
-          "text": "results in minimum trip fuel.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZBQ9K1LFZ",
-          "text": "does not influence the FMS cruising speed.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1ES5SU9BJ",
+          "id": "OIZF4BOW5",
           "text": "does not influence fuel consumption.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGOZIMSW26",
+          "id": "OWPYOKR1Z",
           "text": "results in maximum trip fuel.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QUCTIODT",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-106654",
-      "ATPLGS-120644",
-      "AVEXAM-99378",
-      "BGS-220626"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "For a FMS designed with the lateral navigation (LNAV) capability coupled to the autopilot, the FMS lateral command output is",
-      "options": [
+        },
         {
-          "id": "AJ7N0G3K13",
-          "text": "a roll angle or a heading target.",
+          "id": "OOKSA3WKA",
+          "text": "does not influence the FMS cruising speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O47GH4S43",
+          "text": "results in minimum trip fuel.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A01V30UZC3",
-          "text": "a calibrated airspeed (CAS) and a cross track distance (XTK).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AY14LOT05Z",
-          "text": "a lateral acceleration.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5K5YKNA93",
-          "text": "a longitudinal acceleration and a roll rate.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVOVQJJN",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-625732",
-      "ATPLQ-221604",
-      "ATPLQ-228340",
-      "AVEXAM-19846"
-    ],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With regard to a dual Flight Management System (FMS), which statement is correct?\n<i>(Note: FMC = Flight Management Computer)</i>",
-      "options": [
-        {
-          "id": "AH4HMV2IH1",
-          "text": "Both FMC are decoupled in “independent mode”, and cross-checking between them does not occur.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEV0CIZ1P7",
-          "text": "Both FMC are decoupled in “single mode”, and every system provides its own independent information to the flight crew.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AD0N68BEJE",
-          "text": "Both FMC independently process the respective pilot’s inputs in “dual mode”, and cross-checking between them does not occur.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A417M4ITO6",
-          "text": "Both FMC are decoupled in “dual mode”, and cross-checking between them is very limited.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXNKOPCY",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-26741"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS provides the following functions:\n1) radio tuning.\n2) fuel management.\n3) lateral flight plan management.\n4) traffic alerts.\nThe combination which regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ADI4KPF6U3",
-          "text": "1, 2, 3",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANUO58JVI3",
-          "text": "3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5YCHJWNJ5",
-          "text": "2, 3, 4",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A46NH4RFIO",
-          "text": "1, 2, 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QWBHOLYA",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227958", "BGS-222111"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "One of the main functionalities of a Flight Management System is the...",
-      "options": [
-        {
-          "id": "AQ338C94L2",
-          "text": "construction of the four-dimensional aircraft trajectory.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A5IHUJ1VOA",
-          "text": "graphical representation of all aircraft systems and checklists.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AF9UGEDUED",
-          "text": "construction of the three-dimensional aircraft trajectory.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AW7I3AW3B7",
-          "text": "graphical representation of all aircraft systems.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QXJFLNEQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-225229", "AVEXAM-95659", "BGS-221041"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS provides the following functions:\n\n1 – aid for fuel management2 – lateral flight plan management3 – check-list completion4 – aircraft position computation\nThe combination that regroups all of the correct statements is:",
-      "options": [
-        {
-          "id": "ATRF28TW90",
-          "text": "1, 2, 4.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AO0SHZZ93Y",
-          "text": "3, 4.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYJDOVNDAA",
-          "text": "1, 2, 3.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMVZDVX32H",
-          "text": "2, 3.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRMVFOUZ",
-    "relatedQuestions": ["QRQVKMVI"],
-    "externalIds": ["ATPLQ-223677", "AVEXAM-88853"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "One FMS is in disagreement with another, what happens?",
-      "options": [
-        {
-          "id": "A3UCK64O0X",
-          "text": "The FMS displays a warning message.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AL3Y8HT9Y8",
-          "text": "The FMS shuts down automatically, forcing the pilots to navigate without it.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AA2N1Z68I7",
-          "text": "The correct FMS overrides automatically the faulty one.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARJBJZCKGI",
-          "text": "The FMS overheats.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRQVKMVI",
-    "relatedQuestions": ["QRMVFOUZ"],
-    "externalIds": ["ATPLQ-223677", "AVEXAM-88853"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "One FMS is in disagreement with another, what happens?",
-      "options": [
-        {
-          "id": "AYDS2F7AXJ",
-          "text": "FMS will show an alert message.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3VVY25JGE",
-          "text": "The FMS overheats.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGQ3U8WUXV",
-          "text": "The FMS shuts down automatically, forcing the pilots to navigate without it.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AC3OVMMTTG",
-          "text": "The correct FMS overrides the faulty one automatically.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBJGHIRZ",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-992945"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A cost index of zero on an FMS is:",
-      "options": [
-        {
-          "id": "AGV4FY0LJI",
-          "text": "Maximum range",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA05SIL9HF",
-          "text": "Minimum range",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUMB8KTNNO",
-          "text": "Minimum time",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASZ9EYBWO6",
-          "text": "Maximum time",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QLJSEPKQ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-229688", "BGS-221647"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In a typical FMS architecture including two FMCs, two CDUs and one cross-talk bus when the system operates in the normal DUAL mode, one (1) _____ is the master and the other is the slave. Both (2) _____ exchange data together and synchronise via a cross-talk bus.",
-      "options": [
-        {
-          "id": "AWU1UNYCTB",
-          "text": "(1) FMC; (2) FMCS",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASDRUJA6OG",
-          "text": "(1) CDU; (2) FMCS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AS6IJDUDPZ",
-          "text": "(1) CDU; (2) CDUS",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHO9TXFE7K",
-          "text": "(1) FMC; (2) CDUS",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDSEWSHB",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14278"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Regarding a dual FMS architecture, during normal operations:",
-      "options": [
-        {
-          "id": "ANN1S26OCO",
-          "text": "One FMC is working as a master and one is working as a slave, but information is synchronized through a common bus.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AA5X8BVHTE",
-          "text": "Dual FMS system operates under a Master-Slave arrangement.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AX1U0X40W9",
-          "text": "Captain's and First Officer's FMS operate completely separately with no synchronization.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKLNQW1KD9",
-          "text": "One FMS is switched off and used only if the other fails.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QVROOCMN",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-227171", "AVEXAM-54151", "BGS-220654"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.05"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The FMS vertical navigation management is generally performed based on:",
-      "options": [
-        {
-          "id": "ACU7OWYYTX",
-          "text": "the baro altitude input from the air data system.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A9JC2JEH04",
-          "text": "the geometric altitude input from the Terrain Awareness and Warning System (TAWS).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AH7BIODY6L",
-          "text": "the GPS altitude computed by the GPS receiver.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A50BFDH5EH",
-          "text": "a mix of baro and GPS altitudes.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKSHMHWG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-69883"],
-    "annexes": [],
-    "learningObjectives": ["022.11.01.01.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the purpose of the FMS performance database?",
-      "options": [
-        {
-          "id": "AGJE85WS2O",
-          "text": "To calculate aircraft performance taking into account aircraft drag and engine thrust.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AS0LKWO2LG",
-          "text": "To implement specific procedures for fuel calculation. ",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALT584G113",
-          "text": "To calculate the takeoff distance taking into account runway conditions and obstacles surrounding the aerodrome.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVTH5TYEDX",
-          "text": "To calculate the necessary distances of each published arrivals and departures. ",
-          "correct": false,
           "why": ""
         }
       ]

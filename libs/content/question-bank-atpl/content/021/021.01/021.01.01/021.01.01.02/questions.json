@@ -1,269 +1,36 @@
 [
   {
-    "id": "QVNGUPCE",
+    "id": "QRNVNAQC",
     "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-119986",
-      "ATPLQ-213339",
-      "AVEXAM-71929",
-      "BGS-211218"
-    ],
+    "externalIds": ["ATPLQ-216540", "BGS-211217", "AVEXAM-41847"],
     "annexes": [],
     "learningObjectives": ["021.01.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Name the term which is described by the following definition:\n<i>The duplication or triplication or more of critical components or functions of a system with the intention of increasing the reliability such system.</i>",
+      "question": "Redundancy in systems is",
       "options": [
         {
-          "id": "AYEN19PM7I",
-          "text": "Redundancy",
+          "id": "O7ONI60JO",
+          "text": "two systems working together in tandem to ensure accuracy.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZNE1L19C",
+          "text": "connecting components in series to improve performance.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ0XS0DYY",
+          "text": "the duplication, triplication, or more of critical systems.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AN99LZWO9C",
-          "text": "Damage-tolerant structure",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI7LQVR9F5",
-          "text": "Multiple load path",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV7O9D92CK",
-          "text": "Safe-life design",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKKSFINZ",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-211543"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following aircraft categories fall under CS-23?\n(1) Normal\n(2) Utility\n(3) Ultralights\n(4) Aerobatic\n(5) Commuter Aeroplanes\n(6) Small Helicopters",
-      "options": [
-        {
-          "id": "ACMNWJ51GP",
-          "text": "(1), (2), (4) and (5).",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A3GZ1EHQPM",
-          "text": "All of the above.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASZ2RQJY81",
-          "text": "(1), (2), (3), (4), and (5).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AYDLD4W2BD",
-          "text": "(2) and (6).",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOZMMPYD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-215860", "BGS-996105"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the EASA publication which lays down the requirements for design, material quality, build quality and behavioural characteristics for aircraft?",
-      "options": [
-        {
-          "id": "AK0HIHT71W",
-          "text": "Certification Specifications",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANU3HMWAFZ",
-          "text": "Design Requirements",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIO1TFVHFY",
-          "text": "Design Specifications",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A5X8IV7E3R",
-          "text": "Certification Designs",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTYMUEKD",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-119842", "ATPLQ-211169", "BGS-211417"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "With regard to an aircraft structure, the term 'fail-safe design' means one",
-      "options": [
-        {
-          "id": "A05TW5GU2T",
-          "text": "in which the load is carried by other components if a part of the structure fails.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AI43G4IN7A",
-          "text": "where weak point indicators are built into the structure. If these fail then the structure needs to be replaced.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARTYHHVG0E",
-          "text": "that has been manufactured to withstand loads five times greater than the maximum expected load.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARKD84RGXS",
-          "text": "where the structure is known to fail after a predetermined load so will be scheduled for replacement prior to that point.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QOBYJMFF",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-14314"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "The duplication or triplication of critical components or functions of a system with the intention of increasing its reliability, is the definition for:",
-      "options": [
-        {
-          "id": "A3H7YZMXRY",
-          "text": "redundancy.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABZ0WXNGO9",
-          "text": "SAFE LIFE design.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHFTO1YI9Z",
-          "text": "damage tolerance.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AG5A2JZHX9",
-          "text": "multiple load path.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QHCNAGBW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-219736", "BGS-996113"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Loads of more or less the same value applied in repeated patterns are considered to be...",
-      "options": [
-        {
-          "id": "A2X16D1LVQ",
-          "text": "cyclical loads",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0YM5GQEE2",
-          "text": "dynamic loads",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABY9TQQF6L",
-          "text": "static loads",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOKUY3CNQG",
-          "text": "beyond the normal limits for passenger carrying aircaft",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QTWHNCOW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-215569"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which of the following aircraft categories fall under CS-25?\n(1) Normal\n(2) Cargo Aeroplanes\n(3) Large Aeroplanes\n(4) Large Helicopters",
-      "options": [
-        {
-          "id": "AG9469ZJVL",
-          "text": "(3)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ARK6T3FSRQ",
-          "text": "(2), (3) and (4).",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A02E8IGO3W",
-          "text": "(1)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A0OLP5F9CC",
-          "text": "All of the above.",
+          "id": "O9CURIG4B",
+          "text": "the situation in which a catastrophic failure is caused by a single failure.",
           "correct": false,
           "why": ""
         }
@@ -273,34 +40,34 @@
   {
     "id": "QSLWLGEG",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-211676", "BGS-996106"],
+    "externalIds": ["ATPLQ-211676"],
     "annexes": [],
     "learningObjectives": ["021.01.01.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The design requirements for large aeroplanes certified by EASA can be found in...",
+      "question": "Where can the design requirements for large aeroplanes certified by EASA be found?",
       "options": [
         {
-          "id": "A2QIHGMD9S",
-          "text": "CS-25",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AMZXVWIFOS",
+          "id": "OBDRKI65S",
           "text": "CS-23",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANZJCJCI3S",
+          "id": "OCMOVKKMY",
+          "text": "CS-25",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OS1KK1J4J",
           "text": "CS-27",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AU67UVZ0OF",
+          "id": "OAVJU7Q0O",
           "text": "CS-29",
           "correct": false,
           "why": ""
@@ -309,42 +76,42 @@
     }
   },
   {
-    "id": "QUBKKGHN",
+    "id": "QVNGUPCE",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-119965",
-      "ATPLQ-214654",
-      "AVEXAM-88559",
-      "BGS-211223"
+      "ATPLQ-213339",
+      "ATPLGS-119986",
+      "AVEXAM-71929",
+      "BGS-211218"
     ],
     "annexes": [],
     "learningObjectives": ["021.01.01.02.01"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The main idea behind duplicating or even triplicating a system or components of a system is...",
+      "question": "What term is described by the following definition?\n\n\"The duplication or triplication of critical components or functions of a system with the intention of increasing reliability of this system.\"",
       "options": [
         {
-          "id": "A9J1W0HULR",
-          "text": "in the case of a critical system or component failing, the function can be taken over by another system or component.",
+          "id": "OUM8XTKKA",
+          "text": "Damage-tolerant structure",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGRMQTAHS",
+          "text": "Redundancy",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A67KZQ2V02",
-          "text": "the extensive use of multiple computers and data recorders on board, which need raw source data or information.",
+          "id": "OJ3QXK6QK",
+          "text": "Multiple load path",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A309G1WRZ1",
-          "text": "because of the limitations in strength of modern materials and system components.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXONH4ETAS",
-          "text": "because of the Airworthiness Directives that manufacturers must comply with.",
+          "id": "OTCROARO4",
+          "text": "Safe life design",
           "correct": false,
           "why": ""
         }
@@ -352,37 +119,75 @@
     }
   },
   {
-    "id": "QRQZQBGR",
+    "id": "QOZMMPYD",
     "relatedQuestions": [],
-    "externalIds": ["BGS-996107"],
+    "externalIds": ["ATPLQ-215860", "AVEXAM-64526"],
+    "annexes": [],
+    "learningObjectives": ["021.01.01.02.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the EASA publication which lays down the requirements for design, material quality, build quality and behavioural characteristics for aircraft?",
+      "options": [
+        {
+          "id": "O3ECKJI6L",
+          "text": "Certification Designs",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMLPJCMM5",
+          "text": "Design Requirements",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVPBPVGYS",
+          "text": "Design Specifications",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8ONYQSDP",
+          "text": "Certification Specifications",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTWHNCOW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-215569", "AVEXAM-25058"],
     "annexes": [],
     "learningObjectives": ["021.01.01.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "The EASA publication which lays down the design specifications of small aeroplanes is ...",
+      "question": "Which of the following aircraft categories fall under CS-25?  \n  \n(1) Normal  \n(2) Cargo Aeroplanes  \n(3) Large Aeroplanes  \n(4) Large Helicopters",
       "options": [
         {
-          "id": "ACZUQIATO7",
-          "text": "CS-23",
+          "id": "OMMBDSRCJ",
+          "text": "All of the above.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OISOMYHKF",
+          "text": "(3)",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AVKIDJY5N6",
-          "text": "CS-25",
+          "id": "OVAEIASVM",
+          "text": "(1)",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0LDLE2SSW",
-          "text": "CS-27",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOLBOL1VK9",
-          "text": "CS-29",
+          "id": "OH5O6MDLK",
+          "text": "(2), (3) and (4).",
           "correct": false,
           "why": ""
         }
@@ -390,75 +195,37 @@
     }
   },
   {
-    "id": "QRNVNAQC",
+    "id": "QKKSFINZ",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-216540", "AVEXAM-41847", "BGS-211217"],
-    "annexes": [],
-    "learningObjectives": ["021.01.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Redundancy in systems is:",
-      "options": [
-        {
-          "id": "AN86N5DH9Q",
-          "text": "the duplication, triplication, or more of critical systems.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A81ZWQPL1C",
-          "text": "the situation in which a catastrophic failure is caused by a single failure.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AU5FSH9N4C",
-          "text": "two systems working together in tandem to ensure accuracy.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A2L1EBWMD7",
-          "text": "connecting components in series to improve performance.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QEIZCCLM",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-9428"],
+    "externalIds": ["ATPLQ-211543", "AVEXAM-176"],
     "annexes": [],
     "learningObjectives": ["021.01.01.02.03"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Regarding the oxygen system of EASA CS-25 certified aeroplane:",
+      "question": "Which of the following aircraft categories fall under CS-23?  \n  \n(1) Normal  \n(2) Utility  \n(3) Ultralights  \n(4) Aerobatic  \n(5) Commuter Aeroplanes  \n(6) Small Helicopters",
       "options": [
         {
-          "id": "AMULQWX4SS",
-          "text": "with the setting on \"NORMAL\", the cockpit crew breathes a mixture of oxygen and cabin air.",
+          "id": "OIJPHJLZO",
+          "text": "(2) and (6).",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCEZ9VYQD",
+          "text": "(1), (2), (4) and (5).",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AXPE8VWZIQ",
-          "text": "the same source of supply is used by the crew and passengers.",
+          "id": "OUDZA9QD7",
+          "text": "All of the above.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AZAXJJNDBK",
-          "text": "the passenger source of supply never uses chemically generated oxygen.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALPQJDGQBD",
-          "text": "the seals must be carefully greased to avoid sparks.",
+          "id": "OPIM99DWA",
+          "text": "(1), (2), (3), (4), and (5).",
           "correct": false,
           "why": ""
         }

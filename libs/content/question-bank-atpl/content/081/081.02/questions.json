@@ -1,41 +1,95 @@
 [
   {
-    "id": "QSINGYIT",
+    "id": "QOQNOQFA6",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125629",
-      "ATPLQ-811930",
-      "AVEXAM-77717",
-      "BGS-810585"
+      "ATPLQ-815879",
+      "BGS-810110",
+      "BGS-810628",
+      "BGS-810627",
+      "BGS-810629",
+      "ATPLGS-126561",
+      "ATPLGS-126205",
+      "BGS-810602",
+      "ATPLGS-118512",
+      "ATPLGS-118505",
+      "BGS-810233",
+      "BGS-810245",
+      "ATPLGS-118513",
+      "ATPLGS-118509",
+      "ATPLGS-126231",
+      "BGS-810109",
+      "ATPLGS-118514",
+      "BGS-810107",
+      "BGS-810284",
+      "BGS-810626",
+      "BGS-810625",
+      "ATPLGS-126564",
+      "BGS-810105",
+      "BGS-811482",
+      "ATPLGS-126234",
+      "ATPLGS-126232",
+      "ATPLGS-126233",
+      "ATPLGS-125535",
+      "ATPLGS-118506",
+      "BGS-810227",
+      "ATPLGS-627067",
+      "ATPLGS-126560",
+      "BGS-810290",
+      "BGS-810603",
+      "BGS-810104",
+      "ATPLGS-126077",
+      "ATPLGS-126235",
+      "ATPLGS-126202",
+      "BGS-810740",
+      "BGS-810745",
+      "ATPLGS-126136",
+      "ATPLGS-118510",
+      "BGS-810600",
+      "BGS-810601",
+      "ATPLGS-118511",
+      "ATPLGS-126135",
+      "ATPLGS-126133",
+      "ATPLGS-126138",
+      "BGS-810108",
+      "ATPLGS-118508",
+      "ATPLGS-126563",
+      "BGS-810106",
+      "ATPLGS-126076",
+      "BGS-810103",
+      "ATPLGS-126236",
+      "ATPLGS-126074",
+      "AVEXAM-26509",
+      "BGS-810239"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "During which type of stall does the angle of attack have the smallest value?",
+      "question": "Which of these statements about \"tuck under\" are correct or incorrect?\n\nI. \"Tuck under\" is caused by an aft movement of the centre of pressure of the wing.   \nII. \"Tuck under\" is caused by a reduction in the downwash angle at the location of the horizontal stabiliser.",
       "options": [
         {
-          "id": "ADMCF9KSYF",
-          "text": "Shock stall.",
+          "id": "OSVF1FBLY",
+          "text": "I is incorrect, II is incorrect.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8GUNOZBL",
+          "text": "I is incorrect, II is correct.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OP098O8OH",
+          "text": "I is correct, II is correct.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AG46XQK12F",
-          "text": "Accelerated stall.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATSM1IYS54",
-          "text": "Low speed stall.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A8AVUXLNUV",
-          "text": "Deep stall.",
+          "id": "OUXKNV5TZ",
+          "text": "I is correct, II is incorrect.",
           "correct": false,
           "why": ""
         }
@@ -43,42 +97,42 @@
     }
   },
   {
-    "id": "QRHFYXKH",
-    "relatedQuestions": ["QCMRRFII", "QGCFHEND"],
+    "id": "QPTXK9GFT",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125829",
-      "ATPLQ-815987",
-      "AVEXAM-82660",
-      "BGS-810611"
+      "ATPLQ-813618",
+      "ATPLGS-125792",
+      "BGS-811576",
+      "AVEXAM-30836"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the significance of the maximum allowed cruising altitude, based on the 1.3 g margin? At this altitude:",
+      "question": "The drag coefficient at constant angle of attack:",
       "options": [
         {
-          "id": "ASR8UYXBGT",
-          "text": "a manoeuvre with a load factor of 1.3 will cause buffet onset.",
+          "id": "OUV9MGDGN",
+          "text": "starts to decrease rapidly above the drag divergence Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZU2UBQG3",
+          "text": "starts to increase rapidly above the drag divergence Mach number.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A5EYVXCNR2",
-          "text": "exceeding a load factor of 1.3 will cause permanent deformation of this aeroplane.",
+          "id": "O27FNRQXQ",
+          "text": "increases only when MCRIT is above unity.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AVYWGZCT0H",
-          "text": "a manoeuvre with a load factor of 1.3 will cause M~CRIT~ to be exceeded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "APN7FOMQDU",
-          "text": "a manoeuvre with a load factor of 1.3 will cause a Mach number at which accelerated low speed stall occurs.",
+          "id": "OXG2MNQA4",
+          "text": "starts to increase rapidly above MCRIT.",
           "correct": false,
           "why": ""
         }
@@ -86,156 +140,42 @@
     }
   },
   {
-    "id": "QGCFHEND",
-    "relatedQuestions": ["QCMRRFII", "QRHFYXKH"],
-    "externalIds": ["AVEXAM-82660"],
-    "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the significance of the maximum allowed cruising altitude, based on the 1.3g margin? At this altitude:",
-      "options": [
-        {
-          "id": "A1NDN7KQO4",
-          "text": "a manoeuvre with a load factor of 1.3 will cause buffet onset.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZ8I4UTFFX",
-          "text": "a manoeuvre with a load factor of 1.3 will cause a Mach number at which accelerated low speed stall occurs.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A1K09K42NL",
-          "text": "a manoeuvre with a load factor of 1.3 will cause MCRIT to be exceeded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHNBSDRGXM",
-          "text": "exceeding a load factor of 1.3 will cause permanent deformation of this aeroplane.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCMRRFII",
-    "relatedQuestions": ["QGCFHEND", "QRHFYXKH"],
-    "externalIds": ["BGS-810611"],
-    "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "What is the significance of the maximum allowed cruising altitude, based on the 1.3 g margin? At this altitude:",
-      "options": [
-        {
-          "id": "A1XV7TR057",
-          "text": "a manoeuvre with a load factor of 1.3 will cause buffet onset.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AYKB38B7NW",
-          "text": "exceeding a load factor of 1.3 will cause permanent deformation of this aeroplane.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4F0U2GG2F",
-          "text": "a manoeuvre with a load factor of 1.3 will cause Mcrit to be exceeded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARNPJBVV4O",
-          "text": "a manoeuvre with a load factor of 1.3 will cause a Mach number at which accelerated low speed stall occurs.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFPYOZQB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-125720", "ATPLQ-817234", "BGS-810579"],
-    "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "As altitude increases, the stall speed (IAS):",
-      "options": [
-        {
-          "id": "APTFVG6E5Z",
-          "text": "initially remains constant but at higher altitudes increases.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A6E6R146SU",
-          "text": "remains constant until the tropopause but at higher altitudes increases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AMCYEC6KTP",
-          "text": "initially remains constant but at higher altitudes decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQNLOM8V1U",
-          "text": "remains constant regardless of altitude.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QQIFVOEH",
+    "id": "QKVSOZ9ZN",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125628",
-      "ATPLQ-812463",
-      "AVEXAM-69614",
-      "BGS-810580"
+      "ATPLQ-813900",
+      "BGS-810574",
+      "AVEXAM-1990",
+      "ATPLGS-126544"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "How does stall speed (IAS) vary with altitude?",
+      "question": "Shock induced separation can occur...",
       "options": [
         {
-          "id": "A2RWR0UJ8X",
-          "text": "It remains constant at lower altitudes but increases at higher altitudes due to compressibility effects.",
+          "id": "OCUJLZOKQ",
+          "text": "at high Mach numbers, only at high angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O3GECKJBB",
+          "text": "at high Mach numbers, only at low angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGIX7CRHO",
+          "text": "behind a strong, normal shock wave, ranging from low to high angles of attack.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AOEWC5R5I3",
-          "text": "It increases with increasing altitude, because the density decreases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZH0JVXPUI",
-          "text": "It remains constant.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEBVRIC3OM",
-          "text": "It remains constant at lower altitudes but decreases at higher altitudes due to compressibility effects.",
+          "id": "OFLVRIPJ4",
+          "text": "in supersonic flow only.",
           "correct": false,
           "why": ""
         }
@@ -243,42 +183,518 @@
     }
   },
   {
-    "id": "QMIDKCPO",
+    "id": "QNGEAZRCT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817975"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Using conventional flight controls, you are manually piloting a jet transport aircraft as you decelerate from M0.76 to M0.73\\. A supercritical wing design is used on the aircraft. To maintain altitude as the plane decelerates, you must continuously apply a small nose-down trim. As you decrease your speed through M 0.73, you find that there is a need for progressive nose-up trim. This could have several causes, including...",
+      "options": [
+        {
+          "id": "OLPTBI1HH",
+          "text": "the slight pitch down moment due to shock waves reduces and the airplane returns to normal trim behavior below M**CRIT**",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OVHO33UO7",
+          "text": "all the speed reduces below M**CRIT**, the shock waves increase in strength and create a nose-down pitching moment",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCD5NGEUU",
+          "text": "shock waves forming at the rear of aerofoil creating increased lift at the back of the profile and therefore a nose down pitch moment ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OG0VPXDAC",
+          "text": "that the shock waves are increasing in strength, creating an increased nose down pitching moment, which requires a greater nose-up trim ",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUVOUE3SM",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125788",
+      "ATPLQ-813008",
+      "AVEXAM-82758",
+      "ATPLGS-118452",
+      "BGS-811690"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What will help against shock-induced separation of the boundary layer?",
+      "options": [
+        {
+          "id": "OKGVXMARY",
+          "text": "Deploying the high lift devices.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4P1IFISY",
+          "text": "Using vortex generators.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OIZQKXKWI",
+          "text": "Increasing the Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAEWLWC3F",
+          "text": "Increasing the Angle of Attack.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q2WRST96U",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819814", "ATPLGS-118417"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Some aircraft have design options often referred to as the \"waistline\" or \"coke bottle shape\", mainly characterised by the reduction of the fuselage cross-section. What is the purpose of these designs?",
+      "options": [
+        {
+          "id": "OCRULZMAU",
+          "text": "Reduce friction drag by reducing surface areas",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKDDPQYIO",
+          "text": "Improve aerodynamic stability",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBT2XRMFU",
+          "text": "Improve airflow to the engine air inlet",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIZ3XHEFQ",
+          "text": "Reduce wave drag through application of the area rule",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QJ7HEC6H8",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817261", "AVEXAM-63996"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Behind a normal shock wave, the downwash is greatly reduced. As a consequence, this causes...",
+      "options": [
+        {
+          "id": "OYDULEPJA",
+          "text": "an increase in CL.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2ZURKXHH",
+          "text": "a reduction in CD.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXW4N6Z3U",
+          "text": "an increase in critical AoA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODILOHX4B",
+          "text": "tuck under.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUY4QZAN5",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811497", "AVEXAM-6047"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement is correct regarding the Drag Divergence Mach number (MDRAG DIVERGENCE)?",
+      "options": [
+        {
+          "id": "O6ENAC9S8",
+          "text": "Drag Divergence Mach number is slightly less than MCRIT, except for supercritical wings where it is greater than MCRIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKDEVNKXA",
+          "text": "Drag Divergence Mach number is greater than MCRIT, except for supercritical wings where it is slightly less than MCRIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORTV6MB54",
+          "text": "Drag Divergence Mach number is close to, and always greater than MCRIT.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O2GHCAGGY",
+          "text": "Drag Divergence Mach number is close to, and always less than MCRIT.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAA8DP5XD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814382"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "How does the True Airspeed (TAS) vary during a descent above the troposphere with a constant Mach number?",
+      "options": [
+        {
+          "id": "O4PUDPVXO",
+          "text": "TAS fluctuates unpredictably.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1OJNNHD2",
+          "text": "TAS remains the same.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBNZYC3MV",
+          "text": "TAS decreases due to decreased air density.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAIH1PZKS",
+          "text": "TAS increases due to decreased air density. ",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QRUXNIPMW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815861"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft accelerates towards the transonic speed region. What happens to CLMAX and stall speed?",
+      "options": [
+        {
+          "id": "OBFL4ACM1",
+          "text": "CLMAX will increase and the stalling speed will increase.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHTPWHUHR",
+          "text": "CLMAX will decrease and the stalling speed will increase.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OEAASZXE2",
+          "text": "CLMAX will decrease and the stalling speed will decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJ9VC5CPW",
+          "text": "CLMAX will increase and the stalling speed will decrease.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAGRAQEQQ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811814", "AVEXAM-5082"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a wing flying in supersonic flow, the normal shock wave forms at an angle of…",
+      "options": [
+        {
+          "id": "ON5KTAK4J",
+          "text": "less than 70° to the wing surface, that further reduces towards the edge of the shockwave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5OX6YVUI",
+          "text": "90° to the wing surface.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OS3VG18GE",
+          "text": "less than 70° to the wing surface.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZOWONDDI",
+          "text": "more than 90° to the wing surface.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QWDBPZCDR",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-812204",
+      "AVEXAM-42149",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The critical Mach number of a conventional aerofoil section decreases if:",
+      "options": [
+        {
+          "id": "O9Y70B1QA",
+          "text": "its camber is decreased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6Z6CCLDP",
+          "text": "it is flown at lower angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONVP6WTIF",
+          "text": "its leading edge radius is decreased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH9PSJFPD",
+          "text": "its thickness to chord ratio is increased.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDWRWU3AD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817608", "AVEXAM-60050"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "On a normally cambered airfoil which increases its speed through the transonic region, the lower shock wave…",
+      "options": [
+        {
+          "id": "OFR5WKYMY",
+          "text": "moves aft until reaching the upper shock wave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCY5GAIMH",
+          "text": "moves aft and reaches the trailing edge first.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O1QGE5D4Q",
+          "text": "moves aft slower than upper shock wave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9DCH7ZCR",
+          "text": "does not move.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QHD8P6CZZ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814213"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Consider an aircraft climbing at a constant CAS of 308 kt below the tropopause and in ISA conditions. The ATC requests the pilots to increase their rate of climb, and as a consequence, they change to a constant Mach number of M 0.72, which was the Mach number at the time of the request. How can this be a solution to the request made by ATC?",
+      "options": [
+        {
+          "id": "O3G7VUF5S",
+          "text": "In order to maintain a constant Mach number, the aeroplane must pitch up slightly, resulting in the CAS reducing and an increased average rate of climb.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O97YCEUOI",
+          "text": "In order to maintain a constant Mach number, the aeroplane must reduce AoA, resulting in lower induced drag, giving an increased angle and rate of climb. ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORAHHEAKG",
+          "text": "The aeroplane must increase the AoA to maintain lift as both the CAS and TAS are gradually reducing, resulting in an increased average rate of climb.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLKRISQIH",
+          "text": "The aeroplane must pitch up to maintain a constant CAS and Mach number, and since the TAS reduces, the angle and rate of climb will both increase. ",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QB5LCNCOD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817034"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The local speed of sound (LSS) is (2)\\_\\_\\_\\_\\_ proportional to the (2)\\_\\_\\_\\_\\_.",
+      "options": [
+        {
+          "id": "O3V5WP8MB",
+          "text": "(1) inversely; (2) absolute temperature squared.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOHJ71LED",
+          "text": "(1) inversely; (2) square root of the absolute temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBYARVSEM",
+          "text": "(1) directly; (2) absolute temperature squared.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEJMPHTS0",
+          "text": "(1) directly; (2) square root of the absolute temperature.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMZKIUXEC",
+    "relatedQuestions": [],
+    "externalIds": [
       "ATPLQ-816660",
-      "AVEXAM-90861",
-      "BGS-810523"
+      "BGS-810523",
+      "ATPLGS-125788",
+      "AVEXAM-90861"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
       "question": "Just above the critical Mach number the first evidence of a shock wave will appear at the:",
       "options": [
         {
-          "id": "AVXZH2ZMX5",
+          "id": "OHHXYCAAR",
+          "text": "leading edge of the wing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL4GPZDW3",
           "text": "upper side of the wing.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AM96P9UY74",
-          "text": "trailing edge of the wing.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAJEASRY3M",
+          "id": "OCWE8ZZ4J",
           "text": "lower side of the wing.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5M8DYPQ40",
-          "text": "leading edge of the wing.",
+          "id": "O4OEMODIS",
+          "text": "trailing edge of the wing.",
           "correct": false,
           "why": ""
         }
@@ -286,42 +702,80 @@
     }
   },
   {
-    "id": "QKOZAZDH",
+    "id": "Q8VQARIZJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815187", "AVEXAM-75593"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "To reduce friction drag, some aeroplanes are equipped with modified wing designs to:",
+      "options": [
+        {
+          "id": "O2IUS9LPR",
+          "text": "Increase the effective angle of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZORVYU7C",
+          "text": "Accelerate separation and have a larger turbulent flow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8EO9EVTQ",
+          "text": "Delay the transition point and have a larger laminar flow.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OCGGKFZFQ",
+          "text": "Increase wing lift.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBEVAA3RZ",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-117805",
-      "ATPLQ-816193",
-      "AVEXAM-5385",
-      "BGS-810564"
+      "ATPLQ-818209",
+      "ATPLGS-625959",
+      "BGS-812452",
+      "AVEXAM-32286"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Which of the following flight phenomena can occur at Mach numbers below the critical Mach number?",
+      "question": "The boundary layer will separate from the aerofoil immediately...",
       "options": [
         {
-          "id": "ASJ87GF31F",
-          "text": "Dutch roll.",
+          "id": "OH0473LSM",
+          "text": "behind the shock wave on the lower wing surface.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSL8I3ASR",
+          "text": "in front of the shock wave on the lower wing surface.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHNDVH74Q",
+          "text": "behind the shock wave on the upper wing surface.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A533XI49PK",
-          "text": "Shock stall.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIDFRTZZRP",
-          "text": "Mach buffet.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AR4EPC6Q8T",
-          "text": "Tuck under.",
+          "id": "OGPD647V8",
+          "text": "in front of the shock wave on the upper wing surface.",
           "correct": false,
           "why": ""
         }
@@ -329,75 +783,75 @@
     }
   },
   {
-    "id": "QXLRCZTL",
-    "relatedQuestions": ["QCAEBESQ"],
-    "externalIds": ["ATPLQ-816008"],
+    "id": "QFV32EKHW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811645"],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What causes the separation of the boundary layer at high Mach numbers?",
+      "question": "Which one of the following statements is true with regard to the operation of a Mach trim system:",
       "options": [
         {
-          "id": "A1XLVWHWHR",
-          "text": "Normal shockwave",
+          "id": "OHUYGM8E0",
+          "text": "It operates to counteract the larger than normal forward movements of the wing centre of pressure at high subsonic airspeeds.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF7NHXYDC",
+          "text": "It operates over the full aeroplane speed range.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O64TSZZDQ",
+          "text": "It only operates when the autopilot is engaged.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O7ZE8IO8C",
+          "text": "It only operates above a pre-determined Mach number.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "A0VOCDVWWT",
-          "text": "A higher angle of attack",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AV6H6OIAFE",
-          "text": "Increases buffet on the controls which make the boundary layer to separate",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AVCMWNF9UX",
-          "text": "Due to a higher Mcrit and reduced static pressure",
-          "correct": false,
           "why": ""
         }
       ]
     }
   },
   {
-    "id": "QCAEBESQ",
-    "relatedQuestions": ["QXLRCZTL"],
-    "externalIds": ["BGS-812196"],
+    "id": "QWNFVNEAN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819466", "BGS-812377", "AVEXAM-68915"],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What causes the separation of the boundary layer at high Mach numbers?",
+      "question": "At speeds above the critical Mach number, vortex generators fitted to a wing’s upper surface will...",
       "options": [
         {
-          "id": "A55WFJBK7F",
-          "text": "A normal shockwave",
+          "id": "OT2CUW0GU",
+          "text": "reduce the kinetic energy within the boundary layer.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZMGPCYZC",
+          "text": "retard shock-induced separation.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AEQ343ALA0",
-          "text": "Higher M~CRIT~    and reduced static pressure",
+          "id": "OQA05A8L2",
+          "text": "promote shockinduced separation.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A97DZJVJCA",
-          "text": "An increase in buffet on the controls.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQI73TH2DE",
-          "text": "The higher angle of attack",
+          "id": "OX0CWNL11",
+          "text": "increase the stall speed.",
           "correct": false,
           "why": ""
         }
@@ -405,42 +859,42 @@
     }
   },
   {
-    "id": "QKLEKRQS",
-    "relatedQuestions": ["QELBGEOT", "QRNVWQGB"],
+    "id": "QWJY3W9GO",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125828",
-      "ATPLQ-814231",
-      "AVEXAM-66005",
-      "BGS-810573"
+      "ATPLQ-816704",
+      "ATPLGS-126143",
+      "AVEXAM-96589",
+      "BGS-811286"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Mach buffet occurs:",
+      "question": "Assuming all other factors remain the same, which of the following wing designs would have the least effective high lift devices?",
       "options": [
         {
-          "id": "AJEUZ7WXC0",
-          "text": "following boundary layer separation due to shock wave formation",
+          "id": "OSIZNGNHY",
+          "text": "A wing with a sweepback angle of 25°.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A0KHQDCH2D",
-          "text": "when the stall angle of attack is exceeded.",
+          "id": "OI5QPDEVN",
+          "text": "A wing with a sweepback angle of 15°.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A9F3KHZJ2F",
-          "text": "directly after exceeding Mcrit.",
+          "id": "O3MQMGRR2",
+          "text": "The sweep angle of the wing does not influence the effectiveness of high lift devices.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ALSGFP8352",
-          "text": "when the Mach number has increased to Mcrit.",
+          "id": "OYHZERHVT",
+          "text": "A wing without any sweep angle.",
           "correct": false,
           "why": ""
         }
@@ -448,118 +902,129 @@
     }
   },
   {
-    "id": "QRNVWQGB",
-    "relatedQuestions": ["QELBGEOT", "QKLEKRQS"],
-    "externalIds": ["ATPLQ-814231"],
-    "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Mach buffet occurs:",
-      "options": [
-        {
-          "id": "AJ9HZDC29V",
-          "text": "following boundary layer separation due to shock wave formation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATD6DKSQXZ",
-          "text": "when the Mach number has increased to M~CRIT~.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGPR1HPK0B",
-          "text": "when the stall angle of attack is exceeded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AGAL2RAFJ7",
-          "text": "directly after exceeding M~CRIT~.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QELBGEOT",
-    "relatedQuestions": ["QKLEKRQS", "QRNVWQGB"],
-    "externalIds": ["AVEXAM-66005"],
-    "annexes": [],
-    "learningObjectives": ["081.02", "081.03"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Mach buffet occurs:",
-      "options": [
-        {
-          "id": "AUB8MH3JID",
-          "text": "following boundary layer separation due to shock wave formation.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ABZ11UGAXQ",
-          "text": "directly after exceeding MCRIT.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AB1YDGZVBO",
-          "text": "when the stall angle of attack is exceeded.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABPDVK6UGN",
-          "text": "when the Mach number has increased to MCRIT.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMGGRSNA",
-    "relatedQuestions": ["QORKBGXG"],
+    "id": "QAHP8GNOY",
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-125870",
+      "ATPLQ-811003",
+      "BGS-810634",
+      "AVEXAM-95703",
+      "ATPLGS-125873"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In comparison to a conventional aerofoil section, typical shape characteristics of a supercritical aerofoil section are:",
+      "options": [
+        {
+          "id": "OJN4VGB6Q",
+          "text": "a sharper pointed nose, negative camber and a flatter upper surface.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODINGQ1SO",
+          "text": "a larger nose radius, flatter upper surface and negative as well as positive camber.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OM3IPUCQR",
+          "text": "a sharper pointed nose, flatter lower surface and positive camber at the rear of the aerofoil section.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OA5SQ1TNG",
+          "text": "a larger nose radius, flatter lower surface and negative as well as positive camber.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLBJZBURD",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-818887",
+      "BGS-810594",
+      "ATPLGS-125794",
+      "AVEXAM-85406",
+      "ATPLGS-129431"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The movement of the aerodynamic centre of the wing when an aeroplane accelerates through the transonic range causes:",
+      "options": [
+        {
+          "id": "OQW7YVUCM",
+          "text": "a decrease in static longitudinal stability.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGLMXEL8Y",
+          "text": "a decrease in static directional stability.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV3NRYM5K",
+          "text": "an increase in static directional stability.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OH8RHTVDZ",
+          "text": "an increase in static longitudinal stability.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QNBRIFRZQ",
+    "relatedQuestions": [],
+    "externalIds": [
       "ATPLQ-817273",
-      "AVEXAM-13561",
-      "BGS-810589"
+      "ATPLGS-125870",
+      "BGS-810589",
+      "AVEXAM-13561"
     ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.04"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the effect of exceeding Mcrit on the stick force stability of an aeroplane with swept-back wings without any form of stability augmentation?",
+      "question": "What is the effect of exceeding MCRIT on the stick force stability of an aeroplane with swept-back wings without any form of stability augmentation?",
       "options": [
         {
-          "id": "ACS0ISJ4XI",
+          "id": "ONT1LW2NU",
+          "text": "No effect, because stick force stability is independent of Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORQUFNFPN",
           "text": "A decrease, due to loss of lift in the wing root area.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AD372XH03F",
-          "text": "No effect, because Mcrit is not relevant when considering stick force stability.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANQZCT1854",
+          "id": "OEEHE9JBC",
           "text": "An increase, due to shock wave formation in the wing root area.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AK90LDT555",
-          "text": "No effect, because stick force stability is independent of Mach number.",
+          "id": "OLGKNJYJ6",
+          "text": "No effect, because MCRIT is not relevant when considering stick force stability.",
           "correct": false,
           "why": ""
         }
@@ -567,37 +1032,128 @@
     }
   },
   {
-    "id": "QORKBGXG",
-    "relatedQuestions": ["QMGGRSNA"],
-    "externalIds": ["ATPLQ-817273"],
+    "id": "QPGMFTQ5P",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-814145",
+      "AVEXAM-42149",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.04"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "What is the effect of exceeding Mcrit on the stick force stability of an aeroplane with swept-back wings without any form of stability augmentation?",
+      "question": "The critical Mach number of a conventional aerofoil section decreases if:",
       "options": [
         {
-          "id": "ABK9GQ7FV1",
-          "text": "A decrease, due to loss of lift in the wing root area.",
+          "id": "OILQ34IJA",
+          "text": "its thickness to chord ratio is reduced.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXCZN3ECB",
+          "text": "its camber is decreased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXRLCET1X",
+          "text": "its leading edge radius is decreased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIAJLBNXV",
+          "text": "it is flown at higher angles of attack.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOPLZP6AW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-813324", "AVEXAM-32320"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When a profile reaches the speed of sound, what kind of shock wave is produced at the point of maximum speed?",
+      "options": [
+        {
+          "id": "OLW5DYEJL",
+          "text": "Conformal shockwave",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZX5COIEP",
+          "text": "Oblique shock wave",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOYXXRHGG",
+          "text": "Mach shock wave",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORBKWSOMP",
+          "text": "Straight/right shock wave",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDVDYMPKJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819642"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Your Mach number is 0.7, and you are flying at constant CAS. After considerable time passed, all other variables remained the same, but the temperature SAT of -35°C increased to -30°C.",
+      "options": [
+        {
+          "id": "ONFUO4OYH",
+          "text": "Mach will decrease because LSS will increase with increases in temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYZUS7WAE",
+          "text": "Mach decreases but, after some time, increases once again because of increasing TAT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9YGNLHNI",
+          "text": "Mach remains constant because at a constant CAS and pressure altitude, Mach is independent of temperature.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AQG9YZS36A",
-          "text": "An increase, due to shock wave formation in the wing root area.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AI70NWKKAG",
-          "text": "No effect, because M~CRIT~ is not relevant when considering stick force stability.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKW7L0Q00D",
-          "text": "No effect, because stick force stability is independent of Mach number.",
+          "id": "OIR50YBAG",
+          "text": "Mach will increase because it is a function of temperature.",
           "correct": false,
           "why": ""
         }
@@ -605,37 +1161,37 @@
     }
   },
   {
-    "id": "QSPTQCAB",
-    "relatedQuestions": ["QGHTQTCF"],
-    "externalIds": ["ATPLGS-129432"],
+    "id": "Q10AK4OOO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814838", "AVEXAM-35854"],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.04"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In supersonic flight aerofoil pressure distribution is:",
+      "question": "When descending with a constant TAS, what happens?",
       "options": [
         {
-          "id": "AQUJUHBQZN",
-          "text": "Rectangular",
+          "id": "O4DFGBWTX",
+          "text": "Mach speed decreases.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AA5KJVEYAY",
-          "text": "Triangular",
+          "id": "OAXOSYYQQ",
+          "text": "IAS increases and then decreases.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AJK2GY2MK5",
-          "text": "The same as in subsonic flight",
+          "id": "OXQKAGWJ1",
+          "text": "IAS decreases.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A6198343ZW",
-          "text": "Irregular",
+          "id": "ODIAEXSIE",
+          "text": "Mach speed decreses then increases.",
           "correct": false,
           "why": ""
         }
@@ -643,37 +1199,75 @@
     }
   },
   {
-    "id": "QGHTQTCF",
-    "relatedQuestions": ["QSPTQCAB"],
-    "externalIds": ["AVEXAM-55724"],
+    "id": "QJMVBNLIF",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819598", "AVEXAM-25101", "BGS-812595"],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.04"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "In supersonic flight aerofoil pressure distribution is:",
+      "question": "For this question, consider high speed aerodynamics. An aeroplane accelerates from low speed to a speed just below MCRIT in straight and level flight. What changes to the airflow around the aeroplane can you expect to take place?",
       "options": [
         {
-          "id": "AUL475R2OW",
-          "text": "rectangular.",
+          "id": "OFPRCUGSW",
+          "text": "The total pressure will Increase as shock waves start forming In areas where there is significant local acceleration, causing wave drag.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9N2WCGS5",
+          "text": "The airflow becomes more turbulent due to the presence of areas of Increased compressibility slowing down the speed of the airflow.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQIYPH4EI",
+          "text": "The airflow has a greater tendency to separate as small and weak shock waves start to form In areas of Increased compressibility.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUTJRQUHC",
+          "text": "The total pressure will increase slightly due to compressibility of the air which, for example, gives an artificially high reading of CAS.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QETVT0CKA",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-813233", "AVEXAM-23709", "ATPLGS-129503"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In the transonic region, the coefficient of drag:",
+      "options": [
+        {
+          "id": "ORSMRLXVQ",
+          "text": "Varies depending on Mach number.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AN0H9H1X8I",
-          "text": "irregular.",
+          "id": "OPQF4N2MK",
+          "text": "Increases with increasing Mach number.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A0BENWGLBN",
-          "text": "triangular.",
+          "id": "OE0WQHZGY",
+          "text": "First decreases and then increases.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ANB1R7ZX5I",
-          "text": "the same as in subsonic flight.",
+          "id": "OFLFWI9JX",
+          "text": "Decreases with increasing Mach number.",
           "correct": false,
           "why": ""
         }
@@ -681,37 +1275,51 @@
     }
   },
   {
-    "id": "QXDWIZSP",
-    "relatedQuestions": ["QSBMDRWO"],
-    "externalIds": ["ATPLGS-129452"],
+    "id": "QFMMOELLK",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813961",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.08"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For minimum wave drag, an aircraft should be operated at which of the following speeds?",
+      "question": "The critical Mach number of a conventional aerofoil section increases if:",
       "options": [
         {
-          "id": "AS5VIMR13C",
-          "text": "Subsonic",
+          "id": "OB91IFJLE",
+          "text": "its camber is increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLJMFJEYT",
+          "text": "its thickness to chord ratio is increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORGDT7XN0",
+          "text": "it is flown at lower angles of attack.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AMH81YIFPB",
-          "text": "High Supersonic",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AIWPTH4ELI",
-          "text": "Mach 1.0",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASN5C9EPON",
-          "text": "Low Supersonic",
+          "id": "OQD1KGEPA",
+          "text": "its leading edge radius is increased.",
           "correct": false,
           "why": ""
         }
@@ -719,37 +1327,1812 @@
     }
   },
   {
-    "id": "QSBMDRWO",
-    "relatedQuestions": ["QXDWIZSP"],
-    "externalIds": ["AVEXAM-76977"],
+    "id": "QFJASBUFI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-813514"],
     "annexes": [],
-    "learningObjectives": ["081.02", "081.08"],
+    "learningObjectives": ["081.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For minimum wave drag, an aircraft should be operated at which of the following speeds?",
+      "question": "How can the critical Mach number of a conventional aerofoil section be reduced?",
       "options": [
         {
-          "id": "A5QFA9FPOB",
-          "text": "Subsonic.",
+          "id": "OBZVMKHSN",
+          "text": "Decreasing the camber.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OF9UVHQEM",
+          "text": "Increasing the radius of the leading edge.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AFO4L4OBH0",
-          "text": "Low supersonic.",
+          "id": "OHO0UWQLG",
+          "text": "Increasing the wing sweep back.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ARS1JPYWT6",
-          "text": "Mach 1.",
+          "id": "OLTQXVL5I",
+          "text": "Decreasing the thickness to chord ratio.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1BKWS9HJ",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816453", "ATPLGS-625958"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Immediately above MCRIT in the transonic speed regime, at a constant angle of attack, stall speed will...",
+      "options": [
+        {
+          "id": "OW58OZKJ9",
+          "text": "increase at high altitudes.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONZ01JKSD",
+          "text": "remain constant until reaching the upper end of the transonic speed regime.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AGO9ND6VE2",
-          "text": "High supersonic.",
+          "id": "OTGZDJVAH",
+          "text": "remain constant until reaching the lower end of the transonic speed regime.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKFZB8WMZ",
+          "text": "decrease at high altitudes.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZOH9TIZX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-812223", "ATPLGS-118577", "BGS-810638"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Vortex generators on the upper side of the wing surface will:",
+      "options": [
+        {
+          "id": "ONJ9JHKDH",
+          "text": "increase the critical Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFLHWYNGK",
+          "text": "increase the magnitude of the shock wave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQOUDBK7U",
+          "text": "decrease shock wave induced flow separation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OFRTLDB2M",
+          "text": "decrease the span wise flow at high Mach numbers.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q4GVEPWIB",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-812582", "BGS-812649"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Using conventional flight controls, you are manually piloting a jet transport aircraft as you accelerate from M0.60 to M**MO** of M0.81\\. A supercritical wing design is used on the aircraft. To maintain altitude as the plane accelerates, you must continuously apply a small nose-down trim. As you increase your speed through M 0.74, you'll see that the airplane gradually needs less nose-down trim to maintain altitude. This could have several causes, including...",
+      "options": [
+        {
+          "id": "OGECRQZOQ",
+          "text": "that the aeroplane is designed to be statically unstable in transonic flight to help accelerate through the increased drag from shock waves.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OU0T9XAR2",
+          "text": "that the aeroplane is entering a state of overspeed and the shock waves have resulted in a shock stall, making the aeroplane dive.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5P61XLWR",
+          "text": "reaching the maximum of nose-down trim that is available, making the horizontal -stabiliser stall, which results in the nose dropping.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJAYOHJT3",
+          "text": "that shock waves form, resulting in greater rear loading of the aerofoil, and creating a slightly increasing nose-down pitching moment.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOIWDJLYX",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815167", "AVEXAM-92222"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "In the transonic speed region the L/D ratio is...",
+      "options": [
+        {
+          "id": "OOIUZB9LC",
+          "text": "always at its maximum.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6V6PZEIE",
+          "text": "reduced.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZZFTL4KB",
+          "text": "constant.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYOKE2XGD",
+          "text": "increased.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QUAWUBOJZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813979",
+      "AVEXAM-88027",
+      "ATPLGS-129363",
+      "ATPLGS-118578",
+      "BGS-810639"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Vortex generators mounted on the upper wing surface will:",
+      "options": [
+        {
+          "id": "OHMNVCLO2",
+          "text": "increase the effectiveness of the spoiler due to increase in parasite drag.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVLRBIVZP",
+          "text": "decrease the shock wave induced separation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZPGOZ65Y",
+          "text": "decrease the interference drag of the trailing edge flaps.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9RHGHNUN",
+          "text": "decrease the stall speed by increasing spanwise flow on the wing.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q89AOXBO3",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816703", "BGS-812421"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "As an aeroplane accelerates beyond its critical Mach number (MCRIT), it will experience a pitching...",
+      "options": [
+        {
+          "id": "O6ZLEL6UB",
+          "text": "down moment, due to the formation of shockwaves, which will further increase the speed.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O7JJ9MFL8",
+          "text": "up moment, due to the formation of shockwaves, which will dangerously reduce the speed. ",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFXZ0A9EC",
+          "text": "down moment, due to movement of the CP, which will dangerously reduce the speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSYM6Q4ZE",
+          "text": "up moment, due to movement of the CP, which will further increase the speed. ",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFU3PAHDP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-817522", "ATPLGS-118451", "AVEXAM-29738"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which design characteristic is typical for a supercritical aerofoil when compared to a conventional positive-cambered aerofoil?",
+      "options": [
+        {
+          "id": "OGJ3C9GBM",
+          "text": "A flatter upper surface.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OV6HPP5OV",
+          "text": "A smaller leading edge radius.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOVJK3OUG",
+          "text": "A thinner trailing edge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHSNKPCLG",
+          "text": "A smaller thickness.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAOPWFGZ6",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811876", "AVEXAM-44283", "ATPLGS-125785"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The speed range from approximately M = 1.3 to approximately M = 5 is called the:",
+      "options": [
+        {
+          "id": "OCUU5LCF8",
+          "text": "hypersonic range.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYQKBCGLA",
+          "text": "transonic range.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZLDD58LF",
+          "text": "subsonic range.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXXD0QGWX",
+          "text": "supersonic range.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QDWZP0K0Y",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813232",
+      "AVEXAM-78360",
+      "BGS-810579",
+      "AVEXAM-84891",
+      "ATPLGS-126360",
+      "AVEXAM-16161",
+      "ATPLGS-129465",
+      "AVEXAM-28388",
+      "AVEXAM-69288",
+      "BGS-811614",
+      "ATPLGS-118383",
+      "ATPLGS-126407",
+      "ATPLGS-625863",
+      "AVEXAM-11061",
+      "BGS-810275",
+      "BGS-811610",
+      "AVEXAM-15614",
+      "AVEXAM-51571",
+      "BGS-811306",
+      "AVEXAM-93827",
+      "ATPLGS-126414",
+      "ATPLGS-125716",
+      "AVEXAM-35553",
+      "BGS-812569",
+      "AVEXAM-10482",
+      "ATPLGS-118345",
+      "BGS-811124",
+      "ATPLGS-118393",
+      "ATPLGS-125547",
+      "AVEXAM-62755",
+      "BGS-810270",
+      "AVEXAM-47224",
+      "BGS-811268",
+      "BGS-810276",
+      "BGS-811368",
+      "AVEXAM-64675",
+      "AVEXAM-84709",
+      "ATPLGS-118074",
+      "ATPLGS-118391",
+      "AVEXAM-54618",
+      "ATPLGS-125720",
+      "AVEXAM-60537",
+      "AVEXAM-54991",
+      "BGS-810566",
+      "ATPLGS-118075",
+      "BGS-810565",
+      "BGS-810215",
+      "ATPLGS-118187",
+      "ATPLGS-625837",
+      "AVEXAM-93087",
+      "AVEXAM-58472",
+      "ATPLGS-126377",
+      "AVEXAM-93241",
+      "BGS-811016",
+      "ATPLGS-118358"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Whilst flying at a constant IAS and at n = 1, as the aeroplane mass increases, the value of MCRIT:",
+      "options": [
+        {
+          "id": "OEXO0VRTT",
+          "text": "increases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OJHTQZM6D",
+          "text": "remains constant.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTXURIWAE",
+          "text": "is independent of the angle of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O6NQM61NZ",
+          "text": "decreases.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZHQI48CO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814876"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which statement best describes the NACA-6 series air foil type?",
+      "options": [
+        {
+          "id": "OATYFWJDD",
+          "text": "It is an air foil designed for subsonic flight with an emphasis on drag reduction.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ON7N7ZIWZ",
+          "text": "It is an air foil designed for high-speed supersonic flight and helps minimize shock wave generation.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSAC1AIUA",
+          "text": "It is an air foil optimized for high-speed flight, with an emphasis on low-speed controllability.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OULF1T4DK",
+          "text": "It is an air foil specifically designed for low-speed performance and efficient lift generation.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QG9UGHBPT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-818398", "AVEXAM-66763"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "You are flying close to thunderstorms and you don’t want to stall the aircraft or mach buffet. Which statement is correct\n\n1\\. Descend to a lower altitude.   \n2\\. Increase the mach number.   \n3\\. Climb above the thunderstorms.   \n4\\. Avoid cells by using weather radar.",
+      "options": [
+        {
+          "id": "ODZX7PJJU",
+          "text": "2, 4.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWZPZQJBD",
+          "text": "2, 3.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ORG4UCGSH",
+          "text": "1, 2.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGVLJK6X0",
+          "text": "1, 4.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQHFQ2Y4U",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813504",
+      "ATPLGS-125723",
+      "AVEXAM-75953",
+      "BGS-810622"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The effect of increasing angle of sweep is:",
+      "options": [
+        {
+          "id": "OSOMKNHVV",
+          "text": "an increase in longitudinal stability.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OSU9ZXFYU",
+          "text": "a decrease in stall speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGFRRZ6BA",
+          "text": "an increase in the critical Mach number.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OBFGS68MV",
+          "text": "a decrease in the critical Mach number.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZHJMW0TT",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814518", "AVEXAM-84642"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Constant IAS in a climb, what will happen?",
+      "options": [
+        {
+          "id": "OPBUI31BB",
+          "text": "Coefficient of lift decrease with increasing Mach number",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5JUZSNWW",
+          "text": "Maximum coefficient of lift decrease with increasing Mach number",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSAOLHO8J",
+          "text": "Coefficient of lift increases with increasing Mach number",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9G7B6DR7",
+          "text": "Maximum coefficient of lift increases with increasing Mach number",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q4QUSNQ4O",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-811266",
+      "AVEXAM-85986",
+      "ATPLGS-125556",
+      "BGS-810560",
+      "BGS-810604"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When the speed over an aerofoil section increases from subsonic to supersonic, its aerodynamic centre:",
+      "options": [
+        {
+          "id": "OXPC0ZCQV",
+          "text": "moves aft by approximately 10% of the chord.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCQOFG0JR",
+          "text": "moves slightly forward.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPUEG2DCX",
+          "text": "moves from approximately 25% to about 50% of the chord.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZVVKHMOE",
+          "text": "does not move.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGRER58BY",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813176",
+      "AVEXAM-42149",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "AVEXAM-49340",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The critical Mach number of a conventional aerofoil section decreases if:",
+      "options": [
+        {
+          "id": "OMTQSB4QP",
+          "text": "it is flown at lower angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXWSM2SCU",
+          "text": "its camber is decreased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEYM0JE5Y",
+          "text": "its thickness to chord ratio is reduced.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPZRPBJK3",
+          "text": "its leading edge radius is increased.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QMBJYUHWI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-818808", "ATPLGS-118658", "BGS-811625"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following items are needed to correctly complete the statement? The characteristics of wing sweep include:\n\n1\\. a decreased tendency to tip stall   \n2\\. increased take-off and landing distances   \n3\\. a higher stall speed   \n4\\. an increased effectiveness of trailing edge control surfaces   \n5\\. a decreased effectiveness of high lift devices.",
+      "options": [
+        {
+          "id": "OLAJNN4HT",
+          "text": "2, 3, and 5",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O6EXB8XSZ",
+          "text": "4 and 5",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHSUFNFAJ",
+          "text": "1, 2, and 3",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQL99OTK7",
+          "text": "1, 2, and 4",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QGU2E9RRO",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815277"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Where does the boundary layer separation due to shock wave interaction occur on the wing?",
+      "options": [
+        {
+          "id": "OWI8GIQFF",
+          "text": "Along the upper surface of the wing, just before the trailing edge.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OSDIZWXHY",
+          "text": "Along the lower surface of the wing, just after the leading edge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONV3WVHU9",
+          "text": "At the leading edge.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWNDQKXZL",
+          "text": "At the trailing edge.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QIQHBA8Q5",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-816195",
+      "ATPLGS-126143",
+      "AVEXAM-96589",
+      "ATPLGS-129471",
+      "BGS-811286",
+      "BGS-811277"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which of the following wing designs would have the least effective high lift devices (airspeed and all other factors being constant)?",
+      "options": [
+        {
+          "id": "OLG0J9B5M",
+          "text": "Sweep angle has no influence on the effectiveness of high lift devices.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O4XHFKSNX",
+          "text": "Wing with a sweepback angle of 15 degrees.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OMUURUD4V",
+          "text": "Wing with no sweep angle.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWOMHWJT5",
+          "text": "Wing with a sweepback angle of 25 degrees.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q9TNJF8W1",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-814442"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aeroplane is descending from FL 390 to ground level at maximum speed. The limit(s) in speed is (are):",
+      "options": [
+        {
+          "id": "OFOCI9VJH",
+          "text": "initially MMO, then VMO below a given flight level.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ONAXLTGKN",
+          "text": "initially VMO, then MMO below a given flight level.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ODPRXSXKD",
+          "text": "VMO only during all the descent.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCGPW7KYD",
+          "text": "MMO only during all the descent.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYGRGR8IW",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811840"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A normal, cambered aerofoil accelerates to transonic speeds: the lower shockwave moves aft...",
+      "options": [
+        {
+          "id": "ONHIWZGEL",
+          "text": "More quickly than the upper.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O7TJR7DLQ",
+          "text": "But remains ahead of the upper shockwave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVII0FKMM",
+          "text": "To the location of the upper shockwave than remains static.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OCSTQLVDW",
+          "text": "It is not possible to say.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QW9D3O4H6",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811083"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Which parameters are at least required for the determination of Mach number to show on a display?",
+      "options": [
+        {
+          "id": "OE4TBPOBC",
+          "text": "Dynamic pressure and static pressure.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "O6P4GLBPI",
+          "text": "Density altitude and dynamic pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O2WVG3EPX",
+          "text": "Outside air temperature and static pressure.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OUOC0PRKL",
+          "text": "Outside air temperature and dynamic pressure.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYOUNJCAZ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813226",
+      "AVEXAM-42149",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The critical Mach number of a conventional aerofoil section increases if...",
+      "options": [
+        {
+          "id": "OHPEJFI1P",
+          "text": "its thickness to chord ratio is increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONIQNC6WE",
+          "text": "its camber has increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHMPNQ7SU",
+          "text": "it is flown at higher angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTM94ZFF2",
+          "text": "its leading edge radius is decreased.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QZKTHZ0OM",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816011", "AVEXAM-4854"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft is climbing at a constant IAS, just before the high speed buffet. What should the pilot expect during the climb?",
+      "options": [
+        {
+          "id": "O1HUGQJBV",
+          "text": "CL increases and then decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OROC7DLZH",
+          "text": "CL remains the same.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "ORHNCNMBM",
+          "text": "CL decrease.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OPS9HOIKS",
+          "text": "CL increase.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QTNDELC5B",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-813159", "ATPLGS-628504", "BGS-812576"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "For a given CG position, the aeroplane has an M**CRIT** of Mach 0.82\\. With an aft movement of the CG, the M**CRIT** would (1) \\_\\_\\_\\_\\_, as the local air velocity on the top surface of the wing would (2) \\_\\_\\_\\_\\_, due to the (3) \\_\\_\\_\\_\\_ angle of attack required to maintain level flight.",
+      "options": [
+        {
+          "id": "OBBUQUL5H",
+          "text": "(1) increase; (2) increase; (3) increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OHIZAH797",
+          "text": "(1) decrease; (2) decrease; (3) increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O8SZZCQ6B",
+          "text": "(1) increase; (2) decrease; (3) decreased.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXAULBXYM",
+          "text": "(1) decrease; (2) increase; (3) increased.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYFPZPCD9",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-813199", "AVEXAM-80956"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aircraft with swept wings is better suited to cruising at higher Mach numbers due to reduced speed in the direction (1) \\_\\_\\_\\_\\_ to the wing span, compared to the (2) \\_\\_\\_\\_\\_. This speed varies with the (3) \\_\\_\\_\\_\\_ of the sweep angle.",
+      "options": [
+        {
+          "id": "OY0DLDV34",
+          "text": "(1) perpendicular; (2) free stream flow; (3) sine",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYASMF5IU",
+          "text": "(1) perpendicular; (2) free stream flow; (3) cosine",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OTKOCCWJG",
+          "text": "(1) parallel; (2) free stream flow; (3) sine",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLCY7OXIN",
+          "text": "(1) parallel; (2) free stream flow; (3) tangent",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQQIO4FVN",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819027", "BGS-812769"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The reduction in downwash behind the shock-induced separation will contribute to...",
+      "options": [
+        {
+          "id": "OT9NWUVS3",
+          "text": "increase in induced drag",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OVYPOASDS",
+          "text": "the lift coefficient increasing",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OOGUN9OOO",
+          "text": "a reduction in drag",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTVNTLUSL",
+          "text": "tuck under",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QE0R1PUB8",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815998"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to the pressure coefficient (CP) when the flow velocity (Mach number) is higher than the critical Mach number (MCRIT)?",
+      "options": [
+        {
+          "id": "OVSGIHGYF",
+          "text": "CP fluctuates rapidly",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZD66MROT",
+          "text": "CP remains constant",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKTOHSEVQ",
+          "text": "CP increases",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OKWMDHNTR",
+          "text": "CP decreases",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QVS2CMMQQ",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-815718",
+      "AVEXAM-20922",
+      "BGS-810494",
+      "ATPLGS-125619"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "A jet transport aeroplane is in a straight climb at a constant IAS and constant weight. The operational limit that may be exceeded is:",
+      "options": [
+        {
+          "id": "OYCFLIKAA",
+          "text": "MD.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQ2SQZMPA",
+          "text": "VA.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQERCXLYN",
+          "text": "VMO.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYITYJO9R",
+          "text": "MMO.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QXOTFBEXD",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815560", "ATPLGS-129365"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Compaired to a wing with less camber, a wing with greater camber will:",
+      "options": [
+        {
+          "id": "O76EHSPCU",
+          "text": "Camber percentage have no effect on MCRIT values",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OR21OPHJP",
+          "text": "Increase MCRIT",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OISOGIOHZ",
+          "text": "Decrease MCRIT",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OC8M2DPDI",
+          "text": "MCRIT is not affected",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QPESTRY7Z",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-812806", "AVEXAM-32911"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What effect will shockwave induced separation have on a T-Tail horizontal stabiliser?",
+      "options": [
+        {
+          "id": "OY48RPGTP",
+          "text": "No noticeable effect.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OXO7R3MGV",
+          "text": "Airflow separation will cause it to buffet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLPWX3XCB",
+          "text": "Decrease downwash.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OI1D4TEFU",
+          "text": "Increase downwash.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q7S5ZO8LX",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-817234",
+      "BGS-810579",
+      "BGS-810580",
+      "AVEXAM-69614",
+      "AVEXAM-16161",
+      "ATPLGS-125628",
+      "ATPLGS-125720",
+      "AVEXAM-92334"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "As altitude increases, the stall speed (IAS):",
+      "options": [
+        {
+          "id": "OD9EIQAXO",
+          "text": "initially remains constant but at higher altitudes decreases.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OD0RSXAHQ",
+          "text": "remains constant regardless of altitude.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9LJSIHUM",
+          "text": "initially remains constant but at higher altitudes increases.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OT66MKOOA",
+          "text": "remains constant until the tropopause but at higher altitudes increases.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QCGE0X8AH",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-815403", "ATPLGS-129328"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What happens to the lift to drag ratio in the transonic regime?",
+      "options": [
+        {
+          "id": "OOPUS12ZB",
+          "text": "Stays the same",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O93R2JBRM",
+          "text": "Decreases",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OJFWNLMAY",
+          "text": "Increases",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O93UPNIXP",
+          "text": "Decreases slowly then increases",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QYTDRPJMF",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-815443",
+      "ATPLGS-125631",
+      "BGS-810583",
+      "AVEXAM-30360"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Shock stall:",
+      "options": [
+        {
+          "id": "O5XBPPSG2",
+          "text": "occurs as soon as MCRIT is exceeded.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKRRVMTDE",
+          "text": "occurs when the lift coefficient, as a function of Mach number, reaches its maximum value.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OAUG64UPU",
+          "text": "results from flow separation behind the bow wave.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O1L5WJ2MW",
+          "text": "results from flow separation at the underside of the aerofoil.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QQ5KMAKLP",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816737", "ATPLGS-118660", "AVEXAM-67888"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "An aerofoil with reduced camber compared to one with increased camber at high subsonic speed, at the same level and configuration will...",
+      "options": [
+        {
+          "id": "OPGMLZQU2",
+          "text": "be more sensitive to gust turbulence.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OICB9RGGT",
+          "text": "produce more lift.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OQCPCNFFG",
+          "text": "have a lower MCRIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OTIVX0WXJ",
+          "text": "have a higher MCRIT.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QOGU8UUVE",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-813724",
+      "BGS-811691",
+      "AVEXAM-6393",
+      "ATPLGS-117990"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When shock stall occurs, lift will decrease because:",
+      "options": [
+        {
+          "id": "O78L0XJTI",
+          "text": "the bow wave appears.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OEQ5SQ2NO",
+          "text": "MCRIT is reached.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O9TX7Z1FJ",
+          "text": "of the existence of a shock wave being located at the trailing edge of the wing.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "O5BIR4V4I",
+          "text": "flow separation occurs behind the shock wave.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QKC3B3DF8",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-812474",
+      "AVEXAM-40484",
+      "AVEXAM-15217",
+      "AVEXAM-68772",
+      "AVEXAM-10259",
+      "BGS-812761",
+      "AVEXAM-29482",
+      "ATPLGS-627460",
+      "BGS-811296",
+      "BGS-810578",
+      "BGS-810275",
+      "ATPLGS-125723",
+      "AVEXAM-75953",
+      "BGS-810622",
+      "AVEXAM-41190",
+      "AVEXAM-5032",
+      "BGS-810357",
+      "BGS-810004",
+      "BGS-812217",
+      "AVEXAM-15706",
+      "AVEXAM-27142",
+      "BGS-811913",
+      "AVEXAM-94873",
+      "AVEXAM-60116",
+      "ATPLGS-125769",
+      "AVEXAM-33798",
+      "BGS-812611",
+      "BGS-810404",
+      "ATPLGS-628098",
+      "AVEXAM-99715",
+      "AVEXAM-35854",
+      "BGS-811385",
+      "ATPLGS-126255",
+      "BGS-810249",
+      "AVEXAM-94229",
+      "BGS-811337",
+      "BGS-812066",
+      "BGS-812423",
+      "AVEXAM-54992",
+      "AVEXAM-93827",
+      "ATPLGS-125716",
+      "AVEXAM-91091",
+      "ATPLGS-118483",
+      "BGS-812385",
+      "BGS-812668",
+      "AVEXAM-47066",
+      "ATPLGS-118685",
+      "BGS-811200",
+      "BGS-812704",
+      "BGS-810490",
+      "ATPLGS-129451",
+      "ATPLGS-125826",
+      "AVEXAM-83986",
+      "AVEXAM-40877",
+      "BGS-811270",
+      "ATPLGS-125547",
+      "AVEXAM-62755",
+      "BGS-810270",
+      "BGS-811243",
+      "AVEXAM-6080",
+      "ATPLGS-125981",
+      "AVEXAM-79213",
+      "AVEXAM-12467",
+      "ATPLGS-125646",
+      "ATPLGS-126177",
+      "BGS-812689",
+      "ATPLGS-125620",
+      "AVEXAM-76831",
+      "ATPLGS-125666",
+      "AVEXAM-87386",
+      "ATPLGS-113805",
+      "ATPLGS-628504",
+      "BGS-811027",
+      "BGS-811010",
+      "AVEXAM-58558",
+      "BGS-810390",
+      "BGS-811629",
+      "BGS-811012",
+      "BGS-811013",
+      "BGS-811029",
+      "BGS-811011",
+      "BGS-811028",
+      "AVEXAM-62077",
+      "AVEXAM-9949",
+      "BGS-810575",
+      "AVEXAM-55942",
+      "BGS-812439",
+      "AVEXAM-15040",
+      "ATPLGS-125819",
+      "AVEXAM-16088",
+      "BGS-812650",
+      "AVEXAM-23709",
+      "ATPLGS-129467",
+      "AVEXAM-58472",
+      "AVEXAM-93241",
+      "BGS-810492",
+      "AVEXAM-53639",
+      "BGS-810274",
+      "AVEXAM-57555",
+      "AVEXAM-1499",
+      "AVEXAM-45085",
+      "ATPLGS-125827",
+      "BGS-812604",
+      "ATPLGS-125768"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "When altitude increases, the stall speed (IAS) will:",
+      "options": [
+        {
+          "id": "OPUCNQQZV",
+          "text": "increase due to increasing compressibility effects as a result of increasing Mach number.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OZOMPKYEH",
+          "text": "increase due to decreasing MCRIT.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OGZGQMVVQ",
+          "text": "decrease due to decreasing temperature and decreasing Mach number.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OK7VKDIR9",
+          "text": "decrease due to increasing MCRIT.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QLFOPSBB9",
+    "relatedQuestions": [],
+    "externalIds": [
+      "ATPLQ-812388",
+      "AVEXAM-42149",
+      "AVEXAM-39568",
+      "ATPLGS-626078",
+      "ATPLGS-126459",
+      "BGS-810636",
+      "ATPLGS-626079",
+      "BGS-811711",
+      "BGS-811716",
+      "BGS-811712",
+      "BGS-811714",
+      "ATPLGS-126460",
+      "BGS-812370",
+      "BGS-811713"
+    ],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "The critical Mach number of a conventional aerofoil section increases if:",
+      "options": [
+        {
+          "id": "O1DWPP1GJ",
+          "text": "its leading edge radius is increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OW46GZ2BS",
+          "text": "its camber is increased.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OL2K8HBLZ",
+          "text": "it is flown at higher angles of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OKDDULK3P",
+          "text": "its thickness to chord ratio is reduced.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QFOL76EN1",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-819339", "AVEXAM-30675", "BGS-812689"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "Regarding high-speed flight, if the angle of attack of an aeroplane is increased, it's critical Mach number will…",
+      "options": [
+        {
+          "id": "OAS1MZPZB",
+          "text": "decrease, because of the reduced margin to the critical angle of attack.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ0POJPTX",
+          "text": "increase, because of reduced downwash at the tailplane.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OIIQ2GQEV",
+          "text": "increase, because of increased induced drag.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OAYKDFOPH",
+          "text": "decrease, because of greater acceleration on the top surface of the wing.",
+          "correct": true,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QBXM3M4A8",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-816207", "AVEXAM-46242"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "What is the relationship between speed of sound and absolute temperature?",
+      "options": [
+        {
+          "id": "OTOS9HBVZ",
+          "text": "Inversely proportional to square root of temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OZ5CRHKQE",
+          "text": "Inversely proportional to square of temperature.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWI0NTUUE",
+          "text": "Directly proportional to square root of temperature.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OC27C0CCU",
+          "text": "Directly proportional to square of temperature.",
+          "correct": false,
+          "why": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "QAWYAEZHI",
+    "relatedQuestions": [],
+    "externalIds": ["ATPLQ-811717", "BGS-812563", "AVEXAM-18498"],
+    "annexes": [],
+    "learningObjectives": ["081.02"],
+    "explanation": "",
+    "variant": {
+      "type": "simple",
+      "question": "As an aircraft accelerates through the transonic speed range, it exceeds its Critical Mach number. A normal shock wave forms on the upper surface of the wing, which induces flow separation. This causes...",
+      "options": [
+        {
+          "id": "O26X8P6CS",
+          "text": "downwash over the tail causing a nose up pitching moment.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OLH8RLTLV",
+          "text": "turbulent air to hit the elevator causing only a light buffet.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OYE1EQURS",
+          "text": "turbulent air to hit the tail, producing a severe airframe buffet.",
+          "correct": true,
+          "why": ""
+        },
+        {
+          "id": "OUXP4GKQZ",
+          "text": "up wash over the tail, causing a nose down pitching moment.",
           "correct": false,
           "why": ""
         }

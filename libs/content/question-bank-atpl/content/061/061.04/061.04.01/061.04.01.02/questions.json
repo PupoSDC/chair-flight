@@ -1,308 +1,42 @@
 [
   {
-    "id": "QXPBHPGW",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-613713"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to Jeppesen GSPRM Training Route Manual - Chart \"E LO 2\".  \n  Which bearing will be indicated when an aircraft is overhead waypoint RIKUL (53°03’N, 008°21’W) and its receivers are tuned to Shannon VOR (SHA, 52°43’N, 008°53’W) and Connaught VOR (CON, 53°55’N, 008°49’W)?",
-      "options": [
-        {
-          "id": "A2K67EGXIO",
-          "text": "QDM SHA 230° and QDR CON 166°.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ASUBUF6K2Q",
-          "text": "QDM SHA 230° and QDR CON 161º.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ATBZ9WR5DZ",
-          "text": "QDM SHA 235° and QDR CON 166°.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANLXIXATLP",
-          "text": "QDM SHA 050° and QDR CON 346°.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBGHRLOV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612770"],
-    "annexes": ["a22bc0bad99e8e461b6e84aa9f0411be"],
-    "learningObjectives": ["061.04.01.02.01"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Refer to figure. \n What result of the sum of the vector A and B?",
-      "options": [
-        {
-          "id": "A3QRLFH0JV",
-          "text": "Vector 1",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ATWXZFCOAE",
-          "text": "Vector 3",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3IW2KGQPY",
-          "text": "Vector 2",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AOZWJFDPF9",
-          "text": "Vector 4",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QFPPWQGG",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-60368"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Which best describes convergency?",
-      "options": [
-        {
-          "id": "AQF93QX7OS",
-          "text": "Degrees × sin (lat)",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACPL8DDX6Q",
-          "text": "Degrees × cos (lat)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AL46IGRUC7",
-          "text": "Minutes × sin (lat)",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAE7QUBB9O",
-          "text": "Minutes × cos (lat)",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKYJARBC",
-    "relatedQuestions": ["QRBRYQWA"],
-    "externalIds": ["BGS-610040"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is following the 45°N parallel of latitude. The track followed is a:",
-      "options": [
-        {
-          "id": "AGLE4RXKXD",
-          "text": "rhumb line",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJ5798KSWR",
-          "text": "constant-drift track",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASVV17SM8A",
-          "text": "constant-heading track",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AAOR81SX6X",
-          "text": "great circle",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QRBRYQWA",
-    "relatedQuestions": ["QKYJARBC"],
-    "externalIds": ["AVEXAM-28590"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "An aircraft is following the 45°N parallel of latitude. The track followed is a:",
-      "options": [
-        {
-          "id": "AQY3ZHE4RV",
-          "text": "rhumb line.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ANPDL726IJ",
-          "text": "constant-heading track.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AP34JVSRD3",
-          "text": "constant-drift track.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AFXTG8DQ4W",
-          "text": "great circle.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKUEAHDS",
-    "relatedQuestions": [],
-    "externalIds": ["BGS-610751"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A straight line is drawn on a Lambert conformal conic chart, on which Chart Convergency = Earth Convergency at latitude 42°, from A (48° 155°E) to B (36° x°E). The true course of the straight line track at A is 060°T and at B is 046°T. The hemisphere in which the track is drawn and the final longitude at B are:",
-      "options": [
-        {
-          "id": "AS54BR1IR6",
-          "text": "Southern Hemisphere - 176°E",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AJOFK792YC",
-          "text": "Northern Hemisphere - 166°E",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUPA88C4PT",
-          "text": "Southern Hemisphere - 166°E",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AEOPS1AE5Q",
-          "text": "Northern Hemisphere - 176°E",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
     "id": "QNTHIZVS",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612425", "AVEXAM-79788", "BGS-611408"],
-    "annexes": [],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "When a chart meets the ICAO recommendations for conformity, what does this mean when using this chart for navigational purposes?",
-      "options": [
-        {
-          "id": "A2PXXU2ZB2",
-          "text": "A straight line drawn on the chart will approximate a great circle.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZXYF2A1L0",
-          "text": "For two same sized squares drawn on the chart at different locations, the underlying ground area on Earth will have the same surface size.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A7OCAC5QQV",
-          "text": "Meridians are printed as vertical lines perpendicular to the edges of the chart.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ALDXV9A5XL",
-          "text": "A straight line on the chart between two points does NOT necessarily represent the shortest ground distance between those two points.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QBVZXUYD",
-    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-110255",
-      "ATPLGS-124432",
-      "ATPLQ-617881",
-      "BGS-610210"
+      "ATPLQ-612425",
+      "AVEXAM-79788",
+      "ATPLGS-628537",
+      "BGS-611408"
     ],
     "annexes": [],
     "learningObjectives": ["061.04.01.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Where on a Direct Mercator projection is the chart convergency correct compared to the Earth convergency?",
+      "question": "A chart meets the ICAO recommendation for conformity. What does it mean for you when you intend to use it for navigational purposes?",
       "options": [
         {
-          "id": "AHX0NK1C8W",
-          "text": "At the Equator.",
+          "id": "OZAF0ADAR",
+          "text": "Meridians are printed as vertical lines perpendicular to the edges of the chart.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OBGPNMWZE",
+          "text": "A straight line of the chart between two points does not necessarily represent the shortest distance between those points on the Earth.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OXCOD9SFZ",
+          "text": "For two same sized squares drawn on the chart at different locations, the underlying ground of the Earth will have the same surface size.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "ONHIS4HPM",
+          "text": "A straight line drawn on the chart will approximate a great circle.",
           "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AGCT4TP0BD",
-          "text": "At the poles.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AM8TD4M9TD",
-          "text": "At the two parallels of tangency.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARSO6CNUBA",
-          "text": "All over the chart.",
-          "correct": false,
           "why": ""
         }
       ]
@@ -311,7 +45,7 @@
   {
     "id": "QZYAEUXO",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-619645"],
+    "externalIds": ["ATPLQ-619645", "AVEXAM-87931", "BGS-611289"],
     "annexes": [],
     "learningObjectives": ["061.04.01.02.02"],
     "explanation": "",
@@ -320,26 +54,26 @@
       "question": "What is the chart characteristic which achieves the ICAO requirement of a straight line on an en-route chart approximating to a great circle track on the Earth?",
       "options": [
         {
-          "id": "AWQWJUMW9G",
-          "text": "Meridians and parallels of latitude intersect at 90°.",
+          "id": "ODQAWOL3A",
+          "text": "Chart convergence approximates to Earth convergence.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUCQI8CNJX",
+          "id": "OVLSXTICF",
+          "text": "Meridians and parallels of latitude intersect at 90°.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OV2N365WL",
           "text": "The chart conversion angle must be less than 30°.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AAXVVPDDX4",
+          "id": "O2AVAD212",
           "text": "The scale must change at the same rate in all directions.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ASP1PD4DBU",
-          "text": "Chart convergence approximates to Earth convergence.",
           "correct": false,
           "why": ""
         }
@@ -347,36 +81,36 @@
     }
   },
   {
-    "id": "QBEWYELR",
+    "id": "QCWDIFFB",
     "relatedQuestions": [],
-    "externalIds": ["BGS-611469"],
-    "annexes": ["7d19b51c0831600c9186a199d5d29e4b"],
+    "externalIds": ["ATPLQ-612394", "BGS-611469", "AVEXAM-66748"],
+    "annexes": ["AKRF5947K"],
     "learningObjectives": ["061.04.01.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "For this question use the image which depicts a Lambert's Conformal Chart of the Northern hemisphere.\nAt position A what is the relationship between Earth Convergency (EC) and Chart Convergency (CC)?",
+      "question": "Refer to figure or lamberts Conformal Chart of the northern hemisphere.   \n At position A what is the relationship between Earth Convergency (EC) and Chart Convergency (CC)?",
       "options": [
         {
-          "id": "AW8SLNX489",
+          "id": "OBSOD26GV",
+          "text": "EC > CC",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OWBHN7DV7",
           "text": "EC = CC",
           "correct": true,
           "why": ""
         },
         {
-          "id": "A1RXG3FR3F",
-          "text": "EC &lt; CC",
+          "id": "OEZTVTEOP",
+          "text": "EC < CC",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AABBCW9ZE1",
-          "text": "EC &gt; CC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AQ7UBH3SDF",
+          "id": "OHMEDA5AF",
           "text": "The relationship cannot be determined.",
           "correct": false,
           "why": ""
@@ -387,7 +121,7 @@
   {
     "id": "QOFTIPVD",
     "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612789"],
+    "externalIds": ["ATPLQ-612789", "AVEXAM-66778"],
     "annexes": [],
     "learningObjectives": ["061.04.01.02.02"],
     "explanation": "",
@@ -396,64 +130,26 @@
       "question": "In an aeronautical chart, the convergence of a line between two points is determined by:",
       "options": [
         {
-          "id": "ARDT6Y818F",
-          "text": "Chart meridian convergence.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ACB85PYKOL",
-          "text": "Earth meridian convergence and sin mean latitude.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AZKKD2D6I5",
+          "id": "OVMXLVNHV",
           "text": "Earth meridian convergence.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AY5FSA97YG",
-          "text": "Chart meridian convergence and sin parallel of origin.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QCWDIFFB",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLQ-612394"],
-    "annexes": ["f40da1edb77da81c1ef24e03b4a82495"],
-    "learningObjectives": ["061.04.01.02.02"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "  \n  At position A what is the relationship between Earth Convergency (EC) and Chart Convergency (CC)?",
-      "options": [
-        {
-          "id": "A5R2WHN0WR",
-          "text": "EC = CC",
+          "id": "OILHUQBFY",
+          "text": "Chart meridian convergence.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AU7RDZEUBZ",
-          "text": "The relationship cannot be determined.",
+          "id": "OJYUFUOGC",
+          "text": "Chart meridian convergence and sin parallel of origin.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AIC9TN8UIF",
-          "text": "EC &gt; CC",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARATJ3KB5J",
-          "text": "EC &lt; CC",
+          "id": "OUSXHEEFY",
+          "text": "Earth meridian convergence and sin mean latitude.",
           "correct": false,
           "why": ""
         }
@@ -461,37 +157,43 @@
     }
   },
   {
-    "id": "QWDBUTUZ",
+    "id": "QBVZXUYD",
     "relatedQuestions": [],
-    "externalIds": ["ATPLGS-626323", "BGS-611491"],
+    "externalIds": [
+      "ATPLQ-617881",
+      "BGS-610210",
+      "ATPLGS-110255",
+      "ATPLGS-124432",
+      "AVEXAM-48824"
+    ],
     "annexes": [],
     "learningObjectives": ["061.04.01.02.02"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An aircraft is in Tokyo (35°39'N, 139°50'E) and plans to fly to Anchorage (61°13\"N, 149°52'W). What is the arc-to-time difference between Tokyo and Anchorage?",
+      "question": "Where on a Direct Mercator projection is the chart convergency correct compared to the Earth convergency?",
       "options": [
         {
-          "id": "AKK0GOZJUA",
-          "text": "4 hours 41 minutes",
+          "id": "O15CPQQW9",
+          "text": "At the Equator.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALHS7GKQCR",
-          "text": "19 hours 19 minutes",
+          "id": "ODGSRKE01",
+          "text": "At the poles.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A3ZD6WWTXV",
-          "text": "9 hours 59 minutes",
+          "id": "O0IR0ZJ5F",
+          "text": "All over the chart.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "ACOG89N2FX",
-          "text": "9 hours 19 minutes",
+          "id": "ONRAJKJLY",
+          "text": "At the two parallels of tangency.",
           "correct": false,
           "why": ""
         }

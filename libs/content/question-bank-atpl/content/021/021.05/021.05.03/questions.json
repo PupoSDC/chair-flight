@@ -1,160 +1,41 @@
 [
   {
-    "id": "QOTGSOFY",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105014"],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.10"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A primary stop is mounted on an elevator control system in order to",
-      "options": [
-        {
-          "id": "AAWK8USHWP",
-          "text": "restrict the range of movement of the elevator.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AEZ2SZEBDI",
-          "text": "maintain constant control cable tension.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AWR2N5KTR7",
-          "text": "restrict the range of movement of the control column.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A04YH9NGHG",
-          "text": "prevent overloading of control cables.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QONZZALY",
+    "id": "QDEOGPVO",
     "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-105047",
-      "ATPLQ-216785",
-      "AVEXAM-41958",
-      "BGS-210179"
+      "ATPLQ-219473",
+      "BGS-210206",
+      "AVEXAM-93200",
+      "ATPLGS-120953"
     ],
     "annexes": [],
-    "learningObjectives": ["021.05.03.01.07"],
+    "learningObjectives": ["021.05.03.01.08"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "An artificial feel unit is necessary in the pitch channel of a flight control system when:",
+      "question": "A double-pole switch is used to activate the elevator trim..",
       "options": [
         {
-          "id": "ABD6E7UNPT",
-          "text": "the elevators are actuated by irreversible servo-control units.",
+          "id": "OXBEAA28U",
+          "text": "to allow the use of a slow trim rate at high speed and a high trim rate at low speed.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OO3Q3PKW7",
+          "text": "because there are two trim motors.",
+          "correct": false,
+          "why": ""
+        },
+        {
+          "id": "OFNUV6UUA",
+          "text": "to reduce the probability of a trim runaway.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AYERD31DP8",
-          "text": "the elevators are fitted with servo-tabs or trim tabs.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AXDWBV4DP8",
-          "text": "the elevators are actuated by reversible servo-control units.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4C7KPRUTS",
-          "text": "there is a trimmable stabilizer.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QENTCFEV",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-622289", "ATPLQ-215510", "BGS-211173"],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Hydraulic systems have failed in fully powered flight control system. Movement of the normal pilot`s control input will result in",
-      "options": [
-        {
-          "id": "AXB24W11HM",
-          "text": "Lack of response",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AWECN1AI23",
-          "text": "Activation of standby hydraulic system",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ABXBQF86P1",
-          "text": "Jamming of actuator",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A3TLE5RVMW",
-          "text": "Corresponding movement of control surface",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QNLAMMOS",
-    "relatedQuestions": ["QEJTBLJP"],
-    "externalIds": [
-      "ATPLGS-625682",
-      "ATPLQ-215510",
-      "AVEXAM-10895",
-      "BGS-211173"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Consider the case that the hydraulic systems have failed in a fully powered flight control system. Movement of the normal pilot`s flight control input will result in..",
-      "options": [
-        {
-          "id": "ACKLEFC0E6",
-          "text": "a lack of response in the control surface.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AZU8OBTD92",
-          "text": "a corresponding movement of the control surface.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AKZ1KFK79I",
-          "text": "activation of the standby hydraulic system.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ARSSX5QVYJ",
-          "text": "jamming of the control actuator",
+          "id": "O0TDDACLT",
+          "text": "to prevent both pilots from performing opposite trim inputs.",
           "correct": false,
           "why": ""
         }
@@ -163,42 +44,42 @@
   },
   {
     "id": "QEJTBLJP",
-    "relatedQuestions": ["QNLAMMOS"],
+    "relatedQuestions": [],
     "externalIds": [
-      "ATPLGS-622289",
-      "ATPLGS-625682",
       "ATPLQ-215510",
-      "AVEXAM-10895",
-      "BGS-211173"
+      "BGS-211173",
+      "ATPLGS-625682",
+      "ATPLGS-622289",
+      "AVEXAM-10895"
     ],
     "annexes": [],
     "learningObjectives": ["021.05.03.01.07"],
     "explanation": "",
     "variant": {
       "type": "simple",
-      "question": "Consider the case that the hydraulic systems have failed in a fully powered flight control system. Movement of the normal pilot`s flight control input will result in ...",
+      "question": "Consider the case that all hydraulic systems have failed in a fully powered flight control system. Movement of the normal pilot's flight control input will result in...",
       "options": [
         {
-          "id": "AXIOD9A05Q",
+          "id": "OWJT4U9UY",
           "text": "a lack of response in the control surface.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "ALWA0AO4ZP",
-          "text": "jamming of the control actuator.",
+          "id": "OK9F6BW7S",
+          "text": "a corresponding movement of the control surface.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "AEGR042Q1F",
+          "id": "OE1KNWVIL",
           "text": "activation of the standby hydraulic system.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A4C5A1ZWZD",
-          "text": "a corresponding movement of the control surface.",
+          "id": "O62F0TWVD",
+          "text": "jamming of the control actuator.",
           "correct": false,
           "why": ""
         }
@@ -217,145 +98,26 @@
       "question": "An aircraft trim system acts on the aerodynamic forces on control surfaces in flight. What is the main purpose of the trim system?",
       "options": [
         {
-          "id": "AL23ZD4EML",
+          "id": "O84HGEDYJ",
           "text": "It holds the attitude set once the controls are released.",
           "correct": true,
           "why": ""
         },
         {
-          "id": "AUD8UFEVS7",
+          "id": "OOADN8EAL",
           "text": "It adjusts the attitude of the aircraft.",
           "correct": false,
           "why": ""
         },
         {
-          "id": "A5ZB44LWZI",
-          "text": "It controls the flight path of the aircraft.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUA017N9HC",
+          "id": "OHUL60CBB",
           "text": "It reduces the force required to move the controls.",
           "correct": false,
           "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QKGLSAQK",
-    "relatedQuestions": [],
-    "externalIds": ["ATPLGS-105013"],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "Why is the artificial feel required on some flight control systems and how is the degree of the feel set?",
-      "options": [
-        {
-          "id": "ASE5YO2KSH",
-          "text": "It is fitted to prevent over-stressing of the aircraft and provides increased forces as the speed increases.",
-          "correct": true,
-          "why": ""
         },
         {
-          "id": "AZ4KIPVIFV",
-          "text": "It is fitted to assist the pilot to move the controls and provides decreased assistance as the speed increases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "A4PBSRBC5M",
-          "text": "It is fitted to assist the pilot to move the controls and provides increased assistance as the speed increases.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AN2BKLIIXN",
-          "text": "It is fitted to prevent over-stressing of the aircraft and provides decreased forces as the speed increases.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QDEOGPVO",
-    "relatedQuestions": [],
-    "externalIds": [
-      "ATPLGS-120953",
-      "ATPLQ-219473",
-      "AVEXAM-93200",
-      "BGS-210206"
-    ],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.08"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "A double-pole switch is used to activate the elevator trim..",
-      "options": [
-        {
-          "id": "AX2BPOASKO",
-          "text": "to reduce the probability of a trim runaway.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "ADAUATEJB8",
-          "text": "to prevent both pilots from performing opposite trim inputs.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AHTNBM75AZ",
-          "text": "because there are two trim motors.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AE222QM8QR",
-          "text": "to allow the use of a slow trim rate at high speed and a high trim rate at low speed.",
-          "correct": false,
-          "why": ""
-        }
-      ]
-    }
-  },
-  {
-    "id": "QMEUWYGN",
-    "relatedQuestions": [],
-    "externalIds": ["AVEXAM-70213"],
-    "annexes": [],
-    "learningObjectives": ["021.05.03.01.07"],
-    "explanation": "",
-    "variant": {
-      "type": "simple",
-      "question": "In large transport category aircraft, “artificial feel units” are",
-      "options": [
-        {
-          "id": "A787P99BWA",
-          "text": "Installed in parallel with the flight control system and are referred to as “Q” feel.",
-          "correct": true,
-          "why": ""
-        },
-        {
-          "id": "AT1WUMXFHN",
-          "text": "Installed in line with the flight control system and are referred to as “A” feel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "ANHM1MZ5WB",
-          "text": "Installed in line with the flight control system and are referred to as “Q” feel.",
-          "correct": false,
-          "why": ""
-        },
-        {
-          "id": "AUIQU7D67E",
-          "text": "Installed in parallel with the flight control system and are referred to as “A” feel.",
+          "id": "ONL0BOEQD",
+          "text": "It controls the flight path of the aircraft.",
           "correct": false,
           "why": ""
         }
