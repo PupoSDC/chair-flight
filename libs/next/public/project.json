@@ -5,27 +5,8 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/next/public/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p libs/next/public/tsconfig.json"]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [],
-      "options": {
-        "passWithNoTests": false,
-        "reportsDirectory": "../../../coverage/libs/next/public",
-        "config": "{workspaceRoot}/vitest.config.mts"
-      }
-    }
+    "lint": {},
+    "check": {},
+    "format": {}
   }
 }

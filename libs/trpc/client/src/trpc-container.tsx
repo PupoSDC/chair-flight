@@ -1,4 +1,3 @@
-import { MissingPathParameter } from "@cf/base/errors";
 import { ContainerWrapper } from "@cf/react/components";
 import type { ContainerWrapperProps } from "@cf/react/components";
 import type { TrpcHelper } from "@cf/trpc/server";

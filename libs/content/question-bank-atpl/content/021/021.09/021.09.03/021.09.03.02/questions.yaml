@@ -19,20 +19,17 @@
         correct: true
         why: ""
       - id: OMQLJRGIM
-        text:
-          is driven at constant speed through a constant speed drive (CSD), in the
+        text: is driven at constant speed through a constant speed drive (CSD), in the
           same way as the main AC generator.
         correct: false
         why: ""
       - id: OZABGJ9XM
-        text:
-          is excited by its Generator Control Unit (GCU) as soon as the APU starts
+        text: is excited by its Generator Control Unit (GCU) as soon as the APU starts
           up.
         correct: false
         why: ""
       - id: OCSRN4THD
-        text:
-          must have the same characteristics as the main AC generator so that it can
+        text: must have the same characteristics as the main AC generator so that it can
           be easily coupled with the latter.
         correct: false
         why: ""
@@ -60,14 +57,12 @@
         correct: true
         why: ""
       - id: OFDP6CLF7
-        text:
-          does not need a voltage controller since an AC generator voltage cannot
+        text: does not need a voltage controller since an AC generator voltage cannot
           alter under load.
         correct: false
         why: ""
       - id: O02JGPG8F
-        text:
-          does not need a voltage controller since the CSD will ensure constant
+        text: does not need a voltage controller since the CSD will ensure constant
           voltage.
         correct: false
         why: ""
@@ -115,8 +110,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During start of an engine fitted with a brushless AC generator, the
+    question: During start of an engine fitted with a brushless AC generator, the
       initial excitation is provided by...
     options:
       - id: OZXO14KBD
@@ -181,26 +175,22 @@
     question: In an AC power generation system, the constant speed drive unit is..
     options:
       - id: OOTPR8MG1
-        text:
-          a hydromechanical unit that cannot be disconnected from the engine drive
+        text: a hydromechanical unit that cannot be disconnected from the engine drive
           shaft during flight.
         correct: false
         why: ""
       - id: OFEY3MAO9
-        text:
-          a hydromechanical unit that can be disconnected from the engine drive
+        text: a hydromechanical unit that can be disconnected from the engine drive
           shaft during flight.
         correct: true
         why: ""
       - id: O75CWCSPA
-        text:
-          an electronic unit that cannot be disconnected from the engine drive shaft
+        text: an electronic unit that cannot be disconnected from the engine drive shaft
           during flight.
         correct: false
         why: ""
       - id: O7AEKRQJA
-        text:
-          an electronic unit that can be disconnected from the engine drive shaft
+        text: an electronic unit that can be disconnected from the engine drive shaft
           during flight.
         correct: false
         why: ""
@@ -217,25 +207,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The function of the generator breaker is to close when the voltage of
+    question: "The function of the generator breaker is to close when the voltage of
       the:"
     options:
       - id: OE4EDW1MM
-        text:
-          generator is greater than battery voltage and to open when the opposite is
+        text: generator is greater than battery voltage and to open when the opposite is
           true
         correct: true
         why: ""
       - id: OGWGQJLVN
-        text:
-          alternator is greater than the battery voltage and to open when the
+        text: alternator is greater than the battery voltage and to open when the
           opposite is true
         correct: false
         why: ""
       - id: OVWMSLQLF
-        text:
-          battery is greater than the alternator voltage and to open when the
+        text: battery is greater than the alternator voltage and to open when the
           opposite is true
         correct: false
         why: ""
@@ -317,8 +303,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In aircraft with AC generators as primary source of electrical power
+    question: "In aircraft with AC generators as primary source of electrical power
       DC power is obtained by:"
     options:
       - id: OXHSDFKLI
@@ -380,8 +365,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What directly controls the power required for field excitation of the
+    question: What directly controls the power required for field excitation of the
       main rotor in modern constant-frequency alternators?
     options:
       - id: OOIKHHDDQ
@@ -443,8 +427,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "On an aircraft using AC as primary power supply, the batteries are
+    question: "On an aircraft using AC as primary power supply, the batteries are
       charged in flight from:"
     options:
       - id: OKWTFNIV3
@@ -510,8 +493,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In order to produce an alternating voltage of 400 Hz, the number of
+    question: "In order to produce an alternating voltage of 400 Hz, the number of
       pairs of poles required in an AC generator running at 6000 rpm is:"
     options:
       - id: OQMJSJ0S4

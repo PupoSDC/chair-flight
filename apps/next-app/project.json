@@ -3,7 +3,12 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/next-app",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["apps/docs"],
   "targets": {
+    "lint": {},
+    "check": {},
+    "format": {},
     "dev": {
       "executor": "@nx/next:server",
       "dependsOn": ["^compile", "^migrate"],
@@ -33,21 +38,6 @@
         "buildTarget": "next-app:build",
         "dev": false
       }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/next-app/pages/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p apps/next-app/tsconfig.json"]
-      }
     }
-  },
-  "implicitDependencies": ["apps/docs"],
-  "tags": []
+  }
 }

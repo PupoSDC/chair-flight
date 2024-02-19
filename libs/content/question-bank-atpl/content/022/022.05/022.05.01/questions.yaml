@@ -11,8 +11,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      After entering the starting position, an inertial navigation system
+    question: After entering the starting position, an inertial navigation system
       provides continuous information on the aircraft's position by measuring
       the (1) \_\_\_\_\_ in the vertical, horizontal and lateral planes. A first
       integration over time outputs the (2) \_\_\_\_\_; a second integration
@@ -214,14 +213,12 @@
       accelerations:"
     options:
       - id: OMGMBJ2SN
-        text:
-          it is necessary to integrate the acceleration once with respect to time,
+        text: it is necessary to integrate the acceleration once with respect to time,
           and to know the initial position only.
         correct: false
         why: ""
       - id: OMEDQVCTS
-        text:
-          it is necessary to integrate the acceleration once with respect to time,
+        text: it is necessary to integrate the acceleration once with respect to time,
           and to know the initial speed only.
         correct: true
         why: ""
@@ -230,8 +227,7 @@
         correct: false
         why: ""
       - id: O1SXQI09K
-        text:
-          it is necessary to integrate the acceleration once with respect to time,
+        text: it is necessary to integrate the acceleration once with respect to time,
           and to know the initial speed and the initial position.
         correct: false
         why: ""
@@ -248,8 +244,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Considering a stabilised platform inertial system, the principle of
+    question: "Considering a stabilised platform inertial system, the principle of
       operation requires the use of at least:"
     options:
       - id: OFVRPWBYD
@@ -371,8 +366,7 @@
         correct: false
         why: ""
       - id: OEZIPNWDB
-        text:
-          positioning the gyroscopes and accelerometers relative to the fuselage
+        text: positioning the gyroscopes and accelerometers relative to the fuselage
           axis.
         correct: false
         why: ""
@@ -388,8 +382,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      To provide complete attitude data and navigational data, what external
+    question: To provide complete attitude data and navigational data, what external
       input(s) does the INS computer require?
     options:
       - id: OLJYHLU05
@@ -485,8 +478,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An inertial navigation system includes in its composition three linear
+    question: An inertial navigation system includes in its composition three linear
       accelerometers, in order to measure the…
     options:
       - id: OPJDI3901
@@ -525,8 +517,7 @@
         correct: true
         why: ""
       - id: OEBDE5CNV
-        text:
-          Gyros on a single platform with accelerometers attached to the aircraft
+        text: Gyros on a single platform with accelerometers attached to the aircraft
           structure.
         correct: false
         why: ""
@@ -559,8 +550,7 @@
         correct: false
         why: ""
       - id: OOR8UGNGV
-        text:
-          solid-state, high-precision, angular rate sensors, and it supplies data to
+        text: solid-state, high-precision, angular rate sensors, and it supplies data to
           an Inertial Navigation System (INS).
         correct: false
         why: ""
@@ -570,8 +560,7 @@
         correct: true
         why: ""
       - id: OFTPSUNY2
-        text:
-          mechanical rate-integrating gyroscopes, and it receives data from the
+        text: mechanical rate-integrating gyroscopes, and it receives data from the
           Flight Management Computer (FMC).
         correct: false
         why: ""
@@ -627,14 +616,12 @@
     question: "The operating principle of an inertial system consists in:"
     options:
       - id: O97EE6T8X
-        text:
-          measuring the position of the aircraft and performing integrations to
+        text: measuring the position of the aircraft and performing integrations to
           elaborate the ground speed and acceleration.
         correct: false
         why: ""
       - id: OUBGV6RYV
-        text:
-          measuring the earth rotation and performing integrations to elaborate the
+        text: measuring the earth rotation and performing integrations to elaborate the
           aircraft ground speed and position.
         correct: false
         why: ""
@@ -643,8 +630,7 @@
         correct: false
         why: ""
       - id: O8JGEZKH9
-        text:
-          measuring the acceleration of the aircraft and performing integrations to
+        text: measuring the acceleration of the aircraft and performing integrations to
           elaborate the ground speed and the position.
         correct: true
         why: ""
@@ -661,8 +647,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In an inertial navigation system, the input(s) required to obtain a
+    question: "In an inertial navigation system, the input(s) required to obtain a
       wind direction and velocity readout is(are):"
     options:
       - id: OYTUXWHCD
@@ -837,8 +822,7 @@
         correct: false
         why: ""
       - id: O9MLMVOBW
-        text:
-          can operate as stand alone equipment without any interface with other
+        text: can operate as stand alone equipment without any interface with other
           navigation equipment.
         correct: true
         why: ""
@@ -895,8 +879,7 @@
     question: Is there, by convention, a difference between an INS and an IRS?
     options:
       - id: OHGRK2HMW
-        text:
-          Yes, the INS requires electrical power for its operation, while the IRS is
+        text: Yes, the INS requires electrical power for its operation, while the IRS is
           completely independent of the electrical power.
         correct: false
         why: ""
@@ -913,8 +896,7 @@
         correct: true
         why: ""
       - id: OOOOCGCOK
-        text:
-          There is NO actual difference between an INS and an IRS, they are just
+        text: There is NO actual difference between an INS and an IRS, they are just
           different abbreviations used by different system manufacturers.
         correct: false
         why: ""
@@ -937,20 +919,17 @@
         correct: true
         why: ""
       - id: OHLPKURET
-        text:
-          It is necessary to integrate once the speed in time, and to know the
+        text: It is necessary to integrate once the speed in time, and to know the
           initial position only.
         correct: false
         why: ""
       - id: OVNR2ZOJT
-        text:
-          It is necessary to integrate once the speed in time, and to know the
+        text: It is necessary to integrate once the speed in time, and to know the
           initial speed and the initial position.
         correct: false
         why: ""
       - id: OF2UTM3RH
-        text:
-          It is necessary to integrate once the speed in time, and to know the
+        text: It is necessary to integrate once the speed in time, and to know the
           initial speed only.
         correct: false
         why: ""

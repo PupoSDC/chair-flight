@@ -60,8 +60,7 @@
         correct: true
         why: ""
       - id: OX0QCCF8E
-        text:
-          An ICAO code corresponding to the aircraft identification number, which is
+        text: An ICAO code corresponding to the aircraft identification number, which is
           set from the flight deck.
         correct: false
         why: ""
@@ -146,14 +145,12 @@
     question: The airborne weather radar..
     options:
       - id: OXRRN7FCS
-        text:
-          has the possibility to detect clear air turbulence behind a thunder storm
+        text: has the possibility to detect clear air turbulence behind a thunder storm
           by measuring phase differences caused by the Doppler effect.
         correct: false
         why: ""
       - id: O3WD8X8TI
-        text:
-          may receive no reflections from a thunderstorm in an area behind a heavy
+        text: may receive no reflections from a thunderstorm in an area behind a heavy
           rain shower.
         correct: true
         why: ""
@@ -208,13 +205,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What are the potential dangers of operating an Airborne Weather Radar
+    question: What are the potential dangers of operating an Airborne Weather Radar
       (AWR) on the ground? Radiated energy can..
     options:
       - id: OTFUASJFZ
-        text:
-          "cause misalignment of the aircraft’s Air Data and Inertial Reference
+        text: "cause misalignment of the aircraft’s Air Data and Inertial Reference
           System (ADIRS).  "
         correct: false
         why: ""
@@ -344,8 +339,7 @@
         correct: false
         why: ""
       - id: OH3KMVDHS
-        text:
-          A directional antenna for transmitting, and an omnidirectional antenna for
+        text: A directional antenna for transmitting, and an omnidirectional antenna for
           receiving.
         correct: false
         why: ""
@@ -354,8 +348,7 @@
         correct: true
         why: ""
       - id: OS4ZWXQQY
-        text:
-          An omnidirectional antenna for transmitting, and a directional antenna for
+        text: An omnidirectional antenna for transmitting, and a directional antenna for
           receiving.
         correct: false
         why: ""
@@ -479,8 +472,7 @@
         correct: false
         why: ""
       - id: OZOXQGMDC
-        text:
-          It transmits the aeroplanes registration or flight number as a data coded
+        text: It transmits the aeroplanes registration or flight number as a data coded
           sequence.
         correct: false
         why: ""
@@ -500,19 +492,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What kind of aircraft-related data does a primary route surveillance
+    question: What kind of aircraft-related data does a primary route surveillance
       radar system calculate?
     options:
       - id: OWHGAXZD4
-        text:
-          The altitude by measuring the antenna's angle of elevation, the direction
+        text: The altitude by measuring the antenna's angle of elevation, the direction
           by measuring the antenna's angle of azimuth, but no range.
         correct: false
         why: ""
       - id: OHLYHJY3U
-        text:
-          The direction by measuring antenna azimuth angle, the range by measuring
+        text: The direction by measuring antenna azimuth angle, the range by measuring
           the interrogation signal's travel time, but no altitudes.
         correct: true
         why: ""
@@ -522,8 +511,7 @@
         correct: false
         why: ""
       - id: OCGLNAVP4
-        text:
-          The four-digit octal (squawk) code, but no direction, no range, and no
+        text: The four-digit octal (squawk) code, but no direction, no range, and no
           altitude.
         correct: false
         why: ""
@@ -551,8 +539,7 @@
         correct: false
         why: ""
       - id: ODMKAGSUA
-        text:
-          At aerodrome B, no or low precipitation, conditions at aerodrome C cannot
+        text: At aerodrome B, no or low precipitation, conditions at aerodrome C cannot
           be determined.
         correct: false
         why: ""
@@ -561,8 +548,7 @@
         correct: false
         why: ""
       - id: OFYYYJUPV
-        text:
-          Conditions at aerodrome B cannot be determined. At aerodrome C, no or low
+        text: Conditions at aerodrome B cannot be determined. At aerodrome C, no or low
           precipitation.
         correct: true
         why: ""
@@ -614,8 +600,7 @@
       primary and secondary radar used?
     options:
       - id: O88GSHBFI
-        text:
-          For ATC to provide tracking of aircraft and manage traffic within a given
+        text: For ATC to provide tracking of aircraft and manage traffic within a given
           airspace.
         correct: true
         why: ""
@@ -624,8 +609,7 @@
         correct: false
         why: ""
       - id: OHKEVL2JK
-        text:
-          For ATC to reduce the workload of the pilot by taking over the task of
+        text: For ATC to reduce the workload of the pilot by taking over the task of
           navigating.
         correct: false
         why: ""
@@ -645,8 +629,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      No radar returns are received from an area which is located behind an
+    question: No radar returns are received from an area which is located behind an
       area where intense precipitation is being displayed by the airborne
       weather radar. What is the most appropriate conclusion?
     options:
@@ -678,8 +661,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What happens when the ATC transponder "IDENT" button is pressed by the
+    question: What happens when the ATC transponder "IDENT" button is pressed by the
       pilot?
     options:
       - id: O96UP2PQD
@@ -740,8 +722,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An airborne transponder can provide coded reply signals in response to
+    question: An airborne transponder can provide coded reply signals in response to
       interrogation signals from
     options:
       - id: OLQBQ9CYB
@@ -757,8 +738,7 @@
         correct: false
         why: ""
       - id: OLY0CRHZP
-        text:
-          ground secondary surveillance radar and from aircraft equipped with a mode
+        text: ground secondary surveillance radar and from aircraft equipped with a mode
           A and C transponder.
         correct: false
         why: ""
@@ -817,8 +797,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a primary radar using pulse technique, pulse repetition frequency
+    question: In a primary radar using pulse technique, pulse repetition frequency
       determines..
     options:
       - id: OBMMBRQE2
@@ -850,8 +829,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a primary radar using pulse technique, the ability to discriminate
+    question: In a primary radar using pulse technique, the ability to discriminate
       between targets in azimuth is a factor of..
     options:
       - id: OCH5PNK9V
@@ -973,8 +951,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What information will be displayed on the ATC radar screen if a mode S
+    question: What information will be displayed on the ATC radar screen if a mode S
       transponder receives a mode A interrogation?
     options:
       - id: OXNJ8ZPLZ
@@ -1091,8 +1068,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Ignoring pulse length, the maximum pulse repetition frequency (PRF)
+    question: Ignoring pulse length, the maximum pulse repetition frequency (PRF)
       that can be used by a primary radar facility to detect targets
       unambiguously to a range of 200 NM is… (pps = pulses per second)
     options:
@@ -1157,8 +1133,7 @@
       adjusted..
     options:
       - id: OQJG7GZIL
-        text:
-          to tilt fully down when taxiing to reduce the possibility of injury to
+        text: to tilt fully down when taxiing to reduce the possibility of injury to
           ground personnel.
         correct: false
         why: ""
@@ -1185,13 +1160,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      On the control panel for an airborne weather radar, there is a setting
+    question: On the control panel for an airborne weather radar, there is a setting
       called "MAP", what is the fuction of this setting?
     options:
       - id: O1NUTGPNP
-        text:
-          To change the shape and orientation of the transmission beam down toward
+        text: To change the shape and orientation of the transmission beam down toward
           the ground.
         correct: true
         why: ""
@@ -1205,8 +1178,7 @@
         correct: false
         why: ""
       - id: OOBGKHDT4
-        text:
-          To display the weather returns as an overlay on a map on the Navigation
+        text: To display the weather returns as an overlay on a map on the Navigation
           Display.
         correct: false
         why: ""
@@ -1225,14 +1197,12 @@
     question: "A modern Airborne Weather Radar (AWR) uses a flat plate antenna with a:"
     options:
       - id: OPM7Q2H5J
-        text:
-          Cosecant squared beam with the tilt set to the aircraft pitch for ground
+        text: Cosecant squared beam with the tilt set to the aircraft pitch for ground
           mapping as the beam spreads out vertically to the ground.
         correct: false
         why: ""
       - id: OJOX3AS2C
-        text:
-          Pencil or conical beam with the tilt set to the aircraft pitch for ground
+        text: Pencil or conical beam with the tilt set to the aircraft pitch for ground
           mapping.
         correct: false
         why: ""
@@ -1257,8 +1227,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What information may an ATS controller provide when only using his/her
+    question: What information may an ATS controller provide when only using his/her
       radar situation display? Information about..
     options:
       - id: OHF93DPXN
@@ -1370,8 +1339,7 @@
         correct: false
         why: ""
       - id: OFHZOZ0XX
-        text:
-          Fly on the upwind side of the storm, avoiding red and magenta coloured
+        text: Fly on the upwind side of the storm, avoiding red and magenta coloured
           areas on the screen.
         correct: true
         why: ""
@@ -1457,8 +1425,7 @@
     question: The heaviest turbulence is likely to be encountered..
     options:
       - id: OWIQF8LYN
-        text:
-          where the area of heaviest precipitation is closest to the edge of the
+        text: where the area of heaviest precipitation is closest to the edge of the
           thunderstorm cell.
         correct: true
         why: ""
@@ -1555,8 +1522,7 @@
       (AWR) whilst on the ground is:"
     options:
       - id: OX9JLBNTQ
-        text:
-          Only permitted whilst following certain precautions, to safeguard health
+        text: Only permitted whilst following certain precautions, to safeguard health
           of ground personnel and to protect equipment.
         correct: true
         why: ""
@@ -1597,8 +1563,7 @@
         correct: true
         why: ""
       - id: O54MHEWIR
-        text:
-          power level of the transmitted energy is made dependent on the selected
+        text: power level of the transmitted energy is made dependent on the selected
           range.
         correct: false
         why: ""
@@ -1622,26 +1587,22 @@
     question: When in the WX+T mode, what is the airborne weather radar able to detect?
     options:
       - id: OXP2CC8PM
-        text:
-          Turbulent clouds by looking for ice crystals in the upper part of a
+        text: Turbulent clouds by looking for ice crystals in the upper part of a
           thunderstorm at a reduced wavelength.
         correct: false
         why: ""
       - id: O2QKGK3WC
-        text:
-          Turbulence by looking for a frequency shift in combination with pulse
+        text: Turbulence by looking for a frequency shift in combination with pulse
           flattening.
         correct: true
         why: ""
       - id: OSWDKXJWM
-        text:
-          Clear air turbulence at cruising altitude by using Doppler techniques with
+        text: Clear air turbulence at cruising altitude by using Doppler techniques with
           an increased PRF (Pulse Repetition Frequency).
         correct: false
         why: ""
       - id: OE6MKXXMH
-        text:
-          Thunderstorms with strong updraft and downdraft by measuring static
+        text: Thunderstorms with strong updraft and downdraft by measuring static
           emitted from lightning.
         correct: false
         why: ""
@@ -1759,8 +1720,7 @@
     question: How will an SSR interrogation be directed toward a specific aircraft?
     options:
       - id: O7RK2BB2L
-        text:
-          Controller-Pilot Data-Link Communications (CPDLC) will reply with a unique
+        text: Controller-Pilot Data-Link Communications (CPDLC) will reply with a unique
           aircraft identifier.
         correct: false
         why: ""
@@ -1787,8 +1747,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The weather that usually exists behind a large return on an Airborne
+    question: The weather that usually exists behind a large return on an Airborne
       Weather Radar (AWR) is…
     options:
       - id: OQYMVQDRQ
@@ -1821,26 +1780,22 @@
     question: A Primary Surveillance Radar (PSR) is capable of calculating a...
     options:
       - id: OSYCTOS7A
-        text:
-          two-dimensional position by measuring the bearing and travel time of the
+        text: two-dimensional position by measuring the bearing and travel time of the
           interrogation signal.
         correct: true
         why: ""
       - id: OTJHWFICK
-        text:
-          one-dimensional position by measuring the bearing of the interrogation
+        text: one-dimensional position by measuring the bearing of the interrogation
           signal.
         correct: false
         why: ""
       - id: O4AWQYBLI
-        text:
-          four-dimensional position by measuring the bearing, travel time, height
+        text: four-dimensional position by measuring the bearing, travel time, height
           and time of the interrogation signal.
         correct: false
         why: ""
       - id: OJA6GBNRA
-        text:
-          three-dimensional position by measuring the bearing, travel time, and
+        text: three-dimensional position by measuring the bearing, travel time, and
           height of the interrogation signal.
         correct: false
         why: ""
@@ -1856,8 +1811,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An Airborne Weather Radar (AWR) can be of assistance for navigation
+    question: "An Airborne Weather Radar (AWR) can be of assistance for navigation
       and position reference. The AWR can be used to determine the aircraft’s
       position by:"
     options:
@@ -1866,20 +1820,17 @@
         correct: false
         why: ""
       - id: OAQCWN3B0
-        text:
-          Using the mapping mode to obtain a magnetic bearing and distance from the
+        text: Using the mapping mode to obtain a magnetic bearing and distance from the
           aircraft to suitable echoes on the display.
         correct: false
         why: ""
       - id: OQ826MYWP
-        text:
-          Using the mapping mode to obtain a relative bearing and distance from the
+        text: Using the mapping mode to obtain a relative bearing and distance from the
           aircraft to suitable echoes on the display.
         correct: true
         why: ""
       - id: OZ8CCCZIC
-        text:
-          Selecting the mapping mode and choosing a large built-up area to obtain a
+        text: Selecting the mapping mode and choosing a large built-up area to obtain a
           relative bearing and distance from the aircraft.
         correct: false
         why: ""
@@ -1897,8 +1848,7 @@
     question: How is the Special Position Identification (SPI) pulse transmitted?
     options:
       - id: OIAYKYFXV
-        text:
-          By the SSR interrogator in order to request the identification of an
+        text: By the SSR interrogator in order to request the identification of an
           aircraft.
         correct: false
         why: ""
@@ -1907,8 +1857,7 @@
         correct: false
         why: ""
       - id: ONKFI5GNK
-        text:
-          By the SSR interrogator if it is suspected that responses are received
+        text: By the SSR interrogator if it is suspected that responses are received
           from aircraft that are located in the direction of the side lobes of
           the interrogator antenna.
         correct: false
@@ -1958,8 +1907,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In modern transport aircraft (built from around 2010 onwards), AWRs
+    question: In modern transport aircraft (built from around 2010 onwards), AWRs
       (Airborne Weather Radars) can allow for a more pleasant journey for the
       passengers and crew through the use of...
     options:
@@ -1996,28 +1944,24 @@
       Surveillance Radar (SSR) and Primary Surveillance Radar (PSR) systems?
     options:
       - id: OYBHHNH3H
-        text:
-          "PSR: Target range and bearing. SSR: Target range and bearing, aircraft
+        text: "PSR: Target range and bearing. SSR: Target range and bearing, aircraft
           identification codes, aircraft altitude, selective addressing, and
           full two-way data link."
         correct: true
         why: ""
       - id: OYKZXNJXA
-        text:
-          "PSR: Target range. SSR: Target range and bearing, aircraft altitude and
+        text: "PSR: Target range. SSR: Target range and bearing, aircraft altitude and
           height, selective addressing, and full two-way data link."
         correct: false
         why: ""
       - id: OLQGTPEZP
-        text:
-          "PSR: Target range, bearing, and aircraft identification. SSR: Aircraft
+        text: "PSR: Target range, bearing, and aircraft identification. SSR: Aircraft
           identification codes, aircraft altitude, selective addressing, and
           full two-way data link."
         correct: false
         why: ""
       - id: O2RXXCHG6
-        text:
-          "PSR: Target range, bearing, and aircraft altitude. SSR: Target range and
+        text: "PSR: Target range, bearing, and aircraft altitude. SSR: Target range and
           bearing, aircraft identification codes, aircraft height, selective
           addressing, and full two-way data link."
         correct: false
@@ -2067,8 +2011,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which approximate wavelength is used for most airborne weather radar
+    question: Which approximate wavelength is used for most airborne weather radar
       systems?
     options:
       - id: O6PNABT7P
@@ -2193,8 +2136,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When using airborne weather radar in the mapping mode in polar areas
+    question: When using airborne weather radar in the mapping mode in polar areas
       one runs the risk of..
     options:
       - id: OUWUCTMWO
@@ -2331,8 +2273,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Ground Secondary Surveillance Radar (SSR) equipment incorporates a
+    question: "Ground Secondary Surveillance Radar (SSR) equipment incorporates a
       transmitter and receiver that operate in the following frequencies:"
     options:
       - id: O2PG6IHUV
@@ -2364,8 +2305,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Airborne weather radar systems use a wavelength of approximately 3 cm
+    question: Airborne weather radar systems use a wavelength of approximately 3 cm
       in order to..
     options:
       - id: OMOYUQFD5
@@ -2397,13 +2337,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A Mode S transponder knows that it is receiving interrogations from a
+    question: "A Mode S transponder knows that it is receiving interrogations from a
       Mode S ground interrogator because:"
     options:
       - id: OKD6E1YDX
-        text:
-          The ground interrogator will transmit extra pulses once it has had the
+        text: The ground interrogator will transmit extra pulses once it has had the
           initial reply from the airborne transponder.
         correct: false
         why: ""
@@ -2412,14 +2350,12 @@
         correct: false
         why: ""
       - id: OP8MTDEGO
-        text:
-          Extra pulses are transmitted directly following the Mode A and Mode C
+        text: Extra pulses are transmitted directly following the Mode A and Mode C
           pulses.
         correct: true
         why: ""
       - id: OKPN1FVYN
-        text:
-          The ground interrogator transmits the same pulses for all modes, but for
+        text: The ground interrogator transmits the same pulses for all modes, but for
           Mode S, the pulses are stronger.
         correct: false
         why: ""
@@ -2441,21 +2377,18 @@
         correct: false
         why: ""
       - id: OYU69HFAS
-        text:
-          To avoid code garbling if two aircraft are located in the same direction
+        text: To avoid code garbling if two aircraft are located in the same direction
           (as seen from the interrogator) and at a distance of less than
           approximately 1.7 NM apart.
         correct: false
         why: ""
       - id: OXHK08DS8
-        text:
-          To avoid responses from aircraft that are located in the direction of the
+        text: To avoid responses from aircraft that are located in the direction of the
           side lobes of the interrogator antenna.
         correct: true
         why: ""
       - id: OB6NU0ZCT
-        text:
-          To avoid “fruiting” if an aircraft is interrogated by more than one SSR
+        text: To avoid “fruiting” if an aircraft is interrogated by more than one SSR
           interrogator at the same time.
         correct: false
         why: ""
@@ -2502,8 +2435,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The information available on an air traffic controller's screen about
+    question: The information available on an air traffic controller's screen about
       an aircraft may include (1)\_\_\_\_ from the (2)\_\_\_\_.
     options:
       - id: OWCZVW6KS
@@ -2533,26 +2465,22 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Flying at FL330, ahead of you there is a thunderstorm and you want to
+    question: Flying at FL330, ahead of you there is a thunderstorm and you want to
       climb to FL380 to avoid bad weather. What is the correct regarding the
       tilt of the AWR?
     options:
       - id: O3DDUTA6F
-        text:
-          A low tilt setting should be used during descent if thunderstorms are
+        text: A low tilt setting should be used during descent if thunderstorms are
           expected.
         correct: false
         why: ""
       - id: OXF76TUHN
-        text:
-          During any phase of flight, the tilt of the weather radar will always be
+        text: During any phase of flight, the tilt of the weather radar will always be
           adjusted to the optimum tilt.
         correct: false
         why: ""
       - id: OXQUKK9B0
-        text:
-          During a climb, the tilt needs to be decreased to scan for hazardous
+        text: During a climb, the tilt needs to be decreased to scan for hazardous
           clouds.
         correct: true
         why: ""
@@ -2574,8 +2502,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the principle behind the windshear-warning capability of an
+    question: What is the principle behind the windshear-warning capability of an
       Airborne Weather Radar?
     options:
       - id: OM3OFNVXC
@@ -2607,8 +2534,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During the flight, you observe that what you saw as one return on your
+    question: During the flight, you observe that what you saw as one return on your
       AWR screen, has now turned into two separate echoes. Which of the
       following statements is correct?
     options:
@@ -2625,8 +2551,7 @@
         correct: false
         why: ""
       - id: OVHZ4IZH8
-        text:
-          This is normal since with decreasing range the beam width azimuth will
+        text: This is normal since with decreasing range the beam width azimuth will
           also decrease.
         correct: true
         why: ""
@@ -2650,8 +2575,7 @@
         correct: false
         why: ""
       - id: OWZSWF4PD
-        text:
-          Transponder code, pressure altitude, aircraft address, and other flight
+        text: Transponder code, pressure altitude, aircraft address, and other flight
           data.
         correct: false
         why: ""
@@ -2715,20 +2639,17 @@
         correct: false
         why: ""
       - id: OYC6A2JSY
-        text:
-          Direction by measuring Antenna Azimuth, Range by interval ling signal
+        text: Direction by measuring Antenna Azimuth, Range by interval ling signal
           travel during time, NO altitude.
         correct: true
         why: ""
       - id: OV0FPAJTZ
-        text:
-          Range by interrogating DME transponder, Altitude by interrogating MODE-C
+        text: Range by interrogating DME transponder, Altitude by interrogating MODE-C
           Transponder, NO direction.
         correct: false
         why: ""
       - id: OVAPQTZ7A
-        text:
-          Altitude by angle elevation, Direction by Antenna's angle of Azimuth, NO
+        text: Altitude by angle elevation, Direction by Antenna's angle of Azimuth, NO
           range.
         correct: false
         why: ""
@@ -2910,8 +2831,7 @@
     question: The two main design functions of SSR Mode S are..
     options:
       - id: O3UVQCQTP
-        text:
-          air to ground and ground to air data link communications and improved ATC
+        text: air to ground and ground to air data link communications and improved ATC
           aircraft surveillance capability.
         correct: true
         why: ""
@@ -2921,14 +2841,12 @@
         correct: false
         why: ""
       - id: OVC6INPFW
-        text:
-          continuous automatic position reporting using GPS satellites and collision
+        text: continuous automatic position reporting using GPS satellites and collision
           avoidance using TCAS II.
         correct: false
         why: ""
       - id: ODKXZPWLL
-        text:
-          the elimination of ground to air communications and the introduction of
+        text: the elimination of ground to air communications and the introduction of
           automatic separation between aircraft using TCAS II.
         correct: false
         why: ""
@@ -2943,8 +2861,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When flying at FL290 and having ADS-B with auto-report capability, how
+    question: When flying at FL290 and having ADS-B with auto-report capability, how
       frequently are you required to transmit reports?
     options:
       - id: OKFYZ6IZF
@@ -3043,8 +2960,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      To determine if a return is from a cloud at or above the height of the
+    question: To determine if a return is from a cloud at or above the height of the
       aircraft, the tilt control of an Airborne Weather Radar (AWR) with a 5°
       beam width should be set to..
     options:
@@ -3113,8 +3029,7 @@
       the surveillance system display? Indication of position and also..
     options:
       - id: OH8TRWX0M
-        text:
-          any map information needed to provide the surveillance service, aircraft
+        text: any map information needed to provide the surveillance service, aircraft
           speed, and (when available) the aircraft identification and level.
         correct: false
         why: ""
@@ -3129,8 +3044,7 @@
         correct: false
         why: ""
       - id: OK5LCF7JP
-        text:
-          any map information needed to provide the surveillance service, and (when
+        text: any map information needed to provide the surveillance service, and (when
           available) the aircraft identification and level.
         correct: true
         why: ""
@@ -3151,26 +3065,22 @@
       used to assist the pilots whilst navigating along a route?
     options:
       - id: OFGNI9QWL
-        text:
-          All areas of turbulence may be identified to ensure the safety and comfort
+        text: All areas of turbulence may be identified to ensure the safety and comfort
           of the persons on board.
         correct: false
         why: ""
       - id: O8YNLI5IW
-        text:
-          It detects ground features to enable navigation referenced to the ground
+        text: It detects ground features to enable navigation referenced to the ground
           when flying above clouds.
         correct: false
         why: ""
       - id: OKIG02FP3
-        text:
-          It is the prime source for navigating through mountainous areas due to its
+        text: It is the prime source for navigating through mountainous areas due to its
           ability to detect terrain.
         correct: false
         why: ""
       - id: OPJNO8CJR
-        text:
-          Paths through areas of weather may be determined to ensure the safety and
+        text: Paths through areas of weather may be determined to ensure the safety and
           comfort of the flight.
         correct: true
         why: ""
@@ -3188,8 +3098,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the primary use of the radar fitted onboard a modern civilian
+    question: What is the primary use of the radar fitted onboard a modern civilian
       transport aircraft?
     options:
       - id: OU4FLSUEU
@@ -3219,8 +3128,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are flying at FL330 and there is a thunderstorm in front of you.
+    question: You are flying at FL330 and there is a thunderstorm in front of you.
       Where should you move the tilt angle?
     options:
       - id: ORVFQ5TN6
@@ -3250,8 +3158,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The crew of a large jet aircraft want to use their Airborne Weather
+    question: The crew of a large jet aircraft want to use their Airborne Weather
       Radar to judge the maximum height of a thunderstorm. Their radar display
       is showing red in the region of the thunderstorm. In order to find the
       upper level of the thunderstorm, the crew increase the tilt angle of the
@@ -3297,20 +3204,17 @@
         correct: false
         why: ""
       - id: OPT4MWHLM
-        text:
-          Fly on the upwind side of the thunderstorm and avoid red or magenta
+        text: Fly on the upwind side of the thunderstorm and avoid red or magenta
           coloured areas.
         correct: true
         why: ""
       - id: OPSPXNSJ7
-        text:
-          Fly towards the area where the contours are the steepest and avoid any
+        text: Fly towards the area where the contours are the steepest and avoid any
           areas that are yellow.
         correct: false
         why: ""
       - id: OLXBT0OJS
-        text:
-          The areas that have the worst precipitation are coloured yellow and they
+        text: The areas that have the worst precipitation are coloured yellow and they
           should be avoided at all times.
         correct: false
         why: ""
@@ -3330,8 +3234,7 @@
       range because (2) \_\_\_\_\_.
     options:
       - id: OWXAGXFXF
-        text:
-          (1) enables the controller to have a more organised display; (2) it uses
+        text: (1) enables the controller to have a more organised display; (2) it uses
           longer interrogation pulses.
         correct: false
         why: ""
@@ -3340,14 +3243,12 @@
         correct: false
         why: ""
       - id: OJNBUC01U
-        text:
-          (1) collects more data; (2) of the active participation of the aircraft's
+        text: (1) collects more data; (2) of the active participation of the aircraft's
           transponder
         correct: true
         why: ""
       - id: O1NXVYYOV
-        text:
-          (1) provides coded replies; (2) of its naturally higher transmission
+        text: (1) provides coded replies; (2) of its naturally higher transmission
           power.
         correct: false
         why: ""
@@ -3430,8 +3331,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An Airborne Weather Radar transmits pulses of a wavelength of 3.2 cm.
+    question: An Airborne Weather Radar transmits pulses of a wavelength of 3.2 cm.
       What is the corresponding frequency?
     options:
       - id: OTJLR8Q5O
@@ -3566,14 +3466,12 @@
         correct: false
         why: ""
       - id: OQUBHD0XG
-        text:
-          The correct ICAO 24 bits aircraft address code must be inserted on the
+        text: The correct ICAO 24 bits aircraft address code must be inserted on the
           control panel.
         correct: false
         why: ""
       - id: OVISNSN0K
-        text:
-          With the selector knobs the four digits of the squawk can be selected
+        text: With the selector knobs the four digits of the squawk can be selected
           using the decimal symbols 0 through 9.
         correct: false
         why: ""
@@ -3591,8 +3489,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The main factors that determine cloud detection by airborne weather
+    question: The main factors that determine cloud detection by airborne weather
       radar are the..
     options:
       - id: O1OXXLA3I
@@ -3624,8 +3521,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is an advantage of an SSR with a ‘selective addressing mode’ over
+    question: What is an advantage of an SSR with a ‘selective addressing mode’ over
       primary radar?
     options:
       - id: OH9NQEHEI
@@ -3641,8 +3537,7 @@
         correct: true
         why: ""
       - id: OLPNRMMB8
-        text:
-          "In case of a transponder malfunction, the SSR can be used as a primary
+        text: "In case of a transponder malfunction, the SSR can be used as a primary
           radar.  "
         correct: false
         why: ""
@@ -3701,20 +3596,17 @@
         correct: false
         why: ""
       - id: OC6VZMKDA
-        text:
-          SSR Mode S information is available to ATC, for a period of 15 to 30
+        text: SSR Mode S information is available to ATC, for a period of 15 to 30
           minutes.
         correct: false
         why: ""
       - id: OYAH3Y6R2
-        text:
-          A distinctive display of the aircraft's position is available to ATC for
+        text: A distinctive display of the aircraft's position is available to ATC for
           15 to 30 seconds.
         correct: true
         why: ""
       - id: OH4Y42IPN
-        text:
-          The code 3264 is automatically transmitted to ATC, at regular 30-minute
+        text: The code 3264 is automatically transmitted to ATC, at regular 30-minute
           intervals.
         correct: false
         why: ""
@@ -3760,13 +3652,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of these is one of the main functions of the tilt control on an
+    question: Which of these is one of the main functions of the tilt control on an
       airborne weather radar system?
     options:
       - id: ODEO444DG
-        text:
-          To search for areas of intense precipitation at different levels from the
+        text: To search for areas of intense precipitation at different levels from the
           aircraft.
         correct: true
         why: ""
@@ -3826,8 +3716,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The control panel of an Airborne Weather Radar (AWR) has a knob for
+    question: The control panel of an Airborne Weather Radar (AWR) has a knob for
       adjusting the gain, what is its purpose?
     options:
       - id: ODLKQU85D
@@ -3864,8 +3753,7 @@
        The Secondary Surveillance Radar (SSR) mode S is compatible with (1)\_\_ but also provides the information to (2)\_\_.
     options:
       - id: OEFGIVR0J
-        text:
-          (1) Airborne Weather Radar (AWR); (2) the Traffic alert and Collision
+        text: (1) Airborne Weather Radar (AWR); (2) the Traffic alert and Collision
           Avoidance System (TCAS).
         correct: false
         why: ""
@@ -3878,8 +3766,7 @@
         correct: false
         why: ""
       - id: O65CO0FQW
-        text:
-          (1) SSR modes A and C; (2) Automatic Dependent Surveillance - Broadcast
+        text: (1) SSR modes A and C; (2) Automatic Dependent Surveillance - Broadcast
           (ADS-B).
         correct: true
         why: ""
@@ -3894,8 +3781,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is (one of) the differences between a Mode A/C/S all call and a
+    question: What is (one of) the differences between a Mode A/C/S all call and a
       mode A/C only all call?
     options:
       - id: OMNLNSJ28

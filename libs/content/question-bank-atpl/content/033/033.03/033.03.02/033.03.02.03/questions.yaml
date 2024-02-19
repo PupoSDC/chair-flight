@@ -602,26 +602,22 @@
     question: Contingency Fuel is carried to account for
     options:
       - id: OUCQWASKX
-        text:
-          unforeseen factors that could have an influence on the fuel consumption to
+        text: unforeseen factors that could have an influence on the fuel consumption to
           the alternate aerodrome.
         correct: false
         why: ""
       - id: O0QT43CHR
-        text:
-          known factors that could have an influence on the fuel consumption to the
+        text: known factors that could have an influence on the fuel consumption to the
           alternate aerodrome.
         correct: false
         why: ""
       - id: OBZM0NVZN
-        text:
-          known factors that could have an influence on the fuel consumption to the
+        text: known factors that could have an influence on the fuel consumption to the
           destination aerodrome.
         correct: false
         why: ""
       - id: OELSF2RU0
-        text:
-          unforeseen factors that could have an influence on the fuel consumption to
+        text: unforeseen factors that could have an influence on the fuel consumption to
           the destination aerodrome.
         correct: true
         why: ""
@@ -1127,8 +1123,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Ignoring reserves, how much fuel is needed over a distance of 360 NM
+    question: Ignoring reserves, how much fuel is needed over a distance of 360 NM
       if an aircraft’s fuel consumption is 300 l/h? The TAS is 210 kt and the
       headwind component is 30 kt.
     options:
@@ -1228,28 +1223,24 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The commander decides to increase the Block Fuel by 1 200 kg due to an
+    question: The commander decides to increase the Block Fuel by 1 200 kg due to an
       expected holding at the destination aerodrome as this equates to
       approximately 30 minutes of holding. After take-off, the FMS indicates
       that there is only 27 minutes of extra holding fuel despite the payload
       being as originally planned. What is the reason for this?
     options:
       - id: OKQNC2WOZ
-        text:
-          The Flight is NOT following its original route and shortcuts increase the
+        text: The Flight is NOT following its original route and shortcuts increase the
           Trip Fuel.
         correct: false
         why: ""
       - id: O2ENVWRKC
-        text:
-          The FMC gives inaccurate results of calculations and therefore it cannot
+        text: The FMC gives inaccurate results of calculations and therefore it cannot
           be relied on.
         correct: false
         why: ""
       - id: OYIN2DOPG
-        text:
-          The Extra Fuel has made the aeroplane heavier, thus the Trip fuel is
+        text: The Extra Fuel has made the aeroplane heavier, thus the Trip fuel is
           increased.
         correct: true
         why: ""
@@ -1381,8 +1372,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft is required by ATC to fly at a speed faster than planned
+    question: An aircraft is required by ATC to fly at a speed faster than planned
       for a short period of time, resulting in a higher fuel burn. This
       unforeseen factor has an influence on the fuel consumption but is
       accounted for in the..
@@ -1566,25 +1556,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following calculations would be equal to the amount of
+    question: Which of the following calculations would be equal to the amount of
       trip fuel required?
     options:
       - id: OKRLVRTFR
-        text:
-          Take-off, climb (including step climb), discretionary, descent, approach
+        text: Take-off, climb (including step climb), discretionary, descent, approach
           and landing.
         correct: false
         why: ""
       - id: OVYNR0O3R
-        text:
-          Take-off, climb (including step climb), alternate (not sure)decent,
+        text: Take-off, climb (including step climb), alternate (not sure)decent,
           approach and landing.
         correct: false
         why: ""
       - id: OSJDPTN0J
-        text:
-          Take-off, climb (including step climb), contingency, descent, approach and
+        text: Take-off, climb (including step climb), contingency, descent, approach and
           landing.
         correct: false
         why: ""
@@ -1867,8 +1853,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The commander of a commercial air transport flight has been scheduled
+    question: The commander of a commercial air transport flight has been scheduled
       for the same flight in three consecutive days. During the first two
       flights he/she notices that the actual payload is higher than anticipated,
       having as a consequence increased fuel consumption to the destination

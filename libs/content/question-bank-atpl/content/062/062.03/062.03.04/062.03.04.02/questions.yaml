@@ -10,8 +10,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A transponder set to Mode A/C is responding to an intermode radar that
+    question: A transponder set to Mode A/C is responding to an intermode radar that
       is capable of interrogating modes A, C and S. What does the operating mode
       of the transponder depend on?
     options:
@@ -74,8 +73,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      With mode-S each aircraft can be uniquely interrogated and identified
+    question: With mode-S each aircraft can be uniquely interrogated and identified
       by using the..
     options:
       - id: O2KQYFXI3
@@ -107,31 +105,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      With reference to Mode S transponders, which statement is correct? The
+    question: With reference to Mode S transponders, which statement is correct? The
       reported altitude data..
     options:
       - id: O70EDFBBS
-        text:
-          must be accurate to 25 ft resolution and be dependent on the altitude
+        text: must be accurate to 25 ft resolution and be dependent on the altitude
           sensor systems on board the aircraft.
         correct: false
         why: ""
       - id: OD2ILMYTD
-        text:
-          must be accurate to 100 ft resolution and be independent of the altitude
+        text: must be accurate to 100 ft resolution and be independent of the altitude
           sensor systems on board the aircraft.
         correct: false
         why: ""
       - id: OFOWLNEBP
-        text:
-          could be accurate to 25 ft resolution but it is dependent on the altitude
+        text: could be accurate to 25 ft resolution but it is dependent on the altitude
           sensor systems on board the aircraft.
         correct: true
         why: ""
       - id: OCLEPZVG2
-        text:
-          could be accurate to 25 ft resolution and is independent of the altitude
+        text: could be accurate to 25 ft resolution and is independent of the altitude
           sensor systems on board the aircraft.
         correct: false
         why: ""
@@ -147,13 +140,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which statement about the Special Position Identification (SPI) pulse
+    question: Which statement about the Special Position Identification (SPI) pulse
       is correct?
     options:
       - id: OUMXNCJOA
-        text:
-          This pulse is transmitted by the SSR-interrogator in order to request for
+        text: This pulse is transmitted by the SSR-interrogator in order to request for
           identification of a certain aircraft.
         correct: false
         why: ""
@@ -163,14 +154,12 @@
         correct: false
         why: ""
       - id: OCJHWHSP3
-        text:
-          This pulse is transmitted by the transponder as a result of the pilot
+        text: This pulse is transmitted by the transponder as a result of the pilot
           pushing the IDENT-button.
         correct: true
         why: ""
       - id: OIDOMTWY5
-        text:
-          This pulse is transmitted by the SSR-interrogator if it is suspected that
+        text: This pulse is transmitted by the SSR-interrogator if it is suspected that
           responses are received from aircraft which are located in the
           direction of the side lobes of the interrogator antenna.
         correct: false
@@ -191,8 +180,7 @@
     question: Which statement with respect to interrogation modes is correct?
     options:
       - id: OFSRSVMBJ
-        text:
-          Mode S Selective will trigger replies of all mode S transponders. Mode A/C
+        text: Mode S Selective will trigger replies of all mode S transponders. Mode A/C
           transponders are suppressed.
         correct: false
         why: ""
@@ -201,14 +189,12 @@
         correct: true
         why: ""
       - id: OTSAKSJFK
-        text:
-          Mode S Only all-call will trigger transponder replies of all mode A/C/S
+        text: Mode S Only all-call will trigger transponder replies of all mode A/C/S
           transponders.
         correct: false
         why: ""
       - id: OGRH3HQBP
-        text:
-          Intermode A/C/S all call and Intermode A/C only all call, differ in the
+        text: Intermode A/C/S all call and Intermode A/C only all call, differ in the
           pulse spacing used between the P1 and P3 pulse.
         correct: false
         why: ""

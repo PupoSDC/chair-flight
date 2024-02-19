@@ -13,27 +13,23 @@
       statements is correct? MOD WS APCH RWY18 FCST=
     options:
       - id: OGAZOVROZ
-        text:
-          This is an aerodrome warning forecasting moderate wind shear in the runway
+        text: This is an aerodrome warning forecasting moderate wind shear in the runway
           18 approach.
         correct: false
         why: ""
       - id: OJXBIPHYG
-        text:
-          "Moderate wind shear is affecting the approach to runway 18 caused by one
+        text: "Moderate wind shear is affecting the approach to runway 18 caused by one
           or more of a combination of: a front, cumulonimbus cloud, the
           surrounding terrain, or a temperature inversion."
         correct: false
         why: ""
       - id: OZEO3AIL5
-        text:
-          This is a wind shear warning forecasting moderate wind shear in the runway
+        text: This is a wind shear warning forecasting moderate wind shear in the runway
           18 approach.
         correct: true
         why: ""
       - id: O9AHDQPUV
-        text:
-          "Wind shear of unspecified intensity associated with a forecast weather
+        text: "Wind shear of unspecified intensity associated with a forecast weather
           system is approaching the aerodrome which may affect aircraft making
           approaches to the runway in use: 18."
         correct: false
@@ -57,26 +53,22 @@
       00000KT 0200 R14/0800U R16/P1500U FZFG VV001 M03/M03 Q1022 BECMG 0800=
     options:
       - id: OP7PJ0BTX
-        text:
-          RVR for runway 14 is 800 metres, vertical visibility 100 feet, calm,
+        text: RVR for runway 14 is 800 metres, vertical visibility 100 feet, calm,
           visibility improving to 800 metres in the next 2 hours
         correct: true
         why: ""
       - id: OZLXDEX9G
-        text:
-          Visibility for runway 14 is 800 metres, fog with hoar frost, RVR for
+        text: Visibility for runway 14 is 800 metres, fog with hoar frost, RVR for
           runway 16 more than 1500 metres
         correct: false
         why: ""
       - id: OZLIMGQW2
-        text:
-          Visibility 200 metres, RVR for runway 16 is 1500 metres, temperature -3°C,
+        text: Visibility 200 metres, RVR for runway 16 is 1500 metres, temperature -3°C,
           vertical visibility 100 metres.
         correct: false
         why: ""
       - id: OOIKAKWMS
-        text:
-          Visibility 200 feet, RVR for runway 16 is more than 1500 metres, vertical
+        text: Visibility 200 feet, RVR for runway 16 is more than 1500 metres, vertical
           visibility 100 feet, fog with hoar frost
         correct: false
         why: ""
@@ -97,28 +89,24 @@
     question: What is the definition of AIRMET information?
     options:
       - id: OAAGL8VV2
-        text:
-          An area forecast in abbreviated plain language for low level flights, for
+        text: An area forecast in abbreviated plain language for low level flights, for
           an FIR or sub-area thereof.
         correct: false
         why: ""
       - id: OIO3FEW0L
-        text:
-          Information issued by an MWO concerning occurrence or expected occurrence
+        text: Information issued by an MWO concerning occurrence or expected occurrence
           of weather phenomena which may affect the safety of all aircraft
           operations.
         correct: false
         why: ""
       - id: OQE4XXKYJ
-        text:
-          Information issued by an MO concerning the expected occurrence of weather
+        text: Information issued by an MO concerning the expected occurrence of weather
           phenomena which may affect the safety of low-level operations, not
           already included in the forecast for the FIR.
         correct: false
         why: ""
       - id: OVDKPDN0J
-        text:
-          Information issued by an MWO concerning occurrence or expected occurrence
+        text: Information issued by an MWO concerning occurrence or expected occurrence
           of weather phenomena which may affect the safety of low-level
           operations, not already included in the forecast for the FIR.
         correct: true
@@ -165,33 +153,28 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The METAR for your destination aerodrome reads; EGUB 280950Z 05019KT
+    question: The METAR for your destination aerodrome reads; EGUB 280950Z 05019KT
       9999 BKN032TCU 03/M00 Q1000 TEMPO 1000 +SHSN. What does the "TEMPO 1000
       +SHSN" mean?
     options:
       - id: O1H9UK07B
-        text:
-          During the next 2 hours, heavy snow showers, lasting less than 1 hour in
+        text: During the next 2 hours, heavy snow showers, lasting less than 1 hour in
           total, will reduce visibility to 1000 metres.
         correct: true
         why: ""
       - id: OZQOK7LRI
-        text:
-          During the last hour visibility reduced to 1000 metres for less than 30
+        text: During the last hour visibility reduced to 1000 metres for less than 30
           minutes in a heavy shower of snow.
         correct: false
         why: ""
       - id: O5U0EI8G7
-        text:
-          At 10:00Z heavy snow showers will commence, lasting less than 1 hour in
+        text: At 10:00Z heavy snow showers will commence, lasting less than 1 hour in
           total, and not longer than until 12:20Z, 2 hours after the period of
           validity of this METAR.
         correct: false
         why: ""
       - id: O9RZWUAHY
-        text:
-          During the last hour the QNH reduced to 1000 hPa during a heavy shower of
+        text: During the last hour the QNH reduced to 1000 hPa during a heavy shower of
           snow.
         correct: false
         why: ""
@@ -258,31 +241,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which type(s) of weather phenomena justify issuing an aviation special
+    question: Which type(s) of weather phenomena justify issuing an aviation special
       weather report (SPECI)?
     options:
       - id: OKV2LHQH3
-        text:
-          Significant changes of air pressure, temperature, visibility, cloud cover,
+        text: Significant changes of air pressure, temperature, visibility, cloud cover,
           and wind direction.
         correct: false
         why: ""
       - id: OERFRIVQ7
-        text:
-          An upcoming thunderstorm, which is presumed to arrive at the reporting
+        text: An upcoming thunderstorm, which is presumed to arrive at the reporting
           airfield within the next 2 hours.
         correct: false
         why: ""
       - id: OPCNQ9GNS
-        text:
-          Significant changes of surface winds, visibility, cloud base height, and
+        text: Significant changes of surface winds, visibility, cloud base height, and
           occurrence of severe weather.
         correct: true
         why: ""
       - id: OQDYINVWQ
-        text:
-          Severe weather, if observed at a minimum of two of the three nearest
+        text: Severe weather, if observed at a minimum of two of the three nearest
           airfields.
         correct: false
         why: ""
@@ -371,28 +349,24 @@
     question: Which of the following is a correct description of GAMET information?
     options:
       - id: O2IKH4LG3
-        text:
-          Information issued by a MWO concerning occurrence or expected occurrence
+        text: Information issued by a MWO concerning occurrence or expected occurrence
           of weather phenomena which may affect the safety of aircraft
           operations.
         correct: false
         why: ""
       - id: OY8FSMX9J
-        text:
-          Information issued by the MWO concerning occurrence or expected occurrence
+        text: Information issued by the MWO concerning occurrence or expected occurrence
           of weather phenomena which may affect low-level operations, not
           already included in the forecast for the FIR.
         correct: false
         why: ""
       - id: OOVS6KSY3
-        text:
-          An area forecast in abbreviated plain language for low level flights for
+        text: An area forecast in abbreviated plain language for low level flights for
           an FIR or sub-area thereof.
         correct: true
         why: ""
       - id: OC4SGKFBB
-        text:
-          Information issued by an MO concerning expected occurrence of weather
+        text: Information issued by an MO concerning expected occurrence of weather
           phenomena which may affect the safety of low-level operations, not
           already included in the forecast for the FIR.
         correct: false
@@ -452,27 +426,23 @@
       METAR LEBL 020830Z 11008KT 070V130 9999 FEW030 SCT055 25/17 Q1013 NOSIG=
     options:
       - id: OWFVWDODX
-        text:
-          Visibility 10 km or more, 1-2 oktas clouds at 3000 ft above MSL, 3-5 oktas
+        text: Visibility 10 km or more, 1-2 oktas clouds at 3000 ft above MSL, 3-5 oktas
           clouds at 5500 ft above MSL, air temperature 25°C, dew point 17°C.
         correct: false
         why: ""
       - id: OUVF58ON4
-        text:
-          Runway visual range varying between 700 and 1300 m, 1-2 oktas clouds at
+        text: Runway visual range varying between 700 and 1300 m, 1-2 oktas clouds at
           300 ft AGL, 3-4 oktas clouds at 550 ft AGL, no significant change
           within the next two hours.
         correct: false
         why: ""
       - id: OT7BI5DCB
-        text:
-          Issued at the 2nd day of the month at 08:30 local time, wind direction
+        text: Issued at the 2nd day of the month at 08:30 local time, wind direction
           varying between 70° and 130°, QFE 1013 hPa.
         correct: false
         why: ""
       - id: OPMZ60QYK
-        text:
-          Wind direction varying between 70° and 130°, visibility 10 km or more, no
+        text: Wind direction varying between 70° and 130°, visibility 10 km or more, no
           significant change within the next two hours.
         correct: true
         why: ""
@@ -507,26 +477,22 @@
        NXT MSG: 20180812/1800Z=
     options:
       - id: OZDAXZ1IV
-        text:
-          The tropical cyclone is already weakening and this is the last advisory
+        text: The tropical cyclone is already weakening and this is the last advisory
           message.
         correct: false
         why: ""
       - id: OMXEBOIN9
-        text:
-          The tropical cyclone moves at a speed lower than 3 kt and the atmospheric
+        text: The tropical cyclone moves at a speed lower than 3 kt and the atmospheric
           pressure of its centre is 990 hPa.
         correct: true
         why: ""
       - id: OGM8REPJN
-        text:
-          The tropical cyclone is expected to have wind speeds higher than 80 kt in
+        text: The tropical cyclone is expected to have wind speeds higher than 80 kt in
           the next 12 hours.
         correct: false
         why: ""
       - id: OEMHVTE6L
-        text:
-          The tropical cyclone moves at a speed lower than 3 kt and the max wind
+        text: The tropical cyclone moves at a speed lower than 3 kt and the max wind
           speed is 40 kt.
         correct: false
         why: ""
@@ -553,26 +519,22 @@
       What information does this provide about the weather at Rabat-Sale Airport?
     options:
       - id: OHHB9FOKQ
-        text:
-          There is a forecast of a sandstorm that afternoon between 15:00 UTC and
+        text: There is a forecast of a sandstorm that afternoon between 15:00 UTC and
           17:00 UTC.
         correct: true
         why: ""
       - id: OGTTV6WAF
-        text:
-          There is a forecast of a sandstorm at 15:00 UTC to reduce visibility to
+        text: There is a forecast of a sandstorm at 15:00 UTC to reduce visibility to
           1700 m.
         correct: false
         why: ""
       - id: ODDROSAJF
-        text:
-          A sandstorm was observed at 15:00 UTC and is expected to last until 17:00
+        text: A sandstorm was observed at 15:00 UTC and is expected to last until 17:00
           UTC.
         correct: false
         why: ""
       - id: O9UYGARZN
-        text:
-          This message contains information just for the en-route phase, provided by
+        text: This message contains information just for the en-route phase, provided by
           Rabat - Sale Airport.
         correct: false
         why: ""
@@ -655,8 +617,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The term PROB as used in a TAF message, indicates the probability in
+    question: "The term PROB as used in a TAF message, indicates the probability in
       percentage, of phenomena described during a specific period. The numerical
       values immediately following the term PROB, are:"
     options:
@@ -699,27 +660,23 @@
       likely basis of this SIGMET?
     options:
       - id: OJO4D1WCV
-        text:
-          The Meteorological Watch Office revised their computer modelling, which
+        text: The Meteorological Watch Office revised their computer modelling, which
           indicated a small area of significant turbulence that had not been
           evident before.
         correct: false
         why: ""
       - id: O9EDYFS6R
-        text:
-          The significant area of turbulence was very likely to have been detected
+        text: The significant area of turbulence was very likely to have been detected
           by a weather satellite.
         correct: false
         why: ""
       - id: OG5CM4UY4
-        text:
-          The turbulence reported in the SIGMET, issued by the Meteorological Watch
+        text: The turbulence reported in the SIGMET, issued by the Meteorological Watch
           Office, is most likely to have been based on pilot reports.
         correct: true
         why: ""
       - id: OO6J7J85K
-        text:
-          An area of significant clear air turbulence was detected by long range
+        text: An area of significant clear air turbulence was detected by long range
           ground-based radar and when this information was relayed to the
           appropriate Meteorological Watch Office a SIGMET was issued in
           response.
@@ -750,8 +707,7 @@
         correct: false
         why: ""
       - id: OCDDWMBFD
-        text:
-          The SPECI is an intermediate message before the release of a new METAR to
+        text: The SPECI is an intermediate message before the release of a new METAR to
           have more weather information.
         correct: false
         why: ""
@@ -760,8 +716,7 @@
         correct: false
         why: ""
       - id: OMIV4R0G0
-        text:
-          The SPECI was released because of the thunderstorm’s approach over the
+        text: The SPECI was released because of the thunderstorm’s approach over the
           airport and the precipitations’ intensification.
         correct: true
         why: ""

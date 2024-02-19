@@ -10,16 +10,14 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are on an IFR flight in IMC. You have been cleared to descend from
+    question: You are on an IFR flight in IMC. You have been cleared to descend from
       FL370 to FL60 at the initial approach fix (IAF) for an ILS approach to
       runway 08 at the destination. ATC requested that you report passing
       FL180\. You receive no acknowledgement from ATC when passing FL180 and
       suspect a communication failure. What action should you pilot take?
     options:
       - id: OKMRMCHCL
-        text:
-          Proceed to fly the current flight plan and land within 20 minutes after
+        text: Proceed to fly the current flight plan and land within 20 minutes after
           the estimated time of arrival.
         correct: false
         why: ""
@@ -28,15 +26,13 @@
         correct: false
         why: ""
       - id: OE9T904IS
-        text:
-          Maintain FL180 and proceed to fly the current flight plan route to the
+        text: Maintain FL180 and proceed to fly the current flight plan route to the
           appropriate designated navigation aid to fix serving the destination
           aerodrome, before commencing descent.
         correct: false
         why: ""
       - id: OF023JUIY
-        text:
-          Proceed to the IAF, descending to FL60, and hold over the IAF to arrive
+        text: Proceed to the IAF, descending to FL60, and hold over the IAF to arrive
           at, or as close as possible to, the estimated time of arrival
           resulting from the current flight plan.
         correct: true
@@ -51,8 +47,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are on an IFR flight in airspace where radar is NOT used in the
+    question: You are on an IFR flight in airspace where radar is NOT used in the
       provision of air traffic control. You are experiencing a complete radio
       failure and were unable to report your position at the last compulsory
       reporting point. You shall maintain the last assigned speed and level, or
@@ -86,8 +81,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      ATC observes that an aircraft in their sector has recently altered its
+    question: ATC observes that an aircraft in their sector has recently altered its
       assigned squawk code, transitioning from 2000 to 7600\. What does this
       change indicate?
     options:
@@ -163,8 +157,7 @@
         correct: false
         why: ""
       - id: O4GH9XZFB
-        text:
-          Continue to the destination aerodrome, adding 500 ft to all the altitudes
+        text: Continue to the destination aerodrome, adding 500 ft to all the altitudes
           in the flight plan.
         correct: false
         why: ""
@@ -296,35 +289,30 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Approaching the Top of Climb (TOC) on an IFR flight, a pilot suffers a
+    question: Approaching the Top of Climb (TOC) on an IFR flight, a pilot suffers a
       total loss of communications. The aircraft is currently in VMC conditions.
       What will be the next course of action?
     options:
       - id: OF1MHOLYM
-        text:
-          Continue to fly the flight planned route, hold at the initial approach fix
+        text: Continue to fly the flight planned route, hold at the initial approach fix
           until the estimated approach time, then proceed to commence an
           instrument approach at the destination aerodrome.
         correct: false
         why: ""
       - id: OCSYYOGS0
-        text:
-          Continue to fly in VMC, proceed to land at the nearest suitable aerodrome
+        text: Continue to fly in VMC, proceed to land at the nearest suitable aerodrome
           and report the arrival to the appropriate Air Traffic Services unit as
           soon as possible.
         correct: true
         why: ""
       - id: OVAAFXJ74
-        text:
-          Continue to fly in VMC, proceed to land at the destination aerodrome and
+        text: Continue to fly in VMC, proceed to land at the destination aerodrome and
           report the arrival to the appropriate Air Traffic Services unit as
           soon as possible.
         correct: false
         why: ""
       - id: OVOCB7UAD
-        text:
-          Continue to fly in VMC or IMC, proceed to land at an aerodrome that
+        text: Continue to fly in VMC or IMC, proceed to land at an aerodrome that
           provides radar services.
         correct: false
         why: ""
@@ -339,8 +327,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is under radar control, flying in IMC, and has just reached
+    question: A pilot is under radar control, flying in IMC, and has just reached
       the cleared altitude. 8 NM before the mandatory reporting point he/she
       suddenly suffers a radio failure, and sets the appropriate SSR code. Given
       the sequence of events, how long must the pilot maintain the last cleared
@@ -374,8 +361,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiencing radio communication failure on an IFR flight
+    question: An aircraft experiencing radio communication failure on an IFR flight
       in VMC should..
     options:
       - id: OTI739MMU
@@ -407,8 +393,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Under which of the following circumstances shall an aircraft station
+    question: Under which of the following circumstances shall an aircraft station
       squawk 7600?
     options:
       - id: OG87FXHSC
@@ -440,8 +425,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiencing radio communication failure on an IFR flight
+    question: An aircraft experiencing radio communication failure on an IFR flight
       in IMC should..
     options:
       - id: OFQWNAVMY
@@ -453,14 +437,12 @@
         correct: false
         why: ""
       - id: OVAR27FFA
-        text:
-          proceed to an area from where the flight can be continued according to the
+        text: proceed to an area from where the flight can be continued according to the
           visual flight rules.
         correct: false
         why: ""
       - id: OAF8VV8G5
-        text:
-          proceed in accordance with the current flight plan to the designated
+        text: proceed in accordance with the current flight plan to the designated
           navigation aid serving the destination aerodrome.
         correct: true
         why: ""
@@ -476,8 +458,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      While being radar-vectored in IMC, the pilot loses radio contact with
+    question: While being radar-vectored in IMC, the pilot loses radio contact with
       ATC. Taking into consideration the minimum flight altitude, his/her
       initial action is to rejoin the current flight plan..
     options:
@@ -539,8 +520,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      At what point should you initiate your descent during an approach in
+    question: At what point should you initiate your descent during an approach in
       the event of communication failure?
     options:
       - id: OWVIOFVTB
@@ -570,32 +550,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft flying on the traffic circuit of a controlled aerodrome is
+    question: An aircraft flying on the traffic circuit of a controlled aerodrome is
       encountering radio communications failure. What is the correct course of
       action?
     options:
       - id: OEMC0PRMJ
-        text:
-          Set the transponder code to 7700 and perform radio checks, at 1-minute
+        text: Set the transponder code to 7700 and perform radio checks, at 1-minute
           intervals, to all aeronautical stations.
         correct: false
         why: ""
       - id: OC2CWFPHS
-        text:
-          Rock the aircraft wings and flash navigational lights, at irregular
+        text: Rock the aircraft wings and flash navigational lights, at irregular
           intervals, to signal communication failure.
         correct: false
         why: ""
       - id: OVDFHX7VM
-        text:
-          Transmit blind, on the APP secondary frequency, the number of souls on
+        text: Transmit blind, on the APP secondary frequency, the number of souls on
           board and remaining fuel.
         correct: false
         why: ""
       - id: O2MU3J1OX
-        text:
-          Transmit blind your messages, twice, and watch for instructions which may
+        text: Transmit blind your messages, twice, and watch for instructions which may
           be issued by visual signals.
         correct: true
         why: ""
@@ -612,8 +587,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiences an air-ground communication failure while on
+    question: An aircraft experiences an air-ground communication failure while on
       an IFR flight. If equipped with an SSR transponder, what Mode A code is it
       expected to squawk?
     options:
@@ -643,8 +617,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During the cruise, you begin to experience a lot of noise on the radio
+    question: During the cruise, you begin to experience a lot of noise on the radio
       frequency and it becomes unusable. Which of the following is the
       appropriate action?
     options:
@@ -675,19 +648,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiencing radio communication failure on an IFR flight
+    question: An aircraft experiencing radio communication failure on an IFR flight
       in VMC should..
     options:
       - id: O4MPFJ2HT
-        text:
-          continue to fly in VMC, land at the nearest suitable aerodrome, and report
+        text: continue to fly in VMC, land at the nearest suitable aerodrome, and report
           its arrival.
         correct: true
         why: ""
       - id: OLPG3TVQA
-        text:
-          leave controlled airspace and continue the flight within uncontrolled
+        text: leave controlled airspace and continue the flight within uncontrolled
           airspace.
         correct: false
         why: ""

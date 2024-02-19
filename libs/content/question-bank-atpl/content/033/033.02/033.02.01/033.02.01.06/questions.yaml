@@ -53,14 +53,12 @@
       An aircraft is planned to fly to Alicante Elche aerodrome (LEAL) with the following entry in the tech log "ADF inoperative due broken frequency selector parts ordered". How will this affect the availability of approaches to Runway 10 at Alicante?
     options:
       - id: OY4F1LNDJ
-        text:
-          All given ILS and VOR approaches are available. The LOC A and LOC B
+        text: All given ILS and VOR approaches are available. The LOC A and LOC B
           approaches are unavailable.
         correct: false
         why: ""
       - id: OHXZU12BH
-        text:
-          All given approaches are available as none of them are based on the AI
+        text: All given approaches are available as none of them are based on the AI
           NDB.
         correct: false
         why: ""
@@ -69,8 +67,7 @@
         correct: false
         why: ""
       - id: O5YLY1AWX
-        text:
-          Both the VOR approaches are available. The ILS and LOC approaches are
+        text: Both the VOR approaches are available. The ILS and LOC approaches are
           unavailable.
         correct: true
         why: ""

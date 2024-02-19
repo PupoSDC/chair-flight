@@ -22,20 +22,17 @@
         correct: true
         why: ""
       - id: OGQM9J8XR
-        text:
-          The autopilot is engaged and is on the ILS. The flight director is not
+        text: The autopilot is engaged and is on the ILS. The flight director is not
           engaged.
         correct: false
         why: ""
       - id: OU4RGFJRB
-        text:
-          The flight director is engaged on the ILS, the autopilot is primed for
+        text: The flight director is engaged on the ILS, the autopilot is primed for
           engagement for the flare.
         correct: false
         why: ""
       - id: OZQH9NHUL
-        text:
-          Number 1 autopilot is engaged on the ILS, number 2 autopilot will initiate
+        text: Number 1 autopilot is engaged on the ILS, number 2 autopilot will initiate
           the Land.
         correct: false
         why: ""
@@ -55,25 +52,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following is correct regarding the capture phase of the
+    question: Which of the following is correct regarding the capture phase of the
       autopilot?
     options:
       - id: ODANYFBQC
-        text:
-          The autopilot obtains a trajectory through the third channel in case of
+        text: The autopilot obtains a trajectory through the third channel in case of
           failure.
         correct: false
         why: ""
       - id: OWS1WXLWR
-        text:
-          A given rate of change of trajectory is maintained to achieve a new
+        text: A given rate of change of trajectory is maintained to achieve a new
           parameter without undershooting.
         correct: true
         why: ""
       - id: OWDSBVIHS
-        text:
-          A new trajectory is obtained via a change in attitude to achieve a desired
+        text: A new trajectory is obtained via a change in attitude to achieve a desired
           parameter.
         correct: false
         why: ""
@@ -277,8 +270,7 @@
         correct: false
         why: ""
       - id: OPYCFOBJQ
-        text:
-          You might intercept the G/S Before LOC and descend outside protected
+        text: You might intercept the G/S Before LOC and descend outside protected
           airspace.
         correct: true
         why: ""
@@ -294,8 +286,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      On aircraft equipped with EFIS, how is autothrust mode displayed to
+    question: On aircraft equipped with EFIS, how is autothrust mode displayed to
       the crew?
     options:
       - id: OXQLXXUGK
@@ -367,8 +358,7 @@
         correct: true
         why: ""
       - id: O68WG8XRB
-        text:
-          closed through the flight control computer at the junction point of the
+        text: closed through the flight control computer at the junction point of the
           controller stick.
         correct: false
         why: ""
@@ -399,8 +389,7 @@
         correct: false
         why: ""
       - id: OLPJCSCLN
-        text:
-          No warning will sound; below alert height, you are only notified when both
+        text: No warning will sound; below alert height, you are only notified when both
           autopilots disengage.
         correct: true
         why: ""
@@ -428,14 +417,12 @@
         correct: true
         why: ""
       - id: O9UXGNMWE
-        text:
-          complete the automatic landing, including the landing roll-out to a full
+        text: complete the automatic landing, including the landing roll-out to a full
           stop.
         correct: false
         why: ""
       - id: O14PE6NAQ
-        text:
-          maintain safe flight, providing the autoland capability but without
+        text: maintain safe flight, providing the autoland capability but without
           auto-flare.
         correct: false
         why: ""
@@ -485,8 +472,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'How can you distinguish between an "armed" and an "engaged" mode on
+    question: 'How can you distinguish between an "armed" and an "engaged" mode on
       the Flight Mode Annunciator (FMA)? The caption:'
     options:
       - id: OOUJFMYV4
@@ -550,26 +536,22 @@
       happens to the precision and stability of this autopilot?
     options:
       - id: OSVLDUEAW
-        text:
-          It is not affected because the FD monitors the AP and gives correct
+        text: It is not affected because the FD monitors the AP and gives correct
           indications to the crew.
         correct: false
         why: ""
       - id: OJFXSSROA
-        text:
-          It is affected because the AP actuator is directly linked to the ADC speed
+        text: It is affected because the AP actuator is directly linked to the ADC speed
           sensor.
         correct: false
         why: ""
       - id: OPDTTVHSX
-        text:
-          It is not affected because the autopilot will use the speed from the
+        text: It is not affected because the autopilot will use the speed from the
           opposite ADC instead.
         correct: false
         why: ""
       - id: OLCKUJ7SO
-        text:
-          It is affected because the AP computer uses this information to calculate
+        text: It is affected because the AP computer uses this information to calculate
           control commands.
         correct: true
         why: ""
@@ -644,20 +626,17 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An aircraft controlled by the autopilot is about to be establishes on
+    question: "An aircraft controlled by the autopilot is about to be establishes on
       an ILS. If the pilot disconnects the autopilot to fly manually while
       intending to use FD for guidance:"
     options:
       - id: O1KEJOZCP
-        text:
-          FMAs disappears and FD starts to move and directs the pilot to give
+        text: FMAs disappears and FD starts to move and directs the pilot to give
           appropriate control inputs in order to follow planned trajectory.
         correct: false
         why: ""
       - id: OSAFSBT5J
-        text:
-          FMAs remains visible and FD starts to move and directs the pilot to give
+        text: FMAs remains visible and FD starts to move and directs the pilot to give
           appropriate control inputs in order to follow planned trajectory.
         correct: true
         why: ""
@@ -747,14 +726,12 @@
       particularly careful of?
     options:
       - id: OIU07MEDZ
-        text:
-          The autopilot may select a rate of climb outside the maximum permissible
+        text: The autopilot may select a rate of climb outside the maximum permissible
           limit of the aeroplane.
         correct: false
         why: ""
       - id: ODNPNZZLE
-        text:
-          If the climb is prolonged, there is a risk that the airspeed may reduce
+        text: If the climb is prolonged, there is a risk that the airspeed may reduce
           towards the stall.
         correct: true
         why: ""
@@ -783,27 +760,23 @@
       are the consequences?
     options:
       - id: OO7P7V4W4
-        text:
-          The autopilot system will continue to operate normally, and the pilot will
+        text: The autopilot system will continue to operate normally, and the pilot will
           receive no warning or annunciation of the failed IRS.
         correct: true
         why: ""
       - id: OTPR5ZAOA
-        text:
-          The autopilot system will continue to operate normally, but the pilot will
+        text: The autopilot system will continue to operate normally, but the pilot will
           receive a message on the flight deck display indicating the failed
           IRS.
         correct: false
         why: ""
       - id: OEIAEQRKQ
-        text:
-          The autopilot system will automatically switch to the remaining IRS, and
+        text: The autopilot system will automatically switch to the remaining IRS, and
           the pilot will receive a cautionary message indicating the failed IRS.
         correct: false
         why: ""
       - id: OWI7FWS8K
-        text:
-          The autopilot system will disengage automatically, and the pilot will
+        text: The autopilot system will disengage automatically, and the pilot will
           receive a warning or annunciation of the failed IRS.
         correct: false
         why: ""
@@ -817,13 +790,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The pilot sets the autobrake to MAX due to fear of exceeding runway
+    question: "The pilot sets the autobrake to MAX due to fear of exceeding runway
       distance. The pilot will:"
     options:
       - id: OK6IYQWUL
-        text:
-          Expect the autobrake system to modulate braking pressure to maintain given
+        text: Expect the autobrake system to modulate braking pressure to maintain given
           rate.
         correct: true
         why: ""
@@ -832,8 +803,7 @@
         correct: false
         why: ""
       - id: ODVGXDLMY
-        text:
-          Expect the autobrake system to apply necessary braking to stay on the
+        text: Expect the autobrake system to apply necessary braking to stay on the
           runway.
         correct: false
         why: ""
@@ -857,14 +827,12 @@
       basic function is to provide automatic control of the aeroplane:"
     options:
       - id: ODBGOI0YW
-        text:
-          During phases of flight with high workload, to improve the mental capacity
+        text: During phases of flight with high workload, to improve the mental capacity
           of the pilot(s).
         correct: false
         why: ""
       - id: OXUAAJFO9
-        text:
-          About the lateral, vertical and longitudinal axes, and to control the
+        text: About the lateral, vertical and longitudinal axes, and to control the
           thrust of the engines.
         correct: false
         why: ""
@@ -947,8 +915,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What should the pilot do in case of information mismatch between the
+    question: What should the pilot do in case of information mismatch between the
       ILS and FD on final approach?
     options:
       - id: OQCMSJZFA
@@ -998,21 +965,18 @@
         correct: true
         why: ""
       - id: OJGBPUYFG
-        text:
-          The landing capability downgrades to fail-passive, but there is no warning
+        text: The landing capability downgrades to fail-passive, but there is no warning
           of this downgrade. Aural and visual warnings are activated only for
           the autopilot disconnect.
         correct: false
         why: ""
       - id: OBYSM6LSU
-        text:
-          Because the aircraft is below the alert height, the landing capability
+        text: Because the aircraft is below the alert height, the landing capability
           remains fail-operational, and there are no announcements of failures.
         correct: false
         why: ""
       - id: O5WMQN6HA
-        text:
-          There is an announcement of the autopilot failure and a warning that the
+        text: There is an announcement of the autopilot failure and a warning that the
           landing can no longer be completed automatically. Because the RVR is
           too short for a manual landing, the pilot must go around.
         correct: false
@@ -1033,26 +997,22 @@
     question: What does the FMS compute during normal LNAV mode?
     options:
       - id: OF3H3BXVG
-        text:
-          The great circle track between two or more waypoints, based on IRS, VOR,
+        text: The great circle track between two or more waypoints, based on IRS, VOR,
           DME and GNSS information.
         correct: true
         why: ""
       - id: O0T2JH2VH
-        text:
-          The optimum vertical flight profile, taking into account efficient fuel
+        text: The optimum vertical flight profile, taking into account efficient fuel
           consumption based on the cost index.
         correct: false
         why: ""
       - id: OE8VND9GP
-        text:
-          The altitude restrictions of the airspace above, and the minimum crossing
+        text: The altitude restrictions of the airspace above, and the minimum crossing
           altitude of a waypoint.
         correct: false
         why: ""
       - id: O4LRHFGXT
-        text:
-          The lateral flight path with regard to the theoretical performance of the
+        text: The lateral flight path with regard to the theoretical performance of the
           aircraft from the performance database.
         correct: false
         why: ""
@@ -1112,8 +1072,7 @@
       RVR: 75 m
     options:
       - id: OC10UAOYA
-        text:
-          The crew receives a caution alert and the approach can be continued in
+        text: The crew receives a caution alert and the approach can be continued in
           fail-passive status.
         correct: true
         why: ""
@@ -1127,8 +1086,7 @@
         correct: false
         why: ""
       - id: ODKCYSF1I
-        text:
-          The crew receives a coution alert and the approach cannot be continued
+        text: The crew receives a coution alert and the approach cannot be continued
           because the FLARE mode would not engage.
         correct: false
         why: ""
@@ -1181,8 +1139,7 @@
         correct: false
         why: ""
       - id: OM4VAVOXS
-        text:
-          The alert height is increased by another 100’ to increase the safety
+        text: The alert height is increased by another 100’ to increase the safety
           margin.
         correct: false
         why: ""
@@ -1210,27 +1167,23 @@
       approach on a multi-pilot aircraft?
     options:
       - id: OJVBSCEM5
-        text:
-          Pilot flying operates the controls, or monitors the autopilot. Pilot
+        text: Pilot flying operates the controls, or monitors the autopilot. Pilot
           monitoring duplicates some selections, confirms parameters, and
           performs radio communications.
         correct: true
         why: ""
       - id: OBXMTYLQD
-        text:
-          The commander operates the controls, or monitors the autopilot. The
+        text: The commander operates the controls, or monitors the autopilot. The
           co-pilot duplicates selections and confirms parameters.
         correct: false
         why: ""
       - id: OAYRCX0MJ
-        text:
-          The autopilot flies the aircraft, the commander monitors the parameters,
+        text: The autopilot flies the aircraft, the commander monitors the parameters,
           while the co-pilot monitors the commander.
         correct: false
         why: ""
       - id: OWR9NDFV1
-        text:
-          Pilot flying operates the controls or monitors the autopilot. Pilot
+        text: Pilot flying operates the controls or monitors the autopilot. Pilot
           monitoring prepares for the next departure.
         correct: false
         why: ""
@@ -1246,8 +1199,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The crew is flying a heading assigned by ATC, 20 NM to the left and
+    question: The crew is flying a heading assigned by ATC, 20 NM to the left and
       parallel to the planned route, for weather avoidance. Just after you pass
       the weather, ATC clears you to continue on your flight planned route. You
       select the lateral navigation mode and the Pilot Monitoring (PM) reads the
@@ -1256,14 +1208,12 @@
       the Flight Management Computer (FMC) flight plan?
     options:
       - id: OSCO5J5ZY
-        text:
-          It will continue on the current heading, unless a heading intercepting the
+        text: It will continue on the current heading, unless a heading intercepting the
           flight plan has been set by the pilot.
         correct: true
         why: ""
       - id: ON12XSCQT
-        text:
-          It will continue to parallel the planned route by offset by 20 NM to the
+        text: It will continue to parallel the planned route by offset by 20 NM to the
           left, so the aircraft will execute a right turn.
         correct: false
         why: ""
@@ -1287,8 +1237,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The use of autopilot can lead to a loss of situational awareness and
+    question: The use of autopilot can lead to a loss of situational awareness and
       the comprehension of the implication of the used mode. How can you
       mitigate these risks?
     options:
@@ -1348,8 +1297,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Upon capturing the localizer, the amber/yellow/blue localizer (LOC)
+    question: "Upon capturing the localizer, the amber/yellow/blue localizer (LOC)
       light on an ADI:"
     options:
       - id: OVTJZOQXJ
@@ -1422,35 +1370,30 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A pilot is flying a GNSS non-precision approach using the autopilot.
+    question: "A pilot is flying a GNSS non-precision approach using the autopilot.
       The pilot intends to disconnect the autopilot on final approach after
       having obtained sufficient visual references to complete a manual landing.
       When disconnecting the autopilot using the instinctive or quick
       disengagement control, the pilot should expect:"
     options:
       - id: OJM0APKCC
-        text:
-          A unique autopilot disconnect aural warning and a visual warning for a
+        text: A unique autopilot disconnect aural warning and a visual warning for a
           limited period of time confirming that the autopilot is disconnected.
         correct: true
         why: ""
       - id: OZYJYXFTP
-        text:
-          At least a single cycle aural and visual master warning to signal that the
+        text: At least a single cycle aural and visual master warning to signal that the
           autopilot is disconnected, and NO ONE is controlling the aeroplane.
         correct: false
         why: ""
       - id: OPKERP6X9
-        text:
-          A continuous aural and visual master warning highlighting to the pilot
+        text: A continuous aural and visual master warning highlighting to the pilot
           that he/she must put the hand on the control column/stick to control
           the aeroplane.
         correct: false
         why: ""
       - id: O2IVW5KEJ
-        text:
-          A continuous aural and visual master warning sounding until the pilot
+        text: A continuous aural and visual master warning sounding until the pilot
           presses the autopilot ON/OFF switch to confirm the disconnection was
           intended.
         correct: false
@@ -1468,8 +1411,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are manually flying the aircraft using the FD, when suddenly the
+    question: You are manually flying the aircraft using the FD, when suddenly the
       command bars disappear from the ADI. What should you do?
     options:
       - id: OHJ4USJWI
@@ -1485,8 +1427,7 @@
         correct: true
         why: ""
       - id: OPARLHC9C
-        text:
-          Manually fly the aircraft because this indicates that the autopilot is not
+        text: Manually fly the aircraft because this indicates that the autopilot is not
           available.
         correct: false
         why: ""
@@ -1505,8 +1446,7 @@
       backup mode?
     options:
       - id: O3NYDZMXK
-        text:
-          Flight envelope protection is provided in mechanical backup mode but with
+        text: Flight envelope protection is provided in mechanical backup mode but with
           reduced capabilities.
         correct: false
         why: ""
@@ -1519,8 +1459,7 @@
         correct: true
         why: ""
       - id: OH3CBZ79E
-        text:
-          Flight envelope protection is only partially provided in mechanical backup
+        text: Flight envelope protection is only partially provided in mechanical backup
           mode.
         correct: false
         why: ""
@@ -1535,8 +1474,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot wants the aeroplane to climb at 800 ft/min up to 6 000 ft. How
+    question: A pilot wants the aeroplane to climb at 800 ft/min up to 6 000 ft. How
       does he/she program the autopilot?
     options:
       - id: OOE30JRYU
@@ -1567,8 +1505,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The crew of a multi-pilot aircraft are performing an approach, with
+    question: "The crew of a multi-pilot aircraft are performing an approach, with
       the autopilot (AP) coupled to the ILS. They notice the AP system making
       large corrections in pitch close to the ground, leading to oscillations.
       The safest course of action for the crew is to:"
@@ -1604,14 +1541,12 @@
       you proceed with the autoland under these circumstances?
     options:
       - id: O4XJF2X2N
-        text:
-          No, unless approved by the airline's manuals and the Minimum Equipment
+        text: No, unless approved by the airline's manuals and the Minimum Equipment
           List (MEL) procedures are followed.
         correct: true
         why: ""
       - id: O5IFOU2HR
-        text:
-          Yes, as long as the weather conditions are clear, and there is no need for
+        text: Yes, as long as the weather conditions are clear, and there is no need for
           visibility enhancement.
         correct: false
         why: ""
@@ -1621,8 +1556,7 @@
         correct: false
         why: ""
       - id: OVY8SH0SC
-        text:
-          Yes, because the windshield heating system is not essential for the
+        text: Yes, because the windshield heating system is not essential for the
           autoland procedure.
         correct: false
         why: ""
@@ -1642,25 +1576,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following is correct regarding the initial phase of the
+    question: Which of the following is correct regarding the initial phase of the
       autopilot?
     options:
       - id: OMIYAJTFY
-        text:
-          A given rate of change of trajectory is maintained to achieve a new
+        text: A given rate of change of trajectory is maintained to achieve a new
           parameter without undershooting.
         correct: false
         why: ""
       - id: OBK0O68VD
-        text:
-          A new trajectory is obtained via a change in attitude to achieve a desired
+        text: A new trajectory is obtained via a change in attitude to achieve a desired
           parameter.
         correct: true
         why: ""
       - id: OFCLDNRF9
-        text:
-          The autopilot obtains a trajectory through the third channel in case of
+        text: The autopilot obtains a trajectory through the third channel in case of
           failure.
         correct: false
         why: ""
@@ -1691,8 +1621,7 @@
        Alert height: 100 ft
     options:
       - id: OCQC5VVNF
-        text:
-          The aircraft maintains safe flight conditions but is unable to land
+        text: The aircraft maintains safe flight conditions but is unable to land
           automatically.
         correct: false
         why: ""
@@ -1702,14 +1631,12 @@
         correct: false
         why: ""
       - id: OBMM85Z3X
-        text:
-          The aircraft does NOT annunciate as the flight is already below the
+        text: The aircraft does NOT annunciate as the flight is already below the
           annunciation height.
         correct: false
         why: ""
       - id: OBSADSN74
-        text:
-          The aircraft annunciates the failure but you Go Around as there's no time
+        text: The aircraft annunciates the failure but you Go Around as there's no time
           to select a new minima.
         correct: true
         why: ""
@@ -1723,8 +1650,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Why would the vertical Flight Director bar deviate to the right while
+    question: Why would the vertical Flight Director bar deviate to the right while
       you are flying an ILS approach?
     options:
       - id: O0ZAUXXBC
@@ -1762,8 +1688,7 @@
       An example of a typical Multifunction Display (MFD) with AFCS controls and Flight Mode Annunciators (FMAs) is shown in the annex. The pilot will follow the Flight Director's (FD) instructions while manually flying an ILS approach. The guidance from the raw data localizer (LOC) and glideslope (GS) indications shows that the aircraft is established on the ILS. Which of the following statements about the FD's indications is true?
     options:
       - id: O66Z1YO6Q
-        text:
-          The FD is showing a pitch-down command to indicate the descent along the
+        text: The FD is showing a pitch-down command to indicate the descent along the
           glideslope since both LOC and GS modes are active.
         correct: false
         why: ""
@@ -1773,14 +1698,12 @@
         correct: false
         why: ""
       - id: OGG60LHI9
-        text:
-          The FD is showing incorrect guidance since the command bar indicates a
+        text: The FD is showing incorrect guidance since the command bar indicates a
           pitch down in order to follow the glideslope.
         correct: false
         why: ""
       - id: OWQNDXOV9
-        text:
-          Both LOC and GS modes are armed, and the command bar shows appropriate
+        text: Both LOC and GS modes are armed, and the command bar shows appropriate
           information to the pilot to pitch up the aircraft.
         correct: true
         why: ""
@@ -1824,37 +1747,32 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot in cruise flying with the AP engaged is required to know how
+    question: A pilot in cruise flying with the AP engaged is required to know how
       to program the AFCS and FD in order to descend to an altitude of 10 000
       feet (FL100) with a V/S of 600 fpm. Which of the following options is
       correct?
     options:
       - id: O9BMWSF52
-        text:
-          The FD and the autopilot share the same control panel, but the available
+        text: The FD and the autopilot share the same control panel, but the available
           modes are different. The FD bars shown on the PFD are unreliable when
           both FD and autopilot are engaged.
         correct: false
         why: ""
       - id: OEM1NZUGB
-        text:
-          The available modes and the control panel are the same for both the FD and
+        text: The available modes and the control panel are the same for both the FD and
           the autopilot. The FD will display on the PFD the commands that are
           being followed by the autopilot in order to achieve the programmed
           parameters.
         correct: true
         why: ""
       - id: OXPXRVAPI
-        text:
-          The available modes are the same, but the autopilot control panel is
+        text: The available modes are the same, but the autopilot control panel is
           different to that of the FD. The pilot has to program the parameters
           required separately for each.
         correct: false
         why: ""
       - id: ONXIC9C0X
-        text:
-          The FD and the autopilot have different modes and control panels. The FD
+        text: The FD and the autopilot have different modes and control panels. The FD
           can only be used when flying manually.
         correct: false
         why: ""
@@ -1880,8 +1798,7 @@
         correct: false
         why: ""
       - id: OAMKTMG7L
-        text:
-          Check and confirm any selection made by the pilot on the autopilot control
+        text: Check and confirm any selection made by the pilot on the autopilot control
           panel.
         correct: true
         why: ""
@@ -1901,8 +1818,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During flight, you fail to notice that the autopilot mode has changed.
+    question: During flight, you fail to notice that the autopilot mode has changed.
       What should you do?
     options:
       - id: OSYMC0GYC
@@ -1910,14 +1826,12 @@
         correct: false
         why: ""
       - id: O8J2D8IJG
-        text:
-          Disengage the autopilot and fly manually, as its indications cannot be
+        text: Disengage the autopilot and fly manually, as its indications cannot be
           trusted anymore.
         correct: false
         why: ""
       - id: OUUFQQXQT
-        text:
-          Follow the standard operating procedures and be aware of how to read the
+        text: Follow the standard operating procedures and be aware of how to read the
           FMA.
         correct: true
         why: ""
@@ -1938,8 +1852,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When engaged in the pitch angle hold mode, the autopilot uses data
+    question: "When engaged in the pitch angle hold mode, the autopilot uses data
       issued by the:"
     options:
       - id: OWAYZ3K6B
@@ -2059,8 +1972,7 @@
         correct: true
         why: ""
       - id: OGSZNSB4C
-        text:
-          aircraft is waiting for a certain set of parameters to engage the mode in
+        text: aircraft is waiting for a certain set of parameters to engage the mode in
           question.
         correct: false
         why: ""
@@ -2118,28 +2030,24 @@
       functions of the take-off mode (considering the autopilot only)?
     options:
       - id: ON2HYBO7Z
-        text:
-          The pitch mode should be vertical speed to ensure sufficient climb rate to
+        text: The pitch mode should be vertical speed to ensure sufficient climb rate to
           follow the departure profile, and the roll mode should be heading or
           track.
         correct: false
         why: ""
       - id: OYBBUOEAG
-        text:
-          Pitch commands should be to obtain an attitude that achieved obstacle
+        text: Pitch commands should be to obtain an attitude that achieved obstacle
           clearance, and the roll commands should follow the standard departure
           (SID).
         correct: false
         why: ""
       - id: OZDYNJ0AV
-        text:
-          Pitch commands should stabilise at a speed referenced to V2, and the roll
+        text: Pitch commands should stabilise at a speed referenced to V2, and the roll
           commands should maintain the runway centreline or wings level.
         correct: true
         why: ""
       - id: ONVZMNTNR
-        text:
-          The pitch mode should maintain a fixed pitch attitude that prevents
+        text: The pitch mode should maintain a fixed pitch attitude that prevents
           tailstrike, and the roll mode should use runway localiser to maintain
           the direction.
         correct: false
@@ -2155,8 +2063,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "What happens if, during an automatic approach and landing, the radio
+    question: "What happens if, during an automatic approach and landing, the radio
       altimeter fails? "
     options:
       - id: O9U43LJLF
@@ -2256,8 +2163,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is flying an approach and the HSI indicates a left deviation
+    question: A pilot is flying an approach and the HSI indicates a left deviation
       and FD indicates to turn right. What shall s/he do?
     options:
       - id: OIMUWDEX2
@@ -2287,8 +2193,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Whilst in straight and level flight with the autopilot engaged, the
+    question: Whilst in straight and level flight with the autopilot engaged, the
       aircraft begins to pick up some autopilot-induced oscillations. Which of
       the following will happen if the pilot does not intervene?
     options:
@@ -2319,8 +2224,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft is flying in straight and level flight with the autopilot
+    question: An aircraft is flying in straight and level flight with the autopilot
       on, when suddenly it starts doing self-induced oscillations. What could be
       the consequences if the pilots does not intervene?
     options:
@@ -2352,8 +2256,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The pilot engages the autopilot and selects Vertical Speed (VS) mode
+    question: "The pilot engages the autopilot and selects Vertical Speed (VS) mode
       during the climb. If an excessive vertical speed is selected, the risk
       would be:"
     options:
@@ -2385,19 +2288,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is about to shoot the approach with the A/P. S/he disconnects
+    question: A pilot is about to shoot the approach with the A/P. S/he disconnects
       the A/P during the approach. What happens to the FD/FMA?
     options:
       - id: OJ58ULPAM
-        text:
-          The performance needs to be recalculated to account for the manual landing
+        text: The performance needs to be recalculated to account for the manual landing
           technique.
         correct: false
         why: ""
       - id: OYUBWOTDJ
-        text:
-          All indications on the FMA and the FD will be normal except the A/P
+        text: All indications on the FMA and the FD will be normal except the A/P
           function.
         correct: true
         why: ""
@@ -2421,8 +2321,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In case of a Radio Altimeter (R/A) failure, is the ability to perform
+    question: In case of a Radio Altimeter (R/A) failure, is the ability to perform
       an automatic landing affected?
     options:
       - id: OKLH0LH8Q
@@ -2465,8 +2364,7 @@
         correct: false
         why: ""
       - id: OTBML5JF7
-        text:
-          The autopilot could capture the glideslope before the localiser and
+        text: The autopilot could capture the glideslope before the localiser and
           commence descent outside of the protected area.
         correct: true
         why: ""
@@ -2475,8 +2373,7 @@
         correct: false
         why: ""
       - id: OAZZNEEXC
-        text:
-          The autopilot could capture the localiser before the glideslope and
+        text: The autopilot could capture the localiser before the glideslope and
           commence a turn outside of the protected area.
         correct: false
         why: ""
@@ -2493,8 +2390,7 @@
     question: Which modes of operation exist in Fly-By-Wire systems?
     options:
       - id: OIVTBLZPS
-        text:
-          The normal mode, the alternate (or secondary) mode, the direct mode and
+        text: The normal mode, the alternate (or secondary) mode, the direct mode and
           mechanical backup.
         correct: true
         why: ""
@@ -2557,26 +2453,22 @@
       speed mode. How is speed control achieved?
     options:
       - id: OTPVKG7AH
-        text:
-          The autothrottle will vary engine thrust, while the autopilot varies the
+        text: The autothrottle will vary engine thrust, while the autopilot varies the
           aircraft pitch to maintain altitude.
         correct: true
         why: ""
       - id: OVLQBTS4B
-        text:
-          The autothrottle maintains constant engine thrust, while the autopilot
+        text: The autothrottle maintains constant engine thrust, while the autopilot
           uses the elevator to maintain altitude.
         correct: false
         why: ""
       - id: OV9ERTJVZ
-        text:
-          The autopilot varies the aircraft pitch, while the autothrottle maintains
+        text: The autopilot varies the aircraft pitch, while the autothrottle maintains
           constant engine thrust.
         correct: false
         why: ""
       - id: OVKGGUGBL
-        text:
-          The autopilot maintains constant pitch, while the autothrottle maintains
+        text: The autopilot maintains constant pitch, while the autothrottle maintains
           rated N1 thrust.
         correct: false
         why: ""
@@ -2602,14 +2494,12 @@
         correct: false
         why: ""
       - id: OSBO37VXU
-        text:
-          The autopilot may select a rate of climb outside the maximum permissible
+        text: The autopilot may select a rate of climb outside the maximum permissible
           limit of the aeroplane.
         correct: false
         why: ""
       - id: ODLLV1WWX
-        text:
-          If the climb is prolonged, there is a risk that the airspeed may reduce
+        text: If the climb is prolonged, there is a risk that the airspeed may reduce
           towards the stall.
         correct: true
         why: ""
@@ -2673,8 +2563,7 @@
       autopilot?
     options:
       - id: OKIBUGBTM
-        text:
-          The autopilot obtains a trajectory through the third channel in case of
+        text: The autopilot obtains a trajectory through the third channel in case of
           failure.
         correct: false
         why: ""
@@ -2683,14 +2572,12 @@
         correct: true
         why: ""
       - id: OE61L0S1X
-        text:
-          A new trajectory is obtained via a change in attitude to achieve a desired
+        text: A new trajectory is obtained via a change in attitude to achieve a desired
           parameter.
         correct: false
         why: ""
       - id: O0NLIWKXL
-        text:
-          A given rate of change of trajectory is maintained to achieve a new
+        text: A given rate of change of trajectory is maintained to achieve a new
           parameter without undershooting.
         correct: false
         why: ""

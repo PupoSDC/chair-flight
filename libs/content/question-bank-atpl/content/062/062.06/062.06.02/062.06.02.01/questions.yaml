@@ -10,20 +10,17 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following statements is correct regarding the accuracy
+    question: Which of the following statements is correct regarding the accuracy
       that can be obtained with the LAAS (Local Area Augmentation System) of the
       satellite navigation system NAVSTAR/GPS?
     options:
       - id: O8USNJVLV
-        text:
-          The increase in accuracy of position fixes is independent of the aircraft
+        text: The increase in accuracy of position fixes is independent of the aircraft
           position in relation to the LAAS ground reference station.
         correct: false
         why: ""
       - id: OO3ZOBAQ0
-        text:
-          A LAAS corrects the position of the aircraft by relaying the information
+        text: A LAAS corrects the position of the aircraft by relaying the information
           via a geostationary satellite.
         correct: false
         why: ""
@@ -32,8 +29,7 @@
         correct: false
         why: ""
       - id: OKZDPTENH
-        text:
-          The closer the receiver is to a LAAS ground reference station, the more
+        text: The closer the receiver is to a LAAS ground reference station, the more
           accurate is the aircraft position fix.
         correct: true
         why: ""
@@ -53,8 +49,7 @@
     question: What does a Ground-Based Augmentation System (GBAS) require?
     options:
       - id: OEZZUEPZK
-        text:
-          One ground station to support an unlimited number of aircraft in the
+        text: One ground station to support an unlimited number of aircraft in the
           airspace of its jurisdiction.
         correct: true
         why: ""
@@ -63,14 +58,12 @@
         correct: false
         why: ""
       - id: OC71CWR7F
-        text:
-          One ground station, transmitting on UHF, to send error signals to all the
+        text: One ground station, transmitting on UHF, to send error signals to all the
           aircraft in the final approach segment.
         correct: false
         why: ""
       - id: OILHMRNRK
-        text:
-          At least two ground stations to transmit to arriving aircraft; one to give
+        text: At least two ground stations to transmit to arriving aircraft; one to give
           differential position corrections and the other to give integrity
           information for each satellite.
         correct: false
@@ -87,8 +80,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A GNSS approach may achieve lower minima by using correction signals
+    question: A GNSS approach may achieve lower minima by using correction signals
       from a nearby ground station within the limits of a small, defined
       geographical area (historically known as LAAS, Local Area Augmentation
       System). An example of such an approach is...
@@ -126,8 +118,7 @@
     question: What is one of the advantages of GLS (GBAS Landing System) compared to ILS?
     options:
       - id: ONZ2VATMA
-        text:
-          Aircraft fitted with GPS receivers do NOT need any additional receivers
+        text: Aircraft fitted with GPS receivers do NOT need any additional receivers
           for GBAS operations.
         correct: false
         why: ""

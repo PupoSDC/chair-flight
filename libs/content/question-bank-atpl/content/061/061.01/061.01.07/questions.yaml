@@ -131,14 +131,12 @@
     question: The main purpose of DR navigation is to…
     options:
       - id: OSGWW55VA
-        text:
-          obtain, with reasonable accuracy, the aircraft’s position between fixes or
+        text: obtain, with reasonable accuracy, the aircraft’s position between fixes or
           in the absence of fixes.
         correct: true
         why: ""
       - id: OGMQMJBQS
-        text:
-          obtain, with reasonable accuracy, the aircrafts position between IRS
+        text: obtain, with reasonable accuracy, the aircrafts position between IRS
           fixes.
         correct: false
         why: ""
@@ -714,20 +712,17 @@
         correct: false
         why: ""
       - id: OVQHTI5FZ
-        text:
-          Will be established whenever a crosswind is experienced and desired track
+        text: Will be established whenever a crosswind is experienced and desired track
           is kept.
         correct: true
         why: ""
       - id: OJA90ZWCP
-        text:
-          Will arise whenever the drift is changing during a flight along a fixed
+        text: Will arise whenever the drift is changing during a flight along a fixed
           track.
         correct: false
         why: ""
       - id: OU3VSUXJU
-        text:
-          Is the angle in distance between the desired track and the track made
+        text: Is the angle in distance between the desired track and the track made
           good.
         correct: false
         why: ""
@@ -786,8 +781,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Given the following information, calculate the Wind correction Angle
+    question: "Given the following information, calculate the Wind correction Angle
       (WCA) for an aircraft with a cruise TAS of 120 kt experiencing a crosswind
       component of 10 kt from the left:"
     options:

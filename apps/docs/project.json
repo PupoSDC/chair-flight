@@ -3,19 +3,12 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/docs",
   "projectType": "application",
+  "implicitDependencies": ["react-*", "next-*"],
   "tags": [],
-  "implicitDependencies": [
-    "react-components",
-    "react-games",
-    "react-markdown",
-    "react-theme",
-    "next-analytics",
-    "next-public",
-    "next-question-bank",
-    "next-tests",
-    "next-user"
-  ],
   "targets": {
+    "lint": {},
+    "check": {},
+    "format": {},
     "dev": {
       "executor": "@nx/storybook:storybook",
       "options": {

@@ -11,8 +11,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "During a CAT III approach with NO decision height, you have passed
+    question: "During a CAT III approach with NO decision height, you have passed
       the Alert Height, at this point there is a failure of one autopilot. All
       systems are working normally. As Co-Pilot and Pilot Monitoring (PM), you
       should:"
@@ -83,8 +82,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "If, in the event of a failure, there is no significant out-of-trim
+    question: "If, in the event of a failure, there is no significant out-of-trim
       condition or deviation of flight path or attitude but the landing is not
       completed automatically, such an automatic landing system is considered
       as:"
@@ -171,8 +169,7 @@
         correct: false
         why: ""
       - id: OPIQVPR3R
-        text:
-          there is no significant out-of-trim condition or deviation of flight path
+        text: there is no significant out-of-trim condition or deviation of flight path
           or attitude but the landing is not completed automatically.
         correct: true
         why: ""
@@ -181,8 +178,7 @@
         correct: false
         why: ""
       - id: OLS0FMCCH
-        text:
-          there is no significant out-of-trim condition or deviation of flight path
+        text: there is no significant out-of-trim condition or deviation of flight path
           or attitude and the landing is completed automatically.
         correct: false
         why: ""
@@ -212,14 +208,12 @@
        Alert height: 100 ft
     options:
       - id: O0GOMYFSO
-        text:
-          There is an annunciation of the failure, and the landing capability is now
+        text: There is an annunciation of the failure, and the landing capability is now
           fail-passive. The pilots must prepare to perform a manual landing.
         correct: false
         why: ""
       - id: OPWOI8TO6
-        text:
-          Since the function of the autopilots is Not affected by the failure of the
+        text: Since the function of the autopilots is Not affected by the failure of the
           IRS, the pilots can continue the approach to complete the Autoland
           with fail-operation status.
         correct: false
@@ -231,8 +225,7 @@
         correct: true
         why: ""
       - id: OARHP6MS0
-        text:
-          There is NO annunciation of the failure because the operation of the
+        text: There is NO annunciation of the failure because the operation of the
           autopilots is NOT affected, but the landing capability is now limited
           fail-operational. The pilots should continue the approach to Autoland.
         correct: false
@@ -279,8 +272,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "During an automatic landing, between 50 FT AGL and touch down, the
+    question: "During an automatic landing, between 50 FT AGL and touch down, the
       autopilot maintains:"
     options:
       - id: OKDWPQJFH
@@ -315,8 +307,7 @@
       What does this consist of?
     options:
       - id: OKO2E7XYP
-        text:
-          A fail-passive guidance system and a secondary independent landing system
+        text: A fail-passive guidance system and a secondary independent landing system
           enabling automatic landing if the guidance system fails.
         correct: false
         why: ""
@@ -333,8 +324,7 @@
         correct: false
         why: ""
       - id: OHQILLNDW
-        text:
-          A fail-passive automatic landing system and a secondary independent
+        text: A fail-passive automatic landing system and a secondary independent
           guidance system such as a head-up display (HUD). This enables the
           pilot to land manually if the automatic landing system fails.
         correct: true
@@ -424,8 +414,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The FLARE mode does not indicate during a CAT III approach. The pilot
+    question: The FLARE mode does not indicate during a CAT III approach. The pilot
       has the required visual references. In accordance with the regulations,
       how can the approach be completed?
     options:
@@ -466,14 +455,12 @@
         correct: false
         why: ""
       - id: ODKPTELUK
-        text:
-          Do not interrupt the pilot flying and confront the pilot when you have
+        text: Do not interrupt the pilot flying and confront the pilot when you have
           landed.
         correct: false
         why: ""
       - id: O8HGD4CH8
-        text:
-          Provided that visual references have been established, the approach may be
+        text: Provided that visual references have been established, the approach may be
           continued.
         correct: true
         why: ""
@@ -523,8 +510,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Approaching top of descent, the destination aerodrome ATIS includes
+    question: Approaching top of descent, the destination aerodrome ATIS includes
       RVRs around 200 m, with Low Visibility Procedures (LVP) in force. The
       Commander's windscreen heat failed, with an annunciated alert, in the
       cruise. Does it affect the autoland?
@@ -538,8 +524,7 @@
         correct: false
         why: ""
       - id: ODVGZB0UV
-        text:
-          The autoland capability should NOT be affected by the windscreen heating
+        text: The autoland capability should NOT be affected by the windscreen heating
           failure, therefore NO action is necessary.
         correct: false
         why: ""
@@ -560,8 +545,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "During a CAT III approach with NO decision height, you have passed
+    question: "During a CAT III approach with NO decision height, you have passed
       the Alert Height, with NO visual references, when the ILS signal is lost.
       All other systems are working normally. As Co-Pilot and Pilot Monitoring
       (PM), you should:"
@@ -595,8 +579,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The sequence of the automatic landing comprises several phases, from
+    question: "The sequence of the automatic landing comprises several phases, from
       final approach to touch-down. Transition from one phase to another is
       triggered by:"
     options:
@@ -660,8 +643,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In the event of a failure, a fail-operational flight control system
+    question: "In the event of a failure, a fail-operational flight control system
       will operate as a:"
     options:
       - id: OADCEUVMV
@@ -692,36 +674,31 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Approaching top of descent, the destination aerodrome ATIS includes
+    question: Approaching top of descent, the destination aerodrome ATIS includes
       RVRs around 200 m, with Low Visibility Procedures (LVP) in force. The
       Commander's windscreen heat failed, with an annunciated alert, in the
       cruise. The screen is clear. What implications does the failure have on
       the briefing for the approach and landing?
     options:
       - id: ONDNA28HI
-        text:
-          Because the failure was annunciated, if there is any consequent autoland
+        text: Because the failure was annunciated, if there is any consequent autoland
           capability downgrade, this will also be annunciated. In case autoland
           capability remains unchanged, a CAT III approach may be flown.
         correct: false
         why: ""
       - id: OGNNYX06T
-        text:
-          A check of the manuals is required, in case the defect causes a reduction
+        text: A check of the manuals is required, in case the defect causes a reduction
           in the aircraft's approach capability. Diversion, or a higher height
           and/or RVR might be necessary.
         correct: true
         why: ""
       - id: OGTA0GYX2
-        text:
-          All aircraft systems are required to be serviceable for low visibility
+        text: All aircraft systems are required to be serviceable for low visibility
           procedures, so diversion to a CAT I aerodrome will be necessary.
         correct: false
         why: ""
       - id: OVMZNND2F
-        text:
-          The autoland capability should NOT be affected by the windscreen heating
+        text: The autoland capability should NOT be affected by the windscreen heating
           failure, therefore NO action is necessary.
         correct: false
         why: ""
@@ -778,8 +755,7 @@
         correct: true
         why: ""
       - id: OCTVIWGAM
-        text:
-          Nothing will happen since all warnings including loss of ILS signal are
+        text: Nothing will happen since all warnings including loss of ILS signal are
           inhibited below the alert height.
         correct: false
         why: ""
@@ -800,8 +776,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Following an automatic landing, with the ROLL OUT mode engaged, the
+    question: "Following an automatic landing, with the ROLL OUT mode engaged, the
       autopilot:"
     options:
       - id: OZ8BR7SIW
@@ -813,8 +788,7 @@
         correct: false
         why: ""
       - id: OFRR0Y8UD
-        text:
-          controls the rudder and nose wheel steering to keep the aeroplane on the
+        text: controls the rudder and nose wheel steering to keep the aeroplane on the
           localiser centreline.
         correct: true
         why: ""
@@ -875,8 +849,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "If, in the event of a failure, the approach, flare and landing can be
+    question: "If, in the event of a failure, the approach, flare and landing can be
       completed by the remaining part of the automatic system, such an automatic
       landing system is considered as:"
     options:

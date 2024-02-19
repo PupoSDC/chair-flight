@@ -10,8 +10,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is planning to fly an RNP 1 STAR (Standard Terminal Arrival)
+    question: A pilot is planning to fly an RNP 1 STAR (Standard Terminal Arrival)
       but notices that one of the waypoints is missing in the FMS readout of the
       procedure, when comparing to the chart. It appears that due to an error,
       the missing waypoint is NOT defined in the FMS database. As a result of
@@ -26,14 +25,12 @@
         correct: true
         why: ""
       - id: O2SB8GBGA
-        text:
-          create a waypoint based on a radial and distance from a nearby VOR DME
+        text: create a waypoint based on a radial and distance from a nearby VOR DME
           station.
         correct: false
         why: ""
       - id: OZOABMFW6
-        text:
-          create a waypoint based on the known latitude and longitude of the missing
+        text: create a waypoint based on the known latitude and longitude of the missing
           waypoint.
         correct: false
         why: ""

@@ -108,8 +108,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A NANU is an advisory message to inform users of a change in the (1)
+    question: A NANU is an advisory message to inform users of a change in the (1)
       \_\_ constellation. These messages are released 72 hours in advance for
       (2) \_\_.
     options:
@@ -190,14 +189,12 @@
       NEW TODAY TIL 1603312359 NDB REMAINS CF 367KHZ FROM 0000 TO 0900 NDB CF 367KHZ BECOMES ASM 367KHZ FROM 0900 TO 2359 REF TRIGGER NOTAM PERM AIRAC AIP AMDT 04/16 : NOTAM LF/F0403/16 >>> END OF BULLETIN <<<
     options:
       - id: ONKOV0XNN
-        text:
-          NDB CF identifier changes from “CF” to “ASM” at 23:59 UTC on the given
+        text: NDB CF identifier changes from “CF” to “ASM” at 23:59 UTC on the given
           date.
         correct: false
         why: ""
       - id: ONRRF7TAJ
-        text:
-          NDB CF identifier changes from “CF” to “ASM” at 09:00 UTC on the given
+        text: NDB CF identifier changes from “CF” to “ASM” at 09:00 UTC on the given
           date.
         correct: true
         why: ""
@@ -206,8 +203,7 @@
         correct: false
         why: ""
       - id: OV4JQDYQX
-        text:
-          NDB CF identifier changes to “ASM” at 09:00 UTC, and changes back to “CF”
+        text: NDB CF identifier changes to “ASM” at 09:00 UTC, and changes back to “CF”
           after 00:00 UTC.
         correct: false
         why: ""
@@ -262,8 +258,7 @@
       following info?
     options:
       - id: OU34XVJS4
-        text:
-          The unserviceability of location, destination or other instruction signs
+        text: The unserviceability of location, destination or other instruction signs
           on the aerodrome movement area.
         correct: false
         why: ""
@@ -272,14 +267,12 @@
         correct: false
         why: ""
       - id: OTW4XBETE
-        text:
-          The occurence or correction of major defects or impediements in the
+        text: The occurence or correction of major defects or impediements in the
           maneuvering area.
         correct: true
         why: ""
       - id: O8G99PHPG
-        text:
-          Routine maintenance work on aprons and the taxiways that doesnt affect the
+        text: Routine maintenance work on aprons and the taxiways that doesnt affect the
           safe movement on air.
         correct: false
         why: ""

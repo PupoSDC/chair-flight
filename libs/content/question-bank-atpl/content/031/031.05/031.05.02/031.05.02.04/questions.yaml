@@ -42,33 +42,28 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Prior to every Commercial Air Transport flight of a large aircraft,
+    question: Prior to every Commercial Air Transport flight of a large aircraft,
       the Operator uses an electronic or a paper format trim sheet to determine
       the Centre of Gravity of the actual Zero Fuel Mass, Take-Off Mass and
       Landing Mass. What is the purpose of the trim sheet?
     options:
       - id: ODJJQKF0A
-        text:
-          This is done by computing the balance arm of the actual operational masses
+        text: This is done by computing the balance arm of the actual operational masses
           and the results are given in metres or inches.
         correct: false
         why: ""
       - id: OKAGVVARR
-        text:
-          This is done by referring to the stations of various fuselage sectors
+        text: This is done by referring to the stations of various fuselage sectors
           defined in mass and balance documentation.
         correct: false
         why: ""
       - id: O3JCS5AJH
-        text:
-          This is to ensure that the CGs are within the certified envelope, and is
+        text: This is to ensure that the CGs are within the certified envelope, and is
           achieved by using the index method.
         correct: true
         why: ""
       - id: OEGXBOD99
-        text:
-          This is to check that they are below the limits published in the Aircraft
+        text: This is to check that they are below the limits published in the Aircraft
           flight Manual, and is achieved by calculating the moments.
         correct: false
         why: ""
@@ -298,8 +293,7 @@
         correct: false
         why: ""
       - id: O3NKCZRBO
-        text:
-          an arithmetical reasoning to determine the CG position of operational
+        text: an arithmetical reasoning to determine the CG position of operational
           masses.
         correct: false
         why: ""
@@ -315,8 +309,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Refer to figure or CAP 696 Figure 2.5\. What is the safe CG range for
+    question: Refer to figure or CAP 696 Figure 2.5\. What is the safe CG range for
       a single-engined piston aeroplane with a cruise mass of 2 600 lb?
     options:
       - id: ODAUQMXUH
@@ -453,8 +446,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Refer to figure or CAP696 file 4.12\. Using the load and trim sheet
+    question: Refer to figure or CAP696 file 4.12\. Using the load and trim sheet
       for the twin jet, which of the following is the correct value for the
       index at a Dry Operating Mass (DOM) of 35000 kg with a CG at 14% MAC?
     options:
@@ -515,20 +507,17 @@
       _(Forward limit: 2.80 m aft of datum; aft limit: 3.15 m aft of datum)_
     options:
       - id: OYUGJ4ERC
-        text:
-          Yes, the new centre of gravity is now located more forward within the
+        text: Yes, the new centre of gravity is now located more forward within the
           allowable range.
         correct: true
         why: ""
       - id: OC1VOCWPT
-        text:
-          No, the new centre of gravity is now located 1 cm aft of the aft limit,
+        text: No, the new centre of gravity is now located 1 cm aft of the aft limit,
           thus outside the allowable range.
         correct: false
         why: ""
       - id: OJ8BKSFUP
-        text:
-          Yes, the new centre of gravity is now located 5 cm forward of the aft
+        text: Yes, the new centre of gravity is now located 5 cm forward of the aft
           limit, within the allowable range.
         correct: false
         why: ""
@@ -623,8 +612,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aeroplane, with its CG limits from 638 inches to 658 inches aft of
+    question: An aeroplane, with its CG limits from 638 inches to 658 inches aft of
       the datum, should have been loaded so as to give a calculated Take-Off
       Mass of 64 200 kg and the CG located at 640 inches aft of the datum, with
       750 kg loaded into the front cargo hold and 500 kg into the rear cargo
@@ -659,8 +647,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Refer to figure or CAP696 file 4.12\. The ZFM index is 16 and ZFM = 51
+    question: Refer to figure or CAP696 file 4.12\. The ZFM index is 16 and ZFM = 51
       000 kg. Is the ZFM CG within the limit?
     options:
       - id: OL7SJVMEQ
@@ -732,15 +719,13 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When you are finished loading your aircraft, you find that the CG is 2
+    question: When you are finished loading your aircraft, you find that the CG is 2
       inches forward of the CG limit. The CG limits are between 12% and 16% MAC
       and MAC is 40 inches and LEMAC is 200 inches aft of datum. What can you do
       to get CG within limits if the total aircraft mass is 62 800 kg?
     options:
       - id: OA88DLURZ
-        text:
-          Move 483.07 kg from forward cargo hold 20 inches aft of datum to the aft
+        text: Move 483.07 kg from forward cargo hold 20 inches aft of datum to the aft
           cargo hold 280 inches aft of datum.
         correct: false
         why: ""
@@ -827,20 +812,17 @@
         correct: false
         why: ""
       - id: OQFPLOST3
-        text:
-          No, the new centre of gravity is located slightly aft of the aft limit,
+        text: No, the new centre of gravity is located slightly aft of the aft limit,
           thus outside the allowable range.
         correct: true
         why: ""
       - id: OHPGXOJPQ
-        text:
-          Yes, the new centre of gravity is now located more forward within the
+        text: Yes, the new centre of gravity is now located more forward within the
           allowable range.
         correct: false
         why: ""
       - id: OW0QQWAXM
-        text:
-          Yes, the new centre of gravity is located slightly forward of the aft
+        text: Yes, the new centre of gravity is located slightly forward of the aft
           limit, thus still within the allowable range.
         correct: false
         why: ""

@@ -22,11 +22,32 @@
     "test": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
-    "e2e": {
-      "inputs": ["default", "^production"]
-    },
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "options": {
+        "errorOnUnmatchedPattern": false,
+        "maxWarnings": 0,
+        "lintFilePatterns": ["{projectRoot}/**/*.ts?(x)"]
+      }
+    },
+    "check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p {projectRoot}/tsconfig.json"]
+      }
+    },
+    "format": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["prettier --write \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""]
+      },
+      "configurations": {
+        "check": {
+          "commands": ["prettier --check \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""]
+        }
+      }
     }
   },
   "namedInputs": {

@@ -14,8 +14,7 @@
       manually flying a radius to fix (RF) leg? The flight director…
     options:
       - id: OSATAC3GV
-        text:
-          provides guidance based on a fixed radius calculated with current TAS and
+        text: provides guidance based on a fixed radius calculated with current TAS and
           bank angle.
         correct: false
         why: ""
@@ -25,8 +24,7 @@
         correct: false
         why: ""
       - id: OD8SRMFAE
-        text:
-          is required to provide the necessary level of guidance and precision
+        text: is required to provide the necessary level of guidance and precision
           during the turn.
         correct: true
         why: ""
@@ -48,31 +46,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When flying an RF leg without autopilot, the flight director must be
+    question: When flying an RF leg without autopilot, the flight director must be
       used for guidance. Why?
     options:
       - id: OSAFVT8ED
-        text:
-          The flight director will give a visual and audible alert if the actual
+        text: The flight director will give a visual and audible alert if the actual
           navigation performance exceeds the RNP during the RF leg.
         correct: false
         why: ""
       - id: ON4KXYSG8
-        text:
-          The flight director displays guidance based on the information received
+        text: The flight director displays guidance based on the information received
           from ground-based transmitters.
         correct: false
         why: ""
       - id: OPBUSICLY
-        text:
-          The RNP system uploads the RF procedure to the FAC, which then provides
+        text: The RNP system uploads the RF procedure to the FAC, which then provides
           guidance via the flight director.
         correct: false
         why: ""
       - id: OCGKDQXRP
-        text:
-          The RF leg is based on fixed radius turn with guidance calculated by the
+        text: The RF leg is based on fixed radius turn with guidance calculated by the
           aircraft’s RNAV system.
         correct: true
         why: ""

@@ -51,8 +51,7 @@
         correct: false
         why: ""
       - id: OEZMGVQYG
-        text:
-          Maximum wind speeds (gusts) and minimums (lulls) about the average wind
+        text: Maximum wind speeds (gusts) and minimums (lulls) about the average wind
           velocity.
         correct: true
         why: ""
@@ -70,13 +69,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Why is the wind in the METAR different from the wind broadcasted by
+    question: Why is the wind in the METAR different from the wind broadcasted by
       the ATIS?
     options:
       - id: OITCHNLFC
-        text:
-          In the METAR, the surface wind is the average of the last 10 minutes. In
+        text: In the METAR, the surface wind is the average of the last 10 minutes. In
           the ATIS, it is the average of the last 2 min.
         correct: true
         why: ""
@@ -85,14 +82,12 @@
         correct: false
         why: ""
       - id: OK8F4UUNF
-        text:
-          In the METAR, the surface wind is the average of the last 10 minutes. In
+        text: In the METAR, the surface wind is the average of the last 10 minutes. In
           the ATIS, it is the average of the last 5 min.
         correct: false
         why: ""
       - id: OZJCV7H0V
-        text:
-          In the METAR, the surface wind is the average of the last 2 minutes. In
+        text: In the METAR, the surface wind is the average of the last 2 minutes. In
           the ATIS, it is the average of the last 10 min.
         correct: false
         why: ""
@@ -169,8 +164,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How are well separated CB clouds described on the significant weather
+    question: How are well separated CB clouds described on the significant weather
       chart?
     options:
       - id: OBO09P3DB
@@ -312,8 +306,7 @@
       Which statement about visibility and RVR is correct?
     options:
       - id: OKIG6WFNO
-        text:
-          Prevailing visibility is 900 m, RVR has deteriorated in the last 10
+        text: Prevailing visibility is 900 m, RVR has deteriorated in the last 10
           minutes.
         correct: true
         why: ""
@@ -449,8 +442,7 @@
         correct: false
         why: ""
       - id: OMTWHNMKF
-        text:
-          Whenever the sky is obscured by fog or heavy precipitation and the height
+        text: Whenever the sky is obscured by fog or heavy precipitation and the height
           of the cloud base cannot be measured.
         correct: true
         why: ""
@@ -522,8 +514,7 @@
         correct: true
         why: ""
       - id: ORL5VHZCR
-        text:
-          There is an aerodrome warning between 01:00Z and 03:00Z on the 30th of the
+        text: There is an aerodrome warning between 01:00Z and 03:00Z on the 30th of the
           month.
         correct: false
         why: ""
@@ -543,8 +534,7 @@
     question: "The visibility transmitted in a METAR is:"
     options:
       - id: OVYEPBH0L
-        text:
-          the greatest value, which is reached within at least half the horizon
+        text: the greatest value, which is reached within at least half the horizon
           circle of the aerodrome.
         correct: true
         why: ""
@@ -590,21 +580,18 @@
         correct: false
         why: ""
       - id: OWBKTOOIB
-        text:
-          Because of the expected turbulence, the pilot selects a fight level below
+        text: Because of the expected turbulence, the pilot selects a fight level below
           FL250.
         correct: true
         why: ""
       - id: OSU8NEWUG
-        text:
-          Owing to these reports and taking into account the presence of heavy
+        text: Owing to these reports and taking into account the presence of heavy
           thunderstorms at planned FL310, the pilot selects a higher fight level
           (FL370).
         correct: false
         why: ""
       - id: OJXYXATHR
-        text:
-          The pilot shows no further interest in these reports, since they do not
+        text: The pilot shows no further interest in these reports, since they do not
           concern the route to be owned.
         correct: false
         why: ""
@@ -994,8 +981,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A particular METAR states 4000 m of visibility. This can refer to the
+    question: A particular METAR states 4000 m of visibility. This can refer to the
       visibility of a light on an unlit background. The intesity of this light
       is how many candelas?
     options:
@@ -1069,14 +1055,12 @@
       This information indicates the:
     options:
       - id: OI9BJA5ZY
-        text:
-          portion of runway which a pilot on the threshold of any of the runways
+        text: portion of runway which a pilot on the threshold of any of the runways
           would see, with runway 23 in service.
         correct: false
         why: ""
       - id: OZFOZGG3K
-        text:
-          minimum visibility at this aerodrome, with runway 23 being the one in
+        text: minimum visibility at this aerodrome, with runway 23 being the one in
           service.
         correct: false
         why: ""
@@ -1085,8 +1069,7 @@
         correct: false
         why: ""
       - id: OGUB4TIEH
-        text:
-          length of runway which a pilot in an aircraft on the ground would see, on
+        text: length of runway which a pilot in an aircraft on the ground would see, on
           the threshold of runway 23.
         correct: true
         why: ""
@@ -1174,26 +1157,22 @@
        ATHINAI FIR EMBD TS OBS AND FCST IN W OF ATHINAI FIR / MOV E / INTST NC
     options:
       - id: OWWE0KR1S
-        text:
-          The thunderstorms in the Athens FIR are increasing in intensity, but are
+        text: The thunderstorms in the Athens FIR are increasing in intensity, but are
           stationary above the western part of the Athens FIR
         correct: false
         why: ""
       - id: OZNKBG7JX
-        text:
-          Thunderstorms have formed in the eastern part of the Athens FIR and are
+        text: Thunderstorms have formed in the eastern part of the Athens FIR and are
           slowly moving west
         correct: false
         why: ""
       - id: OE6DWIXNZ
-        text:
-          Athens Airport is closed due to thunderstorms. The thunderstorm zone
+        text: Athens Airport is closed due to thunderstorms. The thunderstorm zone
           should be east of Athens by 18:20 UTC
         correct: false
         why: ""
       - id: OKH5NVXOA
-        text:
-          Thunderstorms must be expected in the western part of the Athens FIR. The
+        text: Thunderstorms must be expected in the western part of the Athens FIR. The
           thunderstorm zone is moving east. Intensity is constant
         correct: true
         why: ""
@@ -1210,19 +1189,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What are the meanings of the meteorological abbreviations SQ, BR, MIFG
+    question: What are the meanings of the meteorological abbreviations SQ, BR, MIFG
       and SG respectively?
     options:
       - id: OQKFDVLT2
-        text:
-          Sudden increase in wind speed lasting for at least one minute / mist /
+        text: Sudden increase in wind speed lasting for at least one minute / mist /
           shallow fog / snowgrains
         correct: true
         why: ""
       - id: OQXB5ZDAN
-        text:
-          Sudden strong increase in wind speed lasting for at least one minute /
+        text: Sudden strong increase in wind speed lasting for at least one minute /
           haze / patches of fog / snowgrains
         correct: false
         why: ""
@@ -1246,8 +1222,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How would the term "vertical visibility is missing or not measurable"
+    question: How would the term "vertical visibility is missing or not measurable"
       be indicated in a METAR?
     options:
       - id: OFVDOKOCY
@@ -1277,8 +1252,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Approaching a given aerodrome, the ATC gives you the ATIS information
+    question: Approaching a given aerodrome, the ATC gives you the ATIS information
       “M” that also includes the cloud base, the wind gusts, the QNH, and some
       drone activity. What must be read back?
     options:
@@ -1295,8 +1269,7 @@
         correct: true
         why: ""
       - id: OGTMVODXY
-        text:
-          Information “Mike” only, as all the information is already contained in
+        text: Information “Mike” only, as all the information is already contained in
           the broadcast.
         correct: false
         why: ""
@@ -1347,8 +1320,7 @@
     question: "In the METAR code the abbreviation VC indicates:"
     options:
       - id: ORDAY2ZRA
-        text:
-          present weather within a range of between approximately 8 and 16 km of the
+        text: present weather within a range of between approximately 8 and 16 km of the
           aerodrome reference point, but not at the airport.
         correct: true
         why: ""

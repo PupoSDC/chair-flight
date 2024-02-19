@@ -5,14 +5,13 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      When operating on the Standby Pack Controls, what temperatures will
+    question: When operating on the Standby Pack Controls, what temperatures will
       the packs be producing?
     options:
       - id: uilmng
@@ -20,8 +19,7 @@
         correct: true
         why: ""
       - id: n1jtg
-        text:
-          The trim air modulating valves close so no pack air is provided to the two
+        text: The trim air modulating valves close so no pack air is provided to the two
           cabin zones, only re-circulated air is provided.
         correct: false
         why: ""
@@ -41,7 +39,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -50,8 +48,7 @@
     question: Which systems use engine bleed air during operation?
     options:
       - id: 69qqk
-        text:
-          Engine starting, air conditioning, cabin pressurisation, engine and wing
+        text: Engine starting, air conditioning, cabin pressurisation, engine and wing
           anti-icing, hydraulic, water.
         correct: true
         why: ""
@@ -61,14 +58,12 @@
         correct: false
         why: ""
       - id: 3zh04
-        text:
-          Engine and wing anti-icing, air conditioning, cabin pressurisation,
+        text: Engine and wing anti-icing, air conditioning, cabin pressurisation,
           hydraulic reservoir pressurisation.
         correct: false
         why: ""
       - id: i1xpdl
-        text:
-          Engine and wing anti-icing, engine starting, air conditioning, cabin
+        text: Engine and wing anti-icing, engine starting, air conditioning, cabin
           pressurisation, hydraulic reservoir pressurisation.
         correct: false
         why: ""
@@ -92,8 +87,7 @@
 
   variant:
     type: true-or-false
-    question:
-      The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT
+    question: The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT
       and BLEED TRIP OFF, it isolates the associated valve and extinguishes the
       alert.
     answer: false
@@ -104,19 +98,17 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If all zone and primary pack controls fail, how is cabin temperatures
+    question: If all zone and primary pack controls fail, how is cabin temperatures
       controlled?
     options:
       - id: 5g3ai
-        text:
-          The last settings before the failure will be maintained until the packs
+        text: The last settings before the failure will be maintained until the packs
           are selected OFF.
         correct: false
         why: ""
@@ -130,8 +122,7 @@
         correct: true
         why: ""
       - id: jxg9j
-        text:
-          A fixed cabin temperature will be produced in this situation - 24 degrees
+        text: A fixed cabin temperature will be produced in this situation - 24 degrees
           C from the left pack, and 18 degrees C from the right pack.
         correct: false
         why: ""
@@ -142,14 +133,13 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      The APU is capable of supplying bleed air for two packs on the ground,
+    question: The APU is capable of supplying bleed air for two packs on the ground,
       or one pack in flight.
     answer: true
 - id: QZNIFJOV
@@ -159,7 +149,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -191,7 +181,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -207,7 +197,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -224,14 +214,12 @@
         correct: true
         why: ""
       - id: 1wdfz
-        text:
-          Recirculate cabin air to allow it to be filtered to remove contaminants as
+        text: Recirculate cabin air to allow it to be filtered to remove contaminants as
           it passes through the recirculation fan HEPA filters.
         correct: false
         why: ""
       - id: 6jv2i
-        text:
-          Recirculate the air from the passenger cabin the provide heating for the
+        text: Recirculate the air from the passenger cabin the provide heating for the
           forward cargo compartment
         correct: false
         why: ""
@@ -242,14 +230,13 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      Conditioned air from the left hand pack flows directly to the Flight
+    question: Conditioned air from the left hand pack flows directly to the Flight
       Deck from the Mix Manifold.
     answer: false
 - id: QBIYKRTN
@@ -259,7 +246,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -276,7 +263,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -298,8 +285,7 @@
         correct: true
         why: ""
       - id: uao22
-        text:
-          There are no Trim Air Pressure Regulators, only Trim Air Modulating
+        text: There are no Trim Air Pressure Regulators, only Trim Air Modulating
           valves.
         correct: false
         why: ""
@@ -310,37 +296,32 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      The differential pressure of the cabin is limited by a pressure relief
+    question: The differential pressure of the cabin is limited by a pressure relief
       system - which of the following statements is correct?
     options:
       - id: gzw1n
-        text:
-          There is a negative pressure relief valve, which limits the cabin pressure
+        text: There is a negative pressure relief valve, which limits the cabin pressure
           to 9.1 psi above ambient.
         correct: false
         why: ""
       - id: pafa2
-        text:
-          There is an outflow valve which opens when cabin pressure reaches 9.1 psi
+        text: There is an outflow valve which opens when cabin pressure reaches 9.1 psi
           above ambient.
         correct: false
         why: ""
       - id: s1pkbh
-        text:
-          There are two negative pressure relief valves, which limit the cabin
+        text: There are two negative pressure relief valves, which limit the cabin
           pressure to 9.1 psi above ambient.
         correct: false
         why: ""
       - id: kb4ta
-        text:
-          There are two pressure relief valves which limit differential pressure to
+        text: There are two pressure relief valves which limit differential pressure to
           9.1 psi.
         correct: true
         why: ""
@@ -351,7 +332,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -360,21 +341,18 @@
     question: What is the result if all temperature zone selectors are positioned to OFF?
     options:
       - id: 9a6tr
-        text:
-          The right pack will produce a fixed temperature of 75 degrees Fahrenheit,
+        text: The right pack will produce a fixed temperature of 75 degrees Fahrenheit,
           and the left pack will produce a fixed temperature of 65 degrees
           Fahrenheit.
         correct: false
         why: ""
       - id: wlxcl
-        text:
-          Left pack will produce 24 degrees centigrade and right pack will produce
+        text: Left pack will produce 24 degrees centigrade and right pack will produce
           18 degrees centigrade.
         correct: true
         why: ""
       - id: 9o5tj
-        text:
-          The packs will attempt to maintain an average temperature across all
+        text: The packs will attempt to maintain an average temperature across all
           zones.
         correct: false
         why: ""
@@ -389,7 +367,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -398,20 +376,17 @@
     question: Where are the wing-body overheat sensors located?
     options:
       - id: zqpbz
-        text:
-          Engine struts, wing leading edge slats, air conditioning bays, APU duct,
+        text: Engine struts, wing leading edge slats, air conditioning bays, APU duct,
           keel beam.
         correct: false
         why: ""
       - id: i8eybh
-        text:
-          Engine struts, wing inboard leading edges, air conditioning bays, APU
+        text: Engine struts, wing inboard leading edges, air conditioning bays, APU
           bleed duct, keel beam.
         correct: true
         why: ""
       - id: xzmgr
-        text:
-          Engine cowling lips, wing leading edge slats, air conditioning bays, APU
+        text: Engine cowling lips, wing leading edge slats, air conditioning bays, APU
           compartment, keel beam.
         correct: false
         why: ""
@@ -480,8 +455,7 @@
 
   variant:
     type: true-or-false
-    question:
-      Bleed air is taken from stage 5 from the low pressure compressor and
+    question: Bleed air is taken from stage 5 from the low pressure compressor and
       stage 9 of the high pressure compressor.
     answer: false
 - id: QFNVBZKC
@@ -510,15 +484,13 @@
         correct: false
         why: ""
       - id: bc8lm
-        text:
-          Bleed air is only supplied from the 9th stage when the valve modulates
+        text: Bleed air is only supplied from the 9th stage when the valve modulates
           open if bleed air requirement is greater than the 5th stage alone can
           supply.
         correct: true
         why: ""
       - id: m6ni5i
-        text:
-          Bleed air is only supplied from the 5th stage when the valve modulates
+        text: Bleed air is only supplied from the 5th stage when the valve modulates
           open if bleed air requirement is greater than the 9th stage alone can
           supply.
         correct: false
@@ -534,7 +506,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -543,8 +515,7 @@
     question: What is the result if one pack fails in-flight?
     options:
       - id: i80jkf
-        text:
-          The remaining pack when selected to AUTO will be capable of maintaining
+        text: The remaining pack when selected to AUTO will be capable of maintaining
           pressurisation up to aircraft ceiling, only if all Zone Temperature
           Controllers are selected to OFF.
         correct: false
@@ -554,14 +525,12 @@
         correct: false
         why: ""
       - id: f2r0k
-        text:
-          The remaining pack is capable of maintaining pressurisation and acceptable
+        text: The remaining pack is capable of maintaining pressurisation and acceptable
           cabin temperatures up to 41,000 feet.
         correct: true
         why: ""
       - id: d9voal
-        text:
-          The remaining pack will be capable of maintaining pressurisation up to the
+        text: The remaining pack will be capable of maintaining pressurisation up to the
           aircraft maximum certified ceiling, and will attempt to produce an
           average temperature across all cabin zones.
         correct: false
@@ -573,7 +542,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 
@@ -582,20 +551,17 @@
     question: What is the function of the duel Bleed Light?
     options:
       - id: jb5ri
-        text:
-          Illuminates to warn of possible backpressure whenever both engines are
+        text: Illuminates to warn of possible backpressure whenever both engines are
           providing bleed air, and engines are at different thrust settings.
         correct: false
         why: ""
       - id: 99ixh
-        text:
-          Illuminates whenever both APU and engines is running to warn of risk of
+        text: Illuminates whenever both APU and engines is running to warn of risk of
           backpressure to APU.
         correct: false
         why: ""
       - id: cv916f
-        text:
-          Illuminates when engine running and APU bleed air valve, engine bleed air
+        text: Illuminates when engine running and APU bleed air valve, engine bleed air
           valve, and isolation valve are in a position to permit possible
           backpressure of the APU.
         correct: true
@@ -611,7 +577,7 @@
   learningObjectives:
     - B737.02
   explanation: |+
-
+    
 
     ---
 

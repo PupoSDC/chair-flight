@@ -131,8 +131,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The pilot notices that the aircraft type stored in the database for
+    question: "The pilot notices that the aircraft type stored in the database for
       aircraft performance is incorrect while performing the FMS performance
       initialization procedure. Before flying, this issue must be resolved
       because it could lead to inaccurate FMS outputs related to:"
@@ -165,8 +164,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In flight, which navigation receivers are typically used for flight
+    question: In flight, which navigation receivers are typically used for flight
       management position updating?
     options:
       - id: OBAXJIOCY
@@ -207,14 +205,12 @@
         correct: false
         why: ""
       - id: OWOLBPZ4C
-        text:
-          Aircraft performance data include takeoff and landing distances, climb
+        text: Aircraft performance data include takeoff and landing distances, climb
           rates, and cruise speeds.
         correct: true
         why: ""
       - id: ONDIUCYLK
-        text:
-          Aircraft weight and balance, navigational database, and engine fuel flow
+        text: Aircraft weight and balance, navigational database, and engine fuel flow
           data.
         correct: false
         why: ""
@@ -245,8 +241,7 @@
         correct: false
         why: ""
       - id: OR7GDSFGI
-        text:
-          Can only read the navigation data for 28 days. Afterwards, the memory is
+        text: Can only read the navigation data for 28 days. Afterwards, the memory is
           erased automatically.
         correct: false
         why: ""
@@ -405,31 +400,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "What is the purpose of the aircraft performance database? It provides
+    question: "What is the purpose of the aircraft performance database? It provides
       the FMC with information:"
     options:
       - id: OLCWXKV71
-        text:
-          Required to calculate pitch and thrust commands, by including aircraft
+        text: Required to calculate pitch and thrust commands, by including aircraft
           drag and engine characteristics.
         correct: true
         why: ""
       - id: OQX3EEO0C
-        text:
-          Required to calculate take-off and landing performance, by including
+        text: Required to calculate take-off and landing performance, by including
           aerodrome and runway-specific obstacles.
         correct: false
         why: ""
       - id: OLUYLNACY
-        text:
-          That would normally be determined by referring to the AFM, by including
+        text: That would normally be determined by referring to the AFM, by including
           performance penalties for fight control failures.
         correct: false
         why: ""
       - id: OFRYYW6D8
-        text:
-          That would normally be determined by referring to charts, by including the
+        text: That would normally be determined by referring to charts, by including the
           location of navigation aids, aerodromes, and instrument procedures.
         correct: false
         why: ""
@@ -477,8 +467,7 @@
     question: During a loss of GPS signal, the FMS position..
     options:
       - id: OTO9Z7TMG
-        text:
-          will remain stable because GPS is only a secondary sensor for normal
+        text: will remain stable because GPS is only a secondary sensor for normal
           operations.
         correct: false
         why: ""
@@ -510,8 +499,7 @@
     question: The Flight Management System (FMS) is organised in such a way that the..
     options:
       - id: OQQTHZFRH
-        text:
-          navigation database in the FMC is “read only”, but the pilot is able to
+        text: navigation database in the FMC is “read only”, but the pilot is able to
           add other navigational data.
         correct: true
         why: ""
@@ -520,8 +508,7 @@
         correct: false
         why: ""
       - id: OMEETNSDE
-        text:
-          pilot cannot modify the navigation database once it is installed in the
+        text: pilot cannot modify the navigation database once it is installed in the
           FMC.
         correct: false
         why: ""
@@ -541,26 +528,22 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The Flight Management Computer (FMC) contains two primary databases:
+    question: "The Flight Management Computer (FMC) contains two primary databases:
       the navigation database and the performance database. What is the purpose
       of the navigation database?"
     options:
       - id: OUHJYR9MN
-        text:
-          It contains data used to calculate predictions for fuel used and estimated
+        text: It contains data used to calculate predictions for fuel used and estimated
           remaining fuel throughout a flight.
         correct: false
         why: ""
       - id: OLL2RIJ8S
-        text:
-          It provides navigational guidance and enable the aircraft to follow
+        text: It provides navigational guidance and enable the aircraft to follow
           established flight procedures.
         correct: false
         why: ""
       - id: O6OLIWJMS
-        text:
-          It integrates FMS positions with navigation data to provide navigational
+        text: It integrates FMS positions with navigation data to provide navigational
           guidance during flight.
         correct: false
         why: ""
@@ -667,8 +650,7 @@
   explanation: ""
   variant:
     type: one-two
-    question:
-      "In order to calculate the optimum vertical profile, the FMS uses the
+    question: "In order to calculate the optimum vertical profile, the FMS uses the
       performance database. Before the flight, during the FMS preparation, the
       performance database has to be checked for:"
     firstCorrectStatements:
@@ -726,33 +708,28 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "At the beginning of the flight, when initialising the FMS, you have
+    question: "At the beginning of the flight, when initialising the FMS, you have
       the option to choose between the current and the upcoming version of the
       navigation database. You confirm the upcoming version of the database, by
       accident and without noticing. This decision:"
     options:
       - id: OYGUUAF8S
-        text:
-          Has no further implications. In the background logic the FMS will use the
+        text: Has no further implications. In the background logic the FMS will use the
           current database.
         correct: false
         why: ""
       - id: OPDNSZMVK
-        text:
-          Could lead to an unsafe situation by including waypoints, SID and STAR
+        text: Could lead to an unsafe situation by including waypoints, SID and STAR
           data that are only available at a later date.
         correct: true
         why: ""
       - id: OTU1F7DTZ
-        text:
-          Will lead to a blockage of the FMS computer. The screen will be frozen and
+        text: Will lead to a blockage of the FMS computer. The screen will be frozen and
           the computer has to be reset by the pilot.
         correct: false
         why: ""
       - id: OYROZ4BXV
-        text:
-          Will be announced by the FMS as WRONG DATABASE VERSION so that the pilot
+        text: Will be announced by the FMS as WRONG DATABASE VERSION so that the pilot
           can correct the situation.
         correct: false
         why: ""
@@ -829,8 +806,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      User-defined waypoints can be inserted using different formats. What
+    question: User-defined waypoints can be inserted using different formats. What
       formats can be used in the B737-400 FMS?
     options:
       - id: OOMPIVDZQ
@@ -849,8 +825,7 @@
         correct: true
         why: ""
       - id: OBSKP45GP
-        text:
-          Place, Place Bearing/Distance, Along-Track Displacement, Latitude and
+        text: Place, Place Bearing/Distance, Along-Track Displacement, Latitude and
           Longitude
         correct: false
         why: ""
@@ -903,20 +878,17 @@
         correct: false
         why: ""
       - id: OZWPBWDQ7
-        text:
-          The navigational database is write-protected and it is not possible to
+        text: The navigational database is write-protected and it is not possible to
           otherwise save crew created navigational data.
         correct: false
         why: ""
       - id: OMQJPC7GJ
-        text:
-          Crew-inserted navigational data is deleted automatically after each
+        text: Crew-inserted navigational data is deleted automatically after each
           flight.
         correct: false
         why: ""
       - id: O02PJMLHN
-        text:
-          Crew created navigational data may be saved in additional space in the
+        text: Crew created navigational data may be saved in additional space in the
           database.
         correct: true
         why: ""
@@ -963,8 +935,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When two waypoints are entered on the FMS flight plan page, a track
+    question: "When two waypoints are entered on the FMS flight plan page, a track
       between the two fixes is computed and can be displayed on the Navigation
       map display (ND). This leg created is:"
     options:
@@ -1091,8 +1062,7 @@
     question: "What is true about the FMC databases:"
     options:
       - id: OGWKMFPMK
-        text:
-          the performance database contains aeronautical information for the planned
+        text: the performance database contains aeronautical information for the planned
           area of operations of the aircraft.
         correct: false
         why: ""
@@ -1118,8 +1088,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aeroplane departs for a 12 hour long flight at 20:00 UTC on the 8th
+    question: An aeroplane departs for a 12 hour long flight at 20:00 UTC on the 8th
       of the Month. During the preparation, the flight crew notices that their
       navigation database is only valid until the 8th of the month. What should
       they do?
@@ -1133,8 +1102,7 @@
         correct: false
         why: ""
       - id: OPGHMOFKE
-        text:
-          The should manually change to the new database at 00:00 UTC on the 9th, in
+        text: The should manually change to the new database at 00:00 UTC on the 9th, in
           flight.
         correct: false
         why: ""
@@ -1166,8 +1134,7 @@
         correct: true
         why: ""
       - id: OVRBTH5QJ
-        text:
-          only the navigation database may be customized by the company’s cost index
+        text: only the navigation database may be customized by the company’s cost index
           strategy.
         correct: false
         why: ""
@@ -1192,26 +1159,22 @@
       into the FMS. Which option is correct?
     options:
       - id: OSYIDFFKW
-        text:
-          The calculations for the flight will be wrong and can only be corrected by
+        text: The calculations for the flight will be wrong and can only be corrected by
           re-initialising the FMS.
         correct: false
         why: ""
       - id: OJWEO5M6Z
-        text:
-          A significant difference between the measured and inserted values will
+        text: A significant difference between the measured and inserted values will
           trigger an error caption.
         correct: true
         why: ""
       - id: OJWBTU0AR
-        text:
-          Since the fuel quantity is critical data, the FMS computer will freeze and
+        text: Since the fuel quantity is critical data, the FMS computer will freeze and
           stop to calculate VNAV and LNAV data and must be reset.
         correct: false
         why: ""
       - id: OX8Z3VTTQ
-        text:
-          There is NO problem as the inserted quantity will be automatically updated
+        text: There is NO problem as the inserted quantity will be automatically updated
           to the actual value.
         correct: false
         why: ""
@@ -1259,8 +1222,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When performing the FMS pre-flight set-up, the pilot notices that the
+    question: "When performing the FMS pre-flight set-up, the pilot notices that the
       current navigation database is out of date. Which of the following is the
       action he/she should take before continuing the FMS initialisation? The
       pilot should:"
@@ -1291,8 +1253,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      While programming the FMS, the flight crew enters the wrong cruising
+    question: While programming the FMS, the flight crew enters the wrong cruising
       level. What are the possible consequences?
     options:
       - id: OJJPR0BXM
@@ -1325,14 +1286,12 @@
     question: On the CDU of an FMS, the message "Insufficient Fuel" is displayed if…
     options:
       - id: OEKJBF6LB
-        text:
-          the calculated estimated fuel at the destination airport is less than the
+        text: the calculated estimated fuel at the destination airport is less than the
           fuel reserve value entered.
         correct: true
         why: ""
       - id: OMJUETQXN
-        text:
-          too little fuel is on board for diversion when the flight crew initiates a
+        text: too little fuel is on board for diversion when the flight crew initiates a
           go-around procedure.
         correct: false
         why: ""
@@ -1341,8 +1300,7 @@
         correct: false
         why: ""
       - id: OEUBQW7MU
-        text:
-          the refuelling process on the ground is stopped before the required amount
+        text: the refuelling process on the ground is stopped before the required amount
           of fuel is on board.
         correct: false
         why: ""
@@ -1373,14 +1331,12 @@
         correct: true
         why: ""
       - id: OXSILK42R
-        text:
-          Remain unchanged as the diversion is calculated with the gear extended
+        text: Remain unchanged as the diversion is calculated with the gear extended
           and/or flaps down.
         correct: false
         why: ""
       - id: OC4DSFQDB
-        text:
-          Increase, and this will be correctly displayed on the FMC fuel prediction
+        text: Increase, and this will be correctly displayed on the FMC fuel prediction
           pages.
         correct: false
         why: ""
@@ -1440,8 +1396,7 @@
         correct: false
         why: ""
       - id: OGNXK8ARR
-        text:
-          the computed position based on a number of sources, e.g. IRS, VOR/DME, ILS
+        text: the computed position based on a number of sources, e.g. IRS, VOR/DME, ILS
           and GPS.
         correct: true
         why: ""
@@ -1520,14 +1475,12 @@
         correct: false
         why: ""
       - id: O1GRMAV3M
-        text:
-          Only parameters related to the engine power output can be changed by the
+        text: Only parameters related to the engine power output can be changed by the
           pilot.
         correct: false
         why: ""
       - id: ORCRQM3LC
-        text:
-          Only parameters related to the fuel consumption can be changed by the
+        text: Only parameters related to the fuel consumption can be changed by the
           pilot.
         correct: false
         why: ""
@@ -1575,8 +1528,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      While preparing the FMGS for the first flight of the day, the pilots
+    question: While preparing the FMGS for the first flight of the day, the pilots
       notice that the navigation database is out of date. What should they do?
     options:
       - id: OF3W3RUAS
@@ -1769,20 +1721,17 @@
         correct: false
         why: ""
       - id: OQJT1DGWV
-        text:
-          To engage the alignment procedure for the INS/IRS and to switch between
+        text: To engage the alignment procedure for the INS/IRS and to switch between
           NAV mode and ATT mode.
         correct: false
         why: ""
       - id: OZCUXTJNE
-        text:
-          To extract information stored in or processed by the FMS and load new or
+        text: To extract information stored in or processed by the FMS and load new or
           updated information into the FMS.
         correct: true
         why: ""
       - id: OAV8CGZVO
-        text:
-          To engage or disengage the autopilot, set different modes, and choose
+        text: To engage or disengage the autopilot, set different modes, and choose
           between armed modes and engaged modes.
         correct: false
         why: ""
@@ -1830,14 +1779,12 @@
     question: One FMS is not in agreement with the other. What happens?
     options:
       - id: OZMQLREH5
-        text:
-          Nothing. The flight crew must keep cross-checking to ensure the FMSs stay
+        text: Nothing. The flight crew must keep cross-checking to ensure the FMSs stay
           in agreement.
         correct: false
         why: ""
       - id: OUN7RQ1DM
-        text:
-          The FMS shuts down, and the flight crew must use alternative means of
+        text: The FMS shuts down, and the flight crew must use alternative means of
           navigation.
         correct: false
         why: ""
@@ -1998,14 +1945,12 @@
       Velocity (W/V) is displayed. Where is the W/V information derived from?
     options:
       - id: OKDJIKBEF
-        text:
-          It is manually entered by the pilots, based on the latest information
+        text: It is manually entered by the pilots, based on the latest information
           available.
         correct: false
         why: ""
       - id: OIKYVIPLS
-        text:
-          It is determined by the FMC from inputs of heading, drift, True Airspeed
+        text: It is determined by the FMC from inputs of heading, drift, True Airspeed
           (TAS) and ground speed.
         correct: true
         why: ""
@@ -2014,8 +1959,7 @@
         correct: false
         why: ""
       - id: O8UXUNU7V
-        text:
-          It is uploaded by data link from the latest available meteorological
+        text: It is uploaded by data link from the latest available meteorological
           forecasts.
         correct: false
         why: ""
@@ -2031,8 +1975,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A new data base should be downloaded to the Flight Management System
+    question: "A new data base should be downloaded to the Flight Management System
       (FMS) on a cycle of every:"
     options:
       - id: OFQBKFONL
@@ -2062,26 +2005,22 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You discover that the aircraft performance database for FMS is based
+    question: You discover that the aircraft performance database for FMS is based
       on incorrect aircraft and engine configurations during pre-flight
       preparation. Which of the following statements is correct?
     options:
       - id: OOWQEBNOM
-        text:
-          Leave the database unchanged because modifying the contents is a lengthy
+        text: Leave the database unchanged because modifying the contents is a lengthy
           procedure.
         correct: false
         why: ""
       - id: OFVN0TORC
-        text:
-          You can manually select the correct configuration by using the list on the
+        text: You can manually select the correct configuration by using the list on the
           initialisation page.
         correct: false
         why: ""
       - id: OLD8J85TT
-        text:
-          Engineering must be notified, as flight crew are prohibited from making
+        text: Engineering must be notified, as flight crew are prohibited from making
           any changes.
         correct: true
         why: ""

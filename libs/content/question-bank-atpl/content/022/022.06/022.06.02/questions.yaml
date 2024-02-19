@@ -92,8 +92,7 @@
         correct: false
         why: ""
       - id: OVQBXK5H6
-        text:
-          This system prevents uncommanded surface deflection when the automatic
+        text: This system prevents uncommanded surface deflection when the automatic
           pilot is disengaged.
         correct: false
         why: ""
@@ -102,8 +101,7 @@
         correct: false
         why: ""
       - id: OTJQB9IMB
-        text:
-          Such system can itself, when it fails, prevent the automatic pilot from
+        text: Such system can itself, when it fails, prevent the automatic pilot from
           being engaged.
         correct: true
         why: ""
@@ -121,8 +119,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "According to CS25, the definition of the control wheel steering mode
+    question: "According to CS25, the definition of the control wheel steering mode
       (CWS) is: Where the pilot has the ability to make inputs to the:"
     options:
       - id: O1VFTQSIA
@@ -167,8 +164,7 @@
         correct: false
         why: ""
       - id: OUYXVSAA5
-        text:
-          controlling the movements of the centre of gravity in three-dimensional
+        text: controlling the movements of the centre of gravity in three-dimensional
           space.
         correct: true
         why: ""
@@ -186,8 +182,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'When an aircraft, operating in the VOR coupled mode, enters the "cone
+    question: 'When an aircraft, operating in the VOR coupled mode, enters the "cone
       of confusion" over a VOR station, the roll channel of the autopilot:'
     options:
       - id: OUYRZL8DN
@@ -299,20 +294,17 @@
       within a set of control laws. The purpose of these control laws is to…
     options:
       - id: OJZ9C27XJ
-        text:
-          ensure any movement of the control surface(s) is smooth and accurate for
+        text: ensure any movement of the control surface(s) is smooth and accurate for
           improved passenger comfort.
         correct: false
         why: ""
       - id: OVBHMLEQC
-        text:
-          prevent the ability to by-pass the computers or the standby systems to
+        text: prevent the ability to by-pass the computers or the standby systems to
           operate without the computers.
         correct: false
         why: ""
       - id: O1RICIT6Z
-        text:
-          prevent the aeroplane from deviating from its desired flight path by an
+        text: prevent the aeroplane from deviating from its desired flight path by an
           amount exceeding the limits established by the operator.
         correct: false
         why: ""
@@ -368,13 +360,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What will happen if the pilot uses manual trim while the autopilot is
+    question: What will happen if the pilot uses manual trim while the autopilot is
       engaged?
     options:
       - id: OTIQC6IQG
-        text:
-          The autopilot will continue to fly the aircraft, but it may be out of trim
+        text: The autopilot will continue to fly the aircraft, but it may be out of trim
           when the pilot disconnects.
         correct: false
         why: ""
@@ -383,8 +373,7 @@
         correct: true
         why: ""
       - id: OTLEIKHKL
-        text:
-          The trim system will respond, but then the autopilot will re-trim the
+        text: The trim system will respond, but then the autopilot will re-trim the
           aircraft.
         correct: false
         why: ""
@@ -407,26 +396,22 @@
     question: Which statement is correct regarding the V/S and FPA autopilot modes?
     options:
       - id: OW22NNIYC
-        text:
-          V/S is an altitude gain/loss in relation to time while FPA is an altitude
+        text: V/S is an altitude gain/loss in relation to time while FPA is an altitude
           gain/loss in relation to ground distance.
         correct: true
         why: ""
       - id: OCAILZNXL
-        text:
-          Both V/S and FPA maintain a vertical speed as it is the main parameter
+        text: Both V/S and FPA maintain a vertical speed as it is the main parameter
           during climb and descent.
         correct: false
         why: ""
       - id: OOASIDYYX
-        text:
-          V/S is an altitude gain/loss in relation to ground distance while FPA is
+        text: V/S is an altitude gain/loss in relation to ground distance while FPA is
           an altitude gain/loss in relation to time.
         correct: false
         why: ""
       - id: OIGJCSEHP
-        text:
-          FPA is to be used during non-precision approaches only, whereas V/S can be
+        text: FPA is to be used during non-precision approaches only, whereas V/S can be
           used during any other approach.
         correct: false
         why: ""
@@ -443,8 +428,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A pilot engages the control wheel steering (CWS) of a conventional
+    question: "A pilot engages the control wheel steering (CWS) of a conventional
       autopilot and carries out a manoeuvre in roll. When the control wheel is
       released, the autopilot will:"
     options:
@@ -461,8 +445,7 @@
         correct: false
         why: ""
       - id: O93NBTEQB
-        text:
-          restore the flight attitude and the rate of turn selected on the autopilot
+        text: restore the flight attitude and the rate of turn selected on the autopilot
           control display unit.
         correct: false
         why: ""
@@ -689,30 +672,26 @@
       had NO auto-trim. The consequence may be:"
     options:
       - id: OOYSORZK4
-        text:
-          That the moment you move the trim wheel the autopilot will disconnect. The
+        text: That the moment you move the trim wheel the autopilot will disconnect. The
           aircraft will be perfectly in trim, and you will be able to re-engage
           the autopilot WITHOUT re-trimming.
         correct: false
         why: ""
       - id: OMACCSFNV
-        text:
-          That the autopilot may be unable to counteract your trim input quickly
+        text: That the autopilot may be unable to counteract your trim input quickly
           enough. The aircraft may pitch down, requiring you to disconnect the
           autopilot and fly manually.
         correct: false
         why: ""
       - id: O34GMK89I
-        text:
-          That the autopilot will fly the rest of the approach with an out-of-trim
+        text: That the autopilot will fly the rest of the approach with an out-of-trim
           load, which may leave insufficient authority should a go-around be
           necessary. This is corrected by disengaging and re-engaging the
           autopilot.
         correct: false
         why: ""
       - id: OUXICVJMH
-        text:
-          An out-of-trim condition, which may cause the autopilot to disconnect and
+        text: An out-of-trim condition, which may cause the autopilot to disconnect and
           the aircraft to pitch up.
         correct: true
         why: ""
@@ -796,8 +775,7 @@
     question: "The main inputs to the autopilot/autoflight are:"
     options:
       - id: O241HKNHA
-        text:
-          Air Data Computer (ADC), Inertial Referencing System (IRS) and Mode
+        text: Air Data Computer (ADC), Inertial Referencing System (IRS) and Mode
           Control Panel (MCP).
         correct: true
         why: ""
@@ -870,8 +848,7 @@
         correct: false
         why: ""
       - id: OS0WMH7GW
-        text:
-          disengagement of the autopilot to make a flight path change, before
+        text: disengagement of the autopilot to make a flight path change, before
           reengaging it back.
         correct: false
         why: ""
@@ -998,8 +975,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aeroplane in straight and level flight, as airspeed increases, the
+    question: An aeroplane in straight and level flight, as airspeed increases, the
       autopilot will \_\_\_ the deflection of the flight control surfaces.
     options:
       - id: OPRKFH4A5
@@ -1032,8 +1008,7 @@
     question: What is the main function of a basic autopilot?
     options:
       - id: O5UBMKIDP
-        text:
-          Stabilising and monitoring the movement around the aeroplane centre of
+        text: Stabilising and monitoring the movement around the aeroplane centre of
           gravity.
         correct: true
         why: ""
@@ -1042,8 +1017,7 @@
         correct: false
         why: ""
       - id: OH6M0DV9K
-        text:
-          Stabilising and monitoring the movement around the aeroplane aerodynamic
+        text: Stabilising and monitoring the movement around the aeroplane aerodynamic
           centre.
         correct: false
         why: ""
@@ -1074,8 +1048,7 @@
         correct: true
         why: ""
       - id: OH7ACWBQJ
-        text:
-          prevents uncommanded surface deflection when the automatic pilot is
+        text: prevents uncommanded surface deflection when the automatic pilot is
           disengaged.
         correct: false
         why: ""
@@ -1104,27 +1077,23 @@
       * Flight-Path Angle (FPA)
     options:
       - id: OMU3JQ4PV
-        text:
-          Both modes will make the aeroplane maintain a selected vertical speed,
+        text: Both modes will make the aeroplane maintain a selected vertical speed,
           which varies with the airspeed to maintain a constant flight-path
           angle.
         correct: false
         why: ""
       - id: OHEZK3UZY
-        text:
-          V/S will maintain a rate of climb or descent as set by the pilot while FPA
+        text: V/S will maintain a rate of climb or descent as set by the pilot while FPA
           will maintain a flight-path angle as coded in the FMS.
         correct: false
         why: ""
       - id: OHDFZTBHG
-        text:
-          Both modes will make the aeroplane follow a trajectory where V/S uses feet
+        text: Both modes will make the aeroplane follow a trajectory where V/S uses feet
           per minute as reference and FPA uses an angle.
         correct: true
         why: ""
       - id: OHZOLXUII
-        text:
-          V/S will maintain a selected airspeed during the climb or descent and FPA
+        text: V/S will maintain a selected airspeed during the climb or descent and FPA
           will maintain a selected geometric flight-path angle during climb or
           descent.
         correct: false
@@ -1142,32 +1111,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Considering vertical modes of the flight guidance system, when using
+    question: Considering vertical modes of the flight guidance system, when using
       vertical navigation (VNAV) or managed climb/descent (CLB or DES), the
       aeroplane should...
     options:
       - id: OTDN1WIA4
-        text:
-          only engage when the pilot selects it, when the aeroplane has no deviation
+        text: only engage when the pilot selects it, when the aeroplane has no deviation
           from the calculated vertical profile in the FMS.
         correct: false
         why: ""
       - id: OGH4D7H6B
-        text:
-          only commence a climb or descent at the position computed by the FMS if a
+        text: only commence a climb or descent at the position computed by the FMS if a
           higher/lower (as appropriate) altitude is selected by the pilot first.
         correct: true
         why: ""
       - id: OUIEY8CZ4
-        text:
-          follow the vertical commands computed by the FMS, ensuring the aeroplane
+        text: follow the vertical commands computed by the FMS, ensuring the aeroplane
           follows the flight path regardless of ambient conditions.
         correct: false
         why: ""
       - id: OMC42PVLY
-        text:
-          commence a climb or descent once the aeroplane reaches the position
+        text: commence a climb or descent once the aeroplane reaches the position
           computed by the FMS regardless of any altitude selection made by the
           pilot.
         correct: false
@@ -1188,8 +1152,7 @@
     question: How can the TCS (Touch Control Steering) system be activated?
     options:
       - id: OHWLW4J9R
-        text:
-          When the pilot touches the flight controls, the autopilot is automatically
+        text: When the pilot touches the flight controls, the autopilot is automatically
           disengaged.
         correct: false
         why: ""
@@ -1198,14 +1161,12 @@
         correct: true
         why: ""
       - id: O71AUVZCQ
-        text:
-          By using a touchpad instead of a control stick/wheel to control the
+        text: By using a touchpad instead of a control stick/wheel to control the
           aircraft.
         correct: false
         why: ""
       - id: OEPOKQULH
-        text:
-          By using a separate set of flight controls to provide the autopilot with
+        text: By using a separate set of flight controls to provide the autopilot with
           new control inputs.
         correct: false
         why: ""
@@ -1220,8 +1181,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The principal function of the synchroniser circuit in an autopilot
+    question: "The principal function of the synchroniser circuit in an autopilot
       pitch channel is to:"
     options:
       - id: OPI0EUTR6
@@ -1233,8 +1193,7 @@
         correct: false
         why: ""
       - id: O34V9AUFJ
-        text:
-          Ensure that the power settings of the autothrust synchronises with the
+        text: Ensure that the power settings of the autothrust synchronises with the
           aircraft pitch.
         correct: false
         why: ""
@@ -1343,8 +1302,7 @@
         correct: true
         why: ""
       - id: O8RJG50Y7
-        text:
-          Crew inputs to the computer and the detector responses (returned to the
+        text: Crew inputs to the computer and the detector responses (returned to the
           airplane).
         correct: false
         why: ""
@@ -1354,8 +1312,7 @@
         correct: false
         why: ""
       - id: OS7GFORLV
-        text:
-          Input and output signals at the amplifier level respectively control
+        text: Input and output signals at the amplifier level respectively control
           deviation data and control deflection signals.
         correct: false
         why: ""
@@ -1373,13 +1330,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following correctly describes the difference between an
+    question: Which of the following correctly describes the difference between an
       armed mode and an engaged mode in an autopilot system?
     options:
       - id: O89ZA5DLM
-        text:
-          An armed mode will only become engaged when the flight crew switches to
+        text: An armed mode will only become engaged when the flight crew switches to
           the engaged mode.
         correct: false
         why: ""
@@ -1472,14 +1427,12 @@
     question: "The purpose of the autopilot Control Wheel Steering (CWS) mode is:"
     options:
       - id: OJWWUZLPD
-        text:
-          to capture and hold the altitude selected with the control wheel on the
+        text: to capture and hold the altitude selected with the control wheel on the
           mode control panel.
         correct: false
         why: ""
       - id: ONOBOSAGO
-        text:
-          to allow the pilot to manoeuvre the aeroplane through the autopilot with
+        text: to allow the pilot to manoeuvre the aeroplane through the autopilot with
           conventional control column inputs.
         correct: true
         why: ""
@@ -1488,8 +1441,7 @@
         correct: false
         why: ""
       - id: OIWNOBHOF
-        text:
-          to control the nose wheel steering during low visibility take off and
+        text: to control the nose wheel steering during low visibility take off and
           landing.
         correct: false
         why: ""
@@ -1507,29 +1459,25 @@
     question: "Explain how the mixed mode works and what inputs it needs:"
     options:
       - id: ONIJWOVV7
-        text:
-          In the mixed mode for the vertical path, the autopilot uses a pitch
+        text: In the mixed mode for the vertical path, the autopilot uses a pitch
           attitude (or pitch attitude rate) which allows it to avoid a
           tail-strike during take off, and for the lateral path, it uses the
           localizer signal to keep the runway centreline.
         correct: true
         why: ""
       - id: OTR8WG8TO
-        text:
-          The mixed mode uses a constant vertical speed to ensure the obstacle
+        text: The mixed mode uses a constant vertical speed to ensure the obstacle
           clearance and uses a heading/track mode to keep the centreline of the
           runway.
         correct: false
         why: ""
       - id: ODQIGXSOH
-        text:
-          It works on the same principle as the CWS and reduces the pilot’s workload
+        text: It works on the same principle as the CWS and reduces the pilot’s workload
           for flight path management.
         correct: false
         why: ""
       - id: O02E19DLV
-        text:
-          The mixed modes are exclusively used for the low visibility take-off and
+        text: The mixed modes are exclusively used for the low visibility take-off and
           landing.
         correct: false
         why: ""
@@ -1545,8 +1493,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An autoland system (autopilot) is described as fail operational when
+    question: "An autoland system (autopilot) is described as fail operational when
       it is:"
     options:
       - id: OFB7OROFX
@@ -1578,32 +1525,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      To ensure that, in case of autopilot failure, flight path deviations
+    question: To ensure that, in case of autopilot failure, flight path deviations
       remain within safe limits, when the autopilot is engaged...
     options:
       - id: OZEWMERUZ
-        text:
-          a delay of 5 seconds occurs while the autopilot motors the auto-trim up
+        text: a delay of 5 seconds occurs while the autopilot motors the auto-trim up
           and down, until the trim position has been identified.
         correct: false
         why: ""
       - id: OXOIETKKW
-        text:
-          a pitch-up trim load is always maintained by the autopilot, ensuring the
+        text: a pitch-up trim load is always maintained by the autopilot, ensuring the
           deviation when the autopilot disconnects is predictable and
           consistent.
         correct: false
         why: ""
       - id: ORRSRME07
-        text:
-          trim is mechanically centred, ensuring that the full range of movement is
+        text: trim is mechanically centred, ensuring that the full range of movement is
           available to the auto-trim system.
         correct: false
         why: ""
       - id: ORXTEETZ0
-        text:
-          engagement occurs only if the aircraft is in trim, with control loads very
+        text: engagement occurs only if the aircraft is in trim, with control loads very
           low.
         correct: true
         why: ""
@@ -1619,8 +1561,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The pilot of a large turbojet aeroplane uses the autopilot disconnect
+    question: The pilot of a large turbojet aeroplane uses the autopilot disconnect
       button on the control column to disconnect the autopilot. What indications
       would he/she receive?
     options:

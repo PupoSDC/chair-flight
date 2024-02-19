@@ -10,13 +10,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      On a scheduled flight, the ATC asks the pilots to change their route.
+    question: On a scheduled flight, the ATC asks the pilots to change their route.
       What action is required for the IRS?
     options:
       - id: OAXULXZW7
-        text:
-          enter the new waypoints into the control unit of each IRS, ensuring the
+        text: enter the new waypoints into the control unit of each IRS, ensuring the
           system in use is updated first.
         correct: false
         why: ""
@@ -25,14 +23,12 @@
         correct: true
         why: ""
       - id: OHWQCIA2L
-        text:
-          the pilot will need to revert to manual navigation. The aircraft must be
+        text: the pilot will need to revert to manual navigation. The aircraft must be
           stationary to update waypoints in the IRS.
         correct: false
         why: ""
       - id: OE358WXBQ
-        text:
-          modern aircraft have GPS, so the pilot does not need to update waypoints
+        text: modern aircraft have GPS, so the pilot does not need to update waypoints
           in the IRS.
         correct: false
         why: ""
@@ -130,26 +126,22 @@
     question: IRS is a self-contained system because...
     options:
       - id: OILJ3BAYO
-        text:
-          the system has a battery back-up which guarantees the well-functioning of
+        text: the system has a battery back-up which guarantees the well-functioning of
           the system in case of power-failure.
         correct: false
         why: ""
       - id: OZQUAZLGR
-        text:
-          the system calculates the position of the aircraft without reference to
+        text: the system calculates the position of the aircraft without reference to
           externally generated (man-made) signals.
         correct: true
         why: ""
       - id: OTSGG9KS0
-        text:
-          the system has the ability to calculate the aircraft’s radio position
+        text: the system has the ability to calculate the aircraft’s radio position
           without any reference to either man-made or natural information.
         correct: false
         why: ""
       - id: OFWV1KX3Y
-        text:
-          the system has the ability to calculate the aircraft’s position with an
+        text: the system has the ability to calculate the aircraft’s position with an
           accuracy comparable to the GPS position.
         correct: false
         why: ""
@@ -167,8 +159,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "As a result of the failure of the ADC, the inertial navigation system
+    question: "As a result of the failure of the ADC, the inertial navigation system
       will no longer provide information about:"
     options:
       - id: OXDSZEWMP
@@ -275,8 +266,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The full alignment of a stabilised platform inertial system can be
+    question: "The full alignment of a stabilised platform inertial system can be
       carried out:"
     options:
       - id: O7499WVSX
@@ -372,20 +362,17 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Before the INS alignment the pilot accidentally provides the system
+    question: Before the INS alignment the pilot accidentally provides the system
       with an INCORRECT value of latitude. What is the consequence of this
       action?
     options:
       - id: OQXEN3T6G
-        text:
-          The system will start up in ATT REF mode, providing attitude data, but NOT
+        text: The system will start up in ATT REF mode, providing attitude data, but NOT
           navigation data.
         correct: false
         why: ""
       - id: ORS2FNCBP
-        text:
-          Nothing. The system will compensate for such errors, but the initial
+        text: Nothing. The system will compensate for such errors, but the initial
           alignment process will take longer.
         correct: false
         why: ""
@@ -395,8 +382,7 @@
         correct: false
         why: ""
       - id: ORSHR70IO
-        text:
-          The system will gradually lose its alignment, as the calculated drift due
+        text: The system will gradually lose its alignment, as the calculated drift due
           to Earth rotation will be wrong.
         correct: true
         why: ""
@@ -420,20 +406,17 @@
         correct: true
         why: ""
       - id: ODVLYMCAT
-        text:
-          pilot must select ALIGN on the mode selector unit and wait for about 10
+        text: pilot must select ALIGN on the mode selector unit and wait for about 10
           minutes.
         correct: false
         why: ""
       - id: OB52IQO2D
-        text:
-          INS loses all functionality and should be switched off to save electrical
+        text: INS loses all functionality and should be switched off to save electrical
           power.
         correct: false
         why: ""
       - id: ODC34WUDG
-        text:
-          pilot must select STBY on the mode selector unit and wait for about 3
+        text: pilot must select STBY on the mode selector unit and wait for about 3
           minutes before switching to the ALIGN mode.
         correct: false
         why: ""
@@ -525,8 +508,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Approximately how long will the ADIRU alignment take at mid latitudes
+    question: Approximately how long will the ADIRU alignment take at mid latitudes
       (30 - 60º North)?
     options:
       - id: OJIGUU0YN
@@ -559,14 +541,12 @@
     question: "The strapdown IRS:"
     options:
       - id: OBGSC6SXR
-        text:
-          Consists of gyros and accelerometers. The gyros keep the platform level
+        text: Consists of gyros and accelerometers. The gyros keep the platform level
           and the accelerometers calculate acceleration.
         correct: false
         why: ""
       - id: ORV2CLRJN
-        text:
-          Is located close to the aircraft CG, and uses laser gyros to calculate
+        text: Is located close to the aircraft CG, and uses laser gyros to calculate
           angular movements.
         correct: true
         why: ""
@@ -575,8 +555,7 @@
         correct: false
         why: ""
       - id: ONC2FFPPO
-        text:
-          Is located away from the aircraft CG and uses laser gyros to calculate
+        text: Is located away from the aircraft CG and uses laser gyros to calculate
           accelerations.
         correct: false
         why: ""
@@ -594,8 +573,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "If the navigation function of an INS is inoperative and the control
+    question: "If the navigation function of an INS is inoperative and the control
       rotary switch is set to ATT, the output data of the INS is (are):"
     options:
       - id: O3FPTCFDT
@@ -627,25 +605,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "On the INS control panel, the rotary knob can be selected to OFF, NAV
+    question: "On the INS control panel, the rotary knob can be selected to OFF, NAV
       or ATT positions. The correct statement is:"
     options:
       - id: OWNB6H3DS
-        text:
-          ATT is the normal system setting; the NAV position inhibits the attitude
+        text: ATT is the normal system setting; the NAV position inhibits the attitude
           data.
         correct: false
         why: ""
       - id: OTF04BTJD
-        text:
-          NAV is the normal system setting; the ATT position is the back up position
+        text: NAV is the normal system setting; the ATT position is the back up position
           in case of failure of the navigation function.
         correct: true
         why: ""
       - id: OLLSCORMK
-        text:
-          NAV is the normal system setting; the OFF position is the back up position
+        text: NAV is the normal system setting; the OFF position is the back up position
           in case of failure of the navigation function.
         correct: false
         why: ""
@@ -714,20 +688,17 @@
         correct: false
         why: ""
       - id: O7NSJT1BS
-        text:
-          It consists of gyros and accelerometers. The gyros keep the platform level
+        text: It consists of gyros and accelerometers. The gyros keep the platform level
           and the accelerometers calculate acceleration.
         correct: false
         why: ""
       - id: OUBB6FB0I
-        text:
-          The IRS is located close to the aircraft C/G and it uses laser gyros to
+        text: The IRS is located close to the aircraft C/G and it uses laser gyros to
           calculate angular rotations.
         correct: true
         why: ""
       - id: O6NRPOQER
-        text:
-          The IRS is located a bit away from the aircraft C/G and it uses laser
+        text: The IRS is located a bit away from the aircraft C/G and it uses laser
           gyros to calculate accelerations.
         correct: false
         why: ""
@@ -776,26 +747,22 @@
       some reason?
     options:
       - id: O9KAMJ3QS
-        text:
-          By setting the INS mode selector to "ALIGN" and waiting for the required
+        text: By setting the INS mode selector to "ALIGN" and waiting for the required
           time.
         correct: false
         why: ""
       - id: OWLJTHPG9
-        text:
-          By setting the INS mode selector to "GPS" and realigning the INSARS
+        text: By setting the INS mode selector to "GPS" and realigning the INSARS
           through the GPS.
         correct: false
         why: ""
       - id: ONKKHQUY9
-        text:
-          By setting the INS mode selector to "ALIGN" and then flying straight and
+        text: By setting the INS mode selector to "ALIGN" and then flying straight and
           level with NO airspeed variations for at least 10 minutes.
         correct: false
         why: ""
       - id: OUZBVWUQZ
-        text:
-          It can NOT, the aircraft must be stationary on the ground for alignment to
+        text: It can NOT, the aircraft must be stationary on the ground for alignment to
           be performed.
         correct: true
         why: ""
@@ -812,8 +779,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'The drift of the azimuth gyro in an inertial unit induces an error.
+    question: 'The drift of the azimuth gyro in an inertial unit induces an error.
       If "t" is the elapsed time, the average total error is:'
     options:
       - id: OADR15ZIK
@@ -847,8 +813,7 @@
     question: "The position error of a stand alone inertial system is:"
     options:
       - id: ODSTARU5F
-        text:
-          constant along the flight with an accuracy depending on the accuracy of
+        text: constant along the flight with an accuracy depending on the accuracy of
           the accelerometers.
         correct: false
         why: ""
@@ -887,8 +852,7 @@
         correct: false
         why: ""
       - id: OCMWKBPAZ
-        text:
-          "merged with only two axes of the aircraft\\`s body axis co-ordinate
+        text: "merged with only two axes of the aircraft\\`s body axis co-ordinate
           system: the roll and the pitch axis."
         correct: false
         why: ""
@@ -909,8 +873,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiences a failure of the inertial system in flight,
+    question: An aircraft experiences a failure of the inertial system in flight,
       resulting in loss of alignment with subsequent loss of (1).... data.
       However, (2)....information may still be available, The crew (3)....
       perform in-flight realignment.

@@ -82,26 +82,22 @@
       effect do parasite and induced drag have on total drag?
     options:
       - id: OMUPXMOBI
-        text:
-          Parasite drag increases, induced drag reduces by the same amount, so total
+        text: Parasite drag increases, induced drag reduces by the same amount, so total
           drag stays the same.
         correct: false
         why: ""
       - id: OITB9WEUK
-        text:
-          Parasite drag reduces, induced drag increases by a larger amount, so total
+        text: Parasite drag reduces, induced drag increases by a larger amount, so total
           drag increases.
         correct: true
         why: ""
       - id: OUOAPZFZK
-        text:
-          Parasite drag reduces, induced drag increases by a smaller amount, so
+        text: Parasite drag reduces, induced drag increases by a smaller amount, so
           total drag reduces.
         correct: false
         why: ""
       - id: O4ZKQVTPJ
-        text:
-          Parasite drag increases, induced drag reduces by a smaller amount, so
+        text: Parasite drag increases, induced drag reduces by a smaller amount, so
           total drag increases.
         correct: false
         why: ""
@@ -188,8 +184,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Increasing air density will have the following effect on the drag of
+    question: "Increasing air density will have the following effect on the drag of
       a body in an airstream (angle of attack and TAS are constant):"
     options:
       - id: OIEQZABHF

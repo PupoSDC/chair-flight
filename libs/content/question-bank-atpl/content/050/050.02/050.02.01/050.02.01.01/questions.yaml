@@ -18,8 +18,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If Paris reports a wind of 190/15KT on the METAR, what wind velocity
+    question: If Paris reports a wind of 190/15KT on the METAR, what wind velocity
       would you expect to encounter at a height of 2000 feet above the ground?
     options:
       - id: OFYFMFTVQ
@@ -51,13 +50,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What relationship exists between the wind at 3000 feet and the surface
+    question: What relationship exists between the wind at 3000 feet and the surface
       wind?
     options:
       - id: ORY1D1GOX
-        text:
-          The wind at 3000 ft is parallel to the isobars and the surface wind
+        text: The wind at 3000 ft is parallel to the isobars and the surface wind
           direction is across the isobars toward the low pressure and the
           surface wind is weaker.
         correct: true
@@ -68,14 +65,12 @@
         correct: false
         why: ""
       - id: ODUDNTVP2
-        text:
-          They have the same direction, but the surface wind is weaker, caused by
+        text: They have the same direction, but the surface wind is weaker, caused by
           friction
         correct: false
         why: ""
       - id: O87ZEY7LR
-        text:
-          The surface wind is veered compared to the wind at 3000 feet and is
+        text: The surface wind is veered compared to the wind at 3000 feet and is
           usually weaker.
         correct: false
         why: ""
@@ -99,8 +94,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If Paris reports a wind of 300/12KT on the METAR, what wind velocity
+    question: If Paris reports a wind of 300/12KT on the METAR, what wind velocity
       would you expect to encounter at a height of 2000 feet above the ground?
     options:
       - id: O3B0OOVWI
@@ -130,8 +124,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft is approaching an airfield when the pilots notice that the
+    question: An aircraft is approaching an airfield when the pilots notice that the
       headwind is becoming increasingly a crosswind from the right less than 2
       000 ft above the airfield. What is this associated with?
     options:
@@ -202,8 +195,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If Paris reports a wind of 080/10KT on the METAR, what wind velocity
+    question: If Paris reports a wind of 080/10KT on the METAR, what wind velocity
       would you expect to encounter at a height of 2000 feet above the ground?
     options:
       - id: OP6GQN2N3
@@ -326,8 +318,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      At 2000 ft above the sea in the northern hemisphere, the gradient wind
+    question: At 2000 ft above the sea in the northern hemisphere, the gradient wind
       of a cyclonic pressure distribution is 350° / 24 kts. At the same
       position, the surface wind would approximate..
     options:
@@ -422,26 +413,22 @@
     question: What is “Surface wind”?
     options:
       - id: OT7HVQMXC
-        text:
-          It is the wind that experiences an increase in the Coriolis effect brought
+        text: It is the wind that experiences an increase in the Coriolis effect brought
           about by the increase in friction near to the surface.
         correct: false
         why: ""
       - id: OFFNZX6SB
-        text:
-          It is the wind that results when the pressure gradient in the layer of air
+        text: It is the wind that results when the pressure gradient in the layer of air
           near to the surface is reduced by the effect of friction.
         correct: false
         why: ""
       - id: O3V1AMFIH
-        text:
-          It is the airflow near to the surface that slows down due to the effect of
+        text: It is the airflow near to the surface that slows down due to the effect of
           an increase in air density.
         correct: false
         why: ""
       - id: OXUB4B3BY
-        text:
-          It is the airflow near to the surface that is reduced in strength by the
+        text: It is the airflow near to the surface that is reduced in strength by the
           effect of friction.
         correct: true
         why: ""

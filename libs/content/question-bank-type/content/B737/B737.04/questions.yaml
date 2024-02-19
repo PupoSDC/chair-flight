@@ -5,14 +5,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      In flight below 2000 feet RA, on an ILS Autopilot approach with flare
+    question: In flight below 2000 feet RA, on an ILS Autopilot approach with flare
       armed, what happens if you push a TO/GA switch once?
     options:
       - id: ly908
@@ -38,14 +37,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      After takeoff the autothrottle will remain in Throttle Hold (THR HLD)
+    question: After takeoff the autothrottle will remain in Throttle Hold (THR HLD)
       until 800 feet RA.
     answer: true
 - id: QWQSXVSK
@@ -79,7 +77,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -110,7 +108,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -142,7 +140,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -173,38 +171,33 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If you engage Level Change by pressing the LVL CHG switch on the MCP
+    question: If you engage Level Change by pressing the LVL CHG switch on the MCP
       and the green light illuminates, what other indications will occur as this
       mode engages?
     options:
       - id: tselk
-        text:
-          Speed window blanks, MCP SPD annunciated for pitch mode, N1 annunciated
+        text: Speed window blanks, MCP SPD annunciated for pitch mode, N1 annunciated
           for thrust mode.
         correct: false
         why: ""
       - id: 80uwx
-        text:
-          Speed window blanks, MCP SPD annunciated for pitch mode, N1 or RETARD/ARM
+        text: Speed window blanks, MCP SPD annunciated for pitch mode, N1 or RETARD/ARM
           annunciated for thrust mode.
         correct: false
         why: ""
       - id: js2x9
-        text:
-          Speed window opens to show target speed, MCP SPD annunciated for thrust
+        text: Speed window opens to show target speed, MCP SPD annunciated for thrust
           mode, N1 annunciated for pitch mode.
         correct: false
         why: ""
       - id: m5wqf
-        text:
-          Speed window opens to show target speed, MCP SPD annunciated for pitch
+        text: Speed window opens to show target speed, MCP SPD annunciated for pitch
           mode, N1 or RETARD/ARM annunciated for thrust mode.
         correct: true
         why: ""
@@ -215,7 +208,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -247,7 +240,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -263,7 +256,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -295,14 +288,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      An altitude restriction is entered at the top of descent, the aircraft
+    question: An altitude restriction is entered at the top of descent, the aircraft
       will not now follow the Idle Descent path but will descend to meet the
       altitude restriction.  After achieving the altitude restriction which of
       the indicated flight paths will the aircraft follow for the rest of the
@@ -314,8 +306,7 @@
         correct: true
         why: ""
       - id: wisb
-        text:
-          Descends to achieve restriction, then continues steady descent to End of
+        text: Descends to achieve restriction, then continues steady descent to End of
           Descent. (C)
         correct: false
         why: ""
@@ -335,7 +326,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -353,14 +344,12 @@
         correct: false
         why: ""
       - id: x2ttw
-        text:
-          Overspeed limiting, current speed selection greater than current flap
+        text: Overspeed limiting, current speed selection greater than current flap
           setting limit.
         correct: false
         why: ""
       - id: nhyry
-        text:
-          Overspeed limiting, Minimum speed for current flap setting cannot be
+        text: Overspeed limiting, Minimum speed for current flap setting cannot be
           achieved.
         correct: false
         why: ""
@@ -371,14 +360,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      For approach, what altitude must the second Autopilot be selected for
+    question: For approach, what altitude must the second Autopilot be selected for
       duel Autopilot operation?
     options:
       - id: 1hgpg
@@ -404,7 +392,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -419,7 +407,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -450,39 +438,34 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If an altitude restriction is entered before TOD, the aircraft will
+    question: If an altitude restriction is entered before TOD, the aircraft will
       commence the descent early to follow a new idle descent path to achieve
       the descent restriction.  If ALT INTV is then selected after the descent
       restriction, which of the paths will the aircraft follow?
     options:
       - id: stxtj
-        text:
-          Path A.  Descends to achieve restriction then maintains level flight until
+        text: Path A.  Descends to achieve restriction then maintains level flight until
           intercepts the original idle descent path.
         correct: false
         why: ""
       - id: kwp64
-        text:
-          Path C.  Descends to achieve restriction, then continues steady descent to
+        text: Path C.  Descends to achieve restriction, then continues steady descent to
           End of Descent.
         correct: false
         why: ""
       - id: hbvohi
-        text:
-          Path D.  Descends to achieve restriction, then continues on that new idle
+        text: Path D.  Descends to achieve restriction, then continues on that new idle
           descent path until new commands are entered.
         correct: false
         why: ""
       - id: 73fig
-        text:
-          Path B.  Descends to achieve restriction then descends at 1000 fpm until
+        text: Path B.  Descends to achieve restriction then descends at 1000 fpm until
           intercepting original idle descent path.
         correct: true
         why: ""
@@ -493,7 +476,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -502,20 +485,17 @@
     question: With VNAV engaged, pushing the SPD INTV switch has what effect?
     options:
       - id: x3m1gk
-        text:
-          IAS/MACH window blanks and next FMC speed restriction becomes active,
+        text: IAS/MACH window blanks and next FMC speed restriction becomes active,
           magenta target speed displayed above speed tape on PFD.
         correct: false
         why: ""
       - id: b0ma3
-        text:
-          IAS/MACH window opens up showing current FMC target speed, and IAS/MACH
+        text: IAS/MACH window opens up showing current FMC target speed, and IAS/MACH
           selector can be used to set new desired speed.
         correct: true
         why: ""
       - id: w20tt
-        text:
-          Current or next speed restriction deleted from FMC, IAS/MACH window opens
+        text: Current or next speed restriction deleted from FMC, IAS/MACH window opens
           up showing previous FMC target speed, and IAS/MACH selector can be
           used to set new desired speed.
         correct: false
@@ -531,7 +511,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -563,7 +543,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -594,7 +574,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -625,14 +605,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Other than by selecting N1 mode by pressing the N1 switch on the MCP,
+    question: Other than by selecting N1 mode by pressing the N1 switch on the MCP,
       when else will N1 mode automatically engage.
     options:
       - id: bnrd6
@@ -648,8 +627,7 @@
         correct: false
         why: ""
       - id: 7jk26
-        text:
-          VNAV engaged in climb and LVL CHG engaged in climb more than 2.5 minutes
+        text: VNAV engaged in climb and LVL CHG engaged in climb more than 2.5 minutes
           after takeoff.
         correct: true
         why: ""
@@ -660,14 +638,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What happens when TO/GA is pressed once on an ILS Autopilot approach
+    question: What happens when TO/GA is pressed once on an ILS Autopilot approach
       with FLARE armed?
     options:
       - id: a7lze
@@ -679,8 +656,7 @@
         correct: false
         why: ""
       - id: soffc
-        text:
-          Autopilot disengages and the Flight Directors re-cycle to give a FD
+        text: Autopilot disengages and the Flight Directors re-cycle to give a FD
           Go-Around.
         correct: false
         why: ""
@@ -695,7 +671,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -711,7 +687,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -727,7 +703,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -744,8 +720,7 @@
         correct: true
         why: ""
       - id: y2pt8
-        text:
-          Autopilot Flight Director System, Autothrottle and MCP Mode Selector
+        text: Autopilot Flight Director System, Autothrottle and MCP Mode Selector
           System.
         correct: false
         why: ""
@@ -760,7 +735,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -777,14 +752,12 @@
         correct: false
         why: ""
       - id: 6l3q6
-        text:
-          Immediately the left main landing gear is compressed, Push Either A/T
+        text: Immediately the left main landing gear is compressed, Push Either A/T
           Disengage switch and Move A/T ARM switch to OFF.
         correct: false
         why: ""
       - id: lcvbw
-        text:
-          Move A/T ARM switch to OFF, Push Either A/T Disengage switch and An A/T
+        text: Move A/T ARM switch to OFF, Push Either A/T Disengage switch and An A/T
           system fault is detected
         correct: true
         why: ""
@@ -795,7 +768,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -826,7 +799,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -841,7 +814,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -857,14 +830,13 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      The Autothrottle (A/T) system, provides automatic thrust control from
+    question: The Autothrottle (A/T) system, provides automatic thrust control from
       the start of takeoff, through all stages of flight to up to and including
       landing.
     answer: true
@@ -875,7 +847,7 @@
   learningObjectives:
     - B737.04
   explanation: |+
-
+    
 
     ---
 
@@ -889,8 +861,7 @@
         correct: true
         why: ""
       - id: uz92t
-        text:
-          Throttle stagger cannot occur with A/T engaged as both throttle servo
+        text: Throttle stagger cannot occur with A/T engaged as both throttle servo
           motors work identically to position the throttles symetrically.
         correct: false
         why: ""

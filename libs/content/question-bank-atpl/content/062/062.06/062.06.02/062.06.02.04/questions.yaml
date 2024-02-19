@@ -11,13 +11,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following correctly describes the principle of integrity
+    question: Which of the following correctly describes the principle of integrity
       monitoring within Airborne-Based Augmentation Systems (ABAS)? ABAS..
     options:
       - id: OWADWSEDM
-        text:
-          uses redundant range measurements to support Fault Detection (FD) or Fault
+        text: uses redundant range measurements to support Fault Detection (FD) or Fault
           Detection and Exclusion (FDE).
         correct: true
         why: ""
@@ -27,8 +25,7 @@
         correct: false
         why: ""
       - id: OPKATHN4M
-        text:
-          uses ground-based radio navigation aids to support Fault Detection (FD) or
+        text: uses ground-based radio navigation aids to support Fault Detection (FD) or
           Fault Detection and Exclusion (FDE).
         correct: false
         why: ""
@@ -111,8 +108,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A flight is planned to Longyear Airport in Svalbard (lat. 78°15'N),
+    question: A flight is planned to Longyear Airport in Svalbard (lat. 78°15'N),
       Due to the high latitude the aircraft GPS will NOT be able to achieve RAIM
       during the arrival phase of flight, as not enough satellites will be in
       view. If the aircraft is suitably equipped, which of the following systems
@@ -150,14 +146,12 @@
     question: What does RAIM determine?
     options:
       - id: OMYFW3WLU
-        text:
-          Integrity of the GNSS navigation signals using only GPS signals or GPS
+        text: Integrity of the GNSS navigation signals using only GPS signals or GPS
           signals augmented with altitude.
         correct: true
         why: ""
       - id: OUOVQNVAI
-        text:
-          Accuracy of the computed aircraft position based on input from at least
+        text: Accuracy of the computed aircraft position based on input from at least
           one ground-based radio transmitter.
         correct: false
         why: ""

@@ -39,8 +39,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The aerodrome weather report includes data on the cloud ceiling (e.g.
+    question: The aerodrome weather report includes data on the cloud ceiling (e.g.
       BKN040). The reference for this vertical distance is…
     options:
       - id: OTNRLDRMN
@@ -156,8 +155,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      After requesting departure information on an airport where no ATIS is
+    question: After requesting departure information on an airport where no ATIS is
       provided, the following information is transmitted:FASTAIR 345, DEPARTURE
       RUNWAY 32, WIND 290 DEGREES 4 KNOTS, QNH 1022, TEMPERATURE 10, DEWPOINT 5,
       RVR 550 METRES, TIME 27\. What is the unit used to report the air
@@ -192,8 +190,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When the term "CAVOK" is used in an aviation routine weather report
+    question: When the term "CAVOK" is used in an aviation routine weather report
       (METAR), what are the values of visibility and cloud?
     options:
       - id: O1LO0REC3
@@ -225,8 +222,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In METAR and SPECI reports, the wind direction is reported in degrees
+    question: In METAR and SPECI reports, the wind direction is reported in degrees
       true. The wind passed by the tower to aircraft for landing or take-off
       purposes is reported in degrees..
     options:
@@ -290,13 +286,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The following is a METAR:EGLL080120Z 21010KT 9999 SCT030 07/04 Q1023
+    question: The following is a METAR:EGLL080120Z 21010KT 9999 SCT030 07/04 Q1023
       NOSIG=The wind is reported as..
     options:
       - id: OE9SJVZWY
-        text:
-          "wind direction 210 degrees magnetic and speed of 10 statute miles per
+        text: "wind direction 210 degrees magnetic and speed of 10 statute miles per
           hour.  "
         correct: false
         why: ""

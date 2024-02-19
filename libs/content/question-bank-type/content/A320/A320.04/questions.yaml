@@ -5,14 +5,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "If the RAT stalls, or if the aircraft is on the ground with a speed
+    question: "If the RAT stalls, or if the aircraft is on the ground with a speed
       below 100kt, the emergency generation  network transfers automatically to
       the batteries and the static inverter, and the system automatically sheds
       the:"
@@ -40,7 +39,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -71,7 +70,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -102,7 +101,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -112,27 +111,23 @@
       automatically?
     options:
       - id: y5ocl
-        text:
-          DC BUS 1 is not electrically supplied and DC BUS 2 is not electrically
+        text: DC BUS 1 is not electrically supplied and DC BUS 2 is not electrically
           supplied and Aircraft speed is greater than  100 kt
         correct: false
         why: ""
       - id: v11z7
-        text:
-          AC BUS 1 is not electrically supplied and DC BUS 2 is not electrically
+        text: AC BUS 1 is not electrically supplied and DC BUS 2 is not electrically
           supplied and Aircraft speed is greater than  100 kt or vice versa (AC
           BUS 2 and DC BUS 1)
         correct: false
         why: ""
       - id: bvgct
-        text:
-          AC BUS 1 is not electrically supplied and AC BUS 2 is not electrically
+        text: AC BUS 1 is not electrically supplied and AC BUS 2 is not electrically
           supplied and Aircraft speed is greater than  100 kt
         correct: true
         why: ""
       - id: flk12
-        text:
-          AC ESS BUS is not electrically supplied and DC ESS BUS is not electrically
+        text: AC ESS BUS is not electrically supplied and DC ESS BUS is not electrically
           supplied and Aircraft speed is greater  than 100 kt
         correct: false
         why: ""
@@ -143,7 +138,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -152,8 +147,7 @@
     question: How is the emergency generator powered?
     options:
       - id: 9kdyf
-        text:
-          The ram air turbine (RAT) must be extended. This powers the blue hydraulic
+        text: The ram air turbine (RAT) must be extended. This powers the blue hydraulic
           system, which drives the  emergency generator by means of a hydraulic
           motor
         correct: true
@@ -165,8 +159,7 @@
         correct: false
         why: ""
       - id: aj80v
-        text:
-          By the yellow hydraulic power through the PTU to drive EMER ELEC GEN in
+        text: By the yellow hydraulic power through the PTU to drive EMER ELEC GEN in
           the green hydraulic system
         correct: false
         why: ""
@@ -181,7 +174,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -198,8 +191,7 @@
         correct: false
         why: ""
       - id: 2ng8v
-        text:
-          The 3 generators or an emergency generator or a static inverter supplied
+        text: The 3 generators or an emergency generator or a static inverter supplied
           by batteries
         correct: true
         why: ""
@@ -214,7 +206,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -245,14 +237,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "On ground with external power conected and MAINT BUS switch ON, the
+    question: "On ground with external power conected and MAINT BUS switch ON, the
       AC and DC GND/FLT buses are  supllied by:"
     options:
       - id: qzqxrh
@@ -278,7 +269,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -309,7 +300,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -340,14 +331,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What would happen to the battery voltage if you switch off the main
+    question: What would happen to the battery voltage if you switch off the main
       power supply (EXT PWR+APU) and  left the BAT 1 and BAT 2 pushbuttons in
       the AUTO position?
     options:
@@ -356,8 +346,7 @@
         correct: false
         why: ""
       - id: 108dx
-        text:
-          The automatic cut-off logic would prevent the batteries from discharging
+        text: The automatic cut-off logic would prevent the batteries from discharging
           completely
         correct: true
         why: ""
@@ -376,14 +365,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What does the BAT check of the PNF include during Preliminary Cockpit
+    question: What does the BAT check of the PNF include during Preliminary Cockpit
       Preparation?
     options:
       - id: cp8rj
@@ -409,7 +397,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -440,7 +428,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -472,7 +460,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -503,7 +491,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -536,19 +524,17 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "A Generator Control Unit (GCU) controls the output of each generator.
+    question: "A Generator Control Unit (GCU) controls the output of each generator.
       The main function(s) of each GCU  are:"
     options:
       - id: 8l68c
-        text:
-          Control the frequency and voltage of the generator output and protect the
+        text: Control the frequency and voltage of the generator output and protect the
           network by controlling the  associated Generator Line Contactor (GLC)
         correct: true
         why: ""
@@ -561,8 +547,7 @@
         correct: false
         why: ""
       - id: ni6ir
-        text:
-          Controls the revolutions of each generator drive gear in order to get
+        text: Controls the revolutions of each generator drive gear in order to get
           constant Frequency
         correct: false
         why: ""
@@ -573,7 +558,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -604,14 +589,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "In case of loss of all main generators, prior to RAT extension and
+    question: "In case of loss of all main generators, prior to RAT extension and
       emergency generator coupling, the  emergency generation network (AC and DC
       power) is supplied by:"
     options:
@@ -624,14 +608,12 @@
         correct: false
         why: ""
       - id: w52iki
-        text:
-          The batteries via the static inverter for AC power and the batteries for
+        text: The batteries via the static inverter for AC power and the batteries for
           DC power
         correct: true
         why: ""
       - id: 8bt4qh
-        text:
-          DC power by the batteries via the static inverter and AC power by the
+        text: DC power by the batteries via the static inverter and AC power by the
           batteries
         correct: false
         why: ""
@@ -642,7 +624,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -651,8 +633,7 @@
     question: What happens when the GEN 1 pushbutton switch is set to the OFF position?
     options:
       - id: rdi1k
-        text:
-          The generator field is de-energized and line contactor opens. The fault
+        text: The generator field is de-energized and line contactor opens. The fault
           circuit is reset
         correct: true
         why: ""
@@ -676,7 +657,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -707,7 +688,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -738,7 +719,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -760,8 +741,7 @@
         correct: false
         why: ""
       - id: iem37
-        text:
-          Disconnects them, but after a time delay of exactly 20min they will be
+        text: Disconnects them, but after a time delay of exactly 20min they will be
           connected again
         correct: false
         why: ""
@@ -772,14 +752,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      On the emergency electric power panel, a fault light illuminates under
+    question: On the emergency electric power panel, a fault light illuminates under
       the 'RAT and EMER GEN' label.  What does it mean?
     options:
       - id: pg2my
@@ -787,8 +766,7 @@
         correct: false
         why: ""
       - id: r3pg1
-        text:
-          The emergency generator is not supplying when AC bus 1 and 2 are not
+        text: The emergency generator is not supplying when AC bus 1 and 2 are not
           powered (above 100 kts) or DC bat bus  is not powered
         correct: false
         why: ""
@@ -797,8 +775,7 @@
         correct: false
         why: ""
       - id: fn9ea
-        text:
-          The emergency generator is not supplying power when AC bus 1 and 2 are not
+        text: The emergency generator is not supplying power when AC bus 1 and 2 are not
           powered
         correct: true
         why: ""
@@ -809,14 +786,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "When the aircraft main electrical system is not powered, the battery
+    question: "When the aircraft main electrical system is not powered, the battery
       voltage can be checked:"
     options:
       - id: ipn67
@@ -832,8 +808,7 @@
         correct: false
         why: ""
       - id: 1wgin
-        text:
-          Both on the ECAM electrical system page and on the electrical section of
+        text: Both on the ECAM electrical system page and on the electrical section of
           the overhead panel
         correct: false
         why: ""
@@ -844,7 +819,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -875,7 +850,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -909,7 +884,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -918,8 +893,7 @@
     question: What are the priorities in the electrical power supply of the A/C?
     options:
       - id: bjbeq
-        text:
-          GEN 1 and 2 over APU and over EXT PWR. External power has priority over
+        text: GEN 1 and 2 over APU and over EXT PWR. External power has priority over
           APU generator when the EXT PWR  pb switch is ON
         correct: true
         why: ""
@@ -942,7 +916,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -951,26 +925,22 @@
     question: "The RAT extends automatically when:"
     options:
       - id: jluhli
-        text:
-          The MAN ON pb on the EMER ELEC PWR panel has been pressed and both DC BUS
+        text: The MAN ON pb on the EMER ELEC PWR panel has been pressed and both DC BUS
           1 and 2 have failed
         correct: false
         why: ""
       - id: 5ot6m
-        text:
-          The MAN ON pb on the EMER ELEC PWR panel is guarded and AC BUS 1 is not
+        text: The MAN ON pb on the EMER ELEC PWR panel is guarded and AC BUS 1 is not
           electrically supplied
         correct: false
         why: ""
       - id: 7w3v5
-        text:
-          The MAN ON pb on the EMER ELEC PWR panel is guarded, the aircraft speed is
+        text: The MAN ON pb on the EMER ELEC PWR panel is guarded, the aircraft speed is
           above 72 kt and AC BUS 2 in not  electrically supplied
         correct: false
         why: ""
       - id: tdpcz
-        text:
-          The MAN ON pb on the EMER ELEC PWR panel is on AUTO, AC BUS 1 and 2 are
+        text: The MAN ON pb on the EMER ELEC PWR panel is on AUTO, AC BUS 1 and 2 are
           not electrically supplied and the  aircaft speed is greater than 100
           kt
         correct: true
@@ -982,7 +952,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1013,14 +983,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      While operating in emergency electrical configuration with the landing
+    question: While operating in emergency electrical configuration with the landing
       gear extended, which of the  following control laws is active?
     options:
       - id: k7aqn
@@ -1046,14 +1015,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Which busses will be powered after the RAT is extended and the EMER
+    question: Which busses will be powered after the RAT is extended and the EMER
       GEN begins producing electrical  power?
     options:
       - id: um8ly
@@ -1061,14 +1029,12 @@
         correct: false
         why: ""
       - id: yd1do
-        text:
-          The STATIC INVERTER would power both HOT BAT busses, DC ESS and AC ESS
+        text: The STATIC INVERTER would power both HOT BAT busses, DC ESS and AC ESS
           through the AC ESS SHED busses
         correct: false
         why: ""
       - id: uzu7af
-        text:
-          The batteries would power both HOT BAT busses, DC ESS and AC ESS through
+        text: The batteries would power both HOT BAT busses, DC ESS and AC ESS through
           the STATIC INVERTER
         correct: false
         why: ""
@@ -1083,7 +1049,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1092,22 +1058,19 @@
     question: During an emergency electrical configuration what happens after landing?
     options:
       - id: 8rbxn
-        text:
-          Below 100 kt, DC BAT BUS is automatically connected to the batteries and
+        text: Below 100 kt, DC BAT BUS is automatically connected to the batteries and
           below 50 kt the AC ESS BUS is no  longer powered, leading to the loss
           of all display units
         correct: true
         why: ""
       - id: dtgyp
-        text:
-          Below 100 kt, DC ESS BUS is automatically connected to the batteries and
+        text: Below 100 kt, DC ESS BUS is automatically connected to the batteries and
           below 50 kt the DC ESS BUS is no  longer powered, leading to the loss
           of all display units
         correct: false
         why: ""
       - id: muf57
-        text:
-          Below 100 kt, AC ESS BUS is automatically disconnected and below 50 kt the
+        text: Below 100 kt, AC ESS BUS is automatically disconnected and below 50 kt the
           DC ESS BUS is no longer powered  from the ESS TR, leading to the loss
           of all display units
         correct: false
@@ -1123,7 +1086,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1155,7 +1118,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1187,7 +1150,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1218,7 +1181,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1249,7 +1212,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1280,7 +1243,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1311,7 +1274,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1324,8 +1287,7 @@
         correct: false
         why: ""
       - id: r33wo
-        text:
-          AC BUS 1 channel is supplied from GEN2 through bus tie contactors. The
+        text: AC BUS 1 channel is supplied from GEN2 through bus tie contactors. The
           inner tank pumps 1 are supplied  directly by IDG and pump relays by DC
           ESS
         correct: true
@@ -1345,7 +1307,7 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
@@ -1355,14 +1317,12 @@
       disconnection mechanism of the IDG,  when the IDG pb-sw will be pushed?
     options:
       - id: mtay7
-        text:
-          To push the IDG pb-sw until the GEN FAULT light comes on and then for at
+        text: To push the IDG pb-sw until the GEN FAULT light comes on and then for at
           least 3 more seconds
         correct: false
         why: ""
       - id: ti5vu
-        text:
-          To push the IDG pb-sw for a maximum of 3 seconds but make sure that the
+        text: To push the IDG pb-sw for a maximum of 3 seconds but make sure that the
           engine is running or windmilling
         correct: true
         why: ""
@@ -1371,8 +1331,7 @@
         correct: false
         why: ""
       - id: xgkmf
-        text:
-          To push the IDG pb-sw until the GEN FAULT light comes on, but only for a
+        text: To push the IDG pb-sw until the GEN FAULT light comes on, but only for a
           maximum of 5 seconds
         correct: false
         why: ""
@@ -1383,14 +1342,13 @@
   learningObjectives:
     - A320.04
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      After an IDG disconnection, why do you get a GALLEY SHED indication on
+    question: After an IDG disconnection, why do you get a GALLEY SHED indication on
       the SD?
     options:
       - id: pdpl1
@@ -1403,8 +1361,7 @@
         correct: false
         why: ""
       - id: r2ruo
-        text:
-          It is a reminder that the main galleys have been shed automatically
+        text: It is a reminder that the main galleys have been shed automatically
           following the loss of one generator
         correct: true
         why: ""

@@ -40,8 +40,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which kind of meteorological information is normally transmitted in an
+    question: Which kind of meteorological information is normally transmitted in an
       ATIS?
     options:
       - id: OLYJGZEJ2
@@ -86,20 +85,17 @@
         correct: false
         why: ""
       - id: OZDMDZIC1
-        text:
-          That the weather at Nice is clearly more volatile than the TAF could have
+        text: That the weather at Nice is clearly more volatile than the TAF could have
           predicted earlier in the morning
         correct: true
         why: ""
       - id: OBLTWRFJU
-        text:
-          That the weather in Nice after 0920 is also likely to be as predicted in
+        text: That the weather in Nice after 0920 is also likely to be as predicted in
           the TAF
         correct: false
         why: ""
       - id: OGFKJKD5Q
-        text:
-          That the VOLMET speaker has got his locations mixed up, because there is
+        text: That the VOLMET speaker has got his locations mixed up, because there is
           no way the latest VOLMET report could be so different from the TAF
         correct: false
         why: ""
@@ -205,8 +201,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Can TREND and TAF reports be found in scheduled HF and continuous VHF
+    question: Can TREND and TAF reports be found in scheduled HF and continuous VHF
       VOLMETs?
     options:
       - id: OCNJGCVTO
@@ -269,8 +264,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which statement about the content of continuous VOLMET messages(VHF)
+    question: Which statement about the content of continuous VOLMET messages(VHF)
       and scheduled VOLMET messages(HF) is correct?
     options:
       - id: OWCQIS842
@@ -312,8 +306,7 @@
         correct: false
         why: ""
       - id: ORMOLQUR6
-        text:
-          The wind directions are given in magnetic and they may contain aerodrome
+        text: The wind directions are given in magnetic and they may contain aerodrome
           information in addition to weather information.
         correct: true
         why: ""
@@ -337,8 +330,7 @@
     question: What is a VOLMET broadcast?
     options:
       - id: OLRYKZLGY
-        text:
-          Provision, as appropriate, of current METAR, SPECI, TAF and SIGMET by
+        text: Provision, as appropriate, of current METAR, SPECI, TAF and SIGMET by
           means of continuous and repetitive voice broadcast.
         correct: true
         why: ""
@@ -401,8 +393,7 @@
     question: "Select the correct statement regarding VHF-VOLMET and HF-VOLMET messages:"
     options:
       - id: OPHKHYPGB
-        text:
-          VHF-VOLMET and HF-VOLMET are both used for long range flights, however
+        text: VHF-VOLMET and HF-VOLMET are both used for long range flights, however
           VHF-VOLMET is used by smaller aeroplanes.
         correct: false
         why: ""
@@ -417,8 +408,7 @@
         correct: false
         why: ""
       - id: OEWVTHZHU
-        text:
-          VHF-VOLMET is used for regional coverage whereas HF-VOLMET is used for
+        text: VHF-VOLMET is used for regional coverage whereas HF-VOLMET is used for
           international coverage.
         correct: true
         why: ""

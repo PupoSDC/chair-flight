@@ -9,14 +9,12 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      EGNOS (European Geostationary Navigation Overlay System) informs the
+    question: EGNOS (European Geostationary Navigation Overlay System) informs the
       users of any GPS malfunctions within 6 seconds to enhance safety. How are
       these malfunctions broadcast to EGNOS users?
     options:
       - id: OTJLHYJP0
-        text:
-          Differential corrections and integrity messages are broadcast every 3
+        text: Differential corrections and integrity messages are broadcast every 3
           hours.
         correct: false
         why: ""
@@ -25,8 +23,7 @@
         correct: false
         why: ""
       - id: ODEPRCTQW
-        text:
-          Alerts are sent to all the satellites in view and then re-transmitted to
+        text: Alerts are sent to all the satellites in view and then re-transmitted to
           the user.
         correct: false
         why: ""
@@ -78,8 +75,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft flying out of sight of land, using GNSS and ABAS (without
+    question: An aircraft flying out of sight of land, using GNSS and ABAS (without
       SBAS), briefly loses power to the IRS. The navigation Information of the
       IRS is lost due to the temporary power loss. What effect could this
       failure have on how GNSS is used during the flight?
@@ -116,20 +112,17 @@
     question: In a GBAS...
     options:
       - id: OVUAJH68F
-        text:
-          The L2 frequency is used, and compared to the data received from the L1
+        text: The L2 frequency is used, and compared to the data received from the L1
           frequency, to reduce the ionospheric error.
         correct: false
         why: ""
       - id: OENFOCT7E
-        text:
-          An extra satellite is used to verify the integrity of the signals from the
+        text: An extra satellite is used to verify the integrity of the signals from the
           other satellites.
         correct: false
         why: ""
       - id: OGVF0MZTQ
-        text:
-          A pseudolite is positioned close to the runway, transmitting information
+        text: A pseudolite is positioned close to the runway, transmitting information
           about the ionospheric and tropospheric errors to nearby aircraft.
         correct: true
         why: ""
@@ -157,21 +150,18 @@
         correct: false
         why: ""
       - id: OEBSW4T48
-        text:
-          Two satellites are spaced by 180 degrees in azimuth, one satellite is
+        text: Two satellites are spaced by 180 degrees in azimuth, one satellite is
           directly overhead, and one satellite is directly opposed to the
           satellite overhead.
         correct: false
         why: ""
       - id: OEFJSVFVY
-        text:
-          Three satellites are spaced by 120 degrees in the vertical plane and one
+        text: Three satellites are spaced by 120 degrees in the vertical plane and one
           satellite is directly overhead.
         correct: false
         why: ""
       - id: OLJOSA6WG
-        text:
-          Three satellites are spaced by 120 degrees in azimuth and one satellite is
+        text: Three satellites are spaced by 120 degrees in azimuth and one satellite is
           directly overhead.
         correct: true
         why: ""
@@ -190,26 +180,22 @@
     question: What is the minimum Ground-Based Augmentation System (GBAS) plan coverage?
     options:
       - id: OBEWIWE67
-        text:
-          25 NM from the landing threshold within 45° apart the final approach path
+        text: 25 NM from the landing threshold within 45° apart the final approach path
           and 20° apart between 25 and 20 NM.
         correct: false
         why: ""
       - id: OJNTAMHOY
-        text:
-          15 NM from the landing threshold within 45° apart the final approach path
+        text: 15 NM from the landing threshold within 45° apart the final approach path
           and 20° apart between 15 and 20 NM.
         correct: false
         why: ""
       - id: OGIJEV5DT
-        text:
-          25 NM from the landing threshold within 35° apart the final approach path
+        text: 25 NM from the landing threshold within 35° apart the final approach path
           and 10° apart between 25 and 30 NM.
         correct: false
         why: ""
       - id: ORHQI8EUK
-        text:
-          15 NM from the landing threshold within 35° apart the final approach path
+        text: 15 NM from the landing threshold within 35° apart the final approach path
           and 10° apart between 15 and 20 NM.
         correct: true
         why: ""
@@ -292,27 +278,23 @@
       Monitoring (RAIM) with regards to GPS/NAVSTAR?
     options:
       - id: OHWFIJNI9
-        text:
-          It is the ability of the GPS satellites to check the integrity of the data
+        text: It is the ability of the GPS satellites to check the integrity of the data
           transmitted by the monitoring stations of the ground segment.
         correct: false
         why: ""
       - id: OGP9LJD4C
-        text:
-          It is a technique whereby the receivers of the world-wide distributed
+        text: It is a technique whereby the receivers of the world-wide distributed
           monitor stations (ground segment) automatically determine the
           integrity of the navigation message.
         correct: false
         why: ""
       - id: ODRASASWI
-        text:
-          It is a method whereby a receiver ensures the integrity of the Pseudo
+        text: It is a method whereby a receiver ensures the integrity of the Pseudo
           Random Noise (PRN) code transmitted by the satellites.
         correct: false
         why: ""
       - id: O6K6R5P72
-        text:
-          It is a technique by which a receiver checks the reliability of the
+        text: It is a technique by which a receiver checks the reliability of the
           signals it is receiving and can detect if one of the signals is
           incorrect.
         correct: true
@@ -331,8 +313,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The clock correction parameters in the navigation message are used to
+    question: The clock correction parameters in the navigation message are used to
       correct..
     options:
       - id: O696Z8TCF
@@ -364,31 +345,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In relation to the NAVSTAR/GPS satellite navigation system, what is
+    question: In relation to the NAVSTAR/GPS satellite navigation system, what is
       involved in the differential technique (D-GPS)?
     options:
       - id: OY2VSLLP4
-        text:
-          Receivers from various manufacturers are operated in parallel to reduce
+        text: Receivers from various manufacturers are operated in parallel to reduce
           the characteristic receiver noise error.
         correct: false
         why: ""
       - id: OQK8RZVB4
-        text:
-          The difference between signals transmitted on the L1 and L2 frequencies
+        text: The difference between signals transmitted on the L1 and L2 frequencies
           are processed by the receiver to determine an error correction.
         correct: false
         why: ""
       - id: OSPPD01XR
-        text:
-          Fixed ground stations compute position errors and transmit correction data
+        text: Fixed ground stations compute position errors and transmit correction data
           to a suitable receiver on the aircraft.
         correct: true
         why: ""
       - id: OGEXSPIAN
-        text:
-          Signals from satellites are received by 2 different antennas which are
+        text: Signals from satellites are received by 2 different antennas which are
           located a fixed distance apart. This enables a suitable receiver on
           the aircraft to recognise and correct for multipath errors.
         correct: false
@@ -440,8 +416,7 @@
     question: By using EGNOS in combination with GPS
     options:
       - id: O7TDPQHJO
-        text:
-          the integrity is improved by reducing the mean failure reporting time from
+        text: the integrity is improved by reducing the mean failure reporting time from
           up to 3 hours to 6 seconds.
         correct: true
         why: ""
@@ -450,8 +425,7 @@
         correct: false
         why: ""
       - id: OJOXZD4AY
-        text:
-          a better position accuracy is obtained but the integrity of the system is
+        text: a better position accuracy is obtained but the integrity of the system is
           not improved.
         correct: false
         why: ""
@@ -470,8 +444,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft is executing the GLS RWY 19R approach. That is a GNSS (1)
+    question: An aircraft is executing the GLS RWY 19R approach. That is a GNSS (1)
       \_\_\_\_\_ approach using a (2) \_\_\_\_\_ station to make corrections to
       the signal.
     options:
@@ -503,32 +476,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Receiver Autonomous Integrity Monitoring (RAIM) is a method used to
+    question: Receiver Autonomous Integrity Monitoring (RAIM) is a method used to
       ensure GNSS position integrity withing a GNSS receiver. This is achieved
       by using the 3D position and timing data from...
     options:
       - id: OSGEYRUHP
-        text:
-          any number of visible satellites beyond 4 to create several independent
+        text: any number of visible satellites beyond 4 to create several independent
           positions which should agree.
         correct: true
         why: ""
       - id: O99MAXP5D
-        text:
-          multiple aircraft systems and compare to the GPS 3D position and time data
+        text: multiple aircraft systems and compare to the GPS 3D position and time data
           to check for consistency**.**
         correct: false
         why: ""
       - id: OSWUBCA46
-        text:
-          more than one GPS receiver and compare these to eliminate the receiver
+        text: more than one GPS receiver and compare these to eliminate the receiver
           that shows incorrect data.
         correct: false
         why: ""
       - id: OWPVPYRWX
-        text:
-          a database in the GPS receiver and compare to the 3D position and time
+        text: a database in the GPS receiver and compare to the 3D position and time
           data derived from 4 satellites.
         correct: false
         why: ""
@@ -558,8 +526,7 @@
         correct: false
         why: ""
       - id: OEGGZD3IB
-        text:
-          Combination of various errors including Selective Availability (SA),
+        text: Combination of various errors including Selective Availability (SA),
           Ephemeris Error (EE), Satellite Clock Error, and Atmospheric Delays.
         correct: true
         why: ""
@@ -602,8 +569,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are flying at high latitude and you are unable to identify your
+    question: You are flying at high latitude and you are unable to identify your
       position. Which of the following should you use as back-up?
     options:
       - id: ODUQA5LUA
@@ -663,8 +629,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Ground Based Augmentation System (GBAS) provides data which defines
+    question: Ground Based Augmentation System (GBAS) provides data which defines
       the Final Approach Segment (FAS). The data is transmitted on…
     options:
       - id: O1WU52VKU
@@ -672,20 +637,17 @@
         correct: false
         why: ""
       - id: OUCLQMWKT
-        text:
-          VHF to arriving aircraft to correct any anomalies in the localiser aspect
+        text: VHF to arriving aircraft to correct any anomalies in the localiser aspect
           of the approach.
         correct: false
         why: ""
       - id: O99ZYEPBS
-        text:
-          VHF to arriving aircraft, together with differential position corrections
+        text: VHF to arriving aircraft, together with differential position corrections
           and integrity information for each satellite.
         correct: true
         why: ""
       - id: O5UNJXY3I
-        text:
-          UHF to arriving aircraft, together with differential position corrections
+        text: UHF to arriving aircraft, together with differential position corrections
           and integrity information for each satellite in view.
         correct: false
         why: ""
@@ -718,8 +680,7 @@
         correct: true
         why: ""
       - id: O4QX8Z7AK
-        text:
-          Providing guidance to interceptions of the Instrument Landing System
+        text: Providing guidance to interceptions of the Instrument Landing System
           (ILS).
         correct: false
         why: ""
@@ -773,8 +734,7 @@
         correct: true
         why: ""
       - id: ODZCCGQQD
-        text:
-          Using the time measured from the signal leaving the satellite to the
+        text: Using the time measured from the signal leaving the satellite to the
           receiver.
         correct: false
         why: ""
@@ -807,15 +767,13 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Assume that one of the satellites used by a GPS receiver is faulty
+    question: "Assume that one of the satellites used by a GPS receiver is faulty
       and that the PDOP has a relatively low value. When the signals of six
       satellites are received (including the faulty one) the RAIM software in
       the receiver is:"
     options:
       - id: OT0ZSVPUL
-        text:
-          Able to detect that one of the satellites is faulty but is unable to
+        text: Able to detect that one of the satellites is faulty but is unable to
           identify the faulty one.
         correct: false
         why: ""
@@ -829,8 +787,7 @@
         correct: true
         why: ""
       - id: O2WZ1NE8I
-        text:
-          NOT active, as the software needs at least eight satellites to function
+        text: NOT active, as the software needs at least eight satellites to function
           correctly.
         correct: false
         why: ""
@@ -847,32 +804,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The accuracy of the NAVSTAR GPS position depends on the geometry of
+    question: "The accuracy of the NAVSTAR GPS position depends on the geometry of
       the intersecting lines. Select the correct statement:"
     options:
       - id: OGGWFHGZU
-        text:
-          If the satellites, as viewed by the GPS receiver, are close together,
+        text: If the satellites, as viewed by the GPS receiver, are close together,
           there will be a poor angle of intersection, resulting in a loss of
           accuracy.
         correct: true
         why: ""
       - id: O18JVBQO2
-        text:
-          The position accuracy will Increase if the satellites, as viewed by the
+        text: The position accuracy will Increase if the satellites, as viewed by the
           GPS receiver, are paced 60° apart and close to the horizon.
         correct: false
         why: ""
       - id: O2BSTX9SE
-        text:
-          The worst configuration to give an accurate fix would be three satellites
+        text: The worst configuration to give an accurate fix would be three satellites
           spaced 120°apart and a fourth satellite overhead.
         correct: false
         why: ""
       - id: O3YFL8DP8
-        text:
-          There will be a good angle of intersection if the satellites, as viewed by
+        text: There will be a good angle of intersection if the satellites, as viewed by
           the GPS receiver, are close together, resulting in an Increase In
           accuracy.
         correct: false
@@ -985,8 +937,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the minimum number of satellites required by a GPS in order to
+    question: What is the minimum number of satellites required by a GPS in order to
       obtain a three dimensional fix?
     options:
       - id: OUZJCVMD3
@@ -1016,32 +967,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      GPS employs two frequencies, L1 and L2, to offer Standard Positioning
+    question: GPS employs two frequencies, L1 and L2, to offer Standard Positioning
       Service (SPS) and Precise Positioning Service (PPS). L1 is essential for
       delivering...
     options:
       - id: OOFAXUHX1
-        text:
-          SPS using the P code, while PPS requires both the C/A code and the P code
+        text: SPS using the P code, while PPS requires both the C/A code and the P code
           transmitted on L1 and L2.
         correct: false
         why: ""
       - id: O5DHNYGBN
-        text:
-          PPS using both the C/A code and the P code, while SPS requires the C/A
+        text: PPS using both the C/A code and the P code, while SPS requires the C/A
           code transmitted on L2.
         correct: false
         why: ""
       - id: OSGJDLOGU
-        text:
-          SPS using only the C/A code, while PPS requires the P code, which is
+        text: SPS using only the C/A code, while PPS requires the P code, which is
           transmitted on both L1 and L2.
         correct: true
         why: ""
       - id: OV72NEDDH
-        text:
-          PPS using only the C/A code, while SPS requires both the C/A code and the
+        text: PPS using only the C/A code, while SPS requires both the C/A code and the
           P code transmitted on L1 and L2.
         correct: false
         why: ""
@@ -1086,8 +1032,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When a GPS position is augmented by EGNOS, what time to alert can be
+    question: When a GPS position is augmented by EGNOS, what time to alert can be
       expected after a loss of integrity?
     options:
       - id: O0MCL7CLK
@@ -1158,32 +1103,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the statement describing the effect of ionosperic delay and
+    question: What is the statement describing the effect of ionosperic delay and
       satellite clock errors on the position of an aircraft using NAVSTAR GPS
       without augmentation?
     options:
       - id: OG8OZRBMS
-        text:
-          Satellite clocks are so accurate that their contribution to the position
+        text: Satellite clocks are so accurate that their contribution to the position
           error is zero.
         correct: false
         why: ""
       - id: OP0YQWS9G
-        text:
-          Satellite clock error affects the position, but the ionospheric delay is
+        text: Satellite clock error affects the position, but the ionospheric delay is
           more significant.
         correct: true
         why: ""
       - id: OUYUHJJM3
-        text:
-          The ionospheric delay affects the position, but satellite clock error is
+        text: The ionospheric delay affects the position, but satellite clock error is
           more significant.
         correct: false
         why: ""
       - id: OCR9GZQRL
-        text:
-          Neither ionospheric delay NOR satellite clock error gives significant
+        text: Neither ionospheric delay NOR satellite clock error gives significant
           position errors.
         correct: false
         why: ""
@@ -1198,8 +1138,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "GPS satellites broadcast signals that enable a suitable receiver to
+    question: "GPS satellites broadcast signals that enable a suitable receiver to
       obtain a position. Each satellite transmits:"
     options:
       - id: OTAHJBURD
@@ -1244,14 +1183,12 @@
         correct: false
         why: ""
       - id: OKMOC3HA8
-        text:
-          only significant if the satellites are located at a small elevation angle
+        text: only significant if the satellites are located at a small elevation angle
           above the horizon.
         correct: false
         why: ""
       - id: OJMGUCOHK
-        text:
-          reduced in Standard Positioning Service (SPS) receivers by using a model
+        text: reduced in Standard Positioning Service (SPS) receivers by using a model
           of the ionosphere transmitted by the satellites.
         correct: true
         why: ""
@@ -1268,8 +1205,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In the Global Navigation Satellite System (GNSS), what is the User
+    question: "In the Global Navigation Satellite System (GNSS), what is the User
       Equivalent Range Error (UERE)? It is a computed value for:"
     options:
       - id: OPIJ0FMZQ
@@ -1277,8 +1213,7 @@
         correct: false
         why: ""
       - id: OPE1P8U8C
-        text:
-          The correction for the receiver errors as transmitted in the navigation
+        text: The correction for the receiver errors as transmitted in the navigation
           message.
         correct: false
         why: ""
@@ -1336,26 +1271,22 @@
       estimate of the GNSS position accuracy?
     options:
       - id: OHUO7M1EB
-        text:
-          The User Equivalent Range Error (UERE) and the Geometric Dilution of
+        text: The User Equivalent Range Error (UERE) and the Geometric Dilution of
           Precision (GDOP).
         correct: true
         why: ""
       - id: OKHH919TM
-        text:
-          The User Equivalent Range Error (UERE) and Precision Dilution of Precision
+        text: The User Equivalent Range Error (UERE) and Precision Dilution of Precision
           (PDOP).
         correct: false
         why: ""
       - id: OJUJQ3NIY
-        text:
-          The Time Dilution of Precision (TDOP) and the Geometric Dilution of
+        text: The Time Dilution of Precision (TDOP) and the Geometric Dilution of
           Precision (GDOP).
         correct: false
         why: ""
       - id: OJ3YRQSBJ
-        text:
-          The Horizontal Dilution of Precision (HDOP) and Vertical Dilution of
+        text: The Horizontal Dilution of Precision (HDOP) and Vertical Dilution of
           Precision (VDOP).
         correct: false
         why: ""
@@ -1371,8 +1302,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Receiver Autonomous Integrity Monitoring (RAIM) is a method used to
+    question: Receiver Autonomous Integrity Monitoring (RAIM) is a method used to
       ensure the integrity of navigational data. With GNSS, this is achieved by…
     options:
       - id: O0WVOI3SG
@@ -1380,8 +1310,7 @@
         correct: false
         why: ""
       - id: ONTY7NIFV
-        text:
-          using information from additional on-board sensors such as the Inertial
+        text: using information from additional on-board sensors such as the Inertial
           Reference System (IRS)
         correct: false
         why: ""
@@ -1391,8 +1320,7 @@
         correct: false
         why: ""
       - id: OR0VGIGU9
-        text:
-          checking the consistency of the range measurements from a group of at
+        text: checking the consistency of the range measurements from a group of at
           least five satellites.
         correct: true
         why: ""
@@ -1409,25 +1337,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      One of the advantages of a Satellite Based Augmentation System (SBAS)
+    question: One of the advantages of a Satellite Based Augmentation System (SBAS)
       over a Ground Based Augmentation System (GBAS) is..
     options:
       - id: OSIZMOLPY
-        text:
-          the rate at which the pseudo-range corrections reach the users is much
+        text: the rate at which the pseudo-range corrections reach the users is much
           higher for a GBAS than for an SBAS.
         correct: false
         why: ""
       - id: OBBECPAZZ
-        text:
-          the pseudo-range corrections of an SBAS are much more accurate than those
+        text: the pseudo-range corrections of an SBAS are much more accurate than those
           of a GBAS.
         correct: false
         why: ""
       - id: OP4KLTJYT
-        text:
-          an SBAS does not, like a GBAS, need ground stations for the estimation of
+        text: an SBAS does not, like a GBAS, need ground stations for the estimation of
           the pseudo-range corrections.
         correct: false
         why: ""
@@ -1505,32 +1429,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Referring to the NAVSTAR/GPS satellite navigation system, what is the
+    question: Referring to the NAVSTAR/GPS satellite navigation system, what is the
       meaning of the term Receiver Autonomous Integrity Monitoring (RAIM)?
     options:
       - id: OM5HMELHZ
-        text:
-          it is a technique whereby the receivers of the world-wide distributed
+        text: it is a technique whereby the receivers of the world-wide distributed
           monitor stations – ground segment – automatically determine the
           integrity of the navigation message.
         correct: false
         why: ""
       - id: OLL6PUDMC
-        text:
-          it is a technique that ensures the integrity of the provided data by
+        text: it is a technique that ensures the integrity of the provided data by
           redundant measurements.
         correct: true
         why: ""
       - id: OAXRKZPZE
-        text:
-          it is a method whereby a receiver ensures the integrity of the Pseudo
+        text: it is a method whereby a receiver ensures the integrity of the Pseudo
           Random Noise -PRN- code transmitted by the satellites.
         correct: false
         why: ""
       - id: OUE5AZXKB
-        text:
-          it is the ability of the GPS satellites to check the integrity of the data
+        text: it is the ability of the GPS satellites to check the integrity of the data
           transmitted by the monitoring stations of the ground segment.
         correct: false
         why: ""
@@ -1577,8 +1496,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What are the two functions of GBAS?. When the aircraft is approaching
+    question: What are the two functions of GBAS?. When the aircraft is approaching
       the airfield and is fitted with a GBAS receiver, GBAS..
     options:
       - id: O7QURGH5Y
@@ -1587,14 +1505,12 @@
         correct: false
         why: ""
       - id: OWDTDGSMY
-        text:
-          "corrects the aircraft’s on-board GPS position and provides the precision
+        text: "corrects the aircraft’s on-board GPS position and provides the precision
           approach path details.  "
         correct: true
         why: ""
       - id: OJEXRX1FE
-        text:
-          replaces the aircraft’s on-board GPS position and provides the precision
+        text: replaces the aircraft’s on-board GPS position and provides the precision
           approach path details.
         correct: false
         why: ""
@@ -1762,32 +1678,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What does a satellite based augmentation system (SBAS) use to improve
+    question: What does a satellite based augmentation system (SBAS) use to improve
       integrity alerting to within 6 seconds if a GNSS malfunction occurs?
     options:
       - id: OOABP1IIU
-        text:
-          Up to 4 geostationary satellites are used to improve accuracy to within 1
+        text: Up to 4 geostationary satellites are used to improve accuracy to within 1
           m to 2 m horizontally and to advise of any GNSS malfunction.
         correct: true
         why: ""
       - id: ONXKVZA49
-        text:
-          At least 1 geostationary satellite is required to relay integrity and
+        text: At least 1 geostationary satellite is required to relay integrity and
           safety messages to the user.
         correct: false
         why: ""
       - id: OEPOCXXBV
-        text:
-          2 geostationary satellites are used to broadcast GNSS malfunctions using
+        text: 2 geostationary satellites are used to broadcast GNSS malfunctions using
           the L2 frequency, which includes an additional ranging signal to
           augment the signals from the GPS satellites.
         correct: false
         why: ""
       - id: OE6TAA3Q3
-        text:
-          Error signals are sent to the GNSS satellite to correct any position
+        text: Error signals are sent to the GNSS satellite to correct any position
           error.
         correct: false
         why: ""
@@ -1803,8 +1714,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In preparation for an RNP approach, the GNSS equipment intended to be
+    question: In preparation for an RNP approach, the GNSS equipment intended to be
       used shows a RAIM prediction error. This means, that...
     options:
       - id: OUCKGYZAM
@@ -1855,8 +1765,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The different segments of the satellite navigation system NAVSTAR/GPS
+    question: The different segments of the satellite navigation system NAVSTAR/GPS
       are the..
     options:
       - id: ORDBABBOF
@@ -1891,8 +1800,7 @@
       Satellite System (GNSS) can be derived from several factors, including:"
     options:
       - id: O9S60RVSC
-        text:
-          Geometric Dilution Of Precision (GDOP) and User Equivalent Range Error
+        text: Geometric Dilution Of Precision (GDOP) and User Equivalent Range Error
           (UERE).
         correct: true
         why: ""
@@ -1922,8 +1830,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is a difference between satellites used by EGNOS and those used
+    question: What is a difference between satellites used by EGNOS and those used
       by GPS?
     options:
       - id: OXWZQVT49
@@ -1931,14 +1838,12 @@
         correct: false
         why: ""
       - id: OGLDZP7KX
-        text:
-          The signal format broadcasted by EGNOS differs considerably from GPS
+        text: The signal format broadcasted by EGNOS differs considerably from GPS
           signal format.
         correct: false
         why: ""
       - id: OA6SD3TKI
-        text:
-          The signals broadcasted by EGNOS are more prone to multipath effects than
+        text: The signals broadcasted by EGNOS are more prone to multipath effects than
           GPS signals.
         correct: false
         why: ""
@@ -2079,8 +1984,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How many elements of an SBAS (Satellite Based Augmentation System) are
+    question: How many elements of an SBAS (Satellite Based Augmentation System) are
       there?
     options:
       - id: O7WUHEU3W
@@ -2149,27 +2053,23 @@
       uses:"
     options:
       - id: OJGWP9BEB
-        text:
-          Only the satellites being used by the aircraft to compute the error
+        text: Only the satellites being used by the aircraft to compute the error
           information.
         correct: false
         why: ""
       - id: O3KRYFZPH
-        text:
-          Timing signals from at least four satellites to establish the position
+        text: Timing signals from at least four satellites to establish the position
           error correction, which is then relayed to the aircraft's GPS
           receiver.
         correct: true
         why: ""
       - id: OXSQL066Y
-        text:
-          Only one satellite to check its position with the position calculated by
+        text: Only one satellite to check its position with the position calculated by
           the incoming signal, and then relays any error back to the satellite.
         correct: false
         why: ""
       - id: OHUUQCJO3
-        text:
-          The precision codes broadcast by the satellites to determine any position
+        text: The precision codes broadcast by the satellites to determine any position
           errors.
         correct: false
         why: ""
@@ -2194,14 +2094,12 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Assume that one of the satellites used by a GPS-receiver is faulty.
+    question: "Assume that one of the satellites used by a GPS-receiver is faulty.
       When the signals of 5 satellites are received (including the faulty one)
       the RAIM software in the receiver:"
     options:
       - id: O4R6TOUI7
-        text:
-          is able to detect that one of the satellites is faulty but is unable to
+        text: is able to detect that one of the satellites is faulty but is unable to
           identify the faulty one.
         correct: true
         why: ""
@@ -2210,14 +2108,12 @@
         correct: false
         why: ""
       - id: OJ4PI4CRK
-        text:
-          is able to detect that one of the satellites is faulty and is able to
+        text: is able to detect that one of the satellites is faulty and is able to
           identify the faulty one.
         correct: false
         why: ""
       - id: O1KQIBN03
-        text:
-          is not active, as the software needs at least 8 satellites to function
+        text: is not active, as the software needs at least 8 satellites to function
           correctly.
         correct: false
         why: ""
@@ -2237,26 +2133,22 @@
     question: With regards to ICAO Annex 10, Volume 1, GPS and GLONASS...
     options:
       - id: OHFYWOP5L
-        text:
-          are two completely separate systems but only GPS is capable of providing
+        text: are two completely separate systems but only GPS is capable of providing
           approved position data.
         correct: false
         why: ""
       - id: OP5192QSP
-        text:
-          can both be used in a suitably equipped aircraft as the systems are
+        text: can both be used in a suitably equipped aircraft as the systems are
           compatible and their functions are interoperable.
         correct: true
         why: ""
       - id: O9V9BVG9X
-        text:
-          can both be used, but because their information is NOT compatible an
+        text: can both be used, but because their information is NOT compatible an
           aircraft CANNOT use both systems.
         correct: false
         why: ""
       - id: OSYKPQVS6
-        text:
-          are two separate systems and only GPS is covered by EU regulations so only
+        text: are two separate systems and only GPS is covered by EU regulations so only
           that service can be used by European Operators.
         correct: false
         why: ""
@@ -2272,37 +2164,32 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Flying around different parts of Europe, it is apparent that there are
+    question: Flying around different parts of Europe, it is apparent that there are
       a significant number of EGNOS based procedures available. When it comes to
       approaches, all parts of the continent use the same EGNOS system but for
       each runway there is a given 5-digit channel number. Which of the
       following statements is correct?
     options:
       - id: OCCOHGEPW
-        text:
-          Any GNSS receivers are by default capable of using the EGNOS signals since
+        text: Any GNSS receivers are by default capable of using the EGNOS signals since
           they use the same frequency as GPS whereas additional equipment is
           needed to receive GBAS.
         correct: false
         why: ""
       - id: OFC2REXNT
-        text:
-          EGNOS covers an extensive area by using geostationary satellites and the
+        text: EGNOS covers an extensive area by using geostationary satellites and the
           channel number is used for approach identification only since EGNOS
           uses the normal GPS frequency.
         correct: true
         why: ""
       - id: OECNV0PRL
-        text:
-          EGNOS is the European SBAS that is used to improve accuracy and integrity
+        text: EGNOS is the European SBAS that is used to improve accuracy and integrity
           of general GNSS navigation and GBAS is used to augment SBAS when
           selecting its channel number.
         correct: false
         why: ""
       - id: OHTG3PK7Q
-        text:
-          EGNOS is the European satellite system running in parallel with GPS but
+        text: EGNOS is the European satellite system running in parallel with GPS but
           has more satellites, enabling greater accuracy, and the channel number
           is to tune the receiver to EGNOS.
         correct: false
@@ -2319,31 +2206,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How is the Final Approach Segment (FAS) of a GBAS Precision Approach
+    question: How is the Final Approach Segment (FAS) of a GBAS Precision Approach
       Procedure defined?
     options:
       - id: OJOOJRVJW
-        text:
-          The GBAS ground facility transmits the approach-path guidance parameters
+        text: The GBAS ground facility transmits the approach-path guidance parameters
           to the GBAS-equipped aircraft.
         correct: true
         why: ""
       - id: OZOFHVUOC
-        text:
-          The GNSS space segment transmits the approach-path guidance parameters to
+        text: The GNSS space segment transmits the approach-path guidance parameters to
           the GBAS-equipped aircraft.
         correct: false
         why: ""
       - id: OAXIIOO9T
-        text:
-          The GBAS ground facility transmits an error correction message to the
+        text: The GBAS ground facility transmits an error correction message to the
           ground-based azimuth and glidepath-guidance transmitters.
         correct: false
         why: ""
       - id: OF3RKHUI0
-        text:
-          The GBAS reference receivers transmit-error correction messages to the
+        text: The GBAS reference receivers transmit-error correction messages to the
           ground-based azimuth and elevation-guidance transmitters.
         correct: false
         why: ""
@@ -2363,26 +2245,22 @@
       Augmentation System, EGNOS:"
     options:
       - id: OMEC0KEZ8
-        text:
-          EGNOS uses at least 1 geostationary satellite to transmit integrity and
+        text: EGNOS uses at least 1 geostationary satellite to transmit integrity and
           safety related messages to aircraft.
         correct: false
         why: ""
       - id: OI0DR6BWI
-        text:
-          EGNOS uses up to 2 geostationary satellites to transmit ranging signals in
+        text: EGNOS uses up to 2 geostationary satellites to transmit ranging signals in
           the L2 frequency.
         correct: false
         why: ""
       - id: OE52ZGKTM
-        text:
-          EGNOS uses at least 3 geostationary satellites to transmit receiver clock
+        text: EGNOS uses at least 3 geostationary satellites to transmit receiver clock
           error and integrity data.
         correct: false
         why: ""
       - id: OYULQP36H
-        text:
-          EGNOS uses up to 4 geostationary satellites to transmit integrity data and
+        text: EGNOS uses up to 4 geostationary satellites to transmit integrity data and
           ranging signals to aircraft.
         correct: true
         why: ""
@@ -2397,8 +2275,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The fully-operational Galileo Global Navigation Satellite System(GNSS)
+    question: The fully-operational Galileo Global Navigation Satellite System(GNSS)
       will consist of (1) ... satellites in (2) ... orbital planes at an
       altitude of (3) ... km. Which are the correct values for 1, 2, and 3?
     options:
@@ -2431,8 +2308,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The Doppler frequency shift of the received GPS carrier frequency may
+    question: The Doppler frequency shift of the received GPS carrier frequency may
       be used to..
     options:
       - id: OXGTZFIWP
@@ -2537,8 +2413,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How many satellites are required for signal reception to perform an
+    question: How many satellites are required for signal reception to perform an
       independent three-dimensional fix, Receiver Autonomous Integrity
       Monitoring (RAIM), and identify and exclude any faulty satellites for
       failure detection?
@@ -2611,14 +2486,12 @@
         correct: false
         why: ""
       - id: OUYKLOZDR
-        text:
-          A GBAS ground station sends correction signals to a ground transmitter,
+        text: A GBAS ground station sends correction signals to a ground transmitter,
           which sends azimuth and glidepath information to the aircraft.
         correct: false
         why: ""
       - id: OHPNPTRJB
-        text:
-          A GBAS ground station sends correction data to the aircraft, which uses
+        text: A GBAS ground station sends correction data to the aircraft, which uses
           the data to determine the correct azimuth and glidepath.
         correct: true
         why: ""
@@ -2638,26 +2511,22 @@
       (RAIM) as a system utilised by an aviation GNSS receiver? RAIM is the...
     options:
       - id: OATLE3B9S
-        text:
-          use of redundant range measurements to verify the position produced by the
+        text: use of redundant range measurements to verify the position produced by the
           minimum number of satellites required for a 3D fix.
         correct: true
         why: ""
       - id: OJGO8G755
-        text:
-          ability of the receiver to perform a receiver clock-error computation and
+        text: ability of the receiver to perform a receiver clock-error computation and
           enhance the accuracy of the initial pseudo-ranges.
         correct: false
         why: ""
       - id: OGQOWJK6I
-        text:
-          exclusion of faulty satellites by means of comparing the satellite clock
+        text: exclusion of faulty satellites by means of comparing the satellite clock
           data and isolating satellites transmitting differing clock data.
         correct: false
         why: ""
       - id: O5VGDYGUY
-        text:
-          use of ground-based facilities such as VOR and/or DME to verify and
+        text: use of ground-based facilities such as VOR and/or DME to verify and
           enhance the accuracy of its calculated position.
         correct: false
         why: ""
@@ -2675,8 +2544,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which system is capable of measuring on the ground, the signal errors
+    question: Which system is capable of measuring on the ground, the signal errors
       transmitted by GNSS satellites and transmitting differential corrections
       and integrity messages to navigation satellites?
     options:
@@ -2709,8 +2577,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The navigation message of a GPS satellite contains the parameters of
+    question: The navigation message of a GPS satellite contains the parameters of
       the model of the ionosphere. This enables..
     options:
       - id: OMX9ASW73
@@ -2718,8 +2585,7 @@
         correct: false
         why: ""
       - id: OITRDHOXX
-        text:
-          the receiver to calculate the delay of GPS signals passing through the
+        text: the receiver to calculate the delay of GPS signals passing through the
           ionosphere.
         correct: true
         why: ""
@@ -2728,8 +2594,7 @@
         correct: false
         why: ""
       - id: OZ2YA5PZN
-        text:
-          the receiver to choose the satellites with the best geometric dilution of
+        text: the receiver to choose the satellites with the best geometric dilution of
           precision.
         correct: false
         why: ""
@@ -2810,8 +2675,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "User Equivalent Range Error (UERE) or User Range Accuracy (URA) is a
+    question: "User Equivalent Range Error (UERE) or User Range Accuracy (URA) is a
       signal-in-space error consisting of several individual errors. The most
       significant of these errors is:"
     options:
@@ -2921,8 +2785,7 @@
         correct: true
         why: ""
       - id: ORJEVHENS
-        text:
-          GBAS requires at least 5 satellites to detect and exclude the possible
+        text: GBAS requires at least 5 satellites to detect and exclude the possible
           faulty satellite.
         correct: false
         why: ""
@@ -3091,31 +2954,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Some of the inherent errors in NAVSTAR/GPS signals can be corrected by
+    question: Some of the inherent errors in NAVSTAR/GPS signals can be corrected by
       using a Ground Based Augmentation System (GBAS). The GBAS station…
     options:
       - id: O21VISMUK
-        text:
-          will only calculate errors in the signals that are being viewed by the
+        text: will only calculate errors in the signals that are being viewed by the
           users receiver.
         correct: false
         why: ""
       - id: OFQUDTLPT
-        text:
-          is located in an accurately surveyed position and analyses the received
+        text: is located in an accurately surveyed position and analyses the received
           signals to provide an error correction.
         correct: true
         why: ""
       - id: OE3JTCZ3M
-        text:
-          transmits error information to each satellite where there is a conflict as
+        text: transmits error information to each satellite where there is a conflict as
           regards position.
         correct: false
         why: ""
       - id: OIBJMBP2C
-        text:
-          checks the position calculated by the received signals against its own
+        text: checks the position calculated by the received signals against its own
           position, then sends error signals back to the satellites, which
           correct the errors.
         correct: false
@@ -3241,8 +3099,7 @@
     question: What is one of the primary tasks of the space segment of NAVSTAR/GPS?
     options:
       - id: OGZIRTQNO
-        text:
-          Transmitting signals to suitable receivers and monitoring the orbital
+        text: Transmitting signals to suitable receivers and monitoring the orbital
           planes autonomously.
         correct: false
         why: ""
@@ -3306,19 +3163,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      One of the more significant errors that reduces the accuracy of the
+    question: One of the more significant errors that reduces the accuracy of the
       GNSS signal-in-space is…
     options:
       - id: OPN4EOAYJ
-        text:
-          dilution of precision caused by the relative positions of the navigation
+        text: dilution of precision caused by the relative positions of the navigation
           satellites.
         correct: true
         why: ""
       - id: ONBLKGLSP
-        text:
-          interference from other space vehicles operating in the same frequency
+        text: interference from other space vehicles operating in the same frequency
           band.
         correct: false
         why: ""
@@ -3327,8 +3181,7 @@
         correct: false
         why: ""
       - id: O4TNNIBRB
-        text:
-          tropospheric propagation delay caused by pollution in lower atmospheric
+        text: tropospheric propagation delay caused by pollution in lower atmospheric
           layers.
         correct: false
         why: ""
@@ -3405,8 +3258,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      AAIM (Aircraft Autonomous Integrity Monitoring) is a type of Airborne
+    question: AAIM (Aircraft Autonomous Integrity Monitoring) is a type of Airborne
       Based Augmentation System that
     options:
       - id: OHYOMDGQJ
@@ -3422,8 +3274,7 @@
         correct: false
         why: ""
       - id: OWF2MVWSV
-        text:
-          relies on GNSS information as well as information from additional on-board
+        text: relies on GNSS information as well as information from additional on-board
           sensors.
         correct: true
         why: ""

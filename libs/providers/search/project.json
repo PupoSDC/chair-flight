@@ -3,20 +3,10 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/providers/search/src",
+  "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/providers/search/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p libs/providers/search/tsconfig.json"]
-      }
-    }
-  },
-  "tags": []
+    "lint": {},
+    "check": {},
+    "format": {}
+  }
 }

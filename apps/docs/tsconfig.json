@@ -1,5 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
+  "files": [
+    ".storybook/preview.tsx",
+    "../../node_modules/@nx/next/typings/image.d.ts",
+    "../../types.d.ts"
+  ],
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": false,
@@ -11,6 +16,5 @@
     "strict": true,
     "types": ["react"],
     "lib": ["esnext", "dom"]
-  },
-  "files": [".storybook/preview.tsx"]
+  }
 }

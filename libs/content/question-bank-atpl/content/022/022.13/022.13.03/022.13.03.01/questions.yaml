@@ -134,26 +134,22 @@
       colours used are:"
     options:
       - id: OHGGRHRA0
-        text:
-          amber or white for the active waypoint (TO waypoint), yellow for high
+        text: amber or white for the active waypoint (TO waypoint), yellow for high
           precipitation.
         correct: false
         why: ""
       - id: OCAF9SUPO
-        text:
-          magenta or white for the active waypoint (TO waypoint), green for light
+        text: magenta or white for the active waypoint (TO waypoint), green for light
           precipitation.
         correct: true
         why: ""
       - id: OKGI3EGDJ
-        text:
-          white or blue for the active waypoint (TO waypoint), red for medium
+        text: white or blue for the active waypoint (TO waypoint), red for medium
           precipitation.
         correct: false
         why: ""
       - id: OFEXU4BEM
-        text:
-          magenta or red for the active waypoint (TO waypoint), amber for medium
+        text: magenta or red for the active waypoint (TO waypoint), amber for medium
           precipitation.
         correct: false
         why: ""
@@ -216,22 +212,19 @@
       Display of an EFIS equipped aircraft?
     options:
       - id: ODOZC8DBS
-        text:
-          MAP or ARC (covering approximately 45° either side of the instantaneous
+        text: MAP or ARC (covering approximately 45° either side of the instantaneous
           track), ROSE (orientated to current heading up) and PLAN (flight plan
           map orientated to Magnetic North).
         correct: false
         why: ""
       - id: OAXWWLWIM
-        text:
-          MAP or ARC (covering approximately 45° either side of the instantaneous
+        text: MAP or ARC (covering approximately 45° either side of the instantaneous
           track), ROSE (orientated to instantaneous track up) and PLAN (flight
           plan map orientated to True North).
         correct: false
         why: ""
       - id: OYQAAZYCQ
-        text:
-          MAP or ARC (covering approximately 45° either side of the instantaneous
+        text: MAP or ARC (covering approximately 45° either side of the instantaneous
           track), ROSE (orientated to current heading up) and PLAN (flight plan
           map orientated to True North).
         correct: true
@@ -319,8 +312,7 @@
       receiver will result in the following response:"
     options:
       - id: OJRTPB8TA
-        text:
-          The associated magenta deviation bar and/or pointer is removed from the
+        text: The associated magenta deviation bar and/or pointer is removed from the
           display.
         correct: true
         why: ""
@@ -329,8 +321,7 @@
         correct: false
         why: ""
       - id: OZUILKYOG
-        text:
-          The pointer rotates around the display and a VOR 1 or 2 failure warning
+        text: The pointer rotates around the display and a VOR 1 or 2 failure warning
           bar appears.
         correct: false
         why: ""
@@ -361,8 +352,7 @@
         correct: false
         why: ""
       - id: OLSKHD705
-        text:
-          A terrain map, navigation aids, bearings, and flight director active
+        text: A terrain map, navigation aids, bearings, and flight director active
           modes.
         correct: false
         why: ""
@@ -429,8 +419,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      According to CS-25, in case of an EFIS failure, standby instruments
+    question: According to CS-25, in case of an EFIS failure, standby instruments
       must normally be…
     options:
       - id: OI0D5OYSI
@@ -438,8 +427,7 @@
         correct: false
         why: ""
       - id: OHPYFPBQB
-        text:
-          switched on manually. or in case of a combination of failures, switched on
+        text: switched on manually. or in case of a combination of failures, switched on
           automatically
         correct: false
         why: ""

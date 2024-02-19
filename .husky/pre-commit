@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
+nx affected --target=lint --fix
+nx affected --target=check
+nx affected --target=format

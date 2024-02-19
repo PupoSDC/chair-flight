@@ -14,8 +14,7 @@
       aircraft at once. What is the reason for this limitation?
     options:
       - id: OBXAOQ7NY
-        text:
-          Limitation of transmission by the echo protection circuit, which avoids
+        text: Limitation of transmission by the echo protection circuit, which avoids
           replies being reflected and coming back into the DME ground station.
         correct: false
         why: ""
@@ -32,8 +31,7 @@
         correct: false
         why: ""
       - id: O05TGJFYN
-        text:
-          Saturation of the DME ground station working on only one receive frequency
+        text: Saturation of the DME ground station working on only one receive frequency
           and one transmit frequency.
         correct: true
         why: ""
@@ -48,27 +46,23 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A particular DME ground station is very busy and can sometimes be used
+    question: A particular DME ground station is very busy and can sometimes be used
       by more than 100 aircraft at a time. When during one of these extremely
       busy periods, the DME ground station may not respond to some aircraft
       based on...
     options:
       - id: OBDWGJQFX
-        text:
-          the type of aircraft operation, with aircraft on IFR approaches having the
+        text: the type of aircraft operation, with aircraft on IFR approaches having the
           highest priority.
         correct: false
         why: ""
       - id: OWO3SNPTW
-        text:
-          the range of the aircraft from the DME, and how long it has been searching
+        text: the range of the aircraft from the DME, and how long it has been searching
           for a lock-on.
         correct: false
         why: ""
       - id: OAGPJ2W1X
-        text:
-          how long each aircraft has been searching for a lock-on, with the one
+        text: how long each aircraft has been searching for a lock-on, with the one
           waiting longest having the highest priority.
         correct: false
         why: ""
@@ -96,8 +90,7 @@
         correct: false
         why: ""
       - id: ORU84DZRJ
-        text:
-          The interrogation starts directly after the correct DME-frequency has been
+        text: The interrogation starts directly after the correct DME-frequency has been
           selected on the frequency-selecting-panel by the pilot.
         correct: false
         why: ""
@@ -107,8 +100,7 @@
         correct: true
         why: ""
       - id: O4BGZOT6U
-        text:
-          The interrogation can only take place if the Echo Protection Circuit has
+        text: The interrogation can only take place if the Echo Protection Circuit has
           been locked.
         correct: false
         why: ""

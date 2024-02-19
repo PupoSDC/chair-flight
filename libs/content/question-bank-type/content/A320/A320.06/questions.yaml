@@ -5,7 +5,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -37,14 +37,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      "When the smoke detector in the air extraction duct of the avionics
+    question: "When the smoke detector in the air extraction duct of the avionics
       ventilation system detects smoke for more than 5 seconds: -A single chime
       sounds. -The MASTER CAUTION lights, on the glareshield, light up. -The
       ECAM displays a caution on the E/WD. -The SMOKE light, on the EMER ELEC
@@ -58,14 +57,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What additional external warnings are activated in case of an APU fire
+    question: What additional external warnings are activated in case of an APU fire
       on ground only?
     options:
       - id: aohcd
@@ -91,7 +89,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -122,7 +120,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -153,7 +151,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -184,7 +182,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -198,20 +196,17 @@
         correct: false
         why: ""
       - id: jl1th
-        text:
-          The low-pressure fuel valve, the hydraulic fire shut off valve, the engine
+        text: The low-pressure fuel valve, the hydraulic fire shut off valve, the engine
           bleed valve and the pack flow valve
         correct: true
         why: ""
       - id: u994k
-        text:
-          The crossfeed fuel valve, the hydraulic fire shut off valve, the pack flow
+        text: The crossfeed fuel valve, the hydraulic fire shut off valve, the pack flow
           valve and the engine bleed valve
         correct: false
         why: ""
       - id: 295s6
-        text:
-          The high-pressure fuel valve, the hydraulic fire shut off valve, the
+        text: The high-pressure fuel valve, the hydraulic fire shut off valve, the
           engine bleed valve and the outflow valve
         correct: false
         why: ""
@@ -222,14 +217,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Does SQUIB light up on the ENG FIRE Panel, when an engine FIRE PB is
+    question: Does SQUIB light up on the ENG FIRE Panel, when an engine FIRE PB is
       popped by the flight crew?
     options:
       - id: 85fg8
@@ -255,26 +249,23 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "The APU TEST PB on the APU FIRE panel permits the flight crew to test
+    question: "The APU TEST PB on the APU FIRE panel permits the flight crew to test
       the operation of the fire detection and extinguishing system for the APU.
       When the flight crew presses it:"
     options:
       - id: pb3xd
-        text:
-          A triple low chime sounds. The MASTER WARN come on white and APU FIRE
+        text: A triple low chime sounds. The MASTER WARN come on white and APU FIRE
           warning flashes on the ECAM.
         correct: false
         why: ""
       - id: 6ryu
-        text:
-          "On the APU FIRE panel: The APU FIRE pushbutton lights up red, the SQUIB
+        text: "On the APU FIRE panel: The APU FIRE pushbutton lights up red, the SQUIB
           light comes on white, and the DISCH light comes on amber."
         correct: true
         why: ""
@@ -293,14 +284,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      The FIRE light identifies the engine to be shutdown because of fire.
+    question: The FIRE light identifies the engine to be shutdown because of fire.
       The light flashes for five seconds then comes on red when an engine fire
       warning is triggered.
     options:
@@ -327,7 +317,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -358,7 +348,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -379,7 +369,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -410,7 +400,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -443,14 +433,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      "When engine FIRE PB is released out, the following sequence occurs:
+    question: "When engine FIRE PB is released out, the following sequence occurs:
       &middot;Silences the aural fire warning &middot;Arms the fire extinguisher
       squibs &middot;Closes the low-pressure fuel valve &middot;Closes the
       hydraulic fire shut off valve &middot;Closes the engine bleed valve
@@ -464,7 +453,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -495,7 +484,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -527,14 +516,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      The FIRE TEST PB on the ENG FIRE panel is pushed to test the operation
+    question: The FIRE TEST PB on the ENG FIRE panel is pushed to test the operation
       of the fire detection and extinguishing system. One of the white SQUIB
       lights will not illuminate. What does that mean?
     options:
@@ -561,38 +549,33 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "When engine FIRE push-button is pushed and released, an electrical
+    question: "When engine FIRE push-button is pushed and released, an electrical
       signal is sent to perform among others following for the corresponding
       engine :"
     options:
       - id: xwnzs
-        text:
-          Arms the fire extinguisher squibs and closes the low-pressure fuel valve,
+        text: Arms the fire extinguisher squibs and closes the low-pressure fuel valve,
           hydraulic fire shut off valve and engine bleed valve
         correct: true
         why: ""
       - id: 1d82m
-        text:
-          Shuts down the APU and closes the low-pressure fuel valve, hydraulic fire
+        text: Shuts down the APU and closes the low-pressure fuel valve, hydraulic fire
           shut off valve and engine bleed valve
         correct: false
         why: ""
       - id: uu1gm
-        text:
-          Cuts off the FADEC power supply and closes the high-pressure fuel valve,
+        text: Cuts off the FADEC power supply and closes the high-pressure fuel valve,
           hydraulic fire shut off valve and engine bleed valve
         correct: false
         why: ""
       - id: qi0av
-        text:
-          Shuts down the APU, deactivates the IDG, closes the low-pressure fuel
+        text: Shuts down the APU, deactivates the IDG, closes the low-pressure fuel
           valve, hydraulic fire shut off valve and engine bleed valve
         correct: false
         why: ""
@@ -603,7 +586,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -620,8 +603,7 @@
         correct: false
         why: ""
       - id: ke31j
-        text:
-          breaks in both loops occurring within 20 seconds of each other (flame
+        text: breaks in both loops occurring within 20 seconds of each other (flame
           effect)
         correct: true
         why: ""
@@ -636,26 +618,23 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "In case of perceptible smoke, the SMOKE/FUMES/AVNCS SMOKE checklist
+    question: "In case of perceptible smoke, the SMOKE/FUMES/AVNCS SMOKE checklist
       requires that you select the BLOWER an EXTRACT push buttons to override.
       This action brings the avionic ventilation to a:"
     options:
       - id: 7w3sel
-        text:
-          close-circuit configuration. The purpose is to starve the fire from
+        text: close-circuit configuration. The purpose is to starve the fire from
           oxygen.
         correct: false
         why: ""
       - id: 2xhoq
-        text:
-          open-circuit configuration. The purpose is to add fresh air from the
+        text: open-circuit configuration. The purpose is to add fresh air from the
           outside.
         correct: false
         why: ""
@@ -664,8 +643,7 @@
         correct: false
         why: ""
       - id: sij0n
-        text:
-          smoke configuration. The air conditioning system supplies cooling air,
+        text: smoke configuration. The air conditioning system supplies cooling air,
           which is then exhausted overboard
         correct: true
         why: ""
@@ -676,7 +654,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -707,14 +685,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "A fire warning (ENG) appears in case: (more than one answer may be
+    question: "A fire warning (ENG) appears in case: (more than one answer may be
       correct)"
     options:
       - id: s6vi9
@@ -722,8 +699,7 @@
         correct: false
         why: ""
       - id: 82cnz
-        text:
-          of breaks in both loops occuring within 5 seconds of each other (flame
+        text: of breaks in both loops occuring within 5 seconds of each other (flame
           effect)
         correct: false
         why: ""
@@ -742,14 +718,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "Which statement is not true? The fire warning ( ENG ) appears in case
+    question: "Which statement is not true? The fire warning ( ENG ) appears in case
       of :"
     options:
       - id: qq5pv
@@ -775,7 +750,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -808,7 +783,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -840,26 +815,23 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "In case of perceptible smoke, the SMOKE/FUMES/AVNCS SMOKE checklist
+    question: "In case of perceptible smoke, the SMOKE/FUMES/AVNCS SMOKE checklist
       requires that you select the BLOWER an EXTRACT pushbuttons to override.
       This action brings the avionic ventilation to a:"
     options:
       - id: lqxho
-        text:
-          close-circuit configuration. The purpose is to starve the fire from
+        text: close-circuit configuration. The purpose is to starve the fire from
           oxygen.
         correct: false
         why: ""
       - id: opiwh
-        text:
-          open-circuit configuration. The purpose is to add fresh air from the
+        text: open-circuit configuration. The purpose is to add fresh air from the
           outside.
         correct: false
         why: ""
@@ -868,8 +840,7 @@
         correct: false
         why: ""
       - id: 0j28w
-        text:
-          smoke configuration. The air conditioning system supplies cooling air,
+        text: smoke configuration. The air conditioning system supplies cooling air,
           which is then exhausted overboard.
         correct: true
         why: ""
@@ -880,7 +851,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -889,28 +860,24 @@
     question: "During the preflight check, you verify that:"
     options:
       - id: cxp6hi
-        text:
-          a red disk is present outside at the rear of the fuselage, signaling that
+        text: a red disk is present outside at the rear of the fuselage, signaling that
           the APU extinguishing agent is not discharged overboard due to bottle
           overpressure.
         correct: true
         why: ""
       - id: fidumj
-        text:
-          a green disk is present outside at the rear of the fuselage, signaling
+        text: a green disk is present outside at the rear of the fuselage, signaling
           that the APU extinguishing agent is available for fire protection.
         correct: false
         why: ""
       - id: fvqoj
-        text:
-          a red disk is not present at the rear of the fuselage indicating that the
+        text: a red disk is not present at the rear of the fuselage indicating that the
           APU extinguishing agent is not discharged overboard due to bottle
           underpressure
         correct: false
         why: ""
       - id: 8udhg
-        text:
-          a green disk is not present at the rear of the fuselage indicating that
+        text: a green disk is not present at the rear of the fuselage indicating that
           the APU has been shut down automatically on ground following an APU
           fire
         correct: false
@@ -922,7 +889,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -935,20 +902,17 @@
         correct: false
         why: ""
       - id: qvw4c
-        text:
-          a temperature of more than 725 degrees C is detected in the turbine hot
+        text: a temperature of more than 725 degrees C is detected in the turbine hot
           section
         correct: false
         why: ""
       - id: s6qau
-        text:
-          a fire is detected by both loops or by one loop, the other one being
+        text: a fire is detected by both loops or by one loop, the other one being
           faulty, or when there is a break in both loops within 5 seconds
         correct: true
         why: ""
       - id: cax5r
-        text:
-          a fire is detected by on loop, followed by the second loop within maximum
+        text: a fire is detected by on loop, followed by the second loop within maximum
           10 seconds
         correct: false
         why: ""
@@ -959,7 +923,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -968,26 +932,22 @@
     question: The fire protection for engines, APU and cargo entails
     options:
       - id: t2qrc
-        text:
-          two extinguisher bottles for the engine, one extinguisher bottle for the
+        text: two extinguisher bottles for the engine, one extinguisher bottle for the
           APU and one fire bottle for the cargo compartments
         correct: true
         why: ""
       - id: 2cgky
-        text:
-          two extinguisher bottles for the engine, one extinguisher bottle for the
+        text: two extinguisher bottles for the engine, one extinguisher bottle for the
           APU and two fire bottles for the cargo compartments
         correct: false
         why: ""
       - id: c4snd
-        text:
-          one extinguisher bottle for the engine, one extinguisher bottle for the
+        text: one extinguisher bottle for the engine, one extinguisher bottle for the
           APU and two fire bottles for the cargo compartment
         correct: false
         why: ""
       - id: 0xf0k
-        text:
-          A CIDS, one extinguisher bottle for the engine, one extinguisher bottle
+        text: A CIDS, one extinguisher bottle for the engine, one extinguisher bottle
           for the APU and two fire bottles for the cargo compartment
         correct: false
         why: ""
@@ -998,7 +958,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1007,28 +967,24 @@
     question: "Aircraft Fire Protection Systems are comprised of:"
     options:
       - id: w04jw
-        text:
-          Fire and overheat protection for engines, fire and smoke detection for
+        text: Fire and overheat protection for engines, fire and smoke detection for
           APU, smoke detection for cargo compartments, avionic bay and
           lavatories
         correct: false
         why: ""
       - id: ft6sy
-        text:
-          Fire and overheat protection for engines and APU, overheat protection for
+        text: Fire and overheat protection for engines and APU, overheat protection for
           avionic bay, smoke detection for cargo compartments and lavatories
         correct: false
         why: ""
       - id: ye62u
-        text:
-          Fire and overheat protection for engines and APU, fire detection for
+        text: Fire and overheat protection for engines and APU, fire detection for
           wheels, smoke detection for cargo compartments, avionic bay and
           lavatories
         correct: false
         why: ""
       - id: wjvks
-        text:
-          Fire and overheat protection for engines and APU, smoke detection for
+        text: Fire and overheat protection for engines and APU, smoke detection for
           cargo compartments, avionic bay and lavatories
         correct: true
         why: ""
@@ -1039,14 +995,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Which statement is correct in case of APU fire on ground? (more than
+    question: Which statement is correct in case of APU fire on ground? (more than
       one statement may be correct)
     options:
       - id: x85sv
@@ -1072,7 +1027,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1103,7 +1058,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1134,7 +1089,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1165,7 +1120,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1182,8 +1137,7 @@
         correct: false
         why: ""
       - id: 56y3b
-        text:
-          The APU will automatically shut down and the extinguisher is ready to
+        text: The APU will automatically shut down and the extinguisher is ready to
           discharge.
         correct: false
         why: ""
@@ -1198,7 +1152,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1229,14 +1183,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "Which of the following components is not equipped with extinguishing
+    question: "Which of the following components is not equipped with extinguishing
       system:"
     options:
       - id: 773bo
@@ -1262,7 +1215,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1293,7 +1246,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1302,27 +1255,23 @@
     question: "The engine and APU fire detection system consists of:"
     options:
       - id: p1e87j
-        text:
-          3 fire detection loops on each engine and 2 fire detection loops attached
+        text: 3 fire detection loops on each engine and 2 fire detection loops attached
           to the APU which are monitored by the FWC (Flight Warning Computer)
         correct: false
         why: ""
       - id: 1cqe2
-        text:
-          3 or 4 (depending on configuration) fire detection loops on each engine
+        text: 3 or 4 (depending on configuration) fire detection loops on each engine
           and 2 fire detection loops attached to the APU which are directly
           wired to the FWC (Flight Warning Computer)
         correct: false
         why: ""
       - id: hwf54
-        text:
-          3 fire detection loops on each engine and 2 fire detection loops attached
+        text: 3 fire detection loops on each engine and 2 fire detection loops attached
           to the APU which are monitored by the FDU (Fire Detection Unit)
         correct: false
         why: ""
       - id: 4u4rr
-        text:
-          2 fire detection loops on each engine and 2 fire detection loops attached
+        text: 2 fire detection loops on each engine and 2 fire detection loops attached
           to the APU which are monitored by the FDU (Fire Detection Unit)
         correct: true
         why: ""
@@ -1333,7 +1282,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1346,21 +1295,18 @@
         correct: true
         why: ""
       - id: pi9p2
-        text:
-          If the system detects an APU fire while the aircraft is on ground, it
+        text: If the system detects an APU fire while the aircraft is on ground, it
           shuts down the APU automatically but the extinguisher must be
           discharged manually
         correct: false
         why: ""
       - id: mhjgl
-        text:
-          "The engine fire detection system consists of 4 sensing elements: pylon
+        text: "The engine fire detection system consists of 4 sensing elements: pylon
           nacelle, engine core, turbine section and gear box section"
         correct: false
         why: ""
       - id: y5agih
-        text:
-          The fire warning will be triggered in case of one of two operative loops
+        text: The fire warning will be triggered in case of one of two operative loops
           has detected a fire / presence of heat
         correct: false
         why: ""
@@ -1371,7 +1317,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1402,7 +1348,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1412,28 +1358,24 @@
       extinguishing system is correct:"
     options:
       - id: 2ypi2f
-        text:
-          The cargo smoke detection consists of 6 smoke detectors (3 Cavities - 1
+        text: The cargo smoke detection consists of 6 smoke detectors (3 Cavities - 1
           fwd & 2 aft). The extinguishing system of one extinguishing bottle is
           connected to 1 nozzle in fwd and two nozzles in aft cargo compartment
         correct: true
         why: ""
       - id: 7s2sw
-        text:
-          "The fire extinguishing bottle must only be used in case of confirmed
+        text: "The fire extinguishing bottle must only be used in case of confirmed
           cargo fire (ECAM warning: FIRE FWD (AFT) CARGO FIRE)"
         correct: false
         why: ""
       - id: wpqqg
-        text:
-          The cargo smoke/fire detection system senses smoke via the smoke detectors
+        text: The cargo smoke/fire detection system senses smoke via the smoke detectors
           located in the ventilation system outlet and heat sensing elements
           installed in the roof of each cargo compartment
         correct: false
         why: ""
       - id: 6rc5s
-        text:
-          The fire extinguishing bottle can be discharged in both cargo compartments
+        text: The fire extinguishing bottle can be discharged in both cargo compartments
           simultaneously if needed. But only if both DISCH pb are pushed within
           3 seconds
         correct: false
@@ -1445,7 +1387,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1462,8 +1404,7 @@
         correct: false
         why: ""
       - id: dhdhz
-        text:
-          The agent bottle has fully discharged (60 seconds after pressing the DISCH
+        text: The agent bottle has fully discharged (60 seconds after pressing the DISCH
           pb)
         correct: true
         why: ""
@@ -1478,14 +1419,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If the system detects an APU fire while the aircraft is in flight, how
+    question: If the system detects an APU fire while the aircraft is in flight, how
       is the APU fire extinguisher bottle discharged?
     options:
       - id: txefp
@@ -1493,8 +1433,7 @@
         correct: false
         why: ""
       - id: pfzzg
-        text:
-          Manually, via the AGENT pb on the APU FIRE PANEL located on the overhead
+        text: Manually, via the AGENT pb on the APU FIRE PANEL located on the overhead
           panel
         correct: true
         why: ""
@@ -1514,7 +1453,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1523,26 +1462,22 @@
     question: If you have an APU FIRE which statement is correct?
     options:
       - id: uolg9
-        text:
-          On the ground, an APU AUTO shut down will occur and the APU fire bottle
+        text: On the ground, an APU AUTO shut down will occur and the APU fire bottle
           will be discharged automatically.
         correct: true
         why: ""
       - id: hp5s3
-        text:
-          On the ground you have to perform the ECAM actions to shut down the APU
+        text: On the ground you have to perform the ECAM actions to shut down the APU
           and extinguish the fire from the cockpit.
         correct: false
         why: ""
       - id: igmdk
-        text:
-          On the ground an APU AUTO shut down will occur but you have to discharge
+        text: On the ground an APU AUTO shut down will occur but you have to discharge
           the APU fire bottle manually.
         correct: false
         why: ""
       - id: xl3cc
-        text:
-          In the air, an APU EMER shut down will occur and the APU fire bottle will
+        text: In the air, an APU EMER shut down will occur and the APU fire bottle will
           be discharged automatically.
         correct: false
         why: ""
@@ -1553,7 +1488,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1584,7 +1519,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1593,26 +1528,22 @@
     question: ENG 1 LOOP B is inoperative. According to this failure...
     options:
       - id: lm08k
-        text:
-          One fire detection loop has failed. Fire detection for both engines is not
+        text: One fire detection loop has failed. Fire detection for both engines is not
           available.
         correct: false
         why: ""
       - id: zxlwg
-        text:
-          One detection loop for engine 1 has failed. Fire detection for both
+        text: One detection loop for engine 1 has failed. Fire detection for both
           engines is still available.
         correct: true
         why: ""
       - id: 0cftu
-        text:
-          One fire detection loop of engine 1 has failed. Fire detection for engine
+        text: One fire detection loop of engine 1 has failed. Fire detection for engine
           1 is inoperative.
         correct: false
         why: ""
       - id: i977i
-        text:
-          Both fire detection loops of engine 1 have failed. Fire detection for
+        text: Both fire detection loops of engine 1 have failed. Fire detection for
           engine 1 is inoperative.
         correct: false
         why: ""
@@ -1623,7 +1554,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1633,26 +1564,22 @@
       statement is true?
     options:
       - id: kor29
-        text:
-          There are two fire bottles, one for the FWD compartment and one for the
+        text: There are two fire bottles, one for the FWD compartment and one for the
           AFT.
         correct: false
         why: ""
       - id: o1npr
-        text:
-          There is only one fire bottle; pressing either DISCH pb discharges it into
+        text: There is only one fire bottle; pressing either DISCH pb discharges it into
           both compartments.
         correct: false
         why: ""
       - id: e0xr8f
-        text:
-          There is only one fire bottle, when it is discharged both amber DISCH
+        text: There is only one fire bottle, when it is discharged both amber DISCH
           lights come on.
         correct: true
         why: ""
       - id: ch1sx
-        text:
-          There are two fire bottles, when the DISCH pb is pressed they are both
+        text: There are two fire bottles, when the DISCH pb is pressed they are both
           discharged into the appropriate compartment.
         correct: false
         why: ""
@@ -1663,7 +1590,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1696,14 +1623,13 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      The cargo compartments have a smoke detection system. Cavities in the
+    question: The cargo compartments have a smoke detection system. Cavities in the
       cargo compartment ceiling panels each hold two smoke detectors. Each
       detector is linked to one of the two detection loops (dual loop
       principle).
@@ -1731,7 +1657,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 
@@ -1762,7 +1688,7 @@
   learningObjectives:
     - A320.06
   explanation: |+
-
+    
 
     ---
 

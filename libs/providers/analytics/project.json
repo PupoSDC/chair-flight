@@ -4,6 +4,9 @@
   "sourceRoot": "libs/providers/analytics/src",
   "projectType": "library",
   "targets": {
+    "lint": {},
+    "check": {},
+    "format": {},
     "migrate": {
       "executor": "nx:run-commands",
       "options": {
@@ -28,19 +31,6 @@
         "dev": {},
         "staging": {},
         "local": {}
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/providers/analytics/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p libs/providers/analytics/tsconfig.json"]
       }
     }
   },

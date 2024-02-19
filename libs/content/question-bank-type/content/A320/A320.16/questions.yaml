@@ -5,7 +5,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -26,8 +26,7 @@
         correct: false
         why: ""
       - id: vp2xx
-        text:
-          Four (engine bleed system & APU load compressor & HP ground connection &
+        text: Four (engine bleed system & APU load compressor & HP ground connection &
           LP ground connection )
         correct: false
         why: ""
@@ -38,14 +37,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      How many pneumatic safety valves prevent cabin pressure from exceeding
+    question: How many pneumatic safety valves prevent cabin pressure from exceeding
       limits?
     options:
       - id: gvvz3
@@ -71,7 +69,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -102,14 +100,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "The aircraft has two similar engine bleed air systems. Each system is
+    question: "The aircraft has two similar engine bleed air systems. Each system is
       designed to:"
     options:
       - id: m344z
@@ -135,7 +132,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -166,7 +163,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -197,14 +194,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "Temperature regulation of the bleed air is achieved by the precooler
+    question: "Temperature regulation of the bleed air is achieved by the precooler
       which regulates the temperature to:"
     options:
       - id: etyw9
@@ -230,14 +226,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "If one BMC fails, the adjacent BMC takes over the monitoring of the
+    question: "If one BMC fails, the adjacent BMC takes over the monitoring of the
       bleed system to issue the following  ECAM warnings if necessary:"
     options:
       - id: suvko
@@ -263,7 +258,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -277,14 +272,12 @@
         correct: false
         why: ""
       - id: 5ixhc
-        text:
-          Supply bleed air only to the left side unless the X-Bleed selector is set
+        text: Supply bleed air only to the left side unless the X-Bleed selector is set
           OPEN
         correct: false
         why: ""
       - id: vvjdsi
-        text:
-          Supply pneumatic air to both sides of the aircraft because the pneumatic
+        text: Supply pneumatic air to both sides of the aircraft because the pneumatic
           crossbleed valve automatically opens
         correct: true
         why: ""
@@ -299,7 +292,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -330,7 +323,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -339,8 +332,7 @@
     question: "When selected, APU bleed air:"
     options:
       - id: 8y9g6
-        text:
-          Will supply bleed air only if the ENG BLEED pb&rsquo;s are manually
+        text: Will supply bleed air only if the ENG BLEED pb&rsquo;s are manually
           selected OFF
         correct: false
         why: ""
@@ -363,7 +355,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -395,7 +387,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -426,14 +418,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What are the possible selections of the crossbleed valve selector on
+    question: What are the possible selections of the crossbleed valve selector on
       the overhead AIR COND panel?
     options:
       - id: 6t01w
@@ -459,7 +450,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -472,20 +463,17 @@
         correct: false
         why: ""
       - id: lunlx
-        text:
-          A non return valve at the HP port protects the compressor against a
+        text: A non return valve at the HP port protects the compressor against a
           reverse flow from the IP port
         correct: false
         why: ""
       - id: 7euuf
-        text:
-          A non return valve at the IP port protects the compressor against a
+        text: A non return valve at the IP port protects the compressor against a
           reverse flow from the HP port
         correct: true
         why: ""
       - id: j17qb
-        text:
-          A check valve can cut off bleed air from the the compressor air extract
+        text: A check valve can cut off bleed air from the the compressor air extract
           port
         correct: false
         why: ""
@@ -496,7 +484,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -527,7 +515,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -536,27 +524,23 @@
     question: How does the precooler operate and what is its purpose?
     options:
       - id: jae6bg
-        text:
-          It uses cooling air bled from the engine fan to regulate the temperature
+        text: It uses cooling air bled from the engine fan to regulate the temperature
           according to the demand before the  bleed air is distributed to the
           users
         correct: true
         why: ""
       - id: wqxmm
-        text:
-          It uses air extracted from the cooling air inlet (CFM) to regulate the
+        text: It uses air extracted from the cooling air inlet (CFM) to regulate the
           temperature as calculated by the ACSCs
         correct: false
         why: ""
       - id: v3rvn
-        text:
-          It uses air extracted from the cooling air inlet (CFM) to regulate the
+        text: It uses air extracted from the cooling air inlet (CFM) to regulate the
           temperature as calculated by the AEVCs
         correct: false
         why: ""
       - id: ulsp8
-        text:
-          It senses the temperature downstream of the the HPV and opens or closes
+        text: It senses the temperature downstream of the the HPV and opens or closes
           the IPV accordingly to regulate the  temperature of the bleed air
           before it is distributed to the users
         correct: false
@@ -568,7 +552,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -577,21 +561,18 @@
     question: What is the purpose of the crossbleed valve?
     options:
       - id: i7kyni
-        text:
-          It enable both the left and right bleed systems to equalize the air
+        text: It enable both the left and right bleed systems to equalize the air
           pressure in the ducts before the bleed air is  distributed to the
           users
         correct: false
         why: ""
       - id: 29d42
-        text:
-          Its sole purpose is to permit a crossbleed engine start and to isolate
+        text: Its sole purpose is to permit a crossbleed engine start and to isolate
           both bleed systems in case of smoke
         correct: false
         why: ""
       - id: 45d87
-        text:
-          It permits the interconnection or isolation of both bleed systems upstream
+        text: It permits the interconnection or isolation of both bleed systems upstream
           of the bleed valves and OPVs
         correct: false
         why: ""
@@ -607,7 +588,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -616,15 +597,13 @@
     question: "The following symbols are displayed on the ECAM BLEED system page:"
     options:
       - id: zkveoh
-        text:
-          The IP and HP ports, the engine bleed valves, the precoolers air inlet
+        text: The IP and HP ports, the engine bleed valves, the precoolers air inlet
           pressure and outlet temperature values,  the APU BLEED valve when the
           APU is running
         correct: true
         why: ""
       - id: x3hie
-        text:
-          The IPVs, the high pressure ground indication,always displayed on ground
+        text: The IPVs, the high pressure ground indication,always displayed on ground
           even if the ground unit is not  connected
         correct: false
         why: ""
@@ -633,8 +612,7 @@
         correct: false
         why: ""
       - id: czq4l
-        text:
-          The non return valves, the APU bleed valve, the pack compressor outlet
+        text: The non return valves, the APU bleed valve, the pack compressor outlet
           temperature
         correct: false
         why: ""
@@ -645,25 +623,22 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      During normal operation, what happens in the pneumatic system as the
+    question: During normal operation, what happens in the pneumatic system as the
       engine power is increased for  take off?
     options:
       - id: wss8xj
-        text:
-          The pressure delivered from the IP stages is sufficient and the HP valves
+        text: The pressure delivered from the IP stages is sufficient and the HP valves
           are automatically closed
         correct: true
         why: ""
       - id: qdw23
-        text:
-          The HP valves open fully to permit sufficient bleed supply in case of pack
+        text: The HP valves open fully to permit sufficient bleed supply in case of pack
           failure
         correct: false
         why: ""
@@ -682,7 +657,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -713,7 +688,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -744,7 +719,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -775,7 +750,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -806,14 +781,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "In order to use bleed from the APU in flight, the aircraft has to be
+    question: "In order to use bleed from the APU in flight, the aircraft has to be
       at or below:"
     options:
       - id: qkw4r
@@ -839,7 +813,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -871,14 +845,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "APU Bleed pb sw ON: The APU valve opens if N > ___ % and there is no
+    question: "APU Bleed pb sw ON: The APU valve opens if N > ___ % and there is no
       leak in the APU or in the left side  bleed"
     options:
       - id: wwvvx
@@ -904,7 +877,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -913,8 +886,7 @@
     question: "The pneumatic system supplies high-pressure air for:"
     options:
       - id: 4fdd1
-        text:
-          Air conditioning, engine starting, wing anti-icing, water pressurization
+        text: Air conditioning, engine starting, wing anti-icing, water pressurization
           and hydraulic reservoir pressurization
         correct: true
         why: ""
@@ -938,7 +910,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -969,14 +941,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Following an ENGINE1 BLEED FAULT why can you only use one pack if Wing
+    question: Following an ENGINE1 BLEED FAULT why can you only use one pack if Wing
       Anti Ice is on?
     options:
       - id: 9wckih
@@ -984,8 +955,7 @@
         correct: false
         why: ""
       - id: xtikh
-        text:
-          If you use wing A/I, the X BLEED valve is automatically closed. Therefore,
+        text: If you use wing A/I, the X BLEED valve is automatically closed. Therefore,
           pack 1 will no longer be supplied.
         correct: false
         why: ""
@@ -1004,14 +974,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "With engines and APU running and APU bleed valve selected on. Select
+    question: "With engines and APU running and APU bleed valve selected on. Select
       the correct statement:"
     options:
       - id: qomq3
@@ -1037,14 +1006,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "PNEU - Engine Bleed System - Temperature Regulation and Limitation:
+    question: "PNEU - Engine Bleed System - Temperature Regulation and Limitation:
       Air bleed from the engines is:"
     options:
       - id: abbpt
@@ -1070,14 +1038,13 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "Engine bleed indications on the precooler inlet pressure is normally
+    question: "Engine bleed indications on the precooler inlet pressure is normally
       green. The light becomes amber if  under _________ or if overpressure
       detected by the BMC:"
     options:
@@ -1104,7 +1071,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
@@ -1132,7 +1099,7 @@
   learningObjectives:
     - A320.16
   explanation: |+
-
+    
 
     ---
 
