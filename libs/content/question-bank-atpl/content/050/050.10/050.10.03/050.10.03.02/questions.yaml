@@ -1,0 +1,424 @@
+- id: QEZYEMJQ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-502059
+    - BGS-502155
+    - AVEXAM-83947
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: Which information should always be delivered by ATIS?
+    options:
+      - id: OXW7YP1QI
+        text: Visibility.
+        correct: true
+        why: ""
+      - id: ODSRQZWSY
+        text: Altitude of the airfield.
+        correct: false
+        why: ""
+      - id: OIQXMCY2M
+        text: Freezing level.
+        correct: false
+        why: ""
+      - id: OVPCFPUMU
+        text: Temperature deviation from ISA.
+        correct: false
+        why: ""
+- id: QVGCITJG
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-503155
+    - BGS-501201
+    - AVEXAM-13796
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      Which kind of meteorological information is normally transmitted in an
+      ATIS?
+    options:
+      - id: OLYJGZEJ2
+        text: TAF / SPECI.
+        correct: false
+        why: ""
+      - id: OHF2JA4K2
+        text: AIRMET / GAMET.
+        correct: false
+        why: ""
+      - id: OCTKATDKP
+        text: METAR / SPECI.
+        correct: false
+        why: ""
+      - id: OWI0S0QQX
+        text: MET REPORT / SPECIAL.
+        correct: true
+        why: ""
+- id: QYSAAUNR
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-505460
+    - ATPLGS-109937
+    - BGS-501204
+    - AVEXAM-51850
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: |-
+      Compare the following TAF and VOLMET reports for Nice:
+
+      TAF 240600Z 2407/2416 VRB02KT CAVOK= VOLMET   
+      report: 0920Z 13012KT 8000 SCT040CB BKN100 20/18 Q1015 TEMPO TS
+
+      What can be concluded from the differences between the two reports?
+    options:
+      - id: OICR6337C
+        text: That the weather conditions at 0920 were actually predicted in the TAF
+        correct: false
+        why: ""
+      - id: OZDMDZIC1
+        text:
+          That the weather at Nice is clearly more volatile than the TAF could have
+          predicted earlier in the morning
+        correct: true
+        why: ""
+      - id: OBLTWRFJU
+        text:
+          That the weather in Nice after 0920 is also likely to be as predicted in
+          the TAF
+        correct: false
+        why: ""
+      - id: OGFKJKD5Q
+        text:
+          That the VOLMET speaker has got his locations mixed up, because there is
+          no way the latest VOLMET report could be so different from the TAF
+        correct: false
+        why: ""
+- id: QVAMHWHP
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-506885
+    - ATPLGS-627925
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: Which of the following is included in an ATIS broadcast?
+    options:
+      - id: O8LXPRLJE
+        text: Freezing Level.
+        correct: false
+        why: ""
+      - id: OM2PZPXLF
+        text: ISA temperature divergence.
+        correct: false
+        why: ""
+      - id: OSDVSE7H1
+        text: Visibility.
+        correct: true
+        why: ""
+      - id: OBKJXQR0M
+        text: Airfield pressure adjusted to standard pressure.
+        correct: false
+        why: ""
+- id: QRJCQKJV
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-507840
+    - AVEXAM-60800
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: "What is correct regarding VOLMET? Meteorological information
+      broadcast in VOLMET is the same as:"
+    options:
+      - id: ORPTQ9QTK
+        text: METARs with TRENDS and sometimes TAFs.
+        correct: true
+        why: ""
+      - id: OOPLHAF9H
+        text: TAFs.
+        correct: false
+        why: ""
+      - id: ONH6OQTEW
+        text: "SPECI TAF sometimes with METARS. "
+        correct: false
+        why: ""
+      - id: OHHCBXWOX
+        text: SIGMETs.
+        correct: false
+        why: ""
+- id: QTJJLJDI
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-506346
+    - BGS-501217
+    - ATPLGS-109977
+    - AVEXAM-24830
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: To which type of message does the following text belong? … VALID
+      211600/212000 HVY SN 25CM FCST=
+    options:
+      - id: OPHDZYMBN
+        text: Supplementary information of a METAR
+        correct: false
+        why: ""
+      - id: OPJQLERF9
+        text: SIGMET
+        correct: false
+        why: ""
+      - id: OM0JOXTWA
+        text: SNOWTAM
+        correct: false
+        why: ""
+      - id: OBZV2DPIY
+        text: Aerodrome warning
+        correct: true
+        why: ""
+- id: QTMOCBSU
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-501028
+    - AVEXAM-83898
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      Can TREND and TAF reports be found in scheduled HF and continuous VHF
+      VOLMETs?
+    options:
+      - id: OCNJGCVTO
+        text: These reports are prohibited in both HF and VHF VOLMETs.
+        correct: false
+        why: ""
+      - id: OERNYV1HJ
+        text: TAFs are contained in both whenever it is possible.
+        correct: false
+        why: ""
+      - id: OCP7IJVMI
+        text: TRENDs are in both VOLMETs if available.
+        correct: true
+        why: ""
+      - id: OMJHSRMN0
+        text: TAFs are scheduled VOLMETs only if available.
+        correct: false
+        why: ""
+- id: QKCCZTHN
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-505671
+    - ATPLGS-110018
+    - AVEXAM-149
+    - BGS-501198
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: "ATIS information contains:"
+    options:
+      - id: OSCJSGH0C
+        text: only meteorological information.
+        correct: false
+        why: ""
+      - id: OWOUUNJUZ
+        text: operational information and if necessary meteorological information.
+        correct: false
+        why: ""
+      - id: OYVLSA9RS
+        text: meteorological and operational information.
+        correct: true
+        why: ""
+      - id: OZYAE6RSB
+        text: only operational information.
+        correct: false
+        why: ""
+- id: QOLMOHGZ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-509302
+    - BGS-502564
+    - ATPLGS-123880
+    - ATPLGS-627935
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      Which statement about the content of continuous VOLMET messages(VHF)
+      and scheduled VOLMET messages(HF) is correct?
+    options:
+      - id: OWCQIS842
+        text: A continuous VOLMET contains information from the TAF.
+        correct: false
+        why: ""
+      - id: O1ORPBLNM
+        text: Forecast information e.g. a trend or TAF, is prohibited in VOLMETs.
+        correct: false
+        why: ""
+      - id: OSMFVGPMW
+        text: TAFs are included in both VOLMET messages.
+        correct: false
+        why: ""
+      - id: OLUKLGFUO
+        text: Both types of VOLMET messages contain trend forecasts, where available.
+        correct: true
+        why: ""
+- id: QZVIXWUK
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-502989
+    - AVEXAM-94304
+    - BGS-501408
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.01
+  explanation: ""
+  variant:
+    type: simple
+    question: How does ATIS broadcasts differ from VOLMET?
+    options:
+      - id: OSO238F40
+        text: They are based on Met Office forecasts for the next two hours.
+        correct: false
+        why: ""
+      - id: OSQGZIU5U
+        text: They are updated every 30 minutes.
+        correct: false
+        why: ""
+      - id: ORMOLQUR6
+        text:
+          The wind directions are given in magnetic and they may contain aerodrome
+          information in addition to weather information.
+        correct: true
+        why: ""
+      - id: OHK7H7MEA
+        text: They are broadcast centrally from National Meteorological Centres.
+        correct: false
+        why: ""
+- id: QGQGIBPO
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-508473
+    - AVEXAM-89876
+    - ATPLGS-123604
+    - BGS-501199
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: What is a VOLMET broadcast?
+    options:
+      - id: OLRYKZLGY
+        text:
+          Provision, as appropriate, of current METAR, SPECI, TAF and SIGMET by
+          means of continuous and repetitive voice broadcast.
+        correct: true
+        why: ""
+      - id: OATXL7LBD
+        text: That part of an ATIS which is concerned to meteorological information.
+        correct: false
+        why: ""
+      - id: O8ZKFL1LQ
+        text: Information issued by a meteorological watch office concerning the
+          occurrence or expected occurrence of specified enroute weather
+          phenomena which may affect the safety of aircraft operations.
+        correct: false
+        why: ""
+      - id: ORPETNTIM
+        text: Weather information transmitted continuously via radio (special
+          broadcast), containing weather information for one airport.
+        correct: false
+        why: ""
+- id: QUFRLBIT
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-507633
+    - AVEXAM-1903
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: VOLMET information contains..
+    options:
+      - id: OFIL47WSL
+        text: meteorological information for aircraft in flight
+        correct: true
+        why: ""
+      - id: OQWKOQWHO
+        text: the current weather referring to specific routes
+        correct: false
+        why: ""
+      - id: OX0HXXOXW
+        text: forecast weather referring to specific routes
+        correct: false
+        why: ""
+      - id: ONOF7YS2Q
+        text: meteorological and operational information
+        correct: false
+        why: ""
+- id: QFPTEOWL
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-504905
+    - ATPLGS-110014
+    - AVEXAM-25122
+  annexes: []
+  learningObjectives:
+    - 050.10.03.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question: "Select the correct statement regarding VHF-VOLMET and HF-VOLMET messages:"
+    options:
+      - id: OPHKHYPGB
+        text:
+          VHF-VOLMET and HF-VOLMET are both used for long range flights, however
+          VHF-VOLMET is used by smaller aeroplanes.
+        correct: false
+        why: ""
+      - id: OO4WZPOGS
+        text: VHF-VOLMET is used for long distances, HF-VOLMET is used for short
+          distances.
+        correct: false
+        why: ""
+      - id: OPWHYV8X8
+        text: VHF-VOLMET is used by general aviation and HF-VOLMET is used by
+          international airlines.
+        correct: false
+        why: ""
+      - id: OEWVTHZHU
+        text:
+          VHF-VOLMET is used for regional coverage whereas HF-VOLMET is used for
+          international coverage.
+        correct: true
+        why: ""

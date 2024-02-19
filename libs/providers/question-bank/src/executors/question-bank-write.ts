@@ -1,4 +1,5 @@
 import * as fs from "node:fs/promises";
+import * as YAML from "yaml";
 import { makeMap } from "@cf/base/utils";
 import { getAllFiles } from "./get-all-files";
 import type { AnnexJson, QuestionTemplateJson } from "./json-types";
@@ -34,7 +35,7 @@ export const writeQuestionTemplates = async (
   await Promise.all(oldFiles.map((file) => fs.rm(file)));
   await Promise.all(
     newFiles.map(([file, content]) =>
-      fs.writeFile(file, JSON.stringify(content, null, 2)),
+      fs.writeFile(file, YAML.stringify(content, null, 2)),
     ),
   );
 };
@@ -82,7 +83,7 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
   await Promise.all(oldFiles.map((file) => fs.rm(file)));
   await Promise.all(
     newFiles.map(([file, content]) =>
-      fs.writeFile(file, JSON.stringify(content, null, 2)),
+      fs.writeFile(file, YAML.stringify(content, null, 2)),
     ),
   );
 };

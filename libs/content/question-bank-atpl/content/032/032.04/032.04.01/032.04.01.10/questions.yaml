@@ -1,0 +1,77 @@
+- id: QPRRBCDB
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329036
+  annexes: []
+  learningObjectives:
+    - 032.04.01.10.04
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      Assuming the same runway and associated conditions, which statement
+      below best describes the reason for the differences between the
+      performance figures produced by the modern performance software in an
+      Electronic Flight Bag (EFB), when compared to those derived from the
+      Regulated Take-Off Weight (RTOW) tables?
+    options:
+      - id: OHJTANET1
+        text:
+          The RTOW tables are typically older and therefore NOT suitable for use in
+          a modern aeroplane where a lot of processes are automated.
+        correct: false
+        why: ""
+      - id: O7RSOQCZG
+        text:
+          Performance figures from the RTOW tables are more conservative as they
+          include a safety factor of 1.15 that is NOT applied in the EFB
+          calculations.
+        correct: false
+        why: ""
+      - id: OPKZ00LVO
+        text: EFB calculations are more accurate and will therefore produce more
+          conservative performance figures than retrieved from RTOW tables.
+        correct: false
+        why: ""
+      - id: OBVJ3ULO3
+        text:
+          The EFB figures are more accurate because a computer is able to consider
+          more accurate parameters and apply these without interpolation.
+        correct: true
+        why: ""
+- id: QFFCNKQG
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323939
+    - AVEXAM-7964
+  annexes: []
+  learningObjectives:
+    - 032.04.01.10.04
+  explanation: ""
+  variant:
+    type: simple
+    question: A pilot preparing for a flight has manually extracted the relevant
+      figures from the aircraft performance charts. They then cross-check these
+      figures with the ones produced by the software on their EFB, and see
+      differences in the results. What might have caused these results to vary
+      from each other?
+    options:
+      - id: OUDH3YVI3
+        text: The EFB is more accurate as it does not need to interpolate any
+          parameters.
+        correct: true
+        why: ""
+      - id: OATCDOXTH
+        text: The tables include an extra safety factor of 1.5.
+        correct: false
+        why: ""
+      - id: OXAXLOAIX
+        text:
+          The tables are no longer accurate for aircraft with such a high level of
+          automation.
+        correct: false
+        why: ""
+      - id: O4MCUI7CQ
+        text: The EFB is more accurate and its outputs are more conservative.
+        correct: false
+        why: ""

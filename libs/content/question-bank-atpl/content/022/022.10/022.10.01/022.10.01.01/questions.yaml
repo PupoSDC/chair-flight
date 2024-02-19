@@ -1,0 +1,284 @@
+- id: QEZAMLNC
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226366
+    - AVEXAM-17223
+    - BGS-220618
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  explanation: ""
+  variant:
+    type: simple
+    question: 'The uplink datalink messages "CLIMB TO REACH \[altitude\] BY
+      \[time\]" means:'
+    options:
+      - id: OEPLZZIYN
+        text:
+          a climb is to commence at a rate such that the specified level is reached
+          at or after the specified time.
+        correct: false
+        why: ""
+      - id: O1ZUOIRRW
+        text: a climb is to commence at or after the specified time.
+        correct: false
+        why: ""
+      - id: O85UPQ5VW
+        text:
+          a climb is to commence at a rate such that the specified level is reached
+          at or before the specified time.
+        correct: true
+        why: ""
+      - id: OUVSF8ZSJ
+        text: a climb is to commence at or before the specified time.
+        correct: false
+        why: ""
+- id: QHIGDHUA
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227467
+    - ATPLGS-120766
+    - AVEXAM-41004
+    - BGS-220594
+    - AVEXAM-54766
+    - BGS-220595
+    - ATPLGS-120767
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.01
+  explanation: ""
+  variant:
+    type: simple
+    question: "In a datalink system, the uplink communications consist in
+      transmitting data:"
+    options:
+      - id: OXLQ3PIF1
+        text: from the ground to the aircraft.
+        correct: true
+        why: ""
+      - id: OP8Z4GFPV
+        text: from the aircraft to the airline maintenance.
+        correct: false
+        why: ""
+      - id: OGC8FJYH6
+        text: from the flight deck to the cabin.
+        correct: false
+        why: ""
+      - id: OZKFJW4XV
+        text: from the aircraft to the ground.
+        correct: false
+        why: ""
+- id: QMPPAHHAC
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225711
+    - ATPLGS-120766
+    - AVEXAM-41004
+    - BGS-220594
+    - AVEXAM-54766
+    - BGS-220595
+    - ATPLGS-120767
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.01
+  explanation: ""
+  variant:
+    type: simple
+    question: "In a datalink system, the downlink communications consist in
+      transmitting data:"
+    options:
+      - id: OQSWTB3I4
+        text: from the ground to the aircraft.
+        correct: false
+        why: ""
+      - id: O4Y8TSAAZ
+        text: from the airline maintenance to the aircraft.
+        correct: false
+        why: ""
+      - id: OHYZBLJC3
+        text: from the aircraft to the ground.
+        correct: true
+        why: ""
+      - id: OUTGKXGMS
+        text: from the flight deck to the cabin.
+        correct: false
+        why: ""
+- id: QZFDNIVS
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223188
+    - AVEXAM-48108
+    - BGS-220600
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.03
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      "The characteristics of the SATCOM transmissions, used for datalink
+      communications are:"
+    options:
+      - id: O1BPLHZPN
+        text: line of sight limitation, variable quality of signals depending on
+          ionospheric conditions.
+        correct: false
+        why: ""
+      - id: OM22G6JCV
+        text:
+          line of sight limitation, no variable quality of signals disturbed by
+          ionospheric conditions.
+        correct: false
+        why: ""
+      - id: O8ZY8HPOO
+        text:
+          no line of sight limitation, no variable quality of signals disturbed by
+          ionospheric conditions.
+        correct: true
+        why: ""
+      - id: OMOACRH68
+        text:
+          no line of sight limitation, variable quality of signals depending on
+          ionospheric conditions.
+        correct: false
+        why: ""
+- id: QEWGEHXD
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225449
+    - BGS-221699
+    - ATPLGS-628399
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  explanation: ""
+  variant:
+    type: simple
+    question: A message or data downlink means…
+    options:
+      - id: OXQIPGZGX
+        text:
+          downloading ATIS / weather / maintenance data from a ground control unit
+          via the onboard Internet connection.
+        correct: false
+        why: ""
+      - id: OI7WKM9VI
+        text:
+          downloading and printing the ATC clearance from the Controller Pilot Data
+          Link Communication (CPDLC).
+        correct: false
+        why: ""
+      - id: OVVENXD4G
+        text: uploading ATIS / weather / maintenance data to an airborne unit
+        correct: false
+        why: ""
+      - id: O3A6AUFLP
+        text:
+          a transmission of signals from an aircraft in flight to a station on the
+          Earth
+        correct: true
+        why: ""
+- id: QISZVNEG
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225309
+    - BGS-220593
+    - AVEXAM-35112
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.02
+  explanation: ""
+  variant:
+    type: simple
+    question: "Comparing the media used to transmit datalink communications, the
+      appropriate classification from the slowest to the fastest data
+      transmission rate is:"
+    options:
+      - id: OKWBBY23H
+        text: SATCOM, VHF datalink, HF datalink.
+        correct: false
+        why: ""
+      - id: OQAJ7PU7L
+        text: HF datalink, VHF datalink, SATCOM.
+        correct: true
+        why: ""
+      - id: OAGEO3SXR
+        text: SATCOM, HF datalink, VHF datalink.
+        correct: false
+        why: ""
+      - id: O2W1F8G7Y
+        text: HF datalink, SATCOM, VHF datalink.
+        correct: false
+        why: ""
+- id: QYZDJHQX
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227201
+    - ATPLGS-106592
+    - AVEXAM-47484
+    - BGS-220612
+    - AVEXAM-99515
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.03
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      The on-board devices that can transmit and receive datalink communication
+      can be:
+
+
+      1 – VHF COM   
+       2 – HF COM   
+       3 – SATCOM
+
+      The combination that regroups all of the correct statements is:
+    options:
+      - id: O0KFCS6K2
+        text: "1."
+        correct: false
+        why: ""
+      - id: OMMZ5WDHD
+        text: "3."
+        correct: false
+        why: ""
+      - id: OAFDLXWHV
+        text: 1, 2, 3.
+        correct: true
+        why: ""
+      - id: O1786ZXAL
+        text: 1, 2.
+        correct: false
+        why: ""
+- id: QYXENIMM
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226120
+    - BGS-221883
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  explanation: ""
+  variant:
+    type: simple
+    question:
+      "The following ‘’The transmission of a digital message from a station
+      on Earth to an aircraft in flight’’ is a definition of a:"
+    options:
+      - id: OLZGG9ZTS
+        text: 2-way VHF radio-communication message.
+        correct: false
+        why: ""
+      - id: ODE5FYWIE
+        text: message/data uplink.
+        correct: true
+        why: ""
+      - id: OH321SKQI
+        text: 2-way HF radio-communication message.
+        correct: false
+        why: ""
+      - id: OZ6HY0PY9
+        text: message/data downlink.
+        correct: false
+        why: ""

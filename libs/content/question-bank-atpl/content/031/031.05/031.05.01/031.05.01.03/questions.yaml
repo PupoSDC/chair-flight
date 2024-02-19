@@ -1,0 +1,367 @@
+- id: QPIUKBSZ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316036
+    - ATPLGS-107111
+    - AVEXAM-33643
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: How can you calculate the Dry Operating Index (DOI)?
+    options:
+      - id: O6P8AQMXI
+        text: OM x constant
+        correct: false
+        why: ""
+      - id: OQGQNQT5D
+        text: DOM x CG arm + constant
+        correct: false
+        why: ""
+      - id: ODPERUMQW
+        text: DOM + constant
+        correct: false
+        why: ""
+      - id: O0JWXX3XW
+        text: DOM x CG arm / constant
+        correct: true
+        why: ""
+- id: QQAPWIOO
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311561
+    - BGS-310722
+    - ATPLGS-127327
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.01
+  explanation: ""
+  variant:
+    type: simple
+    question: What is the principle of the Index method?
+    options:
+      - id: ORUVGK3CL
+        text: To divide high-magnitude moments by a constant and make them more
+          user-friendly.
+        correct: true
+        why: ""
+      - id: OI82VZDUL
+        text: To determine the CG position by reference to the Mean Aerodynamic Chord.
+        correct: false
+        why: ""
+      - id: OMB2MNR69
+        text:
+          To compute the CG position and stabiliser trim setting without completing
+          a load sheet.
+        correct: false
+        why: ""
+      - id: O5W0QUYDR
+        text:
+          To refer every item of the aircraft to a position called the BA (Balance
+          Arm).
+        correct: false
+        why: ""
+- id: QGDPHZCL
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314103
+    - ATPLGS-127326
+    - BGS-310721
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.03
+  explanation: ""
+  variant:
+    type: simple
+    question: What are the advantages of using the Index method to determine
+      moments? It..
+    options:
+      - id: OMTJ1SAJO
+        text:
+          is digitalised and can be automatically uploaded to the aircraft FMC to
+          determine stabiliser trim.
+        correct: false
+        why: ""
+      - id: O6ADEEESU
+        text: regroups different loading zones in single indexes, reducing the
+          complexity of the load and trim sheet.
+        correct: false
+        why: ""
+      - id: OMFQCMANX
+        text: directly produces the position of the CG and the stabiliser trim setting.
+        correct: false
+        why: ""
+      - id: OJIQRO9NO
+        text: reduces the magnitude of moments, making it less time-consuming to
+          compute.
+        correct: true
+        why: ""
+- id: QKCRKQFL
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319745
+    - BGS-310714
+    - AVEXAM-77281
+    - ATPLGS-126793
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: "The dry operating index is:"
+    options:
+      - id: OLIZBOPIH
+        text: The arm used for the moment calculation.
+        correct: false
+        why: ""
+      - id: OKU7UFKUK
+        text: The reduced moment of the dry operating mass.
+        correct: true
+        why: ""
+      - id: OYGC78HQF
+        text: The centre of gravity of the dry operating mass.
+        correct: false
+        why: ""
+      - id: O1ROQ7IKZ
+        text: The reference point for the moment calculation.
+        correct: false
+        why: ""
+- id: QOOZNQFK
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311493
+    - AVEXAM-64087
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: Which of the following equations could be a correct formula to
+      calculate the Dry Operating Index?
+    options:
+      - id: OD614IH7B
+        text: DOI = Total mass at DOM/DOM
+        correct: false
+        why: ""
+      - id: OF4KQIWWY
+        text: DOI = BEM + crew and special operating items
+        correct: false
+        why: ""
+      - id: O73YUFS3U
+        text: DOI = Moment at DOM/1000
+        correct: true
+        why: ""
+      - id: OI5664VHM
+        text: DOI = Total mass at DOM/12000
+        correct: false
+        why: ""
+- id: QTGVBUTD
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312053
+    - AVEXAM-42581
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.03
+  explanation: ""
+  variant:
+    type: simple
+    question: Which one of the following options is an example of a moment index?
+    options:
+      - id: OKPUQNO4G
+        text: CG divided by 100.
+        correct: false
+        why: ""
+      - id: O9KB2GY5I
+        text: Weight divided by 100.
+        correct: false
+        why: ""
+      - id: OYARVQ7SA
+        text: Weight multiplied by CG.
+        correct: false
+        why: ""
+      - id: OOZVXJBJS
+        text: Moment divided by 100.
+        correct: true
+        why: ""
+- id: QULXYVOS
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314759
+    - AVEXAM-14580
+    - BGS-310787
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: |-
+      Determine the Dry operating index (DOI) of the aircraft, given:
+
+      BEM: 3 208 kg   
+       CG at BEM: 129.7 inches aft of datum   
+       2 crew members: 160 kg   
+       Crew seats: 47.5 inches aft of datum
+
+      DOI= ( mass (kg) x CG (inches) / 5000) - 30
+    options:
+      - id: O27SNTXHA
+        text: "57.37"
+        correct: false
+        why: ""
+      - id: OS1RPLMLX
+        text: "53.00"
+        correct: false
+        why: ""
+      - id: OXJFAYTJV
+        text: "56.26"
+        correct: false
+        why: ""
+      - id: OGDPJGLPB
+        text: "54.74"
+        correct: true
+        why: ""
+- id: QCRBYPYQ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318431
+    - ATPLGS-127362
+    - ATPLGS-627464
+    - AVEXAM-27915
+    - BGS-310728
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.01
+  explanation: ""
+  variant:
+    type: simple
+    question: Loading index is a..
+    options:
+      - id: OZWFMFU9O
+        text: Floor loading index to simplify aircraft handling
+        correct: false
+        why: ""
+      - id: OKOFO8XWT
+        text: Wing loading index use ground handling
+        correct: false
+        why: ""
+      - id: ONIHGMM9F
+        text: Fuel-loading index used in fuel density calculations
+        correct: false
+        why: ""
+      - id: OIKMUFBIP
+        text: Simplify, scaled down value of moment
+        correct: true
+        why: ""
+- id: QGMQRIRZ
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313965
+    - BGS-310743
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      The Dry Operating Index (DOI) calculation and basic index correction information from an aeroplane load and trim sheet are shown in the annex.
+
+
+      Calculate the DOI for an aeroplane mass of 110 800 kg and 31.6% MAC, corrected for one additional flight crew member, with a mass of 85 kg, in zone E.
+    options:
+      - id: OZFFKZESS
+        text: "122.0"
+        correct: false
+        why: ""
+      - id: OMVUGAIFV
+        text: "120.4"
+        correct: true
+        why: ""
+      - id: O3FG6KPTH
+        text: "122.2"
+        correct: false
+        why: ""
+      - id: OFQ6MAXVT
+        text: "120.7"
+        correct: false
+        why: ""
+- id: QBYZT07PO
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316506
+    - BGS-310743
+  annexes: []
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      The Dry Operating Index (DOI) calculation and basic index correction information from an aeroplane load and trim sheet are shown in the annex.
+
+
+      Calculate the DOI for an aeroplane mass of 112 600 kg and 30.7% MAC, corrected for one additional cabin crew member, with a mass of 75 kg, in zone G.
+    options:
+      - id: OHREL7JMC
+        text: "119.5"
+        correct: false
+        why: ""
+      - id: OIKMLGFDU
+        text: "118.1"
+        correct: false
+        why: ""
+      - id: OJQXLUG00
+        text: "119.3"
+        correct: true
+        why: ""
+      - id: O0A0TLINY
+        text: "117.7"
+        correct: false
+        why: ""
+- id: QQINKBNP
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314659
+    - AVEXAM-6344
+    - BGS-310808
+    - BGS-310751
+  annexes:
+    - A2MSG2O7J
+  learningObjectives:
+    - 031.05.01.03.02
+  explanation: ""
+  variant:
+    type: simple
+    question: >-
+      Refer to figure.   
+
+      A commercial Air transport flight is scheduled with a planned Dry operating mass (DOM) of 35350 Kg and the associated Dry Operating Index (DOI) is 47\. If one instructor pilot is added in the flight deck and 150 kg of catering are offloaded from the aft galley, the new DOM and DOI are respectively…
+    options:
+      - id: OPLBDFAZD
+        text: 35285 kg and 46.3.
+        correct: false
+        why: ""
+      - id: OJ8MZASKT
+        text: 35285 kg and 42.3.
+        correct: true
+        why: ""
+      - id: OU87TFQO9
+        text: 35585 kg and 42.3.
+        correct: false
+        why: ""
+      - id: OFACZYKWY
+        text: 35585 kg and 48.3.
+        correct: false
+        why: ""
