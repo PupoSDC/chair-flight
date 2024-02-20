@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/docs",
   "projectType": "application",
-  "implicitDependencies": ["react-*", "next-*"],
+  "implicitDependencies": ["react-*", "next-*", "!next-app"],
   "tags": [],
   "targets": {
     "lint": {},
