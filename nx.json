@@ -17,7 +17,7 @@
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "inputs": ["default"]
     },
     "test": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
@@ -25,8 +25,7 @@
     "lint": {
       "cache": true,
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "inputs": ["typescript", "{workspaceRoot}/.eslintrc.json"],
       "options": {
         "errorOnUnmatchedPattern": false,
         "maxWarnings": 0,
@@ -41,8 +40,8 @@
     },  
     "types": {
       "cache": true,
+      "inputs": ["typescript"],
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/node_modules/.cache/tsc/{projectName}"],
       "options": {
         "commands": ["tsc -p {projectRoot}/tsconfig.json"]
       },
@@ -51,8 +50,10 @@
       }
     },
     "format": {
+      "cache": true,
       "executor": "nx:run-commands",
       "dependsOn": ["arrange"],
+      "inputs": ["prettier"],
       "options": {
         "parallel": false,
         "commands": ["prettier --write \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""]
@@ -66,6 +67,7 @@
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*"],
-    "production": ["{projectRoot}/**/*"]
+    "typescript": ["{projectRoot}/**/*.ts?(x)"],
+    "prettier": ["{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}"]
   }
 }

@@ -4,10 +4,12 @@
   "projectType": "library",
   "targets": {
     "arrange": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
       "executor": "@cf/providers/question-bank:arrange",
       "options": {
         "contentFolder": "{projectRoot}/content",
-        "questionBank": "atpl"
+        "questionBank": "type"
       }
     },
     "compile": {

@@ -6,6 +6,8 @@
   "targets": {
     "format": {},
     "arrange": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
       "executor": "@cf/providers/question-bank:arrange",
       "options": {
         "contentFolder": "{projectRoot}/content",
