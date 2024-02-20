@@ -8,6 +8,7 @@ import {
   LearningObjectiveSearch,
   QuestionSearch,
 } from "@cf/providers/search";
+import { UserProgress } from "@cf/providers/user-progress";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
 export const questionBanks: Record<QuestionBankName, QuestionBank> = {
@@ -21,6 +22,8 @@ export const blog = new Blog();
 export const github = new Github();
 
 export const analytics = new Analytics();
+
+export const userProgress = new UserProgress();
 
 export const learningObjectiveSearch = new LearningObjectiveSearch();
 
