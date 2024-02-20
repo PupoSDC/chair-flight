@@ -15,9 +15,9 @@
     "compile": {
       "executor": "@cf/providers/question-bank:compile",
       "options": {
-        "contentFolder": "libs/content/question-bank-atpl/content",
-        "flashcardsFolder": "libs/content/question-bank-atpl/flashcards",
-        "compileFolder": "apps/next-app/public/content/atpl",
+        "contentFolder": "{projectRoot}/content",
+        "flashcardsFolder": "{projectRoot}/flashcards",
+        "compileFolder": "apps/next-app/public/content/tye",
         "questionBank": "type"
       }
     }
