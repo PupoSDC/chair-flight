@@ -22,8 +22,6 @@ type Obstacle = {
   rotationDirection: 1 | -1;
 };
 
-
-
 type GameState = {
   position: [number, number];
   velocity: number;

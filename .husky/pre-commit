@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx nx affected --uncommitted --target=lint --fix
+npx nx affected --uncommitted --target=lint:fix
+npx nx affected --uncommitted --target=format:write
 npx nx affected --uncommitted --target=check
-npx nx affected --uncommitted --target=format

@@ -23,6 +23,7 @@
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
     "lint": {
+      "cache": true,
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
@@ -30,7 +31,11 @@
         "errorOnUnmatchedPattern": false,
         "maxWarnings": 0,
         "lintFilePatterns": ["{projectRoot}/**/*.ts?(x)"],
-        "outputFile": "node_modules/.cache/eslint/${projectName}"
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "check": {
