@@ -1,14 +1,22 @@
 - id: QOLVPSCQ
-  relatedQuestions: []
+  relatedQuestions: [QHNSYYDO, QZNIFJOV, QMCINKVN]
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    Two very similar tidbits of logic you need to know:
 
-    ---
+    - **Standby packs**: Operate at an average for the two cabin zones.
+    - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
 
+    > ### Standby Pack Average Temperature
+    >
+    > If all zone controls and primary pack controls fail, the standby pack controls
+    > command the packs to produce air temperatures which will satisfy the average
+    > temperature demand of the two cabin zones. The trim air modulating valves will
+    > close. The flight deck zone Temperature Selector will have no effect on the
+    > standby pack controls.
   variant:
     type: simple
     question: When operating on the Standby Pack Controls, what temperatures will
@@ -39,10 +47,14 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    - Engine starting: The starter uses Bleed air from APU, external or Cross Feed.
+    - Air conditioning: PACKS are fed with bleed air from 5th and 9th stage 
+    - Cabin pressurisation: Achieved by the PACKS
+    - Engine and wing anti-icing: Both use bleed air to heat up critical ice prone surfaces
+    - Hydraulic: Bleed air is used to pressurize the hydraulic reservoirs.
+    - water: Bleed air is used to pressurize the water tank.
 
-    ---
-
+    MAke sure to select the option that list all systems, and not just a few.
   variant:
     type: simple
     question: Which systems use engine bleed air during operation?
@@ -56,17 +68,17 @@
         text: Engine and wing anti-icing, engine starting, cabin pressurisation,
           hydraulic reservoir pressurisation.
         correct: false
-        why: ""
+        why: "Missing water."
       - id: 3zh04
         text: Engine and wing anti-icing, air conditioning, cabin pressurisation,
           hydraulic reservoir pressurisation.
         correct: false
-        why: ""
+        why: "Missing Engine starting"
       - id: i1xpdl
         text: Engine and wing anti-icing, engine starting, air conditioning, cabin
           pressurisation, hydraulic reservoir pressurisation.
         correct: false
-        why: ""
+        why: "Missing water."
 - id: QQOELHSQ
   relatedQuestions: []
   externalIds: []
@@ -74,14 +86,11 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    ### TRIP RESET Switch
-
-    - resets BLEED TRIP OFF, PACK or ZONE TEMP lights
-
-    - related engine bleed air valve opens, or related pack valve opens, or related trim air modulating valve opens
-
-    ---
-
+    > ### TRIP RESET Switch
+    >
+    > - resets BLEED TRIP OFF, PACK or ZONE TEMP lights
+    > - related engine bleed air valve opens, or related pack valve opens, or 
+    >   related trim air modulating valve opens
   variant:
     type: true-or-false
     question: The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT
@@ -89,16 +98,24 @@
       alert.
     answer: false
 - id: QHNSYYDO
-  relatedQuestions: []
+  relatedQuestions: [QZNIFJOV, QOLVPSCQ, QMCINKVN]
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    Two very similar tidbits of logic you need to know:
 
-    ---
+    - **Standby packs**: Operate at an average for the two cabin zones.
+    - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
 
+    > ### Standby Pack Average Temperature
+    >
+    > If all zone controls and primary pack controls fail, the standby pack controls
+    > command the packs to produce air temperatures which will satisfy the average
+    > temperature demand of the two cabin zones. The trim air modulating valves will
+    > close. The flight deck zone Temperature Selector will have no effect on the
+    > standby pack controls.
   variant:
     type: simple
     question: If all zone and primary pack controls fail, how is cabin temperatures
@@ -130,26 +147,32 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    > ### Air Conditioning Pack
+    > 
+    > The APU is capable of supplying bleed air for two packs on the ground, or one
+    > pack in flight.
   variant:
     type: true-or-false
     question: The APU is capable of supplying bleed air for two packs on the ground,
       or one pack in flight.
     answer: true
 - id: QZNIFJOV
-  relatedQuestions: []
+  relatedQuestions: [QOLVPSCQ, QHNSYYDO, QMCINKVN]
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    Two very similar tidbits of logic you need to know:
 
-    ---
+    - **Standby packs**: Operate at an average for the two cabin zones.
+    - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
 
+    > ### Fixed Cabin Temperature
+    >
+    > If all Temperature Selectors are positioned OFF, the pack controls will cause the
+    > left pack to maintain a fixed temperature of 75°F (24°C) and the right pack to
+    > maintain 65°F (18°C) as measured at the pack temperature sensor.
   variant:
     type: simple
     question: If all Temperature Selectors are positioned OFF, the pack controls
@@ -178,10 +201,12 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    > ### Engine Bleed Air Valves
+    >
+    > The engine bleed air valve acts as a pressure regulator and shutoff valve. With the
+    > engine bleed air switch ON, the valve is DC activated and pressure operated. The
+    > valve maintains proper system operating pressure and reduces bleed air outflow in
+    > response to high bleed air temperature.
   variant:
     type: true-or-false
     question: Engine bleed air pressure is controlled by means of the bleed air
@@ -194,10 +219,12 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    > ### Recirculation Fans
+    >
+    > The recirculation fan system reduces the air conditioning system pack load and the
+    > engine bleed air demand. Air from the passenger cabin and electrical equipment
+    > bay is drawn to the forward cargo bay where it is filtered and recirculated to the
+    > mix manifold. 
   variant:
     type: simple
     question: What is the primary function of the recirculation fans?
@@ -227,10 +254,13 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    > Since the flight deck requires only a fraction of the air supply provided by the left
+    > pack, most of the left pack air output is mixed with the right pack supply and
+    > routed to the passenger cabin
 
-    ---
-
+    The statement from the question is false. Not all the air flows to the
+    flight deck. Most of it is mixed with the right pack supply and
+    routed to the passenger cabin.
   variant:
     type: true-or-false
     question: Conditioned air from the left hand pack flows directly to the Flight
@@ -243,10 +273,17 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    > ### Zone Temperature Control
+    > 
+    > The packs produce an air temperature that satisfies the zone which requires the
+    > most cooling. Zone temperature is controlled by introducing the proper amount of
+    > trim air to the zone supply ducts. The quantity of trim air is regulated 
+    > by individual trim air modulating valves.
 
-    ---
-
+    Hot trim air is bleed air that is decompressed but is not cooled. 
+    To achieve the desired temperature, you mix this air, with
+    the cooled air from the packs. This system allows for a single pack to satisfy
+    temperature requirements of multiple zones.
   variant:
     type: true-or-false
     question: The packs produce the coolest temperature selected in any of the
@@ -260,10 +297,8 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    The system contains ONE trim air pressure regulator, and THREE trim air 
+    modulating valves. One for control zone.
   variant:
     type: simple
     question: How many Trim Air Pressure Regulators are there in the Air
@@ -293,10 +328,11 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    > ### Pressure Relief Valves
+    >
+    > Two pressure relief valves provide safety pressure relief by limiting the
+    > differential pressure to a maximum of 9.1 psi. A negative relief valve prevents
+    > external atmospheric pressure from exceeding internal cabin pressure.
   variant:
     type: simple
     question: The differential pressure of the cabin is limited by a pressure relief
@@ -323,16 +359,22 @@
         correct: true
         why: ""
 - id: QMCINKVN
-  relatedQuestions: []
+  relatedQuestions: [QOLVPSCQ, QHNSYYDO, QZNIFJOV]
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    Two very similar tidbits of logic you need to know:
 
-    ---
+    - **Standby packs**: Operate at an average for the two cabin zones.
+    - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
 
+    > ### Fixed Cabin Temperature
+    >
+    > If all Temperature Selectors are positioned OFF, the pack controls will cause the
+    > left pack to maintain a fixed temperature of 75°F (24°C) and the right pack to
+    > maintain 65°F (18°C) as measured at the pack temperature sensor.
   variant:
     type: simple
     question: What is the result if all temperature zone selectors are positioned to OFF?
@@ -358,7 +400,7 @@
         correct: false
         why: ""
 - id: QBMWZZSN
-  relatedQuestions: []
+  relatedQuestions: [V]
   externalIds: []
   annexes: []
   learningObjectives:
@@ -402,10 +444,8 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.
-
-    ---
-
+    Bleed air is taken from **stage 5** from the **low pressure** compressor 
+    and **stage 9** of the **high pressure compressor**.
   variant:
     type: true-or-false
     question: Bleed air is taken from stage 4 and stage 10 of the high pressure
@@ -421,10 +461,8 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.
-
-    ---
-
+    Bleed air is taken from **stage 5** from the **low pressure** compressor and 
+    **stage 9** of the **high pressure compressor**.
   variant:
     type: true-or-false
     question: Bleed air is taken from stage 5 and stage 9 of the high pressure
@@ -440,10 +478,8 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.
-
-    ---
-
+    Bleed air is taken from **stage 5** from the **low pressure** compressor 
+    and **stage 9** of the **high pressure compressor**.
   variant:
     type: true-or-false
     question: Bleed air is taken from stage 5 from the low pressure compressor and
@@ -459,10 +495,8 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    Bleed air is taken from **stage 5** from the **low pressure** compressor and **stage 9** of the **high pressure compressor**.
-
-    ---
-
+    Bleed air is taken from **stage 5** from the **low pressure** compressor 
+    and **stage 9** of the **high pressure compressor**.
   variant:
     type: simple
     question: "Which statement is correct:"
@@ -495,10 +529,9 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    41000ft is the maximum certified ceiling for the aircraft. It is required
+    by the certification that it must be able to operate safely using a single
+    pack at this altitude.
   variant:
     type: simple
     question: What is the result if one pack fails in-flight?
@@ -531,13 +564,18 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
+    > ### DUAL BLEED Light
+    >
+    > The DUAL BLEED light illuminates whenever the APU bleed air valve is open
+    > and the position of the engine bleed air switches and isolation valve would permit
+    > possible backpressure of the APU. Therefore, thrust must be limited to idle with
+    > the DUAL BLEED light illuminated.
 
-    ---
-
+    This is to prevent damage to the APU. The solution is most often to close 
+    APU Bleed.
   variant:
     type: simple
-    question: What is the function of the duel Bleed Light?
+    question: What is the function of the dual Bleed Light?
     options:
       - id: jb5ri
         text: Illuminates to warn of possible backpressure whenever both engines are
@@ -566,10 +604,11 @@
   learningObjectives:
     - B737.02
   explanation: |+
-    
-
-    ---
-
+    > ### Pressurization Outflow
+    >
+    > Cabin air outflow is controlled by the outflow valve and the overboard exhaust
+    > valve. A small amount is also exhausted through toilet and galley vents,
+    > miscellaneous fixed vents, and by seal leakage.
   variant:
     type: true-or-false
     question: Cabin pressurisation is controlled by the position of the Outflow

@@ -107,16 +107,31 @@
         correct: true
         why: ""
 - id: QMKMMVHT
-  relatedQuestions: []
+  relatedQuestions: [QPHNUZTA]
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.01
   explanation: |
+    > ### External Control
+    >
+    > (...) **Holding the NORMAL/STANDBY Switch
+    > to STANDBY provides DC power from the battery bus for airstair operation. The
+    > BAT switch on the flight deck does not need to be ON when operating the airstair
+    > on standby from the exterior control panel.** (...)
+    >
     > ### Interior Control
     >
-    > The interior control panel is located on the forward attendant panel. (...) 
-    > **To operate in the standby mode, the momentary standby switch must be depressed while the retract or extend switches are also depressed.**
+    > (...) **Normal operation requires 115V AC while standby operation requires 
+    > the battery switch to be ON.**
+
+    When operating the stairs from the outside you need to be able to operate
+    them with the battery off. This is necessary for a scenario where the Aircraft
+    is cold and dark and the battery switch is OFF. For this reason, exceptionally,
+    the **External** Airstair operation switch bypasses the main battery switch.
+
+    When operating the stairs from the inside, you need to have the battery switch
+    ON. There is no need for a weird bypass.
   variant:
     type: true-or-false
     question: The Aircraft battery need to be selected ON for STANDBY operation of
@@ -401,7 +416,7 @@
     question: Can the Flight Deck No2 windows be opened both on the ground and in flight?
     answer: true
 - id: QPHNUZTA
-  relatedQuestions: []
+  relatedQuestions: [QMKMMVHT]
   externalIds: []
   annexes: []
   learningObjectives:
