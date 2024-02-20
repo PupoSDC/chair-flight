@@ -1,3 +1,44 @@
+- id: QABIWCDL
+  relatedQuestions: []
+  externalIds: []
+  annexes: []
+  learningObjectives:
+    - B737.07
+  explanation: |
+    > EEC Alternate Mode
+    > 
+    > (...)
+    >
+    > In the soft alternate mode, the
+    > EEC uses the last valid flight conditions to define engine parameters which allows
+    > the mode change to occur with no immediate change in engine thru
+
+    If one of the throttles EEC is in ALTN, and the other is functioning normally
+    and MCT is commanded, the two EECs will eventually calculate different MCT 
+    leading to a stagger in the throttles. For this reason the QRH will instruct
+    to move both throttles into the HARD ALT mode.
+  variant:
+    type: simple
+    question: With A/T engaged, what condition could cause the throttles to be
+      separated (not aligned).
+    options:
+      - id: 3js3j
+        text: One EEC in ON, one EEC in ALTN.
+        correct: true
+        why: ""
+      - id: uz92t
+        text: Throttle stagger cannot occur with A/T engaged as both throttle servo
+          motors work identically to position the throttles symetrically.
+        correct: false
+        why: ""
+      - id: h47jri
+        text: Both EECs in ALTN.
+        correct: false
+        why: ""
+      - id: r8btrh
+        text: One engine A/T suffering a system fault.
+        correct: false
+        why: ""
 - id: QGDIZGXI
   relatedQuestions: []
   externalIds: []

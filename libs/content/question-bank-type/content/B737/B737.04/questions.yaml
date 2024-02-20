@@ -4,7 +4,23 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > ### A/P Go–Around
+    >
+    > The A/P GA mode requires dual A/P operation and is available after FLARE
+    > armed is annunciated and prior to the A/P sensing touchdown.
+    >
+    > > Note: For go-arounds initiated at or above 2000 feet RA, either a single or a
+    > > double button push will engage A/T N1 thrust mode and not the reduced
+    > > go-around N1 thrust mode. During this time, the A/T FMA will show N1
+    >
+    > With the first push of either TO/GA switch:
+    > - Below 2000 feet RA (below 15,500 feet pressure altitude if both RA’s
+    >   have failed):
+    >   - A/T (if armed) engages in GA and the A/T Engaged Mode
+    >     annunciation on the FMA indicates GA
+    >   - thrust advances toward the reduced go–around N1 to produce 1000 to
+    >     2000 fpm rate of climb
   variant:
     type: simple
     question: In flight below 2000 feet RA, on an ILS Autopilot approach with flare
@@ -32,7 +48,25 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    800 ft RA is a magic number on the 737. 
+
+    > At 84 KIAS, the A/T mode annunciates THR HLD.
+    > (...)
+    > After LIFT-OFF:
+    >  - (...)
+    >  - the A/T remains in THR HLD until 800 feet above field elevation. A/T
+    >    annunciation then changes from THR HLD to ARM and reduction to
+    >    climb thrust can be made by pushing the N1 switch.
+
+    The Two modes are very similar, the only difference is that ARM offers
+    additional protections: 
+
+    > - **THR HLD**: the thrust lever autothrottle servos are inhibited; the pilot
+    >   can set the thrust levers manually
+    > - **ARM**: no autothrottle mode engaged. The thrust lever autothrottle
+    >   servos are inhibited; the pilot can set thrust levers manually. Minimum
+    >   speed protection is provided
   variant:
     type: true-or-false
     question: After takeoff the autothrottle will remain in Throttle Hold (THR HLD)
@@ -46,7 +80,8 @@
     - B737.04
   explanation: |-
     - The A/T automatically disengages approximately 2 seconds after touchdown.
-    - the A/P must be manually disengaged after touchdown. Landing roll-out is executed manually after disengaging the A/P.
+    - the A/P must be manually disengaged after touchdown. Landing roll-out is 
+      executed manually after disengaging the A/P.
   variant:
     type: one-two
     question: Which Statements are correct?
@@ -67,7 +102,11 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > The automatic flight system (AFS) consists of the autopilot flight director system
+    > (AFDS) and the autothrottle (A/T). The flight management computer (FMC)
+    > provides N1 limits and target N1 for the A/T and command airspeeds for the A/T
+    > and AFDS
   variant:
     type: simple
     question: What components make up the Automatic Flight System (AFS)?
@@ -94,7 +133,11 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > The automatic flight system (AFS) consists of the autopilot flight director system
+    > (AFDS) and the autothrottle (A/T). The flight management computer (FMC)
+    > provides N1 limits and target N1 for the A/T and command airspeeds for the A/T
+    > and AFDS
   variant:
     type: simple
     question: What normally provides the N1 limits and target N1 values to the
@@ -122,7 +165,17 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    This question is the centerpiece of the Type Rating. The MCP is not the source
+    of truth on what modes are active. That's the FMA. The MCP green lights
+    simply highlight that a mode can be deselected.
+
+    For example:
+
+    > N1 Switch
+    >  - Push – (light illuminated)
+    >    - deselects N1 mode and extinguishes switch light
+    >    - engages autothrottles in ARM mode.
   variant:
     type: simple
     question: What does an illuminated green light mean in the MCP buttons?
@@ -149,7 +202,13 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > ### Level Change (LVL CHG) Switch
+
+    > - **Push**:
+    >   - LVL CHG switch light illuminates
+    >   - pitch mode annunciates MCP SPD for climb or descent
+    >   - autothrottle mode annunciates N1 for climb and RETARD followed by
   variant:
     type: simple
     question: If you engage Level Change by pressing the LVL CHG switch on the MCP
@@ -182,7 +241,18 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > Normally, FCC A drives the captain’s command bars and FCC B drives the first
+    > officer’s command bars. With both F/D switches ON, the logic for both pilots’ F/D
+    > modes is controlled by the master FCC, and both FMA displays show the same
+    > mode status.
+    > 
+    > The master FCC is indicated by illumination of the respective master (MA) F/D
+    > indicator light. The master FCC is determined as follows:
+    > - with neither A/P engaged in CMD, the FCC for the first F/D turned on is
+    >   the master
+    > - **with one or both A/Ps engaged in CMD, the FCC for the first A/P in
+    >   CMD is the master FCC, regardless of which F/D is turned on first**.
   variant:
     type: simple
     question: In flight, with Autopilot engaged in CMD B, which FCC controls the
@@ -205,16 +275,31 @@
         correct: true
         why: ""
 - id: QKHFCCKX
-  relatedQuestions: []
+  relatedQuestions:
+    - QPOAUIXH
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > One VHF NAV receiver must be tuned to an ILS frequency before the approach
+    > mode can be selected. For a dual A/P approach, the second VHF NAV receiver
+    > must be tuned to the ILS frequency and the corresponding A/P engaged in CMD
+    > prior to 800 feet RA.
+    > 
+    > (...)
+    > 
+    > After setting the localizer frequency and course, pushing the APP switch selects
+    > the APP mode. The APP switch illuminates and VOR/LOC and G/S annunciate
+    > armed. The APP mode permits selecting the second A/P to engage in CMD.
+
+    So the correct answer would say the APP mode must be selected before the second
+    A/P can be engaged in CMD. Both the VOR/LOC and G/S must be armed before the
+    second A/P can be engaged in CMD.
   variant:
     type: true-or-false
     question: The VOR/LOC mode must be armed before the second Autopilot can be
-      selected during a duel channel autopilot approach.
+      selected during a dual channel autopilot approach.
     answer: false
 - id: QNIYDNJK
   relatedQuestions: []
@@ -222,11 +307,17 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > - Underspeed limiting (flashing character “A”) 
+    >   – minimum speed
+    > - Overspeed limiting (flashing character “8”)
+    >   - Vmo or Mmo limit
+    >   - landing gear limit
+    >   - flap limit
   variant:
     type: simple
-    question: What does a flashing &quot;A&quot; displayed to the left of the
-      selected MCP speed indicate?
+    question: What does a flashing "A" displayed to the left of the selected MCP
+      speed indicate?
     options:
       - id: ailf4
         text: Underspeed limiting, FMC speed or MCP selected speed cannot be reached.
@@ -242,6 +333,20 @@
         why: ""
       - id: dznvb
         text: Overspeed limititing at Vmo Limit
+        correct: false
+        why: ""
+      - id: x2ttw
+        text: Overspeed limiting, current speed selection greater than current flap
+          setting limit.
+        correct: false
+        why: ""
+      - id: nhyry
+        text: Overspeed limiting, Minimum speed for current flap setting cannot be
+          achieved.
+        correct: false
+        why: ""
+      - id: q35e8
+        text: Underspeed limiting, Vmo or Mmo limit.
         correct: false
         why: ""
 - id: QDQOPYTG
@@ -278,47 +383,22 @@
           intercepting original idle descent path. (B)
         correct: false
         why: ""
-- id: QYWCQBUL
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: simple
-    question: In the IAS/MACH Display, to the left of the displayed figure, what
-      does a flashing &quot;A&quot; indicate?
-    options:
-      - id: e8btej
-        text: Underspeed limiting, FMC or selected speed can not be reached.
-        correct: true
-        why: ""
-      - id: q35e8
-        text: Underspeed limiting, Vmo or Mmo limit.
-        correct: false
-        why: ""
-      - id: x2ttw
-        text: Overspeed limiting, current speed selection greater than current flap
-          setting limit.
-        correct: false
-        why: ""
-      - id: nhyry
-        text: Overspeed limiting, Minimum speed for current flap setting cannot be
-          achieved.
-        correct: false
-        why: ""
 - id: QPOAUIXH
-  relatedQuestions: []
+  relatedQuestions:
+    - QKHFCCKX
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > One VHF NAV receiver must be tuned to an ILS frequency before the approach
+    > mode can be selected. For a dual A/P approach, the second VHF NAV receiver
+    > must be tuned to the ILS frequency and the corresponding A/P engaged in CMD
+    > prior to 800 feet RA.
   variant:
     type: simple
-    question: For approach, what altitude must the second Autopilot be selected for
-      duel Autopilot operation?
+    question: For approach, by what altitude must the second Autopilot be selected
+      for dual Autopilot operation?
     options:
       - id: 1hgpg
         text: 1500 feet RA
@@ -336,24 +416,26 @@
         text: 800 feet RA
         correct: true
         why: ""
-- id: QJTBJBKN
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: true-or-false
-    question: The autopilot automatically disengages 2 seconds after touchdown.
-    answer: false
 - id: QPPUAMBZ
-  relatedQuestions: []
+  relatedQuestions:
+    - QRCPVOMB
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > Shortly after capturing LOC and G/S and below 1500 feet RA:
+    > - the second A/P couples with the flight controls
+    > - test of the ILS deviation monitor system is performed and the G/S and LOC display turns amber and flashes
+    > - FLARE armed is annunciated
+    > - the SINGLE CH annunciation extinguishes
+    > - A/P go–around mode arms but is not annunciated
+    > 
+    > (...)
+    >
+    > If FLARE is not armed by approximately 350 feet RA, both A/Ps automatically disengage.
+
+    So the 2 magic numbers are 1500ft for ARM, and 350 for A/P disengage if ARM failed.
   variant:
     type: simple
     question: Below which RA should FLARE mode be armed during AUTOLAND?
@@ -414,7 +496,15 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > ### Speed Intervention (SPD INTV) Switch
+    > - Push (when VNAV engaged) –
+    >   - IAS/MACH display alternately shows selected IAS/Mach and blanks
+    >   - when IAS/MACH display is unblanked, FMC speed intervention is
+    >     active, FMC target speed is displayed, and IAS/MACH Selector may be
+    >     used to set desired speed
+    >   - when IAS/MACH display is blank, FMC computed target speed is
+    >     active and displayed on the airspeed indicator
   variant:
     type: simple
     question: With VNAV engaged, pushing the SPD INTV switch has what effect?
@@ -439,41 +529,23 @@
         text: No effect, VNAV remains enagaged with the FMC controlling target speed.
         correct: false
         why: ""
-- id: QFEDPSCT
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: simple
-    question: The N1 limits and target N1 values are normally provided to the
-      Autothrottle from where?
-    options:
-      - id: 4mhth
-        text: Autothrottle Computer.
-        correct: false
-        why: ""
-      - id: wrno
-        text: Electronic Engine Control Computers.
-        correct: false
-        why: ""
-      - id: 2geeh
-        text: Flight Management Computer.
-        correct: true
-        why: ""
-      - id: apug2g
-        text: Flight Control Computers.
-        correct: false
-        why: ""
 - id: QECWBBDU
   relatedQuestions: []
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > ### Flare
+    > The A/P flare maneuver starts at approximately 50 feet RA and is completed at
+    > touchdown:
+    > - FLARE engaged is annunciated and F/D command bars retract.
+    > - the A/T begins retarding thrust at approximately 27 feet RA so as to
+    >   reach idle at touchdown. A/T FMA annunciates RETARD.
+    > - the A/T automatically disengages approximately 2 seconds after
+    >   touchdown.
+    > - the A/P must be manually disengaged after touchdown. Landing roll-out
+    >   is executed manually after disengaging the A/P.
   variant:
     type: simple
     question: At what altitude will the FLARE manoeuvre start during AUTOLAND?
@@ -495,12 +567,26 @@
         correct: false
         why: ""
 - id: QRCPVOMB
-  relatedQuestions: []
+  relatedQuestions:
+    - QPPUAMBZ
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > Shortly after capturing LOC and G/S and below 1500 feet RA:
+    > - the second A/P couples with the flight controls
+    > - test of the ILS deviation monitor system is performed and the G/S and LOC display turns amber and flashes
+    > - FLARE armed is annunciated
+    > - the SINGLE CH annunciation extinguishes
+    > - A/P go–around mode arms but is not annunciated
+    > 
+    > (...)
+    >
+    > If FLARE is not armed by approximately 350 feet RA, both A/Ps automatically disengage.
+
+    So the 2 magic numbers are 1500ft for ARM, and 350 for A/P disengage if ARM failed.
+    A check is commonly done at 500ft to avoid being surprised by A/P disengagement at 350ft.
   variant:
     type: simple
     question: Why do we check that FLARE mode is armed at 500 feet RA?
@@ -550,94 +636,18 @@
           after takeoff.
         correct: true
         why: ""
-- id: QZZXGPIC
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: simple
-    question: What happens when TO/GA is pressed once on an ILS Autopilot approach
-      with FLARE armed?
-    options:
-      - id: a7lze
-        text: Autothrottle advanced the thrust levers to full Go-Around thrust.
-        correct: false
-        why: ""
-      - id: vfvkh
-        text: The autothrottle disengages and THR HLD annunciates in the FMA.
-        correct: false
-        why: ""
-      - id: soffc
-        text: Autopilot disengages and the Flight Directors re-cycle to give a FD
-          Go-Around.
-        correct: false
-        why: ""
-      - id: i57mf
-        text: Autothrottle advanced the thrust levers to reduced Go-Around N1.
-        correct: true
-        why: ""
-- id: QYNNRTXZ
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: true-or-false
-    question: After takeoff, the Autothrottle remains in Throttle Hold (THR HLD)
-      until 800 feet RA.
-    answer: true
-- id: QUEUZGDJ
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: true-or-false
-    question: The VOR/LOC mode must be armed before the second Autopilot can be
-      selected during a duel channel Autopilot approach.
-    answer: false
-- id: QVSKZXRQ
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: simple
-    question: What are the components of the Automatic Flight System (AFS)?
-    options:
-      - id: l3ysv
-        text: Autopilot, Autothrottle, and MCP Mode Selection System.
-        correct: false
-        why: ""
-      - id: u2doz
-        text: Autopilot Flight Director System and Autothrottle.
-        correct: true
-        why: ""
-      - id: y2pt8
-        text: Autopilot Flight Director System, Autothrottle and MCP Mode Selector
-          System.
-        correct: false
-        why: ""
-      - id: as069
-        text: Flight Directors, Autothrottle, and MCP Mode Selection System
-        correct: false
-        why: ""
 - id: QYGCWQFU
   relatedQuestions: []
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > Any of the following conditions or actions disengages the A/T:
+    > - moving the A/T Arm switch to OFF
+    > - pushing either A/T Disengage switch
+    > - an A/T system fault is detected
+    > - two seconds have elapsed since landing touchdown
   variant:
     type: simple
     question: What will cause the A/T to disengage?
@@ -704,7 +714,9 @@
   annexes: []
   learningObjectives:
     - B737.04
-  explanation: ""
+  explanation: |
+    > - **THR HLD**: the thrust lever autothrottle servos are inhibited; the pilot
+    >   can set the thrust levers manually
   variant:
     type: true-or-false
     question: During THR HLD (Throttle Hold), if you manually move the throttle
@@ -723,32 +735,3 @@
       the start of takeoff, through all stages of flight to up to and including
       landing.
     answer: true
-- id: QABIWCDL
-  relatedQuestions: []
-  externalIds: []
-  annexes: []
-  learningObjectives:
-    - B737.04
-  explanation: ""
-  variant:
-    type: simple
-    question: With A/T engaged, what condition could cause the throttles to be
-      separated (not aligned).
-    options:
-      - id: 3js3j
-        text: One EEC in ON, one EEC in ALTN.
-        correct: true
-        why: ""
-      - id: uz92t
-        text: Throttle stagger cannot occur with A/T engaged as both throttle servo
-          motors work identically to position the throttles symetrically.
-        correct: false
-        why: ""
-      - id: h47jri
-        text: Both EECs in ALTN.
-        correct: false
-        why: ""
-      - id: r8btrh
-        text: One engine A/T suffering a system fault.
-        correct: false
-        why: ""
