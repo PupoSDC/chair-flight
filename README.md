@@ -5,7 +5,7 @@ students.
 
 Built with
 [`React`](https://react.dev/),
-[`joy-ui`](https://mui.com/joy-ui/getting-started/overview/),
+[`Joy-ui`](https://mui.com/joy-ui/getting-started/overview/),
 [`Next`](https://nextjs.org/),
 [`Vitest`](https://vitest.dev/),
 [`Storybook`](https://storybook.js.org/),
@@ -22,7 +22,7 @@ and [`nx`](https://nx.dev/).
 ## Installing and running
 
 You will need to install
-[`Git`](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners),
+[`git`](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners),
 [`pnpm`](https://pnpm.io/installation),
 [`fnm`](https://github.com/Schniz/fnm)
 [`docker`](https://docs.docker.com/get-docker/),
@@ -36,7 +36,7 @@ fnm use
 cp .env.example .env.local
 pnpm install
 pnpm infra
-pnpm generate
+pnpm migrate
 pnpm dev
 pnpm build
 ```
@@ -90,6 +90,25 @@ can and will be introduced in patch releases.
 | trpc-mock                  | trpc mock server, for storybook and RTL tests               |
 | trpc-server                | main trpc server. All our backend logic starts here         |
 
+### Commands
+
+We are using nx, so you should get comfortable with the
+[NX CLI commands](https://nx.dev/nx-api/nx/documents/run).
+
+To make onboarding easier the most common commands have traditional npm aliases:
+
+| Command        | Effect                                                             |
+| -------------- | ------------------------------------------------------------------ |
+| `pnpm dev`     | Start the development server for all aps                           |
+| `pnpm build`   | Build all apps                                                     |
+| `pnpm test`    | Run all tests                                                      |
+| `pnpm arrange` | Read all content banks and rewrite them into the system rearranged |
+| `pnpm migrate` | Run all migrations for all databases                               |
+| `pnpm infra`   | Start all required services for local development                  |
+| `pnpm lint`    | Lints (and changes) all code. Use `lint:check` for validation      |
+| `pnpm format`  | Format all code using Prettier. Use `format:check` for validation  |
+| `pnpm types`   | Check all types using tsc. Use `types:check` for validation        |
+
 ### .env
 
 To run the application you will need to provide some env variables in an `.env`
@@ -112,7 +131,6 @@ You can then run specific configurations using the nx `-c` flag:
 pnpm run dev -c prod
 pnpm run build -c prod
 pnpm run migrate -c prod
-pnpm run generate -c prod
 ```
 
 For more information on managing `.env` variables within an `nx` project you can

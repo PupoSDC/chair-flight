@@ -40,14 +40,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run Prettier Check
-        run: pnpm prettier:check
+      - name: Run Format Check
+        run: pnpm format:check
 
       - name: Run Lint Check
-        run: pnpm lint
+        run: pnpm lint:check
 
       - name: Run Typescript Check
-        run: pnpm typecheck
+        run: pnpm types:check
 
       - name: Run Compilation step for tests
         run: pnpm compile

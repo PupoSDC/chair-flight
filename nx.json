@@ -4,13 +4,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "compile",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "compile", "lint", "test", "e2e"]
       }
     }
   },
@@ -37,7 +31,7 @@
           "fix": false
         }
       }
-    },  
+    },
     "types": {
       "cache": true,
       "inputs": ["typescript"],
@@ -56,11 +50,15 @@
       "inputs": ["prettier"],
       "options": {
         "parallel": false,
-        "commands": ["prettier --write \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""]
+        "commands": [
+          "prettier --write \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""
+        ]
       },
       "configurations": {
         "check": {
-          "commands": ["prettier --check \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""]
+          "commands": [
+            "prettier --check \"{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}\""
+          ]
         }
       }
     }
