@@ -1,0 +1,38 @@
+{
+  "name": "providers-user-progress",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/providers/user-progress/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {},
+    "types": {},
+    "format": {},
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/providers/user-progress",
+        "command": "drizzle-kit push:pg"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
+    },
+    "studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/providers/user-progress",
+        "command": "drizzle-kit studio"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
+    }
+  },
+  "tags": []
+}
