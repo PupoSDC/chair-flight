@@ -76,16 +76,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       The published holding procedure is:
 
-
       * all turns to the right
-
       * 1-minute outbound
-
       * inbound Magnetic Track 030°
-
 
       You are approaching the fix from 010° and the wind is calm. Select the appropriate entry procedure:
     options:
@@ -151,12 +147,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      When passing over a hold fix, an aircraft performs a left turn to heading
-      090\. The pilot maintains track for a specified time, and then performs a
-      second left turn to intercept the 270 inbound radial of the same hold fix.
-      After flying over the hold fix for a second time, he/she performs a right
-      turn and continues tracking around the hold procedure.   
+    question: |-
+      When passing over a hold fix, an aircraft performs a left turn to heading 090\. The pilot maintains track for a specified time, and then performs a second left turn to intercept the 270 inbound radial of the same hold fix. After flying over the hold fix for a second time, he/she performs a right turn and continues tracking around the hold procedure.   
        The entry procedure which is being described is:
     options:
       - id: OT5QREBNN
@@ -187,9 +179,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The inbound leg of the holding pattern is on the track (1) \_\_\_\_\_ and the outbound end is located at the (2) \_\_\_\_\_ end of the holding pattern.
     options:
@@ -358,16 +349,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       The published holding procedure is:
 
-
       * all turns to the right
-
       * 1 minute outbound
-
       * inbound Magnetic Track 010°
-
 
       You are approaching the fix on Magnetic Heading of 030°. Select the appropriate entry procedure:
     options:
@@ -407,38 +394,26 @@
       received specifying the time of departure from the holding point...
     options:
       - id: OOUUF2O26
-        text: >-
-          | the pilot should adjust the pattern within the limits of the
-          established holding procedure in order to leave the holding point at
-          or up to 3 minutes after the time specified. |  |
-
+        text: |-
+          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at or up to 3 minutes after the time specified. |  |
           | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |  |
         correct: false
         why: ""
       - id: OO5GXPTNM
-        text: >-
-          | the pilot should adjust the pattern within the limits of the
-          established holding procedure in order to leave the holding point at
-          the time specified. |  |
-
+        text: |-
+          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at the time specified. |  |
           | ----------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: true
         why: ""
       - id: OGVYHFKEZ
-        text: >-
-          | the pilot should adjust the pattern within the limits of the
-          established holding procedure in order to leave the holding point at
-          the time specified, +/- 1 minute. |  |
-
+        text: |-
+          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at the time specified, +/- 1 minute. |  |
           | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OLHPJ4GEJ
-        text: >-
-          | the pilot should adjust the pattern within the limits of the
-          established holding procedure in order to leave the holding point
-          before or at the time specified. |  |
-
+        text: |-
+          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point before or at the time specified. |  |
           | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""

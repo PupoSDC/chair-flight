@@ -76,42 +76,32 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Which of the following correctly translates data from the METAR of Lisbon
-      aerodrome given below?
-
+    question: |-
+      Which of the following correctly translates data from the METAR of Lisbon aerodrome given below?
 
       LPPT 150505Z 11006KT 9999 BKN016 M09/M16 Q1006 NOSIG =
     options:
       - id: OFMC1G7BH
-        text: >-
-          | Wind comes from 110 degrees true, QNH is 9 hPa less than ISA, no
-          significant changes forecast |  |
-
+        text: |-
+          | Wind comes from 110 degrees true, QNH is 9 hPa less than ISA, no significant changes forecast |  |
           | --------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: O7CNN9WA9
-        text: >-
-          | The temperature is minus 9°C, report time is 15:05 PM, clouds are
-          5-7/8 at 1 600 ft |  |
-
+        text: |-
+          | The temperature is minus 9°C, report time is 15:05 PM, clouds are 5-7/8 at 1 600 ft |  |
           | ----------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OG65GBUMW
-        text: >-
-          | Temperature is 16 degrees below ISA, visibility is at least 10 km,
-          QNH is 1006 hPa |  |
-
+        text: |-
+          | Temperature is 16 degrees below ISA, visibility is at least 10 km, QNH is 1006 hPa |  |
           | ---------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OU9FOJRRN
-        text: >-
-          | Report time is 05:05 UTC, dew point is minus 16°C, QNH is 1006 hPa
-          |  |
-
+        text: |-
+          | Report time is 05:05 UTC, dew point is minus 16°C, QNH is 1006 hPa |  |
           | ------------------------------------------------------------------ |  |
         correct: true
         why: ""

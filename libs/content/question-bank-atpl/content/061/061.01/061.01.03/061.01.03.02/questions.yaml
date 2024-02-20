@@ -42,11 +42,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      While proceeding en route, after half the distance between two waypoints,
-      the aircraft’s position is 3 NM left of the desired track. The total
-      distance between the two waypoints is 120 NM.
-
+    question: |-
+      While proceeding en route, after half the distance between two waypoints, the aircraft’s position is 3 NM left of the desired track. The total distance between the two waypoints is 120 NM.
 
       Using the 1 sin 60 rule and for the purpose of reaching the active waypoint, the heading should be changed by…
     options:
@@ -78,12 +75,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft flies over a small lake which is located some degrees to the
-      left of the planned track. Given the following information and using the 1
-      in 60 rule, what is the drift angle of this aircraft (rounded to the
-      nearest whole degree)?
-
+    question: |-
+      An aircraft flies over a small lake which is located some degrees to the left of the planned track. Given the following information and using the 1 in 60 rule, what is the drift angle of this aircraft (rounded to the nearest whole degree)?
 
       TAS: 100 kt   
        Tailwind component: 15 kt   
@@ -147,10 +140,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the heading (T) and
-      groundspeed:
-
+    question: |-
+      Given the following information, calculate the heading (T) and groundspeed:
 
       TAS: 270 kt   
        Track: 260°T   
@@ -184,9 +175,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure. 
-
 
       An aircraft is following the flight log, and during the flight the wind has been as forecast. Between the M20 junction and the DET VOR, the pilot diverts from the route to avoid low clouds. Once past the cloud the pilot is able to make a visual fix, finding that the aircraft is 15 NM along the route from the M20 Junction but approximately 2,5 NM to the left of that route. By the 1:60 rule, the magnetic heading to fly to arrive at the DET VOR is...
     options:
@@ -252,11 +242,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft at FL370, M0.86, OAT -44°C, headwind component 110 kt, is
-      required to reduce speed in order to cross a reporting point 5 MIN later
-      than planned.
-
+    question: |-
+      An aircraft at FL370, M0.86, OAT -44°C, headwind component 110 kt, is required to reduce speed in order to cross a reporting point 5 MIN later than planned.
 
       If the speed reduction were to be made 420 NM from the reporting point, what Mach Number is required?
     options:
@@ -328,10 +315,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The flight log gives the following data: True track, Drift, True heading,
-      Magnetic variation, Magnetic heading, Compass deviation, Compass heading.
-
+    question: |-
+      The flight log gives the following data: True track, Drift, True heading, Magnetic variation, Magnetic heading, Compass deviation, Compass heading.
 
       Which option lists the correct numbers in the same order as in the flight log?
     options:
@@ -464,11 +449,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A planned route has a true course of 179°.The true heading is 185°. After
-      23 minutes en route a fix is overflown that is 44 NM away from the
-      departure point and 6 NM right of the course line.
-
+    question: |-
+      A planned route has a true course of 179°.The true heading is 185°. After 23 minutes en route a fix is overflown that is 44 NM away from the departure point and 6 NM right of the course line.
 
       Calculate the average drift angle for this flight.
     options:
@@ -500,16 +482,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
 
-
       Track= 355°   
-
       TAS = 190 kt   
-
       W/V 270°/25 kt
-
 
       After 30 minutes of flying with the planned TAS and TH the aircraft is 3.5 NM right of track and 4.5 NM ahead of the dead reckoning position.Calculate the actual wind.
     options:
@@ -636,7 +614,7 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:   
        Magnetic track 010º, magnetic heading 020º, TAS 260kt and variation 20ºW. Aircraft travels 57 NM in 15 minutes. Calculate the W/V (ºT)?
     options:
@@ -700,17 +678,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, determine the actual magnetic track of
-      the aircraft:
-
+    question: |-
+      Given the following information, determine the actual magnetic track of the aircraft:
 
       Planned track: 350°(T)  
-
       Heading: 004°(T)  
-
       Actual in-flight drift: 12° left  
-
       Variation: 23°W
     options:
       - id: OGM6HVL3J
@@ -847,12 +820,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft which flies a flight leg from A to B point, after 17 minutes
-      is deviated to the right off the planned track by 3 NM. Given the
-      following information, and using the 1 in 60 rule, what is the average
-      drift angle ?
-
+    question: |-
+      An aircraft which flies a flight leg from A to B point, after 17 minutes is deviated to the right off the planned track by 3 NM. Given the following information, and using the 1 in 60 rule, what is the average drift angle ?
 
       Distance from A to B: 83 NM   
        Average GS: 108 kt
@@ -885,19 +854,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a flight navigated by dead reckoning,
-      what is the track angle error TKE?
-
+    question: |-
+      Given the following information for a flight navigated by dead reckoning, what is the track angle error TKE?
 
       Planned track: 065°T   
-
       Variation: 12° E   
-
       Deviation: +5°   
-
       Planned heading: 054°C   
-
       In flight drift: 8° L
     options:
       - id: O2LQKZDQK
@@ -998,12 +961,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is passing point A at 12:05 with a GS of 140 kt. ETA at point
-      B is 13:20\. At 12:35, a deviation of 7 NM left of the intended track is
-      noticed. To fly direct to point B from this point the pilot must change
-      his/her track:
-
+    question: |-
+      An aircraft is passing point A at 12:05 with a GS of 140 kt. ETA at point B is 13:20\. At 12:35, a deviation of 7 NM left of the intended track is noticed. To fly direct to point B from this point the pilot must change his/her track:
 
       (Note: use 1:60 rule)
     options:
@@ -1103,18 +1062,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying under VFR by DR along a track of 312°(T), heading
-      310°(M) to account for the wind, and the variation of 2°W. On the first
-      part of the leg, the pilot sees several gliders and turns to the left off
-      the intended track to avoid them. After clearing the gliders the pilot
-      spots a railway bridge and is able to fix the position of the
-      aircraft.Determine the best magnetic heading to fly for the next check
-      feature, given:
-
+    question: |-
+      An aircraft is flying under VFR by DR along a track of 312°(T), heading 310°(M) to account for the wind, and the variation of 2°W. On the first part of the leg, the pilot sees several gliders and turns to the left off the intended track to avoid them. After clearing the gliders the pilot spots a railway bridge and is able to fix the position of the aircraft.Determine the best magnetic heading to fly for the next check feature, given:
 
       Fix position: 15 NM from the start of the leg and 2 NM off track  
-
       Distance to the next check feature: 18 NM
     options:
       - id: O0OTKWQSX
@@ -1145,10 +1096,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Using mental dead reckoning, determine the true heading and the ground
-      speed. Given:
-
+    question: |-
+      Using mental dead reckoning, determine the true heading and the ground speed. Given:
 
       Track: 260º(T)   
        TAS: 270 kt   
@@ -1215,15 +1164,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, determine the actual track of the
-      aircraft:
-
+    question: |-
+      Given the following information, determine the actual track of the aircraft:
 
       Planned track: 031º(T)   
-
       Planned Wind Correction Angle: 6ºL   
-
       Actual in-flight drift: 4ºR
     options:
       - id: OVDKBVVFJ
@@ -1356,9 +1301,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       If you want to fly a magnetic heading of 150°, what compass heading should the aircraft steer and what is the compass deviation?
     options:
@@ -1428,13 +1372,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A VFR flight is navigated by dead reckoning. Flying from B to C, the
-      position of the aircraft is fixed and a change of heading calculated. The
-      1:60 rule is used to determine the heading from the fix position to be
-      back on track in approximately the same time it has taken from B to the
-      fix position.Using the following information, what heading is required?
-
+    question: |-
+      A VFR flight is navigated by dead reckoning. Flying from B to C, the position of the aircraft is fixed and a change of heading calculated. The 1:60 rule is used to determine the heading from the fix position to be back on track in approximately the same time it has taken from B to the fix position.Using the following information, what heading is required?
 
       Planned DR heading from B to C: 313°   
        Cross track error: 3 NM left   
@@ -1573,13 +1512,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A planned route has a distance of 150 NM and a true course of 097°.The
-      planned ground speed is 132 kt, the true heading is 101°.After 23 minutes
-      en route a fix is overflown that is 57 NM away from the departure point
-      and has a cross track distance from the course line of 4 NM right of
-      course.
-
+    question: |-
+      A planned route has a distance of 150 NM and a true course of 097°.The planned ground speed is 132 kt, the true heading is 101°.After 23 minutes en route a fix is overflown that is 57 NM away from the departure point and has a cross track distance from the course line of 4 NM right of course.
 
       Calculate the actual true track and the actual ground speed flown:
     options:
@@ -1611,9 +1545,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       According to the deviation card, in order to follow a heading of 150°(M), what compass heading must be followed and how much is the compass deviation ?
     options:

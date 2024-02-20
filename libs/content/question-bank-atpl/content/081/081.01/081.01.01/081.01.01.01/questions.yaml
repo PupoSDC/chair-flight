@@ -160,7 +160,7 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Bernoulli's equation is:   
        (note: rho is density; PSTAT is static pressure; PDYN is dynamic pressure; PTOT is total pressure)
     options:
@@ -377,60 +377,36 @@
   annexes: []
   learningObjectives:
     - 081.01.01.01.13
-  explanation: >-
+  explanation: |-
     ### TLDR
-
 
     In a venturi...
 
-
     - **Total Pressure remains constant**, and...
-
     - **Mass flow remains constant** (for incompressible flows). Therefore...
-
     - **Speed increases at the throat**, therefore...
-
     - **Dynamic pressure increases at the throat**, therefore...
-
     - **Static pressure decreases at the throat**
-
 
     # Long Explanation
 
-
     The Bernoulli's principle states that in a fluid flow, an increase in velocity
-
     results in a decrease in pressure, and vice versa. This principle is commonly
-
     used to explain the behavior of fluids in motion, such as in the case of an
-
     airplane wing or a Venturi tube.
-
     The formula for total pressure in a fluid flow is the sum of dynamic pressure
-
     and static pressure. Dynamic pressure is the pressure due to the motion of the
-
     fluid, while static pressure is the pressure of the fluid when it is at rest.
-
     The total pressure is important to consider in fluid flow calculations, as it
-
     is a measure of the energy contained in the fluid.
 
-
     When a fluid flows through a Venturi tube, the constriction in the tube causes
-
     the velocity of the fluid to increase, according to the Bernoulli's principle.
-
     This increase in velocity results in a decrease in static pressure in the
-
     throat of the tube. However, the total pressure of the fluid remains constant
-
     throughout the tube. Therefore, as the velocity increases, the static
-
     pressure decreases to maintain the constant total pressure. This phenomenon
-
     is used in many applications, such as in carburetors for gasoline engines
-
     or in fluid metering devices.
   variant:
     type: one-two
@@ -539,9 +515,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
-
 
       p = pressure   
        rho = density   

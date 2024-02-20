@@ -310,34 +310,26 @@
       IDENTIFICATION AND REPORT HEADING”. The pilot should…"
     options:
       - id: OW0NLTA1K
-        text: >-
-          | Transmit “GOLF ALPHA CHARLIE BRAVO ROMEO, TRANSMITTING FOR
-          IDENTIFICATION PURPOSES, HEADING \[…\]” |  |
-
+        text: |-
+          | Transmit “GOLF ALPHA CHARLIE BRAVO ROMEO, TRANSMITTING FOR IDENTIFICATION PURPOSES, HEADING \[…\]” |  |
           | -------------------------------------------------------------------------------------------------- |  |
         correct: true
         why: ""
       - id: OYU6AKSNL
-        text: >-
-          | Press the IDENT button and transmit “GOLF ALPHA CHARLIE BRAVO ROMEO
-          HEADING \[…\]” |  |
-
+        text: |-
+          | Press the IDENT button and transmit “GOLF ALPHA CHARLIE BRAVO ROMEO HEADING \[…\]” |  |
           | ---------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OMFZIGX3G
-        text: >-
-          | Reselect Mode S and transmit “GOLF ALPHA CHARLIE BRAVO ROMEO HEADING
-          \[…\]” |  |
-
+        text: |-
+          | Reselect Mode S and transmit “GOLF ALPHA CHARLIE BRAVO ROMEO HEADING \[…\]” |  |
           | --------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OF3QIK5K5
-        text: >-
-          | Set the transponder to STBY and transmit “GOLF ALPHA CHARLIE BRAVO
-          ROMEO HEADING \[…\]” |  |
-
+        text: |-
+          | Set the transponder to STBY and transmit “GOLF ALPHA CHARLIE BRAVO ROMEO HEADING \[…\]” |  |
           | --------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
@@ -630,11 +622,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      FLUGPROP 546 is receiving their departure clearance which requires the use
-      of GNSS, which the crew cannot accept. What is the correct response to the
-      clearance "Cleared via ODEMI SIX VICTOR departure, squawk 1046"?   
-
+    question: |-
+      FLUGPROP 546 is receiving their departure clearance which requires the use of GNSS, which the crew cannot accept. What is the correct response to the clearance "Cleared via ODEMI SIX VICTOR departure, squawk 1046"?   
       _(callsigns are omitted)_
     options:
       - id: O6CJ8ZMJG
@@ -732,16 +721,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      In contact with a radar Air Traffic Services unit, an aircraft receives
-      the three following messages (call signs are omitted).Which option lists
-      correct responses to all of these messages?
-
+    question: |-
+      In contact with a radar Air Traffic Services unit, an aircraft receives the three following messages (call signs are omitted).Which option lists correct responses to all of these messages?
 
       1\. "Advise type of transponder capability"   
-
       2\. "Check altimeter setting and confirmlevel"   
-
       3\. "Turn left immediately heading 050 to avoid traffic 12 o’clock 3 miles"
     options:
       - id: O8UDTKGJX

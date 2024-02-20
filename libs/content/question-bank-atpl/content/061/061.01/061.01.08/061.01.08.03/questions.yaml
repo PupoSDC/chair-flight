@@ -77,15 +77,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what groundspeed must be maintained from
-      the fix in order to achieve planned ETA at ‘B’?
-
+    question: |-
+      Given the following information, what groundspeed must be maintained from the fix in order to achieve planned ETA at ‘B’?
 
       Distance ‘A’ to ‘B’: 475 NM   
-
       Planned groundspeed: 315 kt   
-
       ATD: 10:00 UTC 10:40 UTC: fix obtained 190 NM along track
     options:
       - id: OKLDWOBGY
@@ -179,10 +175,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      You are flying an ILS approach with 12% glideslope. With the following
-      information given:
-
+    question: |-
+      You are flying an ILS approach with 12% glideslope. With the following information given:
 
       TAS: 100 kt   
        Wind compoment: +20 knots
@@ -251,10 +245,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is descending down a 6% slope whilst maintaining a GS of 300
-      kt.
-
+    question: |-
+      An aircraft is descending down a 6% slope whilst maintaining a GS of 300 kt.
 
       What is the aircraft’s approximate rate of descent?
     options:
@@ -319,10 +311,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what would be the average ground speed
-      during a descent from FL200 to an aerodrome with elevation 2000 ft?
-
+    question: |-
+      Given the following information, what would be the average ground speed during a descent from FL200 to an aerodrome with elevation 2000 ft?
 
       Average descent speed: 200 kt CAS   
        Average ISA deviation: -7° C   
@@ -358,15 +348,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A pilot flies from Aerodrome A to Aerodrome B. The return flight to
-      Aerodrome A is scheduled after a quick turn-around. Assume the same wind
-      conditions for both flights. Given the following information, calculate
-      the average groundspeed for the return.
-
+    question: |-
+      A pilot flies from Aerodrome A to Aerodrome B. The return flight to Aerodrome A is scheduled after a quick turn-around. Assume the same wind conditions for both flights. Given the following information, calculate the average groundspeed for the return.
 
       Average TAS for both flights: 145 kt  
-
       HWC from Aerodrome A to Aerodrome B: 25 kt
     options:
       - id: O3YS3EICF
@@ -395,9 +380,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Determine the aircraft's final position, given:
-
 
       An aircraft takes-off from position 55°S 090°W and flies south for 333 NM, then to the west for 33 NM, thereafter northwards for 3 860 NM and finally westwards for 33 NM.
     options:
@@ -579,11 +563,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      You are on a VFR flight and the traffic circuit altitude of your
-      destination has to be established 5 NM before reaching the aerodrome.
-      Given:
-
+    question: |-
+      You are on a VFR flight and the traffic circuit altitude of your destination has to be established 5 NM before reaching the aerodrome. Given:
 
       Ground Speed: 130 kts   
        Cruising altitude: 4 500 ft AMSL   
@@ -773,11 +754,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft flying from A to B (total distance 110 NM) departed from A at
-      09:55 UTC. The planned arrival time at B is 10:35 UTC. After 25 minutes of
-      flight, the aircraft overflies waypoint C located 65 NM away from A.
-
+    question: |-
+      An aircraft flying from A to B (total distance 110 NM) departed from A at 09:55 UTC. The planned arrival time at B is 10:35 UTC. After 25 minutes of flight, the aircraft overflies waypoint C located 65 NM away from A.
 
       What Ground Speed should be flown as from C in order to reach point B at the planned arrival time?
     options:
@@ -812,11 +790,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft flying from A to B (total distance 110 NM) departed from A at
-      09:55 UTC. The planned arrival time at B is 10:45 UTC. After 25 minutes of
-      flight, the aircraft overflies waypoint C located 45 NM away from A.
-
+    question: |-
+      An aircraft flying from A to B (total distance 110 NM) departed from A at 09:55 UTC. The planned arrival time at B is 10:45 UTC. After 25 minutes of flight, the aircraft overflies waypoint C located 45 NM away from A.
 
       What Ground Speed should be flown as from C in order to reach point B at the planned arrival time?
     options:
@@ -878,11 +853,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For descent planning from 15 000 feet MSL to 3 000 feet MSL, a glide path
-      angle of 3° shall be flown. The ground speed at 15 000 feet is 180 kt, the
-      ground speed at 3 000 feet is 150 kt.
-
+    question: |-
+      For descent planning from 15 000 feet MSL to 3 000 feet MSL, a glide path angle of 3° shall be flown. The ground speed at 15 000 feet is 180 kt, the ground speed at 3 000 feet is 150 kt.
 
       To maintain a glide path angle of 3°, the rate of descent will:
     options:
@@ -914,13 +886,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft diverts from the destination to the alternate and on arrival
-      is instructed to hold by ATC. The speed is reduced to V minimum drag (VMD)
-      and the fuel flow is noted as 1290 kg/h.The aircraft must be on the ground
-      at the alternate with 30 minutes of Final Reserve Fuel remaining (based on
-      the fuel flow at VMD).
-
+    question: |-
+      An aircraft diverts from the destination to the alternate and on arrival is instructed to hold by ATC. The speed is reduced to V minimum drag (VMD) and the fuel flow is noted as 1290 kg/h.The aircraft must be on the ground at the alternate with 30 minutes of Final Reserve Fuel remaining (based on the fuel flow at VMD).
 
       If the remaining usable fuel is 1640 kg, what is the remaining safe endurance/flight time?
     options:
@@ -991,11 +958,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      When flying a 3º glide path, an aircraft experiences a reduction in
-      groundspeed from 150 kt at the outer marker to 120 kt over the threshold.
-      What is the effect of this change in groundspeed on the aircraft’s rate of
-      descent?   
+    question: |-
+      When flying a 3º glide path, an aircraft experiences a reduction in groundspeed from 150 kt at the outer marker to 120 kt over the threshold. What is the effect of this change in groundspeed on the aircraft’s rate of descent?   
        It will be a decrease of approximately:
     options:
       - id: OUHTQMQ2A
@@ -1029,19 +993,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the groundspeed during the
-      descent:
-
+    question: |-
+      Given the following information, calculate the groundspeed during the descent:
 
       W/V at TOD at FL100: 260°/50 kt   
-
       W/V at arrival aerodrome at MSL: 200°/20 kt   
-
       Average track after TOD: 190°   
-
       ISA conditions   
-
       Descent speed: 150 kt IAS
     options:
       - id: OXHYBGMJI
@@ -1076,15 +1034,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what groundspeed must be maintained from
-      the fix in order to achieve planned ETA at ‘B’?
-
+    question: |-
+      Given the following information, what groundspeed must be maintained from the fix in order to achieve planned ETA at ‘B’?
 
       Distance ‘A’ to ‘B’: 325 NM   
-
       Planned groundspeed: 315 kt   
-
       ATD: 11:30 UTC 12:05 UTC: fix obtained 165 NM along track
     options:
       - id: OYB64TYT8
@@ -1118,11 +1072,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft flying from A to B (total distance 110 NM) departed from A at
-      09:55 UTC. The planned arrival time at B is 10:40 UTC. After 25 minutes of
-      flight, the aircraft overflies waypoint C located 65 NM away from A.
-
+    question: |-
+      An aircraft flying from A to B (total distance 110 NM) departed from A at 09:55 UTC. The planned arrival time at B is 10:40 UTC. After 25 minutes of flight, the aircraft overflies waypoint C located 65 NM away from A.
 
       What Ground Speed should be flown from C in order to reach point B at the planned arrival time?
     options:
@@ -1295,15 +1246,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information. Calculate the required heading and
-      groundspeed
-
+    question: |-
+      Given the following information. Calculate the required heading and groundspeed
 
       W/V: 300° (T) / 50kt   
-
       TAS: 220 kt   
-
       Required Track: 350° (T)
     options:
       - id: O5VLBD8KV
@@ -1445,9 +1392,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Determine the aircraft's final position, given:
-
 
       An aircraft takes off from position 05°52’N, 000°00’E/W and flies westwards for 704 NM, then southwards for 704 NM, then eastwards for 1 304 km and finally northwards for 5°52’.
     options:

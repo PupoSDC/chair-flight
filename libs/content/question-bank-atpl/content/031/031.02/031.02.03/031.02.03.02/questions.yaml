@@ -9,12 +9,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Just before closing the doors of the aircraft, you are asked if it is
-      possible to accept a group of passengers re-booked from another flight.
-      Knowing that your departure is take-off limited, determine the underload
-      so that you can decide how many passengers to accept:
-
+    question: |-
+      Just before closing the doors of the aircraft, you are asked if it is possible to accept a group of passengers re-booked from another flight. Knowing that your departure is take-off limited, determine the underload so that you can decide how many passengers to accept:
 
       Allowed take off mass: 24 220 kg   
        Operating mass: 14 792 kg   
@@ -87,12 +83,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       You are about to depart for a Commercial Air Transport flight from Athens to Paris and then another flight back to Athens. For tankering purposes, you do not want to refuel in Paris, so will want to land there with 8 300 kg, as this is the Block Fuel for the return sector.
-
 
       What is the minimum Block Fuel that should be onboard for the first flight from Athens?
     options:
@@ -139,13 +133,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      During dispatch calculations, you want to calculate the maximum possible
-      Traffic Load and carry as a minimum 13800 kg of Block Fuel.
-
+    question: |-
+      During dispatch calculations, you want to calculate the maximum possible Traffic Load and carry as a minimum 13800 kg of Block Fuel.
 
       Given the following information, what is the Allowed Traffic Load for your flight?
-
 
       Maximum Take-off Mass: 71 204 kg   
        Maximum Zero Fuel Mass: 56 490 kg   
@@ -189,10 +180,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The crew of a transport jet aeroplane prepares a flight using the
-      following data:
-
+    question: |-
+      The crew of a transport jet aeroplane prepares a flight using the following data:
 
       Dry Operating Mass: 35 058 kg   
        Maximum Zero Fuel Mass: 52 790 kg   
@@ -278,26 +267,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Refer to figure or CAP696 file 4.12\. The medium range twin jet transport
-      is scheduled to operate from a departure airfield where conditions limit
-      the Take-off Mass to 65 050 kg. The destination airfield has a performance
-      limited Landing Mass of 54 500 kg. The Dry Operating Mass is 34 900 kg.
-      Loading data is as follows:
-
+    question: |-
+      Refer to figure or CAP696 file 4.12\. The medium range twin jet transport is scheduled to operate from a departure airfield where conditions limit the Take-off Mass to 65 050 kg. The destination airfield has a performance limited Landing Mass of 54 500 kg. The Dry Operating Mass is 34 900 kg. Loading data is as follows:
 
       | Taxi Fuel:                          | 350    | kg |
-
       | ----------------------------------- | ------ | -- |
-
       | Trip Fuel:                          | 9 250  | kg |
-
       | Contingency and final reserve fuel: | 1 100  | kg |
-
       | Alternate Fuel:                     | 1 000  | kg |
-
       | Traffic Load:                       | 18 600 | kg |
-
 
       Check the load and ensure that the flight may be operated without exceeding any of the aeroplane limits. Changes in trip fuel caused by changes in the total mass may be disregarded. Which of the following statements correctly describes the situation?
     options:
@@ -382,13 +360,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      During the pre-flight mass and balance calculations, a fuel amount of 1
-      850 kg has been decided to be carried for tankering purposes. While the
-      refuelling procedure was about to start, the load controller informs the
-      Commander about a Last Minute Change (LMC) of +285 kg. Given the following
-      information, calculate the maximum Block Fuel that can be carried.
-
+    question: |-
+      During the pre-flight mass and balance calculations, a fuel amount of 1 850 kg has been decided to be carried for tankering purposes. While the refuelling procedure was about to start, the load controller informs the Commander about a Last Minute Change (LMC) of +285 kg. Given the following information, calculate the maximum Block Fuel that can be carried.
 
       Dry Operating Mass: 4 135 kg   
        Traffic Load before LMC: 1 200 kg   
@@ -492,12 +465,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following fuel masses, calculated by the pilot of a light
-      aircraft with the following mass limitations, according to the Limitation
-      section of the Aircraft Flight Manual, what is the maximum traffic load
-      for this flight?
-
+    question: |-
+      Given the following fuel masses, calculated by the pilot of a light aircraft with the following mass limitations, according to the Limitation section of the Aircraft Flight Manual, what is the maximum traffic load for this flight?
 
       Block Fuel: 890 kg   
        Trip Fuel: 480 kg   
@@ -617,32 +586,20 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      If you want to depart with Maximum allowable take off fuel, determine the
-      amount of extra fuel can you refuel, given:   
+    question: |-
+      If you want to depart with Maximum allowable take off fuel, determine the amount of extra fuel can you refuel, given:   
         
       Dry operating mass: 45 000 kg   
-
       Maximum structural take off mass: 143 000 kg   
-
       Maximum performace limited take off mass: 140 000 kg   
-
       Maximum zero fuel mass: 92 000 kg   
-
       Maximum structural landing mass: 95 000 kg   
-
       Trip fuel: 12 600 kg   
-
       Taxi fuel: 120 kg   
-
       Contingency fuel: 1 400 kg   
-
       Alternate fuel: 3 100 kg   
-
       Final reserve fuel: 3 000 kg   
-
       Captains fuel: 3 300 kg   
-
       Traffic load: 16 000 kg
     options:
       - id: OY3RQOE8G
@@ -714,25 +671,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a Commercial Air Transport operation,
-      calculate the maximum possible Extra Fuel to be uplifted.
-
+    question: |-
+      Given the following information for a Commercial Air Transport operation, calculate the maximum possible Extra Fuel to be uplifted.
 
       Maximum Zero Fuel Mass (MZFM): 2000 kg   
-
       Actual Zero Fuel Mass (AZFM): 1800 kg   
-
       Regulated Take-Off Mass (RTOM): 3000 kg   
-
       Maximum Landing Mass (MLM): 2200 kg   
-
       Fuel Tank Capacity: 550 kg   
-
       Trip Fuel (TF): 190 kg   
-
       Minimum Block Fuel (BF): 350 kg   
-
       Taxi Fuel: 15 kg
     options:
       - id: OTG7EAPQ6
@@ -836,33 +784,20 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A revenue flight is to be made by a jet transport. The following are the
-      aeroplane structural limits:
-
+    question: |-
+      A revenue flight is to be made by a jet transport. The following are the aeroplane structural limits:
 
       | Maximum Ramp Mass:                  | 69 900 | kg |
-
       | ----------------------------------- | ------ | -- |
-
       | Maximum Take-off Mass:              | 69 300 | kg |
-
       | Maximum Landing Mass:               | 58 900 | kg |
-
       | Maximum Zero Fuel Mass:             | 52 740 | kg |
-
       | Dry Operating Mass:                 | 34 930 | kg |
-
       | |                                   |        |    |
-
       | Trip Fuel:                          | 11 500 | kg |
-
       | Taxi Fuel:                          | 250    | kg |
-
       | Contingency and Final Reserve Fuel: | 1 450  | kg |
-
       | Alternate Fuel:                     | 1 350  | kg |
-
 
       Take-off and Landing Mass are not performance limited. The maximum Traffic Load (TL) that can be carried is:
     options:
@@ -907,10 +842,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following data for a flight, what is the usable take-off fuel
-      mass loaded on board?
-
+    question: |-
+      Given the following data for a flight, what is the usable take-off fuel mass loaded on board?
 
       Actual Take-Off Mass: 62 800 kg   
        Dry Operating Mass: 34 200 kg   
@@ -1018,25 +951,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The crew of a transport aeroplane prepares a flight using the following
-      data:
-
+    question: |-
+      The crew of a transport aeroplane prepares a flight using the following data:
 
       Block fuel: 40 000 kg  
-
       Taxi Fuel: 800 kg  
-
       Trip fuel: 29 000 kg  
-
       Maximum Take-off Mass: 170 000 kg  
-
       Maximum Landing Mass: 148 500 kg  
-
       Maximum Zero Fuel Mass: 112 500 kg  
-
       Dry Operating Mass: 80 400 kg
-
 
       The maximum traffic load for this flight is:
     options:
@@ -1069,9 +993,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Calculate maximum permissible take off fuel tankage for an aircraft that
-      has a Regulated Take off Mass of 61 900 kg, given:   
+    question: |-
+      Calculate maximum permissible take off fuel tankage for an aircraft that has a Regulated Take off Mass of 61 900 kg, given:   
         
        DOM: 36 200 kg   
        Traffic load: 13 980 kg   
@@ -1106,23 +1029,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what is the maximum amount of Extra Fuel
-      that can be uploaded for this Commercial Air Transport flight?
-
+    question: |-
+      Given the following information, what is the maximum amount of Extra Fuel that can be uploaded for this Commercial Air Transport flight?
 
       MTOM: 2150 lb   
-
       MLM: 2030 lb   
-
       ZFM: 1803 lb   
-
       Planned T/O Fuel: 35 US gal   
-
       Trip Fuel: 27 US gal   
-
       Fuel tank capacity: 68 US gal   
-
       Specific gravity: 0.72
     options:
       - id: OG2VPH38P
@@ -1163,28 +1078,17 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Before departure for a flight, the load controller presents to you cargo
-      documents for boxes containing spare parts. These boxes have a total mass
-      of 4500 kg. If you accept all the boxes, given the following information,
-      what will be the Underload/Overload?
-
+    question: |-
+      Before departure for a flight, the load controller presents to you cargo documents for boxes containing spare parts. These boxes have a total mass of 4500 kg. If you accept all the boxes, given the following information, what will be the Underload/Overload?
 
       Allowed Take-Off Mass: 76720 kg  
-
       Maximum Zero Fuel Mass: 62731 kg  
-
       Operating Mass: 58799 kg  
-
       Actual Zero Fuel Mass: 55063 kg  
-
       Actual Traffic Load (without the boxes): 12563 kg  
-
       Take-off fuel: 16299 kg
 
-
       Disregard changes in fuel due to the increase in Total Mass.  
-
       Consider no restrictions on structural limits and Allowed Landing Mass.
     options:
       - id: O2S6FYTCW
@@ -1254,11 +1158,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A flight crew of a turbojet aeroplane prepares a Commercial Air Transport
-      flight using the following information. Determine the allowed take-off
-      mass for this flight:
-
+    question: |-
+      A flight crew of a turbojet aeroplane prepares a Commercial Air Transport flight using the following information. Determine the allowed take-off mass for this flight:
 
       Maximum Take-Off Mass: 62 800 kg   
        Maximum Landing Mass: 54 900 kg   
@@ -1298,10 +1199,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following data, what is the additional traffic load that the
-      crew could accept for take-off?
-
+    question: |-
+      Given the following data, what is the additional traffic load that the crew could accept for take-off?
 
       Dry Operating Mass: 12 445 lb   
        Traffic Load: 241 lb   

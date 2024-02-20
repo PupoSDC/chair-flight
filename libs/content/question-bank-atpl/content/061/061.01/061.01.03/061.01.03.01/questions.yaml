@@ -81,12 +81,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The True course in the flight log is 270°, the forecast wind is 045°T/15
-      kt and the TAS is 150 kt. After 15 minutes of flying with the planned TAS
-      and TH the aircraft is 2 NM north of the intended track and 2.5 NM ahead
-      of the dead reckoning position.
-
+    question: |-
+      The True course in the flight log is 270°, the forecast wind is 045°T/15 kt and the TAS is 150 kt. After 15 minutes of flying with the planned TAS and TH the aircraft is 2 NM north of the intended track and 2.5 NM ahead of the dead reckoning position.
 
       The track angle error TKE is..
     options:
@@ -181,22 +177,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
 
-
       Time between A and B: 12 min   
-
       Distance between A and B: 32 NM   
-
       True track from A to B: 259°   
-
       True heading from A to B: 270°   
-
       True airspeed: 130 kt   
-
       Variation: 8 °E
-
 
       Calculate the average true wind direction and speed for the flight from A to B:
     options:
@@ -228,10 +217,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following criteria, what are the magnetic heading M and the
-      compass heading C?
-
+    question: |-
+      Given the following criteria, what are the magnetic heading M and the compass heading C?
 
       True heading: 079° T   
        Variation: 7° W   
@@ -357,9 +344,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure or to chart E(LO)2 from the Jeppesen GSPRM 2017.  
-
       Find the true track and distance from BELFAST VOR/DME (BEL, 54°39’N, 006°13’W) to DEAN CROSS DME (DCS, N54°43' W003°20'):
     options:
       - id: OKBH2QKED
@@ -516,9 +502,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       If you want to fly a magnetic heading of 300°, what compass heading should the aircraft steer and what is the compass deviation?
     options:
@@ -713,13 +698,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying from A to B a distance of 60 NM. The True course in
-      the flight log is 090°, the forecast wind is 225°T/15 kt and the TAS is
-      150 kt. After 15 minutes of flying with the planned TAS and TH the
-      aircraft is 3 NM south of the intended track and 2.5 NM ahead of the dead
-      reckoning position.
-
+    question: |-
+      An aircraft is flying from A to B a distance of 60 NM. The True course in the flight log is 090°, the forecast wind is 225°T/15 kt and the TAS is 150 kt. After 15 minutes of flying with the planned TAS and TH the aircraft is 3 NM south of the intended track and 2.5 NM ahead of the dead reckoning position.
 
       To reach destination B from this position, the correction angle on the heading should be…
     options:
@@ -861,14 +841,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying from SALCO to BERRY HEAD on Magnetic Track 007°. At
-      10:00 UTC the relative bearing of locator PY is 311°. At 10:03 UTC the
-      relative bearing of locator PY is 266°.
-
+    question: |-
+      An aircraft is flying from SALCO to BERRY HEAD on Magnetic Track 007°. At 10:00 UTC the relative bearing of locator PY is 311°. At 10:03 UTC the relative bearing of locator PY is 266°.
 
       Calculate the true bearing of locator PY at 10:03 UTC from the aircraft, given that:
-
 
       TAS: 445 kt   
        W/V: 050°(T)/40 kt   

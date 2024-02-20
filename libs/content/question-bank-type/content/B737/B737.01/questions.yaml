@@ -4,11 +4,16 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ## Passenger Oxygen (PASS OXYGEN) Switch
+    >
+    > - **NORMAL**: (guarded position) passenger masks drop and passenger oxygen
+    > system activated automatically if cabin altitude climbs to 14,000 feet. Automatic
+    > 'Emergency Descent' PA x 3 is announced in the cabin. The announcement will
+    > repeat every 10 seconds for a period of one minute.
+    > - **ON**: activates system and drops masks. Automatic 'Emergency Descent' PA x 3
+    > is announced in the cabin. The announcement will repeat every 10 seconds for a
+    > period of one minute.
   variant:
     type: simple
     question: When the PASS OXY switch on the AFT overhead panel is selected to ON,
@@ -36,11 +41,9 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    The Forward Airstairs control are located on the **FORWARD** attendant's 
+    panel.
   variant:
     type: true-or-false
     question: In an emergency, the Emergency Lights and Forward Airstairs can be
@@ -52,11 +55,21 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    Newer B737-800 aircraft have no dedicated Taxi Light on the nose landing gear.
 
-    ---
+    Old B737: 
 
+    > The taxi light is mounted on the nose wheel strut and points in the same direction
+    > as the nose wheel. The light extinguishes automatically when the nose gear is
+    > retracted.
+
+    New B737, equipped with LED lights
+
+    > LED lights are mounted in the wing strakelets and provide all function capability
+    > of landing, taxi, and runway turnoff light applications for the airplane. When both
+    > the landing and taxi lights are in the ON position, the taxi light function is
+    > overridden by the landing light function.
   variant:
     type: true-or-false
     question: Some B737-800 aircraft have no Taxi light mounted on the nose landing gear.
@@ -67,11 +80,11 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    Key values you should be familiar with:
+    - Wing tip radius: **22.9m**
+    - Minimum Width for a 180º turn: **24.1m**
+    - Minimum distance required to make a turn away from an obstacle to the front of the aircraft: **7.4m**  
   variant:
     type: simple
     question: What is the minimum distance required to make a turn away from an
@@ -99,11 +112,11 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ### Interior Control
+    >
+    > The interior control panel is located on the forward attendant panel. (...) 
+    > **To operate in the standby mode, the momentary standby switch must be depressed while the retract or extend switches are also depressed.**
   variant:
     type: true-or-false
     question: The Aircraft battery need to be selected ON for STANDBY operation of
@@ -115,11 +128,11 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    Halon Fire Extinguishers work by depriving the fire of oxygen, essentially
+    suffocating the fire. Unfortunately, humans are also quite fond of oxygen, 
+    so it's essential you are wearing your oxygen mask to avoid dying of 
+    asphyxiation.
   variant:
     type: simple
     question: What action must be carried out prior to discharging a Halon fire
@@ -179,11 +192,13 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ## AUTO Unlock (UNLK) Light
+    >
+    > Illuminated (amber) - correct emergency access code entered in keypad. 
+    > **AUTO UNLK light flashes** and **continuous chime** sounds before 
+    > timer expires and door
+    > unlocks.
   variant:
     type: simple
     question: What indication is there on the Flight Deck if a correct emergency
@@ -195,6 +210,10 @@
         why: ""
       - id: 2icu5
         text: AUTO UNLK light illuminates
+        correct: true
+        why: ""
+      - id: 2icu5
+        text: Continuos cabin chime sounds.
         correct: true
         why: ""
       - id: x3fco
@@ -211,11 +230,11 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ## Portable Protective Breathing Equipment
+    > 
+    > (...) The device is placed over the head and, when activated, provides 
+    > approximately 15 to over 20 minutes of oxygen depending upon the device used. 
   variant:
     type: simple
     question: How long does the PBE, stored under the flight deck left jump seat,
@@ -243,11 +262,14 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ### Emergency (EMER) EXIT LIGHTS Switch
+    >
+    > - **OFF**: prevents emergency lights system operation if airplane electrical power
+    > fails or is turned off.
+    > - **ARMED**: (guarded position) all emergency lights illuminate automatically if
+    > airplane electrical power to DC bus No. 1 fails or AC power is turned off.
+    > - **ON**: all emergency lights illuminate. 
   variant:
     type: simple
     question: With the EMER EXIT LIGHTS switch in the guarded position, when would
@@ -276,11 +298,12 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    > Only the first officer’s number two window can be opened from outside the
+    > airplane.
 
-    ---
-
+    This is for emergency rescue teams to gain access to the flight deck (also,
+    for crews who somehow managed to lock themselves out of the airplane).
   variant:
     type: simple
     question: Which statement is correct for the No 2 windows.
@@ -308,11 +331,14 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ### Emergency (EMER) EXIT LIGHTS Switch
+    >
+    > - **OFF**: prevents emergency lights system operation if airplane electrical power
+    > fails or is turned off.
+    > - **ARMED**: (guarded position) all emergency lights illuminate automatically if
+    > airplane electrical power to DC bus No. 1 fails or AC power is turned off.
+    > - **ON**: all emergency lights illuminate. 
   variant:
     type: simple
     question: How can the Emergency Exit Lights be illuminated?
@@ -343,11 +369,17 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    Halon Fire Extinguishers work by depriving the fire of oxygen, essentially
+    suffocating the fire. Unfortunately, humans are also quite fond of oxygen, 
+    so it's essential you are wearing your oxygen mask to avoid dying of 
+    asphyxiation.
 
-    ---
+    Turning on the recirculation fans would not provide you with extra oxygen, 
+    you need to survive. 
 
+    Opening the No 2 window is not a viable option unless you are on the ground, 
+    in which case, you should be evacuating the aircraft.
   variant:
     type: true-or-false
     question: Prior to discharging a Halon fire extinguisher on the flight deck,
@@ -360,11 +392,10 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    Yes it is true. Nothing stops you from opening the FO No 2 window in flight.
 
-    ---
-
+    Good luck not letting your intrusive thoughts get the better of you!
   variant:
     type: true-or-false
     question: Can the Flight Deck No2 windows be opened both on the ground and in flight?
@@ -375,11 +406,12 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > (Airstairs external) POWER Switch
+    >
+    > (spring-loaded to NORMAL)
+    > - **NORMAL**: requires both AC and DC power.
+    > - **STANDBY**: requires DC power.
   variant:
     type: true-or-false
     question: When operating the Airstairs from outside the aircraft - moving the
@@ -392,11 +424,10 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    Values you should be familiar with:
+    - Wingspan with winglets fitted: **35.79m**
+    - length: **39.50m**
   variant:
     type: simple
     question: What is the B737-800 wingspan when fitted with Winglets?
@@ -423,11 +454,14 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    None of the panels automatically open. They automatically unlock. 
+    Both need to be manually opened.
 
-    ---
-
+    > The door incorporates two pressure sensors that unlock the decompression panels
+    > in the event pressurization is lost. The decompression panels have manual release
+    > pins. Pulling the pins frees the panels allowing egress in the event the door is
+    > jammed. 
   variant:
     type: true-or-false
     question: The flight deck door has one decompression panel that automatically
@@ -441,11 +475,7 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: ""
   variant:
     type: simple
     question: Where is the potable water contents indicator located?
@@ -473,11 +503,12 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > Retractable Landing Lights
+    >
+    > Retractable landing lights are installed in the lower airplane fuselage. The lights
+    > are designed to extend and shine forward, parallel to the waterline of the airplane.
+    > **The lights may be extended at any speed**.
   variant:
     type: simple
     question: The retractable landing lights may only be extended below the
@@ -505,11 +536,13 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > ## AUTO Unlock (UNLK) Light
+    >
+    > Illuminated (amber) - correct emergency access code entered in keypad. 
+    > **AUTO UNLK light flashes** and **continuous chime** sounds before 
+    > timer expires and door
+    > unlocks.
   variant:
     type: simple
     question: What does an amber light indicate on the Flight Deck Door Emergency
@@ -539,11 +572,11 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    The extra mask is provided for (at least) 3 good reasons:
+    - Infants with no dedicated seat. 
+    - So that cabin crew can have masks on hand.
+    - Redundancy.
   variant:
     type: simple
     question: How many oxygen masks are provided from each passenger service unit?
@@ -570,11 +603,10 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > Oxygen pressure is displayed on the indicator located on the aft overhead 
+    > panel. Oxygen flow is controlled through a pressure-reducing regulator to 
+    > supply low-pressure oxygen. System pressure may be as high as 1850 psi.    
   variant:
     type: simple
     question: What is the flight crew maximum oxygen pressure for the first flight
@@ -602,11 +634,18 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    - External control: Any position
+    - Internal control: Partially open
 
-    ---
+    External operation can have the door in any position, to allow for the door
+    to be opened and closed when the cabin is secured. This is done at every 
+    start and end of the day.
 
+    Internal operation requires that the door is unlocked and partially open as 
+    a safety measure. It reduces the risk of the door being opened with the 
+    aircraft moving, and prevents the temptation of extending the door with 
+    the door fully open which could lead to falls. 
   variant:
     type: simple
     question: When operating the forward airstairs, with the external control, what
@@ -634,11 +673,12 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    > Water Supply Selector Valve
+    > - **SUPPLY ON**: provides water to lavatory sink faucets and water heater (normal position).
+    > - **FAUCET ONLY**: water is supplied to faucet only.
+    > - **OFF**: shuts off water to lavatory sink faucets and water heater.
+    > - **TOILET ONLY**: water is supplied to toilet only
   variant:
     type: true-or-false
     question: The water supply in the Lavatories can be manually selected to supply
@@ -650,11 +690,10 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
-
-    ---
-
+  explanation: |
+    One chemical (halon) fire extinguisher to fight electrical fires, behind the 
+    panels. Any other type of fire will have you chug the item that is on fire
+    out of the door and let the cabin crew deal with it.
   variant:
     type: simple
     question: How many fire extinguishers are located on the flight deck, what type
@@ -685,25 +724,28 @@
   annexes: []
   learningObjectives:
     - B737.01
-  explanation: |+
-    
+  explanation: |
+    This is one of those questions where doing it once in real life will never
+    leave you confused ever again:
 
-    ---
-
+    1. Pull latch mechanism rod to unlock window. 
+    2. Move window forward whilst depressing trigger mechanism. 
+    3. Turn handle forward and outboard.
+    4.  Release trigger to lock.
   variant:
     type: simple
     question: What is the correct method to close the Flight Deck No 2 window?
     options:
       - id: x8psij
-        text: Pull latch mechanism rod to unlock window.   Move window forward whilst
+        text: Pull latch mechanism rod to unlock window. Move window forward whilst
           depressing trigger mechanism, turn handle forward and outboard,
           release trigger to lock.
         correct: true
         why: ""
       - id: xfb4w
-        text: Pull lock trigger to unlock window.   Move window forward whilst
-          depressing trigger mechanism, turn handle forward and outboard,
-          release trigger to lock.
+        text: Pull lock trigger to unlock window. Move window forward whilst depressing
+          trigger mechanism, turn handle forward and outboard, release trigger
+          to lock.
         correct: false
         why: ""
       - id: wzfis

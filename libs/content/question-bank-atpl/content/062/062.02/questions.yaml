@@ -347,37 +347,26 @@
       an aircraft that is within the range of the direction finding system?
     options:
       - id: OZG1OQHJV
-        text: >-
-          | Magnetic bearing to the station, magnetic bearing from the station,
-          aircraft position |  |
-
+        text: |-
+          | Magnetic bearing to the station, magnetic bearing from the station, aircraft position |  |
           | ------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: ODUGUKHN2
-        text: >-
-          | True bearing from the station (no wind), Magnetic bearing from the
-          station (no wind), true bearing to the station (no wind), magnetic
-          bearing to the station (no wind) |  |
-
+        text: |-
+          | True bearing from the station (no wind), Magnetic bearing from the station (no wind), true bearing to the station (no wind), magnetic bearing to the station (no wind) |  |
           | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: true
         why: ""
       - id: O8GDETVQF
-        text: >-
-          | Magnetic bearing to the station (no wind), magnetic bearing from the
-          station (no wind), aircraft position |  |
-
+        text: |-
+          | Magnetic bearing to the station (no wind), magnetic bearing from the station (no wind), aircraft position |  |
           | --------------------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: ONKSNZ8WU
-        text: >-
-          | True bearing from the station (including wind correction), magnetic
-          bearing from the station (including wind correction), true bearing to
-          the station (including wind correction), magnetic bearing to the
-          station (including wind correction) |  |
-
+        text: |-
+          | True bearing from the station (including wind correction), magnetic bearing from the station (including wind correction), true bearing to the station (including wind correction), magnetic bearing to the station (including wind correction) |  |
           | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
@@ -515,10 +504,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      There are two primary methods of flying to or from an NDB. Complete the
-      following statement from the options below:
-
+    question: |-
+      There are two primary methods of flying to or from an NDB. Complete the following statement from the options below:
 
       (1)\_\_\_ may be used to fly (2)\_\_\_ the NDB while (3)\_\_\_ may be used to fly (4)\_\_\_ the NDB.
     options:
@@ -813,9 +800,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The pilot has tuned ORJ NDB to ADF 1 and wishes to obtain true bearing from ORJ NDB to the aircraft. If the local variation is 10°E, what is the true bearing from ORJ to the aircraft?
     options:
@@ -846,9 +832,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       You are about to enter an NDB holding pattern from sector 3\. When first passing overhead the NDB, what will happen to the ADF needle?
     options:
@@ -1212,11 +1197,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aeroplane flies over position A which is due North of a VOR station
-      sited at position B. The magnetic variation at A is 18°W, and at B is
-      10°W.
-
+    question: |-
+      An aeroplane flies over position A which is due North of a VOR station sited at position B. The magnetic variation at A is 18°W, and at B is 10°W.
 
       What radial from B is the aircraft on?
     options:
@@ -1301,9 +1283,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on a MH of 210°. The magnetic variation at the VOR is 5°W and at the aircraft 10°W. Which VOR-RMI corresponds to the indications on the CDI shown on the Annex?
     options:
@@ -1828,10 +1809,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Determine the distance which will be shown on a DME display when the
-      aircraft is at FL 360 and 6 NM plan range from the DME station:
-
+    question: |-
+      Determine the distance which will be shown on a DME display when the aircraft is at FL 360 and 6 NM plan range from the DME station:
 
       For the calculation use the following assumptions/approximations:   
        QNH is 1013 hPa   
@@ -1936,9 +1915,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       When intercepting the glide path from below, which PFD shows the correct indications to begin descending on the glide path?
     options:
@@ -1971,14 +1949,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.  
-
       The pilot of a light aircraft is plotting the position of the aircraft using a VOR bearing and an NDB bearing. Both bearings are displayed on an RMI with two pointers. Given the following information, what is the true bearing to plot from the NDB?
 
-
       Deviation: 2°W  
-
       Variation: 6°E
     options:
       - id: OVJLNTJYW
@@ -2090,9 +2065,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on a MH of 010°. The magnetic variation at the VOR is 10°W and at the aircraft 12°W. Which VOR-RMI corresponds to the indications on the CDI shown on the Annex?
     options:
@@ -2155,11 +2129,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what relative bearing will be shown on
-      the RBI in order to maintain an outbound course of 257° (M) from overhead
-      the NDB?
-
+    question: |-
+      Given the following information, what relative bearing will be shown on the RBI in order to maintain an outbound course of 257° (M) from overhead the NDB?
 
       W/V: 230° (T)/20 kt   
        Variation: 6°E   
@@ -2771,9 +2742,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       How far away from the runway is your aircraft when you see the blue marker?
     options:
@@ -2870,9 +2840,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is on the ILS approach indicated by the diagram in the annex. What will be the approximate DME indication when the pilot sees a flashing amber light on the marker panel?
     options:
@@ -3034,17 +3003,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Regarding ILS operations, which of the following circumstances will
-      trigger warning flags for the LLZ and the GP?
-
+    question: |-
+      Regarding ILS operations, which of the following circumstances will trigger warning flags for the LLZ and the GP?
 
       1\. The measured DDM is zero   
-
       2\. The absence of the 90 Hz and 150 Hz modulation simultaneously   
-
       3\. The cloud base as reported by the ATIS is below landing minima   
-
       4\. The modulation depth of either the 90 Hz or 150 Hz signal is reduced to zero
     options:
       - id: OGFEEEM7A
@@ -3141,14 +3105,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
 
-
       Aircraft position 52°09'S 024°E, magnetic variation 14°W, FL 310\.   
-
       BIT VOR/DME position 54°42'S 024°E, magnetic variation 14°E.
-
 
       In order to read the most accurate ground speed given by the DME receiver from his present position, the pilot must follow which BIT radial?
     options:
@@ -3320,17 +3281,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Of the approach aids listed below, which option correctly identifies those
-      that use the VHF band?
-
+    question: |-
+      Of the approach aids listed below, which option correctly identifies those that use the VHF band?
 
       1\. Locator   
-
       2\. Localiser   
-
       3\. Outer Marker   
-
       4\. Glide path
     options:
       - id: ODATV5JVX
@@ -3456,13 +3412,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The principle of operation of an ILS localiser transmitter is based on two
-      overlapping lobes that are transmitted on
-
+    question: |-
+      The principle of operation of an ILS localiser transmitter is based on two overlapping lobes that are transmitted on
 
       (i)… frequencies and carry different   
-
       (ii)....
     options:
       - id: OC9AKVK5G
@@ -3816,10 +3769,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      How do you tune MLS system in your aircraft, select the following
-      combination:
-
+    question: |-
+      How do you tune MLS system in your aircraft, select the following combination:
 
       1\. Approach can only be upload from FMS.   
        2\. Select the appropriate channel number.   
@@ -4043,7 +3994,7 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to E(LO)5 chart from Jeppesen GSPRM 2017\.   
        Which of the following is the correct frequency and morse code identifier for the Pamplona VOR?
     options:
@@ -4360,9 +4311,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on a MH of 010°. The magnetic variation at the VOR is 10°W and at the aircraft 12°W. Which VOR-RMI corresponds to the indications on the HSI shown on the Annex?
     options:
@@ -4792,9 +4742,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Which of the figures above indicates the correct azimuth coverage area of the ILS localiser signal?
     options:
@@ -5143,9 +5092,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex shows you 4 Omni Bearing indicators (OBIs). Select the OBI which has been set up for flying the localiser approach to runway 24 (inbound course 236°) with visual circling to runway 30 (inbound course 298°)?
     options:
@@ -5243,9 +5191,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex above contains a Navigation Display (ND) with a single VOR tuned and identified on both VOR 1 and VOR 2\. What radial from CLT VOR is the aircraft on?
     options:
@@ -5360,9 +5307,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on the 170°radial with a heading of 315°(M).The course is set to 180°. Which CDI shows the correct indications?
     options:
@@ -5428,9 +5374,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying with the navigation display as shown in the annex, with an active cumulonimbus (CB) cloud directly ahead. As the aircraft approaches the CB, what be the likely indications of the ADF1 bearing pointer?
     options:
@@ -5631,9 +5576,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.   
-
       For Alghero VOR with coordinates 40°038'N, 008°015'E the correct identification, frequency, and Morse code are...
     options:
       - id: OKDBPQPBP
@@ -5696,9 +5640,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying an ILS approach and is descending with only a few seconds to go before reaching minimums. The indications on which of the above PFDs would require an immediate go-around?
     options:
@@ -5855,14 +5798,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
 
-
       Aircraft position 34°15'N 098°E, magnetic variation 28°W, FL 280\.   
-
       PTC VOR/DME position 36°12'N 098°E, magnetic variation 13°E.
-
 
       In order to read the most accurate ground speed given by the DME receiver from his present position, the pilot must fly on which PTC radial?
     options:
@@ -6177,9 +6117,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on a MH of 210°. The magnetic variation at the VOR is 5°W and at the aircraft 10°W. Which VOR-RMI corresponds to the indications on the HSI shown on the Annex?
     options:
@@ -6485,9 +6424,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The ADF in the aircraft has been tuned to a nearby NDB, and has been identified. The appendix shows the accompanying RBI and the Direction Indicator in the aircraft, which has just been aligned with the on-board compass. Ignoring any applicable turn radius and wind effects, which statement is correct?
     options:
@@ -6987,9 +6925,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       What is the figure illustrating the standard coverage area of an ILS Localiser?
     options:
@@ -7334,9 +7271,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex shows a multifunctional display (MFD). VOR 1 is displayed on the EHSI, which has been tuned to a nearby VOR and correctly identified. The aircraft is...
     options:
@@ -7403,9 +7339,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is tuned to NTS VOR, as shown on the EHSI of the annex. The aircraft is currently on radial...
     options:
@@ -7571,10 +7506,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      According to the localiser principle of operation in an ILS system, the
-      difference in depth of modulation (DDM):
-
+    question: |-
+      According to the localiser principle of operation in an ILS system, the difference in depth of modulation (DDM):
 
       1\. decreases with respect to the angular displacement from the centreline.   
        2\. increases with right displacement from the centreline.   
@@ -7612,9 +7545,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The ADF in the aircraft has been tuned to a nearby NDB, which has been identified. The annex shows the accompanying RBI and the direction indicator (DI) in the aircraft, which is correctly aligned with the on-board compass. Ignoring any effects of turn radius, and assuming an appropriate intercept, choose the correct statement from the below.
     options:
@@ -7651,12 +7583,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       The cockpit of a small aircraft has been fully set up to fly the appropriate ILS, and it has been identified. The crew have been given the final intercept heading and have been cleared for the approach. As the aircraft gets close enough to the localiser for it to come alive, the above situation is shown on the CDI (Course Deviation Indicator), with the glideslope about to reach the centre indication.
-
 
       Which of these statements is correct?
     options:
@@ -7724,9 +7654,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft ADF is tuned to a nearby NDB, identified as CLN. The RMI indication is presented on the navigation display (EHSI) in the annex. If the magnetic variation is 7°W, what is the aircraft's QDM in relation to the CLN NDB?
     options:
@@ -7988,12 +7917,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying a heading of 245° towards a VOR at FL300\. The HSI
-      displays a "selected course" of 255° with a TO-indication. The variation
-      at the VOR is 15°E. Variation at the aircraft position is 16°E and the
-      deviation is +1°.
-
+    question: |-
+      An aircraft is flying a heading of 245° towards a VOR at FL300\. The HSI displays a "selected course" of 255° with a TO-indication. The variation at the VOR is 15°E. Variation at the aircraft position is 16°E and the deviation is +1°.
 
       When the pilot keeps the CDI on the left inner dot on a display with two dots on either side:
     options:
@@ -8120,9 +8045,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       To enter a holding pattern based on a VOR/DME fix, what are the entry sectors which are permissible when following a DME arc entry track?
     options:
@@ -8217,9 +8141,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       On the EHSI the ADF was tuned to the KUS NDB. What is the QDR for the KUS NDB?
     options:
@@ -8433,9 +8356,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The ADF in an aircraft has been tuned to a nearby NDB, which has been correctly identified. The annex above shows the RBI and the Direction Indicator in the aircraft, which is correctly aligned with the on-board compass. What is the QDM?
     options:
@@ -8591,9 +8513,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Which of these figures correctly depicts the standard coverage area of an ILS Glide Path?
     options:
@@ -8771,9 +8692,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex includes a Navigation Display (ND) with two separate VORS tuned and identified. What radial from PSE VOR is the aircraft on?
     options:
@@ -8914,9 +8834,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex shows a multifunctional display. VOR 1 is displayed, which has been tuned to a nearby VOR station and correctly identified . The aircraft is...
     options:
@@ -8982,10 +8901,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      ICAO Doc 8168 describes how all procedures depict tracks and that pilots
-      should attempt to maintain the track by applying corrections to heading
-      for known wind.   
+    question: |-
+      ICAO Doc 8168 describes how all procedures depict tracks and that pilots should attempt to maintain the track by applying corrections to heading for known wind.   
        What are the implications of this statement for a pilot tracking to and from an NDB regardless of instrument type?
     options:
       - id: OSQNOQV9A
@@ -9126,18 +9043,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Consider the following situations. An aircraft is flying:
 
-
       1\. directly towards a DME   
-
       2\. directly away from a DME   
-
       3\. a DME ARC   
-
       4\. passing abeam a DME station.
-
 
       In which of the above given situations should the DME give an accurate groundspeed reading?
     options:
@@ -9208,14 +9120,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Given:
 
-
       Aircraft position 36°15'S 178°E, magnetic variation 21°W, FL 310\.   
-
       UEB VOR/DME position 36°15'S 178°W, magnetic variation 21°E.
-
 
       In order to read the most accurate ground speed on the DME receiver from his present position, the pilot must fly which UEB radial?
     options:
@@ -9280,9 +9189,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       If the course pointer in situation 2B is rotated 2.5 degrees in a clockwise direction, what will happen to the LOC course deviation indicator?
     options:
@@ -9574,9 +9482,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       At which position would an aircraft at an altitude of 5000 ft AMSL receive the strongest signal from VNC NDB (27°04.3’N, 082°26.4’W)?
     options:
@@ -9704,9 +9611,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is on an ILS approach to runway 23 using an approach plate with the diagram above. As the pilot is passing 1 500 ft, what lights and audio indications might the pilot see and hear?
     options:
@@ -10056,9 +9962,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is flying on the 050 radial with a MH of 250°. On the HSI the CRS is set to 060\. Which HSI shows the correct indications?
     options:
@@ -10248,9 +10153,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.   
-
       You are flying an offset localiser approach for RWY24, with the LOC inbound course of 297º, and the runway track of 236º. Which of the following Omni Bearing indicators (OBIs) has been set up for this scenario?
     options:
       - id: OQMKKJ34Z
@@ -10345,9 +10249,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       One of an aircraft's navigation systems is tuned into a VOR and one is tuned to an NDB. What radial is the aircraft on from the NDB?
     options:
@@ -10578,9 +10481,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       After completion of the inbound turn at 2500 ft QNH, when may a further descent to 2300 ft QNH be started?
     options:
@@ -10649,15 +10551,11 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, where does the HSI course deviation bar
-      appear?
-
+    question: |-
+      Given the following information, where does the HSI course deviation bar appear?
 
       Heading: 160°   
-
       VOR radial: 240°   
-
       Selected course: 250°
     options:
       - id: OMZPHFYLH
@@ -10785,9 +10683,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       You are navigating by radar vectors with an NDB indicating the direction of the airport. Given the navigation display, what is likely to happen to the NDB bearing if you keep flying straight ahead?
     options:
@@ -10853,9 +10750,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The aircraft is tuned to AMS VOR. Which radial of the AMS VOR is the aircraft on?
     options:
@@ -11084,9 +10980,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       After tuning into a VOR/DME, the aircraft flies overhead it and then on a constant heading for about 5 minutes. The HSI indication after that 5 minutes is shown in the annex. What has been the approximate magnetic track of the aircraft?
     options:
@@ -11195,10 +11090,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, what is the true bearing from the NDB to
-      the aircraft?
-
+    question: |-
+      Given the following information, what is the true bearing from the NDB to the aircraft?
 
       Compass heading: 348º   
        ADF indication (Relative Bearing Indicator): 317º   
@@ -11262,9 +11155,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.   
-
       An aircraft ADF is tuned to a nearby NDB, identified as CLN. Based on the RMI indication, what is the QDR in relation to the CLN NDB?
     options:
       - id: OYLMNLZ3B
@@ -11296,9 +11188,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex shows four examples of a PFD with ILS indications shown. The aircraft became established on the ILS at 12 NM DME from the runway threshold. On which of the four PFDs must the aircraft immediately commence a go-around?
     options:
@@ -11361,9 +11252,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The image shows the vertical profile of an approach plate. Whilst flying the approach, the pilot sees a yellow light in the cockpit flashing. How far is the aircraft from the runway?
     options:
@@ -11425,9 +11315,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft is approaching the holding fix at 3 000 ft with a magnetic track of 150º. Upon reaching the holding fix, the aircraft follows a track of 161º for 1 min and then executes a right turn. What is the type of entry into the holding?
     options:
@@ -11461,9 +11350,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Which shows an Omni Bearing Indicator (OBI) and a Direction Indicator (DI) from the cockpit of a light aircraft. The VOR in question is tuned and identified and is showing as 15 NM away. In which direction is the VOR from the aircraft?
     options:
@@ -11766,9 +11654,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The ADF in the aircraft has been tuned to a nearby NDB, which has been identified. The annex shows the accompanying RBI and the direction indicator (DI) in the aircraft, which is correctly aligned with the on-board compass. What is the QDR?
     options:
@@ -11956,26 +11843,20 @@
     question: The distances from two DMEs are plotted on a map, they are...
     options:
       - id: OBA0EERF2
-        text: >-
-          | two range circles intersecting at two different points and show
-          slant ranges. |  |
-
+        text: |-
+          | two range circles intersecting at two different points and show slant ranges. |  |
           | ----------------------------------------------------------------------------- |  |
         correct: true
         why: ""
       - id: O3B8AZHW4
-        text: >-
-          | two range circles intersecting at two different points and show plan
-          ranges. |  |
-
+        text: |-
+          | two range circles intersecting at two different points and show plan ranges. |  |
           | ---------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: OWTLTF3KA
-        text: >-
-          | two range circles intersecting at one point and show slant ranges.
-          |  |
-
+        text: |-
+          | two range circles intersecting at one point and show slant ranges. |  |
           | ------------------------------------------------------------------ |  |
         correct: false
         why: ""

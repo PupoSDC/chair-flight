@@ -48,12 +48,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       Planning an IFR flight from Paris to London for the twin jet aeroplane. Determine the fuel flow, given:
-
 
       Estimated Landing Mass: 49 700 kg   
        Cruising level: FL280   
@@ -172,28 +170,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the minimum Block Fuel required
-      for the Commercial Air Transport flight in a Medium Range Jet Transport
-      MRJT aeroplane, given the following information? The operator has
-      nominated a suitable En-Route Alternate aerodrome. Assume the Basic Fuel
-      Scheme WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the minimum Block Fuel required for the Commercial Air Transport flight in a Medium Range Jet Transport MRJT aeroplane, given the following information? The operator has nominated a suitable En-Route Alternate aerodrome. Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Departure Taxi Fuel: 150 kg  
-
       Trip Fuel: 2101 kg  
-
       Alternate Fuel: 2046 kg  
-
       Destination Taxi Fuel: 250 kg  
-
       Average fuel flow: 3317 kg/h  
-
       Holding fuel flow: 2735 kg/h  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OAP5SRKCH
@@ -225,10 +211,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the maximum attainable flight
-      time and range.
-
+    question: |-
+      Given the following information, calculate the maximum attainable flight time and range.
 
       Average fuel flow: 31.5 kg/h   
        Available fuel: 76 kg   
@@ -300,9 +284,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       During pre-flight planning you decide that NO alternate aerodrome/heliport is required for your flight. During cruise an in-flight fuel check reveals that the fuel consumption is higher than planned. What is the minimum amount of fuel required on arrival at the destination aerodrome/heliport?
     options:
@@ -340,36 +323,26 @@
       aircraft needs to carry? The greater of:"
     options:
       - id: OWJ68WX1I
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel
-          if required for at least 45 min + 15% of flight time at cruising level
-          or 2 hours, whichever is less and not less than final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel if required for at least 45 min + 15% of flight time at cruising level or 2 hours, whichever is less and not less than final reserve fuel  
           2\. Taxi fuel, trip fuel to the destination alternate + contingency, additional fuel if required but at least fuel to fly for 45 minutes and not less than final reserve fuel
         correct: false
         why: ""
       - id: OZHHYSHU4
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, fuel to
-          destination alternate, final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, fuel to destination alternate, final reserve fuel  
           2\. Taxi fuel, trip fuel to the alternate + contingency, fuel from alternate back to destination, final reserve fuel
         correct: false
         why: ""
       - id: OJZYC4OWX
-        text: >-
-          1\. Taxi fuel, trip fuel to predetermined point via destination, trip
-          fuel from predetermined point to alternate, final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to predetermined point via destination, trip fuel from predetermined point to alternate, final reserve fuel  
           2\. Taxi fuel, trip fuel to predetermined point via alternate, trip fuel from predetermined point to destination, final reserve fuel
         correct: false
         why: ""
       - id: ORJGXRJUF
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel
-          if required but at least 2 hours at cruise consumption above the
-          destination and not less than final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel if required but at least 2 hours at cruise consumption above the destination and not less than final reserve fuel  
           2\. Taxi fuel, trip fuel to the destination alternate + contingency, additional fuel if required but at least 30 minutes at holding speed at 1 500 ft above alternate elevation and not less than final reserve fuel
         correct: true
         why: ""
@@ -386,23 +359,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-011 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.5.3.1).   
-
+    question: |-
+      (For this question use annex 033-011 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.5.3.1).   
       Given:
 
-
       Flight time from top of climb to the enroute point in FL280: 48 min   
-
       Cruise procedure is long range cruise LRC   
-
       Temp. ISA -5° C   
-
       Take-off mass 56 000 kg   
-
       Climb fuel 1 100 kg
-
 
       Find the distance in nautical air miles NAM for this leg and the fuel consumption:
     options:
@@ -434,12 +399,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       (For this question use CAP 697 Figure 4.3.1a) You are planning a flight with a Medium Range Jet Transport (MRJT) Aeroplane. Given the following data and Simplified Planning Charts, determine the trip time.
-
 
       Trip distance: 425 NM   
        Cruise pressure altitude: 30000 ft   
@@ -478,10 +441,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Determine the maximum attainable flight time and range, given the
-      following information:
-
+    question: |-
+      Determine the maximum attainable flight time and range, given the following information:
 
       Average fuel flow: 80 lb/h   
        Available fuel: 270 lb   
@@ -518,10 +479,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying a route from position A to B, a distance of 57
-      Nautical Ground Miles (NGM). Given the following information:
-
+    question: |-
+      An aircraft is flying a route from position A to B, a distance of 57 Nautical Ground Miles (NGM). Given the following information:
 
       True Airspeed (TAS): 125 kt   
        Forecast wind: 240°/30 kt   
@@ -559,9 +518,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure or Flight Planning Manual MRJT 1 Figure 4.3.1c.
-
 
       For a flight of 2000 ground nautical miles, cruising at 30000 ft, within the limits of the data given, a headwind component of 25 kt will affect the trip time by approximately:
     options:
@@ -604,35 +562,20 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the total fuel required for the
-      Commercial Air Transport flight in a Medium Range Jet Transport MRJT
-      aeroplane, with no destination alternate, given the following information?
-      Assume the Basic Fuel Scheme WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the total fuel required for the Commercial Air Transport flight in a Medium Range Jet Transport MRJT aeroplane, with no destination alternate, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Estimated taxi time: 15 minutes at both departure and destination aerodromes  
-
       APU fuel flow: 115 kg/h  
-
       Taxi fuel flow: 11 kg/min  
-
       Planned APU usage at the parking position: 15 minutes  
-
       Total trip distance: 315 NM  
-
       Average fuel flow: 2 878 kg/h  
-
       TAS: 440 kt  
-
       Average headwind component: 16 kt  
-
       Contingency Fuel: 5 minutes Holding Fuel  
-
       Holding fuel flow: 2 200 kg/h  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: O9RSKG5MX
@@ -664,19 +607,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Using the Power Setting Table, for the single engine aeroplane, determine the manifold pressure and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions, given:
 
-
       | OAT: | 13°C     |
-
       | ---- | -------- |
-
       | PA:  | 8 000 ft |
-
       | RPM: | 2 300    |
     options:
       - id: ON4QOUP6P
@@ -709,23 +647,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-031 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.5.4).   
-
+    question: |-
+      (For this question use annex 033-031 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.5.4).   
       Planning an IFR flight from Paris to London for the twin jet aeroplane. Given:
 
-
       Estimated Landing Mass: 49700 kg   
-
       FL 280   
-
       W/V: 280°/40 kt   
-
       Average True Course: 320°   
-
       Procedure for descent 0.74 M/250 KIAS
-
 
       Determine the fuel consumption from the top of descent to London elevation 80 ft
     options:
@@ -764,25 +694,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the minimum Ramp Fuel load for
-      the Commercial Air Transport flight with a Jet aeroplane, given the
-      following information? Assume the Basic Fuel Scheme WITHOUT variations
-      applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the minimum Ramp Fuel load for the Commercial Air Transport flight with a Jet aeroplane, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Standard taxi fuel: 600 kg  
-
       Average cruise consumption: 10 000 kg/h  
-
       Holding fuel consumption at 1 500 ft above alternate airfield elevation: 8 000 kg/h  
-
       Flight time from departure to destination: 6 hours  
-
       Fuel for diversion to alternate: 10 200 kg  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OOCNGI42N
@@ -820,23 +740,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annexes 033-065 and 033-066 rev. 05.11.2004 or
-      Flight Planning Manual MRJT 1 Figure 4.5.2 and 4.5.3.1).   
-
+    question: |-
+      (For this question use annexes 033-065 and 033-066 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.5.2 and 4.5.3.1).   
       Given:
 
-
       Distance C - D: 3200 NM   
-
       Long Range Cruise at FL 340   
-
       Temperature Deviation from ISA: +12°C   
-
       Tailwind component: 50 kt   
-
       Gross mass at C: 55 000 kg
-
 
       The fuel required from C - D is:
     options:
@@ -901,23 +813,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the minimum Fuel required at the
-      destination airport for a flight from Munich to London Heathrow, given the
-      following information? Assume the Basic Fuel Scheme WITHOUT variations
-      applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the minimum Fuel required at the destination airport for a flight from Munich to London Heathrow, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Trip fuel: 3 800 kg  
-
       Contingency fuel: 230 kg  
-
       Alternate fuel: 1 200 kg  
-
       Final reserve fuel: 1 300 kg  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OQHYLBIXI
@@ -949,12 +852,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A piston-engined aeroplane on an IFR Commercial Air Transport flight
-      arrives at its destination with the minimum fuel on board. During the
-      approach procedure, the aircraft is forced to divert from the missed
-      approach point to the alternate. Given the following information:
-
+    question: |-
+      A piston-engined aeroplane on an IFR Commercial Air Transport flight arrives at its destination with the minimum fuel on board. During the approach procedure, the aircraft is forced to divert from the missed approach point to the alternate. Given the following information:
 
       Trip Fuel: 235 litres   
        Alternate Fuel: 38 litres   
@@ -1000,35 +899,20 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the total fuel required for the
-      Commercial Air Transport flight in a Medium Range Jet Transport MRJT
-      aeroplane, with no destination alternate, given the following information?
-      Assume the Basic Fuel Scheme WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the total fuel required for the Commercial Air Transport flight in a Medium Range Jet Transport MRJT aeroplane, with no destination alternate, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Estimated taxi time: 20 minutes at both departure and destination aerodromes  
-
       APU fuel flow: 115 kg/h  
-
       Taxi fuel flow: 11 kg/min  
-
       Planned APU usage at the parking position: Zero  
-
       Total trip distance: 1 131 NM  
-
       Average fuel flow: 2 638 kg/h  
-
       TAS: 424 kt  
-
       Average wind component: +17 kt  
-
       Contingency Fuel: 3% of the Trip Fuel  
-
       Holding fuel flow: 2400 kg/h  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OBC5OEJO2
@@ -1059,12 +943,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A piston engine aircraft performing a commercial flight, arrives at the
-      destination with the minimum fuel, conducts a missed approach and proceeds
-      to the alternate aerodrome. How much fuel will there be in the tanks (1)
-      at the destination and (2) at the alternate aerodrome?
-
+    question: |-
+      A piston engine aircraft performing a commercial flight, arrives at the destination with the minimum fuel, conducts a missed approach and proceeds to the alternate aerodrome. How much fuel will there be in the tanks (1) at the destination and (2) at the alternate aerodrome?
 
       Trip fuel: 245 USG   
        Fuel for one go-around and one approach: 22 USG   
@@ -1104,24 +984,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the minimum Take-off Fuel
-      required for the Commercial Air Transport flight in an MRJT aeroplane,
-      given the following information? The operator has nominated a suitable
-      En-Route Alternate aerodrome. Assume the Basic Fuel Scheme WITHOUT
-      variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the minimum Take-off Fuel required for the Commercial Air Transport flight in an MRJT aeroplane, given the following information? The operator has nominated a suitable En-Route Alternate aerodrome. Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Estimated flight time: 03:57  
-
       Estimated flight time to alternate: 00:20  
-
       Average fuel flow: 2 856 kg/h  
-
       Holding fuel flow: 2 600 kg/h  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: O0J7HIRJQ
@@ -1167,9 +1037,8 @@
         correct: false
         why: ""
       - id: O8BIO4G6G
-        text: >-
-          Planning an IFR flight to an airport without sufficient weather
-          service is not allowed.   
+        text: |-
+          Planning an IFR flight to an airport without sufficient weather service is not allowed.   
            ​​
         correct: false
         why: ""
@@ -1193,9 +1062,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       (For this question use CAP 697 Figure 4.5.2) Describe how to convert nautical ground miles (NGM) into nautical air miles (NAM).
     options:
@@ -1278,10 +1146,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Refer to figure or CAP file 2.4\. Given the following information,
-      calculate the Ground range.
-
+    question: |-
+      Refer to figure or CAP file 2.4\. Given the following information, calculate the Ground range.
 
       Aeroplane Mass at start-up: 3663 lb   
        Aviation gasoline fuel load (density 6 lb/gal): 74 US gal   
@@ -1356,9 +1222,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-073 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.3.5).   
+    question: |-
+      (For this question use annex 033-073 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.3.5).   
        For a flight of 2800 ground nautical miles the following apply:
 
       Head wind component: 20 kt   
@@ -1395,21 +1260,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex ECQB-033-230-v2016-05 or refer to CAP 697
-      figure 4.3.6).  
-
+    question: |-
+      (For this question use annex ECQB-033-230-v2016-05 or refer to CAP 697 figure 4.3.6).  
       Given the following information, find the minimum required Alternate Fuel for an IFR Commercial Air Transport flight of duration 8 hours to a destination for which the operator has nominated two destination alternates ALTN1 and ALTN2\. At the destination, meteorological information is available, weather conditions are expected to be above the planning minima within ETA +/- 1 hour, two runways are available and usable, the ceiling will be 1500 ft, and the ground visibility 4 km.
 
-
       Distance to ALTN1: 200 NM  
-
       Wind to ALTN1: 50 kt HWC  
-
       Distance to ALTN2: 275 NM  
-
       Wind to ALTN2: 25 kt TWC  
-
       Landing Mass at alternates: 55.0 t
     options:
       - id: OXTC0ZWOT
@@ -1446,36 +1304,26 @@
       aircraft needs to carry? The greater of :"
     options:
       - id: OV2NWOGJU
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, fuel to
-          destination alternate, final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, fuel to destination alternate, final reserve fuel  
           2\. Taxi fuel, trip fuel to the alternate + contingency, fuel from alternate back to destination, final reserve fuel
         correct: false
         why: ""
       - id: OODKMUEXN
-        text: >-
-          1\. Taxi fuel, trip fuel to predetermined point via destination, trip
-          fuel from predetermined point to alternate, final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to predetermined point via destination, trip fuel from predetermined point to alternate, final reserve fuel  
           2\. Taxi fuel, trip fuel to predetermined point via alternate, trip fuel from predetermined point to destination, final reserve fuel
         correct: false
         why: ""
       - id: OCQAUSYTA
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel
-          if required for at least 45 min + 15% of flight time at cruising level
-          or 2 hours, whichever is less and not less than final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel if required for at least 45 min + 15% of flight time at cruising level or 2 hours, whichever is less and not less than final reserve fuel  
           2\. Taxi fuel, trip fuel to the destination alternate + contingency, additional fuel if required but at least fuel to fly for 45 minutes and not less than final reserve fuel
         correct: true
         why: ""
       - id: ONIZCUUIJ
-        text: >-
-          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel
-          if required but at least 2 hours at cruise consumption above the
-          destination and not less than final reserve fuel  
-
+        text: |-
+          1\. Taxi fuel, trip fuel to destination + contingency, additional fuel if required but at least 2 hours at cruise consumption above the destination and not less than final reserve fuel  
           2\. Taxi fuel, trip fuel to the destination alternate + contingency, additional fuel if required but at least 30 minutes at holding speed at 1 500 ft above alternate elevation and not less than final reserve fuel
         correct: false
         why: ""
@@ -1496,23 +1344,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annexes 033-065 and 033-066 rev. 05.11.2004 or
-      Flight Planning Manual MRJT 1 Figure 4.5.2 and 4.5.3.1).   
-
+    question: |-
+      (For this question use annexes 033-065 and 033-066 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.5.2 and 4.5.3.1).   
       Given:
 
-
       Distance C - D: 680 NM   
-
       Long Range Cruise at FL340   
-
       Temperature Deviation from ISA: 0° C   
-
       Headwind component: 60 kt   
-
       Gross mass at C: 44 700 kg
-
 
       The fuel required from C - D is
     options:
@@ -1561,37 +1401,21 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the total fuel required for the
-      Commercial Air Transport flight in a Medium Range Jet Transport MRJT
-      aeroplane, given the following information? Assume the Basic Fuel Scheme
-      WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the total fuel required for the Commercial Air Transport flight in a Medium Range Jet Transport MRJT aeroplane, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Estimated taxi time: 10 minutes at the departure aerodrome and 5 minutes at the destination aerodrome  
-
       APU fuel flow: 115 kg/h  
-
       Taxi fuel flow: 11 kg/min  
-
       Planned APU usage at the parking position: Zero  
-
       Total trip distance: 748 NM  
-
       Average fuel flow: 2 618 kg/h  
-
       TAS: 421 kt  
-
       Head wind component: 24 kt  
-
       Contingency Fuel: 5% of the Trip Fuel  
-
       Alternate Fuel: 550 kg  
-
       Holding fuel flow: 2 250 kg/h  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OPGRCGYT9
@@ -1624,9 +1448,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annexes 033-048, 033-049 and 033-050 rev.
-      05.11.2004).   
+    question: |-
+      (For this question use annexes 033-048, 033-049 and 033-050 rev. 05.11.2004).   
        Given:
 
       Take-off mass: 150 000 kg   
@@ -1701,20 +1524,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes what is the required fuel for a VFR
-      Commercial Air Transport flight with a reciprocating engines? Assume the
-      Basic Fuel Scheme WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes what is the required fuel for a VFR Commercial Air Transport flight with a reciprocating engines? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Fuel Flow: 120 kg/h  
-
       Trip Time: 4 h 39 min  
-
       No alternate selected and good weather expected.  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: O0NNLZ3KV
@@ -1745,16 +1561,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.   
-
       Consider a twin engine piston aircraft at cruising altitude. Determine the aircraft's fuel flow, given the following:
 
-
       Altitude: 20 000 ft   
-
       Indicated airspeed: 100 kt   
-
       Weight: 6 000 lbs
     options:
       - id: OOSJZYRMR
@@ -1786,17 +1598,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-012 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.5.1).   
-
+    question: |-
+      (For this question use annex 033-012 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.5.1).   
       Given:
 
-
       Brake release mass: 58 000 kg   
-
       Temperature: ISA +15°C
-
 
       The fuel required to climb from an aerodrome at elevation 4000 ft to FL300 is
     options:

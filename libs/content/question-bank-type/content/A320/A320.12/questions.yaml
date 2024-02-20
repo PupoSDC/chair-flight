@@ -1124,13 +1124,10 @@
 
   variant:
     type: true-or-false
-    question: >-
-      The landing gear positions are indicated by 2 triangles for each gear.
-      Each triangle is controlled by one LGCIU:
-
+    question: |-
+      The landing gear positions are indicated by 2 triangles for each gear. Each triangle is controlled by one LGCIU:
 
       - a green triangle indicates that one LGCIU detects a landing gear downlocked.
-
 
       - a red triangle indicates that one LGCIU detects a landing gear which is not locked in the selected position.
     answer: true

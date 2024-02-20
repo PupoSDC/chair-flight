@@ -43,12 +43,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      At the last minute, 15 passengers were unable to board an aircraft,
-      resulting in a weight reduction of 1500 kg. The operational flight plan
-      shows that a weight reduction of 1000 kg will apply a 205 kg reduction to
-      the aircraft's trip fuel. Calculate the new trip fuel required for the
-      flight.   
+    question: |-
+      At the last minute, 15 passengers were unable to board an aircraft, resulting in a weight reduction of 1500 kg. The operational flight plan shows that a weight reduction of 1000 kg will apply a 205 kg reduction to the aircraft's trip fuel. Calculate the new trip fuel required for the flight.   
        (Use interpolation)
     options:
       - id: ONBOZGWUL
@@ -80,20 +76,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft planning to fly a total distance of 460 NM, after flying for 1
-      hour 09 minutes it covers 178 NM and its actual fuel remaining is 1019 I.
-      Given the following information and assuming that the actual fuel
-      consumption remains at the same rate, what will be the actual fuel
-      remaining at destination?
-
+    question: |-
+      An aircraft planning to fly a total distance of 460 NM, after flying for 1 hour 09 minutes it covers 178 NM and its actual fuel remaining is 1019 I. Given the following information and assuming that the actual fuel consumption remains at the same rate, what will be the actual fuel remaining at destination?
 
       Average TAS: 145 kt  
-
       Average wind component: 25 kt headwind  
-
       Trip Fuel: 1 350 l  
-
       Planned average fuel flow: 360 l/h
     options:
       - id: OOERYEMQP
@@ -156,28 +144,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a Commercial Air Transport flight,
-      what is the time (in minutes) needed from the destination to the alternate
-      aerodrome? Assume an operation with a Performance Class A aeroplane
-      applying the Basic Fuel Scheme or with a helicopter (the basic fuel
-      planning provisions are the same).
-
+    question: |-
+      Given the following information for a Commercial Air Transport flight, what is the time (in minutes) needed from the destination to the alternate aerodrome? Assume an operation with a Performance Class A aeroplane applying the Basic Fuel Scheme or with a helicopter (the basic fuel planning provisions are the same).
 
       Missed approach at the destination: 6 minutes  
-
       Climb to cruise level: 7 minutes  
-
       Cruise distance: 130 NM  
-
       Cruise TAS: 145 kt  
-
       Wind component: 10 kt tailwind  
-
       Anticipated hold at the alternate: 11 minutes  
-
       Descent to the alternate: 7 minutes  
-
       Approach to the alternate: 8 minutes
     options:
       - id: O1RKDUYSD
@@ -256,28 +232,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a Commercial Air Transport flight,
-      what is the time (in minutes) needed from the destination to the alternate
-      aerodrome? Assume an operation with a Performance Class A aeroplane
-      applying the Basic Fuel Scheme or with a helicopter (the basic fuel
-      planning provisions are the same).
-
+    question: |-
+      Given the following information for a Commercial Air Transport flight, what is the time (in minutes) needed from the destination to the alternate aerodrome? Assume an operation with a Performance Class A aeroplane applying the Basic Fuel Scheme or with a helicopter (the basic fuel planning provisions are the same).
 
       Missed approach at the destination: 6 minutes  
-
       Climb to cruise level: 8 minutes  
-
       Cruise distance: 75 NM  
-
       Cruise TAS: 145 kt  
-
       Wind component: 10 kt headwind  
-
       Anticipated hold at the alternate: 12 minutes  
-
       Descent to the alternate: 7 minutes  
-
       Approach to the alternate: 6 minutes
     options:
       - id: OKQMPDOI7
@@ -315,27 +279,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the estimated estimated Landing
-      Mass at the destination for the Commercial Air Transport flight with a
-      Performance Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT
-      variations applies.
-
+    question: |-
+      Given the following information, calculate the estimated estimated Landing Mass at the destination for the Commercial Air Transport flight with a Performance Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       DOM: 9 900 lb  
-
       Traffic Load: 3 160 lb  
-
       Remaining useable fuel: 2 100 lb  
-
       Remaining Trip Fuel to Destination: 800 lb  
-
       Destination Alternate Fuel: 485 lb  
-
       Final Reserve Fuel: 420 lb  
-
       Extra fuel: 0 lb  
-
       Discretionary Fuel: 0 lb
     options:
       - id: OYDYP1FIB
@@ -369,9 +322,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Refer to figure or CAP 697 Figure 4.5.3.2 for Pressure Altitude 35000
-      ft.   
+    question: |-
+      Refer to figure or CAP 697 Figure 4.5.3.2 for Pressure Altitude 35000 ft.   
        What will be the change in air range available from 1000 kg of fuel for the following situation if the OAT increases from -55° C to -45° C?
 
       Aircraft mass at start of cruise leg: 50000 kg   
@@ -411,12 +363,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       (For this question use annex CAP 697 Figure 4.3.1a). Given the following data calculate the Trip Fuel.
-
 
       Long Range Cruise   
        Temperature deviation: ISA -5°C   
@@ -483,11 +433,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Consider an IFR flight with a departure aerodrome called "DEP" and a
-      destination aerodrome called "DEST" and a decision point called "DP",
-      since the decision point procedure has to be used.
-
+    question: |-
+      Consider an IFR flight with a departure aerodrome called "DEP" and a destination aerodrome called "DEST" and a decision point called "DP", since the decision point procedure has to be used.
 
       There is also a suitable aerodrome for refuelling, called aerodrome "REF". The pilot has calculated a trip fuel from DEP to DEST so the contingency will be at least:
     options:
@@ -610,11 +557,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A pilot is preparing a commercial flight but during the planning phase the
-      latest weather update at the destination aerodrome leads to a change of
-      the runway which in turn results to a more time consuming arrival section.
-
+    question: |-
+      A pilot is preparing a commercial flight but during the planning phase the latest weather update at the destination aerodrome leads to a change of the runway which in turn results to a more time consuming arrival section.
 
       What will happen to the planned trip fuel?
     options:
@@ -682,31 +626,18 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the actual fuel at the
-      destination for the Commercial Air Transport flight with a Performance
-      Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT variations
-      applies.
-
+    question: |-
+      Given the following information, calculate the actual fuel at the destination for the Commercial Air Transport flight with a Performance Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Assume that the actual fuel consumption is maintained at the same rate.  
-
       Total distance from A to B: 320 NM  
-
       Fuel remaining after 1 hour 15 minutes: 859 US gal  
-
       Distance travelled after 1 hour 15 minutes: 119 NM  
-
       Average TAS: 115 kt  
-
       Wind component: 20 kt headwind  
-
       Trip Fuel: 1280 US gal  
-
       Planned average fuel flow: 380 US gal/h  
-
       Extra fuel: 0 gal  
-
       Discretionary Fuel: 0 gal
     options:
       - id: OVEDPTI9X
@@ -737,10 +668,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Determine the remaining endurance of the aircraft (ignoring any reserve
-      fuel), given:
-
+    question: |-
+      Determine the remaining endurance of the aircraft (ignoring any reserve fuel), given:
 
       An aircraft is on a taxi flight, and the fuel gauge is showing 41% of fuel left in the tank.   
        Total Fuel capacity 514 l   
@@ -773,9 +702,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       A reciprocating engine aeroplane is flying in ISA conditions. Which altitude should a pilot choose to fly: 4 000 ft or 10 000 ft?
     options:
@@ -853,9 +781,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       An aircraft with a mass of 46 500 kg is flying in long range cruise at FL280, under ISA conditions. The tailwind experienced during the flight decreases from 25 kt to 10 kt, what will be the impact in ground distance covered per 1 000 kg of fuel burnt?
     options:
@@ -891,29 +818,18 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annexes 033-056, 033-049 and 033-050 rev.
-      05.11.2004).   
-
+    question: |-
+      (For this question use annexes 033-056, 033-049 and 033-050 rev. 05.11.2004).   
       Knowing that:
 
-
       Mass at brake release: 210 000 kg   
-
       Selected cruise speed: 0.82 Mach   
-
       Flight leg distance: 3 000 NM   
-
       Cruise level: optimum   
-
       Air conditioning: standard   
-
       Anti-icing: OFF   
-
       Temperature: ISA   
-
       CG: 37%
-
 
       Assuming zero wind, the planned landing mass at destination will be:
     options:
@@ -946,12 +862,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       The figure shows a typical fuel plan for a Commercial Air Transport flight with operational impact factors as produced by a flight planning tool. Since the aeroplane has arrived late, it is planned to fly the next flight at a higher speed. Use the data below to calculate the revised flight time.
-
 
       Revised speed: M 0.80   
        Revised weight: 1500 Kg up   
@@ -986,12 +900,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       A Medium-Range Jet Aircraft is planned to perform a Commercial Air Transport flight to Sal International Airport, Cabo Verde (GVAC). For operational purposes, the Tenerife South International Airport (GCTS) is the nominated destination alternate, but for facilitation reasons, the commercial flight must follow the isolated aerodrome procedure requirements. Using the data below and the figures in the annex, calculate the required Additional Fuel (ADDFU) for this flight?
-
 
       Average trip fuel flow: 2849 kg/h   
        Holding fuel flow: 2400 kg/h
@@ -1025,11 +937,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, select the correct statement regarding
-      the Alternate Fuel for a Commercial Air Transport flight for which an
-      En-Route Alternate (ERA) aerodrome is considered.
-
+    question: |-
+      Given the following information, select the correct statement regarding the Alternate Fuel for a Commercial Air Transport flight for which an En-Route Alternate (ERA) aerodrome is considered.
 
       ERA for 3 % Contingency fuel: LFPR   
        Destination aerodrome: DESA   
@@ -1073,28 +982,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a Commercial Air Transport flight,
-      what is the time (in minutes) needed from the destination to the alternate
-      aerodrome? Assume an operation with a Performance Class A aeroplane
-      applying the Basic Fuel Scheme or with a helicopter (the basic fuel
-      planning provisions are the same).
-
+    question: |-
+      Given the following information for a Commercial Air Transport flight, what is the time (in minutes) needed from the destination to the alternate aerodrome? Assume an operation with a Performance Class A aeroplane applying the Basic Fuel Scheme or with a helicopter (the basic fuel planning provisions are the same).
 
       Missed approach at the destination: 6 min  
-
       Climb to cruise level: 8 min  
-
       Cruise distance: 55 NM  
-
       Cruise TAS: 165 kt  
-
       Headwind: 10 kt  
-
       Expected holding at the alternate: 10 min  
-
       Descent to the alternate: 6 min  
-
       Approach to the alternate: 6 min
     options:
       - id: OUGSMFSIG
@@ -1127,19 +1024,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Use the following information to determine the increase in fuel required
-      for a cruise leg for a Medium-Range Jet Transport (MRJT) flight.
-
+    question: |-
+      Use the following information to determine the increase in fuel required for a cruise leg for a Medium-Range Jet Transport (MRJT) flight.
 
       Cruise leg distance: 135 NM   
-
       Planned cruise TAS: 450 kt   
-
       Forecast wind component: +25 kt   
-
       Planned cruise fuel consumption: 5 kg/NAM   
-
       Revised forecast wind component: -25 kt
     options:
       - id: ONUNSCPL9
@@ -1176,29 +1067,18 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-057, 033-056, 033-049 and 033-050 rev.
-      05.11.2004).   
-
+    question: |-
+      (For this question use annex 033-057, 033-056, 033-049 and 033-050 rev. 05.11.2004).   
       Knowing that: .
 
-
       Mass at brake release: 190 000 kg   
-
       Selected cruise speed: 0.82 Mach   
-
       Flight leg distance: 1 500 NM   
-
       Cruise level: optimum   
-
       Air conditioning: standard   
-
       Anti-icing: OFF   
-
       Temperature: ISA   
-
       CG: 37% Assuming zero wind,
-
 
       The planned flight time from take-off to landing needed to complete this flight will be:
     options:
@@ -1289,23 +1169,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For pre-flight planning purposes, what is the minimum Take-off Fuel
-      required for the Commercial Air Transport flight with Performance Class A
-      aeroplanes, given the following information? Assume the Basic Fuel Scheme
-      WITHOUT variations applies.
-
+    question: |-
+      For pre-flight planning purposes, what is the minimum Take-off Fuel required for the Commercial Air Transport flight with Performance Class A aeroplanes, given the following information? Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       Fuel necessary for a jet aeroplane to fly IFR from departure aerodrome to the destination aerodrome: 5 352 kg  
-
       Fuel consumption in holding mode: 6 000 kg/h  
-
       Destination Alternate fuel: 4 380 kg  
-
       Contingency should be 5% of trip fuel  
-
       Extra Fuel: 0 kg  
-
       Discretionary Fuel: 0 kg
     options:
       - id: OH58BFOI6
@@ -1337,7 +1208,7 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure or CAP 697 Figure 3.4\.   
        Given the following conditions and in order to complete a navigation plan, calculate the True Air Speed TAS during cruise, for a VFR flight with a multi engined piston aeroplane at FL075.
 
@@ -1411,9 +1282,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       You are cruising at FL380 with a twin-engined jet aeroplane. However, due to turbulence, you descend from FL380 to FL360\. Determine the fuel consumed at FL360 until the top of descent (TOD). The distance travelled at FL360 is 295 NM, the TAT is -17ºC and the aeroplane mass is 65 000 kg.
     options:
@@ -1446,12 +1316,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Due to significant weather conditions in the vicinity of the destination
-      aerodrome, the pilot of a Commercial Air Transport flight has to plan for
-      two destination alternate aerodromes. Given the following information,
-      what is the Alternate Fuel required?
-
+    question: |-
+      Due to significant weather conditions in the vicinity of the destination aerodrome, the pilot of a Commercial Air Transport flight has to plan for two destination alternate aerodromes. Given the following information, what is the Alternate Fuel required?
 
       Average cruise fuel flow: 46 kg/min   
        Fuel for missed approach: 400 kg   
@@ -1486,9 +1352,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       In the figure, all fuel figures are in kg. For this flight, how does the fuel consumption from top of climb to TORDU compare to the planned fuel consumption? The actual fuel consumption is…
     options:
@@ -1521,10 +1386,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Refer to figure or CAP697 file 4.3.1C. For a flight of 1900 nautical
-      ground miles the following apply:
-
+    question: |-
+      Refer to figure or CAP697 file 4.3.1C. For a flight of 1900 nautical ground miles the following apply:
 
       Head wind component: 10 kt   
        Temperature: ISA -5°C   
@@ -1561,9 +1424,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Determine aircraft's safe endurance overhead CHARLIE if the minimum landing fuel is 350 lb, assuming NO change in actual fuel flow:
     options:
@@ -1599,17 +1461,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-025 rev. 05.11.2004 or Flight planning
-      Manual SEP 1 Figure 2.2 Table 2.2.3).   
-
+    question: |-
+      (For this question use annex 033-025 rev. 05.11.2004 or Flight planning Manual SEP 1 Figure 2.2 Table 2.2.3).   
       Using the Power Setting Table, for the single engine aeroplane, determine the cruise TAS and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions:
 
-
       Given: OAT: 13°C   
-
       Pressure altitude: 8000 ft   
-
       RPM: 2300
     options:
       - id: OZMUDQC7K
@@ -1642,12 +1499,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, the pilot finally decides to fly with TAS
-      140 kt, because of a stronger headwind more than the forecast. What will
-      be the difference in the fuel consumption between the planned and the
-      actual conditions?
-
+    question: |-
+      Given the following information, the pilot finally decides to fly with TAS 140 kt, because of a stronger headwind more than the forecast. What will be the difference in the fuel consumption between the planned and the actual conditions?
 
       Distance A-B: 240 NGM   
        Planned TAS: 130 kt   
@@ -1689,21 +1542,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For the question use annex 033-072 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.3.1C).   
-
+    question: |-
+      (For the question use annex 033-072 rev. 05.11.2004 or Flight Planning Manual MRJT 1 Figure 4.3.1C).   
       For a flight of 2800 ground nautical miles the following apply:
 
-
       Tail wind component 45kt   
-
       Temperature ISA - 10°C   
-
       Cruise altitude 29000ft   
-
       Landing mass 55000kg
-
 
       The (a) trip fuel (b) trip time respectively are:
     options:
@@ -1734,9 +1580,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Assuming no significant change in fuel consumption, what would be the planned remaining fuel at waypoint 40N 050W?
     options:
@@ -1768,12 +1613,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       Given:
-
 
       Pressure altitude: 35 000 ft   
        Cruise: FL350   
@@ -1815,12 +1658,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       You are cruising at FL380 with a twin-engined jet aeroplane. Due to airspace restrictions ATC instructs you to reduce speed to Mach .754\. Given the following information, what is the fuel you will use for the remainder of the cruise time?
-
 
       Distance to Top-of-Descent: 220 NM   
        Aircraft mass: 50 000 kg   
@@ -1862,24 +1703,15 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information, calculate the change in planned Trip Fuel
-      when applying the updated meteorological conditions. Round up the
-      calculation to the next full kilogram.
-
+    question: |-
+      Given the following information, calculate the change in planned Trip Fuel when applying the updated meteorological conditions. Round up the calculation to the next full kilogram.
 
       Trip distance: 150 NAM   
-
       Planned TAS: 150 kt   
-
       Change TAS: 1 kt for every 1° C change in OAT   
-
       Planned average trip fuel consumption: 3 kg/NAM   
-
       Change of Trip Fuel required: 0.5% increase for every 10° C increase in OAT   
-
       Revised OAT: 10° C above planned OAT
-
 
       The change in Trip Fuel will be
     options:
@@ -1911,10 +1743,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-008 rev. 05.11.2004 or Flight Planning
-      Manual MEP1 Figure 3.1).
-
+    question: |-
+      (For this question use annex 033-008 rev. 05.11.2004 or Flight Planning Manual MEP1 Figure 3.1).
 
       A multi engine piston aeroplane is departing an aerodrome with an altitude of 3000 ft and temperature of -1ºC. Calculate the fuel to climb to FL110, where the temperature is ISA -10° C, with mixture rich.
     options:
@@ -2019,12 +1849,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       A reciprocating engine aeroplane is flying in ISA conditions. Which altitude should a pilot choose to fly: 4 000 ft or 10 000 ft?
-
 
       Temperature ISA   
        4 000 ft: 0 kt wind   
@@ -2060,17 +1888,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Refer to figure or CAP 697 Figure 4.3.2c and CAP 697 Figure 4.5.3.2 for
-      Pressure Altitude 37000 ft.  
-
+    question: |-
+      Refer to figure or CAP 697 Figure 4.3.2c and CAP 697 Figure 4.5.3.2 for Pressure Altitude 37000 ft.  
       Which changes to forecast conditions will produce the greatest increase in Trip Fuel required for the following Medium Range Jet Transport MRJT flight?
 
-
       Cruise level: FL370  
-
       Cruise speed: Mach 0.74  
-
       Trip distance: 2000 NM A change in
     options:
       - id: OJ7ESFI47
@@ -2106,16 +1929,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.   
-
       What will be the approximate change in ground distance covered per 1 000 kg of fuel burnt if the headwind increases from 25 kt to 35 kt?
 
-
       Aircraft mass at start of cruise leg: 50 000 kg   
-
       Cruise level: FL280, LRC   
-
       ISA conditions
     options:
       - id: OIWTYI5LN
@@ -2144,10 +1963,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Which of the following statements is correct with regards to fuel
-      tankering?
-
+    question: |-
+      Which of the following statements is correct with regards to fuel tankering?
 
       1\. Fuel tankering should be considered when the fuel price at the destination aerodrome is higher than at the departure aerodrome.   
        2\. Fuel tankering is considered suitable in case weather conditions at the destination aerodrome are below minima.
@@ -2181,12 +1998,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       A pilot on a short VFR flight fills in the flight log, as seen in the image. The aircraft departed with slightly more fuel than the planned fuel, but within operational limits. The planned take-off and landing masses are shown on the log.
-
 
       The pilot wants to estimate their landing mass. TO do this, they assume that the fuel flow from their current position (seeshaupt) to the Top of Descent (Tall Mast) will be the same as the average for the cruise so far and that the fuel used in the descent will be 28 kg, which is the same as the original plan. What is the pilot's estimate of the actual Landing Mass?
     options:
@@ -2218,19 +2033,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-046 rev. 05.11.2004) A turbojet aeroplane
-      is flying using the following data: 
-
+    question: |-
+      (For this question use annex 033-046 rev. 05.11.2004) A turbojet aeroplane is flying using the following data: 
 
       Optimum flight level, Mach 0.80, mass of 190 000 kg 
 
-
       Temperature: ISA 
 
-
       Tailwind component: 100 kts 
-
 
       The fuel mileage and the fuel consumption per hour are:
     options:
@@ -2262,12 +2072,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       Given the following information, calculate the time and distance from take-off to Top of Climb:
-
 
       Aerodrome pressure altitude: 4000 ft   
        Aerodrome OAT: +8°C   
@@ -2344,10 +2152,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Determine the minimum planning fuel required for departure, for the
-      following planned flight with a Performance Class A aeroplane:
-
+    question: |-
+      Determine the minimum planning fuel required for departure, for the following planned flight with a Performance Class A aeroplane:
 
       Assume the Basic Fuel Scheme WITHOUT variations applies.   
        Trip Fuel: 2 862 lb   
@@ -2439,21 +2245,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-021 rev. 05.11.2004 or Flight Planning
-      Manual MEP 1 Figure 3.2).   
-
+    question: |-
+      (For this question use annex 033-021 rev. 05.11.2004 or Flight Planning Manual MEP 1 Figure 3.2).   
       A flight is to be made in a multi engine piston aeroplane MEP 1.
 
-
       The cruising level will be 11000 ft.   
-
       The outside air temperature at FL is -15° C.   
-
       The usable fuel is 123 US gallons.   
-
       The power is set to economic cruise.
-
 
       Find the range in NM with 45 min reserve fuel.
     options:
@@ -2487,17 +2286,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Which of the following circumstances would be considered suitable for fuel
-      tankering?
-
+    question: |-
+      Which of the following circumstances would be considered suitable for fuel tankering?
 
       1\. The estimated landing mass is equal to the maximum landing mass.   
-
       2\. The weather at the destination is below landing minima.   
-
       3\. Unable to climb to the Minimum Obstacle Clearance Altitude (MOCA) should an engine fail.   
-
       4\. There is no fuel available at the destination aerodrome.
     options:
       - id: OFS2LYE7I
@@ -2563,19 +2357,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft is flying a route from position A to B, a distance of 57
-      Nautical Ground Miles (NGM). Given the following information:
-
+    question: |-
+      An aircraft is flying a route from position A to B, a distance of 57 Nautical Ground Miles (NGM). Given the following information:
 
       True Airspeed (TAS): 145 kt  
-
       Forecast wind: 240°/30 kt  
-
       Course: 205°(M)  
-
       Variation: 15°W
-
 
       What is the distance covered in Nautical Air Miles (NAM) ?
     options:
@@ -2671,12 +2459,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A pilot is planning a VFR flight from Ajaccio (LFKJ) to Marina Di Campo
-      (LIRJ) aerodrome with alternate aerodrome the Grosseto (LIRS). Given the
-      following information, what is the required time from Marina Di Campo to
-      Grosseto?
-
+    question: |-
+      A pilot is planning a VFR flight from Ajaccio (LFKJ) to Marina Di Campo (LIRJ) aerodrome with alternate aerodrome the Grosseto (LIRS). Given the following information, what is the required time from Marina Di Campo to Grosseto?
 
       Cruise distance from LIRJ to LIRS: 24 NM   
        Climb from LIRJ to cruise altitude: 3 minutes   
@@ -2714,13 +2498,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft planning to fly a total distance of 450 NM, after flying for 1
-      hour 20 minutes it covers 160 NM and its actual fuel remaining is 890 I.
-      Given the following information and assuming that the actual fuel
-      consumption remains at the same rate, what will be the actual fuel
-      remaining at destination?
-
+    question: |-
+      An aircraft planning to fly a total distance of 450 NM, after flying for 1 hour 20 minutes it covers 160 NM and its actual fuel remaining is 890 I. Given the following information and assuming that the actual fuel consumption remains at the same rate, what will be the actual fuel remaining at destination?
 
       Average TAS: 145 kt   
        Average wind component: 25 kt headwind   
@@ -2756,9 +2535,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       The annex shows an extract of the route info page on a typical operational flight produced by a flight planning tool.You are flying from GVAC to EGCC and notice there are three different distances shown on the flight plan. What is the significance of the difference between GND DIST and AIR DIST?
     options:
@@ -2797,28 +2575,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information for a Commercial Air Transport flight,
-      what is the time (in minutes) needed from the destination to the alternate
-      aerodrome? Assume an operation with a Performance Class A aeroplane
-      applying the Basic Fuel Scheme or with a helicopter (the basic fuel
-      planning provisions are the same).
-
+    question: |-
+      Given the following information for a Commercial Air Transport flight, what is the time (in minutes) needed from the destination to the alternate aerodrome? Assume an operation with a Performance Class A aeroplane applying the Basic Fuel Scheme or with a helicopter (the basic fuel planning provisions are the same).
 
       Missed approach at the destination: 5 min  
-
       Climb to cruise level: 5 min  
-
       Cruise distance: 65 NM  
-
       Cruise TAS: 145 kt  
-
       Wind component: +18 kt  
-
       Anticipated hold at the alternate: 20 min  
-
       Descent to the alternate: 4 min  
-
       Approach to the alternate: 5 min
     options:
       - id: OW376ENZM
@@ -2851,11 +2617,9 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       (For this question use annex 033-045 rev. 05.11.2004).   
-
       A turbojet aeroplane, weighing 200 000 kg, initiates its cruise at the optimum level at M 0.84 (ISA, CG = 37%, Total Anti Ice ON).
-
 
       A head wind of 30 kt is experienced and, after a distance of 500 NM, severe icing is encountered and this requires an immediate descent. The aeroplane mass at start of descent is:
     options:
@@ -2888,12 +2652,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       Refer to CAP 697 Figure 3.4\. From the meteorology charts for your route, you make the following observations:
-
 
       Pressure Altitude 4000 ft: OAT+11°C, headwind component 10 kt   
        Pressure Altitude 6000 ft: OAT+07°C, headwind component 10 kt   
@@ -2901,7 +2663,6 @@
        Pressure Altitude 8000 ft: OAT+0°C, headwind component 20 kt
 
       The fuel flow given for flying at 45% power is 16 gallons per hour.
-
 
       What should be the most fuel efficient pressure altitude to fly a route distance of 300 NM?
     options:
@@ -2970,9 +2731,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex ECQB-033-206-v2015-12 or CAP 697 Figure
-      4.5.3.2 for Pressure Altitude 35000 ft).   
+    question: |-
+      (For this question use annex ECQB-033-206-v2015-12 or CAP 697 Figure 4.5.3.2 for Pressure Altitude 35000 ft).   
        What will be the approximate change in ground distance available from 1000 kg of fuel for the following situation if the headwind increases from 25 kt to 35 kt?
 
       Aircraft mass at start of cruise leg: 65000 kg   
@@ -3010,9 +2770,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      (For this question use annex 033-033 rev. 05.11.2004 or Flight planning
-      Manual SEP 1 Figure 2.4).   
+    question: |-
+      (For this question use annex 033-033 rev. 05.11.2004 or Flight planning Manual SEP 1 Figure 2.4).   
        Using the Range Profile Diagram, for the single engine aeroplane, determine the range in the following conditions: Given:
 
       O.A.T: ISA   

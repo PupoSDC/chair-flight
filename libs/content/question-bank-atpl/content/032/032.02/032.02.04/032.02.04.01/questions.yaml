@@ -19,23 +19,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For a single engine aeroplane, calculate the net glide distance following
-      an engine failure. Given:
-
+    question: |-
+      For a single engine aeroplane, calculate the net glide distance following an engine failure. Given:
 
       Altitude: 9 500 ft  
-
       Terrain elevation: 500 ft  
-
       Gross gradient: 11%  
-
       TAS: 250 kt  
-
       Headwind: 42 kt  
         
       Still Air Distance = (Height Difference (ft) x 100) / Net Gradient (%)  
-
       Ground Distance = Still Air Distance x (GS/TAS)
     options:
       - id: OPNVAH6OZ
@@ -108,22 +101,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For a single engine aeroplane, calculate the net glide distance following
-      an engine failure. Given:  
+    question: |-
+      For a single engine aeroplane, calculate the net glide distance following an engine failure. Given:  
         
       Altitude: 9 000 ft  
-
       Terrain elevation: 250 ft  
-
       Gross gradient: 11%  
-
       TAS: 101 kt  
-
       Tailwind: 3 kt  
         
       Still Air Distance = (Height Difference (ft) x 100) / Net Gradient (%)  
-
       Ground Distance = Still Air Distance x (GS/TAS)
     options:
       - id: O8HTXM37L
@@ -156,12 +143,10 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
 
-
       Given the following information, calculate the obstacle clearance for a departure on runway track from RWY 27 in a class B SEP aircraft:
-
 
       Climb Gradient: 4.5%   
        TAS: 115 kt   
@@ -235,21 +220,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A single-engined piston aeroplane is flying at an altitude of 5 000 ft
-      with a constant headwind component of 25 kt. Given the following
-      information, if the engine fails at this altitude, what should be the
-      expected net glide distance over ground with an elevation of 250 ft?
-
+    question: |-
+      A single-engined piston aeroplane is flying at an altitude of 5 000 ft with a constant headwind component of 25 kt. Given the following information, if the engine fails at this altitude, what should be the expected net glide distance over ground with an elevation of 250 ft?
 
       L/D: 9.1:1   
-
       TAS: 140 kt   
-
       Assume 1 NM = 6 080 ft   
-
       Still Air Distance = (Height difference / Net gradients) x 100   
-
       Ground Distance = Still Air Distance x (GS / TAS)
     options:
       - id: ODGJRUFQX
@@ -283,25 +260,16 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      A twin-engine piston aeroplane with all engines operating commences
-      take-off and the following information is given:
-
+    question: |-
+      A twin-engine piston aeroplane with all engines operating commences take-off and the following information is given:
 
       Maximum take-off mass: 4 750 kg   
-
       Airport elevation: 500 ft   
-
       Obstacle elevation: 644 ft   
-
       Distance from the end of the take-off distance to the obstacle: 2 000 m   
-
       Temperature: ISA   
-
       QNH: 1 018 hPa   
-
       SID: straight departure, no specific climb requirements published
-
 
       What is the regulatory minimum vertical clearance between aircraft and obstacle?
     options:
@@ -370,22 +338,14 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      For planning purposes, determine the net distance travelled down to 4 000
-      ft for a single-engine piston aircraft following an engine failure at 8
-      000 ft. Given the following data:
-
+    question: |-
+      For planning purposes, determine the net distance travelled down to 4 000 ft for a single-engine piston aircraft following an engine failure at 8 000 ft. Given the following data:
 
       TAS: 120 kts   
-
       GS: 150 kts   
-
       Gross gradient of descent 11%   
-
       Gross/net gradient decrement 0.5%   
-
       Still air distance (ft) = (Height difference (ft) x 100) / % net gradient   
-
       Ground distance = still air distance x (groundspeed / TAS)
     options:
       - id: OSIQF0PV9

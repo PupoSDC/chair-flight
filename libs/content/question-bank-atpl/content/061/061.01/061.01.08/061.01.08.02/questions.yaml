@@ -87,19 +87,13 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Calculate the W/V given the following outputs of the Inertial Navigation
-      System and the Air Data Computer:
-
+    question: |-
+      Calculate the W/V given the following outputs of the Inertial Navigation System and the Air Data Computer:
 
       GS: 520 kt   
-
       True heading: 090°   
-
       Drift angle: 5° right   
-
       TAS: 480 kt   
-
       Static Air Temperature SAT: -51°C
     options:
       - id: OM0WTKAE9
@@ -204,28 +198,17 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft descends from flight level 180 to ground level with a constant
-      TAS of 220 kt.The TT in descent is 080°. The W/V at various flight levels
-      in the area are given below.
-
+    question: |-
+      An aircraft descends from flight level 180 to ground level with a constant TAS of 220 kt.The TT in descent is 080°. The W/V at various flight levels in the area are given below.
 
       FL W/V   
-
       ground level 260°/25 kt   
-
       30 270°/30 kt   
-
       60 270°/35 kt   
-
       90 270°/40 kt   
-
       120 280°/50 kt   
-
       150 285°/55 kt   
-
       180 290°/55 kt
-
 
       Calculate the average GS in descent.
     options:
@@ -257,10 +240,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Given the following information,determine the True Heading (TH) and
-      Groundspeed (GS)...
-
+    question: |-
+      Given the following information,determine the True Heading (TH) and Groundspeed (GS)...
 
       True Track: 100°   
        TAS: 100 kt   
@@ -452,27 +433,17 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      An aircraft climbs from ground level to a cruising flight level of 180\.
-      In the table the W/V at various flight levels in the area are given.
-
+    question: |-
+      An aircraft climbs from ground level to a cruising flight level of 180\. In the table the W/V at various flight levels in the area are given.
 
       FL W/V   
-
       ground level 260°/25 kt,   
-
       30 270°/30 kt,   
-
       60 270°/35 kt,   
-
       90 270°/40 kt,   
-
       120 280°/50 kt,   
-
       150 285°/55 kt,   
-
       180 290°/55 kt.
-
 
       Which W/V should be used to solve climb problems e.g. the calculation of the GS from TAS and the Track in climb
     options:

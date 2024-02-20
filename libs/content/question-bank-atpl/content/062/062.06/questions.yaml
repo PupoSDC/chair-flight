@@ -872,9 +872,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Complete the following sentence:
-
 
       Receiver Autonomous Integrity Monitoring (RAIM) of GNSS signals requires (1) \_\_\_\_\_ satellites with good geometry. For Fault Detection and Exclusion (FDE) (2) \_\_\_\_\_ satellites are required.
     options:
@@ -1063,17 +1062,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Which of the following statements correctly describe the clock system in
-      the Galileo Global Navigation Satellite System (GNSS)?
-
+    question: |-
+      Which of the following statements correctly describe the clock system in the Galileo Global Navigation Satellite System (GNSS)?
 
       1\. There are two independent, identical atomic clocks on each satellite.   
-
       2\. There are two independent, non-identical atomic clocks on each satellite.   
-
       3\. There is one master atomic clock and one reference clock on each satellite.   
-
       4\. The satellite clocks are synchronised with each other.
     options:
       - id: O67B0AF6E
@@ -1598,10 +1592,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      Which of the following are current or planned Global Navigation Satellite
-      Systems (GNSS)?
-
+    question: |-
+      Which of the following are current or planned Global Navigation Satellite Systems (GNSS)?
 
       1\. EGNOS   
        2\. WAAS   
@@ -1718,36 +1710,26 @@
       used shows a RAIM prediction error. This means, that...
     options:
       - id: OUCKGYZAM
-        text: >-
-          | at the expected time of approach, an insufficient number of
-          satellites to assure fault detection is predicted to be available.
-          |  |
-
+        text: |-
+          | at the expected time of approach, an insufficient number of satellites to assure fault detection is predicted to be available. |  |
           | ------------------------------------------------------------------------------------------------------------------------------ |  |
         correct: true
         why: ""
       - id: O5DZJSXH7
-        text: >-
-          | the automatic RAIM prediction function has failed and the pilot has
-          to verify the number of available satellites with the ATC. |  |
-
+        text: |-
+          | the automatic RAIM prediction function has failed and the pilot has to verify the number of available satellites with the ATC. |  |
           | ------------------------------------------------------------------------------------------------------------------------------ |  |
         correct: false
         why: ""
       - id: OKP0P1T9P
-        text: >-
-          | at the expected time of approach, the predicted navigation accuracy
-          of the system is worse than the requirement for that approach coded in
-          the database. |  |
-
+        text: |-
+          | at the expected time of approach, the predicted navigation accuracy of the system is worse than the requirement for that approach coded in the database. |  |
           | -------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
         correct: false
         why: ""
       - id: O6LRUFC5O
-        text: >-
-          | the GNSS cannot calculate the estimated time of arrival at the
-          initial approach fix. |  |
-
+        text: |-
+          | the GNSS cannot calculate the estimated time of arrival at the initial approach fix. |  |
           | ------------------------------------------------------------------------------------ |  |
         correct: false
         why: ""
@@ -2340,9 +2322,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
-      The satellite navigation system NAVSTAR GPS uses two navigation
-      frequencies, L1 and L2\.   
+    question: |-
+      The satellite navigation system NAVSTAR GPS uses two navigation frequencies, L1 and L2\.   
        Choose the correct statement:
 
       _SPS: standard positioning service_ 
@@ -2990,16 +2971,12 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Regarding NAVSTAR/GPS which of the following statements is correct?
 
-
       1\. It takes 7 minutes for a GPS receiver to receive all the data frames in the navigation message   
-
       2\. The almanac contains only the orbital data of the specific satellite   
-
       3\. The clock correction parameters are data for correction of the satellite clock   
-
       4\. The UTC parameters are factors determining the difference between GMT and UTC
     options:
       - id: O9RHFC8BY
@@ -3030,9 +3007,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       Which of these diagrams shows the correct standard coverage area for a Ground-Based Augmentation System (GBAS) providing three-dimensional (3D) guidance in the final approach segment?
     options:
@@ -3129,9 +3105,8 @@
   explanation: ""
   variant:
     type: simple
-    question: >-
+    question: |-
       Refer to figure.
-
 
       One of the tasks that must be completed prior to commencing a flight is to have an awareness of what instrument approach procedures are available at the destination aerodrome and any alternates. The annex shows an example of an RNP approaches to an aerodrome (only the top section of the approach plate is required). The information that is highlighted in red means that…
     options:

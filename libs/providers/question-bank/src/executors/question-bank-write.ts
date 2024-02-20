@@ -35,7 +35,13 @@ export const writeQuestionTemplates = async (
   await Promise.all(oldFiles.map((file) => fs.rm(file)));
   await Promise.all(
     newFiles.map(([file, content]) =>
-      fs.writeFile(file, YAML.stringify(content, null, 2)),
+      fs.writeFile(
+        file,
+        YAML.stringify(content, {
+          indent: 2,
+          blockQuote: "literal",
+        }),
+      ),
     ),
   );
 };
@@ -83,7 +89,13 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
   await Promise.all(oldFiles.map((file) => fs.rm(file)));
   await Promise.all(
     newFiles.map(([file, content]) =>
-      fs.writeFile(file, YAML.stringify(content, null, 2)),
+      fs.writeFile(
+        file,
+        YAML.stringify(content, {
+          indent: 2,
+          blockQuote: "literal",
+        }),
+      ),
     ),
   );
 };
