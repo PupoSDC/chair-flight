@@ -56,9 +56,7 @@ engine SFC, not the aircraft!** Aerodynamic effects, that cause a parabolic
 looking curve for SFC are not considered here. \*\*SFC is minimum with zero
 speed and increases to infinity as TAS increases.
 
-<Question
-id="I9V962NGD7"
-lo={["021.11.05.01.01", "021.11.05.01.02"]}
+<Question id="I9V962NGD7" lo={["021.11.05.01.01", "021.11.05.01.02"]}
 contentRef="### Thrust and SFC variations with altitude and TAS"
 
 >   <Text variant="oneCorrect">

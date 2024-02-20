@@ -9,9 +9,9 @@
     button, you can quickly report any issues you find.
 ---
 
-In order to make it easier for you to report issues with Chair Flight, we
-have added a new button in the top right corner to all our pages. With this
-button, you can quickly report any issues you find.
+In order to make it easier for you to report issues with Chair Flight, we have
+added a new button in the top right corner to all our pages. With this button,
+you can quickly report any issues you find.
 
 This feature is a result of a user suggestion, and we are always listening to
 your feedback.

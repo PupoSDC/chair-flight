@@ -2,7 +2,8 @@
 id: "021.03.02.02"
 parent: "021.03.02"
 questionBank: "atpl"
-title: "System components: design, operation, degraded modes of operation,
+title:
+  "System components: design, operation, degraded modes of operation,
   indications and warnings"
 ---
 

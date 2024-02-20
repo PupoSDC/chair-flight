@@ -1,10 +1,13 @@
 - id: QOLVPSCQ
-  relatedQuestions: [QHNSYYDO, QZNIFJOV, QMCINKVN]
+  relatedQuestions:
+    - QHNSYYDO
+    - QZNIFJOV
+    - QMCINKVN
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Two very similar tidbits of logic you need to know:
 
     - **Standby packs**: Operate at an average for the two cabin zones.
@@ -46,7 +49,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     - Engine starting: The starter uses Bleed air from APU, external or Cross Feed.
     - Air conditioning: PACKS are fed with bleed air from 5th and 9th stage 
     - Cabin pressurisation: Achieved by the PACKS
@@ -68,24 +71,24 @@
         text: Engine and wing anti-icing, engine starting, cabin pressurisation,
           hydraulic reservoir pressurisation.
         correct: false
-        why: "Missing water."
+        why: Missing water.
       - id: 3zh04
         text: Engine and wing anti-icing, air conditioning, cabin pressurisation,
           hydraulic reservoir pressurisation.
         correct: false
-        why: "Missing Engine starting"
+        why: Missing Engine starting
       - id: i1xpdl
         text: Engine and wing anti-icing, engine starting, air conditioning, cabin
           pressurisation, hydraulic reservoir pressurisation.
         correct: false
-        why: "Missing water."
+        why: Missing water.
 - id: QQOELHSQ
   relatedQuestions: []
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### TRIP RESET Switch
     >
     > - resets BLEED TRIP OFF, PACK or ZONE TEMP lights
@@ -98,12 +101,15 @@
       alert.
     answer: false
 - id: QHNSYYDO
-  relatedQuestions: [QZNIFJOV, QOLVPSCQ, QMCINKVN]
+  relatedQuestions:
+    - QZNIFJOV
+    - QOLVPSCQ
+    - QMCINKVN
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Two very similar tidbits of logic you need to know:
 
     - **Standby packs**: Operate at an average for the two cabin zones.
@@ -146,7 +152,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Air Conditioning Pack
     > 
     > The APU is capable of supplying bleed air for two packs on the ground, or one
@@ -157,12 +163,15 @@
       or one pack in flight.
     answer: true
 - id: QZNIFJOV
-  relatedQuestions: [QOLVPSCQ, QHNSYYDO, QMCINKVN]
+  relatedQuestions:
+    - QOLVPSCQ
+    - QHNSYYDO
+    - QMCINKVN
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Two very similar tidbits of logic you need to know:
 
     - **Standby packs**: Operate at an average for the two cabin zones.
@@ -200,7 +209,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Engine Bleed Air Valves
     >
     > The engine bleed air valve acts as a pressure regulator and shutoff valve. With the
@@ -218,7 +227,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Recirculation Fans
     >
     > The recirculation fan system reduces the air conditioning system pack load and the
@@ -253,7 +262,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > Since the flight deck requires only a fraction of the air supply provided by the left
     > pack, most of the left pack air output is mixed with the right pack supply and
     > routed to the passenger cabin
@@ -272,7 +281,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Zone Temperature Control
     > 
     > The packs produce an air temperature that satisfies the zone which requires the
@@ -296,7 +305,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     The system contains ONE trim air pressure regulator, and THREE trim air 
     modulating valves. One for control zone.
   variant:
@@ -327,7 +336,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Pressure Relief Valves
     >
     > Two pressure relief valves provide safety pressure relief by limiting the
@@ -359,12 +368,15 @@
         correct: true
         why: ""
 - id: QMCINKVN
-  relatedQuestions: [QOLVPSCQ, QHNSYYDO, QZNIFJOV]
+  relatedQuestions:
+    - QOLVPSCQ
+    - QHNSYYDO
+    - QZNIFJOV
   externalIds: []
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Two very similar tidbits of logic you need to know:
 
     - **Standby packs**: Operate at an average for the two cabin zones.
@@ -439,7 +451,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Bleed air is taken from **stage 5** from the **low pressure** compressor 
     and **stage 9** of the **high pressure compressor**.
   variant:
@@ -456,7 +468,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Bleed air is taken from **stage 5** from the **low pressure** compressor and 
     **stage 9** of the **high pressure compressor**.
   variant:
@@ -473,7 +485,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Bleed air is taken from **stage 5** from the **low pressure** compressor 
     and **stage 9** of the **high pressure compressor**.
   variant:
@@ -490,7 +502,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     Bleed air is taken from **stage 5** from the **low pressure** compressor 
     and **stage 9** of the **high pressure compressor**.
   variant:
@@ -524,7 +536,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     41000ft is the maximum certified ceiling for the aircraft. It is required
     by the certification that it must be able to operate safely using a single
     pack at this altitude.
@@ -559,7 +571,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### DUAL BLEED Light
     >
     > The DUAL BLEED light illuminates whenever the APU bleed air valve is open
@@ -599,7 +611,7 @@
   annexes: []
   learningObjectives:
     - B737.02
-  explanation: |+
+  explanation: |
     > ### Pressurization Outflow
     >
     > Cabin air outflow is controlled by the outflow valve and the overboard exhaust

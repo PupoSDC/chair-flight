@@ -24,8 +24,8 @@ way for you to find questions based on what annexes they included.
 
 Unfortunately, to make this work we had to change how we managed annexes
 internally which will result in all your previously started and finished tests
-no longer being available. Chair-flight is still in relatively early development,
-and although we prefer to avoid such breaking changes, they will sometimes are
-necessary.
+no longer being available. Chair-flight is still in relatively early
+development, and although we prefer to avoid such breaking changes, they will
+sometimes are necessary.
 
 - [Search ATPL Questions](/modules/atpl/annexes)

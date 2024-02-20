@@ -24,7 +24,8 @@ Today we are releasing one essential piece of the puzzle to make that happen.
 
 ## Finding questions
 
-In case you don't know it yet, you can [search for questions](/modules/atpl/questions).
+In case you don't know it yet, you can
+[search for questions](/modules/atpl/questions).
 
 Our entire question bank is free and open for you to explore. But not all our
 questions are created equal. Some are better than others. Whenever you find a
@@ -62,7 +63,7 @@ showcasing what you can do:
 
 If you have any feedback, please let us know by either opening a
 [GitHub Issue](https://github.com/PupoSDC/chair-flight/issues). Alternatively,
-we highly recommend you join the [ATPL 2020 Syllabus Discord](https://discord.gg/atpl).
-This is not our official Discord server, but everyone involved in this project
-hangs out there, and we don't yet see the need to create a Discord server of
-our own.
+we highly recommend you join the
+[ATPL 2020 Syllabus Discord](https://discord.gg/atpl). This is not our official
+Discord server, but everyone involved in this project hangs out there, and we
+don't yet see the need to create a Discord server of our own.

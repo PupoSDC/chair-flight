@@ -24,15 +24,8 @@ title: Performance-based navigation (PBN) principles
 
 - **Total System Error (TSE)**: Is the sum of the 3 errors described above.
 
-<Question
-id="C6QGC3RVJS"
-lo={[
-"062.07.04.01.01",
-"062.07.04.01.02",
-"062.07.04.01.03",
-"062.07.04.01.04",
-]}
-contentRef="### PBN errors"
+<Question id="C6QGC3RVJS" lo={[ "062.07.04.01.01", "062.07.04.01.02",
+"062.07.04.01.03", "062.07.04.01.04", ]} contentRef="### PBN errors"
 
 >   <Text variant="oneCorrect">
 

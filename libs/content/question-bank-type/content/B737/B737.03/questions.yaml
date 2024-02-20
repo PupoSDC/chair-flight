@@ -4,7 +4,13 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    The engine cowl anti-ice valve controls the flow of air from the engine bleed
+    to the engine cowl. The Engine bleed valve controls the flow of air from the
+    bleeds to bleed air duct. 
+
+    The air that flows from the bleeds can flow directly to the engine cowl 
+    without passing through the engine bleed valve. 
   variant:
     type: true-or-false
     question: The engine Cowl Anti-Ice valve is located UPSTREAM of the Engine Bleed
@@ -16,7 +22,10 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    > If the cowl anti–ice valve fails to move to the position indicated by the ENG
+    > ANTI–ICE switch, the COWL VALVE OPEN light remains illuminated bright
+    > blue and an amber TAI indication illuminates on the CDS **after a short delay**
   variant:
     type: true-or-false
     question: If the cowl anti-ice valve fails to move to the position indicated by
@@ -30,7 +39,17 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    > ### 3 ENGINE ANTI–ICE Switches
+    > 
+    > - **ON**
+    >   - related cowl anti–ice valve is open
+    >   - stick shaker logic is set for icing conditions.
+    >   - Green TAI indication shows on the engine display.
+    > - **OFF**
+    >   - related cowl anti–ice valve is closed
+    >   - stick shaker logic returns to normal if wing anti–ice has not been used in flight.
+    >   - Green TAI indication on the engine display extinguishes.
   variant:
     type: simple
     question: Positioning ENG ANTI-ICE switch to on has what effect?
@@ -62,12 +81,21 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    > ### Probe and Sensor Heat
+    >
+    > Pitot probes, the total air temperature probe and the alpha vanes are electrically
+    > heated. Static ports are not heated. When operating on standby power, only the
+    > captain’s pitot probe is heated, however, the CAPT PITOT light does not
+    > illuminate for a failure.
   variant:
     type: true-or-false
-    question: When operating on standby power only the Captain's pitot probe is
-      still heated - if the Captain's pitot probe heating fails in this
-      condition, there is no CAPT PITOT alert given.
+    question: | 
+      When operating on standby power only the Captain's pitot probe is still 
+      heated;
+      
+      If the Captain's pitot probe heating fails in this condition, there is no 
+      CAPT PITOT alert given.
     answer: true
 - id: QXRHVXMX
   relatedQuestions: []
@@ -75,7 +103,20 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    > ### Wing Anti–Ice System Operation
+    >
+    > On the ground, positioning the WING ANTI–ICE switch ON opens both control
+    > valves if thrust on both engines is below the setting for takeoff warning activation
+    > and the temperature inside both wing distribution ducts is less than the thermal
+    > switch activation temperature.
+    > 
+    > Both valves close if either engine thrust is above the takeoff warning setting or
+    > either temperature sensor senses a duct overtemperature. The valves automatically
+    > reopen if thrust on both engines is reduced and both temperature sensors are cool.
+
+    The wing anti-ice valves close if the forward thrust levers are advanced above the
+    takeoff warning setting only on the ground.
   variant:
     type: true-or-false
     question: On the ground and in flight, the wing anti-ice valves close if the
@@ -115,7 +156,16 @@
   annexes: []
   learningObjectives:
     - B737.03
-  explanation: ""
+  explanation: | 
+    > ### Window Heat ON Lights
+    >
+    > - **Illuminated (green)**:
+    >   – window heat is being applied to selected window(s).
+    > - **Extinguished**: 
+    >   - switch is OFF, or
+    >   - an overheat is detected, or
+    >   - a system failure has occurred
+    >   - system is at correct temperature.
   variant:
     type: simple
     question: What do the green ON lights indicate above the Window heat switches?

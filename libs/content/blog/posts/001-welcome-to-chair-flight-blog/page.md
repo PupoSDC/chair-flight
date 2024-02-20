@@ -9,9 +9,9 @@
     make your journey as a flight student as smooth as possible.
 ---
 
-This blog will be used to share technical improvements, new features, and
-other updates about Chair Flight. There will also be articles oriented to make
-your journey as a flight student as smooth as possible.
+This blog will be used to share technical improvements, new features, and other
+updates about Chair Flight. There will also be articles oriented to make your
+journey as a flight student as smooth as possible.
 
 ## What is Chair Flight?
 
@@ -29,7 +29,8 @@ question banks and we noticed some patterns in all the existing banks:
 - The primary focus of the banks was to get you to pass the exam and not to
   teach you the theory.
 - The main focus when designing the banks' websites or apps was on protecting
-  the questions from being "stolen", instead of providing a modern user experience.
+  the questions from being "stolen", instead of providing a modern user
+  experience.
 
 Our goal is to create a platform that will help you to become a pilot. Our
 distinguishing factor is that we aim to be a community built platform, where
@@ -43,14 +44,15 @@ best environment for people to contribute with their own questions.
 Our primary focus was on rethinking what a question is. Consider the following
 classical question:
 
-> Considering subsonic incompressible airflow through a Venturi, which statement is correct?
+> Considering subsonic incompressible airflow through a Venturi, which statement
+> is correct?
 >
 > - The dynamic pressure in the throat is lower than in the undisturbed airflow.
 > - The total pressure in the throat is lower than in the undisturbed airflow.
 
 This question is pretty common to this day in ATPL Principles of Flight exams.
-However, it is a pretty dull question, that after you see once or twice, you will
-never get it wrong.
+However, it is a pretty dull question, that after you see once or twice, you
+will never get it wrong.
 
 The problem with this question is that it has 2 statements, each of them
 writable in 3 different small variations that can be either correct or
@@ -90,9 +92,9 @@ without finding yourself "memorizing and moving on".
 ## What's next?
 
 Chair Flight is still in its early stages, and we have a lot of work to do. Most
-of our questions are still not grouped into variants, and most of them are lacking
-explanations. We are also working on a new question editor that will allow you to
-create questions and variants in a more intuitive way.
+of our questions are still not grouped into variants, and most of them are
+lacking explanations. We are also working on a new question editor that will
+allow you to create questions and variants in a more intuitive way.
 
-In the next few weeks we will be working on these features and publishing updates
-in this blog as we go.
+In the next few weeks we will be working on these features and publishing
+updates in this blog as we go.
