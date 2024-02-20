@@ -126,8 +126,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When the aircraft is NOT in landing configuration, the GPWS system is
+    question: When the aircraft is NOT in landing configuration, the GPWS system is
       able to alert the crew of unsafe terrain clearance. Where does the GPWS
       get information about height above terrain?
     options:
@@ -141,14 +140,12 @@
         correct: false
         why: ""
       - id: OC8DN66K4
-        text:
-          It is calculated from the FMS position, barometric altitude, and a terrain
+        text: It is calculated from the FMS position, barometric altitude, and a terrain
           database.
         correct: false
         why: ""
       - id: ODKKRCQBD
-        text:
-          It is calculated from the GPS position and altitude, and an aerodrome
+        text: It is calculated from the GPS position and altitude, and an aerodrome
           database.
         correct: false
         why: ""
@@ -166,25 +163,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The EGPWS may propose the Terrain Look-Ahead Alerting function, this
+    question: "The EGPWS may propose the Terrain Look-Ahead Alerting function, this
       function uses:"
     options:
       - id: OGOJCWFAO
-        text:
-          the same caution and warning envelopes than the mode 2 GPWS (excessive
+        text: the same caution and warning envelopes than the mode 2 GPWS (excessive
           terrain closure rate).
         correct: false
         why: ""
       - id: OFX28XG1Q
-        text:
-          a specific radar to detect any high ground in conflict with the flight
+        text: a specific radar to detect any high ground in conflict with the flight
           path of the aircraft.
         correct: false
         why: ""
       - id: ONLCXWA4G
-        text:
-          the weather radar to detect any high ground in conflict with the flight
+        text: the weather radar to detect any high ground in conflict with the flight
           path of the aircraft.
         correct: false
         why: ""

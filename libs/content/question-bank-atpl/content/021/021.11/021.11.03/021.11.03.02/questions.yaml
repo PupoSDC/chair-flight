@@ -10,31 +10,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A turbine engine with a dual channel FADEC has a single channel fault.
+    question: A turbine engine with a dual channel FADEC has a single channel fault.
       Which of these actions should the crew take?
     options:
       - id: O1AZ7AZBK
-        text:
-          Continue the flight, since the healthy channel automatically assumes full
+        text: Continue the flight, since the healthy channel automatically assumes full
           engine control.
         correct: true
         why: ""
       - id: OMCSJUC7E
-        text:
-          Intervene and take manual control of the engine, due to the loss of the
+        text: Intervene and take manual control of the engine, due to the loss of the
           redundancy.
         correct: false
         why: ""
       - id: OBB8QJL1L
-        text:
-          Set the power of the affected engine to IDLE, because engine indications
+        text: Set the power of the affected engine to IDLE, because engine indications
           are completely lost.
         correct: false
         why: ""
       - id: OHLEA4QIO
-        text:
-          Avoid a high-power setting on the affected engine, due to single-channel
+        text: Avoid a high-power setting on the affected engine, due to single-channel
           limitations.
         correct: false
         why: ""
@@ -51,8 +46,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The Throttle Lever Angle (TLA) information of a FADEC controlled gas
+    question: "The Throttle Lever Angle (TLA) information of a FADEC controlled gas
       turbine engine is provided:"
     options:
       - id: OYJRKARTZ
@@ -60,8 +54,7 @@
         correct: false
         why: ""
       - id: O7FGZFAVG
-        text:
-          to the electronic engine control unit by a direct electrical wiring
+        text: to the electronic engine control unit by a direct electrical wiring
           connection.
         correct: true
         why: ""
@@ -86,8 +79,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "On a FADEC gas turbine engine during normal flight, the power for the
+    question: "On a FADEC gas turbine engine during normal flight, the power for the
       FADEC\\`s sensors comes from:"
     options:
       - id: OY9UO35P6
@@ -164,8 +156,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The primary input signals for a hydro-mechanical gas turbine engine
+    question: "The primary input signals for a hydro-mechanical gas turbine engine
       fuel control system include:"
     options:
       - id: OLHZHR3ZB
@@ -177,14 +168,12 @@
         correct: false
         why: ""
       - id: ONVBWFL1T
-        text:
-          N2, turbine inlet temperature, fuel shut-off, generator, thrust lever
+        text: N2, turbine inlet temperature, fuel shut-off, generator, thrust lever
           angle.
         correct: false
         why: ""
       - id: ORJ6BBF10
-        text:
-          N2, compressor discharge pressure, compressor inlet temperature, fuel
+        text: N2, compressor discharge pressure, compressor inlet temperature, fuel
           shut-off, thrust lever angle.
         correct: true
         why: ""
@@ -202,8 +191,7 @@
     question: What does a FADEC consist of?
     options:
       - id: OO8KK69KG
-        text:
-          "A fuel control system and its accessories (sensors, wiring, sensors,...
+        text: "A fuel control system and its accessories (sensors, wiring, sensors,...
           etc.). "
         correct: true
         why: ""

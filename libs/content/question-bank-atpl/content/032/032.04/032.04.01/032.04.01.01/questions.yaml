@@ -11,33 +11,28 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The principles of pavement classification numbers (PCNs) and aircraft
+    question: "The principles of pavement classification numbers (PCNs) and aircraft
       classification numbers (ACNs) are described by ICAO Annex 14\\. These
       numbers describe the strength of a surface and the impact an aircraft will
       have on a surface. Select the correct option:"
     options:
       - id: ONXGB01TH
-        text:
-          The ACN of an aircraft is independent of the actual weight of the aircraft
+        text: The ACN of an aircraft is independent of the actual weight of the aircraft
           and tyre pressure and is always reported for maximum weight.
         correct: false
         why: ""
       - id: OLIGA0DLC
-        text:
-          The PCN value must be exactly equal to the ACN value of an aircraft in
+        text: The PCN value must be exactly equal to the ACN value of an aircraft in
           order to allow for unrestricted operation of that aircraft.
         correct: false
         why: ""
       - id: ODYJDA4MR
-        text:
-          An aircraft with a given ACN value may operate on a surface with a lower
+        text: An aircraft with a given ACN value may operate on a surface with a lower
           PCN value if certain operational limitations are met.
         correct: true
         why: ""
       - id: ONPHROCOO
-        text:
-          The published PCN value must be equal to or lower than the aircraft's ACN
+        text: The published PCN value must be equal to or lower than the aircraft's ACN
           value to allow for continuous and unlimited operation.
         correct: false
         why: ""
@@ -336,27 +331,23 @@
       correct?
     options:
       - id: OGMPCEE4T
-        text:
-          When buffet becomes noticeable, it will probably be so severe that the
+        text: When buffet becomes noticeable, it will probably be so severe that the
           pilot will NOT be able to read the instruments or to control the
           aeroplane.
         correct: false
         why: ""
       - id: OW0IRYQVB
-        text:
-          The aeroplane has entered an undesired state if high-speed buffet becomes
+        text: The aeroplane has entered an undesired state if high-speed buffet becomes
           perceptible and recovery from this may be impossible.
         correct: false
         why: ""
       - id: OOMFQUH4M
-        text:
-          High-speed buffet may occur at speeds around VMO/MMO during manoeuvres
+        text: High-speed buffet may occur at speeds around VMO/MMO during manoeuvres
           away from straight flight.
         correct: true
         why: ""
       - id: ORX0HQ1HF
-        text:
-          NO high-speed buffet will occur at any speed up to VMO/MMO, unless the
+        text: NO high-speed buffet will occur at any speed up to VMO/MMO, unless the
           aeroplane is approaching the stall.
         correct: false
         why: ""
@@ -373,8 +364,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      At its landing mass, and on rigid pavement, the aircraft ACN is equal
+    question: At its landing mass, and on rigid pavement, the aircraft ACN is equal
       to 50\. Which runway, associated with the PCN reported, is suitable for
       landing?
     options:
@@ -406,31 +396,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Minimum V2 speed (V2MIN) is limited by both the stall speed (VSR) and
+    question: Minimum V2 speed (V2MIN) is limited by both the stall speed (VSR) and
       minimum control speed (VMC). Which statement is correct?
     options:
       - id: OJQGRLIEP
-        text:
-          At high-density altitudes and high weight, V2MIN is often limited by the
+        text: At high-density altitudes and high weight, V2MIN is often limited by the
           stall reference speed (VSR).
         correct: true
         why: ""
       - id: OABDZYEJV
-        text:
-          V2MIN is calculated with all engines operating, for flight with one engine
+        text: V2MIN is calculated with all engines operating, for flight with one engine
           inoperative, another safety speed must be used.
         correct: false
         why: ""
       - id: OAHGA7SBF
-        text:
-          V2MIN cannot be lower than the highest of 1.05 times VMC and 1.2 times
+        text: V2MIN cannot be lower than the highest of 1.05 times VMC and 1.2 times
           VSR.
         correct: false
         why: ""
       - id: OWNXAZB9C
-        text:
-          At high-density altitudes and high weight, V2MIN is often limited by the
+        text: At high-density altitudes and high weight, V2MIN is often limited by the
           speed for minimum control (VMC).
         correct: false
         why: ""

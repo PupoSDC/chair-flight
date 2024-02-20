@@ -3,6 +3,9 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {
+    "lint": {},
+    "types": {},
+    "format": {},
     "compile": {
       "executor": "@cf/providers/blog:compile"
     }

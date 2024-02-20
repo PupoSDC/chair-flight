@@ -5,14 +5,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "The APU may be started and operated even if the ECAM advisory LOW OIL
+    question: "The APU may be started and operated even if the ECAM advisory LOW OIL
       LEVEL for the APU is displayed.  Maintenance action is required within
       next ___ hours of APU operation:"
     options:
@@ -39,7 +38,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -70,7 +69,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -102,7 +101,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -111,8 +110,7 @@
     question: Which statement is correct concerning the SECURING THE AIRCRAFT CHECKLIST?
     options:
       - id: ewnxm
-        text:
-          if the batteries are off while the APU is running, APU fire extinguishing
+        text: if the batteries are off while the APU is running, APU fire extinguishing
           is not available
         correct: false
         why: ""
@@ -121,14 +119,12 @@
         correct: true
         why: ""
       - id: eju3yl
-        text:
-          switching the batteries off before the APU flap is closed may cause smoke
+        text: switching the batteries off before the APU flap is closed may cause smoke
           in the cabin during the next flight
         correct: false
         why: ""
       - id: 08bsw
-        text:
-          wait until the APU flap is fully closed (about 2 minutes after the APU
+        text: wait until the APU flap is fully closed (about 2 minutes after the APU
           AVAIL light goes out), before switching off  the batteries
         correct: false
         why: ""
@@ -139,7 +135,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -148,29 +144,25 @@
     question: "On ground, in case of APU fire, the following happens:"
     options:
       - id: c03wz
-        text:
-          The APU fire warnings operate in the cockpit, the APU does not shut down,
+        text: The APU fire warnings operate in the cockpit, the APU does not shut down,
           the AVAIL light remains on but the  FAULT light in the MASTER SW
           lights up additionally
         correct: false
         why: ""
       - id: i8a4y
-        text:
-          The horn in the nose gear bay sounds, the FAULT light in the MASTER SW
+        text: The horn in the nose gear bay sounds, the FAULT light in the MASTER SW
           lights up, the APU shuts down but  the the fire extinguisher must be
           discharged manually
         correct: false
         why: ""
       - id: 0ww3
-        text:
-          The APU fire warnings operate in the cockpit, a horn in the nose gear bay
+        text: The APU fire warnings operate in the cockpit, a horn in the nose gear bay
           sounds, the AVAIL light goes out, the  FAULT light in the MASTER SW
           lights up, the APU shuts down and the APU fire extinguisher discharges
         correct: true
         why: ""
       - id: bgiy8
-        text:
-          The APU fire warnings operate in the cockpit, the AVAIL light goes out,
+        text: The APU fire warnings operate in the cockpit, the AVAIL light goes out,
           the APU does not shut down and the  crossbleed valve shuts
         correct: false
         why: ""
@@ -181,7 +173,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -190,26 +182,22 @@
     question: "The APU starter limitations are:"
     options:
       - id: 6tlbq
-        text:
-          after 3 starter motor duty cycles, wait 40 minutes before attempting 3
+        text: after 3 starter motor duty cycles, wait 40 minutes before attempting 3
           more cycles
         correct: false
         why: ""
       - id: gumxs
-        text:
-          after 2 starter motor duty cycles, wait 30 minutes before attempting 3
+        text: after 2 starter motor duty cycles, wait 30 minutes before attempting 3
           more cycles
         correct: false
         why: ""
       - id: n0q26
-        text:
-          after 3 starter motor duty cycles, wait 60 minutes before attempting 3
+        text: after 3 starter motor duty cycles, wait 60 minutes before attempting 3
           more cycles
         correct: true
         why: ""
       - id: gh6gf
-        text:
-          after 4 starter motor duty cycles, wait 20 minutes before attempting 1
+        text: after 4 starter motor duty cycles, wait 20 minutes before attempting 1
           more cycle
         correct: false
         why: ""
@@ -220,14 +208,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      How high is the APU fuel consumption approximately on ground (Packs
+    question: How high is the APU fuel consumption approximately on ground (Packs
       ON, 90KVA load)?
     options:
       - id: sohck
@@ -253,7 +240,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -284,7 +271,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -316,7 +303,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -347,7 +334,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -356,26 +343,22 @@
     question: Which answer about the APU controls is correct?
     options:
       - id: tgjy8
-        text:
-          There is no chance to shut down the APU manually except with the MASTER SW
+        text: There is no chance to shut down the APU manually except with the MASTER SW
           pb
         correct: false
         why: ""
       - id: tbbog
-        text:
-          The blue ON light in the START pb-sw illuminates only if the APU is
+        text: The blue ON light in the START pb-sw illuminates only if the APU is
           running normally
         correct: false
         why: ""
       - id: 0bmppf
-        text:
-          The blue ON light in the MASTER SW pb illuminates only if the APU is
+        text: The blue ON light in the MASTER SW pb illuminates only if the APU is
           running normally
         correct: false
         why: ""
       - id: wkxhk
-        text:
-          The FAULT light within the MASTER SW pb illuminates when an automatic APU
+        text: The FAULT light within the MASTER SW pb illuminates when an automatic APU
           shutdown occurs, which  happens in case of one of several possible
           failures
         correct: true
@@ -387,7 +370,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -396,8 +379,7 @@
     question: The APU Inlet Flap...
     options:
       - id: 6k8h5
-        text:
-          closes 1 minute after the APU MASTER SW pb has been switched to OFF
+        text: closes 1 minute after the APU MASTER SW pb has been switched to OFF
           regardless of the APU rotorspeed
         correct: false
         why: ""
@@ -411,8 +393,7 @@
         correct: false
         why: ""
       - id: 9n0lb
-        text:
-          closes automatically in case of APU Fire to provide efficient work of the
+        text: closes automatically in case of APU Fire to provide efficient work of the
           halon extinguisher
         correct: false
         why: ""
@@ -423,7 +404,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -437,21 +418,18 @@
         correct: false
         why: ""
       - id: huq52
-        text:
-          The use of APU bleed is permitted during ground operation with ground air
+        text: The use of APU bleed is permitted during ground operation with ground air
           unit connected
         correct: false
         why: ""
       - id: wnfhg
-        text:
-          The flight crew should use APU electrical supply as soon as the APU is
+        text: The flight crew should use APU electrical supply as soon as the APU is
           available to avoid unwanted electrical  switching if external power is
           adversely removed
         correct: false
         why: ""
       - id: o5bx5
-        text:
-          After switching the APU MASTER SW pb to ON you have to wait at least 3
+        text: After switching the APU MASTER SW pb to ON you have to wait at least 3
           seconds before selecting the APU  START pb-sw
         correct: true
         why: ""
@@ -462,14 +440,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "14 APU Starter: After ___ starter motor duty cycles, wait __ minutes
+    question: "14 APU Starter: After ___ starter motor duty cycles, wait __ minutes
       before attempting ___ more cycles"
     options:
       - id: o3quo
@@ -495,7 +472,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -526,14 +503,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What is the altitude limitation for APU BATTERY RESTART (ELEC EMERG
+    question: What is the altitude limitation for APU BATTERY RESTART (ELEC EMERG
       CONFIG)?
     options:
       - id: ahtwg
@@ -559,14 +535,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "Emergency shutdown of the APU is possible by two methods. One is to
+    question: "Emergency shutdown of the APU is possible by two methods. One is to
       push the APU fire handle on the  flight deck. The other is to:"
     options:
       - id: wcvbg
@@ -574,8 +549,7 @@
         correct: false
         why: ""
       - id: 97von
-        text:
-          push the APU SHUT-OFF pushbutton on the Interphone Panel under the nose
+        text: push the APU SHUT-OFF pushbutton on the Interphone Panel under the nose
           fuselage.
         correct: true
         why: ""
@@ -594,7 +568,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -625,14 +599,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      If the APU speed is above 95%, the bleed air system has priority over
+    question: If the APU speed is above 95%, the bleed air system has priority over
       the engine bleed air system.
     answer: true
 - id: QKELNRFI
@@ -642,31 +615,27 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "When the aircraft is on ground, the APU may run without cockpit crew
+    question: "When the aircraft is on ground, the APU may run without cockpit crew
       supervision. In case of a fire in the  APU compartment:"
     options:
       - id: qrin9i
-        text:
-          The APU fire extinguisher discharges automatically immediately after the
+        text: The APU fire extinguisher discharges automatically immediately after the
           appearance of the fire warning.
         correct: false
         why: ""
       - id: ymlms
-        text:
-          The APU fire extinguisher discharges automatically 3 s after pressing the
+        text: The APU fire extinguisher discharges automatically 3 s after pressing the
           APU SHUT OFF push-button
         correct: false
         why: ""
       - id: v6fxs
-        text:
-          The APU fire extinguisher discharges immediately after pressing the APU
+        text: The APU fire extinguisher discharges immediately after pressing the APU
           SHUT OFF push-button
         correct: false
         why: ""
@@ -682,7 +651,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -698,7 +667,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -729,7 +698,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -738,8 +707,7 @@
     question: Which statement is correct concerning the APU fuel feed system?
     options:
       - id: b6ldm
-        text:
-          if pressure is not available (batteries only or pumps off) the APU FUEL
+        text: if pressure is not available (batteries only or pumps off) the APU FUEL
           PUMP starts automatically
         correct: true
         why: ""
@@ -762,7 +730,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -795,14 +763,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "The MASTER SW push button controls the electric power supply for APU
+    question: "The MASTER SW push button controls the electric power supply for APU
       operation, and the shutdown  sequences. If the aircraft was using APU
       bleed air:"
     options:
@@ -830,14 +797,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "During refuelling a fuel spill has been occurred, while the APU is
+    question: "During refuelling a fuel spill has been occurred, while the APU is
       running:"
     options:
       - id: jdbpt
@@ -863,7 +829,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -894,7 +860,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -926,7 +892,7 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
@@ -957,14 +923,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      When performing the securing the aircraft checklist and the aircraft
+    question: When performing the securing the aircraft checklist and the aircraft
       is not handed over to Maintenance  staff, the APU...
     options:
       - id: ol31x
@@ -990,14 +955,13 @@
   learningObjectives:
     - A320.17
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      "After 3 starter motor duty cycles, wait ___ min before attempting 3
+    question: "After 3 starter motor duty cycles, wait ___ min before attempting 3
       more cycles:"
     options:
       - id: w5x1y

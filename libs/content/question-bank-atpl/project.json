@@ -2,20 +2,24 @@
   "name": "content-question-bank-atpl",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
+  "tags": [],
   "targets": {
+    "format": {},
+    "arrange": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/question-bank:arrange",
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "questionBank": "atpl"
+      }
+    },
     "compile": {
       "executor": "@cf/providers/question-bank:compile",
       "options": {
         "contentFolder": "libs/content/question-bank-atpl/content",
         "flashcardsFolder": "libs/content/question-bank-atpl/flashcards",
         "compileFolder": "apps/next-app/public/content/atpl",
-        "questionBank": "atpl"
-      }
-    },
-    "arrange": {
-      "executor": "@cf/providers/question-bank:arrange",
-      "options": {
-        "contentFolder": "libs/content/question-bank-atpl/content",
         "questionBank": "atpl"
       }
     },
@@ -26,6 +30,5 @@
         "outputJsonPath": "libs/content/question-bank-atpl/content/learning-objectives.json"
       }
     }
-  },
-  "tags": []
+  }
 }

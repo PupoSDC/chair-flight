@@ -3,20 +3,10 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/core/markdown/src",
+  "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/core/markdown/**/*.ts"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p libs/core/markdown/tsconfig.json"]
-      }
-    }
-  },
-  "tags": []
+    "lint": {},
+    "types": {},
+    "format": {}
+  }
 }

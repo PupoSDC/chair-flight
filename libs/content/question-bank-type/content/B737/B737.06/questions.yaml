@@ -5,7 +5,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -36,7 +36,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -67,14 +67,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      "The DC standby Bus is powered from the batteries through the static
+    question: "The DC standby Bus is powered from the batteries through the static
       Inverter.  Select one:"
     answer: false
 - id: QCWXEGYK
@@ -84,7 +83,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -115,14 +114,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If all AC generated power fails, how long can the batteries (if fully
+    question: If all AC generated power fails, how long can the batteries (if fully
       charged) supply standby power?
     options:
       - id: 4bsw3f
@@ -148,7 +146,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -170,8 +168,7 @@
         correct: true
         why: ""
       - id: rw703
-        text:
-          Automatic load shedding of the galley and main busses on on both Transfer
+        text: Automatic load shedding of the galley and main busses on on both Transfer
           Busses.
         correct: false
         why: ""
@@ -182,7 +179,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -191,8 +188,7 @@
     question: With the BUS TRANSFER switch in the AUTO position; how do the BTBs operate?
     options:
       - id: s6v5li
-        text:
-          BTBs automatically maintain power to DC Bus 1 and DC Bus 2 through the DC
+        text: BTBs automatically maintain power to DC Bus 1 and DC Bus 2 through the DC
           Cross Tie Relay.
         correct: false
         why: ""
@@ -203,8 +199,7 @@
         correct: false
         why: ""
       - id: 80ncpi
-        text:
-          BTBs automatically maintain power to AC Transfer busses from any operating
+        text: BTBs automatically maintain power to AC Transfer busses from any operating
           generator or external power.
         correct: true
         why: ""
@@ -221,7 +216,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -327,14 +322,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      The Static Inverter, converts the Battery's 22-30V DC voltage range to
+    question: The Static Inverter, converts the Battery's 22-30V DC voltage range to
       a constant 24V.
     answer: false
 - id: QMKIKHKM
@@ -344,7 +338,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -376,14 +370,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      When external ground power is connected to the aircraft through the
+    question: When external ground power is connected to the aircraft through the
       External AC Receptacle, the GRD POWER AVAILABLE light does not illuminate
       unless the power supplied meets the quality requirements of 115v AC, 200
       Hz, 3 phase.
@@ -395,7 +388,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -426,7 +419,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -441,8 +434,7 @@
         correct: false
         why: ""
       - id: j977c
-        text:
-          Only if power from from DC Bus 1 is lost and power from AC Transfer Bus 1
+        text: Only if power from from DC Bus 1 is lost and power from AC Transfer Bus 1
           is also lost
         correct: false
         why: ""
@@ -451,8 +443,7 @@
         correct: true
         why: ""
       - id: s0yd7
-        text:
-          No, for automatic switching to occur power must be lost from both DC
+        text: No, for automatic switching to occur power must be lost from both DC
           Busses
         correct: false
         why: ""
@@ -463,7 +454,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -473,26 +464,22 @@
       aircraft battery is fitted?
     options:
       - id: a99fzk
-        text:
-          DC Standby bus - power to important systems that require to be in standby
+        text: DC Standby bus - power to important systems that require to be in standby
           mode.
         correct: false
         why: ""
       - id: klkcu
-        text:
-          Battery bus - power immediately available to important systems such as
+        text: Battery bus - power immediately available to important systems such as
           fire extinguishers.
         correct: false
         why: ""
       - id: ngm38
-        text:
-          Hot Battery Bus - power immediately available to important systems such as
+        text: Hot Battery Bus - power immediately available to important systems such as
           fire extinguishers.
         correct: true
         why: ""
       - id: 6p1qt
-        text:
-          AC standby bus- powered through Transformer Rectifier to ensure no power
+        text: AC standby bus- powered through Transformer Rectifier to ensure no power
           interuption to GPS system.
         correct: false
         why: ""
@@ -503,7 +490,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -534,38 +521,33 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      If the APU is powering Transfer Bus 1 and GEN 2 is powering Transfer
+    question: If the APU is powering Transfer Bus 1 and GEN 2 is powering Transfer
       Bus 2, what will occur when the Ground Power (GRD PWR) Switch is turned to
       ON?
     options:
       - id: pzx49
-        text:
-          Ground Power will power Transfer Bus 1 and GEN 2 will power Transfer Bus
+        text: Ground Power will power Transfer Bus 1 and GEN 2 will power Transfer Bus
           2.
         correct: false
         why: ""
       - id: 2kx12g
-        text:
-          Ground Power will power both Transfer Busses and the SOURCE OFF lights
+        text: Ground Power will power both Transfer Busses and the SOURCE OFF lights
           will illuminate.
         correct: false
         why: ""
       - id: dra9q
-        text:
-          Ground Power will power both Transfer Busses. The SOURCE OFF lights will
+        text: Ground Power will power both Transfer Busses. The SOURCE OFF lights will
           remain extinguished.
         correct: true
         why: ""
       - id: zif9e
-        text:
-          The APU will power Transfer Bus 1 and Ground Power will power Transfer Bus
+        text: The APU will power Transfer Bus 1 and Ground Power will power Transfer Bus
           2.
         correct: false
         why: ""
@@ -576,7 +558,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -607,7 +589,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -617,21 +599,18 @@
       attendant's panel?
     options:
       - id: huuyc
-        text:
-          Energises the No1 and No2 115V GND SERVICE BUS, to allow the galleys water
+        text: Energises the No1 and No2 115V GND SERVICE BUS, to allow the galleys water
           heaters to be powered whilst the aircraft is connected to ground
           power.
         correct: false
         why: ""
       - id: o2lbh
-        text:
-          Powers and sounds external horn through the AC ground services bus to
+        text: Powers and sounds external horn through the AC ground services bus to
           attract attention of ground servicing personnel.
         correct: false
         why: ""
       - id: c5m7ng
-        text:
-          Provides ground power directly to the AC ground services bus for utility
+        text: Provides ground power directly to the AC ground services bus for utility
           outlets, cabin lighting, and battery charger without powering all
           aircraft electrical busses.
         correct: true
@@ -647,7 +626,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -714,7 +693,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -745,7 +724,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -776,14 +755,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      "The 2 basic rules of the B737-800 electrical system are:  Only one AC
+    question: "The 2 basic rules of the B737-800 electrical system are:  Only one AC
       power source can be connected at one time.  A second source connecting to
       a transfer bus will automatically disconnect the existing source."
     answer: true
@@ -794,40 +772,35 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What indications will you see on the electrical panel when selecting
+    question: What indications will you see on the electrical panel when selecting
       GRD PWR ON?
     options:
       - id: x1de6k
-        text:
-          GRD POWER light extinguished, SOURCE OFF lights illuminated, GEN OFF BUS
+        text: GRD POWER light extinguished, SOURCE OFF lights illuminated, GEN OFF BUS
           lights illuminated, TRANSFER BUS OFF lights extinguished, APU GEN OFF
           BUS light illuminated.
         correct: false
         why: ""
       - id: zp2i9k
-        text:
-          GRD POWER AVAILABLE light extinguished, SOURCE OFF lights extinguished,
+        text: GRD POWER AVAILABLE light extinguished, SOURCE OFF lights extinguished,
           GEN OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished,
           APU GEN OFF BUS light illuminated.
         correct: false
         why: ""
       - id: xa85d
-        text:
-          GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN
+        text: GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN
           OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU
           GEN OFF BUS light illuminated.
         correct: false
         why: ""
       - id: fu4ss
-        text:
-          GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN
+        text: GRD POWER AVAILABLE light illuminated, SOURCE OFF lights extinguished, GEN
           OFF BUS lights illuminated, TRANSFER BUS OFF lights extinguished, APU
           GEN OFF BUS light extinguished.
         correct: true
@@ -839,14 +812,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      If operating on a single IDG and an overload is sensed, the electrical
+    question: If operating on a single IDG and an overload is sensed, the electrical
       system will shed the galleys and main bus from Transfer Bus 1 and then
       Transfer Bus 2 before then shedding the IFE busses if an overload is still
       sensed.
@@ -932,7 +904,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -963,7 +935,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -995,7 +967,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -1026,7 +998,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -1037,8 +1009,7 @@
       Transfer Bus result in automatic switching from normal to alternate power?
     options:
       - id: aco2d
-        text:
-          Only if power from AC Transfer Bus 1 is lost and power from DC Bus 1 is
+        text: Only if power from AC Transfer Bus 1 is lost and power from DC Bus 1 is
           also lost
         correct: false
         why: ""
@@ -1051,8 +1022,7 @@
         correct: true
         why: ""
       - id: nzjvb
-        text:
-          No, for automatic switching to occur power must be lost from both AC
+        text: No, for automatic switching to occur power must be lost from both AC
           Transfer Busses
         correct: false
         why: ""
@@ -1063,7 +1033,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -1095,7 +1065,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -1106,26 +1076,22 @@
       correct?
     options:
       - id: pyswdl
-        text:
-          Ground power will be automatically disconnected and the APU will power
+        text: Ground power will be automatically disconnected and the APU will power
           both Transfer Busses.
         correct: true
         why: ""
       - id: acy77
-        text:
-          Ground power will be automatically disconnected and the APU will power
+        text: Ground power will be automatically disconnected and the APU will power
           Transfer Bus 1. Transfer Bus 2 is unpowered.
         correct: false
         why: ""
       - id: 7b876l
-        text:
-          The APU will power Transfer Bus 1 and Ground power will power Transfer Bus
+        text: The APU will power Transfer Bus 1 and Ground power will power Transfer Bus
           2
         correct: false
         why: ""
       - id: ra39w
-        text:
-          Ground power will continue to power the Transfer Busses until the APU is
+        text: Ground power will continue to power the Transfer Busses until the APU is
           selected to power both Transfer Busses.
         correct: false
         why: ""
@@ -1136,7 +1102,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
@@ -1167,14 +1133,13 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: true-or-false
-    question:
-      The SOURCE OFF light illuminates whenever an IDG has tripped offline
+    question: The SOURCE OFF light illuminates whenever an IDG has tripped offline
       due to overheating.
     answer: false
 - id: QRAJNVIA
@@ -1184,7 +1149,7 @@
   learningObjectives:
     - B737.06
   explanation: |+
-
+    
 
     ---
 

@@ -90,8 +90,7 @@
         correct: true
         why: ""
       - id: O15NDRZML
-        text:
-          False beams will only be found more than 10 degrees to the left or to the
+        text: False beams will only be found more than 10 degrees to the left or to the
           right of the localiser centreline.
         correct: false
         why: ""
@@ -193,19 +192,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is executing an ILS approach while the localiser needle is at
+    question: A pilot is executing an ILS approach while the localiser needle is at
       half scale deflection. Is the pilot allowed to continue the approach?
     options:
       - id: ONCE01B34
-        text:
-          No, a missed approach must be performed as obstacle clearance is no longer
+        text: No, a missed approach must be performed as obstacle clearance is no longer
           guaranteed.
         correct: false
         why: ""
       - id: OV1D9Q9LC
-        text:
-          No, a missed approach must be performed once the localiser display goes
+        text: No, a missed approach must be performed once the localiser display goes
           outside a quarter scale deflection.
         correct: false
         why: ""
@@ -229,13 +225,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are established on an ILS approach at 4 NM on the DME and get some
+    question: You are established on an ILS approach at 4 NM on the DME and get some
       signal interference. What could be the reason for this?
     options:
       - id: OWSTEQIHD
-        text:
-          Multipath interference from reflections off objects within the published
+        text: Multipath interference from reflections off objects within the published
           coverage area.
         correct: true
         why: ""

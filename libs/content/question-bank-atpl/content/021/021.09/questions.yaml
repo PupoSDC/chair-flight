@@ -12,26 +12,22 @@
       disconnect IDG 1\. Which of the following will happen?
     options:
       - id: O2OBMOHAQ
-        text:
-          IDG 1 will continue to provide electricity even when disconnected from the
+        text: IDG 1 will continue to provide electricity even when disconnected from the
           AC bus bar.
         correct: false
         why: ""
       - id: ORMUCMWXM
-        text:
-          The generator will stop providing electricity, and can only be reconnected
+        text: The generator will stop providing electricity, and can only be reconnected
           on the ground.
         correct: true
         why: ""
       - id: OKHSXRBNU
-        text:
-          The IDG will stop providing electricity, but can be re-connected in flight
+        text: The IDG will stop providing electricity, but can be re-connected in flight
           after a sufficient cooling period.
         correct: false
         why: ""
       - id: OP0CYURWM
-        text:
-          IDG 1 will continue to provide electricity even when disconnected from the
+        text: IDG 1 will continue to provide electricity even when disconnected from the
           AC bus bar, but can be re-connected in flight after a sufficient
           cooling period.
         correct: false
@@ -144,14 +140,12 @@
         correct: false
         why: ""
       - id: O0VF078DW
-        text:
-          the busbar is isolated completely, but its output components are switched
+        text: the busbar is isolated completely, but its output components are switched
           to another busbar.
         correct: false
         why: ""
       - id: O8PFJQQPX
-        text:
-          the busbar is switched to an alternate power source so that its electrical
+        text: the busbar is switched to an alternate power source so that its electrical
           components will be supplied with power.
         correct: true
         why: ""
@@ -215,8 +209,7 @@
         correct: false
         why: ""
       - id: ORNKJGVNV
-        text:
-          kept in operating conditions by an electrical resistance in the case of
+        text: kept in operating conditions by an electrical resistance in the case of
           energy failure.
         correct: false
         why: ""
@@ -295,8 +288,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In flight, if the Constant Speed Drive (CSD) temperature indicator is
+    question: "In flight, if the Constant Speed Drive (CSD) temperature indicator is
       in the red arc the:"
     options:
       - id: OZSDKDFFD
@@ -380,14 +372,12 @@
         correct: false
         why: ""
       - id: O2YGRHBMD
-        text:
-          To separate the DC systems (powered by the generators) from the AC systems
+        text: To separate the DC systems (powered by the generators) from the AC systems
           (powered by the batteries).
         correct: false
         why: ""
       - id: OEPXOG8ER
-        text:
-          To separate the AC systems (powered by the generators) from the DC systems
+        text: To separate the AC systems (powered by the generators) from the DC systems
           (powered by the batteries).
         correct: false
         why: ""
@@ -401,19 +391,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Given a wire fed with alternating current and a second wire parallel
+    question: "Given a wire fed with alternating current and a second wire parallel
       to, but remote from it. The result will be:"
     options:
       - id: OAKL2CGPO
-        text:
-          The first wire will radiate electro-magnetic waves into space and direct
+        text: The first wire will radiate electro-magnetic waves into space and direct
           current will be induced in the second wire.
         correct: false
         why: ""
       - id: O6UCLOEDM
-        text:
-          The first wire will radiate electro-magnetic waves into space and the
+        text: The first wire will radiate electro-magnetic waves into space and the
           second wire will double the transmission power of the first one.
         correct: false
         why: ""
@@ -423,8 +410,7 @@
         correct: true
         why: ""
       - id: OEXJ7T3PQ
-        text:
-          The first wire will radiate electro-magnetic waves into space but the
+        text: The first wire will radiate electro-magnetic waves into space but the
           transmitted energy will be completely absorbed by the second wire.
         correct: false
         why: ""
@@ -439,8 +425,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a modern aircraft with 3 AC generators (two turbine engines and an
+    question: In a modern aircraft with 3 AC generators (two turbine engines and an
       APU), the generators all fail, and only battery power remains. How would
       the essential AC bus be powered?
     options:
@@ -449,20 +434,17 @@
         correct: false
         why: ""
       - id: OT1C6ATPM
-        text:
-          It contains its own battery which directly provides AC power in case of an
+        text: It contains its own battery which directly provides AC power in case of an
           outage.
         correct: false
         why: ""
       - id: OALP3QNWZ
-        text:
-          It is powered by the main battery via an inverter, to keep essential AC
+        text: It is powered by the main battery via an inverter, to keep essential AC
           consumers running in the event of a total generation failure.
         correct: true
         why: ""
       - id: OGP6SEHGF
-        text:
-          It is directly connected to the main battery to power essential aircraft
+        text: It is directly connected to the main battery to power essential aircraft
           controls and components.
         correct: false
         why: ""
@@ -476,8 +458,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When the AC generators are connected in parallel, the reactive loads
+    question: When the AC generators are connected in parallel, the reactive loads
       are balanced by means of the..
     options:
       - id: OM4DSD5KC
@@ -544,14 +525,12 @@
       immediate action?
     options:
       - id: ODW8LRTY2
-        text:
-          Nothing, the system is protected by circuit breakers and a GCU which does
+        text: Nothing, the system is protected by circuit breakers and a GCU which does
           not need pilot input.
         correct: true
         why: ""
       - id: OJHVX4WI4
-        text:
-          Disconnect the generator by deactivating the Exciter Control Relay Field
+        text: Disconnect the generator by deactivating the Exciter Control Relay Field
           and switching to Emergency Power by turning on the APU.
         correct: false
         why: ""
@@ -561,8 +540,7 @@
         correct: false
         why: ""
       - id: OUDZQ3UEW
-        text:
-          Restart the malfuctioning IDG by disconnecting and reconnecting it to the
+        text: Restart the malfuctioning IDG by disconnecting and reconnecting it to the
           Split Bus Bar system.
         correct: false
         why: ""
@@ -577,8 +555,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When the "disconnect" switch is activated on the electrical panel, it
+    question: When the "disconnect" switch is activated on the electrical panel, it
       disconnects..
     options:
       - id: OPNG4OESD
@@ -616,8 +593,7 @@
         correct: false
         why: ""
       - id: OFMPULRT8
-        text:
-          they produce heat, so firefighters have to be present during loading and
+        text: they produce heat, so firefighters have to be present during loading and
           unloading.
         correct: false
         why: ""
@@ -667,8 +643,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An AC generator's frequency is measured using which unit, and can be
+    question: An AC generator's frequency is measured using which unit, and can be
       described as what?
     options:
       - id: OX3XEFSB3
@@ -729,8 +704,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In an AC circuit with a capacitor, voltage is kept the same, but the
+    question: In an AC circuit with a capacitor, voltage is kept the same, but the
       AC frequency is increased. What will happen to the current?
     options:
       - id: OYMLUHAAZ
@@ -803,8 +777,7 @@
         correct: false
         why: ""
       - id: OECMVV5IG
-        text:
-          To eliminate electromagnetic induction interfering with other wires in the
+        text: To eliminate electromagnetic induction interfering with other wires in the
           bundle.
         correct: true
         why: ""
@@ -889,31 +862,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following gives the correct definition and SI unit for
+    question: Which of the following gives the correct definition and SI unit for
       electrical power (P)?
     options:
       - id: OTH4U9EE1
-        text:
-          Electrical power is energy multiplied by time (t) (P = Energy x t). It is
+        text: Electrical power is energy multiplied by time (t) (P = Energy x t). It is
           measured in watts (W).
         correct: false
         why: ""
       - id: OHXKT7U2Z
-        text:
-          Electrical power is energy is divided by time (t) (P = Energy/t). It is
+        text: Electrical power is energy is divided by time (t) (P = Energy/t). It is
           measured in watts (W).
         correct: true
         why: ""
       - id: OJWLNLTEV
-        text:
-          Electrical power is current (I) divided by voltage (V) (P = I/V). It is
+        text: Electrical power is current (I) divided by voltage (V) (P = I/V). It is
           measured in amperes (A).
         correct: false
         why: ""
       - id: OR5HPWVON
-        text:
-          Electrical power is voltage (V) divided by current (I) (P = V/I). It is
+        text: Electrical power is voltage (V) divided by current (I) (P = V/I). It is
           measured in watts (W).
         correct: false
         why: ""
@@ -929,8 +897,7 @@
   explanation: ""
   variant:
     type: one-two
-    question:
-      You are flying a twin-engined aircraft with an AC electrical system
+    question: You are flying a twin-engined aircraft with an AC electrical system
       fed by two engine driven generators when one generator has a complete
       failure. Which of the following statements is correct in reference to the
       subsequent power distribution.
@@ -1006,8 +973,7 @@
         correct: true
         why: ""
       - id: O8LUNVQFQ
-        text:
-          that the starter-motor maintains a constant RPM irrespective of engine
+        text: that the starter-motor maintains a constant RPM irrespective of engine
           acceleration/deceleration.
         correct: false
         why: ""
@@ -1062,26 +1028,22 @@
       armature runaway will cause the current in the armature to...
     options:
       - id: OBVUUGKAL
-        text:
-          decrease, but because the current in the stator coil increases, the torque
+        text: decrease, but because the current in the stator coil increases, the torque
           will stay the same.
         correct: false
         why: ""
       - id: OWHFPU9GV
-        text:
-          increase, but because the current in the stator coil decreases, the torque
+        text: increase, but because the current in the stator coil decreases, the torque
           will stay the same.
         correct: false
         why: ""
       - id: OVEQMMWHP
-        text:
-          decrease, and because the current in the stator coil also decreases, the
+        text: decrease, and because the current in the stator coil also decreases, the
           torque will decrease.
         correct: true
         why: ""
       - id: ORIKXWFFD
-        text:
-          increase, and because the current in the stator coil also increases, the
+        text: increase, and because the current in the stator coil also increases, the
           torque will increase.
         correct: false
         why: ""
@@ -1095,8 +1057,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In the event of a complete failure of all electrical generators, with
+    question: In the event of a complete failure of all electrical generators, with
       battery backups taking over, which of the following should be a main
       concern?
     options:
@@ -1128,13 +1089,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a DC (Direct Current) circuit, what will happen if the current gets
+    question: In a DC (Direct Current) circuit, what will happen if the current gets
       too high and is not detected?
     options:
       - id: OKH1IQZ58
-        text:
-          The circuit breaker will trip, disconnecting the generator from its drive
+        text: The circuit breaker will trip, disconnecting the generator from its drive
           unit.
         correct: false
         why: ""
@@ -1160,8 +1119,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a modern transport aircraft, in the event of a total AC generator
+    question: In a modern transport aircraft, in the event of a total AC generator
       failure, a static inverter converts (1) \_\_\_\_\_ from the batteries to
       (2) \_\_\_\_\_ for essential AC services.
     options:
@@ -1220,8 +1178,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In an aircraft without a dedicated battery charging system, how are
+    question: In an aircraft without a dedicated battery charging system, how are
       batteries charged?
     options:
       - id: OXTDUVE07
@@ -1284,26 +1241,22 @@
       provides the field excitation to the rotor...
     options:
       - id: OFJHGBU54
-        text:
-          comes from a permanent magnet generator installed on the same shaft as the
+        text: comes from a permanent magnet generator installed on the same shaft as the
           main generator.
         correct: true
         why: ""
       - id: OPZWYEIWF
-        text:
-          is DC and is fed directly to the field windings of the rotor poles through
+        text: is DC and is fed directly to the field windings of the rotor poles through
           contacts and slip rings.
         correct: false
         why: ""
       - id: OWT35J9S3
-        text:
-          comes from an additional, smaller DC generator installed on the end of the
+        text: comes from an additional, smaller DC generator installed on the end of the
           alternator.
         correct: false
         why: ""
       - id: OSJTL1VW2
-        text:
-          is AC and is being fed directly to the field windings to the rotor poles
+        text: is AC and is being fed directly to the field windings to the rotor poles
           through contacts and slip rings.
         correct: false
         why: ""
@@ -1348,13 +1301,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a multi-cell lithium battery, one cell sets on fire. Which of the
+    question: In a multi-cell lithium battery, one cell sets on fire. Which of the
       following is likely to happen?
     options:
       - id: OSVNHUS2S
-        text:
-          The fire will be contained within the battery by the casing, so no danger
+        text: The fire will be contained within the battery by the casing, so no danger
           exists.
         correct: false
         why: ""
@@ -1363,8 +1314,7 @@
         correct: true
         why: ""
       - id: OGL5DOQMT
-        text:
-          The casing around the battery will prevent the fire damaging the other
+        text: The casing around the battery will prevent the fire damaging the other
           cells.
         correct: false
         why: ""
@@ -1425,14 +1375,12 @@
         correct: false
         why: ""
       - id: OAQBVAIZQ
-        text:
-          It is transferred to another bus and the generator is disconnected from
+        text: It is transferred to another bus and the generator is disconnected from
           its drive.
         correct: false
         why: ""
       - id: OIZV8MLOW
-        text:
-          It is transferred to another source and the generator is disconnected from
+        text: It is transferred to another source and the generator is disconnected from
           its bus.
         correct: true
         why: ""
@@ -1447,32 +1395,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are flying an aircraft in which all the generators have failed,
+    question: You are flying an aircraft in which all the generators have failed,
       but you still have battery power. What should be considered?
     options:
       - id: OAMZOL3XF
-        text:
-          All electrical components will become unusable for the remainder of the
+        text: All electrical components will become unusable for the remainder of the
           flight.
         correct: false
         why: ""
       - id: OEZHEP1GU
-        text:
-          The most important instrument to be monitored now is the temperature of
+        text: The most important instrument to be monitored now is the temperature of
           the batteries to avoid any thermal runaway.
         correct: false
         why: ""
       - id: OPN1WLJHZ
-        text:
-          There are no special considerations since all components previously
+        text: There are no special considerations since all components previously
           powered by the generators will receive power from the batteries
           automatically.
         correct: false
         why: ""
       - id: OQK38060H
-        text:
-          The batteries have a limited charge, so electrical components will not be
+        text: The batteries have a limited charge, so electrical components will not be
           able to operate indefinitely.
         correct: true
         why: ""
@@ -1516,8 +1459,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What may lead to generation of excess heat and potentially a fire in a
+    question: What may lead to generation of excess heat and potentially a fire in a
       circuit?
     options:
       - id: OLPDSFTGA
@@ -1548,8 +1490,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When the engine fire shut-off handle is pulled, what is the effect on
+    question: When the engine fire shut-off handle is pulled, what is the effect on
       the AC generator?
     options:
       - id: OTKBFFPWC
@@ -1557,8 +1498,7 @@
         correct: false
         why: ""
       - id: OOTGEIWMN
-        text:
-          The exciter control relay, the generator breaker, and the tie breaker
+        text: The exciter control relay, the generator breaker, and the tie breaker
           open.
         correct: false
         why: ""
@@ -1609,26 +1549,22 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following must be considered if all generators fail in
+    question: Which of the following must be considered if all generators fail in
       flight, and only battery power remains?
     options:
       - id: OIEWLOZST
-        text:
-          Most of the electrical driven systems will fail after a complete generator
+        text: Most of the electrical driven systems will fail after a complete generator
           failure due to a significant drop in voltage when the battery takes
           over.
         correct: false
         why: ""
       - id: ONVGZQXMG
-        text:
-          No special considerations are necessary since the battery takes over the
+        text: No special considerations are necessary since the battery takes over the
           emergency electrical power supply without any restrictions.
         correct: false
         why: ""
       - id: OI8FAAWVT
-        text:
-          Since the only remaining source of electrical power is the aircraft
+        text: Since the only remaining source of electrical power is the aircraft
           battery the consumption of electrical power is time-limited.
         correct: true
         why: ""
@@ -1663,8 +1599,7 @@
         correct: false
         why: ""
       - id: O2MPGQANA
-        text:
-          Recycle the circuit breaker, if it's part of a procedure, and check if the
+        text: Recycle the circuit breaker, if it's part of a procedure, and check if the
           system restarts.
         correct: true
         why: ""
@@ -1755,8 +1690,7 @@
       How are the generators connected to a split bus system?
     options:
       - id: OUH2INL4C
-        text:
-          In parallel, with all 4 generators connected to the same part of the split
+        text: In parallel, with all 4 generators connected to the same part of the split
           bus bar. Power is then shared along the length of the split bus bar.
         correct: false
         why: ""
@@ -1765,14 +1699,12 @@
         correct: false
         why: ""
       - id: OQDFNSOSF
-        text:
-          With 2 or more generators connected in series, so that any increase in
+        text: With 2 or more generators connected in series, so that any increase in
           power demand can be met.
         correct: false
         why: ""
       - id: OJOK4XTRX
-        text:
-          In parallel, with one generator at a time supplying individual parts of
+        text: In parallel, with one generator at a time supplying individual parts of
           the split bus bar.
         correct: true
         why: ""
@@ -1795,8 +1727,7 @@
         correct: false
         why: ""
       - id: OBIVWC2SN
-        text:
-          The disconnect switch can be used to re-connect the IDG in-flight, after
+        text: The disconnect switch can be used to re-connect the IDG in-flight, after
           sufficient time for cooling the generator.
         correct: false
         why: ""
@@ -1850,8 +1781,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In a four-engine aircraft with a generator on each engine, how is the
+    question: In a four-engine aircraft with a generator on each engine, how is the
       AC power usually distributed?
     options:
       - id: OAATCIJ7X
@@ -1895,14 +1825,12 @@
         correct: true
         why: ""
       - id: ORHADISCD
-        text:
-          explode when the cabin altitude is too high because of the differential
+        text: explode when the cabin altitude is too high because of the differential
           pressure.
         correct: false
         why: ""
       - id: OULZRFLNL
-        text:
-          have potential to produce heat, requiring fire fighters to be present
+        text: have potential to produce heat, requiring fire fighters to be present
           during loading and unloading.
         correct: false
         why: ""
@@ -1983,8 +1911,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A bundle of electrical cables within the avionics bay, and in close
+    question: A bundle of electrical cables within the avionics bay, and in close
       proximity to one another, have been poorly insulated during installation.
       What is the most significant risk?
     options:
@@ -1993,8 +1920,7 @@
         correct: false
         why: ""
       - id: OQDY9IQOI
-        text:
-          Increased power consumption of the components’, as poorly insulated cables
+        text: Increased power consumption of the components’, as poorly insulated cables
           have an increased internal resistance.
         correct: false
         why: ""
@@ -2018,8 +1944,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Modern Lithium batteries have high energy density cells. If these are
+    question: Modern Lithium batteries have high energy density cells. If these are
       exposed to mechanical or thermal abuse, this can result in strong...
     options:
       - id: OKECKWBB7

@@ -17,29 +17,25 @@
       defined?
     options:
       - id: OICJWLOIW
-        text:
-          Aircraft, vehicle or personnel on the runway or traffic in the take-off,
+        text: Aircraft, vehicle or personnel on the runway or traffic in the take-off,
           climb-out or initial approach area which may constitute a collision
           hazard for departing or arriving aircraft.
         correct: false
         why: ""
       - id: O2EYWJ7CF
-        text:
-          Aircraft, vehicle or personnel on the runway or traffic in the take-off,
+        text: Aircraft, vehicle or personnel on the runway or traffic in the take-off,
           climb-out or final approach area which may constitute a collision
           hazard for IFR flights.
         correct: false
         why: ""
       - id: OO93I4JAQ
-        text:
-          Aircraft, vehicle or personnel on or near the runway or traffic in the
+        text: Aircraft, vehicle or personnel on or near the runway or traffic in the
           take-off, climb-out or final approach area which may constitute a
           collision hazard for departing or arriving aircraft.
         correct: true
         why: ""
       - id: O97PJDD25
-        text:
-          Aircraft, vehicle or personnel on or near the runway or traffic in the
+        text: Aircraft, vehicle or personnel on or near the runway or traffic in the
           take-off, climb-out or initial approach area which may constitute a
           collision hazard for IFR flights.
         correct: false
@@ -118,8 +114,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft approaches an aerodrome located in controlled airspace. –
+    question: An aircraft approaches an aerodrome located in controlled airspace. –
       When the pilot reports that he has the aerodrome in sight, a clearance for
       a visual approach may be given provided that the..
     options:
@@ -132,14 +127,12 @@
         correct: false
         why: ""
       - id: OVYBDQJM8
-        text:
-          air traffic controller is able to separate this aircraft from other
+        text: air traffic controller is able to separate this aircraft from other
           controlled traffic.
         correct: true
         why: ""
       - id: OYYNBMOMZ
-        text:
-          meteorological visibility is not less than 5 km, the flight can be carried
+        text: meteorological visibility is not less than 5 km, the flight can be carried
           out clear of clouds and with the surface in sight.
         correct: false
         why: ""
@@ -168,20 +161,17 @@
         correct: false
         why: ""
       - id: OXDTRXDPQ
-        text:
-          The pilot of the A320 must maintain the wake turbulence separation from
+        text: The pilot of the A320 must maintain the wake turbulence separation from
           the A380.
         correct: false
         why: ""
       - id: OCQOQUWWY
-        text:
-          ATC is NO longer required to apply wake turbulence separation between the
+        text: ATC is NO longer required to apply wake turbulence separation between the
           A320 and the A380.
         correct: true
         why: ""
       - id: OR1AQSQOD
-        text:
-          ATC is responsible for separating the A380 from the A320 by applying the
+        text: ATC is responsible for separating the A380 from the A320 by applying the
           appropriate wake turbulence separation minima.
         correct: false
         why: ""
@@ -207,8 +197,7 @@
         correct: false
         why: ""
       - id: O0BEB0BHA
-        text:
-          When the runway configuration, meteorological conditions and available
+        text: When the runway configuration, meteorological conditions and available
           instrument approach procedures, air traffic conditions or safety
           permits.
         correct: true
@@ -228,8 +217,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is flying to an airport that he/she is not familiar with and
+    question: A pilot is flying to an airport that he/she is not familiar with and
       does not have the approach charts. An instrument approach will be
       performed. What does the tower must always specify in such a case?
     options:
@@ -263,8 +251,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An Expected Approach Time (EAT) is transmitted to an aircraft by the
+    question: An Expected Approach Time (EAT) is transmitted to an aircraft by the
       most expeditious means when it is expected that it has to hold for..
     options:
       - id: OTF0VBTFI
@@ -295,8 +282,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      On approach to landing the wind is reported 040/20 kt. Which runways
+    question: On approach to landing the wind is reported 040/20 kt. Which runways
       below is the approach controller most likely to clear you for landing?
     options:
       - id: OG2G4XDFQ
@@ -327,13 +313,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What conditions does SERA allow aeroplanes to take-off and land in a
+    question: What conditions does SERA allow aeroplanes to take-off and land in a
       direction other than into wind?
     options:
       - id: O6CGDF5I2
-        text:
-          Whenever safety, air traffic considerations or the runway configuration
+        text: Whenever safety, air traffic considerations or the runway configuration
           dictates.
         correct: true
         why: ""
@@ -342,8 +326,7 @@
         correct: false
         why: ""
       - id: OOVNFUHTZ
-        text:
-          Whenever the Pilot-in-Command informs Air Traffic Control that they intend
+        text: Whenever the Pilot-in-Command informs Air Traffic Control that they intend
           to do so.
         correct: false
         why: ""
@@ -398,26 +381,22 @@
     question: The "Expected Approach Time" is the time that..
     options:
       - id: OKPFNEWUX
-        text:
-          the Pilot-in-Command estimates he/she will arrive overhead the aerodrome
+        text: the Pilot-in-Command estimates he/she will arrive overhead the aerodrome
           to commence the approach.
         correct: false
         why: ""
       - id: O4Q0R2IGZ
-        text:
-          the Pilot-in-Command estimates he/she will arrive at the Initial Approach
+        text: the Pilot-in-Command estimates he/she will arrive at the Initial Approach
           Fix, if the flight is without a delay.
         correct: false
         why: ""
       - id: OZ8UMKNMC
-        text:
-          ATC expects an aircraft to arrive over the Initial Approach Fix, if the
+        text: ATC expects an aircraft to arrive over the Initial Approach Fix, if the
           flight is without a delay, to commence the instrument approach.
         correct: false
         why: ""
       - id: OV20NRIWY
-        text:
-          ATC expects that an aircraft, following a delay, will leave the holding
+        text: ATC expects that an aircraft, following a delay, will leave the holding
           fix to complete its approach for landing.
         correct: true
         why: ""

@@ -75,8 +75,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Your aircraft is TCAS II equipped. To be able to generate a traffic
+    question: "Your aircraft is TCAS II equipped. To be able to generate a traffic
       advisory (TA), the intruder must be at least equipped with:"
     options:
       - id: OCZEQAE3Y
@@ -212,8 +211,7 @@
       transponder of the intruder is switched off or unserviceable:"
     options:
       - id: O7W1OOSVB
-        text:
-          the intruder remains visible to your TCAS equipment, but only TAs (traffic
+        text: the intruder remains visible to your TCAS equipment, but only TAs (traffic
           advisories) can be generated.
         correct: false
         why: ""
@@ -277,20 +275,17 @@
     question: "A TCAS II provides:"
     options:
       - id: OWDRRUXVC
-        text:
-          the intruder relative position and possibly an indication of a collision
+        text: the intruder relative position and possibly an indication of a collision
           avoidance manoeuvre within the horizontal plane only.
         correct: false
         why: ""
       - id: OH7E50JKZ
-        text:
-          the intruder relative position and possibly an indication of a collision
+        text: the intruder relative position and possibly an indication of a collision
           avoidance manoeuvre within both the vertical and horizontal planes.
         correct: false
         why: ""
       - id: O9ALDFQVA
-        text:
-          the intruder relative position and possibly an indication of a collision
+        text: the intruder relative position and possibly an indication of a collision
           avoidance manoeuvre within the vertical plane only.
         correct: true
         why: ""
@@ -326,8 +321,7 @@
         correct: false
         why: ""
       - id: O9453EDXL
-        text:
-          By measuring the time lapse between the transmission of an interrogation
+        text: By measuring the time lapse between the transmission of an interrogation
           signal and the reception of a reply signal.
         correct: false
         why: ""
@@ -510,8 +504,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In the event of a traffic conflict, TCAS II presents warnings to the
+    question: "In the event of a traffic conflict, TCAS II presents warnings to the
       crew such as:"
     options:
       - id: OFFMUQ7ZN
@@ -545,8 +538,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      How is “Other traffic" displayed on the display device of the TCAS 2
+    question: How is “Other traffic" displayed on the display device of the TCAS 2
       (Traffic Collision Avoidance System)?
     options:
       - id: ONIXOPWFC
@@ -577,8 +569,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When a TCAS Resolution Advisory (RA) requires an immediate descent,
+    question: "When a TCAS Resolution Advisory (RA) requires an immediate descent,
       and, at the same time, ATC requests an immediate climb, the crew shall:"
     options:
       - id: O7EEGUCCC
@@ -609,19 +600,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Concerning the TCAS II, when receiving a resolution advisory (RA),
+    question: "Concerning the TCAS II, when receiving a resolution advisory (RA),
       crew members should:"
     options:
       - id: OQVQ3BPZS
-        text:
-          try to establish visual contact with the intruder before taking any
+        text: try to establish visual contact with the intruder before taking any
           evasive action.
         correct: false
         why: ""
       - id: OBIHDJUD2
-        text:
-          immediately engage autopilot which will be temporarily controlled by the
+        text: immediately engage autopilot which will be temporarily controlled by the
           TCAS.
         correct: false
         why: ""
@@ -693,8 +681,7 @@
         correct: false
         why: ""
       - id: OMVL8U8HQ
-        text:
-          command orders in the vertical and horizontal planes and also thrust
+        text: command orders in the vertical and horizontal planes and also thrust
           orders.
         correct: false
         why: ""
@@ -723,8 +710,7 @@
     question: "Your aircraft and an intruder are both TCAS II equipped. Your TCAS:"
     options:
       - id: OANKAAN6V
-        text:
-          can generate co-ordinated resolution advisories by interrogating the radar
+        text: can generate co-ordinated resolution advisories by interrogating the radar
           ground station.
         correct: false
         why: ""
@@ -733,8 +719,7 @@
         correct: true
         why: ""
       - id: OTCEITAJA
-        text:
-          can generate co-ordinated resolution advisories by activating the on-board
+        text: can generate co-ordinated resolution advisories by activating the on-board
           radar system.
         correct: false
         why: ""
@@ -754,8 +739,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When the TCAS II generates a Resolution Advisory (RA), the associated
+    question: "When the TCAS II generates a Resolution Advisory (RA), the associated
       intruder appears on TCAS display as a:"
     options:
       - id: OEZWIIHE0
@@ -830,26 +814,22 @@
        The pilot shall report “clear of conflict” and then:
     options:
       - id: ONZAND5TX
-        text:
-          Enter a holding pattern and resume previous altitude until further advised
+        text: Enter a holding pattern and resume previous altitude until further advised
           by ATC.
         correct: false
         why: ""
       - id: OVSLOFAKT
-        text:
-          Continue on present heading and maintain altitude until further advised by
+        text: Continue on present heading and maintain altitude until further advised by
           ATC.
         correct: false
         why: ""
       - id: O4EC3YZLG
-        text:
-          Return to the assigned routing and altitude in the most direct manner
+        text: Return to the assigned routing and altitude in the most direct manner
           unless otherwise instructed by ATC.
         correct: true
         why: ""
       - id: O1J7S4EXA
-        text:
-          Turn direct to the next waypoint of the FMS flight plan and select the
+        text: Turn direct to the next waypoint of the FMS flight plan and select the
           closest altitude which does not cause a new TCAS conflict.
         correct: false
         why: ""
@@ -898,32 +878,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When comparing a TCAS Traffic Advisory (TA) and a Resolution Advisory
+    question: When comparing a TCAS Traffic Advisory (TA) and a Resolution Advisory
       (RA), which of the following statements is correct?
     options:
       - id: OW65KUFA8
-        text:
-          An RA indicates the relative position of the intruding traffic; a TA
+        text: An RA indicates the relative position of the intruding traffic; a TA
           provides a vertical traffic avoidance manoeuvre.
         correct: false
         why: ""
       - id: OEMMOGZW4
-        text:
-          A TA provides the display of the traffic on the Navigation Display and the
+        text: A TA provides the display of the traffic on the Navigation Display and the
           red arc on the vertical speed indicator; an RA provides the voice
           alerts.
         correct: false
         why: ""
       - id: O9YWI0VFZ
-        text:
-          A TA indicates the relative position of the intruding traffic; an RA
+        text: A TA indicates the relative position of the intruding traffic; an RA
           provides a vertical traffic avoidance manoeuvre.
         correct: true
         why: ""
       - id: OYV1PCVR1
-        text:
-          An RA generates the intruders colour codes on the Navigation Display
+        text: An RA generates the intruders colour codes on the Navigation Display
           according to the threat; a TA manages the other TCAS functions.
         correct: false
         why: ""
@@ -943,19 +918,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Your aircraft and an intruder both are TCAS II equipped. Your TCAS
+    question: "Your aircraft and an intruder both are TCAS II equipped. Your TCAS
       determines the range of the intruder by:"
     options:
       - id: OELJDDEQK
-        text:
-          measuring the time lapse between the transmission of an interrogation
+        text: measuring the time lapse between the transmission of an interrogation
           signal and the reception of a reply signal from the ground station.
         correct: false
         why: ""
       - id: O7DYQLPAT
-        text:
-          measuring the time lapse between the transmission of an interrogation
+        text: measuring the time lapse between the transmission of an interrogation
           signal and the reception of a reply signal from the transponder of the
           intruder.
         correct: true

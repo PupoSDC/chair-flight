@@ -10,29 +10,25 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Flight OAL 136 has just departed Bern aerodrome, flying the MOLUS 4A
+    question: "Flight OAL 136 has just departed Bern aerodrome, flying the MOLUS 4A
       RNAV departure, when it experiences a total electrical failure. The flight
       crew is flying with reference to its standby instruments in IMC. Select
       the option which constitutes a correct DISTRESS message to Bern
       Departure:"
     options:
       - id: O93T2MTNE
-        text:
-          MAYDAY, Bern Departure, OAL 136, unable RNAV due equipment, experiencing
+        text: MAYDAY, Bern Departure, OAL 136, unable RNAV due equipment, experiencing
           total electrical failure, turning left heading 100 climbing to 7 000
           ft.
         correct: true
         why: ""
       - id: OYMAI80CC
-        text:
-          PAN PAN (x3), Bern Departure, OAL 136, unable RNAV due equipment, turning
+        text: PAN PAN (x3), Bern Departure, OAL 136, unable RNAV due equipment, turning
           left heading 100 climbing to 7 000 ft.
         correct: false
         why: ""
       - id: OZ9CJ9PLM
-        text:
-          MAYDAY, MAYDAY, MAYDAY, OAL 136, turning left heading 100 climbing to 7
+        text: MAYDAY, MAYDAY, MAYDAY, OAL 136, turning left heading 100 climbing to 7
           000 ft.
         correct: false
         why: ""
@@ -213,8 +209,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'F-HDJF has already been in contact with Lille Tower, and sends the
+    question: 'F-HDJF has already been in contact with Lille Tower, and sends the
       following message: "PAN PAN, PAN PAN, PAN PAN, Lille Tower, F-HDJF, smoke
       on board, right hand base for runway 20,requesting immediate landing
       runway 20." Which of the following statements is correct as regards the
@@ -236,8 +231,7 @@
         correct: true
         why: ""
       - id: OAHUNHU3C
-        text:
-          The order of the elements in this emergency message is incorrect, if
+        text: The order of the elements in this emergency message is incorrect, if
           possible, the present position shall follow the intentions of the
           person in command.
         correct: false
@@ -325,8 +319,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are performing a VFR flight and are about to transmit a compulsory
+    question: You are performing a VFR flight and are about to transmit a compulsory
       report when you hear a PAN PAN message. Which of the following answers are
       correct?
     options:
@@ -370,14 +363,12 @@
         correct: false
         why: ""
       - id: OJCF7UD0B
-        text:
-          MAYDAY MAYDAY MAYDAY, Girona tower, Globeair xxx, suspect undercarriage
+        text: MAYDAY MAYDAY MAYDAY, Girona tower, Globeair xxx, suspect undercarriage
           malfunction, request low pass for visual check, passing BANOL.
         correct: false
         why: ""
       - id: ODOSSCEX2
-        text:
-          PAN PAN, PAN PAN, PAN PAN, Girona tower, Globeair xxx, cockpit anomaly,
+        text: PAN PAN, PAN PAN, PAN PAN, Girona tower, Globeair xxx, cockpit anomaly,
           request low pass for visual check, going around.
         correct: false
         why: ""
@@ -398,8 +389,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If a discrete frequency is used for distress traffic, who is allowed
+    question: If a discrete frequency is used for distress traffic, who is allowed
       to communicate on this frequency?
     options:
       - id: OMMFAJTYM
@@ -412,15 +402,13 @@
         correct: true
         why: ""
       - id: O1IIUPWKS
-        text:
-          The air traffic controller, the officer responsible for the rescue and
+        text: The air traffic controller, the officer responsible for the rescue and
           firefighting services and the dispatcher of the company of the
           aircraft in distress.
         correct: false
         why: ""
       - id: OBXN0CM7S
-        text:
-          The air traffic controller, the officer responsible for the rescue and
+        text: The air traffic controller, the officer responsible for the rescue and
           firefighting services and ground operations.
         correct: false
         why: ""
@@ -469,28 +457,24 @@
       message and provides it in the preferred sequence?
     options:
       - id: OONK9HM4C
-        text:
-          PAN PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF ALFA, at FL150
+        text: PAN PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF ALFA, at FL150
           heading 95, crew member unwell, request diversion to Brest.
         correct: false
         why: ""
       - id: ODZJN64SG
-        text:
-          PAN PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF ALFA, 5 miles
+        text: PAN PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF ALFA, 5 miles
           east of Ushant, crew member unwell, request diversion to Brest,
           heading 95.
         correct: false
         why: ""
       - id: OMSRXOXBZ
-        text:
-          PAN PAN, PAN PAN, PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF
+        text: PAN PAN, PAN PAN, PAN PAN, BREST CENTRE this is FOXTROT BRAVO GOLF GOLF
           ALFA, crew member unwell, request diversion to Brest, 5 miles east of
           Ushant at FL150 heading 95.
         correct: true
         why: ""
       - id: OA5FOW4BJ
-        text:
-          PAN PAN, PAN PAN, PAN PAN, this is FOXTROT BRAVO GOLF GOLF ALFA, 5 miles
+        text: PAN PAN, PAN PAN, PAN PAN, this is FOXTROT BRAVO GOLF GOLF ALFA, 5 miles
           east of Ushant, crew member unwell, request diversion to Brest,
           heading 95.
         correct: false
@@ -511,14 +495,12 @@
       the pilot take?
     options:
       - id: OQH1KXUYR
-        text:
-          Immediately inform the controller of his/her position in order to provide
+        text: Immediately inform the controller of his/her position in order to provide
           assistance if necessary.
         correct: false
         why: ""
       - id: OMQYM8VUQ
-        text:
-          Write down the information being transmitted and re-transmit it on the
+        text: Write down the information being transmitted and re-transmit it on the
           emergency frequency 121.5 MHz.
         correct: false
         why: ""
@@ -527,8 +509,7 @@
         correct: true
         why: ""
       - id: ORHVLQZ0R
-        text:
-          Immediately stop all transmissions on the frequency being used by the
+        text: Immediately stop all transmissions on the frequency being used by the
           urgency traffic.
         correct: false
         why: ""
@@ -617,8 +598,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiences an engine failure which requires a down-drift.
+    question: An aircraft experiences an engine failure which requires a down-drift.
       Even though the pilot does not expect anything to be wrong with his/her
       radio, He/she cannot seem to communicate with the ATC. What shall he/she
       squawk?
@@ -682,8 +662,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If a pilot is in a state of urgency, which frequency must he/she use
+    question: If a pilot is in a state of urgency, which frequency must he/she use
       to transmit such a message to ATC?
     options:
       - id: OTBZF8EGA
@@ -715,8 +694,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'F-GTPO is already in contact with Lille Tower and sends the following
+    question: 'F-GTPO is already in contact with Lille Tower and sends the following
       message: "PAN PAN, PAN PAN, PAN PAN, Lille, F-GTPO, losing engine power,
       requesting immediate landing runway 20, right hand base for runway 20."
       Which of the following statements is correct as regards the compliance of
@@ -727,14 +705,12 @@
         correct: false
         why: ""
       - id: ORMPTH9ZC
-        text:
-          In urgency transmissions the name of the station addressed shall be
+        text: In urgency transmissions the name of the station addressed shall be
           omitted or abbreviated to save time.
         correct: false
         why: ""
       - id: ODEYRL32O
-        text:
-          Urgency transmissions shall be made on the air-ground frequency in use at
+        text: Urgency transmissions shall be made on the air-ground frequency in use at
           the time.
         correct: true
         why: ""
@@ -831,16 +807,14 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A pilot is performing a VFR flight. He/she is just about to contact
+    question: "A pilot is performing a VFR flight. He/she is just about to contact
       ATC for clearance to cross controlled airspace when he/she hears the
       following radio transmission: “Mayday, Mayday, Mayday, Langen Radar,
       D-ILAA, engine failure, request vectors to nearest airport, position 20 nm
       west of Augsburg”. What should he/she do?"
     options:
       - id: OE4XSGBUR
-        text:
-          Contact ATC and request your clearance immediately to avoid blocking the
+        text: Contact ATC and request your clearance immediately to avoid blocking the
           frequency. Inform ATC of your intention to stay outside of controlled
           airspace.
         correct: false
@@ -850,8 +824,7 @@
         correct: false
         why: ""
       - id: OJNDUXP15
-        text:
-          Do not transmit on the frequency until the distress traffic is terminated
+        text: Do not transmit on the frequency until the distress traffic is terminated
           or transferred to another frequency. Stay outside of controlled
           airspace.
         correct: true
@@ -906,8 +879,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During the cruise, the senior cabin crew member notifies the flight
+    question: During the cruise, the senior cabin crew member notifies the flight
       crew that two armed men are threatening the cabin crew and the passengers.
       Which SSR code should be used by the flight crew in this scenario?
     options:
@@ -1023,34 +995,29 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      'The pilot of a single engined piston engine aircraft on an IFR flight
+    question: 'The pilot of a single engined piston engine aircraft on an IFR flight
       experiences an engine failure. He/she has just finished transmitting a
       distress message to Bern radar, which has been acknowledged already. The
       pilot suddenly hears the following transmission from Bern radar: "All
       stations stop transmitting, mayday". What does this mean to him/her?'
     options:
       - id: ODD0TQWDT
-        text:
-          He/she should stop transmitting until all other aircraft have left the
+        text: He/she should stop transmitting until all other aircraft have left the
           frequency.
         correct: false
         why: ""
       - id: OZG7DQIE7
-        text:
-          He/she should continue talking to Bern radar and provide updates on
+        text: He/she should continue talking to Bern radar and provide updates on
           his/her intentions.
         correct: true
         why: ""
       - id: OJV22WCBZ
-        text:
-          He/she should stop transmitting until he/she hears the message "Distress
+        text: He/she should stop transmitting until he/she hears the message "Distress
           traffic ended" on the frequency.
         correct: false
         why: ""
       - id: OGZ3O1TRI
-        text:
-          Only if the situation becomes worse should he/she continue talking to Bern
+        text: Only if the situation becomes worse should he/she continue talking to Bern
           radar.
         correct: false
         why: ""

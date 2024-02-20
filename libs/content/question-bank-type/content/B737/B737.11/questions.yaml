@@ -5,7 +5,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -21,14 +21,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      On later aircraft YW059 through YW164, what is the default Vertical
+    question: On later aircraft YW059 through YW164, what is the default Vertical
       Required Navigational Performance (VRNP) used by the FMC for oceanic, en
       route, and terminal phases of flight?
     options:
@@ -55,7 +54,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -86,14 +85,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What colour is the route on the Nav display when you activate a route
+    question: What colour is the route on the Nav display when you activate a route
       by pressing the R6 switch?
     options:
       - id: 9af3d
@@ -119,14 +117,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      The image below shows the IRS panel located on the AFT overhead panel,
+    question: The image below shows the IRS panel located on the AFT overhead panel,
       for later aircraft YW130 through YW164.  Other than OFF, what are the
       switch positions in the clockwise order?
     options:
@@ -153,7 +150,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -168,14 +165,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      What does the GPS light illuminating indicate when either annunciator
+    question: What does the GPS light illuminating indicate when either annunciator
       panel is pushed to initiate a recall?
     options:
       - id: r9pu5
@@ -201,14 +197,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      On later aircraft YW130 through YW164, the VHF NAV switch changes the
+    question: On later aircraft YW130 through YW164, the VHF NAV switch changes the
       source of the data that the DEUs use for the NDs.  What data is
       transferred by this switch?
     options:
@@ -235,7 +230,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -266,7 +261,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -275,21 +270,18 @@
     question: Which indications are correct for a single FMC failure (left FMC fails)?
     options:
       - id: 2q2oa
-        text:
-          FMC P/RST amber light illuminates, A/P P/RST light illuminates, LNAV and
+        text: FMC P/RST amber light illuminates, A/P P/RST light illuminates, LNAV and
           VNAV disconnect if engaged, left ND not available.
         correct: false
         why: ""
       - id: 1a49e
-        text:
-          FMC P/RST amber light illuminates, FAIL light on FMC CDU illuminates, LNAV
+        text: FMC P/RST amber light illuminates, FAIL light on FMC CDU illuminates, LNAV
           and VNAV disconnect if engaged, failure information displayed on left
           ND after delay of 25 to 30 seconds.
         correct: true
         why: ""
       - id: 8x1kr
-        text:
-          FMC CDU FAIL light illuminates, left FMC CDU screen blanks, left ND screen
+        text: FMC CDU FAIL light illuminates, left FMC CDU screen blanks, left ND screen
           blanks, LNAV diengages with VNAV remaining available.
         correct: false
         why: ""
@@ -305,7 +297,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -336,7 +328,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -367,7 +359,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -382,7 +374,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -413,19 +405,17 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      On aircraft with a mode selector selection of TEST, WX, WX/TURB and
+    question: On aircraft with a mode selector selection of TEST, WX, WX/TURB and
       MAP,  selecting WX/TURB displays what?
     options:
       - id: j2c53
-        text:
-          Weather radar returns, and turbulence out to 10 miles whilst on the ground
+        text: Weather radar returns, and turbulence out to 10 miles whilst on the ground
           only.
         correct: false
         why: ""
@@ -434,8 +424,7 @@
         correct: true
         why: ""
       - id: kuy8z
-        text:
-          Weather radar returns, turbulence out to 40 miles, and windshear out to 20
+        text: Weather radar returns, turbulence out to 40 miles, and windshear out to 20
           miles.
         correct: false
         why: ""
@@ -450,7 +439,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -467,7 +456,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -500,7 +489,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -531,14 +520,13 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
   variant:
     type: simple
-    question:
-      Below what altitude are windshear alerts available for aircraft fitted
+    question: Below what altitude are windshear alerts available for aircraft fitted
       with IntuVue weather radar?
     options:
       - id: 499hs
@@ -564,7 +552,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -596,7 +584,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -606,20 +594,17 @@
       turned on in which of the following specific aircraft conditions?
     options:
       - id: rnod8
-        text:
-          In flight below 1800 feet AGL, on ground with throttle levers set for
+        text: In flight below 1800 feet AGL, on ground with throttle levers set for
           takeoff.
         correct: true
         why: ""
       - id: zeffy
-        text:
-          In flight below 2300 feet AGL, on ground with throttle levers at takeoff
+        text: In flight below 2300 feet AGL, on ground with throttle levers at takeoff
           position setting.
         correct: false
         why: ""
       - id: z9m59
-        text:
-          In flight above 1200 feet RA, on ground with throttle levers at takeoff
+        text: In flight above 1200 feet RA, on ground with throttle levers at takeoff
           position setting.
         correct: false
         why: ""
@@ -634,7 +619,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -645,8 +630,7 @@
       following:"
     options:
       - id: 5d9q6g
-        text:
-          Controls weather analysis altitude from 0 - 60,000 MSL in 1000 feet
+        text: Controls weather analysis altitude from 0 - 60,000 MSL in 1000 feet
           increments
         correct: true
         why: ""
@@ -655,14 +639,12 @@
         correct: false
         why: ""
       - id: hamoz
-        text:
-          Controls weather analysis alitude from 0 - 41,000 feet MSL in 100 feet
+        text: Controls weather analysis alitude from 0 - 41,000 feet MSL in 100 feet
           increments
         correct: false
         why: ""
       - id: qrv4c
-        text:
-          Controls weather analysis alitude from 500 - 60,000 feet MSL in 100 feet
+        text: Controls weather analysis alitude from 500 - 60,000 feet MSL in 100 feet
           increments
         correct: false
         why: ""
@@ -673,7 +655,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -689,7 +671,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -702,14 +684,12 @@
         correct: false
         why: ""
       - id: juy02
-        text:
-          ADF bearing data switched to keel antenna only, to minimise multipath
+        text: ADF bearing data switched to keel antenna only, to minimise multipath
           interference.
         correct: false
         why: ""
       - id: aq71uj
-        text:
-          ADF bearing data sent to Standby Radio Magnetic Indicator as well as the
+        text: ADF bearing data sent to Standby Radio Magnetic Indicator as well as the
           DUs
         correct: false
         why: ""
@@ -724,7 +704,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -741,7 +721,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 
@@ -772,7 +752,7 @@
   learningObjectives:
     - B737.11
   explanation: >-
-
+    
 
     ---
 
@@ -792,26 +772,22 @@
         correct: false
         why: ""
       - id: kpb1t
-        text:
-          IRS mode selector can be selected to ALIGN for 30 seconds then back to NAV
+        text: IRS mode selector can be selected to ALIGN for 30 seconds then back to NAV
           to reset the system.
         correct: false
         why: ""
       - id: 2r53y
-        text:
-          The IRS mode selectors must be moved to OFF to allow FMC to hold all GPS
+        text: The IRS mode selectors must be moved to OFF to allow FMC to hold all GPS
           and navigation data for remainder of the flight.
         correct: false
         why: ""
       - id: vb7gp
-        text:
-          The navigation mode remains unavailable for the rest of the flight, but
+        text: The navigation mode remains unavailable for the rest of the flight, but
           ALIGN mode can be selected to provide attitude reference.
         correct: false
         why: ""
       - id: vbx2gp
-        text:
-          The navigation mode remains unavailable for the rest of the flight, but
+        text: The navigation mode remains unavailable for the rest of the flight, but
           ATT mode can be selected to provide attitude reference.
         correct: true
         why: ""
@@ -822,7 +798,7 @@
   learningObjectives:
     - B737.11
   explanation: |+
-
+    
 
     ---
 

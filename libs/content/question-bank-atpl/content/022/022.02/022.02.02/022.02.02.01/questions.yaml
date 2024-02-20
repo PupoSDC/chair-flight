@@ -15,8 +15,7 @@
     question: "Total Air Temperature (TAT) is:"
     options:
       - id: OLMTRI38Z
-        text:
-          Higher or equal to static air temperature (SAT), depending on altitude and
+        text: Higher or equal to static air temperature (SAT), depending on altitude and
           SAT.
         correct: false
         why: ""
@@ -48,8 +47,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An aeroplane is flying at FL300 and Mach number 0.36\\. The indicated
+    question: "An aeroplane is flying at FL300 and Mach number 0.36\\. The indicated
       total air temperature is -19°C. Considering that the probe recovery
       coefficient is 0.84, the present weather conditions (OAT) compared with
       the standard atmosphere are:"
@@ -86,26 +84,22 @@
     question: Outside air temperature (OAT) is the…
     options:
       - id: OPEMVMZR9
-        text:
-          maximum temperature attainable by the air when brought to rest, and is
+        text: maximum temperature attainable by the air when brought to rest, and is
           equal to or less than TAT.
         correct: false
         why: ""
       - id: O1RHNWFQ7
-        text:
-          temperature measured on the surface of an aircraft in flight, and is equal
+        text: temperature measured on the surface of an aircraft in flight, and is equal
           to or less than SAT.
         correct: false
         why: ""
       - id: OET6OUZNR
-        text:
-          ambient temperature measured outside an aircraft, and it CANNOT be higher
+        text: ambient temperature measured outside an aircraft, and it CANNOT be higher
           than TAT.
         correct: true
         why: ""
       - id: OUR1IPGC7
-        text:
-          average temperature measured outside an aircraft, and is equal to or less
+        text: average temperature measured outside an aircraft, and is equal to or less
           than TAT.
         correct: false
         why: ""
@@ -121,8 +115,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In-flight, the Total Air Temperature (TAT) is the sum of the Static
+    question: In-flight, the Total Air Temperature (TAT) is the sum of the Static
       Air Temperature (SAT) and the...
     options:
       - id: OWH4SJXXG
@@ -280,8 +273,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "Concerning the ADC, why is TAT displayed to the pilots? It enables
+    question: "Concerning the ADC, why is TAT displayed to the pilots? It enables
       them to:"
     options:
       - id: OBWLCMSXK

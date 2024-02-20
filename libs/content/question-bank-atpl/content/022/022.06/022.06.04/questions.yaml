@@ -51,14 +51,12 @@
       In this image of a typical FMA why is "VOR/LOC” in a smaller font of a different colour?
     options:
       - id: O0R75X2HK
-        text:
-          To help them distinguish between engaged modes and armed modes. MCP SPD
+        text: To help them distinguish between engaged modes and armed modes. MCP SPD
           HDG and ALT are engaged, and VOR/LOC is armed.
         correct: true
         why: ""
       - id: OHJKXOGVQ
-        text:
-          Because all modes are in a small font when first selected. After 5 seconds
+        text: Because all modes are in a small font when first selected. After 5 seconds
           the font changes and the caption replaces the last mode in use in this
           example HDG.
         correct: false
@@ -70,8 +68,7 @@
         correct: false
         why: ""
       - id: OOWPVH4TX
-        text:
-          Because modes selected by buttons on the MCP are always in a large green
+        text: Because modes selected by buttons on the MCP are always in a large green
           font Managed modes selected via the FMC are in a small white font
           until the programmed parameter is achieved, when they change to a
           large white font.
@@ -93,8 +90,7 @@
     question: Which statement about the Flight Mode Annunciator (FMA) is correct?
     options:
       - id: OPGL4XDAW
-        text:
-          When the mode is changed, a caption appears on the Electronic Attitude
+        text: When the mode is changed, a caption appears on the Electronic Attitude
           Direction Indicator that reads "MODE CHG".
         correct: false
         why: ""
@@ -103,8 +99,7 @@
         correct: false
         why: ""
       - id: O2VQMPZ0W
-        text:
-          If the mode changes, a caption on the Electronic Attitude Direction
+        text: If the mode changes, a caption on the Electronic Attitude Direction
           Indicator will change colour or appearance.
         correct: true
         why: ""
@@ -165,26 +160,22 @@
       indications. When are these additional cues used? When:"
     options:
       - id: OPDHB6VNB
-        text:
-          A common mode reverts to a lateral mode and a vertical mode, for example
+        text: A common mode reverts to a lateral mode and a vertical mode, for example
           when TOGA is disengaged by a change to LNAV and VNAV or CLB and NAV.
         correct: false
         why: ""
       - id: OJCUPVZGY
-        text:
-          The consequences of failing to notice a mode change might include an
+        text: The consequences of failing to notice a mode change might include an
           undesirable aircraft state or failure to adhere to an ATC clearance.
         correct: true
         why: ""
       - id: OVG2TR7SK
-        text:
-          A mode change results in a dynamic change of trajectory. such as changing
+        text: A mode change results in a dynamic change of trajectory. such as changing
           from vertical speed to altitude hold mode.
         correct: false
         why: ""
       - id: OCI9WEXRJ
-        text:
-          A mode changes from a managed mode to a selected mode, or from a selected
+        text: A mode changes from a managed mode to a selected mode, or from a selected
           mode to a managed mode.
         correct: false
         why: ""
@@ -200,8 +191,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      In an autopilot system, What does the Flight Mode Annunciator (FMA)
+    question: In an autopilot system, What does the Flight Mode Annunciator (FMA)
       indicate?
     options:
       - id: OKEZB6WDG

@@ -14,26 +14,22 @@
       inaccurate representation of altitude. Why is that?
     options:
       - id: OVRT6UVWK
-        text:
-          The mathematical model used by the GPS is a very close approximation to,
+        text: The mathematical model used by the GPS is a very close approximation to,
           rather than a complete match with, the actual shape of the Earth.
         correct: true
         why: ""
       - id: OT1ATM3SX
-        text:
-          If there are too many satellites in view, the excess information fails to
+        text: If there are too many satellites in view, the excess information fails to
           coincide with that in the Almanac.
         correct: false
         why: ""
       - id: OGV0PVGTX
-        text:
-          The height of the ionosphere interferes with the path lengths of the radio
+        text: The height of the ionosphere interferes with the path lengths of the radio
           waves.
         correct: false
         why: ""
       - id: OFJADI7GL
-        text:
-          If there is an insufficient number of satellites in view, this can result
+        text: If there is an insufficient number of satellites in view, this can result
           in missing information and inconsistencies with the ephemeris data.
         correct: false
         why: ""
@@ -147,8 +143,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Should the static pressure line become blocked during level flight,
+    question: Should the static pressure line become blocked during level flight,
       the pressure altimeter indications will…
     options:
       - id: ORIMBDLKP
@@ -181,8 +176,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "A servo-assisted altimeter is more accurate than a simple altimeter
+    question: "A servo-assisted altimeter is more accurate than a simple altimeter
       because the small movements of:"
     options:
       - id: OFQIVXTSO
@@ -282,20 +276,17 @@
         correct: false
         why: ""
       - id: OXD8KPCO0
-        text:
-          atmospheric pressure at the sea level of the location for which it is
+        text: atmospheric pressure at the sea level of the location for which it is
           given.
         correct: false
         why: ""
       - id: OU3G7QFU7
-        text:
-          altimeter setting so that the altimeter, on the apron of the aerodrome for
+        text: altimeter setting so that the altimeter, on the apron of the aerodrome for
           which it is given, reads zero.
         correct: false
         why: ""
       - id: OPCNSWIDU
-        text:
-          altimeter setting so that the altimeter, on the apron of the aerodrome for
+        text: altimeter setting so that the altimeter, on the apron of the aerodrome for
           which it is given, reads the elevation.
         correct: true
         why: ""
@@ -312,8 +303,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An aircraft is equipped with one altimeter that is compensated for
+    question: "An aircraft is equipped with one altimeter that is compensated for
       position error and another one altimeter that is not. Assuming all other
       factors are equal, during a straight symmetrical flight:"
     options:
@@ -349,8 +339,7 @@
     question: "The altimeter indicates true altitude:  "
     options:
       - id: OXWLJME0O
-        text:
-          "when the temperature on the ground is +15°C with a lapse rate of 2°C per
+        text: "when the temperature on the ground is +15°C with a lapse rate of 2°C per
           1 000 feet, and correct QNH is set.  "
         correct: false
         why: ""
@@ -360,8 +349,7 @@
         correct: false
         why: ""
       - id: OW2HNPGZF
-        text:
-          "when the temperature on the ground is +15°C with a lapse rate of 2°C per
+        text: "when the temperature on the ground is +15°C with a lapse rate of 2°C per
           1 000 feet, and correct QFE is set  "
         correct: false
         why: ""
@@ -480,8 +468,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "An aircraft is climbing to its maximum operating altitude. During the
+    question: "An aircraft is climbing to its maximum operating altitude. During the
       level-off the crew must take into account lag of the altimeter. The
       altimeter will:"
     options:
@@ -514,8 +501,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Pressure altimeters are calibrated to ISA conditions. The use of an
+    question: Pressure altimeters are calibrated to ISA conditions. The use of an
       altimeter correction table is required for error caused by temperature
       deviations because when the temperature is…
     options:
@@ -524,14 +510,12 @@
         correct: false
         why: ""
       - id: OA7RRMNFV
-        text:
-          HIGHER than ISA and the QNH IS HIGHER than 1013.25 hPa, the aircraft will
+        text: HIGHER than ISA and the QNH IS HIGHER than 1013.25 hPa, the aircraft will
           be LOWER than the altimeter reading.
         correct: false
         why: ""
       - id: OZB50I0GG
-        text:
-          HIGHER than ISA and the QNH is LOWER than 1013.25 hPa, the aircraft will
+        text: HIGHER than ISA and the QNH is LOWER than 1013.25 hPa, the aircraft will
           be LOWER than the altimeter reading.
         correct: false
         why: ""
@@ -556,8 +540,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When flying in warm air (warmer than standard atmosphere), indicated
+    question: "When flying in warm air (warmer than standard atmosphere), indicated
       altitude is:"
     options:
       - id: OWY8DN18R
@@ -602,8 +585,7 @@
         correct: false
         why: ""
       - id: OFOUJ6ZYR
-        text:
-          If you are flying with a tailwind, the altimeter underreads; if you are
+        text: If you are flying with a tailwind, the altimeter underreads; if you are
           flying with a headwind, it overreads.
         correct: false
         why: ""

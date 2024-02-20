@@ -1,28 +1,30 @@
 import React, { Suspense, useEffect } from "react";
 import { default as Typography } from "@mui/joy/Typography";
 import { useColorScheme } from "@mui/joy/styles";
-import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
-import { Preview } from "@storybook/react";
+import { DocsContainer } from "@storybook/addon-docs";
 import { themes } from "@storybook/theming";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
-import { ThemeProvider, theme } from "@cf/react/components";
+import { ThemeProvider } from "@cf/react/theme";
 import { trpc } from "@cf/trpc/client";
 import type { TypographyProps } from "@mui/joy";
+import type { DocsContainerProps } from "@storybook/addon-docs";
+import type { Preview } from "@storybook/react";
+import type { FunctionComponent } from "react";
 import "@fontsource/public-sans";
 
 // TODO this is a complete hack. Open ticket with SB
 window.React = React;
 
-const api = initialize({
-  onUnhandledRequest: ({ method, url }, print) => {
+initialize({
+  onUnhandledRequest: ({ url }, print) => {
     if (url.includes("/trpc")) {
       print.error();
     }
   },
 });
 
-const ToggleDarkMode = ({}) => {
+const ToggleDarkMode: FunctionComponent = () => {
   const isDarkMode = useDarkMode();
   const { setMode } = useColorScheme();
   useEffect(() => {
@@ -54,7 +56,7 @@ const preview: Preview = {
         h5: (props: TypographyProps) => <Typography level="h5" {...props} />,
         p: (props: TypographyProps) => <Typography {...props} />,
       },
-      container: (props: DocsContainerProps) => {
+      container: function Container(props: DocsContainerProps) {
         const dark = useDarkMode();
         const docsTheme = dark ? themes.dark : themes.light;
         return (

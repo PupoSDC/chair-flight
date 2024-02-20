@@ -45,8 +45,7 @@
       frequencies and codes?
     options:
       - id: OVFCHSQS0
-        text:
-          The P code is the only code available for civilian use. It is transmitted
+        text: The P code is the only code available for civilian use. It is transmitted
           only on L1.
         correct: false
         why: ""
@@ -56,14 +55,12 @@
         correct: true
         why: ""
       - id: O0WF57RRV
-        text:
-          The C/A code is for authorised (military) use only. It is transmitted on
+        text: The C/A code is for authorised (military) use only. It is transmitted on
           both L1 and L2.
         correct: false
         why: ""
       - id: OBKLRSP9Y
-        text:
-          The P code is for authorised (military) use only. It is transmitted only
+        text: The P code is for authorised (military) use only. It is transmitted only
           on L2.
         correct: false
         why: ""
@@ -122,8 +119,7 @@
       Range Error (UERE) in GNSS, which of the following statements is true?
     options:
       - id: OFK01TY1H
-        text:
-          The user equivalent range error is the difference between errors due to
+        text: The user equivalent range error is the difference between errors due to
           ionospheric effects and satellite clock errors.
         correct: false
         why: ""
@@ -132,8 +128,7 @@
         correct: true
         why: ""
       - id: ORTCYSSS7
-        text:
-          Satellite clocks are so accurate that clock errors can practically be
+        text: Satellite clocks are so accurate that clock errors can practically be
           ignored.
         correct: false
         why: ""
@@ -156,8 +151,7 @@
     question: Which one of the following statements about EGNOS is correct?
     options:
       - id: ORZD0QVYJ
-        text:
-          With EGNOS installed in an aircraft, the GNSS-reciever can use satellites
+        text: With EGNOS installed in an aircraft, the GNSS-reciever can use satellites
           from all Global Navigation Satellite Systems in order to get better
           accuracy.
         correct: false
@@ -188,19 +182,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following correctly describes the principle of Receiver
+    question: Which of the following correctly describes the principle of Receiver
       Autonomous Integrity Monitoring (RAIM)?
     options:
       - id: O2Z5GOIIW
-        text:
-          is guaranteed to be available for all scheduled flight operations at
+        text: is guaranteed to be available for all scheduled flight operations at
           mid-latitudes.
         correct: false
         why: ""
       - id: OYM3IWNYJ
-        text:
-          requires at least five satellites with good geometry to provide the
+        text: requires at least five satellites with good geometry to provide the
           service of detecting faulty signals and alerting the crew.
         correct: true
         why: ""
@@ -210,8 +201,7 @@
         correct: false
         why: ""
       - id: OCHNPGAQT
-        text:
-          is available if range from at least three satellites is supplemented by
+        text: is available if range from at least three satellites is supplemented by
           barometric aiding.
         correct: false
         why: ""
@@ -238,8 +228,7 @@
         correct: false
         why: ""
       - id: OGUWNCXMJ
-        text:
-          The Dilution of Precision (DOP) has to be more than level 6 for position
+        text: The Dilution of Precision (DOP) has to be more than level 6 for position
           fixing in en-route navigation.
         correct: false
         why: ""
@@ -248,8 +237,7 @@
         correct: false
         why: ""
       - id: OXYPPCXJX
-        text:
-          The satellite clock error correction is important for accurate position
+        text: The satellite clock error correction is important for accurate position
           fixing.
         correct: true
         why: ""
@@ -295,19 +283,16 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which statement is true about the navigation data in the navigation
+    question: Which statement is true about the navigation data in the navigation
       message of GPS?
     options:
       - id: OQMKHZLSA
-        text:
-          The navigation data are uploaded to the satellites by the GPS control
+        text: The navigation data are uploaded to the satellites by the GPS control
           segment.
         correct: true
         why: ""
       - id: O6W1UG0JG
-        text:
-          The navigation data are checked and, if necessary, corrected by the
+        text: The navigation data are checked and, if necessary, corrected by the
           satellite itself.
         correct: false
         why: ""
@@ -316,8 +301,7 @@
         correct: false
         why: ""
       - id: OF77ZVYDH
-        text:
-          During normal operation, the navigation data of one satellite are checked
+        text: During normal operation, the navigation data of one satellite are checked
           by other satellites in the constellation and, if necessary, corrected.
         correct: false
         why: ""
@@ -333,8 +317,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The GPS Standard Positioning Service (SPS) was originally designed to
+    question: The GPS Standard Positioning Service (SPS) was originally designed to
       provide civilian users with a less accurate positioning capability than
       the Precise Positioning Service (PPS) which is reserved for authorised
       users only. What makes the SPS less accurate than the PPS?
@@ -372,26 +355,22 @@
       the transmission of the signals on two frequencies (L1 and L2):"
     options:
       - id: O4HQ0SSBK
-        text:
-          The path delay of the signals in the earth atmosphere is proportional to
+        text: The path delay of the signals in the earth atmosphere is proportional to
           the inverse of the carrier frequency squared.
         correct: true
         why: ""
       - id: OF3RLNQMO
-        text:
-          The influence of shadowing on the GPS signals is proportional to the
+        text: The influence of shadowing on the GPS signals is proportional to the
           inverse of the carrier frequency squared.
         correct: false
         why: ""
       - id: OUN6TU0NV
-        text:
-          The effect of signal reflections (multipath effect) can be reduced due to
+        text: The effect of signal reflections (multipath effect) can be reduced due to
           the interference of both frequencies.
         correct: false
         why: ""
       - id: OWWZJVSJL
-        text:
-          The effect of receiver noise can be reduced due to the interference of
+        text: The effect of receiver noise can be reduced due to the interference of
           both frequencies.
         correct: false
         why: ""

@@ -20,26 +20,22 @@
       When selected, the go-around mode engages and the aeroplane climbs...
     options:
       - id: OWVXJCLTV
-        text:
-          only if the aeroplane is below the selected missed approach altitude and
+        text: only if the aeroplane is below the selected missed approach altitude and
           following an ILS.
         correct: false
         why: ""
       - id: OZONBZJKP
-        text:
-          when it is approaching the missed approach point or minimum descent
+        text: when it is approaching the missed approach point or minimum descent
           altitude for the approach.
         correct: false
         why: ""
       - id: OWJW5TMAU
-        text:
-          whether it is below or above the selected missed approach altitude at the
+        text: whether it is below or above the selected missed approach altitude at the
           point of initiation.
         correct: true
         why: ""
       - id: OUHQXYBZF
-        text:
-          only if the selected missed approach altitude is above the aeroplane at
+        text: only if the selected missed approach altitude is above the aeroplane at
           the point of initiation.
         correct: false
         why: ""
@@ -118,8 +114,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When engaging the autopilot with the FDs, the captain cannot see the
+    question: When engaging the autopilot with the FDs, the captain cannot see the
       annunciator on the FMA. What should you do?
     options:
       - id: OMIDRUOZS
@@ -150,14 +145,12 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is manually flying an ILS approach. The Flight Director roll
+    question: A pilot is manually flying an ILS approach. The Flight Director roll
       bar is to the left of centre, but the ILS raw indicator is to the right.
       What should the pilot do?
     options:
       - id: OSIESJCQ5
-        text:
-          Follow the Flight Director, which is indicating the correct course of
+        text: Follow the Flight Director, which is indicating the correct course of
           action to return to the centreline.
         correct: true
         why: ""
@@ -170,8 +163,7 @@
         correct: false
         why: ""
       - id: OLXTPRFY1
-        text:
-          Switch off the Flight Director and follow the raw data. This indication
+        text: Switch off the Flight Director and follow the raw data. This indication
           scenario shows an obvious fault in the system.
         correct: false
         why: ""
@@ -233,20 +225,17 @@
       happens to the FD as you roll right?
     options:
       - id: OPAPGNIOW
-        text:
-          It continues reading the exact same deviation until the localiser course
+        text: It continues reading the exact same deviation until the localiser course
           is intercepted.
         correct: false
         why: ""
       - id: OKBPM3OT9
-        text:
-          Within 10 degrees of capturing the localiser, the flight director will
+        text: Within 10 degrees of capturing the localiser, the flight director will
           switch to a left roll indication to help you level the aircraft.
         correct: false
         why: ""
       - id: OFAPLQS35
-        text:
-          The deviation indication adjusts in proportion to the deviation of the
+        text: The deviation indication adjusts in proportion to the deviation of the
           localiser path.
         correct: true
         why: ""
@@ -271,26 +260,22 @@
       pilots?
     options:
       - id: OVYDWV8XU
-        text:
-          PM flies the aircraft or monitors the autopilot, PF has some similar
+        text: PM flies the aircraft or monitors the autopilot, PF has some similar
           functions, other ancillary functions and does the radios.
         correct: false
         why: ""
       - id: OSUSDTZZ4
-        text:
-          PF flies the aircraft or monitors the autopilot, PM has some similar
+        text: PF flies the aircraft or monitors the autopilot, PM has some similar
           functions, and other ancillary functions.
         correct: false
         why: ""
       - id: OG45LDFWG
-        text:
-          PM flies the aircraft or monitors the autopilot, PF has some similar
+        text: PM flies the aircraft or monitors the autopilot, PF has some similar
           functions and other ancillary functions.
         correct: false
         why: ""
       - id: OVY222NGC
-        text:
-          PF flies the aircraft or monitors the autopilot, PM has some similar
+        text: PF flies the aircraft or monitors the autopilot, PM has some similar
           functions, other ancillary functions and does the radios.
         correct: true
         why: ""
@@ -351,8 +336,7 @@
         correct: false
         why: ""
       - id: OFTVQZE6O
-        text:
-          your aircraft is in the optimum attitude computed for the planned flight
+        text: your aircraft is in the optimum attitude computed for the planned flight
           path.
         correct: true
         why: ""
@@ -407,8 +391,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which statement is correct about the autopilot/flight director modes
+    question: Which statement is correct about the autopilot/flight director modes
       and their respective selection panel?
     options:
       - id: OBQM2IANK
@@ -418,15 +401,13 @@
         correct: false
         why: ""
       - id: OBOLHXDQQ
-        text:
-          The modes available for the flight director are different from those
+        text: The modes available for the flight director are different from those
           available for the autopilot, and a separate panel is used for their
           selection.
         correct: false
         why: ""
       - id: OE0CFMO47
-        text:
-          The modes available for the flight director are different from those
+        text: The modes available for the flight director are different from those
           available for the autopilot, but the same panel is used for the
           selection of both.
         correct: false
@@ -448,8 +429,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The flight director command bars provide the pilot with corrections
+    question: "The flight director command bars provide the pilot with corrections
       to apply to:"
     options:
       - id: OQ2C2WKDP
@@ -484,15 +464,13 @@
       indication…
     options:
       - id: OOJ3ERT97
-        text:
-          Keeps indicating and will indicate a left turn 10º before the required
+        text: Keeps indicating and will indicate a left turn 10º before the required
           heading is reached. Initially indicates a right roll and adjusts to
           indicate a left turn of 10º before the required heading is reached.
         correct: false
         why: ""
       - id: O2YSPLOXG
-        text:
-          keeps indicating a right roll without a change until the required heading
+        text: keeps indicating a right roll without a change until the required heading
           is reached.
         correct: false
         why: ""
@@ -522,31 +500,27 @@
       are verified by the PF. What should the PF do next?
     options:
       - id: OK6YC25YK
-        text:
-          Turn towards POL, ignoring the FD. If the FD still commands any turn once
+        text: Turn towards POL, ignoring the FD. If the FD still commands any turn once
           the aircraft is tracking towards POL, ignore it, as this is common
           when flying direct to waypoints, and the FD roll command will
           eventually reduce.
         correct: false
         why: ""
       - id: ORKDDSFZ7
-        text:
-          Check on the FMA that the NAV mode is engaged, and that the FD commands a
+        text: Check on the FMA that the NAV mode is engaged, and that the FD commands a
           turn towards POL If it does NOT, ask the PM to set the heading or
           track mode and a suitable heading or track.
         correct: true
         why: ""
       - id: O2AZWYMMJ
-        text:
-          Turn 20º right, ignoring the FD roll command, and check on the ND that the
+        text: Turn 20º right, ignoring the FD roll command, and check on the ND that the
           aircraft is tracking towards POL. Check that the FD roll command is
           catching up with the turn and that the FMA shows NAV lateral mode is
           engaged.
         correct: false
         why: ""
       - id: O66KSLKZ2
-        text:
-          Check that the FCU NAV button is illuminated. The FD will command a turn
+        text: Check that the FCU NAV button is illuminated. The FD will command a turn
           towards POL, so follow the FD and wait until the turn is commanded.
           ATC will expect a delay so will NOT need to be told.
         correct: false
@@ -629,8 +603,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A Flight Director (FD) system basically consists of a computer that
+    question: A Flight Director (FD) system basically consists of a computer that
       calculates
     options:
       - id: OT9RVKAR4
@@ -703,22 +676,19 @@
         correct: false
         why: ""
       - id: OTXYVUUKR
-        text:
-          No, the FMAs will automatically be removed from view and the FD command
+        text: No, the FMAs will automatically be removed from view and the FD command
           bar will be centred after a short period of time, unless the pilot
           returns to the planned route.
         correct: false
         why: ""
       - id: OCR6Y9SCL
-        text:
-          Yes, the FD must either be switched OFF or the pilot must select modes and
+        text: Yes, the FD must either be switched OFF or the pilot must select modes and
           parameters for the new intended flight path for the FD to give
           appropriate guidance.
         correct: true
         why: ""
       - id: OI8FNO4RP
-        text:
-          Yes, the autopilot is still engaged and must be disengaged, because the FD
+        text: Yes, the autopilot is still engaged and must be disengaged, because the FD
           indicates that the aeroplane is turning right and climbing to the
           selected altitude of 3000 ft.
         correct: false
@@ -734,25 +704,21 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which option is correct regarding an aircraft equipped with a flight
+    question: Which option is correct regarding an aircraft equipped with a flight
       Director (FD) and an Automatic Flight Control System (AFCS)
     options:
       - id: OY6MFEYTQ
-        text:
-          The available modes and the control panel are the same for both the FD and
+        text: The available modes and the control panel are the same for both the FD and
           the AFCS.
         correct: true
         why: ""
       - id: O3FYI4CHZ
-        text:
-          The FD and the AFCS share the same control panel, but the available modes
+        text: The FD and the AFCS share the same control panel, but the available modes
           are different.
         correct: false
         why: ""
       - id: OPDWZAB7O
-        text:
-          The available modes are the same, but the AFCS control panel is different
+        text: The available modes are the same, but the AFCS control panel is different
           to that of the FD.
         correct: false
         why: ""
@@ -775,8 +741,7 @@
     question: "The purpose of a flight director is to:"
     options:
       - id: OSAFOE7ML
-        text:
-          reduce the pilots workload by presenting data in the form of control
+        text: reduce the pilots workload by presenting data in the form of control
           commands.
         correct: true
         why: ""
@@ -806,8 +771,7 @@
     question: The Flight Director system..
     options:
       - id: ORUQPLBCB
-        text:
-          provides inertial reference position data to control inputs along a
+        text: provides inertial reference position data to control inputs along a
           selected and computed flight path.
         correct: false
         why: ""

@@ -12,8 +12,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The flight crew has 1 hour flight time remaining of a 4 hours flight
+    question: The flight crew has 1 hour flight time remaining of a 4 hours flight
       towards the destination aerodrome. The FMS displays the message DEST EFOB
       BELOW MIN and the Commander looks at the FMS data to see that there is an
       estimated 0.3 tonnes less fuel than required when arriving at the
@@ -1157,15 +1156,13 @@
       jet engine):"
     options:
       - id: O0EX2NBPC
-        text:
-          To fly to the destination, including one missed approach at the DA, then a
+        text: To fly to the destination, including one missed approach at the DA, then a
           flight to one of the two selected alternate airports requiring the
           most fuel and then for another 30 minutes flying + contingency fuel.
         correct: true
         why: ""
       - id: ONHPSPQOF
-        text:
-          To fly to the destination and then to fly for another 45 minutes in a
+        text: To fly to the destination and then to fly for another 45 minutes in a
           holding at 1 500 feet AGL + contingency fuel.
         correct: false
         why: ""
@@ -1177,8 +1174,7 @@
         correct: false
         why: ""
       - id: O0XDAAWKN
-        text:
-          To fly to the destination, including one missed approach at the DA, then a
+        text: To fly to the destination, including one missed approach at the DA, then a
           flight to the alternate airport and then for another 45 minutes flying
           + contingency fuel.
         correct: false
@@ -1204,30 +1200,26 @@
       (For this question use CAP 697 Figure 4.5.2) Describe how to convert nautical ground miles (NGM) into nautical air miles (NAM).
     options:
       - id: O8N31NHCU
-        text:
-          Use the air distance to enter the graph. Travel horizontally to the
+        text: Use the air distance to enter the graph. Travel horizontally to the
           appropriate ground distance line.Travel vertically to intersect the
           wind component, and finally travel horizontally to read the nautical
           air miles.
         correct: false
         why: ""
       - id: OREZOEUXQ
-        text:
-          Use the TAS to enter the graph. Travel horizontally to the zero wind
+        text: Use the TAS to enter the graph. Travel horizontally to the zero wind
           reference line. Travel vertically to the appropriate ground distance
           line, and finally travel horizontally to read the nautical air miles.
         correct: false
         why: ""
       - id: OPCRIKFWN
-        text:
-          Use the TAS to enter the graph. Travel horizontally left to the actual
+        text: Use the TAS to enter the graph. Travel horizontally left to the actual
           wind component. Travel vertically to the appropriate ground distance
           line, and finally travel horizontally to read the nautical air miles.
         correct: true
         why: ""
       - id: OXAAUFVUC
-        text:
-          Enter from the bottom of the graph using the zero-wind reference line.
+        text: Enter from the bottom of the graph using the zero-wind reference line.
           Travel vertically to the appropriate ground distance line and finally
           move horizontally to read the nautical miles.
         correct: false
@@ -1245,31 +1237,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Comparing the integrated range and the average fuel flow procedure,
+    question: Comparing the integrated range and the average fuel flow procedure,
       which of the following statement is correct?
     options:
       - id: O8KBQ1XLI
-        text:
-          The integrated range procedure is more accurate and reflects the different
+        text: The integrated range procedure is more accurate and reflects the different
           fuel flows during different phases of flight.
         correct: true
         why: ""
       - id: ORH373WLG
-        text:
-          The average fuel flow procedure is more accurate and reflects the fuel
+        text: The average fuel flow procedure is more accurate and reflects the fuel
           consumption during different phases of flight.
         correct: false
         why: ""
       - id: OKSYLAUV2
-        text:
-          The integrated range procedure is easier and faster when determining fuel
+        text: The integrated range procedure is easier and faster when determining fuel
           even for long range flights.
         correct: false
         why: ""
       - id: OM11GSCXD
-        text:
-          The average fuel flow procedures allow an accurate monitoring of fuel even
+        text: The average fuel flow procedures allow an accurate monitoring of fuel even
           for long range flights.
         correct: false
         why: ""

@@ -14,20 +14,17 @@
       \[altitude\]" means:'
     options:
       - id: OIEINBSID
-        text:
-          after the climb the specified altitude is to be maintained from the
+        text: after the climb the specified altitude is to be maintained from the
           specified time.
         correct: false
         why: ""
       - id: OHJL3TZD2
-        text:
-          at the specified time a climb to the specified altitude is to be started
+        text: at the specified time a climb to the specified altitude is to be started
           and the specified altitude is to be maintained.
         correct: true
         why: ""
       - id: ORCLQUDOB
-        text:
-          after the climb the specified altitude is to be maintained until the
+        text: after the climb the specified altitude is to be maintained until the
           specified time.
         correct: false
         why: ""
@@ -46,8 +43,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During the cruise phase, how may a pilot compare the actual winds to
+    question: During the cruise phase, how may a pilot compare the actual winds to
       those forecasted on the flight plan?
     options:
       - id: OTCTIXKVP

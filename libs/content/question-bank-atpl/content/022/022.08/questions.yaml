@@ -46,26 +46,22 @@
       applies full elevator deflection in the opposite direction, it will...
     options:
       - id: OK3IX5U96
-        text:
-          be possible to maintain altitude, because the full elevator control
+        text: be possible to maintain altitude, because the full elevator control
           movement will still be available.
         correct: false
         why: ""
       - id: OW8V2LCO2
-        text:
-          still result in a loss of altitude because the elevator will mechanically
+        text: still result in a loss of altitude because the elevator will mechanically
           follow the stabiliser movement.
         correct: false
         why: ""
       - id: OHYCNLOLC
-        text:
-          be possible to maintain altitude, because only the elevator nose-down
+        text: be possible to maintain altitude, because only the elevator nose-down
           direction will be restricted.
         correct: false
         why: ""
       - id: OJVXIB3I4
-        text:
-          still result in a loss of altitude because the elevator nose up direction
+        text: still result in a loss of altitude because the elevator nose up direction
           is restricted.
         correct: true
         why: ""
@@ -131,14 +127,12 @@
         correct: false
         why: ""
       - id: OY52EGYUC
-        text:
-          increases the static longitudinal stability of an aeroplane by adjusting
+        text: increases the static longitudinal stability of an aeroplane by adjusting
           the horizontal stabiliser according to Mach number.
         correct: true
         why: ""
       - id: OUAPV9V1F
-        text:
-          ensures optimum C.G. location by transferring fuel into the horizontal
+        text: ensures optimum C.G. location by transferring fuel into the horizontal
           stabiliser.
         correct: false
         why: ""
@@ -219,14 +213,12 @@
     question: A flight envelope protection system is a system..
     options:
       - id: OE8TFPAOL
-        text:
-          that generates a signal during flight when engine parameters only are
+        text: that generates a signal during flight when engine parameters only are
           exceeded.
         correct: false
         why: ""
       - id: O4PPUFEWO
-        text:
-          that generates a signal when the engines have exceeded the start envelope
+        text: that generates a signal when the engines have exceeded the start envelope
           limit.
         correct: false
         why: ""
@@ -235,8 +227,7 @@
         correct: false
         why: ""
       - id: O4QMYKVRV
-        text:
-          that generates a control signal when the aircraft exceeds the flight
+        text: that generates a control signal when the aircraft exceeds the flight
           envelope limit.
         correct: true
         why: ""
@@ -255,26 +246,22 @@
     question: In Fly-By-Wire aircraft, when the overspeed function is active, it will...
     options:
       - id: O6DNG1KMQ
-        text:
-          require a constant nose-down control input in order to make an increase in
+        text: require a constant nose-down control input in order to make an increase in
           speed.
         correct: true
         why: ""
       - id: OGDF2XMHA
-        text:
-          disconnect the flight controls from the aerodynamic surfaces until the
+        text: disconnect the flight controls from the aerodynamic surfaces until the
           airspeed reduces below the trigger speed.
         correct: false
         why: ""
       - id: OS7ISXNBT
-        text:
-          cause tactile feedback, such as vibration, to the flight controls and
+        text: cause tactile feedback, such as vibration, to the flight controls and
           prevent further acceleration using flight control system inputs.
         correct: false
         why: ""
       - id: OS8B7HZNF
-        text:
-          prevent a speed increase by over-riding manual or automatic control input,
+        text: prevent a speed increase by over-riding manual or automatic control input,
           until the airspeed falls below the threshold speed.
         correct: false
         why: ""
@@ -290,8 +277,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      You are flying an aircraft at FL350 with the autopilot engaged in VNAV
+    question: You are flying an aircraft at FL350 with the autopilot engaged in VNAV
       and LNAV modes. What are the consequences of an auto-trim failure in these
       conditions?
     options:
@@ -362,28 +348,24 @@
       following statements is true in the case of an automatic trim failure?
     options:
       - id: OCYRXG0DX
-        text:
-          There will be no difference in aircraft behaviour as long as the autopilot
+        text: There will be no difference in aircraft behaviour as long as the autopilot
           stays engaged; however, the human pilot must be prepared for high
           aerodynamic loads when disconnecting the autopilot.
         correct: false
         why: ""
       - id: OIXUERSF1
-        text:
-          The autopilot can still be used to control the aircraft; however, the
+        text: The autopilot can still be used to control the aircraft; however, the
           human pilot must manually adjust the trim surface position to cancel
           out any constant loads.
         correct: false
         why: ""
       - id: OFYJPVHO0
-        text:
-          The autopilot will disconnect and issue an appropriate warning. The human
+        text: The autopilot will disconnect and issue an appropriate warning. The human
           pilot must be ready to take over control.
         correct: true
         why: ""
       - id: OCFW368MO
-        text:
-          The human pilot must disconnect the autopilot and assume control over the
+        text: The human pilot must disconnect the autopilot and assume control over the
           aircraft in order to avoid trim runaway.
         correct: false
         why: ""
@@ -429,8 +411,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "State an example of a flight envelope protection system (soft flight
+    question: "State an example of a flight envelope protection system (soft flight
       envelope protection system), which gives warning signal as soon as a limit
       will be approached:"
     options:
@@ -463,8 +444,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When the autopilot is engaged, the role of the automatic pitch trim
+    question: "When the autopilot is engaged, the role of the automatic pitch trim
       is to:"
     options:
       - id: OUYI5CRVS
@@ -472,8 +452,7 @@
         correct: false
         why: ""
       - id: OTPH6HZSS
-        text:
-          block the elevator and pilot the aircraft only via the trim tab actuator
+        text: block the elevator and pilot the aircraft only via the trim tab actuator
           or the horizontal stabiliser.
         correct: false
         why: ""
@@ -482,8 +461,7 @@
         correct: false
         why: ""
       - id: OHFRZYIGX
-        text:
-          relieve the autopilot servo motor and return the aircraft in-trim when
+        text: relieve the autopilot servo motor and return the aircraft in-trim when
           disconnecting the autopilot.
         correct: true
         why: ""
@@ -500,8 +478,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following is an example of a flight envelope protection
+    question: Which of the following is an example of a flight envelope protection
       system that generates warning signals to indicate when a limit is being
       approached (referred to as a soft flight envelope protection system)?
     options:
@@ -535,14 +512,12 @@
       Director (FD) on as well as with the autopilot engaged?
     options:
       - id: O6A1OIYVS
-        text:
-          The yaw damper only operates during manual flight, and is inhibited when
+        text: The yaw damper only operates during manual flight, and is inhibited when
           the autopilot is engaged.
         correct: false
         why: ""
       - id: OXXFSDONN
-        text:
-          The yaw damper is disabled when FD is selected, and manual rudder control
+        text: The yaw damper is disabled when FD is selected, and manual rudder control
           must be used to manage yaw.
         correct: false
         why: ""
@@ -553,8 +528,7 @@
         correct: true
         why: ""
       - id: OLAKPNVTL
-        text:
-          The yaw damper provides stability during manual control and autopilot use,
+        text: The yaw damper provides stability during manual control and autopilot use,
           as long as the FD is on.
         correct: false
         why: ""
@@ -601,14 +575,12 @@
       nose-down configuration due to an out-of-trim condition?
     options:
       - id: OYFOZ71SX
-        text:
-          The elevator can compensate for the nose-down trim by automatically
+        text: The elevator can compensate for the nose-down trim by automatically
           trimming in the opposite direction.
         correct: false
         why: ""
       - id: OEO0PL7GQ
-        text:
-          The elevator can compensate for the nose-down trim by automatically
+        text: The elevator can compensate for the nose-down trim by automatically
           increasing its lift.
         correct: false
         why: ""
@@ -618,8 +590,7 @@
         correct: true
         why: ""
       - id: O3KBA84LA
-        text:
-          The elevator can compensate for the nose-down trim by deploying speed
+        text: The elevator can compensate for the nose-down trim by deploying speed
           brakes.
         correct: false
         why: ""
@@ -718,8 +689,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the flight envelope protection mode that can be offered by an
+    question: What is the flight envelope protection mode that can be offered by an
       auto-throttle system?
     options:
       - id: OSDAHLR0H

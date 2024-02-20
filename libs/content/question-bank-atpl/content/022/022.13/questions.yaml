@@ -42,8 +42,7 @@
     question: "A portable EFB:"
     options:
       - id: OL36UM6BK
-        text:
-          Can be carried in the aircraft and is part of the same certificate of
+        text: Can be carried in the aircraft and is part of the same certificate of
           airworthiness.
         correct: false
         why: ""
@@ -98,8 +97,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      There are two types of software certifications for EFB systems. These
+    question: There are two types of software certifications for EFB systems. These
       are...
     options:
       - id: OOVLUA7QK
@@ -130,8 +128,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft is in flight and suffers an engine failure, confirmed by
+    question: An aircraft is in flight and suffers an engine failure, confirmed by
       the onboard instruments. At the same time, the pilots get confirmation
       that there has been a separation of the engine cowling. After following
       the electronic checklist and shutting down the engine, the last part of
@@ -139,26 +136,22 @@
       follow the checklist and restart the failed engine?
     options:
       - id: OJLQBWZG1
-        text:
-          No, the pilot should not attempt to restart the engine without first
+        text: No, the pilot should not attempt to restart the engine without first
           performing a thorough inspection to assess the extent of the damage.
         correct: false
         why: ""
       - id: OAUDGZ9RE
-        text:
-          No, the checklist is unable to analyse the damage on the engine and a
+        text: No, the checklist is unable to analyse the damage on the engine and a
           restart of the engine would be unsafe.
         correct: true
         why: ""
       - id: OOTBH7XOV
-        text:
-          Yes, the checklist assess multiple parameters at all times, presenting
+        text: Yes, the checklist assess multiple parameters at all times, presenting
           only appropriate actions to the pilots.
         correct: false
         why: ""
       - id: ONH1DP2VP
-        text:
-          Yes, as long as the pilot has visually confirmed that the engine is not on
+        text: Yes, as long as the pilot has visually confirmed that the engine is not on
           fire or otherwise unsafe to restart.
         correct: false
         why: ""
@@ -214,27 +207,23 @@
     question: What is correct regarding an Enhanced Visual System (EVS)?
     options:
       - id: OL3KQ5LHQ
-        text:
-          It combines the static data from a database with the actual data from
+        text: It combines the static data from a database with the actual data from
           external sensors to create a visual 3-dimensional (3D) representation
           of the surroundings of the aircraft.
         correct: false
         why: ""
       - id: OFTKQAB1P
-        text:
-          It generates real-time imagery, to display on the PFD or HUD, of the
+        text: It generates real-time imagery, to display on the PFD or HUD, of the
           surroundings of the aircraft based on external sensors.
         correct: true
         why: ""
       - id: OB22C1G5C
-        text:
-          It collects and stores real-time data from external sensors to create a
+        text: It collects and stores real-time data from external sensors to create a
           synthetic vision representation of the surroundings of the aircraft.
         correct: false
         why: ""
       - id: O8SYDMYVC
-        text:
-          It generates real-time imagery of the surroundings of the aircraft and it
+        text: It generates real-time imagery of the surroundings of the aircraft and it
           is able to digitally detect objects like obstacles to warn the crew.
         correct: false
         why: ""
@@ -354,8 +343,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What should pilots watch out for when executing ECAM/EICAS procedures
+    question: What should pilots watch out for when executing ECAM/EICAS procedures
       during a flight?
     options:
       - id: OXMW1IVGZ
@@ -367,8 +355,7 @@
         correct: false
         why: ""
       - id: O4KEQKNRZ
-        text:
-          The possibility of the aircraft's systems malfunctioning during the
+        text: The possibility of the aircraft's systems malfunctioning during the
           procedures.
         correct: false
         why: ""
@@ -401,8 +388,7 @@
         correct: false
         why: ""
       - id: OLQZMC9E7
-        text:
-          Provides an indication of the runway position and displays autopilot
+        text: Provides an indication of the runway position and displays autopilot
           modes.
         correct: true
         why: ""
@@ -419,8 +405,7 @@
     question: The EFBs the flight schools provide to students are configured for...
     options:
       - id: O0GJOEBYI
-        text:
-          a particular aircraft, and specified by the aircraft's registration or
+        text: a particular aircraft, and specified by the aircraft's registration or
           tail number, e.g., D-EASA.
         correct: false
         why: ""
@@ -454,14 +439,12 @@
         correct: false
         why: ""
       - id: O6OKJOECP
-        text:
-          It is based on a terrain and ground features database that are shown on
+        text: It is based on a terrain and ground features database that are shown on
           the PFD to increase the pilot’s situational awareness.
         correct: true
         why: ""
       - id: OJAGCXPX2
-        text:
-          It is based on infrared sensors detecting the surrounding terrain and
+        text: It is based on infrared sensors detecting the surrounding terrain and
           replicating it on the PFD to increase the pilot’s situational
           awareness.
         correct: false
@@ -519,8 +502,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      According to certification specifications colour standardisation for
+    question: According to certification specifications colour standardisation for
       an EFIS, increasing intensity of precipitation is indicated by colours in
       the order..
     options:
@@ -550,8 +532,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A crew is operating an Airbus 320 aircraft with both right and left
+    question: A crew is operating an Airbus 320 aircraft with both right and left
       fuel tanks filled to their maximum capacity, which is the same for both
       tanks. During the flight, the co-pilot observes that the upper display
       indicates 900 kg of remaining fuel in the left tank, while the right tank
@@ -559,27 +540,23 @@
       this situation?
     options:
       - id: O9SJVMUDQ
-        text:
-          The crew should promptly assume that the fuel pump for the right engine is
+        text: The crew should promptly assume that the fuel pump for the right engine is
           not supplying fuel and initiate a "Mayday Fuel" distress call.
         correct: false
         why: ""
       - id: O0FPZRMLO
-        text:
-          The crew should exercise caution when considering opening the cross-feed
+        text: The crew should exercise caution when considering opening the cross-feed
           valve due to the elevated risk of a fuel leak, which could potentially
           result in total fuel loss.
         correct: true
         why: ""
       - id: O4COUQNL8
-        text:
-          The engine with the higher fuel quantity should be shut down immediately,
+        text: The engine with the higher fuel quantity should be shut down immediately,
           followed by opening the cross-feed valve.
         correct: false
         why: ""
       - id: OQAKRCG6N
-        text:
-          The crew should promptly open the crossfeed valve to redistribute the
+        text: The crew should promptly open the crossfeed valve to redistribute the
           fuel.
         correct: false
         why: ""
@@ -896,26 +873,22 @@
       Why do pilots need to confirm?
     options:
       - id: OOXAIHJVI
-        text:
-          To fulfill regulatory requirements and maintain proper documentation for
+        text: To fulfill regulatory requirements and maintain proper documentation for
           incident reporting.
         correct: false
         why: ""
       - id: O0XEAD8CF
-        text:
-          To satisfy a bureaucratic requirement for pilots to verbally acknowledge
+        text: To satisfy a bureaucratic requirement for pilots to verbally acknowledge
           the failure, regardless of its obvious nature.
         correct: false
         why: ""
       - id: OCIKIROQ6
-        text:
-          To synchronize the information and confirm the engine failure with the air
+        text: To synchronize the information and confirm the engine failure with the air
           traffic control for coordination purposes.
         correct: false
         why: ""
       - id: OXJW3YYVG
-        text:
-          To prevent inappropriate reactions caused by a misinterpretation of the
+        text: To prevent inappropriate reactions caused by a misinterpretation of the
           malfunction by the system.
         correct: true
         why: ""
@@ -961,14 +934,12 @@
       reconfiguration?
     options:
       - id: OXFCWND93
-        text:
-          The copilot’s PFD display is automatically duplicated on the screen
+        text: The copilot’s PFD display is automatically duplicated on the screen
           corresponding to the copilot’s ND.
         correct: false
         why: ""
       - id: OAGDLKZ9K
-        text:
-          The copilot’s PFD display is automatically duplicated on the screen
+        text: The copilot’s PFD display is automatically duplicated on the screen
           corresponding to the commander’s ND.
         correct: true
         why: ""
@@ -1123,20 +1094,17 @@
         correct: false
         why: ""
       - id: O1VHHMYI9
-        text:
-          A vertical speed tape with two arrows, one green to indicate a climb and
+        text: A vertical speed tape with two arrows, one green to indicate a climb and
           one red to indicate a descent.
         correct: false
         why: ""
       - id: OUFSWMI7E
-        text:
-          A vertical speed tape with three arrows, one each to indicate climb,
+        text: A vertical speed tape with three arrows, one each to indicate climb,
           descent or zero.
         correct: false
         why: ""
       - id: OSRKF9Z6V
-        text:
-          A vertical speed tape, with one white arrow that indicates climb, descent
+        text: A vertical speed tape, with one white arrow that indicates climb, descent
           or zero.
         correct: true
         why: ""
@@ -1219,8 +1187,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A PFD, ND, and ECAM comprise the EIS installed on an aircraft. There
+    question: A PFD, ND, and ECAM comprise the EIS installed on an aircraft. There
       is a redundant system failure in flight that necessitates a crew advisory.
       On which of the displays available to the crew would they see the warning
       message?
@@ -1252,8 +1219,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An advanced electronic checklist system is installed in an aircraft to
+    question: An advanced electronic checklist system is installed in an aircraft to
       direct the pilot through the proper procedures in the event that one or
       more of its systems fail. When the pilot completes the ordered action, the
       command is erased from the screen in this particular electronic checklist.
@@ -1261,29 +1227,25 @@
       checklists is true?
     options:
       - id: OK1JEXLAD
-        text:
-          The pilot may be misled by the electronic checklist system as the computer
+        text: The pilot may be misled by the electronic checklist system as the computer
           is NOT able to perform a reliable diagnosis of the problem(s), even in
           the event of a single failure.
         correct: false
         why: ""
       - id: O8XSVKP9Q
-        text:
-          The pilot must maintain awareness of the technical implications of his/her
+        text: The pilot must maintain awareness of the technical implications of his/her
           actions, and NOT simply follow commands because they appear on the
           screen.
         correct: true
         why: ""
       - id: OFSYNV8NW
-        text:
-          Pilots are more likely to use incorrect switches since their position is
+        text: Pilots are more likely to use incorrect switches since their position is
           NOT shown on the screen, compared to the systems overview on a normal
           paper checklist.
         correct: false
         why: ""
       - id: O8MGNO8OK
-        text:
-          Pilots become more proficient in following a checklist since they can be
+        text: Pilots become more proficient in following a checklist since they can be
           confident that the computer displays the correct checklist for the
           detected failure(s).
         correct: false
@@ -1299,8 +1261,7 @@
   explanation: ""
   variant:
     type: one-two
-    question:
-      Consider the following statements about the principle, features and
+    question: Consider the following statements about the principle, features and
       limitations of an Enhanced Visual System (EVS). Which are correct or
       incorrect?
     firstCorrectStatements:
@@ -1405,8 +1366,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Which of the following functions is not compromised if you have an EFB
+    question: Which of the following functions is not compromised if you have an EFB
       failure?
     options:
       - id: OVLXION5H
@@ -1464,8 +1424,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What is the main function of an airplane cockpit's EFIS (Electronic
+    question: What is the main function of an airplane cockpit's EFIS (Electronic
       Flight Instrument System)?
     options:
       - id: OQM75QRNU
@@ -1496,8 +1455,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Under EASA regulations color code rules for EFIS displays, what is the
+    question: Under EASA regulations color code rules for EFIS displays, what is the
       recommended color for the armed AFCS modes?
     options:
       - id: ODPVSOTBH

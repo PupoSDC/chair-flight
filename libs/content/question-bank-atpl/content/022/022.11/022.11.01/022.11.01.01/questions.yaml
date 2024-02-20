@@ -11,13 +11,11 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In a dual FMS architecture, when an incompatibility between the two
+    question: "In a dual FMS architecture, when an incompatibility between the two
       FMC\\`s occurs: NB: FMC = Flight Management Computer"
     options:
       - id: O3XLMV6UY
-        text:
-          both FMC's are working independently; they are linked only to their own
+        text: both FMC's are working independently; they are linked only to their own
           peripherals.
         correct: true
         why: ""
@@ -130,20 +128,17 @@
     question: What does the FMS Overfly function consist of?
     options:
       - id: ODZVXQDQP
-        text:
-          Manually selecting a flight plan waypoint to fly over when sequencing it
+        text: Manually selecting a flight plan waypoint to fly over when sequencing it
           instead of flying by at the transition.
         correct: true
         why: ""
       - id: OFEFZW82R
-        text:
-          Manually selecting a flight plan to fly over each of the waypoints at the
+        text: Manually selecting a flight plan to fly over each of the waypoints at the
           transitions along the route.
         correct: false
         why: ""
       - id: OPRASLFF4
-        text:
-          Manually selecting a flight plan waypoint to hold over for a selected
+        text: Manually selecting a flight plan waypoint to hold over for a selected
           time.
         correct: false
         why: ""
@@ -209,14 +204,12 @@
         correct: true
         why: ""
       - id: O6CE281HA
-        text:
-          Both FMS independently process the respective pilot’s inputs in “dual
+        text: Both FMS independently process the respective pilot’s inputs in “dual
           mode”, and cross-checking between them does not occur.
         correct: false
         why: ""
       - id: OT15EIKWU
-        text:
-          In \`Dual Mode\` both FMCs independently process the pilots\` inputs,
+        text: In \`Dual Mode\` both FMCs independently process the pilots\` inputs,
           there is zero cross-checking between the FMCs.
         correct: false
         why: ""
@@ -245,8 +238,7 @@
         correct: false
         why: ""
       - id: OEBJSZFRT
-        text:
-          The FMS shuts down automatically, forcing the pilots to navigate without
+        text: The FMS shuts down automatically, forcing the pilots to navigate without
           it.
         correct: false
         why: ""
@@ -307,8 +299,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The data base of a FMC (flight management computer) is divided into
+    question: "The data base of a FMC (flight management computer) is divided into
       two major sections:"
     options:
       - id: OXHAH2ZMQ
@@ -552,8 +543,7 @@
         correct: false
         why: ""
       - id: OQYMSLGYO
-        text:
-          the geometric altitude input from the Terrain Awareness and Warning System
+        text: the geometric altitude input from the Terrain Awareness and Warning System
           (TAWS).
         correct: false
         why: ""
@@ -579,8 +569,7 @@
     question: In a dual FMS architecture, what happens if one of the FMS fails?
     options:
       - id: OZ2TDBZ9Y
-        text:
-          The operative FMS will continue sending inputs to the failed FMS in order
+        text: The operative FMS will continue sending inputs to the failed FMS in order
           to recover it.
         correct: false
         why: ""
@@ -688,26 +677,22 @@
     question: "The FMS cross track (XTK) is:"
     options:
       - id: OC2RVGI69
-        text:
-          the abeam distance error, to the left or right from the desired flight
+        text: the abeam distance error, to the left or right from the desired flight
           plan leg to the aircraft position.
         correct: true
         why: ""
       - id: OY0P5CDTJ
-        text:
-          the distance error between the FMS computed position and the IRS computed
+        text: the distance error between the FMS computed position and the IRS computed
           position.
         correct: false
         why: ""
       - id: OVMJ96ZUP
-        text:
-          the distance error between the FMS computed position and the GPS computed
+        text: the distance error between the FMS computed position and the GPS computed
           position.
         correct: false
         why: ""
       - id: OAQRYRPXA
-        text:
-          the angular distance error, to the left or right from the desired track
+        text: the angular distance error, to the left or right from the desired track
           (DT) to the aircraft track (TK).
         correct: false
         why: ""

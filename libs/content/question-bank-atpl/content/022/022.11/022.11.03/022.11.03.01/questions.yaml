@@ -11,8 +11,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During a ground stop the Commander notices that the FMS position is
+    question: During a ground stop the Commander notices that the FMS position is
       NOT in agreement with the actual aircraft position. What is the correct
       procedure to rectify this error? The Commander needs to…
     options:
@@ -29,8 +28,7 @@
         correct: false
         why: ""
       - id: OIGG8AEZV
-        text:
-          note the difference and manually correct calculations for the rest of the
+        text: note the difference and manually correct calculations for the rest of the
           flight.
         correct: false
         why: ""
@@ -85,8 +83,7 @@
         correct: true
         why: ""
       - id: OMHXCSPQY
-        text:
-          Automatically sent from the pilot’s electronic flight bag (EFB) to the
+        text: Automatically sent from the pilot’s electronic flight bag (EFB) to the
           FMS.
         correct: false
         why: ""
@@ -308,8 +305,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Sources of navigation data outputs of the FMC that are displayed on an
+    question: Sources of navigation data outputs of the FMC that are displayed on an
       EFIS are..
     options:
       - id: OXPPQHW8O
@@ -342,20 +338,17 @@
     question: "The navigational database of the FMS:"
     options:
       - id: OXWNDNBDH
-        text:
-          Has to be updated by the flight-crew when the performance database is
+        text: Has to be updated by the flight-crew when the performance database is
           updated.
         correct: false
         why: ""
       - id: OND3NA0IG
-        text:
-          Contains some additional space so that the crew may create navigational
+        text: Contains some additional space so that the crew may create navigational
           data.
         correct: true
         why: ""
       - id: ONQI3RGWG
-        text:
-          Can be edited by the crew so that navigation aids, airways and waypoints
+        text: Can be edited by the crew so that navigation aids, airways and waypoints
           may be deleted.
         correct: false
         why: ""
@@ -375,33 +368,28 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The pilot wants to use the FMS to fly an RNAV approach, but gets the
+    question: "The pilot wants to use the FMS to fly an RNAV approach, but gets the
       message: ‘’NO RAIM’’. The pilot also detects that the ground course and
       ground speed data reported by the IRS are invalid. The pilot…"
     options:
       - id: OJ1XDS38F
-        text:
-          can still use the FMS to fly the RNAV approach, RAIM is only applicable to
+        text: can still use the FMS to fly the RNAV approach, RAIM is only applicable to
           GPS approaches and ground track and speed information is NOT needed
           for an RNAV approach.
         correct: false
         why: ""
       - id: OHI7W7PUM
-        text:
-          must fly the approach using raw data from ground-based navigation aids
+        text: must fly the approach using raw data from ground-based navigation aids
           (e.g, ILS).
         correct: true
         why: ""
       - id: OOPGZCCYQ
-        text:
-          can still use the FMS to fly the RNAV approach, RAIM is only applicable to
+        text: can still use the FMS to fly the RNAV approach, RAIM is only applicable to
           GPS approaches.
         correct: false
         why: ""
       - id: OBD8OISTU
-        text:
-          must use the ground speed information from the GPS and calculate the
+        text: must use the ground speed information from the GPS and calculate the
           approach path by means of performance tables in the Flight Manual.
         correct: false
         why: ""
@@ -754,14 +742,12 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Due to a drive failure, the slats of a transport category aircraft do
+    question: Due to a drive failure, the slats of a transport category aircraft do
       not retract properly after take-off. How will this impact the FMS in terms
       of ETA and fuel predictions?
     options:
       - id: OKILO1DWD
-        text:
-          ETA will no longer be accurate, and fuel prediction will be accurately
+        text: ETA will no longer be accurate, and fuel prediction will be accurately
           calculated.
         correct: false
         why: ""
@@ -774,8 +760,7 @@
         correct: false
         why: ""
       - id: OS6TIMW9P
-        text:
-          ETA will be calculated accurately but fuel prediction will no longer be
+        text: ETA will be calculated accurately but fuel prediction will no longer be
           accurate.
         correct: true
         why: ""
@@ -829,14 +814,12 @@
         correct: true
         why: ""
       - id: OFIRAIHSQ
-        text:
-          The equipment should be able to correct for an estimated value of the
+        text: The equipment should be able to correct for an estimated value of the
           aircraft’s position error.
         correct: false
         why: ""
       - id: OOWAEM8XC
-        text:
-          The equipment should be able to compute the exact value of the aircraft’s
+        text: The equipment should be able to compute the exact value of the aircraft’s
           position error.
         correct: false
         why: ""
@@ -895,8 +878,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      What are the consequences if the GPS position inputs to the FMS are
+    question: What are the consequences if the GPS position inputs to the FMS are
       reduced?
     options:
       - id: O4V7Q7WJN
@@ -904,8 +886,7 @@
         correct: false
         why: ""
       - id: OMG1VIC0O
-        text:
-          The FMS will become inoperative but the RNAV approaches will still be
+        text: The FMS will become inoperative but the RNAV approaches will still be
           available.
         correct: false
         why: ""

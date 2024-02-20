@@ -16,26 +16,22 @@
       consideration the applicable minimum flight altitude, the PIC should..
     options:
       - id: ORRO6CAIG
-        text:
-          proceed in the most direct manner possible to rejoin the flight plan route
+        text: proceed in the most direct manner possible to rejoin the flight plan route
           no later than the next significant point.
         correct: true
         why: ""
       - id: OGHY0M5JH
-        text:
-          "climb to the Minimum Sector Altitude and hold for a period of 7 minutes,
+        text: "climb to the Minimum Sector Altitude and hold for a period of 7 minutes,
           and then rejoin the flight plan route.  "
         correct: false
         why: ""
       - id: O0KCI9CPI
-        text:
-          maintain the last assigned heading for a period of 7 minutes, and then
+        text: maintain the last assigned heading for a period of 7 minutes, and then
           adjust in accordance with the flight plan.
         correct: false
         why: ""
       - id: OQTDFN9ND
-        text:
-          maintain the last assigned heading for a period of 20 minutes, and then
+        text: maintain the last assigned heading for a period of 20 minutes, and then
           adjust in accordance with the flight plan.
         correct: false
         why: ""
@@ -52,8 +48,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When an aircraft station is unable to establish communication due to
+    question: When an aircraft station is unable to establish communication due to
       receiver failure, what procedure should be taken?
     options:
       - id: OBKLQRBO2
@@ -61,8 +56,7 @@
         correct: false
         why: ""
       - id: OFMR7O6GB
-        text:
-          Transmit reports at scheduled times or positions, preceded by the phrase
+        text: Transmit reports at scheduled times or positions, preceded by the phrase
           “Transmitting blind due to receiver failure”
         correct: true
         why: ""
@@ -71,8 +65,7 @@
         correct: false
         why: ""
       - id: OE7NYJL0I
-        text:
-          Transmit at regular times or positions, the phrase “Transmitting blind due
+        text: Transmit at regular times or positions, the phrase “Transmitting blind due
           to receiver failure”
         correct: false
         why: ""
@@ -89,31 +82,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft on an IFR flight in VMC experiences radio communication
+    question: An aircraft on an IFR flight in VMC experiences radio communication
       failure. The aircraft is assumed to..
     options:
       - id: OPTFUNAHO
-        text:
-          continue to fly to its original destination in instrument or visual
+        text: continue to fly to its original destination in instrument or visual
           meteorological conditions.
         correct: false
         why: ""
       - id: OVZPW3SE9
-        text:
-          continue to fly in visual meteorological conditions, and land at the
+        text: continue to fly in visual meteorological conditions, and land at the
           original destination.
         correct: false
         why: ""
       - id: ODROVISNT
-        text:
-          continue to fly in visual meteorological conditions to its original
+        text: continue to fly in visual meteorological conditions to its original
           destination or, if that is not possible, the alternate aerodrome.
         correct: false
         why: ""
       - id: OHDS8YRRB
-        text:
-          continue to fly in visual meteorological conditions, and land at the
+        text: continue to fly in visual meteorological conditions, and land at the
           nearest suitable aerodrome.
         correct: true
         why: ""
@@ -209,34 +197,29 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An IFR flight encounters radio communication failure in VMC and the
+    question: An IFR flight encounters radio communication failure in VMC and the
       PIC considers that he/she will be able to continue to fly in VMC. He/she
       will..
     options:
       - id: O2RVI5OGJ
-        text:
-          land at destination aerodrome unless it is not accessible, and report
+        text: land at destination aerodrome unless it is not accessible, and report
           his/her arrival by the most expeditious means to the appropriate
           rescue coordination centre.
         correct: false
         why: ""
       - id: OZRWFOHKK
-        text:
-          land at destination aerodrome unless it is not accessible, and report
+        text: land at destination aerodrome unless it is not accessible, and report
           his/her arrival by the most expeditious means to the appropriate air
           traffic services unit.
         correct: false
         why: ""
       - id: OVB2MKG2T
-        text:
-          land at the nearest suitable aerodrome, and report his/her arrival by the
+        text: land at the nearest suitable aerodrome, and report his/her arrival by the
           most expeditious means to the appropriate rescue coordination centre.
         correct: false
         why: ""
       - id: OVDSNGGDT
-        text:
-          land at the nearest suitable aerodrome, and report his/her arrival by the
+        text: land at the nearest suitable aerodrome, and report his/her arrival by the
           most expeditious means to the appropriate air traffic services unit.
         correct: true
         why: ""
@@ -254,8 +237,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A message preceded by the phrase "transmitting blind due to receiver
+    question: A message preceded by the phrase "transmitting blind due to receiver
       failure" shall be transmitted..
     options:
       - id: OTGBCNMQ5
@@ -286,8 +268,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft flying under IFR in VMC experiences communication failure.
+    question: An aircraft flying under IFR in VMC experiences communication failure.
       Can the aircraft complete the IFR flight?
     options:
       - id: OARMZZKXL
@@ -328,21 +309,18 @@
         correct: false
         why: ""
       - id: OERZMVRN8
-        text:
-          The pilot shall ensure that the radio equipment is functioning correctly
+        text: The pilot shall ensure that the radio equipment is functioning correctly
           and then make a test transmission on the appropriate frequency for the
           route being flown.
         correct: false
         why: ""
       - id: O3YC4MP6C
-        text:
-          The aircraft shall squawk Code 7500 and land at the nearest suitable
+        text: The aircraft shall squawk Code 7500 and land at the nearest suitable
           aerodrome.
         correct: false
         why: ""
       - id: OFYIFOFT5
-        text:
-          The aircraft shall attempt to establish communication with other aircraft
+        text: The aircraft shall attempt to establish communication with other aircraft
           or other aeronautical stations on frequencies appropriate to the
           route.
         correct: true
@@ -360,32 +338,27 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft on an IFR flight, after experiencing radio communication
+    question: An aircraft on an IFR flight, after experiencing radio communication
       failure in VMC, successfully lands at the nearest suitable aerodrome. What
       is it supposed to do next?
     options:
       - id: O8HE7KBXZ
-        text:
-          Report the failure by the most expeditious means to the responsible
+        text: Report the failure by the most expeditious means to the responsible
           aerodrome operator.
         correct: false
         why: ""
       - id: OYYT7RVG7
-        text:
-          Report its arrival by the most expeditious means to the appropriate Air
+        text: Report its arrival by the most expeditious means to the appropriate Air
           Traffic Control unit.
         correct: true
         why: ""
       - id: ORQHGEC38
-        text:
-          Have the equipment failure repaired within 30 days by an authorised
+        text: Have the equipment failure repaired within 30 days by an authorised
           avionics repair facility.
         correct: false
         why: ""
       - id: O1AMJTXF3
-        text:
-          Inform the relevant Civil Aviation Authority and have the radio failure
+        text: Inform the relevant Civil Aviation Authority and have the radio failure
           repaired as quickly as possible.
         correct: false
         why: ""
@@ -528,8 +501,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      The lost communication procedure for IFR flights in IMC states that
+    question: The lost communication procedure for IFR flights in IMC states that
       the pilot must land, if possible, within how many minutes of the estimated
       time of arrival of the current flight plan?
     options:
@@ -561,8 +533,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Two aircraft are experiencing a radio communication failure. Aeroplane
+    question: Two aircraft are experiencing a radio communication failure. Aeroplane
       A is in the downwind leg of a controlled aerodrome, aeroplane B is
       en-route, cruising at FL055\. Select the correct statement from the
       options below.
@@ -611,8 +582,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If an SSR transponder failure occurs after departure of an IFR flight,
+    question: If an SSR transponder failure occurs after departure of an IFR flight,
       the pilot should..
     options:
       - id: ODSK3L29R
@@ -643,8 +613,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During radio communication failure, an aircraft forming part of the
+    question: During radio communication failure, an aircraft forming part of the
       aerodrome traffic at a controlled aerodrome, shall amongst other
       requirements..
     options:
@@ -658,8 +627,7 @@
         correct: false
         why: ""
       - id: OZAISL9ZO
-        text:
-          land without delay and vacate the runway and report the termination of the
+        text: land without delay and vacate the runway and report the termination of the
           flight.
         correct: false
         why: ""
@@ -713,8 +681,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When an aircraft is unable to establish communication due to airborne
+    question: When an aircraft is unable to establish communication due to airborne
       equipment failure it shall, when so equipped, squawk..
     options:
       - id: OPMGIQ0BT
@@ -783,36 +750,31 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft on an IFR flight in IMC conditions, and flying in airspace
+    question: An aircraft on an IFR flight in IMC conditions, and flying in airspace
       where procedural separation is being applied, experiences radio
       communication failure. When passing over a compulsory reporting point,
       what action should the PIC take?
     options:
       - id: OX9WQJWLY
-        text:
-          Maintain last assigned speed and level, or minimum flight altitude if
+        text: Maintain last assigned speed and level, or minimum flight altitude if
           higher, for a period of 7 minutes. Thereafter adjust speed and level
           in accordance with the flight plan.
         correct: false
         why: ""
       - id: OBYT84KPI
-        text:
-          Maintain last assigned level, or minimum flight altitude if higher, turn
+        text: Maintain last assigned level, or minimum flight altitude if higher, turn
           right by 30 degrees and parallel to the flight plan route with a 5 NM
           offset, until reaching the destination aerodrome.
         correct: false
         why: ""
       - id: ORALBK7TT
-        text:
-          Maintain last assigned speed and level, or minimum flight altitude if
+        text: Maintain last assigned speed and level, or minimum flight altitude if
           higher, for a period of 20 minutes. Thereafter adjust speed and level
           in accordance with the flight plan.
         correct: true
         why: ""
       - id: OPLFJLQDB
-        text:
-          Maintain last assigned speed and initiate a 300 ft per minute climb until
+        text: Maintain last assigned speed and initiate a 300 ft per minute climb until
           reaching VMC conditions, then divert to the nearest suitable
           aerodrome.
         correct: false
@@ -830,31 +792,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Immediately after take-off, an aircraft is experiencing communication
+    question: Immediately after take-off, an aircraft is experiencing communication
       failure. What would be an appropriate course of action?
     options:
       - id: OTITSJSPI
-        text:
-          Join the traffic circuit to land and try to establish communication with
+        text: Join the traffic circuit to land and try to establish communication with
           ATC using all available means.
         correct: true
         why: ""
       - id: OUGT6U4SQ
-        text:
-          Proceed on the runway heading, level off at the minimum sector altitude
+        text: Proceed on the runway heading, level off at the minimum sector altitude
           and set the transponder code to 7500.
         correct: false
         why: ""
       - id: OHZTRFTB1
-        text:
-          Set the transponder code to 7700 and proceed towards destination, in
+        text: Set the transponder code to 7700 and proceed towards destination, in
           accordance with the flight plan.
         correct: false
         why: ""
       - id: OELCC8U5J
-        text:
-          Rock the aircraft wings and flash the navigational lights, at irregular
+        text: Rock the aircraft wings and flash the navigational lights, at irregular
           intervals, to signal a communication failure.
         correct: false
         why: ""
@@ -871,31 +828,26 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A departing aircraft experiencing radio communication failure on an
+    question: A departing aircraft experiencing radio communication failure on an
       IFR flight under radar vectors is to squawk 7600 and
     options:
       - id: OESXCHLA7
-        text:
-          proceed to the route indicated in the current flight plan in the most
+        text: proceed to the route indicated in the current flight plan in the most
           direct manner.
         correct: true
         why: ""
       - id: OLSJNBBPF
-        text:
-          maintain present heading for 1 minute and thereafter return to the route
+        text: maintain present heading for 1 minute and thereafter return to the route
           indicated in the current flight plan on the shortest way.
         correct: false
         why: ""
       - id: O9NPERY4A
-        text:
-          regardless of any limitation previously instructed by ATC, return to the
+        text: regardless of any limitation previously instructed by ATC, return to the
           route indicated in the current flight plan in the most direct manner.
         correct: false
         why: ""
       - id: OVTMWSP8M
-        text:
-          maintain the heading last assigned by ATC for a period of 3 minutes and
+        text: maintain the heading last assigned by ATC for a period of 3 minutes and
           then return to the flight path in accordance with the current flight
           plan.
         correct: false
@@ -914,8 +866,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiencing radio communication failure on an IFR flight
+    question: An aircraft experiencing radio communication failure on an IFR flight
       in IMC has to hold over the designated navigation aid serving the
       destination aerodrome..
     options:
@@ -924,8 +875,7 @@
         correct: false
         why: ""
       - id: OOHNMICT9
-        text:
-          until 10 minutes after the expected approach time last received and
+        text: until 10 minutes after the expected approach time last received and
           acknowledged.
         correct: false
         why: ""
@@ -947,8 +897,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      A pilot is flying under IFR in an airspace where radar is used in the
+    question: A pilot is flying under IFR in an airspace where radar is used in the
       provision of air traffic control. he/she is experiencing air-ground
       communications failure. The last communication he/she received was a level
       assignment. After reaching this level, he/she should maintain it for a
@@ -983,8 +932,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      If the transponder fails before the departure for an IFR flight, the
+    question: If the transponder fails before the departure for an IFR flight, the
       pilot must..
     options:
       - id: OKJCZGJM8
@@ -1060,34 +1008,29 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft on an IFR flight in IMC conditions, and flying in airspace
+    question: An aircraft on an IFR flight in IMC conditions, and flying in airspace
       where radar service is provided, experiences radio communication failure.
       The PIC must set the transponder on 7600, maintain the last assigned speed
       and..
     options:
       - id: OQEMMZJAK
-        text:
-          level, or minimum flight altitude if higher, for a period of 20 minutes.
+        text: level, or minimum flight altitude if higher, for a period of 20 minutes.
           Thereafter he/she must adjust speed and level in accordance with the
           flight plan.
         correct: false
         why: ""
       - id: OHJPOB1E1
-        text:
-          initiate a 300 ft per minute climb until reaching VMC conditions, then
+        text: initiate a 300 ft per minute climb until reaching VMC conditions, then
           divert to the nearest suitable aerodrome.
         correct: false
         why: ""
       - id: O58I4YV8O
-        text:
-          turn right by 30 degrees if flying odd flight levels, or turn left by 30
+        text: turn right by 30 degrees if flying odd flight levels, or turn left by 30
           degrees if flying even flight levels.
         correct: false
         why: ""
       - id: OWHFWDL3A
-        text:
-          level, or minimum flight altitude if higher, for a period of 7 minutes.
+        text: level, or minimum flight altitude if higher, for a period of 7 minutes.
           Thereafter, he/she must adjust speed and level in accordance with the
           flight plan.
         correct: true
@@ -1103,8 +1046,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      During flight, the flight crew hears a click on the ATC frequency but
+    question: During flight, the flight crew hears a click on the ATC frequency but
       no voice. Nevertheless the frequency is blocked. What is most likely the
       reason?
     options:
@@ -1138,8 +1080,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      All but one of the following elements are required to be transmitted
+    question: All but one of the following elements are required to be transmitted
       when an aircraft station is unable to establish communication due to
       receiver failure. Which element can be excluded?
     options:
@@ -1170,34 +1111,29 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      Two aircraft are experiencing communication failure. Aircraft A is on
+    question: Two aircraft are experiencing communication failure. Aircraft A is on
       a VFR flight on the downwind leg to land at a controlled aerodrome.
       Aircraft B is also on a VFR flight cruising atFL55\. Which of the
       following statements is correct?
     options:
       - id: OXVVPH6ST
-        text:
-          The arrival report can be omitted by the pilot of aircraft A, as there is
+        text: The arrival report can be omitted by the pilot of aircraft A, as there is
           an ATC unit at the aerodrome, but one must still be filed at the
           aerodrome reporting office at the aerodrome of departure.
         correct: false
         why: ""
       - id: OIOIGCTAF
-        text:
-          For both aircraft, the general communication failure procedures of the
+        text: For both aircraft, the general communication failure procedures of the
           ICAO “Rules of the Air” override any published local procedures.
         correct: false
         why: ""
       - id: OKVHE4ZXA
-        text:
-          If aircraft B is a VFR flight above the clouds, it may descend through the
+        text: If aircraft B is a VFR flight above the clouds, it may descend through the
           clouds to land at the nearest suitable aerodrome.
         correct: false
         why: ""
       - id: O0HDRXK1I
-        text:
-          A watch shall be kept by the pilot of aircraft A as instructions may be
+        text: A watch shall be kept by the pilot of aircraft A as instructions may be
           issued by visual signals.
         correct: true
         why: ""
@@ -1254,14 +1190,12 @@
       experience communication failure. What actions should the pilot take?
     options:
       - id: OJDYAXCMV
-        text:
-          Continue to the destination aerodrome, adding 500 ft to all the altitudes
+        text: Continue to the destination aerodrome, adding 500 ft to all the altitudes
           in the flight plan.
         correct: false
         why: ""
       - id: OEDAQGFAL
-        text:
-          Continue in VMC, land at the nearest suitable aerodrome and report your
+        text: Continue in VMC, land at the nearest suitable aerodrome and report your
           arrival to the appropriate air traffic control unit.
         correct: true
         why: ""
@@ -1270,8 +1204,7 @@
         correct: false
         why: ""
       - id: OABICBD32
-        text:
-          Continue in VMC to the destination aerodrome and land within 30 min after
+        text: Continue in VMC to the destination aerodrome and land within 30 min after
           the estimated time of arrival in the flight plan.
         correct: false
         why: ""
@@ -1360,8 +1293,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      When an aircraft is unable to establish communication due to receiver
+    question: When an aircraft is unable to establish communication due to receiver
       failure, it shall transmit reports and the time of its next intended
       transmission on the frequency in use. Each transmission has to be preceded
       by the phrase..
@@ -1430,26 +1362,22 @@
       communication failure. What would be an appropriate course of action?
     options:
       - id: OFEAIHX7C
-        text:
-          Rock the aircraft wings and flash the navigational lights, at irregular
+        text: Rock the aircraft wings and flash the navigational lights, at irregular
           intervals, to signal a communication failure.
         correct: false
         why: ""
       - id: OP5WVX7ND
-        text:
-          Join the traffic circuit to land and try to establish communication with
+        text: Join the traffic circuit to land and try to establish communication with
           ATC using all available means.
         correct: true
         why: ""
       - id: OS89DRPPY
-        text:
-          Proceed on the runway heading, level off at the minimum sector altitude
+        text: Proceed on the runway heading, level off at the minimum sector altitude
           and set the transponder code to 7500.
         correct: false
         why: ""
       - id: OAIFREI3H
-        text:
-          Set the transponder code to 7700 and proceed towards destination, in
+        text: Set the transponder code to 7700 and proceed towards destination, in
           accordance with the flight plan.
         correct: false
         why: ""
@@ -1465,8 +1393,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft experiences radio-communication failure in IMC. When is it
+    question: An aircraft experiences radio-communication failure in IMC. When is it
       expected to commence the descent from the navigation aid or fix for the
       instrument approach?
     options:
@@ -1475,8 +1402,7 @@
         correct: true
         why: ""
       - id: O6MPWNANC
-        text:
-          When the fuel on board is the final reserve fuel plus sufficient to fly
+        text: When the fuel on board is the final reserve fuel plus sufficient to fly
           for15 minutes.
         correct: false
         why: ""
@@ -1485,8 +1411,7 @@
         correct: false
         why: ""
       - id: OS4IW72LZ
-        text:
-          After completing one hold over the designated aerodrome navigation aid or
+        text: After completing one hold over the designated aerodrome navigation aid or
           fix.
         correct: false
         why: ""
@@ -1503,8 +1428,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      An aircraft encountering radio communication failure on an IFR flight
+    question: An aircraft encountering radio communication failure on an IFR flight
       in IMC has to land, if possible, within..
     options:
       - id: OE0LURZOP
@@ -1547,8 +1471,7 @@
         correct: true
         why: ""
       - id: ONTAURMG1
-        text:
-          Other aircraft from which separation was provided using vectors, as
+        text: Other aircraft from which separation was provided using vectors, as
           separation from other traffic becomes the pilot\`s responsibility.
         correct: false
         why: ""
@@ -1557,8 +1480,7 @@
         correct: false
         why: ""
       - id: OLLJRCOV6
-        text:
-          The deviations that may be needed to maintain visual separation from all
+        text: The deviations that may be needed to maintain visual separation from all
           other aircraft.
         correct: false
         why: ""

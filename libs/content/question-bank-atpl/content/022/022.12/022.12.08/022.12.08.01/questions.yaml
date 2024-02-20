@@ -46,27 +46,23 @@
     question: "In a radio altimeter, the height measurement is based upon:"
     options:
       - id: OJSR1QNGE
-        text:
-          a triangular amplitude modulation wave, for which modulation phase shift
+        text: a triangular amplitude modulation wave, for which modulation phase shift
           between transmitted and received waves after ground reflection is
           measured.
         correct: false
         why: ""
       - id: ONUQ0HRLB
-        text:
-          a wave transmission, for which the frequency shift by DOPPLER effect after
+        text: a wave transmission, for which the frequency shift by DOPPLER effect after
           ground reflection is measured.
         correct: false
         why: ""
       - id: O9EPCOMDK
-        text:
-          a pulse transmission, for which time between transmission and reception is
+        text: a pulse transmission, for which time between transmission and reception is
           measured on a circular scanning screen.
         correct: false
         why: ""
       - id: O5E8HJQP7
-        text:
-          a frequency modulation wave, for which the frequency difference between
+        text: a frequency modulation wave, for which the frequency difference between
           the transmitted wave and the received wave after ground reflection is
           measured.
         correct: true
@@ -258,8 +254,7 @@
     question: "A radio altimeter uses:"
     options:
       - id: O2QPB1HKV
-        text:
-          "two antennas: one interrogates other aircraft transponders, and an other
+        text: "two antennas: one interrogates other aircraft transponders, and an other
           for the reception."
         correct: false
         why: ""
@@ -303,8 +298,7 @@
         correct: true
         why: ""
       - id: OM55L3SDS
-        text:
-          self-contained on-board aid used to measure the true altitude of the
+        text: self-contained on-board aid used to measure the true altitude of the
           aircraft
         correct: false
         why: ""
@@ -321,8 +315,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The radio altimeter is required to indicate zero height AGL as the
+    question: "The radio altimeter is required to indicate zero height AGL as the
       main wheels touch down on the runway. For this reason, it is necessary
       to:"
     options:
@@ -331,14 +324,12 @@
         correct: true
         why: ""
       - id: O0JURCHJU
-        text:
-          adjust the gross height according to the aeroplane instantaneous pitch
+        text: adjust the gross height according to the aeroplane instantaneous pitch
           angle.
         correct: false
         why: ""
       - id: OOALBIQXT
-        text:
-          change the display scale in short final, in order to have a precise
+        text: change the display scale in short final, in order to have a precise
           readout.
         correct: false
         why: ""
@@ -398,8 +389,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "The maximum range for indication of a radio altimeter is typically
+    question: "The maximum range for indication of a radio altimeter is typically
       from the ground to:"
     options:
       - id: OEJ25OKW9
@@ -432,8 +422,7 @@
     question: A typical radio-altimeter installation consists of
     options:
       - id: OGNQ4FUUQ
-        text:
-          "three antennas placed longitudinally: one for transmission and two
+        text: "three antennas placed longitudinally: one for transmission and two
           redundant receive antennas."
         correct: false
         why: ""
@@ -442,14 +431,12 @@
         correct: false
         why: ""
       - id: OY5GOHTAC
-        text:
-          "two antennas: one continuously transmitting and the other continuously
+        text: "two antennas: one continuously transmitting and the other continuously
           receiving a radio signal."
         correct: true
         why: ""
       - id: OZEMVMRPE
-        text:
-          "four antennas: two longitudinal and two lateral antennas that use Doppler
+        text: "four antennas: two longitudinal and two lateral antennas that use Doppler
           techniques."
         correct: false
         why: ""
@@ -534,8 +521,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "In case of radio altimeter failure, the following system(s) is/are
+    question: "In case of radio altimeter failure, the following system(s) is/are
       affected:"
     options:
       - id: OGNRX4U57
@@ -567,8 +553,7 @@
   explanation: ""
   variant:
     type: simple
-    question:
-      "When EGPWS terrain is displayed, if the computed aircraft position
+    question: "When EGPWS terrain is displayed, if the computed aircraft position
       becomes less accurate:"
     options:
       - id: OWZFKFDAR
@@ -576,20 +561,17 @@
         correct: false
         why: ""
       - id: OW4MUE1V3
-        text:
-          the EGPWS will perform a correction of position thus the terrain display
+        text: the EGPWS will perform a correction of position thus the terrain display
           accuracy won\`t be degraded.
         correct: false
         why: ""
       - id: OSM0KZSSH
-        text:
-          the EGPWS has its own position sensors thus the terrain display accuracy
+        text: the EGPWS has its own position sensors thus the terrain display accuracy
           won\`t be degraded.
         correct: false
         why: ""
       - id: OYRMINYAE
-        text:
-          the terrain display will diverge from the real terrain environment around
+        text: the terrain display will diverge from the real terrain environment around
           the aircraft position.
         correct: true
         why: ""

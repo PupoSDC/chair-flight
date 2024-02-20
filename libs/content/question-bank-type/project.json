@@ -3,19 +3,21 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {
-    "compile": {
-      "executor": "@cf/providers/question-bank:compile",
+    "arrange": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/question-bank:arrange",
       "options": {
-        "contentFolder": "libs/content/question-bank-type/content",
-        "flashcardsFolder": "libs/content/question-bank-type/flashcards",
-        "compileFolder": "apps/next-app/public/content/type",
+        "contentFolder": "{projectRoot}/content",
         "questionBank": "type"
       }
     },
-    "arrange": {
-      "executor": "@cf/providers/question-bank:arrange",
+    "compile": {
+      "executor": "@cf/providers/question-bank:compile",
       "options": {
-        "contentFolder": "libs/content/question-bank-type/content",
+        "contentFolder": "{projectRoot}/content",
+        "flashcardsFolder": "{projectRoot}/flashcards",
+        "compileFolder": "apps/next-app/public/content/type",
         "questionBank": "type"
       }
     }
