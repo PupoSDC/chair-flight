@@ -6,10 +6,10 @@
       "options": {
         "cacheableOperations": [
           "build",
+          "compile",
           "lint",
           "test",
-          "e2e",
-          "build-storybook"
+          "e2e"
         ]
       }
     }
@@ -29,11 +29,14 @@
       "options": {
         "errorOnUnmatchedPattern": false,
         "maxWarnings": 0,
-        "lintFilePatterns": ["{projectRoot}/**/*.ts?(x)"]
+        "lintFilePatterns": ["{projectRoot}/**/*.ts?(x)"],
+        "outputFile": "node_modules/.cache/eslint/${projectName}"
       }
     },
     "check": {
+      "cache": true,
       "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/node_modules/.cache/tsc/{projectName}"],
       "options": {
         "commands": ["tsc -p {projectRoot}/tsconfig.json"]
       }
@@ -51,18 +54,7 @@
     }
   },
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": [
-      "default",
-      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
-      "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/.storybook/**/*",
-      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-      "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/src/test-setup.[jt]s",
-      "!{projectRoot}/test-setup.[jt]s"
-    ],
-    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+    "default": ["{projectRoot}/**/*"],
+    "production": ["{projectRoot}/**/*"]
   }
 }
