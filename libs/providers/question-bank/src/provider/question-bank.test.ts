@@ -35,7 +35,7 @@ describe("QuestionBank", async () => {
     expect(await questionBanks["type"].has("questions")).toBe(true);
     expect(await questionBanks["type"].has("courses")).toBe(true);
     expect(await questionBanks["type"].has("learningObjectives")).toBe(true);
-    expect(await questionBanks["type"].has("annexes")).toBe(false);
+    expect(await questionBanks["type"].has("annexes")).toBe(true);
     expect(await questionBanks["type"].has("flashcards")).toBe(false);
   });
 
