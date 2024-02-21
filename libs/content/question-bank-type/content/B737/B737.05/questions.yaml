@@ -4,7 +4,10 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    - Hand microphone: Typically used for PAs, 
+    - Headset boom microphone: this is your headset microphone 
+    - Oxygen mask microphone: Built into the mask
   variant:
     type: simple
     question: What microphone options are available to the flight crew?
@@ -33,7 +36,20 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > ### Degraded Audio System Operation
+    >
+    > If the remote electronics unit or ACP malfunctions, the ACP cannot control the
+    > remote electronics unit. Audio system operation can be switched to a degraded
+    > mode by placing the ALT–NORM switch to ALT. In this mode, the ACP at that
+    > station is inoperative and the crewmember can only communicate on one radio.
+    > 
+    > (...)
+    >
+    > | CREW STATION AUDIO SYSTEM IN<br/>DEGRADED MODE |  RADIO AVAILABLE FOR<br/>TRANSMISSION AND RECEPTION<br/>AT DEGRADED STATION |
+    > | CAPTAIN       | VHF–1 |
+    > | FIRST OFFICER | VHF–2 |
+    > | OBSERVER      | VHF–1 |
   variant:
     type: simple
     question: When the ALT-NORM switch on the Audio Control Panel (ACP) is selected
@@ -64,7 +80,12 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > ### VOICE RECORDER Switch
+    > - **AUTO**: powers the cockpit voice recorder from first engine start until 5 minutes
+    >   after last engine shutdown
+    > - **ON**: powers the cockpit voice recorder until first engine start, then trips the switch
+    >   to AUTO.
   variant:
     type: simple
     question: Selecting the Cockpit Voice Recorder to ON has what effect?
@@ -93,7 +114,11 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > VHF antennae located on the lower fuselage are susceptible to multipath
+    > interference from nearby structures or vehicles. This may disrupt VHF
+    > communications. VHF antennae located on the upper fuselage are not as
+    > susceptible to this interference
   variant:
     type: true-or-false
     question: VHF antennae located on the upper fuselage are susceptible to
@@ -106,7 +131,17 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > ### SERVICE INTERPHONE Switch
+    > - **OFF**:
+    >   - external jacks are deactivated
+    >   - communication between flight deck and flight attendants is still
+    >     possible.
+    > - **ON**: 
+    >   – adds external jacks to service interphone system.
+
+    The service interphone switch turns off communications to outside the 
+    aircraft (for ground crew). Aircrew is always connected.
   variant:
     type: true-or-false
     question: Communication between the flight deck and flight attendants is still
@@ -118,7 +153,11 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > ### PILOT CALL Switch
+    > Push: sounds a single–tone chime in flight deck.
+
+    **Note**:  A continuos chime indicates the door access code has been entered
   variant:
     type: simple
     question: What is the effect of pushing the Pilot Call switch?
@@ -147,7 +186,9 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    > The volume of received communications can be controlled by rotating
+    > the selected RECEIVER SWITCHES on the **AUDIO CONTROL PANEL**.
   variant:
     type: true-or-false
     question: The volume of received communications can be controlled by rotating
@@ -159,7 +200,10 @@
   annexes: []
   learningObjectives:
     - B737.05
-  explanation: ""
+  explanation: |
+    - Flight interphone system is used by Flight Deck Crew to communicate with each other.
+    - Service interphone system is used by Flight Deck Crew to communicate with the Cabin Crew and Ground service personnel.
+    The two systems are separate.
   variant:
     type: true-or-false
     question: The Flight Interphone and Service Interphone are on separate networks.
