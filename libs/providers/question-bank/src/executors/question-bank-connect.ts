@@ -18,6 +18,8 @@ import type {
   SubjectJson,
 } from "./json-types";
 
+const ANNEX_MATCH = /!\[.*\]\(annex:(.*)\)/gm;
+
 export const connectQuestionBank = ({
   jsonQuestionTemplates: jsonQuestions,
   jsonLearningObjectives: jsonLos,
@@ -66,7 +68,7 @@ export const connectQuestionBank = ({
     questionBank: questionBank,
     href: `/content/${questionBank}/media/${a.id}.${a.format}`,
     srcLocation: undefined as unknown as string,
-    doc: undefined as unknown as string,
+    docs: [],
     questions: [],
     subjects: [],
     learningObjectives: [],
@@ -150,7 +152,30 @@ export const connectQuestionBank = ({
     });
   });
 
-  // Link annexes to docs
+  // Link docs to annexes
+  docs.forEach((doc) => {
+    keepUnique(
+      Array.from(doc.content.matchAll(ANNEX_MATCH), (m) => m[1]),
+    ).forEach((annexId) => {
+      const annex = annexesMap[annexId];
+      if (!annex)
+        throw new Error("Missing annex " + annexId + " in doc " + doc.id);
+      annex.docs = keepUnique([...annex.docs, doc.id]);
+      annex.learningObjectives = keepUnique([
+        ...annex.learningObjectives,
+        ...doc.learningObjectives,
+      ]);
+      doc.content = doc.content.replaceAll(ANNEX_MATCH, (match, cg1) =>
+        match.replace(
+          `annex:${annexId}`,
+          `/content/${questionBank}/media/${cg1}.${annex.format}`,
+        ),
+      );
+      console.log(doc.content);
+    });
+  });
+
+  // Determine Annex Source Location
   annexes.forEach((annex) => {
     const docLo = annex.learningObjectives.reduce(
       (res, cur) => (cur.length < res.length ? cur : res),
@@ -158,7 +183,6 @@ export const connectQuestionBank = ({
     );
     const docId = losMap[docLo].doc;
     const doc = docsMap[docId];
-    annex.doc = doc.id;
     annex.srcLocation = doc.fileName.replace("page.md", "annexes.yaml");
   });
 

@@ -16,11 +16,12 @@ export type AnnexFormat = "jpg";
 export type Annex = {
   id: AnnexId;
   href: string;
+  source: string;
   srcLocation: string;
-  doc: DocId;
   questionBank: QuestionBankName;
   format: AnnexFormat;
   description: string;
+  docs: DocId[];
   questions: QuestionTemplateId[];
   subjects: SubjectId[];
   learningObjectives: LearningObjectiveId[];
@@ -30,11 +31,12 @@ export const annexSchema = z.object({
   id: z.string(),
   href: z.string(),
   srcLocation: z.string(),
-  doc: z.string(),
+  source: z.string(),
   questionBank: questionBankNameSchema,
   format: z.enum(["jpg"]),
   description: z.string(),
-  questions: z.array(z.string().min(3)).min(1),
+  docs: z.array(z.string().min(3)),
+  questions: z.array(z.string().min(3)),
   subjects: z.array(z.string().min(3)).min(1),
   learningObjectives: z.array(z.string().min(3)).min(1),
 });

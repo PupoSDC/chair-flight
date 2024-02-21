@@ -57,6 +57,19 @@ export const markdownComponents: Partial<Components> = {
       {children}
     </Box>
   ),
+  img: ({ src, alt }) => (
+    <Sheet sx={{ width: "100%", p: 0.5, display: "block" }} component="span">
+      <Box
+        component={"img"}
+        src={src}
+        alt={alt}
+        sx={{ maxWidth: "100%", height: "auto" }}
+      />
+      <Box component="figcaption" sx={{ textAlign: "center", fontSize: "sm" }}>
+        {alt}
+      </Box>
+    </Sheet>
+  ),
   table: ({ children }) => (
     <Sheet sx={{ my: 1, p: 0.5 }}>
       <Table children={children} />
