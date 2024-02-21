@@ -56,6 +56,7 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
         id: annex.id,
         description: annex.description,
         format: annex.format,
+        source: annex.source,
       };
       sum[key] ??= [];
       sum[key].push(value);

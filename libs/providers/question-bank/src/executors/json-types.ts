@@ -33,7 +33,7 @@ export type SubjectJson = Pick<
   | "longName"
 >;
 
-export type AnnexJson = Pick<Annex, "id" | "description" | "format">;
+export type AnnexJson = Pick<Annex, "id" | "description" | "format" | "source">;
 
 export type DocJson = Pick<
   Doc,
