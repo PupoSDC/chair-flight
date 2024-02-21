@@ -75,7 +75,7 @@ export const writeAnnexes = async (contentFolder: string, annexes: Annex[]) => {
     }
 
     const fileName = `annexes/${id}.${annex.format}`;
-    const newLocation = annex.srcLocation.replace("annexes.json", fileName);
+    const newLocation = annex.srcLocation.replace("annexes.yaml", fileName);
 
     if (newLocation === oldLocation) {
       continue;
