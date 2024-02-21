@@ -86,7 +86,7 @@
     - ATPLGS-103719
   annexes: []
   learningObjectives:
-    - 010.01.01.03.01
+    - 010.01.01.03.03
   explanation: ""
   variant:
     type: simple
@@ -240,13 +240,14 @@
         correct: false
         why: ""
 - id: QFPVLXKV
-  relatedQuestions: []
+  relatedQuestions:
+    - QFPVLXKW
   externalIds:
     - ATPLQ-101349
   annexes: []
   learningObjectives:
     - 010.01.01.03.03
-  explanation: | 
+  explanation: |
     The table below contains all annexes + a mnemonic to remember them. Not 
     all mnemonics make a lot of sense, but they are all so particular it should
     help you not mix up the annexes.
@@ -278,61 +279,166 @@
     options:
       - id: O1Q74U6VX
         term: "1"
-        definition: "Personnel Licensing"
+        definition: Personnel Licensing
       - id: OI8G5RW3T
         term: "2"
-        definition: "Rules of the Air"
+        definition: Rules of the Air
       - id: OW6EJL2VK
         term: "3"
-        definition: "Meteorological Services"
+        definition: Meteorological Services
       - id: OX7N9MFP4
         term: "4"
-        definition: "Aeronautical Charts"
+        definition: Aeronautical Charts
       - id: O3KPT2DHB
         term: "5"
-        definition: "Units of Measurement"
+        definition: Units of Measurement
       - id: OZSFAK6HC
         term: "6"
-        definition: "Operation of Aircraft"
+        definition: Operation of Aircraft
       - id: OYUQ9XNVK
         term: "7"
-        definition: "Aircraft Nationality and Registration Marks"
+        definition: Aircraft Nationality and Registration Marks
       - id: O2AI3LBG9
         term: "8"
-        definition: "Airworthiness of Aircraft"
+        definition: Airworthiness of Aircraft
       - id: ODP4WXIY8
         term: "9"
-        definition: "Facilitation"
+        definition: Facilitation
       - id: OTCHYW63M
         term: "10"
-        definition: "Aeronautical Telecommunications"
+        definition: Aeronautical Telecommunications
       - id: O4JQ62UVO
         term: "11"
-        definition: "Air Traffic Services"
+        definition: Air Traffic Services
       - id: O1SR7HNTL
         term: "12"
-        definition: "Search and Rescue"
+        definition: Search and Rescue
       - id: OG8Z2T9FJ
         term: "13"
-        definition: "Aircraft Accident and Incident Investigation"
+        definition: Aircraft Accident and Incident Investigation
       - id: OX5ER1DM9
         term: "14"
-        definition: "Aerodromes"
+        definition: Aerodromes
       - id: OS6PKYFZA
         term: "15"
-        definition: "Aeronautical Information Services"
+        definition: Aeronautical Information Services
       - id: OJYTVW7NK
         term: "16"
-        definition: "Environmental Protection"
+        definition: Environmental Protection
       - id: ORKL59V6H
         term: "17"
-        definition: "Security"
+        definition: Security
       - id: O3PI6HX4U
         term: "18"
-        definition: "The Safe Transportation of Dangerous Goods by Air"
+        definition: The Safe Transportation of Dangerous Goods by Air
       - id: O77MG5R6T
         term: "19"
-        definition: "Safety Management"
+        definition: Safety Management
+    fakeOptions: []
+- id: QFPVLXKW
+  relatedQuestions:
+    - QFPVLXKV
+  externalIds:
+    - ATPLGS-103715
+    - AVEXAM-1587
+    - AVEXAM-79643
+    - AVEXAM-90029
+    - ATPLGS-103734
+    - ATPLGS-103715
+    - AVEXAM-1587
+  annexes: []
+  learningObjectives:
+    - 010.01.01.03.03
+  explanation: |
+    The table below contains all annexes + a mnemonic to remember them. Not 
+    all mnemonics make a lot of sense, but they are all so particular it should
+    help you not mix up the annexes.
+
+    | No. | Content                                           | Menemonic                                             |
+    | --- | ------------------------------------------------- | ----------------------------------------------------- |
+    | 1   | Personnel Licensing                               | Getting your License is priority number 1             |
+    | 2   | Rules of the Air                                  | 2 Rules of the Air: VFR, IFR                          |
+    | 3   | Meteorological Services                           | 3º SALR                                               |
+    | 4   | Aeronautical Charts                               | 4 Cardinal points (North, South, East, West)          |
+    | 5   | Units of Measurement                              | 5 ft long stick                                       |
+    | 6   | Operation of Aircraft                             | DC6 a very hard aircraft to operate                   |
+    | 7   | Aircraft Nationality and Registration Marks       | League of the 7 nations                               |
+    | 8   | Airworthiness of Aircraft                         | 8 Looks like a propeller                              |
+    | 9   | Facilitation                                      | Nein Nein Nein - (German) Facilitation                |
+    | 10  | Aeronautical Telecommunications                   | Call 100 for operator (a British thing apparently)    |
+    | 11  | Air Traffic Services                              | ???                                                   |
+    | 12  | Search and Rescue                                 | The one before Friday 13                              |
+    | 13  | Aircraft Accident and Incident Investigation      | Friday 13: Bad news - Aircraft Accidents              |
+    | 14  | Aerodromes                                        | 14 Aerodromes around London                           |
+    | 15  | Aeronautical Information Services                 | 15 looks like IS - (Aeronautica) Information Services |
+    | 16  | Environmental Protection                          | You need to be over 16 to drink                       |
+    | 17  | Security                                          | 17 ft fence around airports                           |
+    | 18  | The Safe Transportation of Dangerous Goods by Air | You need to be over 18 to buy alcohol                 |
+    | 19  | Safety Management                                 | ???                                                   |
+  variant:
+    type: definition
+    question: |
+      What is ICAO Annex that deals with the following topic:
+
+      {term}
+    options:
+      - id: O1Q74U6VX
+        definition: Annex 1
+        term: Personnel Licensing
+      - id: OI8G5RW3T
+        definition: Annex 2
+        term: Rules of the Air
+      - id: OW6EJL2VK
+        definition: Annex 3
+        term: Meteorological Services
+      - id: OX7N9MFP4
+        definition: Annex 4
+        term: Aeronautical Charts
+      - id: O3KPT2DHB
+        definition: Annex 5
+        term: Units of Measurement
+      - id: OZSFAK6HC
+        definition: Annex 6
+        term: Operation of Aircraft
+      - id: OYUQ9XNVK
+        definition: Annex 7
+        term: The registration and marking of aircraft.
+      - id: O2AI3LBG9
+        definition: Annex 8
+        term: Airworthiness of Aircraft
+      - id: ODP4WXIY8
+        definition: Annex 9
+        term: Entry and departure of cargo and other articles on international flights
+      - id: OTCHYW63M
+        definition: Annex 10
+        term: Aeronautical Telecommunications
+      - id: O4JQ62UVO
+        definition: Annex 11
+        term: Air Traffic Services
+      - id: O1SR7HNTL
+        definition: Annex 12
+        term: Search and Rescue
+      - id: OG8Z2T9FJ
+        definition: Annex 13
+        term: Aircraft Accident and Incident Investigation
+      - id: OX5ER1DM9
+        definition: Annex 14
+        term: Aerodromes
+      - id: OS6PKYFZA
+        definition: Annex 15
+        term: Aeronautical Information Services
+      - id: OJYTVW7NK
+        definition: Annex 16
+        term: Environmental Protection
+      - id: ORKL59V6H
+        definition: Annex 17
+        term: Security
+      - id: O3PI6HX4U
+        definition: Annex 18
+        term: The Safe Transportation of Dangerous Goods by Air
+      - id: O77MG5R6T
+        term: "19"
+        definition: Safety Management
     fakeOptions: []
 - id: QLNSDCYV
   relatedQuestions: []
