@@ -4,12 +4,20 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > With RTO selected, if the takeoff is rejected prior to wheel speed reaching 88
+    > knots autobraking is not initiated, the AUTO BRAKE DISARM light does not
+    > illuminate and the RTO autobrake function remains armed. If the takeoff is
+    > rejected after reaching a wheel speed of 88 knots, maximum braking is applied
+    > automatically when the forward thrust levers are retarded to IDLE.
+
+    **NOTE**: Older sources will state 90kts. This has been corrected by boeing 
+    to 88kts.
   variant:
     type: true-or-false
     question: With RTO selected, the system will automatically apply maximum brake
       pressure when the thrust levers have been retarded to idle with speed at
-      or above 90 kts.
+      or above 88 kts.
     answer: true
 - id: QVJKJIXL
   relatedQuestions: []
@@ -17,10 +25,18 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Antiskid Protection
+    >
+    > Antiskid protection is provided in the normal and alternate brake systems.
+    > The normal brake hydraulic system provides each main gear wheel with
+    > individual antiskid protection. When the system detects a skid, the associated
+    > antiskid valve reduces brake pressure until skidding stops. **The alternate brake
+    > hydraulic system works similar to the normal system however antiskid protection
+    > is applied to main gear wheel pairs instead of individual wheels**.
   variant:
     type: simple
-    question: Which of the following statements are false for Antiskid Protection.
+    question: Which of the following statements is false for Antiskid Protection.
     options:
       - id: l6qp1
         text: All of the above are false.
@@ -47,10 +63,16 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Nose Wheel Steering
+    >
+    > Nose wheel steering is available when the nose gear is in the down position and
+    > compressed by weight of the airplane. (...) Alternate nose wheel steering can 
+    > be activated to provide system B pressure to the nose wheels when the NOSE 
+    > WHEEL STEERING switch is placed to ALT
   variant:
     type: simple
-    question: Which of the following statements are true for the Nose Wheel Steering
+    question: Which of the following statements is true for the Nose Wheel Steering
       system
     options:
       - id: mgdwv
@@ -85,7 +107,13 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Brake Accumulator
+    >
+    > The brake accumulator is pressurized by hydraulic system B. If both normal and
+    > alternate brake system pressure is lost, trapped hydraulic pressure in the brake
+    > accumulator can still provide several braking applications or parking brake
+    > application.
   variant:
     type: true-or-false
     question: If both normal and alternative brake system pressure is lost it is
@@ -98,7 +126,21 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    ### Normal landing gear extension is possible if Hydraulic system A operational.
+
+    > Hydraulic power for retraction, extension, and nose wheel steering is normally
+    > supplied by hydraulic system A.
+
+    ### The landing gear cannot be retracted.**
+
+    🙃
+
+    ### The landing gear can be manually lowered with the landing gear lever in ANY position.
+
+    > With the manual extension access door open:
+    > - manual landing gear extension is possible with the LANDING GEAR
+    >   lever in any position
   variant:
     type: simple
     question: Which of the following statements is true, when the landing gear
@@ -114,12 +156,12 @@
         correct: false
         why: ""
       - id: n31g5
-        text: The landing gear can be manually lowered with the lnding gear lever in ANY
-          position.
+        text: The landing gear can be manually lowered with the landing gear lever in
+          ANY position.
         correct: false
         why: ""
       - id: t45rw
-        text: All of the above are true
+        text: All of the options are true
         correct: true
         why: ""
 - id: QLLLRAKQ
@@ -128,7 +170,13 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Parking Brake
+    >
+    > The parking brake can be set with either A or B hydraulic systems pressurized. If
+    > A and B hydraulic systems are not pressurized, parking brake pressure is
+    > maintained by the brake accumulator. Accumulator pressure is shown on the HYD
+    > BRAKE PRESS indicator.
   variant:
     type: simple
     question: Which hydraulic system operates the parking brake?
@@ -146,7 +194,7 @@
         correct: false
         why: ""
       - id: 0zhxz
-        text: All of the above.
+        text: All options are correct
         correct: true
         why: ""
 - id: QPSGIJCR
@@ -155,7 +203,12 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Landing Gear Indicator Lights (overhead)
+    >
+    > Note: Landing gear is down and locked as long as one green landing gear
+    > indicator light (center panel or overhead panel) for each gear is
+    > illuminated.
   variant:
     type: true-or-false
     question: The landing gear lights on the main centre panel all indicate green,
@@ -169,7 +222,17 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### AUTO BRAKE DISARM Light
+    > Illuminated (amber) –
+    > - SPEED BRAKE lever moved to down detent during RTO or landing
+    > - manual brakes applied during RTO or landing
+    > - thrust lever(s) advanced during RTO or landing
+    >   - except during first 3 seconds after touchdown for landing
+    > - landing made with RTO selected
+    > - **RTO mode selected on ground**
+    >   - **illuminates for one to two seconds then extinguishes**
+    > - a malfunction exists in automatic braking system.
   variant:
     type: simple
     question: You select the AUTO BRAKE to RTO on the ground, and the AUTO BRAKE
@@ -200,27 +263,16 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: |+
+  explanation: |
     > **Autobrake – Disarm**
-
     >
-
     > The pilots may disarm the autobrake system by moving the selector switch to the
-
     > OFF position. This action does not cause the AUTO BRAKE DISARM light to
-
     > illuminate. After braking has started, any of the following pilot actions disarm the
-
     > system immediately and illuminate the AUTO BRAKE DISARM light:
-
-    >   • moving the SPEED BRAKE lever to the down detent
-
-    >   • advancing the forward thrust lever(s), except during the first 3 seconds after touchdown for landing
-
-    >   • applying manual brakes.
-
-    ---
-
+    >   - moving the SPEED BRAKE lever to the down detent
+    >   - advancing the forward thrust lever(s), except during the first 3 seconds after touchdown for landing
+    >   - applying manual brakes.
   variant:
     type: simple
     question: Other than moving the Autobrake selector to OFF, how else can
@@ -251,7 +303,11 @@
   annexes: []
   learningObjectives:
     - B737.14
-  explanation: ""
+  explanation: |
+    > ### Manual Gear Extension Handles
+    >
+    > Right main, nose, left main – Each landing gear uplock is released when related
+    > handle is pulled to its limit, approximately 24 inches (61 cm).
   variant:
     type: simple
     question: How far must you pull the emergency gear release handle before the
