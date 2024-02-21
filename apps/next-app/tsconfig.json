@@ -1,7 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "files": ["../../types.d.ts", "index.d.ts", "next-env.d.ts"],
-  "include": ["pages/**/*.ts", "pages/**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,

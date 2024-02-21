@@ -12,7 +12,9 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
-  pageExtensions: ["page.tsx", "api.ts"],
+  experimental: {
+    esmExternals: true,
+  },
   transpilePackages: ["@mui/x-charts"],
   async rewrites() {
     const aboutUsRewrite = [
@@ -53,6 +55,10 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+  webpack(config) {
+    config.externals = [...config.externals, { canvas: "canvas" }];
+    return config;
   },
 };
 

@@ -1,3 +1,4 @@
+"use client";
 export * from "./app-logo";
 export * from "./background-faded-image";
 export * from "./background-sliding-images";

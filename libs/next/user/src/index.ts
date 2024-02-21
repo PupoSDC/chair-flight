@@ -1,3 +1,4 @@
+"use client";
 export { UserBugReport } from "./containers/user-bug-report";
 export { UserSettings } from "./containers/user-settings";
 export {
