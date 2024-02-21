@@ -1,4 +1,6 @@
+import { Children } from "react";
 import { Box, Divider, Link, Sheet, Table, Typography } from "@mui/joy";
+import type { FunctionComponent } from "react";
 import type { Components } from "react-markdown";
 
 export const markdownComponents: Partial<Components> = {
@@ -42,14 +44,26 @@ export const markdownComponents: Partial<Components> = {
       children={children}
     />
   ),
-  p: ({ children }) => (
-    <Typography
-      sx={{ mt: "0.5em" }}
-      level="body-md"
-      component="p"
-      children={children}
-    />
-  ),
+  p: ({ children }) => {
+    const defaultOutput = (
+      <Typography
+        sx={{ mt: "0.5em" }}
+        level="body-md"
+        component="p"
+        children={children}
+      />
+    );
+
+    const childrenArray = Children.toArray(children);
+    if (childrenArray.length > 1) return defaultOutput;
+
+    const onlyChild = childrenArray[0] as unknown as {
+      type?: FunctionComponent;
+    };
+    if (onlyChild?.type?.displayName !== "img") return defaultOutput;
+
+    return <>{children}</>;
+  },
   hr: () => <Divider orientation="horizontal" sx={{ width: "100%", my: 2 }} />,
   a: ({ children, href }) => <Link href={href} children={children} />,
   ul: ({ children }) => (
@@ -58,13 +72,28 @@ export const markdownComponents: Partial<Components> = {
     </Box>
   ),
   img: ({ src, alt }) => (
-    <Sheet sx={{ width: "100%", p: 0.5, display: "block" }} component="span">
+    <Sheet
+      sx={{
+        width: "100%",
+        p: 0.5,
+        display: "flex",
+        mx: 0,
+        flexDirection: "column",
+      }}
+      component="figure"
+    >
       <Box
         component={"img"}
         src={src}
         alt={alt}
-        sx={{ maxWidth: "100%", height: "auto" }}
+        sx={{
+          maxWidth: "100%",
+          height: "auto",
+          maxHeight: "500px",
+          mx: "auto",
+        }}
       />
+      <Divider sx={{ my: 1 }} />
       <Box component="figcaption" sx={{ textAlign: "center", fontSize: "sm" }}>
         {alt}
       </Box>
@@ -92,3 +121,5 @@ export const markdownComponents: Partial<Components> = {
     />
   ),
 };
+
+(markdownComponents.img as FunctionComponent).displayName = "img";

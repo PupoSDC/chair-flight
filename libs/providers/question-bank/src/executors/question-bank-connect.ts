@@ -150,6 +150,27 @@ export const connectQuestionBank = ({
         ...q.learningObjectives,
       ]);
     });
+
+    keepUnique(
+      Array.from(q.explanation.matchAll(ANNEX_MATCH), (m) => m[1]),
+    ).forEach((annexId) => {
+      const annex = annexesMap[annexId];
+      if (!annex)
+        throw new Error(
+          "Missing annex " + annexId + " in question Explanation " + q.id,
+        );
+      annex.questions = keepUnique([...annex.docs, q.id]);
+      annex.learningObjectives = keepUnique([
+        ...annex.learningObjectives,
+        ...q.learningObjectives,
+      ]);
+      q.explanation = q.explanation.replaceAll(ANNEX_MATCH, (match, cg1) =>
+        match.replace(
+          `annex:${annexId}`,
+          `/content/${questionBank}/media/${cg1}.${annex.format}`,
+        ),
+      );
+    });
   });
 
   // Link docs to annexes
@@ -171,7 +192,6 @@ export const connectQuestionBank = ({
           `/content/${questionBank}/media/${cg1}.${annex.format}`,
         ),
       );
-      console.log(doc.content);
     });
   });
 
