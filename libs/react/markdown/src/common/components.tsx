@@ -1,4 +1,4 @@
-import { Box, Divider, Link, Typography } from "@mui/joy";
+import { Box, Divider, Link, Sheet, Table, Typography } from "@mui/joy";
 import type { Components } from "react-markdown";
 
 export const markdownComponents: Partial<Components> = {
@@ -56,6 +56,11 @@ export const markdownComponents: Partial<Components> = {
     <Box component="ul" sx={{ pl: 3 }}>
       {children}
     </Box>
+  ),
+  table: ({ children }) => (
+    <Sheet sx={{ my: 1, p: 0.5 }}>
+      <Table children={children} />
+    </Sheet>
   ),
   blockquote: ({ children }) => (
     <Box

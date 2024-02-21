@@ -4,7 +4,10 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### Airspeed Disagree Alert (amber)
+    > Indicates the Captain’s and F/O’s airspeed indications disagree by more than 5
+    > knots for 5 continuous seconds.
   variant:
     type: simple
     question: What condition causes an Amber IAS DISAGREE alert to appear at the
@@ -34,7 +37,17 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### Minimum Maneuver Speed (amber)
+    >
+    > The amber bar is displayed with the first flap retraction after takeoff or when a
+    > valid Vref is entered.
+    >
+    > Top of amber bar indicates minimum maneuver speed. This airspeed provides
+    > - 1.3g maneuver capability to stick shaker below approximately 20,000 ft.
+    > - 1.3g maneuver capability to low speed buffet (or an alternative
+    >   approved maneuver capability set in the FMC maintenance pages)
+    >   above approximately 20,000 ft.
   variant:
     type: simple
     question: What does the top of the amber bar indicate at the lower end of the
@@ -70,7 +83,9 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > **CDS MAINT (white)**: A dispatchable CDS fault has occurred. Displayed on the
+    > ground only, prior to start of the second engine
   variant:
     type: simple
     question: What does a white CDS MAINT message in the lower left corner of the
@@ -98,7 +113,12 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### Selected Speed (magenta)
+    > Displays target airspeed:
+    >   - indicates the airspeed manually selected in the IAS/MACH window
+    >   - indicates the FMC computed airspeed when the IAS/MACH window is
+    >     blank.
   variant:
     type: simple
     question: What does the Magenta figure displayed above the Speed Tape signify?
@@ -126,11 +146,24 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### Displays Control Panel Annunciation (amber)
+    > Indicates a failed EFIS control panel on the affected side. When DISPLAYS
+    > CONTROL PANEL appears in the lower right hand corner of the display, altitude
+    > information is removed.
+    > 
+    > With the CONTROL PANEL select switch on the overhead panel in:
+    > - BOTH ON 1 – Both the Captain’s and First Officer’s CDS displays and
+    >   baro are controlled from the left EFIS panel
+    > - NORMAL – Left EFIS panel controls Captain’s CDS displays and baro,
+    >   Right EFIS panel controls First Officer’s CDS displays and baro
+    > - BOTH ON 2 – Both the Captain’s and First Officer’s CDS displays and
+    >   baro are controlled from the right EFIS panel.
   variant:
     type: simple
-    question: On the PFD, what does the amber annunciation &quot;DISPLAYS CONTROL
-      PANEL&quot; indicate?
+    question: |
+      On the PFD, what does the amber annunciation "DISPLAYS CONTROL PANEL" 
+      indicate?
     options:
       - id: xj7fc
         text: The PFD the annunciation is displayed on has an error and information
@@ -158,10 +191,16 @@
   annexes: []
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### INSTR SWITCH Annunciation (amber)
+    >
+    > Indicates both the Captain’s and First Officer’s displays are using the same source
+    > of IRU data.
+    > Displayed when the IRS switch on the overhead panel is not in the NORMAL
+    > position.
   variant:
     type: simple
-    question: The amber annunciation &quot;INSTR SWITCH&quot; indicates what?
+    question: The amber annunciation "INSTR SWITCH" indicates what?
     options:
       - id: 03kse
         text: The IRS switch on the Forward Overhead panel is not selected to NORMAL
@@ -212,10 +251,16 @@
 - id: QZPJBQJN
   relatedQuestions: []
   externalIds: []
-  annexes: []
+  annexes:
+    - AFNVNCVT6
   learningObjectives:
     - B737.10
-  explanation: ""
+  explanation: |
+    > ### V2+15 (white)
+    > Displayed for takeoff.
+    > Removed when either of the following occurs:
+    > - at first flap retraction
+    > - when VREF is entered in the CDU.
   variant:
     type: simple
     question: The bug below that indicates V2 + 15 is displayed at what stage of
