@@ -35,7 +35,7 @@ export const getNewVariant = (type: QuestionVariantType): QuestionVariant => {
     case "definition":
       return {
         type: "definition",
-        question: "${term}...",
+        question: "{term}...",
         fakeOptions: [],
         options: [1, 2, 3, 4].map(() => ({
           id: getRandomId(),

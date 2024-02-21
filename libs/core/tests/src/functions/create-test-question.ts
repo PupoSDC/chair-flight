@@ -78,7 +78,7 @@ const createQuestionMultipleChoiceFromDefinition = ({
     why: ``,
   };
 
-  const wrongOptions = [
+  const wrongOptions = shuffler([
     ...options
       .filter((option) => option.id !== correctOption.id)
       .map((opt) => ({
@@ -91,7 +91,7 @@ const createQuestionMultipleChoiceFromDefinition = ({
       text: opt.definition,
       why: `This definition does not match any term in this question.`,
     })),
-  ];
+  ]).slice(0, 3);
 
   const autoExplanation = [
     "| Term | Definition |",
@@ -101,13 +101,15 @@ const createQuestionMultipleChoiceFromDefinition = ({
       .join("\n"),
   ];
 
+  const questionText = variant.question.replace("{term}", options[0].term);
+
   if (!correctOption) {
     throw new BadQuestionError(template, {
       message: "No correct option found",
     });
   }
 
-  if (wrongOptions.length < 3) {
+  if (wrongOptions.length !== 3) {
     throw new BadQuestionError(template, {
       message: "Not enough wrong options found",
     });
@@ -118,13 +120,11 @@ const createQuestionMultipleChoiceFromDefinition = ({
     templateId: template.id,
     seed: randomSeed,
     type: "multiple-choice",
-    question: variant.question,
+    question: questionText,
     annexes: template.annexes,
     correctOptionId: correctOption.id,
     options: shuffler([correctOption, ...wrongOptions]),
-    explanation: [autoExplanation, template.explanation]
-      .filter(Boolean)
-      .join("\n\n---\n\n"),
+    explanation: template.explanation ?? autoExplanation,
   };
 };
 

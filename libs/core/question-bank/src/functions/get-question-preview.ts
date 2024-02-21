@@ -46,9 +46,9 @@ const getQuestionVariantDefinitionPreview = (
   variant: QuestionVariantDefinition,
 ): string => {
   return [
-    variant.question,
+    variant.question.replace("{term}", "______"),
     "\n",
-    ...variant.options.map((opt) => `- ${opt.term} - ${opt.definition}`),
+    ...variant.options.map((opt) => `- ${opt.term} → ${opt.definition}`),
   ].join("\n");
 };
 
