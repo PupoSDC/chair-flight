@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
-import { SvgIcon } from "@mui/joy";
-import type { SvgIconProps } from "@mui/joy";
-import type { FunctionComponent } from "react";
+import { Box, SvgIcon } from "@mui/joy";
+import type { BoxProps } from "@mui/joy";
+import type { ForwardRefExoticComponent, FunctionComponent } from "react";
 
 const AppLogoSvg: FunctionComponent = (props) => (
   <svg
@@ -28,9 +28,35 @@ const AppLogoSvg: FunctionComponent = (props) => (
   </svg>
 );
 
-export const AppLogo = forwardRef<
-  HTMLOrSVGElement,
-  Omit<SvgIconProps, "viewbox" | "component">
->((props, ref) => <SvgIcon ref={ref} component={AppLogoSvg} {...props} />);
+export const AppLogo = forwardRef<HTMLElement, BoxProps>((props, ref) => (
+  <Box
+    {...props}
+    ref={ref}
+    sx={{
+      display: "flex",
+      verticalAlign: "center",
+      alignItems: "center",
+      textDecoration: "none",
 
-AppLogo.displayName = "AppLogo";
+      "& > h2": {
+        fontSize: "14px",
+        ml: 2,
+        fontWeight: 700,
+        letterSpacing: "0.05rem",
+        color: "neutral.plainColor",
+        display: { xs: "none", sm: "block" },
+      },
+
+      "& > svg": {
+        width: "25px",
+        height: "25px",
+        fill: "var(--joy-palette-primary-plainColor)",
+      },
+    }}
+  >
+    <SvgIcon component={AppLogoSvg} />
+    <h2>CHAIR FLIGHT</h2>
+  </Box>
+)) as typeof Box;
+
+(AppLogo as ForwardRefExoticComponent<BoxProps>).displayName = "AppLogo";

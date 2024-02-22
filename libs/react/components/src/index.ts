@@ -1,5 +1,8 @@
 "use client";
 export * from "./app-logo";
+export * from "./app-header";
+export * from "./app-footer";
+export * from "./app-main";
 export * from "./background-faded-image";
 export * from "./background-sliding-images";
 export * from "./blog-post-chip";

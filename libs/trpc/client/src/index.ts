@@ -11,3 +11,4 @@ export type {
   CommonComponentProps,
   CommonContainerProps,
 } from "./trpc-container";
+export { TrpcProvider, trpcNext14 } from "./trpc-provider";

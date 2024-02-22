@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Link from "next/link";
 import { default as KeyboardArrowRightIcon } from "@mui/icons-material/KeyboardArrowRight";
 import {
   Box,
@@ -6,32 +6,25 @@ import {
   Card,
   CardActions,
   CardContent,
-  Link,
+  Stack,
   Typography,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useUserVoyage } from "@cf/next/user";
-import { BlogPostChip } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
-import { container } from "@cf/trpc/client";
-import type { Container } from "@cf/trpc/client";
-import type { AppRouterOutput } from "@cf/trpc/client";
+import { AppMain, BlogPostChip } from "@cf/react/components";
+import { providers } from "@cf/trpc/server";
+import type { FunctionComponent } from "react";
 
-type Props = Record<string, never>;
-type Params = Props;
-type Data = AppRouterOutput["containers"]["blog"]["getBlogIndex"];
+const getData = async () => {
+  const allPosts = await providers.blog.getAllPosts();
+  const meta = allPosts.map(({ content, ...meta }) => meta);
+  return { meta };
+};
 
-export const BlogIndex: Container<Props, Params, Data> = container<
-  Props,
-  Params,
-  Data
->((params) => {
-  const { meta } = BlogIndex.useData(params);
-
-  useEffect(() => useUserVoyage.markBlogAsVisited, []);
+const BlogIndex: FunctionComponent = async () => {
+  const { meta } = await getData();
 
   return (
-    <>
+    <AppMain>
       <Typography level="h2" sx={{ pt: 4 }}>
         Posts
       </Typography>
@@ -65,19 +58,8 @@ export const BlogIndex: Container<Props, Params, Data> = container<
           </CardActions>
         </Card>
       ))}
-      <Box component="footer" sx={{ py: 2 }} />
-    </>
+    </AppMain>
   );
-});
-
-BlogIndex.displayName = "BlogIndex";
-
-BlogIndex.getData = async ({ helper }) => {
-  const router = helper.containers.blog;
-  return await router.getBlogIndex.fetch({});
 };
 
-BlogIndex.useData = () => {
-  const router = trpc.containers.blog;
-  return router.getBlogIndex.useSuspenseQuery({})[0];
-};
+export default BlogIndex;

@@ -7,7 +7,7 @@ export type ThemeOverrideColorSchemeProps = {
 };
 
 const getGlobalColorScheme = (palette: DefaultPaletteRange) => ({
-  '[data-joy-color-scheme="dark"], [data-joy-color-scheme="light"]': {
+  'html[data-joy-color-scheme="dark"], html[data-joy-color-scheme="light"]': {
     "--joy-palette-primary-50": palette[50],
     "--joy-palette-primary-100": palette[100],
     "--joy-palette-primary-200": palette[200],
@@ -30,6 +30,7 @@ export const ThemeOverrideColorScheme: FC<ThemeOverrideColorSchemeProps> = ({
   <GlobalStyles
     styles={(t) => {
       const palette = t.colorSchemes.light.palette;
+      console.log("palette", palette);
       switch (questionBank) {
         case "type":
           return getGlobalColorScheme(palette.primaryRose);

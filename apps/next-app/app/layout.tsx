@@ -1,4 +1,6 @@
 import { Stack } from "@mui/joy";
+import { TrpcProvider } from "@cf/trpc/client";
+import { UserBugReport } from "./_client/user-bug-report";
 import { LayoutThemeRegistry } from "./layout-theme-registry";
 import { LayoutThemeScript } from "./layout-theme-script";
 
@@ -17,13 +19,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <LayoutThemeScript />
-      </head>
-      <Stack component="body">
-        <LayoutThemeRegistry>{children}</LayoutThemeRegistry>
-      </Stack>
-    </html>
+    <TrpcProvider>
+      <html lang="en">
+        <head>
+          <LayoutThemeScript />
+        </head>
+        <Stack component="body">
+          <LayoutThemeRegistry>
+            {children}
+            <UserBugReport />
+          </LayoutThemeRegistry>
+        </Stack>
+      </html>
+    </TrpcProvider>
   );
 }
