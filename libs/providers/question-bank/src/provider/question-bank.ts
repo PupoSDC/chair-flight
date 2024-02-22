@@ -20,7 +20,7 @@ const resources: QuestionBankResource[] = [
 ];
 
 export class QuestionBank implements QuestionBankProvider {
-  private static instances: Record<QuestionBankName, QuestionBank> = {} as any;
+  private static instances: Record<string, QuestionBank> = {};
 
   private questionBankName: QuestionBankName;
 

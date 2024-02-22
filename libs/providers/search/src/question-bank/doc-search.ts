@@ -70,10 +70,10 @@ export class DocSearch extends QuestionBankSearchProvider<
       title: doc.title,
       empty: doc.empty,
       subject: doc.subject,
-      href: `/modules/${doc.questionBank}/docs/${doc.id}`,
+      href: `/${doc.questionBank}/docs/${doc.id}`,
       learningObjectives: doc.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${doc.questionBank}/learning-objectives/${id}`,
+        href: `/${doc.questionBank}/learning-objectives/${id}`,
       })),
     };
   }

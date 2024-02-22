@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Box, Divider, Stack } from "@mui/joy";
+import { Divider, Stack } from "@mui/joy";
 import type { StackProps } from "@mui/joy";
 
 export type AppFooterProps = StackProps;

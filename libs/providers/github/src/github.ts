@@ -12,22 +12,30 @@ interface GithubProvider {
 
 export class Github implements GithubProvider {
   private static octokit: Octokit;
+  private static instance: Github;
 
-  constructor() {
+  private constructor() {
     Github.octokit = new Octokit({
       auth: getEnvVariableOrThrow("PROVIDER_GITHUB_TOKEN"),
     });
   }
 
-  getRepositoryUrl() {
+  public static get(): Github {
+    if (!Github.instance) {
+      Github.instance = new Github();
+    }
+    return Github.instance;
+  }
+
+  public getRepositoryUrl() {
     return `https://github.com/${upstreamOwner}/${originRepo}`;
   }
 
-  async createEditQuestionsPr(newPr: EditQuestionsPr) {
+  public async createEditQuestionsPr(newPr: EditQuestionsPr) {
     return await createEditQuestionsPr(Github.octokit, newPr);
   }
 
-  async createNewIssue(newIssue: NewIssue) {
+  public async createNewIssue(newIssue: NewIssue) {
     return await createNewIssue(Github.octokit, newIssue);
   }
 }

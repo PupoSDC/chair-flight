@@ -10,6 +10,7 @@ import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
 import { listItemContentClasses } from "@mui/joy";
+import path from "path";
 import { AppLogo, Sidebar, SidebarListItem } from "@cf/react/components";
 import type { FunctionComponent } from "react";
 
@@ -35,13 +36,14 @@ export const ModulesSidebar: FunctionComponent<ModulesSidebarProps> = ({
   routes,
 }) => {
   const pathname = usePathname();
-  const isQuestions = pathname.includes("questions");
-  const isTests = pathname.includes("tests");
-  const isSettings = pathname.includes("settings");
-  const isLearningObjectives = pathname.includes("learning-objectives");
-  const isFlashcards = pathname.includes("flashcards");
-  const isAnnexes = pathname.includes("annexes");
-  const isDocs = pathname.includes("docs");
+  const module = pathname.split("/")[2];
+  const isQuestions = module === "questions";
+  const isTests = module === "tests";
+  const isSettings = module === "settings";
+  const isLearningObjectives = module === "learning-objectives";
+  const isFlashcards = module === "flashcards";
+  const isAnnexes = module === "annexes";
+  const isDocs = module === "docs";
   const isHome =
     !isQuestions &&
     !isTests &&

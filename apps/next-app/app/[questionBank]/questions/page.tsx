@@ -1,5 +1,5 @@
+import { SearchQuestions } from "@cf/react/containers";
 import { ModulesMain } from "../_client/modules-main";
-import { SearchQuestions } from "../_server/search-questions";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 

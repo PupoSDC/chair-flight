@@ -89,7 +89,7 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
   protected override getSearchResult(lo: LearningObjective) {
     return {
       id: lo.id,
-      href: `/modules/${lo.questionBank}/learning-objectives/${lo.id}`,
+      href: `/${lo.questionBank}/learning-objectives/${lo.id}`,
       parentId: lo.parentId,
       courses: lo.courses.map((c) => this.coursesMap[c]),
       text: compileMarkdown(lo.text),

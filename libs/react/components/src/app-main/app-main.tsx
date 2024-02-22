@@ -21,3 +21,5 @@ export const AppMain = forwardRef<HTMLMediaElement, AppMainProps>(
     />
   ),
 );
+
+AppMain.displayName = "AppMain";

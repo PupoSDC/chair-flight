@@ -72,15 +72,15 @@ export class QuestionSearch extends QuestionBankSearchProvider<
       questionBank: q.questionBank,
       text: compileMarkdown(getQuestionPreview(q.variant)),
       subjects: q.learningObjectives.map((l) => l.split(".")[0]),
-      href: `/modules/${q.questionBank}/questions/${q.id}`,
+      href: `/${q.questionBank}/questions/${q.id}`,
       externalIds: q.externalIds,
       learningObjectives: q.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${q.questionBank}/learning-objectives/${id}`,
+        href: `/${q.questionBank}/learning-objectives/${id}`,
       })),
       relatedQuestions: q.relatedQuestions.map((id) => ({
         id,
-        href: `/modules/${q.questionBank}/questions/${id}`,
+        href: `/${q.questionBank}/questions/${id}`,
       })),
     };
   }

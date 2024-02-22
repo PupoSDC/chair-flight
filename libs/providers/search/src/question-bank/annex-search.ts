@@ -71,11 +71,11 @@ export class AnnexSearch extends QuestionBankSearchProvider<
       questionBank: annex.questionBank,
       questions: annex.questions.map((id) => ({
         id,
-        href: `/modules/${annex.questionBank}/questions/${id}`,
+        href: `/${annex.questionBank}/questions/${id}`,
       })),
       learningObjectives: annex.learningObjectives.map((id) => ({
         id,
-        href: `/modules/${annex.questionBank}/learning-objectives/${id}`,
+        href: `/${annex.questionBank}/learning-objectives/${id}`,
       })),
     };
   }
