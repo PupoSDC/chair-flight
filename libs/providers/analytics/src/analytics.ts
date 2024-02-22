@@ -10,13 +10,21 @@ import type { TrackEvent } from "./entities/track-event";
 
 export class Analytics {
   private db: AnalyticsDb;
+  private static instance: Analytics;
 
-  constructor() {
+  private constructor() {
     const schema = analyticsSchema;
     const pgProvider = getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS");
     const client = new Client({ connectionString: pgProvider });
     this.db = drizzle(client, { schema });
     client.connect();
+  }
+
+  static get() {
+    if (!Analytics.instance) {
+      Analytics.instance = new Analytics();
+    }
+    return new Analytics();
   }
 
   async createPageEvent(event: PageEvent) {

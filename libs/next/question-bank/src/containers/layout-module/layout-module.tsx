@@ -213,7 +213,6 @@ export const LayoutModule = container<Props, Params, Data>(
           </NoSsr>
           <AppButtonsContainer>
             <BugReportButton />
-
             <GithubButton />
             <ThemeButton />
             <HamburgerButton />

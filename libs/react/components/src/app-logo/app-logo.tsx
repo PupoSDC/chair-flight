@@ -44,7 +44,6 @@ export const AppLogo = forwardRef<HTMLElement, BoxProps>((props, ref) => (
         fontWeight: 700,
         letterSpacing: "0.05rem",
         color: "neutral.plainColor",
-        display: { xs: "none", sm: "block" },
       },
 
       "& > svg": {
@@ -52,6 +51,8 @@ export const AppLogo = forwardRef<HTMLElement, BoxProps>((props, ref) => (
         height: "25px",
         fill: "var(--joy-palette-primary-plainColor)",
       },
+
+      ...props.sx,
     }}
   >
     <SvgIcon component={AppLogoSvg} />

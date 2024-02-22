@@ -1,25 +1,28 @@
+import { MDXRemote } from "@daviereid/next-mdx-remote/rsc";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { compileMdx } from "@cf/core/markdown";
+import { compileMdx, markdownPlugins } from "@cf/core/markdown";
 import { BugReportButton } from "@cf/next/user";
+import { Blog } from "@cf/providers/blog";
 import {
   AppMain,
   BlogPostChip,
   ModuleSelectionButton,
 } from "@cf/react/components";
-import { Mdx } from "@cf/react/markdown";
-import { providers } from "@cf/trpc/server";
+import { Mdx, markdownComponents } from "@cf/react/markdown";
 import type { FunctionComponent } from "react";
 
 type Params = { postId: string };
+type BlogPostProps = { params: Params };
 
 const getBlogPost = async (params: Params) => {
-  const meta = await providers.blog.getPost(params.postId);
-  const mdxContent = await compileMdx(meta.content);
+  const blog = Blog.get();
+  const meta = await blog.getPost(params.postId);
+  const MATCH_CODE_BLOCKS = /```tsx eval((?:.|\n)*?)```/g;
 
   const post = {
-    mdxContent,
+    content: meta.content.replaceAll(MATCH_CODE_BLOCKS, "$1"),
     title: meta.title,
     description: meta.description,
     tag: meta.tag,
@@ -30,7 +33,7 @@ const getBlogPost = async (params: Params) => {
   return { post };
 };
 
-const BlogPost: FunctionComponent<Params> = async (params) => {
+const BlogPost: FunctionComponent<BlogPostProps> = async ({ params }) => {
   const { post } = await getBlogPost(params);
 
   return (
@@ -66,15 +69,15 @@ const BlogPost: FunctionComponent<Params> = async (params) => {
           }}
         />
       </Box>
-      <Mdx
-        children={post.mdxContent}
+
+      <MDXRemote
+        source={post.content}
         components={{
-          Box,
-          Stack,
-          Link,
-          ModuleSelectionButton,
+          ...markdownComponents,
           BugReportButton,
+          Stack,
         }}
+        {...markdownPlugins}
       />
 
       <Typography
@@ -88,7 +91,8 @@ const BlogPost: FunctionComponent<Params> = async (params) => {
 };
 
 export const generateStaticParams = async () => {
-  const allPosts = await providers.blog.getAllPosts();
+  const blog = Blog.get();
+  const allPosts = await blog.getAllPosts();
   const posts = allPosts.map(({ filename: postId }) => postId);
   return posts.map((postId) => ({ postId }));
 };

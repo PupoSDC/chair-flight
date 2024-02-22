@@ -16,13 +16,21 @@ export class LearningObjectiveSearch extends QuestionBankSearchProvider<
   LearningObjectiveFilterField
 > {
   private coursesMap: Record<string, { id: string; text: string }> = {};
+  private static instance: LearningObjectiveSearch;
 
-  constructor() {
+  private constructor() {
     super({
       searchFields: ["id", "text"],
       idSearchFields: ["id"],
       filterFields: ["subject", "course"],
     });
+  }
+
+  public static get() {
+    if (!this.instance) {
+      this.instance = new LearningObjectiveSearch();
+    }
+    return this.instance;
   }
 
   protected override async initializeSearchMaps(bank: QuestionBank) {

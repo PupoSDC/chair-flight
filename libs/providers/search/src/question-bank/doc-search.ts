@@ -13,12 +13,21 @@ export class DocSearch extends QuestionBankSearchProvider<
   DocSearchField,
   DocFilterField
 > {
-  constructor() {
+  private static instance: DocSearch;
+
+  private constructor() {
     super({
       searchFields: ["id", "learningObjective", "content", "title"],
       idSearchFields: ["id", "learningObjective"],
       filterFields: ["subject"],
     });
+  }
+
+  public static get() {
+    if (!this.instance) {
+      this.instance = new DocSearch();
+    }
+    return this.instance;
   }
 
   public override async getFilters(bank: QuestionBank) {

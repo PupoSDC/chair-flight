@@ -16,7 +16,11 @@ const LayoutPublic: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <>
       <AppHeader>
-        <AppLogo component={Link} href="/" />
+        <AppLogo
+          component={Link}
+          sx={{ "& h2": { display: { xs: "none", sm: "block" } } }}
+          href="/"
+        />
         <Box component="nav">
           <Link href="/articles/blog" color="neutral" fontSize="sm">
             Blog

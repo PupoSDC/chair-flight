@@ -23,7 +23,7 @@ export const AppHeader = forwardRef<HTMLHeadingElement, AppHeaderProps>(
         sx={{
           flexDirection: "row",
           color: "text.primary",
-          width: "100%",
+          width: "100vw",
           position: "fixed",
           alignItems: "center",
           justifyContent: "space-between",

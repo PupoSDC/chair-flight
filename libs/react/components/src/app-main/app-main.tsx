@@ -11,11 +11,11 @@ export const AppMain = forwardRef<HTMLMediaElement, AppMainProps>(
       ref={ref}
       component="main"
       sx={{
+        flex: 1,
         width: "100%",
         maxWidth: "md",
         mx: "auto",
-        px: { xs: 1, md: 2 },
-        py: 2,
+        p: { xs: 1, md: 2 },
         ...props.sx,
       }}
     />

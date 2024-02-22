@@ -131,4 +131,5 @@ export const BugReportButton: FunctionComponent = noSsr(
 export const AppButtonsContainer = styled(Stack)`
   flex-direction: row;
   margin-left: auto;
+  justify-content: space-between;
 `;

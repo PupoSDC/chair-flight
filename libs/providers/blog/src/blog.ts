@@ -14,6 +14,16 @@ interface BlogProvider {
 
 export class Blog implements BlogProvider {
   private postMeta: BlogPost[] | undefined = undefined;
+  private static instance: Blog;
+
+  private constructor() {}
+
+  static get() {
+    if (!Blog.instance) {
+      Blog.instance = new Blog();
+    }
+    return Blog.instance;
+  }
 
   async getDateOfLastPost() {
     const allPosts = await this.getAllPosts();
@@ -37,7 +47,7 @@ export class Blog implements BlogProvider {
   async getPost(docId: string) {
     const allPosts = await this.getAllPosts();
     const post = allPosts.find((p) => p.filename === docId);
-    if (!post) throw new NotFoundError();
+    if (!post) throw new NotFoundError(`Post not found: ${docId}`);
     return post;
   }
 

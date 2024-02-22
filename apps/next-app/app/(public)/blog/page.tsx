@@ -6,16 +6,16 @@ import {
   Card,
   CardActions,
   CardContent,
-  Stack,
   Typography,
 } from "@mui/joy";
 import { DateTime } from "luxon";
+import { Blog } from "@cf/providers/blog";
 import { AppMain, BlogPostChip } from "@cf/react/components";
-import { providers } from "@cf/trpc/server";
 import type { FunctionComponent } from "react";
 
 const getData = async () => {
-  const allPosts = await providers.blog.getAllPosts();
+  const blog = Blog.get();
+  const allPosts = await blog.getAllPosts();
   const meta = allPosts.map(({ content, ...meta }) => meta);
   return { meta };
 };

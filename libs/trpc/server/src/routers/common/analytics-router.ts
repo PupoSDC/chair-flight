@@ -1,5 +1,5 @@
 import { pageEventSchema, trackEventSchema } from "@cf/providers/analytics";
-import { analytics } from "../../common/providers";
+import { providers } from "../../common/providers";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const analyticsRouter = router({

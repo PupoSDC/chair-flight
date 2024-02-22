@@ -1,17 +1,6 @@
-import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
-import {
-  AppButtonsContainer,
-  BugReportButton,
-  GithubButton,
-  ThemeButton,
-} from "@cf/next/user";
-import {
-  AppHeader,
-  AppLogo,
-  BackgroundSlidingImages,
-  Typical,
-} from "@cf/react/components";
-import { providers } from "@cf/trpc/server";
+import { Divider, Stack, Typography } from "@mui/joy";
+import { QuestionBank } from "@cf/providers/question-bank";
+import { BackgroundSlidingImages, Typical } from "@cf/react/components";
 import {
   LeftContainer,
   MainContainer,
@@ -25,15 +14,12 @@ import { ThemeOverride } from "./_client/theme-override";
 import type { FunctionComponent } from "react";
 
 const getData = async () => ({
-  numberOfFlashcards: (
-    await providers.questionBanks["type"].getAll("flashcards")
-  ).length,
-  numberOfAtplQuestions: (
-    await providers.questionBanks["atpl"].getAll("questions")
-  ).length,
-  numberOfTypeQuestions: (
-    await providers.questionBanks["type"].getAll("questions")
-  ).length,
+  numberOfFlashcards: (await QuestionBank.get("prep").getAll("flashcards"))
+    .length,
+  numberOfAtplQuestions: (await QuestionBank.get("atpl").getAll("questions"))
+    .length,
+  numberOfTypeQuestions: (await QuestionBank.get("type").getAll("questions"))
+    .length,
 });
 
 const WelcomePage: FunctionComponent = async () => {
@@ -43,19 +29,6 @@ const WelcomePage: FunctionComponent = async () => {
   return (
     <>
       <ThemeOverride />
-      <AppHeader>
-        <AppLogo component={Link} href="/" />
-        <Box component="nav">
-          <Link href="/articles/blog" color="neutral" fontSize="sm">
-            Blog
-          </Link>
-        </Box>
-        <AppButtonsContainer>
-          <BugReportButton />
-          <GithubButton />
-          <ThemeButton />
-        </AppButtonsContainer>
-      </AppHeader>
       <BackgroundSlidingImages />
       <MainContainer>
         <LeftContainer component="section">

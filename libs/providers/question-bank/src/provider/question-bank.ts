@@ -20,6 +20,8 @@ const resources: QuestionBankResource[] = [
 ];
 
 export class QuestionBank implements QuestionBankProvider {
+  private static instances: Record<QuestionBankName, QuestionBank> = {} as any;
+
   private questionBankName: QuestionBankName;
 
   private resourceArrays: QuestionBankResourceArrays = resources.reduce(
@@ -35,8 +37,15 @@ export class QuestionBank implements QuestionBankProvider {
     return s;
   }, {} as QuestionBankResourceMaps);
 
-  constructor(questionBankName: QuestionBankName) {
+  private constructor(questionBankName: QuestionBankName) {
     this.questionBankName = questionBankName;
+  }
+
+  static get(name: QuestionBankName) {
+    if (!QuestionBank.instances[name]) {
+      QuestionBank.instances[name] = new QuestionBank(name);
+    }
+    return QuestionBank.instances[name];
   }
 
   getName() {

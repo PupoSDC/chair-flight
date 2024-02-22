@@ -8,7 +8,7 @@ import { PagesUsedChart } from "./_client/pages-used-chart";
 import type { FunctionComponent } from "react";
 
 const getData = async () => {
-  const analytics = new Analytics();
+  const analytics = Analytics.get();
   const { dailyUsers } = await analytics.getDailyUsers();
   const { pagesUsed } = await analytics.getPagesUsed();
   return {

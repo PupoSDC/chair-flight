@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { Children, forwardRef } from "react";
 import { default as ChevronLeftIcon } from "@mui/icons-material/ChevronLeft";
 import {
   Box,
@@ -71,6 +71,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     return (
       <>
         <GlobalStyles
+          key="sidebar-styles"
           styles={{
             body: {
               [theme.breakpoints.up("sm")]: {
@@ -125,6 +126,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
               borderBottom: 0,
               borderLeftWidth: 4,
               borderLeftColor: "transparent",
+              overflowX: "hidden",
 
               "&:first-of-type": {
                 borderTop: 0,

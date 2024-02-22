@@ -7,5 +7,6 @@ export {
 } from "./hooks/use-user-preferences";
 export { useUserVoyage } from "./hooks/use-user-voyage";
 export { useBugReportStore } from "./hooks/use-bug-report";
+export { useBugReportDisclose } from "./hooks/use-bug-report";
 export { useBugReportDebugData } from "./hooks/use-bug-report";
 export * from "./components/app-buttons";

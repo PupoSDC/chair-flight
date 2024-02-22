@@ -15,12 +15,21 @@ export class QuestionSearch extends QuestionBankSearchProvider<
   QuestionSearchField,
   QuestionFilterField
 > {
-  constructor() {
+  private static instance: QuestionSearch;
+
+  private constructor() {
     super({
       searchFields: ["id", "learningObjective", "externalId", "text"],
       idSearchFields: ["id", "learningObjective", "externalId"],
       filterFields: ["subject"],
     });
+  }
+
+  public static get() {
+    if (!this.instance) {
+      this.instance = new QuestionSearch();
+    }
+    return this.instance;
   }
 
   public override async getFilters(bank: QuestionBank) {

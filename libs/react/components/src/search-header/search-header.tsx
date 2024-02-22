@@ -2,14 +2,7 @@ import { forwardRef } from "react";
 import { useEffect, useState } from "react";
 import { NoSsr } from "@mui/base";
 import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";
-import {
-  Select,
-  Stack,
-  selectClasses,
-  styled,
-  Option,
-  IconButton,
-} from "@mui/joy";
+import { Select, Stack, selectClasses, Option, IconButton } from "@mui/joy";
 import {
   Badge,
   Button,
@@ -21,20 +14,7 @@ import {
 } from "@mui/joy";
 import { useDisclose } from "../hooks/use-disclose";
 import { SearchQuery } from "../search-query";
-
-const SearchHeaderContainer = styled(Stack)`
-  gap: ${({ theme }) => theme.spacing(1)};
-  flex-direction: row;
-  margin-bottom: ${({ theme }) => theme.spacing(1)};
-
-  .${selectClasses.root} {
-    width: 13em;
-  }
-
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    margin-bottom: ${({ theme }) => theme.spacing(2)};
-  }
-`;
+import type { StackProps } from "@mui/joy";
 
 export type SearchHeaderProps = {
   search: string;
@@ -44,6 +24,7 @@ export type SearchHeaderProps = {
   isLoading: boolean;
   isError: boolean;
   mobileBreakpoint?: "sm" | "md" | "lg" | "xl" | "force-mobile";
+  sx?: StackProps["sx"];
   onSearchChange: (value: string) => void;
   onFilterValuesChange: (name: string, value: string) => void;
 };
@@ -51,6 +32,7 @@ export type SearchHeaderProps = {
 export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
   (
     {
+      sx,
       search,
       searchPlaceholder = "Search...",
       filters,
@@ -96,7 +78,18 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
     ));
 
     return (
-      <SearchHeaderContainer ref={ref}>
+      <Stack
+        ref={ref}
+        sx={{
+          gap: 1,
+          flexDirection: "row",
+
+          [`& .${selectClasses.root}`]: {
+            width: "13em",
+          },
+          ...sx,
+        }}
+      >
         <SearchQuery
           size="sm"
           value={search}
@@ -108,7 +101,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
         />
         <Stack
           direction={"row"}
-          gap={1}
+          gap={{ xs: 1, sm: 2 }}
           sx={{ display: { xs: "none", [mobileBreakpoint]: "flex" } }}
         >
           <NoSsr fallback={fallbackJsx}>{filterJsx}</NoSsr>
@@ -144,7 +137,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
             </Button>
           </ModalDialog>
         </Modal>
-      </SearchHeaderContainer>
+      </Stack>
     );
   },
 );
