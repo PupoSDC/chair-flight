@@ -1,11 +1,11 @@
-import { Box, Divider, Link, Stack } from "@mui/joy";
+import { Box, Link, Stack } from "@mui/joy";
+import { AppFooter, AppHeader, AppLogo } from "@cf/react/components";
 import {
-  BugReportButton,
   AppButtonsContainer,
+  BugReportButton,
   GithubButton,
   ThemeButton,
-} from "@cf/next/user";
-import { AppFooter, AppHeader, AppLogo } from "@cf/react/components";
+} from "../_client/app-buttons";
 import type { FunctionComponent } from "react";
 
 type LayoutProps = {

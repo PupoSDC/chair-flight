@@ -2,8 +2,8 @@ import { z } from "zod";
 import { makeMap } from "@cf/base/utils";
 import { questionBankNameSchema } from "@cf/core/question-bank";
 import { createTest, newTestConfigurationSchema } from "@cf/core/tests";
-import { questionBanks } from "../../common/providers";
-import { publicProcedure, router } from "../../config/trpc";
+import { QuestionBank } from "@cf/providers/question-bank";
+import { publicProcedure, router } from "../config/trpc";
 
 export const testsRouter = router({
   createTest: publicProcedure
@@ -14,7 +14,7 @@ export const testsRouter = router({
       }),
     )
     .mutation(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
+      const qb = QuestionBank.get(input.questionBank);
       const questions = await qb.getAll("questions");
       const rawTest = await createTest({ ...input, questions });
       const annexIds = rawTest.questions.flatMap((q) => q.annexes);
@@ -40,7 +40,7 @@ export const testsRouter = router({
       }),
     )
     .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
+      const qb = QuestionBank.get(input.questionBank);
       const course = input.course;
       const allCourses = course === "all";
       const rawSubjects = await qb.getAll("subjects");

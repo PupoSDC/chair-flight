@@ -1,9 +1,9 @@
 "use client";
 
 import { Stack } from "@mui/joy";
-import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
 import { useSearchAnnexes } from "../../hooks/use-search-annexes";
+import { useTrackEvent } from "../../hooks/use-track-event";
 import { SearchAnnexesList } from "./search-annexes-list";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { AnnexSearchResult } from "@cf/core/search";
@@ -40,7 +40,7 @@ export const SearchAnnexesClient: FunctionComponent<
           search.setSearchQuery(v);
         }}
         onFilterValuesChange={(name, value) =>
-          search.filterForm.setValue(name, value)
+          search.filterForm.setValue(name as "subject", value as "all")
         }
       />
       <SearchAnnexesList

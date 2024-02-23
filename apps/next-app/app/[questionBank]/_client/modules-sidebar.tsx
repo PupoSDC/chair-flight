@@ -10,7 +10,6 @@ import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
 import { listItemContentClasses } from "@mui/joy";
-import path from "path";
 import { AppLogo, Sidebar, SidebarListItem } from "@cf/react/components";
 import type { FunctionComponent } from "react";
 
@@ -36,14 +35,14 @@ export const ModulesSidebar: FunctionComponent<ModulesSidebarProps> = ({
   routes,
 }) => {
   const pathname = usePathname();
-  const module = pathname.split("/")[2];
-  const isQuestions = module === "questions";
-  const isTests = module === "tests";
-  const isSettings = module === "settings";
-  const isLearningObjectives = module === "learning-objectives";
-  const isFlashcards = module === "flashcards";
-  const isAnnexes = module === "annexes";
-  const isDocs = module === "docs";
+  const moduleName = pathname.split("/")[2];
+  const isQuestions = moduleName === "questions";
+  const isTests = moduleName === "tests";
+  const isSettings = moduleName === "settings";
+  const isLearningObjectives = moduleName === "learning-objectives";
+  const isFlashcards = moduleName === "flashcards";
+  const isAnnexes = moduleName === "annexes";
+  const isDocs = moduleName === "docs";
   const isHome =
     !isQuestions &&
     !isTests &&
@@ -53,7 +52,7 @@ export const ModulesSidebar: FunctionComponent<ModulesSidebarProps> = ({
     !isLearningObjectives &&
     !isAnnexes;
 
-  return [
+  return (
     <Sidebar sx={{ height: "100vh" }}>
       <SidebarListItem
         href={"/"}
@@ -149,6 +148,6 @@ export const ModulesSidebar: FunctionComponent<ModulesSidebarProps> = ({
           icon={SettingsIcon}
         />
       )}
-    </Sidebar>,
-  ];
+    </Sidebar>
+  );
 };

@@ -5,7 +5,7 @@ import type { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export type AppHeaderProps = StackProps;
 
-const HEADER_HEIGHT = 48;
+const HEADER_HEIGHT = 49;
 
 type Header = ForwardRefExoticComponent<
   Omit<AppHeaderProps, "component"> & RefAttributes<HTMLHeadingElement>
@@ -36,7 +36,6 @@ export const AppHeader = forwardRef<HTMLHeadingElement, AppHeaderProps>(
 
           "& nav": {
             flex: 1,
-            pl: 3,
             display: "flex",
           },
 

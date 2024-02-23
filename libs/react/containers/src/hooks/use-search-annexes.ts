@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { annexSearchFilters } from "@cf/core/search";
 import { createUsePersistenceHook } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
+import { trpc } from "@cf/react/trpc";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = annexSearchFilters.parse({});
 const resolver = zodResolver(annexSearchFilters);
-const searchAnnexes = trpc.common.search.searchAnnexes;
+const searchAnnexes = trpc.search.searchAnnexes;
 const useSearchAnnexesQuery = searchAnnexes.useInfiniteQuery;
 
 const useSearchPersistence = {

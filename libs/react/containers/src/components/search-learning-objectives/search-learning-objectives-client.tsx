@@ -1,9 +1,9 @@
 "use client";
 
 import { Stack } from "@mui/joy";
-import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
 import { useSearchLearningObjectives } from "../../hooks/use-search-learning-objectives";
+import { useTrackEvent } from "../../hooks/use-track-event";
 import { SearchLearningObjectivesList } from "./search-learning-objectives-list";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { LearningObjectiveSearchResult } from "@cf/core/search";
@@ -40,7 +40,7 @@ export const SearchLearningObjectivesClient: FunctionComponent<
           search.setSearchQuery(v);
         }}
         onFilterValuesChange={(name, value) =>
-          search.filterForm.setValue(name, value)
+          search.filterForm.setValue(name as "subject", value as "all")
         }
       />
       <SearchLearningObjectivesList

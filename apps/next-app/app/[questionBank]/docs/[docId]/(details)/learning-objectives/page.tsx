@@ -14,7 +14,7 @@ type PageProps = {
 
 const Page: FunctionComponent<PageProps> = async ({ params }) => (
   <ModulesMain>
-    <DocLearningObjectives {...params} />
+    <DocLearningObjectives {...params} currentCourse="all" />
   </ModulesMain>
 );
 

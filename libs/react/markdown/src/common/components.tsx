@@ -71,10 +71,10 @@ export const markdownComponents: Partial<Components> = {
         p: 2,
         borderRadius: 8,
         borderLeft: "solid 8px",
-        borderLeftColor: (t) => t.vars.palette.text.tertiary,
-        "--joy-palette-text-secondary": (t) => t.vars.palette.text.tertiary,
-        color: (t) => t.vars.palette.text.tertiary,
-        background: (t) => t.vars.palette.background.surface,
+        borderLeftColor: "text.tertiary",
+        "--joy-palette-text-secondary": "text.tertiary",
+        color: "text.tertiary",
+        background: "background.surface",
       }}
     />
   ),

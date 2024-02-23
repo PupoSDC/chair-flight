@@ -1,13 +1,14 @@
-import { questionBanks, userProgress } from "../../common/providers";
-import { publicProcedure, router } from "../../config/trpc";
+import { QuestionBank } from "@cf/providers/question-bank";
+import { UserProgress } from "@cf/providers/user-progress";
+import { publicProcedure, router } from "../config/trpc";
 
 export const userProgressRouter = router({
   updateGlobalStatistics: publicProcedure.mutation(async () => {
     if (process.env["NODE_EMV"] !== "development") return;
-    userProgress.populateQuestionTemplates([
-      ...(await questionBanks.atpl.getAll("questions")),
-      ...(await questionBanks.prep.getAll("questions")),
-      ...(await questionBanks.type.getAll("questions")),
+    UserProgress.get().populateQuestionTemplates([
+      ...(await QuestionBank.get("atpl").getAll("questions")),
+      ...(await QuestionBank.get("prep").getAll("questions")),
+      ...(await QuestionBank.get("type").getAll("questions")),
     ]);
   }),
 });

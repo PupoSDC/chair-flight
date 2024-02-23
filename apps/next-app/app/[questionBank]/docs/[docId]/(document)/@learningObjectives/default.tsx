@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 const Page: FunctionComponent<PageProps> = async ({ params }) => (
-  <DocLearningObjectives {...params} forceMode="mobile" />
+  <DocLearningObjectives {...params} forceMode="mobile" currentCourse="all" />
 );
 
 export default Page;

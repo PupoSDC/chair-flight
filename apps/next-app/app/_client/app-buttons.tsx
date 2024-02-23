@@ -8,20 +8,13 @@ import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
 import { default as HamburgerIcon } from "@mui/icons-material/Menu";
 import { default as NotificationIcon } from "@mui/icons-material/NotificationsNoneOutlined";
-import {
-  Link,
-  IconButton,
-  styled,
-  useColorScheme,
-  Tooltip,
-  Stack,
-} from "@mui/joy";
+import { Link, IconButton, useColorScheme, Tooltip, Stack } from "@mui/joy";
+import { useTrackEvent } from "libs/react/containers/src/hooks/use-track-event";
 import { DateTime } from "luxon";
-import { useTrackEvent } from "@cf/next/analytics";
-import { useBugReportDisclose, useUserVoyage } from "@cf/next/user";
 import { useSidebar, noSsr } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
-import type { FunctionComponent } from "react";
+import { useBugReportDisclose, useUserVoyage } from "@cf/react/containers";
+import { trpc } from "@cf/react/trpc";
+import type { FunctionComponent, ReactNode } from "react";
 
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight";
 
@@ -82,7 +75,7 @@ export const ThemeButton: FunctionComponent = noSsr(
 
 export const NotificationButton: FunctionComponent = noSsr(
   () => {
-    const getDateOfLastPost = trpc.common.blog.getDateOfLastPost;
+    const getDateOfLastPost = trpc.blog.getDateOfLastPost;
     const [{ lastPostDate }] = getDateOfLastPost.useSuspenseQuery();
     const [userVoyage] = useUserVoyage();
 
@@ -127,8 +120,29 @@ export const BugReportButton: FunctionComponent = noSsr(
   () => null,
 );
 
-export const AppButtonsContainer = styled(Stack)`
-  flex-direction: row;
-  margin-left: auto;
-  justify-content: space-between;
-`;
+export const AppButtonsContainer: FunctionComponent<{
+  children: ReactNode;
+}> = ({ children }) => (
+  <Stack
+    sx={{
+      flexDirection: "row",
+      marginLeft: "auto",
+      gap: 0.5,
+      justifyContent: "space-between",
+
+      "& > *": {
+        p: 0,
+        minWidth: { xs: "22px", sm: "36px" },
+        minHeight: { xs: "22px", sm: "36px" },
+        width: { xs: "22px", sm: "36px" },
+        height: { xs: "22px", sm: "36px" },
+      },
+      [`& svg`]: {
+        width: { xs: "18px", sm: "24px" },
+        height: { xs: "18px", sm: "24px" },
+      },
+    }}
+  >
+    {children}
+  </Stack>
+);

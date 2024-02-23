@@ -1,5 +1,5 @@
-import { useCallback, useContext, useRef } from "react";
-import { trpcNext14 } from "@cf/trpc/client";
+import { useCallback } from "react";
+import { trpc } from "@cf/react/trpc";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
 type TrackEventMap = {
@@ -35,16 +35,22 @@ type TrackEventMap = {
 
 type TrackEventName = keyof TrackEventMap;
 
+const useTrackEventMutation = trpc.analytics.trackEvent.useMutation;
+
 export const useTrackEvent = () => {
-  const trpcUtils = trpcNext14.useUtils();
-  const ref = useRef(trpcUtils.common.analytics);
-  ref.current = trpcUtils.common.analytics;
+  const { mutate: mutateTrackEvent } = useTrackEventMutation();
 
   const trackEvent = useCallback(
-    <T extends TrackEventName>(name: T, payload: TrackEventMap[T]) => {
-      ref.current?.trackEvent;
+    <T extends TrackEventName>(eventName: T, properties: TrackEventMap[T]) => {
+      mutateTrackEvent({
+        eventName,
+        properties,
+        path: "",
+        resolvedPath: "",
+        anonymousId: "",
+      });
     },
-    [],
+    [mutateTrackEvent],
   );
 
   return trackEvent;

@@ -1,5 +1,4 @@
 import { QuestionBank } from "@cf/providers/question-bank";
-import { AppHeader } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import { ModulesHeader } from "./_client/modules-header";
 import { ModulesSidebar } from "./_client/modules-sidebar";

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { questionBankNameSchema } from "@cf/core/question-bank";
-import { questionBanks } from "../../common/providers";
-import { publicProcedure, router } from "../../config/trpc";
+import { QuestionBank } from "@cf/providers/question-bank";
+import { publicProcedure, router } from "../config/trpc";
 
 export const questionsRouter = router({
   getQuestionTemplate: publicProcedure
@@ -12,7 +12,7 @@ export const questionsRouter = router({
       }),
     )
     .query(async ({ input }) => {
-      const qb = questionBanks[input.questionBank];
+      const qb = await QuestionBank.get(input.questionBank);
       const question = await qb.getOne("questions", input.questionId);
       const related = await qb.getSome("questions", question.relatedQuestions);
       return { question, relatedQuestions: related };

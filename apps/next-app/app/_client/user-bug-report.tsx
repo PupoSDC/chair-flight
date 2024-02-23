@@ -15,15 +15,16 @@ import {
   Typography,
 } from "@mui/joy";
 import { z } from "zod";
-import { useBugReportStore } from "@cf/next/user";
 import { HookFormInput, HookFormTextArea, toast } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
+import { useBugReportStore } from "@cf/react/containers";
+import { trpc } from "@cf/react/trpc";
+import type { FunctionComponent } from "react";
 
 /** TODO Centralize this */
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight/issues";
 
 const BugReportForm = forwardRef<HTMLFormElement>((_, ref) => {
-  const createIssue = trpc.common.github.createIssue.useMutation();
+  const createIssue = trpc.github.createIssue.useMutation();
   const debugDataCallbacks = useBugReportStore((b) => b.debugDataCallbacks);
   const bugReportSchema = z.object({
     title: z.string().min(5).max(50),
@@ -127,7 +128,7 @@ const BugReportForm = forwardRef<HTMLFormElement>((_, ref) => {
   );
 });
 
-export const UserBugReport = () => {
+export const UserBugReport: FunctionComponent = () => {
   const isOpen = useBugReportStore((b) => b.isOpen);
   const setIsAvailable = useBugReportStore((b) => b.setIsAvailable);
   const setIsOpen = useBugReportStore((b) => b.setIsOpen);

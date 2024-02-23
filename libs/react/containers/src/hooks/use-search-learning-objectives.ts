@@ -3,13 +3,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { learningObjectiveSearchFilters } from "@cf/core/search";
 import { createUsePersistenceHook } from "@cf/react/components";
-import { trpc } from "@cf/trpc/client";
+import { trpc } from "@cf/react/trpc";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = learningObjectiveSearchFilters.parse({});
 const resolver = zodResolver(learningObjectiveSearchFilters);
 const keyPrefix = "cf-learning-objectives-search" as const;
-const searchLos = trpc.common.search.searchLearningObjectives;
+const searchLos = trpc.search.searchLearningObjectives;
 const useSearchLosQuery = searchLos.useInfiniteQuery;
 
 const useSearchPersistence = {

@@ -1,26 +1,27 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Breadcrumbs, Link, Typography, useTheme } from "@mui/joy";
+import { Breadcrumbs, Link, Typography } from "@mui/joy";
+import { AppHeader, Sidebar } from "@cf/react/components";
 import {
   AppButtonsContainer,
   BugReportButton,
   GithubButton,
   HamburgerButton,
   ThemeButton,
-} from "@cf/next/user";
-import { AppHeader, Sidebar, useMediaQuery } from "@cf/react/components";
+} from "../../_client/app-buttons";
 
 export const ModulesHeader = () => {
   const pathName = usePathname();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const breadcrumbs = pathName
     .split("/")
     .filter(Boolean)
     .map((segment, index) => {
-      const url = pathName.split("/").slice(0, index).join("/");
+      const url = pathName
+        .split("/")
+        .slice(0, index + 2)
+        .join("/");
       const name = segment
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -28,13 +29,11 @@ export const ModulesHeader = () => {
       return { name, url };
     });
 
-  const secondToLastBreadcrumb = breadcrumbs?.at(-2);
   const lastBreadcrumb = breadcrumbs?.at(-1);
 
   return (
     <AppHeader
       sx={{
-        boxSizing: "content-box",
         backgroundColor: "background.surface",
         borderBottomStyle: "solid",
         borderBottomWidth: 1,
@@ -44,15 +43,11 @@ export const ModulesHeader = () => {
         right: 0,
       }}
     >
-      <Breadcrumbs separator="›" sx={{ ml: 2 }}>
-        {isMobile && secondToLastBreadcrumb && (
-          <Link href={secondToLastBreadcrumb.url}>•••</Link>
-        )}
-        {!isMobile &&
-          breadcrumbs?.slice(0, -1).map(({ name, url }) => (
-            <Link key={url} color="neutral" href={url}>
-              {name}
-            </Link>
+      <Breadcrumbs separator="›" sx={{ px: 0 }}>
+        {breadcrumbs
+          ?.slice(0, -1)
+          .map(({ name, url }) => (
+            <Link key={url} href={url} children={name} color="neutral" />
           ))}
         {lastBreadcrumb && <Typography>{lastBreadcrumb.name}</Typography>}
       </Breadcrumbs>

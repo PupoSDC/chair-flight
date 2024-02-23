@@ -14,7 +14,7 @@ import type {
   QuestionVariant,
 } from "@cf/core/question-bank";
 import type { PersistenceKey } from "@cf/react/components";
-import type { trpc } from "@cf/trpc/client";
+import type { trpc } from "@cf/react/trpc";
 
 const persistenceKey: PersistenceKey = "cf-question-editor";
 
@@ -130,7 +130,7 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
   type: { beforeState: {}, afterState: {} },
   prep: { beforeState: {}, afterState: {} },
   addQuestion: async ({ trpc, questionBank, questionId }) => {
-    const router = trpc.common.questions;
+    const router = trpc.questions;
     const { question, relatedQuestions } =
       await router.getQuestionTemplate.fetch({
         questionBank,
@@ -146,7 +146,7 @@ const questionEditor = immer<QuestionEditor>((set, get) => ({
     });
   },
   removeQuestion: async ({ trpc, questionBank, questionId }) => {
-    const router = trpc.common.questions;
+    const router = trpc.questions;
     const { question, relatedQuestions } =
       await router.getQuestionTemplate.fetch({
         questionBank,

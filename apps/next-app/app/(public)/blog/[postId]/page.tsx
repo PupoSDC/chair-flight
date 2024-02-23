@@ -1,12 +1,12 @@
 import { MDXRemote } from "@daviereid/next-mdx-remote/rsc";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
+import { BugReportButton } from "apps/next-app/app/_client/app-buttons";
 import { DateTime } from "luxon";
 import { markdownPlugins } from "@cf/core/markdown";
-import { BugReportButton } from "@cf/next/user";
 import { Blog } from "@cf/providers/blog";
 import { AppMain, BlogPostChip } from "@cf/react/components";
-import { Mdx, markdownComponents } from "@cf/react/markdown";
+import { markdownComponents } from "@cf/react/markdown";
 import type { FunctionComponent } from "react";
 
 type Params = { postId: string };

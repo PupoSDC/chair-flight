@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import { keepUnique } from "@cf/base/utils";
 import { QuestionBank } from "@cf/providers/question-bank";
-import { LearningObjectiveSearch, QuestionSearch } from "@cf/providers/search";
+import { LearningObjectiveSearch } from "@cf/providers/search";
 import { SearchLearningObjectivesList } from "@cf/react/containers";
 import type { DocId, QuestionBankName } from "@cf/core/question-bank";
 import type { SearchLearningObjectivesListProps } from "@cf/react/containers";
@@ -17,21 +18,29 @@ type DocLearningObjectivesProps = Omit<
 export const DocLearningObjectives: FunctionComponent<
   DocLearningObjectivesProps
 > = async ({ questionBank, docId, ...props }) => {
-  const bank = QuestionBank.get(questionBank);
-  const search = LearningObjectiveSearch.get();
-  const doc = await bank.getOne("docs", docId);
-  const los = await bank.getSome("learningObjectives", doc.learningObjectives);
-  // recursively get all learning objectives
-  for (const lo of los) {
-    const children = await bank.getSome(
+  try {
+    const bank = QuestionBank.get(questionBank);
+    const search = LearningObjectiveSearch.get();
+    const doc = await bank.getOne("docs", docId);
+    const los = await bank.getSome(
       "learningObjectives",
-      lo.learningObjectives,
+      doc.learningObjectives,
     );
-    los.push(...children);
+    // recursively get all learning objectives
+    for (const lo of los) {
+      const children = await bank.getSome(
+        "learningObjectives",
+        lo.learningObjectives,
+      );
+      los.push(...children);
+    }
+    const loIds = keepUnique(los)
+      .sort((a, b) => a.id.localeCompare(b.id))
+      .map((lo) => lo.id);
+    const { items } = await search.retrieve(bank, loIds);
+
+    return <SearchLearningObjectivesList items={items} {...props} />;
+  } catch (error) {
+    return notFound();
   }
-  const loIds = keepUnique(los)
-    .sort((a, b) => a.id.localeCompare(b.id))
-    .map((lo) => lo.id);
-  const { items } = await search.retrieve(bank, loIds);
-  return <SearchLearningObjectivesList items={items} {...props} />;
 };

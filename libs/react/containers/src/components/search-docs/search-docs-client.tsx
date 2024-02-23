@@ -1,9 +1,9 @@
 "use client";
 
 import { Stack } from "@mui/joy";
-import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
 import { useSearchDocs } from "../../hooks/use-search-docs";
+import { useTrackEvent } from "../../hooks/use-track-event";
 import { SearchDocsList } from "./search-docs-list";
 import type { QuestionBankName, SubjectId } from "@cf/core/question-bank";
 import type { DocSearchResult } from "@cf/core/search";
@@ -46,7 +46,7 @@ export const SearchDocsClient: FunctionComponent<SearchDocsClientProps> = ({
           search.setSearchQuery(v);
         }}
         onFilterValuesChange={(name, value) =>
-          search.filterForm.setValue(name, value)
+          search.filterForm.setValue(name as "subject", value as "all")
         }
       />
       <SearchDocsList

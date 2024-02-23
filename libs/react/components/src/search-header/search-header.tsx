@@ -15,6 +15,7 @@ import {
 import { useDisclose } from "../hooks/use-disclose";
 import { SearchQuery } from "../search-query";
 import type { StackProps } from "@mui/joy";
+import type { ReactNode } from "react";
 
 export type SearchHeaderProps = {
   search: string;
@@ -23,6 +24,7 @@ export type SearchHeaderProps = {
   filterValues: Record<string, string>;
   isLoading: boolean;
   isError: boolean;
+  children?: ReactNode;
   mobileBreakpoint?: "sm" | "md" | "lg" | "xl" | "force-mobile";
   sx?: StackProps["sx"];
   onSearchChange: (value: string) => void;
@@ -40,6 +42,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
       isLoading,
       isError,
       mobileBreakpoint = "md",
+      children,
       onSearchChange,
       onFilterValuesChange,
     },
@@ -122,6 +125,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
             <FilterIcon />
           </Badge>
         </IconButton>
+        {children}
         <Modal open={filterModal.isOpen} onClose={filterModal.close}>
           <ModalDialog aria-labelledby="filter-modal">
             <ModalClose />

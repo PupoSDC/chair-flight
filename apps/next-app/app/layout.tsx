@@ -1,7 +1,7 @@
 import { Stack } from "@mui/joy";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@cf/react/theme";
-import { TrpcProvider } from "@cf/trpc/client";
+import { TrpcProvider } from "@cf/react/trpc";
 import { UserBugReport } from "./_client/user-bug-report";
 import { LayoutThemeScript } from "./layout-theme-script";
 

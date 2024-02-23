@@ -6,10 +6,18 @@ const getClockTime = (milliseconds: number) => {
   return duration.toFormat("hh:mm");
 };
 
+export type ProcessedTest = Test & {
+  color: "warning" | "success" | "danger" | "primary";
+  score: number;
+  timeSpent: string;
+  timeLeft: string;
+  timeStarted: string | undefined;
+};
+
 /**
  * returns a bunch of derivative information from data in Test.
  */
-export const processTest = (test: Test) => {
+export const processTest = (test: Test): ProcessedTest => {
   const correctAnswers = test.questions.reduce(
     (s, q) => s + (q.selectedOptionId === q.correctOptionId ? 1 : 0),
     0,
@@ -34,11 +42,12 @@ export const processTest = (test: Test) => {
 
   const timeSpent = getClockTime(test.timeSpentInMs);
 
-  const timeStarted =
-    test.startedAtEpochMs &&
-    DateTime.fromMillis(test.startedAtEpochMs).toFormat("DDD");
+  const timeStarted = test.startedAtEpochMs
+    ? DateTime.fromMillis(test.startedAtEpochMs).toFormat("DDD")
+    : undefined;
 
   return {
+    ...test,
     color,
     score,
     timeSpent,
