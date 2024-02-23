@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { learningObjectiveSearchFilters } from "@cf/core/search";
+import { questionSearchFilters } from "@cf/core/search";
 import { createUsePersistenceHook } from "@cf/react/components";
 import { trpc } from "@cf/trpc/client";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
-const defaultFilter = learningObjectiveSearchFilters.parse({});
-const resolver = zodResolver(learningObjectiveSearchFilters);
-const keyPrefix = "cf-learning-objectives-search" as const;
-const searchLos = trpc.common.search.searchLearningObjectives;
-const useSearchLos = searchLos.useInfiniteQuery;
+const defaultFilter = questionSearchFilters.parse({});
+const resolver = zodResolver(questionSearchFilters);
+const searchQuestions = trpc.common.search.searchQuestions;
+const useSearchQuestionsQuery = searchQuestions.useInfiniteQuery;
 
 const useSearchPersistence = {
-  atpl: createUsePersistenceHook(`${keyPrefix}-atpl`, defaultFilter),
-  type: createUsePersistenceHook(`${keyPrefix}-type`, defaultFilter),
-  prep: createUsePersistenceHook(`${keyPrefix}-prep`, defaultFilter),
+  atpl: createUsePersistenceHook("cf-question-search-atpl", defaultFilter),
+  type: createUsePersistenceHook("cf-question-search-type", defaultFilter),
+  prep: createUsePersistenceHook("cf-question-search-prep", defaultFilter),
 };
 
-export const useLearningObjectiveSearch = ({
+export const useSearchQuestions = ({
   questionBank,
 }: {
   questionBank: QuestionBankName;
@@ -30,11 +29,10 @@ export const useLearningObjectiveSearch = ({
 
   const searchField = filterForm.watch("searchField");
   const subject = filterForm.watch("subject");
-  const course = filterForm.watch("course");
-  const filters = { subject, course };
+  const filters = { subject };
 
-  const los = useSearchLos(
-    { q: searchQuery, questionBank, limit: 20, searchField, filters },
+  const questions = useSearchQuestionsQuery(
+    { q: searchQuery, questionBank, limit: 24, searchField, filters },
     { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
   );
 
@@ -45,16 +43,15 @@ export const useLearningObjectiveSearch = ({
     }),
   );
 
-  const items = los.data?.pages.flatMap((p) => p.items) ?? [];
+  const items = questions.data?.pages.flatMap((p) => p.items) ?? [];
 
   return {
     searchQuery,
     setSearchQuery,
     filterForm,
-    isLoading: los.isLoading,
-    isError: los.isError,
-    fetchNextPage: los.fetchNextPage,
+    isLoading: questions.isLoading,
+    isError: questions.isError,
+    fetchNextPage: questions.fetchNextPage,
     items,
-    course,
   };
 };

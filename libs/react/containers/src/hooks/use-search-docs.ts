@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { annexSearchFilters } from "@cf/core/search";
+import { docSearchFilters } from "@cf/core/search";
 import { createUsePersistenceHook } from "@cf/react/components";
 import { trpc } from "@cf/trpc/client";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
-const defaultFilter = annexSearchFilters.parse({});
-const resolver = zodResolver(annexSearchFilters);
-const searchAnnexes = trpc.common.search.searchAnnexes;
-const useSearchAnnexes = searchAnnexes.useInfiniteQuery;
+const defaultFilter = docSearchFilters.parse({});
+const resolver = zodResolver(docSearchFilters);
+const searchDocs = trpc.common.search.searchDocs;
+const useSearchDocQuery = searchDocs.useInfiniteQuery;
 
 const useSearchPersistence = {
-  atpl: createUsePersistenceHook("cf-annex-search-atpl", defaultFilter),
-  type: createUsePersistenceHook("cf-annex-search-type", defaultFilter),
-  prep: createUsePersistenceHook("cf-annex-search-prep", defaultFilter),
+  atpl: createUsePersistenceHook("cf-docs-search-atpl", defaultFilter),
+  type: createUsePersistenceHook("cf-docs-search-type", defaultFilter),
+  prep: createUsePersistenceHook("cf-docs-search-prep", defaultFilter),
 };
 
-export const useAnnexSearch = ({
+export const useSearchDocs = ({
   questionBank,
 }: {
   questionBank: QuestionBankName;
@@ -31,7 +31,7 @@ export const useAnnexSearch = ({
   const subject = filterForm.watch("subject");
   const filters = { subject };
 
-  const annexes = useSearchAnnexes(
+  const questions = useSearchDocQuery(
     { q: searchQuery, questionBank, limit: 24, searchField, filters },
     { getNextPageParam: (l) => l.nextCursor, initialCursor: 0 },
   );
@@ -43,15 +43,15 @@ export const useAnnexSearch = ({
     }),
   );
 
-  const items = annexes.data?.pages.flatMap((p) => p.items) ?? [];
+  const items = questions.data?.pages.flatMap((p) => p.items) ?? [];
 
   return {
     searchQuery,
     setSearchQuery,
     filterForm,
-    isLoading: annexes.isLoading,
-    isError: annexes.isError,
-    fetchNextPage: annexes.fetchNextPage,
+    isLoading: questions.isLoading,
+    isError: questions.isError,
+    fetchNextPage: questions.fetchNextPage,
     items,
   };
 };

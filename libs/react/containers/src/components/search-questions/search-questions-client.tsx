@@ -3,7 +3,7 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
-import { useQuestionSearch } from "../../hooks/use-question-search";
+import { useSearchQuestions } from "../../hooks/use-search-questions";
 import { SearchQuestionsList } from "./search-questions-list";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { QuestionSearchResult } from "@cf/core/search";
@@ -22,7 +22,7 @@ export type SearchQuestionsClientProps = {
 export const SearchQuestionsClient: FunctionComponent<
   SearchQuestionsClientProps
 > = ({ component = "div", sx, questionBank, filters, forceMode }) => {
-  const search = useQuestionSearch({ questionBank });
+  const search = useSearchQuestions({ questionBank });
   const trackEvent = useTrackEvent();
 
   return (

@@ -3,7 +3,7 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
-import { useDocSearch } from "../../hooks/use-doc-search";
+import { useSearchDocs } from "../../hooks/use-search-docs";
 import { SearchDocsList } from "./search-docs-list";
 import type { QuestionBankName, SubjectId } from "@cf/core/question-bank";
 import type { DocSearchResult } from "@cf/core/search";
@@ -28,7 +28,7 @@ export const SearchDocsClient: FunctionComponent<SearchDocsClientProps> = ({
   sx,
   forceMode,
 }) => {
-  const search = useDocSearch({ questionBank });
+  const search = useSearchDocs({ questionBank });
   const trackEvent = useTrackEvent();
 
   return (

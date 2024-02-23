@@ -3,7 +3,7 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
-import { useAnnexSearch } from "../../hooks/use-annex-search";
+import { useSearchAnnexes } from "../../hooks/use-search-annexes";
 import { SearchAnnexesList } from "./search-annexes-list";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { AnnexSearchResult } from "@cf/core/search";
@@ -22,7 +22,7 @@ export type SearchAnnexesClientProps = {
 export const SearchAnnexesClient: FunctionComponent<
   SearchAnnexesClientProps
 > = ({ component = "div", sx, questionBank, filters, forceMode }) => {
-  const search = useAnnexSearch({ questionBank });
+  const search = useSearchAnnexes({ questionBank });
   const trackEvent = useTrackEvent();
 
   return (

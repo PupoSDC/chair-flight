@@ -1,7 +1,14 @@
 "use client";
 
 import { forwardRef } from "react";
-import { Box, Divider, Link, ListItemContent, Typography } from "@mui/joy";
+import {
+  Box,
+  Chip,
+  Divider,
+  Link,
+  ListItemContent,
+  Typography,
+} from "@mui/joy";
 import { SearchList } from "@cf/react/components";
 import { Markdown } from "@cf/react/markdown";
 import type { LearningObjectiveSearchResult } from "@cf/core/search";
@@ -10,7 +17,9 @@ import type { SearchListProps } from "@cf/react/components";
 export type SearchLearningObjectivesListProps = Omit<
   SearchListProps<LearningObjectiveSearchResult>,
   "renderThead" | "renderTableRow" | "renderListItemContent"
->;
+> & {
+  currentCourse: string;
+};
 
 export const SearchLearningObjectivesList = forwardRef<
   HTMLDivElement,
@@ -21,6 +30,7 @@ export const SearchLearningObjectivesList = forwardRef<
       items,
       errorMessage = "Error fetching Learning Objectives",
       noDataMessage = "No Learning Objectives found",
+      currentCourse,
       ...otherProps
     },
     ref,

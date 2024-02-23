@@ -3,7 +3,7 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
 import { SearchHeader } from "@cf/react/components";
-import { useLearningObjectiveSearch } from "../../hooks/use-learning-objective-search";
+import { useSearchLearningObjectives } from "../../hooks/use-search-learning-objectives";
 import { SearchLearningObjectivesList } from "./search-learning-objectives-list";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { LearningObjectiveSearchResult } from "@cf/core/search";
@@ -22,7 +22,7 @@ export type SearchLearningObjectivesClientProps = {
 export const SearchLearningObjectivesClient: FunctionComponent<
   SearchLearningObjectivesClientProps
 > = ({ component = "div", sx, questionBank, filters, forceMode }) => {
-  const search = useLearningObjectiveSearch({ questionBank });
+  const search = useSearchLearningObjectives({ questionBank });
   const trackEvent = useTrackEvent();
 
   return (
@@ -48,6 +48,7 @@ export const SearchLearningObjectivesClient: FunctionComponent<
         error={search.isError}
         forceMode={forceMode}
         items={search.items}
+        currentCourse={search.course}
         onFetchNextPage={search.fetchNextPage}
         sx={{ flex: 1, overflow: "hidden" }}
       />
