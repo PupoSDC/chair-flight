@@ -8,8 +8,7 @@ import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = docSearchFilters.parse({});
 const resolver = zodResolver(docSearchFilters);
-const searchDocs = trpc.search.searchDocs;
-const useSearchDocQuery = searchDocs.useInfiniteQuery;
+const useSearchDocQuery = trpc.search.searchDocs.useInfiniteQuery;
 
 const useSearchPersistence = {
   atpl: createUsePersistenceHook("cf-docs-search-atpl", defaultFilter),

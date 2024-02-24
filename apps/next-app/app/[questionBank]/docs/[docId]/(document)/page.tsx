@@ -1,5 +1,4 @@
-import { MDXRemote } from "@daviereid/next-mdx-remote/rsc";
-import { Divider, Link, Stack, Typography } from "@mui/joy";
+import { Chip, Divider, Drawer, Link, Stack, Typography } from "@mui/joy";
 import { markdownPlugins } from "@cf/core/markdown";
 import { Github } from "@cf/providers/github";
 import { QuestionBank } from "@cf/providers/question-bank";
@@ -7,6 +6,8 @@ import { markdownComponents } from "@cf/react/markdown";
 import { ModulesMain } from "../../../_client/modules-main";
 import type { DocId, QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
+import { MdxRemote } from "@cf/react/containers";
+import { DocLearningObjectives } from "../(details)/learning-objectives/doc-learning-objectives";
 
 type PageParams = {
   questionBank: QuestionBankName;
@@ -14,8 +15,14 @@ type PageParams = {
 };
 
 type PageProps = {
-  params: PageParams;
-};
+  params: {
+    questionBank: QuestionBankName;
+    docId: DocId;
+  };
+  searchParams: {
+    drawer?: "learning-objectives" | "questions";
+  }
+}
 
 const getData = async (params: PageParams) => {
   const github = Github.get();
@@ -53,7 +60,7 @@ const getData = async (params: PageParams) => {
   return { doc };
 };
 
-const Page: FunctionComponent<PageProps> = async ({ params }) => {
+const Page: FunctionComponent<PageProps> = async ({ params, searchParams }) => {
   const { doc } = await getData(params);
   return (
     <ModulesMain>
@@ -69,7 +76,7 @@ const Page: FunctionComponent<PageProps> = async ({ params }) => {
         />
 
         <Divider sx={{ width: "100%", my: 1 }} />
-        {/**
+
         <Stack
           spacing={1}
           width={"100%"}
@@ -77,21 +84,25 @@ const Page: FunctionComponent<PageProps> = async ({ params }) => {
           direction={{ xs: "column", sm: "row" }}
           alignItems={{ xs: "flex-start" }}
         >
-          <Chip color="primary" onClick={learningObjectivesDisclose.open}>
+          <Chip color="primary" href="?drawer=learning-objectives" component={Link}>
             Learning Objectives
           </Chip>
-          <Chip color="primary" onClick={questionsDrawer.open}>
+          <Chip color="primary" href="?drawer=questions" component={Link}>
             Questions
           </Chip>
-        </Stack> */}
-
-        <MDXRemote
+        </Stack> 
+        
+        <MdxRemote
           source={doc.content}
           components={{
             ...markdownComponents,
           }}
           {...markdownPlugins}
         />
+
+        <Drawer open={searchParams.drawer === "learning-objectives"}>
+          <DocLearningObjectives {...params} currentCourse="all" />
+        </Drawer>
       </Stack>
     </ModulesMain>
   );

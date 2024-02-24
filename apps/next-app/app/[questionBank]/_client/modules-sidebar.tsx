@@ -60,6 +60,8 @@ export const ModulesSidebar: FunctionComponent<ModulesSidebarProps> = ({
         icon={AppLogo}
         title=""
         sx={{
+          overflowX: "hidden",
+          textWrap: "nowrap",
           height: (t) => t.spacing(6),
           pl: 0.5,
           svg: {

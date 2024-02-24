@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { default as ConstructionIcon } from "@mui/icons-material/Construction";
 import { default as HourglassEmptyIcon } from "@mui/icons-material/HourglassEmpty";

@@ -74,7 +74,11 @@ export const markdownComponents: Partial<Components> = {
         borderLeftColor: "text.tertiary",
         "--joy-palette-text-secondary": "text.tertiary",
         color: "text.tertiary",
-        background: "background.surface",
+        bgcolor: "background.surface",
+
+        "& > :first-child": {
+          mt: 0,
+        },
       }}
     />
   ),

@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { Box, Link, ListItemContent, Typography } from "@mui/joy";
 import { ImageWithModal, SearchList } from "@cf/react/components";
