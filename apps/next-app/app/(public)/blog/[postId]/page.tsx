@@ -1,4 +1,3 @@
-import { MDXRemote } from "@daviereid/next-mdx-remote/rsc";
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { BugReportButton } from "apps/next-app/app/_client/app-buttons";
@@ -8,6 +7,7 @@ import { Blog } from "@cf/providers/blog";
 import { AppMain, BlogPostChip } from "@cf/react/components";
 import { markdownComponents } from "@cf/react/markdown";
 import type { FunctionComponent } from "react";
+import { MdxRemote } from "@cf/react/containers";
 
 type Params = { postId: string };
 type BlogPostProps = { params: Params };
@@ -66,14 +66,13 @@ const BlogPost: FunctionComponent<BlogPostProps> = async ({ params }) => {
         />
       </Box>
 
-      <MDXRemote
+      <MdxRemote
         source={post.content}
         components={{
           ...markdownComponents,
           BugReportButton,
           Stack,
         }}
-        {...markdownPlugins}
       />
 
       <Typography

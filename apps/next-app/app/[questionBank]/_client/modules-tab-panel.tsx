@@ -2,18 +2,18 @@
 
 import { Sidebar } from "@cf/react/components"
 
-import { Box, TabPanel, TabPanelProps, tabClasses } from "@mui/joy"
-import { FunctionComponent } from "react"
+import { TabPanel, TabPanelProps } from "@mui/joy"
+import { FunctionComponent, forwardRef } from "react"
 
-export const ModulesTabPanel: FunctionComponent<TabPanelProps> = (props) => (
-    <>
-        <TabPanel
-            {...props}
-            sx={{
-                width: Sidebar.css.remainingWidth,
-                transition: Sidebar.css.widthTransition,
-                ml: "auto",
-            }}
-        />
-    </>
-);
+export const ModulesTabPanel = forwardRef<HTMLDivElement, TabPanelProps>((props, ref) => (
+    <TabPanel
+        {...props}
+        ref={ref}
+        sx={{
+            width: Sidebar.css.remainingWidth,
+            transition: Sidebar.css.widthTransition,
+            ml: "auto",
+            ...props.sx
+        }}
+    />
+));

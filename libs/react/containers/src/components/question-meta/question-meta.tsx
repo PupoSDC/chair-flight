@@ -1,4 +1,4 @@
-import { default as Stack, StackProps } from "@mui/joy/stack";
+import { Stack, StackProps } from "@mui/joy";
 import { QuestionBank } from "@cf/providers/question-bank";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { QuestionId } from "@cf/core/tests";

@@ -1,4 +1,4 @@
-import { default as Stack, StackProps } from "@mui/joy/stack";
+import {  Stack, StackProps } from "@mui/joy";
 import { MdxRemote } from "../mdx-remote";
 import { QuestionBank } from "@cf/providers/question-bank";
 import { markdownComponents } from "@cf/react/markdown";

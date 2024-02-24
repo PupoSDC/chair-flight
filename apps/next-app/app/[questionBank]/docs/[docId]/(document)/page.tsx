@@ -100,7 +100,9 @@ const Page: FunctionComponent<PageProps> = async ({ params, searchParams }) => {
           {...markdownPlugins}
         />
 
-        <Drawer open={searchParams.drawer === "learning-objectives"}>
+        <Drawer 
+          open={searchParams.drawer === "learning-objectives"}
+        >
           <DocLearningObjectives {...params} currentCourse="all" />
         </Drawer>
       </Stack>

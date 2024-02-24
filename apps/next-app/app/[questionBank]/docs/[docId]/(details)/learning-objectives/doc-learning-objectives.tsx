@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { keepUnique } from "@cf/base/utils";
 import { QuestionBank } from "@cf/providers/question-bank";
 import { LearningObjectiveSearch } from "@cf/providers/search";
@@ -39,5 +38,4 @@ export const DocLearningObjectives: FunctionComponent<
   const { items } = await search.retrieve(bank, loIds);
 
   return <SearchLearningObjectivesList items={items} {...props} />;
-
 };
