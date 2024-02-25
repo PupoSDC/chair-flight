@@ -132,10 +132,10 @@ export const AppButtonsContainer: FunctionComponent<{
 
       "& > *": {
         p: 0,
-        minWidth: { xs: "22px", sm: "36px" },
-        minHeight: { xs: "22px", sm: "36px" },
-        width: { xs: "22px", sm: "36px" },
-        height: { xs: "22px", sm: "36px" },
+        minWidth: { xs: "24px", sm: "36px" },
+        minHeight: { xs: "24px", sm: "36px" },
+        width: { xs: "24px", sm: "36px" },
+        height: { xs: "24px", sm: "36px" },
       },
       [`& svg`]: {
         width: { xs: "18px", sm: "24px" },

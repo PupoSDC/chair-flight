@@ -1,7 +1,6 @@
 import {  Stack, StackProps } from "@mui/joy";
 import { MdxRemote } from "../mdx-remote";
 import { QuestionBank } from "@cf/providers/question-bank";
-import { markdownComponents } from "@cf/react/markdown";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { QuestionId } from "@cf/core/tests";
 import type { FunctionComponent } from "react";

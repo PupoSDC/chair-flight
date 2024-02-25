@@ -3,7 +3,7 @@
 import { Sidebar } from "@cf/react/components"
 
 import { TabPanel, TabPanelProps } from "@mui/joy"
-import { FunctionComponent, forwardRef } from "react"
+import { forwardRef } from "react"
 
 export const ModulesTabPanel = forwardRef<HTMLDivElement, TabPanelProps>((props, ref) => (
     <TabPanel

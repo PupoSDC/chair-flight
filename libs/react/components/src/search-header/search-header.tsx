@@ -84,7 +84,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
       <Stack
         ref={ref}
         sx={{
-          gap: 1,
+          gap: { xs: 1, sm: 2 },
           flexDirection: "row",
 
           [`& .${selectClasses.root}`]: {
@@ -114,7 +114,7 @@ export const SearchHeader = forwardRef<HTMLDivElement, SearchHeaderProps>(
           variant="outlined"
           color="neutral"
           onClick={filterModal.open}
-          sx={{ display: { [mobileBreakpoint]: "none" } }}
+          sx={{ display: { [mobileBreakpoint]: "none" }, bgcolor: "background.surface" }}
         >
           <Badge
             badgeContent={activeFilters}

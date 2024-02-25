@@ -1,6 +1,6 @@
 import { Stack, StackProps } from "@mui/joy";
 import { QuestionBank } from "@cf/providers/question-bank";
-import type { QuestionBankName } from "@cf/core/question-bank";
+import { getQuestionPreview, type QuestionBankName } from "@cf/core/question-bank";
 import type { QuestionId } from "@cf/core/tests";
 import type { FunctionComponent } from "react";
 import { Grid, Link, Sheet, Typography } from "@mui/joy";
@@ -9,6 +9,7 @@ import { AnnexSearch, LearningObjectiveSearch, QuestionSearch } from "@cf/provid
 import { SearchQuestionsList } from "../search-questions";
 import { SearchAnnexesList } from "../search-annexes/search-annexes-list";
 import { Ups } from "@cf/react/components";
+import { MdxRemote } from "../mdx-remote";
 
 export type QuestionMetaProps = {
     questionBank: QuestionBankName;
@@ -38,9 +39,9 @@ export const QuestionMeta: FunctionComponent<
                 Preview
             </Typography>
 
-            <Typography sx={{ mt: 2 }}>
-                TODO
-            </Typography>
+            <Sheet sx={{ p: { xs: 1, sm: 2 } }}>
+                <MdxRemote source={getQuestionPreview(template.variant)} />
+            </Sheet>
 
             <Typography level="h3" sx={{ mt: 2 }}>
                 Learning Objectives
