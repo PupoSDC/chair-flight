@@ -8,8 +8,8 @@ import {
   Tooltip,
   Typography,
 } from "@mui/joy";
-import { SearchHeader, SearchList } from "@cf/react/components";
 import { Markdown } from "@cf/react/markdown";
+import { SearchHeader, SearchList } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";

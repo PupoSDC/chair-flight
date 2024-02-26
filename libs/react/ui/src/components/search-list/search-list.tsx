@@ -10,7 +10,7 @@ import {
   Table,
   useTheme,
 } from "@mui/joy";
-import { useMediaQuery } from "../hooks/use-media-query";
+import { useMediaQuery } from "../../hooks/use-media-query";
 import { Ups } from "../ups";
 import type { SheetProps } from "@mui/joy";
 import type { ForwardedRef, FunctionComponent } from "react";

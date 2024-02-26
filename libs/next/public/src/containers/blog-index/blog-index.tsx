@@ -11,7 +11,7 @@ import {
 } from "@mui/joy";
 import { DateTime } from "luxon";
 import { useUserVoyage } from "@cf/next/user";
-import { BlogPostChip } from "@cf/react/components";
+import { BlogPostChip } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import type { Container } from "@cf/trpc/client";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
 import { Button, Stack } from "@mui/joy";
 import { getRandomId } from "@cf/base/utils";
-import { ImageViewer, QuestionMultipleChoice } from "@cf/react/components";
+import { ImageViewer, QuestionMultipleChoice } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
@@ -13,7 +13,7 @@ import type {
 import type {
   DrawingPoints,
   QuestionMultipleChoiceStatus as Status,
-} from "@cf/react/components";
+} from "@cf/react/ui";
 import type { CommonComponentProps } from "@cf/trpc/client";
 import type { AppRouterOutput } from "@cf/trpc/client";
 import type { FunctionComponent } from "react";

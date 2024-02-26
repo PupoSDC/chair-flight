@@ -2,7 +2,7 @@ import { useState } from "react";
 import { default as ConstructionIcon } from "@mui/icons-material/Construction";
 import { default as HourglassEmptyIcon } from "@mui/icons-material/HourglassEmpty";
 import { Stack, ListItemContent, Link, Tooltip } from "@mui/joy";
-import { SearchHeader, SearchList } from "@cf/react/components";
+import { SearchHeader, SearchList } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { useDocSearchConfig } from "../../hooks/use-doc-search-config";

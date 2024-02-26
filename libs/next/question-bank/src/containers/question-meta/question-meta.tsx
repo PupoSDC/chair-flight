@@ -1,5 +1,5 @@
 import { Grid, Link, Sheet, Stack, Typography } from "@mui/joy";
-import { QuestionMultipleChoice, Ups } from "@cf/react/components";
+import { QuestionMultipleChoice, Ups } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";

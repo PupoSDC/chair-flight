@@ -7,7 +7,7 @@ import {
   DocQuestions,
   LayoutModule,
 } from "@cf/next/question-bank";
-import { useDisclose, useMediaQuery } from "@cf/react/components";
+import { useDisclose, useMediaQuery } from "@cf/react/ui";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { AppHeadProps } from "@cf/next/public";

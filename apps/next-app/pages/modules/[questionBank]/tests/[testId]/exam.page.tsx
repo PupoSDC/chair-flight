@@ -15,8 +15,8 @@ import {
   TestQuestion,
 } from "@cf/next/tests";
 import { UserBugReport } from "@cf/next/user";
-import { useDisclose } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { useDisclose } from "@cf/react/ui";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NextPage } from "next";

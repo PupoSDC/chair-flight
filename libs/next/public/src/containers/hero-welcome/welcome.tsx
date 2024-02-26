@@ -5,7 +5,7 @@ import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff";
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Button, Box, Divider, Grid, Link, Typography } from "@mui/joy";
-import { CountUp, ModuleSelectionButton, Typical } from "@cf/react/components";
+import { CountUp, ModuleSelectionButton, Typical } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import { RightContainer } from "./welcome-right-container";

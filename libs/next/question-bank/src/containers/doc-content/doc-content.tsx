@@ -1,6 +1,6 @@
 import { Box, Chip, Divider, Link, Stack, Typography } from "@mui/joy";
-import { Ups } from "@cf/react/components";
 import { Mdx } from "@cf/react/markdown";
+import { Ups } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import type { DocId, QuestionBankName } from "@cf/core/question-bank";

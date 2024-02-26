@@ -1,5 +1,5 @@
 import { Button, useTheme } from "@mui/joy";
-import { QuestionNavigation, useMediaQuery } from "@cf/react/components";
+import { QuestionNavigation, useMediaQuery } from "@cf/react/ui";
 import { container } from "@cf/trpc/client";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import type { TestId } from "@cf/core/tests";

@@ -1,6 +1,6 @@
 import * as fs from "node:fs/promises";
 import { AppHead, BlogIndex, LayoutPublic } from "@cf/next/public";
-import { BackgroundFadedImage } from "@cf/react/components";
+import { BackgroundFadedImage } from "@cf/react/ui";
 import { staticHandler } from "@cf/trpc/server";
 import type { NextPage } from "next";
 

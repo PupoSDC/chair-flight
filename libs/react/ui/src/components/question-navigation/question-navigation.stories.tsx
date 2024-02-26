@@ -1,4 +1,4 @@
-import { generateQuestionsForNavigation } from "../__utils__/generate-questions-for-navigation";
+import { generateQuestionsForNavigation } from "../../__utils__/generate-questions-for-navigation";
 import { QuestionNavigation } from "./question-navigation";
 import type { QuestionNavigationProps } from "./question-navigation";
 import type { Meta, StoryObj } from "@storybook/react";

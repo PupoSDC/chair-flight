@@ -19,12 +19,8 @@ import {
 } from "@mui/joy";
 import { z } from "zod";
 import { processTest } from "@cf/core/tests";
-import {
-  HookFormSelect,
-  SearchFilters,
-  SearchList,
-} from "@cf/react/components";
-import { createUsePersistenceHook } from "@cf/react/components";
+import { HookFormSelect, SearchFilters, SearchList } from "@cf/react/ui";
+import { createUsePersistenceHook } from "@cf/react/ui";
 import { container } from "@cf/trpc/client";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import type { QuestionBankName } from "@cf/core/question-bank";

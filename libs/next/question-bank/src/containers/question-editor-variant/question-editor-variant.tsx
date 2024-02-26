@@ -14,7 +14,7 @@ import {
   questionVariantSchema,
   getNewVariant,
 } from "@cf/core/question-bank";
-import { useDisclose } from "@cf/react/components";
+import { useDisclose } from "@cf/react/ui";
 import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";
 import { QuestionEditorVariantOneTwo } from "./question-editor-variant-one-two";

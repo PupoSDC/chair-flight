@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/joy";
 import { type QuestionBankName } from "@cf/core/question-bank";
-import { LoadingButton } from "@cf/react/components";
+import { LoadingButton } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";
 import { useQuestionEditor } from "../../hooks/use-question-editor";

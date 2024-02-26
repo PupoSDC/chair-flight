@@ -14,7 +14,7 @@ import {
   useTheme,
 } from "@mui/joy";
 import { create } from "zustand";
-import { useMediaQuery } from "../hooks/use-media-query";
+import { useMediaQuery } from "../../hooks/use-media-query";
 import type { SidebarListItemProps } from "./sidebar-list-item";
 import type { SheetProps } from "@mui/joy";
 import type { ReactElement } from "react";

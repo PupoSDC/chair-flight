@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Link, Typography } from "@mui/joy";
 import { NotFoundError } from "@cf/base/errors";
-import { Ups } from "@cf/react/components";
+import { Ups } from "@cf/react/ui";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 

@@ -1,7 +1,7 @@
 import { default as AddIcon } from "@mui/icons-material/Add";
 import { default as DeleteIcon } from "@mui/icons-material/DeleteOutlineOutlined";
 import { Button, ListItemContent, Stack, Tooltip, Typography } from "@mui/joy";
-import { ImageWithModal, SearchHeader, SearchList } from "@cf/react/components";
+import { ImageWithModal, SearchHeader, SearchList } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";

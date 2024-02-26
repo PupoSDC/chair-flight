@@ -19,7 +19,7 @@ import {
   ModalDialog,
   Typography,
 } from "@mui/joy";
-import { useDisclose } from "../hooks/use-disclose";
+import { useDisclose } from "../../hooks/use-disclose";
 import { SearchQuery } from "../search-query";
 
 const SearchHeaderContainer = styled(Stack)`

@@ -12,7 +12,7 @@ import {
   Stack,
   Typography,
 } from "@mui/joy";
-import { useDisclose } from "../hooks/use-disclose";
+import { useDisclose } from "../../hooks/use-disclose";
 import type { FC, ReactNode } from "react";
 
 export type SearchFiltersProps = {

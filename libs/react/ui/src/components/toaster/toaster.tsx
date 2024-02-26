@@ -8,7 +8,7 @@ import React, {
 import CloseIcon from "@mui/icons-material/Close";
 import { Button, IconButton, LinearProgress, Snackbar, Stack } from "@mui/joy";
 import { create } from "zustand";
-import { useDisclose } from "../hooks/use-disclose";
+import { useDisclose } from "../../hooks/use-disclose";
 import type { ButtonProps, SnackbarProps } from "@mui/joy";
 
 type Toast = {

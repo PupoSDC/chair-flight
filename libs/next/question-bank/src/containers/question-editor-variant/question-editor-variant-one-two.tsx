@@ -5,8 +5,8 @@ import { default as CreateIcon } from "@mui/icons-material/Add";
 import { default as CloseIcon } from "@mui/icons-material/Close";
 import { Divider, IconButton, Stack, Typography } from "@mui/joy";
 import { questionVariantOneTwoSchema } from "@cf/core/question-bank";
-import { HookFormTextArea } from "@cf/react/components";
-import { HookFormErrorMessage } from "@cf/react/components";
+import { HookFormTextArea } from "@cf/react/ui";
+import { HookFormErrorMessage } from "@cf/react/ui";
 import type { QuestionVariantOneTwo } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 

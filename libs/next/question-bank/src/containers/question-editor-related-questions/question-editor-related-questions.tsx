@@ -7,8 +7,8 @@ import {
   type QuestionBankName,
   type QuestionTemplateId,
 } from "@cf/core/question-bank";
-import { LoadingButton, SearchHeader, SearchList } from "@cf/react/components";
 import { Markdown } from "@cf/react/markdown";
+import { LoadingButton, SearchHeader, SearchList } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { MarkdownFromServer } from "../../components/markdown-from-server";

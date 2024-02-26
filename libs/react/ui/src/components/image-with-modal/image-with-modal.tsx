@@ -1,7 +1,7 @@
 import { forwardRef, useState } from "react";
 import { default as Image } from "next/image";
 import { Sheet, Modal, ModalClose, ModalDialog, Stack } from "@mui/joy";
-import { useDisclose } from "../hooks/use-disclose";
+import { useDisclose } from "../../hooks/use-disclose";
 import { Ups } from "../ups";
 import type { SxProps } from "@mui/joy/styles/types";
 

@@ -26,14 +26,9 @@ import {
   BugReportButton,
   UserBugReport,
 } from "@cf/next/user";
-import {
-  AppLogo,
-  Sidebar,
-  SidebarListItem,
-  useMediaQuery,
-} from "@cf/react/components";
-import { usePageTransition } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { AppLogo, Sidebar, SidebarListItem, useMediaQuery } from "@cf/react/ui";
+import { usePageTransition } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import type { QuestionBankName } from "@cf/core/question-bank";

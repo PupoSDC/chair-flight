@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { MarkdownFromServer } from "@cf/next/question-bank";
-import { ImageViewer, QuestionMultipleChoice } from "@cf/react/components";
+import { ImageViewer, QuestionMultipleChoice } from "@cf/react/ui";
 import { container } from "@cf/trpc/client";
 import { TestError } from "../../components/test-error";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import type { TestId } from "@cf/core/tests";
-import type { DrawingPoints } from "@cf/react/components";
+import type { DrawingPoints } from "@cf/react/ui";
 
 type DrawingPointsMap = Record<string, DrawingPoints[]>;
 

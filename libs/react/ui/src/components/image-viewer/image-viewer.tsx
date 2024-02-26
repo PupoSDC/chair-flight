@@ -16,7 +16,7 @@ import {
   useTheme,
 } from "@mui/joy";
 import useImage from "use-image";
-import { useWindowSize } from "../hooks/use-window-resize";
+import { useWindowSize } from "../../hooks/use-window-resize";
 import { useKonvaComponents } from "./use-konva-components";
 import type { BoxProps } from "@mui/joy";
 import type { default as Konva } from "konva";
