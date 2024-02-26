@@ -29,8 +29,6 @@ type Params = Props;
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorManager"];
 
-type FilterKeys = keyof Data["filters"];
-
 export const QuestionEditorManager = container<Props, Params, Data>(
   ({ sx, component = "div", questionBank }) => {
     const utils = trpc.useUtils();
@@ -60,9 +58,10 @@ export const QuestionEditorManager = container<Props, Params, Data>(
             isLoading={search.isLoading}
             isError={search.isError}
             onSearchChange={search.setSearchQuery}
-            onFilterValuesChange={(k, v) =>
-              search.filterForm.setValue(k as FilterKeys, v)
-            }
+            onFilterValuesChange={(value) => {
+              search.filterForm.setValue("searchField", value["searchField"]);
+              search.filterForm.setValue("subject", value["subject"]);
+            }}
           />
           <SearchList
             forceMode={"mobile"}

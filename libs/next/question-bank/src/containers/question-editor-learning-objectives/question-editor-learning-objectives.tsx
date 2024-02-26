@@ -28,8 +28,6 @@ type Params = Props;
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorLearningObjectives"];
 
-type FilterKey = keyof Data["filters"];
-
 const search = trpc.common.search;
 const useRetrieveLos = search.retrieveLearningObjective.useQuery;
 
@@ -75,9 +73,11 @@ export const QuestionEditorLearningObjectives = container<Props, Params, Data>(
           isLoading={search.isLoading}
           isError={search.isError}
           onSearchChange={search.setSearchQuery}
-          onFilterValuesChange={(k, v) =>
-            search.filterForm.setValue(k as FilterKey, v)
-          }
+          onFilterValuesChange={(value) => {
+            search.filterForm.setValue("course", value["course"]);
+            search.filterForm.setValue("searchField", value["searchField"]);
+            search.filterForm.setValue("subject", value["subject"]);
+          }}
         />
         <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList

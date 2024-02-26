@@ -29,8 +29,6 @@ type Params = {
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorRelatedQuestions"];
 
-type FilterKeys = keyof Data["filters"];
-
 const SearchListItem = memo<{
   questionId: QuestionTemplateId;
   questionBank: QuestionBankName;
@@ -92,9 +90,10 @@ export const QuestionEditorRelatedQuestions = container<Props, Params, Data>(
           isLoading={search.isLoading}
           isError={search.isError}
           onSearchChange={search.setSearchQuery}
-          onFilterValuesChange={(k, v) =>
-            search.filterForm.setValue(k as FilterKeys, v)
-          }
+          onFilterValuesChange={(value) => {
+            search.filterForm.setValue("searchField", value["searchField"]);
+            search.filterForm.setValue("subject", value["subject"]);
+          }}
         />
         <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList

@@ -19,7 +19,7 @@ Since Demos are worth 1000 pictures, have a go at the new question search for
 the ATPL module right here:
 
 ```tsx eval
-<QuestionSearch
+<SearchQuestions
   noSsr
   questionBank="atpl"
   forceMode="mobile"

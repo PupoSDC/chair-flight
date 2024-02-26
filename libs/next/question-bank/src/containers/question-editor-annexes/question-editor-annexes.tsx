@@ -22,8 +22,6 @@ type Params = {
 type Data =
   AppRouterOutput["containers"]["questions"]["getQuestionEditorAnnexes"];
 
-type FilterKey = keyof Data["filters"];
-
 const search = trpc.common.search;
 const useRetrieveAnnexes = search.retrieveAnnexes.useQuery;
 
@@ -63,9 +61,11 @@ export const QuestionEditorAnnexes = container<Props, Params, Data>(
           isLoading={search.isLoading}
           isError={search.isError}
           onSearchChange={(v) => search.setSearchQuery(v)}
-          onFilterValuesChange={(name, value) =>
-            search.filterForm.setValue(name as FilterKey, value)
-          }
+          onFilterValuesChange={(value) => {
+            search.filterForm.setValue("course", value["course"]);
+            search.filterForm.setValue("searchField", value["searchField"]);
+            search.filterForm.setValue("subject", value["subject"]);
+          }}
         />
         <Stack flex={1} flexDirection={"row"} overflow={"hidden"}>
           <SearchList

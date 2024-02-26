@@ -3,6 +3,7 @@
   "include": ["src/**/*.ts", "executors/**/*.ts"],
   "files": ["../../../types.d.ts"],
   "compilerOptions": {
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "lib": ["esnext", "dom"]
   }
 }

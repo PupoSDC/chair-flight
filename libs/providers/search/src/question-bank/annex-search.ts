@@ -13,12 +13,18 @@ export class AnnexSearch extends QuestionBankSearchProvider<
   AnnexSearchField,
   AnnexFilterField
 > {
+  private static instance: AnnexSearch;
+
   constructor() {
-    super({
-      searchFields: ["id", "description"],
-      idSearchFields: ["id"],
-      filterFields: ["subject"],
-    });
+    if (!AnnexSearch.instance) {
+      super({
+        searchFields: ["id", "description"],
+        idSearchFields: ["id"],
+        filterFields: ["subject"],
+      });
+      AnnexSearch.instance = this;
+    }
+    return AnnexSearch.instance;
   }
 
   public override async getFilters(bank: QuestionBank) {

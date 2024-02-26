@@ -1,7 +1,5 @@
 export { MarkdownFromServer } from "./components/markdown-from-server";
-export { AnnexSearch } from "./containers/annex-search";
 export { DocContent } from "./containers/doc-content";
-export { DocSearch } from "./containers/doc-search";
 export { FlashcardCollectionList } from "./containers/flashcard-collection-list";
 export { FlashcardList } from "./containers/flashcard-list";
 export { FlashcardTest } from "./containers/flashcard-test";
@@ -9,7 +7,6 @@ export { LayoutModule } from "./containers/layout-module";
 export { LearningObjectiveOverview } from "./containers/learning-objective-overview";
 export { LearningObjectiveQuestions } from "./containers/learning-objective-questions";
 export { LearningObjectiveTree } from "./containers/learning-objective-tree";
-export { LearningObjectivesSearch } from "./containers/learning-objectives-search";
 export { OverviewModules } from "./containers/overview-modules";
 export { QuestionEditorAnnexes } from "./containers/question-editor-annexes";
 export { QuestionEditorCode } from "./containers/question-editor-code";
@@ -23,7 +20,6 @@ export { QuestionEditorSubmitForm } from "./containers/question-editor-submit-fo
 export { QuestionEditorVariant } from "./containers/question-editor-variant";
 export { QuestionExplanation } from "./containers/question-explanation";
 export { QuestionMeta } from "./containers/question-meta";
-export { QuestionSearch } from "./containers/question-search";
 export { QuestionStandAlone } from "./containers/question-stand-alone";
 export { DocLearningObjectives } from "./containers/doc-learning-objectives";
 export { DocQuestions } from "./containers/doc-questions";

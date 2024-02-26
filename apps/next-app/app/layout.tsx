@@ -1,5 +1,6 @@
 import { Stack } from "@mui/joy";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { TrpcProvider } from "@cf/next/trpc";
 import { ThemeProvider } from "@cf/react/theme";
 import { LayoutThemeScript } from "./layout-theme-script";
 
@@ -18,15 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <LayoutThemeScript />
-      </head>
-      <Stack component="body">
-        <AppRouterCacheProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </AppRouterCacheProvider>
-      </Stack>
-    </html>
+    <TrpcProvider>
+      <html lang="en">
+        <head>
+          <LayoutThemeScript />
+        </head>
+        <Stack component="body">
+          <AppRouterCacheProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </AppRouterCacheProvider>
+        </Stack>
+      </html>
+    </TrpcProvider>
   );
 }

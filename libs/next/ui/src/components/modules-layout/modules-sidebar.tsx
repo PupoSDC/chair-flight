@@ -34,7 +34,8 @@ export const ModulesSidebarListItem = forwardRef<
   HTMLAnchorElement,
   Omit<SidebarListItemProps, "selected">
 >((props, ref) => {
-  const pathName = usePathname();
+  // TODO remove cast after migrating to APP dir
+  const pathName = usePathname() as string;
   return (
     <SidebarListItem
       {...props}

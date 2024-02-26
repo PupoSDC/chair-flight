@@ -6,7 +6,6 @@ import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardAr
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
 import { BugReportButton, useUserVoyage } from "@cf/next/user";
 import { Mdx } from "@cf/react/markdown";
 import { BlogPostChip, ModuleSelectionButton } from "@cf/react/ui";
@@ -68,13 +67,13 @@ export const BlogPost: Container<Props, Params, Data> = container<
           Box,
           Stack,
           Link,
-          AnnexSearch,
+          // SearchQuestions,
           ModuleSelectionButton,
           AirplaneTicketIcon,
           ChevronRightIcon,
           FlightTakeoffIcon,
           StyleIcon,
-          QuestionSearch,
+          // QuestionSearch,
           BugReportButton,
         }}
       />

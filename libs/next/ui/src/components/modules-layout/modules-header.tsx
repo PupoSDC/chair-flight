@@ -13,7 +13,8 @@ import {
 } from "../app-layout";
 
 export const ModulesHeader = () => {
-  const pathName = usePathname();
+  // TODO remove cast after migrating to APP dir
+  const pathName = usePathname() as string;
 
   const breadcrumbs = pathName
     .split("/")

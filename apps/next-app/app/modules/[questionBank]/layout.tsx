@@ -8,7 +8,6 @@ import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
 import {
   ModulesHeader,
-  ModulesMain,
   ModulesSidebarHomeItem,
   ModulesSidebarListItem,
 } from "@cf/next/ui";
@@ -100,7 +99,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
         />
       </Sidebar>
       <ModulesHeader />
-      <ModulesMain>{children}</ModulesMain>
+      {children}
     </>
   );
 };

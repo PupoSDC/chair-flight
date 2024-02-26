@@ -28,4 +28,5 @@ export * from "./hooks/use-media-query";
 export * from "./hooks/use-window-resize";
 export * from "./hooks/use-page-transition";
 export * from "./hooks/use-persistence";
+export * from "./hooks/use-persisted-state";
 export * from "./hooks/use-throttle";
