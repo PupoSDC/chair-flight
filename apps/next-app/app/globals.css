@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-zinc-800 dark:text-zinc-300;
+    @apply transition-colors duration-0;
+  
+    --header-height: 40px;
+    --sidebar-collapsed-width: 40px;
+    --sidebar-expanded-width: 210px;
+    --sidebar-desktop-width: var(--sidebar-expanded-width);
+    --sidebar-mobile-width: var(--sidebar-collapsed-width);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  h1 { @apply text-2xl md:text-3xl; }
+  h2 { @apply text-lg md:text-2xl; }
+  p { @apply text-base }
+}
+
+@layer components {
+  .border,
+  .border-r,
+  .border-l,
+  .border-t,
+  .border-b,
+  .border-x,
+  .border-y {
+     @apply border-zinc-200 dark:border-zinc-700;
+  }
+
+  .btn-primary {
+    @apply p-2 rounded-md text-zinc-100 font-semibold;
+  }
+
+  .btn-icon {
+    @apply w-8 h-8 flex items-center justify-center;
+    @apply [&_svg]:w-5 [&_svg]:h-5;
+    @apply text-neutral-500 hover:text-neutral-700
+  }
+}

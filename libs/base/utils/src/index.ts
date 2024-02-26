@@ -5,3 +5,4 @@ export * from "./js/noop";
 export * from "./random/random";
 export * from "./js/keep-unique";
 export * from "./js/wait";
+export * from "./js/cntl";

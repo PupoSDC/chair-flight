@@ -1,0 +1,1 @@
+export { AirplanesAnimation } from "./airplanes-animation";

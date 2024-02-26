@@ -1,9 +1,20 @@
-const ModuleHomePage = () => {
-  return (
-    <div>
-      <h1>Module Home Page</h1>
-    </div>
-  );
+import { QuestionBankName } from "@cf/core/question-bank";
+import { FunctionComponent } from "react";
+
+type QuestionBankHomeProps = {
+  params: {
+    questionBank: QuestionBankName;
+  }
 };
 
-export default ModuleHomePage;
+const QuestionBankHome : FunctionComponent<QuestionBankHomeProps> = ({ 
+  params 
+}) => {
+  return (
+    <div>
+      <h1>Question Bank Home</h1>
+    </div>
+  );
+}
+
+export default QuestionBankHome;

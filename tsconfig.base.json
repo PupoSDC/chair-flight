@@ -32,10 +32,10 @@
       "@cf/base/utils": ["libs/base/utils/src/index.ts"],
       "@cf/core/blog": ["libs/core/blog/src/index.ts"],
       "@cf/core/github": ["libs/core/github/src/index.ts"],
+      "@cf/core/markdown": ["libs/core/markdown/src/index.ts"],
       "@cf/core/question-bank": ["libs/core/question-bank/src/index.ts"],
       "@cf/core/search": ["libs/core/search/src/index.ts"],
       "@cf/core/tests": ["libs/core/tests/src/index.ts"],
-      "@cf/core/markdown": ["libs/core/markdown/src/index.ts"],
       "@cf/next/analytics": ["libs/next/analytics/src/index.ts"],
       "@cf/next/public": ["libs/next/public/src/index.ts"],
       "@cf/next/question-bank": ["libs/next/question-bank/src/index.ts"],
@@ -46,13 +46,11 @@
       "@cf/providers/github": ["libs/providers/github/src/index.ts"],
       "@cf/providers/question-bank": ["libs/providers/question-bank/src/index.ts"],
       "@cf/providers/search": ["libs/providers/search/src/index.ts"],
-      "@cf/providers/user-progress": ["libs/providers/user-progress/src/index.ts"],
       "@cf/providers/trpc": ["libs/providers/trpc/src/index.ts"],
-      "@cf/react/components": ["libs/react/components/src/index.ts"],
-      "@cf/react/containers": ["libs/react/containers/src/index.ts"],
-      "@cf/react/markdown": ["libs/react/markdown/src/index.ts"],
-      "@cf/react/theme": ["libs/react/theme/src/index.ts"],
-      "@cf/react/trpc": ["libs/react/trpc/src/index.ts"],
-    },
+      "@cf/providers/user-progress": ["libs/providers/user-progress/src/index.ts"],
+     
+      "@cf/react/ui": ["libs/react/ui/src/index.ts"],
+      "@cf/react/trpc": ["libs/react/trpc/src/index.ts"]
+    }
   }
 }

@@ -37,7 +37,7 @@ const runExecutor = async (_: ExecutorOptions, context: ExecutorContext) => {
     const match = MATTER_REGEX.exec(source);
     if (!match) throw new Error(`Missing frontMatter for ${post}`);
     const data = parse(match[1]);
-    const content = source.split("\n---").slice(1).join().trim();
+    const content = source.split("\n---").slice(1).join("").trim();
     data.filename = post;
     data.content = content;
     data.imageUrl ??= null;

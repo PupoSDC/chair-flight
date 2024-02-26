@@ -2,6 +2,7 @@
   "name": "content-question-bank-prep",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
+  "sourceRoot": "libs/content/question-bank-prep/src",
   "targets": {
     "compile": {
       "executor": "@cf/providers/question-bank:compile",

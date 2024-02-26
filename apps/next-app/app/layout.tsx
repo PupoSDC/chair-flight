@@ -1,16 +1,13 @@
-import { Stack } from "@mui/joy";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
-import { ThemeProvider } from "@cf/react/theme";
 import { TrpcProvider } from "@cf/react/trpc";
-import { UserBugReport } from "./_client/user-bug-report";
-import { LayoutThemeScript } from "./layout-theme-script";
+import { default as Script } from 'next/script'
+import "./globals.css";
 
 export const metadata = {
   title: "Chair Flight",
   description: [
-    "Chair Flight is a community driven Aviation Question Bank built by students",
-    "for students. Prepare yourself for your ATPL exams, Interviews, and type",
-    "rating technical exams. For Free!",
+    "Chair Flight is a community driven Aviation Question Bank built by ",
+    "students for students. Prepare yourself for your ATPL exams, Interviews, ",
+    "and type rating technical exams.",
   ].join(" "),
 };
 
@@ -21,16 +18,22 @@ export default function RootLayout({
 }) {
   return (
     <TrpcProvider>
-      <html lang="en">
+      <html lang="en" className="antialiased min-h-screen">
         <head>
-          <LayoutThemeScript />
+          <script dangerouslySetInnerHTML={{
+            __html: `
+              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+              } else {
+                document.documentElement.classList.remove('dark')
+              }
+            `,
+            }}
+          />
         </head>
-        <Stack component="body">
-          <AppRouterCacheProvider>
-            <ThemeProvider>{children}</ThemeProvider>
-            <UserBugReport />
-          </AppRouterCacheProvider>
-        </Stack>
+        <body className="min-h-screen bg-white dark:bg-black">
+          {children}
+        </body>
       </html>
     </TrpcProvider>
   );
