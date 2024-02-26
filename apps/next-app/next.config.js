@@ -12,9 +12,8 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
-  pageExtensions: ["page.tsx", "api.ts"],
   transpilePackages: ["@mui/x-charts"],
-  async rewrites() {
+  rewrites: async () => {
     const aboutUsRewrite = [
       {
         source: "/articles/about-us",
@@ -40,7 +39,7 @@ const nextConfig = {
 
     return [...storybookRewrites, ...aboutUsRewrite];
   },
-  async redirects() {
+  redirects: async () => {
     return [
       {
         source: "/storybook",
