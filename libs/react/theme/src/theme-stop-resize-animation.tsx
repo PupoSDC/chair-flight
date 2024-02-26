@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import { GlobalStyles } from "@mui/joy";
 import type { FunctionComponent } from "react";

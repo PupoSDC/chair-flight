@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useEffect, useState } from "react";
 import { default as SearchIcon } from "@mui/icons-material/Search";
 import { CircularProgress, Input } from "@mui/joy";

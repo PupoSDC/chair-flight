@@ -16,7 +16,7 @@ export type SidebarListItemProps = {
   selected?: boolean;
   bottom?: boolean;
   onClick?: () => void;
-} & ListItemButtonProps;
+} & Omit<ListItemButtonProps, "children">;
 
 export const SidebarListItem = forwardRef<
   HTMLAnchorElement,

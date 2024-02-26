@@ -1,3 +1,5 @@
+"use client";
+
 import { Fragment, forwardRef, useRef } from "react";
 import { NoSsr } from "@mui/base";
 import {

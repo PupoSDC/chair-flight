@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import type { default as Konva } from "konva";
 import type { KonvaNodeComponent, StageProps } from "react-konva";

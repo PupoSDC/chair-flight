@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Typography, styled } from "@mui/joy";
 import type { TypographyProps } from "@mui/joy";

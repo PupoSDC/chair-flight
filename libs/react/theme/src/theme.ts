@@ -1,3 +1,5 @@
+"use client";
+
 import { extendTheme } from "@mui/joy";
 import { ThemeCustomLink } from "./theme-custom-link";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useEffect, useState } from "react";
 import { default as ChevronRightIcon } from "@mui/icons-material/ChevronRight";
 import {

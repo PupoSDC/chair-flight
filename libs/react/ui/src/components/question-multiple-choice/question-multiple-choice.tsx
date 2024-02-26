@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";

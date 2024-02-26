@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { get, useFormContext } from "react-hook-form";
 import { Typography } from "@mui/joy";

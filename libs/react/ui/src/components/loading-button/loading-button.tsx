@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useCallback, useState } from "react";
 import { Button } from "@mui/joy";
 import type { ButtonProps } from "@mui/joy";

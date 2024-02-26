@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useEffect, useRef, useState } from "react";
 import AbcIcon from "@mui/icons-material/Abc";
 import CenterFocusStrongIcon from "@mui/icons-material/CenterFocusStrong";

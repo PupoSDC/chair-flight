@@ -1,3 +1,5 @@
+"use client";
+
 import { GlobalStyles } from "@mui/material";
 import type { DefaultPaletteRange } from "@mui/joy/styles/types";
 import type { FC } from "react";

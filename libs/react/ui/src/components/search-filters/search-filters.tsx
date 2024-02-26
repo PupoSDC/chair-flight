@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { NoSsr } from "@mui/base";
 import { default as FilterIcon } from "@mui/icons-material/FilterAltOutlined";

@@ -1,18 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": ["../../types.d.ts", "index.d.ts", "next-env.d.ts"],
-  "include": [
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+  "files": ["../../types.d.ts", "index.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "incremental": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "types": ["node", "react"],
     "lib": ["esnext", "dom"],

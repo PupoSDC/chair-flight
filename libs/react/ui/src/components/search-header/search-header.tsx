@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { useEffect, useState } from "react";
 import { NoSsr } from "@mui/base";

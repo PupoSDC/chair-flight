@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useState } from "react";
 import { default as Image } from "next/image";
 import { Sheet, Modal, ModalClose, ModalDialog, Stack } from "@mui/joy";

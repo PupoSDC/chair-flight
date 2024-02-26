@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, useEffect, useState } from "react";
 import { Input, Slider, inputClasses, styled } from "@mui/joy";
 import type { SliderProps } from "@mui/base";
