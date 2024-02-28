@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 import { Box, Link, ListItemContent, Typography } from "@mui/joy";
-import { Markdown } from "@cf/react/markdown";
 import { SearchList } from "@cf/react/ui";
+import { LazyMarkdown } from "../../shared/lazy-markdown";
 import type { QuestionSearchResult } from "@cf/core/search";
 import type { SearchListProps } from "@cf/react/ui";
 
@@ -50,9 +50,9 @@ export const SearchQuestionsList = forwardRef<
                 <Typography>{result.id}</Typography>
               </Link>
             </td>
-            <Markdown component="td" compressed>
+            <LazyMarkdown component="td" compressed>
               {result.text}
-            </Markdown>
+            </LazyMarkdown>
             <td>
               {result.learningObjectives.slice(0, 5).map(({ id, href }) => (
                 <Link
@@ -115,7 +115,7 @@ export const SearchQuestionsList = forwardRef<
                   "linear-gradient(to bottom, black 50%, transparent 100%)",
               }}
             >
-              <Markdown compressed>{result.text}</Markdown>
+              <LazyMarkdown compressed>{result.text}</LazyMarkdown>
             </Box>
           </ListItemContent>
         )}

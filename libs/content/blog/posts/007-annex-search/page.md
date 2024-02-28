@@ -14,8 +14,7 @@ always easy. We are introducing annex search to Chair flight as an alternative
 way for you to find questions based on what annexes they included.
 
 ```tsx eval
-<AnnexSearch
-  noSsr
+<SearchAnnexes
   questionBank="atpl"
   forceMode="mobile"
   sx={{ height: 500, my: 2 }}

@@ -12,6 +12,23 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
+  experimental: {
+    optimizePackageImports: [
+      "@cf/react/ui",
+      "@cf/react/markdown",
+      "@cf/react/theme",
+      "@cf/next/analytics",
+      "@cf/next/public",
+      "@cf/next/question-bank",
+      "@cf/next/search",
+      "@cf/next/tests",
+      "@cf/next/trpc",
+      "@cf/next/ui",
+      "@cf/next/user",
+      "@mui/joy",
+      "@mui/base",
+    ],
+  },
   transpilePackages: ["@mui/x-charts"],
   rewrites: async () => {
     const aboutUsRewrite = [

@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { default as CelebrationIcon } from "@mui/icons-material/Celebration";
 import { default as HandymanIcon } from "@mui/icons-material/Handyman";
 import { default as LibraryBooksIcon } from "@mui/icons-material/LibraryBooks";
-import { Chip } from "@mui/joy";
+import { default as Chip } from "@mui/joy/Chip";
 import type { ChipProps, ColorPaletteProp } from "@mui/joy";
 import type { FunctionComponent } from "react";
 

@@ -1,5 +1,9 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": ["src/**/*.ts"],
-  "files": ["../../../types.d.ts"]
+  "files": ["../../../types.d.ts"],
+  "compilerOptions": {
+    "lib": ["dom", "ESNext"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  }
 }

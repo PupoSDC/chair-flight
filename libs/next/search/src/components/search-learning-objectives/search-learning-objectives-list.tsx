@@ -9,8 +9,8 @@ import {
   ListItemContent,
   Typography,
 } from "@mui/joy";
-import { Markdown } from "@cf/react/markdown";
 import { SearchList } from "@cf/react/ui";
+import { LazyMarkdown } from "../../shared/lazy-markdown";
 import type { LearningObjectiveSearchResult } from "@cf/core/search";
 import type { SearchListProps } from "@cf/react/ui";
 
@@ -60,12 +60,12 @@ export const SearchLearningObjectivesList = forwardRef<
                 <Typography>{result.id}</Typography>
               </Link>
             </td>
-            <Markdown component={"td"} compressed>
+            <LazyMarkdown component={"td"} compressed>
               {result.text}
-            </Markdown>
-            <Markdown component={"td"} compressed>
+            </LazyMarkdown>
+            <LazyMarkdown component={"td"} compressed>
               {result.source}
-            </Markdown>
+            </LazyMarkdown>
             <td>
               {result.courses
                 .filter((c) => {
@@ -110,17 +110,17 @@ export const SearchLearningObjectivesList = forwardRef<
                   "linear-gradient(to bottom, black 50%, transparent 100%)",
               }}
             >
-              <Markdown compressed>{result.text}</Markdown>
+              <LazyMarkdown compressed>{result.text}</LazyMarkdown>
               {result.source && (
                 <>
                   <Divider sx={{ width: "50%", my: 0.5 }} />
                   <Typography level="body-xs">source: </Typography>
-                  <Markdown
+                  <LazyMarkdown
                     compressed
                     sx={{ color: "text.tertiary", fontSize: "xs" }}
                   >
                     {result.source}
-                  </Markdown>
+                  </LazyMarkdown>
                 </>
               )}
             </Box>

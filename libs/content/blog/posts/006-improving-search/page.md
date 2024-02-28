@@ -20,7 +20,6 @@ the ATPL module right here:
 
 ```tsx eval
 <SearchQuestions
-  noSsr
   questionBank="atpl"
   forceMode="mobile"
   sx={{ height: 500, my: 2 }}

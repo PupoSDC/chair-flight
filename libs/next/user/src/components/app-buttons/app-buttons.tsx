@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { keyframes } from "@emotion/react";
 import { default as BugReportIcon } from "@mui/icons-material/BugReport";

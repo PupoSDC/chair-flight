@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Stack } from "@mui/joy";
+import { default as Stack } from "@mui/joy/Stack";
 import type { StackProps } from "@mui/joy";
 
 export type AppMainProps = Omit<StackProps, "component">;
