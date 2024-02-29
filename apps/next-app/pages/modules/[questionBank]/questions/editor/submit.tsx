@@ -1,15 +1,15 @@
 import * as fs from "node:fs/promises";
 import { Box, Divider, Stack, Typography } from "@mui/joy";
-import { AppHead } from "@cf/next/public";
+import { AppHead } from "@cf/next-old/public";
 import {
   LayoutModule,
   QuestionEditorDiff,
   QuestionEditorManager,
   QuestionEditorSubmitForm,
-} from "@cf/next/question-bank";
+} from "@cf/next-old/question-bank";
 import { staticHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
-import type { Breadcrumbs } from "@cf/next/question-bank";
+import type { Breadcrumbs } from "@cf/next-old/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageProps = {

@@ -1,10 +1,13 @@
 import * as fs from "node:fs/promises";
 import { Typography, Box } from "@mui/joy";
-import { AppHead } from "@cf/next/public";
-import { FlashcardCollectionList, LayoutModule } from "@cf/next/question-bank";
+import { AppHead } from "@cf/next-old/public";
+import {
+  FlashcardCollectionList,
+  LayoutModule,
+} from "@cf/next-old/question-bank";
 import { staticHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
-import type { Breadcrumbs } from "@cf/next/question-bank";
+import type { Breadcrumbs } from "@cf/next-old/question-bank";
 import type { GetStaticPaths, NextPage } from "next";
 
 type PageParams = {

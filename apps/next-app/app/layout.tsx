@@ -1,7 +1,9 @@
 import { Stack } from "@mui/joy";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { TrpcProvider } from "@cf/next/trpc";
+import { UserBugReportModal } from "@cf/next/user";
 import { ThemeProvider } from "@cf/react/theme";
+import { Toaster } from "@cf/react/ui";
 import { LayoutThemeScript } from "./layout-theme-script";
 
 export const metadata = {
@@ -26,7 +28,11 @@ export default function RootLayout({
         </head>
         <Stack component="body">
           <AppRouterCacheProvider>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+              {children}
+              <UserBugReportModal />
+              <Toaster />
+            </ThemeProvider>
           </AppRouterCacheProvider>
         </Stack>
       </html>

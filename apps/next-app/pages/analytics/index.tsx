@@ -3,7 +3,7 @@ import { GlobalStyles, Sheet, Typography } from "@mui/joy";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { DateTime } from "luxon";
-import { AppHead, BlogIndex, LayoutPublic } from "@cf/next/public";
+import { AppHead, BlogIndex, LayoutPublic } from "@cf/next-old/public";
 import { BackgroundFadedImage } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";
 import { staticHandler } from "@cf/trpc/server";

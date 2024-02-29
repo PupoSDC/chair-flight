@@ -41,7 +41,22 @@ export type TRPCProviderProps = {
 export const TrpcProvider: FunctionComponent<TRPCProviderProps> = ({
   children,
 }) => {
-  const [queryClient] = useState(() => new QueryClient());
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            refetchOnMount: false,
+            refetchOnWindowFocus: false,
+            networkMode: "always",
+          },
+          mutations: {
+            networkMode: "always",
+          },
+        },
+      }),
+  );
+
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [

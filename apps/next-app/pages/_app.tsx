@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import { default as Head } from "next/head";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { AnalyticsProvider, AnalyticsPageLogger } from "@cf/next/analytics";
+import { AnalyticsProvider, AnalyticsPageLogger } from "@cf/next-old/analytics";
 import { ThemeProvider } from "@cf/react/theme";
 import { Toaster } from "@cf/react/ui";
 import { trpc } from "@cf/trpc/client";

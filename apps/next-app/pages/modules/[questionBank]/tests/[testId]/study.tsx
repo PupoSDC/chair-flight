@@ -7,15 +7,15 @@ import {
   ModalClose,
   ModalDialog,
 } from "@mui/joy";
-import { AppHead } from "@cf/next/public";
+import { AppHead } from "@cf/next-old/public";
 import {
   TestFinisher,
   TestHeader,
   TestNavigation,
   TestQuestion,
   TestQuestionMeta,
-} from "@cf/next/tests";
-import { UserBugReport } from "@cf/next/user";
+} from "@cf/next-old/tests";
+import { UserBugReport } from "@cf/next-old/user";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import { useDisclose } from "@cf/react/ui";
 import { ssrHandler } from "@cf/trpc/server";

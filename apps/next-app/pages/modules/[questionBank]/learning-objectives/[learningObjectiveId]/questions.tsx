@@ -1,11 +1,11 @@
-import { AppHead } from "@cf/next/public";
+import { AppHead } from "@cf/next-old/public";
 import {
   LayoutModule,
   LearningObjectiveQuestions,
-} from "@cf/next/question-bank";
+} from "@cf/next-old/question-bank";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
-import type { Breadcrumbs } from "@cf/next/question-bank";
+import type { Breadcrumbs } from "@cf/next-old/question-bank";
 import type { NextPage } from "next";
 
 type PageParams = {

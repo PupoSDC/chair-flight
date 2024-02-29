@@ -1,22 +1,27 @@
+import { default as YAML } from "yaml";
 import { originOwner, originRepo } from "../common/env";
 import type { NewIssue } from "@cf/core/github";
 import type { Octokit } from "octokit";
 
 export const createNewIssue = async (octokit: Octokit, newIssue: NewIssue) => {
-  const { title, description, debugData, href } = newIssue;
+  const { title, description, debugData, authorName } = newIssue;
 
   const response = await octokit.rest.issues.create({
     owner: originOwner,
     repo: originRepo,
     title: `[App Bug Report] ${title}`,
     body: [
-      `## Data\n`,
-      `**href** : ${href}\n`,
-      "```",
-      JSON.stringify(debugData, null, 2),
-      "```",
-      `\n\n---\n\n## Description\n`,
       description,
+      "\n---\n",
+      "## Author\n",
+      authorName,
+      "\n---\n",
+      "## Data\n",
+      "<details>",
+      "```yaml\n",
+      YAML.stringify(debugData),
+      "```",
+      "</details>",
     ].join("\n"),
   });
 

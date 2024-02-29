@@ -1,6 +1,6 @@
 import { default as OpenInNewIcon } from "@mui/icons-material/OpenInNewOutlined";
 import { Link, Button, Stack } from "@mui/joy";
-import { AppHead, LayoutPublic } from "@cf/next/public";
+import { AppHead, LayoutPublic } from "@cf/next-old/public";
 import { Ups } from "@cf/react/ui";
 import type { NextPage } from "next";
 

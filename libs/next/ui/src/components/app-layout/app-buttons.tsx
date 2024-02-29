@@ -10,6 +10,7 @@ import { default as HamburgerIcon } from "@mui/icons-material/Menu";
 import { default as NotificationIcon } from "@mui/icons-material/NotificationsNoneOutlined";
 import { Link, IconButton, useColorScheme, Tooltip, Stack } from "@mui/joy";
 import { DateTime } from "luxon";
+import { useBugReportDisclose } from "@cf/next/user";
 import { useSidebar, noSsr } from "@cf/react/ui";
 import type { FunctionComponent, ReactNode } from "react";
 
@@ -104,22 +105,16 @@ export const NotificationButton: FunctionComponent = noSsr(
   ),
 );
 
-/** TODO not developed */
-export const BugReportButton: FunctionComponent = noSsr(
-  () => {
-    // const bugReport = useBugReportDisclose();
-    // if (!bugReport.isAvailable) return null;
-
-    return (
-      <Tooltip title="Submit a bug report">
-        <IconButton>
-          <BugReportIcon />
-        </IconButton>
-      </Tooltip>
-    );
-  },
-  () => null,
-);
+export const BugReportButton: FunctionComponent = () => {
+  const bugReport = useBugReportDisclose();
+  return (
+    <Tooltip title="Submit a bug report">
+      <IconButton onClick={bugReport.open}>
+        <BugReportIcon />
+      </IconButton>
+    </Tooltip>
+  );
+};
 
 export const AppButtonsContainer: FunctionComponent<{
   children: ReactNode;

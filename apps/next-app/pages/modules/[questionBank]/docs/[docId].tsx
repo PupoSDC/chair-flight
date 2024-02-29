@@ -1,17 +1,17 @@
 import * as fs from "node:fs/promises";
 import { Drawer, ModalClose, Typography, useTheme } from "@mui/joy";
-import { AppHead } from "@cf/next/public";
+import { AppHead } from "@cf/next-old/public";
 import {
   DocContent,
   DocLearningObjectives,
   DocQuestions,
   LayoutModule,
-} from "@cf/next/question-bank";
+} from "@cf/next-old/question-bank";
 import { useDisclose, useMediaQuery } from "@cf/react/ui";
 import { staticHandler, staticPathsHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
-import type { AppHeadProps } from "@cf/next/public";
-import type { Breadcrumbs } from "@cf/next/question-bank";
+import type { AppHeadProps } from "@cf/next-old/public";
+import type { Breadcrumbs } from "@cf/next-old/question-bank";
 import type { NextPage } from "next";
 
 const HEADER_HEIGHT = 48;
