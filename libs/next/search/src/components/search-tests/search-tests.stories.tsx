@@ -1,13 +1,13 @@
-import { TestSearch } from "./test-search";
+import { SearchTests } from "./search-tests";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type Story = StoryObj<typeof TestSearch>;
+type Story = StoryObj<typeof SearchTests>;
 
 export const Playground: Story = {};
 
-const meta: Meta<typeof TestSearch> = {
-  title: "Containers/Test/TestSearch",
-  component: TestSearch,
+const meta: Meta<typeof SearchTests> = {
+  title: "Containers/Test/SearchTests",
+  component: SearchTests,
   tags: ["autodocs"],
   args: {
     questionBank: "atpl",

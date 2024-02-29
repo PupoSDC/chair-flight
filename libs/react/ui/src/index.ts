@@ -14,7 +14,6 @@ export * from "./components/module-selection-button";
 export * from "./components/nested-checkbox-select";
 export * from "./components/question-multiple-choice";
 export * from "./components/question-navigation";
-export * from "./components/search-filters";
 export * from "./components/search-header";
 export * from "./components/search-query";
 export * from "./components/search-list";

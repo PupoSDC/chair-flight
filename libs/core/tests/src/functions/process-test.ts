@@ -34,9 +34,9 @@ export const processTest = (test: Test) => {
 
   const timeSpent = getClockTime(test.timeSpentInMs);
 
-  const timeStarted =
-    test.startedAtEpochMs &&
-    DateTime.fromMillis(test.startedAtEpochMs).toFormat("DDD");
+  const timeStarted = test.startedAtEpochMs
+    ? DateTime.fromMillis(test.startedAtEpochMs).toFormat("DDD")
+    : null;
 
   return {
     color,
