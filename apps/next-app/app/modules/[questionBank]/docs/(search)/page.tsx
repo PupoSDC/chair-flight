@@ -1,4 +1,4 @@
-import { SearchDocs } from "@cf/next/search";
+import { SearchDocs } from "@cf/next/question-bank";
 import { ModulesMain } from "@cf/next/ui";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";

@@ -21,7 +21,7 @@ import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent, ReactNode } from "react";
 
 export type QuestionPageProps = {
-  explanation: ReactNode;
+  meta: ReactNode;
   question: ReactNode;
   params: {
     questionBank: QuestionBankName;
@@ -33,7 +33,7 @@ const getRandomId = getRandomIdGenerator("seed");
 
 const QuestionPage: FunctionComponent<QuestionPageProps> = ({
   params,
-  explanation,
+  meta,
   question,
 }) => {
   const metaDisclose = useDisclose();
@@ -105,7 +105,7 @@ const QuestionPage: FunctionComponent<QuestionPageProps> = ({
             overflowY: "auto",
           }}
         >
-          <Stack sx={{ mx: "auto", maxWidth: "md" }}>{explanation}</Stack>
+          <Stack sx={{ mx: "auto", maxWidth: "md" }}>{meta}</Stack>
         </Box>
         {!metaDisclose.isOpen && (
           <Button
@@ -163,7 +163,7 @@ const QuestionPage: FunctionComponent<QuestionPageProps> = ({
           <Stack
             sx={{ p: 1, mx: "auto", flex: 1, overflowY: "auto", width: "100%" }}
           >
-            {explanation}
+            {meta}
           </Stack>
         </Drawer>
       )}

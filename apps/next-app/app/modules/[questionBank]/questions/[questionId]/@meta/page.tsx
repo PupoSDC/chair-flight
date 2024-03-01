@@ -1,4 +1,4 @@
-import { QuestionExplanation } from "@cf/next/question-bank";
+import { QuestionMeta } from "@cf/next/question-bank";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 
@@ -9,15 +9,13 @@ export type QuestionPageProps = {
   };
 };
 
-const QuestionPageExplanation: FunctionComponent<QuestionPageProps> = ({
-  params,
-}) => {
+const QuestionPageMeta: FunctionComponent<QuestionPageProps> = ({ params }) => {
   return (
-    <QuestionExplanation
+    <QuestionMeta
       questionBank={params.questionBank}
       questionId={params.questionId}
     />
   );
 };
 
-export default QuestionPageExplanation;
+export default QuestionPageMeta;

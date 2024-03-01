@@ -7,7 +7,7 @@ import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
 import { BugReportButton } from "@cf/next-old/user";
-import { SearchAnnexes, SearchQuestions } from "@cf/next/search";
+import { SearchAnnexes, SearchQuestions } from "@cf/next/question-bank";
 import { AppMain, MdxRemote } from "@cf/next/ui";
 import { Blog } from "@cf/providers/blog";
 import { BlogPostChip, ModuleSelectionButton } from "@cf/react/ui";

@@ -10,16 +10,19 @@ import type { QuestionBankName } from "@cf/core/question-bank";
 import type { StackProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
-export type QuestionExplanation = {
+export type QuestionMeta = {
   questionBank: QuestionBankName;
   questionId: string;
   component?: StackProps["component"];
   sx?: StackProps["sx"];
 };
 
-export const QuestionExplanation: FunctionComponent<
-  QuestionExplanation
-> = async ({ questionBank, questionId, component = "div", sx }) => {
+export const QuestionMeta: FunctionComponent<QuestionMeta> = async ({
+  questionBank,
+  questionId,
+  component = "div",
+  sx,
+}) => {
   const bank = new QuestionBank(questionBank);
   const loSearch = new LearningObjectiveSearch();
   const questionSearch = new QuestionSearch();

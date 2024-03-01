@@ -1,6 +1,7 @@
 import { TRPCError } from "@trpc/server";
 
 export class NotFoundError extends TRPCError {
+  digest = "NEXT_NOT_FOUND";
   constructor(message?: string) {
     super({
       code: "NOT_FOUND",

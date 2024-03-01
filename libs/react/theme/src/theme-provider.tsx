@@ -1,4 +1,4 @@
-import { CssBaseline, CssVarsProvider } from "@mui/joy";
+import { CssBaseline, CssVarsProvider, GlobalStyles } from "@mui/joy";
 import { theme } from "./theme";
 import { ThemeStopResizeAnimation } from "./theme-stop-resize-animation";
 import type { FunctionComponent, ReactNode } from "react";
@@ -13,6 +13,13 @@ export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({
   <CssVarsProvider defaultMode="light" theme={theme}>
     <CssBaseline />
     <ThemeStopResizeAnimation />
+    <GlobalStyles
+      styles={{
+        "html, body": {
+          minHeight: "100vh",
+        },
+      }}
+    />
     {children}
   </CssVarsProvider>
 );

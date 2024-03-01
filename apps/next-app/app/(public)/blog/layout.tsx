@@ -21,7 +21,7 @@ const LayoutPublic: FunctionComponent<LayoutProps> = ({ children }) => {
           sx={{ "& h2": { display: { xs: "none", sm: "block" } } }}
           href="/"
         />
-        <Box component="nav">
+        <Box component="nav" sx={{ ml: 2, display: "flex" }}>
           <Link href="/blog" color="neutral" fontSize="sm">
             Blog
           </Link>
