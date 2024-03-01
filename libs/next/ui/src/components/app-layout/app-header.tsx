@@ -34,11 +34,6 @@ export const AppHeader = forwardRef<HTMLHeadingElement, AppHeaderProps>(
           zIndex: 1000,
           boxShadow: "md",
 
-          "& nav": {
-            flex: 1,
-            display: "flex",
-          },
-
           ...props.sx,
         }}
       />

@@ -34,7 +34,6 @@ export const Ups = forwardRef<HTMLDivElement, UpsProps>(
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        minHeight: "50vh",
         color: color ? `${color}.plainColor` : undefined,
         "--joy-palette-text-primary": color ? `${color}.plainColor` : undefined,
         ...boxProps.sx,

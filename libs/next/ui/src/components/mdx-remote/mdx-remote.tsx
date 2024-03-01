@@ -1,4 +1,5 @@
 import { Stack } from "@mui/joy";
+import { mdxComponents } from "./mdx-components";
 import type { MDXRemoteProps } from "@daviereid/next-mdx-remote/rsc";
 import type { StackProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
@@ -29,7 +30,10 @@ export const MdxRemote: FunctionComponent<MdxRemoteProps> = async ({
     <Stack {...props}>
       <ActualMdxRemote
         source={source.replaceAll(MATCH_CODE_BLOCKS, "$1")}
-        components={components}
+        components={{
+          ...mdxComponents,
+          ...components,
+        }}
         options={{
           mdxOptions: {
             remarkPlugins: [

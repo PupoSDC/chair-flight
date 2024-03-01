@@ -76,12 +76,6 @@ const extraColors = {
   },
 };
 
-const lightBackground = {
-  background: {
-    body: "var(--joy-palette-primary-50)",
-  },
-};
-
 // @mui-x relies on some mui theme props that do not exist in joy themes.
 const muiThemeBackwardsCompatibility = {
   shape: {
@@ -112,7 +106,6 @@ export const theme = extendTheme({
       palette: {
         ...basicTheme.colorSchemes.light.palette,
         ...extraColors,
-        ...lightBackground,
         primary: extraColors.primaryBlue,
       },
     },

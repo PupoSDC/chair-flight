@@ -1,7 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Breadcrumbs, Link, Typography } from "@mui/joy";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { Breadcrumbs, Link, Stack, Typography } from "@mui/joy";
 import { Sidebar } from "@cf/react/ui";
 import {
   AppHeader,
@@ -32,6 +33,7 @@ export const ModulesHeader = () => {
     });
 
   const lastBreadcrumb = breadcrumbs?.at(-1);
+  const secondLastBreadcrumb = breadcrumbs?.at(-2);
 
   return (
     <AppHeader
@@ -45,7 +47,23 @@ export const ModulesHeader = () => {
         right: 0,
       }}
     >
-      <Breadcrumbs separator="›" sx={{ px: 0 }}>
+      <Stack
+        component="nav"
+        direction="row"
+        alignItems="center"
+        sx={{ display: { xs: "flex", sm: "none" } }}
+      >
+        {secondLastBreadcrumb && (
+          <Link
+            href={secondLastBreadcrumb?.url}
+            children={<ChevronLeftIcon />}
+            level={"h3"}
+            color="neutral"
+          />
+        )}
+        {lastBreadcrumb && <Typography>{lastBreadcrumb.name}</Typography>}
+      </Stack>
+      <Breadcrumbs separator="›" sx={{ display: { xs: "none", md: "flex" } }}>
         {breadcrumbs
           ?.slice(0, -1)
           .map(({ name, url }) => (

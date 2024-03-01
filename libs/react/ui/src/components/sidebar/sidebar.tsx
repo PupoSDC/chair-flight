@@ -149,6 +149,11 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
                 borderLeftColor: "var(--joy-palette-primary-plainColor)",
                 bgcolor: "transparent",
               },
+
+              [`& .${listItemContentClasses.root}`]: {
+                overflow: "hidden",
+                textWrap: "nowrap",
+              },
             },
 
             ["& .chevron"]: {

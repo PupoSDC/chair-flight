@@ -96,8 +96,10 @@ function SearchListInner<T extends { id: string }>(
       >
         <NoSsr fallback={<LoadingPlaceholder />}>
           {loading && <LoadingPlaceholder />}
-          {error && <Ups message={errorMessage} color="danger" />}
-          {hasNoResults && <Ups message={noDataMessage} />}
+          {error && (
+            <Ups message={errorMessage} color="danger" sx={{ my: 4 }} />
+          )}
+          {hasNoResults && <Ups message={noDataMessage} sx={{ my: 4 }} />}
           {hasResults && !isMobile && (
             <Table
               stickyHeader
