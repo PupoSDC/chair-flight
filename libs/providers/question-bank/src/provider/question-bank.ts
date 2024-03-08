@@ -59,6 +59,7 @@ export class QuestionBank implements QuestionBankProvider {
       const bankPath = `/content/${this.getName()}`;
       const baseApiPath = `${urlPath}${bankPath}`;
       const apiPath = `${baseApiPath}/${resource}.json`;
+      console.log(apiPath);
       const response = await fetch(apiPath, { cache: "no-store" });
       const json = (await response.json()) as QuestionBankNameToType[T][];
       type ArrayType = (typeof this.resourceArrays)[typeof resource];

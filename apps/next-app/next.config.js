@@ -68,6 +68,11 @@ const nextConfig = {
         destination: "/blog/:path*",
         permanent: true,
       },
+      {
+        source: "/modules/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
     ];
   },
   webpack: (config) => {

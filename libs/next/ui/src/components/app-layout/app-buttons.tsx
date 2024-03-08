@@ -12,6 +12,7 @@ import { Link, IconButton, useColorScheme, Tooltip, Stack } from "@mui/joy";
 import { DateTime } from "luxon";
 import { useBugReportDisclose } from "@cf/next/user";
 import { useSidebar, noSsr } from "@cf/react/ui";
+import type { IconButtonProps } from "@mui/joy";
 import type { FunctionComponent, ReactNode } from "react";
 
 const GITHUB_URL = "https://github.com/PupoSDC/chair-flight";
@@ -105,11 +106,13 @@ export const NotificationButton: FunctionComponent = noSsr(
   ),
 );
 
-export const BugReportButton: FunctionComponent = () => {
+export const BugReportButton: FunctionComponent<
+  Omit<IconButtonProps, "onClick">
+> = (props) => {
   const bugReport = useBugReportDisclose();
   return (
     <Tooltip title="Submit a bug report">
-      <IconButton onClick={bugReport.open}>
+      <IconButton onClick={bugReport.open} {...props}>
         <BugReportIcon />
       </IconButton>
     </Tooltip>

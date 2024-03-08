@@ -18,7 +18,6 @@ import type { BoxProps } from "@mui/joy";
 
 const StyledBox = styled(Box)`
   --cell-width: ${({ theme }) => theme.spacing(4)};
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

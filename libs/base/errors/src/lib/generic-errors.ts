@@ -45,3 +45,10 @@ export class MissingPathParameter extends Error {
     this.name = MissingPathParameter.name;
   }
 }
+
+export class MissingQueryParameter extends Error {
+  constructor(parameter: string) {
+    super(`Missing Query Parameter "${parameter}". Please check your query.`);
+    this.name = MissingQueryParameter.name;
+  }
+}

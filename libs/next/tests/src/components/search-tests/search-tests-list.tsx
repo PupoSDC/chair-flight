@@ -135,10 +135,7 @@ export const SearchTestsList = forwardRef<HTMLDivElement, SearchTestsListProps>(
                 </Tooltip>
               ) : (
                 <Tooltip title="Continue">
-                  <IconButton
-                    component={Link}
-                    href={`/modules/${test.questionBank}/tests/${test.id}/${test.mode}`}
-                  >
+                  <IconButton component={Link} href={`/test/${test.id}`}>
                     <PlayIcon />
                   </IconButton>
                 </Tooltip>

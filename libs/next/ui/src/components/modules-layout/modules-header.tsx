@@ -44,6 +44,7 @@ export const ModulesHeader = () => {
         borderBottomColor: "divider",
         width: Sidebar.css.remainingWidth,
         transition: Sidebar.css.widthTransition,
+        boxShadow: "none",
         right: 0,
       }}
     >

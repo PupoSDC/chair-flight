@@ -5,6 +5,8 @@ import type { BoxProps } from "@mui/joy";
 import type { ReactNode } from "react";
 
 export type UpsProps = {
+  iconSize?: string;
+
   color?: "danger" | "warning";
   /**
    * The message shown on the top of the component
@@ -24,7 +26,7 @@ export type UpsProps = {
  *
  */
 export const Ups = forwardRef<HTMLDivElement, UpsProps>(
-  ({ color, message, children, ...boxProps }, ref) => (
+  ({ color, message, children, iconSize = "100px", ...boxProps }, ref) => (
     <Box
       ref={ref}
       {...boxProps}
@@ -50,8 +52,8 @@ export const Ups = forwardRef<HTMLDivElement, UpsProps>(
         sx={{
           color: color ? `${color}.plainColor` : undefined,
           my: 2,
-          width: "100px",
-          height: "100px",
+          width: iconSize,
+          height: iconSize,
         }}
       />
       {children}
