@@ -2,7 +2,6 @@ import { forwardRef } from "react";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { default as CrossIcon } from "@mui/icons-material/Close";
 import { Box, Sheet, Stack, Typography } from "@mui/joy";
-import { MarkdownFromServer } from "@cf/next-old/question-bank";
 import type { SheetProps } from "@mui/joy";
 
 export type TestQuestionResultProps = {

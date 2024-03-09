@@ -27,7 +27,6 @@ import {
 } from "@mui/joy";
 import { getNumberOfAvailableQuestions } from "@cf/core/question-bank";
 import { newTestConfigurationSchema } from "@cf/core/tests";
-import { useTrackEvent } from "@cf/next-old/analytics";
 import { trpc } from "@cf/next/trpc";
 import { useBugReportDebugData } from "@cf/next/user";
 import {
@@ -84,7 +83,6 @@ const TestMakerComponent: FunctionComponent<Props> = ({ questionBank, sx }) => {
   const createTest = useCreateTest();
   const [{ subjects }] = useSubjects({ questionBank, course: "all" });
   const { getData, setData } = useTestMakerPersistence[questionBank]();
-  const trackEvent = useTrackEvent();
 
   const defaultValues: NewTestConfiguration = {
     mode: "exam",
@@ -144,11 +142,6 @@ const TestMakerComponent: FunctionComponent<Props> = ({ questionBank, sx }) => {
 
   const onSubmit = form.handleSubmit(async (config) => {
     try {
-      trackEvent("test.create", {
-        questionBank,
-        subject: config.subject,
-        mode: config.mode,
-      });
       const { test } = await createTest.mutateAsync({
         questionBank,
         config,
