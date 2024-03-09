@@ -6,8 +6,8 @@ import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardAr
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { BugReportButton } from "@cf/next/ui";
 import { SearchAnnexes, SearchQuestions } from "@cf/next/question-bank";
+import { BugReportButton } from "@cf/next/ui";
 import { AppMain, MdxRemote } from "@cf/next/ui";
 import { Blog } from "@cf/providers/blog";
 import { BlogPostChip, ModuleSelectionButton } from "@cf/react/ui";
