@@ -7,7 +7,6 @@ export { LayoutModule } from "./containers/layout-module";
 export { LearningObjectiveOverview } from "./containers/learning-objective-overview";
 export { LearningObjectiveQuestions } from "./containers/learning-objective-questions";
 export { LearningObjectiveTree } from "./containers/learning-objective-tree";
-export { OverviewModules } from "./containers/overview-modules";
 export { QuestionEditorAnnexes } from "./containers/question-editor-annexes";
 export { QuestionEditorCode } from "./containers/question-editor-code";
 export { QuestionEditorDiff } from "./containers/question-editor-diff";

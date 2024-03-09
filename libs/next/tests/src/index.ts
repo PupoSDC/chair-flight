@@ -1,3 +1,4 @@
+export * from "./components/latest-tests";
 export * from "./components/search-tests";
 export * from "./components/test-stand-alone";
 export * from "./components/test-maker";

@@ -1,6 +1,7 @@
 export * from "./components/app-logo";
 export * from "./components/background-faded-image";
 export * from "./components/background-sliding-images";
+export * from "./components/blog-card";
 export * from "./components/blog-post-chip";
 export * from "./components/container-wrapper";
 export * from "./components/count-up";
@@ -10,6 +11,7 @@ export * from "./components/image-viewer";
 export * from "./components/image-with-modal";
 export * from "./components/input-slider";
 export * from "./components/loading-button";
+export * from "./components/module-card";
 export * from "./components/module-selection-button";
 export * from "./components/nested-checkbox-select";
 export * from "./components/question-multiple-choice";

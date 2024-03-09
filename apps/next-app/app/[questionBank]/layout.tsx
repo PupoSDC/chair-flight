@@ -38,14 +38,14 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
         <ModulesSidebarListItem
           key="home"
           title="Home"
-          href={`/modules/${questionBank}/home`}
+          href={`/${questionBank}/home`}
           icon={HomeIcon}
         />
         {(await bank.has("questions")) && (
           <ModulesSidebarListItem
             key="tests"
             title="Tests"
-            href={`/modules/${questionBank}/tests`}
+            href={`/${questionBank}/tests`}
             icon={TestIcon}
           />
         )}
@@ -53,7 +53,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           <ModulesSidebarListItem
             key="questions"
             title="Questions"
-            href={`/modules/${questionBank}/questions`}
+            href={`/${questionBank}/questions`}
             icon={QuestionsIcon}
           />
         )}
@@ -61,7 +61,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           <ModulesSidebarListItem
             key="docs"
             title="Docs"
-            href={`/modules/${questionBank}/docs`}
+            href={`/${questionBank}/docs`}
             icon={DocsIcon}
           />
         )}
@@ -69,7 +69,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           <ModulesSidebarListItem
             key="learningObjectives"
             title="Learning Objectives"
-            href={`/modules/${questionBank}/learning-objectives`}
+            href={`/${questionBank}/learning-objectives`}
             icon={LearningObjectivesIcon}
           />
         )}
@@ -77,7 +77,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           <ModulesSidebarListItem
             key="annexes"
             title="Annexes"
-            href={`/modules/${questionBank}/annexes`}
+            href={`/${questionBank}/annexes`}
             icon={AnnexesIcon}
           />
         )}
@@ -85,7 +85,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           <ModulesSidebarListItem
             key="flashcards"
             title="Flash Cards"
-            href={`/modules/${questionBank}/flashcards`}
+            href={`/${questionBank}/flashcards`}
             icon={CardIcon}
             sx={{ "& svg": { transform: "rotate(180deg)" } }}
           />
@@ -94,7 +94,7 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
           bottom
           key="settings"
           title="Settings"
-          href={`/modules/${questionBank}/settings`}
+          href={`/${questionBank}/settings`}
           icon={SettingsIcon}
         />
       </Sidebar>

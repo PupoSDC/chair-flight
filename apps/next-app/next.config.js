@@ -73,6 +73,16 @@ const nextConfig = {
         destination: "/:path*",
         permanent: true,
       },
+      {
+        source: "/:path",
+        destination: "/:path/home",
+        permanent: true,
+      },
+      {
+        source: "/:module/tests/:testId/:mode",
+        destination: "/:module/tests/:testId",
+        permanent: true,
+      },
     ];
   },
   webpack: (config) => {
