@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { default as HomeIcon } from "@mui/icons-material/ConnectingAirportsOutlined";
 import { default as TestIcon } from "@mui/icons-material/FlightTakeoffOutlined";
 import { default as DocsIcon } from "@mui/icons-material/LibraryBooksOutlined";
@@ -7,6 +8,10 @@ import { default as QuestionsIcon } from "@mui/icons-material/QuizOutlined";
 import { default as SettingsIcon } from "@mui/icons-material/SettingsOutlined";
 import { default as CardIcon } from "@mui/icons-material/StyleOutlined";
 import {
+  questionBankNameSchema,
+  type QuestionBankName,
+} from "@cf/core/question-bank";
+import {
   ModulesHeader,
   ModulesSidebarHomeItem,
   ModulesSidebarListItem,
@@ -14,7 +19,6 @@ import {
 import { QuestionBank } from "@cf/providers/question-bank";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import { Sidebar } from "@cf/react/ui";
-import type { QuestionBankName } from "@cf/core/question-bank";
 import type { FunctionComponent, ReactNode } from "react";
 
 type ModulePageTemplateProps = {
@@ -28,6 +32,10 @@ const ModulePageTemplate: FunctionComponent<ModulePageTemplateProps> = async ({
   children,
   params: { questionBank },
 }) => {
+  if (questionBankNameSchema.safeParse(questionBank).success === false) {
+    return notFound();
+  }
+
   const bank = new QuestionBank(questionBank);
 
   return (
