@@ -46,9 +46,9 @@ export const FlashcardCollectionList = container<Props, Params, Data>(
               <CardCover
                 sx={{
                   background: `
-              linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), 
-              linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)
-            `,
+                    linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), 
+                    linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)
+                  `,
                 }}
               />
               <CardContent sx={{ justifyContent: "space-between" }}>

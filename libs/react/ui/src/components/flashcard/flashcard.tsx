@@ -1,8 +1,7 @@
 import { forwardRef } from "react";
 import { Box, Button, Card, Typography, styled } from "@mui/joy";
-import { Ups } from "@cf/react/ui";
-import { MarkdownFromServer } from "../markdown-from-server";
 import type { CardProps } from "@mui/joy";
+import type { ReactNode } from "react";
 
 const FlipCard = styled(Card)`
   transition: transform 0.8s;
@@ -17,8 +16,8 @@ const FlipCard = styled(Card)`
 `;
 
 export type FlashcardProps = {
-  question: string;
-  answer: string;
+  question: ReactNode;
+  answer: ReactNode;
   flipped?: boolean;
   onFlip?: (flipped: boolean) => void;
 } & Pick<CardProps, "sx" | "style" | "className">;
@@ -67,15 +66,7 @@ export const Flashcard = forwardRef<HTMLDivElement, FlashcardProps>(
           <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
             {question}
           </Typography>
-          <Box sx={{ flex: 1, overflowY: "scroll" }}>
-            {answer ? (
-              <MarkdownFromServer>{answer}</MarkdownFromServer>
-            ) : (
-              <Ups sx={{ minHeight: 0 }}>
-                <Typography>We are missing the answer.</Typography>
-              </Ups>
-            )}
-          </Box>
+          <Box sx={{ flex: 1, overflowY: "scroll" }}>{answer}</Box>
         </FlipCard>
       </Box>
     );

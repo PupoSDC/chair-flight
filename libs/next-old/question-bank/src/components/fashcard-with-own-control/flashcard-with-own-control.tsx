@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flashcard } from "../flashcard";
+import { Flashcard } from "@cf/react/ui";
 import type { FlashcardContent } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 
