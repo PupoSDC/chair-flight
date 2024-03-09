@@ -10,8 +10,8 @@ import {
   formLabelClasses,
   styled,
 } from "@mui/joy";
-import { container } from "@cf/trpc/client";
 import { useUserPreferences } from "../../hooks/use-user-preferences";
+import type { StackProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
 const StyledFormControl = styled(FormControl)`
@@ -27,9 +27,15 @@ const StyledFormControl = styled(FormControl)`
   }
 `;
 
-const UserSettingsFallback: FunctionComponent = () => null;
+export type UserSettingsProps = {
+  component?: StackProps["component"];
+  sx?: StackProps["sx"];
+};
 
-export const UserSettings = container(({ sx, component = "section" }) => {
+export const UserSettings: FunctionComponent<UserSettingsProps> = ({
+  sx,
+  component = "div",
+}) => {
   const [preferences, setUserPreference] = useUserPreferences();
   const { examModeAutoSkip, studyModeAutoSkip } = preferences;
 
@@ -37,7 +43,7 @@ export const UserSettings = container(({ sx, component = "section" }) => {
     <Stack
       component={component}
       sx={{
-        m: "auto",
+        mx: "auto",
         maxWidth: (t) => t.breakpoints.values.md,
         width: "100%",
         ...sx,
@@ -77,9 +83,4 @@ export const UserSettings = container(({ sx, component = "section" }) => {
       </StyledFormControl>
     </Stack>
   );
-});
-
-UserSettings.displayName = "UserSettings";
-UserSettings.getData = async () => ({});
-UserSettings.useData = () => ({});
-UserSettings.LoadingFallback = UserSettingsFallback;
+};
