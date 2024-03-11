@@ -457,10 +457,13 @@
   annexes: []
   learningObjectives:
     - B737.13
-  explanation: ""
+  explanation: |
+    When using alternate Flaps, the trailing edge flpas are operated electrically.
+    Only the leading edge flaps use power from the Standby Hydraulic System.
   variant:
     type: true-or-false
-    question: With a loss of system B pressure the standby system can be used to
+    question: |
+      With a loss of system B pressure the standby system can be used to
       extend the leading and trailing edge devices, the leading edge devices
       cannot be retracted again once extended by the standby system, but the
       trailing edge flaps can be retracted by electric motors using the

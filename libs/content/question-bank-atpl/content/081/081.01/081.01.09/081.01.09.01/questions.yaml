@@ -155,44 +155,6 @@
         text: A lower nose attitude is essential, in all situations.
         correct: false
         why: ""
-- id: QAFNTGNS
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-813246
-    - BGS-812657
-    - BGS-810443
-    - ATPLGS-102344
-    - BGS-810433
-    - AVEXAM-42261
-    - AVEXAM-95885
-    - ATPLGS-102296
-  annexes: []
-  learningObjectives:
-    - 081.01.09.01.01
-  explanation: ""
-  variant:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      Which type of flap is shown in the picture 3?
-    options:
-      - id: OLJWNM0X9
-        text: Slotted flap
-        correct: false
-        why: ""
-      - id: OWCMFUROU
-        text: Fowler flap
-        correct: true
-        why: ""
-      - id: OQJTPAOGT
-        text: Plain flap
-        correct: false
-        why: ""
-      - id: OPGIWEAZA
-        text: Split flap
-        correct: false
-        why: ""
 - id: QUOIHQMW
   relatedQuestions: []
   externalIds:
@@ -622,33 +584,44 @@
     - AVEXAM-42261
     - AVEXAM-95885
     - ATPLGS-102296
-  annexes: []
+    - ATPLQ-814222
+    - BGS-812657
+    - BGS-810443
+    - ATPLGS-102344
+    - BGS-810433
+    - AVEXAM-42261
+    - AVEXAM-95885
+    - ATPLGS-102296
+    - ATPLQ-813246
+    - BGS-812657
+    - BGS-810443
+    - ATPLGS-102344
+    - BGS-810433
+    - AVEXAM-42261
+    - AVEXAM-95885
+    - ATPLGS-102296
+  annexes:
+    - ABFVDW7
   learningObjectives:
     - 081.01.09.01.01
   explanation: ""
   variant:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      Which type of flap is shown in the picture 1?
+    type: definition
+    question: Which type of flap is shown in the picture {term}?
     options:
       - id: OCWPCSGEE
-        text: Split flap
-        correct: false
-        why: ""
+        term: "1"
+        definition: Plain flap
       - id: O9DGNVHLO
-        text: Plain flap
-        correct: true
-        why: ""
+        definition: Slotted flap
+        term: "2"
       - id: OQ5O0HUAP
-        text: Slotted flap
-        correct: false
-        why: ""
+        definition: Fowler flap
+        term: "3"
       - id: OKHLE4J95
-        text: Fowler flap
-        correct: false
-        why: ""
+        definition: Split flap
+        term: "4"
+    fakeOptions: []
 - id: QTTNGZTZ
   relatedQuestions: []
   externalIds:
@@ -741,44 +714,6 @@
         why: ""
       - id: OFGLBMDO0
         text: 4\. Fowler Flap
-        correct: false
-        why: ""
-- id: QN7YCZ6W1
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-814222
-    - BGS-812657
-    - BGS-810443
-    - ATPLGS-102344
-    - BGS-810433
-    - AVEXAM-42261
-    - AVEXAM-95885
-    - ATPLGS-102296
-  annexes: []
-  learningObjectives:
-    - 081.01.09.01.01
-  explanation: ""
-  variant:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      Which type of flap is shown in the picture 2?
-    options:
-      - id: OOTLMQZKG
-        text: Fowler flap
-        correct: false
-        why: ""
-      - id: O1FJWKJKQ
-        text: Split flap
-        correct: false
-        why: ""
-      - id: OKXIZ0Q2Z
-        text: Slotted flap
-        correct: true
-        why: ""
-      - id: OHEZDAE2Z
-        text: Plain flap
         correct: false
         why: ""
 - id: QCHRPFNS
