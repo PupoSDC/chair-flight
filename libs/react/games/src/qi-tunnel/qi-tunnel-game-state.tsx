@@ -15,7 +15,7 @@ export const INITIAL_VELOCITY = 30;
 
 type Obstacle = {
   id: number;
-  ref: React.MutableRefObject<THREE.Mesh | null>;
+  ref: React.MutableRefObject<Mesh | null>;
   rotation: number;
   name: keyof typeof obstacleIndex;
   position: number;
