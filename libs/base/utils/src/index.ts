@@ -4,3 +4,4 @@ export * from "./js/make-map";
 export * from "./js/noop";
 export * from "./random/random";
 export * from "./js/keep-unique";
+export * from "./js/sha256";

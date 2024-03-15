@@ -19,3 +19,12 @@ services:
       POSTGRES_USER: default
       POSTGRES_PASSWORD: this0is0a0secret0password
       POSTGRES_DB: verceldb
+  PROVIDER_CONTENT_POSTGRES:
+    image: postgres:latest
+    container_name: PROVIDER_CONTENT_POSTGRES
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: default
+      POSTGRES_PASSWORD: this0is0a0secret0password
+      POSTGRES_DB: verceldb      

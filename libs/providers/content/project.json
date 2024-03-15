@@ -1,0 +1,65 @@
+{
+  "name": "providers-content",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/providers/content/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {},
+    "types": {},
+    "format": {},
+    "migrate": {},
+    "migrate-schema": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/providers/content",
+        "command": "drizzle-kit push:pg"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
+    },
+    "migrate-blog": {
+      "executor": "@cf/providers/content:blog-migrate",
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      },
+      "options": {
+        "contentFolder": "libs/content/blog/posts"
+      }
+    },
+    "migrate-qb-atpl": {
+      "executor": "@cf/providers/content:blog-migrate",
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      },
+      "options": {
+        "contentFolder": "libs/content/blog/posts"
+      }
+    },
+    "migrate-qb-prep": {},
+    "migrate-qb-type": {},
+    "studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/providers/content",
+        "command": "drizzle-kit studio"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
+    }
+  },
+  "tags": []
+}

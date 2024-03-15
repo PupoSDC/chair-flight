@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "blog-migrate": {
+      "implementation": "./executors/blog-migrate/executor",
+      "schema": "./executors/blog-migrate/schema.json",
+      "description": "Migrates Blog data into DB"
+    }
+  }
+}
