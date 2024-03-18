@@ -45,7 +45,7 @@ export const OverviewModules = container<Props, Params, Data>(
       },
       {
         id: "type" satisfies QuestionBankName,
-        name: "737 Type Rating Questions",
+        name: "737/A320 Type Rating Questions",
         imgSrc: previewB737,
         imgAlt: "737 dragging itself through the skies like an old lady",
         tagLine: `${numberOfTypeQuestions} Questions`,
