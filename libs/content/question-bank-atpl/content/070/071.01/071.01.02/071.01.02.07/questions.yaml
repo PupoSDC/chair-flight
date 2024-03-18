@@ -124,27 +124,19 @@
       5) a secondary surveillance radar (SSR) transponder with altitude reporting system that can be connected to the altitude measurement system in use for altitude control
     options:
       - id: ONCANCBRO
-        text: |-
-          | 1), 4) |  |
-          | ------ |  |
+        text: 1), 4)
         correct: false
         why: ""
       - id: O1T9CNHZO
-        text: |-
-          | 1), 2), 3) |  |
-          | ---------- |  |
+        text: 1), 2), 3)
         correct: false
         why: ""
       - id: OJCBIXHUD
-        text: |-
-          | 1), 3), 4), 5) |  |
-          | -------------- |  |
+        text: 1), 3), 4), 5)
         correct: true
         why: ""
       - id: OZISYCLMB
-        text: |-
-          | 1), 2), 3), 4), 5) |  |
-          | ------------------ |  |
+        text: 1), 2), 3), 4), 5)
         correct: false
         why: ""
 - id: QTYXPFXC

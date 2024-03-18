@@ -347,27 +347,26 @@
       an aircraft that is within the range of the direction finding system?
     options:
       - id: OZG1OQHJV
-        text: |-
-          | Magnetic bearing to the station, magnetic bearing from the station, aircraft position |  |
-          | ------------------------------------------------------------------------------------- |  |
+        text: Magnetic bearing to the station, magnetic bearing from the station,
+          aircraft position
         correct: false
         why: ""
       - id: ODUGUKHN2
-        text: |-
-          | True bearing from the station (no wind), Magnetic bearing from the station (no wind), true bearing to the station (no wind), magnetic bearing to the station (no wind) |  |
-          | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: True bearing from the station (no wind), Magnetic bearing from the station
+          (no wind), true bearing to the station (no wind), magnetic bearing to
+          the station (no wind)
         correct: true
         why: ""
       - id: O8GDETVQF
-        text: |-
-          | Magnetic bearing to the station (no wind), magnetic bearing from the station (no wind), aircraft position |  |
-          | --------------------------------------------------------------------------------------------------------- |  |
+        text: Magnetic bearing to the station (no wind), magnetic bearing from the
+          station (no wind), aircraft position
         correct: false
         why: ""
       - id: ONKSNZ8WU
-        text: |-
-          | True bearing from the station (including wind correction), magnetic bearing from the station (including wind correction), true bearing to the station (including wind correction), magnetic bearing to the station (including wind correction) |  |
-          | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: True bearing from the station (including wind correction), magnetic
+          bearing from the station (including wind correction), true bearing to
+          the station (including wind correction), magnetic bearing to the
+          station (including wind correction)
         correct: false
         why: ""
 - id: QDZL2E8YK
@@ -3548,27 +3547,19 @@
     question: What leads to the highest interference for an ADF?
     options:
       - id: OMACCKVD9
-        text: |-
-          | Interference during the day |  |
-          | --------------------------- |  |
+        text: Interference during the day
         correct: false
         why: ""
       - id: OAOUFHJOD
-        text: |-
-          | Other aircraft aerials |  |
-          | ---------------------- |  |
+        text: Other aircraft aerials
         correct: false
         why: ""
       - id: OFYWKOSO7
-        text: |-
-          | Interference during the night |  |
-          | ----------------------------- |  |
+        text: Interference during the night
         correct: true
         why: ""
       - id: OSDWTK0CH
-        text: |-
-          | Signal shift during the day |  |
-          | --------------------------- |  |
+        text: Signal shift during the day
         correct: false
         why: ""
 - id: QAG3EG7ZQ
@@ -11017,27 +11008,19 @@
       DME has:"
     options:
       - id: OTF95OFK1
-        text: |-
-          | same ident, same tone |  |
-          | --------------------- |  |
+        text: same ident, same tone
         correct: false
         why: ""
       - id: OF00XQ2FM
-        text: |-
-          | same ident, different tone |  |
-          | -------------------------- |  |
+        text: same ident, different tone
         correct: true
         why: ""
       - id: OB3VWPKM9
-        text: |-
-          | different ident, different tone |  |
-          | ------------------------------- |  |
+        text: different ident, different tone
         correct: false
         why: ""
       - id: OLQT26UGE
-        text: |-
-          | different ident, same tone |  |
-          | -------------------------- |  |
+        text: different ident, same tone
         correct: false
         why: ""
 - id: QAVFBXACX
@@ -11843,27 +11826,21 @@
     question: The distances from two DMEs are plotted on a map, they are...
     options:
       - id: OBA0EERF2
-        text: |-
-          | two range circles intersecting at two different points and show slant ranges. |  |
-          | ----------------------------------------------------------------------------- |  |
+        text: two range circles intersecting at two different points and show slant
+          ranges.
         correct: true
         why: ""
       - id: O3B8AZHW4
-        text: |-
-          | two range circles intersecting at two different points and show plan ranges. |  |
-          | ---------------------------------------------------------------------------- |  |
+        text: two range circles intersecting at two different points and show plan
+          ranges.
         correct: false
         why: ""
       - id: OWTLTF3KA
-        text: |-
-          | two range circles intersecting at one point and show slant ranges. |  |
-          | ------------------------------------------------------------------ |  |
+        text: two range circles intersecting at one point and show slant ranges.
         correct: false
         why: ""
       - id: OMC7XDLLY
-        text: |-
-          | two lines intersecting at one point and show plan ranges. |  |
-          | --------------------------------------------------------- |  |
+        text: two lines intersecting at one point and show plan ranges.
         correct: false
         why: ""
 - id: Q28YLLTJJ
