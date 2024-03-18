@@ -1,4 +1,4 @@
-export { UserBugReport } from "./containers/user-bug-report";
+export { UserBugReport } from "./components/user-bug-report";
 export { UserSettings } from "./containers/user-settings";
 export {
   useUserPreferences,
