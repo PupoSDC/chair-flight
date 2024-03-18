@@ -1635,27 +1635,19 @@
     question: Which of the following is an ABAS input device mounted in an aircraft?
     options:
       - id: OUHSD84K1
-        text: |-
-          | TCAS II |  |
-          | ------- |  |
+        text: TCAS II
         correct: false
         why: ""
       - id: OQE6X1FQK
-        text: |-
-          | WAAS |  |
-          | ---- |  |
+        text: WAAS
         correct: false
         why: ""
       - id: OOC9GJU0B
-        text: |-
-          | IRS |  |
-          | --- |  |
+        text: IRS
         correct: true
         why: ""
       - id: OJQOMZZTT
-        text: |-
-          | ADS-B |  |
-          | ----- |  |
+        text: ADS-B
         correct: false
         why: ""
 - id: QV1PF6BQN
@@ -1710,27 +1702,24 @@
       used shows a RAIM prediction error. This means, that...
     options:
       - id: OUCKGYZAM
-        text: |-
-          | at the expected time of approach, an insufficient number of satellites to assure fault detection is predicted to be available. |  |
-          | ------------------------------------------------------------------------------------------------------------------------------ |  |
+        text: at the expected time of approach, an insufficient number of satellites to
+          assure fault detection is predicted to be available.
         correct: true
         why: ""
       - id: O5DZJSXH7
-        text: |-
-          | the automatic RAIM prediction function has failed and the pilot has to verify the number of available satellites with the ATC. |  |
-          | ------------------------------------------------------------------------------------------------------------------------------ |  |
+        text: the automatic RAIM prediction function has failed and the pilot has to
+          verify the number of available satellites with the ATC.
         correct: false
         why: ""
       - id: OKP0P1T9P
-        text: |-
-          | at the expected time of approach, the predicted navigation accuracy of the system is worse than the requirement for that approach coded in the database. |  |
-          | -------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: at the expected time of approach, the predicted navigation accuracy of the
+          system is worse than the requirement for that approach coded in the
+          database.
         correct: false
         why: ""
       - id: O6LRUFC5O
-        text: |-
-          | the GNSS cannot calculate the estimated time of arrival at the initial approach fix. |  |
-          | ------------------------------------------------------------------------------------ |  |
+        text: the GNSS cannot calculate the estimated time of arrival at the initial
+          approach fix.
         correct: false
         why: ""
 - id: QF8WJITRN

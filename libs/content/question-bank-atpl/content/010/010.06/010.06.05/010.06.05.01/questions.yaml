@@ -86,9 +86,7 @@
       You are approaching the fix from 010° and the wind is calm. Select the appropriate entry procedure:
     options:
       - id: OUR1NBXMY
-        text: |-
-          | either offset or parallel |  |
-          | ------------------------- |  |
+        text: either offset or parallel
         correct: false
         why: ""
       - id: OIZYLUXD1
@@ -216,27 +214,19 @@
       of a holding (leg specified by 1 NM DME per leg)?
     options:
       - id: OHPJXVMMU
-        text: |-
-          | as soon as DME states 1 NM. |  |
-          | --------------------------- |  |
+        text: as soon as DME states 1 NM.
         correct: true
         why: ""
       - id: OJP8XROXI
-        text: |-
-          | 1 NM before reaching 1 NM DME. |  |
-          | ------------------------------ |  |
+        text: 1 NM before reaching 1 NM DME.
         correct: false
         why: ""
       - id: OWMXAVQLR
-        text: |-
-          | 0.5 NM before reaching 1 NM DME. |  |
-          | -------------------------------- |  |
+        text: 0.5 NM before reaching 1 NM DME.
         correct: false
         why: ""
       - id: OWG1ZKSU0
-        text: |-
-          | 15 seconds before reaching 1 NM DME. |  |
-          | ------------------------------------ |  |
+        text: 15 seconds before reaching 1 NM DME.
         correct: false
         why: ""
 - id: QYCFNKNT
@@ -367,9 +357,7 @@
         correct: false
         why: ""
       - id: O6LN4BJHV
-        text: |-
-          | either offset or parallel. |  |
-          | -------------------------- |  |
+        text: either offset or parallel.
         correct: false
         why: ""
       - id: OTTAQ2KKI
@@ -394,27 +382,27 @@
       received specifying the time of departure from the holding point...
     options:
       - id: OOUUF2O26
-        text: |-
-          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at or up to 3 minutes after the time specified. |  |
-          | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |  |
+        text: the pilot should adjust the pattern within the limits of the established
+          holding procedure in order to leave the holding point at or up to 3
+          minutes after the time specified.
         correct: false
         why: ""
       - id: OO5GXPTNM
-        text: |-
-          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at the time specified. |  |
-          | ----------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: the pilot should adjust the pattern within the limits of the established
+          holding procedure in order to leave the holding point at the time
+          specified.
         correct: true
         why: ""
       - id: OGVYHFKEZ
-        text: |-
-          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point at the time specified, +/- 1 minute. |  |
-          | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: the pilot should adjust the pattern within the limits of the established
+          holding procedure in order to leave the holding point at the time
+          specified, +/- 1 minute.
         correct: false
         why: ""
       - id: OLHPJ4GEJ
-        text: |-
-          | the pilot should adjust the pattern within the limits of the established holding procedure in order to leave the holding point before or at the time specified. |  |
-          | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |  |
+        text: the pilot should adjust the pattern within the limits of the established
+          holding procedure in order to leave the holding point before or at the
+          time specified.
         correct: false
         why: ""
 - id: QILTRQXW
