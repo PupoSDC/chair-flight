@@ -110,21 +110,16 @@ export const NotificationButton: FunctionComponent = noSsr(
   ),
 );
 
-export const BugReportButton: FunctionComponent = noSsr(
-  () => {
-    const bugReport = useBugReportDisclose();
-    if (!bugReport.isAvailable) return null;
-
-    return (
-      <Tooltip title="Submit a bug report">
-        <IconButton onClick={bugReport.open}>
-          <BugReportIcon />
-        </IconButton>
-      </Tooltip>
-    );
-  },
-  () => null,
-);
+export const BugReportButton: FunctionComponent = () => {
+  const bugReport = useBugReportDisclose();
+  return (
+    <Tooltip title="Submit a bug report">
+      <IconButton onClick={bugReport.open}>
+        <BugReportIcon />
+      </IconButton>
+    </Tooltip>
+  );
+};
 
 export const AppButtonsContainer = styled(Stack)`
   flex-direction: row;

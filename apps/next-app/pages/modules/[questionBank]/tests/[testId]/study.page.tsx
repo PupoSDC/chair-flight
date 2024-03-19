@@ -15,7 +15,6 @@ import {
   TestQuestion,
   TestQuestionMeta,
 } from "@cf/next/tests";
-import { UserBugReport } from "@cf/next/user";
 import { useDisclose } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import { ssrHandler } from "@cf/trpc/server";
@@ -101,7 +100,6 @@ export const Page: NextPage<Props> = ({ testId, questionBank }) => {
           </DialogContent>
         </ModalDialog>
       </Modal>
-      <UserBugReport />
     </>
   );
 };

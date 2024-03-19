@@ -1,4 +1,5 @@
 import React, { StrictMode } from "react";
+import { default as dynamic } from "next/dynamic";
 import { default as Head } from "next/head";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AnalyticsProvider, AnalyticsPageLogger } from "@cf/next/analytics";
@@ -8,6 +9,11 @@ import { trpc } from "@cf/trpc/client";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";
 import "@fontsource/public-sans";
+
+const UserBugReport = dynamic(
+  () => import("@cf/next/user").then((mod) => mod.UserBugReport),
+  { ssr: false },
+);
 
 if (typeof document === "undefined") {
   React.useLayoutEffect = React.useEffect;
@@ -25,6 +31,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <ThemeProvider>
           <Component {...pageProps} />
           <Toaster />
+          <UserBugReport />
         </ThemeProvider>
       </AnalyticsProvider>
     </StrictMode>

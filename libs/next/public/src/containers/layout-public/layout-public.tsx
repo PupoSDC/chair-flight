@@ -1,6 +1,5 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
 import {
-  UserBugReport,
   BugReportButton,
   AppButtonsContainer,
   GithubButton,
@@ -115,7 +114,6 @@ export const LayoutPublic = container<Props>(
             zIndex: 1000,
           }}
         />
-        <UserBugReport />
       </>
     );
   },

@@ -24,7 +24,6 @@ import {
   HamburgerButton,
   ThemeButton,
   BugReportButton,
-  UserBugReport,
 } from "@cf/next/user";
 import {
   AppLogo,
@@ -234,7 +233,6 @@ export const LayoutModule = container<Props, Params, Data>(
             ...sx,
           }}
         />
-        <UserBugReport />
         <LinearProgress
           sx={{
             "--LinearProgress-radius": 0,
