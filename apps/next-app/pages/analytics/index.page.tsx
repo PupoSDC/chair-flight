@@ -3,7 +3,7 @@ import { GlobalStyles, Sheet, Typography } from "@mui/joy";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { DateTime } from "luxon";
-import { AppHead, BlogIndex, LayoutPublic } from "@cf/next/public";
+import { AppHead, LayoutPublic } from "@cf/next/public";
 import { BackgroundFadedImage } from "@cf/react/components";
 import { trpc } from "@cf/trpc/client";
 import { staticHandler } from "@cf/trpc/server";
@@ -67,8 +67,7 @@ const Page: NextPage = () => {
   );
 };
 
-export const getStaticProps = staticHandler(async ({ helper }) => {
-  await BlogIndex.getData({ params: {}, helper });
+export const getStaticProps = staticHandler(async () => {
   return { props: {} };
 }, fs);
 

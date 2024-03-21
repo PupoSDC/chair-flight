@@ -1,5 +1,4 @@
 import { Analytics } from "@cf/providers/analytics";
-import { Blog } from "@cf/providers/blog";
 import { Github } from "@cf/providers/github";
 import { QuestionBank } from "@cf/providers/question-bank";
 import {
@@ -16,8 +15,6 @@ export const questionBanks: Record<QuestionBankName, QuestionBank> = {
   atpl: new QuestionBank("atpl"),
   prep: new QuestionBank("prep"),
 };
-
-export const blog = new Blog();
 
 export const github = new Github();
 

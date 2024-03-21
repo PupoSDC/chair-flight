@@ -1,4 +1,4 @@
-import { blog, questionBanks } from "../common/providers";
+import { questionBanks } from "../common/providers";
 import { getTrpcHelper } from "./trpc-helper";
 import type { TrpcHelper } from "./trpc-helper";
 import type {
@@ -12,7 +12,7 @@ import type {
 } from "next/types";
 import type { ParsedUrlQuery } from "querystring";
 
-const repositories = [...Object.values(questionBanks), blog];
+const repositories = [...Object.values(questionBanks)];
 
 export const staticHandler = <
   Props extends Record<string, unknown>,

@@ -1,6 +1,7 @@
 export * from "./app-logo";
 export * from "./background-faded-image";
 export * from "./background-sliding-images";
+export * from "./blog-post-card";
 export * from "./blog-post-chip";
 export * from "./container-wrapper";
 export * from "./count-up";

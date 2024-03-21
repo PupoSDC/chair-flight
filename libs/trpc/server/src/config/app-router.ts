@@ -17,7 +17,6 @@ import { overviewsContainersRouter } from "../routers/containers/overviews-route
 import { questionsContainersRouter } from "../routers/containers/questions-router";
 import { testsContainersRouter } from "../routers/containers/tests-router";
 import { userContainersRouter } from "../routers/containers/user-router";
-import { blogPagesRouter } from "../routers/pages/blog-pages-router";
 import { modulesPagesRouter } from "../routers/pages/modules-pages-router";
 import { router } from "./trpc";
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
@@ -37,7 +36,6 @@ export const appRouter = router({
 
   pageGeneration: router({
     modules: modulesPagesRouter,
-    blog: blogPagesRouter,
   }),
 
   containers: router({

@@ -87,7 +87,7 @@ export const NotificationButton: FunctionComponent = noSsr(
 
     const hasNewPosts =
       DateTime.fromISO(userVoyage.lastBlogVisit) <
-      DateTime.fromISO(lastPostDate);
+      DateTime.fromJSDate(lastPostDate);
     const animation = hasNewPosts ? `${pulseAnimation} 2s infinite` : undefined;
     const tooltipTitle = hasNewPosts
       ? "New Posts available in our blog!"
