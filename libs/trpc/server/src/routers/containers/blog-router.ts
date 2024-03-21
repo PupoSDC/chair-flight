@@ -1,29 +1,31 @@
 import { z } from "zod";
 import { compileMdx } from "@cf/core/markdown";
-import { blog } from "../../common/providers";
+import { Github } from "@cf/providers/github";
 import { publicProcedure, router } from "../../config/trpc";
 
 export const blogContainersRouter = router({
   getBlogPost: publicProcedure
     .input(z.object({ postId: z.string() }))
     .query(async ({ input }) => {
-      const meta = await blog.getPost(input.postId);
-      const mdxContent = await compileMdx(meta.content);
+      const github = new Github();
+      const rawPost = await github.getBlogPost(input.postId);
+      const mdxContent = await compileMdx(rawPost.content);
 
       const post = {
         mdxContent,
-        title: meta.title,
-        description: meta.description,
-        tag: meta.tag,
-        date: meta.date,
-        tagHref: `/blog?tag=${meta.tag}`,
+        title: rawPost.title,
+        description: rawPost.description,
+        tag: rawPost.tag,
+        date: rawPost.date,
+        tagHref: `/blog?tag=${rawPost.tag}`,
       };
 
       return { post };
     }),
   getBlogIndex: publicProcedure.input(z.object({})).query(async () => {
-    const allPosts = await blog.getAllPosts();
-    const meta = allPosts.map(({ content, ...meta }) => meta);
+    const github = new Github();
+    const { posts } = await github.getBlogPosts();
+    const meta = posts.map(({ content, ...meta }) => meta);
     return { meta };
   }),
 });

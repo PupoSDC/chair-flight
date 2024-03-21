@@ -9,4 +9,5 @@ export const githubRouter = router({
   createEditQuestionsPr: publicProcedure
     .input(editQuestionsPrSchema)
     .mutation(async ({ input }) => github.createEditQuestionsPr(input)),
+  getBlogPosts: publicProcedure.query(() => github.getBlogPosts()),
 });

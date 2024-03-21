@@ -50,14 +50,14 @@ export const BlogIndex: Container<Props, Params, Data> = container<
             <Box>
               <Typography level="body-sm">{post.author}</Typography>
               <Typography level="body-xs">
-                {DateTime.fromISO(post.date).toFormat("dd LLL yyyy")}
+                {DateTime.fromJSDate(post.date).toFormat("dd LLL yyyy")}
               </Typography>
             </Box>
             <Button
               color="primary"
               variant="plain"
               component={Link}
-              href={`/articles/blog/${post.filename}`}
+              href={`/articles/blog/${post.id}`}
               children="Read&nbsp;More"
               endDecorator={<KeyboardArrowRightIcon />}
               sx={{ flex: 0, ml: "auto" }}

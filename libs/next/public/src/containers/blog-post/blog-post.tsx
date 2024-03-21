@@ -40,7 +40,7 @@ export const BlogPost: Container<Props, Params, Data> = container<
       />
       <Typography
         level="body-sm"
-        children={DateTime.fromISO(post.date).toFormat("dd LLL yyyy")}
+        children={DateTime.fromJSDate(post.date).toFormat("dd LLL yyyy")}
       />
       <Typography
         level="h2"
