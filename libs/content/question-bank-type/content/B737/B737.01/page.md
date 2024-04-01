@@ -49,7 +49,7 @@ Three positions:
 
 ### COCKPIT DOOR ACCESS SYSTEM
 
-Three lights:
+3 lights:
 
 - Red: Indicates the door is locked, and the lock system is operating
 - Amber: Indicates the correct code has been entered and is awaiting flight crew
