@@ -829,14 +829,24 @@
   annexes: []
   learningObjectives:
     - B737.07
-  explanation: ""
+  explanation: | 
+    > ### EEC Alternate Mode
+    > The EEC can operate in either of two alternate modes, soft or hard. If required
+    > signals are not available to operate in the normal mode, the EEC automatically
+    > changes to the soft alternate mode. 
+    > 
+    > (...)
+    >
+    > In flight, if a fault
+    > prevents the EEC from receiving flap, or main landing gear position signals,
+    > approach idle schedule begins below 19,000 feet MSL.
   variant:
     type: simple
     question: In flight, if a fault prevents the EEC receiving flap or anti-ice
       signals; at what altitude would the Approach Idle schedule begin?
     options:
       - id: szqcpk
-        text: Below 15,000 MSL.
+        text: Below 19,000 MSL.
         correct: true
         why: ""
       - id: 5lxe6i
