@@ -113,7 +113,24 @@
   annexes: []
   learningObjectives:
     - B737.07
-  explanation: ""
+  explanation: |
+    > ### Electronic Engine Control (EEC) Switches
+    >
+    > - ON (white)
+    >   - indicates normal control mode is selected
+    >   - engine ratings calculated by EEC from sensed atmospheric conditions
+    >     and bleed air demand
+    >   - when ON is not in view, the EEC has been manually selected to the
+    >     alternate mode.
+    > - ALTN (amber)
+    >   - indicated EEC has automatically switched to alternate control mode or it
+    >     has been selected manually
+    >
+    > EEC provides rated thrust or higher.
+    >
+    > **Note**: **Both ON and ALTN may be in view if EEC has automatically switched to
+    > soft alternate mode**.
+    > **Note**: EGT limits must be observed in both normal and alternate control modes
   variant:
     type: simple
     question: If both the ON and ALTN lights in the EEC switch are illuminated, what
@@ -829,7 +846,7 @@
   annexes: []
   learningObjectives:
     - B737.07
-  explanation: | 
+  explanation: |
     > ### EEC Alternate Mode
     > The EEC can operate in either of two alternate modes, soft or hard. If required
     > signals are not available to operate in the normal mode, the EEC automatically
