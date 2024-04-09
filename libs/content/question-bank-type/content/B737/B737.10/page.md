@@ -47,6 +47,9 @@ A DEU (Display Electronic Unit) failure will prompt a DSPLY SOURCE message.
   - Shows pitch limit to stall when flaps are extended or at low speeds
 - **Expended LOC:**
   - Displayed when within 1/2 dot and 5° of MCP course
+- **Minimum indicators**
+  - Baro: turns amber and flashes for 3 seconds
+  - Radio Dial: dial display and pointer turn amber and flash for 3 seconds
 
 ## ALERTS
 
@@ -56,6 +59,9 @@ A DEU (Display Electronic Unit) failure will prompt a DSPLY SOURCE message.
   - Capt & F/O IAS disagree by more than 5kt for 5 seconds
 - **AOA DISAGREE:**
   - Capt & F/O AOA disagree by more than 10° for 10 seconds
+- **MAP RANGE DISAGREE**
+  - The selected range on the EFIS control panel is different from the map
+    display range.
 
 ## TERRAIN (On navigation display & VSD)
 
