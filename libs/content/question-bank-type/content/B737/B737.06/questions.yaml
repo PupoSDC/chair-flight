@@ -800,7 +800,15 @@
   annexes: []
   learningObjectives:
     - B737.06
-  explanation: ""
+  explanation: |
+    > Under normal conditions, DC bus 1, DC bus 2, and the DC standby 
+    > bus are connected via the cross bus tie relay. In this condition, 
+    > TR1 and TR2 are each powering DC bus 1, DC bus 2, and the DC standby 
+    > bus. TR3 powers the battery bus and serves as a backup power source 
+    > for TR1 and TR2
+
+    Do not confuse with AC tie bus breaker. AC Power sources cannot be 
+    parallelized. The same does not apply to DC Power sources.
   variant:
     type: simple
     question: Under normal conditions, what powers DC Bus 1?

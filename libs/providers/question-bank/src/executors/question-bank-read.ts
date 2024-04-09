@@ -60,7 +60,6 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
     const jsonData = YAML.parse(json) as QuestionTemplateJson[];
     questions.push(...jsonData);
   }
-
   return questions;
 };
 
