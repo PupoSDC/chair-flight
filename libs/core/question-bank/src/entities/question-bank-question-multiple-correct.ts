@@ -1,16 +1,4 @@
 import { z } from "zod";
-import { assertType } from "@cf/base/utils";
-import type { IsEqual } from "@cf/base/utils";
-
-export type QuestionVariantMultipleCorrect = {
-  type: "multiple-correct";
-  question: string;
-  options: Array<{
-    text: string;
-    correct: boolean;
-    why: string;
-  }>;
-};
 
 export const questionVariantMultipleCorrectSchema = z.object({
   type: z.literal("multiple-correct"),
@@ -25,5 +13,6 @@ export const questionVariantMultipleCorrectSchema = z.object({
     .min(4),
 });
 
-type IVariantMultiple = z.infer<typeof questionVariantMultipleCorrectSchema>;
-assertType<IsEqual<IVariantMultiple, QuestionVariantMultipleCorrect>>();
+export type QuestionVariantMultipleCorrect = z.infer<
+  typeof questionVariantMultipleCorrectSchema
+>;

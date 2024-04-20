@@ -61,6 +61,32 @@
           ]
         }
       }
+    },
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "drizzle-kit push:pg"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
+    },
+    "studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "drizzle-kit studio"
+      },
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      }
     }
   },
   "namedInputs": {
