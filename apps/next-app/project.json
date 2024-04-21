@@ -11,7 +11,7 @@
     "format": {},
     "dev": {
       "executor": "@nx/next:server",
-      "dependsOn": ["^compile", "^migrate"],
+      "dependsOn": ["^migrate"],
       "options": {
         "port": 4200,
         "buildTarget": "next-app:build",
