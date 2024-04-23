@@ -91,6 +91,7 @@ export const TestReview = container<Props>(
             <TestQuestionResult
               key={question.questionId}
               questionTemplateId={question.templateId}
+              questionHref={`/modules/${test.questionBank}/questions/${question.templateId}`}
               sx={{ my: 1 }}
               title={`${i + 1}/${arr.length}`}
               question={question.question}

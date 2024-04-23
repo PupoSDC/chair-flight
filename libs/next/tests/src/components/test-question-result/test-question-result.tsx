@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { default as CheckIcon } from "@mui/icons-material/Check";
 import { default as CrossIcon } from "@mui/icons-material/Close";
-import { Box, Sheet, Stack, Typography } from "@mui/joy";
+import { Box, Link, Sheet, Stack } from "@mui/joy";
 import { MarkdownFromServer } from "@cf/next/question-bank";
 import type { SheetProps } from "@mui/joy";
 
@@ -10,6 +10,7 @@ export type TestQuestionResultProps = {
   correct?: boolean;
   question?: string;
   questionTemplateId?: string;
+  questionHref?: string;
   correctOption?: string;
   selectedOption?: string;
   learningObjectives?: string[];
@@ -24,6 +25,7 @@ export const TestQuestionResult = forwardRef<
       title,
       correct,
       question,
+      questionHref,
       correctOption,
       selectedOption,
       questionTemplateId,
@@ -45,9 +47,9 @@ export const TestQuestionResult = forwardRef<
           ...props.sx,
         }}
       >
-        <Typography level="body-sm" fontWeight={900}>
+        <Link level="body-sm" fontWeight={900} href={questionHref}>
           {questionTemplateId}
-        </Typography>
+        </Link>
         <MarkdownFromServer compressed sx={{ fontSize: "sm" }}>
           {question ?? ""}
         </MarkdownFromServer>
