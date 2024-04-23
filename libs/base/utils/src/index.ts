@@ -1,3 +1,4 @@
+export * from "./js/chunk";
 export * from "./js/deep-clone";
 export * from "./js/make-map";
 export * from "./js/noop";
