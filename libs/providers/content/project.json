@@ -8,21 +8,10 @@
     "types": {},
     "format": {},
     "migrate": {},
-    "migrate-schema": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "libs/providers/content",
-        "command": "drizzle-kit push:pg"
-      },
-      "configurations": {
-        "prod": {},
-        "dev": {},
-        "staging": {},
-        "local": {}
-      }
-    },
+    "studio": {},
     "migrate-blog": {
-      "executor": "@cf/providers/content:blog-migrate",
+      "executor": "@cf/providers/content:migrate-blog",
+      "dependsOn": ["migrate"],
       "configurations": {
         "prod": {},
         "dev": {},
@@ -34,7 +23,8 @@
       }
     },
     "migrate-qb-atpl": {
-      "executor": "@cf/providers/content:blog-migrate",
+      "executor": "@cf/providers/content:migrate-question-bank",
+      "dependsOn": ["migrate"],
       "configurations": {
         "prod": {},
         "dev": {},
@@ -42,22 +32,36 @@
         "local": {}
       },
       "options": {
-        "contentFolder": "libs/content/blog/posts"
+        "contentFolder": "libs/content/question-bank-atpl/content",
+        "questionBank": "atpl"
       }
     },
-    "migrate-qb-prep": {},
-    "migrate-qb-type": {},
-    "studio": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "libs/providers/content",
-        "command": "drizzle-kit studio"
-      },
+    "migrate-qb-prep": {
+      "executor": "@cf/providers/content:migrate-question-bank",
+      "dependsOn": ["migrate"],
       "configurations": {
         "prod": {},
         "dev": {},
         "staging": {},
         "local": {}
+      },
+      "options": {
+        "contentFolder": "libs/content/question-bank-prep/content",
+        "questionBank": "prep"
+      }
+    },
+    "migrate-qb-type": {
+      "executor": "@cf/providers/content:migrate-question-bank",
+      "dependsOn": ["migrate"],
+      "configurations": {
+        "prod": {},
+        "dev": {},
+        "staging": {},
+        "local": {}
+      },
+      "options": {
+        "contentFolder": "libs/content/question-bank-type/content",
+        "questionBank": "type"
       }
     }
   },

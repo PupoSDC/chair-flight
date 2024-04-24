@@ -1,11 +1,11 @@
 import * as fs from "node:fs/promises";
-import * as path from "node:path";
 import { DateTime } from "luxon";
 import { parse } from "yaml";
-import { sha256 } from "@cf/base/utils";
+import { DataError } from "@cf/base/errors";
+import { blogPostSchema } from "@cf/core/blog";
 import { Content } from "../../src/content";
-import { blogPostSchema } from "../../src/entities/blog-post";
-import type { BlogPost } from "../../src/entities/blog-post";
+import { getAllFiles } from "../../src/executors/get-all-files";
+import type { BlogPost } from "@cf/core/blog";
 
 type ExecutorOptions = {
   contentFolder: string;
@@ -16,18 +16,18 @@ const MATTER_REGEX =
 
 const runExecutor = async ({ contentFolder }: ExecutorOptions) => {
   const content = new Content();
-  const posts = await fs.readdir(contentFolder);
+  const posts = await getAllFiles(contentFolder, "page.md");
   const parsedPosts: BlogPost[] = [];
 
   for (const post of posts) {
-    const postPage = path.join(contentFolder, post, "page.md");
-    const source = (await fs.readFile(postPage)).toString();
+    const source = (await fs.readFile(post)).toString();
     const match = MATTER_REGEX.exec(source);
-    if (!match) throw new Error(`Missing frontMatter for ${post}`);
+    const id = post.split("/").at(-1)?.split("-")[0];
+    if (!match) throw new DataError(`Missing frontMatter for ${post}`);
+    if (!id) throw new DataError("No ID could be inferred from post title");
     const data = parse(match[1]);
     const meta = blogPostSchema.parse({
-      id: post,
-      hash: await sha256(source),
+      id: post.split("/").at(-1)?.split("-")[0],
       createdAt: DateTime.fromFormat(data.date, "yyyy-MM-dd").toJSDate(),
       updatedAt: DateTime.now().toJSDate(),
       title: data.title,
@@ -35,12 +35,12 @@ const runExecutor = async ({ contentFolder }: ExecutorOptions) => {
       author: data.author,
       content: source.split("\n---").slice(1).join().trim(),
       tag: data.tag,
-      imageUrl: data.imageUrl,
+      imageUrl: data.imageUrl ?? "/default",
     });
     parsedPosts.push(meta);
   }
 
-  await content.updateBlogPosts(parsedPosts);
+  await content.updateBlog(parsedPosts);
 
   return {
     success: true,
