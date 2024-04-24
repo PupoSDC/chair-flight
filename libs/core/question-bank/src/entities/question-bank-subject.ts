@@ -1,20 +1,4 @@
 import { z } from "zod";
-import { assertType } from "@cf/base/utils";
-import type { CourseId, LearningObjectiveId, SubjectId } from "./ids";
-import type { IsEqual } from "@cf/base/utils";
-
-export type Subject = {
-  id: SubjectId;
-  learningObjective: LearningObjectiveId;
-  /** Includes all Learning objectives from this subject */
-  nestedLearningObjectives: LearningObjectiveId[];
-  courses: CourseId[];
-  longName: string;
-  shortName: string;
-  numberOfExamQuestions: number;
-  numberOfExamMinutes: number;
-  numberOfQuestions: number;
-};
 
 export const subjectSchema = z.object({
   id: z.string(),
@@ -28,5 +12,4 @@ export const subjectSchema = z.object({
   numberOfQuestions: z.number(),
 });
 
-type ISubject = z.infer<typeof subjectSchema>;
-assertType<IsEqual<ISubject, Subject>>();
+export type Subject = z.infer<typeof subjectSchema>;

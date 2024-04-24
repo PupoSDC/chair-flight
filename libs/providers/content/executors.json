@@ -1,9 +1,14 @@
 {
   "executors": {
-    "blog-migrate": {
-      "implementation": "./executors/blog-migrate/executor",
-      "schema": "./executors/blog-migrate/schema.json",
+    "migrate-blog": {
+      "implementation": "./executors/migrate-blog/executor",
+      "schema": "./executors/migrate-blog/schema.json",
       "description": "Migrates Blog data into DB"
+    },
+    "migrate-question-bank": {
+      "implementation": "./executors/migrate-question-bank/executor",
+      "schema": "./executors/migrate-question-bank/schema.json",
+      "description": "Migrates Question Bank data into DB"
     }
   }
 }

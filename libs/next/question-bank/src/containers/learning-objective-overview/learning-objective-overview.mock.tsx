@@ -5,7 +5,7 @@ export const mockData: AppRouterOutput["containers"]["learningObjectives"]["getL
     learningObjective: {
       id: "070",
       subject: "070",
-      parentId: "",
+      parentId: null,
       courses: ["ATPL_H_IR", "ATPL_H_VFR", "CPL_H", "ATPL_A", "CPL_A"],
       text: { mdContent: "Operational Procedures" },
       source: { mdContent: "" },

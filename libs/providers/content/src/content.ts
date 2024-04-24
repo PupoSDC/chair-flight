@@ -2,8 +2,11 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 import { getEnvVariableOrThrow } from "@cf/base/env";
 import { contentSchema, type ContentDb } from "../drizzle";
-import { updateBlogPosts } from "./functions/update-blog-posts";
-import type { BlogPost } from "./entities/blog-post";
+import { getBankMetadata } from "./functions/get-bank-metadata";
+import { updateBlog } from "./functions/update-blog";
+import { updateQuestionBank } from "./functions/update-question-bank";
+import type { BlogPost } from "@cf/core/blog";
+import type { QuestionBank } from "@cf/core/question-bank";
 
 export class Content {
   private static db: ContentDb;
@@ -17,7 +20,11 @@ export class Content {
     Content.client.connect();
   }
 
-  public updateBlogPosts = (blogPosts: BlogPost[]) => {
-    updateBlogPosts(Content.db, blogPosts);
-  };
+  public updateBlog = (blogPosts: BlogPost[]) =>
+    updateBlog(Content.db, blogPosts);
+
+  public updateQuestionBank = (content: QuestionBank) =>
+    updateQuestionBank(Content.db, content);
+
+  public getBankMetadata = () => getBankMetadata(Content.db);
 }

@@ -1,21 +1,4 @@
 import { z } from "zod";
-import { assertType } from "@cf/base/utils";
-import type { QuestionOptionId } from "./ids";
-import type { IsEqual } from "@cf/base/utils";
-
-export type QuestionVariantDefinition = {
-  type: "definition";
-  question: string;
-  options: Array<{
-    id: QuestionOptionId;
-    term: string;
-    definition: string;
-  }>;
-  fakeOptions: Array<{
-    id: QuestionOptionId;
-    definition: string;
-  }>;
-};
 
 export const questionVariantDefinitionSchema = z
   .object({
@@ -50,5 +33,6 @@ export const questionVariantDefinitionSchema = z
     }
   });
 
-type IVariantDefinition = z.infer<typeof questionVariantDefinitionSchema>;
-assertType<IsEqual<IVariantDefinition, QuestionVariantDefinition>>();
+export type QuestionVariantDefinition = z.infer<
+  typeof questionVariantDefinitionSchema
+>;

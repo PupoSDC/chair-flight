@@ -16,7 +16,8 @@ import type {
   LearningObjectiveJson,
   QuestionTemplateJson,
   SubjectJson,
-} from "./json-types";
+} from "./question-bank-json-types";
+import type { FlashcardCollection } from "@cf/core/question-bank";
 
 const ANNEX_MATCH = /!\[.*\]\(annex:(.*)\)/gm;
 
@@ -27,6 +28,7 @@ export const connectQuestionBank = ({
   jsonSubjects,
   jsonAnnexes,
   jsonDocs,
+  jsonFlashcardCollections,
   questionBank,
 }: {
   jsonQuestionTemplates: QuestionTemplateJson[];
@@ -34,6 +36,7 @@ export const connectQuestionBank = ({
   jsonCourses: CourseJson[];
   jsonSubjects: SubjectJson[];
   jsonAnnexes: AnnexJson[];
+  jsonFlashcardCollections: FlashcardCollection[];
   jsonDocs: DocJson[];
   questionBank: QuestionBankName;
 }): {
@@ -43,7 +46,9 @@ export const connectQuestionBank = ({
   subjects: Subject[];
   annexes: Annex[];
   docs: Doc[];
+  flashcardCollections: FlashcardCollection[];
 } => {
+  const flashcardCollections = jsonFlashcardCollections;
   const courses = jsonCourses;
 
   const learningObjectives = jsonLos.map<LearningObjective>((lo) => ({
@@ -253,22 +258,13 @@ export const connectQuestionBank = ({
     }
   });
 
-  questionBankSchema.parse({
+  return questionBankSchema.parse({
     questionTemplates,
     docs,
     annexes,
     learningObjectives,
     subjects,
     courses,
-    flashcardCollections: [],
+    flashcardCollections,
   });
-
-  return {
-    questionTemplates,
-    learningObjectives,
-    courses: jsonCourses,
-    subjects,
-    annexes,
-    docs,
-  };
 };
