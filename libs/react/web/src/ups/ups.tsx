@@ -1,8 +1,7 @@
-import { forwardRef } from "react";
 import { default as AirplanemodeInactiveIcon } from "@mui/icons-material/AirplanemodeInactive";
 import { Box, Typography } from "@mui/joy";
 import type { BoxProps } from "@mui/joy";
-import type { ReactNode } from "react";
+import type { FunctionComponent, ReactNode } from "react";
 
 export type UpsProps = {
   color?: "danger" | "warning";
@@ -23,41 +22,41 @@ export type UpsProps = {
  *
  *
  */
-export const Ups = forwardRef<HTMLDivElement, UpsProps>(
-  ({ color, message, children, ...boxProps }, ref) => (
-    <Box
-      ref={ref}
-      {...boxProps}
+export const Ups: FunctionComponent<UpsProps> = ({
+  color,
+  message,
+  children,
+  ...boxProps
+}) => (
+  <Box
+    {...boxProps}
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "50vh",
+      color: color ? `${color}.plainColor` : undefined,
+      "--joy-palette-text-primary": color ? `${color}.plainColor` : undefined,
+      ...boxProps.sx,
+    }}
+  >
+    <Typography
+      level="h3"
+      children={message}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "50vh",
         color: color ? `${color}.plainColor` : undefined,
-        "--joy-palette-text-primary": color ? `${color}.plainColor` : undefined,
-        ...boxProps.sx,
       }}
-    >
-      <Typography
-        level="h3"
-        children={message}
-        sx={{
-          color: color ? `${color}.plainColor` : undefined,
-        }}
-      />
-      <AirplanemodeInactiveIcon
-        sx={{
-          color: color ? `${color}.plainColor` : undefined,
-          my: 2,
-          width: "100px",
-          height: "100px",
-        }}
-      />
-      {children}
-    </Box>
-  ),
+    />
+    <AirplanemodeInactiveIcon
+      sx={{
+        color: color ? `${color}.plainColor` : undefined,
+        my: 2,
+        width: "100px",
+        height: "100px",
+      }}
+    />
+    {children}
+  </Box>
 );
-
-Ups.displayName = "Ups";

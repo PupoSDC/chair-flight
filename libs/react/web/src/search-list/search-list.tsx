@@ -1,4 +1,4 @@
-import { Fragment, forwardRef, useRef } from "react";
+import { Fragment, useRef } from "react";
 import { NoSsr } from "@mui/base";
 import {
   Box,
@@ -13,7 +13,22 @@ import {
 import { useMediaQuery } from "../hooks/use-media-query";
 import { Ups } from "../ups";
 import type { SheetProps } from "@mui/joy";
-import type { ForwardedRef, FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
+
+const LoadingPlaceholder: FunctionComponent = () => (
+  <Box sx={{ height: "100%", p: 2 }} gap={1}>
+    <Box sx={{ overflow: "hidden", height: "100%" }}>
+      {[...new Array(20).keys()].map((k) => (
+        <Skeleton
+          key={k}
+          variant="rectangular"
+          height={"48px"}
+          sx={{ my: 1 }}
+        />
+      ))}
+    </Box>
+  </Box>
+);
 
 export type SearchListProps<T extends { id: string }> = {
   items?: T[];
@@ -31,37 +46,19 @@ export type SearchListProps<T extends { id: string }> = {
   onFetchNextPage?: () => Promise<unknown>;
 } & SheetProps;
 
-const LoadingPlaceholder: FunctionComponent = () => (
-  <Box sx={{ height: "100%", p: 2 }} gap={1}>
-    <Box sx={{ overflow: "hidden", height: "100%" }}>
-      {[...new Array(20).keys()].map((k) => (
-        <Skeleton
-          key={k}
-          variant="rectangular"
-          height={"48px"}
-          sx={{ my: 1 }}
-        />
-      ))}
-    </Box>
-  </Box>
-);
-
-function SearchListInner<T extends { id: string }>(
-  {
-    items = [],
-    loading,
-    error,
-    forceMode,
-    errorMessage = "Error Fetching Data",
-    noDataMessage = "No Data Found",
-    renderTableRow: TableRow,
-    renderListItemContent: ListItemContent,
-    renderThead: RenderThead,
-    onFetchNextPage,
-    ...sheetProps
-  }: SearchListProps<T>,
-  ref: ForwardedRef<HTMLDivElement>,
-) {
+export const SearchList = <T extends { id: string }>({
+  items = [],
+  loading,
+  error,
+  forceMode,
+  errorMessage = "Error Fetching Data",
+  noDataMessage = "No Data Found",
+  renderTableRow: TableRow,
+  renderListItemContent: ListItemContent,
+  renderThead: RenderThead,
+  onFetchNextPage,
+  ...sheetProps
+}: SearchListProps<T>) => {
   const isFetchingMore = useRef(false);
   const theme = useTheme();
   const isMobileMq = useMediaQuery(theme.breakpoints.down("md"));
@@ -87,7 +84,7 @@ function SearchListInner<T extends { id: string }>(
   };
 
   return (
-    <Sheet ref={ref} {...sheetProps}>
+    <Sheet {...sheetProps}>
       <Box
         sx={{ height: "100%", overflow: loading ? "hidden" : "auto" }}
         onScroll={onScroll}
@@ -133,9 +130,4 @@ function SearchListInner<T extends { id: string }>(
       </Box>
     </Sheet>
   );
-}
-
-const ForwardRefSearchList = forwardRef(SearchListInner);
-ForwardRefSearchList.displayName = "SearchList";
-
-export const SearchList = forwardRef(SearchListInner) as typeof SearchListInner;
+};

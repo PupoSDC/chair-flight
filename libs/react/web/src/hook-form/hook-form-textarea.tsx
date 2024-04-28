@@ -1,8 +1,9 @@
-import { forwardRef, startTransition, useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { get, useFormContext } from "react-hook-form";
 import { FormControl, FormLabel, Textarea } from "@mui/joy";
 import { HookFormErrorMessage } from "./hook-form-error-message";
 import type { FormControlProps, TextareaProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 type StyleProps = "sx" | "style" | "className";
 
@@ -13,10 +14,15 @@ export type HookFormTextAreaProps = {
   Omit<TextareaProps, StyleProps | "onChange" | "onBlur" | "value"> &
   Required<Pick<TextareaProps, "onChange" | "onBlur">>;
 
-export const HookFormTextArea = forwardRef<
-  HTMLInputElement,
-  HookFormTextAreaProps
->(({ sx, style, className, name, formLabel, onChange, ...otherProps }, ref) => {
+export const HookFormTextArea: FunctionComponent<HookFormTextAreaProps> = ({
+  sx,
+  style,
+  className,
+  name,
+  formLabel,
+  onChange,
+  ...otherProps
+}) => {
   const form = useFormContext();
   const error = get(form.formState.errors, name);
   const watchedValue = form.watch(name);
@@ -33,7 +39,6 @@ export const HookFormTextArea = forwardRef<
     <FormControl sx={sx} style={style} className={className}>
       {formLabel && <FormLabel>{formLabel}</FormLabel>}
       <Textarea
-        ref={ref}
         error={!!error}
         name={name}
         value={localValue}
@@ -43,6 +48,4 @@ export const HookFormTextArea = forwardRef<
       <HookFormErrorMessage name={name} />
     </FormControl>
   );
-});
-
-HookFormTextArea.displayName = "HookFormTextArea";
+};

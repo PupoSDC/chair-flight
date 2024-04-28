@@ -1,4 +1,4 @@
-import { forwardRef, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { ChevronRight } from "@mui/icons-material";
 import {
   Box,
@@ -11,6 +11,7 @@ import {
   styled,
 } from "@mui/joy";
 import type { StackProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 export type NestedCheckboxItem = {
   id: string;
@@ -53,12 +54,11 @@ export type NestedCheckboxSelectProps = {
   items?: NestedCheckboxItem[];
   values?: string[];
   onChange?: (values: string[]) => void;
-} & Pick<StackProps, "sx" | "style" | "className">;
+} & Pick<StackProps, "sx" | "style" | "className" | "ref">;
 
-export const NestedCheckboxSelect = forwardRef<
-  HTMLDivElement,
+export const NestedCheckboxSelect: FunctionComponent<
   NestedCheckboxSelectProps
->(({ items = [], values = [], onChange, ...props }, ref) => {
+> = ({ items = [], values = [], onChange, ...props }) => {
   const [openChapter, setOpenChapter] = useState<string>();
 
   const valueMap = useMemo(
@@ -74,7 +74,7 @@ export const NestedCheckboxSelect = forwardRef<
   );
 
   return (
-    <Stack {...props} ref={ref} sx={props.sx} role="group">
+    <Stack {...props} role="group">
       {items?.map((parent) => {
         const parentChecked = valueMap[parent.id] ?? false;
         const open = openChapter === parent.id;
@@ -223,9 +223,7 @@ export const NestedCheckboxSelect = forwardRef<
       })}
     </Stack>
   );
-});
-
-NestedCheckboxSelect.displayName = "NestedCheckboxSelect";
+};
 
 const valuesMapToArray = (record: Record<string, boolean>) =>
   Object.entries(record)

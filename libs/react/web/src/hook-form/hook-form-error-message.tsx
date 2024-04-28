@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
 import { get, useFormContext } from "react-hook-form";
 import { Typography } from "@mui/joy";
 import type { TypographyProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 import type { ZodError } from "zod";
 
 export type HookFormErrorMessageProps = Omit<
@@ -11,10 +11,9 @@ export type HookFormErrorMessageProps = Omit<
   name: string;
 };
 
-export const HookFormErrorMessage = forwardRef<
-  HTMLParagraphElement,
+export const HookFormErrorMessage: FunctionComponent<
   HookFormErrorMessageProps
->(({ name, ...props }, ref) => {
+> = ({ name, ...props }) => {
   const form = useFormContext();
   const error = get(form.formState.errors, name) as ZodError;
 
@@ -22,7 +21,6 @@ export const HookFormErrorMessage = forwardRef<
 
   return (
     <Typography
-      ref={ref}
       level="body-sm"
       color="danger"
       {...props}
@@ -31,6 +29,4 @@ export const HookFormErrorMessage = forwardRef<
       {error.message}
     </Typography>
   );
-});
-
-HookFormErrorMessage.displayName = "HookFormErrorMessage";
+};

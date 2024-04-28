@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import { SvgIcon } from "@mui/joy";
 import type { SvgIconProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
@@ -28,9 +27,8 @@ const AppLogoSvg: FunctionComponent = (props) => (
   </svg>
 );
 
-export const AppLogo = forwardRef<
-  HTMLOrSVGElement,
-  Omit<SvgIconProps, "viewbox" | "component">
->((props, ref) => <SvgIcon ref={ref} component={AppLogoSvg} {...props} />);
+export type AppLogoProps = Omit<SvgIconProps, "viewbox" | "component">;
 
-AppLogo.displayName = "AppLogo";
+export const AppLogo: FunctionComponent<AppLogoProps> = (props) => (
+  <SvgIcon component={AppLogoSvg} {...props} />
+);

@@ -1,8 +1,8 @@
-import { forwardRef } from "react";
 import { get, useFormContext } from "react-hook-form";
 import { FormControl, FormLabel, Select } from "@mui/joy";
 import { HookFormErrorMessage } from "./hook-form-error-message";
 import type { FormControlProps, SelectProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 type StyleProps = "sx" | "style" | "className";
 
@@ -17,10 +17,15 @@ export type HookFormSelectProps = {
   > &
   Required<Pick<SelectProps<object, false>, "onBlur">>;
 
-export const HookFormSelect = forwardRef<
-  HTMLButtonElement,
-  HookFormSelectProps
->(({ sx, style, className, name, formLabel, optional, ...otherProps }, ref) => {
+export const HookFormSelect: FunctionComponent<HookFormSelectProps> = ({
+  sx,
+  style,
+  className,
+  name,
+  formLabel,
+  optional,
+  ...otherProps
+}) => {
   const form = useFormContext();
   const error = get(form.formState.errors, name);
   const watchedValue = form.watch(name);
@@ -35,7 +40,6 @@ export const HookFormSelect = forwardRef<
         />
       )}
       <Select
-        ref={ref}
         name={name}
         color={color}
         value={watchedValue}
@@ -51,6 +55,4 @@ export const HookFormSelect = forwardRef<
       <HookFormErrorMessage name={name} />
     </FormControl>
   );
-});
-
-HookFormSelect.displayName = "HookFormSelect";
+};
