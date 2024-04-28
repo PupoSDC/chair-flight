@@ -10,8 +10,8 @@ import {
   Typography,
 } from "@mui/joy";
 import { type QuestionBankName } from "@cf/core/question-bank";
-import { LoadingButton, SearchHeader, SearchList } from "@cf/react/components";
 import { Markdown } from "@cf/react/markdown";
+import { LoadingButton, SearchHeader, SearchList } from "@cf/react/web";
 import { trpc, type AppRouterOutput } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { VerticalDivider } from "../../components/vertical-divider";

@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { Button, Stack } from "@mui/joy";
 import { editQuestionsPrMetaSchema } from "@cf/core/github";
-import { HookFormInput, HookFormTextArea } from "@cf/react/components";
+import { HookFormInput, HookFormTextArea } from "@cf/react/web";
 import { trpc, type AppRouterOutput } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";

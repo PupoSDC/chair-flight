@@ -25,14 +25,14 @@ import {
   ThemeButton,
   BugReportButton,
 } from "@cf/next/user";
+import { ThemeOverrideColorScheme } from "@cf/react/theme";
 import {
   AppLogo,
   Sidebar,
   SidebarListItem,
   useMediaQuery,
-} from "@cf/react/components";
-import { usePageTransition } from "@cf/react/components";
-import { ThemeOverrideColorScheme } from "@cf/react/theme";
+} from "@cf/react/web";
+import { usePageTransition } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import type { QuestionBankName } from "@cf/core/question-bank";

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { docSearchFilters } from "@cf/core/search";
-import { createUsePersistenceHook } from "@cf/react/components";
+import { createUsePersistenceHook } from "@cf/react/web";
 import type { QuestionBankName } from "@cf/core/question-bank";
 
 const defaultFilter = docSearchFilters.parse({});

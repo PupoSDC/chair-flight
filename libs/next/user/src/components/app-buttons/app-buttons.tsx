@@ -16,7 +16,7 @@ import {
 } from "@mui/joy";
 import { DateTime } from "luxon";
 import { useTrackEvent } from "@cf/next/analytics";
-import { useSidebar, noSsr } from "@cf/react/components";
+import { useSidebar, noSsr } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { useBugReportDisclose } from "../../hooks/use-bug-report";
 import { useUserVoyage } from "../../hooks/use-user-voyage";

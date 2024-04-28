@@ -4,7 +4,7 @@ import { LineChart } from "@mui/x-charts/LineChart";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { DateTime } from "luxon";
 import { AppHead, LayoutPublic } from "@cf/next/public";
-import { BackgroundFadedImage } from "@cf/react/components";
+import { BackgroundFadedImage } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { staticHandler } from "@cf/trpc/server";
 import type { NextPage } from "next";

@@ -1,5 +1,5 @@
 import { type QuestionBankName } from "@cf/core/question-bank";
-import { SearchList } from "@cf/react/components";
+import { SearchList } from "@cf/react/web";
 import { type AppRouterOutput } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import { useQuestionEditor } from "../../hooks/use-question-editor";

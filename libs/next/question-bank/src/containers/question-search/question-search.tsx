@@ -1,12 +1,12 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
-import { SearchHeader } from "@cf/react/components";
+import { SearchHeader } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { QuestionList } from "../../components/question-list";
 import { useQuestionSearch } from "../../hooks/use-question-search";
 import type { QuestionBankName } from "@cf/core/question-bank";
-import type { SearchListProps } from "@cf/react/components";
+import type { SearchListProps } from "@cf/react/web";
 import type { AppRouterOutput } from "@cf/trpc/client";
 
 type Props = {

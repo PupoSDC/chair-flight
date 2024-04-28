@@ -1,5 +1,5 @@
-import { ContainerWrapper } from "@cf/react/components";
-import type { ContainerWrapperProps } from "@cf/react/components";
+import { ContainerWrapper } from "@cf/react/web";
+import type { ContainerWrapperProps } from "@cf/react/web";
 import type { TrpcHelper } from "@cf/trpc/server";
 import type { SxProps } from "@mui/joy/styles/types";
 import type { ElementType, FunctionComponent } from "react";
