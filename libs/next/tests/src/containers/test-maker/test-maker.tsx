@@ -33,14 +33,14 @@ import {
   toast,
   useDisclose,
   useMediaQuery,
-} from "@cf/react/components";
-import { createUsePersistenceHook } from "@cf/react/components";
+} from "@cf/react/web";
+import { createUsePersistenceHook } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import { useTestProgress } from "../../hooks/use-test-progress";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NewTestConfiguration } from "@cf/core/tests";
-import type { NestedCheckboxSelectProps } from "@cf/react/components";
+import type { NestedCheckboxSelectProps } from "@cf/react/web";
 
 const useSubjects = trpc.common.tests.getSubjects.useSuspenseQuery;
 

@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/joy";
 import { z } from "zod";
-import { HookFormInput, HookFormTextArea, toast } from "@cf/react/components";
+import { HookFormInput, HookFormTextArea, toast } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { useBugReportStore } from "../../hooks/use-bug-report";
 import type { FunctionComponent } from "react";

@@ -5,8 +5,8 @@ import {
   GithubButton,
   ThemeButton,
 } from "@cf/next/user";
-import { AppLogo } from "@cf/react/components";
-import { usePageTransition } from "@cf/react/components";
+import { AppLogo } from "@cf/react/web";
+import { usePageTransition } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container } from "@cf/trpc/client";
 import type { ReactElement } from "react";

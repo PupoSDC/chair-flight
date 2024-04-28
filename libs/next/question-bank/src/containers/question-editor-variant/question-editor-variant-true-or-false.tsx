@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Divider, FormLabel } from "@mui/joy";
 import { Switch } from "@mui/joy";
 import { questionVariantTrueOrFalseSchema } from "@cf/core/question-bank";
-import { HookFormTextArea } from "@cf/react/components";
+import { HookFormTextArea } from "@cf/react/web";
 import type { QuestionVariantTrueOrFalse } from "@cf/core/question-bank";
 import type { FunctionComponent } from "react";
 

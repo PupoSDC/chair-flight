@@ -14,8 +14,8 @@ import {
   TestNavigation,
   TestQuestion,
 } from "@cf/next/tests";
-import { useDisclose } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { useDisclose } from "@cf/react/web";
 import { ssrHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NextPage } from "next";

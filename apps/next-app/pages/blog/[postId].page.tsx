@@ -10,14 +10,14 @@ import { compileMdx } from "@cf/core/markdown";
 import { AppHead, LayoutPublic } from "@cf/next/public";
 import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
 import { Github } from "@cf/providers/github";
+import { Mdx } from "@cf/react/markdown";
 import {
   BackgroundFadedImage,
   BlogPostChip,
   ModuleSelectionButton,
-} from "@cf/react/components";
-import { Mdx } from "@cf/react/markdown";
+} from "@cf/react/web";
 import type { MdxDocument } from "@cf/core/markdown";
-import type { BlogPostTag } from "@cf/react/components";
+import type { BlogPostTag } from "@cf/react/web";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type PageParams = {

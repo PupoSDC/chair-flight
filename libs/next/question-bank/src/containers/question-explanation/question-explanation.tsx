@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
-import { Ups } from "@cf/react/components";
 import { Markdown } from "@cf/react/markdown";
+import { Ups } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import type {

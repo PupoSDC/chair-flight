@@ -13,7 +13,7 @@ import type {
   QuestionTemplateId,
   QuestionVariant,
 } from "@cf/core/question-bank";
-import type { PersistenceKey } from "@cf/react/components";
+import type { PersistenceKey } from "@cf/react/web";
 import type { trpc } from "@cf/trpc/client";
 
 const persistenceKey: PersistenceKey = "cf-question-editor";

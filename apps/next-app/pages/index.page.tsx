@@ -1,8 +1,8 @@
 import * as fs from "node:fs/promises";
 import { useState } from "react";
 import { LayoutPublic, HeroWelcome, AppHead } from "@cf/next/public";
-import { BackgroundSlidingImages } from "@cf/react/components";
 import { ThemeOverrideColorScheme } from "@cf/react/theme";
+import { BackgroundSlidingImages } from "@cf/react/web";
 import { staticHandler } from "@cf/trpc/server";
 import type { QuestionBankName } from "@cf/core/question-bank";
 import type { NextPage } from "next";

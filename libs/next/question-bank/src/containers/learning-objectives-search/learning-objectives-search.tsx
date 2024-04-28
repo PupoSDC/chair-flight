@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
 import { useTrackEvent } from "@cf/next/analytics";
-import { SearchHeader } from "@cf/react/components";
+import { SearchHeader } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { container, getRequiredParam } from "@cf/trpc/client";
 import { LearningObjectiveList } from "../../components/learning-objectives-list";
