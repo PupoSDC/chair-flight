@@ -1,11 +1,12 @@
-import { forwardRef, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { Button } from "@mui/joy";
 import type { ButtonProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
-export const LoadingButton = forwardRef<
-  HTMLButtonElement,
-  Omit<ButtonProps, "loading">
->(({ onClick, ...props }, ref) => {
+export const LoadingButton: FunctionComponent<Omit<ButtonProps, "loading">> = ({
+  onClick,
+  ...props
+}) => {
   const [loading, setLoading] = useState(false);
 
   const newOnClick = useCallback(
@@ -20,7 +21,5 @@ export const LoadingButton = forwardRef<
     [onClick],
   );
 
-  return <Button ref={ref} {...props} loading={loading} onClick={newOnClick} />;
-});
-
-LoadingButton.displayName = "LoadingButton";
+  return <Button {...props} loading={loading} onClick={newOnClick} />;
+};

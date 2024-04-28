@@ -1,5 +1,4 @@
 import {
-  forwardRef,
   useCallback,
   useEffect,
   useLayoutEffect,
@@ -13,6 +12,7 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 import { Box, Button, Skeleton, styled } from "@mui/joy";
 import { useWindowSize } from "../hooks/use-window-resize";
 import type { BoxProps } from "@mui/joy";
+import type { FunctionComponent } from "react";
 
 const StyledBox = styled(Box)`
   --cell-width: ${({ theme }) => theme.spacing(4)};
@@ -98,158 +98,148 @@ export type QuestionNavigationProps = {
   component?: React.ElementType;
 } & Pick<BoxProps, "className" | "sx" | "style">;
 
-export const QuestionNavigation = forwardRef<
-  HTMLDivElement,
-  QuestionNavigationProps
->(
-  (
-    {
-      loading,
-      questions = [],
-      currentId = "",
-      status = "in-progress",
-      pageSize = 40,
-      onQuestionClicked,
-      ...boxProps
-    },
-    ref,
-  ) => {
-    const window = useWindowSize();
-    const ulRef = useRef<HTMLUListElement>(null);
-    const totalPages = Math.ceil(questions.length / pageSize);
-    const currentQuestionIndex = Math.max(
-      questions.findIndex((q) => q.id === currentId),
-      0,
-    );
-    const currentQuestionPage = Math.floor(currentQuestionIndex / pageSize);
-    const [currentPage, setCurrentPage] = useState(currentQuestionPage);
-    const [height, setHeight] = useState(0);
-
-    const updateHeight = useCallback(() => {
-      if (!ulRef.current) return;
-      const cellWidth = 32;
-      const buttonHeight = 32;
-      const width = ulRef.current.clientWidth;
-      const columns = Math.max(0, Math.floor((width + 6) / (cellWidth + 6)));
-      const rows = Math.ceil(pageSize / columns);
-      const height = rows * (cellWidth + 6) + buttonHeight + 16;
-      setHeight(height);
-    }, [ulRef, setHeight, pageSize]);
-
-    useLayoutEffect(updateHeight);
-    useEffect(updateHeight, [updateHeight, window.width]);
-
-    return (
-      <StyledBox ref={ref} {...boxProps} style={{ height, ...boxProps.style }}>
-        <Box component="ul" ref={ulRef}>
-          {loading
-            ? new Array(pageSize).fill(0).map((_, i) => (
-                <Box component="li" key={i}>
-                  <Button
-                    disabled
-                    variant={"outlined"}
-                    color={"neutral"}
-                    sx={{ p: "0 !important" }}
-                    children={
-                      <Skeleton
-                        sx={{
-                          width: "100%",
-                          height: "var(--cell-width)",
-                          borderRadius: 8,
-                        }}
-                      />
-                    }
-                  />
-                </Box>
-              ))
-            : questions
-                .slice(currentPage * pageSize, (currentPage + 1) * pageSize)
-                .map((item, i) => {
-                  const color = (() => {
-                    if (status === "in-progress") {
-                      return "neutral";
-                    }
-                    if (status === "both" && !item.selectedOption) {
-                      return "neutral";
-                    }
-                    if (item.correctOption === item.selectedOption) {
-                      return "success";
-                    }
-                    return "danger";
-                  })();
-
-                  return (
-                    <Box component="li" key={item.id}>
-                      <Button
-                        onClick={() =>
-                          onQuestionClicked?.(
-                            item.id,
-                            currentPage * pageSize + i,
-                          )
-                        }
-                        variant={item.selectedOption ? "solid" : "outlined"}
-                        color={color}
-                        className={item.id === currentId ? "active" : ""}
-                        children={currentPage * pageSize + i + 1}
-                      />
-                    </Box>
-                  );
-                })}
-        </Box>
-        {(loading || totalPages > 1) && (
-          <Box component="nav">
-            <Button
-              variant="outlined"
-              size="sm"
-              color="neutral"
-              disabled={loading || totalPages === 1}
-              onClick={() => setCurrentPage(0)}
-            >
-              <KeyboardDoubleArrowLeftIcon />
-            </Button>
-            <Button
-              variant="outlined"
-              size="sm"
-              color="neutral"
-              disabled={loading || totalPages === 1}
-              onClick={() => setCurrentPage((p) => Math.max(p - 1, 0))}
-            >
-              <KeyboardArrowLeftIcon />
-            </Button>
-            <Button
-              variant="outlined"
-              size="sm"
-              color="neutral"
-              disabled={loading || totalPages === 1}
-              onClick={() => setCurrentPage(currentQuestionPage)}
-            >
-              {currentPage + 1} / {totalPages}
-            </Button>
-            <Button
-              variant="outlined"
-              size="sm"
-              color="neutral"
-              disabled={loading || totalPages === 1}
-              onClick={() =>
-                setCurrentPage((p) => Math.min(p + 1, totalPages - 1))
-              }
-            >
-              <KeyboardArrowRightIcon />
-            </Button>
-            <Button
-              variant="outlined"
-              size="sm"
-              color="neutral"
-              disabled={loading || totalPages === 1}
-              onClick={() => setCurrentPage(totalPages - 1)}
-            >
-              <KeyboardDoubleArrowRightIcon />
-            </Button>
-          </Box>
-        )}
-      </StyledBox>
-    );
+export const QuestionNavigation: FunctionComponent<QuestionNavigationProps> = (
+  {
+    loading,
+    questions = [],
+    currentId = "",
+    status = "in-progress",
+    pageSize = 40,
+    onQuestionClicked,
+    ...boxProps
   },
-);
+  ref,
+) => {
+  const window = useWindowSize();
+  const ulRef = useRef<HTMLUListElement>(null);
+  const totalPages = Math.ceil(questions.length / pageSize);
+  const currentQuestionIndex = Math.max(
+    questions.findIndex((q) => q.id === currentId),
+    0,
+  );
+  const currentQuestionPage = Math.floor(currentQuestionIndex / pageSize);
+  const [currentPage, setCurrentPage] = useState(currentQuestionPage);
+  const [height, setHeight] = useState(0);
 
-QuestionNavigation.displayName = "TestQuestionNavigation";
+  const updateHeight = useCallback(() => {
+    if (!ulRef.current) return;
+    const cellWidth = 32;
+    const buttonHeight = 32;
+    const width = ulRef.current.clientWidth;
+    const columns = Math.max(0, Math.floor((width + 6) / (cellWidth + 6)));
+    const rows = Math.ceil(pageSize / columns);
+    const height = rows * (cellWidth + 6) + buttonHeight + 16;
+    setHeight(height);
+  }, [ulRef, setHeight, pageSize]);
+
+  useLayoutEffect(updateHeight);
+  useEffect(updateHeight, [updateHeight, window.width]);
+
+  return (
+    <StyledBox ref={ref} {...boxProps} style={{ height, ...boxProps.style }}>
+      <Box component="ul" ref={ulRef}>
+        {loading
+          ? new Array(pageSize).fill(0).map((_, i) => (
+              <Box component="li" key={i}>
+                <Button
+                  disabled
+                  variant={"outlined"}
+                  color={"neutral"}
+                  sx={{ p: "0 !important" }}
+                  children={
+                    <Skeleton
+                      sx={{
+                        width: "100%",
+                        height: "var(--cell-width)",
+                        borderRadius: 8,
+                      }}
+                    />
+                  }
+                />
+              </Box>
+            ))
+          : questions
+              .slice(currentPage * pageSize, (currentPage + 1) * pageSize)
+              .map((item, i) => {
+                const color = (() => {
+                  if (status === "in-progress") {
+                    return "neutral";
+                  }
+                  if (status === "both" && !item.selectedOption) {
+                    return "neutral";
+                  }
+                  if (item.correctOption === item.selectedOption) {
+                    return "success";
+                  }
+                  return "danger";
+                })();
+
+                return (
+                  <Box component="li" key={item.id}>
+                    <Button
+                      onClick={() =>
+                        onQuestionClicked?.(item.id, currentPage * pageSize + i)
+                      }
+                      variant={item.selectedOption ? "solid" : "outlined"}
+                      color={color}
+                      className={item.id === currentId ? "active" : ""}
+                      children={currentPage * pageSize + i + 1}
+                    />
+                  </Box>
+                );
+              })}
+      </Box>
+      {(loading || totalPages > 1) && (
+        <Box component="nav">
+          <Button
+            variant="outlined"
+            size="sm"
+            color="neutral"
+            disabled={loading || totalPages === 1}
+            onClick={() => setCurrentPage(0)}
+          >
+            <KeyboardDoubleArrowLeftIcon />
+          </Button>
+          <Button
+            variant="outlined"
+            size="sm"
+            color="neutral"
+            disabled={loading || totalPages === 1}
+            onClick={() => setCurrentPage((p) => Math.max(p - 1, 0))}
+          >
+            <KeyboardArrowLeftIcon />
+          </Button>
+          <Button
+            variant="outlined"
+            size="sm"
+            color="neutral"
+            disabled={loading || totalPages === 1}
+            onClick={() => setCurrentPage(currentQuestionPage)}
+          >
+            {currentPage + 1} / {totalPages}
+          </Button>
+          <Button
+            variant="outlined"
+            size="sm"
+            color="neutral"
+            disabled={loading || totalPages === 1}
+            onClick={() =>
+              setCurrentPage((p) => Math.min(p + 1, totalPages - 1))
+            }
+          >
+            <KeyboardArrowRightIcon />
+          </Button>
+          <Button
+            variant="outlined"
+            size="sm"
+            color="neutral"
+            disabled={loading || totalPages === 1}
+            onClick={() => setCurrentPage(totalPages - 1)}
+          >
+            <KeyboardDoubleArrowRightIcon />
+          </Button>
+        </Box>
+      )}
+    </StyledBox>
+  );
+};

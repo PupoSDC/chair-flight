@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import {
   Link,
   ListItemButton,
@@ -18,13 +17,16 @@ export type SidebarListItemProps = {
   onClick?: () => void;
 } & ListItemButtonProps;
 
-export const SidebarListItem = forwardRef<
-  HTMLAnchorElement,
-  SidebarListItemProps
->(({ icon: Icon, selected, href, title, onClick, ...other }, ref) => {
+export const SidebarListItem: FunctionComponent<SidebarListItemProps> = ({
+  icon: Icon,
+  selected,
+  href,
+  title,
+  onClick,
+  ...other
+}) => {
   return (
     <ListItemButton
-      ref={ref}
       variant="outlined"
       selected={selected}
       component={Link}
@@ -38,6 +40,4 @@ export const SidebarListItem = forwardRef<
       <ListItemContent>{title}</ListItemContent>
     </ListItemButton>
   );
-});
-
-SidebarListItem.displayName = "SidebarListItem";
+};

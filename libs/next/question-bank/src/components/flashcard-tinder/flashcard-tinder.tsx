@@ -1,9 +1,9 @@
-import { forwardRef, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { default as ArrowBackIosNewIcon } from "@mui/icons-material/ArrowBackIosNew";
 import { default as ArrowForwardIosIcon } from "@mui/icons-material/ArrowForwardIos";
 import { Box, IconButton, LinearProgress, styled } from "@mui/joy";
 import type { BoxProps } from "@mui/joy";
-import type { ReactElement } from "react";
+import type { FunctionComponent, ReactElement } from "react";
 
 const CARD_WIDTH = 420;
 
@@ -69,74 +69,73 @@ const FlashcardTinderCardWrapper = styled(Box)`
 
 export type FlashcardTinderProps = {
   children: ReactElement[];
-} & Pick<BoxProps, "sx" | "style" | "className" | "component">;
+} & Pick<BoxProps, "sx" | "style" | "className" | "component" | "ref">;
 
 /**
  * A swipable container designed to flash cards, and inspired by Tinder.
  *
  * Children must be an array.
  */
-export const FlashcardTinder = forwardRef<HTMLDivElement, FlashcardTinderProps>(
-  ({ children, ...boxProps }, ref) => {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [currentScroll, setCurrentScroll] = useState(0);
+export const FlashcardTinder: FunctionComponent<FlashcardTinderProps> = ({
+  children,
+  ...boxProps
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentScroll, setCurrentScroll] = useState(0);
 
-    const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-      const container = e.currentTarget;
-      const scrollLeft = container.scrollLeft;
-      const maxScroll = container.scrollWidth - container.clientWidth;
-      const scrollPercent = scrollLeft / maxScroll;
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    const scrollPercent = scrollLeft / maxScroll;
 
-      setCurrentScroll(scrollPercent);
-    };
+    setCurrentScroll(scrollPercent);
+  };
 
-    const scrollProgrammatically = (direction: "left" | "right") => {
-      const container = containerRef.current;
-      if (!container) return;
-      containerRef.current?.scrollBy({
-        left: (direction === "left" ? -1 : 1) * CARD_WIDTH,
-        behavior: "smooth",
-      });
-    };
+  const scrollProgrammatically = (direction: "left" | "right") => {
+    const container = containerRef.current;
+    if (!container) return;
+    containerRef.current?.scrollBy({
+      left: (direction === "left" ? -1 : 1) * CARD_WIDTH,
+      behavior: "smooth",
+    });
+  };
 
-    return (
-      <WrapperContainer {...boxProps} ref={ref}>
-        <CardsContainer ref={containerRef} onScroll={handleScroll}>
-          {children.map((child) => (
-            <FlashcardTinderCardWrapper key={child.key}>
-              {child}
-            </FlashcardTinderCardWrapper>
-          ))}
-        </CardsContainer>
-        <ControlsContainer>
-          <IconButton
-            disabled={currentScroll === 0}
-            variant="solid"
-            onClick={() => scrollProgrammatically("left")}
-          >
-            <ArrowBackIosNewIcon />
-          </IconButton>
-          <IconButton
-            disabled={currentScroll === 1}
-            variant="solid"
-            onClick={() => scrollProgrammatically("right")}
-          >
-            <ArrowForwardIosIcon />
-          </IconButton>
-        </ControlsContainer>
-        <LinearProgress
-          value={currentScroll * 100}
-          determinate
-          sx={{
-            position: "absolute",
-            bottom: 0,
-            width: "100%",
-            "--LinearProgress-radius": 0,
-          }}
-        />
-      </WrapperContainer>
-    );
-  },
-);
-
-FlashcardTinder.displayName = "FlashcardTinder";
+  return (
+    <WrapperContainer {...boxProps}>
+      <CardsContainer ref={containerRef} onScroll={handleScroll}>
+        {children.map((child) => (
+          <FlashcardTinderCardWrapper key={child.key}>
+            {child}
+          </FlashcardTinderCardWrapper>
+        ))}
+      </CardsContainer>
+      <ControlsContainer>
+        <IconButton
+          disabled={currentScroll === 0}
+          variant="solid"
+          onClick={() => scrollProgrammatically("left")}
+        >
+          <ArrowBackIosNewIcon />
+        </IconButton>
+        <IconButton
+          disabled={currentScroll === 1}
+          variant="solid"
+          onClick={() => scrollProgrammatically("right")}
+        >
+          <ArrowForwardIosIcon />
+        </IconButton>
+      </ControlsContainer>
+      <LinearProgress
+        value={currentScroll * 100}
+        determinate
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          width: "100%",
+          "--LinearProgress-radius": 0,
+        }}
+      />
+    </WrapperContainer>
+  );
+};

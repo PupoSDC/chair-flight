@@ -1,9 +1,8 @@
-import { forwardRef } from "react";
 import { default as Image } from "next/image";
 import { Box, Button, Skeleton, buttonClasses, styled } from "@mui/joy";
 import { getOptionColor } from "./get-question-status-color";
 import type { BoxProps } from "@mui/joy";
-import type { ReactNode } from "react";
+import type { FunctionComponent, ReactNode } from "react";
 
 const QuestionMultipleChoiceBox = styled(Box)`
   padding: ${({ theme }) => theme.spacing(0)};
@@ -92,104 +91,94 @@ export type QuestionMultipleChoiceProps = {
   onAnnexClicked?: (annexId: string) => void;
   onOptionClicked?: (optionId: string) => void;
   component?: React.ElementType;
-} & Pick<BoxProps, "sx" | "className">;
+} & Pick<BoxProps, "sx" | "className" | "ref">;
 
-export const QuestionMultipleChoice = forwardRef<
-  HTMLDivElement,
+export const QuestionMultipleChoice: FunctionComponent<
   QuestionMultipleChoiceProps
->(
-  (
-    {
-      question = "",
-      correctOptionId,
-      selectedOptionId,
-      status = "in-progress",
-      loading,
-      compact,
-      hideIrrelevant,
-      options = [],
-      disabled,
-      annexesHref,
-      onAnnexClicked,
-      onOptionClicked,
-      ...others
-    },
-    ref,
-  ) => (
-    <QuestionMultipleChoiceBox ref={ref} {...others}>
-      <Box>
-        {loading ? (
-          <>
-            <Skeleton variant="text" sx={{ width: "100%" }} />
-            <Skeleton variant="text" sx={{ width: "100%" }} />
-            <Skeleton variant="text" sx={{ width: "85%", mb: 2 }} />
-          </>
-        ) : (
-          <>
-            {question}
-            <Box sx={{ mt: 2 }}>
-              {annexesHref?.map((annex) => (
-                <Button
-                  key={annex}
-                  variant="outlined"
-                  color="primary"
-                  sx={{ mr: 1, mb: 1 }}
-                  onClick={() => onAnnexClicked?.(annex)}
-                >
-                  <Image src={annex} alt="annex" width={40} height={40} />
-                </Button>
-              ))}
-            </Box>
-          </>
-        )}
-      </Box>
-      <Box className="options-container">
-        {loading &&
-          [1, 2, 3, 4].map((key) => (
-            <Skeleton
-              key={key}
-              variant="rectangular"
-              sx={{ height: compact ? "2em" : "4em", my: 1 }}
+> = (
+  {
+    question = "",
+    correctOptionId,
+    selectedOptionId,
+    status = "in-progress",
+    loading,
+    compact,
+    hideIrrelevant,
+    options = [],
+    disabled,
+    annexesHref,
+    onAnnexClicked,
+    onOptionClicked,
+    ...others
+  },
+  ref,
+) => (
+  <QuestionMultipleChoiceBox ref={ref} {...others}>
+    <Box>
+      {loading ? (
+        <>
+          <Skeleton variant="text" sx={{ width: "100%" }} />
+          <Skeleton variant="text" sx={{ width: "100%" }} />
+          <Skeleton variant="text" sx={{ width: "85%", mb: 2 }} />
+        </>
+      ) : (
+        <>
+          {question}
+          <Box sx={{ mt: 2 }}>
+            {annexesHref?.map((annex) => (
+              <Button
+                key={annex}
+                variant="outlined"
+                color="primary"
+                sx={{ mr: 1, mb: 1 }}
+                onClick={() => onAnnexClicked?.(annex)}
+              >
+                <Image src={annex} alt="annex" width={40} height={40} />
+              </Button>
+            ))}
+          </Box>
+        </>
+      )}
+    </Box>
+    <Box className="options-container">
+      {loading &&
+        [1, 2, 3, 4].map((key) => (
+          <Skeleton
+            key={key}
+            variant="rectangular"
+            sx={{ height: compact ? "2em" : "4em", my: 1 }}
+          />
+        ))}
+      {!loading &&
+        options.map(({ id: optionId, text }, index) => {
+          const isRelevantOption = [correctOptionId, selectedOptionId].includes(
+            optionId,
+          );
+
+          if (hideIrrelevant && status === "show-result" && !isRelevantOption) {
+            return null;
+          }
+
+          const [variant, color] = getOptionColor({
+            correctOptionId,
+            selectedOptionId,
+            status,
+            optionId,
+          });
+          return (
+            <QuestionMultipleChoiceOption
+              fullWidth
+              size={compact ? "sm" : "lg"}
+              startDecorator={String.fromCharCode(65 + index)}
+              disabled={disabled}
+              key={optionId}
+              variant={variant}
+              children={text}
+              color={color}
+              onClick={() => onOptionClicked?.(optionId)}
             />
-          ))}
-        {!loading &&
-          options.map(({ id: optionId, text }, index) => {
-            const isRelevantOption = [
-              correctOptionId,
-              selectedOptionId,
-            ].includes(optionId);
-
-            if (
-              hideIrrelevant &&
-              status === "show-result" &&
-              !isRelevantOption
-            ) {
-              return null;
-            }
-
-            const [variant, color] = getOptionColor({
-              correctOptionId,
-              selectedOptionId,
-              status,
-              optionId,
-            });
-            return (
-              <QuestionMultipleChoiceOption
-                fullWidth
-                size={compact ? "sm" : "lg"}
-                startDecorator={String.fromCharCode(65 + index)}
-                disabled={disabled}
-                key={optionId}
-                variant={variant}
-                children={text}
-                color={color}
-                onClick={() => onOptionClicked?.(optionId)}
-              />
-            );
-          })}
-      </Box>
-    </QuestionMultipleChoiceBox>
-  ),
+          );
+        })}
+    </Box>
+  </QuestionMultipleChoiceBox>
 );
-
-QuestionMultipleChoice.displayName = "QuestionMultipleChoice";

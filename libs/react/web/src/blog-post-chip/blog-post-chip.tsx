@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import { default as CelebrationIcon } from "@mui/icons-material/Celebration";
 import { default as HandymanIcon } from "@mui/icons-material/Handyman";
 import { default as LibraryBooksIcon } from "@mui/icons-material/LibraryBooks";
@@ -27,21 +26,20 @@ export type BlogPostChipProps = Omit<
   tag: BlogPostTag;
 };
 
-export const BlogPostChip = forwardRef<HTMLDivElement, BlogPostChipProps>(
-  ({ tag, variant = "soft", ...props }, ref) => {
-    const Icon = tagToIcon[tag];
-    return (
-      <Chip
-        ref={ref}
-        children={tag}
-        startDecorator={<Icon />}
-        color={tagToColor[tag]}
-        variant={variant}
-        sx={{ px: 1, py: 0.5, ...props.sx }}
-        {...props}
-      />
-    );
-  },
-);
-
-BlogPostChip.displayName = "BlogPostChip";
+export const BlogPostChip: FunctionComponent<BlogPostChipProps> = ({
+  tag,
+  variant = "soft",
+  ...props
+}) => {
+  const Icon = tagToIcon[tag];
+  return (
+    <Chip
+      {...props}
+      children={tag}
+      startDecorator={<Icon />}
+      color={tagToColor[tag]}
+      variant={variant}
+      sx={{ px: 1, py: 0.5, ...props.sx }}
+    />
+  );
+};
