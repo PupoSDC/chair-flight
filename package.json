@@ -33,7 +33,11 @@
     "@mdx-js/react": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
     "@mui/base": "5.0.0-beta.40",
+<<<<<<< HEAD
     "@mui/icons-material": "^5.15.20",
+=======
+    "@mui/icons-material": "^5.15.17",
+>>>>>>> c6237f098 (chore: bump deps)
     "@mui/joy": "5.0.0-beta.36",
     "@mui/material": "npm:@mui/joy@5.0.0-beta.36",
     "@mui/x-charts": "^6.19.8",
@@ -44,19 +48,32 @@
     "@trpc/next": "^10.45.2",
     "@trpc/react-query": "^10.45.2",
     "@trpc/server": "^10.45.2",
+<<<<<<< HEAD
     "analytics": "^0.8.13",
+=======
+    "analytics": "^0.8.11",
+>>>>>>> c6237f098 (chore: bump deps)
     "drizzle-orm": "^0.30.10",
     "drizzle-zod": "^0.5.1",
     "immer": "^10.1.1",
     "konva": "^9.3.12",
     "luxon": "^3.4.4",
     "minisearch": "^6.3.0",
+<<<<<<< HEAD
     "next": "^14.2.4",
     "octokit": "^3.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
     "react-hook-form": "^7.52.0",
+=======
+    "next": "^14.2.3",
+    "octokit": "^3.2.1",
+    "react": "19.0.0-beta-94eed63c49-20240425",
+    "react-dom": "19.0.0-beta-94eed63c49-20240425",
+    "react-error-boundary": "^4.0.13",
+    "react-hook-form": "^7.51.4",
+>>>>>>> c6237f098 (chore: bump deps)
     "react-hotkeys-hook": "^4.5.0",
     "react-konva": "^18.2.10",
     "react-markdown": "^9.0.1",
@@ -73,6 +90,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@next/bundle-analyzer": "^14.2.4",
     "@nx/devkit": "^19.3.1",
     "@nx/eslint-plugin": "^19.3.1",
@@ -96,6 +114,31 @@
     "@swc/core": "^1.6.5",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.6",
+=======
+    "@next/bundle-analyzer": "^14.2.3",
+    "@nx/devkit": "^19.0.2",
+    "@nx/eslint-plugin": "^19.0.2",
+    "@nx/linter": "^19.0.2",
+    "@nx/next": "^19.0.2",
+    "@nx/node": "^19.0.2",
+    "@nx/plugin": "^19.0.2",
+    "@nx/react": "^19.0.2",
+    "@nx/storybook": "^19.0.2",
+    "@nx/vite": "^19.0.2",
+    "@nx/webpack": "^19.0.2",
+    "@nx/workspace": "^19.0.2",
+    "@storybook/addon-docs": "^8.0.10",
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/blocks": "^8.0.10",
+    "@storybook/core-server": "^8.0.10",
+    "@storybook/nextjs": "^8.0.10",
+    "@storybook/react": "^8.0.10",
+    "@storybook/theming": "^8.0.10",
+    "@swc-node/register": "^1.9.1",
+    "@swc/core": "^1.5.5",
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.5",
+>>>>>>> c6237f098 (chore: bump deps)
     "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
     "@total-typescript/ts-reset": "^0.5.1",
