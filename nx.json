@@ -93,7 +93,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
-        "command": "drizzle-kit push:pg"
+        "command": "drizzle-kit push"
       },
       "configurations": {
         "prod": {},

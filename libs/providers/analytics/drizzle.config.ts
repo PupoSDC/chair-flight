@@ -1,11 +1,11 @@
+import { defineConfig } from "drizzle-kit";
 import { getEnvVariableOrThrow } from "@cf/base/env";
-import type { Config } from "drizzle-kit";
 
-export default {
+export default defineConfig({
+  dialect: "postgresql",
   schema: "./drizzle/schema.ts",
   out: "./drizzle",
-  driver: "pg",
   dbCredentials: {
-    connectionString: getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS"),
+    url: getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS"),
   },
-} satisfies Config;
+});
