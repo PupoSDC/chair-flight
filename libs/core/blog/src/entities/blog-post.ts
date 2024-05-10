@@ -4,13 +4,12 @@ export const blogPostIdSchema = z.string();
 
 export const blogPostSchema = z.object({
   id: blogPostIdSchema,
-  createdAt: z.date(),
-  updatedAt: z.date(),
+  createdAt: z.coerce.date(),
   title: z.string(),
   description: z.string(),
   author: z.string(),
   content: z.string(),
-  tag: z.string(),
+  tag: z.enum(["Technical", "Feature", "Content"]),
   imageUrl: z.string(),
 });
 

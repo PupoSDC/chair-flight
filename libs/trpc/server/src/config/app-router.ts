@@ -8,7 +8,6 @@ import { statusRouter } from "../routers/common/status-router";
 import { testsRouter } from "../routers/common/tests-router";
 import { userProgressRouter } from "../routers/common/user-progress-router";
 import { annexesContainersRouter } from "../routers/containers/annexes-router";
-import { blogContainersRouter } from "../routers/containers/blog-router";
 import { docsContainersRouter } from "../routers/containers/docs-router";
 import { flashcardsContainersRouter } from "../routers/containers/flashcards-router";
 import { layoutsContainersRouter } from "../routers/containers/layouts-router";
@@ -40,7 +39,6 @@ export const appRouter = router({
 
   containers: router({
     annexes: annexesContainersRouter,
-    blog: blogContainersRouter,
     docs: docsContainersRouter,
     flashcards: flashcardsContainersRouter,
     layouts: layoutsContainersRouter,

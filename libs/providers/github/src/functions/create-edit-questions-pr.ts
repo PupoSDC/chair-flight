@@ -48,7 +48,6 @@ export const createEditQuestionsPr = async (
     ]),
   ];
 
-  console.log(srcLocations);
   const githubQuestions: QuestionTemplate[] = [];
   for (const srcLocation of srcLocations) {
     const getContentResponse = await octokit.rest.repos.getContent({
