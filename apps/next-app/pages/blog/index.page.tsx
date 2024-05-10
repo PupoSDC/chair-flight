@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
 import { AppHead, LayoutPublic } from "@cf/next/public";
-import { Github } from "@cf/providers/github";
+import { Content } from "@cf/providers/content";
 import { BackgroundFadedImage, BlogPostCard } from "@cf/react/web";
 import type { BlogPostCardProps } from "@cf/react/web";
 import type { GetStaticProps, NextPage } from "next";
@@ -26,14 +26,14 @@ const Page: NextPage<PageProps> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const github = new Github();
-  const data = await github.getBlogPosts();
+  const content = new Content();
+  const data = await content.getBlogPosts();
   const posts = data.posts.map((post) => ({
     tag: post.tag,
     title: post.title,
     description: post.description,
     author: post.author,
-    date: DateTime.fromJSDate(post.date).toFormat("dd LLL yyyy"),
+    date: DateTime.fromJSDate(post.createdAt).toFormat("dd LLL yyyy"),
     href: `/blog/${post.id}`,
   }));
   return { props: { posts } };

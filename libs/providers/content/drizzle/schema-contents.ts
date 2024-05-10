@@ -18,7 +18,7 @@ const documentTable = (name: string) =>
     name,
     {
       hash: varchar("hash", { length: 64 }).primaryKey().notNull(),
-      id: varchar("id", { length: 12 }).notNull(),
+      id: varchar("id", { length: 32 }).notNull(),
       status: contentStatusEnum("status").notNull(),
       createdAt: timestamp("created_at").notNull(),
       document: jsonb("document").notNull(),

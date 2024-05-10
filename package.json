@@ -111,7 +111,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-istanbul": "^1.6.0",
     "@vitest/ui": "^1.6.0",
-    "drizzle-kit": "^0.21.0",
+    "drizzle-kit": "^0.21.1",
     "esbuild": "^0.21.1",
     "eslint": "^9.2.0",
     "eslint-config-next": "^14.2.3",
@@ -157,5 +157,10 @@
       "<TS_TYPES>",
       "^@fontsource(/.*)?$"
     ]
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "uploadthing@6.10.3": "patches/uploadthing@6.10.3.patch"
+    }
   }
 }

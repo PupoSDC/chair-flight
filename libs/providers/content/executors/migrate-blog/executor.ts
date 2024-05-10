@@ -5,6 +5,7 @@ import { DataError } from "@cf/base/errors";
 import { blogPostSchema } from "@cf/core/blog";
 import { Content } from "../../src/content";
 import { getAllFiles } from "../../src/executors/get-all-files";
+import type { MediaFile } from "../../src/content";
 import type { BlogPost } from "@cf/core/blog";
 
 type ExecutorOptions = {
@@ -17,30 +18,52 @@ const MATTER_REGEX =
 const runExecutor = async ({ contentFolder }: ExecutorOptions) => {
   const content = new Content();
   const posts = await getAllFiles(contentFolder, "page.md");
+  const videos = await getAllFiles(contentFolder, ".webm");
+  const images = await getAllFiles(contentFolder, ".png");
   const parsedPosts: BlogPost[] = [];
+  const parsedFiles: MediaFile[] = [];
+
+  for (const media of [...videos, ...images]) {
+    const buffer = await fs.readFile(media);
+    const blob = new Blob([buffer]);
+    const id = "/blog/" + media.split("posts/")[1];
+    const file = new File([blob], id);
+    parsedFiles.push({
+      id,
+      file,
+    });
+  }
+
+  const mediaMap = await content.updateMedia(parsedFiles);
 
   for (const post of posts) {
     const source = (await fs.readFile(post)).toString();
     const match = MATTER_REGEX.exec(source);
-    const id = post.split("/").at(-1)?.split("-")[0];
+    const id = post.split("/").at(-2);
     if (!match) throw new DataError(`Missing frontMatter for ${post}`);
     if (!id) throw new DataError("No ID could be inferred from post title");
+
+    let content = source.split("\n---").slice(1).join().trim();
+
+    Object.entries(mediaMap).forEach(([key, value]) => {
+      content = content.replaceAll(key, value);
+    });
+
     const data = parse(match[1]);
     const meta = blogPostSchema.parse({
-      id: post.split("/").at(-1)?.split("-")[0],
+      id,
+      content,
       createdAt: DateTime.fromFormat(data.date, "yyyy-MM-dd").toJSDate(),
-      updatedAt: DateTime.now().toJSDate(),
       title: data.title,
       description: data.title,
       author: data.author,
-      content: source.split("\n---").slice(1).join().trim(),
       tag: data.tag,
       imageUrl: data.imageUrl ?? "/default",
     });
     parsedPosts.push(meta);
   }
 
-  await content.updateBlog(parsedPosts);
+  await content.updateBlogPosts(parsedPosts);
 
   return {
     success: true,

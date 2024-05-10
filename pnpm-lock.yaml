@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  uploadthing@6.10.3:
+    hash: xcmib4goaim3bm55jwkgzot4tu
+    path: patches/uploadthing@6.10.3.patch
+
 dependencies:
   '@emotion/react':
     specifier: ^11.11.4
@@ -136,7 +141,7 @@ dependencies:
     version: 2.2.1
   uploadthing:
     specifier: ^6.10.3
-    version: 6.10.3(next@14.2.3)
+    version: 6.10.3(patch_hash=xcmib4goaim3bm55jwkgzot4tu)(next@14.2.3)
   use-broadcast-ts:
     specifier: ^1.4.5
     version: 1.4.5(@types/react@18.3.1)(immer@10.1.1)
@@ -263,8 +268,8 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0(vitest@1.6.0)
   drizzle-kit:
-    specifier: ^0.21.0
-    version: 0.21.0
+    specifier: ^0.21.1
+    version: 0.21.1
   esbuild:
     specifier: ^0.21.1
     version: 0.21.1
@@ -10334,8 +10339,8 @@ packages:
       wordwrap: 1.0.0
     dev: true
 
-  /drizzle-kit@0.21.0:
-    resolution: {integrity: sha512-vdGbZWa9/Bvu3sLMruNufH5eNExDXvJZ3b1l6u/vbkmxT1v7RofC83zVY7jlBFuMsk2J7xckAwlbNesXB6Pj1w==}
+  /drizzle-kit@0.21.1:
+    resolution: {integrity: sha512-Sp7OnCdROiE2ebMuHsAfrnRoHVGYCvErQxUh7/0l6R1caHssZu9oZu/hW9rLU19xnTK4/y3iSe3sL0Cc530wCg==}
     hasBin: true
     dependencies:
       '@esbuild-kit/esm-loader': 2.6.5
@@ -19080,7 +19085,7 @@ packages:
       escalade: 3.1.2
       picocolors: 1.0.0
 
-  /uploadthing@6.10.3(next@14.2.3):
+  /uploadthing@6.10.3(patch_hash=xcmib4goaim3bm55jwkgzot4tu)(next@14.2.3):
     resolution: {integrity: sha512-0TvK8IvJbdCDYcRmDzZWeOZDLFDxU7Eoh+e0mJPeustsA9bXHZgozdBHGh0uLM//tNXB+iv4TqabT31YlU810g==}
     engines: {node: '>=18.13.0'}
     peerDependencies:
@@ -19110,6 +19115,7 @@ packages:
       next: 14.2.3(@babel/core@7.24.5)(react-dom@19.0.0-beta-94eed63c49-20240425)(react@19.0.0-beta-94eed63c49-20240425)
       std-env: 3.7.0
     dev: false
+    patched: true
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}

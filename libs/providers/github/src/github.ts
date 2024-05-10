@@ -3,7 +3,6 @@ import { getEnvVariableOrThrow } from "@cf/base/env";
 import { originRepo, upstreamOwner } from "./common/env";
 import { createEditQuestionsPr } from "./functions/create-edit-questions-pr";
 import { createNewIssue } from "./functions/create-new-issue";
-import { getBlogPost, getBlogPosts } from "./functions/get-blog-posts";
 import type { NewIssue, EditQuestionsPr } from "@cf/core/github";
 
 interface GithubProvider {
@@ -31,13 +30,5 @@ export class Github implements GithubProvider {
 
   async createNewIssue(newIssue: NewIssue) {
     return await createNewIssue(Github.octokit, newIssue);
-  }
-
-  async getBlogPosts() {
-    return await getBlogPosts(Github.octokit);
-  }
-
-  async getBlogPost(postId: string) {
-    return await getBlogPost(Github.octokit, postId);
   }
 }

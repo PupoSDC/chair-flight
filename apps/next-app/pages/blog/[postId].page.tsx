@@ -9,7 +9,7 @@ import { DateTime } from "luxon";
 import { compileMdx } from "@cf/core/markdown";
 import { AppHead, LayoutPublic } from "@cf/next/public";
 import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
-import { Github } from "@cf/providers/github";
+import { Content } from "@cf/providers/content";
 import { Mdx } from "@cf/react/markdown";
 import {
   BackgroundFadedImage,
@@ -105,26 +105,26 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   params,
 }) => {
   if (!params) throw new Error("No params");
-  const github = new Github();
-  const rawPost = await github.getBlogPost(params.postId);
-  const mdxContent = await compileMdx(rawPost.content);
+  const content = new Content();
+  const { post } = await content.getBlogPost(params.postId);
+  const mdxContent = await compileMdx(post.content);
 
-  const post = {
+  const props = {
     postId: params.postId,
     mdxContent,
-    title: rawPost.title,
-    description: rawPost.description,
-    tag: rawPost.tag,
-    date: DateTime.fromJSDate(rawPost.date).toFormat("dd LLL yyyy"),
-    tagHref: `/blog?tag=${rawPost.tag}`,
+    title: post.title,
+    description: post.description,
+    tag: post.tag,
+    date: DateTime.fromJSDate(post.createdAt).toFormat("dd LLL yyyy"),
+    tagHref: `/blog?tag=${post.tag}`,
   };
 
-  return { props: post };
+  return { props };
 };
 
 export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const github = new Github();
-  const { posts } = await github.getBlogPosts();
+  const content = new Content();
+  const { posts } = await content.getBlogPosts();
   const paths = posts.map(({ id }) => ({ params: { postId: id } }));
   return { fallback: false, paths };
 };

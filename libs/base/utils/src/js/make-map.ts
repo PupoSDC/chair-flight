@@ -1,5 +1,5 @@
 export const makeMap = <T, V = T>(
-  array: T[],
+  array: readonly T[],
   getId: (t: T) => string,
   getContent: (t: T) => V = (t) => t as unknown as V,
 ): Record<string, V> => {
