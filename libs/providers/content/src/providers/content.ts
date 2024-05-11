@@ -72,7 +72,6 @@ export class Content {
       (f) => f.hash !== existingFilesToHash[f.id],
     );
 
-    console.log(filesThatChanged);
     const newFileUploads = await Content.ut.uploadFiles(
       filesThatChanged.map((f) => {
         const file: File & { customId?: string } = f.file;
