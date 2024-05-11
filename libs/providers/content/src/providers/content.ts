@@ -3,11 +3,12 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 import { UTApi } from "uploadthing/server";
 import { getEnvVariableOrThrow } from "@cf/base/env";
-import { chunk, makeMap, sha256 } from "@cf/base/utils";
+import { chunk, makeMap, sha256, wait } from "@cf/base/utils";
 import { contentSchema } from "../../drizzle";
 import type { ContentDb, ContentSchema } from "../../drizzle";
 import type { BlogPost } from "@cf/core/blog";
 import type { QuestionBank } from "@cf/core/question-bank";
+import type { UploadFileResult } from "uploadthing/types";
 
 export type MediaId = string;
 export type MediaUrl = string;
@@ -72,13 +73,19 @@ export class Content {
       (f) => f.hash !== existingFilesToHash[f.id],
     );
 
-    const newFileUploads = await Content.ut.uploadFiles(
-      filesThatChanged.map((f) => {
-        const file: File & { customId?: string } = f.file;
-        file.customId = f.hash;
-        return file;
-      }),
-    );
+    const newFileUploads: UploadFileResult[] = [];
+    const chunks = chunk(filesThatChanged, 20);
+    for (const chunk of chunks) {
+      const results = await Content.ut.uploadFiles(
+        chunk.map((f) => {
+          const file: File & { customId?: string } = f.file;
+          file.customId = f.hash;
+          return file;
+        }),
+      );
+      newFileUploads.push(...results);
+      await wait(5000);
+    }
 
     const errors = newFileUploads.filter((f) => f.error);
     if (errors.length) {

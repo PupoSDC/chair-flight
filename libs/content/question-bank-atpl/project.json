@@ -8,7 +8,17 @@
     "arrange": {
       "cache": true,
       "inputs": ["{projectRoot}/content/**/*"],
-      "executor": "@cf/providers/question-bank:arrange",
+      "executor": "@cf/providers/content:arrange-question-bank",
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "questionBank": "atpl"
+      }
+    },
+    "migrate": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/content:migrate-question-bank",
+      "dependsOn": ["providers-content:migrate"],
       "options": {
         "contentFolder": "{projectRoot}/content",
         "questionBank": "atpl"
