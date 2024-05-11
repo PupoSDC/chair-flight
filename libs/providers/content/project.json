@@ -9,27 +9,6 @@
     "format": {},
     "migrate": {},
     "studio": {},
-    "arrange-qb-atpl": {
-      "executor": "@cf/providers/content:arrange-question-bank",
-      "options": {
-        "contentFolder": "libs/content/question-bank-atpl/content",
-        "questionBank": "atpl"
-      }
-    },
-    "arrange-qb-prep": {
-      "executor": "@cf/providers/content:arrange-question-bank",
-      "options": {
-        "contentFolder": "libs/content/question-bank-prep/content",
-        "questionBank": "prep"
-      }
-    },
-    "arrange-qb-type": {
-      "executor": "@cf/providers/content:arrange-question-bank",
-      "options": {
-        "contentFolder": "libs/content/question-bank-type/content",
-        "questionBank": "type"
-      }
-    },
     "migrate-blog": {
       "executor": "@cf/providers/content:migrate-blog",
       "dependsOn": ["migrate"],

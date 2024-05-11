@@ -3,6 +3,25 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {
+    "arrange": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/content:arrange-question-bank",
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "questionBank": "prep"
+      }
+    },
+    "migrate": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/content:migrate-question-bank",
+      "dependsOn": ["providers-content:migrate"],
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "questionBank": "prep"
+      }
+    },
     "compile": {
       "executor": "@cf/providers/question-bank:compile",
       "options": {

@@ -90,7 +90,9 @@
       }
     },
     "migrate": {
+      "cache": true,
       "executor": "nx:run-commands",
+      "inputs": ["{projectRoot}/drizzle/**/*"],
       "options": {
         "cwd": "{projectRoot}",
         "command": "drizzle-kit push"
