@@ -74,7 +74,7 @@ export const connectQuestionBank = ({
   const annexes = jsonAnnexes.map<Annex>((a) => ({
     ...a,
     questionBank: questionBank,
-    href: mediaMap[a.id],
+    href: mediaMap[a.id] ?? "/placeholder.png",
     srcLocation: undefined as unknown as string,
     docs: [],
     questions: [],
@@ -103,16 +103,14 @@ export const connectQuestionBank = ({
   const subjectsMap = makeMap(subjects, (s) => s.id);
   const annexesMap = makeMap(annexes, (a) => a.id);
 
-  // Link learning objectives to one another:
-  learningObjectives.forEach((lo) => {
+  learningObjectives.forEach(function linkLearningObjectivesToOneAnother(lo) {
     if (!lo.parentId) return;
     const parent = losMap[lo.parentId];
     if (!parent) throw new Error("Missing parent for lo " + lo.id);
     parent.learningObjectives.push(lo.id);
   });
 
-  // Link learning Objectives to Docs
-  learningObjectives.forEach((lo) => {
+  learningObjectives.forEach(function linkLearningObjectivesToDocs(lo) {
     let docId: string | null = lo.id;
     while (docId) {
       if (docsMap[docId]) {
@@ -126,8 +124,7 @@ export const connectQuestionBank = ({
     throw new Error(`Unable to connect lo ${lo.id} to a doc!`);
   });
 
-  // link questions to learning objectives
-  questionTemplates.forEach((q) => {
+  questionTemplates.forEach(function linkQuestionsToLearningObjectives(q) {
     q.learningObjectives.forEach((lo) => {
       if (!losMap[lo]) return;
       const thisLo = losMap[lo];
@@ -136,8 +133,7 @@ export const connectQuestionBank = ({
     });
   });
 
-  // Link questions to docs
-  questionTemplates.forEach((q) => {
+  questionTemplates.forEach(function linkQuestionsToDocs(q) {
     const docLo = q.learningObjectives.reduce(
       (res, cur) => (cur.length < res.length ? cur : res),
       q.learningObjectives[0],
@@ -148,8 +144,7 @@ export const connectQuestionBank = ({
     q.srcLocation = doc.fileName.replace("page.md", "questions.yaml");
   });
 
-  // Link questions to annexes
-  questionTemplates.forEach((q) => {
+  questionTemplates.forEach(function linkQuestionsToAnnexes(q) {
     q.annexes.forEach((annexId) => {
       const annex = annexesMap[annexId];
       annex.questions.push(q.id);
@@ -181,8 +176,7 @@ export const connectQuestionBank = ({
     });
   });
 
-  // Link docs to annexes
-  docs.forEach((doc) => {
+  docs.forEach(function linkDocsToAnnexes(doc) {
     keepUnique(
       Array.from(doc.content.matchAll(ANNEX_MATCH), (m) => m[1]),
     ).forEach((annexId) => {
@@ -203,8 +197,7 @@ export const connectQuestionBank = ({
     });
   });
 
-  // Determine Annex Source Location
-  annexes.forEach((annex) => {
+  annexes.forEach(function determineAnnexSourceLocation(annex) {
     const docLo = annex.learningObjectives.reduce(
       (res, cur) => (cur.length < res.length ? cur : res),
       annex.learningObjectives[0],
@@ -214,8 +207,7 @@ export const connectQuestionBank = ({
     annex.srcLocation = doc.fileName.replace("page.md", "annexes.yaml");
   });
 
-  // Link docs to one another
-  docs.forEach((doc) => {
+  docs.forEach(function linkDocsToOneAnother(doc) {
     doc.subject = losMap[doc.id]?.subject ?? undefined;
     if (!doc.parentId) return;
     const parent = docsMap[doc.parentId];
@@ -223,15 +215,13 @@ export const connectQuestionBank = ({
     parent.docs.push(doc.id);
   });
 
-  // Add Subject to questions
-  questionTemplates.map((question) => {
+  questionTemplates.map(function addSubjectToQuestions(question) {
     question.subjects = keepUnique(
       question.learningObjectives.map((lo) => losMap[lo].subject),
     ).filter(Boolean);
   });
 
-  // Add Subject to annexes
-  annexes.map((annex) => {
+  annexes.map(function addSubjectToAnnexes(annex) {
     annex.subjects = keepUnique(
       annex.learningObjectives.map((lo) => losMap[lo].subject),
     ).filter(Boolean);
