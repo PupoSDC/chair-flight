@@ -1,5 +1,5 @@
 import * as XLSX from "xlsx";
-import type { LearningObjectiveJson } from "./question-bank-json-types";
+import type { LearningObjectiveJson } from "./question-bank-json-schemas";
 
 const courseNames: Record<string, string> = {
   "ATPL(A)": "ATPL_A",

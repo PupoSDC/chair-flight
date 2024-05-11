@@ -9,6 +9,7 @@ import {
   type QuestionTemplate,
   type Subject,
 } from "@cf/core/question-bank";
+import type { MediaMap } from "../providers/content";
 import type {
   AnnexJson,
   CourseJson,
@@ -16,7 +17,7 @@ import type {
   LearningObjectiveJson,
   QuestionTemplateJson,
   SubjectJson,
-} from "./question-bank-json-types";
+} from "./question-bank-json-schemas";
 import type { FlashcardCollection } from "@cf/core/question-bank";
 
 const ANNEX_MATCH = /!\[.*\]\(annex:(.*)\)/gm;
@@ -30,6 +31,7 @@ export const connectQuestionBank = ({
   jsonDocs,
   jsonFlashcardCollections,
   questionBank,
+  mediaMap,
 }: {
   jsonQuestionTemplates: QuestionTemplateJson[];
   jsonLearningObjectives: LearningObjectiveJson[];
@@ -39,6 +41,7 @@ export const connectQuestionBank = ({
   jsonFlashcardCollections: FlashcardCollection[];
   jsonDocs: DocJson[];
   questionBank: QuestionBankName;
+  mediaMap: MediaMap;
 }): {
   questionTemplates: QuestionTemplate[];
   learningObjectives: LearningObjective[];
@@ -71,7 +74,7 @@ export const connectQuestionBank = ({
   const annexes = jsonAnnexes.map<Annex>((a) => ({
     ...a,
     questionBank: questionBank,
-    href: `/content/${questionBank}/media/${a.id}.${a.format}`,
+    href: mediaMap[a.id],
     srcLocation: undefined as unknown as string,
     docs: [],
     questions: [],
@@ -257,6 +260,8 @@ export const connectQuestionBank = ({
       return;
     }
   });
+
+  // TODO: Replace docs annexes with URLs
 
   return questionBankSchema.parse({
     questionTemplates,

@@ -4,7 +4,7 @@ import { annexSchema } from "./question-bank-annex";
 import { courseSchema } from "./question-bank-course";
 import { docSchema } from "./question-bank-doc";
 import { flashcardCollectionSchema } from "./question-bank-flashcards";
-import { LearningObjectiveSchema } from "./question-bank-learning-objectives";
+import { learningObjectiveSchema } from "./question-bank-learning-objectives";
 import { questionTemplateSchema } from "./question-bank-question";
 import { subjectSchema } from "./question-bank-subject";
 
@@ -13,7 +13,7 @@ export const questionBankSchema = z
     questionTemplates: z.array(questionTemplateSchema),
     docs: z.array(docSchema),
     annexes: z.array(annexSchema),
-    learningObjectives: z.array(LearningObjectiveSchema),
+    learningObjectives: z.array(learningObjectiveSchema),
     subjects: z.array(subjectSchema),
     courses: z.array(courseSchema),
     flashcardCollections: z.array(flashcardCollectionSchema),

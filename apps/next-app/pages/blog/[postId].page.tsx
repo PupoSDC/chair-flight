@@ -9,7 +9,7 @@ import { DateTime } from "luxon";
 import { compileMdx } from "@cf/core/markdown";
 import { AppHead, LayoutPublic } from "@cf/next/public";
 import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
-import { Content } from "@cf/providers/content";
+import { Blog } from "@cf/providers/content";
 import { Mdx } from "@cf/react/markdown";
 import {
   BackgroundFadedImage,
@@ -105,8 +105,8 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   params,
 }) => {
   if (!params) throw new Error("No params");
-  const content = new Content();
-  const { post } = await content.getBlogPost(params.postId);
+  const blog = new Blog();
+  const { post } = await blog.getBlogPost(params.postId);
   const mdxContent = await compileMdx(post.content);
 
   const props = {
@@ -123,8 +123,8 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
 };
 
 export const getStaticPaths: GetStaticPaths<PageParams> = async () => {
-  const content = new Content();
-  const { posts } = await content.getBlogPosts();
+  const blog = new Blog();
+  const { posts } = await blog.getBlogPosts();
   const paths = posts.map(({ id }) => ({ params: { postId: id } }));
   return { fallback: false, paths };
 };

@@ -3,9 +3,9 @@ import { DateTime } from "luxon";
 import { parse } from "yaml";
 import { DataError } from "@cf/base/errors";
 import { blogPostSchema } from "@cf/core/blog";
-import { Content } from "../../src/content";
 import { getAllFiles } from "../../src/executors/get-all-files";
-import type { MediaFile } from "../../src/content";
+import { Content } from "../../src/providers/content";
+import type { MediaFile } from "../../src/providers/content";
 import type { BlogPost } from "@cf/core/blog";
 
 type ExecutorOptions = {
@@ -19,19 +19,17 @@ const runExecutor = async ({ contentFolder }: ExecutorOptions) => {
   const content = new Content();
   const posts = await getAllFiles(contentFolder, "page.md");
   const videos = await getAllFiles(contentFolder, ".webm");
-  const images = await getAllFiles(contentFolder, ".png");
+  const imagesPng = await getAllFiles(contentFolder, ".png");
+  const imagesJpg = await getAllFiles(contentFolder, ".jpg");
   const parsedPosts: BlogPost[] = [];
   const parsedFiles: MediaFile[] = [];
 
-  for (const media of [...videos, ...images]) {
+  for (const media of [...videos, ...imagesPng, ...imagesJpg]) {
     const buffer = await fs.readFile(media);
     const blob = new Blob([buffer]);
     const id = "/blog/" + media.split("posts/")[1];
     const file = new File([blob], id);
-    parsedFiles.push({
-      id,
-      file,
-    });
+    parsedFiles.push({ id, file });
   }
 
   const mediaMap = await content.updateMedia(parsedFiles);
