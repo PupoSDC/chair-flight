@@ -5,7 +5,7 @@ import { getAllFiles } from "./get-all-files";
 import type {
   AnnexJson,
   QuestionTemplateJson,
-} from "./question-bank-json-types";
+} from "./question-bank-json-schemas";
 import type { Annex, QuestionTemplate } from "@cf/core/question-bank";
 
 export const writeQuestionTemplates = async (

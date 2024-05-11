@@ -1,24 +1,24 @@
-import { and, eq } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 import { UTApi } from "uploadthing/server";
 import { getEnvVariableOrThrow } from "@cf/base/env";
-import { makeMap, sha256, takeOneOrThrow } from "@cf/base/utils";
-import { blogPostSchema, type BlogPost } from "@cf/core/blog";
-import { contentSchema, type ContentDb } from "../drizzle";
-import { getBankMetadata } from "./functions/get-bank-metadata";
-import { updateQuestionBank } from "./functions/update-question-bank";
+import { chunk, makeMap, sha256 } from "@cf/base/utils";
+import { contentSchema } from "../../drizzle";
+import type { ContentDb, ContentSchema } from "../../drizzle";
+import type { BlogPost } from "@cf/core/blog";
 import type { QuestionBank } from "@cf/core/question-bank";
 
 export type MediaId = string;
 export type MediaUrl = string;
 export type MediaFile = { id: MediaId; file: File };
+export type MediaMap = Record<MediaId, MediaUrl>;
 
 export class Content {
   private static client: Client;
-  private static db: ContentDb;
   private static ut: UTApi;
   private static utSalt: string;
+  protected static db: ContentDb;
 
   constructor() {
     const schema = contentSchema;
@@ -46,7 +46,7 @@ export class Content {
     return (await Content.ut.listFiles({ limit: 2000 })).files;
   }
 
-  public async updateMedia(files: MediaFile[]) {
+  public async updateMedia(files: MediaFile[]): Promise<MediaMap> {
     const existingFiles = await this.getAllMediaFiles();
 
     const existingFilesToHash = makeMap(
@@ -72,6 +72,7 @@ export class Content {
       (f) => f.hash !== existingFilesToHash[f.id],
     );
 
+    console.log(filesThatChanged);
     const newFileUploads = await Content.ut.uploadFiles(
       filesThatChanged.map((f) => {
         const file: File & { customId?: string } = f.file;
@@ -95,7 +96,7 @@ export class Content {
     return {
       ...existingFilesToUrl,
       ...newFilesToUrl,
-    } as Record<MediaId, MediaUrl>;
+    };
   }
 
   public async updateBlogPosts(blogPosts: BlogPost[]) {
@@ -113,36 +114,31 @@ export class Content {
       });
   }
 
-  public updateQuestionBank = (content: QuestionBank) =>
-    updateQuestionBank(Content.db, content);
+  public async updateQuestionBank(content: QuestionBank) {
+    const db = Content.db;
+    for (const [key, data] of Object.entries(content)) {
+      const docs = await Promise.all(data.map(this.makeDocument));
+      const schema = contentSchema[key as keyof ContentSchema];
+      if (!schema) throw new Error(`${key} is not a valid QB entity`);
+      if (!docs.length) continue;
 
-  public getBankMetadata = () => getBankMetadata(Content.db);
+      const castSchema = schema as ContentSchema["annexes"];
+      const docsInChunks = chunk(docs, 10000);
 
-  public async getBlogPosts() {
-    const rows = await Content.db
-      .select()
-      .from(contentSchema.blogPosts)
-      .where(eq(contentSchema.blogPosts.status, "current"))
-      .execute();
-    const posts = rows
-      .map((row) => blogPostSchema.parse(row.document))
-      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
-    return { posts };
-  }
+      for (const docsChunk of docsInChunks) {
+        await Content.db
+          .update(castSchema)
+          .set({ status: "outdated" })
+          .where(eq(castSchema.status, "current"));
 
-  public async getBlogPost(id: string) {
-    const row = await Content.db
-      .select()
-      .from(contentSchema.blogPosts)
-      .where(
-        and(
-          eq(contentSchema.blogPosts.id, id),
-          eq(contentSchema.blogPosts.status, "current"),
-        ),
-      )
-      .execute()
-      .then(takeOneOrThrow);
-    const post = blogPostSchema.parse(row.document);
-    return { post };
+        await db
+          .insert(castSchema)
+          .values(docsChunk)
+          .onConflictDoUpdate({
+            target: castSchema.hash,
+            set: { status: "current" },
+          });
+      }
+    }
   }
 }

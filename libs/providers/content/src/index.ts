@@ -1,1 +1,2 @@
-export { Content } from "./content";
+export { Content } from "./providers/content";
+export { Blog } from "./providers/blog";

@@ -2,14 +2,20 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import * as YAML from "yaml";
 import { getAllFiles } from "./get-all-files";
-import type {
-  AnnexJson,
-  CourseJson,
-  DocJson,
-  LearningObjectiveJson,
-  QuestionTemplateJson,
-  SubjectJson,
-} from "./question-bank-json-types";
+import {
+  annexJsonSchema,
+  docJsonSchema,
+  learningObjectiveJsonSchema,
+  questionTemplateJsonSchema,
+  subjectJsonSchema,
+  courseJsonSchema,
+  type AnnexJson,
+  type CourseJson,
+  type DocJson,
+  type LearningObjectiveJson,
+  type QuestionTemplateJson,
+  type SubjectJson,
+} from "./question-bank-json-schemas";
 import type {
   FlashcardCollection,
   FlashcardContent,
@@ -27,7 +33,9 @@ const exists = async (f: string) => {
   }
 };
 
-export const readAllDocsFromFs = async (contentFolder: string) => {
+export const readAllDocsFromFs = async (
+  contentFolder: string,
+): Promise<DocJson[]> => {
   const posts = await getAllFiles(contentFolder, "page.md");
   const docs: DocJson[] = [];
 
@@ -37,15 +45,16 @@ export const readAllDocsFromFs = async (contentFolder: string) => {
     if (!match) throw new Error(`Missing frontMatter for ${fileName}`);
     const data = YAML.parse(match[1]);
     const content = source.split("\n---").slice(1).join().trim();
-    const doc: DocJson = {
-      id: data.id,
-      parentId: data.parent,
-      description: data.description,
-      title: data.title,
-      fileName: fileName,
-      content: content,
-    };
-    docs.push(doc);
+    docs.push(
+      docJsonSchema.parse({
+        id: data.id,
+        parentId: data.parent,
+        description: data.description,
+        title: data.title,
+        fileName: fileName,
+        content: content,
+      }),
+    );
   }
 
   return docs.sort((a, b) => a.id.localeCompare(b.id));
@@ -56,44 +65,54 @@ export const readAllQuestionsFromFs = async (contentFolder: string) => {
   const questions: QuestionTemplateJson[] = [];
 
   for (const filePath of files) {
-    const json = await fs.readFile(filePath, "utf-8");
-    const jsonData = YAML.parse(json) as QuestionTemplateJson[];
-    questions.push(...jsonData);
+    const fileBuffer = await fs.readFile(filePath, "utf-8");
+    const array = YAML.parse(fileBuffer);
+    questions.push(...questionTemplateJsonSchema.array().parse(array));
   }
   return questions;
 };
 
-export const readAllAnnexesFromFs = async (contentFolder: string) => {
+export const readAllAnnexesFromFs = async (
+  contentFolder: string,
+): Promise<AnnexJson[]> => {
   const files = await getAllFiles(contentFolder, "annexes.yaml");
   const annexes: AnnexJson[] = [];
 
   for (const annexPath of files) {
-    const json = await fs.readFile(annexPath, "utf-8");
-    const jsonData = YAML.parse(json || "[]") as AnnexJson[];
-    annexes.push(...jsonData);
+    const fileBuffer = await fs.readFile(annexPath, "utf-8");
+    const array = YAML.parse(fileBuffer || "[]");
+    annexes.push(...annexJsonSchema.array().parse(array));
   }
 
   return annexes;
 };
 
-export const readAllLosFromFs = async (contentFolder: string) => {
-  const loFile = path.join(contentFolder, "learning-objectives.yaml");
-  const fileBuffer = await fs.readFile(loFile, "utf-8");
-  const los = YAML.parse(fileBuffer) as LearningObjectiveJson[];
+export const readAllLosFromFs = async (
+  contentFolder: string,
+): Promise<LearningObjectiveJson[]> => {
+  const file = path.join(contentFolder, "learning-objectives.yaml");
+  const fileBuffer = await fs.readFile(file, "utf-8");
+  const array = YAML.parse(fileBuffer);
+  const los = learningObjectiveJsonSchema.array().parse(array);
   return los.sort((a, b) => a.id.localeCompare(b.id));
 };
 
-export const readAllSubjectsFromFs = async (contentFolder: string) => {
+export const readAllSubjectsFromFs = async (
+  contentFolder: string,
+): Promise<SubjectJson[]> => {
   const subjectsJson = path.join(contentFolder, "subjects.yaml");
   const fileBuffer = await fs.readFile(subjectsJson, "utf-8");
-  const subjects = YAML.parse(fileBuffer) as SubjectJson[];
-  return subjects.map((s) => ({ ...s, numberOfQuestions: 0 }));
+  const array = YAML.parse(fileBuffer);
+  return subjectJsonSchema.array().parse(array);
 };
 
-export const readAllCoursesFromFs = async (contentFolder: string) => {
+export const readAllCoursesFromFs = async (
+  contentFolder: string,
+): Promise<CourseJson[]> => {
   const coursesJson = path.join(contentFolder, "courses.yaml");
   const fileBuffer = await fs.readFile(coursesJson, "utf-8");
-  return YAML.parse(fileBuffer) as CourseJson[];
+  const array = YAML.parse(fileBuffer);
+  return courseJsonSchema.array().parse(array);
 };
 
 export const readAllFlashcardsFromFs = async (

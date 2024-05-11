@@ -8,7 +8,7 @@ import {
   subjectIdSchema,
 } from "./question-bank-ids";
 
-export const LearningObjectiveSchema = z.object({
+export const learningObjectiveSchema = z.object({
   id: learningObjectiveIdSchema,
   questionBank: questionBankNameSchema,
   parentId: learningObjectiveIdSchema.nullable(),
@@ -24,4 +24,4 @@ export const LearningObjectiveSchema = z.object({
   source: z.string(),
 });
 
-export type LearningObjective = z.infer<typeof LearningObjectiveSchema>;
+export type LearningObjective = z.infer<typeof learningObjectiveSchema>;
