@@ -52,7 +52,7 @@ const runExecutor = async ({
     mediaMap,
   });
 
-  await content.updateQuestionBank(connectedBank);
+  await content.updateQuestionBank(connectedBank, questionBank);
 
   return {
     success: true,

@@ -48,6 +48,15 @@ export class QuestionBank extends Content {
     docs: {} as Record<string, Doc>,
   };
 
+  private static caches_has_all = {
+    questions: false,
+    learningObjectives: false,
+    annexes: false,
+    subjects: false,
+    courses: false,
+    docs: false,
+  };
+
   private resourceToZodSchema = {
     questions: questionTemplateSchema,
     learningObjectives: learningObjectiveSchema,
@@ -59,7 +68,7 @@ export class QuestionBank extends Content {
   };
 
   private resourceToTable = {
-    questions: contentSchema.questionTemplates,
+    questions: contentSchema.questions,
     learningObjectives: contentSchema.learningObjectives,
     annexes: contentSchema.annexes,
     subjects: contentSchema.subjects,
@@ -69,7 +78,7 @@ export class QuestionBank extends Content {
   };
 
   private resourceToDrizzleSchema = {
-    questions: contentSchema.questionTemplates,
+    questions: contentSchema.questions,
     learningObjectives: contentSchema.learningObjectives,
     annexes: contentSchema.annexes,
     subjects: contentSchema.subjects,
@@ -136,5 +145,40 @@ export class QuestionBank extends Content {
 
     const items = ids.map((id) => cache[id]);
     return items as ResourceToType[T][];
+  }
+
+  public async getAll<T extends Resource>(
+    resource: T,
+  ): Promise<ResourceToType[T][]> {
+    const drizzleSchema = this.resourceToDrizzleSchema[resource];
+    const zodSchema = this.resourceToZodSchema[resource];
+    const table = this.resourceToTable[resource];
+    const cache = QuestionBank.caches[resource];
+    const hasAll = QuestionBank.caches_has_all[resource];
+
+    if (!hasAll) {
+      let offset = 0;
+      while (true) {
+        const items = zodSchema
+          .array()
+          .parse(
+            await Content.db
+              .select()
+              .from(table)
+              .where(eq(drizzleSchema.status, "current"))
+              .orderBy(drizzleSchema.id)
+              .limit(1000)
+              .offset(offset)
+              .execute(),
+          );
+        items.forEach((item) => {
+          cache[item.id] = item;
+        });
+        if (items.length < 1000) break;
+        offset += 1000;
+      }
+    }
+
+    return Object.values(cache) as ResourceToType[T][];
   }
 }
