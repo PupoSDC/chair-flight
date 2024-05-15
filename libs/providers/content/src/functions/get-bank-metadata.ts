@@ -3,7 +3,7 @@ import { contentSchema } from "../../drizzle";
 import type { ContentDb } from "../../drizzle";
 
 export const getBankMetadata = async (db: ContentDb) => {
-  const questionsSchema = contentSchema.questionTemplates;
+  const questionsSchema = contentSchema.questions;
   const [{ numberOfQuestions }] = await db
     .select({
       numberOfQuestions: count(),

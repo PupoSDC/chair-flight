@@ -33,13 +33,14 @@ export class Content {
     Content.client.connect();
   }
 
-  private async makeDocument(item: { id: string }) {
+  private async makeDocument(document: { id: string }, source: string) {
     return {
-      hash: await sha256(JSON.stringify(item)),
-      id: item.id,
+      source,
+      document,
+      hash: await sha256(JSON.stringify(document)),
+      id: document.id,
       status: "current" as const,
       createdAt: new Date(),
-      document: item,
     };
   }
 
@@ -113,17 +114,24 @@ export class Content {
 
     await Content.db
       .insert(contentSchema.blogPosts)
-      .values(await Promise.all(blogPosts.map(this.makeDocument)))
+      .values(
+        await Promise.all(
+          blogPosts.map((doc) => this.makeDocument(doc, "blog")),
+        ),
+      )
       .onConflictDoUpdate({
         target: contentSchema.blogPosts.hash,
         set: { status: "current" },
       });
   }
 
-  public async updateQuestionBank(content: QuestionBank) {
+  public async updateQuestionBank(content: QuestionBank, source: string) {
     const db = Content.db;
     for (const [key, data] of Object.entries(content)) {
-      const docs = await Promise.all(data.map(this.makeDocument));
+      const docs = await Promise.all(
+        data.map((v) => this.makeDocument(v, source)),
+      );
+
       const schema = contentSchema[key as keyof ContentSchema];
       if (!schema) throw new Error(`${key} is not a valid QB entity`);
       if (!docs.length) continue;
