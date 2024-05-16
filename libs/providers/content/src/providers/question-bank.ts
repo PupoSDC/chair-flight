@@ -158,6 +158,8 @@ export class QuestionBank extends Content {
 
     if (!hasAll) {
       let offset = 0;
+      // TODO fix this!
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         const items = zodSchema
           .array()
