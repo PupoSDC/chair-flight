@@ -5,7 +5,6 @@ export * from "./components/blog-post-card";
 export * from "./components/blog-post-chip";
 export * from "./components/container-wrapper";
 export * from "./components/count-up";
-export * from "./components/helpers/no-ssr";
 export * from "./components/hook-form";
 export * from "./components/image-viewer";
 export * from "./components/image-with-modal";

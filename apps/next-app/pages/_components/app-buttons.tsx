@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { keyframes } from "@emotion/react";
+import { NoSsr } from "@mui/base";
 import { default as BugReportIcon } from "@mui/icons-material/BugReport";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
@@ -15,7 +15,7 @@ import {
   Stack,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useSidebar, noSsr } from "@cf/react/web";
+import { useSidebar } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { useBugReportDisclose } from "../_hooks/use-bug-report";
 import { useTrackEvent } from "../_hooks/use-track-event";
@@ -48,36 +48,24 @@ export const HamburgerButton: FunctionComponent = () => (
   </Tooltip>
 );
 
-export const ThemeButton: FunctionComponent = noSsr(
-  () => {
-    const [isMounted, setIsMounted] = useState(false);
-    const { mode, setMode } = useColorScheme();
-    const trackEvent = useTrackEvent();
-    const showDarkModeButton = !isMounted || mode === "light";
+export const ThemeButton: FunctionComponent = () => {
+  const { mode, setMode } = useColorScheme();
+  const trackEvent = useTrackEvent();
 
-    const toggleTheme = () => {
-      trackEvent("themeButton.switch", {});
-      setMode(mode === "dark" ? "light" : "dark");
-    };
+  const toggleTheme = () => {
+    trackEvent("themeButton.switch", {});
+    setMode(mode === "dark" ? "light" : "dark");
+  };
 
-    useEffect(() => setIsMounted(true), []);
-
-    return (
-      <Tooltip title={`Switch to ${mode} mode`}>
-        <IconButton onClick={toggleTheme}>
-          {showDarkModeButton ? <DarkModeIcon /> : <LightModeIcon />}
-        </IconButton>
-      </Tooltip>
-    );
-  },
-  () => (
-    <Tooltip title={`Switch theme`}>
-      <IconButton disabled>
-        <LightModeIcon />
+  return (
+    <Tooltip title={<NoSsr>{`Switch to ${mode} mode`}</NoSsr>}>
+      <IconButton onClick={toggleTheme}>
+        <DarkModeIcon className="dark-only" />
+        <LightModeIcon className="light-only" />
       </IconButton>
     </Tooltip>
-  ),
-);
+  );
+};
 
 export const NotificationButton: FunctionComponent = () => {
   const getDateOfLastPost = trpc.blog.getDateOfLastPost;

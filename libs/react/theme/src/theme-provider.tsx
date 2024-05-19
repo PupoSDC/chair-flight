@@ -1,5 +1,6 @@
 import { CssBaseline, CssVarsProvider } from "@mui/joy";
 import { theme } from "./theme";
+import { ThemeGlobalStyles } from "./theme-global-styles";
 import { ThemeStopResizeAnimation } from "./theme-stop-resize-animation";
 import type { FunctionComponent, ReactNode } from "react";
 
@@ -13,6 +14,7 @@ export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({
   <CssVarsProvider defaultMode="light" theme={theme}>
     <CssBaseline />
     <ThemeStopResizeAnimation />
+    <ThemeGlobalStyles />
     {children}
   </CssVarsProvider>
 );

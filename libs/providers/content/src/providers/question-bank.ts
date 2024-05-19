@@ -97,16 +97,16 @@ export class QuestionBank extends Content {
     const cache = QuestionBank.caches[resource];
 
     if (!cache[id]) {
-      cache[id] = zodSchema.parse(
-        await Content.db
-          .select()
-          .from(table)
-          .where(
-            and(eq(drizzleSchema.id, id), eq(drizzleSchema.status, "current")),
-          )
-          .execute()
-          .then(takeOneOrThrow),
-      );
+      const { document } = await Content.db
+        .select()
+        .from(table)
+        .where(
+          and(eq(drizzleSchema.id, id), eq(drizzleSchema.status, "current")),
+        )
+        .execute()
+        .then(takeOneOrThrow);
+
+      zodSchema.parse(document);
     }
 
     return QuestionBank.caches[resource][id] as ResourceToType[T];
