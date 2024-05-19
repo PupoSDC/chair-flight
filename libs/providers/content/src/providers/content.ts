@@ -16,8 +16,7 @@ export type MediaFile = { id: MediaId; file: File };
 export type MediaMap = Record<MediaId, MediaUrl>;
 
 export class Content {
-  private static client: Client;
-  private static ut: UTApi;
+  private static ut: UTApi | null;
   private static utSalt: string;
   protected static db: ContentDb;
 
@@ -26,11 +25,20 @@ export class Content {
     const pgProvider = getEnvVariableOrThrow("PROVIDER_POSTGRES_CONTENT");
     const utSalt = getEnvVariableOrThrow("PROVIDER_UPLOADTHING_HASH_SALT");
     const utSecret = getEnvVariableOrThrow("PROVIDER_UPLOADTHING_SECRET");
-    Content.ut = new UTApi({ apiKey: utSecret });
-    Content.utSalt = utSalt;
-    Content.client = new Client({ connectionString: pgProvider });
-    Content.db = drizzle(Content.client, { schema });
-    Content.client.connect();
+
+    Content.ut ??= (() => {
+      if (utSecret === "DISABLE") return null;
+      return new UTApi({ apiKey: utSecret });
+    })();
+
+    Content.db ??= (() => {
+      const client = new Client({ connectionString: pgProvider });
+      const db = drizzle(client, { schema });
+      client.connect();
+      return db;
+    })();
+
+    Content.utSalt ??= utSalt;
   }
 
   private async makeDocument(document: { id: string }, source: string) {
@@ -45,10 +53,20 @@ export class Content {
   }
 
   private async getAllMediaFiles() {
+    if (!Content.ut) return [];
     return (await Content.ut.listFiles({ limit: 2000 })).files;
   }
 
+  private async fakeUpdateMedia(files: MediaFile[]): Promise<MediaMap> {
+    return makeMap(
+      files,
+      (f) => f.id,
+      () => "/placeholder.png",
+    );
+  }
+
   public async updateMedia(files: MediaFile[]): Promise<MediaMap> {
+    if (!Content.ut) return this.fakeUpdateMedia(files);
     const existingFiles = await this.getAllMediaFiles();
 
     const existingFilesToHash = makeMap(

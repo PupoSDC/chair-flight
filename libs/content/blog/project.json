@@ -5,7 +5,16 @@
   "targets": {
     "lint": {},
     "types": {},
-    "format": {}
+    "format": {},
+    "migrate": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/content:migrate-blog",
+      "dependsOn": ["providers-content:migrate"],
+      "options": {
+        "contentFolder": "{projectRoot}/posts"
+      }
+    }
   },
   "tags": []
 }

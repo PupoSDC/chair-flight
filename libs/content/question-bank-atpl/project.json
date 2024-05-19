@@ -24,15 +24,6 @@
         "questionBank": "atpl"
       }
     },
-    "compile": {
-      "executor": "@cf/providers/question-bank:compile",
-      "options": {
-        "contentFolder": "libs/content/question-bank-atpl/content",
-        "flashcardsFolder": "libs/content/question-bank-atpl/flashcards",
-        "compileFolder": "apps/next-app/public/content/atpl",
-        "questionBank": "atpl"
-      }
-    },
     "parseLosXlsx": {
       "executor": "@cf/providers/question-bank:parseLosXlsx",
       "options": {

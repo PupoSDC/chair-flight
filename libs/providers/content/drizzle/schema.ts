@@ -39,7 +39,9 @@ export const docs = documentTable("question_bank_docs");
 
 export const subjects = documentTable("question_bank_subjects");
 
-export const questions = documentTable("question_bank_question_templates");
+export const questionTemplates = documentTable(
+  "question_bank_question_templates",
+);
 
 export const learningObjectives = documentTable(
   "question_bank_learning_objectives",

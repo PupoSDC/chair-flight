@@ -26,10 +26,9 @@ export const staticHandler = <
     context: GetStaticPropsContext<Params, Preview>;
     helper: TrpcHelper;
   }) => Promise<GetStaticPropsResult<Props>>,
-  fs: MiniFs,
 ): GetStaticProps<Props, Params, Preview> => {
   return async (context) => {
-  //  await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));
+    //  await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));
 
     const helper = await getTrpcHelper();
 
@@ -60,7 +59,6 @@ export const staticPathsHandler = <
     context: GetStaticPathsContext;
     helper: TrpcHelper;
   }) => Promise<GetStaticPathsResult<Params>>,
-  fs: MiniFs,
 ): GetStaticPaths<Params> => {
   return async (context) => {
     //await Promise.all(repositories.map((qb) => qb.preloadForStaticRender(fs)));

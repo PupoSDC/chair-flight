@@ -1,8 +1,13 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
 import { AppLogo } from "@cf/react/web";
 import { usePageTransition } from "@cf/react/web";
+import {
+  AppButtonsContainer,
+  BugReportButton,
+  GithubButton,
+  ThemeButton,
+} from "./app-buttons";
 import type { FunctionComponent, ReactElement } from "react";
-import { AppButtonsContainer, BugReportButton, GithubButton, ThemeButton } from "./app-buttons";
 
 const HEADER_HEIGHT = 48;
 const HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;

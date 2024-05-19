@@ -2,10 +2,14 @@ import { Octokit } from "octokit";
 import { default as YAML } from "yaml";
 import { getEnvVariableOrThrow } from "@cf/base/env";
 import { getRandomId } from "@cf/base/utils";
-import type { EditQuestionsPr, NewIssue, QuestionTemplate} from "@cf/core/content";
 import { questionTemplateSchema } from "@cf/core/content";
+import type {
+  EditQuestionsPr,
+  NewIssue,
+  QuestionTemplate,
+} from "@cf/core/content";
 
-export class Github  {
+export class Github {
   private static octokit: Octokit;
   private projectOwner: string;
   private projectRepo: string;

@@ -1,14 +1,14 @@
 {
   "executors": {
-    "arrange-question-bank": {
-      "implementation": "./executors/arrange-question-bank/executor",
-      "schema": "./executors/arrange-question-bank/schema.json",
-      "description": "Reads and Rewrites the whole question bank"
-    },
     "migrate-blog": {
       "implementation": "./executors/migrate-blog/executor",
       "schema": "./executors/migrate-blog/schema.json",
       "description": "Migrates Blog data into DB"
+    },
+    "arrange-question-bank": {
+      "implementation": "./executors/arrange-question-bank/executor",
+      "schema": "./executors/arrange-question-bank/schema.json",
+      "description": "Reads and Rewrites the whole question bank"
     },
     "migrate-question-bank": {
       "implementation": "./executors/migrate-question-bank/executor",

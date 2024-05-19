@@ -68,7 +68,7 @@ export class QuestionBank extends Content {
   };
 
   private resourceToTable = {
-    questions: contentSchema.questions,
+    questions: contentSchema.questionTemplates,
     learningObjectives: contentSchema.learningObjectives,
     annexes: contentSchema.annexes,
     subjects: contentSchema.subjects,
@@ -78,7 +78,7 @@ export class QuestionBank extends Content {
   };
 
   private resourceToDrizzleSchema = {
-    questions: contentSchema.questions,
+    questions: contentSchema.questionTemplates,
     learningObjectives: contentSchema.learningObjectives,
     annexes: contentSchema.annexes,
     subjects: contentSchema.subjects,
