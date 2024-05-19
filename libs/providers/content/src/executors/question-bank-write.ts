@@ -6,7 +6,7 @@ import type {
   AnnexJson,
   QuestionTemplateJson,
 } from "./question-bank-json-schemas";
-import type { Annex, QuestionTemplate } from "@cf/core/question-bank";
+import type { Annex, QuestionTemplate } from "@cf/core/content";
 
 export const writeQuestionTemplates = async (
   contentFolder: string,

@@ -1,7 +1,7 @@
+import { getQuestionPreview } from "@cf/core/content";
 import { compileMarkdown } from "@cf/core/markdown";
-import { getQuestionPreview } from "@cf/core/question-bank";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { QuestionTemplate } from "@cf/core/question-bank";
+import type { QuestionTemplate } from "@cf/core/content";
 import type {
   QuestionFilterField,
   QuestionSearchField,

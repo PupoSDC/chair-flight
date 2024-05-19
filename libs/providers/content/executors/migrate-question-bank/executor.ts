@@ -1,5 +1,5 @@
 import * as fs from "node:fs/promises";
-import { questionBankNameSchema } from "@cf/core/question-bank";
+import { questionBankNameSchema } from "@cf/core/content";
 import { getAllFiles } from "../../src/executors/get-all-files";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {

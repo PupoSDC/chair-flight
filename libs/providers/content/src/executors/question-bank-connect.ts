@@ -8,7 +8,7 @@ import {
   type QuestionBankName,
   type QuestionTemplate,
   type Subject,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 import type { MediaMap } from "../providers/content";
 import type {
   AnnexJson,
@@ -18,7 +18,7 @@ import type {
   QuestionTemplateJson,
   SubjectJson,
 } from "./question-bank-json-schemas";
-import type { FlashcardCollection } from "@cf/core/question-bank";
+import type { FlashcardCollection } from "@cf/core/content";
 
 const ANNEX_MATCH = /!\[.*\]\(annex:(.*)\)/gm;
 

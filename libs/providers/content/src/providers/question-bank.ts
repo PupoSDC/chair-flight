@@ -7,7 +7,7 @@ import {
   learningObjectiveSchema,
   questionTemplateSchema,
   subjectSchema,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 import { contentSchema } from "../../drizzle";
 import { Content } from "./content";
 import type {
@@ -17,7 +17,7 @@ import type {
   LearningObjective,
   QuestionTemplate,
   Subject,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 
 type ResourceToType = {
   questions: QuestionTemplate;

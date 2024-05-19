@@ -1,5 +1,5 @@
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { Annex } from "@cf/core/question-bank";
+import type { Annex } from "@cf/core/content";
 import type {
   AnnexSearchResult,
   AnnexFilterField,

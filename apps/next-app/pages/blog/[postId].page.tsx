@@ -4,11 +4,8 @@ import { default as FlightTakeoffIcon } from "@mui/icons-material/FlightTakeoff"
 import { default as KeyboardArrowLeftIcon } from "@mui/icons-material/KeyboardArrowLeft";
 import { default as StyleIcon } from "@mui/icons-material/Style";
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy";
-import { BugReportButton } from "libs/next/user/src/components/app-buttons";
 import { DateTime } from "luxon";
 import { compileMdx } from "@cf/core/markdown";
-import { AppHead, LayoutPublic } from "@cf/next/public";
-import { AnnexSearch, QuestionSearch } from "@cf/next/question-bank";
 import { Blog } from "@cf/providers/content";
 import { Mdx } from "@cf/react/markdown";
 import {
@@ -16,6 +13,8 @@ import {
   BlogPostChip,
   ModuleSelectionButton,
 } from "@cf/react/web";
+import { AppHead } from "../_components/app-head";
+import { LayoutPublic } from "../_components/layout-public";
 import type { MdxDocument } from "@cf/core/markdown";
 import type { BlogPostTag } from "@cf/react/web";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -80,14 +79,14 @@ export const Page: NextPage<PageProps> = ({
           Box,
           Stack,
           Link,
-          AnnexSearch,
+          // AnnexSearch,
           ModuleSelectionButton,
           AirplaneTicketIcon,
           ChevronRightIcon,
           FlightTakeoffIcon,
           StyleIcon,
-          QuestionSearch,
-          BugReportButton,
+          // QuestionSearch,
+          // BugReportButton,
         }}
       />
 

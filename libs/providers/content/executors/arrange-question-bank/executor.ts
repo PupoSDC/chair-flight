@@ -1,4 +1,4 @@
-import { questionBankNameSchema } from "@cf/core/question-bank";
+import { questionBankNameSchema } from "@cf/core/content";
 import { connectQuestionBank } from "../../src/executors/question-bank-connect";
 import {
   readAllAnnexesFromFs,

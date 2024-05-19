@@ -6,8 +6,8 @@ import { getEnvVariableOrThrow } from "@cf/base/env";
 import { chunk, makeMap, sha256, wait } from "@cf/base/utils";
 import { contentSchema } from "../../drizzle";
 import type { ContentDb, ContentSchema } from "../../drizzle";
-import type { BlogPost } from "@cf/core/blog";
-import type { QuestionBank } from "@cf/core/question-bank";
+import type { BlogPost } from "@cf/core/content";
+import type { QuestionBank } from "@cf/core/content";
 import type { UploadFileResult } from "uploadthing/types";
 
 export type MediaId = string;

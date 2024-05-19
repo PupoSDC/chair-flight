@@ -1,6 +1,6 @@
 import { z } from "zod";
+import type { QuestionBankName, SubjectId } from "@cf/core/content";
 import type { MdDocument } from "@cf/core/markdown";
-import type { QuestionBankName, SubjectId } from "@cf/core/question-bank";
 
 export type QuestionSearchResult = {
   id: string;

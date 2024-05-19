@@ -2,16 +2,17 @@ import React, { StrictMode } from "react";
 import { default as dynamic } from "next/dynamic";
 import { default as Head } from "next/head";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { AnalyticsProvider, AnalyticsPageLogger } from "@cf/next/analytics";
 import { ThemeProvider } from "@cf/react/theme";
 import { Toaster } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
+import { AnalyticsPageLogger } from "./_components/analytics-page-logger";
+import { AnalyticsProvider } from "./_providers/analytics-provider";
 import type { AppProps } from "next/app";
 import type { FunctionComponent } from "react";
 import "@fontsource/public-sans";
 
 const UserBugReport = dynamic(
-  () => import("@cf/next/user").then((mod) => mod.UserBugReport),
+  () => import("./_components/app-bug-report").then((mod) => mod.AppBugReport),
   { ssr: false },
 );
 

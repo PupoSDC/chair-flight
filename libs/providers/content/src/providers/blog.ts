@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import { takeOneOrThrow } from "@cf/base/utils";
-import { blogPostSchema } from "@cf/core/blog";
+import { blogPostSchema } from "@cf/core/content";
 import { contentSchema } from "../../drizzle";
 import { Content } from "./content";
 

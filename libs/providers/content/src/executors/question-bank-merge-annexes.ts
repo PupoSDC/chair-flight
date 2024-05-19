@@ -1,4 +1,4 @@
-import type { Annex, AnnexId, QuestionTemplate } from "@cf/core/question-bank";
+import type { Annex, AnnexId, QuestionTemplate } from "@cf/core/content";
 
 export const mergeAnnexes = (args: {
   questionTemplates: QuestionTemplate[];

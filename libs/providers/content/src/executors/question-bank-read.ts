@@ -16,10 +16,7 @@ import {
   type QuestionTemplateJson,
   type SubjectJson,
 } from "./question-bank-json-schemas";
-import type {
-  FlashcardCollection,
-  FlashcardContent,
-} from "@cf/core/question-bank";
+import type { FlashcardCollection, FlashcardContent } from "@cf/core/content";
 
 const MATTER_REGEX =
   /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;

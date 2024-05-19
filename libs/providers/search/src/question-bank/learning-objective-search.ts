@@ -1,7 +1,7 @@
 import { makeMap } from "@cf/base/utils";
 import { compileMarkdown } from "@cf/core/markdown";
 import { QuestionBankSearchProvider } from "../abstract-providers/question-bank-search-provider";
-import type { LearningObjective } from "@cf/core/question-bank";
+import type { LearningObjective } from "@cf/core/content";
 import type {
   LearningObjectiveFilterField,
   LearningObjectiveSearchField,

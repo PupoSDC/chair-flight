@@ -4,7 +4,7 @@ import type {
   QuestionBankName,
   SubjectId,
   LearningObjectiveId,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 
 export type DocSearchResult = {
   id: DocId;

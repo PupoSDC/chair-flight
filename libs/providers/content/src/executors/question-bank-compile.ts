@@ -10,7 +10,7 @@ import type {
   LearningObjective,
   QuestionTemplate,
   Subject,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 
 export const compileQuestionBank = async (args: {
   contentFolder: string;

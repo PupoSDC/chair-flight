@@ -1,11 +1,11 @@
 import { z } from "zod";
-import type { MdDocument } from "@cf/core/markdown";
 import type {
   CourseId,
   LearningObjectiveId,
   QuestionBankName,
   SubjectId,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
+import type { MdDocument } from "@cf/core/markdown";
 
 export type LearningObjectiveSearchResult = {
   id: LearningObjectiveId;

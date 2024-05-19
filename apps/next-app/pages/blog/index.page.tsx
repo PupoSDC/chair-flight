@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/joy";
 import { DateTime } from "luxon";
-import { AppHead, LayoutPublic } from "@cf/next/public";
 import { Blog } from "@cf/providers/content";
 import { BackgroundFadedImage, BlogPostCard } from "@cf/react/web";
+import { AppHead } from "../_components/app-head";
+import { LayoutPublic } from "../_components/layout-public";
 import type { BlogPostCardProps } from "@cf/react/web";
 import type { GetStaticProps, NextPage } from "next";
 

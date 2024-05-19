@@ -5,7 +5,7 @@ import type {
   QuestionBankName,
   QuestionTemplateId,
   SubjectId,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 
 export type AnnexSearchResult = {
   id: AnnexId;

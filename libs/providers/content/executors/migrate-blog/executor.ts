@@ -2,11 +2,11 @@ import * as fs from "node:fs/promises";
 import { DateTime } from "luxon";
 import { parse } from "yaml";
 import { DataError } from "@cf/base/errors";
-import { blogPostSchema } from "@cf/core/blog";
+import { blogPostSchema } from "@cf/core/content";
 import { getAllFiles } from "../../src/executors/get-all-files";
 import { Content } from "../../src/providers/content";
 import type { MediaFile } from "../../src/providers/content";
-import type { BlogPost } from "@cf/core/blog";
+import type { BlogPost } from "@cf/core/content";
 
 type ExecutorOptions = {
   contentFolder: string;

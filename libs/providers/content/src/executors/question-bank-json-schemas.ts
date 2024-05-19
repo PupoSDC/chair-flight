@@ -5,7 +5,7 @@ import {
   subjectSchema,
   docSchema,
   courseSchema,
-} from "@cf/core/question-bank";
+} from "@cf/core/content";
 import type { z } from "zod";
 
 export const questionTemplateJsonSchema = questionTemplateSchema.pick({
