@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 import { UTApi } from "uploadthing/server";
@@ -155,13 +155,21 @@ export class Content {
       if (!docs.length) continue;
 
       const castSchema = schema as ContentSchema["annexes"];
-      const docsInChunks = chunk(docs, 10000);
+      const docsInChunks = chunk(docs, 5000);
 
       for (const docsChunk of docsInChunks) {
         await Content.db
           .update(castSchema)
           .set({ status: "outdated" })
-          .where(eq(castSchema.status, "current"));
+          .where(
+            and(
+              eq(castSchema.status, "current"),
+              inArray(
+                castSchema.id,
+                docsChunk.map((d) => d.id),
+              ),
+            ),
+          );
 
         await db
           .insert(castSchema)

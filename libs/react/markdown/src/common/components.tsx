@@ -64,8 +64,7 @@ export const markdownComponents: Partial<Components> = {
 
     return <>{children}</>;
   },
-  hr: () => <Divider orientation="horizontal" sx={{ width: "100%", my: 2 }} />,
-  a: ({ children, href }) => <Link href={href} children={children} />,
+  a: ({ children, href }) => <Link href={href}>{children}</Link>,
   ul: ({ children }) => (
     <Box component="ul" sx={{ pl: 3 }}>
       {children}
@@ -120,6 +119,7 @@ export const markdownComponents: Partial<Components> = {
       }}
     />
   ),
+  hr: () => <Divider orientation="horizontal" sx={{ width: "100%", my: 2 }} />,
 };
 
 (markdownComponents.img as FunctionComponent).displayName = "img";

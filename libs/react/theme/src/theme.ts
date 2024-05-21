@@ -154,6 +154,13 @@ export const theme = extendTheme({
         component: ThemeCustomLink,
       },
     },
+    JoyDrawer: {
+      styleOverrides: {
+        root: () => ({
+          "--Drawer-transitionDuration": "0.15s",
+        }),
+      },
+    },
   },
   ...muiThemeBackwardsCompatibility,
 });

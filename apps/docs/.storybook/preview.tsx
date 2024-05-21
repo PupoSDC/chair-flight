@@ -1,13 +1,12 @@
 import React, { Suspense, useEffect } from "react";
+import { useColorScheme, type TypographyProps } from "@mui/joy";
 import { default as Typography } from "@mui/joy/Typography";
-import { useColorScheme } from "@mui/joy/styles";
 import { DocsContainer } from "@storybook/addon-docs";
 import { themes } from "@storybook/theming";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import { useDarkMode } from "storybook-dark-mode";
 import { ThemeProvider } from "@cf/react/theme";
 import { trpc } from "@cf/trpc/client";
-import type { TypographyProps } from "@mui/joy";
 import type { DocsContainerProps } from "@storybook/addon-docs";
 import type { Preview } from "@storybook/react";
 import type { FunctionComponent } from "react";

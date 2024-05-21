@@ -1,4 +1,5 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
+import type { SxProps } from "@mui/joy/styles/types";
 import { AppLogo } from "@cf/react/web";
 import { usePageTransition } from "@cf/react/web";
 import {
@@ -17,7 +18,11 @@ export const LayoutPublic: FunctionComponent<{
   fixedHeight?: boolean;
   background?: ReactElement;
   noPadding?: boolean;
-}> = ({ children, fixedHeight, background, noPadding }) => {
+  sx?: {
+    main?: SxProps;
+    header?: SxProps;
+  };
+}> = ({ children, fixedHeight, background, noPadding, sx }) => {
   const { isTransitioning } = usePageTransition();
 
   return (
@@ -65,6 +70,8 @@ export const LayoutPublic: FunctionComponent<{
             pl: 3,
             display: "flex",
           },
+
+          ...sx?.header,
         }}
       >
         <Link href="/">
@@ -72,15 +79,21 @@ export const LayoutPublic: FunctionComponent<{
           <h2>CHAIR FLIGHT</h2>
         </Link>
 
-        <Box component="nav">
+        <Box component="nav" gap={2}>
           <Link href="/articles/blog" color="neutral" fontSize="sm">
             Blog
+          </Link>
+          <Link href="/content" color="neutral" fontSize="sm">
+            Content
+          </Link>
+          <Link href="/app" color="neutral" fontSize="sm">
+            App
           </Link>
         </Box>
         <AppButtonsContainer>
           <BugReportButton />
           <GithubButton />
-          <ThemeButton />
+          {/** <ThemeButton /> */}
         </AppButtonsContainer>
       </Stack>
       <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />
@@ -94,6 +107,8 @@ export const LayoutPublic: FunctionComponent<{
           ...(fixedHeight ? { height: HEIGHT } : { minHeight: HEIGHT }),
           ...(noPadding ? {} : { p: { xs: 2, md: 4 } }),
           ...(noPadding ? {} : { maxWidth: "md" }),
+
+          ...sx?.main,
         }}
       />
       <LinearProgress

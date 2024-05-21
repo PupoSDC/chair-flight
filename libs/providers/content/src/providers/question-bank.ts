@@ -1,5 +1,4 @@
-import { and, eq, inArray } from "drizzle-orm";
-import { takeOneOrThrow } from "@cf/base/utils";
+import { NotFoundError } from "@cf/base/errors";
 import {
   annexSchema,
   courseSchema,
@@ -8,7 +7,6 @@ import {
   questionTemplateSchema,
   subjectSchema,
 } from "@cf/core/content";
-import { contentSchema } from "../../drizzle";
 import { Content } from "./content";
 import type {
   Annex,
@@ -19,16 +17,6 @@ import type {
   Subject,
 } from "@cf/core/content";
 
-type ResourceToType = {
-  questions: QuestionTemplate;
-  learningObjectives: LearningObjective;
-  annexes: Annex;
-  subjects: Subject;
-  courses: Course;
-  docs: Doc;
-  // flashcards: FlashcardCollection;
-};
-
 type Resource =
   | "questions"
   | "learningObjectives"
@@ -36,10 +24,18 @@ type Resource =
   | "subjects"
   | "courses"
   | "docs";
-// | "flashcards"
+
+type ResourceToType = {
+  questions: QuestionTemplate;
+  learningObjectives: LearningObjective;
+  annexes: Annex;
+  subjects: Subject;
+  courses: Course;
+  docs: Doc;
+};
 
 export class QuestionBank extends Content {
-  private static caches = {
+  private static cache = {
     questions: {} as Record<string, QuestionTemplate>,
     learningObjectives: {} as Record<string, LearningObjective>,
     annexes: {} as Record<string, Annex>,
@@ -48,139 +44,66 @@ export class QuestionBank extends Content {
     docs: {} as Record<string, Doc>,
   };
 
-  private static caches_has_all = {
-    questions: false,
-    learningObjectives: false,
-    annexes: false,
-    subjects: false,
-    courses: false,
-    docs: false,
+  private static drizzleQuery = {
+    questions: () => Content.db.query.questionTemplates,
+    learningObjectives: () => Content.db.query.learningObjectives,
+    annexes: () => Content.db.query.annexes,
+    subjects: () => Content.db.query.subjects,
+    courses: () => Content.db.query.courses,
+    docs: () => Content.db.query.docs,
   };
 
-  private resourceToZodSchema = {
+  private static zodSchema = {
     questions: questionTemplateSchema,
     learningObjectives: learningObjectiveSchema,
     annexes: annexSchema,
     subjects: subjectSchema,
     courses: courseSchema,
     docs: docSchema,
-    // flashcards: flashcardSchema,
   };
 
-  private resourceToTable = {
-    questions: contentSchema.questionTemplates,
-    learningObjectives: contentSchema.learningObjectives,
-    annexes: contentSchema.annexes,
-    subjects: contentSchema.subjects,
-    courses: contentSchema.courses,
-    docs: contentSchema.docs,
-    // flashcards: contentSchema.flashcards,
-  };
-
-  private resourceToDrizzleSchema = {
-    questions: contentSchema.questionTemplates,
-    learningObjectives: contentSchema.learningObjectives,
-    annexes: contentSchema.annexes,
-    subjects: contentSchema.subjects,
-    courses: contentSchema.courses,
-    docs: contentSchema.docs,
-    // flashcards: flashcardSchema,
-  };
-
-  public async getOne<T extends Resource>(
-    resource: T,
+  public async getOne<R extends Resource, V extends ResourceToType[R]>(
+    resource: R,
     id: string,
-  ): Promise<ResourceToType[T]> {
-    const drizzleSchema = this.resourceToDrizzleSchema[resource];
-    const zodSchema = this.resourceToZodSchema[resource];
-    const table = this.resourceToTable[resource];
-    const cache = QuestionBank.caches[resource];
+  ): Promise<V> {
+    const cache = QuestionBank.cache[resource];
+    const drizzleQuery = QuestionBank.drizzleQuery[resource]();
+    const zodSchema = QuestionBank.zodSchema[resource];
 
     if (!cache[id]) {
-      const { document } = await Content.db
-        .select()
-        .from(table)
-        .where(
-          and(eq(drizzleSchema.id, id), eq(drizzleSchema.status, "current")),
-        )
-        .execute()
-        .then(takeOneOrThrow);
+      const result = await drizzleQuery.findFirst({
+        where: (item, { and, eq }) =>
+          and(eq(item.id, id), eq(item.status, "current")),
+      });
 
-      zodSchema.parse(document);
+      if (!result) throw new NotFoundError(`${resource} ${id}`);
+      const parsedResult = zodSchema.parse(result?.document);
+      cache[id] = parsedResult;
     }
-
-    return QuestionBank.caches[resource][id] as ResourceToType[T];
+    return cache[id] as V;
   }
 
-  public async getSome<T extends Resource>(
-    resource: T,
+  public async getSome<R extends Resource, V extends ResourceToType[R]>(
+    resource: R,
     ids: string[],
-  ): Promise<ResourceToType[T][]> {
-    if (!ids.length) return [];
-    const drizzleSchema = this.resourceToDrizzleSchema[resource];
-    const zodSchema = this.resourceToZodSchema[resource];
-    const table = this.resourceToTable[resource];
-    const cache = QuestionBank.caches[resource];
-
+  ): Promise<V[]> {
+    const cache = QuestionBank.cache[resource];
+    const drizzleQuery = QuestionBank.drizzleQuery[resource]();
+    const zodSchema = QuestionBank.zodSchema[resource];
     const missingIds = ids.filter((id) => !cache[id]);
+
     if (missingIds.length) {
-      zodSchema
-        .array()
-        .parse(
-          await Content.db
-            .select()
-            .from(table)
-            .where(
-              and(
-                eq(drizzleSchema.status, "current"),
-                inArray(drizzleSchema.id, missingIds),
-              ),
-            )
-            .execute(),
-        )
-        .forEach((item) => {
-          cache[item.id] = item;
-        });
+      const result = await drizzleQuery.findMany({
+        where: (item, { and, eq, inArray }) =>
+          and(inArray(item.id, ids), eq(item.status, "current")),
+      });
+
+      result.forEach((item) => {
+        const parsedResult = zodSchema.parse(item.document);
+        cache[item.id] = parsedResult;
+      });
     }
 
-    const items = ids.map((id) => cache[id]);
-    return items as ResourceToType[T][];
-  }
-
-  public async getAll<T extends Resource>(
-    resource: T,
-  ): Promise<ResourceToType[T][]> {
-    const drizzleSchema = this.resourceToDrizzleSchema[resource];
-    const zodSchema = this.resourceToZodSchema[resource];
-    const table = this.resourceToTable[resource];
-    const cache = QuestionBank.caches[resource];
-    const hasAll = QuestionBank.caches_has_all[resource];
-
-    if (!hasAll) {
-      let offset = 0;
-      // TODO fix this!
-      // eslint-disable-next-line no-constant-condition
-      while (true) {
-        const items = zodSchema
-          .array()
-          .parse(
-            await Content.db
-              .select()
-              .from(table)
-              .where(eq(drizzleSchema.status, "current"))
-              .orderBy(drizzleSchema.id)
-              .limit(1000)
-              .offset(offset)
-              .execute(),
-          );
-        items.forEach((item) => {
-          cache[item.id] = item;
-        });
-        if (items.length < 1000) break;
-        offset += 1000;
-      }
-    }
-
-    return Object.values(cache) as ResourceToType[T][];
+    return ids.map((id) => cache[id]) as V[];
   }
 }

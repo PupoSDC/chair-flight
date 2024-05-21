@@ -36,6 +36,7 @@ export const Ups: FunctionComponent<UpsProps> = ({
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
+      textAlign: "center",
       minHeight: "50vh",
       color: color ? `${color}.plainColor` : undefined,
       "--joy-palette-text-primary": color ? `${color}.plainColor` : undefined,

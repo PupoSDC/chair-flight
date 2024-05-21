@@ -4,45 +4,26 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "compile",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "compile", "lint", "test", "e2e"]
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "default"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["default"]
     },
     "test": {
-      "inputs": [
-        "default",
-        "^production",
-        "{workspaceRoot}/jest.preset.js"
-      ]
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
     "lint": {
       "cache": true,
       "executor": "@nx/linter:eslint",
-      "inputs": [
-        "typescript",
-        "{workspaceRoot}/.eslintrc.json"
-      ],
+      "inputs": ["typescript", "{workspaceRoot}/.eslintrc.json"],
       "options": {
         "errorOnUnmatchedPattern": false,
         "maxWarnings": 0,
-        "lintFilePatterns": [
-          "{projectRoot}/**/*.ts?(x)"
-        ],
+        "lintFilePatterns": ["{projectRoot}/**/*.ts?(x)"],
         "fix": true
       },
       "configurations": {
@@ -53,14 +34,10 @@
     },
     "types": {
       "cache": true,
-      "inputs": [
-        "typescript"
-      ],
+      "inputs": ["typescript"],
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "tsc -p {projectRoot}/tsconfig.json"
-        ]
+        "commands": ["tsc -p {projectRoot}/tsconfig.json"]
       },
       "configurations": {
         "check": {}
@@ -69,12 +46,8 @@
     "format": {
       "cache": true,
       "executor": "nx:run-commands",
-      "dependsOn": [
-        "arrange"
-      ],
-      "inputs": [
-        "prettier"
-      ],
+      "dependsOn": ["arrange"],
+      "inputs": ["prettier"],
       "options": {
         "parallel": false,
         "commands": [
@@ -119,14 +92,8 @@
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*"
-    ],
-    "typescript": [
-      "{projectRoot}/**/*.ts?(x)"
-    ],
-    "prettier": [
-      "{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}"
-    ]
+    "default": ["{projectRoot}/**/*"],
+    "typescript": ["{projectRoot}/**/*.ts?(x)"],
+    "prettier": ["{projectRoot}/**/*.{ts,tsx,js,jsx,json,md}"]
   }
 }

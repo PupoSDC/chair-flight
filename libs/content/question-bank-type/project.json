@@ -15,7 +15,10 @@
     },
     "migrate": {
       "cache": true,
-      "inputs": ["{projectRoot}/content/**/*"],
+      "inputs": [
+        "{projectRoot}/content/**/*",
+        "{workspaceRoot}/libs/providers/content/**/*"
+      ],
       "executor": "@cf/providers/content:migrate-question-bank",
       "dependsOn": ["providers-content:migrate"],
       "options": {

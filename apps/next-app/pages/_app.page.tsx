@@ -24,12 +24,12 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
     <StrictMode>
       <AnalyticsProvider>
-        <AnalyticsPageLogger />
-        <ReactQueryDevtools position="bottom-right" />
-        <Head>
-          <title>Welcome to chair-flight!</title>
-        </Head>
         <ThemeProvider>
+          <AnalyticsPageLogger />
+          <ReactQueryDevtools position="bottom-right" />
+          <Head>
+            <title>Welcome to chair-flight!</title>
+          </Head>
           <Component {...pageProps} />
           <Toaster />
           <UserBugReport />
