@@ -1,8 +1,8 @@
-import type { FunctionComponent } from "react";
 import { Skeleton, Typography } from "@mui/joy";
 import { Markdown } from "@cf/react/markdown";
 import { Ups } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
+import type { FunctionComponent } from "react";
 
 export const QuestionPreview: FunctionComponent<{
   questionId: string;

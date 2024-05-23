@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
 import { Grid, Link, Stack, Typography } from "@mui/joy";
 import { text } from "stream/consumers";
 import { AppLogo, SearchQuery } from "@cf/react/web";
 import { LayoutPublic } from "../_components/layout-public";
+import type { NextPage } from "next";
 
 type QueryParams = {};
 

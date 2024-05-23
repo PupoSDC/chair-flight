@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql, desc } from "drizzle-orm";
 import { takeOneOrThrow } from "@cf/base/utils";
 import { blogPostSchema } from "@cf/core/content";
 import { contentSchema } from "../../drizzle";
@@ -10,10 +10,9 @@ export class Blog extends Content {
       .select()
       .from(contentSchema.blogPosts)
       .where(eq(contentSchema.blogPosts.status, "current"))
-      .execute();
-    const posts = rows
-      .map((row) => blogPostSchema.parse(row.document))
-      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+      .orderBy(desc(sql`document->'createdAt'`));
+
+    const posts = rows.map((m) => blogPostSchema.parse(m.document));
     return { posts };
   }
 

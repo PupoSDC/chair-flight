@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
 import { LayoutPublic } from "../../_components/layout-public";
+import type { NextPage } from "next";
 
 type QueryParams = {};
 

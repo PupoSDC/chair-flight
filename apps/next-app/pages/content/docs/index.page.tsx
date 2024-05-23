@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Image from "next/image";
 import { default as AutoStoriesOutlinedIcon } from "@mui/icons-material/AutoStoriesOutlined";
 import Favorite from "@mui/icons-material/Favorite";
@@ -21,6 +20,7 @@ import {
 import { trpc } from "@cf/trpc/client";
 import { ssrHandler } from "@cf/trpc/server";
 import { LayoutPublic } from "../../_components/layout-public";
+import type { NextPage } from "next";
 
 type QueryParams = {};
 

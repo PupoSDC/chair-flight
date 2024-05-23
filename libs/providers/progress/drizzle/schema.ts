@@ -7,7 +7,7 @@ import {
   jsonb,
 } from "drizzle-orm/pg-core";
 
-export const questionTemplate = pgTable("question_template", {
+export const questionTemplate = pgTable("question_template_data", {
   id: text("id").primaryKey().notNull(),
 
   /**

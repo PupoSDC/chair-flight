@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { default as NextLink } from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -10,7 +9,6 @@ import {
   Stack,
   Typography,
 } from "@mui/joy";
-import type { DocId } from "@cf/core/content";
 import { Markdown } from "@cf/react/markdown";
 import { ContentHeader, Ups } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
@@ -18,6 +16,8 @@ import { ssrHandler } from "@cf/trpc/server";
 import { CopyToClipboardButton } from "../../_components/app-buttons";
 import { AppHead } from "../../_components/app-head";
 import { LayoutPublic } from "../../_components/layout-public";
+import type { DocId } from "@cf/core/content";
+import type { NextPage } from "next";
 
 type QueryParams = {
   tab?: string;
