@@ -93,7 +93,7 @@ export const LayoutPublic: FunctionComponent<{
         <AppButtonsContainer>
           <BugReportButton />
           <GithubButton />
-          {/** <ThemeButton /> */}
+          <ThemeButton />
         </AppButtonsContainer>
       </Stack>
       <Box sx={{ height: HEADER_HEIGHT, width: "100%", content: '""' }} />

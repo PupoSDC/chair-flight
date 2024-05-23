@@ -39,7 +39,7 @@ export const QuestionStandalone: FunctionComponent<
     setQuestionStatus("in-progress");
     setCurrentAnnex(undefined);
     setAnnexDrawings({});
-  });
+  }, [questionId, seed]);
 
   return (
     <Stack {...props}>

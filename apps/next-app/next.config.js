@@ -12,6 +12,9 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
+  experimental: {
+    reactCompiler: true,
+  },
   pageExtensions: ["page.tsx", "api.ts"],
   transpilePackages: ["@mui/x-charts"],
   async rewrites() {

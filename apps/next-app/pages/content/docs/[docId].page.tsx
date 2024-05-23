@@ -1,14 +1,6 @@
 import { default as NextLink } from "next/link";
 import { useRouter } from "next/router";
-import {
-  Box,
-  Chip,
-  Divider,
-  IconButton,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/joy";
+import { Divider, Link, Stack, Typography } from "@mui/joy";
 import { Markdown } from "@cf/react/markdown";
 import { ContentHeader, Ups } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";

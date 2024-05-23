@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 
 type QueryParams = {};
 
-type PageParams = QueryParams & {};
+type PageParams = QueryParams;
 
 type PageProps = Required<PageParams>;
 

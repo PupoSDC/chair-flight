@@ -1,20 +1,15 @@
 import Image from "next/image";
-import { default as AutoStoriesOutlinedIcon } from "@mui/icons-material/AutoStoriesOutlined";
 import Favorite from "@mui/icons-material/Favorite";
 import {
   AspectRatio,
-  Button,
   Card,
-  CardActions,
   CardContent,
   CardOverflow,
-  CircularProgress,
   Divider,
   Grid,
   IconButton,
   Link,
   Stack,
-  SvgIcon,
   Typography,
 } from "@mui/joy";
 import { trpc } from "@cf/trpc/client";

@@ -1,4 +1,4 @@
-import { Skeleton, Typography } from "@mui/joy";
+import { Skeleton } from "@mui/joy";
 import { Markdown } from "@cf/react/markdown";
 import { Ups } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";

@@ -3,7 +3,9 @@ import type { NextPage } from "next";
 
 type QueryParams = {};
 
-type PageParams = QueryParams & {};
+type PageParams = QueryParams & {
+  annexId: string;
+};
 
 type PageProps = Required<PageParams>;
 
