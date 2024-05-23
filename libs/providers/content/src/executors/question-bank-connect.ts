@@ -88,6 +88,7 @@ export const connectQuestionBank = ({
     subject: undefined,
     learningObjectives: [],
     docs: [],
+    nestedDocs: [],
     empty: !doc.content,
   }));
 
@@ -176,6 +177,7 @@ export const connectQuestionBank = ({
     });
   });
 
+  // TODO: Replace docs annexes with URLs
   docs.forEach(function linkDocsToAnnexes(doc) {
     keepUnique(
       Array.from(doc.content.matchAll(ANNEX_MATCH), (m) => m[1]),
@@ -207,12 +209,17 @@ export const connectQuestionBank = ({
     annex.srcLocation = doc.fileName.replace("page.md", "annexes.yaml");
   });
 
-  docs.forEach(function linkDocsToOneAnother(doc) {
+  docs.toReversed().forEach(function linkDocsToOneAnother(doc) {
     doc.subject = losMap[doc.id]?.subject ?? undefined;
     if (!doc.parentId) return;
     const parent = docsMap[doc.parentId];
     if (!parent) throw new Error("Missing parent for doc " + doc.id);
-    parent.docs.push(doc.id);
+    parent.docs = keepUnique([...parent.docs, doc.id]);
+    parent.nestedDocs = keepUnique([
+      ...parent.nestedDocs,
+      ...doc.nestedDocs,
+      doc.id,
+    ]);
   });
 
   questionTemplates.map(function addSubjectToQuestions(question) {
@@ -250,8 +257,6 @@ export const connectQuestionBank = ({
       return;
     }
   });
-
-  // TODO: Replace docs annexes with URLs
 
   return questionBankSchema.parse({
     questionTemplates,

@@ -1,6 +1,8 @@
+import { default as NextLink } from "next/link";
 import { keyframes } from "@emotion/react";
 import { NoSsr } from "@mui/base";
 import { default as BugReportIcon } from "@mui/icons-material/BugReport";
+import { default as CopyIcon } from "@mui/icons-material/ContentPasteOutlined";
 import { default as DarkModeIcon } from "@mui/icons-material/DarkMode";
 import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
@@ -15,7 +17,7 @@ import {
   Stack,
 } from "@mui/joy";
 import { DateTime } from "luxon";
-import { useSidebar } from "@cf/react/web";
+import { toast, useSidebar } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { useBugReportDisclose } from "../_hooks/use-bug-report";
 import { useTrackEvent } from "../_hooks/use-track-event";
@@ -105,3 +107,27 @@ export const AppButtonsContainer = styled(Stack)`
   flex-direction: row;
   margin-left: auto;
 `;
+
+export const CopyToClipboardButton: FunctionComponent<{
+  url: string;
+  title: string;
+}> = ({ url, title }) => {
+  return (
+    <Tooltip title={title}>
+      <IconButton
+        size="sm"
+        href={url}
+        onClick={(e) => {
+          e.preventDefault();
+          navigator.clipboard.writeText(url);
+          toast({
+            content: "Link copied to clipboard!",
+          });
+        }}
+        component={NextLink}
+      >
+        <CopyIcon />
+      </IconButton>
+    </Tooltip>
+  );
+};

@@ -1,12 +1,4 @@
 import { NotFoundError } from "@cf/base/errors";
-import {
-  annexSchema,
-  courseSchema,
-  docSchema,
-  learningObjectiveSchema,
-  questionTemplateSchema,
-  subjectSchema,
-} from "@cf/core/content";
 import { Content } from "./content";
 import type {
   Annex,
@@ -53,22 +45,12 @@ export class QuestionBank extends Content {
     docs: () => Content.db.query.docs,
   };
 
-  private static zodSchema = {
-    questions: questionTemplateSchema,
-    learningObjectives: learningObjectiveSchema,
-    annexes: annexSchema,
-    subjects: subjectSchema,
-    courses: courseSchema,
-    docs: docSchema,
-  };
-
   public async getOne<R extends Resource, V extends ResourceToType[R]>(
     resource: R,
     id: string,
   ): Promise<V> {
     const cache = QuestionBank.cache[resource];
     const drizzleQuery = QuestionBank.drizzleQuery[resource]();
-    const zodSchema = QuestionBank.zodSchema[resource];
 
     if (!cache[id]) {
       const result = await drizzleQuery.findFirst({
@@ -77,8 +59,7 @@ export class QuestionBank extends Content {
       });
 
       if (!result) throw new NotFoundError(`${resource} ${id}`);
-      const parsedResult = zodSchema.parse(result?.document);
-      cache[id] = parsedResult;
+      cache[id] = result?.document;
     }
     return cache[id] as V;
   }
@@ -89,7 +70,6 @@ export class QuestionBank extends Content {
   ): Promise<V[]> {
     const cache = QuestionBank.cache[resource];
     const drizzleQuery = QuestionBank.drizzleQuery[resource]();
-    const zodSchema = QuestionBank.zodSchema[resource];
     const missingIds = ids.filter((id) => !cache[id]);
 
     if (missingIds.length) {
@@ -99,11 +79,18 @@ export class QuestionBank extends Content {
       });
 
       result.forEach((item) => {
-        const parsedResult = zodSchema.parse(item.document);
-        cache[item.id] = parsedResult;
+        cache[item.id] = item.document;
       });
     }
 
     return ids.map((id) => cache[id]) as V[];
+  }
+
+  public async getTopLevelDocs(): Promise<Doc[]> {
+    const result = await Content.db.query.docs.findMany({
+      where: (item, { eq, and, sql }) =>
+        and(eq(item.status, "current"), sql`NOT (document ? 'parentId')`),
+    });
+    return result.map((item) => item.document);
   }
 }

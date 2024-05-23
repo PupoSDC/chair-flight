@@ -1,5 +1,4 @@
 import { Box, LinearProgress, Link, Stack } from "@mui/joy";
-import type { SxProps } from "@mui/joy/styles/types";
 import { AppLogo } from "@cf/react/web";
 import { usePageTransition } from "@cf/react/web";
 import {
@@ -8,6 +7,7 @@ import {
   GithubButton,
   ThemeButton,
 } from "./app-buttons";
+import type { SxProps } from "@mui/joy/styles/types";
 import type { FunctionComponent, ReactElement } from "react";
 
 const HEADER_HEIGHT = 48;

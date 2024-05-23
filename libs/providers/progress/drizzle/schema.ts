@@ -4,6 +4,7 @@ import {
   text,
   integer,
   boolean,
+  jsonb,
 } from "drizzle-orm/pg-core";
 
 export const questionTemplate = pgTable("question_template", {
@@ -44,3 +45,11 @@ export const questionTemplateExamViews = pgTable(
     date: timestamp("date").notNull(),
   },
 );
+
+export const test = pgTable("test", {
+  id: text("id").primaryKey().notNull(),
+  questionBank: text("question_bank").notNull(),
+  title: text("title").notNull(),
+  durationInMs: integer("duration_in_ms").notNull(),
+  questions: jsonb("document").notNull(),
+});

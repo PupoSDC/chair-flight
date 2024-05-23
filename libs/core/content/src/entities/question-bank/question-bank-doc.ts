@@ -13,6 +13,7 @@ export const docSchema = z.object({
   questionBank: questionBankNameSchema,
   learningObjectives: learningObjectiveIdSchema.array(),
   docs: docIdSchema.array(),
+  nestedDocs: docIdSchema.array(),
   title: z.string(),
   description: z.string().optional(),
   fileName: z.string(),

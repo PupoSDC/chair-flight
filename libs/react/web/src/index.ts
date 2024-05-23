@@ -4,6 +4,7 @@ export * from "./components/background-sliding-images";
 export * from "./components/blog-post-card";
 export * from "./components/blog-post-chip";
 export * from "./components/container-wrapper";
+export * from "./components/content-wrapper";
 export * from "./components/count-up";
 export * from "./components/hook-form";
 export * from "./components/image-viewer";

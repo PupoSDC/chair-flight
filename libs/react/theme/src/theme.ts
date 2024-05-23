@@ -10,9 +10,9 @@ declare module "@mui/joy/styles" {
     h3: true;
     h4: true;
     h5: true;
-    "title-lg": false;
-    "title-md": false;
-    "title-sm": false;
+    "title-lg": true;
+    "title-md": true;
+    "title-sm": true;
     "body-lg": true;
     "body-md": true;
     "body-sm": true;
