@@ -1,13 +1,17 @@
 import { LayoutPublic } from "../../_components/layout-public";
 import type { NextPage } from "next";
 
-type QueryParams = {};
+type QueryParams = {
+  tab?: string;
+};
 
-type PageParams = QueryParams & {};
+type PageParams = QueryParams & {
+  learningObjectiveId: string;
+};
 
 type PageProps = Required<PageParams>;
 
-const Page: NextPage<PageProps> = ({}) => {
+const Page: NextPage<PageProps> = () => {
   return <LayoutPublic>{null}</LayoutPublic>;
 };
 

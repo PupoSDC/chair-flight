@@ -1,4 +1,4 @@
-import { Box, LinearProgress, Link, Stack } from "@mui/joy";
+import { Box, LinearProgress, Link, Stack, Typography } from "@mui/joy";
 import { AppLogo } from "@cf/react/web";
 import { usePageTransition } from "@cf/react/web";
 import {
@@ -111,6 +111,25 @@ export const LayoutPublic: FunctionComponent<{
           ...sx?.main,
         }}
       />
+      <Stack component="footer" alignItems="center">
+        <AppLogo sx={{ width: 52, height: 52, my: 2 }} color="primary" />
+
+        <Stack
+          gap={2}
+          alignItems={"center"}
+          sx={{ my: 2 }}
+          direction={{ md: "row" }}
+        >
+          <Link href={"/blog"}>Github</Link>
+          <Link href={"/content"}>Content</Link>
+          <Link href={"/blog"}>Blog</Link>
+          <Link href={"/about-us"}>About Us</Link>
+        </Stack>
+        <Typography sx={{ my: 2 }}>
+          Chair Flight is a community driven Aviation Question Bank built by
+          students for students.
+        </Typography>
+      </Stack>
       <LinearProgress
         sx={{
           "--LinearProgress-radius": 0,

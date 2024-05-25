@@ -1,4 +1,5 @@
 export * from "./components/app-logo";
+export * from "./components/app-title";
 export * from "./components/background-faded-image";
 export * from "./components/background-sliding-images";
 export * from "./components/blog-post-card";

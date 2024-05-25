@@ -1,5 +1,5 @@
 import { memo, type FunctionComponent, type ReactNode } from "react";
-import { CssBaseline, CssVarsProvider } from "@mui/joy";
+import { CssBaseline, CssVarsProvider, useColorScheme } from "@mui/joy";
 import { theme } from "./theme";
 import { ThemeGlobalStyles } from "./theme-global-styles";
 import { ThemeStopResizeAnimation } from "./theme-stop-resize-animation";
@@ -18,5 +18,7 @@ export const ThemeProvider: FunctionComponent<ThemeProviderProps> = memo(
     </CssVarsProvider>
   ),
 );
+
+export { useColorScheme };
 
 ThemeProvider.displayName = "ThemeProvider";

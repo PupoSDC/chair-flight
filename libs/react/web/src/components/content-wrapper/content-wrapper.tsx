@@ -19,7 +19,6 @@ export const ContentHeader: FunctionComponent<ContentHeaderProps> = ({
   title,
   actions,
   links,
-  children,
   ...props
 }) => (
   <Box {...props}>

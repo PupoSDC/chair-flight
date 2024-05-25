@@ -17,20 +17,14 @@ import { ssrHandler } from "@cf/trpc/server";
 import { LayoutPublic } from "../../_components/layout-public";
 import type { NextPage } from "next";
 
-type QueryParams = {};
-
-type PageParams = QueryParams & {};
-
-type PageProps = Required<PageParams>;
-
-const Page: NextPage<PageProps> = ({}) => {
+const Page: NextPage = () => {
   const [{ docs }] = trpc.questionBank.docs.getTopLevelDocs.useSuspenseQuery();
 
   return (
     <LayoutPublic noPadding sx={{ main: { p: 2 } }}>
       <Grid container spacing={2}>
         {docs.map((doc) => (
-          <Grid xs={12} sm={6} md={3} lg={2}>
+          <Grid xs={12} sm={6} md={3} lg={2} key={doc.id}>
             <Card variant="outlined" sx={{ minHeight: 260 }}>
               <CardOverflow>
                 <AspectRatio ratio="2">
@@ -87,12 +81,10 @@ const Page: NextPage<PageProps> = ({}) => {
   );
 };
 
-export const getServerSideProps = ssrHandler<PageProps, PageParams>(
-  async ({ params, helper, context }) => {
-    await helper.questionBank.docs.getTopLevelDocs.fetch();
+export const getServerSideProps = ssrHandler(async ({ params, helper }) => {
+  await helper.questionBank.docs.getTopLevelDocs.fetch();
 
-    return { props: params };
-  },
-);
+  return { props: params };
+});
 
 export default Page;

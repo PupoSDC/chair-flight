@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NoSsr } from "@mui/base";
 import { Stack } from "@mui/joy";
+import { Markdown } from "@cf/react/markdown";
 import { ImageViewer, QuestionMultipleChoice } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import type {
@@ -19,10 +20,11 @@ export const QuestionStandalone: FunctionComponent<
     seed: string;
   } & StackProps
 > = ({ questionId, seed, ...props }) => {
-  const questionQuery = trpc.questionBank.questions.getStandalone.useQuery(
-    { id: questionId, seed },
-    { keepPreviousData: true },
-  );
+  const { data, isLoading } =
+    trpc.questionBank.questions.getStandalone.useQuery(
+      { id: questionId, seed },
+      { keepPreviousData: true },
+    );
 
   const [selectedOption, setSelectedOption] = useState<string>();
   const [questionStatus, setQuestionStatus] = useState<Status>("in-progress");
@@ -44,15 +46,18 @@ export const QuestionStandalone: FunctionComponent<
   return (
     <Stack {...props}>
       <QuestionMultipleChoice
-        loading={questionQuery.isLoading}
-        question={questionQuery.data?.question.question}
-        options={questionQuery.data?.question.options}
-        correctOptionId={questionQuery.data?.question.correctOptionId}
+        loading={isLoading}
+        question={data && <Markdown>{data.question.question}</Markdown>}
+        options={data?.question.options.map((opt) => ({
+          ...opt,
+          text: <Markdown>{opt.text}</Markdown>,
+        }))}
+        correctOptionId={data?.question.correctOptionId}
         selectedOptionId={selectedOption}
         status={questionStatus}
         disabled={questionStatus === "show-result"}
         onAnnexClicked={setCurrentAnnex}
-        annexesHref={questionQuery.data?.annexes.map((annex) => annex.href)}
+        annexesHref={data?.annexes.map((annex) => annex.href)}
         onOptionClicked={(optionId) => {
           setSelectedOption(optionId);
           setQuestionStatus("show-result");

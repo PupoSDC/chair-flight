@@ -84,6 +84,7 @@ export const connectQuestionBank = ({
 
   const docs = jsonDocs.map<Doc>((doc) => ({
     ...doc,
+    rootDocId: "",
     questionBank,
     subject: undefined,
     learningObjectives: [],
@@ -209,17 +210,29 @@ export const connectQuestionBank = ({
     annex.srcLocation = doc.fileName.replace("page.md", "annexes.yaml");
   });
 
-  docs.toReversed().forEach(function linkDocsToOneAnother(doc) {
+  docs.forEach(function linkDocsToOneAnother(doc) {
     doc.subject = losMap[doc.id]?.subject ?? undefined;
-    if (!doc.parentId) return;
-    const parent = docsMap[doc.parentId];
-    if (!parent) throw new Error("Missing parent for doc " + doc.id);
-    parent.docs = keepUnique([...parent.docs, doc.id]);
-    parent.nestedDocs = keepUnique([
-      ...parent.nestedDocs,
-      ...doc.nestedDocs,
-      doc.id,
-    ]);
+    if (!doc.parentId) {
+      doc.rootDocId = doc.id;
+      doc.rootDocToc = docs
+        .filter((d) => d.parentId === doc.id)
+        .map((d) => ({
+          id: d.id,
+          title: d.title,
+          nestedDocs: docs
+            .filter((e) => e.id.startsWith(d.id ?? "fail") && e.id !== d.id)
+            .map((e) => ({
+              id: e.id,
+              title: e.title,
+            })),
+        }));
+    } else {
+      let tentativeRoot = docsMap[doc.parentId];
+      while (tentativeRoot.parentId) {
+        tentativeRoot = docsMap[tentativeRoot.parentId];
+      }
+      doc.rootDocId = tentativeRoot.id;
+    }
   });
 
   questionTemplates.map(function addSubjectToQuestions(question) {

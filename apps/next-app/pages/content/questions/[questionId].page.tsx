@@ -2,7 +2,6 @@ import { default as NextLink } from "next/link";
 import { useRouter } from "next/router";
 import { default as RefreshIcon } from "@mui/icons-material/Refresh";
 import {
-  Box,
   Card,
   CardOverflow,
   DialogContent,
@@ -12,10 +11,8 @@ import {
   IconButton,
   Link,
   ModalClose,
-  Sheet,
   Stack,
   Typography,
-  linkClasses,
   useTheme,
 } from "@mui/joy";
 import { getRandomIdGenerator } from "@cf/base/utils";
@@ -25,6 +22,8 @@ import { CopyToClipboardButton } from "../../_components/app-buttons";
 import { AppHead } from "../../_components/app-head";
 import { LayoutPublic } from "../../_components/layout-public";
 import { QuestionExplanation } from "../../_containers/question-explanation";
+import { QuestionExternalReferences } from "../../_containers/question-external-references";
+import { QuestionLearningObjectives } from "../../_containers/question-learning-objectives";
 import { QuestionPreview } from "../../_containers/question-preview";
 import { QuestionStandalone } from "../../_containers/question-standalone";
 import type { NextPage } from "next";
@@ -57,7 +56,54 @@ const Page: NextPage<PageProps> = ({
 
   const nextSeed = getRandomIdGenerator(seed)();
 
-  const meta = <></>;
+  const explanation = <QuestionExplanation questionId={questionId} />;
+
+  const meta = (
+    <Stack sx={{ mt: 2, gap: 2 }}>
+      <Card variant="outlined" size="sm">
+        <Typography level="h4">Preview</Typography>
+        <CardOverflow
+          sx={{
+            borderBottom: "1px solid",
+            borderTop: "1px solid",
+            borderColor: "neutral.outlinedBorder",
+            backgroundColor: "background.level1",
+          }}
+        >
+          <QuestionPreview questionId={questionId} />
+        </CardOverflow>
+      </Card>
+
+      <Card variant="outlined" size="sm">
+        <Typography level="h4">Learning Objectives</Typography>
+        <CardOverflow
+          sx={{
+            borderBottom: "1px solid",
+            borderTop: "1px solid",
+            borderColor: "neutral.outlinedBorder",
+            backgroundColor: "background.level1",
+          }}
+        >
+          <QuestionLearningObjectives questionId={questionId} />
+        </CardOverflow>
+      </Card>
+
+      <Card variant="outlined" size="sm">
+        <Typography level="h4">External References</Typography>
+        <CardOverflow
+          sx={{
+            borderBottom: "1px solid",
+            borderTop: "1px solid",
+            borderColor: "neutral.outlinedBorder",
+            backgroundColor: "background.level1",
+          }}
+        >
+          <QuestionExternalReferences questionId={questionId} />
+        </CardOverflow>
+      </Card>
+    </Stack>
+  );
+
   const comments = <></>;
 
   return (
@@ -150,33 +196,8 @@ const Page: NextPage<PageProps> = ({
               {tab[0].toLocaleUpperCase() + tab.slice(1)}
             </Typography>
             <Divider />
-            {tab === "explanation" && (
-              <QuestionExplanation questionId={questionId} />
-            )}
-            {tab === "meta" && (
-              <Stack sx={{ mt: 2 }}>
-                <Card variant="outlined" size="sm">
-                  <Typography level="h4">Preview</Typography>
-                  <CardOverflow
-                    sx={{
-                      borderBottom: "1px solid",
-                      borderTop: "1px solid",
-                      borderColor: "neutral.outlinedBorder",
-                      backgroundColor: "background.level1",
-                    }}
-                  >
-                    <QuestionPreview questionId={questionId} />
-                  </CardOverflow>
-
-                  <Typography level="body-xs">Added 27 Jun 2023</Typography>
-                </Card>
-
-                <Sheet sx={{ p: 1 }}>
-                  <QuestionPreview questionId={questionId} />
-                </Sheet>
-                <Typography level="h4">Learning Objectives</Typography>
-              </Stack>
-            )}
+            {tab === "explanation" && explanation}
+            {tab === "meta" && meta}
             {tab === "comments" && comments}
           </Stack>
         )}
@@ -192,10 +213,12 @@ const Page: NextPage<PageProps> = ({
         >
           <ModalClose />
           <DialogTitle level="h4" component="h2" sx={{ mt: 1 }}>
-            Explanation
+            {tab[0].toLocaleUpperCase() + tab.slice(1)}
           </DialogTitle>
-          <DialogContent sx={{ px: 2 }}>
-            <QuestionExplanation questionId={questionId} />
+          <DialogContent sx={{ px: 2, pb: 2 }}>
+            {tab === "explanation" && explanation}
+            {tab === "meta" && meta}
+            {tab === "comments" && comments}
           </DialogContent>
         </Drawer>
       )}

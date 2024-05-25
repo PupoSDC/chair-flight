@@ -8,15 +8,9 @@ import { default as GithubIcon } from "@mui/icons-material/GitHub";
 import { default as LightModeIcon } from "@mui/icons-material/LightMode";
 import { default as HamburgerIcon } from "@mui/icons-material/Menu";
 import { default as NotificationIcon } from "@mui/icons-material/NotificationsNoneOutlined";
-import {
-  Link,
-  IconButton,
-  styled,
-  useColorScheme,
-  Tooltip,
-  Stack,
-} from "@mui/joy";
+import { Link, IconButton, styled, Tooltip, Stack } from "@mui/joy";
 import { DateTime } from "luxon";
+import { useColorScheme } from "@cf/react/theme";
 import { toast, useSidebar } from "@cf/react/web";
 import { trpc } from "@cf/trpc/client";
 import { useBugReportDisclose } from "../_hooks/use-bug-report";
@@ -39,7 +33,7 @@ export const GithubButton: FunctionComponent = () => (
   </Tooltip>
 );
 
-export const HamburgerButton: FunctionComponent = () => (
+export const SidebarHamburgerButton: FunctionComponent = () => (
   <Tooltip title="Open Sidebar Menu">
     <IconButton
       sx={{ display: { xs: "flex", sm: "none" } }}

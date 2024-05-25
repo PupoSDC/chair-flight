@@ -1,16 +1,18 @@
 import { Grid, Link, Stack, Typography } from "@mui/joy";
-import { text } from "stream/consumers";
 import { AppLogo, SearchQuery } from "@cf/react/web";
 import { LayoutPublic } from "../_components/layout-public";
 import type { NextPage } from "next";
+import { NOOP } from "@cf/base/utils";
 
-type QueryParams = {};
+type QueryParams = {
+  query?: string;
+};
 
-type PageParams = QueryParams & {};
+type PageParams = QueryParams;
 
 type PageProps = Required<PageParams>;
 
-const Page: NextPage<PageProps> = ({}) => {
+const Page: NextPage<PageProps> = () => {
   return (
     <LayoutPublic fixedHeight>
       <Stack alignItems={"center"} textAlign={"center"} sx={{ mt: 6 }}>
@@ -35,7 +37,7 @@ const Page: NextPage<PageProps> = ({}) => {
         <SearchQuery
           value=""
           sx={{ width: "100%", maxWidth: "sm", margin: "auto", my: 2 }}
-          onChange={() => {}}
+          onChange={NOOP}
         />
 
         <Grid

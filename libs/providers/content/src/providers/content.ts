@@ -41,7 +41,10 @@ export class Content {
     Content.utSalt ??= utSalt;
   }
 
-  private async makeDocument(document: { id: string }, source: string) {
+  private async makeDocument<T extends { id: string }>(
+    document: T,
+    source: string,
+  ) {
     return {
       source,
       document,
@@ -173,7 +176,8 @@ export class Content {
 
         await db
           .insert(castSchema)
-          .values(docsChunk)
+          // TODO fix me !
+          .values(docsChunk as any)
           .onConflictDoUpdate({
             target: castSchema.hash,
             set: { status: "current" },

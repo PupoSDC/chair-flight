@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { InvalidData } from "@cf/base/errors";
 import { compileMarkdown } from "@cf/core/markdown";
 import { Github, QuestionBank } from "@cf/providers/content";
 import { publicProcedure, router } from "../config/trpc";
@@ -10,7 +11,6 @@ export const questionBankDocsRouter = router({
       const qb = new QuestionBank();
       const github = new Github();
       const rawDoc = await qb.getOne("docs", input.id);
-      const children = await qb.getSome("docs", rawDoc.docs);
       const parent = rawDoc.parentId
         ? await qb.getOne("docs", rawDoc.parentId)
         : undefined;
@@ -28,11 +28,6 @@ export const questionBankDocsRouter = router({
               title: `[${parent.id}] ${parent.title}`,
             }
           : null,
-        children: children.map((child) => ({
-          href: `/content/docs/${child.id}`,
-          title: `[${child.id}] ${child.title}`,
-          isEmpty: child.empty,
-        })),
         links: {
           search: `/content/docs`,
           aboutUs: "/blog/000-about-us",
@@ -43,6 +38,40 @@ export const questionBankDocsRouter = router({
 
       return { doc };
     }),
+  getDocToc: publicProcedure
+    .input(z.object({ id: z.string() }))
+    .query(async ({ input }) => {
+      const qb = new QuestionBank();
+      const rawDoc = await qb.getOne("docs", input.id);
+      const rawRootDoc = await qb.getOne("docs", rawDoc.rootDocId);
+      if (!rawRootDoc.rootDocToc) {
+        throw new InvalidData("Root Doc is missing TOC table.");
+      }
+
+      const toc = rawRootDoc.rootDocToc.map((item) => ({
+        id: item.id,
+        title: item.title,
+        href: `/content/docs/${item.id}`,
+        nestedDocs: item.nestedDocs.map((nestedItem) => ({
+          id: nestedItem.id,
+          title: nestedItem.title,
+          href: `/content/docs/${nestedItem.id}`,
+        })),
+      }));
+
+      const root = {
+        id: rawRootDoc.id,
+        title: rawRootDoc.title,
+        href: `/content/docs/${rawRootDoc.id}`,
+      };
+
+      const library = {
+        title: "Library",
+        href: "/content/docs",
+      };
+
+      return { toc, root, library };
+    }),
   getTopLevelDocs: publicProcedure.query(async () => {
     const qb = new QuestionBank();
     const rawDocs = await qb.getTopLevelDocs();
@@ -50,7 +79,9 @@ export const questionBankDocsRouter = router({
       id: rawDoc.id,
       title: rawDoc.title,
       potato: rawDoc.description,
-      docsContained: rawDoc.nestedDocs.length,
+      docsContained: rawDoc.rootDocToc?.reduce((s, e) => {
+        return s + 1 + e.nestedDocs.length;
+      }, 0),
       questionBank: rawDoc.questionBank,
       href: `/content/docs/${rawDoc.id}`,
     }));

@@ -44,3 +44,17 @@ export class MissingPathParameter extends Error {
     this.name = MissingPathParameter.name;
   }
 }
+
+export class BadRequestError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = BadRequestError.name;
+  }
+}
+
+export class InvalidData extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = BadRequestError.name;
+  }
+}

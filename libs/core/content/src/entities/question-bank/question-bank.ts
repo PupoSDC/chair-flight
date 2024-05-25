@@ -102,12 +102,29 @@ export const questionBankSchema = z
     });
 
     val.docs.forEach((d) => {
-      d.docs.forEach((c) => {
-        if (docIds[c]) return;
+      if (d.rootDocId === d.id && !d.rootDocToc) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: `Child Doc ${c} does not exist`,
-          path: ["docs", d.id, "children"],
+          message: `Doc ${d.id} is top level, but does not have a TOC`,
+          path: ["docs", d.id],
+        });
+      }
+
+      d.rootDocToc?.forEach((e) => {
+        if (!docIds[e.id]) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Child Doc ${e.id} does not exist`,
+            path: ["docs", d.id, "rootDocToc"],
+          });
+        }
+        e.nestedDocs.forEach((f) => {
+          if (docIds[f.id]) return;
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Child Doc ${f} does not exist`,
+            path: ["docs", d.id, "rootDocToc", f.id],
+          });
         });
       });
 
