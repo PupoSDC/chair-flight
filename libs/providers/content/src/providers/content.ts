@@ -19,6 +19,7 @@ export class Content {
   private static ut: UTApi | null;
   private static utSalt: string;
   protected static db: ContentDb;
+  protected static schema = contentSchema;
 
   constructor() {
     const schema = contentSchema;
@@ -129,19 +130,19 @@ export class Content {
 
   public async updateBlogPosts(blogPosts: BlogPost[]) {
     await Content.db
-      .update(contentSchema.blogPosts)
+      .update(Content.schema.blogPosts)
       .set({ status: "outdated" })
-      .where(eq(contentSchema.blogPosts.status, "current"));
+      .where(eq(Content.schema.blogPosts.status, "current"));
 
     await Content.db
-      .insert(contentSchema.blogPosts)
+      .insert(Content.schema.blogPosts)
       .values(
         await Promise.all(
           blogPosts.map((doc) => this.makeDocument(doc, "blog")),
         ),
       )
       .onConflictDoUpdate({
-        target: contentSchema.blogPosts.hash,
+        target: Content.schema.blogPosts.hash,
         set: { status: "current" },
       });
   }

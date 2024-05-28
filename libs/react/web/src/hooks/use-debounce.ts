@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 /**
- * Copied from https://usehooks-ts.com/react-hook/use-debounce
+ * Inspired by https://usehooks-ts.com/react-hook/use-debounce
  */
-export function useDebounce<T>(value: T, delay?: number): T {
+export function useDebounce<T>(value: T, delay?: number): [T, boolean] {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {
@@ -16,5 +16,6 @@ export function useDebounce<T>(value: T, delay?: number): T {
     };
   }, [value, delay]);
 
-  return debouncedValue;
+  const isDebouncing = debouncedValue !== value;
+  return [debouncedValue, isDebouncing];
 }

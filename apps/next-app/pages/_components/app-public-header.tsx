@@ -5,7 +5,7 @@ import { BugReportButton, GithubButton, ThemeButton } from "./app-buttons";
 import type { StackProps } from "@mui/joy";
 import type { FunctionComponent } from "react";
 
-const HEADER_HEIGHT = 48;
+export const HEADER_HEIGHT = 48;
 
 export const AppPublicHeader: FunctionComponent<
   Omit<StackProps, "children">

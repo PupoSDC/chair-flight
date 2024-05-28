@@ -9,13 +9,11 @@ import type { PageEvent } from "./entities/page-event";
 import type { TrackEvent } from "./entities/track-event";
 
 export class Analytics {
-  private static staticDb: AnalyticsDb;
-
-  private db = Analytics.staticDb;
-  private schema = analyticsSchema;
+  private static db: AnalyticsDb;
+  private static schema = analyticsSchema;
 
   constructor() {
-    Analytics.staticDb ??= (() => {
+    Analytics.db ??= (() => {
       const schema = analyticsSchema;
       const pgProvider = getEnvVariableOrThrow("PROVIDER_POSTGRES_ANALYTICS");
       const client = new Client({ connectionString: pgProvider });
@@ -26,18 +24,18 @@ export class Analytics {
   }
 
   async createPageEvent(event: PageEvent) {
-    await this.db.insert(this.schema.pageEvent).values(event);
+    await Analytics.db.insert(Analytics.schema.pageEvent).values(event);
   }
 
   async createTrackEvent(event: TrackEvent) {
-    await this.db.insert(this.schema.trackEvent).values(event);
+    await Analytics.db.insert(Analytics.schema.trackEvent).values(event);
   }
 
   async getDailyUsers() {
-    return getDailyUsers(this.db);
+    return getDailyUsers(Analytics.db);
   }
 
   async getPagesUsed() {
-    return getPagesUsed(this.db);
+    return getPagesUsed(Analytics.db);
   }
 }

@@ -16,6 +16,7 @@ export * from "./entities/question-bank/question-bank-question-simple";
 export * from "./entities/question-bank/question-bank-question-true-or-false";
 export * from "./entities/question-bank/question-bank-subject";
 export * from "./entities/question-bank/question-bank";
+export * from "./entities/question-bank/question-bank-search-params";
 export * from "./functions/question-bank/get-new-variant";
 export * from "./functions/question-bank/get-number-of-available-questions";
 export * from "./functions/question-bank/get-question-preview";

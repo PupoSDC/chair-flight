@@ -1,3 +1,4 @@
+import { count, eq } from "drizzle-orm";
 import { NotFoundError } from "@cf/base/errors";
 import { Content } from "./content";
 import type {
@@ -9,7 +10,7 @@ import type {
   Subject,
 } from "@cf/core/content";
 
-type Resource =
+export type Resource =
   | "questions"
   | "learningObjectives"
   | "annexes"
@@ -36,6 +37,15 @@ export class QuestionBank extends Content {
     docs: {} as Record<string, Doc>,
   };
 
+  private static cacheHasAll = {
+    questions: false,
+    learningObjectives: false,
+    annexes: false,
+    subjects: false,
+    courses: false,
+    docs: false,
+  };
+
   private static drizzleQuery = {
     questions: () => Content.db.query.questionTemplates,
     learningObjectives: () => Content.db.query.learningObjectives,
@@ -44,6 +54,50 @@ export class QuestionBank extends Content {
     courses: () => Content.db.query.courses,
     docs: () => Content.db.query.docs,
   };
+
+  private static drizzleSchema = {
+    questions: () => Content.schema.questionTemplates,
+    learningObjectives: () => Content.schema.learningObjectives,
+    annexes: () => Content.schema.annexes,
+    subjects: () => Content.schema.subjects,
+    courses: () => Content.schema.courses,
+    docs: () => Content.schema.docs,
+  };
+
+  // This query is freaking expensive. It's hidden as protected so that
+  // its only used when really needed (ie, the search provider)
+  protected async getAll<R extends Resource, V extends ResourceToType[R]>(
+    resource: R,
+  ): Promise<V[]> {
+    const cache = QuestionBank.cache[resource] as Record<string, V>;
+    const cacheHasAll = QuestionBank.cacheHasAll[resource] as boolean;
+    const drizzleQuery = QuestionBank.drizzleQuery[resource]();
+    const drizzleSchema = QuestionBank.drizzleSchema[resource]();
+
+    if (!cacheHasAll) {
+      const [{ count: numberOfResources }] = await Content.db
+        .select({ count: count() })
+        .from(drizzleSchema)
+        .where(eq(drizzleSchema.status, "current"));
+
+      const limit = 1000;
+
+      for (let i = 0; i < numberOfResources; i += limit) {
+        const results = await drizzleQuery.findMany({
+          where: (item, { eq }) => eq(item.status, "current"),
+          limit: limit,
+          offset: i,
+        });
+        results.forEach((res) => {
+          cache[res.id] = res.document as V;
+        });
+      }
+
+      QuestionBank.cacheHasAll[resource] = true;
+    }
+
+    return Object.values(cache);
+  }
 
   public async getOne<R extends Resource, V extends ResourceToType[R]>(
     resource: R,
