@@ -1,0 +1,27 @@
+{
+  "name": "content-question-bank-ppl",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "format": {},
+    "arrange-skip": {
+      "cache": true,
+      "inputs": ["{projectRoot}/content/**/*"],
+      "executor": "@cf/providers/question-bank:arrange",
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "questionBank": "ppl"
+      }
+    },
+    "compile": {
+      "executor": "@cf/providers/question-bank:compile",
+      "options": {
+        "contentFolder": "{projectRoot}/content",
+        "flashcardsFolder": "{projectRoot}/flashcards",
+        "compileFolder": "apps/next-app/public/content/ppl",
+        "questionBank": "ppl"
+      }
+    }
+  },
+  "tags": []
+}
