@@ -11,8 +11,8 @@ night or twilight exists.
 
 If The Sun is at a celestial latitude of 90 degrees then it is directly over the
 subject's head.\
-This can occur only within the tropical band of latitude between 23 degrees 27 minutes
-North and 23 degrees 27 minutes South
+This can occur only within the tropical band of latitude between 23 degrees 27
+minutes North and 23 degrees 27 minutes South
 
 ```tsx
 <Question id="UNMI90HZB6" lo={["061.01.01.02.01"]}>
