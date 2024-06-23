@@ -13,7 +13,7 @@
         "questionBank": "ppl"
       }
     },
-    "compile": {
+    "compile-skip": {
       "executor": "@cf/providers/question-bank:compile",
       "options": {
         "contentFolder": "{projectRoot}/content",
