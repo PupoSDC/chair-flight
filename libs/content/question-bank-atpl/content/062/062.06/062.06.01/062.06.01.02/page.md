@@ -5,8 +5,8 @@ questionBank: "atpl"
 title: Operation
 ---
 
-<Question id="O2OVH2WDJY" lo={["062.06.01.02.10", "062.06.01.02.06",
-"062.06.01.02.04"]}
+<Question id="O2OVH2WDJY" lo={["062.06.01.02.10",
+"062.06.01.02.06", "062.06.01.02.04"]}
 
 >   <Text variant="oneCorrect">
 

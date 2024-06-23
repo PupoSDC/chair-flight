@@ -14,7 +14,7 @@ export const AnalyticsProvider: FunctionComponent<PropsWithChildren> = ({
   const [analytics] = useState(async () =>
     (await import("analytics")).default({
       app: "chair-flight",
-      version: "1",
+      version: 1,
       plugins: [plugin],
     }),
   );
