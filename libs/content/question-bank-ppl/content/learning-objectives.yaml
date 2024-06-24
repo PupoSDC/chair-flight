@@ -676,11 +676,524 @@
   courses: []
   text: Principles of Flight (Aeroplane)
   source: ""
-- id: "060"
+- id: 060
   subject: "060"
-  parentId: null
+  parentId: None
   courses: []
-  text: Operational Procedures
+  text: "Operational Procedures"
+  source: ""
+- id: 060.01
+  subject: "060"
+  parentId: 060
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "GENERAL"
+  source: ""
+- id: 060.01.01
+  subject: "060"
+  parentId: 060.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Operation of aircraft: ICAO Annex 6, General requirements"
+  source: ""
+- id: 060.01.01.01
+  subject: "060"
+  parentId: 060.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Definitions"
+  source: ""
+- id: 060.01.01.01.01
+  subject: "060"
+  parentId: 060.01.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define 'flight time (aeroplanes)'"
+  source: ""
+- id: 060.02
+  subject: "060"
+  parentId: 060
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "SPECIAL OPERATIONAL PROCEDURES AND HAZARDS (GENERAL ASPECTS)"
+  source: ""
+- id: 060.02.03
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Noise abatement"
+  source: ""
+- id: 060.02.03.02
+  subject: "060"
+  parentId: 060.02.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Influence of the flight procedure (departure, cruise and approach)"
+  source: ""
+- id: 060.02.03.02.01
+  subject: "060"
+  parentId: 060.02.03.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe how noise abatement can be performed during flight at low altitude (e.g. when entering / jo"
+  source: ""
+- id: 060.02.05
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Fire or smoke"
+  source: ""
+- id: 060.02.05.01
+  subject: "060"
+  parentId: 060.02.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Carburettor fire"
+  source: ""
+- id: 060.02.05.01.01
+  subject: "060"
+  parentId: 060.02.05.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain what a 'carburetor fire' is and how to handle such a situation"
+  source: ""
+- id: 060.02.05.02
+  subject: "060"
+  parentId: 060.02.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Engine fire"
+  source: ""
+- id: 060.02.05.02.01
+  subject: "060"
+  parentId: 060.02.05.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe actions in case of engine fire during flight with regard to emergency checklist and engine"
+  source: ""
+- id: 060.02.05.02.02
+  subject: "060"
+  parentId: 060.02.05.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe hazards from engine fire during flight with regard to power loss, possible visual obstructi"
+  source: ""
+- id: 060.02.05.03
+  subject: "060"
+  parentId: 060.02.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Fire in the cabin and cockpit (extinguishing agents, fire classification, use of extinguishers)"
+  source: ""
+- id: 060.02.05.03.01
+  subject: "060"
+  parentId: 060.02.05.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List different extinguishing agents and suitable fire for use of the extinguishers"
+  source: ""
+- id: 060.02.05.04
+  subject: "060"
+  parentId: 060.02.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Smoke in the cockpit and cabin (effects and actions to be taken)"
+  source: ""
+- id: 060.02.05.04.02
+  subject: "060"
+  parentId: 060.02.05.04
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List actions in case of smoke in the cockpit, e.g. open windows and turn off heating system"
+  source: ""
+- id: 060.02.06
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Wind shear and microburst"
+  source: ""
+- id: 060.02.06.01
+  subject: "060"
+  parentId: 060.02.06
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Effects and recognition during departure and approach"
+  source: ""
+- id: 060.02.06.01.01
+  subject: "060"
+  parentId: 060.02.06.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define 'wind shear' (horizontal or vertical)"
+  source: ""
+- id: 060.02.06.01.02
+  subject: "060"
+  parentId: 060.02.06.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe typical meteorological situations in which 'wind shear' may occur"
+  source: ""
+- id: 060.02.06.01.03
+  subject: "060"
+  parentId: 060.02.06.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the effects on aerodynamics and the hazards for an aircraft that a strong wind shear impose"
+  source: ""
+- id: 060.02.06.01.04
+  subject: "060"
+  parentId: 060.02.06.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the variation in airspeed and climb performance when encountering a downburst / microburst"
+  source: ""
+- id: 060.02.06.01.05
+  subject: "060"
+  parentId: 060.02.06.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the effects of wind shear during final approach with regard to speed and variation from the"
+  source: ""
+- id: 060.02.06.02
+  subject: "060"
+  parentId: 060.02.06
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Actions to avoid and actions taken during encounter"
+  source: ""
+- id: 060.02.06.02.01
+  subject: "060"
+  parentId: 060.02.06.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe flight procedures that can be applied when experiencing strong wind shear during approach a"
+  source: ""
+- id: 060.02.07
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Wake turbulence"
+  source: ""
+- id: 060.02.07.01
+  subject: "060"
+  parentId: 060.02.07
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Cause"
+  source: ""
+- id: 060.02.07.01.01
+  subject: "060"
+  parentId: 060.02.07.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the origin and hazards resulting from 'wake turbulences'"
+  source: ""
+- id: 060.02.07.01.02
+  subject: "060"
+  parentId: 060.02.07.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "State that significant wake turbulences exist from rotation to nose-wheel touchdown"
+  source: ""
+- id: 060.02.07.02
+  subject: "060"
+  parentId: 060.02.07
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List of relevant parameters"
+  source: ""
+- id: 060.02.07.02.02
+  subject: "060"
+  parentId: 060.02.07.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe how the intensity of wake turbulence depends on aircraft's size (mass), speed and configura"
+  source: ""
+- id: 060.02.07.02.03
+  subject: "060"
+  parentId: 060.02.07.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "State the most critical situation for wake turbulence as 'heavy and slow'"
+  source: ""
+- id: 060.02.07.03
+  subject: "060"
+  parentId: 060.02.07
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Actions taken when crossing traffic, during take-off and landing"
+  source: ""
+- id: 060.02.07.03.03
+  subject: "060"
+  parentId: 060.02.07.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe procedures to handle wake turbulence at takeoff and landing (e.g. higher approach, later to"
+  source: ""
+- id: 060.02.07.03.04
+  subject: "060"
+  parentId: 060.02.07.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the pilot's responsibility for establishing an appropriate amount of separation during taxi"
+  source: ""
+- id: 060.02.09
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Emergency and precautionary landings"
+  source: ""
+- id: 060.02.09.01
+  subject: "060"
+  parentId: 060.02.09
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Definition"
+  source: ""
+- id: 060.02.09.01.01
+  subject: "060"
+  parentId: 060.02.09.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define and explain the differences between 'precautionary landing' and 'emergency landing'"
+  source: ""
+- id: 060.02.09.01.04
+  subject: "060"
+  parentId: 060.02.09.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "State in which cases life wests for every passenger have to carried on board"
+  source: ""
+- id: 060.02.09.03
+  subject: "060"
+  parentId: 060.02.09
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Landing preparation"
+  source: ""
+- id: 060.02.09.03.01
+  subject: "060"
+  parentId: 060.02.09.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe appropriate actions for conducting a off-field landing (unless stated other by AFM/POH)"
+  source: ""
+- id: 060.02.09.04
+  subject: "060"
+  parentId: 060.02.09
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Passenger information"
+  source: ""
+- id: 060.02.09.04.01
+  subject: "060"
+  parentId: 060.02.09.04
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the briefing to be given to passengers before conducting a precautionary/emergency landing"
+  source: ""
+- id: 060.02.09.05
+  subject: "060"
+  parentId: 060.02.09
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Evacuation"
+  source: ""
+- id: 060.02.09.05.02
+  subject: "060"
+  parentId: 060.02.09.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain when to inflate life wests in case of emergency ditching"
+  source: ""
+- id: 060.02.10
+  subject: "060"
+  parentId: 060.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Contaminated runways"
+  source: ""
+- id: 060.02.10.01
+  subject: "060"
+  parentId: 060.02.10
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Kinds of contamination"
+  source: ""
+- id: 060.02.10.01.01
+  subject: "060"
+  parentId: 060.02.10.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain the term 'contaminated runway'"
+  source: ""
+- id: 060.02.10.02
+  subject: "060"
+  parentId: 060.02.10
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Estimated surface friction and friction coefficient"
+  source: ""
+- id: 060.02.10.02.02
+  subject: "060"
+  parentId: 060.02.10.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain the potential effects of contaminations (e.g. longer take-off / landing roll, lower braking"
+  source: ""
+- id: 060.02.10.02.04
+  subject: "060"
+  parentId: 060.02.10.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe precautions and procedures in case of poor friction coefficient, or if information about fr"
+  source: ""
+- id: 060.03
+  subject: "060"
+  parentId: 060
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "EMERGENCY PROCEDURES (HELICOPTER)"
+  source: ""
+- id: 060.03.02
+  subject: "060"
+  parentId: 060.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Operation influence by meteorological conditions (helicopter)"
+  source: ""
+- id: 060.03.02.01
+  subject: "060"
+  parentId: 060.03.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "White out, sand or dust"
+  source: ""
+- id: 060.03.02.01.01
+  subject: "060"
+  parentId: 060.03.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the effect of 'white-out' and its hazards (e.g. loss of orientation)"
   source: ""
 - id: "070"
   subject: "070"
