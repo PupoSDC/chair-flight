@@ -1201,11 +1201,443 @@
   courses: []
   text: Flight Performance and Planning
   source: ""
-- id: "071"
+- id: 071
   subject: "071"
-  parentId: null
+  parentId: None
   courses: []
-  text: Mass and Balance - Aeroplanes or Helicopters
+  text: "Mass And Balance - Aeroplanes Or Helicopters"
+  source: ""
+- id: 071.01
+  subject: "071"
+  parentId: 071
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "PURPOSE OF MASS AND BALANCE CONSIDERATIONS"
+  source: ""
+- id: 071.01.01
+  subject: "071"
+  parentId: 071.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Mass limitations"
+  source: ""
+- id: 071.01.01.01
+  subject: "071"
+  parentId: 071.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Importance in regard to structural limitations"
+  source: ""
+- id: 071.01.01.01.03
+  subject: "071"
+  parentId: 071.01.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain why loads exceeding the loading limitations have to be reduced to limits"
+  source: ""
+- id: 071.01.02
+  subject: "071"
+  parentId: 071.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Centre of gravity (CG) limitations"
+  source: ""
+- id: 071.01.02.01
+  subject: "071"
+  parentId: 071.01.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Importance in regard to stability and controllability"
+  source: ""
+- id: 071.01.02.01.01
+  subject: "071"
+  parentId: 071.01.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the relationship between CG position and stability/controllability of the aircraft"
+  source: ""
+- id: 071.01.02.01.02
+  subject: "071"
+  parentId: 071.01.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe possible hazards associated with a CG position out of aft/forward limits"
+  source: ""
+- id: 071.01.02.01.03
+  subject: "071"
+  parentId: 071.01.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain the importance of securing or tying down pieces of baggage"
+  source: ""
+- id: 071.01.02.02
+  subject: "071"
+  parentId: 071.01.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Importance in regard to performance"
+  source: ""
+- id: 071.01.02.02.01
+  subject: "071"
+  parentId: 071.01.02.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Describe the effects of CG position on performance parameters (speeds, altitude, endurance and range"
+  source: ""
+- id: 071.02
+  subject: "071"
+  parentId: 071
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "LOADING"
+  source: ""
+- id: 071.02.01
+  subject: "071"
+  parentId: 071.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Terminology"
+  source: ""
+- id: 071.02.01.01
+  subject: "071"
+  parentId: 071.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Mass terms"
+  source: ""
+- id: 071.02.01.01.01
+  subject: "071"
+  parentId: 071.02.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define the term 'basic empty mass'"
+  source: ""
+- id: 071.02.01.02
+  subject: "071"
+  parentId: 071.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Load terms (including Fuel Terms)"
+  source: ""
+- id: 071.02.01.02.02
+  subject: "071"
+  parentId: 071.02.01.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List the common units of measurement for masses and convert them (lbs, kg, kp, etc.)"
+  source: ""
+- id: 071.02.01.02.03
+  subject: "071"
+  parentId: 071.02.01.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List the common units of measurement for fuel volume and and mass, and convert them (liters, US/Imp"
+  source: ""
+- id: 071.02.02
+  subject: "071"
+  parentId: 071.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Mass limits"
+  source: ""
+- id: 071.02.02.01
+  subject: "071"
+  parentId: 071.02.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Structural limitations"
+  source: ""
+- id: 071.02.02.01.01
+  subject: "071"
+  parentId: 071.02.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Explain the term 'maximum ramp mass'"
+  source: ""
+- id: 071.03
+  subject: "071"
+  parentId: 071
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "FUNDAMENTALS OF CG CALCULATIONS"
+  source: ""
+- id: 071.03.01
+  subject: "071"
+  parentId: 071.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Definition of centre of gravity"
+  source: ""
+- id: 071.03.01.01
+  subject: "071"
+  parentId: 071.03.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Definition"
+  source: ""
+- id: 071.03.01.01.01
+  subject: "071"
+  parentId: 071.03.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define and explain the meaning of 'center of gravity (CG)'"
+  source: ""
+- id: 071.03.02
+  subject: "071"
+  parentId: 071.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Conditions of equilibrium (balance of forces and balance of moments)"
+  source: ""
+- id: 071.03.02.01
+  subject: "071"
+  parentId: 071.03.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Definition"
+  source: ""
+- id: 071.03.02.01.01
+  subject: "071"
+  parentId: 071.03.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Define 'datum' (reference point), 'moment arm' and 'moment'"
+  source: ""
+- id: 071.03.02.02
+  subject: "071"
+  parentId: 071.03.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Relation between factors for equlilbrium"
+  source: ""
+- id: 071.03.02.02.01
+  subject: "071"
+  parentId: 071.03.02.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "List the forces acting for the balance of moments"
+  source: ""
+- id: 071.03.03
+  subject: "071"
+  parentId: 071.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Basic calculations of CG"
+  source: ""
+- id: 071.03.03.01
+  subject: "071"
+  parentId: 071.03.03
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "General considerations"
+  source: ""
+- id: 071.03.03.01.01
+  subject: "071"
+  parentId: 071.03.03.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Calculate 'moment' by multiplying 'mass (force)' x 'moment arm'"
+  source: ""
+- id: 071.04
+  subject: "071"
+  parentId: 071
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "MASS AND BALANCE DETAILS OF AIRCRAFT"
+  source: ""
+- id: 071.04.01
+  subject: "071"
+  parentId: 071.04
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Contents of mass and balance documentation"
+  source: ""
+- id: 071.04.01.01
+  subject: "071"
+  parentId: 071.04.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Datum and moment arm"
+  source: ""
+- id: 071.04.01.01.02
+  subject: "071"
+  parentId: 071.04.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "State where the datum and moment arms for aircraft can be found"
+  source: ""
+- id: 071.04.02
+  subject: "071"
+  parentId: 071.04
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Extraction of basic mass and balance data from aircraft documentation"
+  source: ""
+- id: 071.04.02.01
+  subject: "071"
+  parentId: 071.04.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "BEM"
+  source: ""
+- id: 071.04.02.01.03
+  subject: "071"
+  parentId: 071.04.02.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "State that actual weight & balance data / weighing report can be found in the aircraft documents or"
+  source: ""
+- id: 071.04.02.02
+  subject: "071"
+  parentId: 071.04.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "CG position or moment at BEM"
+  source: ""
+- id: 071.04.02.02.01
+  subject: "071"
+  parentId: 071.04.02.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Determine CG position at basic empty mass from AFM/POH"
+  source: ""
+- id: 071.05
+  subject: "071"
+  parentId: 071
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "DETERMINATION OF CG POSITION"
+  source: ""
+- id: 071.05.01
+  subject: "071"
+  parentId: 071.05
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Methods"
+  source: ""
+- id: 071.05.01.01
+  subject: "071"
+  parentId: 071.05.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Arithmetic method"
+  source: ""
+- id: 071.05.01.01.01
+  subject: "071"
+  parentId: 071.05.01.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Calculate the CG position of an aircraft by using the formula: CG position = sum of moments / total"
+  source: ""
+- id: 071.05.01.02
+  subject: "071"
+  parentId: 071.05.01
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Graphic method"
+  source: ""
+- id: 071.05.01.02.01
+  subject: "071"
+  parentId: 071.05.01.02
+  courses:
+    - PPL (A)
+    - PPL (H)
+    - SPL
+  text: "Determine the CG position of an aircraft by using the loading graphs given in sample documents"
   source: ""
 - id: "072"
   subject: "072"
