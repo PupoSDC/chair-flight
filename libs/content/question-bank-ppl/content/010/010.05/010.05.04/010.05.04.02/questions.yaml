@@ -1,0 +1,54 @@
+- id: QAL0020
+  relatedQuestions: []
+  externalIds: []
+  annexes: []
+  learningObjectives: 
+    - 010.05.04.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question:  What condition has to be met during a Special VFR flight?
+    options: 
+    - id: AAL0201
+      text: "At least 500 m ground visibilty"
+      correct: false
+      why: ""
+    - id: AAL0202
+      text: "Speed not above 115 kt IAS"
+      correct: false
+      why: ""
+    - id: AAL0203
+      text: "A minimum distance to clouds of 2000 m"
+      correct: false
+      why: ""
+    - id: AAL0204
+      text: "Visual reference to the terrain"
+      correct: true
+      why: ""
+- id: QAL0042
+  relatedQuestions: []
+  externalIds: []
+  annexes: []
+  learningObjectives: 
+    - 010.05.04.02.02
+  explanation: ""
+  variant:
+    type: simple
+    question:  State the minimum weather conditions to enter a control zone (airspace "D") under special VFR conditions for a fixed-wing aircraft?
+    options: 
+    - id: AAL0421
+      text: "Ground visibility at least 800 m Flight visibility at least 800 m Ceiling not below 600 ft Visual contact to the ground must be maintained The aircraft must remain always clear of clouds."
+      correct: false
+      why: ""
+    - id: AAL0422
+      text: "Ground visibility at least 1,5 km Flight visibility at least 1,5 km Ceiling not below 1000 ft Visual contact to the ground must be maintained The aircraft must remain always clear of clouds."
+      correct: false
+      why: ""
+    - id: AAL0423
+      text: "Ground visibility at least 1,5 km Flight visibility at least 1,5 km Ceiling not below 600 ft Visual contact to the ground must be maintained The aircraft must remain always clear of clouds."
+      correct: true
+      why: ""
+    - id: AAL0424
+      text: "Ground visibility at least 5 km Flight visibility at least 5 km Ceiling not below 1500 ft Visual contact to the ground must be maintained The aircraft must remain always clear of clouds."
+      correct: false
+      why: ""
