@@ -19,7 +19,11 @@ const ScoreCircle: FC<{ score: number; passed: boolean }> = ({
   const circumference = 2 * Math.PI * radius;
   return (
     <div className="relative size-28 flex-none">
-      <svg viewBox="0 0 100 100" className="size-full -rotate-90">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 100 100"
+        className="size-full -rotate-90"
+      >
         <circle
           cx="50"
           cy="50"

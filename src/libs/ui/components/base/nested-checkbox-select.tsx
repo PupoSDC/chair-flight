@@ -49,7 +49,7 @@ export const NestedCheckboxSelect: FC<{
   const valueMap = Object.fromEntries(values.map((value) => [value, true]));
 
   return (
-    <div role="group" className={cn("flex flex-col gap-1.5", className)}>
+    <fieldset className={cn("flex flex-col gap-1.5", className)}>
       {items.map((parent) => {
         const parentChecked = valueMap[parent.id] ?? false;
         const open = openId === parent.id;
@@ -150,6 +150,6 @@ export const NestedCheckboxSelect: FC<{
           </div>
         );
       })}
-    </div>
+    </fieldset>
   );
 };

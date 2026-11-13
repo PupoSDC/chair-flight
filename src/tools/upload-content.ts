@@ -4,7 +4,15 @@ import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import * as YAML from "yaml";
-import * as tables from "../database/schema/question-bank.ts";
+import {
+  annexes,
+  courses,
+  docs,
+  flashcards,
+  learningObjectives,
+  questions,
+  subjects,
+} from "../database/schema/question-bank.ts";
 import { chunkItems } from "../libs/base/chunk-items.ts";
 import { readEnv } from "../libs/base/read-env.ts";
 import { connectQuestionBank } from "../libs/core/question-bank/connect-question-bank.ts";
@@ -117,6 +125,16 @@ const readQuestionBank = async (questionBank: QuestionBankName) => {
       path.join(root, "flashcards"),
     ),
   };
+};
+
+const tables = {
+  annexes,
+  courses,
+  docs,
+  flashcards,
+  learningObjectives,
+  questions,
+  subjects,
 };
 
 const uploadContent = async () => {

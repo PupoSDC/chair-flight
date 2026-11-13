@@ -37,6 +37,7 @@ export const ModuleSelectionButton: FC<{
   const { text, bg, border, hover } = COLORS[color];
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: contains a nested link, which cannot live inside a button
     <div
       role="button"
       tabIndex={0}

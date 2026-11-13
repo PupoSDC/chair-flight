@@ -29,7 +29,7 @@ export const SlidingImages: FC = () => {
     >
       {COLUMNS.map(({ order, seconds, reverse }, column) => (
         <div
-          key={column}
+          key={COLUMN_CLASS_NAMES[column]}
           className={cn(
             "w-80 flex-none overflow-hidden pr-4",
             COLUMN_CLASS_NAMES[column],
@@ -42,16 +42,18 @@ export const SlidingImages: FC = () => {
             )}
             style={{ animationDuration: `${seconds}s` }}
           >
-            {[...order, ...order].map((image, index) => (
-              <img
-                key={index}
-                src={`/images/home/${IMAGES[image]}.png`}
-                alt=""
-                width={320}
-                height={320}
-                className={cn("size-80 flex-none", `sliding-fade-${column}`)}
-              />
-            ))}
+            {[0, 1]
+              .flatMap((copy) => order.map((image) => ({ copy, image })))
+              .map(({ copy, image }) => (
+                <img
+                  key={`${copy}-${image}`}
+                  src={`/images/home/${IMAGES[image]}.png`}
+                  alt=""
+                  width={320}
+                  height={320}
+                  className={cn("size-80 flex-none", `sliding-fade-${column}`)}
+                />
+              ))}
           </div>
         </div>
       ))}
