@@ -7,11 +7,13 @@ import {
 } from "@tanstack/react-router";
 import { QUESTION_BANK_NAMES } from "../../libs/core/question-bank/question-banks";
 import { TestRunner } from "../../libs/ui/components/tests/test-runner";
+import { useQuestionBankTheme } from "../../libs/ui/hooks/use-question-bank-theme";
 import { useTests } from "../../libs/ui/hooks/use-tests";
 import type { FC } from "react";
 
 const TestPage: FC = () => {
   const { questionBank, testId } = Route.useParams();
+  useQuestionBankTheme(questionBank);
   const navigate = useNavigate();
   const { tests, saveTest } = useTests();
   const test = tests[testId];

@@ -8,6 +8,7 @@
   --muted: light-dark(#555e68, #9fa6ad);
   --rule: light-dark(#dde7ee, #32383e);
   --rule-strong: light-dark(#c7dff7, #434b53);
+  --brand: #0b6bcb;
   --accent: light-dark(#0b6bcb, #3a86dc);
   --accent-soft: light-dark(#e3effb, #0f2a45);
   --success: light-dark(#1f7a1f, #2ea043);
@@ -19,6 +20,24 @@
   --teal-soft: light-dark(#dff5e8, #10301f);
   --rose: light-dark(#d93a2b, #f58a7d);
   --rose-soft: light-dark(#fde6e3, #3a1a17);
+}
+
+[data-bank="type"] {
+  --canvas: light-dark(#fdf0ee, #0d0b0b);
+  --rule: light-dark(#f2dcd8, #3a3232);
+  --rule-strong: light-dark(#f7c9c3, #53443f);
+  --brand: #c8372b;
+  --accent: light-dark(#c8372b, #f0645a);
+  --accent-soft: light-dark(#fde6e3, #3a1a17);
+}
+
+[data-bank="prep"] {
+  --canvas: light-dark(#edf8f1, #0b0d0c);
+  --rule: light-dark(#d9ebe0, #32393a);
+  --rule-strong: light-dark(#bfe6cc, #3f5348);
+  --brand: #1f8f4e;
+  --accent: light-dark(#1f8f4e, #4cc38a);
+  --accent-soft: light-dark(#dff5e8, #10301f);
 }
 
 :root[data-theme="light"] {
@@ -37,7 +56,7 @@
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
   --color-accent: var(--accent);
-  --color-brand: #0b6bcb;
+  --color-brand: var(--brand);
   --color-accent-soft: var(--accent-soft);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);

@@ -5,6 +5,7 @@ import { CountUp } from "../../libs/ui/components/public/count-up";
 import { ModuleSelectionButton } from "../../libs/ui/components/public/module-selection-button";
 import { SlidingImages } from "../../libs/ui/components/public/sliding-images";
 import { Typical } from "../../libs/ui/components/public/typical";
+import { useQuestionBankTheme } from "../../libs/ui/hooks/use-question-bank-theme";
 import { CardsIcon } from "../../libs/ui/icons/cards-icon";
 import { ChevronRightIcon } from "../../libs/ui/icons/chevron-right-icon";
 import { PlaneIcon } from "../../libs/ui/icons/plane-icon";
@@ -43,9 +44,13 @@ const HeroLink: FC<{ to: string; children: string }> = ({ to, children }) => (
 const HomePage: FC = () => {
   const counts = Route.useLoaderData();
   const [questionBank, setQuestionBank] = useState<QuestionBankName>();
+  useQuestionBankTheme(questionBank);
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div
+      data-bank={questionBank}
+      className="flex min-h-dvh flex-col bg-canvas text-ink"
+    >
       <PublicHeader />
       <SlidingImages />
       <main

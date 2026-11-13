@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { GithubIcon } from "../../icons/github-icon";
 import { cn } from "../../utils/cn";
+import { Logo } from "./logo";
 import { ThemeToggle } from "./theme-toggle";
 import type { FC } from "react";
 
@@ -15,7 +16,7 @@ export const PublicHeader: FC = () => {
       )}
     >
       <Link to="/" className="flex items-center gap-2 text-ink no-underline">
-        <img src="/favicon.svg" alt="" className="size-6" />
+        <Logo />
         <span className="text-sm font-bold tracking-widest uppercase">
           Chair Flight
         </span>

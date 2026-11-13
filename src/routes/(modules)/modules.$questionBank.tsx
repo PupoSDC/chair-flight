@@ -13,9 +13,11 @@ import {
   QUESTION_BANKS,
 } from "../../libs/core/question-bank/question-banks";
 import { IconButton } from "../../libs/ui/components/base/icon-button";
+import { Logo } from "../../libs/ui/components/base/logo";
 import { GITHUB_URL } from "../../libs/ui/components/base/public-header";
 import { ThemeToggle } from "../../libs/ui/components/base/theme-toggle";
 import { useMediaQuery } from "../../libs/ui/hooks/use-media-query";
+import { useQuestionBankTheme } from "../../libs/ui/hooks/use-question-bank-theme";
 import { BookIcon } from "../../libs/ui/icons/book-icon";
 import { CardsIcon } from "../../libs/ui/icons/cards-icon";
 import { ChevronLeftIcon } from "../../libs/ui/icons/chevron-left-icon";
@@ -72,6 +74,7 @@ const NAV_ITEMS = [
 const ModuleLayout: FC = () => {
   const { questionBank } = Route.useParams();
   const { pathname } = useLocation();
+  useQuestionBankTheme(questionBank);
   const [desktopOpen, setDesktopOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 639px)");
@@ -83,7 +86,7 @@ const ModuleLayout: FC = () => {
   const isOpen = isMobile ? mobileOpen : desktopOpen;
 
   return (
-    <div className="h-dvh">
+    <div data-bank={questionBank} className="h-dvh bg-canvas text-ink">
       <div
         aria-hidden="true"
         onClick={() => setMobileOpen(false)}
@@ -108,11 +111,7 @@ const ModuleLayout: FC = () => {
             "pl-2 text-ink no-underline",
           )}
         >
-          <img
-            src="/favicon.svg"
-            alt="Chair Flight"
-            className="size-6 flex-none"
-          />
+          <Logo />
           <span
             className={cn(
               "text-sm font-bold tracking-widest whitespace-nowrap uppercase",
