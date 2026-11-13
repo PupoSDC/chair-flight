@@ -280,7 +280,7 @@
   variant:
     type: simple
     question: |-
-      Given the following information, calculate the estimated estimated Landing Mass at the destination for the Commercial Air Transport flight with a Performance Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT variations applies.
+      Given the following information, calculate the estimated Landing Mass at the destination for the Commercial Air Transport flight with a Performance Class A aeroplane. Assume the Basic Fuel Scheme WITHOUT variations applies.
 
       DOM: 9 900 lb  
       Traffic Load: 3 160 lb  
@@ -567,9 +567,8 @@
         correct: false
         why: ""
       - id: OPBMT0GDV
-        text: The pilot could update the trip fuel, but he/she does not have to update
-          the contingency fuel because it covers such changes during the
-          planning phase.
+        text: The pilot could update the trip fuel, but the pilot does not have to
+          update because it covers such changes during the planning phase.
         correct: false
         why: ""
       - id: O3JOIUFMP
@@ -741,10 +740,10 @@
       cruising altitude significantly below the normal cruising altitude.
       His/her decision to proceed to an adequate alternate, increases
       significantly the fuel consumption compared to the planned consumption.
-      Although he/she has planned for Trip Fuel, Contingency Fuel, Alternate
-      Fuel and Final Reserve Fuel, he/she has NOT included in the fuel planning
-      a sufficient quantity for this engine-out situation. Which option is
-      correct for the above scenario?
+      Although they have planned for Trip Fuel, Contingency Fuel, Alternate Fuel
+      and Final Reserve Fuel, he/she has NOT included in the fuel planning a
+      sufficient quantity for this engine-out situation. Which option is correct
+      for the above scenario?
     options:
       - id: OVGK7QUVF
         text: The Alternate Fuel must plan for such an event, and the fuel planning must
@@ -1069,7 +1068,7 @@
     type: simple
     question: |-
       (For this question use annex 033-057, 033-056, 033-049 and 033-050 rev. 05.11.2004).   
-      Knowing that: .
+      Knowing that:
 
       Mass at brake release: 190 000 kg   
       Selected cruise speed: 0.82 Mach   
@@ -1078,7 +1077,9 @@
       Air conditioning: standard   
       Anti-icing: OFF   
       Temperature: ISA   
-      CG: 37% Assuming zero wind,
+      CG: 37%
+
+      Assuming zero wind,
 
       The planned flight time from take-off to landing needed to complete this flight will be:
     options:
@@ -1114,7 +1115,7 @@
     question: "The calculated fuel for a flight is 2 500 kg. However, due to
       expected delays during flight, the commander decides to order an
       additional 100 kg of fuel. Due to miscommunication, the refueling team
-      provides only 2 500 kg. In such situation, the refueling team shoud:"
+      provides only 2 500 kg. In such situation, the refueling team should:"
     options:
       - id: OJVJJSJTP
         text: Be informed and the fuel added as long as it does not delay the departure.
@@ -1285,7 +1286,7 @@
     question: |-
       Refer to figure.
 
-      You are cruising at FL380 with a twin-engined jet aeroplane. However, due to turbulence, you descend from FL380 to FL360\. Determine the fuel consumed at FL360 until the top of descent (TOD). The distance travelled at FL360 is 295 NM, the TAT is -17ºC and the aeroplane mass is 65 000 kg.
+      You are cruising at FL380 with a twin-engined jet aeroplane. However, due to turbulence, you descend from FL380 to FL360. Determine the fuel consumed at FL360 until the top of descent (TOD). The distance travelled at FL360 is 295 NM, the TAT is -17ºC and the aeroplane mass is 65 000 kg.
     options:
       - id: OFZXMG2PR
         text: 1 670 kg
@@ -1661,7 +1662,7 @@
     question: |-
       Refer to figure.
 
-      You are cruising at FL380 with a twin-engined jet aeroplane. Due to airspace restrictions ATC instructs you to reduce speed to Mach .754\. Given the following information, what is the fuel you will use for the remainder of the cruise time?
+      You are cruising at FL380 with a twin-engined jet aeroplane. Due to airspace restrictions ATC instructs you to reduce speed to Mach .754. Given the following information, what is the fuel you will use for the remainder of the cruise time?
 
       Distance to Top-of-Descent: 220 NM   
        Aircraft mass: 50 000 kg   
@@ -2163,7 +2164,7 @@
        Taxi Fuel: 100 lb   
        Extra Fuel: 0 lb   
        Tankering Fuel: 971 lb   
-      _A destination alternate is required._
+      A destination alternate is required.
     options:
       - id: OFQPASYLX
         text: "5 200 lb "
@@ -2289,10 +2290,10 @@
     question: |-
       Which of the following circumstances would be considered suitable for fuel tankering?
 
-      1\. The estimated landing mass is equal to the maximum landing mass.   
-      2\. The weather at the destination is below landing minima.   
-      3\. Unable to climb to the Minimum Obstacle Clearance Altitude (MOCA) should an engine fail.   
-      4\. There is no fuel available at the destination aerodrome.
+      1. The estimated landing mass is equal to the maximum landing mass.   
+      2. The weather at the destination is below landing minima.   
+      3. Unable to climb to the Minimum Obstacle Clearance Altitude (MOCA) should an engine fail.   
+      4. There is no fuel available at the destination aerodrome.
     options:
       - id: OFS2LYE7I
         text: 2 and 3
@@ -2324,8 +2325,8 @@
     question: A Commercial Air Transport flight of 3 hours total flight time is
       planned to an aerodrome where no alternate is required. 1.5 hours after
       take-off, the pilot is informed that there will be a delay due to traffic
-      on arriving at destination, thus he/she has to use 8 minutes out of the 15
-      minutes additional fuel. What action should be done in this case?
+      on arriving at destination, thus they have to use out of the 15 minutes
+      additional fuel. What action should be done in this case?
     options:
       - id: OKXEZRH3B
         text: Proceed to the enroute alternate, as it should be selected when no
@@ -2396,7 +2397,7 @@
     type: simple
     question: You have just finished planning a flight and you require 3643 lb of
       fuel. The fuel tanker supplies fuel in US gallon with the specific gravity
-      of 0.84\. How many US gallons do you require?
+      of 0.84. How many US gallons do you require?
     options:
       - id: ODAVZKKBL
         text: "520"
@@ -2805,8 +2806,8 @@
   variant:
     type: simple
     question: A pilot has planned a flight but the destination reports a weather
-      phenomenon which induced the pilot to update his/her the fuel log. Which
-      of the following phenomena does this refer to (most likely)?
+      phenomenon which to update the fuel log. Which of the following phenomena
+      does this refer to (most likely)?
     options:
       - id: OCC1IAV8P
         text: Shallow fog.

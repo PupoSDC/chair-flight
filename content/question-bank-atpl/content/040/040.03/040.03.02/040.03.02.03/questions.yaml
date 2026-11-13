@@ -306,7 +306,7 @@
   variant:
     type: simple
     question: |-
-      A pilot is distracted by a failure of his/her navigation equipment and consequently does not execute a planned turn, but quickly realises and corrects. Afterwards, he/she lands at his/her intermediate airport and checks the weather at his/her final destination. As the weather looks good, he/she decides to take off without loading additional fuel. When he/she encounters an unexpected headwind, he/she barely makes it to his/her final destination without any fuel left. What were the errors committed?
+      A pilot is distracted by a failure of their navigation equipment and consequently does not execute a planned turn, but quickly realises and corrects. Afterwards, they land at their intermediate airport and checks the weather at their final destination. As the weather looks good, they decide to take off without loading additional fuel. When they encounter an unexpected headwind, they barely makes it to their final destination without any fuel left. What were the errors committed?
 
       (1) Forgotten turn: lapse   
       (2) Forgotten turn: violation   
@@ -361,9 +361,9 @@
         correct: false
         why: ""
       - id: ORINZDIXA
-        text: The pilot correctly reads back the new altitude assignment during an
-          en&route climb but proceeds to set it incorrectly in the autopilot’s
-          mode control panel.
+        text: The pilot correctly reads back the new altitude assignment en-route climb
+          but proceeds to set it incorrectly in the autopilot’s mode control
+          panel.
         correct: false
         why: ""
       - id: O3TBCWFPM
@@ -424,7 +424,7 @@
     options:
       - id: OBWPWUU8I
         text: The PIC's decision to complete the pre-take-off checks from memory was a
-          violation. As a result, a lapse occured in the execution, which was
+          violation. As a result, a lapse occurred in the execution, which was
           failing to check the pitot heat setting.
         correct: true
         why: ""
@@ -442,8 +442,8 @@
         why: ""
       - id: ONPHX9KLB
         text: The PIC made a rule-based error by NOT following the normal checklist
-          procedure. In addition, he/she made a knowledge-based mistake by
-          failing to check the pitot heat setting.
+          procedure. In addition, they made a knowledge-based mistake by failing
+          to check the pitot heat setting.
         correct: false
         why: ""
 - id: QGHMMWUM

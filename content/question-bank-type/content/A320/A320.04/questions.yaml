@@ -48,7 +48,7 @@
         correct: true
         why: ""
       - id: fjqm3
-        text: Push the IDG pb-sw for at at least 4 seconds
+        text: Push the IDG pb-sw for at least 4 seconds
         correct: false
         why: ""
       - id: 1dpo
@@ -211,8 +211,8 @@
   explanation: ""
   variant:
     type: simple
-    question: "On ground with external power conected and MAINT BUS switch ON, the
-      AC and DC GND/FLT buses are  supllied by:"
+    question: "On ground with external power connected and MAINT BUS switch ON, the
+      AC and DC GND/FLT buses are  supplied by:"
     options:
       - id: qzqxrh
         text: External power directly
@@ -266,7 +266,7 @@
   explanation: ""
   variant:
     type: simple
-    question: Which bus is not powerded during EMER ELEC in flight?
+    question: Which bus is not powered during EMER ELEC in flight?
     options:
       - id: eufd7
         text: AC ESS BUS
@@ -294,7 +294,7 @@
   variant:
     type: simple
     question: What would happen to the battery voltage if you switch off the main
-      power supply (EXT PWR+APU) and  left the BAT 1 and BAT 2 pushbuttons in
+      power supply (EXT PWR+APU) and leave the BAT 1 and BAT 2 pushbuttons in
       the AUTO position?
     options:
       - id: x2pkd
@@ -379,7 +379,7 @@
   variant:
     type: simple
     question: "TRIPPED C/B RE-ENGAGEMENT A FUEL PUMP C/B has tripped by itself.
-      Which statement regarding the re\x02engagement is correct"
+      Which statement regarding the re-engagement is correct"
     options:
       - id: 5d4ea
         text: On ground do not reengage the C/B of the fuel pump(s) of any tank
@@ -582,7 +582,7 @@
     question: "The BAT FAULT light illuminates if:"
     options:
       - id: t4wyz
-        text: The battery voltage is less then 25V
+        text: The battery voltage is less than 25V
         correct: false
         why: ""
       - id: a857n
@@ -820,12 +820,12 @@
         why: ""
       - id: 7w3v5
         text: The MAN ON pb on the EMER ELEC PWR panel is guarded, the aircraft speed is
-          above 72 kt and AC BUS 2 in not  electrically supplied
+          above 72 kt and AC BUS 2 is not  electrically supplied
         correct: false
         why: ""
       - id: tdpcz
         text: The MAN ON pb on the EMER ELEC PWR panel is on AUTO, AC BUS 1 and 2 are
-          not electrically supplied and the  aircaft speed is greater than 100
+          not electrically supplied and the  aircraft speed is greater than 100
           kt
         correct: true
         why: ""

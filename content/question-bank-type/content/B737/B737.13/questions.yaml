@@ -7,7 +7,7 @@
   explanation: ""
   variant:
     type: simple
-    question: "The engine hydraulic pump (ENG 1 and ENG 2) switches are switch ON:"
+    question: "The engine hydraulic pump (ENG 1 and ENG 2) switches are switched ON:"
     options:
       - id: 0u71n
         text: They de-energize the blocking valve to allow pump pressure to enter the
@@ -105,8 +105,7 @@
       standpipe?
     options:
       - id: bmka
-        text: Both the the engine driven pump (EDP) and the AC electric motor-driven
-          pump
+        text: Both the engine driven pump (EDP) and the AC electric motor-driven pump
         correct: false
         why: ""
       - id: 2j7l4
@@ -398,20 +397,20 @@
   variant:
     type: simple
     question: While airborne and with flaps retracted, if hydraulic System A or
-      System B loose pressure does the Standby hydraulic system automatically
+      System B lose pressure does the Standby hydraulic system automatically
       activate?
     options:
       - id: n2eh2
-        text: Yes, but only if both System A and System B loose pressure.
+        text: Yes, but only if both System A and System B lose pressure.
         correct: false
         why: ""
       - id: npbqng
-        text: No, automatic activation only occurs if either System A or System B loose
+        text: No, automatic activation only occurs if either System A or System B lose
           pressure and flaps are extended.
         correct: true
         why: ""
       - id: yot18
-        text: No, automatic activation only occurs if both System A and System B loose
+        text: No, automatic activation only occurs if both System A and System B lose
           pressure and flaps are extended.
         correct: false
         why: ""

@@ -92,7 +92,7 @@
   explanation: ""
   variant:
     type: simple
-    question: Which memory items define to retract the speedbrakes?
+    question: Which memory items call for retracting the speedbrakes?
     options:
       - id: 4gzsv
         text: Unreliable speed indication, GPWS warnings, Stall recovery
@@ -122,7 +122,7 @@
     question: Which statement about landing with slats or flaps jammed is correct?
     options:
       - id: dle0a
-        text: The flap lever is useless due to jammend slats and flaps and have to
+        text: The flap lever is useless due to jammed slats and flaps and has to
           maintain at the last selected position
         correct: false
         why: ""
@@ -132,7 +132,7 @@
         why: ""
       - id: o2g9m
         text: The autopilot may be used down to 500ft AGL. As it is tuned for abnormal
-          configurations, ist behavior can be less than optimum and must be
+          configurations, its behavior can be less than optimum and must be
           monitored
         correct: true
         why: ""
@@ -150,14 +150,14 @@
   explanation: ""
   variant:
     type: simple
-    question: Is there any crosswind limitation for landing with jammend flight controls?
+    question: Is there any crosswind limitation for landing with jammed flight controls?
     options:
       - id: qe2x5
         text: Yes, 20kt for LANDING WITH SLATS OR FLAPS JAMMED
         correct: false
         why: ""
       - id: 8nzpp
-        text: No, there are no crosswind limits for a landing with jammend flight
+        text: No, there are no crosswind limits for a landing with jammed flight
           controls
         correct: false
         why: ""
@@ -262,7 +262,7 @@
   variant:
     type: simple
     question: "To control the aircraft about the roll axis the following Flight
-      controls will are used:"
+      controls are used:"
     options:
       - id: q9gsu
         text: Aileron, rudder and spoilers
@@ -277,7 +277,7 @@
         correct: false
         why: ""
       - id: xh39fl
-        text: Aileronsonly
+        text: Ailerons only
         correct: false
         why: ""
 - id: QMUSWXJR
@@ -360,7 +360,7 @@
         correct: false
         why: ""
       - id: 62uu8
-        text: Operate with limited range (Dependig on the aircraft speed within the
+        text: Operate with limited range (Depending on the aircraft speed within the
           envelope)
         correct: false
         why: ""
@@ -533,11 +533,11 @@
         correct: false
         why: ""
       - id: 4mjdcj
-        text: 1,2,3,4and5
+        text: 1,2,3,4 and 5
         correct: false
         why: ""
       - id: amh13
-        text: 2,3and4
+        text: 2,3 and 4
         correct: true
         why: ""
       - id: 5cu9v
@@ -556,15 +556,15 @@
     question: Which spoilers are used as ground spoilers?
     options:
       - id: flc44
-        text: 1,2and3
+        text: 1,2 and 3
         correct: false
         why: ""
       - id: pvjxx
-        text: 1,2,3,4and5
+        text: 1,2,3,4 and 5
         correct: true
         why: ""
       - id: ojl1e
-        text: 2,3and4
+        text: 2,3 and 4
         correct: false
         why: ""
       - id: plicm
@@ -673,7 +673,7 @@
     options:
       - id: r9fbfj
         text: If the ground spoilers are armed and the speed exceeds 72kts the ground
-          spoilers will automatically extend as soon as one thrust lever are
+          spoilers will automatically extend as soon as one thrust lever is
           reset to idle
         correct: false
         why: ""
@@ -891,7 +891,7 @@
   explanation: ""
   variant:
     type: simple
-    question: f, in flight, you experience ELAC or SEC malfunctions, can you reset
+    question: IIf, in flight, you experience ELAC or SEC malfunctions, can you reset
       more than one computer at a time?
     options:
       - id: 8b9eq
@@ -900,9 +900,9 @@
         correct: true
         why: ""
       - id: 8divlg
-        text: Yes, Flight control computers are redundant an can reset by more than one
-          at the same time, this reduces the time to reset/recover the flight
-          control computers
+        text: Yes, Flight control computers are redundant and can be reset by more than
+          one at the same time, this reduces the time to reset/recover the
+          flight control computers
         correct: false
         why: ""
       - id: e19kn
@@ -943,7 +943,7 @@
         correct: false
         why: ""
       - id: wgg0i
-        text: f the bank angle exceeds the value of 67&deg;, the autopilot disconnects
+        text: IIf the bank angle exceeds the value of 67&deg;, the autopilot disconnects
           and the FD bars disappear
         correct: false
         why: ""
@@ -956,8 +956,8 @@
   explanation: ""
   variant:
     type: simple
-    question: "Depending on the failures occuring to the flight control system or on
-      its peripherals, control reconfigurations to certain levels can occur.
+    question: "Depending on the failures occurring to the flight control system or
+      on its peripherals, control reconfigurations to certain levels can occur.
       These are:"
     options:
       - id: 18p36
@@ -985,7 +985,7 @@
   explanation: ""
   variant:
     type: simple
-    question: "On the A319 and A320,the flight controls are comprised of, among others:"
+    question: "On the A319 and A320, the flight controls are comprised of, among others:"
     options:
       - id: gdcdt
         text: 5 slat surfaces per wing, 8 spoilers, 2 cruise ailerons, 1 rudder surface
@@ -1109,7 +1109,7 @@
     options:
       - id: evs0y
         text: A Solenoid-operated detent locks both sidesticks in the neutral position.
-          The lock cannot be overiden
+          The lock cannot be overridden
         correct: false
         why: ""
       - id: puj2f
@@ -1174,7 +1174,7 @@
         correct: false
         why: ""
       - id: uqc8l
-        text: The spoilers do not extend, unti both struts are compressed.
+        text: The spoilers do not extend, until both struts are compressed.
         correct: false
         why: ""
       - id: d0h69
@@ -1222,19 +1222,19 @@
   explanation: ""
   variant:
     type: simple
-    question: The message WING TIP BRK ON appears on the E/WD. What happend and what
-      are the consequences?
+    question: The message WING TIP BRK ON appears on the E/WD. What happened and
+      what are the consequences?
     options:
       - id: yxqvc
         text: Wingtip brakes (WTBs), activated in case of asymmetry, mechanism
-          overspeed, symmetrical runaway or uncommented movement of surfaces.
+          overspeed, symmetrical runaway or uncommanded movement of surfaces.
           They cannot be released in flight
         correct: true
         why: ""
       - id: fslysj
-        text: To reduce structural stress due to failure of partial flight
-          controlsystem, the slat and flap movement is being slowed down through
-          the Wingtip brakes (WTBs)
+        text: To reduce structural stress due to failure of partial flight control
+          system, the slat and flap movement is being slowed down through the
+          Wingtip brakes (WTBs)
         correct: false
         why: ""
       - id: whivz
@@ -1244,7 +1244,7 @@
         why: ""
       - id: 596dk
         text: The flaps and slats are locked with the Wingtip brakes (WTBs) because of a
-          detected leak in the hydraulic system to avoid spilling hydrailic
+          detected leak in the hydraulic system to avoid spilling hydraulic
           fluid. For safety reasons a reset is possible in flight
         correct: false
         why: ""
@@ -1327,9 +1327,9 @@
         correct: false
         why: ""
       - id: of899
-        text: The flight computer compensate the yaw automatic and using the spoiler
-          surfaces only. No rudder movement under normal conditions during
-          flight
+        text: The flight computer compensates the yaw automatically and using the
+          spoiler surfaces only. No rudder movement under normal conditions
+          during flight
         correct: false
         why: ""
 - id: QCDUCKEJ
@@ -1400,8 +1400,8 @@
   explanation: ""
   variant:
     type: simple
-    question: n NORMAL LAW, if one side stick is rapidly pulled fully back, can the
-      aircraft&rsquo;s maximum allowable &ldquo;G&rdquo; load be exceeded?
+    question: IIn NORMAL LAW, if one side stick is rapidly pulled fully back, can
+      the aircraft&rsquo;s maximum allowable &ldquo;G&rdquo; load be exceeded?
     options:
       - id: g1v0e
         text: Yes. Because of that, rapid side stick deflection must never be made
@@ -1489,7 +1489,7 @@
   variant:
     type: simple
     question: Which law does the system apply in the case of an extraordinary
-      unpredictable external event (e.g. mid- air collision)? The flight
+      unpredictable external event (e.g. mid-air collision)? The flight
       parameters may go far beyond the limits of the protected envelope.
     options:
       - id: 36wre
@@ -1774,7 +1774,7 @@
     question: "In Direct Law aircraft pitch is trimmed:"
     options:
       - id: 48pye
-        text: Automatically controlled by the FAC ́s
+        text: Automatically controlled by the FAC's
         correct: false
         why: ""
       - id: 6kroa
@@ -1786,7 +1786,7 @@
         correct: false
         why: ""
       - id: ewswh
-        text: Automatically controlled by the ELAC ́s or SEC ́s depending on the failure
+        text: Automatically controlled by the ELAC's or SEC's depending on the failure
         correct: false
         why: ""
 - id: QNSIAGEV
@@ -2204,7 +2204,7 @@
         correct: true
         why: ""
       - id: da0xgi
-        text: Alternte Law
+        text: Alternate Law
         correct: false
         why: ""
       - id: r32uh

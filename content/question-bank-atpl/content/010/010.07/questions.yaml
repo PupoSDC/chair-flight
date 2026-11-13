@@ -147,7 +147,7 @@
       This means that the pilot...
     options:
       - id: OIMV0X0IK
-        text: may climb to FL 100, must to comply with published level restriction, can
+        text: may climb to FL 100, must comply with published level restriction, can
           deviate from the lateral profile of the SID, and must comply with
           published speed restrictions or ATC issued speed control instructions.
         correct: false
@@ -199,7 +199,7 @@
         why: ""
       - id: ODYF1KIY7
         text: may propose another clearance. ATC has to amend the clearance in
-          accordance with the pilot\`s request.
+          accordance with the pilot's request.
         correct: false
         why: ""
       - id: OKCUATL4T
@@ -440,7 +440,7 @@
     type: simple
     question: "While in VMC, a B737 is established on an RNP APCH. ATC instructs the
       B737 pilot to follow and maintain its own separation from a preceding
-      HEAVY B777, which the B737 pilot has already acknowledged he/she has
+      HEAVY B777, which the B737 pilot has already acknowledged they have
       in-sight. The B737 pilot:"
     options:
       - id: OJVAQIKSV
@@ -449,7 +449,7 @@
         correct: false
         why: ""
       - id: OJ4JOKOWU
-        text: Shall NOT receive a landing clearance, and he/she will be expected to land
+        text: Shall NOT receive a landing clearance, and they will be expected to land
           after the preceding aircraft vacates the runway.
         correct: false
         why: ""
@@ -548,8 +548,8 @@
         correct: false
         why: ""
       - id: OF0GIT5GU
-        text: He/she must inform ATC that he/she cannot comply with the instructions as
-          soon as possible.
+        text: they must inform ATC that they cannot comply with the instructions as soon
+          as possible.
         correct: true
         why: ""
       - id: OGIKI1AF2
@@ -1088,11 +1088,11 @@
       the pilots?
     options:
       - id: OVFGAWJKB
-        text: Request RWY 04 and file a incident report.
+        text: Request RWY 04 and file an incident report.
         correct: false
         why: ""
       - id: OKC3YBYQF
-        text: Take-off RWY 27 and file a incident report.
+        text: Take-off RWY 27 and file an incident report.
         correct: false
         why: ""
       - id: OIOP2EIUH
@@ -1115,7 +1115,7 @@
   variant:
     type: simple
     question: A pilot lands at an airfield other than the destination specified in
-      the flight plan. When must he/she inform the ATC unit at the original
+      the flight plan. When must they inform the ATC unit at the original
       destination? Within…
     options:
       - id: OG8PJPXCA
@@ -1182,7 +1182,7 @@
 
       “FGACC, runway 27, wind 220 degrees 10 knots visibility 8 km, QNH 1019, transition level 45, time 06, squawk will be 3636\. Taxi to holding point runway 27 via taxiway Bravo, cross runway 22, give way to Airbus crossing left to right”.
 
-      In accordance with ICAO Doc 4444, if the pilot is able to comply, what must his/her reply be?
+      In accordance with ICAO Doc 4444, if the pilot is able to comply, what must their reply be?
     options:
       - id: OC3IDBLQ4
         text: “Taxi to holding point runway 27 via taxiway Bravo. Squawk 3636, QNH 1019,
@@ -1311,7 +1311,7 @@
   explanation: ""
   variant:
     type: simple
-    question: A twin-engine aircraft flying at 3000 ft experiencies a single engine
+    question: A twin-engine aircraft flying at 3000 ft experiences a single engine
       failure. The aircraft can safely climb with one engine inoperative. The
       current aircraft mass is 5900 kg, but the Maximum Landing Mass (MLM) is
       5600 kg. What should the pilot do?
@@ -1381,7 +1381,7 @@
       take-off, a section of engine cowling from the NO. 1 engine separated from
       the aircraft. The crew conducted a fuel dump and returned the aircraft to
       Sydney." The incident did NOT involve an engine fire. What is the most
-      appropriate explanation for why the crew dumped fuel after take-off?​'
+      appropriate explanation for why the crew dumped fuel after take-off?'
     options:
       - id: OC1PAX4AL
         text: They had to reduce the aircraft's mass in order to safely land below the
@@ -1400,7 +1400,7 @@
         why: ""
       - id: O5URH9GND
         text: They had to mitigate against the risk of fire and therefore empty the fuel
-          tanks as much as possible.​
+          tanks as much as possible.
         correct: false
         why: ""
 - id: QXWKPQCNZ
@@ -1506,7 +1506,7 @@
   explanation: ""
   variant:
     type: simple
-    question: Which of the following occurences during the Approach and Landing
+    question: Which of the following occurrences during the Approach and Landing
       phases of flight must be reported to ATC?
     options:
       - id: O4947R0V8
@@ -1537,8 +1537,8 @@
   explanation: ""
   variant:
     type: simple
-    question: You are flying above Bristol and need to dump the fuel. what you need
-      to do?
+    question: You are flying above Bristol and need to dump the fuel. What do you
+      need to do?
     options:
       - id: OCJLYPWWI
         text: Climb to 5000 ft and fly over Bristol channel, then dump the fuel.
@@ -1573,7 +1573,7 @@
     options:
       - id: OUWPKTL3Y
         text: ATC should advise the flight crew to establish and maintain visual
-          seperation
+          separation
         correct: false
         why: ""
       - id: OQUE7QSWG
@@ -1633,7 +1633,7 @@
   explanation: ""
   variant:
     type: simple
-    question: A \`Visual Approach\` can be performed by a flight under IFR..
+    question: A 'Visual Approach' can be performed by a flight under IFR..
     options:
       - id: OVNAPBRBT
         text: during IFR and VFR approaches in VMC.
@@ -1701,8 +1701,8 @@
   explanation: ""
   variant:
     type: simple
-    question: Within controlled airspace, IFR cruising levels shall given as flight
-      levels..
+    question: Within controlled airspace, IFR cruising levels shall be given as
+      flight levels..
     options:
       - id: OZIGW2MZB
         text: if the obstacle clearance is more than 2 000 feet.
@@ -1732,7 +1732,7 @@
   variant:
     type: simple
     question: An aircraft is under Mach number separation when the pilot encounters
-      turbulence. Can he/she reduce separation?
+      turbulence. Can they reduce separation?
     options:
       - id: OSG0XQXV2
         text: No, the pilot needs to ask ATC.
@@ -2126,7 +2126,7 @@
   explanation: ""
   variant:
     type: simple
-    question: How is the local QNH given, regarding to the nearest hectopascal?
+    question: How is the local QNH given to the nearest hectopascal?
     options:
       - id: OZEQXCRUT
         text: It is rounded up to nearest tenths hectopascal.
@@ -2908,14 +2908,13 @@
         correct: true
         why: ""
       - id: O9NPF3KPI
-        text: Perform a lateral offset from the filed flight-plan route, maintaining the
-          frequency of the ATC unit which has provided him/her the last
-          clearance.
+        text: Perform a lateral offset from the filed flight-plan route, which has
+          provided them the last clearance..
         correct: false
         why: ""
       - id: OWBNS5CL4
-        text: Change frequency to the appropriate. ATC unit on his/her own initiative,
-          and provide a full position report.
+        text: Change frequency to the appropriate ATC unit on their own initiative, and
+          provide a full position report., and provide a full position report.
         correct: false
         why: ""
 - id: QJJOG7DUU
@@ -3058,7 +3057,7 @@
       What should an ATC clearance include in accordance with ICAO Annex 11? 
 
       1\. Aircraft identification   
-       2\. Clearence limit   
+       2\. Clearance limit   
        3\. Level(s)   
        4\. Current time   
        5\. Runway in use   
@@ -3344,7 +3343,7 @@
       An air traffic control clearance shall indicate:
 
       1\. Aircraft identification   
-       2\. Clearence limit   
+       2\. Clearance limit   
        3\. Level(s) of flight   
        4\. Current time   
        5\. Runway in use   
@@ -3444,7 +3443,7 @@
       flight, when they are instructed to maintain an indicated airspeed of 250
       kt. In the same message, ATC inform them of significant weather (Emb Cb)
       ahead, a change to some restricted airspace that might affect their route,
-      and possible wake turbulence from a crossing Airbus A380\. They are then
+      and possible wake turbulence from a crossing Airbus A380. They are then
       told to contact another ATC unit as they are crossing an FIR boundary
       shortly. What shall be included in the crew's initial call to the new ATC
       unit?
@@ -3634,7 +3633,7 @@
         correct: false
         why: ""
       - id: O2VHPR9LD
-        text: who's callsign is not known to a station.
+        text: whose callsign is not known to a station.
         correct: true
         why: ""
       - id: OTVYE9CLS

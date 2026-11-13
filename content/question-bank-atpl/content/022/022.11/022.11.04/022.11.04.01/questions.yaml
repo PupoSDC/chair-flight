@@ -83,8 +83,8 @@
     question: "During initialisation of the FMS, the pilot selects the current
       database. He/she enters the route and waypoints for the flight. After
       being distracted during start-up, the pilot is confused and changes some
-      data. In error, he/she also selects the second navigation database of the
-      FMS. This is:"
+      data. They also select the second navigation database of the FMS. This
+      is:"
     options:
       - id: OQZW84CY3
         text: NOT a problem. The route and waypoints remain active.
@@ -291,8 +291,8 @@
       database on the FMS. On the INIT page, the pilot...
     options:
       - id: OS6LXQLE6
-        text: can select the sub-menu of the performance database and can change
-          whatever data he/she thinks is needed.
+        text: can select the sub-menu of the performance database and can whatever data
+          they think is needed.
         correct: false
         why: ""
       - id: OWXWTA741
@@ -351,7 +351,7 @@
   variant:
     type: simple
     question: During pre-flight, while checking the route entered in the FMS by the
-      pilot, it is noticed that the FMS navigation databasee is out-of-date. The
+      pilot, it is noticed that the FMS navigation database is out-of-date. The
       decision is taken to change the FMS navigation database cycle to the
       current cycle. After changing the navigation database cycle...
     options:

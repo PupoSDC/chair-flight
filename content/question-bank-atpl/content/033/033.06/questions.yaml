@@ -47,7 +47,7 @@
   variant:
     type: simple
     question: |-
-      A flight has been diverted off the planned route due to the bad weather. ATC clears the flight to re-join the planned route at TUSKA. The pilot wishes to decide early, if there is enough fuel to safely complete the flight or if a fuel diversion is needed, so he/she checks the fuel at 18:06 UTC. Following the data, what is minimum fuel required at 18:06 UTC to complete the planned flight?
+      A flight has been diverted off the planned route due to the bad weather. ATC clears the flight to re-join the planned route at TUSKA. The pilot wishes to decide early, if there is enough fuel to safely complete the flight or if a fuel diversion is needed, so they check the fuel at 18:06 UTC. Following the data, what is minimum fuel required at 18:06 UTC to complete the planned flight?
 
       Minimum fuel at TUSKA to complete the flight: 144 litres   
       Average fuel flow: 45 kg/h   
@@ -118,7 +118,7 @@
   variant:
     type: simple
     question: |-
-      The actual wind has a big difference from the planned wind. If the pilot keeps the same Heading and TAS, how may s/he note the difference?
+      The actual wind has a big difference from the planned wind. If the pilot keeps the same Heading and TAS, how may they note the difference?
 
       1\. Difference in calculated times.   
        2\. Higher fuel consumption.   
@@ -695,11 +695,11 @@
   variant:
     type: simple
     question: During a navigation flight, the pilot makes in-flight checks to
-      monitor the progress of the flight. During the last leg, he/she notices
-      that the planned timings overhead the chosen waypoints are NOT
-      corresponding to the actual timings, and that the aircraft is getting
-      behind the timings. Both the planned and actual airspeed are 160 kt. What
-      is the main reason for the deviation from the planned timings?
+      monitor the progress of the flight. During the last leg, they notice that
+      the planned timings overhead the chosen waypoints are NOT corresponding to
+      the actual timings, and that the aircraft is getting behind the timings.
+      Both the planned and actual airspeed are 160 kt. What is the main reason
+      for the deviation from the planned timings?
     options:
       - id: OWDA2DTAE
         text: The actual wind (direction or speed) is different to the forecast wind.
@@ -766,7 +766,7 @@
   variant:
     type: simple
     question: |-
-      Refer to AMSTERDAM - Chart 10-2B from Jeppesen GSPRM 2017\.   
+      Refer to AMSTERDAM - Chart 10-2B from Jeppesen GSPRM 2017.   
        An aircraft is flying from MOLIX to the clearance limit at the maximum ground speed allowed overhead the IAF. How long will it take the aircraft to reach the clearance limit?
     options:
       - id: OLBM6NFP8
@@ -800,8 +800,8 @@
     type: simple
     question: An aircraft flies at a TAS of 380 kt. It flies from A to B and back to
       A. Distance AB is 480 NM. When going from A to B, it experiences a
-      headwind componentof 60 kt. The wind remains constant. The duration of the
-      flight will be
+      headwind component of 60 kt. The wind remains constant. The duration of
+      the flight will be
     options:
       - id: OMWSWKQPP
         text: 2 h 35 min.
@@ -871,8 +871,8 @@
     type: simple
     question: Flight planning chart for an aeroplane, states that the time to reach
       FL190 at a given gross mass is 22 minutes and the distance travelled is 66
-      NM (no wind). What will be the distance travelled with a average head wind
-      component of 35 kt?
+      NM (no wind). What will be the distance travelled with an average head
+      wind component of 35 kt?
     options:
       - id: OIYX4RODX
         text: 53 NM
@@ -1218,9 +1218,9 @@
     question: |-
       Calculate the estimated total fuel used from Alpha to Delta:
 
-      Alpha : 14:35\. 52.4 gallons   
-      Beta : 14:45\. 48.7 gallons   
-      Charlie : 15:03\. 46.3 gallons   
+      Alpha : 14:35. 52.4 gallons   
+      Beta : 14:45. 48.7 gallons   
+      Charlie : 15:03. 46.3 gallons   
       Delta : 15:53 ?
     options:
       - id: OZ8AFV9YN
@@ -1388,7 +1388,7 @@
     question: |-
       Refer to figure.
 
-      An aeroplane is performing a commercial air transport flight. Regular fuel checks performed approximately every 30 min as required by the operator. The flight follows the planned route and the flies at the mach number as planned. The fuel measurements are accurate within +/- 20 kg and the fuel flow indicators show a constant 1340 kg/h per engine throughout.
+      An aeroplane is performing a commercial air transport flight. Regular fuel checks performed approximately every 30 min as required by the operator. The flight follows the planned route and then flies at the Mach number as planned. The fuel measurements are accurate within +/- 20 kg and the fuel flow indicators show a constant 1340 kg/h per engine throughout.
 
       What is the reason for the creation of the position of PBD05 + 10 min?
     options:
@@ -1399,7 +1399,7 @@
         correct: false
         why: ""
       - id: OOT6PJX8Z
-        text: The fuel flow appear to be gradually increasing and one way of verifying
+        text: The fuel flow appears to be gradually increasing and one way of verifying
           this is to create a waypoint based on time and use the last known fuel
           depletion rate to assess any trends.
         correct: true
@@ -1411,7 +1411,7 @@
         correct: false
         why: ""
       - id: OZF3TVMAI
-        text: The fuel flow appear to be gradually reducing and in order to verify a
+        text: The fuel flow appears to be gradually reducing and in order to verify a
           revised fuel flow of 2850 kg/h the new waypoint enables this and a
           revised landing fuel may be calculated.
         correct: false
@@ -1473,7 +1473,7 @@
   variant:
     type: simple
     question: |-
-      Due to a drive failure, the slats of a transport category aircraft do not retract properly after take-off.Based on the flight planning data given below, calculate the time penalty in per cent for the flight, based on endurance.
+      Due to a drive failure, the slats of a transport category aircraft do not retract properly after take-off. Based on the flight planning data given below, calculate the time penalty in per cent for the flight, based on endurance.
 
       Usable fuel 8 540 kg   
       Fuel consumption 2 600 kg/h   
@@ -1511,7 +1511,7 @@
   variant:
     type: simple
     question: |-
-      Refer to AMSTERDAM - Chart 10-2A from Jeppesen GSPRM 2017\.   
+      Refer to AMSTERDAM - Chart 10-2A from Jeppesen GSPRM 2017.   
        You are cleared to hold at RIVER via PESER 2A arrival. When passing PESER, a fuel check reveals 5 000 kg of fuel on board. You decide to divert at 3 600 kg of fuel remaining. How long can you hold before you need to divert? Average TAS 260 kt, fuel flow 2 400 kg/h, wind 310° / 20 kt.
     options:
       - id: O8BHFIO1M
@@ -1545,7 +1545,7 @@
     question: |-
       Refer to figure.
 
-      Using the information in the Flight Log extract, calculate the actual fuel used from ALPHA to DELTA.The flight conditions on the leg CHARLIE to DELTA and the fuel consumption remain unchanged.
+      Using the information in the Flight Log extract, calculate the actual fuel used from ALPHA to DELTA. The flight conditions on the leg CHARLIE to DELTA and the fuel consumption remain unchanged.
     options:
       - id: ON937HFQT
         text: 7.0 US gal
@@ -1680,7 +1680,7 @@
   variant:
     type: simple
     question: |-
-      In order to follow the planned track, a pilot flies a True Heading of 040º, which was calculated for the forecast wind of 100°/40kt. The actual wind encountered at his/her altitude is 160°/40kt.
+      In order to follow the planned track, a pilot flies a True Heading of 040º, which was calculated for the forecast wind of 100°/40kt. The actual wind encountered at their altitude is 160°/40kt.
 
       What will the in-flight track be?
     options:
@@ -1760,7 +1760,7 @@
     question: |-
       Refer to figure.
 
-      An aeroplane is using its fuel according to the following rules: Every engine always feeds from the inner tank on their respective side. An aft trim tank transfers all content to the inner tanks when these have less than 4 000 kg. The outer tanks transfer all content to the inner tanks when the inner tanks have less than 3 500 kg.Trim tank and outer tanks of the aeroplane are full. During the flight, the trim tank transfer pump fails when total fuel on board is 18 590 kg.
+      An aeroplane is using its fuel according to the following rules: Every engine always feeds from the inner tank on their respective side. An aft trim tank transfers all content to the inner tanks when these have less than 4 000 kg. The outer tanks transfer all content to the inner tanks when the inner tanks have less than 3 500 kg. Trim tank and outer tanks of the aeroplane are full. During the flight, the trim tank transfer pump fails when total fuel on board is 18 590 kg.
 
       What is the remaining endurance, assuming a fuel consumption of 95 kg/min?
     options:
@@ -2240,27 +2240,27 @@
     question: |-
       Determine the revised estimated landing mass at the destination aerodrome, given the following information:
 
-      DOM: 9 950 Ib   
-       Traffic Load: 3 450 Ib   
-       Remaining Usable Fuel: 2 500 Ib   
-       Remaining Trip Fuel to the destination: 1 200 Ib   
-       Alternate Fuel: 525 Ib   
-       Final Reserve Fuel: 415 Ib
+      DOM: 9 950 lb   
+       Traffic Load: 3 450 lb   
+       Remaining Usable Fuel: 2 500 lb   
+       Remaining Trip Fuel to the destination: 1 200 lb   
+       Alternate Fuel: 525 lb   
+       Final Reserve Fuel: 415 lb
     options:
       - id: OGICAYNIW
-        text: 14 600 Ib
+        text: 14 600 lb
         correct: false
         why: ""
       - id: O5RHDQLRQ
-        text: 15 640 Ib
+        text: 15 640 lb
         correct: false
         why: ""
       - id: OKMI2LBWT
-        text: 14 285 Ib
+        text: 14 285 lb
         correct: false
         why: ""
       - id: OEIJNVSWZ
-        text: 14 700 Ib
+        text: 14 700 lb
         correct: true
         why: ""
 - id: QRIMFYGGV
@@ -2662,7 +2662,7 @@
     question: |-
       For a planned flight the calculated fuel is as follows:
 
-      Trip fuel: sufficient for a planned flight time o 4 h 24 min   
+      Trip fuel: sufficient for a planned flight time of 4 h 24 min   
       Reserve fuel: 30% of the planned trip fuel   
       Start up and Taxi fuel: 15 kg   
       Block fuel: 138 kg
@@ -2834,7 +2834,7 @@
     question: |-
       Refer to figure.
 
-      The annex depicts a pilot's flight log from LPFR to LEMG extracted by a flight planning software. When approaching VJF, the pilots feels abnormal airframe vibrations and reduces speed from VJF. Their IAS and TAS both decrease by 30 kt. What will be the new time to cover the next two legs of their flight?
+      The annex depicts a pilot's flight log from LPFR to LEMG extracted by a flight planning software. When approaching VJF, the pilots feel abnormal airframe vibrations and reduces speed from VJF. Their IAS and TAS both decrease by 30 kt. What will be the new time to cover the next two legs of their flight?
     options:
       - id: OJOKF2N3R
         text: 20 minutes to Estepona then 17 minutes to TOD.
@@ -3061,9 +3061,9 @@
     type: simple
     question: |-
       Refer to figure.  
-      The engines always feed from each individual inner tank (left engine from left tank and right engine From right tank). When the inner tanks each have 4000 kg fuel in them, the trim tank evenly transfers all its contents to the two inner tanks. When the inner tanks each have less than 3500 kg, the outer tanks transfer all their contents into their respective inner tank via transfer valves.
+      The engines always feed from each individual inner tank (left engine from left tank and right engine from right tank). When the inner tanks each have 4000 kg fuel in them, the trim tank evenly transfers all its contents to the two inner tanks. When the inner tanks each have less than 3500 kg, the outer tanks transfer all their contents into their respective inner tank via transfer valves.
 
-      During flight, when the total fuel quantity reach 12730 kg, the left hand transfer valve between the left outer and inner tanks fail to open. What is the remaining endurance for the right engine if the fuel flow of each engine is 5420 kg/h?
+      During flight, when the total fuel quantity reaches 12730 kg, the left hand transfer valve between the left outer and inner tanks fails to open. What is the remaining endurance for the right engine if the fuel flow of each engine is 5420 kg/h?
     options:
       - id: O0ZQ75TM8
         text: 1H 10
@@ -3099,11 +3099,11 @@
       Due to in-flight conditions, what will be the impact on the flight time, if the EFOU airport is considered as an alternate instead of the ESNU airport?
     options:
       - id: O6JBR7V73
-        text: \-5 min
+        text: -5 min
         correct: true
         why: ""
       - id: OT7TVF1ET
-        text: \-2 min
+        text: -2 min
         correct: false
         why: ""
       - id: OCM6A0ILU
@@ -3670,7 +3670,7 @@
   variant:
     type: simple
     question: |-
-      In order to follow the planned track, a pilot flies a True Heading of 040º, which was calculated for the forecast wind of 160°/40kt. The actual wind encountered at his/her altitude is 100°/40kt.
+      In order to follow the planned track, a pilot flies a True Heading of 040º, which was calculated for the forecast wind of 160°/40kt. The actual wind encountered at their altitude is 100°/40kt.
 
       What will the in-flight track be?
     options:

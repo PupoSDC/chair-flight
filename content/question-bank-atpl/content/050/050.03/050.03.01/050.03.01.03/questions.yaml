@@ -267,7 +267,7 @@
     question: What is the formula for relative humidity given temperature and dewpoint?
     options:
       - id: O6L9UC51K
-        text: Td = T ((100 - RH /) 10)
+        text: Td = T - ((100 - RH) / 10)
         correct: false
         why: ""
       - id: OUI0GTHCL
@@ -279,7 +279,7 @@
         correct: true
         why: ""
       - id: OEUNU1XBY
-        text: Td = (100 - RH / 5) + T
+        text: Td = T - ((100 - RH) / 10)
         correct: false
         why: ""
 - id: QDOVFSNH

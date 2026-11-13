@@ -49,7 +49,7 @@
         why: ""
       - id: OOO4HJKH1
         text: The GPWS system relies only on downward-looking radar altimeters and
-          cannot look ahead, while the TWAS/HTWAS can look ahead by also using a
+          cannot look ahead, while the TAWS/HTAWS can look ahead by also using a
           3D terrain database.
         correct: true
         why: ""
@@ -74,7 +74,7 @@
   explanation: ""
   variant:
     type: simple
-    question: What is the aural warning for TWAS Mode 4b?
+    question: What is the aural warning for TAWS Mode 4b?
     options:
       - id: OTPFKFJSI
         text: '"Terrain, terrain"'
@@ -106,7 +106,7 @@
   variant:
     type: simple
     question: 'If the GPWS activates, and alerts the pilot with an aural warning
-      "DON\`T SINK" (twice), it is because:'
+      "DON''T SINK" (twice), it is because:'
     options:
       - id: OSE9GNRXN
         text: during take-off or missed approach manoeuvre, the aeroplane has started to
@@ -840,9 +840,9 @@
   variant:
     type: simple
     question: During a single-pilot operation flight, the pilot is performing
-      paperwork/administrative tasks and he/she is not looking at the
-      instruments panel. How will the pilot be informed if an immediate crew
-      awareness but no immediate action is required?
+      paperwork/administrative tasks and they are not looking at the instruments
+      panel. How will the pilot be informed if an immediate crew awareness but
+      no immediate action is required?
     options:
       - id: OE3P8SZ1X
         text: Amber or yellow warning and aural warning.

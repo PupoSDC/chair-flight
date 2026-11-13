@@ -332,7 +332,7 @@
     question: "Nose wheel steering by rudder pedals is limited to:"
     options:
       - id: 57ti1
-        text: 2&deg; to 6&deg; under all circumstances.
+        text: 2° to 6° under all circumstances.
         correct: false
         why: ""
       - id: mcro1
@@ -526,8 +526,7 @@
   explanation: ""
   variant:
     type: simple
-    question: .20 Is it possible (system wise) to lower the gear by gravity above
-      260 kts?
+    question: Is it possible (system wise) to lower the gear by gravity above 260 kts?
     options:
       - id: on7oy
         text: Yes
@@ -1121,13 +1120,12 @@
         why: ""
       - id: xpaor
         text: LGCIU 1 is connected to the Landing gear indicator panel (as long it is
-          electrically supplied) and supplies informations to the ECAM WHEEL
-          Page
+          electrically supplied) and supplies information to the ECAM WHEEL Page
         correct: true
         why: ""
       - id: 4y47z
         text: LGCIU 1 is connected to the Landing gear indicator panel (as long as no
-          fault is detected) and supplies informations to the ECAM WHEEL Page
+          fault is detected) and supplies information to the ECAM WHEEL Page
         correct: false
         why: ""
 - id: QHYQZLET
@@ -1351,7 +1349,7 @@
         why: ""
       - id: fwuxvj
         text: Antiskid is deactivated and nose wheel steering with the handwheel is lost
-          (Pedal steering remains aviable)
+          (Pedal steering remains available)
         correct: false
         why: ""
       - id: 5q70v
@@ -1419,7 +1417,7 @@
         correct: true
         why: ""
       - id: eh756k
-        text: The landing gear will we retracted except of the gear associated with the
+        text: The landing gear will be retracted except of the gear associated with the
           failure, a L/G GEAR NOT UPLOCKED warning will be triggered
         correct: false
         why: ""
@@ -1445,7 +1443,7 @@
         correct: false
         why: ""
       - id: ei1jni
-        text: the red UNLK lights on the gear indication panel remains on
+        text: the red UNLK lights on the gear indication panel remain on
         correct: true
         why: ""
       - id: qp387
@@ -1547,7 +1545,7 @@
     question: When does the control transfer between the two LGCIU&rsquo;s happen?
     options:
       - id: 374s5
-        text: After engine star
+        text: After engine startt
         correct: false
         why: ""
       - id: 2l4jt
@@ -1602,7 +1600,7 @@
   variant:
     type: simple
     question: "If tire damage is suspected after landing or after a rejected
-      takeoff, the following limitation must be adhered:"
+      takeoff, the following limitation must be adhered to:"
     options:
       - id: 6uiie
         text: If one tire is deflated on one or more gears (i.e. a maximum of three
@@ -1617,7 +1615,7 @@
         why: ""
       - id: 1cqqv
         text: An inspection of the tires is required before taxi, and if the tires are
-          deflated bit not damaged, the aircraft can be taxied at low speed
+          deflated but not damaged, the aircraft can be taxied at low speed
         correct: false
         why: ""
       - id: qxs4s
@@ -1649,7 +1647,7 @@
         correct: false
         why: ""
       - id: ggf3a
-        text: When the actual decelaration is less than 80% of the selected rate
+        text: When the actual deceleration is less than 80% of the selected rate
         correct: false
         why: ""
 - id: QHHGHKTR

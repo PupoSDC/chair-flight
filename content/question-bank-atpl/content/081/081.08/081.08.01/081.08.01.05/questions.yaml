@@ -12,7 +12,7 @@
     type: simple
     question: "An aeroplane is in a steady horizontal turn at a TAS of 195 kt. The
       turn radius is 1000 m. The bank angle is approximately: assume g = 10
-      m/s?"
+      m/s2."
     options:
       - id: OB2PAZJYN
         text: 60°.
@@ -113,19 +113,19 @@
     type: simple
     question: |-
       Refer to Alicante chart 11-2 from Jeppesen GSPRM 2017.  
-      An aircraft is flying outbond on radial 298 from ALT VOR and exceeds the MAX speed for the base turn. From the following, what could be the possible result?
+      An aircraft is flying outbound on radial 298 from ALT VOR and exceeds the MAX speed for the base turn. From the following, what could be the possible result?
     options:
       - id: OUYVB0ARP
         text: The turn radius will decrease and aircraft will fly closer to the airport.
         correct: false
         why: ""
       - id: O2O5TDAKM
-        text: A risk of undershooting the baseturn, ending up too high before final
+        text: A risk of undershooting the base turn, ending up too high before final
           approach fix.
         correct: false
         why: ""
       - id: OJUSS7SYM
-        text: A risk of overshooting the baseturn, ending up too high before final
+        text: A risk of overshooting the base turn, ending up too high before final
           approach fix.
         correct: false
         why: ""
@@ -278,7 +278,7 @@
     type: simple
     question: While briefing for an IFR approach, the pilot notices a maximum speed
       requirement on the reversal procedure. Exceeding the defined maximum speed
-      might be hazardous, because he/she might NOT be able to comply with the
+      might be hazardous, because they might NOT be able to comply with the
       required (1) \_\_\_\_\_, due to exceeding the expected (2) \_\_\_\_\_.
     options:
       - id: O3W6WFOBX
@@ -720,7 +720,7 @@
   variant:
     type: simple
     question: "Two identical aeroplanes A and B, with the same mass, are flying
-      steady level co&ordinated 20 degree bank turns. If the TAS of A is 130 kt
+      steady level co-ordinated 20 degree bank turns. If the TAS of A is 130 kt
       and the TAS of B is 200 kt:"
     options:
       - id: OG0ZICPIU

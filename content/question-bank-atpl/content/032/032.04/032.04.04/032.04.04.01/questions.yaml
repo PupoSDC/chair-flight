@@ -74,7 +74,7 @@
   variant:
     type: simple
     question: A pilot is asked by ATC to descend to FL120 at a point 50 NM away.
-      He/she realizes he/she won’t make it. What should the pilot do?
+      they realize they won’t make it. What should the pilot do?
     options:
       - id: OGJRENYCE
         text: Descend at constant TAS.
@@ -85,7 +85,7 @@
         correct: false
         why: ""
       - id: O1YSBD2RQ
-        text: Descend at MMO all the way down to FL120\. Use speed brakes if needed.
+        text: Descend at MMO all the way down to FL120. Use speed brakes if needed.
         correct: false
         why: ""
       - id: OJ57WU3TY
@@ -108,7 +108,7 @@
   explanation: ""
   variant:
     type: simple
-    question: The drift down requirements are based on the..
+    question: "The drift down requirements are based on the:"
     options:
       - id: O5NKFTSWJ
         text: actual engine thrust output at the altitude of engine failure.
@@ -139,8 +139,8 @@
   variant:
     type: simple
     question: "After a new software update, the engineer has changed the crossover
-      data from 250 kt / M0.75 to 250 kt / M0.78\\. The pilot now must make sure
-      he/she does not exceed:"
+      data from 250 kt / M0.75 to 250 kt / M0.78. The pilot now must make sure
+      they do not exceed:"
     options:
       - id: OWGUTGBHF
         text: VNE
@@ -230,8 +230,8 @@
   explanation: ""
   variant:
     type: simple
-    question: You suffer a decompression at FL370 at what speed should you decent to
-      your MSA?
+    question: You suffer a decompression at FL370 at what speed should you descend
+      to your MSA?
     options:
       - id: OPPIRUUB0
         text: VMO

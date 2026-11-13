@@ -41,10 +41,10 @@
   explanation: ""
   variant:
     type: simple
-    question: If the N/100% regulator is set to &ldquo;N&rdquo;, it delivers a
-      mixture of air and oxygen to the mask, the content of  which varies with
-      cabin altitude. When cabin altitude goes _________, the air inlet closes
-      and the wearer breathes  100 % oxygen.
+    question: If the N/100% regulator is set to "N", it delivers a mixture of air
+      and oxygen to the mask, the content of  which varies with cabin altitude.
+      When cabin altitude goes _________, the air inlet closes and the wearer
+      breathes  100 % oxygen.
     options:
       - id: ks7j3
         text: Above 35000 feet
@@ -161,7 +161,7 @@
   variant:
     type: simple
     question: "Oxygen system (cockpit): on ECAM DOOR/OXY page, CKPT OXY indication
-      is normally green .It becomes  amber when:"
+      is normally green. It becomes  amber when:"
     options:
       - id: p6mni
         text: Low oxygen pressure is detected
@@ -482,13 +482,13 @@
     options:
       - id: nqwef
         text: Overpressure supply is automatically started, when the cabin altitude
-          exceeds 25&rsquo;000ft
+          exceeds 25,000 ft
         correct: false
         why: ""
       - id: 1kyw6
         text: Overpressure supply is only available when the N/100% selector is set to
           100% and will be automatically  started, when the cabin altitude
-          exceeds 30&rsquo;000ft
+          exceeds 30,000 ft
         correct: true
         why: ""
       - id: 1dxxt
@@ -499,7 +499,7 @@
       - id: dsxzi
         text: Overpressure supply is available when the N/100% selector is set to 100%
           or NORMAL and will be  automatically started, when the cabin altitude
-          exceeds 30&rsquo;000ft
+          exceeds 30,000 ft
         correct: false
         why: ""
 - id: QVJQUXHB

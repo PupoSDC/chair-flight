@@ -681,11 +681,11 @@
         correct: false
         why: ""
       - id: OOGVUSANU
-        text: He has to decrease his speed.
+        text: The pilot has to increase their speed.
         correct: false
         why: ""
       - id: OFTUSTWDA
-        text: He has to increase his speed.
+        text: The pilot has to increase their speed.
         correct: true
         why: ""
       - id: OENSRY5IS
@@ -925,7 +925,7 @@
   explanation: ""
   variant:
     type: simple
-    question: When to use the formula 9\*square root of the tyre pressure in PSI?
+    question: When to use the formula 9 x square root of the tyre pressure in PSI?
     options:
       - id: OAIC8UU7Z
         text: For dynamic aqua-planning speed
@@ -1237,8 +1237,9 @@
   explanation: ""
   variant:
     type: simple
-    question: If the climb gradient in still air 3.2 percent, the height achieved is
-      640 ft, what is the distance travelled in the climb in still air?
+    question: If the climb gradient in still air is 3.2 percent, and the height
+      achieved is 640 ft, what is the distance travelled in the climb in still
+      air?
     options:
       - id: OEW5HBT6V
         text: 2.03 NM
@@ -1435,7 +1436,7 @@
     question: "In a turn at a constant angle of bank, the rate of turn is:"
     options:
       - id: OVBHOUIBD
-        text: independent to the aircraft TAS.
+        text: independent of the aircraft TAS.
         correct: false
         why: ""
       - id: O4FYLM6XC
@@ -1693,7 +1694,7 @@
     question: Two aircraft of the same weight, configuration and altitude are
       climbing with the same pitch angle. Assume no compressibility effects and
       a standard atmosphere. Aircraft A is at Mach 0.75 and aircraft B is at
-      Mach 0.73\. Which will have the highest rate of climb?
+      Mach 0.73. Which will have the highest rate of climb?
     options:
       - id: O3UP13O9B
         text: Aircraft A below FL 300, thereafter Aircraft B
@@ -1823,8 +1824,8 @@
       the aerodrome pressure altitude:"
     options:
       - id: OOOK0HJ57
-        text: has no effect on the maximum permitted take-of mass up to 5000 ft pressure
-          altitude above which it increases.
+        text: has no effect on the maximum permitted take-off mass up to 5000 ft
+          pressure altitude above which it increases.
         correct: false
         why: ""
       - id: ON7ZAUP3P
@@ -2450,7 +2451,7 @@
         correct: false
         why: ""
       - id: OUI7QKLEW
-        text: Ice with a layer of water (any depth) on top of itor ice that is melting.
+        text: Ice with a layer of water (any depth) on top of it or ice that is melting.
         correct: true
         why: ""
       - id: OD2PAKJF6
@@ -2458,7 +2459,7 @@
         correct: false
         why: ""
       - id: O2BZWRYR7
-        text: Ice with a layer of water (more than 3 mm) on top of itor ice that is
+        text: Ice with a layer of water (more than 3 mm) on top of it or ice that is
           melting.
         correct: false
         why: ""
@@ -2511,7 +2512,7 @@
     question: Your route of the day is London-Paris-London in a performance class B
       aeroplane. During your approach into London, the QNH has reduced
       considerably since your earlier departure, with a small increase in
-      temperature. You expect your aircrafts performance to (1) \_\_\_\_\_ as
+      temperature. You expect your aircraft's performance to (1) \_\_\_\_\_ as
       the landing distance required will (2) \_\_\_\_\_ and the missed approach
       climb gradient will (3) \_\_\_\_\_.
     options:
@@ -2611,7 +2612,7 @@
     question: An air traffic controller clears an aeroplane to climb to FL250 with a
       minimum required vertical speed of 1500 fpm. The pilot is maintaining a
       constant CAS of 288 kt, which gives a vertical speed of 1700 fpm whilst
-      climbing through FL100\. If the pilot maintains the current settings, what
+      climbing through FL100. If the pilot maintains the current settings, what
       will happen to the vertical speed as the altitude increases?
     options:
       - id: O0KOF7VM5
@@ -2772,8 +2773,8 @@
     question: Consider a standard atmosphere and NO performance degradation due to
       increased altitude. During climb through FL260 with a constant CAS of 300
       kt the indicated rate of climb is 2 000 feet per minute, and the Mach
-      number is 0.76\. You decide to continue the climb and maintain a constant
-      speed of M 0.76\. What will happen to the Rate of Climb and TAS?
+      number is 0.76. You decide to continue the climb and maintain a constant
+      speed of M 0.76. What will happen to the Rate of Climb and TAS?
     options:
       - id: OPYUYC1U7
         text: Rate of Climb will increase and TAS will decrease.
@@ -3774,19 +3775,19 @@
       Performance Class B.
     options:
       - id: OQQMM3OWC
-        text: 18; 5700 Kg
+        text: 18; 5700 kg
         correct: false
         why: ""
       - id: OYIPZCYEF
-        text: 9; 12500 Kg
+        text: 9; 12500 kg
         correct: false
         why: ""
       - id: OZRQBZN0R
-        text: 9; 5700 Kg
+        text: 9; 5700 kg
         correct: true
         why: ""
       - id: OWHLFZQR7
-        text: 18; 12500 Kg
+        text: 18; 12500 kg
         correct: false
         why: ""
 - id: QRJZMBYVG
@@ -3847,7 +3848,7 @@
         correct: true
         why: ""
       - id: OIQJDJBWM
-        text: (1) +1.25%; (2) +2.%
+        text: (1) +1.25%; (2) +2.5%
         correct: false
         why: ""
       - id: OGOLPUNLB
@@ -4297,7 +4298,7 @@
   variant:
     type: simple
     question: For take-off an aircraft requires a headwind component of at least 10
-      kt and has a cross wind limitation of 35 kt.If the angle between the wind
+      kt and has a cross wind limitation of 35 kt. If the angle between the wind
       direction and the runway is 60°, what are the minimum and maximum
       allowable wind speeds?
     options:
@@ -4795,7 +4796,7 @@
   variant:
     type: simple
     question: |-
-      A departure procedure require a climb gradient of 4.6% to 1300 ft in order to maintain obstacle clearance.Given the data below, estimate the minimum rate of climb required.
+      A departure procedure require a climb gradient of 4.6% to 1300 ft obstacle clearance. Given the data below, estimate the minimum rate of climb required.
 
       TAS: 125 kt   
       Average headwind component: 25 kt
@@ -4951,11 +4952,11 @@
   explanation: ""
   variant:
     type: simple
-    question: During flight, the pilot notices that he/she does not have enough
-      final reserve fuel. The aircraft is 40 minutes away from the departure (A)
-      and 50 minutes to the destination (B). There is a runway of another
-      aerodrome (C) in sight but ATC reports that the weather is below minimum.
-      What should he/she do?
+    question: During flight, notices that they do not have enough final reserve
+      fuel. What should they do?. The aircraft is 40 minutes away from the
+      departure (A) and 50 minutes to the destination (B). There is a runway of
+      another aerodrome (C) in sight but ATC reports that the weather is below
+      minimum. What should he/she do?
     options:
       - id: OB7EYBAVZ
         text: Declare an emergency and ask ATC for further instructions.

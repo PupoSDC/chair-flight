@@ -114,7 +114,7 @@
     question: "An aircraft is in cruise when the pilots hear the following radio
       transmission: “PAN PAN PAN PAN PAN PAN, Langen Radar, D-JLAA, we have a
       sick passenger, request vector to Augsburg airport, position 20 NM west of
-      Augsburg FL160, heading 285º. What category of radio message is this?"
+      Augsburg FL160, heading 285º.” What category of radio message is this?"
     options:
       - id: OX4H7U3VR
         text: Urgency message
@@ -129,7 +129,7 @@
         correct: false
         why: ""
       - id: OHXCSWV5M
-        text: Flight regulatory massage
+        text: Flight regulatory message
         correct: false
         why: ""
 - id: Q9XBMCFFO
@@ -211,7 +211,7 @@
     type: simple
     question: 'F-HDJF has already been in contact with Lille Tower, and sends the
       following message: "PAN PAN, PAN PAN, PAN PAN, Lille Tower, F-HDJF, smoke
-      on board, right hand base for runway 20,requesting immediate landing
+      on board, right hand base for runway 20, requesting immediate landing
       runway 20." Which of the following statements is correct as regards the
       compliance of the message with the standards for urgency and emergency
       transmissions?'
@@ -487,7 +487,7 @@
       the pilot take?
     options:
       - id: OQH1KXUYR
-        text: Immediately inform the controller of his/her position in order to provide
+        text: Immediately inform the controller of their position in order to provide
           assistance if necessary.
         correct: false
         why: ""
@@ -587,8 +587,8 @@
   variant:
     type: simple
     question: An aircraft experiences an engine failure which requires a down-drift.
-      Even though the pilot does not expect anything to be wrong with his/her
-      radio, He/she cannot seem to communicate with the ATC. What shall he/she
+      Even though the pilot does not expect anything to be wrong with their
+      radio, they cannot seem to communicate with the ATC. What shall they
       squawk?
     options:
       - id: OMRUHK60Z
@@ -619,7 +619,7 @@
   variant:
     type: simple
     question: Who can be allowed to communicate on a discrete frequency on the
-      ground after and aircraft has declared an emergency?
+      ground after an aircraft has declared an emergency?
     options:
       - id: O3YA60PON
         text: ATC and every firefighter.
@@ -650,8 +650,8 @@
   explanation: ""
   variant:
     type: simple
-    question: If a pilot is in a state of urgency, which frequency must he/she use
-      to transmit such a message to ATC?
+    question: If a pilot is in a state of urgency, which frequency must they use to
+      transmit such a message to ATC?
     options:
       - id: OTBZF8EGA
         text: The international guard frequency.
@@ -662,7 +662,7 @@
         correct: false
         why: ""
       - id: OGSCFEBKS
-        text: His/her current air-ground frequency.
+        text: Their current air-ground frequency.
         correct: true
         why: ""
       - id: OAKZ6I6YB
@@ -752,7 +752,7 @@
   variant:
     type: simple
     question: |-
-      A certain message is preceded by "PAN PAN", spoken three times. What is the preferred sequence for transmitting the message\`s content to ATC?
+      A certain message is preceded by "PAN PAN", spoken three times. What is the preferred sequence for transmitting the message's content to ATC?
 
       1\. Identification of the aircraft   
       2\. Intention of the pilot-in-command   
@@ -788,11 +788,11 @@
   explanation: ""
   variant:
     type: simple
-    question: "A pilot is performing a VFR flight. He/she is just about to contact
-      ATC for clearance to cross controlled airspace when he/she hears the
+    question: "A pilot is performing a VFR flight. They are just about to contact
+      ATC for clearance to cross controlled airspace when they hear the
       following radio transmission: “Mayday, Mayday, Mayday, Langen Radar,
       D-ILAA, engine failure, request vectors to nearest airport, position 20 nm
-      west of Augsburg”. What should he/she do?"
+      west of Augsburg”. What should they do?"
     options:
       - id: OE4XSGBUR
         text: Contact ATC and request your clearance immediately to avoid blocking the
@@ -968,28 +968,28 @@
   variant:
     type: simple
     question: 'The pilot of a single engined piston engine aircraft on an IFR flight
-      experiences an engine failure. He/she has just finished transmitting a
+      experiences an engine failure. They have just finished transmitting a
       distress message to Bern radar, which has been acknowledged already. The
       pilot suddenly hears the following transmission from Bern radar: "All
-      stations stop transmitting, mayday". What does this mean to him/her?'
+      stations stop transmitting, mayday". What does this mean to them?'
     options:
       - id: ODD0TQWDT
-        text: He/she should stop transmitting until all other aircraft have left the
+        text: They should stop transmitting until all other aircraft have left the
           frequency.
         correct: false
         why: ""
       - id: OZG7DQIE7
-        text: He/she should continue talking to Bern radar and provide updates on
-          his/her intentions.
+        text: They should continue talking to Bern radar and provide updates on their
+          intentions.
         correct: true
         why: ""
       - id: OJV22WCBZ
-        text: He/she should stop transmitting until he/she hears the message "Distress
+        text: They should stop transmitting until they hear the message "Distress
           traffic ended" on the frequency.
         correct: false
         why: ""
       - id: OGZ3O1TRI
-        text: Only if the situation becomes worse should he/she continue talking to Bern
+        text: Only if the situation becomes worse should they continue talking to Bern
           radar.
         correct: false
         why: ""

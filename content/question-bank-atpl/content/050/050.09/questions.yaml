@@ -13,9 +13,9 @@
     type: simple
     question: It is 17:30 UTC on a day in March. You are listening to the ATIS for
       an aerodrome with a single runway near London. The following is reported
-      ‘’Visibility 3000 metres in haze, sky clear’’. When about to land on
-      Runway 27, the runway in use, what flight visibility would you expect? (NO
-      RVR information is given in the ATIS message)
+      ‘Visibility 3000 metres in haze, sky clear’. When about to land on Runway
+      27, the runway in use, what flight visibility would you expect? (NO RVR
+      information is given in the ATIS message)
     options:
       - id: OKEIF4AXT
         text: Considerably less than 3 000 m, and less than 1 500 m into the sun.
@@ -769,9 +769,10 @@
   variant:
     type: simple
     question: "A pilot has just finished reviewing the meteorological information
-      for a flight within central Europe.This his/her last flight for the month
-      of July. He/she noticed that the destination weather report warns of
-      tornadoes in the area. This is:"
+      for a flight within central within central Europe. This is their last
+      flight for the month of July. They noticed that the destination weather
+      report warns of tornadoes in the area. This is: He/she noticed that the
+      destination weather report warns of tornadoes in the area. This is:"
     options:
       - id: OI4LJLE5W
         text: NOT possible, as tornadoes only occur in North America.
@@ -966,9 +967,9 @@
     question: Shortly after take-off in an area with local storms, a pilot observes
       a thunderstorm drawing air into its base cloud, and a narrow funnel-shaped
       cloud extending downwards from the cloud, touching the Earth's surface.
-      The pilot can see that the local wind velocity is very high arround this
-      funnel by observing the plants, dust and debris on the ground. The
-      phenomenon disappears within a few minutes. The pilot has observed a...
+      very high around this funnel by observing the plants, dust and debris on
+      the ground. The phenomenon disappears within a few minutes. The pilot has
+      observed a...
     options:
       - id: OF8AJIWSL
         text: cyclone.
@@ -2218,7 +2219,7 @@
     question: |-
       A pilot will depart from ESSA (Stockholm Arlanda) airport. During the briefing the meteorologist informs them that there is strong instability in the area and provides the following special weather report.
 
-      SPECI ESSA 31035G45KT 270V360 3000 BKNO10CB BKNO23TCU OVC040 24/20 Q0990 RERA WS.
+      SPECI ESSA 31035G45KT 270V360 3000 BKN010CB BKN023TCU OVC040 24/20 Q0990 RERA WS.
 
       Given the available information, a tornado...
     options:
@@ -2410,7 +2411,7 @@
     type: simple
     question: A pilot of a small single-engine piston aircraft is en-route in icing
       conditions. The pilot has been periodically checking the wings for ice
-      accretion initially; he/she notices some slight translucent ice and the
+      accretion initially; they notice some slight translucent ice and the
       formation of white horns, followed shortly after that by the ice changing
       to an opaque (white) colour with a uniform thickness and some remaining
       horn formation. What are these observations typical characteristics of?
@@ -2580,8 +2581,7 @@
         correct: false
         why: ""
       - id: OY9UUAETQ
-        text: Close to the tropopause within cumulonimbus clouds that have in Arctic
-          regions.
+        text: Close to the tropopause within cumulonimbus clouds in Arctic regions.
         correct: false
         why: ""
       - id: OEJVWQU25
@@ -3398,11 +3398,11 @@
         correct: false
         why: ""
       - id: OX9I21Z1G
-        text: Between -45⁰C and -10⁰C.
+        text: -45°C and -10°C.
         correct: false
         why: ""
       - id: OBRHPE8VG
-        text: Between -10⁰C and +30⁰C.
+        text: -10°C and +30°C.
         correct: true
         why: ""
 - id: QYA9Y12BA

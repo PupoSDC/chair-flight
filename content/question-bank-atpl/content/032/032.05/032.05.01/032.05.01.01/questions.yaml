@@ -12,7 +12,7 @@
     type: simple
     question: |-
       Refer to figure or CAP file 4.31.  
-      The pilot of an MRJT aeroplane after recognizing a generator failure during the take-off roll, he/she decides to reject the take-off and taxi off the runway to hold on a taxiway. Resetting the generator after 10 minutes, he/she realizes that it functions properly, so the flight can resume. Given the following information, what is the minimum cooling time before the next take-off, assuming that the taxi distance is negligible?
+      The pilot of an MRJT aeroplane after recognizing a generator failure during the take-off roll, they decide to reject the take-off and taxi off the runway to hold on a taxiway. Resetting the generator after 10 minutes, they realize that it functions properly, so the flight can resume. Given the following information, what is the minimum cooling time before the next take-off, assuming that the taxi distance is negligible?
 
       Take-off mass: 57 500 kg  
       Speed when fault occurred: 90 kt  
@@ -114,7 +114,7 @@
     type: simple
     question: |-
       Refer to figure or use CAP 698 figure 4.6.  
-      An MRJT aeroplane is planning a take-off from runway 26R at Munich (EDDM). Determine the tyre- speed limited take off mass, given:
+      An MRJT aeroplane is planning a take-off from runway 26R at Munich (EDDM). Determine the tyre-speed limited take-off mass, given:
 
       Airport pressure altitude: 1 487 ft  
       OAT: +31ºC  
@@ -306,7 +306,7 @@
     type: simple
     question: |-
       Refer to figures or CAP698 MRJT take-off density subgraph and file 4.9.  
-      Given the following information, determine the V**1** \- V**R** \- V**2** speeds for an MRJT aeroplane.
+      Given the following information, determine the V**1** - V**R** - V**2** speeds for an MRJT aeroplane.
 
       Runway: 27  
       Runway slope: 0.1% DOWN  
@@ -318,19 +318,19 @@
       Flaps: 15º
     options:
       - id: ONZOX5M9T
-        text: V1 \- 125 kt, VR \- 126 kt, V2 \- 135 kt.
+        text: V1 - 125 kt, VR - 126 kt, V2 - 135 kt.
         correct: true
         why: ""
       - id: OO6FH5LTQ
-        text: V1 \- 139 kt, VR \- 140 kt, V2 \- 146 kt.
+        text: V1 - 139 kt, VR - 140 kt, V2 - 146 kt.
         correct: false
         why: ""
       - id: OPFJKLZ2B
-        text: V1 \- 146 kt, VR \- 149 kt, V2 \- 155 kt.
+        text: V1 - 146 kt, VR - 149 kt, V2 - 155 kt.
         correct: false
         why: ""
       - id: OYIXROTTF
-        text: V1 \- 132 kt, VR \- 134 kt, V2 \- 143 kt.
+        text: V1 - 132 kt, VR - 134 kt, V2 - 143 kt.
         correct: false
         why: ""
 - id: QEWTLIRY4
@@ -476,19 +476,19 @@
        1% downslope
     options:
       - id: O7YDAJROG
-        text: V1\=143, VR\=146, V2\=153
+        text: V1=143, VR=146, V2=153
         correct: false
         why: ""
       - id: OWC8L5QUF
-        text: V1\=143, VR\=148, V2\=155
+        text: V1=143, VR=148, V2=155
         correct: true
         why: ""
       - id: ODDUI7D5R
-        text: V1\=145, VR\=148, V2\=155
+        text: V1=145, VR=148, V2=155
         correct: false
         why: ""
       - id: O3IFROIP5
-        text: V1\=145, VR\=147, V2\=155
+        text: V1=145, VR=147, V2=155
         correct: false
         why: ""
 - id: QKODB1H5E
@@ -532,19 +532,19 @@
       Wind component: 5 kt tailwind
     options:
       - id: OJI791TVD
-        text: V1 \= 142 kt, VR \= 143 kt and V2 \= 149 kt
+        text: V1 = 142 kt, VR = 143 kt and V2 = 149 kt
         correct: false
         why: ""
       - id: OGN7AVNO9
-        text: V1 \= 140 kt, VR \= 143 kt and V2 \= 149 kt
+        text: V1 = 140 kt, VR = 143 kt and V2 = 149 kt
         correct: true
         why: ""
       - id: OIQLNKLY1
-        text: V1 \= 143 kt, VR \= 146 kt and V2 \= 151 kt
+        text: V1 = 143 kt, VR = 146 kt and V2 = 151 kt
         correct: false
         why: ""
       - id: ONLTY3MDJ
-        text: V1 \= 136 kt, VR \= 140 kt and V2 \= 151 kt
+        text: V1 = 136 kt, VR = 140 kt and V2 = 151 kt
         correct: false
         why: ""
 - id: QEZSSDBM
@@ -639,7 +639,7 @@
       Runway: WET  
       Engine anti ice: OFF  
       Packs: OFF  
-      Take of mass: 72 820 kg
+      Take-off mass: 72 820 kg
     options:
       - id: OUJAVRCJA
         text: 41°C and V1 140 kt, VR 140 kt and V2 144 kt
@@ -715,7 +715,7 @@
     type: simple
     question: |-
       Refer to figure or CAP 698 file 4.6.  
-      Given the following information, what is the tyre speed limited take-off mass for a Medium Range Jet Transport (MTJT) which is scheduled to depart from Madrid airport?
+      Given the following information, what is the tyre speed limited take-off mass for a Medium Range Jet Transport (MRJT) which is scheduled to depart from Madrid airport?
 
       Airport Elevation: 1998 ft  
       OAT: +38⁰C  
@@ -798,7 +798,7 @@
 
       Using the Regulated Take-Off Weight (RTOW) table for runway 08 of Paris-Orly airport, determine the V1/VR/V2 for a take-off configuration CONF 3, given the following conditions:
 
-      QNH: 1003 HPA   
+      QNH: 1003 hPa   
        OAT: +33ºC   
        Wind: calm   
        Runway condition: WET   
@@ -881,7 +881,7 @@
 
       Using the Regulated Take-Off Weight (RTOW) table for runway 08 of Paris-Orly airport, determine the performance limited take-off mass (to the nearest 100 kg) for a CONF 1+F take-off in the following conditions, interpolating as necessary:
 
-      QNH: 999 HPA   
+      QNH: 999 hPa   
        OAT: -3°C   
        Wind: 10 kt headwind   
        Runway condition: DRY   
@@ -1002,18 +1002,18 @@
       Assumed/Flex T°: 63°C
     options:
       - id: OUNUKNP6V
-        text: V1 \= 142kt , VR\=142kt, and V2\=146kt
+        text: V1 = 142kt , VR=142kt, and V2=146kt
         correct: false
         why: ""
       - id: O0PH1OOFE
-        text: V1 \= 136kt , VR\=139kt, and V2\=145kt
+        text: V1 = 136kt , VR=139kt, and V2=145kt
         correct: false
         why: ""
       - id: OD7IMTU7P
-        text: V1 \= 123kt , VR\=126kt, and V2\=132kt
+        text: V1 = 123kt , VR=126kt, and V2=132kt
         correct: true
         why: ""
       - id: OJJKSK75J
-        text: V1 \= 126kt , VR\=129kt, and V2\=135kt
+        text: V1 = 126kt , VR=129kt, and V2=135kt
         correct: false
         why: ""

@@ -12,7 +12,7 @@
   variant:
     type: simple
     question: "In a dual FMS architecture, when an incompatibility between the two
-      FMC\\`s occurs: NB: FMC = Flight Management Computer"
+      FMC's occurs: NB: FMC = Flight Management Computer"
     options:
       - id: O3XLMV6UY
         text: both FMC's are working independently; they are linked only to their own
@@ -28,7 +28,7 @@
         correct: false
         why: ""
       - id: OJHIAKIJ9
-        text: both FMC\`s are automatically switched OFF.
+        text: both FMC's are automatically switched OFF.
         correct: false
         why: ""
 - id: QLPWSXNS
@@ -187,12 +187,12 @@
       FMC = Flight Management Computer
     options:
       - id: OG0IB3IQ1
-        text: In \`Single Mode\` both FMCs are decoupled, and there is zero
-          cross-checking between them.
+        text: In 'Single Mode' both FMCs are decoupled, and there is zero cross-checking
+          between them.
         correct: false
         why: ""
       - id: OSLJFOVLV
-        text: In \`Independent Mode\` both FMCs are decoupled, and there is zero
+        text: In 'Independent Mode' both FMCs are decoupled, and there is zero
           cross-checking between them.
         correct: true
         why: ""
@@ -202,8 +202,8 @@
         correct: false
         why: ""
       - id: OT15EIKWU
-        text: In \`Dual Mode\` both FMCs independently process the pilots\` inputs,
-          there is zero cross-checking between the FMCs.
+        text: In 'Dual Mode' both FMCs independently process the pilots' inputs, there
+          is zero cross-checking between the FMCs.
         correct: false
         why: ""
 - id: QRQVKMVI
@@ -583,7 +583,7 @@
   variant:
     type: simple
     question: |-
-      An aircraft is equipped with a dual FMS configuration. The Pilot Monitoring (PM) enters flight plan data through his/her Multifunction Control and Display Unit (MCDU). Soon after, the crew realises that those data are NOT shown on the cross-side MCDU, and the PM reads an alerting message concerning the operational mode of the FMSs.
+      An aircraft is equipped with a dual FMS configuration. through their Multifunction Control and Display Unit (MCDU) Soon after, the crew realises that those data are NOT shown on the cross-side MCDU, and the PM reads an alerting message concerning the operational mode of the FMSs.
 
       The FMS operate in (1) \_\_\_\_\_ mode, there is a problem with data transferring over the (2) \_\_\_\_\_ bus, and each MCDU communicates only with the (3) \_\_\_\_\_ FMS.
     options:

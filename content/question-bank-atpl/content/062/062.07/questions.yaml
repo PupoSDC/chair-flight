@@ -111,8 +111,8 @@
   variant:
     type: simple
     question: "A student pilot wants to practise an RNP APCH to LPV minima. In the
-      planning phase, the pilot finds out he/she needs a FAS data block (FAS
-      DB). What is the FAS data block used for? It is used to:"
+      planning phase, the pilot finds out they need a FAS data block (FAS DB).
+      What is the FAS data block used for? It is used to:"
     options:
       - id: OGR6ZRKPM
         text: Select a minimum descent altitude depending on the outside air
@@ -357,7 +357,7 @@
         correct: false
         why: ""
       - id: OK3KVGTBR
-        text: Be equipped with atleast two LRNSs.
+        text: Be equipped with at least two LRNSs.
         correct: false
         why: ""
       - id: OAQNBGAAW
@@ -626,7 +626,7 @@
         correct: false
         why: ""
       - id: OFPWPCLGO
-        text: No, because your aircraft may not have the requeriments for RNP 2.
+        text: No, because your aircraft may not have the requirements for RNP 2.
         correct: true
         why: ""
 - id: QVTUQSRUS
@@ -885,7 +885,7 @@
         correct: false
         why: ""
       - id: ORDIHSTL9
-        text: CAT I, II, II minima.
+        text: CAT I, II, III minima.
         correct: false
         why: ""
       - id: OXMM611FR
@@ -1707,8 +1707,8 @@
   variant:
     type: simple
     question: Operation in RNAV 10 airspace requires as a minimum a certain number
-      of independent and serviceable Long Range Navigation Systems (LRNSs).The
-      minimum equipment required consists of at least..
+      of independent and serviceable (LRNSs). The minimum equipment required
+      consists of at least..
     options:
       - id: OSPBONVEL
         text: one LRNS using input from VOR/DME or DME/DME RNAV equipment.
@@ -1851,13 +1851,12 @@
         correct: false
         why: ""
       - id: OKVIYXMDM
-        text: Advise ATC, that he/she is UNABLE to comply and should request a different
-          SID.
+        text: Advise ATC that they are UNABLE to comply to comply and should request a
+          different SID.
         correct: true
         why: ""
       - id: OH5OJPAD2
-        text: He/she shall accept the SID and monitor system performance during
-          departure.
+        text: They shall accept the SID system performance during departure.
         correct: false
         why: ""
       - id: OUWFHNWXN
@@ -3342,7 +3341,7 @@
   explanation: ""
   variant:
     type: simple
-    question: "Consider RNAV and RNP system functions. An “offset flight path’’ is:"
+    question: "Consider RNAV and RNP system functions. An “offset flight path” is:"
     options:
       - id: OVJ5XCQA3
         text: A parallel path that is offset only to the left of the original active

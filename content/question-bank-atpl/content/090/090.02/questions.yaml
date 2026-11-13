@@ -267,7 +267,7 @@
       "TC-BTO, TRANSMITTING BLIND DUE TO RECEIVER FAILURE...
     options:
       - id: OAEDXO4BP
-        text: ...RIGHT TURN. CONTINUING VFR FOR LANDING RWY 09\. NEXT REPORT FINAL."
+        text: ...RIGHT TURN. CONTINUING VFR FOR LANDING RWY 09. NEXT REPORT FINAL."
         correct: true
         why: ""
       - id: O9W9SQX8W
@@ -407,7 +407,7 @@
       - id: OFSODAB6J
         text: Depending on the rules of the State where the station is located, the
           elements may include a prefix for the frequency (eg 118.725), its
-          location, and a suffix (e.g. RADAR)) indicating the type of service
+          location, and a suffix (e.g. RADAR) indicating the type of service
           being provided.
         correct: false
         why: ""
@@ -497,8 +497,7 @@
   explanation: ""
   variant:
     type: simple
-    question: A pilot wishes to obtain bearing information during flight. He/she
-      should...
+    question: A pilot wishes to obtain bearing information during flight. They should...
     options:
       - id: OZ3C0BW4P
         text: request this on 121.5 MHz.
@@ -724,7 +723,7 @@
   variant:
     type: simple
     question: You are Pilot-In-Command of a scheduled international commercial air
-      transport flight, flying at FL140\. Your aircraft is equipped with all the
+      transport flight, flying at FL140. Your aircraft is equipped with all the
       necessary communication and navigation equipment. After 30 minutes of
       flight at cruising altitude, you notice the unserviceability of the
       air-ground data link. Weather conditions at the moment are moderate to
@@ -1122,8 +1121,8 @@
   variant:
     type: simple
     question: A pilot encounters turbulence and is unable to maintain an RNAV route
-      as a result. ATC asks if he/she is able to navigate that route. What
-      should he/she transmit?
+      as a result. ATC asks if they are able to navigate that route. What should
+      they transmit?
     options:
       - id: ORSPMTZFR
         text: Unable \[route\] due RNAV type.
@@ -1185,10 +1184,10 @@
   explanation: ""
   variant:
     type: simple
-    question: An aircraft is flying on a track of 060º directly towards his/her
+    question: An aircraft is flying on a track of 060º directly towards their
       planned destination aerodrome. After establishing communication with an
       ATC radar unit, the pilot is instructed to “Turn right heading one five
-      zero degrees for identification”. He/she should…
+      zero degrees for identification”. They should…
     options:
       - id: OAC5HGTVL
         text: Turn right onto a magnetic heading of 150° and press the IDENT button on
@@ -1317,7 +1316,7 @@
     question: Upon reporting runway vacated, the tower controller passes taxi
       instructions specifying the route the aircraft should follow to get to its
       parking position, which the pilot reads back correctly. The controller
-      then instructs the pilot to "MONITOR GROUND 121,7?". What should the pilot
+      then instructs the pilot to "MONITOR GROUND 121.7?". What should the pilot
       now do?
     options:
       - id: OB8G8CNL9
@@ -1496,12 +1495,12 @@
   variant:
     type: simple
     question: 'A pilot is flying IFR in class D airspace and receives the following
-      message on the radio: "Sunny Air 125, unknown traffic 12 o\`clock 3 miles
+      message on the radio: "Sunny Air 125, unknown traffic 12 o''clock 3 miles
       opposite direction 600 feet below descending". The pilot is not in sight
-      of this traffic. He/she reads back..'
+      of this traffic. They read back..'
     options:
       - id: OY77R855C
-        text: '"Unknown traffic 12 o\`clock 3 miles 600 feet below descending copied,
+        text: '"Unknown traffic 12 o''clock 3 miles 600 feet below descending copied,
           looking out", then files a report on this near collision.'
         correct: false
         why: ""
@@ -1597,10 +1596,10 @@
   variant:
     type: simple
     question: What is the correct phrase to use in radiotelephony communication,
-      when asking about the readability of your transmission?​​​​
+      when asking about the readability of your transmission?
     options:
       - id: OSJWWGGHP
-        text: Read back.​
+        text: Read back.
         correct: false
         why: ""
       - id: OY8HKB9YQ
@@ -1608,7 +1607,7 @@
         correct: true
         why: ""
       - id: OUPB2HK7S
-        text: Monitor.​​​​
+        text: Monitor.
         correct: false
         why: ""
       - id: O4TBD9DUB
@@ -1761,7 +1760,7 @@
         correct: false
         why: ""
       - id: ON7NTN8VO
-        text: Ask the controller if he/she understood.
+        text: Ask the controller if they understood.
         correct: false
         why: ""
       - id: OFY4WYEYE
@@ -1816,7 +1815,7 @@
     type: simple
     question: An aircraft is flying under radar control over Germany, and the
       controller instructs the pilot to maintain 280 kt. Upon arriving at the
-      FIR’s limits and crossing the border, what should he/she say to Brussels
+      FIR’s limits and crossing the border, what should they say to Brussels
       Control?
     options:
       - id: O2QRGUDTW
@@ -1879,7 +1878,7 @@
   variant:
     type: simple
     question: It is the 23rd December and the pilot is in London, the local time is
-      2325 hr. What shall he/she readback for a time check?
+      2325 hr. What shall they read back for a time check?
     options:
       - id: OTIQKY8CQ
         text: Two three two five.
@@ -1890,7 +1889,7 @@
         correct: false
         why: ""
       - id: OXFFUPJHQ
-        text: Two thre two five UTC.
+        text: Two three two five UTC.
         correct: false
         why: ""
       - id: OS2OKJR5H
@@ -2007,7 +2006,7 @@
   explanation: ""
   variant:
     type: simple
-    question: In radiotelephony communication, what does the term "break break "indicate?
+    question: In radiotelephony communication, what does the term "break break" indicate?
     options:
       - id: OG7BJH7CX
         text: My transmission has ended but I expect a response from you.
@@ -2080,7 +2079,7 @@
   variant:
     type: simple
     question: OO-IMC, Lille information, squawk 6120, QNH 1025, ceiling broken 2500
-      feet.How would those numbers be transmitted by an Air Traffic Services
+      feet. How would those numbers be transmitted by an Air Traffic Services
       unit?
     options:
       - id: OIN8JCIGR
@@ -2116,9 +2115,8 @@
   variant:
     type: simple
     question: F-GTPO is out of radio-range of Lille Approach. Lille Approach has
-      asked Bigjet 347 to relay F-GTPO\`s transfer of communications to the
-      Paris Area Control Centre on 128.055 MHz. What is the message of Bigjet
-      347?
+      asked Bigjet 347 to relay F-GTPO's transfer of communications to the Paris
+      Area Control Centre on 128.055 MHz. What is the message of Bigjet 347?
     options:
       - id: ONQKOPXXA
         text: “Bigjet 347 relaying Lille Approach for F-GTPO, call Paris Control
@@ -2182,8 +2180,8 @@
   explanation: ""
   variant:
     type: simple
-    question: Which R/T phrase should the pilot use if he/she receives an
-      instruction from ATC that he/she cannot carry out?
+    question: Which R/T phrase should the pilot use if they receive an instruction
+      from ATC that they cannot carry out?
     options:
       - id: ODMEY2B8C
         text: Impossible to make it.
@@ -2256,7 +2254,7 @@
   variant:
     type: simple
     question: While you are receiving Flight Information Service, the controller
-      advises you "F-BVZG, TRAFFIC ELEVEN O\`CLOCK SIX MILES, CLOSING, 500 FEET
+      advises you "F-BVZG, TRAFFIC ELEVEN O'CLOCK SIX MILES, CLOSING, 500 FEET
       BELOW, DESCENDING". What do you reply if you have difficulties seeing that
       traffic?
     options:
@@ -2287,8 +2285,8 @@
   explanation: ""
   variant:
     type: simple
-    question: When a pilot is being vectored, he/she may occasionally be instructed
-      to make a complete turn for delaying purposes or to achieve a required
+    question: When a pilot is being vectored, they may occasionally be instructed to
+      make a complete turn for delaying purposes or to achieve a required
       spacing behind preceding traffic. Which of the following communications
       can be heard in such a situation?
     options:
@@ -2298,8 +2296,8 @@
         correct: true
         why: ""
       - id: OWERKRZLD
-        text: “F-GO, THREE HUNDRED SIX ZERO LEFT ON DOWNWIND.” “THREE HUNDREDSIX
-          ZEROLEFT, F-GO.”
+        text: “F-GO, THREE HUNDRED SIX ZERO LEFT ON DOWNWIND.” “THREE HUNDRED SIX ZERO
+          LEFT, F-GO.”
         correct: false
         why: ""
       - id: OXZCEYRD1
@@ -2363,7 +2361,7 @@
       What is the correct phraseology? “YR-BTO, TRANSMITTING BLIND DUE TO RECEIVER FAILURE…
     options:
       - id: OQEYOLS7E
-        text: PASSING 6000 FT, NEXT REPORT AT 1201\. CONTINUING FLIGHT AS PLANNED."
+        text: PASSING 6000 FT, NEXT REPORT AT 6000. CONTINUING FLIGHT AS PLANNED.
         correct: false
         why: ""
       - id: OCYW2QRNE
@@ -2470,8 +2468,8 @@
         correct: false
         why: ""
       - id: O9EPIR6WQ
-        text: To allow the controller to call in case he/she was already looking for
-          your aircraft before you changed to this new frequency.
+        text: To allow the controller to call in case they were already looking for your
+          aircraft before you changed to this new frequency.
         correct: false
         why: ""
 - id: QHMRM3E7D
@@ -2569,8 +2567,8 @@
         correct: false
         why: ""
       - id: OJQOGDB0D
-        text: Name of fix, level (optional),inbound track (optional),direction of turn
-          (optional),time of leg (optional), expected approach clearance time.
+        text: Name of fix, level (optional), inbound track (optional), direction of turn
+          (optional), time of leg (optional), expected approach clearance time.
         correct: true
         why: ""
 - id: QTO2DMKKR
@@ -2689,7 +2687,7 @@
   variant:
     type: simple
     question: While you are receiving Flight Information Service, the controller
-      advises you "F-BVZG, TRAFFIC ELEVEN OCLOCK SIX MILES, CLOSING, 500 FEET
+      advises you "F-BVZG, TRAFFIC ELEVEN O'CLOCK SIX MILES, CLOSING, 500 FEET
       BELOW, DESCENDING". What do you reply if you can see that traffic?
     options:
       - id: ORSRZDI1X
@@ -2754,14 +2752,14 @@
   explanation: ""
   variant:
     type: simple
-    question: How shall a pilot ask for a QFE ?
+    question: How shall a pilot ask for a QFE?
     options:
       - id: OTYWMDC8B
         text: Using the Morse Codes.
         correct: false
         why: ""
       - id: OHZROFPJU
-        text: Using the spelling (phonetic)alphabet.
+        text: Using the spelling (phonetic) alphabet.
         correct: false
         why: ""
       - id: ONFGNPGEE
@@ -2790,7 +2788,7 @@
         correct: false
         why: ""
       - id: O6OFKWZPO
-        text: You confirm that you have understood the massage.
+        text: You confirm that you have understood the message.
         correct: false
         why: ""
       - id: O2AUV1ZBJ
@@ -2883,7 +2881,7 @@
   variant:
     type: simple
     question: It is 20:43 UTC. A pilot is fourteen minutes from the next waypoint,
-      CMB, when he/she is asked to give an estimate for CMB. What is the reply?
+      CMB, when they are asked to give an estimate for CMB. What is the reply?
     options:
       - id: OCHM4WJAX
         text: Estimate Charlie Mike Bravo-VOR two zero five seven.
@@ -3039,7 +3037,7 @@
   variant:
     type: simple
     question: An aircraft is cruising with reduced thrust at Mach 0.80 and is able
-      to fly at Mach0.85\. What is the correct reply if ATC asks "Are you able
+      to fly at Mach 0.85. What is the correct reply if ATC asks "Are you able
       to increase to Mach 0.85?"?
     options:
       - id: OTWKL24HU
@@ -3201,8 +3199,8 @@
     type: simple
     question: "A TCAS Resolution Advisory (RA) requires a deviation from an ATC
       clearance. The pilot should report to the ATC controller as soon as
-      practicable after he/she starts to deviate. How should this be done? The
-      call sign plus:"
+      practicable after they start to deviate. How should this be done? The call
+      sign plus:"
     options:
       - id: ON8XAZTKZ
         text: '"TCAS Conflict".'
@@ -3231,7 +3229,7 @@
   explanation: ""
   variant:
     type: simple
-    question: When should a pilot include the word heavy in his/her ATC transmission?
+    question: When should a pilot include the word heavy in their ATC transmission?
     options:
       - id: OTDTGD8XX
         text: Initial call when the aircraft mass is higher than 113 000 kg.
@@ -3261,7 +3259,7 @@
   variant:
     type: simple
     question: A pilot has requested a diversion due to weather via CPDLC. What ATC
-      reply could he/she expect?
+      reply could they expect?
     options:
       - id: OPSLML5ZM
         text: '"Standby"'
@@ -3455,7 +3453,7 @@
   variant:
     type: simple
     question: A trainee ground control informed “ROMEO VICTOR ROMEO SIX HUNDRED”.
-      What was his/her mistake?
+      What was their mistake?
     options:
       - id: ODJJIR8SC
         text: RVR constituent letters
@@ -3518,7 +3516,7 @@
   variant:
     type: simple
     question: From your cruising altitude at FL 240, you want to descend to flight
-      level 100\. What is your transmission to the radar controller?
+      level 100. What is your transmission to the radar controller?
     options:
       - id: O4SOIPFGA
         text: Request to descend flight level one zero zero.
@@ -3647,8 +3645,8 @@
       the tower. What is the station’s call sign?
     options:
       - id: O7VOKY3C0
-        text: Bern tower, since the call sign consists of a place and service unit
-          available.
+        text: Bern tower, since the call sign consists of a place name and the service
+          unit.
         correct: true
         why: ""
       - id: OQZKTKMPA
@@ -3767,7 +3765,7 @@
   explanation: ""
   variant:
     type: simple
-    question: An aircraft reports long final for runway 27\. Tower replies "continue
+    question: An aircraft reports long final for runway 27. Tower replies "continue
       approach runway 27, wind 180 at 15kt". What does it mean?
     options:
       - id: OGNULRJPQ
@@ -3800,7 +3798,7 @@
     question: An aircraft with a call-sign D-EASA is flying VFR in the CTR of an
       international airport that operates with two TOWER frequencies. The pilot
       was initially instructed to contact the first TOWER frequency. A few
-      minutes later, TOWER reports "DSA, new QNH 1014, contact TOWER on...
+      minutes later, TOWER reports "EASA, new QNH 1014, contact TOWER on...
       (second frequency)". What should the pilot readback?
     options:
       - id: OMRYWFOBG
@@ -3930,14 +3928,14 @@
   variant:
     type: simple
     question: ATC instructs the pilot to contact Stephenville Tower and there is no
-      response on the new frequency. What action should he/she take?
+      response on the new frequency. What action should they take?
     options:
       - id: OHYXZR7RN
         text: Contact other aircraft for relay.
         correct: false
         why: ""
       - id: OJFSXZUMV
-        text: Attempt to contact on 121.5 Mhz.
+        text: Attempt to contact on 121.5 MHz.
         correct: false
         why: ""
       - id: O6OBTCSO8
@@ -3962,12 +3960,12 @@
     question: |-
       How may an aeronautical radio station identify a test transmission?
 
-      1\. The call sign of the aeronautical station being called   
-       2\. The aircraft identification   
-       3\. The words “TEST TRANSMISSION”   
-       4\. The words “RADIO CHECK”   
-       5\. The frequency being used   
-       6\. Additional information with respect to any abnormality
+      1. The call sign of the aeronautical station being called   
+       2. The aircraft identification   
+       3. The words “TEST TRANSMISSION”   
+       4. The words “RADIO CHECK”   
+       5. The frequency being used   
+       6. Additional information with respect to any abnormality
     options:
       - id: OUWQNMTII
         text: 2, 4, 5, and 6.
@@ -4035,8 +4033,8 @@
     question: |-
       A change of frequency shall generally be authorized by the ground station. On which occasions can a pilot make a change of frequency without authorization from the station?
 
-      1\. When he/she thinks it is useful to realize approach and landing   
-       2\. When he/she asks the tower to change the frequency by necessity   
+      1. When they think it is useful to realize approach and landing   
+       2. When they ask the tower to change the frequency by necessity   
        3\. In distress
     options:
       - id: OBVX543SB
@@ -4400,7 +4398,7 @@
     type: simple
     question: The registration of an airplane is F-AKME. The company telephony
       designator of the airplane is Air Europa and the number of flight is
-      AE0039\. Choose the appropriate callsign to be used by ATC.
+      AE0039. Choose the appropriate callsign to be used by ATC.
     options:
       - id: OUDDXIJQH
         text: Air Europa AE0039.
@@ -4685,7 +4683,7 @@
   explanation: ""
   variant:
     type: simple
-    question: Your call sign is AIRFLY12345\. You are in contact with Barcelona
+    question: Your call sign is AIRFLY12345. You are in contact with Barcelona
       approach flying at FL350 passing overhead BCN VOR. The aircraft suffers a
       depressurisation. How do you communicate the distress situation?
     options:
@@ -4758,7 +4756,7 @@
         correct: true
         why: ""
       - id: OECFAGEW1
-        text: All other aircraft will be direcred to a new frequency.
+        text: All other aircraft will be directed to a new frequency.
         correct: false
         why: ""
       - id: OAYTSR8I2

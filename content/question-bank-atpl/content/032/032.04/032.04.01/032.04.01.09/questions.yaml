@@ -73,7 +73,7 @@
   variant:
     type: simple
     question: |-
-      Taking off from Lanzarote Airport with reported surface wind of 030/10\. There are two runways available for take-off, both with no slope.
+      Taking off from Lanzarote Airport with reported surface wind of 030/10. There are two runways available for take-off, both with no slope.
 
       RWY 03: Facing the mountains with a TORA of 2 400 m. The aircraft will need to clear an obstacle 297 ft above threshold elevation which is 4 330 m away.  
       RWY 21: Facing the ocean with a TORA of 2 400 m. There are no obstacles in the climb path.  
@@ -741,8 +741,9 @@
       limited take-off mass for a Performance Class A aeroplane?
     options:
       - id: OYRRV1SUG
-        text: It should be calculated in such a way that it ensures a obstacle clearance
-          margin of 50 ft with respect to the net take-off flight path.
+        text: It should be calculated in such a way that it ensures an obstacle
+          clearance margin of 50 ft with respect to the net take-off flight
+          path.
         correct: false
         why: ""
       - id: OAHXBFEKJ
