@@ -1,31 +1,7 @@
 {
-  "buildCommand": "pnpm build",
-  "outputDirectory": ".dist/apps/next-app/.next",
-  "rewrites": [],
-  "crons": [
-    {
-      "path": "/api/trpc/common.search.initialize",
-      "schedule": "*/15 * * * *"
-    },
-    {
-      "path": "/",
-      "schedule": "*/15 * * * *"
-    },
-    {
-      "path": "/modules/type/questions",
-      "schedule": "*/15 * * * *"
-    },
-    {
-      "path": "/modules/atpl/questions/QOLXVXTE",
-      "schedule": "*/15 * * * *"
-    },
-    {
-      "path": "/modules/type/tests/create",
-      "schedule": "*/10 * * * *"
-    },
-    {
-      "path": "/modules/atpl/tests/create",
-      "schedule": "*/10 * * * *"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": false
+  },
+  "buildCommand": "pnpm build"
 }

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.5/schema.json",
+  "vcs": {
+    "enabled": false
+  },
+  "files": {
+    "includes": ["src/**", "!src/routeTree.gen.ts", "*.json", "*.md"]
+  },
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              {
+                "kind": "!bare",
+                "type": false,
+                "source": [":NODE:", ":PACKAGE:", "!**/*.{css,svg,png,webp}*"]
+              },
+              {
+                "kind": "!bare",
+                "type": false,
+                "source": [":PATH:", "!**/*.{css,svg,png,webp}*"]
+              },
+              {
+                "type": true,
+                "source": [":NODE:", ":PACKAGE:"]
+              },
+              {
+                "type": true,
+                "source": [":PATH:", "!**/*.{css,svg,png,webp}*"]
+              },
+              {
+                "kind": "!bare",
+                "source": "**/*.{css,svg,png,webp}*"
+              },
+              {
+                "kind": "bare"
+              }
+            ],
+            "sortBareImports": true
+          }
+        }
+      }
+    }
+  }
+}

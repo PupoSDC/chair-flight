@@ -1,8 +1,0 @@
-{
-  "extends": "../../../tsconfig.base.json",
-  "include": ["src/**/*.ts"],
-  "files": ["../../../types.d.ts"],
-  "compilerOptions": {
-    "types": ["vitest/globals"]
-  }
-}

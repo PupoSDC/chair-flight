@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+  --canvas: light-dark(#edf5fd, #0b0d0e);
+  --paper: light-dark(#ffffff, #171a1c);
+  --ink: light-dark(#171a1c, #f0f4f8);
+  --muted: light-dark(#555e68, #9fa6ad);
+  --rule: light-dark(#dde7ee, #32383e);
+  --rule-strong: light-dark(#c7dff7, #434b53);
+  --accent: light-dark(#0b6bcb, #3a86dc);
+  --accent-soft: light-dark(#e3effb, #0f2a45);
+  --success: light-dark(#1f7a1f, #2ea043);
+  --success-soft: light-dark(#e3fbe3, #0f2f17);
+  --danger: light-dark(#c41c1c, #e5484d);
+  --danger-soft: light-dark(#fce4e4, #3a1616);
+  --warning: light-dark(#9a5b13, #f3c46b);
+  --teal: light-dark(#1f9d55, #4cc38a);
+  --teal-soft: light-dark(#dff5e8, #10301f);
+  --rose: light-dark(#d93a2b, #f58a7d);
+  --rose-soft: light-dark(#fde6e3, #3a1a17);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-accent: var(--accent);
+  --color-brand: #0b6bcb;
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --animate-slide: slide 30s linear infinite;
+  --animate-blink: blink 1s step-start infinite;
+  @keyframes slide {
+    to {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  --font-ui: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-canvas;
+  }
+  html,
+  body {
+    @apply text-ink font-ui;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.45;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .markdown {
+    @apply text-sm leading-6 wrap-break-word;
+  }
+  .markdown > :first-child {
+    @apply mt-0;
+  }
+  .markdown > :last-child {
+    @apply mb-0;
+  }
+  .markdown :is(h1, h2, h3, h4) {
+    @apply mt-6 mb-2 font-semibold;
+  }
+  .markdown h1 {
+    @apply text-2xl;
+  }
+  .markdown h2 {
+    @apply text-xl;
+  }
+  .markdown h3 {
+    @apply text-lg;
+  }
+  .markdown :is(p, ul, ol, table, pre, blockquote) {
+    @apply my-3;
+  }
+  .markdown ul {
+    @apply list-disc pl-6;
+  }
+  .markdown ol {
+    @apply list-decimal pl-6;
+  }
+  .markdown a {
+    @apply text-accent underline;
+  }
+  .markdown img {
+    @apply max-w-full rounded-md;
+  }
+  .markdown hr {
+    @apply my-6 border-rule;
+  }
+  .markdown blockquote {
+    @apply border-l-4 border-rule-strong pl-4 text-muted;
+  }
+  .markdown table {
+    @apply block w-full overflow-x-auto border-collapse;
+  }
+  .markdown :is(th, td) {
+    @apply border border-rule px-2 py-1 text-left;
+  }
+  .markdown .search-mark {
+    @apply rounded-sm bg-warning/40 text-inherit;
+  }
+  .markdown code {
+    @apply rounded bg-accent-soft px-1 text-[13px];
+  }
+  .markdown pre {
+    @apply overflow-x-auto rounded-md border border-rule bg-canvas p-3;
+  }
+  .markdown pre code {
+    @apply bg-transparent p-0;
+  }
+}
+
+@layer components {
+  .sliding-fade-0 {
+    mask-image: linear-gradient(to right, rgb(0 0 0 / 0), rgb(0 0 0 / 0.15));
+  }
+  .sliding-fade-1 {
+    mask-image: linear-gradient(to right, rgb(0 0 0 / 0.15), rgb(0 0 0 / 0.4));
+  }
+  .sliding-fade-2 {
+    mask-image: linear-gradient(to right, rgb(0 0 0 / 0.4), rgb(0 0 0 / 0.75));
+  }
+}

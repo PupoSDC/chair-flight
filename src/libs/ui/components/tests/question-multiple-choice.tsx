@@ -1,0 +1,110 @@
+import { cn } from "../../utils/cn";
+import { Markdown } from "../base/markdown";
+import type { FC } from "react";
+
+const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
+
+export const QuestionMultipleChoice: FC<{
+  question: string;
+  options: {
+    id: string;
+    text: string;
+    why?: string;
+  }[];
+  annexes?: string[];
+  selectedOptionId?: string;
+  correctOptionId?: string;
+  showResult?: boolean;
+  disabled?: boolean;
+  onOptionClick: (optionId: string) => void;
+  onAnnexClick?: (href: string) => void;
+}> = ({
+  question,
+  options,
+  annexes = [],
+  selectedOptionId,
+  correctOptionId,
+  showResult,
+  disabled,
+  onOptionClick,
+  onAnnexClick,
+}) => {
+  return (
+    <div className="flex flex-col gap-3">
+      <Markdown className="text-base">{question}</Markdown>
+      {annexes.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {annexes.map((href) => (
+            <button
+              key={href}
+              type="button"
+              aria-label="Open annex"
+              className={cn(
+                "size-14 cursor-pointer overflow-hidden rounded-md border",
+                "border-rule-strong bg-paper p-0 hover:border-accent",
+              )}
+              onClick={() => onAnnexClick?.(href)}
+            >
+              <img src={href} alt="" className="size-full object-cover" />
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="flex flex-col gap-2">
+        {options.map((option, index) => {
+          const selected = option.id === selectedOptionId;
+          const correct = option.id === correctOptionId;
+          return (
+            <button
+              key={option.id}
+              type="button"
+              disabled={disabled}
+              aria-pressed={selected}
+              className={cn(
+                "flex min-h-[78px] cursor-pointer items-center gap-5 rounded-md",
+                "border px-4 py-3 text-left text-sm",
+                "disabled:cursor-default",
+                !showResult &&
+                  (selected
+                    ? "border-brand bg-brand text-white"
+                    : "border-ink/80 bg-transparent text-ink hover:bg-ink/5"),
+                showResult &&
+                  selected &&
+                  correct &&
+                  "border-success bg-success text-white",
+                showResult &&
+                  selected &&
+                  !correct &&
+                  "border-danger bg-danger text-white",
+                showResult &&
+                  !selected &&
+                  correct &&
+                  "border-2 border-success bg-transparent text-ink",
+                showResult &&
+                  !selected &&
+                  !correct &&
+                  "border-ink/40 bg-transparent text-ink",
+              )}
+              onClick={() => onOptionClick(option.id)}
+            >
+              <span
+                className={cn(
+                  "w-8 flex-none text-center text-[44px] leading-none",
+                  !showResult && !selected && "text-brand",
+                )}
+              >
+                {OPTION_LETTERS[index]}
+              </span>
+              <span className="flex min-w-0 flex-col gap-1">
+                <span>{option.text}</span>
+                {showResult && option.why && (
+                  <span className="text-xs opacity-80">{option.why}</span>
+                )}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};

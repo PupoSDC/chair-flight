@@ -1,8 +1,0 @@
-{
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "types": ["react"],
-    "lib": ["esnext", "dom"]
-  },
-  "files": [".storybook/preview.tsx"]
-}

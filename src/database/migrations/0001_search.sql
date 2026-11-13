@@ -1,0 +1,1 @@
+CREATE EXTENSION IF NOT EXISTS fuzzystrmatch WITH SCHEMA extensions;

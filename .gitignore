@@ -1,50 +1,15 @@
-# compiled output
-/dist
-/tmp
-.dist
-.nx
-.next
-.generated
-.vercel
-
-# dependencies
 node_modules
-
-# IDEs and editors
-.idea
-.project
-.classpath
-.c9/
-.vscode/*
-.settings/
-*.launch
-*.sublime-workspace
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# misc
-/connect.lock
-/coverage
-/libpeerconnection.log
-/typings
-/out-tsc
-npm-debug.log
-yarn-error.log
-testem.log
-*.tsbuildinfo
-**/debug.log
-
-# System Files
+dist
+.old
+.output
+.vercel
+.nitro
+.tanstack
+.env
+.env.local
 .DS_Store
-Thumbs.db
-
-# Env files
-.env.*
-!.env.example
-!.env.test
-
-# Content produced by build steps
-apps/next-app/public/storybook
-apps/next-app/public/content
+.claude
+.localdata
+*.log
+tmp
+tsconfig.tsbuildinfo
